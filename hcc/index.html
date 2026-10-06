@@ -1,0 +1,1436 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="Hepatocellular carcinoma — Memorial Hermann system roadmap v0.8, draft under development.">
+<title>Memorial Hermann HCC Pathway</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
+</head>
+<body>
+<style>
+/* Layout: a decision strip on top, a stage answer below it, then topic sections, then the evidence library everything links back into. */
+:root{
+  --bg:#F4F6F8; --surface:#FFFFFF; --surface2:#EDF1F5;
+  --ink:#16222D; --muted:#5A6B79; --line:#D3DCE4; --line2:#E6ECF1;
+  --navy:#17365D; --teal:#176A87; --amber:#8E5008; --clay:#8C2F26; --violet:#4C3F7A;
+  --navy-soft:#E8EEF7; --teal-soft:#E3F0F5; --amber-soft:#FBF1E2; --clay-soft:#F8E9E7; --violet-soft:#EDEAF6;
+  --shadow:0 1px 2px rgba(22,34,45,.06), 0 6px 18px rgba(22,34,45,.05);
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0E151C; --surface:#151F29; --surface2:#1B2733;
+  --ink:#E4EBF1; --muted:#9AAAB8; --line:#2A3A48; --line2:#223040;
+  --navy:#9FC0E8; --teal:#6FB9D4; --amber:#DCA459; --clay:#E79389; --violet:#A79CD8;
+  --navy-soft:#1B2A3E; --teal-soft:#13303A; --amber-soft:#332514; --clay-soft:#36211E; --violet-soft:#241F38;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 6px 18px rgba(0,0,0,.3);
+  color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0E151C; --surface:#151F29; --surface2:#1B2733;
+  --ink:#E4EBF1; --muted:#9AAAB8; --line:#2A3A48; --line2:#223040;
+  --navy:#9FC0E8; --teal:#6FB9D4; --amber:#DCA459; --clay:#E79389; --violet:#A79CD8;
+  --navy-soft:#1B2A3E; --teal-soft:#13303A; --amber-soft:#332514; --clay-soft:#36211E; --violet-soft:#241F38;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 6px 18px rgba(0,0,0,.3);
+  color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--bg); color:var(--ink); font-family:var(--sans); font-size:15px; line-height:1.55;
+  -webkit-text-size-adjust:100%}
+.wrap{max-width:1240px; margin:0 auto; padding-inline:18px; padding-block:0}
+h1,h2,h3,h4{font-family:var(--serif); text-wrap:balance; margin:0}
+h2{font-size:26px; letter-spacing:-.01em}
+h3{font-size:19px}
+p{margin:0}
+a{color:var(--teal)}
+hr{border:0; border-top:1px solid var(--line); margin:0}
+.eyebrow{font-size:11.5px; letter-spacing:.09em; text-transform:uppercase; font-weight:700; color:var(--teal)}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* header */
+header.top{position:sticky; top:env(safe-area-inset-top,0px); z-index:40; background:color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter:blur(8px); border-bottom:1px solid var(--line)}
+.devbar{background:var(--amber-soft); color:var(--amber); border-bottom:1px solid var(--amber);
+  font-size:11.8px; font-weight:700; line-height:1.35; padding:5px 18px; text-align:center}
+.topin{max-width:1240px; margin:0 auto; padding:9px 18px; display:flex; gap:12px; align-items:center; flex-wrap:wrap}
+.brand{font-family:var(--serif); font-weight:700; font-size:16px; line-height:1.2; min-width:0}
+.brand span{display:block; font-family:var(--sans); font-weight:400; font-size:11.5px; color:var(--muted)}
+nav.sec{display:flex; gap:2px; margin-left:auto; flex-wrap:wrap}
+nav.sec a{font-size:12.5px; color:var(--muted); text-decoration:none; padding:4px 8px; border-radius:6px}
+nav.sec a:hover{color:var(--ink); background:var(--surface2)}
+
+/* hero */
+.hero{padding-block:30px 14px}
+.hero h1{font-size:clamp(28px,5.2vw,42px); letter-spacing:-.02em; line-height:1.08}
+.hero .sub{margin-top:10px; max-width:66ch; color:var(--muted); font-size:16px}
+.statusbar{margin-top:18px; display:flex; gap:8px; flex-wrap:wrap; align-items:center}
+.chip{display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:600; padding:3px 9px; border-radius:999px;
+  border:1px solid var(--line); background:var(--surface); color:var(--muted); max-width:100%; min-width:0}
+.chip.warn{border-color:var(--amber); color:var(--amber); background:var(--amber-soft)}
+
+/* legend */
+.legend{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:14px; margin-top:22px}
+.lg{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:14px 15px; box-shadow:var(--shadow); min-width:0}
+.lg h4{font-size:13px; letter-spacing:.06em; text-transform:uppercase; font-family:var(--sans); color:var(--muted); margin-bottom:9px}
+.lgrow{display:flex; gap:9px; align-items:baseline; padding:3px 0; font-size:13.3px}
+.lgrow b{flex:none}
+
+/* label + grade pills */
+.pill{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+  padding:2px 7px; border-radius:5px; border:1px solid; white-space:nowrap}
+.p-std{color:var(--navy); border-color:var(--navy); background:var(--navy-soft)}
+.p-pref{color:var(--teal); border-color:var(--teal); background:var(--teal-soft)}
+.p-reas{color:var(--amber); border-color:var(--amber); background:var(--amber-soft)}
+.p-trial{color:var(--violet); border-color:var(--violet); background:var(--violet-soft)}
+.p-avoid{color:var(--clay); border-color:var(--clay); background:var(--clay-soft)}
+.grade{display:inline-flex; align-items:center; justify-content:center; width:19px; height:19px; border-radius:4px;
+  font-size:11.5px; font-weight:700; border:1px solid var(--line); background:var(--surface2); color:var(--ink); flex:none}
+.grade.A{background:var(--navy); color:var(--surface); border-color:var(--navy)}
+.grade.B{background:var(--teal); color:var(--surface); border-color:var(--teal)}
+.grade.C{background:var(--amber-soft); color:var(--amber); border-color:var(--amber)}
+.grade.D{background:transparent; color:var(--muted)}
+.flag{font-size:10.5px; font-weight:700; letter-spacing:.05em; color:var(--muted); border:1px dashed var(--line);
+  border-radius:4px; padding:1px 5px; white-space:nowrap}
+
+/* tree */
+.tree{margin-top:14px}
+.entry{background:var(--ink); color:var(--bg); border-radius:10px; padding:12px 16px; font-size:13.6px; line-height:1.45}
+.entry b{color:var(--bg)}
+.qrow{display:flex; gap:10px; align-items:stretch; margin-top:16px}
+.q{flex:1 1 0; min-width:0; position:relative; display:flex}
+.qbox{flex:1; background:var(--surface); border:2px solid var(--ink); border-radius:10px; padding:12px 13px; display:flex;
+  flex-direction:column; gap:7px; min-width:0}
+.qhead{font-weight:600; font-size:14.4px; line-height:1.3}
+.qans{display:flex; flex-direction:column; align-items:flex-start; gap:5px; font-size:12.4px; color:var(--muted); margin-top:auto}
+.goto{appearance:none; font:inherit; font-size:12.4px; cursor:pointer; background:var(--surface2); color:var(--ink);
+  border:1px solid var(--line); border-radius:7px; padding:3px 9px; text-align:left; max-width:100%}
+.goto:hover{border-color:var(--ink)}
+.goto b{font-weight:700}
+.qnext{font-size:12.4px; color:var(--muted)}
+.arrowR{position:absolute; right:-9px; top:50%; transform:translateY(-50%); color:var(--muted); font-size:15px; line-height:1}
+@media (max-width:640px){ .arrowR{display:none} }
+
+/* reference strip: closed items stay inline, the open one takes its own row */
+.refstrip{display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:12px}
+.refstrip > .reflab{font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; font-weight:700; color:var(--muted)}
+.refstrip > details{margin-top:0; flex:0 0 auto; min-width:0}
+.refstrip > details > summary{font-size:13.5px; padding:7px 14px; gap:8px; border-color:var(--line);
+  background:var(--surface); box-shadow:var(--shadow)}
+.refstrip > details > summary:hover{background:var(--surface2)}
+.refstrip > details[open] > summary{border-color:var(--ink)}
+.ricon{width:19px; height:19px; flex:none; order:-1; color:var(--teal)}
+.refstrip > details[open] > summary .ricon{color:var(--ink)}
+.refstrip > details[open]{flex:1 1 100%}
+.refstrip > details[open] > .moreinner{background:var(--surface); border:1px solid var(--line); border-radius:11px;
+  padding:14px 16px; margin-top:9px; box-shadow:var(--shadow)}
+.cp{display:grid; grid-template-columns:repeat(auto-fit,minmax(168px,1fr)); gap:10px; margin-top:10px}
+.cp label{display:flex; flex-direction:column; gap:3px; font-size:12px; font-weight:600; color:var(--muted); min-width:0}
+.cp select{font:inherit; font-size:13px; padding:5px 7px; border-radius:7px; border:1px solid var(--line);
+  background:var(--surface); color:var(--ink); max-width:100%}
+.cpout{margin-top:12px; display:flex; gap:9px; align-items:center; flex-wrap:wrap; font-size:13.5px}
+.cpclass{font-family:var(--serif); font-size:19px; font-weight:700}
+.minitab{width:100%; min-width:0; border-collapse:collapse; font-size:12.6px; margin-top:10px}
+.minitab th,.minitab td{text-align:left; padding:6px 9px; border-bottom:1px solid var(--line2); vertical-align:top}
+.minitab th{font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); background:var(--surface2)}
+.minitab tr:last-child td{border-bottom:0}
+.minitab td:first-child{font-weight:600}
+.minitab.keys td:first-child{white-space:nowrap; width:1%}
+.minitabwrap{overflow-x:auto; margin-top:10px}
+.minitabwrap .minitab{min-width:440px; margin-top:0}
+.lrgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; margin-top:12px}
+
+/* stages */
+.stages{display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-top:16px}
+.st{appearance:none; text-align:left; font:inherit; color:inherit; cursor:pointer; background:var(--surface);
+  border:1px solid var(--line); border-left:4px solid var(--line); border-radius:10px; padding:12px 13px; min-width:0;
+  display:flex; flex-direction:column; gap:5px; box-shadow:var(--shadow); transition:border-color .12s, transform .12s}
+.st:hover{transform:translateY(-1px)}
+.st .sname{font-family:var(--serif); font-size:17px; font-weight:700; line-height:1.15}
+.st .sreq{font-size:10.4px; letter-spacing:.07em; text-transform:uppercase; font-weight:700; color:var(--muted)}
+.st .scrit{list-style:none; margin:0; padding:0; font-size:12.3px; line-height:1.3; color:var(--muted)}
+.st .scrit li{position:relative; padding-left:11px; margin-top:4px}
+.st .scrit li:first-child{margin-top:0}
+.st .scrit li::before{content:""; position:absolute; left:2px; top:.52em; width:4px; height:1px; background:currentColor; opacity:.65}
+.st[data-tone="cure"]{border-left-color:var(--navy)}
+.st[data-tone="loco"]{border-left-color:var(--amber)}
+.st[data-tone="sys"]{border-left-color:var(--clay)}
+.st[data-tone="pall"]{border-left-color:var(--muted)}
+.st[aria-pressed="true"]{border-color:var(--ink); box-shadow:0 0 0 2px var(--ink) inset, var(--shadow)}
+.st:focus-visible, .tab:focus-visible, .refchip:focus-visible, button:focus-visible, input:focus-visible{outline:2px solid var(--teal); outline-offset:2px}
+
+/* answer panel */
+.answer{margin-top:16px; background:var(--surface); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow);
+  overflow:hidden; scroll-margin-top:84px}
+.ahead{padding:15px 18px; border-bottom:1px solid var(--line2); display:flex; gap:12px; align-items:flex-start; flex-wrap:wrap}
+.ahead h3{font-size:22px}
+.abody{display:grid; grid-template-columns:repeat(3,1fr); gap:0}
+.acol{padding:15px 18px; border-right:1px solid var(--line2); min-width:0; display:flex; flex-direction:column; gap:11px}
+.acol:last-child{border-right:0}
+.acol > .eyebrow{margin-bottom:-3px}
+.rec{display:flex; flex-direction:column; gap:7px; font-size:13.8px; line-height:1.5}
+.recmeta{display:flex; gap:6px; align-items:center; flex-wrap:wrap}
+.recnote{font-size:12.6px; color:var(--muted); border-left:2px solid var(--line); padding-left:9px}
+.opts{display:flex; flex-direction:column}
+.opt{display:grid; grid-template-columns:23px 1fr; gap:11px; padding:11px 0; border-top:1px solid var(--line2); min-width:0}
+.opt:first-child{border-top:0; padding-top:4px}
+.optn{width:23px; height:23px; border-radius:50%; background:var(--surface2); color:var(--muted); font-size:11.5px;
+  font-weight:700; display:flex; align-items:center; justify-content:center; flex:none}
+.optname{font-family:var(--serif); font-size:15.5px; font-weight:700; display:flex; gap:7px; align-items:center;
+  flex-wrap:wrap; margin-bottom:4px; line-height:1.2}
+.optwhen{font-size:13.5px; line-height:1.45}
+details.more{margin-top:8px}
+details.more > summary{cursor:pointer; list-style:none; font-size:12px; font-weight:600; color:var(--teal);
+  display:inline-flex; gap:6px; align-items:center; padding:4px 11px; border-radius:999px;
+  border:1px solid var(--line); background:var(--surface2)}
+details.more > summary::-webkit-details-marker{display:none}
+details.more > summary::before{content:"Show"; font-weight:700; color:var(--ink)}
+details.more[open] > summary::before{content:"Hide"}
+details.more > summary:hover{color:var(--ink); border-color:var(--ink)}
+details.more > summary:focus-visible{outline:2px solid var(--teal); outline-offset:3px}
+.moreinner{padding:2px 0 4px}
+.xpand{appearance:none; cursor:pointer; font:inherit; font-size:11.5px; font-weight:600; color:var(--muted);
+  background:transparent; border:1px solid var(--line); border-radius:999px; padding:3px 10px; margin-left:auto}
+.xpand:hover{color:var(--ink); border-color:var(--ink)}
+.optline{display:grid; grid-template-columns:106px 1fr; gap:4px 11px; font-size:13px; line-height:1.45; margin-top:7px; min-width:0}
+.optlab{font-size:10.5px; letter-spacing:.07em; text-transform:uppercase; font-weight:700; color:var(--teal); padding-top:3px}
+.optline.bad .optlab{color:var(--clay)}
+@media (max-width:640px){ .optline{grid-template-columns:1fr; gap:2px} }
+.optwhen + .refs{margin-top:6px}
+.orderrule{margin-top:11px; font-size:12.8px; color:var(--muted); border-top:1px dashed var(--line); padding-top:10px; line-height:1.5}
+.orderrule b{color:var(--ink)}
+
+/* ref chips */
+.refs{display:flex; gap:5px; flex-wrap:wrap}
+.refchip{appearance:none; cursor:pointer; font:inherit; font-size:11.5px; font-weight:600; padding:1px 7px; border-radius:999px;
+  border:1px solid var(--line); background:var(--surface2); color:var(--teal); white-space:nowrap}
+.refchip:hover{border-color:var(--teal)}
+
+/* sections */
+section{scroll-margin-top:80px}
+.sechead{margin-top:46px; display:flex; gap:12px; align-items:baseline; flex-wrap:wrap; border-bottom:1px solid var(--line); padding-bottom:9px}
+.sechead p{font-size:13.5px; color:var(--muted); max-width:62ch}
+.tabs{display:flex; gap:6px; flex-wrap:wrap; margin-top:16px}
+.tab{appearance:none; cursor:pointer; font:inherit; font-size:13px; font-weight:600; padding:6px 12px; border-radius:999px;
+  border:1px solid var(--line); background:var(--surface); color:var(--muted)}
+.tab[aria-selected="true"]{background:var(--ink); color:var(--bg); border-color:var(--ink)}
+.panel{margin-top:16px; display:flex; flex-direction:column; gap:14px}
+
+.card{background:var(--surface); border:1px solid var(--line); border-radius:11px; padding:16px 18px; box-shadow:var(--shadow); min-width:0}
+.card h3{margin-bottom:4px}
+.card .kicker{font-size:12.5px; color:var(--muted); margin-bottom:11px}
+.card p + p{margin-top:9px}
+.stack{display:flex; flex-direction:column; gap:12px}
+.kv{display:grid; grid-template-columns:auto 1fr; gap:6px 14px; font-size:13.6px; align-items:baseline}
+.kv dt{font-weight:600; color:var(--teal); white-space:nowrap}
+.kv dd{margin:0; min-width:0}
+
+.tablewrap{overflow-x:auto; border:1px solid var(--line); border-radius:11px; background:var(--surface); box-shadow:var(--shadow)}
+table{border-collapse:collapse; width:100%; min-width:720px; font-size:13.3px}
+th,td{text-align:left; padding:11px 13px; border-bottom:1px solid var(--line2); vertical-align:top}
+th{font-size:11.5px; letter-spacing:.07em; text-transform:uppercase; color:var(--muted); font-weight:700; background:var(--surface2); position:sticky; top:0}
+tbody tr:last-child td{border-bottom:0}
+td b{font-weight:600}
+
+.callout{border-left:3px solid var(--clay); background:var(--clay-soft); border-radius:0 9px 9px 0; padding:13px 16px; font-size:13.6px}
+.callout.amber{border-left-color:var(--amber); background:var(--amber-soft)}
+.callout.teal{border-left-color:var(--teal); background:var(--teal-soft)}
+.callout b{font-weight:700}
+
+/* liver-directed matrix */
+:root{ --t1f:#0f5c38; --t1b:#c8e6d3; --t2f:#4b7f1c; --t2b:#eff6df; --t3f:#24609e; --t3b:#dde9f6;
+       --t4f:#a15c00; --t4b:#fbe8c9; --t5f:#5b616a; --t5b:#eceef1 }
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --t1f:#7fd6a6; --t1b:#16382a; --t2f:#b5dc84; --t2b:#2b3a1a; --t3f:#8dbcf0; --t3b:#1a2c42;
+  --t4f:#f2bb6b; --t4b:#3f2e14; --t5f:#b4bac3; --t5b:#2c3036 }}
+:root[data-theme="dark"]{
+  --t1f:#7fd6a6; --t1b:#16382a; --t2f:#b5dc84; --t2b:#2b3a1a; --t3f:#8dbcf0; --t3b:#1a2c42;
+  --t4f:#f2bb6b; --t4b:#3f2e14; --t5f:#b4bac3; --t5b:#2c3036 }
+/* the five tiers read left to right as a scale */
+.tierlegend{display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin-top:16px}
+.tl{display:flex; flex-direction:column; gap:7px; font-size:12.2px; line-height:1.4; min-width:0;
+  background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:11px 12px 12px;
+  box-shadow:var(--shadow); position:relative; overflow:hidden}
+.tl::before{content:""; position:absolute; inset:0 0 auto 0; height:4px}
+.tl[data-tier="1"]::before{background:var(--t1f)} .tl[data-tier="2"]::before{background:var(--t2f)}
+.tl[data-tier="3"]::before{background:var(--t3f)} .tl[data-tier="4"]::before{background:var(--t4f)}
+.tl[data-tier="5"]::before{background:var(--t5f)}
+.tl > span:last-child{min-width:0; color:var(--muted)}
+.tl .tchip{align-self:flex-start; margin-top:3px}
+@media (max-width:980px){ .tierlegend{grid-template-columns:repeat(3,1fr)} }
+@media (max-width:620px){ .tierlegend{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:420px){ .tierlegend{grid-template-columns:1fr} }
+.tchip{font-size:10.5px; font-weight:700; letter-spacing:.03em; padding:2px 7px; border-radius:5px; flex:none; max-width:100%}
+.mcell .tchip, .rolewhen .tchip{white-space:nowrap}
+.t1{color:var(--t1f); background:var(--t1b)} .t2{color:var(--t2f); background:var(--t2b)}
+.t3{color:var(--t3f); background:var(--t3b)} .t4{color:var(--t4f); background:var(--t4b)}
+.t5{color:var(--t5f); background:var(--t5b)}
+/* six modalities side by side */
+.mcards{display:grid; grid-template-columns:repeat(6,1fr); gap:8px; margin-top:18px}
+.mcell{appearance:none; text-align:left; font:inherit; color:inherit; cursor:pointer; background:var(--surface);
+  border:1px solid var(--line); border-radius:10px; padding:11px 12px; display:flex; flex-direction:column; gap:7px;
+  min-width:0; box-shadow:var(--shadow); transition:border-color .12s, transform .12s}
+.mcell:hover{transform:translateY(-1px); border-color:var(--ink)}
+.mcell[aria-pressed="true"]{border-color:var(--ink); box-shadow:0 0 0 2px var(--ink) inset, var(--shadow)}
+.mcell .mname{font-family:var(--serif); font-size:14px; font-weight:700; line-height:1.2; min-width:0}
+.mcell .mname span{display:block; font-family:var(--sans); font-weight:400; font-size:10.5px; color:var(--muted); margin-top:2px}
+.mcell .tchip{align-self:flex-start}
+.mcell .mhead{font-size:11.8px; line-height:1.35; min-width:0; color:var(--muted); margin-top:auto}
+@media (max-width:1080px){ .mcards{grid-template-columns:repeat(3,1fr)} }
+@media (max-width:700px){ .mcards{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:420px){ .mcards{grid-template-columns:1fr} }
+.lrtdetail{margin-top:16px; background:var(--surface); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); padding:16px 18px}
+.role{border-top:1px solid var(--line2); padding-top:12px; margin-top:12px}
+.role:first-of-type{border-top:0; padding-top:0; margin-top:10px}
+.rolewhen{font-size:14px; font-weight:600; margin-bottom:7px; display:flex; gap:8px; align-items:baseline; flex-wrap:wrap}
+.evline{font-size:13.2px; display:flex; gap:8px; align-items:baseline; padding:3px 0; flex-wrap:wrap}
+.evline .evfind{color:var(--muted); min-width:0}
+
+/* evidence library */
+.evtools{display:flex; gap:9px; flex-wrap:wrap; margin-top:16px; align-items:center}
+input[type="search"]{font:inherit; font-size:14px; padding:8px 12px; border-radius:9px; border:1px solid var(--line);
+  background:var(--surface); color:var(--ink); min-width:min(100%,280px); flex:1 1 240px}
+.evcount{font-size:12.5px; color:var(--muted); margin-left:auto}
+.evlist{margin-top:14px; display:flex; flex-direction:column; gap:9px}
+.ev{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:12px 14px; display:flex; gap:12px;
+  align-items:flex-start; flex-wrap:wrap; box-shadow:var(--shadow)}
+.ev .evtag{font-size:11.5px; font-weight:700; letter-spacing:.03em; color:var(--teal); flex:none; width:118px}
+.ev .evcit{flex:1 1 320px; min-width:0; font-size:13.3px; line-height:1.45}
+.ev .evlinks{display:flex; gap:6px; flex-wrap:wrap; flex:none}
+.lnk{font-size:11.5px; font-weight:600; text-decoration:none; padding:3px 9px; border-radius:999px; border:1px solid var(--line);
+  color:var(--teal); background:var(--surface2); white-space:nowrap}
+.lnk:hover{border-color:var(--teal)}
+.ev.hit{border-color:var(--teal); box-shadow:0 0 0 2px var(--teal-soft), var(--shadow)}
+
+footer{margin-top:54px; border-top:1px solid var(--line); padding-block:22px 40px; font-size:12.6px; color:var(--muted)}
+footer p + p{margin-top:8px}
+
+@media (max-width:860px){
+  .abody{grid-template-columns:1fr}
+  .acol{border-right:0; border-bottom:1px solid var(--line2)}
+  .acol:last-child{border-bottom:0}
+  .stages{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  .qrow{flex-direction:column}
+  .arrowL{display:none}
+  .ordernote{text-align:left}
+  .stages{grid-template-columns:1fr}
+  .ev .evtag{width:auto}
+}
+@media (prefers-reduced-motion:reduce){ *{transition:none !important} }
+</style>
+
+<header class="top">
+  <div class="devbar">Under development — draft content under active revision. Not ratified clinical policy, and not for patient care decisions.</div>
+  <div class="topin">
+    <div class="brand">Memorial Hermann HCC pathway<span>Adult hepatocellular carcinoma · draft v0.8 · Batch 07, 4 October 2026</span></div>
+    <nav class="sec">
+      <a href="#tree">Pathway</a><a href="#stage">Stage</a><a href="#lrt">Liver-directed</a><a href="#topics">Treatment</a><a href="#honest">Limits</a><a href="#ops">Operations</a><a href="#evidence">Evidence</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+<div class="hero">
+  <h1>What we do, and how good the evidence is</h1>
+  <p class="sub">The adult HCC roadmap as a working console. Pick a stage and the pathway answers with the standard, the reasonable alternative, what to avoid, and the grade behind each — every claim tied to the paper it came from. The liver-directed evidence matrix covers all four tumours.</p>
+  <div class="statusbar">
+    <span class="chip warn">Draft — not ratified clinical policy</span>
+    <span class="chip">HCC roadmap v0.8 · Batch 07 evidence-audit corrections</span>
+    <span class="chip">BCLC 2026 · NCCN HCC v2.2026</span>
+    <span class="chip">OPTN Policy 9.5.I — verify current text</span>
+    <button class="xpand" type="button" id="expandAllSections" data-open="0" style="margin-left:0">Expand all sections</button>
+  </div>
+</div>
+
+<div class="legend">
+  <div class="lg">
+    <h4>Recommendation label — what we advise</h4>
+    <div class="lgrow"><b class="pill p-std">Standard</b><span>Default when eligibility is met; departure needs a recorded reason.</span></div>
+    <div class="lgrow"><b class="pill p-pref">Preferred</b><span>Favoured only for the stated phenotype, not a general default.</span></div>
+    <div class="lgrow"><b class="pill p-reas">Reasonable</b><span>Acceptable after documented MDT review; benefit is context dependent.</span></div>
+    <div class="lgrow"><b class="pill p-trial">Trial only</b><span>Protocol or mandatory outcomes registry; effectiveness evidence is immature.</span></div>
+    <div class="lgrow"><b class="pill p-avoid">Avoid</b><span>Expected harm, futility, or absent benefit generally outweighs benefit.</span></div>
+  </div>
+  <div class="lg">
+    <h4>Evidence grade — how strong the basis is</h4>
+    <div class="lgrow"><b class="grade A">A</b><span>Guideline supported by randomised trials or strong consistent comparative evidence.</span></div>
+    <div class="lgrow"><b class="grade B">B</b><span>One randomised trial, prospective comparative evidence, or strong prospective cohorts.</span></div>
+    <div class="lgrow"><b class="grade C">C</b><span>Single-arm prospective, retrospective comparative, or inconsistent evidence.</span></div>
+    <div class="lgrow"><b class="grade D">D</b><span>Expert consensus or local operational requirement, no comparative outcome data.</span></div>
+    <div class="lgrow small muted" style="margin-top:6px"><span>A strong label does not imply a high grade. Several operating requirements are deliberately Standard at grade D because they are local policy choices.</span></div>
+  </div>
+  <div class="lg">
+    <h4>Dependency flags — what it rests on locally</h4>
+    <div class="lgrow"><b class="flag">EXPERTISE</b><span>Demonstrated operator and team experience with this technique at this site.</span></div>
+    <div class="lgrow"><b class="flag">DOSIMETRY</b><span>Personalised dosimetry planning and radiation-safety review for every case.</span></div>
+    <div class="lgrow"><b class="flag">DEVICE</b><span>Device availability, credentialing, maintained competency.</span></div>
+    <div class="lgrow"><b class="flag">PAYER</b><span>Insurance authorisation; may not be deliverable in a useful interval.</span></div>
+    <div class="lgrow"><b class="flag">TX-TIMING</b><span>Waitlist dynamics and expected time to transplant at this centre.</span></div>
+  </div>
+</div>
+
+<section id="tree">
+  <div class="sechead">
+    <h2>The decision tree</h2>
+    <p>Three questions in order. Every <b>yes</b> settles the stage; every <b>no</b> moves to the next question. Performance status and spread are therefore decided before tumour burden is ever asked. Choose any answer or any stage to see the full recommendation.</p>
+  </div>
+
+  <div class="tree">
+    <div class="entry"><b>HCC confirmed</b> — LR-5 on multiphase CT or MRI in an at-risk liver; biopsy when imaging is indeterminate, decided at MDT. <b>Stage with</b> liver imaging and chest CT · ECOG · Child-Pugh and bilirubin · portal hypertension assessment · AFP. Nonresectability and transplant candidacy are assessed in parallel with the rest of staging, not after it.</div>
+
+    <div class="refstrip">
+      <span class="reflab">Reference</span>
+
+      <details class="more"><summary><svg class="ricon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="2.5"/><rect x="7.5" y="6" width="9" height="3.5" rx="1"/><circle cx="8.5" cy="13.5" r=".9" fill="currentColor" stroke="none"/><circle cx="12" cy="13.5" r=".9" fill="currentColor" stroke="none"/><circle cx="15.5" cy="13.5" r=".9" fill="currentColor" stroke="none"/><circle cx="8.5" cy="17.5" r=".9" fill="currentColor" stroke="none"/><circle cx="12" cy="17.5" r=".9" fill="currentColor" stroke="none"/><circle cx="15.5" cy="17.5" r=".9" fill="currentColor" stroke="none"/></svg>Child-Pugh</summary><div class="moreinner">
+        <p class="small muted">Five parameters, 1–3 points each. <b>Class A 5–6 · Class B 7–9 · Class C 10–15.</b></p>
+        <div class="cp">
+          <label>Bilirubin (mg/dL)
+            <select id="cpBili"><option value="1">&lt;2</option><option value="2">2–3</option><option value="3">&gt;3</option></select></label>
+          <label>Albumin (g/dL)
+            <select id="cpAlb"><option value="1">&gt;3.5</option><option value="2">2.8–3.5</option><option value="3">&lt;2.8</option></select></label>
+          <label>INR
+            <select id="cpInr"><option value="1">&lt;1.7</option><option value="2">1.7–2.3</option><option value="3">&gt;2.3</option></select></label>
+          <label>Ascites
+            <select id="cpAsc"><option value="1">None</option><option value="2">Mild, diuretic-responsive</option><option value="3">Moderate–severe or refractory</option></select></label>
+          <label>Encephalopathy
+            <select id="cpEnc"><option value="1">None</option><option value="2">Grade I–II</option><option value="3">Grade III–IV</option></select></label>
+        </div>
+        <div class="cpout"><span class="cpclass" id="cpClass">Class A</span><span class="chip" id="cpPts">5 points</span>
+          <span class="small muted" id="cpNote">Preserved function. This does not establish portal pressure — see the CSPH gate.</span></div>
+        <p class="small muted" style="margin-top:10px">In primary biliary cholangitis and primary sclerosing cholangitis the bilirubin bands are &lt;4, 4–10 and &gt;10 mg/dL. The roadmap also records ALBI and MELD 3.0; Child-Pugh alone does not drive allocation.</p>
+      </div></details>
+
+      <details class="more"><summary><svg class="ricon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.6"/><path d="M12 7.8v7"/><path d="M6.5 10.2h11"/><path d="M12 14.8 8.5 21"/><path d="m12 14.8 3.5 6.2"/></svg>ECOG performance status</summary><div class="moreinner">
+        <table class="minitab"><thead><tr><th style="width:52px">Grade</th><th>Definition</th></tr></thead><tbody>
+          <tr><td>0</td><td>Fully active, able to carry on all pre-disease performance without restriction.</td></tr>
+          <tr><td>1</td><td>Restricted in physically strenuous activity but ambulatory and able to carry out work of a light or sedentary nature — light house work, office work.</td></tr>
+          <tr><td>2</td><td>Ambulatory and capable of all self-care but unable to carry out any work activities; up and about more than 50% of waking hours.</td></tr>
+          <tr><td>3</td><td>Capable of only limited self-care; confined to bed or chair more than 50% of waking hours.</td></tr>
+          <tr><td>4</td><td>Completely disabled; cannot carry on any self-care; totally confined to bed or chair.</td></tr>
+          <tr><td>5</td><td>Dead.</td></tr>
+        </tbody></table>
+        <p class="small muted" style="margin-top:10px">Oken et al., Am J Clin Oncol 1982. <b>In this pathway ECOG 3–4 settles stage D, and cancer-related ECOG 1–2 is part of stage C</b> — record whether the limitation is from the tumour or the liver, because that distinction decides whether transplant is still on the table.</p>
+      </div></details>
+
+      <details class="more"><summary><svg class="ricon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><path d="M12 1.8v3.4M12 18.8v3.4M1.8 12h3.4M18.8 12h3.4"/></svg>LI-RADS, in full</summary><div class="moreinner">
+        <p class="small muted">CT/MRI LI-RADS v2018 diagnostic algorithm and the v2024 treatment-response algorithms. <b>Applies only in the at-risk population</b> — cirrhosis of any cause, chronic hepatitis B, or current or prior HCC. OPTN class 5 criteria for listing are a separate system.</p>
+
+        <div class="lrgrid">
+          <div>
+            <h4 class="eyebrow">The four major features</h4>
+            <table class="minitab keys"><tbody>
+              <tr><td>Nonrim APHE</td><td>Unequivocal enhancement in the arterial phase, in whole or in part, that is <b>not</b> rim-shaped.</td></tr>
+              <tr><td>Nonperipheral washout</td><td>Visually assessed reduction in enhancement relative to liver, in whole or in part, from an earlier to a later phase — not peripheral.</td></tr>
+              <tr><td>Enhancing capsule</td><td>Smooth, uniform, sharp border around most or all of the observation, unequivocally thicker or more conspicuous than around background nodules.</td></tr>
+              <tr><td>Threshold growth</td><td>≥50% increase in size in ≤6 months.</td></tr>
+            </tbody></table>
+            <p class="small muted" style="margin-top:8px">Size is the fifth criterion and sets the row of the table; the three features other than APHE are what “additional major features” counts.</p>
+          </div>
+          <div>
+            <h4 class="eyebrow">Other categories</h4>
+            <table class="minitab keys"><tbody>
+              <tr><td>LR-1</td><td>Definitely benign.</td></tr>
+              <tr><td>LR-2</td><td>Probably benign.</td></tr>
+              <tr><td>LR-3</td><td>Intermediate probability of malignancy.</td></tr>
+              <tr><td>LR-4</td><td>Probably HCC.</td></tr>
+              <tr><td>LR-5</td><td>Definitely HCC.</td></tr>
+              <tr><td>LR-M</td><td>Probably or definitely malignant, not HCC specific — targetoid appearance or other features favouring cholangiocarcinoma or a combined tumour.</td></tr>
+              <tr><td>LR-TIV</td><td>Tumour in vein: enhancing soft tissue within a vessel, whatever the parenchymal observation.</td></tr>
+              <tr><td>LR-NC</td><td>Not categorisable because of image degradation or omission.</td></tr>
+            </tbody></table>
+          </div>
+        </div>
+
+        <h4 class="eyebrow" style="margin-top:16px">Diagnostic table — no nonrim APHE (absent, or rim / peripheral discontinuous)</h4>
+        <table class="minitab"><thead><tr><th style="width:38%">Additional major features</th><th>Any size</th></tr></thead><tbody>
+          <tr><td>0</td><td>LR-3</td></tr>
+          <tr><td>≥1</td><td>LR-4</td></tr>
+        </tbody></table>
+
+        <h4 class="eyebrow" style="margin-top:14px">Diagnostic table — nonrim APHE present</h4>
+        <div class="minitabwrap"><table class="minitab"><thead><tr><th style="width:34%">Additional major features</th><th>&lt;10 mm</th><th>10–19 mm</th><th>≥20 mm</th></tr></thead><tbody>
+          <tr><td>0</td><td>LR-3</td><td>LR-3</td><td>LR-4</td></tr>
+          <tr><td>1</td><td>LR-4</td><td>LR-4 if capsule alone<br>LR-5 if washout or threshold growth</td><td>LR-5</td></tr>
+          <tr><td>≥2</td><td>LR-4</td><td>LR-5</td><td>LR-5</td></tr>
+        </tbody></table></div>
+        <p class="small muted" style="margin-top:8px"><b>An observation under 10 mm cannot be LR-5.</b> LR-5 requires ≥10 mm with nonrim APHE plus nonperipheral washout or threshold growth, or ≥20 mm with nonrim APHE plus any one additional feature.</p>
+
+        <h4 class="eyebrow" style="margin-top:16px">Treatment response v2024 — use the algorithm that matches the treatment</h4>
+        <div class="minitabwrap"><table class="minitab"><thead><tr><th style="width:26%">Category</th><th>Nonradiation — ablation, TACE</th><th>Radiation — SBRT, Y-90</th></tr></thead><tbody>
+          <tr><td>LR-TR Nonviable</td><td>No lesional enhancement, or treatment-specific expected enhancement.</td><td>No lesional enhancement.</td></tr>
+          <tr><td>LR-TR Equivocal</td><td>Enhancement atypical for treatment effect and not meeting viable criteria.</td><td><b>Does not exist</b> in the radiation algorithm.</td></tr>
+          <tr><td>LR-TR Nonprogressing</td><td>—</td><td><b>Unique to the radiation algorithm.</b> Persistently enhancing, stable or decreasing — treatment effect rather than residual tumour. Observe with close follow-up; do not retreat on enhancement alone.</td></tr>
+          <tr><td>LR-TR Viable</td><td>Nodular, mass-like or thick irregular enhancement in or along the treated lesion.</td><td>New or enlarging mass-like enhancement.</td></tr>
+        </tbody></table></div>
+        <p class="small muted" style="margin-top:8px">Applying the nonradiation algorithm after radioembolisation or SBRT is a recurring and consequential error in this pathway — it turns expected delayed necrosis into a false call of residual tumour.</p>
+
+        <p class="small muted" style="margin-top:12px"><b>Provenance.</b> This table is standard reference material, not taken from the roadmap, which cites the ACR documents without reproducing them. Verify against the ACR CT/MRI LI-RADS v2018 core and the v2024 treatment-response algorithms before it is used for reporting.</p>
+      </div></details>
+    </div>
+
+    <div class="qrow" id="qrow">
+      <div class="q"><span class="arrowR">→</span><div class="qbox">
+        <div class="qhead">ECOG 3–4, or Child-Pugh C and not a transplant candidate?</div>
+        <div class="qans">
+          <button class="goto" type="button" data-goto="D"><b>Yes →</b> stage D · terminal</button>
+          <span class="qnext"><b>No →</b> next question</span>
+        </div>
+      </div></div>
+      <div class="q"><span class="arrowR">→</span><div class="qbox">
+        <div class="qhead">Macrovascular invasion or extrahepatic spread?</div>
+        <div class="qans">
+          <button class="goto" type="button" data-goto="C"><b>Yes →</b> stage C · advanced</button>
+          <span class="qnext"><b>No →</b> next question</span>
+        </div>
+      </div></div>
+      <div class="q"><div class="qbox">
+        <div class="qhead">What is the tumour burden on the staging scan?</div>
+        <div class="qans">
+          <button class="goto" type="button" data-goto="0">Solitary ≤2 cm <b>→</b> stage 0</button>
+          <button class="goto" type="button" data-goto="A">Solitary any size, or ≤3 nodules each ≤3 cm <b>→</b> stage A</button>
+          <button class="goto" type="button" data-goto="B">Multinodular beyond A <b>→</b> stage B</button>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="stages" id="stageBtns"></div>
+  </div>
+</section>
+
+<section id="stage">
+  <div class="answer" id="answer"></div>
+  <p class="small muted" style="margin-top:10px">Stage migration is permitted when anatomy, biology, liver function, transplant strategy, comorbidity, access or patient goals make the stage default unsuitable — the reason must be recorded. It is not a licence to substitute a lower-evidence modality for a proven curative option.</p>
+</section>
+
+<section id="lrt">
+  <div class="sechead">
+    <h2>Liver-directed therapy</h2>
+    <p>Intent is assigned before a device is chosen. Curative intent means an attempt to eradicate all known cancer; it does not establish a cure rate. Local control, complete radiographic response, complete pathologic necrosis in a treated lesion, and overall survival are four different outcomes.</p>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>There is no ladder</h3>
+    <p>Do not use a universal ablation → SBRT → Y-90 → TACE → HAI → histotripsy sequence. <b>An upfront alternative chosen because of anatomy or organ reserve is not a post-progression second line.</b> Bridge and downstaging preserve a later transplant or resection opportunity; conversion treatment is not itself the curative operation.</p>
+    <p>Compare resection, local ablation and transplant where appropriate at multidisciplinary review, and record the intended outcome, why alternatives fit or do not fit, the systemic-treatment plan, the reassessment date and the next action. After progression or toxicity, restage and reconsider complete treatment rather than automatically repeating the same procedure.</p>
+    <p class="small muted">The tiers below are a clinical synthesis of treatment intent. They are not the roadmap's A–D evidence grading system, and the two should not be read as equivalent.</p>
+  </div>
+
+  <div class="tierlegend" id="tierLegend"></div>
+
+  <div class="mcards" id="mcards"></div>
+  <div class="lrtdetail" id="lrtDetail"><p class="muted">Loading the matrix…</p></div>
+  <p class="small muted" style="margin-top:10px">Source: <code>LRT_Evidence_Matrix</code>, Batch 07, filtered to the hepatocellular carcinoma column. The full matrix also covers iCCA, colorectal and neuroendocrine liver metastases; perihilar cholangiocarcinoma is not in it.</p>
+</section>
+
+<section id="topics">
+  <div class="sechead">
+    <h2>Treatment, in detail</h2>
+    <p>Diagnosis and staging, the curative pathways and the CSPH gate, transplant and allocation, the locoregional selector, systemic therapy, and the response loop.</p>
+    <button class="xpand" type="button" data-fold="topicsBody">Show</button>
+  </div>
+  <div id="topicsBody" hidden>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <div class="panel" id="panel"></div>
+  </div>
+</section>
+
+<section id="honest">
+  <div class="sechead">
+    <h2>What we do that is not evidence based</h2>
+    <p>Retained because they are defensible practice here, but each rests on anatomy, physiology or consensus rather than comparative outcome data. Each requires prospective outcome tracking, and none should be quoted to a patient, a payer or a referring clinician as evidence based.</p>
+    <button class="xpand" type="button" data-fold="honestBodyWrap">Show</button>
+  </div>
+  <div id="honestBodyWrap" hidden><div class="tablewrap" style="margin-top:16px">
+    <table>
+      <thead><tr><th style="width:24%">Statement</th><th style="width:30%">What is actually known</th><th style="width:26%">Variables that should govern selection</th><th style="width:20%">Tracking commitment</th></tr></thead>
+      <tbody id="honestBody"></tbody>
+    </table>
+  </div></div>
+</section>
+
+<section id="ops">
+  <div class="sechead">
+    <h2>Operating model, quality and approvals</h2>
+    <p>Sections 9, 10 and 12 of the roadmap, plus the ratification list. These are stakeholder-derived operating requirements — <b>evidence grade D by construction</b>, local policy choices with no comparative outcome evidence. They are labelled Standard because the programme chose them, not because trials support them, and should be audited for adherence rather than effectiveness until the registry can support an effectiveness question.</p>
+    <button class="xpand" type="button" data-fold="opsBody">Show</button>
+  </div>
+  <div id="opsBody" hidden>
+    <div class="tabs" id="opsTabs" role="tablist" style="margin-top:16px"></div>
+    <div class="panel" id="opsPanel"></div>
+  </div>
+</section>
+
+<section id="evidence">
+  <div class="sechead">
+    <h2>Evidence library</h2>
+    <p>Every source behind the pathway, with the local depot naming and a link straight into the TMC library resolver. This is a decision-focused evidence synthesis, not a systematic review; single-arm response data are never used here to infer superiority.</p>
+    <button class="xpand" type="button" data-fold="evBody">Show</button>
+  </div>
+  <div id="evBody" hidden>
+  <div class="evtools">
+    <input type="search" id="evSearch" placeholder="Search trial, author, journal, topic…" aria-label="Search the evidence library">
+    <div class="tabs" id="evGroups" style="margin-top:0"></div>
+    <span class="evcount" id="evCount"></span>
+  </div>
+  <div class="evlist" id="evList"></div>
+  </div>
+</section>
+
+<footer>
+  <p><b>Provenance.</b> Content is taken from the Memorial Hermann Adult Hepatocellular Carcinoma System Roadmap, <b>draft v0.8</b> (Batch 07, evidence-audit corrections, 4 October 2026). The liver-directed matrix and its 79 references come from <code>LRT_Evidence_Matrix</code> in the same batch, where every PMID was verified against PubMed on 3 October 2026. 78 of those 79 now have a full text in <code>Ref_Depot_LRT</code> — 53 were downloaded through the TMC resolver and filed on 5 October, each identified from its own full text rather than its download file name, and each also copied into the depot of every roadmap whose matrix cells cite it. One is still outstanding: Ng 2017 (<i>Br J Surg</i>, PMID 29091283), which is also the one paper this page cites without holding its full text. Every paper in the HCC depot was then read in full and abstracted with its published critique, and this page was re-checked against those abstracts on 5 October 2026: the ablation, SBRT, HAIC, Y-90, TACE-plus-immunotherapy and first-line systemic rows were reworded where a one-line evidence string had carried only the favourable half of a result. Quoted NCCN positions are from Hepatocellular Carcinoma v2.2026 (14 August 2026) with original PDF page numbers. OPTN criteria are from Policy 9.5.I and Policy 9.4.C–E, checked 1 October 2026.</p>
+  <p><b>Batch 07 changed 14 HCC statements</b> — 4 discrepant, 10 partly matching, across 29 text edits. Where a correction changes what the pathway asserts, it is marked in place.</p>
+  <p><b>Status.</b> Draft for multidisciplinary and institutional governance review. Not active clinical policy. It does not replace clinician judgement, current drug labelling, OPTN policy, or patient-specific informed consent. Every criterion drawn from OPTN policy, drug labelling or device authorisation must be re-verified against the current source at implementation and at each scheduled review. Clinical transplant candidacy and allocation eligibility are separate judgements.</p>
+</footer>
+
+</div>
+
+<script>
+/* ---------- evidence base ---------- */
+const REF = {
+ "41151697":["BCLC 2026","Guidelines & policy","Reig M, Sanduzzi-Zamparelli M, Forner A, et al. BCLC strategy for prognosis prediction and treatment recommendations: the 2026 update. J Hepatol. 2026;84(3):631-654."],
+ "34801630":["BCLC 2022","Guidelines & policy","Reig M, Forner A, Rimola J, et al. BCLC strategy for prognosis prediction and treatment recommendation: the 2022 update. J Hepatol. 2022;76(3):681-693."],
+ "37199193":["AASLD 2023","Guidelines & policy","Singal AG, Llovet JM, Yarchoan M, et al. AASLD Practice Guidance on prevention, diagnosis, and treatment of hepatocellular carcinoma. Hepatology. 2023;78(6):1922-1965."],
+ "39992051":["AASLD critical update","Guidelines & policy","Taddei TH, Brown DB, Yarchoan M, et al. Critical Update: AASLD Practice Guidance on prevention, diagnosis, and treatment of hepatocellular carcinoma. Hepatology. 2025;82(1):272-274."],
+ "39690085":["EASL 2025","Guidelines & policy","EASL Clinical Practice Guidelines on the management of hepatocellular carcinoma. J Hepatol. 2025;82(2):315-374."],
+ "34688956":["ASTRO EBRT","Guidelines & policy","Apisarnthanarax S, Barry A, Cao M, et al. External beam radiation therapy for primary liver cancers: an ASTRO clinical practice guideline. Pract Radiat Oncol. 2022;12(1):28-51."],
+ "8594428":["Milan criteria","Transplant & downstaging","Mazzaferro V, Regalia E, Doci R, et al. Liver transplantation for the treatment of small hepatocellular carcinomas in patients with cirrhosis. N Engl J Med. 1996;334(11):693-699."],
+ "34331914":["MERITS-LT","Transplant & downstaging","Mehta N, Frenette C, Tabrizian P, et al. Downstaging outcomes for hepatocellular carcinoma: results from the MERITS-LT consortium. Gastroenterology. 2021;161(5):1502-1512."],
+ "32615109":["XXL trial","Transplant & downstaging","Mazzaferro V, Citterio D, Bhoori S, et al. Liver transplantation in hepatocellular carcinoma after tumour downstaging (XXL): a randomised, controlled, phase 2b/3 trial. Lancet Oncol. 2020;21(7):947-956."],
+ "36102312":["ICI after transplant","Transplant & downstaging","Kayali S, Pasta A, Plaz Torres MC, et al. Immune checkpoint inhibitors in malignancies after liver transplantation: a systematic review and pooled analysis. Liver Int. 2023;43(1):8-17."],
+ "15042359":["Surveillance RCT","Surveillance & diagnosis","Zhang BH, Yang BH, Tang ZY. Randomized controlled trial of screening for hepatocellular carcinoma. J Cancer Res Clin Oncol. 2004;130(7):417-422."],
+ "35949295":["SURF trial","Resection & ablation","Takayama T, Hasegawa K, Izumi N, et al. Surgery versus radiofrequency ablation for small hepatocellular carcinoma: a randomized controlled trial (SURF). Liver Cancer. 2022;11(3):209-218."],
+ "40554738":["SURF final","Resection & ablation","Kawaguchi Y, Takayama T, Hasegawa K, et al. Surgery versus ablation for hepatocellular carcinoma: a randomized controlled trial (SURF-RCT) and a nonrandomized prospective observational trial (SURF-Cohort). J Clin Oncol. 2025."],
+ "16495695":["Chen RCT","Resection & ablation","Chen MS, Li JQ, Zheng Y, et al. A prospective randomized trial comparing percutaneous local ablative therapy and partial hepatectomy for small hepatocellular carcinoma. Ann Surg. 2006."],
+ "29091283":["Ng RCT","Resection & ablation","Ng KKC, Chok KSH, Chan ACY, et al. Randomized clinical trial of hepatic resection versus radiofrequency ablation for early-stage hepatocellular carcinoma. Br J Surg. 2017."],
+ "18008357":["Livraghi","Resection & ablation","Livraghi T, Meloni F, Di Stasi M, et al. Sustained complete response and complications rates after radiofrequency ablation of very early hepatocellular carcinoma in cirrhosis: is resection still the treatment of choice? Hepatology. 2008."],
+ "31774468":["Xia RCT","Resection & ablation","Xia Y, Li J, Liu G, et al. Long-term effects of repeat hepatectomy vs percutaneous radiofrequency ablation among patients with recurrent hepatocellular carcinoma: a randomized clinical trial. JAMA Oncol. 2020."],
+ "29503247":["MWA vs RFA","Resection & ablation","Vietti Violi N, Duran R, Guiu B, et al. Efficacy of microwave ablation versus radiofrequency ablation for hepatocellular carcinoma in chronic liver disease: a randomised controlled phase 2 trial. Lancet Gastroenterol Hepatol. 2018;3(5):317-325."],
+ "33739462":["LEGACY","Radioembolisation","Salem R, Johnson GE, Kim E, et al. Yttrium-90 radioembolization for solitary, unresectable HCC: the LEGACY study. Hepatology. 2021;74(5):2342-2352."],
+ "35617978":["RASER","Radioembolisation","Kim E, Sher A, Abboud G, et al. Radiation segmentectomy for curative intent of unresectable very early to early stage HCC (RASER): a single-centre, single-arm study. Lancet Gastroenterol Hepatol. 2022;7(9):843-850."],
+ "35258371":["TRACE","Radioembolisation","Dhondt E, Lambert B, Hermie L, et al. Y-90 radioembolization versus drug-eluting bead chemoembolization for unresectable HCC: the TRACE phase II randomized controlled trial. Radiology. 2022;303(3):699-710."],
+ "27575820":["PREMIERE","Radioembolisation","Salem R, Gordon AC, Mouli S, et al. Y90 radioembolization significantly prolongs time to progression compared with chemoembolization in patients with hepatocellular carcinoma. Gastroenterology. 2016;151(6):1155-1163."],
+ "33166497":["DOSISPHERE-01","Radioembolisation","Garin E, Tselikas L, Guiu B, et al. Personalised versus standard dosimetry approach of selective internal radiation therapy in locally advanced HCC (DOSISPHERE-01): a randomised, multicentre, open-label phase 2 trial. Lancet Gastroenterol Hepatol. 2021;6(1):17-29."],
+ "29107679":["SARAH","Radioembolisation","Vilgrain V, Pereira H, Assenat E, et al. Efficacy and safety of selective internal radiotherapy with yttrium-90 resin microspheres compared with sorafenib in locally advanced and inoperable HCC (SARAH). Lancet Oncol. 2017;18(12):1624-1636."],
+ "29498924":["SIRveNIB","Radioembolisation","Chow PKH, Gandhi M, Tan SB, et al. SIRveNIB: selective internal radiation therapy versus sorafenib in Asia-Pacific patients with hepatocellular carcinoma. J Clin Oncol. 2018;36(19):1913-1921."],
+ "19908093":["PRECISION V","Chemoembolisation","Lammer J, Malagari K, Vogl T, et al. Prospective randomized study of doxorubicin-eluting-bead embolization in the treatment of hepatocellular carcinoma: results of the PRECISION V study. Cardiovasc Intervent Radiol. 2010;33(1):41-52."],
+ "24937669":["DEB vs cTACE","Chemoembolisation","Golfieri R, Giampalma E, Renzulli M, et al. Randomised controlled trial of doxorubicin-eluting beads vs conventional chemoembolisation for hepatocellular carcinoma. Br J Cancer. 2014;111(2):255-264."],
+ "39699905":["RTOG 1112","Radiotherapy","Dawson LA, Winter KA, Knox JJ, et al. Stereotactic body radiotherapy vs sorafenib alone in hepatocellular carcinoma: the NRG Oncology/RTOG 1112 phase 3 randomized clinical trial. JAMA Oncol. 2025;11(2):136-144."],
+ "39693584":["SBRT vs RFA","Radiotherapy","Xi M, Yang Z, Hu L, et al. Radiofrequency ablation versus stereotactic body radiotherapy for recurrent small hepatocellular carcinoma: a randomized, open-label, controlled trial. J Clin Oncol. 2025;43(9):1073-1082."],
+ "42139645":["EBRT cohort","Radiotherapy","Moon AM, Yanagihara TK, Dawson LA, et al. Overall survival among patients with hepatocellular carcinoma treated with external beam radiation therapy: individual patient data from a multinational cohort. J Clin Oncol. 2026;44(19):1784-1797."],
+ "29543938":["TACE + EBRT","Radiotherapy","Yoon SM, Ryoo BY, Lee SJ, et al. Efficacy and safety of transarterial chemoembolization plus external beam radiotherapy vs sorafenib in HCC with macroscopic vascular invasion: a randomized clinical trial. JAMA Oncol. 2018;4(5):661-669."],
+ "39225612":["#HOPE4LIVER","Histotripsy","Mendiratta-Lala M, Wiggermann P, Pech M, et al. The #HOPE4LIVER single-arm pivotal trial for histotripsy of primary and metastatic liver tumors. Radiology. 2024;312(3):e233051."],
+ "32402160":["IMbrave150","Systemic therapy","Finn RS, Qin S, Ikeda M, et al. Atezolizumab plus bevacizumab in unresectable hepatocellular carcinoma. N Engl J Med. 2020;382(20):1894-1905."],
+ "34902530":["IMbrave150 update","Systemic therapy","Cheng AL, Qin S, Ikeda M, et al. Updated efficacy and safety data from IMbrave150: atezolizumab plus bevacizumab vs sorafenib for unresectable hepatocellular carcinoma. J Hepatol. 2022;76(4):862-873."],
+ "38319892":["HIMALAYA / STRIDE","Systemic therapy","Abou-Alfa GK, Lau G, Kudo M, et al. Tremelimumab plus durvalumab in unresectable hepatocellular carcinoma. NEJM Evid. 2022;1(8):EVIDoa2100070."],
+ "40349714":["CheckMate 9DW","Systemic therapy","Yau T, Galle PR, Decaens T, et al. Nivolumab plus ipilimumab versus lenvatinib or sorafenib as first-line treatment for unresectable hepatocellular carcinoma (CheckMate 9DW): an open-label, randomised, phase 3 trial. Lancet. 2025;405(10492):1851-1864."],
+ "30665869":["REACH-2","Systemic therapy","Zhu AX, Kang YK, Yen CJ, et al. Ramucirumab after sorafenib in patients with advanced hepatocellular carcinoma and increased α-fetoprotein concentrations (REACH-2). Lancet Oncol. 2019;20(2):282-296."],
+ "29972759":["CELESTIAL","Systemic therapy","Abou-Alfa GK, Meyer T, Cheng AL, et al. Cabozantinib in patients with advanced and progressing hepatocellular carcinoma. N Engl J Med. 2018;379(1):54-63."],
+ "27932229":["RESORCE","Systemic therapy","Bruix J, Qin S, Merle P, et al. Regorafenib for patients with hepatocellular carcinoma who progressed on sorafenib treatment (RESORCE). Lancet. 2017;389(10064):56-66."],
+ "36455168":["KEYNOTE-394","Systemic therapy","Qin S, Chen Z, Fang W, et al. Pembrolizumab versus placebo as second-line therapy in patients from Asia with advanced hepatocellular carcinoma: a randomized, double-blind, phase III trial. J Clin Oncol. 2023;41(7):1434-1443."],
+ "37871608":["IMbrave050","Adjuvant therapy","Qin S, Chen M, Cheng AL, et al. Atezolizumab plus bevacizumab versus active surveillance in patients with resected or ablated high-risk hepatocellular carcinoma (IMbrave050). Lancet. 2023;402(10415):1835-1847."],
+ "41580093":["IMbrave050 update","Adjuvant therapy","Yopp A, Chen M, Cheng AL, et al. Updated data from IMbrave050: adjuvant atezolizumab plus bevacizumab for high-risk hepatocellular carcinoma. J Hepatol. 2026;84(6):1102-1111."],
+ "39798579":["EMERALD-1","Locoregional + systemic","Sangro B, Kudo M, Erinjeri JP, et al. Durvalumab with or without bevacizumab with transarterial chemoembolisation in hepatocellular carcinoma (EMERALD-1). Lancet. 2025;405(10474):216-232."],
+ "39798578":["LEAP-012","Locoregional + systemic","Kudo M, Ren Z, Guo Y, et al. Transarterial chemoembolisation combined with lenvatinib plus pembrolizumab versus dual placebo for unresectable, non-metastatic hepatocellular carcinoma (LEAP-012). Lancet. 2025;405(10474):203-215."],
+ "42636832":["EMERALD-3","Locoregional + systemic","Kudo M, Abou-Alfa GK, Ren Z, et al. Durvalumab and tremelimumab, with or without lenvatinib, combined with transarterial chemoembolisation in embolisation-eligible hepatocellular carcinoma (EMERALD-3). Lancet Oncol. 2026;27(9):1077-1093."],
+ "41503570":["LEAP-012 / EMERALD-1 commentary","Locoregional + systemic","Singal AG, Garcia-Reyes K, Kelley RK, Kim E. Impact of LEAP-012 and EMERALD-1 in the management of HCC. JHEP Rep. 2026;8:101664."],
+ "42624290":["Baveno VIII","Portal hypertension","Berzigotti A, Mandorfer M, Pons M, et al; Baveno VIII Faculty. Baveno VIII — advancing consensus in portal hypertension. J Hepatol. 2026. Epub ahead of print."],
+ "35120736":["Baveno VII","Portal hypertension","de Franchis R, Bosch J, Garcia-Tsao G, et al. Baveno VII — renewing consensus in portal hypertension. J Hepatol. 2022;76:959-974."],
+ "8831597":["Bruix 1996","Portal hypertension","Bruix J, Castells A, Bosch J, et al. Surgical resection of hepatocellular carcinoma in cirrhotic patients: prognostic value of preoperative portal pressure. Gastroenterology. 1996;111:1018-1022."],
+ "25212123":["Berzigotti meta-analysis","Portal hypertension","Berzigotti A, Reig M, Abraldes JG, et al. Portal hypertension and the outcome of surgery for hepatocellular carcinoma in compensated cirrhosis: a systematic review and meta-analysis. Hepatology. 2015;61:526-536."],
+ "27248425":["Citterio 2016","Portal hypertension","Citterio D, Facciorusso A, Sposito C, et al. Hierarchic interaction of factors associated with liver decompensation after resection for hepatocellular carcinoma. JAMA Surg. 2016;151:846-853."],
+ "39322951":["Yuan 2024 RCT","Portal hypertension","Yuan Y, Peng H, He W, et al. Partial hepatectomy versus interventional treatment in patients with HBV-related hepatocellular carcinoma and clinically significant portal hypertension: a randomized comparative clinical trial. Cancer Commun. 2024;44:1337-1349."],
+ "34905388":["FOHAIC-1","Locoregional + systemic","Lyu N, Wang X, Li JB, et al. Arterial chemotherapy of oxaliplatin plus fluorouracil versus sorafenib in advanced hepatocellular carcinoma: a biomolecular exploratory, randomized, phase III trial (FOHAIC-1). J Clin Oncol. 2022;40(5):468-480."]
+};
+const NONPM = {
+ "LIRADS":["LI-RADS","Guidelines & policy","American College of Radiology. CT/MRI LI-RADS v2018 core, CT/MRI Treatment Response Assessment v2024 (separate nonradiation and radiation algorithms), US LI-RADS Surveillance v2024.","https://www.acr.org/Clinical-Resources/Clinical-Tools-and-Reference/Reporting-and-Data-Systems/LI-RADS"],
+ "OPTN9":["OPTN Policy 9","Guidelines & policy","Organ Procurement and Transplantation Network. Policy 9: allocation of livers and liver-intestines, including Policy 9.5 MELD or PELD score exceptions. HRSA. Verify the current effective version before applying any criterion.","https://optn.transplant.hrsa.gov/policies-bylaws/policies/"],
+ "NCCN":["NCCN v2.2026","Guidelines & policy","National Comprehensive Cancer Network. NCCN Clinical Practice Guidelines in Oncology: Hepatocellular Carcinoma. Version 2.2026, 14 August 2026.","https://www.nccn.org/guidelines/category_1"],
+ "NCT04246177":["LEAP-012 registry","Locoregional + systemic","ClinicalTrials.gov NCT04246177 (LEAP-012). Final overall-survival results posted to the registry; no overall-survival benefit demonstrated. Registry posting, not peer reviewed at the time of writing.","https://clinicaltrials.gov/study/NCT04246177"],
+ "NCT03778957":["EMERALD-1 registry","Locoregional + systemic","ClinicalTrials.gov NCT03778957 (EMERALD-1). Final overall-survival analysis did not demonstrate a benefit. Registry or sponsor disclosure; confirm against the peer-reviewed report before use.","https://clinicaltrials.gov/study/NCT03778957"]
+};
+
+/* ---------- stages ---------- */
+const STAGES = [
+ {id:"0", tone:"cure", name:"0 · Very early", req:"all", crit:["Single lesion ≤2 cm","ECOG 0","Child-Pugh A","No clinically significant portal hypertension"],
+  standard:[{l:"Standard", g:"A", opts:[
+      {name:"Resection", g:"A", flags:["EXPERTISE"],
+       when:"BCLC 2026 calls liver resection, preferably minimally invasive, the recommended first step when there is no clinically significant portal hypertension.",
+       pref:"Solitary tumour, adequate future liver remnant, preserved function, acceptable portal-hypertension risk. With mildly increased CSPH, minimally invasive surgery remains an option for a single peripheral tumour with an adequate remnant.",
+       avoid:"CSPH raises operative risk and should trigger transplant assessment in any patient within Milan — it is not an absolute bar. Record which criterion established it (HVPG, a Baveno specific sign, or non-invasive rule-in) and its value, not just the conclusion.",
+       note:"Part of the reason is pathology: microvascular invasion and satellite nodules are validated predictors of recurrence and may support ab initio transplant.",
+       refs:["41151697","34801630","25212123","39322951"]},
+      {name:"Thermal ablation", g:"A", flags:["EXPERTISE"],
+       when:"When transplant is not feasible, ablation is the recommended option — radiofrequency or microwave. No randomised trial separates them — Vietti Violi was a negative superiority trial at a mean lesion size of 18 mm — but BCLC 2026 now prefers microwave up to 3–4 cm. Also the “ablate and wait” strategy: ablate now and consider transplant at recurrence if still within criteria.",
+       pref:"Tumour ≤3 cm, up to three nodules, with a safe percutaneous route and a circumferential ablative margin achievable. Preferred at ≤2 cm.",
+       avoid:"Lesions abutting central bile ducts, bowel, gallbladder, diaphragm, heart, or major vessels where a heat sink is expected — use an adjunctive technique or another modality. Also: target not reliably visible, unsafe access, uncorrectable coagulopathy. At 3–5 cm, single-probe ablation alone is not curative-intent therapy. An anatomic contraindication can justify upfront SBRT or Y-90 segmentectomy.",
+       refs:["41151697","18008357","35949295","40554738","29503247"]}],
+    order:"<b>This order follows the BCLC very-early-stage text, not a survival advantage.</b> BCLC 2026: without CSPH, “liver resection remains the recommended first step”; and “when LT is not feasible, ablation is the recommended option”. The randomised trials do not separate the two on <i>survival</i>, but none of them proves equivalence either. SURF closed at 302 of a planned 600 patients, so it is a failed superiority trial; its final report gave 5-year overall survival of 74.6% versus 70.4% (HR 0.96). <b>Local control is not equal:</b> recurrence at the treated site was 8.0% after resection versus 15.8% after ablation in SURF, and equal survival therefore depends on salvage being available. Chen was analysed per protocol after 21% of its ablation arm crossed to resection, and Ng 2017, cited here for 10-year follow-up, is the one paper in this matrix with no PDF in the depot. What moves a patient between the two is portal pressure, resectability, tumour size and transplant strategy.",
+    flagnote:"<b>Ratification item.</b> The v0.8 BCLC 0 row reads “thermal ablation when a circumferential margin is achievable; resection when anatomy and reserve favour it”, which puts ablation first. That is more permissive than the BCLC 2026 text this roadmap is anchored to, which makes resection the first step in the absence of CSPH and brings ablation in when transplant is not feasible. Hepatology and hepatobiliary surgery should decide which reading the roadmap adopts."}],
+  alt:[{l:"Reasonable", g:"B", rank:false, opts:[
+      {name:"Transplant", g:"B",
+       when:"Replacing the liver is the better long-term answer.",
+       pref:"Clinically significant portal hypertension, decompensation, or a recurrence pattern that the liver disease itself is driving.",
+       avoid:"A solitary lesion <2 cm is OPTN T1 and does not attract exception points — listing must be justified by the liver disease, not the tumour. BCLC 2026 adds that an AFP above 1,000 ng/mL signals an unacceptably high risk of post-transplant recurrence.",
+       refs:["8594428","41151697"]},
+      {name:"Definitive SBRT or Y-90 segmentectomy", g:"B", flags:["DOSIMETRY","EXPERTISE"],
+       when:"May be discussed when surgery and thermal ablation are unsuitable. This does not require prior TACE.",
+       pref:"SBRT: difficult access or vessel-adjacent target with adequate uninvolved liver. Segmentectomy: solitary localized tumour with full arterial coverage and ablative dosimetry.",
+       avoid:"SBRT — insufficient uninvolved liver, refractory ascites, unsafe dose to adjacent bowel or stomach, overlapping prior dose, decompensation. Segmentectomy — hepatic reserve inadequate for the treated volume, unsafe lung-shunt fraction or non-target flow, personalised dosimetry unavailable.",
+       refs:["35617978","33739462","39693584","34688956"]}]}],
+  avoid:[{t:"Indiscriminate embolisation or radiation when a better-suited established curative option is available. Selected definitive segmentectomy or SBRT remains permissible.", l:"Avoid", g:"", refs:[]}]},
+ {id:"A", tone:"cure", name:"A · Early", req:"all", crit:["Solitary of any size, or ≤3 nodules each ≤3 cm","ECOG 0","Preserved liver function","No macrovascular invasion or extrahepatic spread"],
+  standard:[{l:"Standard", g:"A", rank:false, opts:[
+      {name:"Resection", g:"A", flags:["EXPERTISE"],
+       when:"The only curative option that scales above 3 cm. Resectability in selected multifocal or larger tumours is determined by expert hepatobiliary review, not by size alone.",
+       pref:"Solitary tumour, adequate future liver remnant, no clinically significant portal hypertension.",
+       avoid:"Preserved Child-Pugh and MELD do not establish the absence of portal hypertension — see the CSPH gate under Curative. Adjuvant atezolizumab–bevacizumab is not recommended afterwards.",
+       refs:["41151697","25212123","39322951","41580093"]},
+      {name:"Thermal ablation", g:"A", flags:["EXPERTISE"],
+       when:"Local curative treatment with a circumferential ablative margin. Microwave or radiofrequency. BCLC 2026 prefers microwave up to 3–4 cm; no randomised trial has shown a difference, so below that the choice is operational.",
+       pref:"Tumours ≤3 cm, up to three nodules, safe percutaneous route, complete margin achievable. Also recurrence treatment and transplant bridge.",
+       avoid:"Lesions abutting central bile ducts, bowel, gallbladder, diaphragm, heart, or major vessels with an expected heat sink — use an adjunctive technique or another modality. Target not reliably visible, unsafe access, uncorrectable coagulopathy. At 3–5 cm, single-probe ablation alone must not be presented as curative-intent therapy; combined or alternative approaches are selected in the MDT.",
+       refs:["35949295","40554738","29503247"]},
+      {name:"Transplant", g:"A",
+       when:"The right answer rather than a fallback when portal hypertension, decompensation or a recurrence pattern makes the liver itself the problem.",
+       pref:"Within Milan / OPTN T2: one lesion 2–5 cm, or 2–3 lesions each 1–3 cm, AFP ≤1,000 ng/mL. Refer early.",
+       avoid:"Macrovascular invasion or extrahepatic spread excludes the HCC exception — categorical, and not subject to stage migration or local override. An AFP that has ever exceeded 1,000 ng/mL blocks the standard exception until it falls below 500 and stays there. Serial locoregional procedures accumulated while a referral is pending are a recognised failure mode of this pathway.",
+       refs:["8594428","34331914"]}],
+    order:"<b>These are three destinations, not a ranking.</b> No comparative evidence orders them at this stage, and v0.8 requires a multidisciplinary comparison of all three rather than a sequence. SURF did not demonstrate superior recurrence-free survival for resection in ≤3 cm disease, but non-inferiority was never formally established and the trial was underpowered — so for this phenotype resection and ablation are reasonable alternatives selected on anatomy, reserve and access, not proven equivalent. What decides is the condition beside each option."}],
+  alt:[{l:"Reasonable", g:"C", rank:false, opts:[
+      {name:"Radiation segmentectomy", g:"C", flags:["DOSIMETRY","EXPERTISE","PAYER"],
+       when:"Y-90 to one or two segments, as a selected definitive curative-intent option.",
+       pref:"Solitary localized HCC with ablation unsuitable, full arterial coverage and ablative dosimetry. Strongest prospective evidence is solitary ≤3 cm.",
+       avoid:"Hepatic reserve inadequate for the treated volume, unsafe lung-shunt fraction or non-target flow, overlapping prior radiation dose, personalised dosimetry unavailable. ≤8 cm is not a universal curative cutoff, and segmentectomy's curative claim does not transfer to lobar Y-90.",
+       refs:["33739462","35617978"]},
+      {name:"SBRT", g:"B", flags:["EXPERTISE"],
+       when:"Selected definitive alternative. No prior treatment failure is required — catheter therapy need not fail first.",
+       pref:"Target unsuitable for both ablation and surgery, including difficult access and vessel-adjacent lesions, with preserved liver function and adequate uninvolved liver.",
+       avoid:"Insufficient uninvolved liver, refractory ascites, unsafe dose to adjacent bowel or stomach, overlapping prior dose, decompensation.",
+       refs:["39693584","34688956"]}],
+    order:"v0.8 removed the requirement that all three curative options be documented unsuitable first. These enter after a multidisciplinary comparison of resection, thermal ablation and transplant, not after a failure."}],
+  avoid:[{t:"Serial locoregional therapy that delays transplant referral or consumes hepatic reserve.", l:"Avoid", g:"", refs:[]}]},
+ {id:"B", tone:"loco", name:"B · Intermediate", req:"all", crit:["Multinodular, beyond stage A","Liver-confined","ECOG 0","Preserved liver function"],
+  standard:[{t:"Superselective conventional or drug-eluting-bead TACE. Bead choice is not the decision that matters — selectivity, a pre-declared response endpoint and stop rules govern the outcome.", l:"Standard", g:"A", refs:["19908093","24937669","39690085"],
+       pref:"Multinodular arterialised liver-confined disease, preserved reserve, patent portal flow, superselective access achievable. Also bridge or downstage.",
+       avoid:"Decompensation, ALBI grade 3, diffuse or infiltrative pattern, impaired portal flow, renal or infection risk, and inadequate benefit despite technically adequate treatment. Reassess after each session rather than against a fixed session count."}],
+  alt:[{t:"Lobar radioembolisation with Y-90.", l:"Reasonable", g:"B", refs:["27575820","35258371","33166497"], flags:["DOSIMETRY","PAYER"],
+       pref:"Unilobar or segment-dominant burden; TACE intolerance or failure; planned radiation lobectomy with contralateral hypertrophy; selected portal-vein tumour thrombus.",
+       avoid:"High-volume bilobar replacement, hyperbilirubinaemia, unsafe shunt fraction, inadequate future remnant, decompensation."},
+       {t:"Systemic therapy as deliberate stage migration.", l:"Standard", g:"A", refs:["32402160","38319892","40349714"],
+       pref:"Diffuse, high-burden or TACE-unsuitable disease.",
+       avoid:"Pivotal evidence is Child-Pugh A and ECOG 0–1. Document variceal assessment and treat high-risk varices before the first dose of atezolizumab–bevacizumab."},
+       {t:"SBRT or proton radiotherapy.", l:"Reasonable", g:"B", refs:["34688956","39693584"], flags:["EXPERTISE"],
+       pref:"Target unsuitable for both ablation and catheter therapy; vessel-adjacent lesion; residual or recurrent disease after locoregional therapy.",
+       avoid:"Insufficient uninvolved liver, refractory ascites, unsafe dose to adjacent bowel or stomach, overlapping prior dose."}],
+  avoid:[{t:"Repeating ineffective TACE without restaging and reserve review.", l:"Avoid", g:"", refs:[],
+          note:"v0.8 withdrew the fixed two-session rule: reassess after each session, in MDT context."},
+         {t:"TACE combined with checkpoint inhibitors outside a protocol.", l:"Avoid", g:"", refs:["39798579","39798578","42636832"]}]},
+ {id:"C", tone:"sys", name:"C · Advanced", req:"any", crit:["Macrovascular invasion","Extrahepatic spread","Cancer-related ECOG 1–2"],
+  standard:[{t:"Systemic therapy is the backbone. Start an immunotherapy combination when eligible and do not delay it for a liver-directed procedure.", l:"Standard", g:"A", refs:["32402160","34902530","38319892","40349714"],
+       pref:"Child-Pugh A, ECOG 0–1 — where almost all the pivotal evidence sits. Three first-line combinations, none ranked above the others on evidence. Atezolizumab–bevacizumab showed no benefit in non-viral HCC (HR for death 1.05, 0.68–1.63), the aetiology that dominates our practice.",
+       avoid:"Atezolizumab–bevacizumab requires documented variceal assessment and treatment of high-risk varices first, and bleeding is not a varices-only risk: all five fatal upper-gastrointestinal bleeds in IMbrave150 were in patients with Vp3–Vp4 invasion. Nivolumab–ipilimumab carries excess mortality in the first six months (HR 1.65, nine fatal hepatic events), which matters for a patient with a short runway; tremelimumab–durvalumab shows no early excess but its curves separate only after nine months, so neither pattern should be read as a class effect. Child-Pugh B9 and above is rarely appropriate outside a trial. Pre-transplant checkpoint exposure only through transplant-specific review."}],
+  alt:[{t:"Add external beam radiotherapy or radioembolisation alongside systemic therapy. Both supporting trials used a sorafenib comparator: RTOG 1112 missed its primary survival endpoint (HR 0.77, 90% CI 0.59–1.01, one-sided p=0.06) and 15% of its patients then never started sorafenib, while the Asan trial gave TACE plus radiotherapy instead of sorafenib, with 91% crossover. Neither tested adding radiation to an immunotherapy backbone.", l:"Reasonable", g:"B", refs:["39699905","29543938","34688956"],
+       pref:"Liver-dominant control, portal-vein tumour thrombus, or symptom control, where the anatomy is liver-confined, reserve is preserved and dosimetry is feasible.",
+       avoid:"Do not let it delay or displace the systemic start — the most common harm in this group is a delayed systemic start, not the radiation itself. Document why local therapy is being added and when systemic therapy starts or resumes.",
+       note:"No randomised trial has tested this against a modern immunotherapy backbone. Both supporting trials used a sorafenib comparator."}],
+  avoid:[{t:"Radioembolisation as a substitute for systemic therapy.", l:"Avoid", g:"", refs:["29107679","29498924"]},
+         {t:"Deferring systemic therapy to complete a locoregional series.", l:"Avoid", g:"", refs:[]}]},
+ {id:"D", tone:"pall", name:"D · Terminal", req:"any", crit:["ECOG 3–4","Child-Pugh C not correctable by transplant"],
+  standard:[{t:"Symptom-directed care with early specialist palliative involvement; treat reversible liver complications.", l:"Standard", g:"A", refs:["41151697"],
+       pref:"ECOG 3–4, or Child-Pugh C that transplant cannot correct, after the transplant question has been asked and answered.",
+       avoid:"Do not start systemic therapy at ECOG 3–4 or Child-Pugh C. Do not continue surveillance imaging that cannot change the plan."}],
+  alt:[{t:"Re-evaluate for transplant.", l:"Reasonable", g:"B", refs:["8594428"],
+       pref:"Decompensation rather than tumour is driving performance status — the liver failure, not the cancer, is the indication.",
+       avoid:"This determination must be made before the patient is assigned stage D, not after. Once assigned, the label tends to stick.",
+       note:"Macrovascular invasion or extrahepatic spread still excludes the HCC exception, categorically."}],
+  avoid:[{t:"Antitumour therapy without realistic benefit.", l:"Avoid", g:"", refs:[]},
+         {t:"Surveillance imaging that cannot change the plan.", l:"Avoid", g:"", refs:[]}]}
+];
+
+const LABELCLS = {"Standard":"p-std","Preferred":"p-pref","Reasonable":"p-reas","Trial only":"p-trial","Avoid":"p-avoid"};
+
+/* ---------- topic panels ---------- */
+const TOPICS = [
+{id:"dx", name:"Diagnosis & staging", html:`
+<div class="card">
+  <h3>Surveillance and recall</h3>
+  <p class="kicker"><span class="pill p-std">Standard</span> <span class="grade B">B</span> &nbsp; Ultrasound plus AFP every six months for adults with cirrhosis and eligible chronic hepatitis B populations.</p>
+  <p><b>Grade challenge.</b> v0.2 graded this A. Only one randomised trial has shown a mortality benefit for HCC surveillance, and it was conducted in a chronic hepatitis B population in China; the evidence in cirrhosis is observational and subject to lead-time and length-time bias. AASLD 2023 rates semiannual ultrasound plus AFP surveillance Level 2, Strong Recommendation. Grade B is the defensible label — this does not weaken the recommendation, but it should not be cited as randomised-trial-grade certainty when counselling patients or negotiating quality targets. {{15042359|37199193}}</p>
+  <p><b>Recall.</b> US-1 continue six-month surveillance. US-2 subthreshold observation under 10 mm, repeat ultrasound and AFP in 3–6 months. US-3 positive, a rising or elevated AFP trigger, <b>or a visualisation score of C</b> → diagnostic multiphase contrast-enhanced MRI or CT. Visualisation score is recorded separately from the US category and is the trigger most often missed operationally. {{LIRADS}}</p>
+  <p>Do not initiate or continue surveillance in patients for whom no HCC treatment, including transplant, would be offered. Record that decision rather than leaving surveillance orders open.</p>
+</div>
+<div class="card">
+  <h3>Diagnostic categories</h3>
+  <p class="kicker">LI-RADS applies only within the at-risk definition: cirrhosis of any cause, chronic hepatitis B, or current or prior HCC.</p>
+  <div class="tablewrap"><table><thead><tr><th style="width:18%">Finding</th><th>System action</th><th style="width:7%">Grade</th></tr></thead><tbody>
+   <tr><td><b>LR-5</b></td><td>Treat as HCC without routine biopsy after multidisciplinary imaging confirmation.</td><td><span class="grade A">A</span></td></tr>
+   <tr><td><b>LR-4</b></td><td>Multidisciplinary review. Repeat or alternative contrast imaging at about three months, or biopsy when an immediate diagnosis would change management — transplant listing, or an imminent resection.</td><td><span class="grade B">B</span></td></tr>
+   <tr><td><b>LR-3</b></td><td>Repeat CT or MRI in 3–6 months; escalate to tumour board sooner for growth, concerning AFP, transplant relevance, or discordant interpretation.</td><td><span class="grade B">B</span></td></tr>
+   <tr><td><b>LR-M</b></td><td>Biopsy when feasible, because non-HCC malignancy changes the entire pathway. Coordinate tissue acquisition with pathology and molecular needs at the first pass.</td><td><span class="grade A">A</span></td></tr>
+   <tr><td><b>LR-TIV</b><br><span class="small muted">tumour in vein</span></td><td>Tumour in vein contiguous with an LR-5 parenchymal mass in an at-risk patient may be managed as HCC with macrovascular invasion. Biopsy when the vein finding is isolated, when the parenchymal mass is not LR-5, or when bland thrombus cannot be excluded — the distinction changes both staging and transplant eligibility. v0.2 required biopsy for all tumour in vein; this is narrowed.</td><td><span class="grade B">B</span></td></tr>
+   <tr><td><b>Non-cirrhotic</b><br><span class="small muted">without qualifying HBV risk</span></td><td>Pathologic confirmation is generally required; LI-RADS diagnostic certainty does not apply. Consider fibrolamellar HCC, intrahepatic cholangiocarcinoma and metastatic disease.</td><td><span class="grade A">A</span></td></tr>
+  </tbody></table></div>
+  <p style="margin-top:12px"><b>Before any biopsy in a potential transplant candidate</b>, discuss the case with the transplant team first — sampling can affect transplant eligibility, and the transplant evaluation may settle the diagnostic question without it. <span class="pill p-std">Standard</span> <span class="grade D">D</span>. NCCN: “If patient is a potential transplant candidate, consider referral to transplant center before biopsy.” <span class="small muted">[original NCCN PDF p. 8]</span></p>
+</div>
+<div class="card">
+  <h3>Required before a treatment decision</h3>
+  <dl class="kv">
+   <dt>Tumour</dt><dd>Number; largest viable diameter; segments; arterial enhancement and washout; LI-RADS category; infiltrative pattern; macrovascular invasion and its extent; extrahepatic disease; prior treatment map and response.</dd>
+   <dt>Liver</dt><dd>Aetiology; Child-Pugh; MELD 3.0 or the score currently used for allocation; ALBI; bilirubin, albumin, INR, creatinine, sodium, platelets; ascites; encephalopathy; clinically significant portal hypertension; portal-vein patency; varices status and date of last endoscopy.</dd>
+   <dt>Patient</dt><dd>ECOG; frailty; cardiopulmonary and anaesthesia risk; renal function; anticoagulation; autoimmune disease; prior malignancy; transplant contraindications; goals and preferences.</dd>
+   <dt>Biology</dt><dd>AFP and its trajectory; AFP-L3 or DCP if locally adopted; growth kinetics; response to prior therapy; histology when imaging is non-diagnostic or suggests non-HCC.</dd>
+   <dt>Prior burden</dt><dd>Cumulative radiation dose and treated volumes; number and selectivity of prior embolisations; prior ablation zones; systemic agents, duration and worst toxicity.</dd>
+   <dt>Access</dt><dd>Insurance authorisation status, network constraints, transportation, language, immigration or social barriers, referring clinician, responsible navigator.</dd>
+   <dt>Decision</dt><dd>BCLC stage; resectable yes/no; transplantable yes/no; treatment intent; chosen plan; rejected alternatives and why; owner; deadline; response-assessment modality and date.</dd>
+  </dl>
+</div>`},
+
+{id:"cure", name:"Curative", html:`
+<div class="card">
+  <h3>Resection</h3>
+  <p class="kicker"><span class="pill p-std">Standard</span> <span class="grade A">A</span> <span class="flag">EXPERTISE</span> &nbsp; Localised HCC with technically complete resection, adequate future remnant, preserved function and acceptable portal-hypertension risk.</p>
+  <p>In selected multifocal or larger tumours, resectability is determined by expert hepatobiliary review rather than size alone. After resection, obtain multiphase liver imaging and chest imaging every 3–6 months and continue long-term surveillance, because recurrence risk persists indefinitely.</p>
+  <div class="callout"><b>Adjuvant atezolizumab–bevacizumab is not recommended.</b> The updated IMbrave050 analysis lost the recurrence-free survival signal seen at the first interim analysis (HR 0.90, 95% CI 0.72–1.12), with overall survival immature and numerically unfavourable (HR 1.26). {{37871608|41580093|39992051}}</div>
+</div>
+<div class="card">
+  <h3>Establishing clinically significant portal hypertension</h3>
+  <p class="kicker">Child-Pugh class, MELD and the absence of decompensation establish preserved hepatic function. They do not establish portal pressure.</p>
+  <p>BCLC treats the two as separate axes. A patient can be Child-Pugh A with a normal MELD and still have CSPH — this is the most common way the resection decision is made on incomplete information. CSPH is an HVPG ≥10 mmHg. BCLC accepts surrogate markers, cites Baveno VII for them and keeps HVPG as the gold standard; the table below applies the later Baveno VIII statements. {{41151697|42624290|35120736}}</p>
+  <details class="more" open><summary>The Baveno criteria, in full</summary><div class="moreinner">
+  <div class="tablewrap"><table><thead><tr><th style="width:18%">Criterion</th><th style="width:38%">Finding</th><th>Interpretation</th></tr></thead><tbody>
+   <tr><td><b>Reference standard</b></td><td>HVPG ≥10 mmHg.</td><td>Defines CSPH. BCLC states HVPG remains the gold standard; non-invasive tools may rule it in or out. Measure it when the decision turns on it.</td></tr>
+   <tr><td><b>Specific signs</b></td><td>Medium or large oesophageal varices; gastric varices; spontaneous portosystemic collaterals; spleen stiffness &gt;40 kPa absent myeloproliferative neoplasm.</td><td>Baveno VIII lists these as specific signs of portal hypertension in its PSVD/NCPF diagnostic score (statement 8.44) — note that spleen stiffness &gt;40 kPa is <b>not</b> one of its cACLD CSPH criteria — and names varices or portosystemic collaterals as generally signs of CSPH (statement 3.2d). A shunt reported on staging CT is a staging finding, not an incidental one.</td></tr>
+   <tr><td><b>Non-specific</b></td><td>Overt ascites; small oesophageal varices; platelets &lt;150 × 10⁹/L; splenomegaly.</td><td>Supportive but not sufficient alone. Absence does not exclude CSPH.</td></tr>
+   <tr><td><b>Non-invasive rule-in</b></td><td>Liver stiffness ≥25 kPa, except in obese (BMI ≥30 kg/m²) MASLD; spleen stiffness (100 Hz) &gt;55 kPa; ANTICIPATE or ANTICIPATE-NASH ≥75%; NICER ≥75%.</td><td>Baveno VIII statement 1.16 criteria for CSPH in compensated advanced chronic liver disease. In BCLC 0–A HCC without a &gt;5 cm right-lobe nodule, ANTICIPATE or ANTICIPATE-NASH ≥75% is rated only as <b>highly suggestive</b> (statement 1.23, weak recommendation). Useful where HVPG is unavailable or declined — measure HVPG when the resection decision turns on it. <span class="flag">EXPERTISE</span></td></tr>
+   <tr><td><b>What to record</b></td><td>The criterion used, its value, and the date.</td><td>“No portal hypertension” without a stated basis is not an acceptable entry when resection is being proposed.</td></tr>
+  </tbody></table></div>
+  </div></details>
+  <details class="more"><summary>Three situations where a portosystemic shunt does not settle the question</summary><div class="moreinner">
+  <p style="margin-top:4px"><i>Cured or controlled aetiology</i> — Baveno VIII states varices and collaterals may persist despite resolution of CSPH where the aetiology has been cured or controlled, and after recompensation they are not reliable indicators; in suppressed hepatitis B, cured hepatitis C or sustained alcohol abstinence a shunt alone does not establish current CSPH, so measure. <i>Portosinusoidal vascular disorder</i> — Baveno VII directs that when signs of portal hypertension are present with HVPG &lt;10 mmHg, PSVD must be ruled out; the same imaging finding then carries a different diagnosis and a different operative risk. <i>Steatotic liver disease</i> — BCLC notes HVPG reliability may be suboptimal here, and signs of portal hypertension can occur with HVPG &lt;10 mmHg in a minority of MASH cirrhosis; a sub-threshold measurement should not override a specific sign.</p>
+  </div></details>
+  <div class="callout amber" style="margin-top:14px"><b>Unresolved locally.</b> Whether a large spontaneous shunt can decompress the portal system enough to lower measured HVPG is a physiological concern raised in practice that this roadmap has not verified against a primary source. Hepatology should rule on it before a sub-10 value is treated as reassuring.</div>
+</div>
+<div class="card">
+  <h3>Does CSPH bar resection? The randomised evidence cuts both ways</h3>
+  <p>Portal pressure has been prognostic for post-resection decompensation since Bruix 1996. {{8831597}} A meta-analysis of 11 studies quantified it: CSPH assessed by any method raised 3-year post-resection mortality (pooled OR 2.09, 95% CI 1.52–2.88), 5-year mortality (OR 2.07, 95% CI 1.51–2.84) and early clinical decompensation (OR 3.04, 95% CI 2.02–4.59). {{25212123}} A hierarchical analysis of decompensation predictors reached the same conclusion. {{27248425}} BCLC's position is that with CSPH resection poses significant risk and transplantation offers better survival.</p>
+  <p>The first multicentre randomised test compared partial hepatectomy with ablation, with or without TACE, in HBV-related HCC within Milan criteria and with CSPH (n = 80 per arm). Five-year overall survival was 69.5% with resection versus 64.9% (P = 0.325) and recurrence-free survival 46.2% versus 45.0% (P = 0.783) — no significant difference, in a trial too small to establish equivalence. Total complications were higher after resection (67.5% versus 20%, P &lt; 0.001) but the excess was mainly Clavien-Dindo grade I; higher grades were not significantly different (grade III, 6 versus 1, P = 0.117). The authors conclude that resection is safe and should be considered a treatment option rather than a contraindication. {{39322951}}</p>
+  <div class="callout teal"><b>The roadmap adopts neither reading by default.</b> CSPH raises operative risk and should trigger transplant assessment in any patient within Milan criteria, but it is not an automatic bar where the remnant is adequate, the resection is minor or laparoscopic, and the hepatologist concurs. <b>Record which reading the board applied.</b> <span class="flag">EXPERTISE</span> <span class="flag">TX-TIMING</span></div>
+</div>
+<div class="card">
+  <h3>Thermal ablation</h3>
+  <p class="kicker"><span class="pill p-std">Standard</span> <span class="grade A">A</span> &nbsp; Tumours ≤3 cm, up to three nodules, when a circumferential ablative margin can be achieved safely.</p>
+  <p><b>Microwave versus radiofrequency: no demonstrated superiority.</b> The randomised comparison in HCC up to 4 cm was a superiority trial: it did not show superiority of microwave over radiofrequency ablation, did not test non-inferiority, and found no significant difference in two-year local tumour progression (6% versus 12%, RR 1.62, 95% CI 0.66–3.94). v0.2 said microwave is “often favoured operationally”, which is accurate — but that is a workflow preference, not an outcome-based one. {{29503247}}</p>
+  <p><b>Resection versus ablation for small HCC.</b> The randomised SURF trial (308 registered, 301 analysed — 150 resection, 151 ablation; tumours ≤3 cm, up to three nodules, Child-Pugh ≤7) did not demonstrate superior recurrence-free survival for resection, but non-inferiority was not formally established and the trial was underpowered. The honest statement is that for this phenotype the two are reasonable alternatives selected on anatomy, reserve and access — not that they are proven equivalent. {{35949295}}</p>
+  <p>Use adjunctive technique or another modality for lesions abutting central bile ducts, bowel, gallbladder, diaphragm, heart or major vessels where a heat sink is expected. For tumours of 3–5 cm, single-probe thermal ablation alone should not be presented as curative-intent therapy.</p>
+</div>`},
+
+{id:"tx", name:"Transplant & allocation", html:`
+<div class="card">
+  <h3>Four kinds of statement, which the roadmap must not blur</h3>
+  <dl class="kv">
+   <dt>OPTN policy</dt><dd>Binding, and changes without notice to this document. Every numeric criterion must be re-verified against the current Policy 9 text before it is applied to a listing decision. {{OPTN9}}</dd>
+   <dt>OPTN guidance</dt><dd>Nonbinding. Informs but does not compel the review board.</dd>
+   <dt>Published evidence</dt><dd>MERITS-LT and XXL support downstaging as a strategy, but were generated under earlier allocation rules. {{34331914|32615109}}</dd>
+   <dt>Local policy</dt><dd>May be stricter than OPTN policy and is the operative constraint at this centre. Where these conflict, the stricter of OPTN and local policy governs.</dd>
+  </dl>
+</div>
+<div class="card">
+  <h3>Eligibility pathways</h3>
+  <div class="tablewrap"><table><thead><tr><th style="width:20%">Pathway</th><th>Criteria and action</th><th style="width:16%">Source type</th></tr></thead><tbody>
+   <tr><td><b>Milan / OPTN T2</b></td><td>One lesion ≥2 cm and ≤5 cm, or 2–3 lesions each ≥1 cm and ≤3 cm; no macrovascular invasion; no extrahepatic spread. <b>The ≥2 cm and ≥1 cm lower limits are OPTN T2 rules</b> — Milan (Mazzaferro 1996) set upper limits only and excluded any vascular or lymph-node invasion. Lesions must meet OPTN class 5 imaging criteria. A solitary lesion &lt;2 cm is T1 and does not attract exception points. Exception points accrue after the required waiting period and are capped relative to the median MELD at transplant in the acquisition circle.</td><td class="small">OPTN policy — verify current text</td></tr>
+   <tr><td><b>Downstaging pool</b><br><span class="small muted">UNOS-DS</span></td><td>One lesion &gt;5 cm and ≤8 cm; or 2–3 lesions each ≤5 cm with at least one lesion &gt;3 cm and total diameter ≤8 cm; or 4–5 lesions each &lt;3 cm with total diameter ≤8 cm. No macrovascular invasion or extrahepatic spread. Viable disease must be downstaged to within Milan and remain there for the required observation period. <b>v0.2 omitted the “at least one lesion &gt;3 cm” qualifier in the 2–3 lesion group, which would have incorrectly routed T2 disease into the downstaging pool.</b></td><td class="small">OPTN policy — verify current text</td></tr>
+   <tr><td><b>AFP rule</b></td><td>An AFP at or above 1,000 ng/mL blocks the standard exception until it falls below 500 ng/mL following locoregional therapy. A rise to 500 ng/mL or above at any later point requires review-board referral rather than automatic continuation. Record every AFP value with its date and the intervening treatment.</td><td class="small">OPTN policy — verify current text</td></tr>
+   <tr><td><b>Macrovascular invasion or extrahepatic spread</b></td><td>Excludes the HCC exception. This is categorical and is not subject to stage migration or local override.</td><td class="small">OPTN policy</td></tr>
+   <tr><td><b>Beyond the downstaging pool</b><br><span class="small muted">“all-comers”</span></td><td>Not an automatic exception route and not a recognised standard. Consider only for selected patients through transplant governance and the national liver review board, or within a clinical protocol, using sustained response and tumour biology rather than anatomy alone. Outcomes must be tracked prospectively.</td><td class="small">Local policy + registry</td></tr>
+   <tr><td><b>Checkpoint exposure before transplant</b></td><td>Does not categorically exclude transplant, but the rejection risk and the required washout interval are unresolved; reported allograft rejection after pre-transplant checkpoint exposure is substantial and has been fatal. Require transplant-specific multidisciplinary review and a documented washout and immunosuppression plan agreed <b>before</b> the first dose, not after. Do not use checkpoint inhibitors as a casual bridging strategy. <span class="flag">TX-TIMING</span></td><td class="small">Evidence (low) + local policy</td></tr>
+   <tr><td><b>Post-transplant checkpoint blockade</b></td><td><span class="pill p-avoid">Avoid</span> outside exceptional governance review. Pooled series report graft rejection in a substantial minority with appreciable graft loss and mortality. {{36102312}}</td><td class="small">Evidence (low)</td></tr>
+  </tbody></table></div>
+  <p style="margin-top:12px"><b>Refer early</b> — when within Milan criteria, when the downstaging pool may apply, or when recurrent HCC combined with the severity of the underlying liver disease makes resection or ablation a poor long-term solution. Serial locoregional procedures accumulated while a referral is pending are a recognised failure mode of this pathway.</p>
+</div>
+<div class="card">
+  <h3>Listing and allocation — calculated MELD initially, then MMaT-3</h3>
+  <p class="kicker">OPTN Policy 9.5.I, full PDF pp. 196–199; guidance pp. 3–4, 7. Policy 9.4.C–E, full PDF pp. 188–189. Official policy checked 1 October 2026.</p>
+  <dl class="kv">
+   <dt>Authority</dt><dd>Policy 9.5 defines standardized exceptions; the Adult MELD Exceptions for Transplant Oncology document is review-board guidance, not policy and not a clinical standard of care. HCC and perihilar cholangiocarcinoma have standardized routes. Clinical candidacy and local protocol approval remain separate from allocation eligibility.</dd>
+   <dt>MMaT</dt><dd>Median MELD at transplant for the donor hospital used in the match run — not one fixed national score. Under Policy 9.4.E an MMaT-relative exception below 15 is assigned 15. Exceptions generally require 90-day extensions (9.4.C).</dd>
+   <dt>Route and score</dt><dd>Initial request and first extension receive calculated MELD; any extension after the first receives MMaT-3 (Table 9-10). Because each exception is valid for 90 days (Policy 9.4.A), two consecutive periods at calculated MELD elapse before MMaT-3 applies — approximately six months. <b>Policy states the score table, not a six-month rule.</b> Do not represent successful downstaging or referral as immediate exception points. The scores apply to candidates at least 18 years old at registration; Table 9-10 assigns a different score to a candidate registered between 12 and 18.</dd>
+   <dt>Initial eligibility</dt><dd>Before locoregional treatment document lesion number and size on CT or MRI, qualifying Class 5 imaging or biopsy, initial chest CT, absence of extrahepatic spread and macrovascular invasion, nonresectability, AFP, and previous treatment. Standard T2 is one lesion 2–5 cm inclusive, or two to three lesions each 1–3 cm inclusive, with AFP ≤1000 ng/mL. Policy inclusive bounds govern; stricter inequalities in guidance examples do not replace them.</dd>
+   <dt>Extensions</dt><dd>Every extension documents CT/MRI stage, treatment if tumour number fell, and AFP. Policy 9.5.I.i item 3 (full PDF p. 196) requires a chest CT only before an <b>initial</b> exception request and states it is not required for extensions; clinically indicated thoracic surveillance is a separate plan.</dd>
+   <dt>Beyond-entry</dt><dd>Requires nonstandard review: T2 response, no extrahepatic disease, no macrovascular invasion, no AFP &gt;1000, imaging at least four weeks after the last downstaging treatment, and six months from the first exception request.</dd>
+   <dt>After transplant</dt><dd>Submit explant pathology within 60 days as required by Policy 9.5.I. Record graft outcome, recurrence surveillance and the accountable clinical team.</dd>
+  </dl>
+</div>`},
+
+{id:"loco", name:"Locoregional", html:`
+<div class="card">
+  <h3>Decision sequence</h3>
+  <div class="callout" style="margin-bottom:12px"><b>Do not use a universal ablation → SBRT → Y-90 → TACE → HAI → histotripsy ladder.</b> An upfront alternative chosen because of anatomy or organ reserve is not a post-progression second line.</div>
+  <p>Compare resection, local ablation and transplant where appropriate at multidisciplinary review. Record the intended outcome, why alternatives fit or do not fit, the systemic-treatment plan, the reassessment date and the next action. After progression or toxicity, restage and reconsider complete treatment rather than automatically repeating the same procedure. <b>Device availability and specialty preference are not indications.</b></p>
+  <p>Evidence differs by indication: radiation segmentectomy and ablative SBRT may be definitive treatments in localized HCC, while broader arterial therapy usually seeks control or conversion. Do not generalize findings from advanced-disease systemic-combination trials to small-tumour definitive therapy.</p>
+</div>
+<div class="tablewrap">
+  <table><thead><tr><th style="width:13%">Modality</th><th style="width:10%">Label</th><th style="width:19%">Preferred phenotype</th><th style="width:19%">Caution or avoid</th><th>Comparative evidence and what governs selection</th></tr></thead><tbody id="locoBody"></tbody></table>
+</div>
+<div class="card">
+  <h3>Stop and switch rules</h3>
+  <p>After each locoregional treatment, reassess liver function, clinical recovery, AFP trajectory, new disease, and whether a viable target remains — not simply whether another procedure is technically possible.</p>
+  <p><b>Switch away</b> from repeated TACE or broad embolisation for new decompensation, worsening ALBI or Child-Pugh, inability to achieve selective access, progression outside the treated territory, new macrovascular or extrahepatic progression, or persistent viable disease after two well-executed sessions — unless a specific curative or downstaging rationale remains and is recorded.</p>
+  <p><b>For radiation-based therapy, allow the expected delayed response pattern.</b> Apply the LI-RADS treatment response radiation algorithm and do not declare failure from persistent enhancement alone when the lesion is categorised as nonprogressing. Using the nonradiation algorithm after radioembolisation or SBRT is a recurring and consequential error. {{LIRADS}}</p>
+  <p>Every repeat cycle must name, in the note: the viable target, the expected benefit, the liver-function cost, the owner, and the reassessment date.</p>
+</div>
+<div class="card">
+  <h3>Portal-vein tumour thrombus</h3>
+  <p>Systemic therapy is the default backbone <span class="grade A">A</span>. Adding radioembolisation or external beam radiotherapy is a <span class="pill p-reas">Reasonable</span> consideration <span class="grade B">B</span> when the anatomy is liver-confined, reserve is preserved, dosimetry is feasible, and there is a symptom-control, local-control or protocol-driven goal.</p>
+  <p>The supporting randomised data for combined radiotherapy here come from a small single-centre trial against sorafenib, and RTOG 1112 also used a sorafenib comparator; neither has been repeated against a modern immunotherapy backbone. {{29543938|39699905}}</p>
+  <div class="callout"><b>Document explicitly why local therapy is being added and when systemic therapy starts or resumes.</b> The most common harm in this group is a delayed systemic start, not the radiation itself.</div>
+</div>`},
+
+{id:"resp", name:"Response loop", html:`
+<div class="card">
+  <h3>Response assessment</h3>
+  <p class="kicker">The response-assessment framework is expert consensus, grade C/D — not randomised evidence. v0.2's figure graded this step A; that is corrected.</p>
+  <div class="tablewrap"><table><thead><tr><th style="width:16%">Treatment</th><th style="width:16%">First assessment</th><th style="width:30%">Framework</th><th>Mandatory return question</th></tr></thead><tbody>
+   <tr><td><b>Ablation or TACE</b></td><td>About 4–6 weeks</td><td>LI-RADS treatment response, <b>nonradiation</b> algorithm v2024; AFP and liver function.</td><td>Complete response? Residual viable target? New untreated disease? Is retreatment safe?</td></tr>
+   <tr><td><b>Radioembolisation or SBRT</b></td><td>Usually 8–12 weeks, then serially</td><td>LI-RADS treatment response, <b>radiation</b> algorithm v2024; recognise the nonprogressing category and expect delayed necrosis.</td><td>Is enhancement decreasing or stable, or truly progressing? Is liver function preserved?</td></tr>
+   <tr><td><b>Systemic therapy</b></td><td>Every 6–12 weeks by regimen and tempo</td><td>RECIST 1.1 for trials and extrahepatic disease; mRECIST may supplement assessment of intrahepatic viable tumour but should not drive a switch decision alone.</td><td>Continue, manage toxicity, add local control, switch line, or move to symptom-focused care?</td></tr>
+   <tr><td><b>Transplant waitlist</b></td><td>At least every 3 months</td><td>Viable tumour burden, AFP and its trajectory, vascular and extrahepatic status, exception status.</td><td>Still within criteria? Bridge or downstage needed? Internal hold? Who owns the next step?</td></tr>
+   <tr><td><b>After complete response</b></td><td>Every 3–6 months for two years, then every six months, at least five years</td><td>Multiphase liver CT or MRI, chest imaging as appropriate, AFP with its trend. Care for the underlying liver disease continues alongside.</td><td>New lesion, rising AFP, or change in liver function — back to MDT? Which option now applies?</td></tr>
+  </tbody></table></div>
+  <p style="margin-top:12px">Every reassessment returns to the MDT when there is viable tumour, discordant interpretation, a new lesion, stage migration, treatment toxicity, a change in transplant eligibility, or uncertainty about the next modality.</p>
+</div>`}
+];
+
+const LOCO = [
+ ["Thermal ablation","microwave or radiofrequency","Standard","A",
+  "Best established local option: tumours ≤3 cm, complete safe margin, usually 1–3 lesions. Initial definitive local choice when technically suitable; also recurrence treatment or transplant bridge. An anatomic contraindication can justify upfront SBRT or Y-90 segmentectomy.",
+  "Central bile duct, bowel or gallbladder contact, major-vessel heat sink, target not reliably visible, unsafe access, uncorrectable coagulopathy.",
+  "A definitive curative-intent option for appropriately located small HCC when every target and a margin can be treated. Resection and transplant remain parallel options selected by hepatic reserve, portal hypertension, tumour burden and patient goals. Above 3 cm local failure increases — consider combination treatment or radiation rather than promising the same results. The randomised microwave-versus-radiofrequency comparison was a superiority trial that did not show superiority, and did not test non-inferiority.",
+  ["35949295","29503247"],["EXPERTISE"]],
+ ["Radiation segmentectomy","Y-90 to ≤2 segments","Preferred","C",
+  "Solitary localized HCC; ablation unsuitable; full arterial coverage and ablative dosimetry. Upfront definitive alternative when surgery and thermal ablation are unsuitable, or bridge or downstage.",
+  "Hepatic reserve inadequate for the treated volume, unsafe lung-shunt fraction or non-target flow, overlapping prior radiation dose, personalised dosimetry unavailable.",
+  "Selected segmentectomy to one or two segments can be definitive curative-intent therapy. The strongest prospective evidence is solitary HCC ≤3 cm; selected retrospective cohorts extend to larger tumours, but ≤8 cm is not a universal curative cutoff. RASER (29 patients) reported 90% sustained complete response; LEGACY (162) supports response durability but includes later surgery and transplant. NCCN specifies >400 Gy to ≤25% of liver in Child-Pugh A — document dose compartment and microsphere model. Segment absorbed dose is not interchangeable with tumour absorbed dose. Lobar Y-90 for broader burden is generally control or conversion: do not transfer segmentectomy curative claims to all Y-90.",
+  ["33739462","35617978"],["DOSIMETRY","EXPERTISE","PAYER"]],
+ ["TACE","conventional or drug-eluting bead","Standard","A",
+  "Established disease-control option for selected intermediate HCC; also bridge or downstage. Not universally second line — it can be the first locoregional treatment for appropriate intermediate-stage disease.",
+  "Decompensation, ALBI grade 3, diffuse or infiltrative pattern, impaired portal flow, renal or infection risk, inadequate benefit despite technically adequate treatment. Reassess after each session.",
+  "Usually the goal is control or transplant bridge and downstaging. EASL permits selected curative-intent use when other local options are infeasible — label that a weaker-evidence fallback, not equivalent to margin-complete ablation or radiation segmentectomy. Drug-eluting beads did not meet the response primary endpoint against conventional TACE and no consistent survival difference has been shown; bead choice is not the decision that matters. Repeated ineffective treatment consumes liver reserve. No automatic two-session rule without MDT context.",
+  ["19908093","24937669","39690085"],[]],
+ ["Lobar radioembolisation","Y-90","Reasonable","B",
+  "Unilobar liver-dominant burden; TACE intolerance or failure; planned radiation lobectomy with contralateral hypertrophy; selected portal-vein tumour thrombus.",
+  "High-volume bilobar replacement, hyperbilirubinaemia, unsafe shunt fraction, inadequate future remnant, decompensation.",
+  "SARAH (n=467) and SIRveNIB (n=360) showed no survival advantage over sorafenib in locally advanced HCC without extrahepatic spread. DOSISPHERE-01 (n=60, open label) improved response and overall survival with personalised versus standard dosimetry, but overall survival was a secondary endpoint confounded by later resection in 36% versus 4%, and it did not compare Y-90 with resection, ablation or a modern systemic regimen.",
+  ["29107679","29498924","33166497"],["DOSIMETRY","PAYER"]],
+ ["SBRT or external beam radiotherapy","incl. proton","Reasonable","B",
+  "Definitive alternative for limited HCC when thermal ablation or surgery is unsuitable, including difficult access and vessel-adjacent targets; safe liver and gastrointestinal dose required. May be an upfront alternative after MDT review — catheter therapy need not first fail. Salvage, bridge and palliative uses must be named separately.",
+  "Insufficient uninvolved liver, refractory ascites, unsafe dose to adjacent bowel or stomach, overlapping prior dose, decompensation.",
+  "ASTRO makes conditional recommendations across these indications. RTOG 1112 did not meet its overall-survival primary endpoint (15.8 versus 12.3 months, one-sided P=.06), reached significance only on pre-planned adjustment, closed early, and used a sorafenib comparator that no longer reflects practice. A randomised study of 166 patients with a single recurrent HCC ≤5 cm favoured SBRT for local progression-free survival (HR 0.45, 95% CI 0.24–0.87, P=.014; 2-year 92.7% versus 75.8%) without a demonstrated difference in progression-free survival (HR 0.76, P=.190) or overall survival (HR 0.91, P=.830). This does not establish superiority for all newly diagnosed HCC.",
+  ["34688956","39699905","39693584","42139645"],["EXPERTISE"]],
+ ["Hepatic arterial infusion","HAI / HAIC","Trial only","C",
+  "Selected advanced liver-dominant HCC, under a trial or a specifically approved expert pathway, with a defined conversion or control goal.",
+  "Not a routine Memorial Hermann first or second locoregional line. Must not displace suitable curative local therapy. Not interchangeable with colorectal FUDR pump protocols.",
+  "HAI and HAIC regimens, including regional Asian practice, have evidence for response and survival in defined populations — FOHAIC-1 randomised HAIC-FO against sorafenib in 262 patients — but they do not establish standalone cure. Any local adoption requires regimen-specific oncology review, expertise and a named goal.",
+  ["34905388"],["EXPERTISE","PAYER"]],
+ ["Histotripsy","non-thermal focused ultrasound","Trial only","C",
+  "Prospective trial or institutional registry only, with explicit consent about oncologic uncertainty: reliably visible target, adequate acoustic access, device-compliant size and depth, credentialed operator, independent standard-treatment review.",
+  "Poor acoustic window, target not reliably visualised, or target outside the device working range — the #HOPE4LIVER screen-failure reasons; that trial treated up to three tumours <3 cm with a transducer depth limit of 14–16 cm. Any use that would displace transplant, resection, ablation, TACE, radioembolisation or radiotherapy.",
+  "No tumour-specific curative evidence. The pivotal single-arm trial enrolled 44 patients, of whom only 18 had HCC. The one-year update (47 patients, 52 tumours) reported local control of 63.4% on the primary assessment against 90% post hoc. FDA device clearance for tumour destruction is a safety and performance determination; it does not establish survival benefit or equivalence to established ablation. A bridge-to-transplant use remains protocol-based, and a technical response does not establish transplant eligibility.",
+  ["39225612"],["DEVICE","EXPERTISE","PAYER"]]
+];
+
+const SYSTEMIC = [
+ ["First line, immunotherapy eligible",
+  "Atezolizumab + bevacizumab; tremelimumab + durvalumab (STRIDE); nivolumab + ipilimumab. All <span class='pill p-std'>Standard</span> <span class='grade A'>A</span>.",
+  "No head-to-head trial ranks these three, so none can be labelled preferred over the others on evidence. v0.2 listed them in an order that implies a hierarchy; that implication is removed. Atezolizumab–bevacizumab requires documented variceal assessment and treatment of high-risk varices before the first dose. Dual checkpoint regimens avoid the VEGF bleeding risk but carry immune toxicity; nivolumab–ipilimumab showed excess mortality in the first six months (HR 1.65) despite superior overall survival at 23.7 versus 20.6 months — which matters for a patient with a short runway.",
+  ["32402160","34902530","38319892","40349714"]],
+ ["First line, immunotherapy unsuitable",
+  "Lenvatinib or sorafenib <span class='grade A'>A</span>; durvalumab monotherapy in selected patients <span class='grade B'>B</span>.",
+  "Match the tyrosine-kinase inhibitor to cardiovascular, renal, weight, hand-foot, diarrhoea and drug-interaction risk. Evidence is strongest in Child-Pugh A.",
+  ["38319892"]],
+ ["After a first-line immunotherapy combination",
+  "Clinical trial preferred. Otherwise a mechanistically appropriate tyrosine-kinase inhibitor — cabozantinib, lenvatinib or sorafenib if not previously used, regorafenib only after documented sorafenib tolerance — or ramucirumab if AFP ≥400 ng/mL. All <span class='pill p-reas'>Reasonable</span> <span class='grade C'>C</span>.",
+  "There is no randomised evidence for any sequence after a modern immunotherapy combination. <b>Every second-line agent was tested after sorafenib, in a population that no longer exists.</b> This must not be presented as an evidence-based sequence. Record prior toxicity, best response, liver function and the rationale.",
+  ["29972759","27932229","30665869"]],
+ ["After a tyrosine-kinase inhibitor without prior immunotherapy",
+  "An approved immune regimen if eligible <span class='grade B'>B</span>; otherwise cabozantinib, regorafenib, ramucirumab for AFP ≥400, or pembrolizumab per indication.",
+  "Avoid duplicative checkpoint therapy without evidence. Pembrolizumab monotherapy after sorafenib has positive randomised data in an Asian population; generalisability to this practice is uncertain.",
+  ["36455168","29972759","27932229","30665869"]],
+ ["Child-Pugh B",
+  "Individualised by an experienced hepatology and oncology team <span class='grade C'>C</span>.",
+  "Benefit and toxicity evidence is weak and largely from subgroups and single-arm cohorts. Distinguish cancer symptoms from liver-failure prognosis before committing to treatment. Child-Pugh B9 and above is rarely appropriate for systemic therapy outside a trial. NCCN: therapies “may have limited safety data available for CTP Class B or C liver function”.",
+  []],
+ ["Transplant candidate or recipient",
+  "Pre-transplant checkpoint inhibitor only through transplant-specific review <span class='grade C'>C</span>. Post-transplant checkpoint blockade <span class='pill p-avoid'>Avoid</span> outside exceptional governance.",
+  "Document the washout interval agreed, the immunosuppression plan, and the alternative strategy if transplant becomes available early. <span class='flag'>TX-TIMING</span>",
+  ["36102312"]]
+];
+
+const HONEST = [
+ ["Microwave ablation is preferred over radiofrequency ablation.",
+  "No randomised superiority; the phase 2 comparison was a superiority trial and did not test non-inferiority.",
+  "Tumour size, proximity to large vessels, expected procedure time, operator familiarity.",
+  "Local tumour progression at 12 and 24 months by device."],
+ ["Radiation segmentectomy is a curative-intent option for ablation-unsuitable solitary tumours.",
+  "Single-arm data only (LEGACY, RASER); no randomised comparison with ablation or resection.",
+  "Segmental anatomy, tumour size, remnant volume, dosimetry feasibility, transplant timing.",
+  "Complete response, local progression, and transplant explant pathology."],
+  ["Radioembolisation is an alternative to TACE in BCLC B.",
+  "PREMIERE improved time to progression without a demonstrated survival difference, but 35 of its 45 patients were BCLC A. TRACE, a small single-centre phase II trial, improved time to progression and overall survival against DEB-TACE (median 30.2 versus 15.6 months, HR 0.48, whole intention-to-treat population, 85% BCLC B) but was stopped early at interim analysis. This supports selected disease-control use, not proof of cure or superiority to resection or ablation.",
+  "Unilobar versus bilobar distribution, shunt fraction, remnant volume, whether hypertrophy is a goal.",
+  "Time to progression, decompensation at 90 days, downstaging rate."],
+ ["Adding SBRT or radioembolisation to systemic therapy helps liver-dominant BCLC C.",
+  "No randomised test against a modern immunotherapy backbone; RTOG 1112 used sorafenib and missed its primary endpoint.",
+  "Liver-dominant burden, symptom burden, uninvolved-liver volume, prior dose, time to systemic start.",
+  "Time from decision to systemic-therapy start; hepatic progression-free survival."],
+ ["A fixed two-session TACE failure threshold is not a universal rule.",
+  "A pragmatic consensus threshold, not a validated rule; published TACE-refractoriness definitions differ. v0.8 withdrew the fixed rule in favour of reassessment after each session.",
+  "Selectivity achieved, response pattern, liver-function trajectory, remaining downstaging goal.",
+  "Outcomes of patients switched at two sessions versus continued."],
+ ["An approximate 10–12 case agenda cap improves decision quality.",
+  "An operational judgement with no comparative outcome evidence.",
+  "Case complexity mix, attendance, available time, urgent-lane volume.",
+  "Decision completeness and deferral rate by agenda length."]
+];
+
+/* ---------- helpers ---------- */
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function refTag(id){ const r = REF[id] || NONPM[id]; return r ? r[0] : id; }
+function refChips(ids){
+  if(!ids || !ids.length) return "";
+  return '<div class="refs">' + ids.map(id =>
+    `<button class="refchip" data-ref="${id}" type="button">${esc(refTag(id))}</button>`).join("") + '</div>';
+}
+/* {{pmid|pmid}} inline markers become chips */
+function expand(html){
+  return html.replace(/\{\{([^}]+)\}\}/g, (m, ids) => refChips(ids.split("|")));
+}
+
+/* ---------- build stage buttons + answer ---------- */
+const stageBtns = document.getElementById("stageBtns");
+stageBtns.innerHTML = STAGES.map(s => `
+  <button class="st" type="button" data-stage="${s.id}" data-tone="${s.tone}" aria-pressed="false">
+    <span class="sname">${esc(s.name)}</span>
+    <span class="sreq">${s.req === "any" ? "Any one of" : "All of"}</span>
+    <ul class="scrit">${s.crit.map(c => `<li>${esc(c)}</li>`).join("")}</ul>
+  </button>`).join("");
+
+/* Collapsed by default: the stage reads as a list of options at rest, and the
+   criteria, cautions and sources open on demand. */
+function detail(o){
+  const bits = [];
+  if(o.pref)  bits.push(`<div class="optline"><span class="optlab">Preferred when</span><span>${esc(o.pref)}</span></div>`);
+  if(o.avoid) bits.push(`<div class="optline bad"><span class="optlab">Caution / avoid</span><span>${esc(o.avoid)}</span></div>`);
+  if(o.note)  bits.push(`<div class="recnote" style="margin-top:7px">${esc(o.note)}</div>`);
+  const chips = refChips(o.refs);
+  if(chips) bits.push(`<div style="margin-top:8px">${chips}</div>`);
+  if(!bits.length) return "";
+  const n = (o.refs||[]).length;
+  const label = [o.pref||o.avoid ? "Criteria and cautions" : "", n ? n + (n===1?" source":" sources") : ""]
+                .filter(Boolean).join(" · ");
+  return `<details class="more"><summary>${esc(label)}</summary><div class="moreinner">${bits.join("")}</div></details>`;
+}
+function recHTML(r){
+  const cls = LABELCLS[r.l] || "p-std";
+  const flags = (r.flags||[]).map(f=>`<span class="flag">${esc(f)}</span>`).join(" ");
+  const body = r.opts ? `
+    <div class="opts">${r.opts.map((o,i)=>`
+      <div class="opt">
+        <div class="optn">${r.rank === false ? "·" : i+1}</div>
+        <div style="min-width:0">
+          <div class="optname">${esc(o.name)}${o.g?`<span class="grade ${o.g}">${o.g}</span>`:""}${(o.flags||[]).map(f=>`<span class="flag">${esc(f)}</span>`).join(" ")}</div>
+          <div class="optwhen">${esc(o.when)}</div>
+          ${detail(o)}
+        </div>
+      </div>`).join("")}</div>
+    ${r.order?`<details class="more"><summary>Why this order</summary><div class="moreinner"><div class="orderrule" style="border-top:0; margin-top:2px; padding-top:0">${r.order}</div></div></details>`:""}
+    ${r.flagnote?`<details class="more"><summary>Ratification item</summary><div class="moreinner"><div class="callout amber" style="font-size:12.8px">${r.flagnote}</div></div></details>`:""}`
+    : `<div>${esc(r.t)}</div>${detail(r)}`;
+  return `<div class="rec">
+    <div class="recmeta"><span class="pill ${cls}">${esc(r.l)}</span>${r.g?`<span class="grade ${r.g}">${r.g}</span>`:""}${flags}</div>
+    ${body}
+  </div>`;
+}
+function renderStage(id){
+  const s = STAGES.find(x=>x.id===id);
+  document.querySelectorAll(".st").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.stage===id)));
+  document.getElementById("answer").innerHTML = `
+    <div class="ahead">
+      <h3>${esc(s.name)}</h3>
+      <span class="chip">${s.req === "any" ? "Any one of" : "All of"}: ${esc(s.crit.join(" · "))}</span>
+      <button class="xpand" type="button" id="xpandAll" data-open="0">Expand all</button>
+    </div>
+    <div class="abody">
+      <div class="acol"><div class="eyebrow">Standard</div>${s.standard.map(recHTML).join("")}</div>
+      <div class="acol"><div class="eyebrow">Reasonable alternative</div>${s.alt.map(recHTML).join("")}</div>
+      <div class="acol"><div class="eyebrow">Avoid</div>${s.avoid.map(recHTML).join("")}</div>
+    </div>`;
+  try{ localStorage.setItem("hcc.stage", id); }catch(e){}
+}
+/* Child-Pugh: five parameters, 1–3 points each */
+const CP = ["cpBili","cpAlb","cpInr","cpAsc","cpEnc"].map(id=>document.getElementById(id));
+function cpCalc(){
+  const pts = CP.reduce((a,s)=>a + Number(s.value), 0);
+  const cls = pts <= 6 ? "A" : pts <= 9 ? "B" : "C";
+  document.getElementById("cpClass").textContent = "Class " + cls;
+  document.getElementById("cpPts").textContent = pts + (pts===1?" point":" points");
+  document.getElementById("cpNote").textContent = {
+    A:"Preserved function. This does not establish portal pressure — see the CSPH gate.",
+    B:"Selected B may still be treated, but most pivotal systemic evidence is Child-Pugh A. B9 and above is rarely appropriate outside a trial.",
+    C:"Stage D unless transplant can correct it — ask the transplant question before assigning the stage."
+  }[cls];
+}
+CP.forEach(s=> s.addEventListener("change", cpCalc));
+cpCalc();
+
+/* Section-level folding: the page reads as its outline at rest. */
+function setFold(id, open){
+  const body = document.getElementById(id);
+  const btn = document.querySelector(`[data-fold="${id}"]`);
+  if(!body || !btn) return;
+  body.hidden = !open;
+  btn.textContent = open ? "Hide" : "Show";
+  btn.setAttribute("aria-expanded", String(open));
+}
+document.querySelectorAll("[data-fold]").forEach(b=>{
+  b.setAttribute("aria-expanded","false");
+  b.addEventListener("click", ()=> setFold(b.dataset.fold, document.getElementById(b.dataset.fold).hidden));
+});
+document.getElementById("expandAllSections").addEventListener("click", e=>{
+  const b = e.currentTarget, open = b.dataset.open !== "1";
+  document.querySelectorAll("[data-fold]").forEach(x=> setFold(x.dataset.fold, open));
+  b.dataset.open = open ? "1" : "0";
+  b.textContent = open ? "Collapse all sections" : "Expand all sections";
+});
+/* Opening a folded section from the top nav */
+document.querySelectorAll("nav.sec a").forEach(a=>{
+  a.addEventListener("click", ()=>{
+    const id = a.getAttribute("href").slice(1);
+    const map = {topics:"topicsBody", honest:"honestBodyWrap", ops:"opsBody", evidence:"evBody"};
+    if(map[id]) setFold(map[id], true);
+  });
+});
+
+document.getElementById("answer").addEventListener("click", e=>{
+  const b = e.target.closest("#xpandAll"); if(!b) return;
+  const open = b.dataset.open !== "1";
+  document.querySelectorAll("#answer details.more").forEach(d=>{ d.open = open; });
+  b.dataset.open = open ? "1" : "0";
+  b.textContent = open ? "Collapse all" : "Expand all";
+});
+/* Changing stage must not move the page under the reader: the stage row and the
+   answer are both in view on a laptop, and on a phone the answer panel sits
+   directly below the row you just tapped. Only scroll when the panel is wholly
+   off-screen, and then only far enough to bring its top into view. */
+function selectStage(id){
+  renderStage(id);
+  const a = document.getElementById("answer");
+  const r = a.getBoundingClientRect();
+  if(r.top > window.innerHeight - 60){
+    window.scrollBy({top: r.top - (window.innerHeight - 200), behavior:"smooth"});
+  }
+}
+stageBtns.addEventListener("click", e => {
+  const b = e.target.closest(".st"); if(b) selectStage(b.dataset.stage);
+});
+document.getElementById("qrow").addEventListener("click", e => {
+  const b = e.target.closest(".goto"); if(b) selectStage(b.dataset.goto);
+});
+let start = "A";
+try{ const v = localStorage.getItem("hcc.stage"); if(v && STAGES.some(s=>s.id===v)) start = v; }catch(e){}
+renderStage(start);
+
+/* ---------- topic tabs ---------- */
+const tabsEl = document.getElementById("tabs"), panelEl = document.getElementById("panel");
+tabsEl.innerHTML = TOPICS.map((t,i)=>`<button class="tab" type="button" role="tab" data-topic="${t.id}" aria-selected="${i===0}">${esc(t.name)}</button>`).join("")
+  + `<button class="tab" type="button" role="tab" data-topic="sys" aria-selected="false">Systemic therapy</button>`;
+
+function systemicHTML(){
+  return `
+  <div class="card">
+    <h3>How therapy is selected</h3>
+    <p>Medical oncology selects therapy using liver function, ECOG, transplant intent, bleeding and variceal risk, autoimmune disease, prior transplant, cardiovascular and renal risk, tumour tempo, patient preference, formulary and trial availability.</p>
+    <div class="callout amber" style="margin-top:12px"><b>Almost all pivotal evidence applies to Child-Pugh A and ECOG 0–1.</b> Extrapolation beyond that is an individualised decision, not a pathway default.</div>
+  </div>
+  <div class="tablewrap"><table><thead><tr><th style="width:18%">Setting</th><th style="width:28%">Options and grade</th><th>Selection issues and cautions</th></tr></thead><tbody>
+  ${SYSTEMIC.map(r=>`<tr><td><b>${esc(r[0])}</b></td><td>${r[1]}</td><td>${r[2]}${refChips(r[3])}</td></tr>`).join("")}
+  </tbody></table></div>
+  <div class="card">
+    <h3>TACE combined with systemic therapy is not a standard of care</h3>
+    <p class="kicker"><span class="pill p-avoid">Avoid</span> outside a clinical trial or an approved institutional protocol.</p>
+    <p>v0.2 stated that EMERALD-1 and LEAP-012 “improved progression-free survival, with higher toxicity and evolving overall-survival and regulatory context”, and deferred a decision. That framing is too permissive.</p>
+    <p>Three randomised phase 3 trials have reported. EMERALD-1 (progression-free survival HR 0.77), LEAP-012 (0.66) and EMERALD-3 (0.70, for STRIDE plus lenvatinib plus TACE versus TACE) each met their progression-free survival endpoint, and <b>none has demonstrated an overall-survival benefit</b> — EMERALD-3 reported an <b>interim</b> overall-survival HR of 0.84 (P = .18, not significant) for that comparison, and the final registry-posted overall-survival hazard ratio for LEAP-012 was 0.98. The recommendation is therefore Avoid, not “pending”. Re-review if a positive overall-survival analysis is published or a labelled indication is granted. ${refChips(["39798579","39798578","42636832","41503570","NCT04246177","NCT03778957"])}</p>
+    <div class="callout amber"><b>Corrected in v0.8 (HCC-03).</b> Earlier versions said a safety signal of unexplained early deaths in EMERALD-1 had been raised in correspondence. That sentence was removed because no source in the depot supports it. Re-add it only with the correspondence citation.</div>
+    <p class="small muted" style="margin-top:9px">NCCN quotes the LEAP-012 primary endpoint (median PFS 14.6 versus 10.0 months; HR 0.66, 95% CI 0.51–0.84, P = .0002) and an overall-survival HR of 0.80 (one-sided P = .087). <span class="muted">[original NCCN PDF p. 60]</span> In the LEAP-012 report that HR is the <b>interim overall-survival analysis</b>, not a test of the 24-month overall-survival rate. Our position: retain protocol-only TACE plus checkpoint-inhibitor combinations, and do not portray protocol-only as an NCCN prohibition.</p>
+  </div>
+  <div class="card">
+    <h3>Adjuvant therapy after resection or ablation</h3>
+    <p class="kicker"><span class="pill p-avoid">Avoid</span> routine adjuvant atezolizumab–bevacizumab.</p>
+    <p>The updated IMbrave050 analysis lost the recurrence-free survival signal seen at the first interim analysis (HR 0.90, 95% CI 0.72–1.12), with overall survival immature and numerically unfavourable (HR 1.26). NCCN: “Following the updated analysis, the Panel has not included atezolizumab plus bevacizumab as an adjuvant therapy option. There is no adjuvant strategy at this time.” <span class="small muted">[original NCCN PDF p. 51]</span> ${refChips(["37871608","41580093","39992051"])}</p>
+  </div>`;
+}
+function renderTopic(id){
+  document.querySelectorAll(".tab[data-topic]").forEach(b=>b.setAttribute("aria-selected", String(b.dataset.topic===id)));
+  if(id==="sys"){ panelEl.innerHTML = systemicHTML(); }
+  else {
+    const t = TOPICS.find(x=>x.id===id);
+    panelEl.innerHTML = expand(t.html);
+    if(id==="loco"){
+      document.getElementById("locoBody").innerHTML = LOCO.map(r=>`
+        <tr>
+          <td><b>${esc(r[0])}</b>${r[1]?`<br><span class="small muted">${esc(r[1])}</span>`:""}</td>
+          <td><span class="pill ${LABELCLS[r[2]]}">${esc(r[2])}</span><br><span class="grade ${r[3]}" style="margin-top:5px">${r[3]}</span></td>
+          <td>${esc(r[4])}</td>
+          <td>${esc(r[5])}</td>
+          <td>${esc(r[6])}<div style="margin-top:7px">${(r[8]||[]).map(f=>`<span class="flag">${esc(f)}</span>`).join(" ")}</div>${refChips(r[7])}</td>
+        </tr>`).join("");
+    }
+  }
+  try{ localStorage.setItem("hcc.topic", id); }catch(e){}
+}
+tabsEl.addEventListener("click", e => { const b=e.target.closest(".tab"); if(b) renderTopic(b.dataset.topic); });
+let startTopic = "dx";
+try{ const v = localStorage.getItem("hcc.topic"); if(v) startTopic = v; }catch(e){}
+if(!TOPICS.some(t=>t.id===startTopic) && startTopic!=="sys") startTopic="dx";
+renderTopic(startTopic);
+
+/* ---------- honest table ---------- */
+document.getElementById("honestBody").innerHTML = HONEST.map(r=>
+  `<tr><td><b>${esc(r[0])}</b></td><td>${esc(r[1])}</td><td>${esc(r[2])}</td><td>${esc(r[3])}</td></tr>`).join("");
+
+/* ---------- evidence library ---------- */
+const ALL = [];
+for(const [pmid,v] of Object.entries(REF)) ALL.push({id:pmid, tag:v[0], group:v[1], cit:v[2], pmid:pmid});
+for(const [k,v] of Object.entries(NONPM)) ALL.push({id:k, tag:v[0], group:v[1], cit:v[2], url:v[3]});
+const GROUPS = [...new Set(ALL.map(r=>r.group))];
+let evGroup = "All", evQuery = "";
+document.getElementById("evGroups").innerHTML = ["All",...GROUPS].map((g,i)=>
+  `<button class="tab" type="button" data-group="${esc(g)}" aria-selected="${i===0}">${esc(g)}</button>`).join("");
+
+function evRow(r){
+  const links = r.pmid
+    ? `<a class="lnk" href="https://libkey.io/libraries/480/pmid/${r.pmid}" target="_blank" rel="noopener">TMC full text</a>
+       <a class="lnk" href="https://pubmed.ncbi.nlm.nih.gov/${r.pmid}/" target="_blank" rel="noopener">PubMed ${r.pmid}</a>`
+    : `<a class="lnk" href="${r.url}" target="_blank" rel="noopener">Source</a>`;
+  const depot = r.depot === undefined ? "" :
+    (r.depot ? `<span class="chip" style="font-size:11px">In depot</span>`
+             : `<span class="chip warn" style="font-size:11px">To download</span>`);
+  return `<div class="ev" id="ev-${esc(r.id)}"><div class="evtag">${esc(r.tag)}</div><div class="evcit">${esc(r.cit)}</div><div class="evlinks">${depot}${links}</div></div>`;
+}
+function renderEv(){
+  const q = evQuery.trim().toLowerCase();
+  const rows = ALL.filter(r =>
+    (evGroup==="All" || r.group===evGroup) &&
+    (!q || (r.tag+" "+r.cit+" "+r.group+" "+r.id).toLowerCase().includes(q)));
+  document.getElementById("evList").innerHTML = rows.length
+    ? rows.map(evRow).join("")
+    : `<div class="card"><p class="muted">Nothing matches “${esc(evQuery)}”. Try a trial name, an author, or a journal.</p></div>`;
+  document.getElementById("evCount").textContent = rows.length + " of " + ALL.length + " sources";
+}
+document.getElementById("evGroups").addEventListener("click", e=>{
+  const b = e.target.closest(".tab"); if(!b) return;
+  evGroup = b.dataset.group;
+  document.querySelectorAll("#evGroups .tab").forEach(x=>x.setAttribute("aria-selected", String(x===b)));
+  renderEv();
+});
+document.getElementById("evSearch").addEventListener("input", e=>{ evQuery = e.target.value; renderEv(); });
+renderEv();
+
+/* ---------- operating model, quality, approvals, ratification ---------- */
+const MDT = [
+ ["Submission","Epic form captures the clinical question, diagnosis, BCLC stage, liver scores, AFP, imaging availability, prior treatment, transplant status, referring clinician and urgency.","Submitting clinician"],
+ ["Triage","Coordinator and a clinically trained gatekeeper check completeness, imaging quality, duplicate cases, urgent lane, and whether pathology is needed.","Coordinator + APP/physician"],
+ ["Agenda","Stable at least 24 hours ahead; target 10–12 decision cases; defer incomplete routine cases; urgent exceptions require chair approval.","Coordinator + chair"],
+ ["Attendance","Required: hepatology, hepatobiliary/transplant surgery, diagnostic radiology, interventional radiology, medical oncology, radiation oncology. Pathology attends when pre-identified. Nursing, navigation and the coordinator attend.","Programme leadership"],
+ ["Pathology pre-alert","Cases needing tissue review are flagged at triage so slides, stains and molecular status are ready at the time of discussion.","Coordinator + pathology"],
+ ["Urgent lane","Same or next business day pathway for obstructive, bleeding, rapidly decompensating, or imminently untransplantable patients, with chair approval and a named owner at intake.","Chair + coordinator"],
+ ["Conference","State the question; radiology first; clinical context; curative assessment; explicit comparison of options with their evidence labels; chair synthesises one recommendation. Where the decision is genuinely uncertain, name the uncertainty and the review trigger rather than forcing false consensus.","Neutral clinical chair"],
+ ["Documentation","Epic note within one business day recording the recommendation, the alternatives considered, the owner, the due date and the reassessment plan.","Designated documenting clinician"],
+ ["Closure","Registry tracks completion, outside communication, scheduling barriers, results and re-presentation.","Navigator/coordinator"],
+ ["Community relationship","Return the recommendation promptly and state clearly whether treatment remains local or transfers; do not absorb longitudinal care without agreement from the referring clinician.","Treating and referring clinicians"]
+];
+const QUAL = [
+ ["Access","Referral-to-MDT and MDT-to-treatment intervals; urgent cases triaged within one business day.","Baseline first; target after the 90-day pilot."],
+ ["Completeness","Cases with BCLC, Child-Pugh, ALBI, AFP, vascular invasion, transplant and resection assessment, and a focused question recorded.","≥90% by month 3."],
+ ["Decision reliability","Recommendation documented with owner and date; referring clinician notified.","≥95%."],
+ ["Imaging","Adequate dynamic imaging and prior comparison available; LI-RADS diagnostic and treatment-response language used; correct radiation versus nonradiation algorithm applied.","≥90%."],
+ ["Curative-first discipline","Proportion of non-curative treatment decisions that record why transplant, resection and ablation were each unsuitable. <b>New measure — this is the pathway's central claim and was previously unmeasured.</b>","≥95%."],
+ ["Transplant pathway","Time from first MDT to transplant referral; number of locoregional procedures before referral; waitlist dropout; AFP-rule compliance.","Quarterly; investigate any patient with ≥3 procedures before referral."],
+ ["Locoregional outcomes","Technical success, complete response, local progression, 30- and 90-day decompensation, retreatment rate, downstaging success, waitlist dropout.","Risk-adjusted quarterly review."],
+ ["Systemic outcomes","Regimen, line, reason for selection, response, grade ≥3 toxicity, liver-function change, trial enrolment; early (≤6 month) mortality by regimen.","Quarterly review."],
+ ["Equity","Delays and treatment completion by payer, language, geography, race and ethnicity, and referring site.","Identify and act on disparities; no punitive target."],
+ ["Innovation","Histotripsy, TACE-plus-systemic protocols and beyond-criteria transplant strategies entered in a prospective registry with selection rationale and standardised follow-up.","100% of cases."]
+];
+const APPROVALS = [
+ "Name the accountable system HCC pathway owner and the neutral tumour-board chair.",
+ "Approve the Epic submission form, the MDT note template, the registry minimum dataset and the urgent-case rule.",
+ "Approve modality-specific liver-function and dosimetry thresholds rather than relying on a single universal bilirubin cut-off.",
+ "Ratify the locoregional selector and the stop/switch rules jointly with hepatobiliary and transplant surgery, hepatology, interventional radiology, radiation oncology, diagnostic radiology and medical oncology.",
+ "Decide whether histotripsy begins as trial-only or registry-only, with credentialing, target criteria, consent language and an outcome review cadence.",
+ "Adopt an explicit institutional position that TACE combined with checkpoint inhibitors is protocol-only until an overall-survival benefit is demonstrated.",
+ "Define the pre-transplant checkpoint-inhibitor washout requirement and the approval route, and confirm that local transplant policy is at least as strict as OPTN policy.",
+ "Assign an owner and a calendar date for re-verifying OPTN Policy 9 criteria, drug labelling and device authorisations against this document.",
+ "Pilot for 90 days, audit 20 consecutive cases, then revise before formal approval as a clinical practice guideline."
+];
+const RATIFY = [
+ ["Hepatology",["Surveillance grade B (not A) and the stop-surveillance rule.","Child-Pugh, ALBI and MELD thresholds used to bar each locoregional modality.","Whether the §5.1.1 criteria are adopted as the institutional definition of clinically significant portal hypertension, whether HVPG is required before resection or non-invasive rule-in suffices, and which reading of the Yuan randomised trial governs when CSPH is present.","Hepatitis B antiviral requirement before embolic, radiation and systemic therapy.","Child-Pugh B systemic-therapy position."]],
+ ["Transplant and hepatobiliary surgery",["Milan/T2 and downstaging-pool wording, including the ‘at least one lesion >3 cm’ correction.","AFP-rule operational handling and who monitors it.","Beyond-downstaging position: governance route, registry requirement, no automatic exception.","Pre-transplant checkpoint-inhibitor washout requirement and approval route.","Resection criteria including portal-hypertension risk and future-remnant thresholds.","The rule that transplant referral is not delayed by accumulating locoregional procedures."]],
+ ["Diagnostic radiology",["LR-TIV handling — narrowing v0.2's universal biopsy requirement.","Visualisation score C as an escalation trigger distinct from the US category.","Mandatory use of the correct LI-RADS treatment-response algorithm, radiation versus nonradiation.","Reporting minimum dataset and turnaround for MDT imaging review.","Alternative surveillance with abbreviated MRI: indications and capacity."]],
+ ["Interventional radiology",["The locoregional selector table: phenotypes, cautions and evidence grades as written.","Radiation segmentectomy graded C rather than B, and what that implies for consent.","Personalised dosimetry as a precondition for radioembolisation, and who performs it.","The two-session TACE stop rule and what counts as ‘well executed’.","Histotripsy as trial or registry only, with credentialing and target criteria."]],
+ ["Radiation oncology",["SBRT graded B as a reasonable consideration, not a standard alternative to ablation.","The accurate statement of RTOG 1112 (primary endpoint not met) in consent and MDT discussion.","Dose-constraint and prior-dose-overlap rules; who maintains the cumulative dose record.","Delayed-response interpretation rules after radiation-based therapy.","Position on radiotherapy for portal-vein tumour thrombus alongside systemic therapy."]],
+ ["Medical oncology",["Removal of any implied ranking among the three first-line immunotherapy regimens.","Mandatory variceal assessment before atezolizumab–bevacizumab.","Explicit statement that post-immunotherapy sequencing is not evidence based.","TACE plus checkpoint inhibitor as protocol-only, and the trigger to re-review.","Early-mortality counselling for dual checkpoint therapy in patients with a short runway."]],
+ ["Pathology",["Pre-alert trigger list and the turnaround commitment for MDT cases.","Tissue-handling protocol for LR-M and tumour-in-vein biopsies, including molecular adequacy.","Explant reporting dataset needed to close the downstaging and bridging registry loop."]],
+ ["Programme operations",["All section 9 operating requirements as written — 24-hour agenda, 10–12 case cap, urgent lane, required attendance, one recommendation, one owner, Epic documentation within one business day, registry closure, referring-clinician protection.","The new curative-first discipline measure and the transplant-pathway measures in section 10.","The registry minimum dataset and who is accountable for entry.","The named owner and calendar date for re-verifying OPTN policy, labelling and device authorisations."]]
+];
+const OPSTABS = [
+ {id:"mdt", name:"Tumour board", html:()=>`
+   <div class="tablewrap"><table><thead><tr><th style="width:17%">Component</th><th>System requirement</th><th style="width:19%">Owner</th></tr></thead><tbody>
+   ${MDT.map(r=>`<tr><td><b>${esc(r[0])}</b></td><td>${esc(r[1])}</td><td class="small muted">${esc(r[2])}</td></tr>`).join("")}
+   </tbody></table></div>`},
+ {id:"qual", name:"Quality dashboard", html:()=>`
+   <div class="tablewrap"><table><thead><tr><th style="width:17%">Domain</th><th>Measure</th><th style="width:22%">Initial target</th></tr></thead><tbody>
+   ${QUAL.map(r=>`<tr><td><b>${esc(r[0])}</b></td><td>${r[1]}</td><td class="small">${esc(r[2])}</td></tr>`).join("")}
+   </tbody></table></div>`},
+ {id:"appr", name:"Needs local approval", html:()=>`
+   <div class="card"><h3>Implementation decisions requiring local approval</h3>
+   <div class="stack" style="margin-top:10px">${APPROVALS.map((a,i)=>
+     `<div class="opt" style="border-top:${i?'1px solid var(--line2)':'0'}"><div class="optn">${i+1}</div><div class="optwhen">${esc(a)}</div></div>`).join("")}</div></div>`},
+ {id:"rat", name:"Ratification list", html:()=>`
+   <div class="card"><p class="kicker">A decision is not ratified until the named specialty has approved <b>the exact wording in the document</b>, not the concept.</p>
+   <div class="tablewrap" style="margin-top:12px"><table><thead><tr><th style="width:24%">Specialty</th><th>Decisions this specialty must approve</th></tr></thead><tbody>
+   ${RATIFY.map(r=>`<tr><td><b>${esc(r[0])}</b></td><td><ol style="margin:0; padding-left:18px">${r[1].map(x=>`<li style="margin:3px 0">${esc(x)}</li>`).join("")}</ol></td></tr>`).join("")}
+   </tbody></table></div></div>`}
+];
+const opsTabs = document.getElementById("opsTabs"), opsPanel = document.getElementById("opsPanel");
+opsTabs.innerHTML = OPSTABS.map((t,i)=>`<button class="tab" type="button" role="tab" data-ops="${t.id}" aria-selected="${i===0}">${esc(t.name)}</button>`).join("");
+function renderOps(id){
+  document.querySelectorAll("[data-ops]").forEach(b=>b.setAttribute("aria-selected", String(b.dataset.ops===id)));
+  opsPanel.innerHTML = OPSTABS.find(t=>t.id===id).html();
+}
+opsTabs.addEventListener("click", e=>{ const b=e.target.closest(".tab"); if(b) renderOps(b.dataset.ops); });
+renderOps("mdt");
+
+/* ---------- liver-directed matrix (published alongside this page) ---------- */
+const TUM = "hcc";                       // this console is HCC; the matrix holds four tumours
+let MX = null, mCell = TUM + "|abl";
+function tchip(t, label){ return `<span class="tchip t${t}">${esc(label)}</span>`; }
+/* The matrix data is written in trial shorthand. Expand it so a reader does not
+   have to know that "cx" is complications or that "≡" means equivalent to. */
+const ABBR = [
+ [/\bcx\b/g,"complications"], [/\bLTP\b/g,"local tumour progression"],
+ [/\bFFLP\b/g,"freedom from local progression"], [/\bLC\b/g,"local control"],
+ [/\bCR\b/g,"complete response"], [/\bRFS\b/g,"recurrence-free survival"],
+ [/\bOS\b/g,"overall survival"], [/\bPFS\b/g,"progression-free survival"],
+ [/\bTTP\b/g,"time to progression"], [/\bDFS\b/g,"disease-free survival"],
+ [/\bNS\b/g,"not significant"], [/\bPSM\b/g,"propensity-score-matched"],
+ [/\bITT\b/g,"intention-to-treat"], [/\bMVI\b/g,"microvascular invasion"],
+ [/\bRR\b/g,"relative risk"], [/\bpts\b/g,"patients"], [/\bmo\b/g,"months"],
+ [/\b(\d+)-y\b/g,"$1-year"], [/\s*≡\s*/g," equivalent to "], [/\s*≈\s*/g," comparable to "]
+];
+function expandAbbr(s){ let o = String(s); for(const [re,to] of ABBR) o = o.replace(re,to); return o; }
+function renderTierLegend(){
+  document.getElementById("tierLegend").innerHTML = Object.entries(MX.tiers).map(([k,v])=>
+    `<div class="tl" data-tier="${k}">${tchip(k, v.short)}<span>${esc(v.label.replace(/^[^—]*—\s*/,""))}</span></div>`).join("");
+}
+function renderCards(){
+  document.getElementById("mcards").innerHTML = MX.modalities.map(m=>{
+    const key = TUM+"|"+m[0], c = MX.cells[key];
+    if(!c) return "";
+    return `<button class="mcell" type="button" data-cell="${key}" aria-pressed="${String(key===mCell)}">
+      <span class="mname">${esc(m[1])}<span>${esc(m[2])}</span></span>
+      ${tchip(c.tier, MX.tiers[c.tier].short)}
+      <span class="mhead">${esc(expandAbbr(c.head))}</span></button>`;
+  }).join("");
+}
+function evLine(e){
+  const [label, pmid, finding] = e;
+  const left = pmid ? `<button class="refchip" type="button" data-ref="${pmid}">${esc(label)}</button>`
+                    : `<span class="chip">${esc(label)}</span>`;
+  return `<div class="evline">${left}<span class="evfind">${esc(expandAbbr(finding))}</span></div>`;
+}
+function renderCell(){
+  const c = MX.cells[mCell];
+  const mod = MX.modalities.find(x=>x[0]===mCell.split("|")[1]);
+  document.querySelectorAll(".mcell").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.cell===mCell)));
+  document.getElementById("lrtDetail").innerHTML = `
+    <div class="ahead" style="padding:0 0 12px; border-bottom:1px solid var(--line2)">
+      <h3 style="font-size:20px">${esc(mod[1])} <span class="muted" style="font-family:var(--sans); font-weight:400">in hepatocellular carcinoma</span></h3>
+      ${tchip(c.tier, MX.tiers[c.tier].label)}
+    </div>
+    <p style="margin-top:12px; font-size:14.5px"><b>${esc(expandAbbr(c.head))}</b></p>
+    ${c.roles.map(r=>`<div class="role">
+        <div class="rolewhen">${tchip(r.t, MX.tiers[r.t].short)}<span>${esc(expandAbbr(r.when))}</span></div>
+        <details class="more"><summary>${r.ev.length} ${r.ev.length===1?"trial":"trials"}</summary>
+          <div class="moreinner">${r.ev.map(evLine).join("")}</div></details>
+      </div>`).join("")}`;
+}
+document.getElementById("mcards").addEventListener("click", e=>{
+  const b = e.target.closest(".mcell"); if(!b) return;
+  mCell = b.dataset.cell;
+  renderCell();
+});
+
+Promise.all([
+  fetch("data/lrt_matrix.json").then(r=>r.json()),
+  fetch("data/lrt_refs.json").then(r=>r.json())
+]).then(([mx, refs])=>{
+  MX = mx;
+  renderTierLegend(); renderCards(); renderCell();
+  // only the papers this tumour's cells actually cite go into the library
+  const used = new Set();
+  for(const [key, c] of Object.entries(MX.cells)){
+    if(!key.startsWith(TUM+"|")) continue;
+    for(const role of c.roles) for(const e of role.ev) if(e[1]) used.add(e[1]);
+  }
+  const have = new Set(ALL.map(r=>r.id));
+  for(const r of refs){
+    if(have.has(r.pmid) || !used.has(r.pmid)) continue;
+    ALL.push({id:r.pmid, tag:(r.au||"")+" "+(r.y||""), group:"Liver-directed (HCC)",
+              cit:`${r.au} et al. ${r.t} ${r.j}. ${r.y}.`.replace(/\s+/g," "),
+              pmid:r.pmid, depot:r.st==="depot"});
+    have.add(r.pmid);
+  }
+  const groups = [...new Set(ALL.map(r=>r.group))];
+  document.getElementById("evGroups").innerHTML = ["All",...groups].map((g,i)=>
+    `<button class="tab" type="button" data-group="${esc(g)}" aria-selected="${String(g===evGroup)}">${esc(g)}</button>`).join("");
+  renderEv();
+}).catch(err=>{
+  document.getElementById("lrtDetail").innerHTML =
+    `<p class="muted">The matrix data did not load. The rest of the page is unaffected; reload to try again.</p>`;
+  document.getElementById("tierLegend").innerHTML = "";
+});
+
+/* ---------- reference chips jump to the library ---------- */
+document.addEventListener("click", e=>{
+  const c = e.target.closest(".refchip"); if(!c) return;
+  const id = c.dataset.ref;
+  setFold("evBody", true);          // the library is folded by default
+  evGroup = "All"; evQuery = "";
+  document.getElementById("evSearch").value = "";
+  document.querySelectorAll("#evGroups .tab").forEach((x,i)=>x.setAttribute("aria-selected", String(i===0)));
+  renderEv();
+  const el = document.getElementById("ev-"+id);
+  if(el){
+    el.scrollIntoView({behavior:"smooth", block:"center"});
+    document.querySelectorAll(".ev.hit").forEach(x=>x.classList.remove("hit"));
+    el.classList.add("hit");
+  }
+});
+</script>
+
+<script>
+/* served as a site rather than a single artifact: give every page the way back */
+(function(){
+  var nav = document.querySelector("nav.sec");
+  if(!nav) return;
+  var a = document.createElement("a");
+  a.href = "../"; a.textContent = "\u2190 All pathways";
+  nav.insertBefore(a, nav.firstChild);
+})();
+</script>
+</body>
+</html>

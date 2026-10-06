@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Memorial Hermann Liver Tumour Pathways</title>
+<meta name="description" content="Five interactive liver tumour pathway consoles, under development.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,700&display=swap">
+<style>
+:root{
+  --bg:#F4F6F8; --surface:#FFFFFF; --surface2:#EDF1F5; --ink:#16222D; --muted:#5A6B79;
+  --line:#D3DCE4; --teal:#176A87; --amber:#8E5008; --amber-soft:#FBF1E2;
+  --shadow:0 1px 2px rgba(22,34,45,.06), 0 6px 18px rgba(22,34,45,.05);
+  --serif:"Source Serif 4", Georgia, serif; --sans:"Source Sans 3", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0E151C; --surface:#151F29; --surface2:#1B2733; --ink:#E4EBF1; --muted:#9AAAB8;
+  --line:#2A3A48; --teal:#6FB9D4; --amber:#DCA459; --amber-soft:#332514;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 6px 18px rgba(0,0,0,.3); color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0E151C; --surface:#151F29; --surface2:#1B2733; --ink:#E4EBF1; --muted:#9AAAB8;
+  --line:#2A3A48; --teal:#6FB9D4; --amber:#DCA459; --amber-soft:#332514;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 6px 18px rgba(0,0,0,.3); color-scheme:dark }
+*{box-sizing:border-box}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); font-size:15px; line-height:1.55}
+.devbar{background:var(--amber-soft); color:var(--amber); border-bottom:1px solid var(--amber);
+  font-size:11.8px; font-weight:700; line-height:1.35; padding:6px 18px; text-align:center}
+.wrap{max-width:980px; margin:0 auto; padding:0 18px 56px}
+h1{font-family:var(--serif); font-size:clamp(28px,5.2vw,40px); letter-spacing:-.02em; line-height:1.1; margin:40px 0 0}
+.sub{margin-top:12px; color:var(--muted); font-size:16px; max-width:66ch}
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px; margin-top:28px}
+.pcard{display:flex; flex-direction:column; gap:3px; text-decoration:none; color:inherit; background:var(--surface);
+  border:1px solid var(--line); border-left:4px solid var(--teal); border-radius:11px; padding:15px 17px;
+  box-shadow:var(--shadow); transition:transform .12s, border-color .12s}
+.pcard:hover{transform:translateY(-1px); border-color:var(--ink)}
+.pshort{font-size:11px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--teal)}
+.pname{font-family:var(--serif); font-size:19px; font-weight:700; line-height:1.2}
+.pmeta{font-size:12.6px; color:var(--muted); margin-top:4px}
+.note{margin-top:34px; background:var(--surface); border:1px solid var(--line); border-radius:11px;
+  padding:16px 18px; box-shadow:var(--shadow); font-size:13.6px}
+.note h2{font-family:var(--serif); font-size:18px; margin:0 0 7px}
+.note p + p{margin-top:9px}
+.note p{margin:0}
+footer{color:var(--muted); font-size:12.6px; margin-top:28px}
+</style>
+</head>
+<body>
+<div class="devbar">Under development — draft content under active revision. Not ratified clinical policy, and not for patient care decisions.</div>
+<div class="wrap">
+  <h1>Liver tumour pathways</h1>
+  <p class="sub">Five Memorial Hermann system roadmaps as working consoles. Each one answers a stage or gate with the standard, the reasonable alternative and what to avoid, with the grade and the paper behind every claim.</p>
+
+  <div class="grid">
+      <a class="pcard" href="hcc/">
+        <span class="pshort">HCC</span>
+        <span class="pname">Hepatocellular carcinoma</span>
+        <span class="pmeta">Roadmap v0.8 &middot; 5 stages &middot; 79 sources &middot; liver-directed matrix</span>
+      </a>
+      <a class="pcard" href="crlm/">
+        <span class="pshort">CRLM</span>
+        <span class="pname">Colorectal liver metastases</span>
+        <span class="pmeta">Roadmap v0.6 &middot; 5 gates &middot; 49 sources &middot; liver-directed matrix</span>
+      </a>
+      <a class="pcard" href="icca/">
+        <span class="pshort">iCCA</span>
+        <span class="pname">Intrahepatic cholangiocarcinoma</span>
+        <span class="pmeta">Roadmap v0.6 &middot; 10 gates &middot; 41 sources &middot; liver-directed matrix</span>
+      </a>
+      <a class="pcard" href="hilar/">
+        <span class="pshort">Perihilar CCA</span>
+        <span class="pname">Perihilar cholangiocarcinoma</span>
+        <span class="pmeta">Roadmap v0.6 &middot; 7 gates &middot; 47 sources</span>
+      </a>
+      <a class="pcard" href="nelm/">
+        <span class="pshort">NELM</span>
+        <span class="pname">Neuroendocrine liver metastases</span>
+        <span class="pmeta">Roadmap v0.6 &middot; 9 gates &middot; 40 sources &middot; liver-directed matrix</span>
+      </a>
+  </div>
+
+  <div class="note">
+    <h2>What this is, and what it is not</h2>
+    <p>These pages are <b>drafts under active development</b>, prepared for multidisciplinary and institutional governance review. They are not ratified clinical policy, they have not been approved by the specialties named in them, and they must not be used for patient care decisions.</p>
+    <p>Content is a decision-focused evidence synthesis, not a systematic review. Every criterion drawn from OPTN policy, drug labelling, NCCN or device authorisation must be re-verified against the current source before any use. Clinical transplant candidacy and allocation eligibility are separate judgements.</p>
+    <p>Last build 6 October 2026.</p>
+  </div>
+
+  <footer>Memorial Hermann / UTHealth Houston liver tumour roadmap programme · draft working material</footer>
+</div>
+</body>
+</html>

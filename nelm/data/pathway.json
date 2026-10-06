@@ -1,0 +1,915 @@
+{
+  "key": "nelm",
+  "short": "NELM",
+  "name": "Neuroendocrine liver metastases",
+  "version": "v0.6",
+  "lead": "Which pathway this patient belongs to once differentiation and grade are known, and what the liver is allowed to be asked to do over a disease measured in years.",
+  "gatelabel": "The decision in front of you",
+  "gates": [
+    {
+      "id": "1",
+      "tone": "cure",
+      "name": "1 · Differentiation and grade",
+      "req": "all",
+      "crit": [
+        "Biopsy reporting differentiation, an exact Ki-67 index and a mitotic count",
+        "Somatostatin-receptor PET/CT for receptor status and whole-body staging",
+        "Functional syndrome recorded explicitly, confirmed with directed tests",
+        "Hepatic burden and distribution: unilobar versus bilobar, resectable versus diffuse-miliary",
+        "Primary site, whether it is resected, and the extrahepatic sites"
+      ],
+      "ask": "Is this a well-differentiated neuroendocrine tumour or a poorly differentiated carcinoma, and do I have the Ki-67 to prove it?",
+      "standard": [
+        {
+          "t": "Get a biopsy with the Ki-67 index and the mitotic count, read by a pathologist experienced in neuroendocrine neoplasms, and have differentiation stated explicitly rather than inferred from grade.",
+          "l": "Standard",
+          "g": "B",
+          "refs": ["28609356", "36924180"],
+          "pref": "Every patient before a pathway is assigned, and again on any specimen sampled metachronously — a well-differentiated G3 tumour and a poorly differentiated carcinoma can share a Ki-67 range and need different pathways.",
+          "avoid": "Do not accept a report giving Ki-67 as a range, and do not let grade stand in for differentiation; if the report does not say which it is, ask the pathologist before the board meets.",
+          "note": "A mixed neuroendocrine–non-neuroendocrine neoplasm is named as such, and its clinically dominant aggressive component sets the pathway. NANETS had consensus that both differentiation and grade be reported, and a significant majority that both mitotic rate and Ki-67 be measured; fine-needle aspiration was accepted as adequate in most cases."
+        },
+        {
+          "t": "Stage with somatostatin-receptor PET/CT, 68Ga-DOTATATE or equivalent, alongside cross-sectional CT or MRI.",
+          "l": "Standard",
+          "g": "B",
+          "refs": ["33588146", "37774329"],
+          "pref": "All patients at staging and at restaging: it is the gateway to both the analogue and the PRRT decisions, and the EANM consensus judged it necessary at staging of all NET as complementary to conventional imaging.",
+          "avoid": "Do not use receptor uptake as a substitute for anatomic burden assessment or as a universal response measure, and do not order octreotide SPECT/CT unless SSTR-PET is unavailable.",
+          "note": "Depends on local radiopharmaceutical availability; where SSTR-PET has not been done, the board records its absence explicitly rather than proceeding as if it had."
+        },
+        {
+          "t": "Record carcinoid syndrome, insulinoma, gastrinoma or any other functional syndrome explicitly, confirmed with tests directed at the suspected syndrome rather than a panel of every available marker.",
+          "l": "Standard",
+          "g": "D",
+          "refs": ["39266864"],
+          "pref": "Before any hepatic procedure — this changes procedural safety planning, not only symptom management, and high hepatic burden with a midgut primary is the dominant carcinoid-crisis risk combination.",
+          "avoid": "Do not treat a normal marker panel as excluding a functional syndrome, and do not leave the syndrome undocumented because symptoms are currently controlled on an analogue.",
+          "note": "Grade D: a named local requirement with no comparative outcome evidence behind the thresholds themselves."
+        },
+        {
+          "t": "State the hepatic tumour burden, unilobar versus bilobar, resectable versus diffuse-miliary pattern, the primary site and whether it is resected, the extrahepatic sites, and which problem is driving the clinical picture.",
+          "l": "Standard",
+          "g": "D",
+          "pref": "Every case at submission: burden and distribution decide whether cytoreduction, embolotherapy or transplantation is even on the table.",
+          "avoid": "Do not open a treatment discussion where the dominant problem has not been named — hormonal symptoms and tumour progression need different answers and conflating them produces treatment without an endpoint."
+        }
+      ],
+      "alt": [
+        {
+          "t": "Obtain FDG PET where the grade is high, where behaviour is discordant with grade, where SSTR uptake is heterogeneous, or where a CT or MRI lesion shows no SSTR uptake.",
+          "l": "Reasonable",
+          "g": "B",
+          "refs": ["33588146", "39395114"],
+          "pref": "Before committing to receptor-directed therapy in G2–G3 disease or rapid progression, to find receptor-negative, FDG-avid disease that PRRT will not treat.",
+          "avoid": "Not for routine staging of well-differentiated disease, where NANETS found no value in it.",
+          "note": "The roadmap keeps FDG selective on the Itanet triggers rather than requiring it for every G2–G3 PRRT candidate as EANM Focus 3 does; EANM graded its position by modified Delphi consensus and Itanet graded the FDG trigger 3b-A."
+        },
+        {
+          "t": "Consider re-biopsy on unexpected behavioural change or discordant FDG avidity.",
+          "l": "Reasonable",
+          "g": "C",
+          "refs": ["39395114"],
+          "pref": "Where the original grading is years old or the disease has clearly changed pace: grade progression and transformation both occur and change the pathway.",
+          "avoid": "Not as a scheduled ritual — no study defines the trigger or the interval, which is why this sits at C and remains an open local decision.",
+          "note": "Itanet attaches 3a-A to re-evaluation before radioligand therapy when behaviour changes, which is stronger than the roadmap's 'consider'; whether it becomes a required step before PRRT is a ratification item."
+        }
+      ],
+      "avoid": [
+        {
+          "t": "Do not assign a pathway on grade alone.",
+          "l": "Avoid",
+          "g": "D",
+          "pref": "The differentiation fork drives every later decision, so the tissue standard is deliberately set high.",
+          "avoid": "If differentiation cannot be established on the available material, get more material rather than guessing from Ki-67."
+        },
+        {
+          "t": "Do not manage a poorly differentiated carcinoma on the indolent-disease pathway.",
+          "l": "Avoid",
+          "g": "B",
+          "refs": ["36924180"],
+          "pref": "Carcinoma is managed as an aggressive carcinoma; metastatic patients survive a median 11 to 12 months on palliative platinum–etoposide and about 1 month without it.",
+          "avoid": "Somatostatin analogue for antiproliferative intent, PRRT, hepatic debulking for cytoreduction and transplantation are all inappropriate here. Managing a carcinoma on the indolent pathway costs months of ineffective therapy in a disease measured in months."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "tone": "sys",
+      "name": "2 · G1–G2, low burden: treat or observe",
+      "req": "all",
+      "crit": [
+        "Well-differentiated NET, grade 1 or grade 2",
+        "Low hepatic tumour burden, resectable or ablatable",
+        "Radiologically stable or slowly progressive",
+        "Asymptomatic, or symptoms attributable to a hormonal syndrome rather than to bulk"
+      ],
+      "ask": "This patient has three small liver lesions and no symptoms — do I start an analogue, operate, or scan again in three months?",
+      "standard": [
+        {
+          "t": "Start a somatostatin analogue for antiproliferative effect and symptom control.",
+          "l": "Standard",
+          "g": "A",
+          "refs": ["19704057", "25014687", "38977327"],
+          "pref": "Receptor-positive or functional phenotypes, and anyone in whom progression would be hard to salvage. PROMID (n=85, treatment-naive midgut) gave time to progression 14.3 versus 6.0 months, hazard ratio 0.34 (95% CI 0.20–0.59); CLARINET (n=204, non-functioning enteropancreatic, Ki-67 under 10%) gave a progression-free survival hazard ratio of 0.47 (0.30–0.73) with 24-month progression-free survival 65.1% versus 33.0%.",
+          "avoid": "Do not make it mandatory for every patient. Grade A applies to the antiproliferative indication in unresectable disease: PROMID and CLARINET enrolled only patients with no curative option, unresectable disease or declined surgery. In resectable or ablatable disease, analogue versus resection or ablation is an MDT decision.",
+          "note": "Neither trial established an overall-survival benefit — CLARINET found no significant difference in overall survival or quality of life, and PROMID was an interim analysis with only 16 deaths. The effect is stabilisation, not shrinkage: one partial remission per arm in PROMID. For carcinoid-syndrome control the source is ENETS 2024, not these trials."
+        }
+      ],
+      "alt": [
+        {
+          "l": "Reasonable",
+          "g": "B",
+          "opts": [
+            {
+              "name": "Observation with scheduled imaging",
+              "g": "B",
+              "when": "NCCN says observation with serial imaging is an option if the patient has a low tumour burden; ENETS 2024 supports watch and wait only for selected G1, asymptomatic, low-burden and/or stable small-intestine NET, and ASCO puts the evidence strongest at Ki-67 under 10%.",
+              "pref": "Asymptomatic, low-volume, radiologically stable disease: cross-sectional imaging every 3 to 4 months at first and about every 6 months once stability is shown, with treatment started on progression or symptoms. The CLARINET placebo arm itself ran a median 18.0 months without progression.",
+              "avoid": "Not where the syndrome is active, where receptor-positive bulk is accumulating, or where the patient will not reliably return for imaging. The 3–4-month interval is a local choice within the NCCN range of every 12 weeks to 12 months.",
+              "note": "The NANETS midgut panel split roughly half and half between starting an analogue and observing, and concluded that either is acceptable.",
+              "refs": ["28609356", "37774329", "38977327"]
+            },
+            {
+              "name": "Hepatic cytoreduction — resection, ablation, or both",
+              "g": "C",
+              "flags": ["EXPERTISE"],
+              "when": "Reasonable consideration, grade C: aim for maximal debulking with parenchymal-sparing resection and resect the primary where appropriate. The supporting series are single-arm with strong selection.",
+              "pref": "Burden that can largely be cleared in a patient fit for a long operation, where the target and the expected residual can be named before the incision — see gate 5 for the thresholds and what supports them.",
+              "avoid": "Poorly differentiated carcinoma, diffuse miliary disease, uncontrolled extrahepatic progression, significant untreated carcinoid heart disease. Do not offer it as an alternative to an analogue on the strength of the debulking survival figures.",
+              "note": "The expanded-criteria series reported 5-year disease-specific survival 90% and median liver progression-free survival 72 months in 52 selected patients; these are the outcomes of selected patients, not a measured treatment effect.",
+              "refs": ["25456912", "28609357"]
+            }
+          ],
+          "order": "Observation is listed first because the guidelines treat it as an equally acceptable course in this phenotype, not because it outperforms anything; cytoreduction is second because its evidence is single-arm. Neither order reflects a survival advantage — no randomised comparison of debulking against systemic therapy alone exists.",
+          "flagnote": "Whether observation with 3–4-monthly imaging is an acceptable documented alternative to an immediate analogue, and whether grade B is the right label for it, is alignment area 3 and remains a ratification item."
+        }
+      ],
+      "avoid": [
+        {
+          "t": "Do not read debulking series survival figures as a treatment effect.",
+          "l": "Avoid",
+          "g": "C",
+          "refs": ["25456912"],
+          "pref": "Present them to patients as the outcomes of selected patients: single-arm, heavily selected, with no randomised comparison against systemic therapy alone.",
+          "avoid": "Quoting 90% 5-year disease-specific survival as what an operation delivers."
+        },
+        {
+          "t": "Do not offer Y90 radioembolisation without a phenotype-specific rationale.",
+          "l": "Avoid",
+          "g": "C",
+          "refs": ["29724520"],
+          "pref": "Selected early use may be appropriate where the rationale is stated — lobar or segmental liver-dominant distribution, or prior Whipple or biliary instrumentation.",
+          "avoid": "Low-burden disease in a patient with years of treatment horizon ahead: radiation-induced liver injury accrues over exactly the time the patient has, and cirrhosis-like morphology or portal-hypertension signs appeared in 15 of 52 patients followed beyond a year."
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "tone": "sys",
+      "name": "3 · G1–G2, high burden or progressing",
+      "req": "any",
+      "crit": [
+        "Diffuse or bilobar hepatic disease",
+        "Progression on a somatostatin analogue",
+        "Clinically significant hepatic burden driving the picture",
+        "Hormonal symptoms poorly controlled on an analogue"
+      ],
+      "ask": "Which problem am I treating here — the tumour burden or the hormone — and what is this liver procedure meant to achieve?",
+      "standard": [
+        {
+          "t": "Continue the somatostatin analogue for functional-syndrome control where it is needed, and after clinically significant progression in a nonfunctional tumour do not automatically continue it for antiproliferative benefit.",
+          "l": "Standard",
+          "g": "B",
+          "refs": ["25014687", "28609356"],
+          "pref": "Functional disease, where the analogue is doing hormonal work that nothing else in the plan replaces.",
+          "avoid": "Carrying an analogue indefinitely in a nonfunctional tumour that has progressed on it, on the assumption that it is still holding the tumour back.",
+          "note": "The NANETS midgut panel reached no consensus on continuing an analogue past progression; the roadmap's position is that the indication after progression is hormonal, not antiproliferative."
+        },
+        {
+          "t": "Escalate systemically on progression, with the agent chosen by primary site, receptor status, growth rate and burden — see gate 6.",
+          "l": "Standard",
+          "g": "A",
+          "refs": ["28076709", "34793718"],
+          "pref": "Receptor-positive midgut disease progressing on an analogue: 177Lu-DOTATATE. Pancreatic primaries: sunitinib or capecitabine–temozolomide. Everolimus across non-functional GI and lung disease.",
+          "avoid": "Do not treat grade A for the class as a survival claim for any one agent: NETTER-1's final overall-survival analysis gave median 48.0 versus 36.3 months, hazard ratio 0.84 (95% CI 0.60–1.17), p=0.30, and did not meet its endpoint.",
+          "note": "Grade A here is for the class of systemic escalation being expected practice, not for a sequence; §5 sets out what each trial actually showed."
+        }
+      ],
+      "alt": [
+        {
+          "t": "Add a liver-directed procedure where the hepatic goal is stated: bland embolisation or conventional TACE for symptoms, progression or bulky liver-dominant disease, Y90 for selected lobar or segmental distribution.",
+          "l": "Reasonable",
+          "g": "C",
+          "refs": ["16134179", "18525307"],
+          "pref": "Liver-dominant bulk or a hormonal syndrome poorly controlled on an analogue, where the viable target, the goal, the liver-function cost, the owner and the reassessment date can all be named — see gate 7 for the modality choice.",
+          "avoid": "Do not group bland embolisation, conventional TACE and radioembolisation as equivalent, and do not use drug-eluting embolics in NET.",
+          "note": "NCCN NE-H accepts bland embolisation and conventional TACE and advises against drug-eluting embolics because of increased hepatobiliary toxicity in the NET population. Comparative superiority of bland versus conventional chemoembolisation remains unresolved."
+        }
+      ],
+      "avoid": [
+        {
+          "t": "Do not add a liver-directed procedure on systemic progression without a stated hepatic goal.",
+          "l": "Avoid",
+          "g": "D",
+          "pref": "The trigger for a liver-directed procedure is a hepatic problem — bulk, symptoms, a dominant growing lesion — not the fact that a drug has failed.",
+          "avoid": "A repeat embolic or radiation cycle with no named target, goal, liver-function cost, owner or reassessment date. Worsening liver function after embolic or radiation therapy is a stop, not a reason to change device: cumulative hepatic injury is the limiting resource in a long-horizon disease."
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "tone": "sys",
+      "name": "4 · High-grade disease: G3 NET or carcinoma",
+      "req": "any",
+      "crit": [
+        "Ki-67 above 20%",
+        "Poorly differentiated small-cell or large-cell morphology",
+        "Grade progression from a prior G1 or G2 tumour",
+        "A mixed neuroendocrine–non-neuroendocrine neoplasm"
+      ],
+      "ask": "Ki-67 is 34% — is this a well-differentiated G3 tumour I can treat with receptor-directed therapy, or a carcinoma that needs platinum tomorrow?",
+      "standard": [
+        {
+          "l": "Standard",
+          "g": "B",
+          "opts": [
+            {
+              "name": "177Lu-DOTATATE, well-differentiated G3, receptor-positive",
+              "g": "B",
+              "when": "Preferred for a defined phenotype: advanced SSTR-positive GEP-NET with Ki-67 10–55%. NETTER-2 (n=226, newly diagnosed grade 2–3) gave median progression-free survival 22.8 versus 8.5 months, stratified hazard ratio 0.276 (0.182–0.418), p<0.0001, with objective response 43.0% versus 9.3%.",
+              "pref": "Receptor uptake greater than normal liver in the target disease, Ki-67 inside 10–55%, renal, marrow and hepatic reserve documented, and clinically significant burden — the last being a local selection criterion, not a trial entry criterion.",
+              "avoid": "Ki-67 above 55% was not studied. Receptor-negative or FDG-avid, SSTR-negative disease will not be treated by it. In a series of 69 receptor-expressing high-grade neoplasms, median progression-free survival was 9.6 months and overall survival 19.9 months, falling to 4 and 7 months once Ki-67 exceeded 55%.",
+              "note": "Graded B, not A: NETTER-2 is open-label with immature overall survival, and NETTER-1's final overall-survival analysis was negative (48.0 versus 36.3 months, hazard ratio 0.84, p=0.30). NETTER-2 enrolled 147 grade 2 patients with Ki-67 10–20% and 79 grade 3 patients, so the same evidence covers G2 tumours in that band. Itanet grades the same NETTER-2 recommendation 1b-A; the roadmap's downgrade to B is a ratification item.",
+              "refs": ["38851203", "34793718", "32015164", "39395114"]
+            },
+            {
+              "name": "Capecitabine–temozolomide, or platinum-based therapy",
+              "g": "B",
+              "when": "Reasonable alternative where behaviour is aggressive and receptor expression is low or absent. E2211 (n=133, pancreatic) gave median progression-free survival 22.7 versus 14.4 months with temozolomide alone, hazard ratio 0.58, p=.022 at interim under a two-sided α of 0.20; the final analysis gave 23.2 versus 15.1 months, hazard ratio 0.71 (0.46–1.07).",
+              "pref": "High burden, tumour-related symptoms or rapid progression, especially with a pancreatic primary; and where receptor imaging will not support PRRT.",
+              "avoid": "Do not apply a universal platinum regimen to all G3 NET — Itanet reports etoposide–platinum efficacy as limited in advanced G3 NET compared with its use in carcinoma. E2211's overall survival was not significant (hazard ratio 0.82, p=.42) and grade 3–4 toxicity doubled, 45% versus 22%.",
+              "refs": ["36260828", "39395114"]
+            }
+          ],
+          "order": "PRRT is listed first for the receptor-positive Ki-67 10–55% phenotype because that is the phenotype a randomised trial tested; chemotherapy is first where receptor expression is low or growth is fast. The order reflects the trials' entry criteria and a progression-free survival result, not a demonstrated survival advantage for either.",
+          "flagnote": "The roadmap does not state whether hepatic debulking is appropriate in well-differentiated G3 disease, which is the decision a liver surgeon will face. Both NANETS surgical papers advise against cytoreducing G3 liver metastases — NANETS 2017 refers grade 3 liver metastases for systemic therapy, and NANETS 2020 says cytoreduction may not be indicated because of high relapse and poor survival. Alignment area 15 asks whether G3 debulking should be added to the Avoid column except for selected limited disease within multimodal therapy."
+        },
+        {
+          "t": "Poorly differentiated neuroendocrine carcinoma: platinum–etoposide systemic therapy, managed as an aggressive carcinoma.",
+          "l": "Standard",
+          "g": "B",
+          "refs": ["36924180"],
+          "pref": "Small-cell or large-cell carcinoma morphology, whatever the hepatic burden. Carboplatin–etoposide first line gives response 30 to 50%, progression-free survival 4 to 6 months and overall survival 11 to 12 months.",
+          "avoid": "Somatostatin analogue for antiproliferative intent, PRRT, hepatic debulking for cytoreduction and transplantation are all inappropriate. ENETS grades the recommendation against metastasectomy and against PRRT in metastatic digestive NEC 5D — its weakest grade, resting on no comparative data — but it is the statement that would close down a liver resection discussion at board.",
+          "note": "Molecular profiling of advanced high-grade disease, where available, may identify additional treatment options. A prior history of G1 or G2 NET strongly favours G3 NET over carcinoma if G3 disease is confirmed."
+        }
+      ],
+      "alt": [
+        {
+          "t": "In carcinoma, use liver-directed therapy only for a specific symptomatic or oligoprogressive problem, with a stated goal and a stated duration.",
+          "l": "Reasonable",
+          "g": "C",
+          "refs": ["36924180"],
+          "pref": "A single bleeding, painful or obstructing deposit in a patient whose systemic disease is otherwise being controlled.",
+          "avoid": "Cytoreduction for its own sake, or any liver-directed plan without an end date, in a disease whose median survival on treatment is about a year."
+        }
+      ],
+      "avoid": [
+        {
+          "t": "Do not assume an overall-survival benefit from the PRRT trials.",
+          "l": "Avoid",
+          "g": "B",
+          "refs": ["34793718", "38851203"],
+          "pref": "State plainly what they showed: NETTER-1 met progression-free survival decisively and did not meet overall survival (48.0 versus 36.3 months, hazard ratio 0.84, 95% CI 0.60–1.17, p=0.30); NETTER-2 met progression-free survival with a large effect and its overall survival is immature, with 48% of control patients crossing over.",
+          "avoid": "Telling a patient that PRRT has been shown to make them live longer. In NETTER-1 the proportional-hazards assumption failed and 36% of controls crossed over, so the final comparison is closer to early versus delayed PRRT than to PRRT versus none."
+        },
+        {
+          "t": "Do not apply a universal platinum regimen to all G3 NET, and keep surgery and transplant criteria distinct from systemic-treatment options.",
+          "l": "Avoid",
+          "g": "C",
+          "refs": ["39395114", "31856076"],
+          "pref": "Phenotype-based G3 options: receptor status, growth rate and primary site choose the drug.",
+          "avoid": "Treating well-differentiated G3 as carcinoma, or reading eligibility for a G3 systemic option as eligibility for cytoreduction or transplantation."
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "tone": "cure",
+      "name": "5 · Hepatic cytoreduction",
+      "req": "all",
+      "crit": [
+        "Well-differentiated NET, not poorly differentiated carcinoma",
+        "A substantial fraction of the hepatic burden can be cleared — the target and the expected residual named before operating",
+        "No diffuse-miliary pattern and no uncontrolled extrahepatic progression",
+        "Adequate performance status and hepatic reserve, with significant carcinoid heart disease addressed first",
+        "Demonstrated local experience with parenchymal-sparing hepatic surgery"
+      ],
+      "ask": "Can I clear enough of this liver to be worth the operation, and what exactly am I leaving behind?",
+      "standard": [
+        {
+          "t": "Operate for meaningful reduction of hepatic burden with parenchymal-sparing resection — often multiple small wedges — using ablation as an adjunct for lesions unsuited to resection, and resect the primary where appropriate.",
+          "l": "Reasonable",
+          "g": "C",
+          "flags": ["EXPERTISE"],
+          "refs": ["25456912", "28609357", "31856076", "37578384"],
+          "pref": "Well-differentiated disease where a substantial fraction of the burden can be cleared and the patient will tolerate a long operation. The expanded-criteria series of 52 patients reported 5-year disease-specific survival 90%, 5-year overall survival 88% and median liver progression-free survival 71.6 months, with 51 of 52 having wedge resections and 47 bilobar resections, median 15 tumours resected.",
+          "avoid": "Poorly differentiated carcinoma, diffuse miliary disease, uncontrolled extrahepatic progression, poor performance status, hepatic dysfunction, or liver replacement above roughly 50 to 70% — where NANETS says embolisation, PRRT or medical therapy are preferable. Debulking must not be called complete eradication.",
+          "note": "Read the series with its limits in front of you. It is retrospective, single-surgeon and single-institution; the debulking percentage is the operating surgeon's own intraoperative visual and ultrasonographic estimate, not a volumetric or blinded radiological measurement, and the same surgeon selected who was operated on at all. The lowest-debulking arm — the 70 to 89% group that the whole threshold rests on — contains 11 patients. No morbidity or mortality rate is reported anywhere in the paper, only a median length of stay of 6 days. Median follow-up was 37.4 months against a median liver progression-free survival of 71.6 months, and 88% were kept on octreotide LAR, which the authors themselves say may account for the unusually long progression-free survival rather than the debulking strategy. Extent of debulking did not correlate with liver progression-free survival (P=.74) or disease-specific survival (P=.37). ENETS 2023 puts the target at 70 to 90% or more of visible disease with adequate liver function at level 2b, grade B, and gives no guidance on which end of that 20-point range applies to whom."
+        }
+      ],
+      "alt": [
+        {
+          "l": "Reasonable",
+          "g": "C",
+          "opts": [
+            {
+              "name": "Thermal ablation as complete local treatment",
+              "g": "C",
+              "flags": ["EXPERTISE"],
+              "when": "Selected oligometastatic complete local treatment, usually four lesions or fewer each under 3 cm as NCCN describes it; ENETS 2024 puts percutaneous ablation at three to five metastases each under 3 cm. Cure evidence is weak.",
+              "pref": "Limited well-differentiated disease where all known sites can be addressed, alone or combined with resection, with safe access and margins — an upfront local option for suitable oligometastatic disease, or focal salvage, not necessarily after every systemic treatment. Per-lesion local recurrence was 6.3% in 63 patients and 7.9% in 89 patients, with morbidity 5% and 5.6% and one 30-day death in the larger series.",
+              "avoid": "Do not call it cure: 80% of one series developed new or progressive liver disease, mostly growth of sub-centimetre lesions deliberately left untreated, and neither series reports grade or Ki-67 at all, so long survival after ablation reflects indolent biology as much as the procedure. Record residual disease and grade.",
+              "note": "More often the realistic goal is cytoreduction, symptom control or treatment of a growing dominant lesion; symptom relief was reported in 94% at one week with a median duration of 11 months.",
+              "refs": ["17629995", "21134563", "38977327"]
+            },
+            {
+              "name": "Resection of the primary tumour with liver metastases present",
+              "g": "C",
+              "when": "NCCN says resection of ileum or jejunum NETs with their mesenteric nodes should be performed when symptoms arise from the primary, and should be considered in asymptomatic cases to reduce future obstruction, mesenteric ischaemia, bleeding or perforation.",
+              "pref": "Small-bowel primaries, where NANETS reached full consensus that resection should be considered when feasible; and before PRRT where mesenteric ischaemia or obstruction risk is real. Transplant candidacy depends on the primary being out.",
+              "avoid": "No universal resect-or-observe instruction for pancreatic primaries: NANETS 2020 reached no consensus, with the majority holding that resection may help only in selected circumstances — functional tumour, body or tail location, local complications. ENETS notes that at least three propensity-matched studies show no survival benefit in asymptomatic stage IV disease.",
+              "note": "The supporting series are retrospective with unresected patients older, more comorbid or more heavily replaced; selection bias cannot be excluded. The roadmap keeps selected primary surgery after MDT review and distinguishes small-bowel from pancreatic decisions.",
+              "refs": ["28609357", "31856076", "38977327"]
+            }
+          ],
+          "order": "These are adjuncts to and alternatives within the same operation, not a ladder: ablation is listed with resection because the roadmap pairs them, and primary resection is a separate decision taken at the same board. Neither order carries a survival claim.",
+          "flagnote": "The hepatic burden threshold above which cytoreduction is not attempted is unresolved local decision 3. Debulking series are single-arm and selection-driven and no threshold is evidence-derived; NANETS 2020 reached no consensus on the threshold for pancreatic primaries at all. Registry tracking: burden before and after, residual, liver progression-free survival."
+        }
+      ],
+      "avoid": [
+        {
+          "t": "Do not call debulking complete eradication, and do not operate without naming the target and the expected residual first.",
+          "l": "Avoid",
+          "g": "D",
+          "pref": "It is worth doing only if a substantial fraction of the burden can be cleared; say what fraction and what will be left before the patient consents.",
+          "avoid": "An operation whose success is defined after the fact by what turned out to be resectable."
+        },
+        {
+          "t": "Do not debulk in poorly differentiated carcinoma, diffuse miliary disease, or uncontrolled extrahepatic progression.",
+          "l": "Avoid",
+          "g": "C",
+          "refs": ["36924180", "28609357"],
+          "pref": "Systemic therapy is the pathway in carcinoma; in diffuse disease that cannot reach a meaningful clearance, embolisation, PRRT or medical therapy are preferable.",
+          "avoid": "Significant carcinoid heart disease is a contraindication to hepatic cytoreduction until it is addressed — raised right-sided pressure increases the risk of liver surgery, and NCCN advises valve replacement before liver resection where carcinoid heart disease is significant."
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "tone": "sys",
+      "name": "6 · Systemic therapy: what each trial showed",
+      "req": "any",
+      "crit": [
+        "Progression on a somatostatin analogue",
+        "Unresectable disease with no liver-directed goal to serve",
+        "Receptor-positive disease being considered for PRRT",
+        "A pancreatic primary needing a sequencing decision"
+      ],
+      "ask": "I have four drugs and no trial that compares them — what decides the order for this patient?",
+      "standard": [
+        {
+          "l": "Standard",
+          "g": "B",
+          "opts": [
+            {
+              "name": "177Lu-DOTATATE",
+              "g": "B",
+              "when": "NCCN: lutetium Lu 177 dotatate is FDA-approved for SSTR-positive GEP NETs including foregut, midgut and hindgut tumours. NETTER-1 (n=229, midgut disease progressing on an analogue) met progression-free survival decisively — 65.2% versus 10.8% progression-free at month 20, hazard ratio 0.21 (0.13–0.33), median not reached versus 8.4 months, objective response 18% versus 3%.",
+              "pref": "Receptor-positive disease with uptake greater than normal liver in the target disease on SSTR PET, renal, marrow and hepatic reserve documented before each course, and surgical evaluation first — especially where mesenteric ischaemia or obstruction is a risk. NANETS and Itanet both prefer it second line in SSTR-positive midgut disease.",
+              "avoid": "The final overall-survival analysis did not meet its endpoint: 48.0 versus 36.3 months, hazard ratio 0.84 (95% CI 0.60–1.17), p=0.30. Avoid generally at GFR under 30 and use with caution at GFR 30 to 50. Where SSTR uptake is heterogeneous, a CT or MRI lesion shows no uptake, or progression is rapid, get FDG PET first to find receptor-negative disease PRRT will not treat.",
+              "note": "EANM requires Krenning 3 or 4 uptake in all metastases; the comparator in NETTER-1 was octreotide LAR 60 mg, a dose never shown to control tumour growth, so the trial does not compare PRRT with everolimus, chemotherapy or liver-directed therapy. Myelodysplastic syndrome occurred in 2 of 111 treated patients, one fatal. EANM reached no consensus on the right time point for PRRT in the sequence, and did not recommend it specifically second line for pancreatic NET.",
+              "refs": ["28076709", "34793718", "32015164", "33588146", "39395114"]
+            },
+            {
+              "name": "Everolimus",
+              "g": "B",
+              "when": "RADIANT-3 (n=410, pancreatic): progression-free survival 11.0 versus 4.6 months, hazard ratio 0.35 (0.27–0.45). RADIANT-4 (n=302, non-functional GI and lung): 11.0 versus 3.9 months, hazard ratio 0.48 (0.35–0.67).",
+              "pref": "Non-functional disease across primary sites, and where receptor-negative biology or haematologic risk rules out PRRT.",
+              "avoid": "No survival benefit is established. RADIANT-3's overall survival is uninterpretable — 73% of the placebo arm crossed over — and RADIANT-4's interim overall survival was not significant (hazard ratio 0.64, 0.40–1.05). RADIANT-4 excluded carcinoid syndrome and pancreatic primaries and 90 of 302 patients had lung primaries, so it does not cover functional midgut disease.",
+              "note": "The benefit is stabilisation, not shrinkage: confirmed objective response 5% in RADIANT-3 and 2% in RADIANT-4. Both trials excluded patients embolised within 6 months or ablated within 2 months, so neither says anything about combining everolimus with liver-directed therapy.",
+              "refs": ["21306238", "26703889"]
+            },
+            {
+              "name": "Sunitinib, pancreatic primaries",
+              "g": "B",
+              "when": "n=171: progression-free survival 11.4 versus 5.5 months, hazard ratio 0.42 (0.26–0.66); overall survival hazard ratio 0.41 (0.19–0.89).",
+              "pref": "Progressive pancreatic NET where a tyrosine kinase inhibitor suits the comorbidity profile.",
+              "avoid": "Closed early at 171 of 340 planned patients after more deaths and serious adverse events with placebo; the formal efficacy boundary was not crossed (z 3.85 against 3.88) and early closure limits mature survival estimates. A 9.3% response rate means it stabilises rather than shrinks — it will not convert unresectable hepatic disease.",
+              "refs": ["21306237"]
+            },
+            {
+              "name": "Capecitabine–temozolomide, pancreatic primaries",
+              "g": "B",
+              "when": "E2211 (n=133): 22.7 versus 14.4 months against temozolomide alone, hazard ratio 0.58, p=.022 at the interim analysis under a two-sided α of 0.20; final analysis 23.2 versus 15.1 months, hazard ratio 0.71 (0.46–1.07).",
+              "pref": "Pancreatic primaries with high burden, tumour-related symptoms or rapid progression, where shrinkage is wanted quickly — response rate 39.7%.",
+              "avoid": "Phase 2, open label, not powered for overall survival, which was not significant (hazard ratio 0.82, p=.42); grade 3–4 toxicity doubled, 45% versus 22%. The control arm was single-agent temozolomide, never a standard of care, so the trial does not compare the combination with everolimus, sunitinib or PRRT.",
+              "refs": ["36260828"]
+            },
+            {
+              "name": "Cabozantinib, after PRRT or targeted therapy",
+              "g": "B",
+              "when": "CABINET, placebo-controlled 2:1: extrapancreatic cohort (n=203) 8.4 versus 3.9 months, hazard ratio 0.38 (0.25–0.59); pancreatic cohort (n=95) 13.8 versus 4.4 months, hazard ratio 0.23 (0.12–0.42).",
+              "pref": "Late line, after PRRT, everolimus or sunitinib: patients had a median of two to three prior lines and 59% had already had 177Lu-dotatate.",
+              "avoid": "Objective response was 5% and 19%, there was no overall-survival benefit (21.9 versus 19.7 months and 40.0 versus 31.1 months), and grade 3 or higher adverse events ran 62 to 65% versus 23 to 27% with two-thirds needing dose reduction. The trial stopped early at interim on local rather than central assessment.",
+              "refs": ["39282913"]
+            }
+          ],
+          "order": "The order follows primary site and receptor status, not survival: receptor-positive disease first to PRRT, pancreatic primaries to sunitinib or capecitabine–temozolomide, non-functional disease to everolimus, cabozantinib after those. Every one of these is a progression-free survival result. There is no randomised evidence establishing a sequence and the roadmap does not claim one — sequencing is driven by primary site, receptor status, growth rate, hepatic burden, the need for rapid shrinkage, prior therapy, toxicity tolerance and access.",
+          "flagnote": "Whether first-line PRRT is offered for receptor-positive grade 2–3 disease, and to whom, is unresolved local decision 2: one open-label randomised trial with a progression-free survival endpoint, overall survival immature. Registry tracking: every PRRT course, progression-free survival, hepatic and renal function. Itanet grades PRRT over targeted agents 2b-B and over chemotherapy 3b-A on cross-trial comparison; ESMO records that one of its own authors dissented on PRRT sequencing."
+        },
+        {
+          "t": "Document somatostatin-receptor uptake greater than normal liver in the target disease, and renal, marrow and hepatic reserve, before every PRRT course.",
+          "l": "Standard",
+          "g": "B",
+          "refs": ["32015164", "33588146"],
+          "pref": "PRRT is receptor-dependent: uptake above normal liver is the NCCN threshold and EANM asks for Krenning 3 or 4 in all metastases.",
+          "avoid": "Do not spend marrow, renal and hepatic reserve on FDG-avid, receptor-negative disease that PRRT will not treat; assess discordant FDG-positive, SSTR-negative lesions first. Surgical evaluation should be performed before PRRT.",
+          "note": "Prior liver-directed therapy may raise PRRT hepatotoxicity, and the safe sequence of radioembolisation and PRRT is unresolved — cumulative hepatic exposure is reviewed before either."
+        }
+      ],
+      "alt": [
+        {
+          "t": "Hepatic debulking before PRRT may improve response and progression-free survival, and reduces the mass of amine-producing cells before a radioligand course.",
+          "l": "Reasonable",
+          "g": "C",
+          "refs": ["32015164", "39266864"],
+          "pref": "A fit patient with high hepatic burden and a functional syndrome facing PRRT, where cytoreduction is independently justified.",
+          "avoid": "Do not build a debulking indication on this alone: it rests on a single retrospective series, and the crisis-prevention argument comes from a narrative review.",
+          "note": "This is the one place where the surgeon sits inside the PRRT safety pathway rather than beside it."
+        }
+      ],
+      "avoid": [
+        {
+          "t": "Do not claim a sequence the evidence does not support.",
+          "l": "Avoid",
+          "g": "A",
+          "refs": ["37774329", "32272208"],
+          "pref": "Record the order chosen and the reason for it at tumour board for each patient, and track it in the registry.",
+          "avoid": "ASCO states explicitly that there is insufficient evidence to recommend any particular sequence after progression, because the trials used placebo controls with almost no head-to-head comparisons; overall-survival certainty was rated very low for CLARINET, RADIANT-3, RADIANT-4 and the sunitinib trial and low for NETTER-1."
+        },
+        {
+          "t": "Do not continue a somatostatin analogue for antiproliferative benefit in every nonfunctional NET after significant progression.",
+          "l": "Avoid",
+          "g": "B",
+          "refs": ["19704057", "25014687"],
+          "pref": "Continue it for hormonal control where the tumour is functional.",
+          "avoid": "PROMID and CLARINET tested delay of progression in stable, indolent disease — 96% of CLARINET patients had no progression in the 3 to 6 months before randomisation — and neither establishes an antiproliferative role after documented progression."
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "tone": "loco",
+      "name": "7 · Liver-directed therapy: which modality",
+      "req": "any",
+      "crit": [
+        "Bulky or symptomatic liver-dominant disease",
+        "Hepatic progression with a stated hepatic goal",
+        "Hormonal symptoms poorly controlled on a somatostatin analogue",
+        "Lobar or segmental distribution, or prior Whipple or biliary instrumentation"
+      ],
+      "ask": "This liver needs treating — which device, and what does it cost me in reserve later?",
+      "standard": [
+        {
+          "l": "Reasonable",
+          "g": "C",
+          "opts": [
+            {
+              "name": "Bland embolisation or conventional TACE",
+              "g": "C",
+              "when": "NCCN: there are no completed randomised studies comparing TAE with conventional TACE and both are acceptable. An accepted liver-control and hormone-symptom strategy in well-differentiated NET, for symptoms or progression on an analogue or other systemic therapy, and for bulky disease without waiting for progression.",
+              "pref": "Bulky or symptomatic liver-dominant disease — an early liver-directed choice, not universally second line to PRRT, Y90 or ablation. In 123 patients, radiologic response was 66.7% in carcinoid versus 35.2% in islet-cell tumours, with median overall survival 33.8 versus 23.2 months. Plan staged treatment, liver reserve, biliary infection precautions and a carcinoid-crisis response.",
+              "avoid": "Serious adverse events followed 8.5% of embolisation sessions in that series — hepatorenal syndrome, sepsis, hepatic abscess and one death — and major complications ran 27.3% where liver involvement exceeded 75%. ENETS generally prefers bland embolisation in small-intestine NET.",
+              "note": "Comparative superiority of bland versus conventional chemoembolisation remains unresolved; choose by burden, symptoms, reserve and biliary infection risk, and do not group the approaches as equivalent. The series predates RECIST, analogue maintenance, PRRT and 68Ga-DOTATATE staging, and reports no grade or Ki-67.",
+              "refs": ["16134179", "30016989", "38977327"]
+            },
+            {
+              "name": "Radioembolisation — Y-90 or holmium-166",
+              "g": "C",
+              "flags": ["EXPERTISE"],
+              "when": "Revised local position, Reasonable consideration: selected lobar or segmental liver-dominant control, not restricted to last resort. A phenotype-selected alternative to bland or conventional chemoembolisation, which may be used earlier when justified; NCCN permits it especially for lobar or segmental distribution or prior Whipple or biliary instrumentation, where embolic infection risk may be lower.",
+              "pref": "Lobar or segmental liver-dominant disease with a positive rationale stated. In 148 patients, partial response was 60.5% and complete response 2.7%, with median survival 70 months from first treatment. Adding 166Ho-SIRT to PRRT in 24 matched pairs gave 2-year hepatic progression-free survival 82% versus 50% and best objective response 71% versus 25%.",
+              "avoid": "Weigh late hepatic injury, bilobar treatment, prior radiation and future PRRT. Cirrhosis-like morphology or portal-hypertension signs appeared in 15 of 52 patients followed beyond a year, more often after bilobar treatment, and liver enzymes stayed raised in the 11 followed beyond four years. A long expected survival raises the threshold for radioembolisation rather than lowering it.",
+              "note": "The 70-month median cannot be read as a treatment effect — 78% of patients were alive at a median follow-up of 42 months, response assessment was not standardised and half the patients came from self-described centres of excellence. The HEPAR PLuS comparison was a prospective arm against a retrospective control with only 24 pairs matched, no overall-survival benefit and medians unseparated. There is no evidence for or against the safety of sequencing radioembolisation and PRRT.",
+              "refs": ["18525307", "29724520", "40302310"]
+            },
+            {
+              "name": "Thermal ablation",
+              "g": "C",
+              "flags": ["EXPERTISE"],
+              "when": "Selected oligometastatic complete local treatment, usually four lesions or fewer each under 3 cm; otherwise cytoreduction, symptom control or treatment of a growing dominant lesion.",
+              "pref": "Safe access, achievable margins, all sites reviewed and a hormone-syndrome plan in place — an upfront local option for suitable oligometastatic disease, or focal salvage.",
+              "avoid": "Separate complete treatment from debulking: there is no established cured fraction, and long survival after ablation is strongly affected by indolent biology.",
+              "refs": ["17629995", "21134563"]
+            }
+          ],
+          "order": "Do not use a universal ablation, SBRT, Y90, TACE, HAI, histotripsy ladder. An upfront alternative chosen because of anatomy or organ reserve is not a post-progression second line. The order here reflects how often each is reached for in liver-dominant NET and the wording of NCCN NE-H, not any survival advantage — no optimal order has been established for combining PRRT, systemic therapy and liver-directed treatment, and a liver-directed procedure does not replace indicated systemic therapy. After progression or toxicity, restage and reconsider complete treatment rather than automatically repeating the same procedure.",
+          "flagnote": "Two ratification items sit here. Which embolisation technique is the programme's default is unresolved decision 1: one small randomised TAE versus TACE trial (Maire 2012, 26 patients) found no significant 2-year progression-free survival difference but was underpowered, and any choice is expertise and availability. Whether the programme offers radioembolisation at all, and at what point, is unresolved decision 4 — a mandatory exhaustion-of-all-options rule before Y90 is a local restriction and not NCCN, and the liver-directed matrix on this page carries RETNET outcome figures that the protocol paper in the depot does not report."
+        }
+      ],
+      "alt": [
+        {
+          "t": "SBRT or ablative radiotherapy can provide local treatment of selected liver targets in well-differentiated NET, particularly where access or anatomy prevents ablation.",
+          "l": "Reasonable",
+          "g": "C",
+          "pref": "An alternative focal therapy, or control of oligoprogression, with the continuing systemic or PRRT strategy coordinated.",
+          "avoid": "Evidence is mainly retrospective and there is no established tumour-specific curative benefit. An exceptional plan to treat all oligometastatic disease is labelled definitive local intent with uncertain cure, not proven curative treatment.",
+          "note": "There is no NET-specific series; the matrix entry for this modality rests on mixed-histology data."
+        }
+      ],
+      "avoid": [
+        {
+          "t": "Avoid drug-eluting embolics in NET.",
+          "l": "Avoid",
+          "g": "B",
+          "refs": ["22722717", "30016989", "38977327"],
+          "pref": "Bland embolisation or conventional TACE instead, chosen by burden, symptoms, reserve and biliary infection risk.",
+          "avoid": "NCCN says drug-eluting embolics are associated with increased hepatobiliary toxicity in the NET population and are not recommended. The phase 2 DEB-TACE study stopped on its safety endpoint: 7 of 13 patients (54%) developed a biloma, four needed percutaneous drainage, and two had a prolonged infected hospital course and subsequently died.",
+          "note": "RETNET in the depot is the study protocol and reports no outcome data at all. Its drug-eluting-bead TACE arm was later closed for increased severe complications — reported in the ENETS 2024 guidance, not in the protocol paper — so the trial's practice-changing message came from its 20% serious-adverse-event stopping rule rather than its efficacy question."
+        },
+        {
+          "t": "Hepatic arterial infusion has no routine role in this indication.",
+          "l": "Avoid",
+          "g": "D",
+          "pref": "Consider only within a disease-specific study or as an exceptional expert indication.",
+          "avoid": "Do not transfer colorectal or intrahepatic cholangiocarcinoma pump evidence across histologies; there is no dedicated NELM data."
+        },
+        {
+          "t": "Histotripsy is investigational here: trial or institutional registry only.",
+          "l": "Avoid",
+          "g": "D",
+          "flags": ["PROTOCOL", "REGISTRY"],
+          "pref": "Only with explicit consent about oncologic uncertainty, suitable ultrasound visibility and acoustic access, device-compliant target size and depth, an independent standard-treatment review, and functional-syndrome precautions.",
+          "avoid": "FDA device clearance for tumour destruction does not establish survival benefit or equivalence to established ablation, and there is no tumour-specific curative evidence. A bridge-to-transplant use remains protocol-based: a technical response does not establish transplant eligibility.",
+          "note": "The HOPE4LIVER one-year update reported local control of 63.4% on the primary assessment against 90% post hoc in 47 patients with 52 tumours of mixed histology."
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "tone": "pall",
+      "name": "8 · Functional syndrome and crisis precautions",
+      "req": "any",
+      "crit": [
+        "Carcinoid syndrome or any other documented functional syndrome",
+        "Markedly raised 5-HIAA or chromogranin A",
+        "Any planned hepatic procedure, ablation or PRRT course in functional disease",
+        "Signs or symptoms of carcinoid heart disease"
+      ],
+      "ask": "Who owns the crisis plan for this operation, and is the rescue drug actually in the room?",
+      "standard": [
+        {
+          "t": "Write a procedure-specific crisis plan with a named owner, available rescue octreotide and immediate haemodynamic treatment, for every functional tumour.",
+          "l": "Standard",
+          "g": "D",
+          "refs": ["39266864", "28609357"],
+          "pref": "Every procedure in a functional patient — surgery, ablation, embolisation and PRRT, with anaesthesia and nuclear medicine determining the precautions for each. Treatment is intravenous octreotide 500 to 1000 micrograms at symptom onset, repeated every 5 minutes until control and escalated to a continuous infusion if refractory.",
+          "avoid": "Do not let a plan live in individual memory; this is a named safety process that fails exactly when it is informal. It is not an evidence question and carries no comparative outcome evidence — audit it for adherence.",
+          "note": "Highest risk: midgut primary, high hepatic tumour burden, liver metastases, raised 5-HIAA or chromogranin A, prior carcinoid syndrome including carcinoid heart disease, advanced age, and concurrent histamine-releasing drugs. Crisis usually appears 12 to 48 hours after a first PRRT dose but has followed later doses."
+        },
+        {
+          "t": "Give short-acting octreotide before embolisation in patients with hormonal syndromes.",
+          "l": "Standard",
+          "g": "C",
+          "refs": ["39266864"],
+          "pref": "Functional disease going to bland embolisation, conventional TACE or radioembolisation: short-acting octreotide 250 to 500 micrograms subcutaneously, or 50 micrograms intravenously, 1 to 2 hours before the procedure.",
+          "avoid": "Octreotide within 48 hours, or octreotide LAR within 28 days, of 177Lu-dotatate can competitively block tumour uptake and reduce efficacy, and no rule defines when prophylaxis is worth that trade-off — decide it explicitly with nuclear medicine rather than by default.",
+          "note": "NCCN preserves pre-embolisation octreotide for hormonal syndromes; the roadmap keeps it while refusing the wider claim that prophylaxis prevents crisis."
+        },
+        {
+          "t": "Assess the syndrome and the heart before hepatic procedures, with joint cardiology and anaesthesia review where carcinoid heart disease is significant.",
+          "l": "Standard",
+          "g": "C",
+          "refs": ["28609356", "28609357"],
+          "pref": "Annual echocardiography once serotonin or 5-HIAA exceeds about five times the upper limit of normal, and a low threshold in anyone with signs or symptoms. NCCN: in significant carcinoid heart disease, valve replacement should be done before liver resection if at all possible.",
+          "avoid": "Do not take a functional patient to hepatic resection or transplant evaluation with right-heart disease unassessed — NANETS treats significant carcinoid heart disease as a contraindication to hepatic cytoreduction, because raised right-sided pressure increases the risk of liver surgery.",
+          "note": "This closes a gap the earlier draft acknowledged. Whether an explicit echocardiography gate is adopted is alignment area 12 and remains a ratification item."
+        }
+      ],
+      "alt": [
+        {
+          "t": "Debulking by surgery, interventional radiology or external-beam radiotherapy before a radioligand course is a recognised preventive measure, alongside correction of electrolyte, nutritional and protein deficits.",
+          "l": "Reasonable",
+          "g": "C",
+          "refs": ["39266864", "32015164"],
+          "pref": "High hepatic burden with a midgut primary and an active syndrome, where cytoreduction is justified on its own terms.",
+          "avoid": "Not as a reason to operate on a patient who would not otherwise be a cytoreduction candidate: the evidence is a narrative review and a single retrospective series."
+        },
+        {
+          "t": "For refractory carcinoid diarrhoea with stable imaging, telotristat ethyl rather than raising the analogue dose.",
+          "l": "Reasonable",
+          "g": "B",
+          "refs": ["28609356"],
+          "pref": "Diarrhoea that persists on a standard-dose analogue while imaging is stable — the hormone problem, not the tumour problem.",
+          "avoid": "Escalating the analogue dose for diarrhoea and calling it tumour control; state which problem is being treated."
+        }
+      ],
+      "avoid": [
+        {
+          "t": "Do not rely on prophylactic octreotide to prevent intraoperative carcinoid crisis, and never let it delay fluids and vasopressors.",
+          "l": "Avoid",
+          "g": "B",
+          "refs": ["39266864", "28609357", "31856076"],
+          "pref": "Be ready to manage crisis with fluids and vasopressors — vasopressin, phenylephrine — as well as octreotide, and treat preparedness rather than prophylaxis as the safeguard.",
+          "avoid": "NCCN states prophylactic octreotide is likely ineffective in preventing intraoperative carcinoid crisis, NANETS 2017 says prevention has not been established, and NANETS 2020 calls the role of analogues in preventing crisis in pancreatic NET undefined.",
+          "note": "The roadmap's quoted 1 to 2% incidence during 177Lu-dotatate comes from a narrative review with a single-centre audit and no agreed diagnostic criteria, while surgical series cited by NANETS report intraoperative event rates of 24 to 30% despite octreotide, with liver metastases the strongest predictor in one of them. Whether §7 is reframed as crisis preparedness for every patient with neuroendocrine liver metastases is alignment area 11."
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "tone": "cure",
+      "name": "9 · Transplant candidate",
+      "req": "all",
+      "crit": [
+        "Well or moderately differentiated G1/G2 NET, Ki-67 under 20% and mitotic rate under 20 per 10 high-power fields",
+        "Gastroenteropancreatic primary with portal venous drainage, resected together with all extrahepatic disease, no recurrence for at least six months",
+        "Unresectable disease limited to the liver, with no extrahepatic disease on functional imaging",
+        "Approved local protocol, registry entry and a nonstandard review-board submission",
+        "Significant carcinoid heart disease and functional syndrome assessed"
+      ],
+      "ask": "Is this patient inside the transplant criteria, and is it our protocol or the allocation route that stops us?",
+      "standard": [
+        {
+          "t": "Offer transplantation only within a trial or prospective registry, under restrictive criteria, through the nonstandard Adult Transplant Oncology Review Board route scored at MMaT-3.",
+          "l": "Reasonable",
+          "g": "C",
+          "flags": ["PROTOCOL", "REGISTRY"],
+          "refs": ["27134017", "35869798"],
+          "pref": "A young patient with liver-limited, unresectable, well-differentiated disease whose primary has been out for at least six months without recurrence, who has shown stability under observation, and who will be entered in the registry. In 88 patients meeting Milan-NET criteria, 5- and 10-year survival were 97.2% and 88.8% with transplantation versus 50.9% and 22.4% without; a separate single-centre comparison of 104 patients found 10-year survival 93% after transplantation versus 75% after resection, with disease-free survival 52% versus 18%.",
+          "avoid": "Allocation eligibility does not establish routine clinical benefit, and NCCN deems liver transplantation investigational, acknowledging the considerable associated risks. Neuroendocrine liver metastasis is not a standardised OPTN MELD exception: use the nonstandard 'other liver cancer or tumour, specify' pathway with a written narrative, and confirm the current OPTN policy text before any listing decision.",
+          "note": "Read the evidence with its selection in view. Allocation in the Milan series was non-randomised, recipients were 15 years younger (median 40.5 versus 55.5 years), and propensity adjustment for measured factors cut the 5-year mean survival gain from 12.8 to 6.8 months while keeping the difference (hazard ratio 7.4, 2.4–23.0, for death without transplant); unmeasured selection remains, and 18 of the 22 patients who declined transplant did so because they judged their own health normal. The resection comparison reports univariate analysis only, with transplant recipients younger, more heavily involved and selected by a test of time — median 38.5 months from primary resection to liver surgery versus 6.5 months. Sufficient to justify a protocol; not sufficient to make transplantation a routine option."
+        },
+        {
+          "t": "Hold the allocation record and the renewal ownership from the start: diagnosis and histology, baseline burden, primary and last-treatment dates, serial response imaging, extrahepatic staging, request and extension dates, score route, and named coordinator and physician sign-off.",
+          "l": "Standard",
+          "g": "D",
+          "pref": "Every candidate from first submission. MMaT means median MELD at transplant for the donor hospital used in the match run, not a fixed national score; an MMaT-relative exception below 15 is assigned 15 under Policy 9.4.E, and exceptions generally require 90-day extensions under 9.4.C.",
+          "avoid": "Do not let the imaging-timing wording drift. The guidance requires radiologic workup for extrahepatic disease 'at least 3 months prior to initial or extension MELD exception request (submit date)', including somatostatin-receptor scintigraphy or Ga-68 imaging or PET; that wording is reproduced rather than changed to 'within three months', and the intended timing is confirmed with the review process before filing while current clinical staging is kept.",
+          "note": "Reassess eligibility at progression, recurrence, new extrahepatic findings and each extension. Exploratory laparoscopy or laparotomy is not required for the exception."
+        }
+      ],
+      "alt": [
+        {
+          "t": "Where disease is limited enough to clear, compare resection and cytoreduction against transplantation at the same board before listing.",
+          "l": "Reasonable",
+          "g": "C",
+          "refs": ["28609357", "38977327"],
+          "pref": "Favourable-biology patients are often cytoreduction candidates too, and organ scarcity limits transplantation; ENETS 2024 reduces transplantation to a rare consideration in selected individuals after resecting the primary to leave liver-only disease.",
+          "avoid": "Do not list a patient whose disease a hepatectomy would clear — limited disease amenable to curative liver resection excluded 75 of 280 referrals in the Milan series.",
+          "note": "Recurrence after transplantation is predominantly extrahepatic and late (median disease-free interval 78 months) while after resection it is intrahepatic and early (24 months); 17 of 19 resection deaths were cancer-related, almost all from intrahepatic progression to liver failure."
+        }
+      ],
+      "avoid": [
+        {
+          "t": "Do not list G3 disease or neuroendocrine carcinoma, any extrahepatic disease, a patient whose primary is still in place, a patient with no documented observation period, or a patient not entered in the registry.",
+          "l": "Avoid",
+          "g": "D",
+          "refs": ["27134017"],
+          "pref": "Local policy, stated as policy rather than as evidence. Extrahepatic progression, including new Ga-68-positive lymph nodes, calls for delisting; reconsideration may be possible after all extrahepatic disease is resected and absent for at least six months, while extrahepatic solid-organ metastases such as lung or bone are described as permanent exclusion.",
+          "avoid": "Do not treat a local complete response after liver-directed therapy as an automatic transplant exception, and record bridge or downstaging separately from definitive local treatment.",
+          "note": "Any centre age or hepatic tumour-burden cutoff must be labelled local or attributed to its selection framework — the supplied guidance specifies none, while the Milan criteria carry an age limit under 60 and under 50% liver involvement and ESMO quotes age under 60 and Ki-67 under 10%. Whether the programme opens a NELM transplant protocol at all is unresolved decision 5."
+        },
+        {
+          "t": "Do not take the published series' criteria as evidence-derived thresholds.",
+          "l": "Avoid",
+          "g": "C",
+          "refs": ["32272208", "35869798"],
+          "pref": "They are protocol conditions: well-differentiated G1–G2 disease, portal-drained primary already resected, liver-only disease, hepatic involvement below a defined threshold, an age limit, and a documented period of stability before listing.",
+          "avoid": "Reading them as a selection rule validated against outcome. Milan criteria do not include nodal status of the primary, yet nodal involvement was the only independent predictor of post-transplant survival in the resection comparison (hazard ratio 5.7, 1.3–24) — the criteria may be selecting on the wrong variable."
+        }
+      ]
+    }
+  ],
+  "matrix": "nelm",
+  "quickref": [
+    {
+      "title": "Ki-67 thresholds that change the pathway",
+      "intro": "The numbers that fork this pathway, and what each one permits or bars.",
+      "rows": [
+        ["Ki-67 under 10%", "The CLARINET population, and where ASCO puts the analogue evidence at its strongest; ESMO caps first-line analogue growth control and debulking for syndrome at this level"],
+        ["Ki-67 10–20%, grade 2", "First-line 177Lu-DOTATATE evidence covers this band — 147 of the 226 NETTER-2 patients were grade 2"],
+        ["Ki-67 under 20% with mitotic rate under 20 per 10 high-power fields", "The OPTN review-board grade requirement for a nonstandard NET transplant exception; preserve the stated mitotic units"],
+        ["Ki-67 above 20%, grade 3", "High-grade disease: differentiation must be stated separately, since a well-differentiated G3 tumour and a carcinoma share this range. 79 of 226 NETTER-2 patients were grade 3"],
+        ["Ki-67 10–55%", "The tested first-line PRRT phenotype in receptor-positive GEP-NET; NCCN says first-line PRRT can be considered here. Above 55% was not studied"],
+        ["Ki-67 above 55%", "Best discriminator between carcinoma and well-differentiated G3 in ENETS 2023; in the largest receptor-positive high-grade PRRT series, progression-free survival fell to 4 months and overall survival to 7"]
+      ],
+      "foot": "Differentiation is never read off Ki-67. Biopsy with Ki-67 and mitotic count is required before a pathway is assigned, with the index reported exactly and not as a range, and reassessed on every specimen sampled metachronously. A prior history of G1 or G2 disease strongly favours G3 NET over carcinoma if G3 is confirmed.",
+      "src": "NCCN Neuroendocrine and Adrenal Tumors v1.2026, PDF pp. 89, 119; NETTER-2, PMID 38851203; OPTN NLRB transplant-oncology guidance, December 2025; ENETS 2023 digestive NEC, PMID 36924180; NANETS/SNMMI PRRT consensus, PMID 32015164"
+    },
+    {
+      "title": "Milan-NET transplant criteria",
+      "intro": "The eligibility rule set from the series that quantified transplant benefit — and the OPTN criteria that any listing is actually judged against.",
+      "rows": [
+        ["Confirmed low-grade G1–G2 histology", "Milan: required. OPTN: G1/G2, Ki-67 under 20%, mitoses under 20 per 10 HPF"],
+        ["Primary drained by the portal system, resected with all extrahepatic deposits at a prior curative R0 operation", "Milan: required. OPTN: GEP primary with portal drainage; lower rectum, oesophagus, lung, adrenal and thyroid primaries excluded"],
+        ["Metastatic diffusion under 50% of total liver volume", "Milan: required. OPTN: no hepatic tumour-burden cutoff stated — any local limit must be labelled local"],
+        ["Stable disease or response to therapy for at least six months", "Milan: required. OPTN: no recurrence of primary or extrahepatic disease for at least six months before the request"],
+        ["Age under 60 years", "Milan: relative criterion. OPTN: no age limit stated; ESMO quotes under 60 with Ki-67 under 10%"],
+        ["No extrahepatic spread at six-month restaging by total-body CT or MRI plus octreoscan or Ga-68 PET", "Milan: required. OPTN: functional-imaging workup 'at least 3 months prior to initial or extension request (submit date)' — wording to be clarified before filing"],
+        ["Carcinoid syndrome", "Milan: explicitly not an exclusion"]
+      ],
+      "foot": "88 of 280 referrals met these criteria; 42 were transplanted and 46 were not, the split driven by waiting-list capacity, age and patient refusal. Five- and 10-year overall survival were 97.2% and 88.8% with transplantation versus 50.9% and 22.4% without, but recipients were 15 years younger and propensity adjustment for measured factors cut the 5-year mean survival gain from 12.8 to 6.8 months (hazard ratio 7.4, 95% CI 2.4–23.0, for death without transplant). 88% of grafts were marginal-quality. NCCN still calls transplantation investigational, and NELM is a nonstandard MMaT-3 exception, not a standardised one.",
+      "src": "Mazzaferro 2016, PMID 27134017; Maspero 2022, PMID 35869798; OPTN Policy 9.4.C–E and NLRB transplant-oncology guidance, December 2025; NCCN v1.2026 PDF p. 178"
+    },
+    {
+      "title": "Cytoreduction thresholds, and what supports them",
+      "intro": "Five different debulking targets are in circulation; this is where each comes from.",
+      "rows": [
+        ["More than 90% of metastatic disease — NCCN", "May provide symptomatic relief, prevent future symptoms and improve progression-free survival"],
+        ["At least 70% of visible liver disease — NANETS 2017, small bowel", "Near consensus with one dissent: any number or size of metastases, intermediate grade and extrahepatic disease allowed if 70% is achievable. Over 70% versus under 70% gave median overall survival not reached versus 6.5 years and progression-free survival 3.2 versus 1.3 years"],
+        ["More than 70%, individualised — NANETS 2020, pancreas", "No consensus reached. Over half the panel favoured it over the traditional 90%; progression-free survival was 10.8, 20.6 and 56.1 months for under 70%, 70–90% and over 90%, and some members held that only complete clearance helps while a few doubted any benefit"],
+        ["70–90% or more — ENETS 2023, functioning pancreatic NET", "Level 2b, grade B, with adequate liver function; the paper gives no guidance on which end of the 20-point range applies to whom"],
+        ["70–90% — ASCO 2023", "An unreviewed note only: surgery and liver-directed therapy were excluded from the systematic review, so a surgical reader should not treat it as that guideline's evidence"]
+      ],
+      "foot": "The 70% threshold rests on one expanded-criteria series of 52 patients: retrospective, single-surgeon, single-institution, with the debulking percentage taken as the operating surgeon's own intraoperative visual and ultrasonographic estimate, and that same surgeon deciding who was operated on at all. The group sizes were 11 at 70–89%, 22 at 90–99% and 19 at 100%, so the comparison that matters rests on 11 patients. No morbidity or mortality rate is reported anywhere in the paper — only a median length of stay of 6 days. Extent of debulking did not correlate with liver progression-free survival (P=.74) or disease-specific survival (P=.37), 88% were kept on octreotide LAR, and median follow-up was 37.4 months against a median liver progression-free survival of 71.6 months. The hepatic burden threshold above which cytoreduction is not attempted remains unresolved local decision 3.",
+      "src": "NCCN v1.2026 PDF p. 85; Howe 2017, PMID 28609357; Howe 2020, PMID 31856076; Hofland 2023, PMID 37578384; Del Rivero 2023, PMID 37774329; Graff-Baker 2014, PMID 25456912"
+    },
+    {
+      "title": "Carcinoid crisis precautions",
+      "intro": "What has to be true before a functional patient goes to theatre, to the angiography suite or to a PRRT course.",
+      "rows": [
+        ["A named owner for the crisis plan, procedure by procedure", "Required in functional disease and audited: prophylaxis documented before every procedure"],
+        ["Rescue octreotide in the room", "Intravenous octreotide 500–1000 micrograms at symptom onset, repeated every 5 minutes until control, escalated to continuous infusion if refractory; no consensus on how many boluses precede the infusion"],
+        ["Fluids and vasopressors first", "Octreotide administration must not delay them. Prophylactic octreotide is likely ineffective at preventing intraoperative crisis"],
+        ["Short-acting octreotide before embolisation", "250–500 micrograms subcutaneously or 50 micrograms intravenously 1–2 hours before, for hormonal syndromes"],
+        ["Echocardiography once 5-HIAA or serotonin exceeds about five times normal", "Annually, and at a low threshold with any signs or symptoms; valve replacement before liver resection where carcinoid heart disease is significant"],
+        ["Highest-risk combination", "Midgut primary, high hepatic burden, liver metastases, raised 5-HIAA or chromogranin A, prior carcinoid syndrome or carcinoid heart disease, advanced age, histamine-releasing drugs"]
+      ],
+      "foot": "Crisis after 177Lu-dotatate is estimated at 1 to 2% of recipients, but that figure comes from a narrative review whose authors state the diagnosis lacks agreed criteria and whose own 127 administrations produced none; surgical series cited by NANETS report intraoperative event rates of 24 to 30% despite octreotide, including in patients without the syndrome, with liver metastases the strongest predictor in one of them. Octreotide within 48 hours, or octreotide LAR within 28 days, of 177Lu-dotatate can competitively block tumour uptake and reduce efficacy.",
+      "src": "NCCN v1.2026 PDF pp. 85, 115; Sozio 2024, PMID 39266864; Howe 2017, PMID 28609357; Strosberg 2017 NANETS midgut, PMID 28609356"
+    }
+  ],
+  "honest": [
+    {
+      "t": "Functional status and hepatic burden and distribution are named requirements at grade D.",
+      "why": "The roadmap grades them D because no comparative study tests the thresholds themselves. They are kept because functional status changes procedural safety planning and not only symptom management, and because a pathway cannot be assigned without knowing which problem is driving the clinical picture."
+    },
+    {
+      "t": "Functional tumours require a procedure-specific crisis plan with a named owner, available rescue octreotide and immediate haemodynamic treatment.",
+      "why": "The roadmap states plainly that this is not an evidence question — it is a named safety process that fails when it lives in individual memory. The mechanism that would have justified it, octreotide prophylaxis, is not supported: NCCN calls prophylactic octreotide likely ineffective at preventing intraoperative crisis."
+    },
+    {
+      "t": "Cross-sectional imaging every 3 to 4 months at first, and about every 6 months once stability is shown.",
+      "why": "A local interval chosen within the NCCN range of every 12 weeks to 12 months, retained where risk warrants it rather than claiming one NCCN interval for every patient. No trial compares surveillance intervals."
+    },
+    {
+      "t": "A hepatic burden threshold above which cytoreduction is not attempted.",
+      "why": "Debulking series are single-arm and selection-driven, and no threshold is evidence-derived. NCCN says more than 90%, NANETS 2017 lowered it to 70% on two retrospective series from the centres that championed it, and NANETS 2020 reached no consensus at all for pancreatic primaries."
+    },
+    {
+      "t": "A mandatory exhaustion-of-all-options rule before radioembolisation is a local restriction, not NCCN.",
+      "why": "The roadmap says so explicitly and now permits phenotype-selected Y90 as a reasonable consideration. The counterweight is not evidence of harm from early use but the treatment-horizon principle: a long expected survival raises the threshold for hepatic radioembolisation rather than lowering it, because radiation-induced liver disease accrues over exactly the time the patient has."
+    },
+    {
+      "t": "The tumour board operating model is labelled Standard because the programme has chosen it, not because trials support it.",
+      "why": "The roadmap says these are stakeholder-derived operating requirements, reproduced unchanged across every disease roadmap so the programme has one operating standard rather than five, evidence grade D by construction. Audit them for adherence, not for effectiveness."
+    },
+    {
+      "t": "Transplantation is offered under an approved protocol and registry only, under restrictive criteria.",
+      "why": "Evidence is low and policy is separate from benefit: the supporting series are non-randomised with large selection effects, adjustment for measured factors narrowed but did not remove the transplant advantage, and unmeasured selection remains. Graft stewardship is an institutional judgement, and whether the programme opens a NELM transplant protocol at all is still open."
+    },
+    {
+      "t": "Any centre age or hepatic tumour-burden limit for transplantation must be labelled local or attributed to its selection framework.",
+      "why": "The supplied OPTN review-board guidance specifies no age or burden cutoff. The limits in circulation — age under 60, under 50% liver involvement — come from the Milan and ENETS selection frameworks and are protocol conditions, not evidence-derived thresholds."
+    },
+    {
+      "t": "First-line PRRT in receptor-positive grade 2–3 disease is labelled Preferred for a defined phenotype at grade B.",
+      "why": "The roadmap records this as a deliberate downgrade from the position drafted before the evidence was checked, and asks that it be discussed rather than assumed. One open-label randomised trial with a progression-free survival endpoint supports a strong phenotype-specific recommendation; it does not support a grade A survival claim, and Itanet grades the same recommendation 1b-A."
+    }
+  ],
+  "ops": {
+    "board": [
+      "Submission: an Epic form capturing the clinical question, differentiation and Ki-67, somatostatin-receptor status, functional syndrome status, hepatic burden and distribution, primary site and whether resected, extrahepatic sites, prior therapy, referring clinician and urgency. Owner: submitting clinician.",
+      "Triage: the coordinator and a clinically trained gatekeeper check completeness, imaging quality, duplicate cases, the urgent lane, and whether the question is a decision question. Owner: coordinator and chair.",
+      "Agenda: stable at least 24 hours ahead, approximately 10 to 12 decision cases per session, each carrying one focused question. Owner: coordinator.",
+      "Urgent lane: a same-week slot with chair approval, used in this disease for uncontrolled hormonal syndromes and for suspected high-grade transformation. Owner: chair.",
+      "Attendance: hepatobiliary and transplant surgery, medical oncology, nuclear medicine or theranostics, interventional radiology, diagnostic radiology, pathology, endocrinology where functional disease is managed, and coordination. Owner: specialty leads.",
+      "Imaging: adequate and available current imaging reviewed before the recommendation, with the somatostatin-receptor PET/CT result available or its absence explicitly noted. Owner: diagnostic radiology and nuclear medicine.",
+      "Pathology: pre-alerted for every case requiring differentiation, grade, Ki-67, or re-biopsy for suspected transformation. Owner: pathology.",
+      "Output: one recommendation, one owner, one due date, one reassessment date, one documented alternative considered — and where the tumour is functional, the carcinoid-crisis prophylaxis owner named separately. Owner: chair.",
+      "Documentation: an Epic note within one business day in the agreed structured format. Owner: named owner.",
+      "Registry: the case closed with the decision, the modality delivered, cumulative hepatic-directed exposure, and the outcome at reassessment. Owner: coordinator.",
+      "Referring relationships: the referring clinician is informed of the recommendation and who owns the next step; community-referring relationships are protected explicitly — the pathway returns patients with a plan, it does not capture them. Owner: named owner."
+    ],
+    "dashboard": [
+      "Embolisation: technique, stated goal, hepatic progression-free survival and toxicity, recorded for every procedure.",
+      "PRRT: every course, with progression-free survival and hepatic and renal function.",
+      "Cytoreduction: hepatic burden before and after, the residual left behind, and liver progression-free survival.",
+      "Radioembolisation: long-term hepatic follow-up for every patient treated, with cumulative hepatic-directed exposure per patient.",
+      "Transplantation: registry entry for every listing, with the allocation record and a named renewal owner.",
+      "Functional disease: carcinoid-crisis prophylaxis documented before every procedure, audited for adherence.",
+      "Re-biopsy: rate, and whether the pathway changed when it was performed.",
+      "Board output: named owner, due date and reassessment date present on every recommendation, with the Epic note filed within one business day.",
+      "Every repeat liver-directed cycle: the viable target, the goal (symptoms or progression), the liver-function cost, the owner and the reassessment date all named.",
+      "Source currency: NCCN edition and OPTN allocation requirements verified on the agreed cycle by a named owner."
+    ],
+    "approvals": [
+      {
+        "n": 1,
+        "q": "Which embolisation technique is the programme's default?",
+        "why": "One small randomised TAE versus TACE trial (Maire 2012, 26 patients) found no significant 2-year progression-free survival difference but was underpowered; RETNET is ongoing and closed its drug-eluting-bead TACE arm for increased severe complications (ENETS 2024). Any choice is expertise and availability.",
+        "audit": "Registry: technique, goal, hepatic progression-free survival, toxicity."
+      },
+      {
+        "n": 2,
+        "q": "Is first-line PRRT offered for receptor-positive grade 2–3 disease, and to whom?",
+        "why": "One open-label randomised trial with a progression-free survival endpoint; overall survival immature. Depends on radiopharmaceutical availability and payer authorisation.",
+        "audit": "Registry: every PRRT course, progression-free survival, hepatic and renal function."
+      },
+      {
+        "n": 3,
+        "q": "Hepatic burden threshold above which cytoreduction is not attempted.",
+        "why": "Debulking series are single-arm and selection-driven; no threshold is evidence-derived.",
+        "audit": "Registry: burden before and after, residual, liver progression-free survival."
+      },
+      {
+        "n": 4,
+        "q": "Does the programme offer radioembolisation in this disease at all, and at what point?",
+        "why": "Evidence is minimal and the long treatment horizon makes cumulative hepatic radiation injury the dominant consideration.",
+        "audit": "Registry required if offered; long-term hepatic follow-up."
+      },
+      {
+        "n": 5,
+        "q": "Does the programme open a NELM transplant protocol?",
+        "why": "Non-randomised series; adjustment for measured factors narrowed but did not remove the transplant advantage, and unmeasured selection remains. Graft stewardship is an institutional judgement.",
+        "audit": "Registry required if opened."
+      },
+      {
+        "n": 6,
+        "q": "Who owns carcinoid-crisis prophylaxis, and how is it verified before each procedure?",
+        "why": "Not an evidence question. It is a named safety process that fails when it lives in individual memory.",
+        "audit": "Audit: prophylaxis documented before every procedure in functional patients."
+      },
+      {
+        "n": 7,
+        "q": "Re-biopsy policy for suspected grade progression or transformation.",
+        "why": "No evidence defines the trigger or interval; behaviour-driven in practice.",
+        "audit": "Audit: re-biopsy rate, change in pathway when performed."
+      },
+      {
+        "n": 8,
+        "q": "Who owns subsequent NCCN and OPTN update checks, and on what cycle?",
+        "why": "Source reconciliation is complete in this version. An owner is assigned to verify subsequent editions and current allocation requirements, ratify the documented institutional positions, and maintain the update cycle.",
+        "audit": "Named owner plus edition and date plus update cycle."
+      }
+    ]
+  },
+  "refs": {
+    "19704057": ["PROMID", "Systemic therapy", "Rinke A, Müller HH, Schade-Brittinger C, et al. Placebo-controlled, double-blind, prospective, randomized study on the effect of octreotide LAR in the control of tumor growth in patients with metastatic neuroendocrine midgut tumors: a report from the PROMID Study Group. J Clin Oncol. 2009;27(28):4656-63."],
+    "25014687": ["CLARINET", "Systemic therapy", "Caplin ME, Pavel M, Ćwikła JB, et al. Lanreotide in metastatic enteropancreatic neuroendocrine tumors. N Engl J Med. 2014;371(3):224-33."],
+    "28076709": ["NETTER-1", "Systemic therapy", "Strosberg J, El-Haddad G, Wolin E, et al. Phase 3 trial of 177Lu-Dotatate for midgut neuroendocrine tumors. N Engl J Med. 2017;376(2):125-135."],
+    "34793718": ["NETTER-1 final OS", "Systemic therapy", "Strosberg JR, Caplin ME, Kunz PL, et al. 177Lu-Dotatate plus long-acting octreotide versus high-dose long-acting octreotide in patients with midgut neuroendocrine tumours (NETTER-1): final overall survival and long-term safety results from an open-label, randomised, controlled, phase 3 trial. Lancet Oncol. 2021;22(12):1752-1763."],
+    "38851203": ["NETTER-2", "Systemic therapy", "Singh S, Halperin D, Myrehaug S, et al. [177Lu]Lu-DOTA-TATE plus long-acting octreotide versus high-dose long-acting octreotide for the treatment of newly diagnosed, advanced grade 2-3, well-differentiated, gastroenteropancreatic neuroendocrine tumours (NETTER-2): an open-label, randomised, phase 3 study. Lancet. 2024;403(10446):2807-2817."],
+    "21306238": ["RADIANT-3", "Systemic therapy", "Yao JC, Shah MH, Ito T, et al. Everolimus for advanced pancreatic neuroendocrine tumors. N Engl J Med. 2011;364(6):514-23."],
+    "26703889": ["RADIANT-4", "Systemic therapy", "Yao JC, Fazio N, Singh S, et al. Everolimus for the treatment of advanced, non-functional neuroendocrine tumours of the lung or gastrointestinal tract (RADIANT-4): a randomised, placebo-controlled, phase 3 study. Lancet. 2016;387(10022):968-977."],
+    "21306237": ["Sunitinib A6181111", "Systemic therapy", "Raymond E, Dahan L, Raoul JL, et al. Sunitinib malate for the treatment of pancreatic neuroendocrine tumors. N Engl J Med. 2011;364(6):501-13."],
+    "36260828": ["E2211 CAPTEM", "Systemic therapy", "Kunz PL, Graham NT, Catalano PJ, et al. Randomized study of temozolomide or temozolomide and capecitabine in patients with advanced pancreatic neuroendocrine tumors (ECOG-ACRIN E2211). J Clin Oncol. 2023;41(7):1359-1369."],
+    "39282913": ["CABINET", "Systemic therapy", "Chan JA, Geyer S, Zemla T, et al. Phase 3 trial of cabozantinib to treat advanced neuroendocrine tumors. N Engl J Med. 2025;392(7):653-665."],
+    "25456912": ["Graff-Baker debulking", "Resection", "Graff-Baker AN, Sauer DA, Pommier SJ, et al. Expanded criteria for carcinoid liver debulking: maintaining survival and increasing the number of eligible patients. Surgery. 2014;156(6):1369-76."],
+    "28609357": ["NANETS 2017 surgical", "Guidelines & policy", "Howe JR, Cardona K, Fraker DL, et al. The surgical management of small bowel neuroendocrine tumors: consensus guidelines of the North American Neuroendocrine Tumor Society. Pancreas. 2017;46(6):715-731."],
+    "31856076": ["NANETS 2020 surgical", "Guidelines & policy", "Howe JR, Merchant NB, Conrad C, et al. The North American Neuroendocrine Tumor Society consensus paper on the surgical management of pancreatic neuroendocrine tumors. Pancreas. 2020;49(1):1-33."],
+    "28609356": ["NANETS 2017 medical", "Guidelines & policy", "Strosberg JR, Halfdanarson TR, Bellizzi AM, et al. The North American Neuroendocrine Tumor Society consensus guidelines for surveillance and medical management of midgut neuroendocrine tumors. Pancreas. 2017;46(6):707-714."],
+    "32015164": ["NANETS/SNMMI PRRT", "Guidelines & policy", "Hope TA, Bodei L, Chan JA, et al. NANETS/SNMMI consensus statement on patient selection and appropriate use of 177Lu-DOTATATE peptide receptor radionuclide therapy. J Nucl Med. 2020;61(2):222-227."],
+    "33588146": ["EANM Focus 3", "Staging & risk", "Ambrosini V, Kunikowska J, Baudin E, et al. Consensus on molecular imaging and theranostics in neuroendocrine neoplasms. Eur J Cancer. 2021;146:56-73."],
+    "39395114": ["Itanet 2024 RLT", "Guidelines & policy", "Panzuto F, Albertelli M, Davì MV, et al. Radioligand therapy in the therapeutic strategy for patients with gastro-entero-pancreatic neuroendocrine tumors: a consensus statement from Itanet, AIMN, SIE and AIOM. J Endocrinol Invest. 2025;48(1):23-36."],
+    "38977327": ["ENETS 2024 small intestine", "Guidelines & policy", "Lamarca A, Bartsch DK, Caplin M, et al. European Neuroendocrine Tumor Society (ENETS) 2024 guidance paper for the management of well-differentiated small intestine neuroendocrine tumours. J Neuroendocrinol. 2024;36(9):e13423."],
+    "36924180": ["ENETS 2023 NEC", "Guidelines & policy", "Sorbye H, Grande E, Pavel M, et al. European Neuroendocrine Tumor Society (ENETS) 2023 guidance paper for digestive neuroendocrine carcinoma. J Neuroendocrinol. 2023;35(3):e13249."],
+    "37578384": ["ENETS 2023 functioning panNET", "Guidelines & policy", "Hofland J, Falconi M, Christ E, et al. European Neuroendocrine Tumor Society 2023 guidance paper for functioning pancreatic neuroendocrine tumour syndromes. J Neuroendocrinol. 2023;35(8):e13318."],
+    "37774329": ["ASCO 2023 systemic", "Guidelines & policy", "Del Rivero J, Perez K, Kennedy EB, et al. Systemic therapy for tumor control in metastatic well-differentiated gastroenteropancreatic neuroendocrine tumors: ASCO guideline. J Clin Oncol. 2023;41(32):5049-5067."],
+    "32272208": ["ESMO 2020 GEP-NEN", "Guidelines & policy", "Pavel M, Öberg K, Falconi M, et al. Gastroenteropancreatic neuroendocrine neoplasms: ESMO clinical practice guidelines for diagnosis, treatment and follow-up. Ann Oncol. 2020;31(7):844-860."],
+    "27134017": ["Milan-NET transplant", "Transplant", "Mazzaferro V, Sposito C, Coppa J, et al. The long-term benefit of liver transplantation for hepatic metastases from neuroendocrine tumors. Am J Transplant. 2016;16(10):2892-2902."],
+    "35869798": ["Resection vs transplant", "Transplant", "Maspero M, Rossi RE, Sposito C, et al. Long-term outcomes of resection versus transplantation for neuroendocrine liver metastases meeting the Milan criteria. Am J Transplant. 2022;22(11):2598-2607."],
+    "39266864": ["Carcinoid crisis in PRRT", "Staging & risk", "Sozio SJ, Raynor W, Becker MC, et al. Carcinoid crisis in Lutetium-177-Dotatate therapy of neuroendocrine tumors: an overview of pathophysiology, risk factors, recognition, and treatment. EJNMMI Rep. 2024;8(1):29."],
+    "30016989": ["RETNET protocol", "Liver-directed", "Chen JX, Wileyto EP, Soulen MC. Randomized Embolization Trial for NeuroEndocrine Tumor Metastases to the Liver (RETNET): study protocol for a randomized controlled trial. Trials. 2018;19(1):390."],
+    "22722717": ["DEB-TACE phase 2", "Liver-directed", "Bhagat N, Reyes DK, Lin M, et al. Phase II study of chemoembolization with drug-eluting beads in patients with hepatic neuroendocrine metastases: high incidence of biliary injury. Cardiovasc Intervent Radiol. 2013;36(2):449-59."],
+    "16134179": ["Gupta embolisation", "Liver-directed", "Gupta S, Johnson MM, Murthy R, et al. Hepatic arterial embolization and chemoembolization for the treatment of patients with metastatic neuroendocrine tumors: variables affecting response rates and survival. Cancer. 2005;104(8):1590-602."],
+    "18525307": ["Kennedy Y-90", "Liver-directed", "Kennedy AS, Dezarn WA, McNeillie P, et al. Radioembolization for unresectable neuroendocrine hepatic metastases using resin 90Y-microspheres: early results in 148 patients. Am J Clin Oncol. 2008;31(3):271-9."],
+    "29724520": ["Y-90 late toxicity", "Liver-directed", "Tomozawa Y, Jahangiri Y, Pathak P, et al. Long-term toxicity after transarterial radioembolization with yttrium-90 using resin microspheres for neuroendocrine tumor liver metastases. J Vasc Interv Radiol. 2018;29(6):858-865."],
+    "40302310": ["HEPAR PLuS", "Liver-directed", "Veldhuis WB, Walter T, de Vries-Huizing DMV, et al. PRRT plus holmium-166-SIRT (HEPAR PLuS) versus PRRT-only in patients with metastatic neuroendocrine tumors: a propensity-score matched analysis. J Neuroendocrinol. 2025;37(8):e70034."],
+    "17629995": ["Mazzaglia RFA", "Liver-directed", "Mazzaglia PJ, Berber E, Milas M, Siperstein AE. Laparoscopic radiofrequency ablation of neuroendocrine liver metastases: a 10-year experience evaluating predictors of survival. Surgery. 2007;142(1):10-9."],
+    "21134563": ["Akyildiz RFA", "Liver-directed", "Akyildiz HY, Mitchell J, Milas M, Siperstein A, Berber E. Laparoscopic radiofrequency thermal ablation of neuroendocrine hepatic metastases: long-term follow-up. Surgery. 2010;148(6):1288-93."]
+  },
+  "nonpm": {
+    "nccn": ["NCCN NE v1.2026", "Guidelines & policy", "National Comprehensive Cancer Network. NCCN Clinical Practice Guidelines in Oncology: Neuroendocrine and Adrenal Tumors. Version 1.2026, 21 April 2026. Original PDF p. 72 (imaging), p. 85 (NE-D, surgery and carcinoid crisis), p. 89 (NE-E, pathology), p. 115 (NE-H, embolisation), p. 119 (NE-J, PRRT), p. 178 (discussion, transplantation)."],
+    "optn9": ["OPTN Policy 9", "Guidelines & policy", "Organ Procurement and Transplantation Network. Policy 9: Allocation of Livers and Liver-Intestines. U.S. Department of Health and Human Services, HRSA. Policy 9.4.C–E, 9.5.A and 9.5.I; official policy PDF retrieved 1 October 2026.", "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf"],
+    "optn-nlrb": ["OPTN NLRB guidance 2025", "Guidelines & policy", "Organ Procurement and Transplantation Network, Liver and Intestinal Organ Transplantation Committee. Guidance to Liver Transplant Programs and the National Liver Review Board for: Adult MELD Exceptions for Transplant Oncology. December 2025. Review-board guidance, not OPTN policy; pp. 8–9, submission instructions p. 3.", "https://www.hrsa.gov/sites/default/files/hrsa/optn/adult-meld-exception-transplant-oncology-review-guidance.pdf"],
+    "asco25": ["ASCO 2025 symptom management", "Guidelines & policy", "ASCO guideline: symptom management for well-differentiated gastroenteropancreatic neuroendocrine tumours, 2025.", "https://doi.org/10.1200/OP-25-00133"],
+    "hope4liver": ["HOPE4LIVER", "Liver-directed", "Ziemlewicz TJ, et al. HOPE4LIVER one-year update. Ann Surg 2025. 47 patients, 52 tumours; local control 63.4% on the primary assessment versus 90% post hoc.", "https://pmc.ncbi.nlm.nih.gov/articles/PMC12594125/"],
+    "mh-roadmap": ["MH NELM roadmap v0.6", "Guidelines & policy", "Memorial Hermann Neuroendocrine Liver Metastasis System Roadmap. Multidisciplinary practice guideline and operating pathway, Draft v0.6, 4 October 2026 (liver-directed therapy section revised 3 October 2026). Systemwide review copy, pending multidisciplinary approval."],
+    "mh-align": ["MH NELM alignment worksheet", "Guidelines & policy", "Guideline alignment worksheet — adult neuroendocrine liver metastasis. Memorial Hermann Neuroendocrine Liver Metastasis System Roadmap, Draft v0.6, 4 October 2026. Sixteen areas where the published guidelines can disagree; NCCN included in every area."]
+  },
+  "provenance": "Built from the Memorial Hermann Neuroendocrine Liver Metastasis System Roadmap, Draft v0.6 dated 4 October 2026 with its liver-directed therapy section revised 3 October 2026, and from the companion guideline alignment worksheet of the same date, which compares the roadmap against NCCN Neuroendocrine and Adrenal Tumors v1.2026 (21 April 2026), NANETS 2017 medical and surgical consensus statements, NANETS 2020 surgical consensus, EANM Focus 3 (2021), Itanet 2024, ENETS 2023–2024 guidance and the OPTN National Liver Review Board transplant-oncology guidance of December 2025 against OPTN Policy 9 as checked on 1 October 2026. Evidence strings, numbers and published criticism come from the structured abstracts of the NELM reference depot, and the liver-directed therapy matrix is rendered from the shared modality matrix. Both source documents are drafts pending multidisciplinary and institutional governance review: they are not active clinical policy, and every numeric criterion must be verified against its current source before use."
+}

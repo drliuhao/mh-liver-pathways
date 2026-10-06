@@ -1,0 +1,814 @@
+{
+  "key": "crlm",
+  "short": "CRLM",
+  "name": "Colorectal liver metastases",
+  "version": "v0.6",
+  "lead": "Whether every site of hepatic disease can be eradicated — now, after a defined course of conversion therapy, or only by replacing the liver — and what to do when the answer is no.",
+  "gatelabel": "The decision in front of you",
+  "gates": [
+    {
+      "id": "1",
+      "tone": "sys",
+      "name": "1 · Staged and genotyped",
+      "req": "all",
+      "crit": [
+        "Contrast CT of chest, abdomen and pelvis, plus liver MRI with hepatocyte-specific or diffusion-weighted sequences whenever local therapy is contemplated",
+        "PET/CT and colonoscopy added whenever transplantation is a possibility",
+        "RAS, BRAF, MMR/MSI and HER2 resulted before the first-line systemic decision",
+        "Primary tumour status recorded, with pelvic MRI and baseline bowel, urinary and sexual function for a rectal primary",
+        "Future liver remnant, prior treatment map including previous ablation zones, and the clinical risk score recorded"
+      ],
+      "ask": "Do I know the whole disease, the liver and the biology well enough to say which phase this patient is in?",
+      "standard": [
+        {
+          "t": "Stage with contrast CT of chest, abdomen and pelvis and add a liver MRI with hepatocyte-specific or diffusion-weighted sequences before any hepatectomy or ablation.",
+          "l": "Standard",
+          "g": "B",
+          "refs": ["41990853", "40640089"],
+          "pref": "Every patient in whom local therapy is contemplated: MRI detects lesions CT misses and changes the operative plan, and ESMO asks for liver contrast MRI with hepatobiliary agents in every candidate for locoregional therapy [II, A].",
+          "avoid": "Do not plan a hepatectomy or an ablation from CT alone; an incomplete map produces an incomplete operation. Image before the first dose of chemotherapy where possible, because lesions are easier to see untreated.",
+          "note": "NCCN prefers hepatic MRI with extracellular or hepatobiliary contrast over CT to assess the exact number and distribution of foci for local treatment planning. The Chinese 2024 consensus makes liver-specific contrast MRI the preferred baseline study (Grade I) and does not use PET/CT first line."
+        },
+        {
+          "t": "If transplantation is a possibility, stage to the transplant standard: PET/CT and colonoscopy in addition, inside the OPTN time windows.",
+          "l": "Standard",
+          "g": "B",
+          "refs": ["34506756"],
+          "pref": "Any patient who might reach Phase 3. The threshold for excluding extrahepatic disease is higher for transplantation than for resection, because graft scarcity and lifelong immunosuppression change the consequence of being wrong. IHPBA 2021 recommends FDG PET/CT to rule out extrahepatic disease and high-resolution chest CT to exclude pulmonary metastases.",
+          "avoid": "Do not treat resection-grade staging as evidence of transplant eligibility. Imaging adequate to plan a hepatectomy is not adequate to establish exception eligibility.",
+          "note": "The OPTN guidance route requires CT/MRI of chest, abdomen and pelvis plus PET within one month before the initial request, with the PET performed at least four weeks after chemotherapy is stopped, and colonoscopy within 12 months before the request. IHPBA 2021 instead asks for colonoscopy within 3 months of transplant."
+        },
+        {
+          "t": "Resulted RAS, BRAF, mismatch-repair or microsatellite status and HER2 at diagnosis of metastatic disease, with broader profiling where a rare actionable alteration would change treatment.",
+          "l": "Standard",
+          "g": "A",
+          "refs": ["41990853", "40640089"],
+          "pref": "Before the first-line decision, every patient. ESMO asks for molecular work-up at diagnosis in all patients reported within 14 days [I, A]; the Chinese 2024 consensus tests RAS and BRAF in all patients before treatment (Grade I, Class 1A).",
+          "avoid": "Do not let a single mutation set margin width, the extent of parenchymal resection, or exclusion from otherwise feasible clearance. BRAF mutation carries an adverse prognosis after resection; it is not an operative contraindication.",
+          "note": "A POLE or POLD1 variant needs variant-level and phenotype interpretation before it is used to justify checkpoint therapy. Mismatch-repair deficiency or a suggestive family history prompts hereditary cancer assessment. Genotype is prognostic; the direction and duration of response during effective therapy carry more decision weight."
+        },
+        {
+          "l": "Standard",
+          "g": "A",
+          "opts": [
+            {
+              "name": "Doublet plus anti-EGFR",
+              "g": "A",
+              "when": "ASCO 2023 recommends anti-EGFR plus doublet chemotherapy first line for left-sided RAS wild-type disease (strong recommendation) and not for right-sided tumours: versus bevacizumab, overall survival HR 0.71 (0.58–0.85) on the left and 1.35 (1.0–1.8) on the right.",
+              "pref": "Left-sided, RAS and BRAF wild-type, mismatch-repair proficient disease when maximal shrinkage is the goal. In the final RAS wild-type FIRE-3 population centrally reviewed response was 72.0% versus 56.1% and early shrinkage of 20% or more 68.2% versus 49.1% with cetuximab — both post hoc, in a trial whose investigator-assessed response and progression-free survival did not differ and which did not analyse sidedness.",
+              "avoid": "Right-sided primary, or RAS or BRAF V600E mutation. Do not read a shrinkage advantage as a survival advantage: CALGB/SWOG 80405 found median overall survival 30.0 months with cetuximab versus 29.0 with bevacizumab, HR 0.88 (0.77–1.01), p=0.08, so the two biologics give similar survival in KRAS wild-type disease.",
+              "note": "Sidedness was collected post hoc in CALGB 80405 and the chemotherapy backbone was chosen by physician and patient, so the mFOLFOX6 subgroup favouring cetuximab is an unplanned subgroup of a non-randomised comparison.",
+              "refs": ["36252154", "27575024", "28632865"]
+            },
+            {
+              "name": "FOLFOXIRI plus bevacizumab",
+              "g": "B",
+              "when": "CAIRO5 supported regimen choice by sidedness and molecular status. In right-sided or RAS/BRAF V600E-mutant initially unresectable liver-only disease, FOLFOXIRI–bevacizumab improved progression-free survival (median 10.6 versus 9.0 months, HR 0.76, 95% CI 0.60–0.98, p=0.032) and complete local treatment (51% versus 37%, p=0.013).",
+              "pref": "A fit patient with right-sided or RAS/BRAF V600E-mutant disease in whom conversion response is the limiting factor. Preferred for that defined phenotype, not a general default.",
+              "avoid": "Unfit patients, and left-sided RAS/BRAF wild-type disease, where FOLFOXIRI was never tested in CAIRO5. Grade 3 or worse events were 76% versus 59% with dose reductions in 55% and seven treatment-related deaths in the triplet arm; overall survival is not yet reported.",
+              "note": "Resectability in CAIRO5 was a panel judgement with unanimous agreement in only 66% of baseline and 42% of follow-up assessments, so the complete local treatment endpoint is investigator-dependent.",
+              "refs": ["37329889"]
+            },
+            {
+              "name": "Encorafenib, cetuximab and mFOLFOX6",
+              "g": "A",
+              "when": "BREAKWATER met its primary endpoint in first-line BRAF V600E-mutant disease: median progression-free survival 12.8 versus 7.1 months, HR 0.53 (95% CI 0.41–0.68), with interim overall survival 30.3 versus 15.1 months, HR 0.49 (0.38–0.63).",
+              "pref": "BRAF V600E mutation, first line. NCCN asks that these patients receive an encorafenib-containing regimen during one line of therapy, with a chemotherapy-containing option preferred first line.",
+              "avoid": "Do not read it as a conversion result: no resection, conversion or local-treatment endpoint was reported, and grade 3 or 4 toxicity in 81.5% with permanent discontinuation in 26.7% is demanding for a patient being worked up for liver surgery.",
+              "note": "BRAF V600E is an exclusion in current transplant protocols, so this branch and Phase 3 rarely meet. The survival analysis is interim at 242 of 297 expected events and MSI-high patients were excluded.",
+              "refs": ["40444708"]
+            },
+            {
+              "name": "Nivolumab plus ipilimumab",
+              "g": "A",
+              "when": "CheckMate 8HW: progression-free survival favoured nivolumab plus ipilimumab over nivolumab alone in centrally confirmed MSI-high or dMMR disease, HR 0.62 (95% CI 0.48–0.81), and against chemotherapy first line median 54.1 versus 5.9 months, HR 0.21 (0.14–0.31).",
+              "pref": "MSI-high or mismatch-repair deficient disease. Sustained molecular control may postpone, replace or change the role of liver-directed treatment, judged on serial cross-sectional imaging against a defined framework rather than on symptoms or a single scan.",
+              "avoid": "Do not list such a patient on the described OPTN exception route, which requires microsatellite stability; IHPBA 2021 excludes MSI-high and dMMR patients from transplantation altogether. Pre-transplant checkpoint exposure and post-transplant rejection risk must be addressed before the first dose.",
+              "note": "Overall survival in CheckMate 8HW remains masked under the hierarchical testing plan and adding ipilimumab roughly doubled grade 3–4 toxicity (22% versus 14%). In KEYNOTE-177 pembrolizumab improved progression-free survival over chemotherapy, 16.5 versus 8.2 months, HR 0.60, but 29.4% had progressive disease as best response and survival was immature with 59% effective crossover.",
+              "refs": ["39874977", "33264544", "34506756"]
+            },
+            {
+              "name": "Sotorasib plus panitumumab",
+              "g": "B",
+              "when": "CodeBreaK 300, after chemorefractory progression in KRAS G12C disease: median progression-free survival 5.6 versus 2.0 months with sotorasib 960 mg plus panitumumab, HR 0.48 (95% CI 0.30–0.78), objective response 26.4% versus 0%.",
+              "pref": "KRAS G12C mutation after chemorefractory progression — a reasonable consideration, not a conversion strategy.",
+              "avoid": "Do not promise survival: the trial was not powered for it and overall survival was immature with HR 0.77 (0.40–1.45) crossing 1. No resection or ablation outcomes were reported, and the standard-care comparator was overtaken by SUNLIGHT and FRESCO-2 during the trial.",
+              "refs": ["37870968"]
+            }
+          ],
+          "order": "Molecular class decides first and sidedness second. This order reflects the guidelines' branching logic, not a survival ranking between classes — each option was tested only in its own molecular group.",
+          "flagnote": "Two alignment items are open. The roadmap grades first-line BRAF V600E therapy A on a single trial, which does not match its own §0 definition; and the worksheet asks whether the left-sided RAS wild-type default should be restated as anti-EGFR plus doublet on overall-survival grounds (ASCO 2023, strong), with bevacizumab an acceptable alternative."
+        }
+      ],
+      "alt": [
+        {
+          "t": "Record integrated clinical-molecular risk alongside the Fong score where the assay is available.",
+          "l": "Reasonable",
+          "g": "C",
+          "refs": ["37471075"],
+          "pref": "A resected metastasis with tissue available for mRNA and miRNA profiling, used for prognosis and surveillance intensity. In the New EPOC validation cohort 5-year progression-free survival was 43% for the immune, 26% for the stromal and 14% for the canonical subtype (log-rank p=0.004), and integrated risk groups gave 5-year overall survival 78%, 56% and 43%.",
+          "avoid": "Do not use it to decide operability or to choose systemic therapy. It is prognostic only, the three-way overall survival comparison was not significant (p=0.08), the assay needs resected metastatic tissue so it cannot inform the preoperative decision, and the low-risk 78% rests on wide confidence intervals (44–93%).",
+          "note": "Validated in a biomarker subset of a trial whose experimental arm harmed patients; subtypes predicted from the matched primary tumour were not prognostic."
+        },
+        {
+          "t": "Assess clinical-trial eligibility at every decision point, and record it.",
+          "l": "Reasonable",
+          "g": "D",
+          "pref": "Every discussion, in both directions: a trial may be the best available option, and enrolment constraints may set the timing of local treatment.",
+          "avoid": "Do not let a trial screening window displace a feasible clearance operation that is ready to go."
+        }
+      ],
+      "avoid": [
+        {
+          "t": "Indiscriminate triplet intensification, and triplet chemotherapy combined with an anti-EGFR antibody.",
+          "l": "Avoid",
+          "g": "B",
+          "refs": ["38728364"],
+          "pref": "Intensify only where conversion response is the limiting factor, in a fit patient, with a defined clearance endpoint and toxicity review recorded.",
+          "avoid": "Adding irinotecan to cetuximab–FOLFOX did not raise response in TRICE (84.7% versus 79.7%, odds ratio 0.70, p=0.42) and did not raise complete local treatment (54.2% versus 52.7%), while increasing grade 3 or worse neutropenia; progression-free survival numerically favoured the doublet, so harm from intensification is not excluded.",
+          "note": "The roadmap's position is individualised consideration for fit patients rather than a blanket Avoid; the worksheet asks whether Avoid should be narrowed to triplet plus anti-EGFR only, with triplet plus bevacizumab relabelled a reasonable consideration."
+        },
+        {
+          "t": "Using genotype alone to exclude a patient from a feasible clearance operation, or to set margin width.",
+          "l": "Avoid",
+          "g": "D",
+          "pref": "Let observed response on effective therapy carry the decision weight; a single mutation stratifies prognosis rather than determining operability.",
+          "avoid": "A larger resection, a wider margin or a refusal to operate justified by a BRAF or RAS result alone."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "tone": "cure",
+      "name": "2 · Clearable now",
+      "req": "all",
+      "crit": [
+        "Every original site of hepatic disease treatable by resection, margin-verified thermal ablation, or the two combined",
+        "Adequate future liver remnant with preserved inflow, outflow and biliary drainage",
+        "No progression on an appropriate systemic regimen",
+        "No extrahepatic disease, or disease that is limited, controllable and itself completely treatable",
+        "Patient fit for the operation that clearance actually requires"
+      ],
+      "ask": "Can I eradicate every deposit in this liver now, and prove the margin afterwards?",
+      "standard": [
+        {
+          "t": "Parenchymal-sparing resection is the reference clearance strategy, because it is the only route that permits pathologic margin assessment.",
+          "l": "Standard",
+          "g": "A",
+          "refs": ["10493478"],
+          "pref": "Disease clearable with an adequate remnant and preserved inflow, outflow and biliary drainage. Use a minimally invasive or robotic approach where it does not compromise completeness. Preserve parenchyma deliberately: recurrence is common and repeat liver-directed treatment produces meaningful survival in selected patients.",
+          "avoid": "Inadequate remnant, prohibitive vascular or biliary anatomy, or progression on appropriate therapy. A positive margin and extrahepatic disease were the two most influential adverse factors in the 1001-patient Fong series (5-year survival 20% and 18%) and the authors treat both as contraindications to resection.",
+          "note": "Needs demonstrated team experience with the specific operation. Fong's series is a single tertiary centre, retrospective, and pre-oxaliplatin, pre-PET; it describes outcome after resection rather than comparing resection with anything."
+        },
+        {
+          "t": "Thermal ablation alone or with resection is a curative-intent clearance option for small lesions, provided every original site is treated and a circumferential margin is confirmed.",
+          "l": "Standard",
+          "g": "A",
+          "refs": ["39848272", "26267832"],
+          "pref": "Lesions of 3 cm or less, up to about ten, where all sites are treatable and a margin beyond 5 mm is achievable — an initial option in that phenotype, not a consolation after surgical failure. NCCN prioritises feasible thermal ablation in selected lesions of 3 cm or less. COLLISION randomised 300 patients and stopped early when conditional power reached 90.5%: adverse events of any grade 19% versus 46%, serious events 7% versus 20%, median stay 1 versus 4 days, no treatment-related deaths versus three.",
+          "avoid": "Within 1 cm of a major bile duct, where a heat sink is expected, where the target is not reliably visible, or where only a margin under 5 mm is achievable. In the 233-tumour Memorial Sloan Kettering series local recurrence was 90% at a 0 mm margin, 60% at 1–5 mm, 15% beyond 5–10 mm and 5% beyond 10 mm, and a margin of 5 mm or less carried HR 9.9 (4.9–20) for shorter local progression-free survival.",
+          "note": "COLLISION stopped at interim on conditional power rather than a confidence interval excluding its margin: the overall survival HR was 1.05 with a 95% CI of 0.69–1.58, whose upper bound crosses the prespecified non-inferiority limit of 1.30. The arms were not clean — 18% of the ablation arm also had a lesion resected and 35% of the resection arm had a non-target lesion ablated — and the trial was funded by an ablation device manufacturer. This is clearance, not debulking: treat every original site."
+        },
+        {
+          "l": "Standard",
+          "g": "B",
+          "opts": [
+            {
+              "name": "Simultaneous resection of liver and primary",
+              "g": "C",
+              "when": "NCCN states that patients with resectable metastatic disease and a primary tumour in place should have both sites resected with curative intent, and that staged procedures can be liver-first or primary-first.",
+              "pref": "Both operations limited: a minor hepatectomy with an uncomplicated colonic primary.",
+              "avoid": "Adam 2015 does not advocate one-stage surgery for a major hepatectomy of three or more segments, a complex colonic tumour or a low rectal primary; one-stage resection is more risky than two separate resections.",
+              "refs": ["26417845"]
+            },
+            {
+              "name": "Liver-first",
+              "g": "C",
+              "when": "Useful when rectal therapy would otherwise delay control of substantial hepatic disease. Sequence by the dominant oncologic threat rather than by chronology.",
+              "pref": "Hepatic burden drives the risk, particularly with a rectal primary whose pelvic treatment will take months.",
+              "avoid": "A primary that threatens obstruction, substantial bleeding or perforation — that threat is treated first.",
+              "refs": ["26417845"]
+            },
+            {
+              "name": "Primary-first",
+              "g": "C",
+              "when": "Appropriate where the primary is the dominant threat, or where it must be cleared before transplant consideration.",
+              "pref": "Symptomatic or obstructing primary; and in a possible transplant candidate, where the primary is resected after a favourable response to systemic therapy.",
+              "avoid": "An asymptomatic primary with broadly unresectable liver disease: resecting it first delays the systemic therapy that is also the biological test.",
+              "refs": ["26417845", "41990853"]
+            }
+          ],
+          "order": "The order is by dominant oncologic threat, not by survival: no randomised comparison of these sequences exists, and the LiverMetSurvey comparisons behind Adam 2015 are non-randomised and selection-confounded, with 5-year survival no better for chemotherapy first than for primary surgery first.",
+          "flagnote": "Colorectal surgery must ratify the criteria for simultaneous versus liver-first, and the pelvic radiotherapy schedule for a rectal primary with synchronous liver metastases is set by pelvic local-risk features by colorectal surgery and radiation oncology together — not chosen to suit the liver plan. Short-course radiotherapy is not interchangeable for every high-risk presentation."
+        },
+        {
+          "t": "Perioperative chemotherapy for clearly resectable disease is optional, not mandatory; where it is used, state the six-month total framework.",
+          "l": "Standard",
+          "g": "B",
+          "refs": ["18358928", "24120480", "36252154"],
+          "pref": "More or larger metastases, a clinical risk score above 2, or a need to observe biology before operating. ASCO recommends a total perioperative duration of six months on the basis of EORTC 40983.",
+          "avoid": "Do not treat it as automatic for every patient. EORTC 40983 missed its primary endpoint as randomised: 3-year progression-free survival 35.4% versus 28.1%, HR 0.79 (0.62–1.02), p=0.058, significant only in eligible (HR 0.77, p=0.041) and resected (HR 0.73, p=0.025) patients, and long-term overall survival showed no difference (HR 0.88, p=0.34). Reversible postoperative complications were more frequent after chemotherapy, 25% versus 16%.",
+          "note": "Only 63% of patients started the postoperative half, so what the trial really tested was six cycles of FOLFOX4 before surgery. Do not assume adjuvant biologics are interchangeable."
+        },
+        {
+          "t": "After clearance, run the longitudinal loop: imaging and CEA at 3–6 months then by risk, ablation margins re-read at 4–8 weeks, colonoscopic follow-up, over a two-year and five-year framework.",
+          "l": "Standard",
+          "g": "B",
+          "refs": ["40640089"],
+          "pref": "Every cleared patient. After resection the return question is the recurrence pattern and whether repeat clearance is feasible — recurrence is part of the treatment course, not automatic failure of the first operation. After ablation treat the site as incompletely treated unless a circumferential margin is confirmed; local progression risk is high when the margin is under 5 mm.",
+          "avoid": "Do not equate persistent enhancement after SBRT or transarterial therapy with failure: expect delayed and partial radiographic change at 8–12 weeks.",
+          "note": "The Chinese 2024 consensus would fix the post-clearance schedule at 3-monthly CEA and cross-sectional imaging including liver MRI for the first two years (Grade I); the worksheet asks whether to adopt that in place of '3–6 months, then per risk'. Where a rectum is retained after organ preservation, add frequent local examination, endoscopy and pelvic imaging."
+        }
+      ],
+      "alt": [
+        {
+          "t": "Clear the liver with ablation plus resection when resection alone cannot reach every site.",
+          "l": "Reasonable",
+          "g": "B",
+          "refs": ["28376151"],
+          "pref": "Liver-only disease judged unresectable by distribution rather than by biology, where ablation plus resection can treat every deposit alongside systemic therapy. In EORTC 40004 (CLOCC) overall survival favoured combined local treatment plus systemic therapy over systemic therapy alone, HR 0.58 (0.38–0.88), with 5- and 8-year survival 43.1% and 35.9% versus 30.3% and 8.9%, and progression-free survival 16.8 versus 9.9 months, HR 0.57.",
+          "avoid": "Do not read it as evidence for ablation on its own: nearly half the combined arm (26 of 57) also needed resection, so the gain belongs to complete liver clearance. The trial was downsized to randomised phase 2, closed early for poor accrual at 119 patients with overall survival a secondary endpoint, and its control arm had no anti-EGFR therapy and no RAS or BRAF selection.",
+          "note": "The survival curves separate only after 3 years; unresectability was decided locally with no central review."
+        },
+        {
+          "t": "SBRT with definitive local intent when resection and margin-verified ablation are both unsuitable.",
+          "l": "Reasonable",
+          "g": "B",
+          "refs": ["19255321", "32484754", "36252154"],
+          "pref": "Selected oligometastatic disease where all disease can be addressed and safe ablative dosing is feasible, or where the patient prefers a non-invasive approach. NCCN favours BED10 above 100 Gy for oligometastases when organ-at-risk limits allow; ASCO supports selected use after systemic therapy in unresectable liver oligometastases. In the multi-institution phase I/II trial in-field local control was 95% at 1 year and 92% at 2 years, and 100% at 2 years for lesions of 3 cm or less versus 77% above 3 cm.",
+          "avoid": "Do not claim equivalence to margin-verified clearance, and do not use it without full staging, with insufficient uninvolved liver or with an unsafe normal-organ dose. Imaging response is not margin-verified clearance.",
+          "note": "The cure evidence is weaker than the local-control evidence. Only 15 of 47 patients in the phase I/II trial had colorectal metastases and colorectal-specific outcomes were not reported; ASCO's recommendation rests on 18 non-randomised studies (1-year overall survival 67%, 2-year local control 59%) and is graded low quality, weak. In the SABR-COMET long-term analysis 5-year overall survival was 42.3% versus 17.7%, but only 18 of 99 patients had a colorectal primary and liver lesional control was the worst of any site at 50%, with 4.5% grade 5 toxicity."
+        },
+        {
+          "t": "Cytoreductive surgery with systemic chemotherapy for peritoneal metastases, in a specialised centre and only where complete cytoreduction is feasible.",
+          "l": "Reasonable",
+          "g": "B",
+          "refs": ["41990853", "36252154"],
+          "pref": "Peritoneal disease assessed by a peritoneal surface malignancy team rather than routed through this liver pathway. ESMO recommends cytoreductive surgery for peritoneal-only disease [II, A].",
+          "avoid": "Incomplete cytoreduction, or managing peritoneal disease as an extension of the hepatic clearance plan. Any peritoneal disease ends transplant intent.",
+          "note": "Needs demonstrated team experience. ASCO's cytoreduction recommendation requires no extraperitoneal metastases, so combined liver and peritoneal disease sits outside it and is a systemic-therapy-first, case-by-case decision."
+        }
+      ],
+      "avoid": [
+        {
+          "t": "Adding cetuximab to perioperative chemotherapy in resectable KRAS wild-type liver metastases.",
+          "l": "Avoid",
+          "g": "A",
+          "refs": ["24717919", "32014119"],
+          "pref": "Nothing. There is no perioperative phenotype in which the roadmap accepts it, and no evidence supports other anti-EGFR agents perioperatively.",
+          "avoid": "New EPOC found median overall survival 81.0 months with chemotherapy alone versus 55.4 months with added cetuximab, HR 1.45 (1.02–2.05), p=0.036, with worse post-progression survival (HR 1.55) and the harm falling on good-prognosis patients (no adverse feature HR 2.35, 1.37–4.03). Preoperative response and resection rates did not differ, so there was no offsetting surgical gain.",
+          "note": "Both halves: the interim progression-free survival detriment (HR 1.48, p=0.030) was no longer significant on long-term follow-up (HR 1.17, p=0.304), overall survival was a secondary endpoint without multiplicity adjustment, and the trial closed early. This is why the roadmap separates the resectable and unresectable settings: an agent that helps in unresectable disease shortened survival given perioperatively."
+        },
+        {
+          "t": "Oxaliplatin-based HIPEC added to cytoreduction.",
+          "l": "Avoid",
+          "g": "B",
+          "refs": ["41990853"],
+          "pref": "Nothing outside a trial. ESMO does not recommend HIPEC outside trials [II, D].",
+          "avoid": "Adding it to complete cytoreduction as routine practice."
+        },
+        {
+          "t": "Partial debulking, and accumulating regional-control procedures as a route to cure.",
+          "l": "Avoid",
+          "g": "D",
+          "pref": "Nothing. NCCN states that partial debulking of less than an R0 resection is not recommended.",
+          "avoid": "A treatment that achieves regional control is not a substitute for clearance when clearance is achievable, and a succession of control procedures is not a route to cure. The roadmap calls this the single most common source of error in multidisciplinary discussion of this disease."
+        },
+        {
+          "t": "De-escalating or shortening treatment and surveillance on the strength of a negative circulating tumour DNA result.",
+          "l": "Avoid",
+          "g": "B",
+          "refs": ["34506756"],
+          "pref": "Keep ctDNA inside a defined research or prospective registry role; IHPBA 2021 places circulating biomarker profiling within research.",
+          "avoid": "NCCN states there is currently insufficient evidence to recommend routine ctDNA use outside a clinical trial and that de-escalation decisions should not be based on ctDNA results. It is prognostic; it cannot replace imaging or justify clearance on its own."
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "tone": "loco",
+      "name": "3 · Clearable after conversion",
+      "req": "any",
+      "crit": [
+        "Anatomic unresectability only — remnant too small or vascular and biliary relations prohibitive — with biology controlled",
+        "Liver-dominant or liver-only disease where a high hepatic response could convert to clearance",
+        "Functional limitation from parenchymal quality or reserve that may recover with a chemotherapy holiday and nutritional recovery",
+        "Hepatic burden drives the risk and liver-first sequencing would bring clearance forward",
+        "Disease in the planned future remnant that a defined course of therapy could clear"
+      ],
+      "ask": "If I cannot clear this liver today, what specific step would make clearance possible, who owns it, and by when?",
+      "standard": [
+        {
+          "t": "Give conversion therapy against a defined surgical endpoint, and reassess resectability with a surgeon in the room every 8 weeks.",
+          "l": "Standard",
+          "g": "D",
+          "refs": ["37329889", "41990853", "40640089"],
+          "pref": "Every patient treated with conversion intent. Choose the regimen by sidedness and molecular status as in Phase 1; in CAIRO5 complete local treatment of all metastases was reached in 51% versus 37% of right-sided or RAS/BRAF-mutant patients with the triplet. ESMO asks for resectability to be redefined at baseline on imaging under four weeks old, every 2–3 months on first-line treatment and again in later lines in very good responders [IV, A].",
+          "avoid": "Do not let conversion therapy become chemotherapy continued until progression or cumulative liver injury. When response has made safe complete clearance possible, operate now rather than continue.",
+          "note": "The 8-week interval is an operating judgement with no comparative evidence; the Chinese 2024 consensus asks for surgical reassessment every 1.5–2.0 months and operation as soon as the disease is resectable, 6–8 weeks after the last bevacizumab dose."
+        },
+        {
+          "l": "Reasonable",
+          "g": "B",
+          "opts": [
+            {
+              "name": "Portal vein embolisation or liver venous deprivation",
+              "g": "B",
+              "flags": ["EXPERTISE"],
+              "when": "Remnant augmentation enables clearance; it does not itself clear disease in the remnant.",
+              "pref": "Anticipated remnant too small but disease otherwise clearable and biology controlled. Rescue ALPPS after failed portal vein occlusion closed most of the resection-rate gap in LIGRO (82% versus 92%, not significant), so an embolisation-first strategy with ALPPS held in reserve is not excluded by that trial.",
+              "avoid": "Disease in the future remnant left unaddressed, progressing biology, or a dropout and morbidity risk exceeding the realistic chance of clearance.",
+              "refs": ["28902669"]
+            },
+            {
+              "name": "Two-stage hepatectomy",
+              "g": "B",
+              "flags": ["EXPERTISE"],
+              "when": "The conventional staged route to an adequate remnant.",
+              "pref": "Bilobar disease where the remnant can be cleared first and hypertrophy awaited; tolerable where the interval can be covered by systemic therapy.",
+              "avoid": "High dropout risk between stages. In LIGRO the two-stage arm completed resection in only 57% (28 of 49) against a strict 30% remnant threshold, below published rates of 60–75%.",
+              "refs": ["28902669"]
+            },
+            {
+              "name": "ALPPS",
+              "g": "B",
+              "flags": ["EXPERTISE"],
+              "when": "LIGRO randomised 97 patients with a standardised remnant under 30%: resection rate 92% versus 57% with two-stage hepatectomy, rate ratio 8.25 (2.6–26.6), p<0.0001, with faster hypertrophy (day-7 remnant 37.1% versus 26.1%) and an 11-day rather than 43-day interval.",
+              "pref": "A remnant that will not reach threshold in time by embolisation alone, in a fit patient, at a centre that does this operation regularly.",
+              "avoid": "Marginal fitness or progressing biology. The endpoint was resectability, not survival — the authors state the oncologic role is therefore uncertain. Grade 3a or worse complications were 43% in both arms and 90-day mortality 8.3% versus 6.1%, with postoperative liver failure in all seven deaths.",
+              "refs": ["28902669"]
+            }
+          ],
+          "order": "Least invasive first: embolisation, then a staged resection, with ALPPS in reserve. The order reflects morbidity and the LIGRO rescue finding, not a survival advantage — no augmentation strategy has been compared for long-term oncologic outcome.",
+          "flagnote": "Remnant-volume thresholds, the augmentation hierarchy and who decides between its steps are modality-specific local policy (grade D) and require hepatobiliary and interventional radiology approval, together with the embolisation-to-surgery interval."
+        },
+        {
+          "t": "Hepatic arterial infusion plus systemic therapy to convert liver-dominant or liver-only disease to clearance, planned early rather than kept as terminal salvage.",
+          "l": "Standard",
+          "g": "C",
+          "flags": ["EXPERTISE"],
+          "refs": ["19470932", "38608150"],
+          "pref": "Liver-dominant or liver-only disease where a high hepatic response could convert to clearance, or where biology needs testing before transplant referral, at a centre with an established pump programme. The Memorial Sloan Kettering phase I experience converted 47% (23 of 49) of technically unresectable patients to resection with 92% radiologic response; a two-centre Dutch phase II study met its feasibility endpoint with 90% receiving at least two combined cycles, partial response in 34% and hepatic disease control in 93% at first evaluation.",
+          "avoid": "No dedicated pump programme; unsuitable arterial anatomy; extrahepatic disease; portal hypertension; prior liver radiation; direct bilirubin above 1.5 mg/dL or alkaline phosphatase at or above twice the upper limit of normal. NCCN also requires at least one prior systemic line and operative fitness, and HAI cannot be delivered with concurrent bevacizumab or other VEGF inhibitors.",
+          "note": "Conversion is a surrogate and the evidence is single-arm and centre-concentrated: median disease-free survival after R0 resection was only 7.6 months, 12 of 23 resected patients needed portal vein embolisation and 10 needed intraoperative ablation. Toxicity rises with exposure — grade 3 or worse chemotherapy toxicity in 38% during the first two cycles and 66% by six months, with late biliary sclerosis unresolved. Biliary toxicity and pump complications are not occasional-case risks, and delivery depends on payer authorisation in a clinically useful interval."
+        },
+        {
+          "t": "Leave an asymptomatic primary in situ during systemic therapy when liver disease is broadly unresectable; resect it for a defined local threat, and before transplantation after a favourable response.",
+          "l": "Standard",
+          "g": "B",
+          "refs": ["26417845", "41990853"],
+          "pref": "An asymptomatic primary with unresectable metastases — the whole Adam 2015 panel agreed on optimal chemotherapy first to achieve resectability, and ESMO states that primary resection cannot be recommended for an asymptomatic primary with unresectable synchronous metastases [I, D]. Where transplantation is contemplated, the primary is resected after a favourable response, with clear margins and a circumferential margin of at least 1 mm for a rectal cancer.",
+          "avoid": "Imminent obstruction, substantial bleeding, perforation or another local threat: resect first. NCCN advises colon resection only in that situation.",
+          "note": "A rectal primary managed by watch-and-wait after a clinical complete response does not meet the transplant requirement for a resected primary — a clinical complete response is not proof that every tumour cell is gone — and must be resolved before listing."
+        }
+      ],
+      "alt": [
+        {
+          "t": "Selected Y90 radiation lobectomy to grow the future remnant, with the operation supplying the curative step.",
+          "l": "Reasonable",
+          "g": "C",
+          "pref": "A patient whose remnant will not come up by embolisation and in whom lobar radioembolisation is technically attractive, planned as a route to an operation.",
+          "avoid": "Do not present it as the curative treatment, and do not extrapolate HCC segmentectomy cure claims to CRLM. Assess any future HAI pathway before liver irradiation, because prior liver radiation bars the pump.",
+          "note": "Depends on personalised dosimetry planning and radiation-safety review; the CRLM hypertrophy evidence is a small part of mixed series."
+        },
+        {
+          "t": "Adjuvant hepatic arterial infusion after resection, as a separate expert-centre indication.",
+          "l": "Reasonable",
+          "g": "C",
+          "flags": ["EXPERTISE"],
+          "refs": ["10615075", "28426374", "30953467"],
+          "pref": "A completely resected patient at a credentialed pump centre. The randomised Memorial Sloan Kettering trial gave 2-year survival free of hepatic progression of 90% versus 60% (p<0.001) and 2-year overall survival 86% versus 72% (p=0.03).",
+          "avoid": "Extrahepatic disease or a positive margin, where the propensity-matched series found no benefit (37 versus 33 months and 37 versus 28 months). Do not offer it outside a programme with credentialed surgeons, oncologists and pump management.",
+          "note": "Both halves: in that trial the whole overall survival curves were not significantly different (p=0.21 by log-rank) and the positive result is the prespecified two-year landmark, against an obsolete bolus fluorouracil comparator, with biliary toxicity limiting delivered dose. The 2368-patient propensity analysis (median overall survival 67 versus 44 months, adjusted HR 0.67) is retrospective across 21 years, and the randomised PUMP trial exists in the depot only as a published protocol with no outcome data."
+        }
+      ],
+      "avoid": [
+        {
+          "t": "A larger operation as the answer to disease progressing on an appropriate systemic regimen.",
+          "l": "Avoid",
+          "g": "D",
+          "pref": "Redirect. Biologic unresectability is not reversible by surgery; restage and reconsider complete treatment rather than escalating the operation.",
+          "avoid": "Escalating from resection to augmentation, staged surgery or ALPPS in a patient whose disease is growing through therapy. Progression or new extrahepatic disease at any phase ends transplant intent and redirects care."
+        },
+        {
+          "t": "Adding Y90 radioembolisation to first-line chemotherapy expecting a survival benefit.",
+          "l": "Avoid",
+          "g": "B",
+          "refs": ["28781171", "26903575"],
+          "pref": "Nothing in the first line. If hepatic control is the goal, say so and label it control, not conversion.",
+          "avoid": "The prospectively planned combined analysis of FOXFIRE, SIRFLOX and FOXFIRE-Global in 1103 patients found median overall survival 22.6 versus 23.3 months, pooled HR 1.04 (0.90–1.19), p=0.61, with no benefit in the liver-only subgroup (HR 1.00) and identical hepatic resection rates (17% versus 16%), at the cost of grade 3 or worse events in 74% versus 67%.",
+          "note": "Both halves: liver control did improve — first progression in the liver 31% versus 49%, subdistribution HR 0.51 — but non-liver progression rose (HR 1.76), and in SIRFLOX the primary endpoint of progression-free survival at any site was negative (10.7 versus 10.2 months, HR 0.93) while liver progression-free survival improved from 12.6 to 20.5 months. Resection rates did not move in either trial."
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "tone": "cure",
+      "name": "4 · Transplant candidate",
+      "req": "all",
+      "crit": [
+        "Permanent unresectability formally determined, with a written record of why resection, margin-verified ablation, portal vein embolisation or liver venous deprivation, staged hepatectomy, ALPPS and hepatic arterial infusion each cannot clear the liver at acceptable functional risk",
+        "Unequivocally liver-only on CT/MRI and PET/CT, with no extrahepatic, nodal or peritoneal disease at any time",
+        "Histologically confirmed colorectal adenocarcinoma, BRAF wild type and microsatellite stable, with R0 primary resection and colonoscopy within 12 months excluding local recurrence",
+        "At least 12 months from CRLM diagnosis and at least six months of stability or regression on systemic or locoregional therapy; CEA not above 80 µg/L; no hepatic lesion above 10 cm before treatment",
+        "ECOG 0–1 with adequate organ function and low frailty, under a written protocol with a transplant-oncology MDT, a defined graft strategy, a prospective registry and an agreed recurrence plan"
+      ],
+      "ask": "Is this permanently unresectable, liver-only, biologically controlled disease that this programme can actually list — and under whose criteria?",
+      "standard": [
+        {
+          "l": "Standard",
+          "g": "B",
+          "opts": [
+            {
+              "name": "Deceased-donor transplantation under the nonstandard review route",
+              "g": "B",
+              "flags": ["PROTOCOL", "REGISTRY"],
+              "when": "TransMet randomised 94 patients with permanently unresectable liver-only disease controlled on chemotherapy: intention-to-treat 5-year overall survival 56.6% versus 12.6% with chemotherapy alone, HR 0.37 (95% CI 0.21–0.65), p=0.0003; per protocol 73.3% versus 9.3%, HR 0.16. CRLM is not a standardised OPTN exception, so listing goes through nonstandard Adult Transplant Oncology Review Board review with the CRLM diagnosis form and a written narrative requesting consideration at MMaT-20, with Policy 9.4.E setting a floor of 15.",
+              "pref": "A patient inside both the OPTN guidance gates and the local protocol: BRAF wild type, microsatellite stable, 12 months from CRLM diagnosis, six months of stability or regression, CEA at or below 80 µg/L, no pretreatment lesion above 10 cm, primary resected R0 with a clear colonoscopy, ECOG 0–1, age considered with physiologic reserve rather than alone.",
+              "avoid": "Any uncontrolled or non-curable extrahepatic disease, progression on an appropriate regimen, new lesions, declining reserve, prohibitive comorbidity, active infection or psychosocial risk. Disease clearable by reasonable resection, margin-verified ablation, augmentation, staged surgery or HAI is not a transplant indication.",
+              "note": "Both halves: 19% of the transplantation arm never received a graft, recurrence after transplant was 74% with 5-year progression-free survival 19.9%, and the survival gain rests on repeatedly treating recurrence — mostly pulmonary, 54% of isolated recurrences lung-only, with 46% of those treated with curative intent. Selection was extreme: an independent panel excluded 40% of screened patients, and the trial depended on negotiated national prioritisation that delivered grafts at a median 50.5 days after randomisation. Without exception points these low-MELD patients do not compete, and a longer wait raises the 19% dropout.",
+              "refs": ["39306468"]
+            },
+            {
+              "name": "Living-donor or RAPID graft strategy",
+              "g": "C",
+              "flags": ["PROTOCOL", "REGISTRY", "EXPERTISE"],
+              "when": "IHPBA 2021 permits extended-criteria grafts, machine perfusion and deceased- or living-donor RAPID, with living donation only in centres meeting international benchmarks and preferably within a trial, and no re-transplantation for recurrent metastases.",
+              "pref": "A protocol-eligible candidate at a benchmark-meeting living-donor programme, entered prospectively, where waiting for a deceased-donor graft would cost the window. The three-centre North American series transplanted 10 of 91 evaluated patients, with 1.5-year overall survival 100% and recurrence-free survival 62% and full donor recovery.",
+              "avoid": "Do not use a living donor to get around the exception criteria. Any research or living-donor pathway outside the guidance needs its own approved protocol and must not be represented as qualifying for this exception route.",
+              "note": "Very small, single-arm and short: three recurrences occurred at 92, 121 and 199 days, the outcomes of the 79 patients not transplanted are not reported, and the invited commentary calls 1.5-year survival a technical demonstration rather than an oncologic result. Selection was tight — median Fong score 2.5, median Oslo score 1.5, median CEA 7.7 ng/mL, median 22.5 chemotherapy cycles.",
+              "refs": ["35353121"]
+            }
+          ],
+          "order": "Deceased-donor listing under the review-board route first, because that is where the randomised evidence and the allocation pathway sit; living donation is a graft-supply answer to waiting time, not a separate indication, and carries only single-arm short-term data.",
+          "flagnote": "The two documents the board will be handed do not agree, and the difference decides real patients. IHPBA 2021 requires at least six months of response and at least one year from diagnosis of non-resectable disease, excludes BRAF V600E, excludes MSI-high and dMMR patients outright, and excludes a metabolic tumour volume above 70 cm³ with total lesion glycolysis above 260 g. ESMO 2026 recommends transplantation [II, A] on stabilisation of three months or more no later than third line, with BRAF wild type, CEA under 80 ng/mL, never any extrahepatic disease, a resected primary, performance status under 2 and age 18–65 — and sets no MSI or PET-volume exclusion at all. A dMMR patient with four months of stability and a metabolic tumour volume of 90 cm³ is transplantable under ESMO and barred under IHPBA. The roadmap's position is that where the randomised evidence, the consensus and the institution's own protocol conflict, the stricter governs; the local decisions still open are whether MSI-high and dMMR disease is excluded outright rather than left to 'separate consideration', and whether the BRAF exclusion is limited to V600E (IHPBA) or extends to any BRAF mutation (the OPTN 'BRAF wild type' wording, which would also exclude the non-V600 BRAF-mutant patients in whom IHPBA reports long survival)."
+        },
+        {
+          "t": "Declare permanent unresectability formally, in writing, after dedicated hepatobiliary and transplant review of every alternative.",
+          "l": "Standard",
+          "g": "D",
+          "pref": "Before any transplant referral. Permanent unresectability is a formal determination, not an impression: record why resection, margin-verified ablation, portal vein embolisation or liver venous deprivation, staged hepatectomy, ALPPS and hepatic arterial infusion each cannot achieve clearance at acceptable functional risk.",
+          "avoid": "Referring on an impression, or treating a local complete response as an automatic transplant exception. Functional unresectability that may recover with a chemotherapy holiday and nutritional recovery is not yet permanent.",
+          "note": "This is the roadmap's central claim and the quality dashboard measures it: at least 95% of non-clearance treatment decisions should record why each clearance route was unsuitable."
+        },
+        {
+          "t": "Keep the candidate inside protocol while waiting: review every 2–3 months and renew the exception every three months with CT/MRI of chest, abdomen and pelvis and CEA.",
+          "l": "Standard",
+          "g": "D",
+          "refs": ["39306468"],
+          "pref": "Every listed or referred patient. Renewal requires no hepatic progression, no extrahepatic disease and CEA below 80 µg/L; exceptions generally need 90-day extensions, and the coordinator records source version, eligibility dates, request and extension dates, imaging, laboratory values and a named renewal owner, with transplant leadership signing the allocation assessment. Agree the surveillance and recurrence plan during selection, not after — recurrence after transplantation is common and predominantly pulmonary, often indolent and amenable to further local treatment.",
+          "avoid": "Do not let indefinite chemotherapy run while a candidate waits: it erodes nutrition, marrow, neurologic function and liver quality. Sustained control should prompt coordinated timing of definitive clearance rather than drift.",
+          "note": "Two boundaries in the guidance need clarifying before filing: the initial exclusion is CEA above 80 while the renewal wording is below 80, so an exact value of 80 requires explicit review rather than an assumed pass; and footnotes 20–21 describe progression as a 10% increase in diameter or new lesions while labelling this RECIST 1.1, which differs from the usual target-lesion threshold. Preserve the source wording and flag it — do not silently substitute 20%."
+        }
+      ],
+      "alt": [
+        {
+          "t": "Use the Oslo score, the largest lesion diameter and PET metabolic tumour volume as prognostic refinements inside the eligibility gates, not as substitutes for them.",
+          "l": "Reasonable",
+          "g": "C",
+          "refs": ["37494056", "36241941", "42572136", "31188200"],
+          "pref": "Counselling and protocol stratification. In the 61-patient Oslo cohort median overall survival was 60.3 months, with an Oslo score of 0 giving 5- and 10-year survival of 88.9% while a score of 3–4 gave 8.3% and 0%; a largest lesion of 5.5 cm or more gave 25.3 versus 92.0 months and CEA above 80 µg/L 26.6 versus 90.5 months. Metabolic tumour volume below 70 cm³ on PET gave 5- and 10-year survival of 76% and 50% versus 21% and 7%, and the signal held only when the scan was within 90 days of transplant. The SECA-II 10-year report gives median overall survival 128.2 months with 5-year 77.8% and 10-year 51.5% in 25 patients.",
+          "avoid": "Do not relax the allocation gates because the prognostic scores look good, and do not use a favourable score to justify listing outside the protocol. These are separate prognostic considerations and do not replace the pretreatment 10-cm limit or the CEA exclusion.",
+          "note": "The thresholds are internally derived and externally unvalidated: the 70 cm³ cut-off was defined by ROC analysis in the same 40-patient Oslo cohort in which it is tested, the Oslo score was derived from SECA-I patients included in the later analyses, and prognostic factors were tested one at a time in 60 patients with no multivariable model. The SECA-II survival figures come from 25 highly selected patients at one centre — the authors' own simulation found only 2 to 3 eligible patients per year in a population of 5.5 million — with relapse in 48% at a median relapse-free survival of 24.3 months and one death from hepatic artery thrombosis (4% operative mortality). Survival calculated from transplant excludes the 11 of 72 listed patients never grafted; from listing, median overall survival for all 72 was 50.8 months."
+        }
+      ],
+      "avoid": [
+        {
+          "t": "Listing an MSI-high or mismatch-repair deficient patient on this exception route, even after a checkpoint response.",
+          "l": "Avoid",
+          "g": "C",
+          "refs": ["34506756", "39874977"],
+          "pref": "If such a patient is to be considered at all, it requires a separate approved protocol with a written pre-transplant checkpoint-inhibitor policy, including washout and the approval route, agreed before any such patient is listed.",
+          "avoid": "The supplied exception route requires microsatellite stability, and IHPBA 2021 states that MSI-high and dMMR patients should not currently be considered for transplantation. Sustained checkpoint response does not create eligibility.",
+          "note": "The IHPBA exclusion rests on the risk of graft rejection if immunotherapy were needed after transplant rather than on transplant outcome data in these patients, and its own reviewers call it the statement most likely to be overtaken. ESMO 2026 sets no MSI exclusion."
+        },
+        {
+          "t": "Transplanting with any extrahepatic, nodal or peritoneal disease, or with an uncontrolled primary.",
+          "l": "Avoid",
+          "g": "C",
+          "refs": ["34506756"],
+          "pref": "Nothing. Treatable lung disease may still permit resection; it does not permit transplantation under current pathways.",
+          "avoid": "IHPBA 2021 finds no evidence to support transplantation in patients who present with extrahepatic disease, and the OPTN exclusions cover extrahepatic disease after primary resection, nodes outside the original primary nodal resection, local primary relapse and CEA above 80 µg/L. Undifferentiated or signet-ring histology excludes and N2 nodal disease is a relative exclusion. Any peritoneal disease ends transplant intent."
+        },
+        {
+          "t": "Ad hoc listing without auditable criteria, a defined graft strategy or a recurrence plan.",
+          "l": "Avoid",
+          "g": "D",
+          "pref": "A written protocol, a transplant-oncology MDT, a prospective registry and an agreed recurrence plan — the programme domain of the selection table.",
+          "avoid": "The roadmap names this the failure mode to avoid. A research or living-donor pathway outside the guidance criteria needs its own approved protocol and must not imply eligibility for this exception route."
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "tone": "pall",
+      "name": "5 · Control, not clearance",
+      "req": "any",
+      "crit": [
+        "Progression despite an appropriate systemic regimen — biologic unresectability, which surgery cannot correct",
+        "Liver-dominant refractory disease after at least one systemic line, where hepatic control rather than clearance is the goal",
+        "Oligoprogression in a patient otherwise controlled on systemic therapy",
+        "Reserve, parenchymal quality or frailty makes any clearance operation intolerable and recovery is not expected"
+      ],
+      "ask": "If clearance is off the table, what keeps this liver quiet without burning the next option?",
+      "standard": [
+        {
+          "t": "Record the intent as control, name the reassessment date, and restage before repeating any procedure.",
+          "l": "Standard",
+          "g": "D",
+          "pref": "Every control-intent decision: record the intended outcome, why the clearance alternatives do not fit, the systemic-treatment plan, the reassessment date and the next action. After progression or toxicity, restage and reconsider complete treatment rather than automatically repeating the same procedure.",
+          "avoid": "Do not run a universal ablation, SBRT, Y90, TACE, HAI, histotripsy ladder. An upfront alternative chosen for anatomy or organ reserve is not a post-progression second line, and there is no established priority between the transarterial options.",
+          "note": "Protect what is left: remnant volume, vascular and biliary integrity, prior ablation zones, marrow and nutritional reserve, and the ability to treat recurrence. Clinical-trial eligibility is reassessed here too."
+        }
+      ],
+      "alt": [
+        {
+          "l": "Reasonable",
+          "g": "B",
+          "opts": [
+            {
+              "name": "Y90 radioembolisation, second line",
+              "g": "B",
+              "when": "EPOCH randomised 428 patients with disease progressing on first-line therapy: progression-free survival 8.0 versus 7.2 months, HR 0.69 (0.54–0.88), and hepatic progression-free survival 9.1 versus 7.2 months, HR 0.59 (0.46–0.77), both co-primary endpoints met.",
+              "pref": "Chemotherapy-resistant or refractory liver-dominant disease, after review of the systemic and complete-treatment options, where hepatic control is the goal.",
+              "avoid": "Do not offer it for survival: median overall survival was 14.0 versus 14.4 months, HR 1.07 (0.86–1.32). Grade 3 or worse events were 68.4% versus 49.3%, with three possibly related deaths from radiation-induced liver disease, hepatic failure and portal hypertension at 3 to 5 months — a real cost in hepatic reserve if later resection, ablation or transplantation is still conceivable. Assess any future HAI pathway before liver irradiation.",
+              "note": "A positive trial on surrogate endpoints with a flat survival curve: the absolute progression-free survival gain was 0.8 months, the trial was not powered for survival, and the control arm was not contemporary standard of care for RAS and BRAF wild-type disease (only 17% received a first-line EGFR inhibitor). In the earlier 46-patient refractory trial, time to liver progression was 5.5 versus 2.1 months (HR 0.38) with no survival difference (10.0 versus 7.3 months), a result the authors attribute to crossover.",
+              "refs": ["34541864", "20567019"]
+            },
+            {
+              "name": "TACE or DEBIRI",
+              "g": "C",
+              "when": "May be considered in selected liver-dominant refractory CRLM by an experienced MDT. A two-centre randomised trial in 74 patients after two or three prior lines reported median overall survival 22 versus 15 months with DEBIRI against FOLFIRI (p=0.031) and progression-free survival 7 versus 4 months.",
+              "pref": "Later-line selected hepatic control, or a trial, where reserve and biliary anatomy allow.",
+              "avoid": "It should not substitute for feasible resection or margin-complete ablation, and neither technical response nor debulking establishes curative benefit. Reserve and biliary infection risk matter.",
+              "note": "Weak evidence to carry a survival claim: 74 patients in a low-impact journal, with the authors framing it as sizing an effect for a larger trial; the FOLFIRI comparator had no oxaliplatin, bevacizumab or anti-EGFR agent and was capped at eight cycles while DEBIRI patients could be retreated; the report is internally inconsistent on two p values. Evidence and techniques across TACE are heterogeneous and there is no established universal priority over Y90, SBRT or HAI.",
+              "refs": ["22493375"]
+            },
+            {
+              "name": "SBRT for oligoprogression",
+              "g": "C",
+              "when": "SBRT can also treat oligoprogression with a control goal, and is not restricted to use after failed embolisation.",
+              "pref": "One or a few progressing deposits in a patient otherwise controlled, where safe ablative dosing is feasible and the rest of the disease is quiet.",
+              "avoid": "Insufficient uninvolved liver or an unsafe normal-organ dose; and do not label the result clearance.",
+              "note": "Liver lesional control after SABR in the long-term SABR-COMET analysis was 50%, the lowest of any treated site.",
+              "refs": ["32484754"]
+            },
+            {
+              "name": "Hepatic arterial infusion for unresectable liver-only disease",
+              "g": "C",
+              "flags": ["EXPERTISE"],
+              "when": "CALGB 9481 randomised 135 patients with unresectable liver-only disease: median overall survival 24.4 versus 20.0 months (p=0.0034), hepatic response 47% versus 24% and time to hepatic progression 9.8 versus 7.3 months.",
+              "pref": "Liver-only disease at a credentialed pump centre where hepatic control is the objective and conversion has not been achieved.",
+              "avoid": "No pump programme, extrahepatic disease, prior liver radiation or concurrent VEGF inhibition. Time to extrahepatic progression was shorter with HAI (7.7 versus 14.8 months) and overall time to progression did not differ, so the survival claim rests entirely on hepatic control.",
+              "note": "The comparator was bolus fluorouracil and leucovorin, the 1996 standard, and biliary toxicity was the price: bilirubin above 3 mg/dL in 18.6% versus 0%, with four patients needing biliary stents.",
+              "refs": ["16505413"]
+            }
+          ],
+          "order": "There is no established ladder and no proven priority between these options; sequence by what the liver and the arterial anatomy will tolerate, by whether a future clearance or transplant route must be protected, and by what the patient wants. Only Y90 in the second line and HAI against an obsolete comparator have randomised support, and neither improved overall survival in a modern control arm.",
+          "flagnote": "Interventional radiology must ratify that transarterial therapy is labelled regional control rather than clearance and is not first line, and radiation oncology must define response interpretation, cumulative radiation records and review of HAI eligibility before liver radiation."
+        }
+      ],
+      "avoid": [
+        {
+          "t": "Histotripsy outside a prospective trial or institutional registry.",
+          "l": "Avoid",
+          "g": "D",
+          "refs": ["40201962"],
+          "pref": "Only under a protocol or mandatory outcomes registry, with explicit consent about oncologic uncertainty, suitable ultrasound visibility and acoustic access, a device-compliant target size and depth, and an independent standard-treatment review.",
+          "avoid": "There is no tumour-specific curative evidence in CRLM. FDA device clearance for tumour destruction does not establish survival benefit or equivalence to established ablation; the HOPE4LIVER one-year update in 47 patients with 52 tumours reported local control of 63.4% on its primary assessment against 90% post hoc. A bridge-to-transplant use remains protocol-based, and a technical response does not establish transplant eligibility.",
+          "note": "Do not count technical success as proven complete oncologic clearance."
+        },
+        {
+          "t": "Extrapolating HCC segmentectomy cure claims, or any complete radiographic response, to oncologic clearance in CRLM.",
+          "l": "Avoid",
+          "g": "D",
+          "pref": "Nothing. Local control, complete radiographic response, complete pathologic necrosis in a treated lesion and overall survival are different outcomes, and bridge or downstaging treatment is recorded separately from definitive local treatment.",
+          "avoid": "Curative segmentectomy evidence is not established in CRLM, and a local complete response is not an automatic transplant exception."
+        }
+      ]
+    }
+  ],
+  "matrix": "crlm",
+  "quickref": [
+    {
+      "title": "Fong clinical risk score",
+      "intro": "Five preoperative factors, one point each, for stratifying outcome after resection of colorectal liver metastases.",
+      "rows": [
+        ["Node-positive primary", "1"],
+        ["Disease-free interval under 12 months", "1"],
+        ["More than one hepatic tumour", "1"],
+        ["Largest tumour over 5 cm", "1"],
+        ["CEA over 200 ng/mL", "1"]
+      ],
+      "foot": "Five-year survival falls from 60% at score 0 (n=52) to 44% at 1, 40% at 2, 20% at 3, 25% at 4 and 14% at 5 (n=14); median survival 74, 51, 47, 33, 20 and 22 months. No patient scoring 5 survived five years. Positive margin and extrahepatic disease were deliberately left out — they are not known preoperatively — and the authors treat both as contraindications to resection (5-year survival 20% and 18%). The score stratifies outcome; it does not by itself determine operability, and in the published discussion Bismuth and Blumgart both noted that about 20% five-year survival with three or more factors still beats the alternative.",
+      "src": "Fong 1999, PMID 10493478 — 1001 consecutive resections, single centre, retrospective, derived and tested in the same cohort"
+    },
+    {
+      "title": "The three axes of unresectability",
+      "intro": "The roadmap's governing definition: the three axes are assessed separately because they differ in reversibility, and an operation may be anatomically feasible yet oncologically futile or physiologically intolerable.",
+      "rows": [
+        ["Anatomic — disease cannot be cleared while preserving inflow, outflow, biliary drainage and an adequate functional remnant", "Often reversible, by augmentation, conversion therapy or staged surgery. Pursue Phase 2 strategies before concluding unresectability."],
+        ["Biologic — progression despite an appropriate systemic regimen", "Not reversible: surgery cannot correct biology. Redirect; a larger operation is not the answer to progressive disease."],
+        ["Functional — parenchymal quality or reserve, not tumour distribution, is the limiting factor", "Sometimes reversible with a chemotherapy holiday and nutritional recovery; may be permanent. If permanent with favourable biology, this is the transplant question."]
+      ],
+      "foot": "Permanent unresectability is a formal determination, not an impression. It requires dedicated hepatobiliary and transplant review and an explicit written record of why each alternative — resection, margin-verified ablation, portal vein embolisation or liver venous deprivation, staged hepatectomy, ALPPS and hepatic arterial infusion — cannot achieve clearance at acceptable functional risk. Clearance means a pathologic margin (resection or explant) or a confirmed circumferential ablative margin on imaging; radiographic response or stability after transarterial therapy is regional control and must not be called margin-verified clearance.",
+      "src": "Memorial Hermann CRLM System Roadmap v0.6, §3.1–3.2, 4 October 2026"
+    },
+    {
+      "title": "Transplant: the Oslo score and the eligibility gates",
+      "intro": "The Oslo score is prognostic and the allocation gates are binary. Keep them apart — a good score does not relax a gate, and the three documents a board will be handed do not agree with each other.",
+      "rows": [
+        ["Oslo score — largest lesion over 5.5 cm", "1"],
+        ["Oslo score — CEA over 80 µg/L", "1"],
+        ["Oslo score — under 2 years from primary resection to transplant", "1"],
+        ["Oslo score — progressive disease on chemotherapy at transplant", "1"],
+        ["OPTN guidance (Dec 2025): diagnosis and molecular gates", "Colorectal adenocarcinoma, BRAF wild type, microsatellite stable; R0 primary resection and colonoscopy within 12 months before the request; KRAS mutation is a negative prognostic footnote, not an exclusion"],
+        ["OPTN guidance: clocks", "At least 12 months from CRLM diagnosis to the initial request; at least six months of stability or regression on systemic or locoregional therapy. For a synchronous colon primary: primary resection more than 6 months after initial diagnosis, at least six months of chemotherapy after that resection, and at least 12 months total stability"],
+        ["OPTN guidance: burden and staging", "No hepatic lesion above 10 cm before treatment; CEA above 80 µg/L excludes; CT/MRI chest, abdomen and pelvis plus PET within one month before the request, the PET at least four weeks after chemotherapy stops"],
+        ["OPTN guidance: score and renewal", "Nonstandard Adult Transplant Oncology Review Board review at MMaT-20, with a floor of 15 under Policy 9.4.E; renew every three months with CT/MRI and CEA below 80 µg/L"],
+        ["IHPBA 2021, additional exclusions", "BRAF V600E excludes; MSI-high or dMMR should not be considered at present; metabolic tumour volume above 70 cm³ with total lesion glycolysis above 260 g excludes; at least six months of response and at least one year from diagnosis of non-resectable disease; undifferentiated or signet-ring histology excludes, N2 a relative exclusion; colonoscopy within 3 months of transplant"],
+        ["ESMO 2026 [II, A], for comparison", "BRAF wild type, CEA under 80 ng/mL, stabilisation of three months or more no later than third line, never any extrahepatic disease, resected primary, performance status under 2, age 18–65 — no MSI and no PET tumour-volume exclusion"]
+      ],
+      "foot": "Oslo score 0 gave median overall survival 151.6 months with 5- and 10-year survival both 88.9% in the 61-patient Oslo cohort, against 8.3% and 0% for a score of 3–4; a Fong score of 0–2 gave 5-year survival 75.4% versus 39.7% for 3–5, and metabolic tumour volume below 70 cm³ gave 66.7% versus 23.3%. These are prognostic refinements from small, internally derived, non-randomised cohorts and they do not replace the guidance gates. Note the contradiction the board must settle: ESMO 2026 asks only for three months of stabilisation up to third line and sets no MSI or PET-volume bar, so a dMMR patient with four months of stability, or a patient with a metabolic tumour volume of 90 cm³, is transplantable under ESMO and excluded under IHPBA 2021 and the OPTN route. The roadmap's rule is that where the randomised evidence (TransMet), the consensus (IHPBA 2021) and the institution's own protocol conflict, the stricter governs. Two numeric boundaries still need clarification before filing: the initial CEA exclusion is above 80 while renewal wording is below 80, so an exact 80 needs explicit review; and the guidance defines progression as a 10% increase in diameter or new lesions while labelling it RECIST 1.1.",
+      "src": "Oslo score as defined in Dueland 2026, PMID 42572136, with survival by score from Dueland 2023, PMID 37494056; OPTN Adult MELD Exceptions for Transplant Oncology guidance, December 2025 (guidance, not Policy); IHPBA 2021, PMID 34506756; ESMO 2026, PMID 41990853"
+    },
+    {
+      "title": "Molecular groups that change first-line therapy",
+      "intro": "The four results that fork the pathway before any liver-directed decision, with what each one changes.",
+      "rows": [
+        ["BRAF V600E", "Encorafenib, cetuximab and mFOLFOX6 first line — progression-free survival 12.8 versus 7.1 months, HR 0.53; interim overall survival 30.3 versus 15.1 months, HR 0.49. Excluded from current transplant protocols."],
+        ["dMMR or MSI-high", "Checkpoint blockade — nivolumab plus ipilimumab over nivolumab alone, progression-free survival HR 0.62 with survival still masked; against chemotherapy first line 54.1 versus 5.9 months, HR 0.21. Does not meet the microsatellite-stable OPTN exception route, and IHPBA excludes it from transplantation."],
+        ["RAS and BRAF wild type, left-sided primary", "Doublet plus anti-EGFR when maximal shrinkage is the goal — overall survival HR 0.71 versus bevacizumab on the left, 1.35 on the right; centrally reviewed response 72% versus 56% in FIRE-3, post hoc. Cetuximab and bevacizumab give similar overall survival overall (30.0 versus 29.0 months)."],
+        ["RAS or BRAF mutant, or right-sided primary", "FOLFOXIRI–bevacizumab for fit patients — progression-free survival HR 0.76 and complete local treatment 51% versus 37% in CAIRO5, with grade 3 or worse events 76% versus 59% and overall survival not yet reported. Anti-EGFR is not used for right-sided tumours."],
+        ["KRAS G12C", "Sotorasib plus panitumumab after chemorefractory progression — progression-free survival 5.6 versus 2.0 months, HR 0.48; survival immature (HR 0.77, CI crossing 1). A later-line option, not a conversion strategy."],
+        ["HER2, POLE or POLD1, other rare alterations", "Tested at diagnosis of metastatic disease with broader profiling where the result would change treatment. A POLE or POLD1 variant needs variant-level and phenotype interpretation before it justifies checkpoint therapy."]
+      ],
+      "foot": "Genotype is prognostic; observed response is the stronger signal, and the direction and duration of response during effective therapy carry more decision weight than genotype alone. A single mutation should not set margin width, the extent of parenchymal resection, or exclusion from otherwise feasible clearance. Two molecular results do close a door, but it is the transplant door: BRAF mutation and MSI-high or dMMR status both fall outside the described exception route.",
+      "src": "BREAKWATER PMID 40444708; CheckMate 8HW PMID 39874977 and KEYNOTE-177 PMID 33264544; ASCO 2023 PMID 36252154, FIRE-3 PMID 27575024, CALGB/SWOG 80405 PMID 28632865; CAIRO5 PMID 37329889; CodeBreaK 300 PMID 37870968"
+    }
+  ],
+  "honest": [
+    {
+      "t": "Hepatic arterial infusion converts unresectable disease.",
+      "why": "What is actually known is high hepatic response in single-arm, centre-concentrated series with no randomised conversion endpoint. Selection turns on liver-dominant burden, arterial anatomy, prior therapy and pump programme maturity, and the programme commits to tracking the conversion-to-resection rate, biliary toxicity and 6-month grade 3 or worse toxicity."
+    },
+    {
+      "t": "Ablation and resection are equivalent for small lesions.",
+      "why": "For lesions of 3 cm or less in selected patients, COLLISION's early stopping supported non-inferiority under its prespecified rules, but formal overall-survival non-inferiority was not shown (HR 1.05, 95% CI 0.69–1.58); it included few high-burden patients and allowed combined ablation and resection in both arms. Selection turns on lesion size and location, achievable margin, remnant considerations and operator experience, and the programme tracks local progression by achieved margin band and salvage feasibility after ablation failure."
+    },
+    {
+      "t": "ALPPS expands curative options.",
+      "why": "LIGRO showed a higher resection rate; long-term oncologic outcome was not the endpoint. Selection turns on remnant volume, biology, fitness and dropout risk in a staged approach, and the programme tracks resection rate, 90-day mortality, R0 rate and 2-year recurrence."
+    },
+    {
+      "t": "Transplantation should be offered beyond TransMet criteria.",
+      "why": "There is no randomised evidence outside that population. Selection turns on the Oslo score, CEA, largest lesion, metabolic tumour volume, interval from the primary and donor strategy, and the commitment is a mandatory registry recording whether criteria were met or exceeded, recurrence site and post-recurrence survival."
+    },
+    {
+      "t": "Surgical reassessment every 8 weeks improves outcome.",
+      "why": "It is an operating judgement with no comparative evidence for the interval. Selection turns on regimen, tempo of response, patient tolerance and scheduling capacity, and the programme tracks the conversion rate and the time from first response to operation."
+    }
+  ],
+  "ops": {
+    "board": [
+      "Submission: an Epic form captures the clinical question, phase, disease extent, biology, prior treatment, transplant status, referring clinician and urgency. Owner: submitting clinician.",
+      "Triage: the coordinator and a clinically trained gatekeeper check completeness, imaging quality, duplicate cases, the urgent lane and pathology needs. Owner: coordinator with an APP or physician.",
+      "Agenda: stable at least 24 hours ahead, target 10–12 decision cases, incomplete routine cases deferred, urgent exceptions by chair approval. Owner: coordinator and chair.",
+      "Attendance: hepatobiliary and transplant surgery, medical oncology, diagnostic radiology, interventional radiology, radiation oncology and colorectal surgery are required; pathology when pre-identified; nursing, navigation and the coordinator attend. Owner: programme leadership.",
+      "Pathology pre-alert: cases needing tissue or molecular review are flagged at triage so results are available at discussion. Owner: coordinator and pathology.",
+      "Urgent lane: a same or next business day pathway for obstructing, bleeding or rapidly progressing patients, with chair approval and a named owner at intake. Owner: chair and coordinator.",
+      "Conference: state the question, radiology first, then clinical context, phase assignment, an explicit clearance assessment, options compared with evidence labels, and the chair synthesises one recommendation. Name uncertainty rather than forcing consensus. Owner: a neutral clinical chair.",
+      "Documentation: an Epic note within one business day recording the phase, the recommendation, the alternatives considered, the owner, the due date and the reassessment plan. Owner: the designated documenting clinician.",
+      "Closure: the registry tracks completion, outside communication, scheduling barriers, results and re-presentation. Owner: navigator and coordinator.",
+      "Community relationship: return the recommendation promptly and state whether treatment remains local or transfers; do not absorb longitudinal care without the referring clinician's agreement. Owner: treating and referring clinicians.",
+      "These operating requirements are reproduced from the Memorial Hermann HCC roadmap so that one tumour board runs one standard across hepatobiliary diseases. They are evidence grade D by construction and should be audited for adherence, not effectiveness."
+    ],
+    "dashboard": [
+      "Clearance discipline: proportion of non-clearance treatment decisions that record why resection, margin-verified ablation, augmentation, staged surgery and HAI were each unsuitable — the pathway's central claim. Target 95% or more.",
+      "Staging adequacy: liver MRI obtained before any hepatectomy or ablation, and PET/CT and colonoscopy before transplant evaluation. Target 90% or more.",
+      "Molecular completeness: RAS, BRAF, MMR/MSI and HER2 resulted before the first-line systemic therapy decision. Target 90% or more.",
+      "Reassessment cadence: surgical reassessment of resectability at least every 8 weeks during conversion-intent therapy. Target 85% or more.",
+      "Ablation quality: confirmed circumferential margin documented, proportion with a margin under 5 mm, and local progression at 12 and 24 months. Margin documented in 95% or more; track progression.",
+      "Perioperative safety: 90-day morbidity and mortality by procedure type, including augmentation and staged strategies. Risk-adjusted quarterly review.",
+      "Transplant pathway: time from declaration of permanent unresectability to transplant evaluation, protocol conformance, registry entry, waitlist dropout, and recurrence site and management. 100% registry entry, quarterly review.",
+      "Systemic care: line, regimen, molecular match, response, grade 3 or worse toxicity and trial enrolment. Quarterly review.",
+      "Equity: delays and treatment completion by payer, language, geography, race and ethnicity, and referring site. Identify and act; no punitive target."
+    ],
+    "approvals": [
+      {
+        "n": 1,
+        "q": "Name the accountable CRLM pathway owner and the neutral tumour-board chair.",
+        "why": "The pathway produces one recommendation, one accountable owner, one due date and one reassessment plan; without a named owner and a neutral chair the synthesis step has nobody to perform it.",
+        "audit": "Named individuals recorded in the programme charter, with the chair's name on every conference record."
+      },
+      {
+        "n": 2,
+        "q": "Approve the Epic submission form with an explicit phase field and a clearance-assessment field.",
+        "why": "Phase assignment and the explicit clearance question are the two things this pathway is built on, so they have to be captured at submission rather than reconstructed later.",
+        "audit": "Completeness of the phase and clearance fields at triage; the clearance-discipline dashboard measure depends on them."
+      },
+      {
+        "n": 3,
+        "q": "Decide whether Memorial Hermann will run a hepatic arterial infusion programme, and if so the credentialing standard, case volume floor and toxicity review cadence.",
+        "why": "HAI conversion evidence is single-arm and concentrated in experienced centres, and biliary toxicity and pump complications are not occasional-case risks; the modality is only defensible with a credentialed programme behind it.",
+        "audit": "Credentialing records, case volume against the floor, and the 6-month grade 3 or worse toxicity and biliary toxicity review."
+      },
+      {
+        "n": 4,
+        "q": "Ratify the written liver transplant protocol for CRLM: eligibility, review-board route, graft strategy including living donation, registry dataset and recurrence plan.",
+        "why": "CRLM is not a standardised OPTN exception, so the institutional protocol is the operative constraint and the programme domain of the selection table requires it in writing.",
+        "audit": "Protocol conformance and registry entry for every listed patient, reviewed quarterly."
+      },
+      {
+        "n": 5,
+        "q": "Set the institutional position on transplanting outside TransMet criteria — permitted under protocol with registry entry, or not at all.",
+        "why": "There is no randomised evidence outside the TransMet population, and the roadmap lists this among the statements that are locally reasonable but not evidence based.",
+        "audit": "Mandatory registry recording whether criteria were met or exceeded, recurrence site and post-recurrence survival."
+      },
+      {
+        "n": 6,
+        "q": "Define the pre-transplant checkpoint-inhibitor policy for MSI-high candidates, including washout and the approval route, before any such patient is listed.",
+        "why": "The exception route requires microsatellite stability and IHPBA excludes these patients, while pre-transplant checkpoint exposure and post-transplant rejection risk must be addressed before the first dose.",
+        "audit": "Written policy in place before listing; every exposed candidate has a documented graft-safety assessment."
+      },
+      {
+        "n": 7,
+        "q": "Approve remnant-volume thresholds and the augmentation strategy hierarchy (PVE, LVD, two-stage, ALPPS), including who decides between them.",
+        "why": "Modality-specific remnant thresholds are local policy without comparative outcome evidence, and the augmentation options differ in morbidity rather than in proven survival.",
+        "audit": "Perioperative safety measure by procedure type, including augmentation and staged strategies, plus resection rate and dropout between stages."
+      },
+      {
+        "n": 8,
+        "q": "Set the minimum ablative margin that counts toward clearance, and require it to be documented.",
+        "why": "Ablation counts as clearance only when a circumferential margin is confirmed, and local progression risk rises steeply below 5 mm.",
+        "audit": "Margin documented in 95% or more of ablations, with local progression reported by achieved margin band at 12 and 24 months."
+      },
+      {
+        "n": 9,
+        "q": "Name the referral route and the specialist team for peritoneal metastases, which are assessed outside this liver pathway.",
+        "why": "Peritoneal disease is assessed by a peritoneal surface malignancy team rather than routed automatically through the liver pathway, and any peritoneal disease ends transplant intent.",
+        "audit": "Referral route documented; cases with peritoneal disease tracked out of the liver pathway rather than treated as an extension of it."
+      },
+      {
+        "n": 10,
+        "q": "Pilot for 90 days, audit 20 consecutive cases, then revise before approval as a clinical practice guideline.",
+        "why": "This is a draft for multidisciplinary and institutional governance review, not active clinical policy, and the operating measures are grade D by construction.",
+        "audit": "The 20-case audit against the dashboard measures, with revisions recorded before approval."
+      }
+    ]
+  },
+  "refs": {
+    "10493478": ["Fong CRS", "Staging & risk", "Fong Y, Fortner J, Sun RL, et al. Clinical score for predicting recurrence after hepatic resection for metastatic colorectal cancer: analysis of 1001 consecutive cases. Ann Surg. 1999;230(3):309-318; discussion 318-321. doi:10.1097/00000658-199909000-00004. PMID:10493478."],
+    "37471075": ["New EPOC biomarker", "Staging & risk", "Katipally RR, Martinez CA, Pugh SA, et al. Integrated clinical-molecular classification of colorectal liver metastases: a biomarker analysis of the phase 3 New EPOC randomized clinical trial. JAMA Oncol. 2023;9(9):1245-1254. doi:10.1001/jamaoncol.2023.2535. PMID:37471075."],
+    "27575024": ["FIRE-3", "Systemic therapy", "Stintzing S, Modest DP, Rossius L, et al. FOLFIRI plus cetuximab versus FOLFIRI plus bevacizumab for metastatic colorectal cancer (FIRE-3): a post-hoc analysis of tumour dynamics in the final RAS wild-type subgroup of this randomised open-label phase 3 trial. Lancet Oncol. 2016;17(10):1426-1434. doi:10.1016/S1470-2045(16)30269-8. PMID:27575024."],
+    "28632865": ["CALGB/SWOG 80405", "Systemic therapy", "Venook AP, Niedzwiecki D, Lenz HJ, et al. Effect of first-line chemotherapy combined with cetuximab or bevacizumab on overall survival in patients with KRAS wild-type advanced or metastatic colorectal cancer: a randomized clinical trial. JAMA. 2017;317(23):2392-2401. doi:10.1001/jama.2017.7105. PMID:28632865."],
+    "37329889": ["CAIRO5", "Systemic therapy", "Bond MJG, Bolhuis K, Loosveld OJL, et al. First-line systemic treatment strategies in patients with initially unresectable colorectal cancer liver metastases (CAIRO5): an open-label, multicentre, randomised, controlled, phase 3 study from the Dutch Colorectal Cancer Group. Lancet Oncol. 2023;24(7):757-771. doi:10.1016/S1470-2045(23)00219-X. PMID:37329889."],
+    "38728364": ["TRICE", "Systemic therapy", "Wang DS, Ren C, Li SS, et al. Cetuximab plus FOLFOXIRI versus cetuximab plus FOLFOX as conversion regimen in RAS/BRAF wild-type patients with initially unresectable colorectal liver metastases (TRICE trial): a randomized controlled trial. PLoS Med. 2024;21(5):e1004389. doi:10.1371/journal.pmed.1004389. PMID:38728364."],
+    "40444708": ["BREAKWATER", "Systemic therapy", "Elez E, Yoshino T, Shen L, et al. Encorafenib, cetuximab, and mFOLFOX6 in BRAF-mutated colorectal cancer. N Engl J Med. 2025;392(24):2425-2437. doi:10.1056/NEJMoa2501912. PMID:40444708."],
+    "39874977": ["CheckMate 8HW", "Systemic therapy", "André T, Elez E, Lenz HJ, et al. Nivolumab plus ipilimumab versus nivolumab in microsatellite instability-high metastatic colorectal cancer (CheckMate 8HW): a randomised, open-label, phase 3 trial. Lancet. 2025;405(10476):383-395. doi:10.1016/S0140-6736(24)02848-4. PMID:39874977."],
+    "33264544": ["KEYNOTE-177", "Systemic therapy", "André T, Shiu KK, Kim TW, et al. Pembrolizumab in microsatellite-instability-high advanced colorectal cancer. N Engl J Med. 2020;383(23):2207-2218. doi:10.1056/NEJMoa2017699. PMID:33264544."],
+    "37870968": ["CodeBreaK 300", "Systemic therapy", "Fakih MG, Salvatore L, Esaki T, et al. Sotorasib plus panitumumab in refractory colorectal cancer with mutated KRAS G12C. N Engl J Med. 2023;389(23):2125-2139. doi:10.1056/NEJMoa2308795. PMID:37870968."],
+    "18358928": ["EORTC 40983", "Resection", "Nordlinger B, Sorbye H, Glimelius B, et al. Perioperative chemotherapy with FOLFOX4 and surgery versus surgery alone for resectable liver metastases from colorectal cancer (EORTC Intergroup trial 40983): a randomised controlled trial. Lancet. 2008;371(9617):1007-1016. doi:10.1016/S0140-6736(08)60455-9. PMID:18358928."],
+    "24120480": ["EORTC 40983 long-term", "Resection", "Nordlinger B, Sorbye H, Glimelius B, et al. Perioperative FOLFOX4 chemotherapy and surgery versus surgery alone for resectable liver metastases from colorectal cancer (EORTC 40983): long-term results of a randomised, controlled, phase 3 trial. Lancet Oncol. 2013;14(12):1208-1215. doi:10.1016/S1470-2045(13)70447-9. PMID:24120480."],
+    "24717919": ["New EPOC", "Resection", "Primrose J, Falk S, Finch-Jones M, et al. Systemic chemotherapy with or without cetuximab in patients with resectable colorectal liver metastasis: the New EPOC randomised controlled trial. Lancet Oncol. 2014;15(6):601-611. doi:10.1016/S1470-2045(14)70105-6. PMID:24717919."],
+    "32014119": ["New EPOC long-term", "Resection", "Bridgewater JA, Pugh SA, Maishman T, et al. Systemic chemotherapy with or without cetuximab in patients with resectable colorectal liver metastasis (New EPOC): long-term results of a multicentre, randomised, controlled, phase 3 trial. Lancet Oncol. 2020;21(3):398-411. doi:10.1016/S1470-2045(19)30798-3. PMID:32014119."],
+    "28902669": ["LIGRO", "Resection", "Sandström P, Røsok BI, Sparrelid E, et al. ALPPS improves resectability compared with conventional two-stage hepatectomy in patients with advanced colorectal liver metastasis: results from a Scandinavian multicenter randomized controlled trial (LIGRO trial). Ann Surg. 2018;267(5):833-840. doi:10.1097/SLA.0000000000002511. PMID:28902669."],
+    "39848272": ["COLLISION", "Liver-directed", "van der Lei S, Puijk RS, Dijkstra M, et al. Thermal ablation versus surgical resection of small-size colorectal liver metastases (COLLISION): an international, randomised, controlled, phase 3 non-inferiority trial. Lancet Oncol. 2025;26(2):187-199. doi:10.1016/S1470-2045(24)00660-0. PMID:39848272."],
+    "26267832": ["Shady ablation margins", "Liver-directed", "Shady W, Petre EN, Gonen M, et al. Percutaneous radiofrequency ablation of colorectal cancer liver metastases: factors affecting outcomes — a 10-year experience at a single center. Radiology. 2016;278(2):601-611. doi:10.1148/radiol.2015142489. PMID:26267832."],
+    "28376151": ["EORTC 40004 (CLOCC)", "Liver-directed", "Ruers T, Van Coevorden F, Punt CJ, et al. Local treatment of unresectable colorectal liver metastases: results of a randomized phase II trial. J Natl Cancer Inst. 2017;109(9):djx015. doi:10.1093/jnci/djx015. PMID:28376151."],
+    "19255321": ["Rusthoven SBRT", "Liver-directed", "Rusthoven KE, Kavanagh BD, Cardenes H, et al. Multi-institutional phase I/II trial of stereotactic body radiation therapy for liver metastases. J Clin Oncol. 2009;27(10):1572-1578. doi:10.1200/JCO.2008.19.6329. PMID:19255321."],
+    "32484754": ["SABR-COMET long-term", "Liver-directed", "Palma DA, Olson R, Harrow S, et al. Stereotactic ablative radiotherapy for the comprehensive treatment of oligometastatic cancers: long-term results of the SABR-COMET phase II randomized trial. J Clin Oncol. 2020;38(25):2830-2838. doi:10.1200/JCO.20.00818. PMID:32484754."],
+    "34541864": ["EPOCH", "Liver-directed", "Mulcahy MF, Mahvash A, Pracht M, et al. Radioembolization with chemotherapy for colorectal liver metastases: a randomized, open-label, international, multicenter, phase III trial. J Clin Oncol. 2021;39(35):3897-3907. doi:10.1200/JCO.21.01839. PMID:34541864."],
+    "28781171": ["FOXFIRE / SIRFLOX / FOXFIRE-Global", "Liver-directed", "Wasan HS, Gibbs P, Sharma NK, et al. First-line selective internal radiotherapy plus chemotherapy versus chemotherapy alone in patients with liver metastases from colorectal cancer (FOXFIRE, SIRFLOX, and FOXFIRE-Global): a combined analysis of three multicentre, randomised, phase 3 trials. Lancet Oncol. 2017;18(9):1159-1171. doi:10.1016/S1470-2045(17)30457-6. PMID:28781171."],
+    "26903575": ["SIRFLOX", "Liver-directed", "van Hazel GA, Heinemann V, Sharma NK, et al. SIRFLOX: randomized phase III trial comparing first-line mFOLFOX6 (plus or minus bevacizumab) versus mFOLFOX6 (plus or minus bevacizumab) plus selective internal radiation therapy in patients with metastatic colorectal cancer. J Clin Oncol. 2016;34(15):1723-1731. doi:10.1200/JCO.2015.66.1181. PMID:26903575."],
+    "20567019": ["Hendlisz Y90", "Liver-directed", "Hendlisz A, Van den Eynde M, Peeters M, et al. Phase III trial comparing protracted intravenous fluorouracil infusion alone or with yttrium-90 resin microspheres radioembolization for liver-limited metastatic colorectal cancer refractory to standard chemotherapy. J Clin Oncol. 2010;28(23):3687-3694. doi:10.1200/JCO.2010.28.5643. PMID:20567019."],
+    "22493375": ["DEBIRI", "Liver-directed", "Fiorentini G, Aliberti C, Tilli M, et al. Intra-arterial infusion of irinotecan-loaded drug-eluting beads (DEBIRI) versus intravenous therapy (FOLFIRI) for hepatic metastases from colorectal cancer: final results of a phase III study. Anticancer Res. 2012;32(4):1387-1395. PMID:22493375."],
+    "19470932": ["Kemeny HAI conversion", "Liver-directed", "Kemeny NE, Melendez FDH, Capanu M, et al. Conversion to resectability using hepatic artery infusion plus systemic chemotherapy for the treatment of unresectable liver metastases from colorectal carcinoma. J Clin Oncol. 2009;27(21):3465-3471. doi:10.1200/JCO.2008.20.1301. PMID:19470932."],
+    "38608150": ["Dutch HAI phase II", "Liver-directed", "Krul MF, Kok NFM, Osmani H, et al. Hepatic arterial infusion pump chemotherapy combined with systemic chemotherapy for borderline resectable and unresectable colorectal liver metastases: phase II feasibility study. Br J Surg. 2024;111(4):znae089. doi:10.1093/bjs/znae089. PMID:38608150."],
+    "16505413": ["CALGB 9481", "Liver-directed", "Kemeny NE, Niedzwiecki D, Hollis DR, et al. Hepatic arterial infusion versus systemic therapy for hepatic metastases from colorectal cancer: a randomized trial of efficacy, quality of life, and molecular markers (CALGB 9481). J Clin Oncol. 2006;24(9):1395-1403. doi:10.1200/JCO.2005.03.8166. PMID:16505413."],
+    "10615075": ["Kemeny adjuvant HAI", "Liver-directed", "Kemeny N, Huang Y, Cohen AM, et al. Hepatic arterial infusion of chemotherapy after resection of hepatic metastases from colorectal cancer. N Engl J Med. 1999;341(27):2039-2048. doi:10.1056/NEJM199912303412702. PMID:10615075."],
+    "28426374": ["MSKCC HAI propensity", "Liver-directed", "Groot Koerkamp B, Sadot E, Kemeny NE, et al. Perioperative hepatic arterial infusion pump chemotherapy is associated with longer survival after resection of colorectal liver metastases: a propensity score analysis. J Clin Oncol. 2017;35(17):1938-1944. doi:10.1200/JCO.2016.71.8346. PMID:28426374."],
+    "30953467": ["PUMP (protocol)", "Liver-directed", "Buisman FE, Homs MYV, Grünhagen DJ, et al. Adjuvant hepatic arterial infusion pump chemotherapy and resection versus resection alone in patients with low-risk resectable colorectal liver metastases — the multicenter randomized controlled PUMP trial. BMC Cancer. 2019;19(1):327. doi:10.1186/s12885-019-5515-6. PMID:30953467. Published protocol; no outcome data."],
+    "40201962": ["#HOPE4LIVER one-year", "Liver-directed", "Ziemlewicz TJ, et al. The #HOPE4LIVER single-arm pivotal trial for histotripsy of primary and metastatic liver tumors: one-year update of clinical outcomes. Ann Surg. 2025. doi:10.1097/SLA.0000000000006720. PMID:40201962."],
+    "39306468": ["TransMet", "Transplant", "Adam R, Piedvache C, Chiche L, et al. Liver transplantation plus chemotherapy versus chemotherapy alone in patients with permanently unresectable colorectal liver metastases (TransMet): results from a multicentre, open-label, prospective, randomised controlled trial. Lancet. 2024;404(10458):1107-1118. doi:10.1016/S0140-6736(24)01595-2. PMID:39306468."],
+    "31188200": ["SECA-II", "Transplant", "Dueland S, Syversveen T, Solheim JM, et al. Survival following liver transplantation for patients with nonresectable liver-only colorectal metastases. Ann Surg. 2020;271(2):212-218. doi:10.1097/SLA.0000000000003404. PMID:31188200."],
+    "37494056": ["Oslo cohort", "Transplant", "Dueland S, Smedman TM, Syversveen T, et al. Long-term survival, prognostic factors, and selection of patients with colorectal cancer for liver transplant: a nonrandomized controlled trial. JAMA Surg. 2023;158(9):e232932. doi:10.1001/jamasurg.2023.2932. PMID:37494056."],
+    "42572136": ["SECA-II 10-year", "Transplant", "Dueland S, Smedman TM, Syversveen T, et al. Liver transplantation for nonresectable colorectal liver metastases: ten-year follow-up and assessment of curative rate in the SECA-II study. Ann Surg. 2026. doi:10.1097/SLA.0000000000007200. PMID:42572136."],
+    "36241941": ["Grut metabolic tumour volume", "Transplant", "Grut H, Line PD, Syversveen T, et al. Metabolic tumor volume predicts long-term survival after transplantation for unresectable colorectal liver metastases: 15 years of experience from the SECA study. Ann Nucl Med. 2022;36(12):1073-1081. doi:10.1007/s12149-022-01796-8. PMID:36241941."],
+    "35353121": ["North American LDLT", "Transplant", "Hernandez-Alejandro R, Ruffolo LI, Sasaki K, et al. Recipient and donor outcomes after living-donor liver transplant for unresectable colorectal liver metastases. JAMA Surg. 2022;157(6):524-530. doi:10.1001/jamasurg.2022.0300. PMID:35353121."],
+    "34506756": ["IHPBA 2021", "Guidelines & policy", "Bonney GK, Chew CA, Lodge P, et al. Liver transplantation for non-resectable colorectal liver metastases: the International Hepato-Pancreato-Biliary Association consensus guidelines. Lancet Gastroenterol Hepatol. 2021;6(11):933-946. doi:10.1016/S2468-1253(21)00219-3. PMID:34506756."],
+    "41990853": ["ESMO 2026", "Guidelines & policy", "Cremolini C, Chalabi M, Elez E, et al. Metastatic colorectal cancer: ESMO Clinical Practice Guideline for diagnosis, treatment and follow-up. Ann Oncol. 2026;37(6):759-776. doi:10.1016/j.annonc.2026.03.005. PMID:41990853."],
+    "36252154": ["ASCO 2023", "Guidelines & policy", "Morris VK, Kennedy EB, Baxter NN, et al. Treatment of metastatic colorectal cancer: ASCO guideline. J Clin Oncol. 2023;41(3):678-700. doi:10.1200/JCO.22.01690. PMID:36252154."],
+    "26417845": ["Adam 2015 consensus", "Guidelines & policy", "Adam R, de Gramont A, Figueras J, et al. Managing synchronous liver metastases from colorectal cancer: a multidisciplinary international consensus. Cancer Treat Rev. 2015;41(9):729-741. doi:10.1016/j.ctrv.2015.06.006. PMID:26417845."],
+    "40640089": ["Chinese 2024 consensus", "Guidelines & policy", "Zhang W, Bi X, Sun Y, et al. Diagnosis and treatment of colorectal liver metastases: Chinese expert consensus-based multidisciplinary team (2024 edition). Chin Med J (Engl). 2025;138(15):1765-1768. doi:10.1097/CM9.0000000000003688. PMID:40640089."]
+  },
+  "nonpm": {
+    "nccn": ["NCCN colon v2.2026", "Guidelines & policy", "National Comprehensive Cancer Network. NCCN Clinical Practice Guidelines in Oncology: Colon Cancer. Version 2.2026, 7 April 2026. Original PDF pp. 13-14, 16, 26, 30, 37-41 and 51-55; HAI and SBRT on p. 39 and local selection on p. 40.", "https://www.nccn.org/guidelines/category_1"],
+    "optn-policy": ["OPTN Policy 9", "Guidelines & policy", "Organ Procurement and Transplantation Network. Policy 9: Allocation of Livers and Liver-Intestines. US Department of Health and Human Services, HRSA. Policy 9.4.C-E, 9.5.A and 9.5.I; official PDF retrieved 1 October 2026. Colorectal liver metastasis is not a standardised exception; verify the current text before any listing decision.", "https://optn.transplant.hrsa.gov/policies-bylaws/policies/"],
+    "optn-guidance": ["OPTN transplant-oncology guidance", "Guidelines & policy", "Organ Procurement and Transplantation Network, Liver and Intestinal Organ Transplantation Committee. Guidance to Liver Transplant Programs and the National Liver Review Board for: Adult MELD Exceptions for Transplant Oncology. December 2025. Review-board guidance, not OPTN Policy; colorectal liver metastasis section, pp. 9-10.", "https://www.hrsa.gov/sites/default/files/hrsa/optn/adult-meld-exception-transplant-oncology-review-guidance.pdf"],
+    "mh-review": ["MH/UTHealth CRLM review", "Guidelines & policy", "Memorial Hermann / UTHealth colorectal liver metastasis review, V18 coauthor draft, September 2026. Internal manuscript; the three-phase clearance-anchored framework, the clearance / regional-control / remnant-augmentation distinction and the transplant selection domains follow that review."],
+    "mh-roadmap": ["MH CRLM roadmap v0.6", "Guidelines & policy", "Memorial Hermann Colorectal Liver Metastasis System Roadmap. Multidisciplinary practice guideline and operating pathway, Draft v0.6, 4 October 2026; liver-directed treatment section revised 3 October 2026. Evidence current to 20 September 2026. Pending multidisciplinary approval; not active clinical policy."],
+    "mh-align": ["CRLM alignment worksheet", "Guidelines & policy", "Guideline alignment worksheet — adult colorectal liver metastases, Memorial Hermann CRLM System Roadmap Draft v0.6, 4 October 2026. Sixteen areas where NCCN 2.2026, IHPBA 2021, OPTN 2025 guidance, ASCO 2023, Adam 2015 and the Chinese 2024 consensus can disagree, with the institutional position and the open ratification decisions."]
+  },
+  "provenance": "Built from the Memorial Hermann Colorectal Liver Metastasis System Roadmap Draft v0.6 (4 October 2026, liver-directed section revised 3 October 2026, evidence current to 20 September 2026) and its companion guideline alignment worksheet of the same date, which supplied the institutional positions, the NCCN decisions 1-16 and the open ratification items. The evidence strings were written against the structured abstracts in the CRLM reference depot, using each paper's recorded critique and data problems so that a result is not claimed beyond what its trial showed; the liver-directed therapy matrix supplies the modality table. Policy wording follows NCCN Colon Cancer v2.2026 (7 April 2026), OPTN Policy 9 as retrieved 1 October 2026, and the OPTN Adult MELD Exceptions for Transplant Oncology review-board guidance of December 2025, which is guidance and not Policy. The roadmap itself is a draft pending multidisciplinary and institutional governance review: it is not active clinical policy, does not replace clinician judgement, current drug labelling, OPTN policy or patient-specific informed consent, and every transplant criterion must be confirmed against current policy at implementation."
+}

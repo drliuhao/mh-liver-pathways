@@ -1,0 +1,937 @@
+{
+ "tiers": {
+  "1": {
+   "short": "Curative",
+   "label": "Curative — equivalent to resection in its niche (RCT-level)"
+  },
+  "2": {
+   "short": "Curative-intent alt.",
+   "label": "Curative-intent alternative — when resection / transplant / ablation not feasible"
+  },
+  "3": {
+   "short": "Bridge / adjunct",
+   "label": "Bridge, downstage or conversion to surgery/LT, or adjunct to surgery"
+  },
+  "4": {
+   "short": "2nd-line / palliative",
+   "label": "Second-line / palliative — disease control, survival extension"
+  },
+  "5": {
+   "short": "Investigational",
+   "label": "Investigational / no established role"
+  }
+ },
+ "modalities": [
+  [
+   "abl",
+   "Thermal ablation",
+   "RFA / MWA"
+  ],
+  [
+   "sbrt",
+   "SBRT / EBRT",
+   "incl. proton · palliative RT"
+  ],
+  [
+   "y90",
+   "Y-90 (TARE)",
+   "segmentectomy · lobar"
+  ],
+  [
+   "tace",
+   "TACE / TAE",
+   "cTACE · DEB · bland"
+  ],
+  [
+   "hai",
+   "HAI / HAIC",
+   "pump FUDR · HAIC-FOLFOX"
+  ],
+  [
+   "htx",
+   "Histotripsy",
+   "non-thermal focused US"
+  ]
+ ],
+ "tumours": [
+  [
+   "hcc",
+   "HCC",
+   "Hepatocellular carcinoma"
+  ],
+  [
+   "icca",
+   "iCCA",
+   "Intrahepatic cholangiocarcinoma"
+  ],
+  [
+   "crlm",
+   "CRLM",
+   "Colorectal liver metastases"
+  ],
+  [
+   "nelm",
+   "NELM",
+   "Neuroendocrine liver metastases"
+  ]
+ ],
+ "cells": {
+  "hcc|abl": {
+   "tier": 1,
+   "head": "First-line curative for solitary ≤2 cm; local control lower than resection above that",
+   "roles": [
+    {
+     "t": 1,
+     "when": "Solitary ≤2 cm, Child-Pugh A (BCLC 0); at 2–3 cm or multinodular the equal survival depends on salvage being available",
+     "ev": [
+      [
+       "SURF RCT",
+       "35949295",
+       "SURF: OS/RFS NS but local recurrence 8.0 vs 15.8% favouring surgery; stopped at 302 of 600 planned"
+      ],
+      [
+       "SURF final",
+       "40554738",
+       "SURF final: 5-y OS 74.6 vs 70.4%, HR 0.96 — a failed superiority trial, not proven equivalence"
+      ],
+      [
+       "Chen RCT",
+       "16495695",
+       "Chen: OS NS, but per-protocol after 21% of the ablation arm crossed to resection; mean follow-up 28 mo"
+      ],
+      [
+       "Ng RCT",
+       "29091283",
+       "10-y OS NS"
+      ],
+      [
+       "Livraghi",
+       "18008357",
+       "≤2 cm sustained CR"
+      ],
+      [
+       "MWA vs RFA RCT",
+       "29503247",
+       "Vietti Violi: 2-y LTP 6 vs 12%, NS — a negative superiority trial at mean lesion 18 mm; BCLC 2026 now prefers microwave to 3–4 cm"
+      ]
+     ]
+    },
+    {
+     "t": 1,
+     "when": "Recurrent HCC after resection; the apparent advantage of repeat resection above 3 cm or AFP >200 is an unplanned, unadjusted subgroup (50 patients) — hypothesis-generating",
+     "ev": [
+      [
+       "Xia RCT",
+       "31774468",
+       "OS NS (HR 1.26, 0.91–1.76), but local repeat recurrence 37.8 vs 21.7% and early repeat recurrence 40.3 vs 23.3% (both p=0.04) favour repeat resection; cx 7.3 vs 22.4%"
+      ]
+     ]
+    },
+    {
+     "t": 2,
+     "when": "Solitary <7 cm or ≤3 nodules <3 cm: RFA + TACE (no size subgroup reported, so the 3–7 cm benefit is inferred)",
+     "ev": [
+      [
+       "Peng RCT",
+       "23269991",
+       "Peng: OS HR 0.53 vs RFA alone; single centre, 89% HBsAg+, half the cohort ≤3 cm, no resection arm"
+      ]
+     ]
+    },
+    {
+     "t": 3,
+     "when": "Bridge to LT",
+     "ev": [
+      [
+       "Sapisochin ITT",
+       "28257902",
+       "Sapisochin: dropout ≈ TACE/RFA, but explant necrosis 13 vs 49% and post-LT recurrence 23 vs 13% after SBRT"
+      ]
+     ]
+    }
+   ]
+  },
+  "hcc|sbrt": {
+   "tier": 2,
+   "head": "Curative-intent alternative when ablation unsuitable",
+   "roles": [
+    {
+     "t": 2,
+     "when": "Single ≤2 cm recurrent HCC where ablation is possible; above 2 cm the randomised advantage disappears and the retrospective data point the other way",
+     "ev": [
+      [
+       "Xi RCT vs RFA",
+       "39693584",
+       "Xi: 2-y local PFS 92.7 vs 75.8%, but significant only ≤2 cm (HR 0.39); 2–5 cm NS (HR 0.58, p=0.31); PFS and OS identical"
+      ],
+      [
+       "Wahl",
+       "26628466",
+       "Wahl (retrospective): better freedom from local progression than RFA ≥2 cm — the opposite size pattern to Xi"
+      ]
+     ]
+    },
+    {
+     "t": 3,
+     "when": "Bridge to LT",
+     "ev": [
+      [
+       "Sapisochin ITT",
+       "28257902",
+       "dropout 16.7% ≈ TACE/RFA"
+      ]
+     ]
+    },
+    {
+     "t": 3,
+     "when": "Perioperative: neoadjuvant RT for resectable HCC with PVTT; adjuvant RT after narrow-margin hepatectomy",
+     "ev": [
+      [
+       "Wei RCT",
+       "31283409",
+       "Wei: cancer-specific death HR 0.35; 11% lost their operation during the wait; 96% from one hospital"
+      ],
+      [
+       "Bai RCT",
+       "38488934",
+       "Bai: PFS and OS negative; recurrence shifted intrahepatic→extrahepatic (37.5 vs 14.6%); no surgery-alone arm, n=72"
+      ]
+     ]
+    },
+    {
+     "t": 4,
+     "when": "Incomplete TACE; macrovascular invasion with systemic Rx",
+     "ev": [
+      [
+       "Comito ph III",
+       "36421345",
+       "LC ↑ vs repeat TACE"
+      ],
+      [
+       "TRENDY ph II",
+       "37037359",
+       "TTP NS; LC ↑ vs DEB-TACE (post hoc)"
+      ],
+      [
+       "RTOG 1112",
+       "39699905",
+       "RTOG 1112: missed its primary endpoint (1-sided p=0.06, HR 0.77, 90% CI 0.59–1.01); 15% never started sorafenib"
+      ],
+      [
+       "START RCT",
+       "29543938",
+       "Asan RCT: TACE+EBRT instead of sorafenib, not added to it; 91% of the sorafenib arm crossed over"
+      ]
+     ]
+    },
+    {
+     "t": 4,
+     "when": "Painful hepatic tumour (HCC or metastases): single-fraction RT",
+     "ev": [
+      [
+       "CCTG HE1",
+       "39245060",
+       "pain response 67 vs 22% vs BSC"
+      ]
+     ]
+    }
+   ]
+  },
+  "hcc|y90": {
+   "tier": 2,
+   "head": "Segmentectomy = curative-intent; lobar = bridge or palliative",
+   "roles": [
+    {
+     "t": 2,
+     "when": "Solitary ≤8 cm, unresectable / not ablatable; ablative segmental dosimetry",
+     "ev": [
+      [
+       "LEGACY",
+       "33739462",
+       "LEGACY: ORR 88% by treated-zone mRECIST (46% by RECIST 1.1), 3-y OS 86.6% — retrospective, median 2.7 cm, 28% went on to transplant or resection"
+      ],
+      [
+       "RASER",
+       "35617978",
+       "≤3 cm, sustained CR 90%"
+      ]
+     ]
+    },
+    {
+     "t": 3,
+     "when": "Bridge / downstage to LT or resection; radiation lobectomy for FLR",
+     "ev": [
+      [
+       "PREMIERE RCT",
+       "27575820",
+       "TTP >26 vs 6.8 mo vs cTACE"
+      ],
+      [
+       "TRACE RCT",
+       "35258371",
+       "OS 30.2 vs 15.6 mo vs DEB-TACE"
+      ],
+      [
+       "MERITS-LT",
+       "34331914",
+       "Y90 ≈ TACE for downstaging"
+      ],
+      [
+       "Vouche",
+       "23811303",
+       "radiation lobectomy: FLR +45% at 9 mo"
+      ]
+     ]
+    },
+    {
+     "t": 4,
+     "when": "Advanced / PVTT: no OS gain vs sorafenib in SARAH, SIRveNIB or SORAMIC; dosimetry is the open question",
+     "ev": [
+      [
+       "SARAH",
+       "29107679",
+       "OS NS"
+      ],
+      [
+       "SIRveNIB",
+       "29498924",
+       "OS NS"
+      ],
+      [
+       "SORAMIC",
+       "31421157",
+       "OS NS"
+      ],
+      [
+       "DOSISPHERE-01",
+       "33166497",
+       "DOSISPHERE-01: personalised vs standard dosimetry (not vs sorafenib) — ORR 71 vs 36%, OS 26.6 vs 10.7 mo, resection 36 vs 4%; phase 2, n=60, stopped early"
+      ]
+     ]
+    }
+   ]
+  },
+  "hcc|tace": {
+   "tier": 4,
+   "head": "Standard for BCLC-B; main bridging / downstaging tool",
+   "roles": [
+    {
+     "t": 3,
+     "flag": "Emergency",
+     "when": "Ruptured HCC: TAE for haemostasis, then staged hepatectomy",
+     "ev": [
+      [
+       "Meta-analysis (18 studies)",
+       "37328589",
+       "lower in-hospital mortality, better 1-/3-y OS vs emergency hepatectomy"
+      ]
+     ]
+    },
+    {
+     "t": 3,
+     "when": "Adjuvant after resection, intermediate/high recurrence risk",
+     "ev": [
+      [
+       "Wang RCT (HBV)",
+       "29420221",
+       "Wang (HBV): RFS ↑, 3-y OS 85.2 vs 77.4% — single centre, one reduced-dose cycle; EASL 2025 recommends against any adjuvant treatment"
+      ]
+     ]
+    },
+    {
+     "t": 3,
+     "when": "Bridge / downstage to LT (UNOS-DS)",
+     "ev": [
+      [
+       "XXL RCT",
+       "32615109",
+       "LT after downstaging ↑ OS"
+      ],
+      [
+       "MERITS-LT",
+       "34331914",
+       ">80% downstaged; 2-y post-LT OS 95%"
+      ]
+     ]
+    },
+    {
+     "t": 4,
+     "when": "BCLC-B multinodular, Child-Pugh A–B7, no MVI; adding checkpoint therapy improves PFS only and stays inside a protocol",
+     "ev": [
+      [
+       "Llovet RCT",
+       "12049862",
+       "OS HR 0.47 vs supportive"
+      ],
+      [
+       "Lo RCT",
+       "11981766",
+       "OS ↑ vs supportive"
+      ],
+      [
+       "EMERALD-1",
+       "39798579",
+       "EMERALD-1: PFS 15.0 vs 8.2 mo; OS interim not significant and withheld; haemorrhage doubled, 28% stopped for toxicity"
+      ],
+      [
+       "LEAP-012",
+       "39798578",
+       "LEAP-012: PFS 14.6 vs 10.0 mo; OS HR 0.80, p=0.087 against a 0.0012 threshold; grade 3+ 71 vs 32%"
+      ]
+     ]
+    }
+   ]
+  },
+  "hcc|hai": {
+   "tier": 4,
+   "head": "Large / advanced HCC — mostly Asian RCTs",
+   "roles": [
+    {
+     "t": 4,
+     "when": "Large (≥7 cm) unresectable without vascular invasion for Li 2021; Vp3–4 evidence is FOHAIC-1 and He",
+     "ev": [
+      [
+       "FOHAIC-1",
+       "34905388",
+       "OS 13.9 vs 8.2 mo vs sorafenib"
+      ],
+      [
+       "He RCT",
+       "31070690",
+       "Sora+HAIC OS 13.4 vs 7.1 mo"
+      ],
+      [
+       "Li ph III",
+       "34648352",
+       "Li: HAIC > cTACE, OS 23.1 vs 16.1 mo — excluded macrovascular invasion; conversion to resection 24 vs 12%"
+      ]
+     ]
+    },
+    {
+     "t": 3,
+     "when": "Conversion in responders",
+     "ev": [
+      [
+       "FOHAIC-1",
+       "34905388",
+       "12% downstaged to surgery/ablation"
+      ]
+     ]
+    },
+    {
+     "t": 3,
+     "when": "Adjuvant HAIC-FOLFOX after resection for MVI",
+     "ev": [
+      [
+       "Li ph III",
+       "36525610",
+       "Li adjuvant: DFS 20.3 vs 10.0 mo, OS NS — HAIC arm had arteriography the controls did not, so case-finding is asymmetric"
+      ]
+     ]
+    }
+   ]
+  },
+  "hcc|htx": {
+   "tier": 5,
+   "head": "FDA-cleared 2023; no long-term oncologic data",
+   "roles": [
+    {
+     "t": 5,
+     "when": "≤3 tumours <3 cm with acoustic window; trial / registry",
+     "ev": [
+      [
+       "#HOPE4LIVER",
+       "39225612",
+       "technical success 95%, major cx 7%"
+      ],
+      [
+       "#HOPE4LIVER 1-y",
+       "40201962",
+       "1-y LC 63–90%; 1-y OS 73% (HCC)"
+      ]
+     ]
+    }
+   ]
+  },
+  "icca|abl": {
+   "tier": 2,
+   "head": "Small primary or recurrent iCCA when resection not chosen",
+   "roles": [
+    {
+     "t": 2,
+     "when": "≤3 cm, ≤3 nodules; unresectable / unfit, or intrahepatic recurrence; margin ≥5 mm",
+     "ev": [
+      [
+       "MALRIC (PSM)",
+       "38261915",
+       "MWA vs resection 5-y OS 44.8 vs 40.4%"
+      ],
+      [
+       "MALRIC recurrent",
+       "41528222",
+       "MWA ≈ repeat resection OS"
+      ],
+      [
+       "Meta-analysis",
+       "34347159",
+       "worse if >3 cm or multiple"
+      ]
+     ]
+    }
+   ]
+  },
+  "icca|sbrt": {
+   "tier": 2,
+   "head": "Ablative-dose RT for localized unresectable iCCA",
+   "roles": [
+    {
+     "t": 2,
+     "when": "Liver-confined, unresectable, no nodal/EHD; BED >80 Gy",
+     "ev": [
+      [
+       "Tao",
+       "26503201",
+       "3-y OS 73% (BED >80.5) vs 38%"
+      ],
+      [
+       "Hong ph II (proton)",
+       "26668346",
+       "2-y LC 94%, OS 46.5%"
+      ]
+     ]
+    }
+   ]
+  },
+  "icca|y90": {
+   "tier": 4,
+   "head": "Add to 1st-line gem/cis; minority downstaged",
+   "roles": [
+    {
+     "t": 4,
+     "when": "Unresectable, liver-confined",
+     "ev": [
+      [
+       "MISPHEC ph II",
+       "31670746",
+       "+gem/cis, mOS 22 mo"
+      ]
+     ]
+    },
+    {
+     "t": 3,
+     "when": "Downstaging to resection",
+     "ev": [
+      [
+       "MISPHEC ph II",
+       "31670746",
+       "22% downstaged, 20% R0"
+      ]
+     ]
+    },
+    {
+     "t": 3,
+     "when": "Radiation lobectomy to grow FLR before resection",
+     "ev": [
+      [
+       "Vouche (mixed series)",
+       "23811303",
+       "few non-HCC cases"
+      ]
+     ]
+    }
+   ]
+  },
+  "icca|tace": {
+   "tier": 4,
+   "head": "Palliative option; low-level evidence",
+   "roles": [
+    {
+     "t": 4,
+     "when": "Unresectable liver-dominant, with systemic therapy",
+     "ev": [
+      [
+       "Kiefer 2-centre",
+       "21425151",
+       "mOS 15 mo; 28 vs 16 mo with systemic"
+      ]
+     ]
+    }
+   ]
+  },
+  "icca|hai": {
+   "tier": 4,
+   "head": "Strongest regional data for unresectable liver-confined iCCA",
+   "roles": [
+    {
+     "t": 4,
+     "when": "Unresectable, liver-confined ± regional nodes; FUDR pump + GemOx",
+     "ev": [
+      [
+       "Cercek ph II",
+       "31670750",
+       "6-mo DCR 84%, mOS 25 mo"
+      ],
+      [
+       "Konstantinidis",
+       "26695839",
+       "HAI+sys vs sys OS 30.8 vs 18.4 mo"
+      ]
+     ]
+    },
+    {
+     "t": 3,
+     "when": "Conversion to resection",
+     "ev": [
+      [
+       "Cercek ph II",
+       "31670750",
+       "4 of 38 resected"
+      ]
+     ]
+    }
+   ]
+  },
+  "icca|htx": {
+   "tier": 5,
+   "head": "No iCCA data",
+   "roles": [
+    {
+     "t": 5,
+     "when": "Trial only — pivotal trial enrolled HCC and metastases, not iCCA",
+     "ev": [
+      [
+       "#HOPE4LIVER",
+       "39225612",
+       ""
+      ]
+     ]
+    }
+   ]
+  },
+  "crlm|abl": {
+   "tier": 1,
+   "head": "Curative; ≡ resection for ≤3 cm",
+   "roles": [
+    {
+     "t": 1,
+     "when": "≤3 cm (≤10 lesions), resectable; margin >5 mm",
+     "ev": [
+      [
+       "COLLISION RCT",
+       "39848272",
+       "OS non-inferior (HR 1.05); AEs 19 vs 46%"
+      ],
+      [
+       "Shady",
+       "26267832",
+       "<3 cm & margin >5 mm drive LC"
+      ]
+     ]
+    },
+    {
+     "t": 2,
+     "when": "Unresectable liver-only, with systemic therapy",
+     "ev": [
+      [
+       "CLOCC RCT",
+       "28376151",
+       "8-y OS 35.9 vs 8.9%"
+      ]
+     ]
+    }
+   ]
+  },
+  "crlm|sbrt": {
+   "tier": 2,
+   "head": "Curative-intent when not resectable / ablatable",
+   "roles": [
+    {
+     "t": 2,
+     "when": "1–3 lesions, ≤6 cm, not resectable or ablatable",
+     "ev": [
+      [
+       "Rusthoven ph I/II",
+       "19255321",
+       "2-y LC 92% (100% if ≤3 cm)"
+      ],
+      [
+       "SABR-COMET",
+       "30982687",
+       "mixed oligomets incl. CRC"
+      ],
+      [
+       "SABR-COMET LT",
+       "32484754",
+       "5-y OS 42.3 vs 17.7%"
+      ]
+     ]
+    }
+   ]
+  },
+  "crlm|y90": {
+   "tier": 4,
+   "head": "Salvage for chemo-refractory liver-dominant disease",
+   "roles": [
+    {
+     "t": 4,
+     "when": "Chemo-refractory or 2nd-line, liver-only / dominant",
+     "ev": [
+      [
+       "EPOCH ph III",
+       "34541864",
+       "PFS 8.0 vs 7.2, hPFS 9.1 vs 7.2 mo; OS NS"
+      ],
+      [
+       "Hendlisz ph III",
+       "20567019",
+       "TTLP 5.5 vs 2.1 mo"
+      ]
+     ]
+    },
+    {
+     "t": 3,
+     "when": "Radiation lobectomy to grow FLR before resection",
+     "ev": [
+      [
+       "Vouche (mixed series)",
+       "23811303",
+       "few non-HCC cases"
+      ]
+     ]
+    },
+    {
+     "t": 5,
+     "when": "Not for 1st-line",
+     "ev": [
+      [
+       "FOXFIRE/SIRFLOX/-Global",
+       "28781171",
+       "no OS benefit"
+      ]
+     ]
+    }
+   ]
+  },
+  "crlm|tace": {
+   "tier": 4,
+   "head": "Limited; DEBIRI only as salvage / in trials",
+   "roles": [
+    {
+     "t": 4,
+     "when": "Chemo-refractory liver-dominant (salvage)",
+     "ev": [
+      [
+       "Fiorentini RCT (n=74)",
+       "22493375",
+       "DEBIRI vs FOLFIRI OS 22 vs 15 mo"
+      ]
+     ]
+    }
+   ]
+  },
+  "crlm|hai": {
+   "tier": 3,
+   "head": "Adjuvant & conversion (experienced pump centres)",
+   "roles": [
+    {
+     "t": 3,
+     "when": "Adjuvant after resection (+ systemic)",
+     "ev": [
+      [
+       "Kemeny NEJM RCT",
+       "10615075",
+       "2-y hepatic RFS 90 vs 60%"
+      ],
+      [
+       "Groot Koerkamp",
+       "28426374",
+       "PSM OS HR 0.67"
+      ],
+      [
+       "PUMP RCT (protocol)",
+       "30953467",
+       "low-risk; results pending"
+      ]
+     ]
+    },
+    {
+     "t": 3,
+     "when": "Conversion of unresectable liver-only disease",
+     "ev": [
+      [
+       "Kemeny ph I",
+       "19470932",
+       "47% converted to resection"
+      ]
+     ]
+    },
+    {
+     "t": 4,
+     "when": "Unresectable liver-only",
+     "ev": [
+      [
+       "CALGB 9481",
+       "16505413",
+       "OS 24.4 vs 20 mo vs systemic"
+      ]
+     ]
+    }
+   ]
+  },
+  "crlm|htx": {
+   "tier": 5,
+   "head": "No CRLM-specific oncologic data",
+   "roles": [
+    {
+     "t": 5,
+     "when": "Trial / registry only",
+     "ev": [
+      [
+       "#HOPE4LIVER",
+       "39225612",
+       "59% had metastases (mixed)"
+      ],
+      [
+       "#HOPE4LIVER 1-y",
+       "40201962",
+       "1-y OS 48.6% (metastases)"
+      ]
+     ]
+    }
+   ]
+  },
+  "nelm|abl": {
+   "tier": 2,
+   "head": "Limited small lesions; adjunct to resection / debulking",
+   "roles": [
+    {
+     "t": 2,
+     "when": "Few small lesions, alone or combined with resection",
+     "ev": [
+      [
+       "Mazzaglia (n=63)",
+       "17629995",
+       "LTP 6.3%; mOS 3.9 y post-RFA"
+      ],
+      [
+       "Akyildiz",
+       "21134563",
+       "OS 6 y post-RFA"
+      ]
+     ]
+    },
+    {
+     "t": 3,
+     "when": "Cytoreduction / hormonal symptom control",
+     "ev": [
+      [
+       "Mazzaglia",
+       "17629995",
+       "symptom relief in most"
+      ]
+     ]
+    }
+   ]
+  },
+  "nelm|sbrt": {
+   "tier": 5,
+   "head": "No NET-specific series",
+   "roles": [
+    {
+     "t": 5,
+     "when": "Consider for 1–3 lesions not resectable / ablatable (extrapolated)",
+     "ev": [
+      [
+       "SABR-COMET (mixed)",
+       "30982687",
+       "no NET-specific data"
+      ]
+     ]
+    }
+   ]
+  },
+  "nelm|y90": {
+   "tier": 4,
+   "head": "Bulky liver-dominant disease; late hepatotoxicity",
+   "roles": [
+    {
+     "t": 4,
+     "when": "Unresectable, progressive or symptomatic, liver-dominant",
+     "ev": [
+      [
+       "Kennedy (n=148)",
+       "18525307",
+       "PR 60.5%, mOS 70 mo"
+      ]
+     ]
+    },
+    {
+     "t": 0,
+     "when": "Bilobar → cirrhosis-like change / portal HTN; plan sequence with PRRT",
+     "ev": [
+      [
+       "Tomozawa",
+       "29724520",
+       "15 of 52 with >1-y follow-up"
+      ]
+     ]
+    }
+   ]
+  },
+  "nelm|tace": {
+   "tier": 4,
+   "head": "Standard embolotherapy; avoid DEB-TACE",
+   "roles": [
+    {
+     "t": 4,
+     "when": "Progressive or symptomatic liver-dominant disease",
+     "ev": [
+      [
+       "Gupta (n=123)",
+       "16134179",
+       "carcinoid > islet-cell response"
+      ],
+      [
+       "RETNET RCT",
+       "30016989",
+       "TAE ≈ cTACE, hPFS 18 vs 13 mo, NS*"
+      ],
+      [
+       "Bhagat ph II",
+       "22722717",
+       "DEB-TACE: biloma 54%"
+      ]
+     ]
+    }
+   ]
+  },
+  "nelm|hai": {
+   "tier": 5,
+   "head": "No established role",
+   "roles": [
+    {
+     "t": 5,
+     "when": "No dedicated data",
+     "ev": []
+    }
+   ]
+  },
+  "nelm|htx": {
+   "tier": 5,
+   "head": "No NET-specific data",
+   "roles": [
+    {
+     "t": 5,
+     "when": "Trial only",
+     "ev": [
+      [
+       "#HOPE4LIVER",
+       "39225612",
+       "mixed metastases"
+      ]
+     ]
+    }
+   ]
+  }
+ }
+}
