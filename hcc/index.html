@@ -1015,7 +1015,7 @@ const stageBtns = document.getElementById("stageBtns");
 stageBtns.innerHTML = STAGES.map(s => `
   <button class="st" type="button" data-stage="${s.id}" data-tone="${s.tone}" aria-pressed="false">
     <span class="sname">${esc(s.name)}</span>
-    <span class="sreq">${s.req === "any" ? "Any one of" : "All of"}</span>
+    <span class="sreq">${s.req === "any" ? "Any one of the following" : "All of the following"}</span>
     <ul class="scrit">${s.crit.map(c => `<li>${esc(c)}</li>`).join("")}</ul>
   </button>`).join("");
 
@@ -1061,7 +1061,7 @@ function renderStage(id){
   document.getElementById("answer").innerHTML = `
     <div class="ahead">
       <h3>${esc(s.name)}</h3>
-      <span class="chip">${s.req === "any" ? "Any one of" : "All of"}: ${esc(s.crit.join(" · "))}</span>
+      <span class="chip">${s.req === "any" ? "Any one of the following" : "All of the following"}: ${esc(s.crit.join(" · "))}</span>
       <button class="xpand" type="button" id="xpandAll" data-open="0">Expand all</button>
     </div>
     <div class="abody">
