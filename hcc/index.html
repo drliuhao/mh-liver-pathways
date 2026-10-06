@@ -150,6 +150,11 @@ nav.sec a:hover{color:var(--ink); background:var(--surface2)}
 .st:hover{transform:translateY(-1px)}
 .st .sname{font-family:var(--serif); font-size:17px; font-weight:700; line-height:1.15}
 .st .sreq{font-size:10.4px; letter-spacing:.07em; text-transform:uppercase; font-weight:700; color:var(--muted)}
+/* ALL vs ANY is the thing a reader must not misread: give the quantifier its
+   own colour and keep it uppercase even outside the small-caps label */
+.qw{font-weight:800; text-transform:uppercase; letter-spacing:.06em; padding:0 4px; border-radius:4px}
+.qw.all{color:var(--navy); background:var(--navy-soft)}
+.qw.any{color:var(--amber); background:var(--amber-soft)}
 .st .scrit{list-style:none; margin:0; padding:0; font-size:12.3px; line-height:1.3; color:var(--muted)}
 .st .scrit li{position:relative; padding-left:11px; margin-top:4px}
 .st .scrit li:first-child{margin-top:0}
@@ -752,6 +757,12 @@ const STAGES = [
          {t:"Surveillance imaging that cannot change the plan.", l:"Avoid", g:"", refs:[]}]}
 ];
 
+/* the quantifier is highlighted: ALL and ANY decide how the criteria combine */
+function reqLabel(req){
+  return req === "any"
+    ? '<b class="qw any">Any</b> one of the following'
+    : '<b class="qw all">All</b> of the following';
+}
 const LABELCLS = {"Standard":"p-std","Preferred":"p-pref","Reasonable":"p-reas","Trial only":"p-trial","Avoid":"p-avoid"};
 
 /* ---------- topic panels ---------- */
@@ -1015,7 +1026,7 @@ const stageBtns = document.getElementById("stageBtns");
 stageBtns.innerHTML = STAGES.map(s => `
   <button class="st" type="button" data-stage="${s.id}" data-tone="${s.tone}" aria-pressed="false">
     <span class="sname">${esc(s.name)}</span>
-    <span class="sreq">${s.req === "any" ? "Any one of the following" : "All of the following"}</span>
+    <span class="sreq">${reqLabel(s.req)}</span>
     <ul class="scrit">${s.crit.map(c => `<li>${esc(c)}</li>`).join("")}</ul>
   </button>`).join("");
 
@@ -1061,7 +1072,7 @@ function renderStage(id){
   document.getElementById("answer").innerHTML = `
     <div class="ahead">
       <h3>${esc(s.name)}</h3>
-      <span class="chip">${s.req === "any" ? "Any one of the following" : "All of the following"}: ${esc(s.crit.join(" · "))}</span>
+      <span class="chip">${reqLabel(s.req)}: ${esc(s.crit.join(" · "))}</span>
       <button class="xpand" type="button" id="xpandAll" data-open="0">Expand all</button>
     </div>
     <div class="abody">
