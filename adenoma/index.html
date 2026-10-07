@@ -1,0 +1,816 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="Hepatocellular adenoma — Memorial Hermann system roadmap v0.2, draft under development.">
+<title>Memorial Hermann Hepatocellular Adenoma Pathway</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
+</head>
+<body>
+<style>
+/* One renderer, four tumours: the gates come from data/pathway.json, the
+   liver-directed matrix from the shared LRT_Evidence_Matrix export. Layout
+   follows the HCC console: a gate strip, the answer below it, then the
+   evidence library everything links back into. */
+:root{
+  --bg:#F4F6F8; --surface:#FFFFFF; --surface2:#EDF1F5;
+  --ink:#16222D; --muted:#5A6B79; --line:#D3DCE4; --line2:#E6ECF1;
+  --navy:#17365D; --teal:#176A87; --amber:#8E5008; --clay:#8C2F26; --violet:#4C3F7A;
+  --navy-soft:#E8EEF7; --teal-soft:#E3F0F5; --amber-soft:#FBF1E2; --clay-soft:#F8E9E7; --violet-soft:#EDEAF6;
+  --shadow:0 1px 2px rgba(22,34,45,.06), 0 6px 18px rgba(22,34,45,.05);
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0E151C; --surface:#151F29; --surface2:#1B2733;
+  --ink:#E4EBF1; --muted:#9AAAB8; --line:#2A3A48; --line2:#223040;
+  --navy:#9FC0E8; --teal:#6FB9D4; --amber:#DCA459; --clay:#E79389; --violet:#A79CD8;
+  --navy-soft:#1B2A3E; --teal-soft:#13303A; --amber-soft:#332514; --clay-soft:#36211E; --violet-soft:#241F38;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 6px 18px rgba(0,0,0,.3);
+  color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0E151C; --surface:#151F29; --surface2:#1B2733;
+  --ink:#E4EBF1; --muted:#9AAAB8; --line:#2A3A48; --line2:#223040;
+  --navy:#9FC0E8; --teal:#6FB9D4; --amber:#DCA459; --clay:#E79389; --violet:#A79CD8;
+  --navy-soft:#1B2A3E; --teal-soft:#13303A; --amber-soft:#332514; --clay-soft:#36211E; --violet-soft:#241F38;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 6px 18px rgba(0,0,0,.3);
+  color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--bg); color:var(--ink); font-family:var(--sans); font-size:15px; line-height:1.55;
+  -webkit-text-size-adjust:100%}
+.wrap{max-width:1240px; margin:0 auto; padding-inline:18px; padding-block:0}
+h1,h2,h3,h4{font-family:var(--serif); text-wrap:balance; margin:0}
+h2{font-size:26px; letter-spacing:-.01em}
+h3{font-size:19px}
+p{margin:0}
+a{color:var(--teal)}
+.eyebrow{font-size:11.5px; letter-spacing:.09em; text-transform:uppercase; font-weight:700; color:var(--teal)}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+
+/* header */
+header.top{position:sticky; top:env(safe-area-inset-top,0px); z-index:40; background:color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter:blur(8px); border-bottom:1px solid var(--line)}
+.devbar{background:var(--amber-soft); color:var(--amber); border-bottom:1px solid var(--amber);
+  font-size:11.8px; font-weight:700; line-height:1.35; padding:5px 18px; text-align:center}
+.topin{max-width:1240px; margin:0 auto; padding:9px 18px; display:flex; gap:12px; align-items:center; flex-wrap:wrap}
+.brand{font-family:var(--serif); font-weight:700; font-size:16px; line-height:1.2; min-width:0}
+.brand span{display:block; font-family:var(--sans); font-weight:400; font-size:11.5px; color:var(--muted)}
+nav.sec{display:flex; gap:2px; margin-left:auto; flex-wrap:wrap}
+nav.sec a{font-size:12.5px; color:var(--muted); text-decoration:none; padding:4px 8px; border-radius:6px}
+nav.sec a:hover{color:var(--ink); background:var(--surface2)}
+
+/* hero */
+.hero{padding-block:30px 14px}
+.hero h1{font-size:clamp(28px,5.2vw,42px); letter-spacing:-.02em; line-height:1.08}
+.hero .sub{margin-top:10px; max-width:70ch; color:var(--muted); font-size:16px}
+.statusbar{margin-top:18px; display:flex; gap:8px; flex-wrap:wrap; align-items:center}
+.chip{display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:600; padding:3px 9px; border-radius:999px;
+  border:1px solid var(--line); background:var(--surface); color:var(--muted); max-width:100%; min-width:0}
+.chip.warn{border-color:var(--amber); color:var(--amber); background:var(--amber-soft)}
+
+/* legend */
+.legend{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:14px; margin-top:22px}
+.lg{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:14px 15px; box-shadow:var(--shadow); min-width:0}
+.lg h4{font-size:13px; letter-spacing:.06em; text-transform:uppercase; font-family:var(--sans); color:var(--muted); margin-bottom:9px}
+.lgrow{display:flex; gap:9px; align-items:baseline; padding:3px 0; font-size:13.3px}
+.lgrow b{flex:none}
+
+/* label + grade pills */
+.pill{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+  padding:2px 7px; border-radius:5px; border:1px solid; white-space:nowrap}
+.p-std{color:var(--navy); border-color:var(--navy); background:var(--navy-soft)}
+.p-pref{color:var(--teal); border-color:var(--teal); background:var(--teal-soft)}
+.p-reas{color:var(--amber); border-color:var(--amber); background:var(--amber-soft)}
+.p-trial{color:var(--violet); border-color:var(--violet); background:var(--violet-soft)}
+.p-avoid{color:var(--clay); border-color:var(--clay); background:var(--clay-soft)}
+.grade{display:inline-flex; align-items:center; justify-content:center; width:19px; height:19px; border-radius:4px;
+  font-size:11.5px; font-weight:700; border:1px solid var(--line); background:var(--surface2); color:var(--ink); flex:none}
+.grade.A{background:var(--navy); color:var(--surface); border-color:var(--navy)}
+.grade.B{background:var(--teal); color:var(--surface); border-color:var(--teal)}
+.grade.C{background:var(--amber-soft); color:var(--amber); border-color:var(--amber)}
+.grade.D{background:transparent; color:var(--muted)}
+.flag{font-size:10.5px; font-weight:700; letter-spacing:.05em; color:var(--muted); border:1px dashed var(--line);
+  border-radius:4px; padding:1px 5px; white-space:nowrap}
+
+/* the lead statement + quick-reference strip */
+.entry{background:var(--ink); color:var(--bg); border-radius:10px; padding:12px 16px; font-size:13.6px; line-height:1.45; margin-top:14px}
+.entry b{color:var(--bg)}
+.refstrip{display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:12px}
+.refstrip > .reflab{font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; font-weight:700; color:var(--muted)}
+/* titles here are sentences, not words: let a chip shrink and wrap rather than
+   widening the strip past the page */
+.refstrip > details{margin-top:0; flex:0 1 auto; min-width:0; max-width:100%}
+.refstrip > details > summary{font-size:13.5px; padding:7px 14px; gap:8px; border-color:var(--line);
+  background:var(--surface); box-shadow:var(--shadow); text-align:left}
+.refstrip > details > summary:hover{background:var(--surface2)}
+.refstrip > details[open] > summary{border-color:var(--ink)}
+.ricon{width:19px; height:19px; flex:none; order:-1; color:var(--teal)}
+.refstrip > details[open] > summary .ricon{color:var(--ink)}
+.refstrip > details[open]{flex:1 1 100%}
+.refstrip > details[open] > .moreinner{background:var(--surface); border:1px solid var(--line); border-radius:11px;
+  padding:14px 16px; margin-top:9px; box-shadow:var(--shadow)}
+/* table-layout:fixed so a long criterion wraps instead of widening the page */
+.minitab{width:100%; min-width:0; border-collapse:collapse; font-size:12.8px; margin-top:10px; table-layout:fixed}
+.minitab th,.minitab td{text-align:left; padding:6px 9px; border-bottom:1px solid var(--line2); vertical-align:top;
+  overflow-wrap:anywhere}
+.minitab th{font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); background:var(--surface2)}
+.minitab tr:last-child td{border-bottom:0}
+.minitab td:first-child{font-weight:600; width:44%}
+@media (max-width:520px){ .minitab td:first-child{width:52%} }
+
+/* gates */
+.stages{display:grid; grid-template-columns:repeat(auto-fit,minmax(188px,1fr)); gap:10px; margin-top:16px;
+  align-items:start}
+.st{appearance:none; text-align:left; font:inherit; color:inherit; cursor:pointer; background:var(--surface);
+  border:1px solid var(--line); border-left:4px solid var(--line); border-radius:10px; padding:12px 13px; min-width:0;
+  display:flex; flex-direction:column; gap:5px; box-shadow:var(--shadow); transition:border-color .12s, transform .12s}
+.st:hover{transform:translateY(-1px)}
+.st .sname{font-family:var(--serif); font-size:16.5px; font-weight:700; line-height:1.15}
+.st .sreq{font-size:10.4px; letter-spacing:.07em; text-transform:uppercase; font-weight:700; color:var(--muted)}
+/* ALL vs ANY is the thing a reader must not misread: give the quantifier its
+   own colour and keep it uppercase even outside the small-caps label */
+.qw{font-weight:800; text-transform:uppercase; letter-spacing:.06em; padding:0 4px; border-radius:4px}
+.qw.all{color:var(--navy); background:var(--navy-soft)}
+.qw.any{color:var(--amber); background:var(--amber-soft)}
+.st .scrit{list-style:none; margin:0; padding:0; font-size:12.3px; line-height:1.3; color:var(--muted)}
+.st .scrit li{position:relative; padding-left:11px; margin-top:4px}
+.st .scrit li:first-child{margin-top:0}
+.st .scrit li::before{content:""; position:absolute; left:2px; top:.52em; width:4px; height:1px; background:currentColor; opacity:.65}
+.st[data-tone="cure"]{border-left-color:var(--navy)}
+.st[data-tone="loco"]{border-left-color:var(--amber)}
+.st[data-tone="sys"]{border-left-color:var(--clay)}
+.st[data-tone="pall"]{border-left-color:var(--muted)}
+.st[aria-pressed="true"]{border-color:var(--ink); box-shadow:0 0 0 2px var(--ink) inset, var(--shadow)}
+.st:focus-visible, .tab:focus-visible, .refchip:focus-visible, button:focus-visible, input:focus-visible{outline:2px solid var(--teal); outline-offset:2px}
+
+/* answer panel */
+.answer{margin-top:16px; background:var(--surface); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow);
+  overflow:hidden; scroll-margin-top:84px}
+.ahead{padding:15px 18px; border-bottom:1px solid var(--line2); display:flex; gap:12px; align-items:flex-start; flex-wrap:wrap}
+.ahead h3{font-size:22px}
+.ask{flex:1 1 100%; font-family:var(--serif); font-size:16px; font-style:italic; line-height:1.4; color:var(--muted)}
+.abody{display:grid; grid-template-columns:repeat(3,1fr); gap:0}
+.acol{padding:15px 18px; border-right:1px solid var(--line2); min-width:0; display:flex; flex-direction:column; gap:11px}
+.acol:last-child{border-right:0}
+.acol > .eyebrow{margin-bottom:-3px}
+.rec{display:flex; flex-direction:column; gap:7px; font-size:13.8px; line-height:1.5}
+.recmeta{display:flex; gap:6px; align-items:center; flex-wrap:wrap}
+.recnote{font-size:12.6px; color:var(--muted); border-left:2px solid var(--line); padding-left:9px}
+.opts{display:flex; flex-direction:column}
+.opt{display:grid; grid-template-columns:23px 1fr; gap:11px; padding:11px 0; border-top:1px solid var(--line2); min-width:0}
+.opt:first-child{border-top:0; padding-top:4px}
+.optn{width:23px; height:23px; border-radius:50%; background:var(--surface2); color:var(--muted); font-size:11.5px;
+  font-weight:700; display:flex; align-items:center; justify-content:center; flex:none}
+.optname{font-family:var(--serif); font-size:15.5px; font-weight:700; display:flex; gap:7px; align-items:center;
+  flex-wrap:wrap; margin-bottom:4px; line-height:1.2}
+.optwhen{font-size:13.5px; line-height:1.45}
+details.more{margin-top:8px}
+details.more > summary{cursor:pointer; list-style:none; font-size:12px; font-weight:600; color:var(--teal);
+  display:inline-flex; gap:6px; align-items:center; padding:4px 11px; border-radius:999px;
+  border:1px solid var(--line); background:var(--surface2)}
+details.more > summary::-webkit-details-marker{display:none}
+details.more > summary::before{content:"Show"; font-weight:700; color:var(--ink)}
+details.more[open] > summary::before{content:"Hide"}
+details.more > summary:hover{color:var(--ink); border-color:var(--ink)}
+details.more > summary:focus-visible{outline:2px solid var(--teal); outline-offset:3px}
+.moreinner{padding:2px 0 4px}
+.xpand{appearance:none; cursor:pointer; font:inherit; font-size:11.5px; font-weight:600; color:var(--muted);
+  background:transparent; border:1px solid var(--line); border-radius:999px; padding:3px 10px; margin-left:auto}
+.xpand:hover{color:var(--ink); border-color:var(--ink)}
+.optline{display:grid; grid-template-columns:106px 1fr; gap:4px 11px; font-size:13px; line-height:1.45; margin-top:7px; min-width:0}
+.optlab{font-size:10.5px; letter-spacing:.07em; text-transform:uppercase; font-weight:700; color:var(--teal); padding-top:3px}
+.optline.bad .optlab{color:var(--clay)}
+@media (max-width:640px){ .optline{grid-template-columns:1fr; gap:2px} }
+.optwhen + .refs{margin-top:6px}
+.orderrule{margin-top:11px; font-size:12.8px; color:var(--muted); border-top:1px dashed var(--line); padding-top:10px; line-height:1.5}
+.orderrule b{color:var(--ink)}
+
+/* ref chips */
+.refs{display:flex; gap:5px; flex-wrap:wrap}
+.refchip{appearance:none; cursor:pointer; font:inherit; font-size:11.5px; font-weight:600; padding:1px 7px; border-radius:999px;
+  border:1px solid var(--line); background:var(--surface2); color:var(--teal); white-space:nowrap}
+.refchip:hover{border-color:var(--teal)}
+
+/* sections */
+section{scroll-margin-top:80px}
+.sechead{margin-top:46px; display:flex; gap:12px; align-items:baseline; flex-wrap:wrap; border-bottom:1px solid var(--line); padding-bottom:9px}
+.sechead p{font-size:13.5px; color:var(--muted); max-width:66ch}
+.tabs{display:flex; gap:6px; flex-wrap:wrap; margin-top:16px}
+.tab{appearance:none; cursor:pointer; font:inherit; font-size:13px; font-weight:600; padding:6px 12px; border-radius:999px;
+  border:1px solid var(--line); background:var(--surface); color:var(--muted)}
+.tab[aria-selected="true"]{background:var(--ink); color:var(--bg); border-color:var(--ink)}
+.panel{margin-top:16px; display:flex; flex-direction:column; gap:14px}
+
+.card{background:var(--surface); border:1px solid var(--line); border-radius:11px; padding:16px 18px; box-shadow:var(--shadow); min-width:0}
+.card h3{margin-bottom:4px}
+.card .kicker{font-size:12.5px; color:var(--muted); margin-bottom:11px}
+.card p + p{margin-top:9px}
+.stack{display:flex; flex-direction:column; gap:12px}
+
+.tablewrap{overflow-x:auto; border:1px solid var(--line); border-radius:11px; background:var(--surface); box-shadow:var(--shadow)}
+table.big{border-collapse:collapse; width:100%; min-width:720px; font-size:13.3px}
+table.big th,table.big td{text-align:left; padding:11px 13px; border-bottom:1px solid var(--line2); vertical-align:top}
+table.big th{font-size:11.5px; letter-spacing:.07em; text-transform:uppercase; color:var(--muted); font-weight:700;
+  background:var(--surface2); position:sticky; top:0}
+table.big tbody tr:last-child td{border-bottom:0}
+
+.callout{border-left:3px solid var(--clay); background:var(--clay-soft); border-radius:0 9px 9px 0; padding:13px 16px; font-size:13.6px}
+.callout.amber{border-left-color:var(--amber); background:var(--amber-soft)}
+.callout.teal{border-left-color:var(--teal); background:var(--teal-soft)}
+
+/* liver-directed matrix */
+:root{ --t1f:#0f5c38; --t1b:#c8e6d3; --t2f:#4b7f1c; --t2b:#eff6df; --t3f:#24609e; --t3b:#dde9f6;
+       --t4f:#a15c00; --t4b:#fbe8c9; --t5f:#5b616a; --t5b:#eceef1 }
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --t1f:#7fd6a6; --t1b:#16382a; --t2f:#b5dc84; --t2b:#2b3a1a; --t3f:#8dbcf0; --t3b:#1a2c42;
+  --t4f:#f2bb6b; --t4b:#3f2e14; --t5f:#b4bac3; --t5b:#2c3036 }}
+:root[data-theme="dark"]{
+  --t1f:#7fd6a6; --t1b:#16382a; --t2f:#b5dc84; --t2b:#2b3a1a; --t3f:#8dbcf0; --t3b:#1a2c42;
+  --t4f:#f2bb6b; --t4b:#3f2e14; --t5f:#b4bac3; --t5b:#2c3036 }
+.tierlegend{display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin-top:16px}
+.tl{display:flex; flex-direction:column; gap:7px; font-size:12.2px; line-height:1.4; min-width:0;
+  background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:11px 12px 12px;
+  box-shadow:var(--shadow); position:relative; overflow:hidden}
+.tl::before{content:""; position:absolute; inset:0 0 auto 0; height:4px}
+.tl[data-tier="1"]::before{background:var(--t1f)} .tl[data-tier="2"]::before{background:var(--t2f)}
+.tl[data-tier="3"]::before{background:var(--t3f)} .tl[data-tier="4"]::before{background:var(--t4f)}
+.tl[data-tier="5"]::before{background:var(--t5f)}
+.tl > span:last-child{min-width:0; color:var(--muted)}
+.tl .tchip{align-self:flex-start; margin-top:3px}
+@media (max-width:980px){ .tierlegend{grid-template-columns:repeat(3,1fr)} }
+@media (max-width:620px){ .tierlegend{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:420px){ .tierlegend{grid-template-columns:1fr} }
+.tchip{font-size:10.5px; font-weight:700; letter-spacing:.03em; padding:2px 7px; border-radius:5px; flex:none; max-width:100%}
+.mcell .tchip, .rolewhen .tchip{white-space:nowrap}
+.t1{color:var(--t1f); background:var(--t1b)} .t2{color:var(--t2f); background:var(--t2b)}
+.t3{color:var(--t3f); background:var(--t3b)} .t4{color:var(--t4f); background:var(--t4b)}
+.t5{color:var(--t5f); background:var(--t5b)}
+.mcards{display:grid; grid-template-columns:repeat(6,1fr); gap:8px; margin-top:18px}
+.mcell{appearance:none; text-align:left; font:inherit; color:inherit; cursor:pointer; background:var(--surface);
+  border:1px solid var(--line); border-radius:10px; padding:11px 12px; display:flex; flex-direction:column; gap:7px;
+  min-width:0; box-shadow:var(--shadow); transition:border-color .12s, transform .12s}
+.mcell:hover{transform:translateY(-1px); border-color:var(--ink)}
+.mcell[aria-pressed="true"]{border-color:var(--ink); box-shadow:0 0 0 2px var(--ink) inset, var(--shadow)}
+.mcell .mname{font-family:var(--serif); font-size:14px; font-weight:700; line-height:1.2; min-width:0}
+.mcell .mname span{display:block; font-family:var(--sans); font-weight:400; font-size:10.5px; color:var(--muted); margin-top:2px}
+.mcell .tchip{align-self:flex-start}
+.mcell .mhead{font-size:11.8px; line-height:1.35; min-width:0; color:var(--muted); margin-top:auto}
+@media (max-width:1080px){ .mcards{grid-template-columns:repeat(3,1fr)} }
+@media (max-width:700px){ .mcards{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:420px){ .mcards{grid-template-columns:1fr} }
+.lrtdetail{margin-top:16px; background:var(--surface); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow); padding:16px 18px}
+.role{border-top:1px solid var(--line2); padding-top:12px; margin-top:12px}
+.role:first-of-type{border-top:0; padding-top:0; margin-top:10px}
+.rolewhen{font-size:14px; font-weight:600; margin-bottom:7px; display:flex; gap:8px; align-items:baseline; flex-wrap:wrap}
+.evline{font-size:13.2px; display:flex; gap:8px; align-items:baseline; padding:3px 0; flex-wrap:wrap}
+.evline .evfind{color:var(--muted); min-width:0}
+
+/* evidence library */
+.evtools{display:flex; gap:9px; flex-wrap:wrap; margin-top:16px; align-items:center}
+input[type="search"]{font:inherit; font-size:14px; padding:8px 12px; border-radius:9px; border:1px solid var(--line);
+  background:var(--surface); color:var(--ink); min-width:min(100%,280px); flex:1 1 240px}
+.evcount{font-size:12.5px; color:var(--muted); margin-left:auto}
+.evlist{margin-top:14px; display:flex; flex-direction:column; gap:9px}
+.ev{background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:12px 14px; display:flex; gap:12px;
+  align-items:flex-start; flex-wrap:wrap; box-shadow:var(--shadow)}
+.ev .evtag{font-size:11.5px; font-weight:700; letter-spacing:.03em; color:var(--teal); flex:none; width:118px}
+.ev .evcit{flex:1 1 320px; min-width:0; font-size:13.3px; line-height:1.45}
+.ev .evlinks{display:flex; gap:6px; flex-wrap:wrap; flex:none}
+.lnk{font-size:11.5px; font-weight:600; text-decoration:none; padding:3px 9px; border-radius:999px; border:1px solid var(--line);
+  color:var(--teal); background:var(--surface2); white-space:nowrap}
+.lnk:hover{border-color:var(--teal)}
+.ev.hit{border-color:var(--teal); box-shadow:0 0 0 2px var(--teal-soft), var(--shadow)}
+
+footer{margin-top:54px; border-top:1px solid var(--line); padding-block:22px 40px; font-size:12.6px; color:var(--muted)}
+footer p + p{margin-top:8px}
+
+@media (max-width:860px){
+  .abody{grid-template-columns:1fr}
+  .acol{border-right:0; border-bottom:1px solid var(--line2)}
+  .acol:last-child{border-bottom:0}
+}
+@media (max-width:640px){ .ev .evtag{width:auto} }
+@media (prefers-reduced-motion:reduce){ *{transition:none !important} }
+</style>
+
+<header class="top">
+  <div class="devbar">Under development — draft content under active revision. Not ratified clinical policy, and not for patient care decisions.</div>
+  <div class="topin">
+    <div class="brand" id="brand">Memorial Hermann pathway<span>Loading…</span></div>
+    <nav class="sec" id="nav">
+      <a href="#tree">Pathway</a><a href="#lrt" id="navLrt" hidden>Liver-directed</a><a href="#honest">Limits</a><a href="#ops">Operations</a><a href="#evidence">Evidence</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+<div class="hero">
+  <h1>What we do, and how good the evidence is</h1>
+  <p class="sub" id="lead">Loading the pathway…</p>
+  <div class="statusbar" id="statusbar"></div>
+</div>
+
+<div class="legend" id="legend"></div>
+
+<section id="tree">
+  <div class="sechead">
+    <h2 id="gatelabel">The decision in front of you</h2>
+    <p id="gateintro"></p>
+  </div>
+  <div class="entry" id="entry"></div>
+  <div class="refstrip" id="quickref"></div>
+  <div class="stages" id="stageBtns"></div>
+</section>
+
+<section id="stage">
+  <div class="answer" id="answer"></div>
+  <p class="small muted" style="margin-top:10px">Departure from a gate default is permitted when anatomy, biology, liver function, transplant strategy, comorbidity, access or patient goals make it unsuitable — the reason must be recorded. It is not a licence to substitute a lower-evidence modality for a proven curative option.</p>
+</section>
+
+<section id="lrt" hidden>
+  <div class="sechead">
+    <h2>Liver-directed therapy</h2>
+    <p>Intent is assigned before a device is chosen. Curative intent means an attempt to eradicate all known cancer; it does not establish a cure rate. Local control, complete radiographic response, complete pathologic necrosis in a treated lesion, and overall survival are four different outcomes.</p>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>There is no ladder</h3>
+    <p>Do not use a universal ablation → SBRT → Y-90 → TACE → HAI → histotripsy sequence. <b>An upfront alternative chosen because of anatomy or organ reserve is not a post-progression second line.</b> Bridge, downstaging and conversion preserve a later resection or transplant opportunity; conversion treatment is not itself the curative operation.</p>
+    <p class="small muted">The tiers below are a clinical synthesis of treatment intent. They are not the roadmap's A–D evidence grading system, and the two should not be read as equivalent.</p>
+  </div>
+  <div class="tierlegend" id="tierLegend"></div>
+  <div class="mcards" id="mcards"></div>
+  <div class="lrtdetail" id="lrtDetail"><p class="muted">Loading the matrix…</p></div>
+  <p class="small muted" style="margin-top:10px" id="lrtsrc"></p>
+</section>
+
+<section id="honest">
+  <div class="sechead">
+    <h2>What we do that is not evidence based</h2>
+    <p>Retained because they are defensible practice here, but each rests on anatomy, physiology or consensus rather than comparative outcome data. Each requires prospective outcome tracking, and none should be quoted to a patient, a payer or a referring clinician as evidence based.</p>
+    <button class="xpand" type="button" data-fold="honestBodyWrap">Show</button>
+  </div>
+  <div id="honestBodyWrap" hidden><div class="tablewrap" style="margin-top:16px">
+    <table class="big">
+      <thead><tr><th style="width:38%">What the roadmap says</th><th>What is actually known, and why it is kept</th></tr></thead>
+      <tbody id="honestBody"></tbody>
+    </table>
+  </div></div>
+</section>
+
+<section id="ops">
+  <div class="sechead">
+    <h2>Operating model, quality and approvals</h2>
+    <p>The tumour board model, the quality dashboard and the decisions that need local approval. These are stakeholder-derived operating requirements — <b>evidence grade D by construction</b>, local policy choices with no comparative outcome evidence. They are labelled Standard because the programme chose them, not because trials support them.</p>
+    <button class="xpand" type="button" data-fold="opsBody">Show</button>
+  </div>
+  <div id="opsBody" hidden>
+    <div class="tabs" id="opsTabs" role="tablist" style="margin-top:16px"></div>
+    <div class="panel" id="opsPanel"></div>
+  </div>
+</section>
+
+<section id="evidence">
+  <div class="sechead">
+    <h2>Evidence library</h2>
+    <p>Every source behind the pathway, with a link straight into the TMC library resolver. This is a decision-focused evidence synthesis, not a systematic review; single-arm response data are never used here to infer superiority.</p>
+    <button class="xpand" type="button" data-fold="evBody">Show</button>
+  </div>
+  <div id="evBody" hidden>
+    <div class="evtools">
+      <input type="search" id="evSearch" placeholder="Search trial, author, journal, topic…" aria-label="Search the evidence library">
+      <div class="tabs" id="evGroups" style="margin-top:0"></div>
+      <span class="evcount" id="evCount"></span>
+    </div>
+    <div class="evlist" id="evList"></div>
+  </div>
+</section>
+
+<footer>
+  <p id="prov"></p>
+  <p><b>Status.</b> Draft for multidisciplinary and institutional governance review. Not active clinical policy. It does not replace clinician judgement, current drug labelling, OPTN policy, or patient-specific informed consent. Every criterion drawn from OPTN policy, drug labelling or device authorisation must be re-verified against the current source at implementation and at each scheduled review. Clinical transplant candidacy and allocation eligibility are separate judgements.</p>
+</footer>
+
+</div>
+
+<script>
+/* ---------- helpers ---------- */
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+/* the quantifier is highlighted: ALL and ANY decide how the criteria combine */
+function reqLabel(req){
+  return req === "any"
+    ? '<b class="qw any">Any</b> one of the following'
+    : '<b class="qw all">All</b> of the following';
+}
+const LABELCLS = {"Standard":"p-std","Preferred":"p-pref","Reasonable":"p-reas","Trial only":"p-trial","Avoid":"p-avoid"};
+const FLAGDEF = {
+  EXPERTISE:"Demonstrated operator and team experience with this technique at this site.",
+  PROTOCOL:"Only inside a clinical trial or an approved institutional protocol.",
+  REGISTRY:"Mandatory prospective outcomes registry; effectiveness evidence is immature.",
+  DOSIMETRY:"Personalised dosimetry planning and radiation-safety review for every case.",
+  DEVICE:"Device availability, credentialing, maintained competency.",
+  PAYER:"Insurance authorisation; may not be deliverable in a useful interval.",
+  "TX-TIMING":"Waitlist dynamics and expected time to transplant at this centre."
+};
+let P = null, KEY = "x", REF = {}, NONPM = {};
+function refTag(id){ const r = REF[id] || NONPM[id]; return r ? r[0] : id; }
+function refChips(ids){
+  if(!ids || !ids.length) return "";
+  return '<div class="refs">' + ids.map(id =>
+    `<button class="refchip" data-ref="${esc(id)}" type="button">${esc(refTag(id))}</button>`).join("") + '</div>';
+}
+
+/* ---------- recommendation rendering ---------- */
+function detail(o){
+  const bits = [];
+  if(o.pref)  bits.push(`<div class="optline"><span class="optlab">Preferred when</span><span>${esc(o.pref)}</span></div>`);
+  if(o.avoid) bits.push(`<div class="optline bad"><span class="optlab">Caution / avoid</span><span>${esc(o.avoid)}</span></div>`);
+  if(o.note)  bits.push(`<div class="recnote" style="margin-top:7px">${esc(o.note)}</div>`);
+  const chips = refChips(o.refs);
+  if(chips) bits.push(`<div style="margin-top:8px">${chips}</div>`);
+  if(!bits.length) return "";
+  const n = (o.refs||[]).length;
+  const label = [o.pref||o.avoid ? "Criteria and cautions" : "", n ? n + (n===1?" source":" sources") : ""]
+                .filter(Boolean).join(" · ");
+  return `<details class="more"><summary>${esc(label)}</summary><div class="moreinner">${bits.join("")}</div></details>`;
+}
+/* Options are marked with a dot, not a number: almost every `order` note on this
+   page says plainly that the sequence is the roadmap's wording or the branching
+   logic of the guideline, not a survival ranking. Pass rank:true to number them. */
+function recHTML(r){
+  const cls = LABELCLS[r.l] || "p-std";
+  const flags = (r.flags||[]).map(f=>`<span class="flag">${esc(f)}</span>`).join(" ");
+  const body = r.opts ? `
+    <div class="opts">${r.opts.map((o,i)=>`
+      <div class="opt">
+        <div class="optn">${r.rank === true ? i+1 : "·"}</div>
+        <div style="min-width:0">
+          <div class="optname">${esc(o.name)}${o.g?`<span class="grade ${esc(o.g)}">${esc(o.g)}</span>`:""}${(o.flags||[]).map(f=>`<span class="flag">${esc(f)}</span>`).join(" ")}</div>
+          <div class="optwhen">${esc(o.when)}</div>
+          ${detail(o)}
+        </div>
+      </div>`).join("")}</div>
+    ${r.order?`<details class="more"><summary>Why this order</summary><div class="moreinner"><div class="orderrule" style="border-top:0; margin-top:2px; padding-top:0">${esc(r.order)}</div></div></details>`:""}
+    ${r.flagnote?`<details class="more"><summary>Ratification item</summary><div class="moreinner"><div class="callout amber" style="font-size:12.8px">${esc(r.flagnote)}</div></div></details>`:""}`
+    : `<div>${esc(r.t)}</div>${detail(r)}`;
+  return `<div class="rec">
+    <div class="recmeta"><span class="pill ${cls}">${esc(r.l)}</span>${r.g?`<span class="grade ${esc(r.g)}">${esc(r.g)}</span>`:""}${flags}</div>
+    ${body}
+  </div>`;
+}
+
+/* ---------- gates ---------- */
+function renderGate(id){
+  const s = P.gates.find(x=>x.id===id);
+  document.querySelectorAll(".st").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.stage===id)));
+  const col = (name, items) => `<div class="acol"><div class="eyebrow">${name}</div>${
+    (items&&items.length) ? items.map(recHTML).join("")
+      : `<p class="small muted">Nothing is listed here for this gate.</p>`}</div>`;
+  document.getElementById("answer").innerHTML = `
+    <div class="ahead">
+      <h3>${esc(s.name)}</h3>
+      <button class="xpand" type="button" id="xpandAll" data-open="0">Expand all</button>
+      <p class="ask">${esc(s.ask)}</p>
+      <span class="chip">${reqLabel(s.req)}: ${esc(s.crit.join(" · "))}</span>
+    </div>
+    <div class="abody">
+      ${col("Standard", s.standard)}${col("Reasonable alternative", s.alt)}${col("Avoid", s.avoid)}
+    </div>`;
+  try{ localStorage.setItem(KEY+".gate", id); }catch(e){}
+}
+/* Changing gate must not move the page under the reader: only scroll when the
+   answer panel is wholly off-screen, and then only enough to bring its top in. */
+function selectGate(id){
+  renderGate(id);
+  const r = document.getElementById("answer").getBoundingClientRect();
+  if(r.top > window.innerHeight - 60){
+    window.scrollBy({top: r.top - (window.innerHeight - 200), behavior:"smooth"});
+  }
+}
+
+/* ---------- section folding ---------- */
+function setFold(id, open){
+  const body = document.getElementById(id);
+  const btn = document.querySelector(`[data-fold="${id}"]`);
+  if(!body || !btn) return;
+  body.hidden = !open;
+  btn.textContent = open ? "Hide" : "Show";
+  btn.setAttribute("aria-expanded", String(open));
+}
+document.querySelectorAll("[data-fold]").forEach(b=>{
+  b.setAttribute("aria-expanded","false");
+  b.addEventListener("click", ()=> setFold(b.dataset.fold, document.getElementById(b.dataset.fold).hidden));
+});
+document.querySelectorAll("nav.sec a").forEach(a=>{
+  a.addEventListener("click", ()=>{
+    const map = {honest:"honestBodyWrap", ops:"opsBody", evidence:"evBody"};
+    const id = a.getAttribute("href").slice(1);
+    if(map[id]) setFold(map[id], true);
+  });
+});
+
+/* ---------- evidence library ---------- */
+let ALL = [], evGroup = "All", evQuery = "";
+function evRow(r){
+  const links = r.pmid
+    ? `<a class="lnk" href="https://libkey.io/libraries/480/pmid/${esc(r.pmid)}" target="_blank" rel="noopener">TMC full text</a>
+       <a class="lnk" href="https://pubmed.ncbi.nlm.nih.gov/${esc(r.pmid)}/" target="_blank" rel="noopener">PubMed ${esc(r.pmid)}</a>`
+    : (r.url ? `<a class="lnk" href="${esc(r.url)}" target="_blank" rel="noopener">Source</a>`
+             : `<span class="chip" style="font-size:11px">Internal document</span>`);
+  const depot = r.depot === undefined ? "" :
+    (r.depot ? `<span class="chip" style="font-size:11px">In depot</span>`
+             : `<span class="chip warn" style="font-size:11px">To download</span>`);
+  return `<div class="ev" id="ev-${esc(r.id)}"><div class="evtag">${esc(r.tag)}</div><div class="evcit">${esc(r.cit)}</div><div class="evlinks">${depot}${links}</div></div>`;
+}
+function renderEvGroups(){
+  const groups = [...new Set(ALL.map(r=>r.group))];
+  document.getElementById("evGroups").innerHTML = ["All",...groups].map(g=>
+    `<button class="tab" type="button" data-group="${esc(g)}" aria-selected="${String(g===evGroup)}">${esc(g)}</button>`).join("");
+}
+function renderEv(){
+  const q = evQuery.trim().toLowerCase();
+  const rows = ALL.filter(r =>
+    (evGroup==="All" || r.group===evGroup) &&
+    (!q || (r.tag+" "+r.cit+" "+r.group+" "+r.id).toLowerCase().includes(q)));
+  document.getElementById("evList").innerHTML = rows.length
+    ? rows.map(evRow).join("")
+    : `<div class="card"><p class="muted">Nothing matches “${esc(evQuery)}”. Try a trial name, an author, or a journal.</p></div>`;
+  document.getElementById("evCount").textContent = rows.length + " of " + ALL.length + " sources";
+}
+document.getElementById("evGroups").addEventListener("click", e=>{
+  const b = e.target.closest(".tab"); if(!b) return;
+  evGroup = b.dataset.group;
+  document.querySelectorAll("#evGroups .tab").forEach(x=>x.setAttribute("aria-selected", String(x===b)));
+  renderEv();
+});
+document.getElementById("evSearch").addEventListener("input", e=>{ evQuery = e.target.value; renderEv(); });
+document.addEventListener("click", e=>{
+  const c = e.target.closest(".refchip"); if(!c) return;
+  setFold("evBody", true);
+  evGroup = "All"; evQuery = "";
+  document.getElementById("evSearch").value = "";
+  renderEvGroups(); renderEv();
+  const el = document.getElementById("ev-"+c.dataset.ref);
+  if(el){
+    el.scrollIntoView({behavior:"smooth", block:"center"});
+    document.querySelectorAll(".ev.hit").forEach(x=>x.classList.remove("hit"));
+    el.classList.add("hit");
+  }
+});
+
+/* ---------- liver-directed matrix ---------- */
+let MX = null, mCell = null;
+function tchip(t, label){ return `<span class="tchip t${esc(t)}">${esc(label)}</span>`; }
+/* The matrix is written in trial shorthand. Expand it so a reader does not have
+   to know that "cx" is complications or that "≡" means equivalent to. */
+const ABBR = [
+ [/\bcx\b/g,"complications"], [/\bLTP\b/g,"local tumour progression"],
+ [/\bFFLP\b/g,"freedom from local progression"], [/\bLC\b/g,"local control"],
+ [/\bCR\b/g,"complete response"], [/\bRFS\b/g,"recurrence-free survival"],
+ [/\bOS\b/g,"overall survival"], [/\bPFS\b/g,"progression-free survival"],
+ [/\bTTP\b/g,"time to progression"], [/\bDFS\b/g,"disease-free survival"],
+ [/\bNS\b/g,"not significant"], [/\bPSM\b/g,"propensity-score-matched"],
+ [/\bITT\b/g,"intention-to-treat"], [/\bMVI\b/g,"microvascular invasion"],
+ [/\bRR\b/g,"relative risk"], [/\bpts\b/g,"patients"], [/\bmo\b/g,"months"],
+ [/\b(\d+)-y\b/g,"$1-year"], [/\s*≡\s*/g," equivalent to "], [/\s*≈\s*/g," comparable to "]
+];
+function expandAbbr(s){ let o = String(s); for(const [re,to] of ABBR) o = o.replace(re,to); return o; }
+function renderMatrix(){
+  const TUM = P.matrix;
+  document.getElementById("tierLegend").innerHTML = Object.entries(MX.tiers).map(([k,v])=>
+    `<div class="tl" data-tier="${esc(k)}">${tchip(k, v.short)}<span>${esc(v.label.replace(/^[^—]*—\s*/,""))}</span></div>`).join("");
+  document.getElementById("mcards").innerHTML = MX.modalities.map(m=>{
+    const key = TUM+"|"+m[0], c = MX.cells[key];
+    if(!c) return "";
+    return `<button class="mcell" type="button" data-cell="${esc(key)}" aria-pressed="${String(key===mCell)}">
+      <span class="mname">${esc(m[1])}<span>${esc(m[2])}</span></span>
+      ${tchip(c.tier, MX.tiers[c.tier].short)}
+      <span class="mhead">${esc(expandAbbr(c.head))}</span></button>`;
+  }).join("");
+}
+function evLine(e){
+  const [label, pmid, finding] = e;
+  const left = pmid ? `<button class="refchip" type="button" data-ref="${esc(pmid)}">${esc(label)}</button>`
+                    : `<span class="chip">${esc(label)}</span>`;
+  return `<div class="evline">${left}<span class="evfind">${esc(expandAbbr(finding))}</span></div>`;
+}
+function renderCell(){
+  const c = MX.cells[mCell];
+  const mod = MX.modalities.find(x=>x[0]===mCell.split("|")[1]);
+  const tum = (MX.tumours.find(t=>t[0]===P.matrix)||[,,P.name])[2];
+  document.querySelectorAll(".mcell").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.cell===mCell)));
+  document.getElementById("lrtDetail").innerHTML = `
+    <div class="ahead" style="padding:0 0 12px; border-bottom:1px solid var(--line2)">
+      <h3 style="font-size:20px">${esc(mod[1])} <span class="muted" style="font-family:var(--sans); font-weight:400">in ${esc(tum.toLowerCase())}</span></h3>
+      ${tchip(c.tier, MX.tiers[c.tier].label)}
+    </div>
+    <p style="margin-top:12px; font-size:14.5px"><b>${esc(expandAbbr(c.head))}</b></p>
+    ${c.roles.map(r=>`<div class="role">
+        <div class="rolewhen">${tchip(r.t, MX.tiers[r.t].short)}<span>${esc(expandAbbr(r.when))}</span></div>
+        <details class="more"><summary>${r.ev.length} ${r.ev.length===1?"trial":"trials"}</summary>
+          <div class="moreinner">${r.ev.map(evLine).join("")}</div></details>
+      </div>`).join("")}`;
+}
+document.getElementById("mcards").addEventListener("click", e=>{
+  const b = e.target.closest(".mcell"); if(!b) return;
+  mCell = b.dataset.cell; renderCell();
+});
+
+/* ---------- build the page from the data ---------- */
+function build(){
+  KEY = P.key; REF = P.refs || {}; NONPM = P.nonpm || {};
+  document.title = "Memorial Hermann " + P.short + " Pathway";
+  document.getElementById("brand").innerHTML =
+    `Memorial Hermann ${esc(P.short)} pathway<span>${esc(P.name)} · draft ${esc(P.version)} · Batch 07, 5 October 2026</span>`;
+  document.getElementById("lead").textContent = P.lead;
+  document.getElementById("gatelabel").textContent = P.gatelabel;
+  document.getElementById("gateintro").innerHTML =
+    "The gates run in the order the roadmap asks them, and the order is the point: each one can foreclose the next. "
+    + "Choose a gate to see the standard, the reasonable alternative, what to avoid, and the grade behind each — "
+    + "every claim tied to the paper it came from.";
+  document.getElementById("statusbar").innerHTML =
+    `<span class="chip warn">Draft — not ratified clinical policy</span>
+     <span class="chip">${esc(P.short)} roadmap ${esc(P.version)} · Batch 07</span>
+     <span class="chip">${P.gates.length} gates · ${Object.keys(REF).length} papers</span>
+     <button class="xpand" type="button" id="expandAllSections" data-open="0" style="margin-left:0">Expand all sections</button>`;
+  document.getElementById("expandAllSections").addEventListener("click", e=>{
+    const b = e.currentTarget, open = b.dataset.open !== "1";
+    document.querySelectorAll("[data-fold]").forEach(x=> setFold(x.dataset.fold, open));
+    b.dataset.open = open ? "1" : "0";
+    b.textContent = open ? "Collapse all sections" : "Expand all sections";
+  });
+
+  /* legend: labels, grades, and only the dependency flags this pathway uses */
+  const usedFlags = new Set();
+  for(const g of P.gates) for(const col of ["standard","alt","avoid"]) for(const it of (g[col]||[])){
+    for(const f of (it.flags||[])) usedFlags.add(f);
+    for(const o of (it.opts||[])) for(const f of (o.flags||[])) usedFlags.add(f);
+  }
+  const labelRows = [
+    ["p-std","Standard","Default when eligibility is met; departure needs a recorded reason."],
+    ["p-reas","Reasonable","Acceptable after documented MDT review; benefit is context dependent."],
+    ["p-avoid","Avoid","Expected harm, futility, or absent benefit generally outweighs benefit."]
+  ];
+  document.getElementById("legend").innerHTML = `
+    <div class="lg">
+      <h4>Recommendation label — what we advise</h4>
+      ${labelRows.map(r=>`<div class="lgrow"><b class="pill ${r[0]}">${r[1]}</b><span>${r[2]}</span></div>`).join("")}
+    </div>
+    <div class="lg">
+      <h4>Evidence grade — how strong the basis is</h4>
+      <div class="lgrow"><b class="grade A">A</b><span>Guideline supported by randomised trials or strong consistent comparative evidence.</span></div>
+      <div class="lgrow"><b class="grade B">B</b><span>One randomised trial, prospective comparative evidence, or strong prospective cohorts.</span></div>
+      <div class="lgrow"><b class="grade C">C</b><span>Single-arm prospective, retrospective comparative, or inconsistent evidence.</span></div>
+      <div class="lgrow"><b class="grade D">D</b><span>Expert consensus or local operational requirement, no comparative outcome data.</span></div>
+      <div class="lgrow small muted" style="margin-top:6px"><span>A strong label does not imply a high grade. Several operating requirements are deliberately Standard at grade D because they are local policy choices.</span></div>
+    </div>
+    ${usedFlags.size ? `<div class="lg">
+      <h4>Dependency flags — what it rests on locally</h4>
+      ${[...usedFlags].map(f=>`<div class="lgrow"><b class="flag">${esc(f)}</b><span>${esc(FLAGDEF[f]||"A local dependency named by the roadmap.")}</span></div>`).join("")}
+    </div>` : ""}`;
+
+  /* the tree in one line: the order of the questions is itself the pathway */
+  document.getElementById("entry").innerHTML =
+    `<b>The order of the questions.</b> ` +
+    P.gates.map(g=>esc(g.name)).join(" &nbsp;→&nbsp; ") +
+    `. Each gate can foreclose the ones after it.`;
+
+  /* quick reference: the scores and criteria people look up mid-discussion */
+  const icon = `<svg class="ricon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="2.5"/><path d="M8 7.5h8M8 12h8M8 16.5h5"/></svg>`;
+  document.getElementById("quickref").innerHTML = `<span class="reflab">Quick reference</span>` +
+    (P.quickref||[]).map(q=>`
+      <details class="more"><summary>${icon}${esc(q.title)}</summary><div class="moreinner">
+        ${q.intro?`<p class="small muted">${esc(q.intro)}</p>`:""}
+        <table class="minitab"><tbody>${q.rows.map(r=>
+          `<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td></tr>`).join("")}</tbody></table>
+        ${q.foot?`<p class="small" style="margin-top:10px">${esc(q.foot)}</p>`:""}
+        ${q.src?`<p class="small muted" style="margin-top:8px">Source: ${esc(q.src)}</p>`:""}
+      </div></details>`).join("");
+
+  /* gates */
+  const stageBtns = document.getElementById("stageBtns");
+  stageBtns.innerHTML = P.gates.map(s => `
+    <button class="st" type="button" data-stage="${esc(s.id)}" data-tone="${esc(s.tone)}" aria-pressed="false">
+      <span class="sname">${esc(s.name)}</span>
+      <span class="sreq">${reqLabel(s.req)}</span>
+      <ul class="scrit">${s.crit.map(c => `<li>${esc(c)}</li>`).join("")}</ul>
+    </button>`).join("");
+  stageBtns.addEventListener("click", e => {
+    const b = e.target.closest(".st"); if(b) selectGate(b.dataset.stage);
+  });
+  document.getElementById("answer").addEventListener("click", e=>{
+    const b = e.target.closest("#xpandAll"); if(!b) return;
+    const open = b.dataset.open !== "1";
+    document.querySelectorAll("#answer details.more").forEach(d=>{ d.open = open; });
+    b.dataset.open = open ? "1" : "0";
+    b.textContent = open ? "Collapse all" : "Expand all";
+  });
+  let startGate = P.gates[0].id;
+  try{ const v = localStorage.getItem(KEY+".gate"); if(v && P.gates.some(g=>g.id===v)) startGate = v; }catch(e){}
+  renderGate(startGate);
+
+  /* what is not evidence based */
+  document.getElementById("honestBody").innerHTML = (P.honest||[]).map(h=>
+    `<tr><td><b>${esc(h.t)}</b></td><td>${esc(h.why)}</td></tr>`).join("");
+
+  /* operating model */
+  const O = P.ops || {};
+  const listCard = (title, kicker, items) => `
+    <div class="card"><h3>${esc(title)}</h3><p class="kicker">${esc(kicker)}</p>
+    <div class="stack" style="margin-top:4px">${items.map((x,i)=>
+      `<div class="opt" style="border-top:${i?'1px solid var(--line2)':'0'}"><div class="optn">${i+1}</div><div class="optwhen">${esc(x)}</div></div>`
+    ).join("")}</div></div>`;
+  const OPSTABS = [
+    {id:"mdt", name:"Tumour board", html:()=>listCard("How the board runs",
+      "The operating model as the roadmap sets it out.", O.board||[])},
+    {id:"qual", name:"Quality dashboard", html:()=>listCard("What gets measured",
+      "Metrics the programme commits to tracking. Audit adherence first; effectiveness questions need the registry to mature.", O.dashboard||[])},
+    {id:"appr", name:"Needs local approval", html:()=>`
+      <div class="card"><h3>Decisions requiring local approval</h3>
+      <p class="kicker">A decision is not ratified until the named specialty has approved <b>the exact wording in the document</b>, not the concept.</p>
+      <div class="tablewrap" style="margin-top:12px"><table class="big"><thead><tr>
+        <th style="width:4%">#</th><th style="width:32%">The decision</th><th>Why it needs a local answer</th><th style="width:26%">What gets audited</th>
+      </tr></thead><tbody>${(O.approvals||[]).map(a=>
+        `<tr><td><b>${esc(a.n)}</b></td><td><b>${esc(a.q)}</b></td><td>${esc(a.why)}</td><td class="small">${esc(a.audit)}</td></tr>`).join("")}
+      </tbody></table></div></div>`}
+  ];
+  const opsTabs = document.getElementById("opsTabs"), opsPanel = document.getElementById("opsPanel");
+  opsTabs.innerHTML = OPSTABS.map((t,i)=>`<button class="tab" type="button" role="tab" data-ops="${t.id}" aria-selected="${i===0}">${esc(t.name)}</button>`).join("");
+  function renderOps(id){
+    document.querySelectorAll("[data-ops]").forEach(b=>b.setAttribute("aria-selected", String(b.dataset.ops===id)));
+    opsPanel.innerHTML = OPSTABS.find(t=>t.id===id).html();
+  }
+  opsTabs.addEventListener("click", e=>{ const b=e.target.closest(".tab"); if(b) renderOps(b.dataset.ops); });
+  renderOps("mdt");
+
+  /* evidence library */
+  ALL = [];
+  for(const [pmid,v] of Object.entries(REF)) ALL.push({id:pmid, tag:v[0], group:v[1], cit:v[2], pmid:pmid});
+  for(const [k,v] of Object.entries(NONPM)) ALL.push({id:k, tag:v[0], group:v[1], cit:v[2], url:v[3]});
+  renderEvGroups(); renderEv();
+
+  document.getElementById("prov").innerHTML = "<b>Provenance.</b> " + esc(P.provenance);
+}
+
+/* ---------- load ---------- */
+fetch("data/pathway.json").then(r=>r.json()).then(p=>{
+  P = p;
+  build();
+  if(!P.matrix) return null;
+  document.getElementById("lrt").hidden = false;
+  document.getElementById("navLrt").hidden = false;
+  return Promise.all([
+    fetch("data/lrt_matrix.json").then(r=>r.json()),
+    fetch("data/lrt_refs.json").then(r=>r.json())
+  ]).then(([mx, refs])=>{
+    MX = mx;
+    const first = MX.modalities.map(m=>P.matrix+"|"+m[0]).find(k=>MX.cells[k]);
+    if(!first){ document.getElementById("lrt").hidden = true; document.getElementById("navLrt").hidden = true; return; }
+    mCell = first;
+    renderMatrix(); renderCell();
+    const others = MX.tumours.filter(t=>t[0]!==P.matrix).map(t=>t[2]);
+    document.getElementById("lrtsrc").innerHTML =
+      `Source: <code>LRT_Evidence_Matrix</code>, Batch 07, filtered to the ${esc(P.name.toLowerCase())} column. `
+      + `The full matrix also covers ${esc(others.join(", ").toLowerCase())}; perihilar cholangiocarcinoma is not in it.`;
+    /* only the papers this tumour's cells actually cite go into the library */
+    const used = new Set();
+    for(const [key, c] of Object.entries(MX.cells)){
+      if(!key.startsWith(P.matrix+"|")) continue;
+      for(const role of c.roles) for(const e of role.ev) if(e[1]) used.add(e[1]);
+    }
+    const have = new Set(ALL.map(r=>r.id));
+    for(const r of refs){
+      if(have.has(r.pmid) || !used.has(r.pmid)) continue;
+      ALL.push({id:r.pmid, tag:((r.au||"")+" "+(r.y||"")).trim(), group:"Liver-directed ("+P.short+")",
+                cit:`${r.au} et al. ${r.t} ${r.j}. ${r.y}.`.replace(/\s+/g," "),
+                pmid:r.pmid, depot:r.st==="depot"});
+      have.add(r.pmid);
+    }
+    renderEvGroups(); renderEv();
+  }).catch(()=>{
+    document.getElementById("lrtDetail").innerHTML =
+      `<p class="muted">The matrix data did not load. The rest of the page is unaffected; reload to try again.</p>`;
+    document.getElementById("tierLegend").innerHTML = "";
+  });
+}).catch(()=>{
+  document.getElementById("lead").textContent =
+    "The pathway data did not load. Reload the page to try again.";
+});
+</script>
+
+<script>
+/* served as a site rather than a single artifact: give every page the way back */
+(function(){
+  var nav = document.querySelector("nav.sec");
+  if(!nav) return;
+  var a = document.createElement("a");
+  a.href = "../"; a.textContent = "\u2190 All pathways";
+  nav.insertBefore(a, nav.firstChild);
+})();
+</script>
+</body>
+</html>
