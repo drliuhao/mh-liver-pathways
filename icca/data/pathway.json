@@ -2,7 +2,8 @@
   "key": "icca",
   "short": "iCCA",
   "name": "Intrahepatic cholangiocarcinoma",
-  "version": "v0.6",
+  "version": "v0.7",
+  "batch": "Batch 08, 7 October 2026",
   "lead": "Where this patient sits in the intrahepatic cholangiocarcinoma pathway, and what the evidence behind the next step actually shows.",
   "gatelabel": "The decision in front of you",
   "gates": [
@@ -46,7 +47,7 @@
           ],
           "pref": "Any patient with a tumour obstructing the biliary tree who might be resected — reactive change from a stent obscures ductal extent, which is exactly what decides whether biliary resection and reconstruction are needed. MRI is the study that characterises the biliary and vascular relationships that determine resectability, and EASL-ILCA prefers it over CT for intrahepatic staging.",
           "avoid": "Do not wait for imaging in cholangitis — that is drained without waiting for the discussion, and urgent sepsis treatment takes priority over the elective sequence.",
-          "note": "Where the tumour obstructs the biliary tree, the need for drainage, its route and its side are decided with the hepatobiliary surgeon before any non-emergency procedure; resection without preoperative drainage can be considered when the future remnant is large. Standard, grade D."
+          "note": "Where the tumour obstructs the biliary tree, the need for drainage, its route and its side are decided with the hepatobiliary surgeon before any non-emergency procedure; resection without preoperative drainage can be considered when the future remnant is large. That drainage rule is grade D on its own — no comparative outcome data in intrahepatic disease were identified for it — while the grade B on this string covers the imaging sequence, which BSG 2023 and EASL-ILCA both recommend."
         },
         {
           "t": "Exclude another primary before committing to this pathway, because metastatic adenocarcinoma can be histologically indistinguishable from intrahepatic cholangiocarcinoma.",
@@ -64,14 +65,14 @@
         {
           "t": "Plan molecular testing of a dedicated biliary specimen at the index ERCP where the disease presents as an indeterminate stricture rather than a mass and the alternative is a repeat procedure.",
           "l": "Reasonable",
-          "g": "B",
+          "g": "C",
           "refs": [
             "41905432",
             "30971436"
           ],
-          "pref": "The patient entering the pathway as an indeterminate stricture, where pathology alone is weakest: in a 6-year prospective study of 2,116 patients across 28 institutions, pathologic assessment of ERCP brushings and biopsies had 44% sensitivity overall and 36% for intrahepatic or hilar strictures, while a DNA/RNA sequencing panel on separately collected specimens in a dedicated nucleic-acid buffer reached 82% sensitivity at 98% specificity and the combination 88% at 97%.",
-          "avoid": "Do not read a negative molecular result as excluding malignancy — in the original single-centre cohort the negative predictive value was only 63%, with sampling failure the usual explanation. Payer authorisation and the dedicated collection buffer have to be arranged before the procedure, not after.",
-          "note": "Therapeutically relevant alterations were reported in 8% of patients in the original cohort, so the same specimen can contribute to the profiling in gate 2 rather than duplicating it."
+          "pref": "The patient entering the pathway as an indeterminate stricture, where pathology alone is weakest: in a 6-year prospective study of 2,116 patients across 28 institutions, pathologic assessment of ERCP brushings and biopsies had 44% sensitivity overall and 36% for intrahepatic or hilar strictures, while a DNA/RNA sequencing panel on separately collected specimens in a dedicated nucleic-acid buffer reached 82% sensitivity at 98% specificity and the combination 88% at 97%. Specificity was 99% for pathology, so sequencing bought sensitivity and gave up almost nothing.",
+          "avoid": "Do not read a negative molecular result as excluding malignancy — in the original single-centre cohort there were 37 false negatives (25%) and the negative predictive value was only 63%, with sampling failure the usual explanation; in 12 of those cases the same panel found an alteration in the resected tumour. Only 2% of neoplastic strictures in the 2026 study were purely dysplastic, so outside primary sclerosing cholangitis this is earlier diagnosis of established cancer, not early detection, and no resectability or survival benefit has been shown. Payer authorisation and the dedicated collection buffer have to be arranged before the procedure, not after.",
+          "note": "Correct the yield figure: therapeutically relevant alterations were reported in 20 of 150 cancers (13%) in the original single-centre cohort, and in the 2026 multi-institutional study in 137 of 458 cholangiocarcinomas (30%) — but only on the 161-gene version of the panel. The 28-gene version used in the original cohort did not detect FGFR2 fusions at all, which with chromatin-remodelling genes accounts for up to 20% of intrahepatic tumours, so a biliary specimen substitutes for the gate 2 profile only if the panel actually run reports fusions. Downgraded from B: specimens were submitted at the endoscopist's discretion rather than consecutively, a stricture could be classified neoplastic on 12 months of clinical or radiographic progression rather than on tissue, and all testing was done in the laboratory that developed the assay."
         },
         {
           "t": "Add FDG-PET selectively, for suspected occult spread and for transplant staging.",
@@ -84,7 +85,7 @@
           ],
           "pref": "Where occult nodal or distant disease would change the operation, and in any patient being staged for a transplant protocol.",
           "avoid": "Do not substitute PET for MRI with MRCP in local planning; MRCP is preferred for biliary anatomy and ERCP or PTC are used more for therapeutic intervention.",
-          "note": "BSG 2023 recommends FDG-PET-CT for nodal and distant disease as part of staging and EASL-ILCA recommends it routinely in apparently resectable patients, both more broadly than our selective wording — alignment worksheet, area 2."
+          "note": "BSG 2023 recommends FDG-PET-CT for nodal and distant disease as part of staging and EASL-ILCA recommends it routinely in apparently resectable patients, both more broadly than our selective wording — alignment worksheet, area 2. Read the strength of the broader recommendation honestly: the EASL-ILCA routine-PET statement passed its Delphi panel with only 78% agreement, the weakest consensus in that guideline's staging section, and AASLD 2023 states PET should not be used to assess the primary tumour."
         }
       ],
       "avoid": [
@@ -148,8 +149,8 @@
               "g": "C",
               "when": "Preferred for a defined phenotype. Pemigatinib after prior systemic therapy, or futibatinib after gemcitabine–platinum. At final FIGHT-202 analysis, independently reviewed response was 37.0% with median progression-free survival 7.0 months and median overall survival 17.5 months in 108 patients; FOENIX-CCA2 gave response 42%, median progression-free survival 9.0 months and median overall survival 21.7 months in 103 patients.",
               "pref": "Second line or later in a patient fit for an oral targeted agent, where the alteration reported is a fusion or rearrangement — 90% of FIGHT-202 and the whole of FOENIX-CCA2 was intrahepatic disease, so this is the alteration with the most directly applicable data.",
-              "avoid": "Do not infer superiority over second-line chemotherapy: both trials are single-arm and neither has been compared with it. Do not expect it in an untested patient — 783 patients were screened to enrol 103 in FOENIX-CCA2, and 1,206 were prescreened to find 107 fusion-positive patients for FIGHT-202.",
-              "note": "There were no responses at all in the FIGHT-202 cohorts with other FGF/FGFR alterations (0 of 20) or none (0 of 18). Hyperphosphataemia affected 58–85% of patients and acquired kinase-domain resistance emerged in those who shrank then progressed.",
+              "avoid": "Do not infer superiority over second-line chemotherapy: both trials are single-arm, neither has been compared with it, and the pemigatinib investigators explicitly warn against the cross-study comparison with pooled second-line chemotherapy (response 9.5%, progression-free survival 2.6 months) that makes the agent look better. Both drugs were approved on these single-arm data. Do not expect the alteration in an untested patient — 783 patients were screened to enrol 103 in FOENIX-CCA2, and 1,206 were prescreened to find 107 fusion-positive patients for FIGHT-202.",
+              "note": "At the FIGHT-202 final analysis there were no objective responses in the cohorts with other FGF/FGFR alterations (0 of 20) or with none (0 of 17), so the effect is confined to the fusion and rearrangement class; with 20 and 17 patients that is a weak negative rather than proof. Hyperphosphataemia affected 58.5% on pemigatinib and 85% on futibatinib (grade 3 in 30%), and acquired kinase-domain resistance mutations emerged in those who shrank then progressed. Benefit is modest in absolute terms and the first-line question is still open in FIGHT-302.",
               "refs": [
                 "38838500",
                 "32203698",
@@ -162,7 +163,7 @@
               "when": "Preferred for a defined phenotype, positioned on progression-free survival grounds only. ClarIDHy met its primary endpoint — median progression-free survival 2.7 versus 1.4 months, hazard ratio 0.37 — but the final intention-to-treat overall survival was 10.3 versus 7.5 months, hazard ratio 0.79 (95% CI 0.56–1.12), p=0.09, not significant, with 70% of placebo patients crossing over.",
               "pref": "A chemotherapy-refractory patient with an IDH1 mutation who understands that the benefit is disease stabilisation: objective response was 2% and the signal came from stable disease, 51% versus 28%. Physical functioning was better preserved than on placebo.",
               "avoid": "Do not use it to convert unresectable disease — response is almost absent, so it is useless as an on-treatment surgical decision point. Do not quote the crossover-adjusted survival figure (hazard ratio 0.49) as the trial result; it comes from a model that assumes the effect is identical whenever given.",
-              "note": "The comparator was placebo, not the active second-line standard, so the gain over mFOLFOX is unknown.",
+              "note": "The comparator was placebo, not the active second-line standard, so the gain over mFOLFOX is unknown. Note the population when reading this into a liver pathway: only 9 of 185 patients (5%) had cirrhosis, 93% were metastatic and 90% of the ivosidenib arm had intrahepatic disease, so this is a non-cirrhotic metastatic cohort and nothing like a transplant or conversion candidate. Quality-of-life conclusions rest on change scores available for 62 of 113 ivosidenib and 20 of 52 placebo patients.",
               "refs": [
                 "32416072",
                 "34554208"
@@ -181,8 +182,8 @@
             {
               "name": "HER2 amplification or overexpression",
               "g": "C",
-              "when": "Preferred for a defined phenotype. Zanidatamab: single-arm; at final analysis (median follow-up 33 months, 80 ERBB2-amplified patients) confirmed response was 41.3% and median overall survival 15.5 months.",
-              "pref": "An IHC 3+ tumour, where the activity is concentrated: response 51.6% versus 1 of 18 at IHC 2+, and median overall survival 18.1 versus 5.2 months — a post hoc split.",
+              "when": "Preferred for a defined phenotype. Zanidatamab: single-arm; at final analysis (median follow-up 33.4 months, 80 ERBB2-amplified patients) confirmed response was 41% (33 of 80, 95% CI 30–53) and median overall survival 15.5 months.",
+              "pref": "An IHC 3+ tumour, where the activity is concentrated: response 52% (32 of 62) versus 6% (1 of 18) at IHC 2+, disease control 79% versus 33%, and median overall survival 18.1 versus 5.2 months — a post hoc split the authors themselves label as such.",
               "avoid": "Do not offer it on an IHC 2+ result as though the trial supported it, and do not read the 15.5-month survival as attributable to the drug: there was no control group and 44% of patients received further anticancer therapy afterwards.",
               "note": "Results are reported for biliary tract cancer as a whole with no breakdown by subsite, so the effect specifically in intrahepatic disease is unknown; HER2 is a minority of iCCA. ESMO 2024 also recommends considering trastuzumab deruxtecan for HER2 overexpression or amplification, which our table does not name — alignment worksheet, area 14.",
               "refs": [
@@ -226,8 +227,9 @@
             "37770126",
             "36652354"
           ],
-          "pref": "The patient whose core is exhausted or whose repeat biopsy would push the start of treatment out by weeks; the FGFR2 fusion or rearrangement was detectable in plasma in 83 of 95 FOENIX-CCA2 patients tested (87%).",
-          "avoid": "Do not accept a negative plasma result as excluding a target — BSG 2023 notes DNA-based panels and most liquid biopsies are weaker at detecting fusions, so a negative plasma result should prompt tissue testing where it would change management."
+          "pref": "The patient whose core is exhausted or whose repeat biopsy would push the start of treatment out by weeks.",
+          "avoid": "Do not accept a negative plasma result as excluding a target — BSG 2023 notes DNA-based panels and most liquid biopsies are weaker at detecting fusions, so a negative plasma result should prompt tissue testing where it would change management.",
+          "note": "Read the plasma figure for what it is: the FGFR2 fusion or rearrangement was detectable in plasma in 83 of 95 FOENIX-CCA2 patients tested (87%), but those patients were already known to be tissue-positive, so 87% is concordance in a positive population and not the chance of finding a target de novo in an unselected patient. No study in this disease reports the latter."
         }
       ],
       "avoid": [
@@ -268,21 +270,22 @@
               "when": "The established curative standard. Hepatic resection with negative margins is the goal; major resections are often necessary but wedge and segmental resections are appropriate where a negative margin can be achieved, and a regional lymphadenectomy of the porta hepatis is carried out.",
               "pref": "Liver-confined disease where R0 is achievable with an adequate remnant and preserved or reconstructable biliary drainage, in a patient fit for the operation. Lymphadenectomy is part of the operation and informs the adjuvant decision in gate 8 — nodal status is the main staging variable afterwards and clinical nodal staging is insensitive.",
               "avoid": "Multifocal disease across both lobes, satellite pattern implying field disease, encasement precluding reconstruction, bilateral second-order biliary involvement, nodal disease beyond the regional basin, any extrahepatic disease, or reserve that makes the necessary resection unsafe.",
-              "note": "Nodal status and tumour number dominate outcome: LCSGJ 2022 reports 5-year survival of 46.8%, 33.6% and 11.1% for one, two and three tumours, and 7–19% with nodal metastasis.",
+              "note": "Nodal status and tumour number dominate outcome: LCSGJ 2022 reports 5-year survival of 46.8%, 33.6% and 11.1% for one, two and three tumours, 63.4% for tumours under 2 cm, and 7–19% with nodal metastasis. The lymphadenectomy itself is the weak point in the evidence, not the resection: LCSGJ 2022 makes no recommendation on node dissection at all and warns that prophylactic dissection in cirrhosis increases complications, ESMO 2023 recommends routine hepatoduodenal-ligament dissection on level IV evidence, and neither BSG 2023 nor AASLD 2023 states an extent or a minimum node yield. Keeping it in every operation is a staging decision the programme has made, not a survival finding.",
               "refs": [
                 "nccn",
                 "36083140",
                 "37770126",
-                "35978598"
+                "35978598",
+                "36372281"
               ]
             },
             {
               "name": "Definitive thermal ablation",
               "g": "C",
               "when": "Potentially curative in a narrow nonsurgical group: solitary tumour under 3 cm with a complete safe margin. NCCN accepts thermal ablation for a small single primary or recurrent iCCA under 3 cm, particularly where surgery carries high risk; EASL-ILCA is narrower at single lesions under 2 cm, unresectable or inoperable, on low-level evidence.",
-              "pref": "The small single lesion in a patient whose reserve or comorbidity makes resection unsuitable, where all disease can be treated with a margin of 5 mm or more and there is no uncontrolled nodal or distant disease. In a ten-centre propensity-matched cohort within Milan criteria, microwave ablation gave 5-year overall survival of 44.8% versus 40.4% for resection (HR 0.96, p=0.761), and when both ablative and surgical margins exceeded 5 mm disease-free survival was also similar (HR 0.83, p=0.41).",
+              "pref": "The small single lesion in a patient whose reserve or comorbidity makes resection unsuitable, where all disease can be treated with a margin of 5 mm or more and there is no uncontrolled nodal or distant disease. In a ten-centre propensity-matched cohort, microwave ablation gave 5-year overall survival of 44.8% versus 40.4% for resection (HR 0.96, 95% CI 0.71–1.29, p=0.761), and when both ablative and surgical margins exceeded 5 mm disease-free survival was also similar (HR 0.83, 95% CI 0.52–1.32, p=0.41).",
               "avoid": "No safe margin obtainable, central bile duct injury risk, or disease left unaddressed. Do not extrapolate to large or multifocal tumours: in meta-analysis, tumours over 3 cm (HR 2.12) and multiple tumours (HR 1.67) carried shorter survival, and pooled 5-year survival after ablation was 28.5%.",
-              "note": "Disease-free survival in the matched cohort favoured resection overall (median 1.7 versus 3.6 years, HR 0.63, p=0.0010), with margin mediating 34.5% of that gap; the evidence base is retrospective and weaker than in hepatocellular carcinoma or colorectal liver metastases. Agreeing the boundary — NCCN under 3 cm versus EASL-ILCA under 2 cm — is a ratification item.",
+              "note": "Disease-free survival in the matched cohort favoured resection overall (median 1.7 versus 3.6 years, HR 0.63, 95% CI 0.48–0.83, p=0.0010), with margin mediating 34.5% of that gap. Two cautions the cohort itself imposes. First, its entry criterion was Milan-equivalent — a single tumour up to 5 cm or up to three each 3 cm or less — so it does not validate our under-3 cm wording; within it, a 3–5 cm tumour was an independent risk factor for disease-free survival after ablation but not after resection, and resection also outperformed ablation in patients under 60, with hepatolithiasis, with left-lobe tumours and with GGT above 50 U/L. Second, the equivalence headline comes from a post hoc split at 2017 in which the later comparison was underpowered (p=0.129), and a nonsignificant difference is not equivalence. Ablation also yields no specimen and no nodal dissection, so the patient has no pathological node status to drive the gate 8 decision, and node-negativity rests on imaging whose sensitivity for nodal metastasis is 20–61%. Agreeing the boundary — NCCN under 3 cm versus EASL-ILCA under 2 cm — is a ratification item.",
               "refs": [
                 "nccn",
                 "37084797",
@@ -297,7 +300,7 @@
               "when": "Selected definitive or consolidative treatment where the disease is localized but the patient is inoperable; cure evidence is limited. It may be selected directly on geometry and reserve — unsuccessful catheter therapy is not a prerequisite.",
               "pref": "Localized, liver-confined disease in a patient who cannot have an operation or an ablation, with adequate uninvolved liver, relieved biliary obstruction and safe gastrointestinal and biliary doses. A retrospective dose-response analysis of 79 patients found 3-year overall survival of 73% with a biologic equivalent dose above 80.5 Gy versus 38% below it (p=0.017) and 3-year local control 78% versus 45% (p=0.04); a multi-institutional phase II proton study reported 2-year local control of 94.1% in its 39 iCCA patients with grade 3 toxicity in 7.7%.",
               "avoid": "Insufficient uninvolved liver, unrelieved biliary obstruction, overlapping prior dose or refractory ascites. For bulky disease, coordinate systemic therapy rather than replacing it by default.",
-              "note": "Both datasets are nonrandomised and selected: only 19 of 79 patients received the high dose, dose escalation is confounded with era and image guidance, and in the proton study local failures kept accruing past the 2-year landmark (six in 39) while 53.8% developed distant metastases. Dose-response associations do not prove cure or equivalence to resection.",
+              "note": "Both datasets are nonrandomised and selected. Only 19 of 79 patients received the high dose, and that group also had significantly smaller planning target volumes (median 415 versus 614 cm³, p=0.02), so more favourable anatomy is confounded with dose; dose escalation is further confounded with era and image guidance, since patients treated after 2010 survived 50 versus 24 months (p=0.007). The proton cohort had no prespecified efficacy hypothesis at all — it was enrolled alongside a hepatocellular cohort for precision of estimates — its median delivered dose was 58.0 GyE against an intended 67.5 GyE, every local failure occurred below 60 GyE, local failures kept accruing past the 2-year landmark (six in 39) and 53.8% developed distant metastases. Dose-response associations do not prove cure or equivalence to resection.",
               "refs": [
                 "26503201",
                 "26668346",
@@ -387,7 +390,7 @@
           ],
           "pref": "Borderline or locally advanced liver-confined disease in a patient fit for chemo-immunotherapy, where conversion is a declared goal rather than a hope. Reassessment at the pre-declared point is a formal surgical re-review, not an imaging report alone.",
           "avoid": "Do not run conversion therapy open-endedly. If R0 is not achievable at the reassessment, say so and record that the goal has changed from conversion to control — that is the decision the board has to make.",
-          "note": "Retrospective series report conversion rates of 36.4% and 53% after chemotherapy for initially unresectable disease (LCSGJ 2022), and AASLD 2023 states the role of neoadjuvant downstaging is not well defined; the roadmap grades this pathway C for that reason."
+          "note": "The conversion figures are weaker than they sound. The rates of 36.4% and 53% come from retrospective Japanese series quoted by LCSGJ 2022, which in the same breath records no evidence of benefit for neoadjuvant chemotherapy and makes no recommendation; the denominators are not defined and the series report median survival of 24.1 months in converted patients against 25.7 months in those primarily resectable. AASLD 2023 states the role of neoadjuvant downstaging is not well defined, and BSG 2023 does not recommend routine neoadjuvant chemotherapy. The roadmap grades this pathway C for those reasons. Note also that neither chemo-immunotherapy trial supports it: TOPAZ-1 and KEYNOTE-966 were 86% and 89% metastatic and neither says anything about downstaging."
         }
       ],
       "alt": [
@@ -401,10 +404,10 @@
               "flags": [
                 "EXPERTISE"
               ],
-              "when": "Conversion or hepatic control in an approved expert programme, generally with systemic therapy; no established cure as monotherapy. In a phase 2 study of 38 treated patients, HAI floxuridine with systemic gemcitabine–oxaliplatin gave partial response in 58% and 6-month progression-free survival of 84.1% with median overall survival 25.0 months, and four patients went on to resection.",
+              "when": "Conversion or hepatic control in an approved expert programme, generally with systemic therapy; no established cure as monotherapy. In a single-arm, single-institution phase 2 study of 38 treated patients, HAI floxuridine with systemic gemcitabine–oxaliplatin gave partial response in 22 of 38 (58%) and 6-month progression-free survival of 84.1% against an 80% target, with median progression-free survival 11.8 months and median overall survival 25.0 months, and four patients went on to resection.",
               "pref": "Liver-confined unresectable disease with favourable arterial anatomy in a centre with a functioning pump programme, where conversion or durable hepatic control is the stated goal. It can be considered early rather than only after a systemic line fails.",
               "avoid": "No dedicated pump programme, any extrahepatic disease, or unrelieved biliary obstruction. Do not treat it as interchangeable with a modern chemo-immunotherapy regimen, and do not count response as the curative event — conversion to a complete operation is.",
-              "note": "Grade 4 toxicity forcing withdrawal occurred in 11% of the phase 2 cohort (portal hypertension, gastroduodenal artery aneurysms, pump-pocket infection), grade 3 transaminase rises in a third to a half, and 11% needed biliary stents. The cohort was heavily selected — 38 of 84 screened. A retrospective single-centre comparison gave median overall survival of 30.8 months with HAI plus systemic therapy versus 18.4 months with systemic therapy alone in liver-confined disease, but all HAI patients were surgically staged and only 42% of the comparator was, so stage migration favours HAI.",
+              "note": "Grade 4 toxicity forcing withdrawal occurred in 4 of 38 (11%) of the phase 2 cohort (portal hypertension, two gastroduodenal artery aneurysms, pump-pocket infection), grade 3 ALT in 42% and AST in 34%, and 11% needed biliary stents, two for chemotherapy-induced biliary sclerosis. Delivery decayed: 71% received the expected floxuridine dose over the first 3 months but only 47% over the next 6. The cohort was heavily selected — 38 of 84 screened, median tumour 8.3 cm — and the comparison is with historical systemic series; the linked JAMA Oncology editorial judged the case for locoregional therapy in unresectable cholangiocarcinoma still unsettled without a randomised trial. A retrospective single-centre comparison gave median overall survival of 30.8 months with HAI plus systemic therapy versus 18.4 months with systemic therapy alone in liver-confined disease, but all HAI patients were surgically staged and only 42% of the comparator was, so stage migration favours HAI; the comparator was 26 patients of whom only 30% had gemcitabine–cisplatin, and 44 of the 93 HAI patients came from two previously reported phase 2 trials. In that whole series only 8 of 236 patients (3%) converted to a curative-intent resection.",
               "refs": [
                 "31670750",
                 "26695839",
@@ -420,7 +423,7 @@
               "when": "Control or conversion with selected ablative use under expert review; curative evidence is emerging, not established. MISPHEC, a single-arm phase II study of 41 patients, combined Y90 with gemcitabine–cisplatin: response at 3 months was 39% by investigator assessment and 41% centrally, 9 patients (22%) were downstaged to surgery and 8 (20%) achieved an R0 resection, with median overall survival 22 months.",
               "pref": "Liver-dominant unresectable disease in a non-cirrhotic patient with personalised dosimetry available, where conversion is the explicit plan — among the 27 patients with disease confined to one hemiliver, 8 (30%) were resected.",
               "avoid": "Cirrhosis above all: hepatic failure occurred in 9 of 12 cirrhotic patients (75%), irreversible in 5, versus 5 of 29 (17%) without cirrhosis, all reversible, and every irreversible case had whole-liver treatment. The trial's authors advise against radioembolisation plus chemotherapy in cirrhosis. Also avoid with inadequate future remnant or an unsafe shunt fraction.",
-              "note": "Those results do not prove Y90 alone is curative, and grade 3–4 toxicity affected 71% of the cohort. The NCCN discussion of a tumour dose above 205 Gy is distinct from hepatocellular segment-dose thresholds. Payer authorisation and dosimetry capability are local dependencies.",
+              "note": "Those results do not prove Y90 alone is curative, and grade 3–4 toxicity affected 29 of 41 patients (71%). The conversion figures describe a doubly selected cohort: 4 of 45 patients were excluded at the planning angiogram and 9 of 41 had major protocol deviations, leaving 32 per protocol. The trial was run only at centres experienced with glass microspheres and was part-funded by the microsphere manufacturer, with several authors as its consultants; the authors state tumour-absorbed dose rather than a generic liver dose probably drives outcome, so the regimen does not transfer as written. Two patients whose disease stayed unresectable but controlled were offered transplant and both recurred, at 16 and 17 months. The NCCN discussion of a tumour dose above 205 Gy is distinct from hepatocellular segment-dose thresholds. Payer authorisation and dosimetry capability are local dependencies, and the confirmatory randomised SIRCCA trial has not reported.",
               "refs": [
                 "31670746",
                 "nccn"
@@ -482,7 +485,7 @@
         {
           "t": "Systemic therapy is the backbone: gemcitabine and cisplatin with durvalumab, or with pembrolizumab.",
           "l": "Standard",
-          "g": "A",
+          "g": "B",
           "refs": [
             "nccn",
             "20375404",
@@ -493,7 +496,7 @@
           ],
           "pref": "Every patient fit for it. The regimens and the fitness question are in gate 9; what this gate settles is that systemic therapy is the backbone and any liver-directed treatment is added to it, not substituted for it.",
           "avoid": "A patient whose performance status, renal or hepatic function, or contraindication to checkpoint inhibition rules out the full regimen still gets a systemic plan, modified with the reason recorded — not a catheter instead.",
-          "note": "Clinical trial eligibility is checked at diagnosis and at each progression. Standard, grade D."
+          "note": "Downgraded from A. The two trials that carry the grade did not study this gate's population. TOPAZ-1 was 86% metastatic and KEYNOTE-966 89%, both restricted to ECOG 0–1, and the TOPAZ-1 investigators state explicitly that the trial says nothing about neoadjuvant, downstaging or peri-transplant use in liver-confined disease, which is where this regimen is now borrowed. Grade A remains right for gate 9, where the population matches. Clinical trial eligibility is checked at diagnosis and at each progression — Standard, grade D."
         }
       ],
       "alt": [
@@ -521,7 +524,7 @@
               "when": "Hepatic control. Liver-dominant disease with hepatic control as the goal, portal flow preserved and dosimetry planning available. Median overall survival was 22 months with Y90 plus gemcitabine–cisplatin in a 41-patient phase II, and 20 months from diagnosis in a 62-patient two-centre chemoembolisation cohort, where the 18 patients who also had systemic chemotherapy survived 28 versus 16 months (HR 1.94, p=0.02).",
               "pref": "Hepatic-dominant disease where selective delivery and reserve are adequate and the goal is stated as control, with the systemic plan running alongside. Procedural safety was the strongest chemoembolisation finding: major complications after 5 of 165 procedures (3%), 0% 30-day disease-specific mortality.",
               "avoid": "Substitution for systemic therapy; use while extrahepatic disease progresses; inadequate future remnant or unsafe shunt fraction; biliary obstruction and infection risk. Avoid radioembolisation plus chemotherapy in cirrhosis, where hepatic failure occurred in 75% of cirrhotic patients and was irreversible in 5.",
-              "note": "The chemoembolisation evidence is heterogeneous and nonrandomised — 40% of that cohort had adenocarcinoma of unknown primary rather than proven cholangiocarcinoma — and does not have evidence equivalent to resection or small-tumour ablation for eradication. There is no proven preferred sequence among TACE, Y90, HAI and ablative radiotherapy.",
+              "note": "The chemoembolisation evidence is heterogeneous and nonrandomised — 40% of that cohort had adenocarcinoma of unknown primary rather than proven cholangiocarcinoma, 11% had a prior hepatectomy, 27% had no evaluable imaging follow-up, and the regimen (an ethiodol and polyvinyl alcohol emulsion of cisplatin, doxorubicin and mitomycin) predates drug-eluting beads, Y90 and gemcitabine–cisplatin. Do not read the 28 versus 16 months as an effect of adding chemotherapy: only 18 of 62 patients received it, at their own oncologists' discretion, so those were by definition the fitter patients. None of this has evidence equivalent to resection or small-tumour ablation for eradication, and there is no proven preferred sequence among TACE, Y90, HAI and ablative radiotherapy.",
               "refs": [
                 "31670746",
                 "21425151",
@@ -551,7 +554,8 @@
                 "34347159",
                 "38261915",
                 "37084797"
-              ]
+              ],
+              "note": "The pooled figures are fragile: all 20 studies were retrospective, heterogeneity reached I² 85% at 1 year, Egger testing showed publication bias in the 3-year pooling (p=0.039), and disease control was short-lived even when ablation worked — pooled recurrence-free survival was 40.0% at 1 year and 19.2% at 3 years. The 3 cm threshold rests on a dichotomised study-level variable with no individual patient data, unadjusted for margin, nodal status or liver function, and the authors' own comparison of their 28.5% pooled 5-year survival with a 30% figure from a separate resection meta-analysis carries no adjustment for stage, candidacy or era."
             }
           ],
           "order": "This is the weakest evidence zone in the pathway. No randomised trial compares any two of these modalities in intrahepatic cholangiocarcinoma and none has been tested against a modern chemo-immunotherapy backbone, so selection is driven by treatment goal, target geometry, liver reserve and what the institution can actually deliver. The order below reproduces the roadmap's listing and the size of each dataset; it is not a hierarchy of evidence, because no such hierarchy exists.",
@@ -616,8 +620,8 @@
               "g": "A",
               "when": "Overall survival hazard ratio 0.80 (95% CI 0.66–0.97), median 12.8 versus 11.5 months, with 24-month survival 24.9% versus 10.4% in 685 patients. In the intrahepatic subgroup (n=383) the hazard ratio was 0.76 (0.58–0.98).",
               "pref": "A patient fit for platinum and for checkpoint inhibition who wants the regimen with the longer tail: almost all of the benefit accrues after 6 months (hazard ratio 0.91 up to 6 months, 0.74 thereafter), and gemcitabine is capped at eight cycles.",
-              "avoid": "Active or prior autoimmune or inflammatory disorders, or any contraindication to checkpoint inhibition. Do not promise the median — the absolute gain in median survival is 1.3 months, the proportional-hazards assumption was formally violated, and this was a prespecified interim analysis at 424 of 496 planned deaths.",
-              "note": "Benefit did not track PD-L1 expression, and MSI status was missing for about half the cohort. Ampullary cancer was excluded and 86% of patients were metastatic, so the trial says nothing about neoadjuvant, downstaging or peri-transplant use.",
+              "avoid": "Active or prior autoimmune or inflammatory disorders, or any contraindication to checkpoint inhibition. Do not promise the median — the absolute gain in median survival is 1.3 months, the proportional-hazards assumption was formally violated on kernel-smoothed and log-log plots so a single hazard ratio misrepresents a time-varying effect, and this was a prespecified interim analysis at 424 of 496 planned deaths, powered to about 75%. The 24-month figures are Kaplan-Meier estimates, not counted survivors.",
+              "note": "Benefit did not track PD-L1 expression (hazard ratio 0.79 at tumour area positivity of 1% or more, 0.86 below 1%), and MSI status was missing for about half the cohort, with only 5 of 333 evaluable patients MSI-high, so the possibility that a small hypermutated subset carries the signal is answered by argument rather than data. Responses were investigator-assessed with no central review. Ampullary cancer was excluded and 86% of patients were metastatic, so the trial says nothing about neoadjuvant, downstaging or peri-transplant use. Point estimates were better in locally advanced than metastatic disease (0.49 versus 0.83) but the trial was not sized for subgroups and no multiplicity adjustment was made, so that cannot be acted on.",
               "refs": [
                 "38319896"
               ]
@@ -627,10 +631,11 @@
               "g": "A",
               "when": "Median overall survival 12.7 versus 10.9 months, hazard ratio 0.83 (95% CI 0.72–0.95) in 1069 patients, with 24-month survival 25% versus 18%. The intrahepatic subgroup (n=633) carried the effect: hazard ratio 0.76 (0.64–0.91), against 0.99 extrahepatic and 0.96 gallbladder.",
               "pref": "A patient fit for checkpoint inhibition where gemcitabine continued to progression without a cycle cap suits the plan, and where the largest intrahepatic dataset is the reassurance wanted.",
-              "avoid": "Contraindication to checkpoint inhibition, or prior systemic therapy for advanced disease. Both supporting endpoints failed their prespecified boundaries — progression-free survival hazard ratio 0.86 (p=0.023 against 0.0125) and objective response 29% versus 29% (p=0.47) — so the benefit rests on overall survival with no response signal behind it, and treatment-related deaths were 8 (2%) versus 3 (1%) with no improvement in quality of life.",
+              "avoid": "Contraindication to checkpoint inhibition, or prior systemic therapy for advanced disease. The absolute gain is 1.8 months of median survival, and both supporting endpoints failed their prespecified boundaries — progression-free survival hazard ratio 0.86 (p=0.023 against 0.0125) and objective response 29% versus 29% (p=0.47) — so the benefit rests on overall survival with no response signal behind it. Treatment-related deaths were 8 (2%) versus 3 (1%), immune-mediated events 22% versus 13%, and quality of life did not improve (EORTC QLQ-C30 global health change −2.5 in both arms).",
               "refs": [
                 "37075781"
-              ]
+              ],
+              "note": "There is no usable predictive biomarker: the effect was the same below and above a PD-L1 combined positive score of 1 and only 10 MSI-high patients enrolled, so every patient is exposed to immune toxicity without a way to select. Crossover was not permitted and 89% were metastatic, so the trial says nothing about perioperative or conversion strategy."
             }
           ],
           "order": "The roadmap does not rank them. Both improved survival against chemotherapy alone and there is no head-to-head comparison, so the choice is made on toxicity profile, schedule and access — exactly ESMO 2024's position, which states no biomarker and no difference in efficacy or toxicity favours one checkpoint inhibitor over the other. Nothing in this order implies a survival advantage for either.",
@@ -645,7 +650,7 @@
             {
               "name": "A matched targeted agent, if a driver is present",
               "g": "C",
-              "when": "Second line, where the molecular result from gate 2 shows an alteration of the class the evidence covers. These are single-arm response data — pemigatinib 37% response and 17.5 months median survival, futibatinib 42% and 21.7 months, zanidatamab 41.3% and 15.5 months, dabrafenib–trametinib 51% by investigator — not comparative survival data.",
+              "when": "Second line, where the molecular result from gate 2 shows an alteration of the class the evidence covers. These are single-arm response data — pemigatinib 37.0% response and 17.5 months median survival, futibatinib 42% and 21.7 months, zanidatamab 41% and 15.5 months, dabrafenib–trametinib 51% by investigator and 47% centrally — not comparative survival data.",
               "pref": "The patient whose tumour carries an FGFR2 fusion or rearrangement, IDH1 mutation, BRAF V600E, HER2 amplification or overexpression, or MSI-high disease, and whose result is already in hand.",
               "avoid": "Do not substitute a gene name for an alteration class, and do not read the single-arm survival figures as showing superiority over FOLFOX. Ivosidenib is the only randomised option and it met progression-free survival, not intention-to-treat overall survival.",
               "refs": [
@@ -660,10 +665,10 @@
             {
               "name": "FOLFOX, where no driver is present",
               "g": "B",
-              "when": "ABC-06 gave median overall survival 6.2 versus 5.3 months against active symptom control, adjusted hazard ratio 0.69 (95% CI 0.50–0.97), p=0.031 — a real but modest benefit, open label, with grade 3–5 events in 69% versus 52% and three treatment-related deaths.",
+              "when": "ABC-06 gave median overall survival 6.2 versus 5.3 months against active symptom control, adjusted hazard ratio 0.69 (95% CI 0.50–0.97), p=0.031 — an absolute median gain of 0.9 months, open label, with grade 3–5 events in 69% versus 52% and three chemotherapy-related deaths (infection, acute kidney injury, febrile neutropenia).",
               "pref": "A fit patient after progression on gemcitabine–platinum with no actionable alteration; the gain is clearest in survival rates, 25.9% versus 11.4% alive at 12 months, and albumin of 35 g/L or above was independently prognostic.",
               "avoid": "A patient whose performance status or albumin makes 69% grade 3–5 toxicity the dominant outcome. Objective response was 5% and disease control 33%, so this is not a conversion strategy.",
-              "note": "72 of 162 patients (44%) in ABC-06 had intrahepatic disease. The trial predates molecular selection and first-line chemo-immunotherapy, both of which change who would now be offered FOLFOX second line.",
+              "note": "72 of 162 patients (44%) in ABC-06 had intrahepatic disease. Two delivery problems temper the result: 6 of 81 patients assigned FOLFOX never received it and 9 had only one cycle, while 8 of 81 in the control arm received off-study chemotherapy, and stratification errors found during data cleaning required a post hoc sensitivity analysis (adjusted hazard ratio 0.68, 0.49–0.95) to confirm the primary result. More FOLFOX patients were platinum resistant or refractory (67% versus 58%), which cuts against the treatment arm rather than for it. The trial predates molecular selection and first-line chemo-immunotherapy, both of which change who would now be offered FOLFOX second line.",
               "refs": [
                 "33798493",
                 "36083140",
@@ -775,7 +780,7 @@
               "when": "Goal: potentially curative intent in a narrow group. Reasonable consideration. Fits solitary tumour under 3 cm with a complete safe margin; EASL-ILCA is narrower at under 2 cm. Central ducts often limit feasibility.",
               "pref": "A small lesion when resection is unsuitable, with all disease treated to a safe margin and no uncontrolled nodal or distant disease; also at a first intrahepatic recurrence, where microwave ablation gave median overall survival 29.8 versus 34.0 months against repeat resection (HR 0.89, p=0.31) with major complications in 5.5% versus 31.3%.",
               "avoid": "No safe margin, central bile duct injury risk, or unaddressed disease. Evidence is mainly retrospective and weaker than in hepatocellular carcinoma or colorectal liver metastases; do not extrapolate to large or multifocal iCCA. Document why the patient fits the narrower evidence base.",
-              "note": "At recurrence, repeat resection gave better disease-free survival in four strata: large-duct subtype, no complication at the initial resection, a disease-free interval under 12 months, and a margin under 5 mm.",
+              "note": "At recurrence, repeat resection gave better disease-free survival in four strata: large-duct subtype, no complication at the initial resection, a disease-free interval under 12 months, and a margin under 5 mm. Read the recurrence comparison as the authors do: the 4-month difference in median overall survival was not significant but they call it clinically noteworthy and state the study cannot exclude a real difference, 18.0% of the cohort was lost to follow-up and censored, treatment was chosen by tumour board and patient preference, the repeat-resection arm was only 119 patients, and liver function and quality of life — the outcomes that would most favour ablation — were not measured. All ten centres were Chinese tertiary hospitals with operators averaging a decade of independent ablation experience, so the 5.5% major complication rate may not transfer.",
               "refs": [
                 "41528222",
                 "38261915",
@@ -791,7 +796,7 @@
                 "PROTOCOL",
                 "REGISTRY"
               ],
-              "when": "Goal: total clearance. Trial or registry only. The best-characterised setting is a single tumour of 2 cm or less first diagnosed on cirrhotic explant pathology, most having been seen before transplant as presumed hepatocellular carcinoma.",
+              "when": "Goal: total clearance. Trial or registry only. The best-characterised setting is a single tumour of 2 cm or less first diagnosed on cirrhotic explant pathology, most having been seen before transplant as presumed hepatocellular carcinoma — 15 patients in the index series, and mixed hepatocellular-cholangiocarcinoma was excluded from it.",
               "pref": "Only inside a formally approved protocol with review-board approval and registry entry — gate 10.",
               "avoid": "Multifocal or larger disease outside a protocol; any extrahepatic disease; no registry entry. A technical response does not establish transplant eligibility.",
               "refs": [
@@ -870,14 +875,14 @@
           ],
           "pref": "Every patient being offered capecitabine. Significance appeared in the prespecified intention-to-treat sensitivity analysis adjusted for nodal status, tumour grade and sex (hazard ratio 0.71, 95% CI 0.55–0.92, p=0.010) and in the per-protocol analysis (hazard ratio 0.75, 95% CI 0.58–0.97, p=0.028); the trial was unmasked. Say both halves.",
           "avoid": "Do not present it as settled. Only 84 of 447 patients (19%) had intrahepatic disease and the trial was not powered for site-specific effects, so the iCCA-specific benefit is unproven; LCSGJ 2022 reports no significant benefit in the intrahepatic subgroup, while EASL-ILCA cites an iCCA hazard ratio of 0.65 — the best of the subtypes — and still grades the recommendation on a trial that was negative on intention to treat.",
-          "note": "Lymphadenectomy was not mandated for intrahepatic patients in BILCAP, yet nodal status is one of the covariates that turns the sensitivity analysis positive. Recurrence-free survival favoured capecitabine over the first 24 months (hazard ratio 0.75) with no difference from 24 to 60 months, which the authors read as deferred rather than prevented recurrence. NCCN Biliary Tract Cancers v1.2026 designates capecitabine preferred, category 1, while acknowledging the nonsignificant intention-to-treat analysis; our Reasonable consideration, grade B is deliberately more cautious and requires explicit multidisciplinary ratification (alignment worksheet, area 11)."
+          "note": "Lymphadenectomy was not mandated for intrahepatic patients in BILCAP, yet nodal status is one of the covariates that turns the sensitivity analysis positive. Recurrence-free survival favoured capecitabine over the first 24 months (median 24.4 versus 17.5 months, adjusted hazard ratio 0.75, 95% CI 0.58–0.98, p=0.033) with no difference from 24 to 60 months (hazard ratio 1.48, 0.80–2.77, p=0.21), which the authors read as deferred rather than prevented recurrence. Recruitment ran nearly nine years with no fully defined analysis plan at the outset and the monitoring committee had to reset the event target when survival on observation proved far better than assumed. Two guideline readings of the same subgroup conflict and should not be presented as two datasets: LCSGJ 2022 reports no significant benefit in the intrahepatic subgroup while EASL-ILCA cites an iCCA hazard ratio of 0.65 as the best of the subtypes — both are unpowered subgroup estimates from the trial that was negative on intention to treat. NCCN Biliary Tract Cancers v1.2026 designates capecitabine preferred, category 1, while acknowledging the nonsignificant intention-to-treat analysis; our Reasonable consideration is deliberately more cautious and requires explicit multidisciplinary ratification (alignment worksheet, area 11)."
         }
       ],
       "alt": [
         {
           "t": "Offer adjuvant capecitabine for 6 months as a reasonable consideration, not an obligation.",
           "l": "Reasonable",
-          "g": "B",
+          "g": "C",
           "refs": [
             "30922733",
             "36083140",
@@ -886,7 +891,7 @@
           ],
           "pref": "The fit patient after R0 or R1 resection, particularly node-positive or R1 disease, who has heard the trial endpoints and wants treatment. AASLD 2023 says capecitabine should be considered for all patients with cholangiocarcinoma and BSG 2023 recommends considering 24 weeks (strong recommendation, moderate-quality evidence).",
           "avoid": "A patient for whom the toxicity outweighs an unproven site-specific gain: grade 3 or worse events affected 44% of the 213 treated patients, most often hand-foot syndrome (20%), 32% stopped for toxicity and only 55% completed all eight cycles. Serious adverse events were 21% versus 10% on observation.",
-          "note": "Our label sits closest to LCSGJ 2022's weak recommendation and is more cautious than AASLD 2023 and BSG 2023. Whether it moves to Standard is unresolved decision 3."
+          "note": "Downgraded from B. The trial that supports it did not meet its primary intention-to-treat endpoint (adjusted hazard ratio 0.81, 95% CI 0.63–1.04, p=0.097), only 84 of 447 patients (19%) had intrahepatic disease and it was not powered for site-specific effects, so for this pathway the benefit is an unpowered subgroup of a negative trial. ACTICCA-1 has not reported. Our label sits closest to LCSGJ 2022's weak recommendation and is more cautious than AASLD 2023, BSG 2023 and EASL-ILCA, each of which grades the recommendation strong. Whether it moves to Standard is unresolved decision 3."
         },
         {
           "t": "Discuss adjuvant chemoradiotherapy case by case at tumour board after an R1 or node-positive resection; it is not routine.",
@@ -908,8 +913,8 @@
           "refs": [
             "30707660"
           ],
-          "pref": "PRODIGE-12 was negative on both co-primary endpoints: relapse-free survival 30.4 versus 18.5 months, hazard ratio 0.88 (95% CI 0.62–1.25), p=0.48, and no difference in time to definitive quality-of-life deterioration; overall survival numerically favoured surveillance (hazard ratio 1.08).",
-          "avoid": "Grade 3–4 toxicity reached 73% and grade 3 peripheral sensory neuropathy 18%. Intrahepatic patients were 86 of 194 (44%) and showed no significant benefit, so this is not a population mismatch excuse."
+          "pref": "PRODIGE-12 was negative on both co-primary endpoints: relapse-free survival 30.4 versus 18.5 months, hazard ratio 0.88 (95% CI 0.62–1.25), p=0.48, and median time to definitive quality-of-life deterioration 31.8 versus 32.1 months, hazard ratio 1.28 (0.73–2.26), p=0.39; overall survival numerically favoured surveillance (median 75.8 versus 50.8 months, hazard ratio 1.08, 0.70–1.66).",
+          "avoid": "Grade 3 toxicity affected 62% and grade 4 11%, with grade 3 peripheral sensory neuropathy in 18%. Intrahepatic patients were 86 of 194 (44%) and their relapse-free survival hazard ratio was 0.718 (0.431–1.196), so this is not a population mismatch excuse. Say what kind of negative it is: the trial was powered for a hazard ratio of 0.60 on 126 events, its medians fell on a plateau of the curves, and salvage differed sharply by arm (40 of 41 surveillance relapses received gemcitabine-based salvage versus 9 of 33 after GEMOX), so this is a failed superiority trial in a lower-risk population than BILCAP (13% R1 and 38% node-positive, against 38% and 47%) rather than a demonstration that adjuvant therapy does nothing."
         },
         {
           "t": "Do not offer S-1 as the adjuvant option here, and do not use BCAT to argue against adjuvant therapy in intrahepatic disease.",
@@ -919,8 +924,8 @@
             "36681415",
             "29405274"
           ],
-          "pref": "ASCOT was positive — 3-year survival 77.1% versus 67.6%, hazard ratio 0.69 — but was conducted entirely in Japan and S-1 is not available in the United States; only 58 of 440 patients (13%) had intrahepatic disease and that subgroup's hazard ratio, 0.75 (95% CI 0.30–1.89), is uninformative.",
-          "avoid": "BCAT found no benefit for gemcitabine (hazard ratio 1.01) but enrolled only resected extrahepatic bile duct cancer — intrahepatic disease was not eligible — which is why EASL-ILCA excluded it when answering the adjuvant question for iCCA."
+          "pref": "ASCOT met its primary endpoint — 3-year overall survival 77.1% versus 67.6%, stratified hazard ratio 0.69 (95% CI 0.51–0.94) — but relapse-free survival did not reach significance (hazard ratio 0.80, 0.61–1.04, p=0.088) with the curves crossing at 6 years, the analysis was done at 179 deaths, 62.8% of the 285 prespecified events, and the observation arm did far better than the hypothesised 47%. It was conducted entirely in Japan and S-1 is not available in the United States; only 58 of 440 patients (13%) had intrahepatic disease and that subgroup's hazard ratio, 0.75 (95% CI 0.30–1.89), is uninformative.",
+          "avoid": "BCAT found no benefit for gemcitabine (hazard ratio 1.01, 95% CI 0.70–1.45) but enrolled only resected extrahepatic bile duct cancer — intrahepatic disease was not eligible — which is why EASL-ILCA excluded it when answering the adjuvant question for iCCA. It is also underpowered on its own terms: recruitment stopped at 226 of a planned 300 because patients wanted adjuvant chemotherapy, and the authors calculate only a 2.8% probability the result would have reached significance even with the planned 189 deaths. Neither trial can be quoted as evidence that adjuvant therapy is futile."
         }
       ]
     },
@@ -950,8 +955,8 @@
             "37084797"
           ],
           "pref": "Either combination is acceptable and the roadmap does not rank them; no trial compares them, so the choice is made on toxicity profile, schedule and access. ESMO 2024 recommends both [I, A] and states no biomarker favours one checkpoint inhibitor over the other.",
-          "avoid": "Do not read the backbone trial as an iCCA trial. The three trials differ sharply in how much of their population was actually intrahepatic: 80 of 410 patients (20%) in ABC-02, 383 of 685 (55.9%) in TOPAZ-1 and 633 of 1069 (59%) in KEYNOTE-966 — the last enriched because tumour tissue was mandatory and intrahepatic tumours are easier to sample. The modern figures are the ones that apply to this clinic; ABC-02's 11.7 months rests on a population in which gallbladder cancer was the largest single site at 36%.",
-          "note": "In both chemo-immunotherapy trials the intrahepatic subgroup carried the effect — hazard ratio 0.76 in each — which is the opposite of the adjuvant picture in gate 8, where intrahepatic patients were a small minority."
+          "avoid": "Do not read the backbone trial as an iCCA trial. The three trials differ sharply in how much of their population was actually intrahepatic: 80 of 410 patients (20%) in ABC-02, 383 of 685 (55.9%) in TOPAZ-1 and 633 of 1069 (59%) in KEYNOTE-966 — the last enriched because tumour tissue was mandatory and intrahepatic tumours are easier to sample. The modern figures are the ones that apply to this clinic; ABC-02's 11.7 months rests on a population in which gallbladder cancer was the largest single site at 36%, with a median follow-up of only 8.2 months, scans at weeks 12 and 24 by RECIST 1.0, and no molecular selection.",
+          "note": "In both chemo-immunotherapy trials the intrahepatic subgroup carried the effect — hazard ratio 0.76 in each — which is the opposite of the adjuvant picture in gate 8, where intrahepatic patients were a small minority. The absolute gains are small: 1.3 months of median survival with durvalumab and 1.8 with pembrolizumab, both bought with immune toxicity and, in KEYNOTE-966, more treatment-related deaths and no quality-of-life gain. The claim that the two are interchangeable is an indirect comparison across trials that differ in chemotherapy duration, geography and population; ESMO states no biomarker or efficacy difference separates them, and no randomised comparison exists."
         },
         {
           "t": "Performance status, renal and hepatic function, contraindications to checkpoint inhibition and prior therapy determine whether the full regimen is appropriate and at what intensity; any modification is recorded with its reason.",
@@ -981,7 +986,7 @@
           ],
           "pref": "ABC-06 is the only randomised second-line evidence: FOLFOX 6.2 versus 5.3 months against active symptom control, adjusted hazard ratio 0.69 (95% CI 0.50–0.97), with 12-month survival 25.9% versus 11.4%. The matched agents report larger response and survival figures from single-arm trials and have never been compared with chemotherapy.",
           "avoid": "Do not treat the single-arm figures as comparative survival data, and do not expect a response-driven surgical opportunity from ivosidenib (response 2%) or from any of these agents. There is no randomised evidence establishing a sequence among the targeted options.",
-          "note": "ABC-06's benefit cost grade 3–5 toxicity in 69% versus 52% and three treatment-related deaths; 44% of its patients had intrahepatic disease."
+          "note": "ABC-06's benefit is an absolute median gain of 0.9 months and cost grade 3–5 toxicity in 69% versus 52% and three chemotherapy-related deaths; 44% of its patients had intrahepatic disease, and stratification errors discovered in data cleaning required a post hoc sensitivity analysis to confirm the result."
         },
         {
           "t": "Move to symptom-focused care when the reassessment answers that question, and make that an explicit tumour-board decision rather than a default.",
@@ -1036,11 +1041,12 @@
             "36083140",
             "37770126",
             "35978598",
-            "42312290"
+            "42312290",
+            "40014003"
           ],
           "pref": "This is our added institutional restriction, and it is a judgement about graft stewardship rather than an evidence finding. It sits closest to AASLD 2023 (research protocols only) and BSG 2023 (prospective national protocol), and is stricter than OPTN 2025 and ILTS-ILCA 2024, which both support consideration for cirrhotic, unresectable, biopsy-proven tumours of 3 cm or less after a period of stability.",
           "avoid": "Do not state that iCCA has no exception route — OPTN review-board guidance now describes one — and do not apply the perihilar neoadjuvant or stricture pathway to intrahepatic disease. LCSGJ 2022 states iCCA is generally not an indication for transplantation at all.",
-          "note": "ILTS-ILCA 2024 grades the cirrhotic ≤3 cm recommendation moderate evidence, moderate strength, and confines non-cirrhotic disease to investigational protocols after at least 6 months of stability on systemic therapy (moderate evidence, weak strength). It also makes biopsy mandatory to confirm iCCA, assess differentiation and exclude mixed hepatocellular-cholangiocarcinoma, and finds no evidence for using molecular profiling to select candidates."
+          "note": "ILTS-ILCA 2024 — published twice, in Liver Transplantation 2025 and Liver Cancer 2026 — grades the cirrhotic ≤3 cm recommendation moderate evidence, moderate strength, and confines non-cirrhotic disease to investigational protocols after at least 6 months of stability on systemic therapy (moderate evidence, weak strength). It also makes biopsy mandatory to confirm iCCA, assess differentiation and exclude mixed hepatocellular-cholangiocarcinoma, and finds no evidence for using molecular profiling to select candidates. Every one of its iCCA recommendations rests on low or moderate evidence and is graded weak or moderate, and the consensus reports modern 5-year post-transplant outcomes spanning 25–73% overall survival and 29–82% recurrence-free survival, almost entirely from single-centre retrospective series — a range too wide to support a selection rule. It makes no recommendation on allocation priority, exception points or acceptable waitlist dropout, and reached no agreement on large, locally advanced or non-cirrhotic disease."
         },
         {
           "t": "Where a protocol exists, the allocation route is a nonstandard MMaT-3 exception: select the CCA diagnosis form and submit a written narrative to the Adult Transplant Oncology Review Board.",
@@ -1056,7 +1062,7 @@
           "note": "MMaT is the median MELD at transplant for the donor hospital used in the match run, not one fixed national score; under Policy 9.4.E an MMaT-relative exception below 15 is assigned 15, and exceptions generally require 90-day extensions (9.4.C). The coordinator records source version, eligibility dates, request and extension dates, imaging, laboratory values and a named renewal owner; transplant leadership signs the allocation assessment. Required allocation record: diagnosis and histology; baseline burden and AFP/CEA where applicable; primary and last-treatment dates; serial response imaging; extrahepatic staging; request and extension dates; score route; named coordinator and physician sign-off. Reassess at progression, recurrence, new extrahepatic findings and each extension."
         },
         {
-          "t": "Read the supporting evidence for what it is: single tumours of 2 cm or less had a 5-year recurrence risk of 18% versus 61% for larger or multifocal disease, with 5-year survival 65% versus 45% — in explants where the cancer was first diagnosed on explant pathology.",
+          "t": "Read the supporting evidence for what it is: in 15 patients with a single tumour of 2 cm or less, the 5-year recurrence risk was 18% versus 61% for larger or multifocal disease, with 5-year survival 65% versus 45% — in explants where the cancer was first diagnosed on explant pathology.",
           "l": "Standard",
           "g": "C",
           "refs": [
@@ -1064,8 +1070,8 @@
             "34859465"
           ],
           "pref": "Quote it when the question is the prognosis of a very small intrahepatic cholangiocarcinoma discovered on an explant removed for another reason, which is the population it describes: 15 patients, 7 of them (47%) entirely incidental, from 17 centres and 25,016 transplants.",
-          "avoid": "Crucially these tumours were recognised as intrahepatic cholangiocarcinoma only at explant, not selected for transplantation, so the result cannot be read as licensing transplantation of known disease. No lymphadenectomy was performed because iCCA was not suspected, central pathology review was possible in only 68% of cases, and recurrence was driven by microvascular invasion (HR 4.7) and poor differentiation (HR 6.1).",
-          "note": "The wider literature is no firmer: a 2020 meta-analysis of 18 studies and 355 patients gave pooled 5-year survival of 42% and pooled recurrence 43%, with 5-year recurrence-free survival 67% for single tumours of 2 cm or less versus 34% for more advanced disease, and a propensity-matched National Cancer Database comparison found transplant and resection within a few percentage points of each other at 5 years."
+          "avoid": "Crucially these tumours were recognised as intrahepatic cholangiocarcinoma only at explant, not selected for transplantation, so the result cannot be read as licensing transplantation of known disease. Fifteen patients leaves very few still at risk at 5 years and the authors call the 3- and 5-year rates encouraging rather than established. No lymphadenectomy was performed because iCCA was not suspected, central pathology review was possible in only 55 of 81 cases (68%), each of 17 centres used its own pathologist so number and size may be understaged, and recurrence was driven by microvascular invasion (HR 4.7, 1.6–13.8) and poor differentiation (HR 6.1, 1.9–20.2) — neither of which is knowable before transplant.",
+          "note": "Three limits of this series bear directly on how it is cited here. It studied tumours of 2 cm or less, not 3 cm: the ceiling in our criteria comes from EASL-ILCA, OPTN and ILTS-ILCA, and inside this series it rests on a 6-patient subgroup of single 2.1–3 cm, not poorly differentiated tumours whose 5-year survival was 61%. It required no period of disease stability on therapy and could not have — the diagnosis was made on the explant, bridging chemoembolisation, ablation or ethanol injection was permitted but was not a selection test, and 7 of the 15 (47%) were incidental findings after transplant for decompensated cirrhosis. And it excluded mixed hepatocellular-cholangiocarcinoma within a nodule outright, analysing the 33 explants with separate iCCA and hepatocellular nodules as a separate group outside the 48-patient study population, so it reports no outcome at all for the mixed tumours our gate criteria admit. The wider literature is no firmer: a 2020 meta-analysis of 18 studies and 355 patients gave pooled 5-year survival of 42% and pooled recurrence 43%, with 5-year recurrence-free survival 67% for single tumours of 2 cm or less versus 34% for more advanced disease, and a propensity-matched National Cancer Database comparison found transplant and resection within a few percentage points of each other at 5 years — whose authors argued resection should remain preferred for localised iCCA."
         }
       ],
       "alt": [
@@ -1095,13 +1101,15 @@
               "flags": [
                 "REGISTRY"
               ],
-              "when": "Biopsy-proven, unresectable, solitary iCCA or mixed HCC-iCCA of 3 cm or less, in cirrhosis, after 6 months of stability on locoregional or systemic therapy, scored at MMaT-3.",
+              "when": "Biopsy-proven, unresectable, solitary iCCA or mixed HCC-iCCA of 3 cm or less, in cirrhosis, after a period of observed radiographic stability, scored at MMaT-3. Note that ILTS-ILCA attaches no duration to that period for the cirrhotic ≤3 cm phenotype; the six-month figure in our criteria comes from its separate, weakly graded route for non-cirrhotic locally advanced disease and from the prospective protocol below.",
               "pref": "The route both documents describe; OPTN 2025 gives the review board defined criteria and ILTS-ILCA 2024 reports broad community agreement on the cirrhotic ≤3 cm phenotype.",
-              "avoid": "Every iCCA recommendation in the ILTS-ILCA consensus rests on low or moderate evidence and is graded weak or moderate, and the 3 cm threshold is carried forward from a small retrospective series of explant-discovered tumours — the single-centre series behind it span 5-year survival of 25–73%.",
+              "avoid": "Every iCCA recommendation in the ILTS-ILCA consensus rests on low or moderate evidence and is graded weak or moderate, and the 3 cm threshold is carried forward from a small retrospective series of explant-discovered tumours whose own cut-off was 2 cm — the single-centre series behind it span 5-year survival of 25–73%. EASL-ILCA concedes the 3 cm figure is more permissive than the 2 cm cut-off used in the series and trials it cites, and ILTS-ILCA notes the ceiling mirrors the June 2024 OPTN review-board criteria rather than any new data. The consensus also recommends nothing on allocation priority or acceptable waitlist dropout, which makes the criterion hard to act on where iCCA earns no priority.",
               "refs": [
                 "optnguid",
                 "42312290",
-                "27481548"
+                "40014003",
+                "27481548",
+                "37084797"
               ]
             },
             {
@@ -1113,7 +1121,7 @@
               ],
               "when": "The prospective Houston Methodist–MD Anderson protocol: 21 patients referred, 12 listed, 6 transplanted after a mandatory 6 months of radiographic stability on gemcitabine-based therapy. Post-transplant survival 100% at 1 year and 83.3% at 3 and 5 years, but recurrence-free survival 50% at 1, 3 and 5 years.",
               "pref": "This is the only prospective experience in locally advanced disease, and it is where the 6-month stability requirement in the OPTN biology clock comes from.",
-              "avoid": "Six patients, no control arm, median cumulative tumour diameter 14.2 cm with no patient under 5 cm, and 3 of 6 recurred at a median of 7.6 months. Two of the six had stable extrahepatic lesions before transplant that proved to be metastases. Half the grafts were extended-criteria livers refused by every other centre, so the approach is not reproducible where such organs are not available. ILTS-ILCA confines non-cirrhotic locally advanced disease to investigational protocols with a weak recommendation.",
+              "avoid": "Six patients, no control arm, no power calculation and no trial registration — it was run as a centre policy. Median cumulative tumour diameter was 14.2 cm with no patient under 5 cm, and 3 of 6 recurred at a median of 7.6 months. Two of the six had stable extrahepatic lesions before transplant that proved to be metastases and a third recurred after perihilar fat invasion found only on explant, so the authors concede more aggressive pre-transplant sampling is needed. Only 9 patients were listed in 6 years, so the strategy reaches a very small fraction of referrals. Selecting for 6 months of chemotherapy stability may itself be selecting indolent biology, and without a comparator it cannot be known whether these patients would have done as well on continued chemotherapy. Half the grafts were extended-criteria livers refused by every other centre — used because no MELD exception existed at the time — so the approach is not reproducible where such organs are not available. ILTS-ILCA confines non-cirrhotic locally advanced disease to investigational protocols with a weak recommendation.",
               "refs": [
                 "29548617",
                 "34859465",
@@ -1145,8 +1153,8 @@
             "mhroadmap",
             "27481548"
           ],
-          "pref": "The eligible phenotype is narrow and explicit — solitary, 3 cm or less, cirrhosis, treated, six months stable.",
-          "avoid": "In the explant series, larger or multifocal tumours recurred in 61% by 5 years with 45% survival. A broader resection or systemic-treatment population must not be treated as exception-eligible."
+          "pref": "The eligible phenotype is narrow and explicit — solitary, 3 cm or less, cirrhosis, treated, six months stable — but say where each limb comes from: the size ceiling and the stability requirement are guideline and review-board criteria, not findings of the explant series, whose own cut-off was 2 cm and which required no stability at all.",
+          "avoid": "In the explant series, larger or multifocal tumours recurred in 61% by 5 years with 45% survival, and the crude recurrence split was 2 of 15 versus 18 of 33. A broader resection or systemic-treatment population must not be treated as exception-eligible."
         },
         {
           "t": "Do not treat mixed hepatocellular-cholangiocarcinoma as eligible for the hepatocellular carcinoma exception pathway.",
@@ -1155,10 +1163,12 @@
           "refs": [
             "mhroadmap",
             "optnguid",
-            "42312290"
+            "42312290",
+            "27481548",
+            "34859465"
           ],
           "pref": "Treat it as biliary disease for transplant purposes unless a protocol states otherwise, and flag it to the transplant team explicitly; OPTN 2025 routes mixed HCC-iCCA through the same nonstandard request as iCCA.",
-          "avoid": "ILTS-ILCA makes biopsy mandatory partly to exclude a mixed tumour, and reviews note that pooling mixed tumours with pure iCCA can make survival and recurrence look falsely favourable when the dominant phenotype is hepatocellular."
+          "avoid": "ILTS-ILCA makes biopsy mandatory partly to exclude a mixed tumour, and reviews note that pooling mixed tumours with pure iCCA can make survival and recurrence look falsely favourable when the dominant phenotype is hepatocellular. The index explant series excluded mixed tumours within a nodule entirely, so there is no transplant outcome dataset for this phenotype to argue from in either direction."
         }
       ]
     }
@@ -1305,51 +1315,296 @@
   "honest": [
     {
       "t": "Where the tumour obstructs the biliary tree, the need for drainage, its route and its side are decided with the hepatobiliary surgeon before any non-emergency procedure, particularly when a major hepatectomy is contemplated. Cholangitis is drained without waiting for that discussion.",
-      "why": "Standard, grade D. No comparative outcome data were identified for intrahepatic disease. The reasoning is mechanical rather than empirical: stent-related inflammation distorts the ductal extent that decides whether biliary resection and reconstruction are needed, and drainage of the wrong side adds cholangitis risk and delay."
+      "why": "Standard, grade D. No comparative outcome data were identified for intrahepatic disease. The reasoning is mechanical rather than empirical: stent-related inflammation distorts the ductal extent that decides whether biliary resection and reconstruction are needed, and drainage of the wrong side adds cholangitis risk and delay.",
+      "refs": [
+        "nccn",
+        "37770126"
+      ]
     },
     {
-      "t": "Metastatic adenocarcinoma can be histologically indistinguishable. Colonoscopy, age-appropriate breast imaging, and a CK7/CK20/CDX2-type panel as indicated before committing to this pathway.",
-      "why": "Grade D. The justification is that treating a colorectal or pancreatic metastasis as intrahepatic cholangiocarcinoma is a recognised and consequential error, not that any study shows this work-up changes outcomes."
-    },
-    {
-      "t": "Record tumour number and size, vascular involvement, biliary involvement, regional nodal status, extrahepatic sites, ECOG performance status, Child-Pugh and bilirubin, CA 19-9 and CEA, and hepatitis serology.",
-      "why": "Grade D. A documentation standard the programme has chosen so that resectability, candidacy and the registry can be audited; no comparative outcome evidence supports the particular list."
+      "t": "Exclude another primary before committing to this pathway, and record the entry dataset: tumour number and size, vascular and biliary involvement, regional nodal status, extrahepatic sites, ECOG, Child-Pugh and bilirubin, CA 19-9 and CEA, hepatitis serology.",
+      "why": "Both are grade D. The work-up justification is that metastatic adenocarcinoma can be histologically indistinguishable from intrahepatic cholangiocarcinoma and that treating a colorectal or pancreatic metastasis as iCCA is a recognised and consequential error — not that any study shows colonoscopy, age-appropriate breast imaging or a CK7/CK20/CDX2-type panel changes outcomes. The recorded dataset is a documentation standard the programme has chosen so that resectability, candidacy and the registry can be audited; no comparative outcome evidence supports the particular list. CA 19-9 and CEA are baseline and monitoring tests and never establish the diagnosis, and AASLD 2023 states explicitly that an elevated CA 19-9 alone must not be used to diagnose cholangiocarcinoma.",
+      "refs": [
+        "mhroadmap",
+        "37770126",
+        "36083140",
+        "35978598"
+      ]
     },
     {
       "t": "Match treatment to the alteration class reported, not to the gene name; other alterations in the same genes are not interchangeable and should be reviewed with a clinician experienced in molecular oncology before a matched agent is chosen.",
-      "why": "Standard, grade D. Locally reasonable and consistent with how the trials selected patients, but it is a consensus rule: no comparative data establish what happens when a non-canonical alteration is treated with a matched agent."
-    },
-    {
-      "t": "Clinical trial eligibility is checked at diagnosis and at each progression.",
-      "why": "Standard, grade D. Local operating policy. It is defensible in a disease where most of the molecularly matched evidence is single-arm, but no study shows that systematic eligibility checking improves outcome."
+      "why": "Standard, grade D. Locally reasonable and consistent with how the trials selected patients, but it is a consensus rule: no comparative data establish what happens when a non-canonical alteration is treated with a matched agent.",
+      "refs": [
+        "39864891",
+        "38838500",
+        "32203698"
+      ]
     },
     {
       "t": "Reassessment intervals: systemic therapy every 8–12 weeks by RECIST 1.1 with CA 19-9 as a supporting trend only; after resection every 3–6 months for 2 years then less frequently; after liver-directed therapy at 8–12 weeks allowing for the delayed response pattern; conversion intent at the pre-declared 2–3 month point, by formal surgical re-review rather than an imaging report alone.",
-      "why": "The response-assessment framework in this disease is expert consensus, not randomised evidence — grade C to D. NCCN states there are no data to support a specific surveillance schedule. Whether post-resection imaging should be fixed at 3-monthly, given that most recurrences are intrahepatic and some are re-resectable, or 6-monthly as most UK centres practise, is a ratification item (alignment worksheet, area 16)."
+      "why": "The response-assessment framework in this disease is expert consensus, not randomised evidence — grade C to D. NCCN states there are no data to support a specific surveillance schedule. Whether post-resection imaging should be fixed at 3-monthly, given that most recurrences are intrahepatic and some are re-resectable, or 6-monthly as most UK centres practise, is a ratification item (alignment worksheet, area 16).",
+      "refs": [
+        "nccn",
+        "37770126",
+        "31670746"
+      ]
     },
     {
       "t": "Biliary function is monitored alongside the disease: liver biochemistry at each assessment, and every patient with a biliary stent has a defined route for early detection of blockage. New jaundice, a rising bilirubin or cholangitis is evaluated promptly and does not wait for the next scheduled scan.",
-      "why": "Standard, grade D. Supported only indirectly — BSG 2023 attributes the better-than-expected survival of the ABC-06 active-symptom-control arm to proactive treatment of biliary obstruction and infection."
+      "why": "Standard, grade D. Supported only indirectly — BSG 2023 attributes the better-than-expected survival of the ABC-06 active-symptom-control arm to proactive treatment of biliary obstruction and infection.",
+      "refs": [
+        "37770126",
+        "33798493"
+      ]
     },
     {
-      "t": "The tumour board operating model: submission form, triage, stable agenda, urgent lane, required attendance, imaging reviewed rather than described, pathology pre-alerted, one recommendation with one owner and one reassessment date, documentation within one business day, registry closure.",
-      "why": "These are stakeholder-derived operating requirements, reproduced unchanged across every disease roadmap so the programme has one operating standard rather than five. They are evidence grade D by construction — local policy choices with no comparative outcome evidence — and are labelled Standard because the programme has chosen them, not because trials support them. Audit them for adherence, not for effectiveness."
+      "t": "The tumour board operating model, and the standing rule that trial eligibility is checked at diagnosis and at each progression.",
+      "why": "These are stakeholder-derived operating requirements, reproduced unchanged across every disease roadmap so the programme has one operating standard rather than five: submission form, triage, stable agenda, urgent lane, required attendance, imaging reviewed rather than described, pathology pre-alerted, one recommendation with one owner and one reassessment date, documentation within one business day, registry closure. The trial-eligibility rule belongs to the same class. All are evidence grade D by construction — local policy choices with no comparative outcome evidence — and are labelled Standard because the programme has chosen them, not because trials support them. The eligibility rule is defensible in a disease where most of the molecularly matched evidence is single-arm, but no study shows that systematic eligibility checking improves outcome. Audit them for adherence, not for effectiveness.",
+      "refs": [
+        "mhroadmap"
+      ]
     },
     {
-      "t": "Thresholds barring each liver-directed modality by liver function.",
-      "why": "No comparative data define the cut-offs; they are safety conventions. Unresolved decision 6, audited through decompensation after liver-directed therapy."
+      "t": "Thresholds barring each liver-directed modality by liver function, and the order in which the modalities are listed.",
+      "why": "No comparative data define the cut-offs; they are safety conventions. The one hard stop that does come from data is cirrhosis before radioembolisation with chemotherapy, where hepatic failure occurred in 9 of 12 cirrhotic patients (75%), irreversible in 5, against 5 of 29 (17%) without cirrhosis, all reversible — and every irreversible case had whole-liver treatment. Everything else, including the liver-function limits for ablation and for ablative radiotherapy, is convention. Unresolved decision 6, audited through decompensation after liver-directed therapy. The order itself carries no claim either. No randomised trial compares any two of hepatic arterial infusion, radioembolisation, chemoembolisation, ablative radiotherapy and thermal ablation in this disease, and none has been tested against a modern systemic backbone, so the sequence on the page reproduces the roadmap's table and the depth of each dataset rather than a hierarchy of evidence. Selection runs on treatment goal, target geometry, liver reserve and what the institution can deliver, and an upfront alternative chosen for anatomy or reserve is not a post-progression second line. Unresolved decisions 2, 6 and 7.",
+      "refs": [
+        "mhroadmap",
+        "31670746",
+        "26668346",
+        "31670750",
+        "21425151",
+        "34347159"
+      ]
     },
     {
       "t": "Retain the local requirement for a formally approved trial or prospective registry protocol and expert transplant-oncology selection before any transplantation for known intrahepatic cholangiocarcinoma.",
-      "why": "This is an additional institutional restriction, not an evidence finding. OPTN 2025 guidance and ILTS-ILCA 2024 both describe a route for cirrhotic, unresectable, biopsy-proven tumours of 3 cm or less after six months of stability; the roadmap declines to open it outside a protocol because graft stewardship is an institutional judgement, not an evidence question. Unresolved decision 5."
+      "why": "This is an additional institutional restriction, not an evidence finding. OPTN 2025 guidance and ILTS-ILCA 2024 both describe a route for cirrhotic, unresectable, biopsy-proven tumours of 3 cm or less after six months of stability; the roadmap declines to open it outside a protocol because graft stewardship is an institutional judgement, not an evidence question. Unresolved decision 5. What cannot honestly be given alongside it is an expected outcome. The published 5-year figures in iCCA span 25–73% overall survival and 29–82% recurrence-free survival, almost entirely from single-centre retrospective series, a range the ILTS-ILCA panel itself calls too wide to support a selection rule; almost every series describes iCCA found incidentally or misdiagnosed as hepatocellular carcinoma, so none is an intention-to-treat result and waitlist dropout for progression is unmeasured. A propensity-matched National Cancer Database comparison put transplant and resection within a few percentage points of each other at 5 years, and its authors argued resection should remain preferred for localised disease.",
+      "refs": [
+        "optnguid",
+        "42312290",
+        "40014003",
+        "36083140",
+        "37770126",
+        "34859465"
+      ]
     },
     {
       "t": "If intrahepatic cholangiocarcinoma is found in an explant removed for another indication, enter the patient into structured surveillance and the registry; immunosuppression minimisation and adjuvant therapy are individualised.",
-      "why": "Local policy. There is no comparative evidence for either immunosuppression minimisation or adjuvant therapy in this situation, and the published outcomes describe exactly this incidentally diagnosed population rather than a selected one."
+      "why": "Local policy. There is no comparative evidence for either immunosuppression minimisation or adjuvant therapy in this situation, and the published outcomes describe exactly this incidentally diagnosed population rather than a selected one.",
+      "refs": [
+        "27481548",
+        "34859465"
+      ]
     },
     {
       "t": "Mixed hepatocellular-cholangiocarcinoma is out of scope for the hepatocellular carcinoma exception pathway: treat it as biliary disease for transplant purposes unless a protocol states otherwise, and flag it to the transplant team explicitly.",
-      "why": "Local policy, concordant with OPTN 2025, which routes mixed tumours through the same nonstandard request as iCCA. The supporting outcome literature often pools mixed tumours with pure iCCA, which can make survival and recurrence look falsely favourable when the dominant phenotype is hepatocellular."
+      "why": "Local policy, concordant with OPTN 2025, which routes mixed tumours through the same nonstandard request as iCCA, and with ILTS-ILCA 2024, which makes biopsy mandatory partly to exclude a mixed tumour. What is not known is how these patients do after transplantation. The index explant series excluded mixed tumours within a nodule outright and analysed the 33 explants with separate iCCA and hepatocellular nodules as a group outside its 48-patient study population, so it reports no outcome for them; the wider review literature notes that pooling mixed tumours with pure iCCA can make survival and recurrence look falsely favourable when the dominant phenotype is hepatocellular. The policy is therefore a precaution against an unquantified risk, not a reading of a dataset.",
+      "refs": [
+        "optnguid",
+        "42312290",
+        "27481548",
+        "34859465"
+      ]
+    },
+    {
+      "t": "Adjuvant capecitabine after resection of intrahepatic cholangiocarcinoma.",
+      "why": "BILCAP did not meet its primary endpoint. Intention-to-treat median overall survival was 51.1 versus 36.4 months with an adjusted hazard ratio of 0.81 (95% CI 0.63–1.04), p=0.097; significance appeared only in a prespecified sensitivity analysis adjusted for nodal status, grade and sex (0.71, 0.55–0.92) and in the per-protocol analysis (0.75, 0.58–0.97), in an unmasked trial whose analysis plan was not fully defined at the outset. Intrahepatic patients were 84 of 447 (19%) and the trial was not powered for site-specific effects, so no iCCA-specific benefit has been shown. The two guideline readings of that subgroup contradict each other — LCSGJ 2022 reports no significant benefit, EASL-ILCA cites a hazard ratio of 0.65 as the best of the subtypes — and they are not two datasets but two readings of one unpowered subgroup of a negative trial. What is actually known is that recurrence was deferred rather than prevented (no difference in recurrence-free survival from 24 to 60 months) and that 44% of treated patients had a grade 3 event, 32% stopped for toxicity and 55% finished all eight cycles. ACTICCA-1 has not reported. Our label is Reasonable consideration, grade C, and the conversation is the deliverable.",
+      "refs": [
+        "30922733",
+        "35978598",
+        "37084797",
+        "37770126",
+        "nccn"
+      ]
+    },
+    {
+      "t": "The 3 cm tumour ceiling for a transplant referral.",
+      "why": "No study derived it. The series our page cites studied single tumours of 2 cm or less; EASL-ILCA concedes its own 3 cm figure is more permissive than the 2 cm cut-off used in the series and trials it cites, and ILTS-ILCA 2024 notes its ceiling mirrors the June 2024 OPTN review-board criteria rather than new data. Inside the index series the 2.1–3 cm band rests on 6 patients — single, not poorly differentiated tumours, 5-year survival 61%. A threshold nobody derived should be stated as a referral convention that the review board and the guidelines share, not as a size at which biology changes.",
+      "refs": [
+        "27481548",
+        "37084797",
+        "42312290",
+        "40014003",
+        "optnguid"
+      ]
+    },
+    {
+      "t": "Six months from diagnosis or last treatment with tumour stability, as a transplant criterion.",
+      "why": "The clock does not come from the evidence for the phenotype it is applied to. The explant series required no period of stability and could not have, because the diagnosis was made on the explant; bridging chemoembolisation, ablation or ethanol injection was permitted but was not a selection test, and 7 of its 15 very early patients (47%) were incidental findings after transplant for decompensated cirrhosis. ILTS-ILCA 2024 attaches no duration at all to the cirrhotic ≤3 cm recommendation — only 'a period of observation showing stability'. The six-month figure comes from its separate, weakly graded route for non-cirrhotic locally advanced disease and from the prospective Houston Methodist–MD Anderson protocol, where 6 months of radiographic stability on gemcitabine-based therapy was mandatory. Keeping it is defensible as a biology test; what is not known is whether six months is the right length, and the protocol's own authors concede that selecting for stability may simply be selecting indolent biology.",
+      "refs": [
+        "27481548",
+        "29548617",
+        "42312290",
+        "40014003",
+        "optnguid"
+      ]
+    },
+    {
+      "t": "First-line chemo-immunotherapy: the grade it carries in gate 5, and the choice between the two agents.",
+      "why": "Graded B here rather than A, because the trials that establish the regimen did not study this population. TOPAZ-1 was 86% metastatic and KEYNOTE-966 89%, both ECOG 0–1, and the TOPAZ-1 investigators state that the trial says nothing about neoadjuvant, downstaging or peri-transplant use in liver-confined disease — which is exactly where the regimen is now borrowed. The absolute gains in the trials as run are 1.3 and 1.8 months of median survival, TOPAZ-1's proportional-hazards assumption was formally violated and it was reported at a prespecified interim analysis, and KEYNOTE-966 missed its prespecified boundaries for both progression-free survival and response. Grade A remains right for gate 9. The choice between them is not an evidence finding either. There is no randomised comparison; ESMO declares the two interchangeable on an indirect comparison across trials differing in chemotherapy duration (gemcitabine capped at eight cycles in TOPAZ-1, continued to progression in KEYNOTE-966), geography and size, and states that no clinical, biochemical or molecular biomarker favours one. Neither trial found a predictive biomarker: benefit did not track PD-L1 in either, MSI status was missing for about half of TOPAZ-1 and only 10 KEYNOTE-966 patients were MSI-high. Present the choice as toxicity profile, schedule and access.",
+      "refs": [
+        "38319896",
+        "37075781",
+        "37084797",
+        "39864891"
+      ]
+    },
+    {
+      "t": "The matched targeted agents in gate 2, as a group.",
+      "why": "Only one of them comes from a randomised trial, and that trial was negative on intention-to-treat overall survival. ClarIDHy met progression-free survival (2.7 versus 1.4 months, hazard ratio 0.37) but final intention-to-treat survival was 10.3 versus 7.5 months, hazard ratio 0.79 (0.56–1.12), p=0.09, with 70% crossover; the frequently quoted 0.49 comes from a crossover-adjustment model that assumes the drug's effect is identical whenever given. Pemigatinib, futibatinib, zanidatamab and dabrafenib–trametinib are single-arm, all approved on single-arm data, and none has been compared with second-line chemotherapy; the pemigatinib investigators explicitly warn against the cross-study comparison with pooled second-line chemotherapy that makes their agent look better, since FGFR2-fusion disease itself carries longer survival from diagnosis. Every one is industry-sponsored with sponsor involvement in design, analysis and writing. What is known is response rate and duration in a selected population; what is not known is survival against the alternative. A related choice sits on the same table: our rows require that HER2, NTRK and RET findings be captured but do not name trastuzumab deruxtecan, entrectinib, larotrectinib or selpercatinib, which ESMO 2024 recommends on level III grade A. The reason to hesitate is assay definition and evidence level rather than availability — ESMO concedes there are no standardised criteria for assessing HER2 status in biliary tract cancer and that no specific test can be recommended, while making two HER2-directed recommendations that depend on that undefined assay, and zanidatamab's own data are reported for biliary tract cancer as a whole with no breakdown by subsite. Alignment worksheet, area 14.",
+      "refs": [
+        "34554208",
+        "32416072",
+        "38838500",
+        "36652354",
+        "41264278",
+        "32818466",
+        "39864891"
+      ]
+    },
+    {
+      "t": "Hepatic arterial infusion as the strongest regional option.",
+      "why": "The phase 2 evidence is 38 treated patients at one institution, selected from 84 screened, with the comparison drawn from historical systemic series; the linked editorial judged the case for locoregional therapy in unresectable cholangiocarcinoma still unsettled without a randomised trial, and the authors themselves called for one. The retrospective comparison that gives 30.8 versus 18.4 months had all HAI patients surgically staged against 42% of a 26-patient comparator of whom only 30% received gemcitabine–cisplatin, so stage migration favours HAI; 44 of its 93 HAI patients came from earlier phase 2 trials, and it reports no pump complication or biliary toxicity rate at all. Conversion to curative-intent resection occurred in 8 of 236 patients (3%). Delivery is harder than the figures suggest: 71% received the expected floxuridine dose over the first 3 months and 47% over the next 6, and grade 4 pump or arterial complications forced withdrawal in 11% of the lead-centre cohort and 30% of the 10-patient confirmatory cohort. The deciding variables for the programme are pump expertise, nursing infrastructure and case volume, not the evidence.",
+      "refs": [
+        "31670750",
+        "26695839",
+        "nccn"
+      ]
+    },
+    {
+      "t": "Y90 radioembolisation as a conversion strategy.",
+      "why": "One single-arm phase 2 of 41 patients, run only at centres experienced with glass microspheres and part-funded by the microsphere manufacturer, with several authors as its consultants. Its 22% downstaging and 20% R0 rates describe a doubly selected cohort: 4 of 45 patients were excluded at the planning angiogram and 9 of 41 had major protocol deviations, leaving 32 per protocol. The authors state tumour-absorbed dose rather than a generic liver dose probably drives outcome, so the regimen does not transfer as written, and grade 3–4 toxicity affected 71%. Two patients whose disease stayed unresectable but controlled were offered transplant and both recurred, at 16 and 17 months. The confirmatory randomised SIRCCA trial has not reported.",
+      "refs": [
+        "31670746",
+        "nccn"
+      ]
+    },
+    {
+      "t": "Ablative radiotherapy doses, and the 80.5 Gy figure.",
+      "why": "It is an association in a retrospective single-centre series of 79 patients in which only 19 received the high dose. Those 19 also had significantly smaller planning target volumes (median 415 versus 614 cm³, p=0.02), and the high doses arrived with breath-hold gating and daily diagnostic-quality CT image guidance after 2010, so anatomy, technique and era are all confounded with dose — patients treated after 2010 survived 50 versus 24 months. The prospective proton data are a safety and local-control signal, not a survival finding: the 39-patient iCCA cohort had no prespecified efficacy hypothesis, median delivered dose was 58.0 GyE against an intended 67.5, every local failure occurred below 60 GyE, local failures kept accruing past 2 years and 53.8% developed distant metastases. The randomised answer was deferred to NRG GI-001, which closed early for poor accrual. Treat the dose as a planning aspiration, not a threshold.",
+      "refs": [
+        "26503201",
+        "26668346"
+      ]
+    },
+    {
+      "t": "Thermal ablation as an alternative to resection for a small tumour.",
+      "why": "The cohort that reports parity did not test our rule. Its entry criterion was Milan-equivalent — a single tumour up to 5 cm, or up to three each 3 cm or less — not the under-3 cm wording the page uses, and within it a 3–5 cm tumour was an independent risk factor for disease-free survival after ablation but not after resection. The equivalence headline comes from a post hoc split at 2017, where the later comparison was underpowered (p=0.129), and a nonsignificant difference is not equivalence; margin was measured by post-ablation CT or MR in one arm and on the specimen in the other, which the authors accept may bias the mediation result their conclusion rests on. Resection still outperformed ablation in patients under 60, with hepatolithiasis, with left-lobe tumours and with GGT above 50 U/L. The pooled meta-analysis behind the under-3 cm limit is 20 retrospective studies with I² up to 85%, publication bias on 3-year survival (Egger p=0.039), a dichotomised size variable and no individual patient data; pooled recurrence-free survival was 40.0% at 1 year and 19.2% at 3. The structural problem for a surgeon is different: ablation yields no specimen and no nodal dissection, so there is no pathological node status to drive the gate 8 decision, and node-negativity rests on imaging whose sensitivity for nodal metastasis is 20–61%.",
+      "refs": [
+        "38261915",
+        "34347159",
+        "41528222",
+        "37084797",
+        "nccn"
+      ]
+    },
+    {
+      "t": "Routine regional lymphadenectomy at every iCCA resection.",
+      "why": "No guideline recommends it on evidence of survival benefit. LCSGJ 2022 makes no recommendation on node dissection at all and warns that prophylactic dissection in cirrhosis increases complications; ESMO 2023 recommends routine hepatoduodenal-ligament dissection on level IV evidence; BSG 2023 says nothing about extent or node yield, which its own critics identify as a gap given that the adjuvant recommendation it then makes turns on nodal status; AASLD 2023 likewise makes no statement. Keeping it in every operation is a staging decision the programme has made so that the adjuvant conversation and the registry have a denominator, not a survival finding. Unresolved; audit the node yield, not the outcome.",
+      "refs": [
+        "35978598",
+        "36372281",
+        "37770126",
+        "36083140"
+      ]
+    },
+    {
+      "t": "Two resectability criteria this page states but does not define: the regional nodal basin, and the liver-reserve limit.",
+      "why": "The basin is not defined in this version. AASLD 2023 draws the boundary at nodal metastasis beyond the hepatoduodenal and gastrohepatic ligaments and NCCN at beyond the porta hepatis; an undefined basin cannot be audited and two surgeons can reach opposite conclusions on the same scan. Clinical nodal staging is also insensitive here — reported sensitivity for nodal metastasis is 20–61% — so the criterion is applied to an uncertain input. On the other side the roadmap is silent on portal hypertension, while AASLD 2023 names decompensated cirrhosis and portal hypertension as contraindications to resection and LCSGJ 2022 builds its whole algorithm on Child-Pugh class, sending Child-Pugh C to palliative care. No comparative data define numeric reserve thresholds in iCCA, so any local rule is a safety convention, which is why it stays specialty-approved local implementation rather than being asserted here. Alignment worksheet, areas 3 and 4.",
+      "refs": [
+        "36083140",
+        "nccn",
+        "35978598",
+        "38261915"
+      ]
+    },
+    {
+      "t": "Conversion therapy with a declared reassessment, and the rates quoted for it.",
+      "why": "The 36.4% and 53% conversion rates are retrospective Japanese series quoted by LCSGJ 2022, which in the same document records no evidence of benefit for neoadjuvant chemotherapy and makes no recommendation; the denominators are not defined and those series report median survival of 24.1 months in converted patients against 25.7 months in those primarily resectable. AASLD 2023 states the role of neoadjuvant downstaging is not well defined and BSG 2023 does not recommend routine neoadjuvant chemotherapy. Neither modern chemo-immunotherapy trial supports downstaging, since both were almost entirely metastatic. The prospective conversion numbers that do exist are small: 9 of 41 downstaged and 8 resected with Y90 plus chemotherapy, 4 of 38 with hepatic arterial infusion. What is defensible is the discipline — record the obstacle to R0, declare the reassessment date, hold a formal surgical re-review — not a conversion rate.",
+      "refs": [
+        "35978598",
+        "36083140",
+        "37770126",
+        "31670746",
+        "31670750"
+      ]
+    },
+    {
+      "t": "Ordering broad molecular profiling at diagnosis rather than at progression.",
+      "why": "The argument is operational, not biological, and no study shows that ordering earlier improves outcome. What supports it is turnaround of two to four weeks against a second-line decision that cannot wait, plus the screening arithmetic: 783 patients screened to enrol 103 in FOENIX-CCA2, 1,206 prescreened to find 107 fusion-positive patients for FIGHT-202, and a BRAF V600E yield reported at 9% but nearer 5–7% in practice because sites entered known positives. Our grade B is lower than ESMO's level I grade A and BSG's strong recommendation on high-quality evidence; the obstacle in practice is payer authorisation and ordering discipline, which is why this is audited as a proportion rather than asserted as a standard. The plasma alternative is weaker than its headline figure suggests: the 87% quoted for plasma detection of an FGFR2 fusion comes from 83 of 95 FOENIX-CCA2 patients already known to be tissue-positive, so it measures concordance in a positive population, not the chance of finding a target de novo. No study in this disease reports the latter, and BSG 2023 notes DNA-based panels and most liquid biopsies are weaker at detecting fusions, so a negative plasma result in a patient whose management would change should prompt tissue testing rather than closing the question.",
+      "refs": [
+        "39864891",
+        "37770126",
+        "36652354",
+        "32203698",
+        "32818466"
+      ]
+    },
+    {
+      "t": "Sequencing a dedicated biliary specimen at ERCP, and reusing it for the gate 2 profile.",
+      "why": "The accuracy data are strong on their own terms — 82% sensitivity at 98% specificity against 44% for pathology, 36% for intrahepatic or hilar strictures — but they come from a cohort whose specimens were submitted at the endoscopist's discretion rather than consecutively, where a stricture could be called neoplastic on 12 months of clinical or radiographic progression rather than on tissue, and where all testing was done in the laboratory that developed the assay. Reuse for gate 2 depends entirely on which panel version is run: the 28-gene version used in the original cohort did not detect FGFR2 fusions, which with chromatin-remodelling genes accounts for up to 20% of intrahepatic tumours, while the 161-gene version reports fusions and found actionable alterations in 137 of 458 cholangiocarcinomas (30%). A negative result excludes nothing — negative predictive value in the original cohort was 63%. Downgraded to C for those reasons.",
+      "refs": [
+        "41905432",
+        "30971436"
+      ]
+    },
+    {
+      "t": "Not substituting liver-directed therapy for systemic therapy (gate 5, Avoid).",
+      "why": "This is the one place the roadmap knowingly disagrees with NCCN, whose wording that arterially directed therapies may be used alone can be read as permitting substitution. The position is supported by AASLD 2023, which states data are insufficient to recommend liver-directed therapy as standard therapy for locally advanced unresectable iCCA, and by the absence of any trial of any catheter or radiation modality against a modern chemo-immunotherapy backbone — none of the HAI, Y90, chemoembolisation, ablation or radiotherapy datasets has such a comparator. It is therefore a position taken in the absence of evidence either way, and it is put to a decision rather than asserted. Alignment worksheet, area 9.",
+      "refs": [
+        "36083140",
+        "nccn",
+        "mhalign",
+        "31670750",
+        "31670746"
+      ]
+    },
+    {
+      "t": "Adjuvant chemoradiotherapy after an R1 or node-positive resection.",
+      "why": "In intrahepatic disease the support is retrospective only. BSG 2023 confines its chemoradiotherapy recommendation after an R1 resection to extrahepatic cholangiocarcinoma and gallbladder cancer, and ESMO 2023 states that definitive external beam radiotherapy or chemoradiotherapy for locally advanced cholangiocarcinoma should not be used outside trials. Keeping it as a case-by-case tumour-board discussion rather than a standing rule is the honest position; what is not known is whether it changes anything in iCCA. Alignment worksheet, area 11.",
+      "refs": [
+        "mhalign",
+        "37770126",
+        "36372281"
+      ]
+    },
+    {
+      "t": "Negative adjuvant trials cannot be quoted as evidence that adjuvant therapy is futile.",
+      "why": "PRODIGE-12 was powered for a hazard ratio of 0.60 on 126 events, its medians fell on a plateau of the curves, and salvage differed sharply by arm (40 of 41 surveillance relapses received gemcitabine-based salvage against 9 of 33 after GEMOX), in a population lower-risk than BILCAP's; it is a failed superiority trial for one regimen. BCAT stopped at 226 of a planned 300 because patients wanted adjuvant chemotherapy, and its authors calculate only a 2.8% probability of reaching significance even with the planned events — and it excluded intrahepatic disease outright. ASCOT was positive on overall survival but its relapse-free survival endpoint did not reach significance (hazard ratio 0.80, p=0.088) with curves crossing at 6 years, it was analysed at 179 of 285 prespecified events, and S-1 is unavailable outside Asia. Three negative or inapplicable trials do not add up to a demonstration that nothing works, and they do not settle gate 8 either way.",
+      "refs": [
+        "30707660",
+        "29405274",
+        "36681415",
+        "30922733"
+      ]
+    },
+    {
+      "t": "Histotripsy for intrahepatic cholangiocarcinoma.",
+      "why": "There is no tumour-specific evidence in this disease at all. The pivotal experience enrolled hepatocellular carcinoma and liver metastases, not iCCA, and in its one-year update local control was 63.4% on the primary assessment against 90% post hoc in 47 patients with 52 tumours. FDA device clearance for tumour destruction establishes neither survival benefit nor equivalence to established ablation. Grade D, protocol and registry only, with explicit consent about oncologic uncertainty.",
+      "refs": [
+        "hope4liver"
+      ]
+    },
+    {
+      "t": "The MMaT-3 exception route, and what it is not.",
+      "why": "The Adult MELD Exceptions for Transplant Oncology document is review-board guidance, not OPTN Policy and not a clinical practice guideline; Policy 9.5 defines the standardised exceptions and intrahepatic cholangiocarcinoma is not among them, so every request goes to the review board as a narrative. MMaT is the median MELD at transplant for the donor hospital used in the match run rather than a fixed national score, an MMaT-relative exception below 15 is assigned 15 under Policy 9.4.E, and extensions generally run in 90-day cycles under 9.4.C. ILTS-ILCA makes no recommendation on allocation priority, exception points or acceptable waitlist dropout, which is what makes the ≤3 cm criterion hard to act on in a system where iCCA earns no priority. Verify the current policy text before any listing decision.",
+      "refs": [
+        "optn",
+        "optnguid",
+        "42312290"
+      ]
+    },
+    {
+      "t": "A core biopsy before resection of a high-suspicion, clearly resectable mass.",
+      "why": "The sources disagree and the page has chosen a destination-specific rule rather than a universal one. AASLD 2023 and BSG 2023 require histological confirmation for a definitive iCCA diagnosis, EASL-ILCA recommends biopsy on level 4 evidence with 96% consensus, LCSGJ 2022 regards biopsy as basically unnecessary for a typical resectable mass and recommends it only in unresectable cases, and NCCN states a suspicious mass in the proper clinical setting should be treated as malignant. ILTS-ILCA makes biopsy mandatory where transplantation is contemplated, to grade differentiation and exclude a mixed tumour. No outcome study compares the two policies in a resectable mass. Alignment worksheet, area 1.",
+      "refs": [
+        "36083140",
+        "37770126",
+        "37084797",
+        "35978598",
+        "nccn",
+        "42312290"
+      ]
     }
   ],
   "ops": {
@@ -1425,6 +1680,42 @@
         "q": "Who owns subsequent NCCN and OPTN update checks, and on what cycle?",
         "why": "Source reconciliation is complete in this version. An owner must be assigned to verify subsequent editions and current allocation requirements, ratify the documented institutional positions, and maintain the update cycle.",
         "audit": "Named owner plus edition and date plus update cycle."
+      },
+      {
+        "n": 9,
+        "q": "Is a core biopsy required before resection of a high-suspicion, clearly resectable mass, or is destination-specific confirmation enough?",
+        "why": "AASLD 2023, BSG 2023 and EASL-ILCA require histological confirmation; LCSGJ 2022 regards biopsy as basically unnecessary for a typical resectable mass; NCCN permits treating a suspicious mass in the proper clinical setting as malignant. No outcome study compares the two policies. Alignment worksheet, area 1.",
+        "audit": "Audit: proportion of resections performed without pre-operative histology, and the final pathology in each."
+      },
+      {
+        "n": 10,
+        "q": "Is regional lymphadenectomy mandatory at every iCCA resection, and what minimum node yield is recorded?",
+        "why": "LCSGJ 2022 makes no recommendation and warns that prophylactic dissection in cirrhosis increases complications; ESMO 2023 recommends routine hepatoduodenal-ligament dissection on level IV evidence; BSG 2023 and AASLD 2023 state neither extent nor yield. The gate 8 adjuvant conversation and the registry both need a nodal denominator. Alignment worksheet, area 5.",
+        "audit": "Registry: lymphadenectomy performed, node count, node positivity, and complications attributable to the dissection."
+      },
+      {
+        "n": 11,
+        "q": "What counts as 'a period of stability' before a transplant referral — what duration, on what therapy, and at what imaging interval?",
+        "why": "ILTS-ILCA 2024 attaches no duration to the cirrhotic ≤3 cm recommendation; the six-month figure in our criteria comes from its separate weakly graded non-cirrhotic route and from the Houston Methodist–MD Anderson protocol, whose own authors concede that selecting for stability may be selecting indolent biology. The explant series that supplies our size data required no stability at all.",
+        "audit": "Registry: stability interval achieved, regimen, imaging interval, and waitlist dropout for progression."
+      },
+      {
+        "n": 12,
+        "q": "Does the page name trastuzumab deruxtecan, entrectinib, larotrectinib and selpercatinib, as ESMO 2024 does, or only require that the alterations be captured?",
+        "why": "The ESMO recommendations are level III grade A — single-arm or basket-trial evidence — several agents are FDA- but not EMA-approved, and ESMO itself concedes there are no standardised criteria for HER2 assessment in biliary tract cancer. Alignment worksheet, area 14.",
+        "audit": "Audit: matched agents prescribed, alteration class, assay used and line of therapy."
+      },
+      {
+        "n": 13,
+        "q": "Is there a default first-line checkpoint combination, or does the choice stay with the treating oncologist?",
+        "why": "No randomised comparison exists between durvalumab and pembrolizumab; ESMO's statement that they are interchangeable is an indirect comparison across trials differing in chemotherapy duration, geography and size. The practical differences are the gemcitabine cycle cap, schedule and access, not efficacy. BSG 2023 also treats oxaliplatin substitution in renal impairment and gemcitabine alone in poor performance status as reasonable, which our page leaves unnamed. Alignment worksheet, area 13.",
+        "audit": "Audit: regimen chosen, cycles delivered, any modification and the reason recorded."
+      },
+      {
+        "n": 14,
+        "q": "Post-resection surveillance — 3-monthly or 6-monthly imaging for the first two years?",
+        "why": "NCCN states there are no data supporting a specific surveillance schedule. The argument for 3-monthly is that most recurrences are intrahepatic and some are re-resectable or ablatable; the argument for 6-monthly is that most UK centres practise it and no study shows the shorter interval changes outcome. Alignment worksheet, area 16.",
+        "audit": "Audit: interval actually achieved, recurrence pattern, and proportion of recurrences treated with curative intent."
       }
     ]
   },
@@ -1603,6 +1894,16 @@
       "ESMO BTC 2024 interim",
       "Guidelines & policy",
       "Vogel A, Ducreux M, on behalf of the ESMO Guidelines Committee. ESMO Clinical Practice Guideline interim update on the management of biliary tract cancer. ESMO Open. 2025;10(1):104003. doi:10.1016/j.esmoop.2024.104003. PMID:39864891."
+    ],
+    "40014003": [
+      "ILTS-ILCA 2024 (Liver Transpl)",
+      "Transplant",
+      "Kodali S, Kulik L, D'Alessio A, et al. The 2024 ILTS-ILCA consensus recommendations for liver transplantation for HCC and intrahepatic cholangiocarcinoma. Liver Transpl. 2025;31(6):815-831. doi:10.1097/LVT.0000000000000578. PMID:40014003. The same Valencia consensus as PMID:42312290 (Liver Cancer 2026); both records are cited because the iCCA recommendations and their evidence grades are reported in both."
+    ],
+    "36372281": [
+      "ESMO BTC 2023 guideline",
+      "Guidelines & policy",
+      "Vogel A, Bridgewater J, Edeline J, et al. Biliary tract cancer: ESMO Clinical Practice Guideline for diagnosis, treatment and follow-up. Ann Oncol. 2023;34(2):127-140. doi:10.1016/j.annonc.2022.10.506. PMID:36372281. The parent guideline to the 2024 interim update (PMID:39864891), which covers only molecular diagnostics and advanced disease; the surgical, adjuvant and locoregional recommendations are here."
     ]
   },
   "nonpm": {
@@ -1643,5 +1944,5 @@
       ""
     ]
   },
-  "provenance": "Built from the Memorial Hermann Intrahepatic Cholangiocarcinoma System Roadmap, Draft v0.6 (4 October 2026, including the 3 October 2026 liver-directed treatment revision), and its companion Guideline alignment worksheet of the same date, which compares the roadmap against AASLD 2023, OPTN 2025 review-board guidance, ESMO 2024 interim update, BSG 2023, LCSGJ 2022, ILTS-ILCA 2024 and NCCN Biliary Tract Cancers v1.2026 across 16 areas. Source documents behind those two: NCCN Biliary Tract Cancers v1.2026 (10 March 2026); OPTN Policy 9 (official PDF checked 1 October 2026) and the OPTN Guidance to Liver Transplant Programs and the National Liver Review Board for Adult MELD Exceptions for Transplant Oncology (December 2025); the EASL-ILCA iCCA guideline (2023); and the trial and cohort reports in the reference depot, every citation of which was resolved against PubMed. Evidence strings carry the published numbers and the published criticism from the depot's structured abstracts; where the roadmap's label and the trial's primary endpoint diverge, both are stated and the ratification item is named. The liver-directed therapy matrix is read directly from the shared matrix file and is not reproduced here. This page reproduces a draft pending multidisciplinary approval: it is not active clinical policy, does not replace clinician judgement, and every numeric criterion must be verified against the current source before use."
+  "provenance": "Revised 7 October 2026 (Batch 08) after a full-text read of this page's reference depot: 37 structured abstracts, each carrying the authors' own stated limitations and an independent critique with its sources identified, against which every evidence string on this page was rechecked for the published number, for whether the critique undercuts what the string claims, and for whether the grade still follows. Thirty-three evidence strings changed. Three grades were lowered and the reason is recorded in each note: first-line chemo-immunotherapy in permanently unresectable liver-confined disease from A to B, because TOPAZ-1 and KEYNOTE-966 were 86% and 89% metastatic and say nothing about this population; offering adjuvant capecitabine from B to C, because BILCAP did not meet its intention-to-treat primary endpoint and only 19% of its patients had intrahepatic disease; and sequencing a dedicated biliary specimen at ERCP from B to C, because specimens were submitted non-consecutively, the reference standard allowed clinical and radiographic progression in place of tissue, and all testing was done in the laboratory that developed the assay. The transplant gate was corrected most: the international explant series is now cited only for what it studied — 15 patients with single tumours of 2 cm or less, diagnosed on explant pathology, with mixed hepatocellular-cholangiocarcinoma excluded and no requirement for disease stability on therapy — and the 3 cm ceiling and the six-month stability clock in our criteria are attributed to EASL-ILCA, the OPTN review-board guidance and ILTS-ILCA rather than to that series. The ILTS-ILCA 2024 consensus is published twice and both records are cited (PMID 40014003, Liver Transplantation 2025; PMID 42312290, Liver Cancer 2026); the ESMO 2023 parent guideline (PMID 36372281) is now cited alongside its 2024 interim update, since the update covers only molecular diagnostics and advanced disease and leaves the surgical recommendations to the parent. Every reference the page cites was read in full. Still cited from the source document rather than from a full-text read: NCCN Biliary Tract Cancers v1.2026, OPTN Policy 9 and the OPTN Adult MELD Exceptions for Transplant Oncology guidance (December 2025), the Memorial Hermann roadmap and its alignment worksheet, and the HOPE4LIVER one-year histotripsy update, which in any case enrolled hepatocellular carcinoma and metastases rather than intrahepatic cholangiocarcinoma. Built from the Memorial Hermann Intrahepatic Cholangiocarcinoma System Roadmap, Draft v0.6 (4 October 2026, including the 3 October 2026 liver-directed treatment revision), and its companion Guideline alignment worksheet of the same date, which compares the roadmap against AASLD 2023, OPTN 2025 review-board guidance, ESMO 2024 interim update, BSG 2023, LCSGJ 2022, ILTS-ILCA 2024 and NCCN Biliary Tract Cancers v1.2026 across 16 areas. Evidence strings carry the published numbers and the published criticism; where the roadmap's label and the trial's primary endpoint diverge, both are stated and the ratification item is named. No recommendation was removed because its evidence turned out to be weak; the roadmap's position stands and the page now says how well supported it is. The liver-directed therapy matrix is read directly from the shared matrix file and is not reproduced here. This page reproduces a draft pending multidisciplinary approval: it is not active clinical policy, does not replace clinician judgement, and every numeric criterion must be verified against the current source before use."
 }
