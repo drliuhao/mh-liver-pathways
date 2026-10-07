@@ -625,7 +625,7 @@ function build(){
   KEY = P.key; REF = P.refs || {}; NONPM = P.nonpm || {};
   document.title = "Memorial Hermann " + P.short + " Pathway";
   document.getElementById("brand").innerHTML =
-    `Memorial Hermann ${esc(P.short)} pathway<span>${esc(P.name)} · draft ${esc(P.version)} · Batch 07, 5 October 2026</span>`;
+    `Memorial Hermann ${esc(P.short)} pathway<span>${esc(P.name)} · draft ${esc(P.version)} · ${esc(P.batch || "Batch 07, 5 October 2026")}</span>`;
   document.getElementById("lead").textContent = P.lead;
   document.getElementById("gatelabel").textContent = P.gatelabel;
   document.getElementById("gateintro").innerHTML =
@@ -634,7 +634,7 @@ function build(){
     + "every claim tied to the paper it came from.";
   document.getElementById("statusbar").innerHTML =
     `<span class="chip warn">Draft — not ratified clinical policy</span>
-     <span class="chip">${esc(P.short)} roadmap ${esc(P.version)} · Batch 07</span>
+     <span class="chip">${esc(P.short)} roadmap ${esc(P.version)} · ${esc((P.batch || "Batch 07").split(",")[0])}</span>
      <span class="chip">${P.gates.length} gates · ${Object.keys(REF).length} papers</span>
      <button class="xpand" type="button" id="expandAllSections" data-open="0" style="margin-left:0">Expand all sections</button>`;
   document.getElementById("expandAllSections").addEventListener("click", e=>{
