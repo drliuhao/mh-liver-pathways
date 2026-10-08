@@ -284,6 +284,24 @@ input[type="search"]{font:inherit; font-size:14px; padding:8px 12px; border-radi
   color:var(--teal); background:var(--surface2); white-space:nowrap}
 .lnk:hover{border-color:var(--teal)}
 .ev.hit{border-color:var(--teal); box-shadow:0 0 0 2px var(--teal-soft), var(--shadow)}
+.ev{flex-wrap:wrap}
+.evcrit{flex:1 1 100%; margin-top:2px; border-top:1px solid var(--line2); padding-top:9px}
+.evcrit > summary{cursor:pointer; font-size:12px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+  color:var(--clay); list-style:none; display:flex; align-items:center; gap:7px}
+.evcrit > summary::-webkit-details-marker{display:none}
+.evcrit > summary::before{content:"\25B8"; font-size:11px; transition:transform .12s}
+.evcrit[open] > summary::before{transform:rotate(90deg)}
+.evcrit > summary span{font-weight:400; text-transform:none; letter-spacing:0; color:var(--muted); font-size:12.2px}
+.evcritin{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:11px}
+@media (max-width:760px){ .evcritin{grid-template-columns:1fr} }
+.evcritin h5{font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+  margin:0 0 6px}
+.evcritin .lim h5{color:var(--amber)}
+.evcritin .crit h5{color:var(--clay)}
+.evcritin ul{margin:0; padding-left:17px}
+.evcritin li{font-size:12.8px; line-height:1.45; margin-bottom:5px}
+.evmeta{flex:1 1 100%; font-size:12.4px; color:var(--muted); margin-top:6px}
+.evmeta b{color:var(--ink); font-weight:600}
 
 footer{margin-top:54px; border-top:1px solid var(--line); padding-block:22px 40px; font-size:12.6px; color:var(--muted)}
 footer p + p{margin-top:8px}
@@ -514,7 +532,7 @@ document.querySelectorAll("nav.sec a").forEach(a=>{
 });
 
 /* ---------- evidence library ---------- */
-let ALL = [], evGroup = "All", evQuery = "";
+let ALL = [], evGroup = "All", evQuery = "", CRIT = {};
 function evRow(r){
   const links = r.pmid
     ? `<a class="lnk" href="https://libkey.io/libraries/480/pmid/${esc(r.pmid)}" target="_blank" rel="noopener">TMC full text</a>
@@ -524,18 +542,39 @@ function evRow(r){
   const depot = r.depot === undefined ? "" :
     (r.depot ? `<span class="chip" style="font-size:11px">In depot</span>`
              : `<span class="chip warn" style="font-size:11px">To download</span>`);
-  return `<div class="ev" id="ev-${esc(r.id)}"><div class="evtag">${esc(r.tag)}</div><div class="evcit">${esc(r.cit)}</div><div class="evlinks">${depot}${links}</div></div>`;
+  const c = CRIT[r.pmid] || CRIT[r.id] || null;
+  let crit = "";
+  if(c){
+    const lim = c.limitations || [], ind = c.critique || [];
+    const li = a => a.length ? a.map(t=>`<li>${esc(t)}</li>`).join("") : "<li>None found in the full text.</li>";
+    const meta = [];
+    if(c.n) meta.push(`<b>Population.</b> ${esc(c.n)}`);
+    if(c.bottom_line) meta.push(`<b>Bottom line.</b> ${esc(c.bottom_line)}`);
+    if(c.funding) meta.push(`<b>Funding.</b> ${esc(c.funding)}`);
+    crit = `<details class="evcrit"><summary>How far this one goes
+        <span>${lim.length} stated \u00b7 ${ind.length} unstated</span></summary>
+      ${meta.length ? `<div class="evmeta">${meta.join(" ")}</div>` : ""}
+      <div class="evcritin">
+        <div class="lim"><h5>Limitations the authors state</h5><ul>${li(lim)}</ul></div>
+        <div class="crit"><h5>What they do not say</h5><ul>${li(ind)}</ul></div>
+      </div></details>`;
+  }
+  return `<div class="ev" id="ev-${esc(r.id)}"><div class="evtag">${esc(r.tag)}</div><div class="evcit">${esc(r.cit)}</div><div class="evlinks">${depot}${links}</div>${crit}</div>`;
 }
 function renderEvGroups(){
   const groups = [...new Set(ALL.map(r=>r.group))];
   document.getElementById("evGroups").innerHTML = ["All",...groups].map(g=>
     `<button class="tab" type="button" data-group="${esc(g)}" aria-selected="${String(g===evGroup)}">${esc(g)}</button>`).join("");
 }
+function critText(r){
+  const c = CRIT[r.pmid] || CRIT[r.id];
+  return c ? (c.limitations||[]).concat(c.critique||[], [c.bottom_line||""]).join(" ") : "";
+}
 function renderEv(){
   const q = evQuery.trim().toLowerCase();
   const rows = ALL.filter(r =>
     (evGroup==="All" || r.group===evGroup) &&
-    (!q || (r.tag+" "+r.cit+" "+r.group+" "+r.id).toLowerCase().includes(q)));
+    (!q || (r.tag+" "+r.cit+" "+r.group+" "+r.id+" "+critText(r)).toLowerCase().includes(q)));
   document.getElementById("evList").innerHTML = rows.length
     ? rows.map(evRow).join("")
     : `<div class="card"><p class="muted">Nothing matches “${esc(evQuery)}”. Try a trial name, an author, or a journal.</p></div>`;
@@ -757,9 +796,14 @@ function build(){
 }
 
 /* ---------- load ---------- */
-fetch("data/pathway.json").then(r=>r.json()).then(p=>{
+Promise.all([
+  fetch("data/pathway.json").then(r=>r.json()),
+  fetch("data/critique.json").then(r=>r.ok ? r.json() : {}).catch(()=>({}))
+]).then(([p, crit])=>{
   P = p;
+  CRIT = crit || {};
   build();
+  renderEv();
   if(!P.matrix) return null;
   document.getElementById("lrt").hidden = false;
   document.getElementById("navLrt").hidden = false;
