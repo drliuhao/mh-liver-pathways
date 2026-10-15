@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<meta name="description" content="Pancreatic ductal adenocarcinoma — Memorial Hermann system roadmap v0.2, draft under development.">
+<meta name="description" content="Pancreatic ductal adenocarcinoma — Memorial Hermann system roadmap v0.3, draft under development.">
 <title>Memorial Hermann PDAC Pathway</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
 </head>
 <body>
 <style>
-/* One renderer, four tumours: the gates come from data/pathway.json, the
+/* One renderer, four tumours: the gates come from data/pathway.json?v=20261015, the
    liver-directed matrix from the shared LRT_Evidence_Matrix export. Layout
    follows the HCC console: a gate strip, the answer below it, then the
    evidence library everything links back into. */
@@ -347,7 +347,7 @@ footer p + p{margin-top:8px}
 
 <section id="stage">
   <div class="answer" id="answer"></div>
-  <p class="small muted" style="margin-top:10px">Departure from a gate default is permitted when anatomy, biology, liver function, transplant strategy, comorbidity, access or patient goals make it unsuitable — the reason must be recorded. It is not a licence to substitute a lower-evidence modality for a proven curative option.</p>
+  <p class="small muted" style="margin-top:10px">Departure from a gate default is permitted when anatomy, biology, organ function, comorbidity, access or patient goals make it unsuitable — the reason must be recorded. It is not a licence to substitute a lower-evidence modality for a proven curative option.</p>
 </section>
 
 <section id="lrt" hidden>
@@ -357,7 +357,7 @@ footer p + p{margin-top:8px}
   </div>
   <div class="card" style="margin-top:16px">
     <h3>There is no ladder</h3>
-    <p>Do not use a universal ablation → SBRT → Y-90 → TACE → HAI → histotripsy sequence. <b>An upfront alternative chosen because of anatomy or organ reserve is not a post-progression second line.</b> Bridge, downstaging and conversion preserve a later resection or transplant opportunity; conversion treatment is not itself the curative operation.</p>
+    <p>Do not use a universal ablation → SBRT → Y-90 → TACE → HAI → histotripsy sequence. <b>An upfront alternative chosen because of anatomy or organ reserve is not a post-progression second line.</b> Bridge, downstaging and conversion preserve a later resection opportunity; conversion treatment is not itself the curative operation.</p>
     <p class="small muted">The tiers below are a clinical synthesis of treatment intent. They are not the roadmap's A–D evidence grading system, and the two should not be read as equivalent.</p>
   </div>
   <div class="tierlegend" id="tierLegend"></div>
@@ -410,7 +410,7 @@ footer p + p{margin-top:8px}
 
 <footer>
   <p id="prov"></p>
-  <p><b>Status.</b> Draft for multidisciplinary and institutional governance review. Not active clinical policy. It does not replace clinician judgement, current drug labelling, OPTN policy, or patient-specific informed consent. Every criterion drawn from OPTN policy, drug labelling or device authorisation must be re-verified against the current source at implementation and at each scheduled review. Clinical transplant candidacy and allocation eligibility are separate judgements.</p>
+  <p><b>Status.</b> Draft for multidisciplinary and institutional governance review. Not active clinical policy. It does not replace clinician judgement, current drug labelling or patient-specific informed consent. Every criterion drawn from guidelines, drug labelling or device authorisation must be re-verified against the current source at implementation and at each scheduled review.</p>
 </footer>
 
 </div>
@@ -432,7 +432,7 @@ const FLAGDEF = {
   DOSIMETRY:"Personalised dosimetry planning and radiation-safety review for every case.",
   DEVICE:"Device availability, credentialing, maintained competency.",
   PAYER:"Insurance authorisation; may not be deliverable in a useful interval.",
-  "TX-TIMING":"Waitlist dynamics and expected time to transplant at this centre."
+  "TX-TIMING":"Treatment timing and service availability at this centre."
 };
 let P = null, KEY = "x", REF = {}, NONPM = {};
 function refTag(id){ const r = REF[id] || NONPM[id]; return r ? r[0] : id; }
@@ -797,8 +797,8 @@ function build(){
 
 /* ---------- load ---------- */
 Promise.all([
-  fetch("data/pathway.json").then(r=>r.json()),
-  fetch("data/critique.json").then(r=>r.ok ? r.json() : {}).catch(()=>({}))
+  fetch("data/pathway.json?v=20261015").then(r=>r.json()),
+  fetch("data/critique.json?v=20261015").then(r=>r.ok ? r.json() : {}).catch(()=>({}))
 ]).then(([p, crit])=>{
   P = p;
   CRIT = crit || {};
@@ -808,8 +808,8 @@ Promise.all([
   document.getElementById("lrt").hidden = false;
   document.getElementById("navLrt").hidden = false;
   return Promise.all([
-    fetch("data/lrt_matrix.json").then(r=>r.json()),
-    fetch("data/lrt_refs.json").then(r=>r.json())
+    fetch("data/lrt_matrix.json?v=20261015").then(r=>r.json()),
+    fetch("data/lrt_refs.json?v=20261015").then(r=>r.json())
   ]).then(([mx, refs])=>{
     MX = mx;
     const first = MX.modalities.map(m=>P.matrix+"|"+m[0]).find(k=>MX.cells[k]);
@@ -818,7 +818,7 @@ Promise.all([
     renderMatrix(); renderCell();
     const others = MX.tumours.filter(t=>t[0]!==P.matrix).map(t=>t[2]);
     document.getElementById("lrtsrc").innerHTML =
-      `Source: <code>LRT_Evidence_Matrix</code>, Batch 07, filtered to the ${esc(P.name.toLowerCase())} column. `
+      `Source: <code>LRT_Evidence_Matrix</code>, Batch 09 HAI update (15 October 2026), filtered to the ${esc(P.name.toLowerCase())} column. `
       + `The full matrix also covers ${esc(others.join(", ").toLowerCase())}; perihilar cholangiocarcinoma is not in it.`;
     /* only the papers this tumour's cells actually cite go into the library */
     const used = new Set();

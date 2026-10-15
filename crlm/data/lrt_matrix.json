@@ -560,11 +560,11 @@
   },
   "icca|hai": {
    "tier": 4,
-   "head": "Strongest regional data for unresectable liver-confined iCCA",
+   "head": "Expert-centre control / conversion; no comparative superiority",
    "roles": [
     {
      "t": 4,
-     "when": "Unresectable, liver-confined ± regional nodes; FUDR pump + GemOx",
+     "when": "Unresectable liver-confined disease ± selected resectable regional nodes; systemic-treatment plan required",
      "ev": [
       [
        "Cercek ph II",
@@ -575,6 +575,16 @@
        "Konstantinidis",
        "26695839",
        "HAI+sys vs sys OS 30.8 vs 18.4 mo"
+      ],
+      [
+       "PUMP-2 phase II",
+       "41082695",
+       "50 patients; median OS 22.3 months, 3-y OS 31.5%; historical control"
+      ],
+      [
+       "Pooled four phase II trials",
+       "42331230",
+       "142 treated; median OS 26 months, 5-y OS 15%; overlapping cohorts"
       ]
      ]
     },
@@ -586,6 +596,11 @@
        "Cercek ph II",
        "31670750",
        "4 of 38 resected"
+      ],
+      [
+       "PUMP-2",
+       "41082695",
+       "5/50 (10%) resected; no randomized comparison with modern chemo-immunotherapy"
       ]
      ]
     }
@@ -731,11 +746,11 @@
   },
   "crlm|hai": {
    "tier": 3,
-   "head": "Adjuvant & conversion (experienced pump centres)",
+   "head": "Early conversion review; selective adjuvant use",
    "roles": [
     {
      "t": 3,
-     "when": "Adjuvant after resection (+ systemic)",
+     "when": "Adjuvant after resection: selective expert-centre discussion, not routine low-risk use",
      "ev": [
       [
        "Kemeny NEJM RCT",
@@ -748,9 +763,9 @@
        "PSM OS HR 0.67"
       ],
       [
-       "PUMP RCT (protocol)",
-       "30953467",
-       "low-risk; results pending"
+       "Dutch PUMP, ASCO 2026 LBA3506",
+       null,
+       "PFS HR 0.88 (0.62–1.25), P=.48; no adjuvant systemic therapy; OS immature. DOI 10.1200/JCO.2026.44.17_suppl.LBA3506"
       ]
      ]
     },
@@ -762,6 +777,11 @@
        "Kemeny ph I",
        "19470932",
        "47% converted to resection"
+      ],
+      [
+       "D’Angelica phase II",
+       "24646562",
+       "49 patients; 47% resected, 76% response. Distinct from the 49-patient phase I trial."
       ]
      ]
     },
@@ -773,6 +793,28 @@
        "CALGB 9481",
        "16505413",
        "OS 24.4 vs 20 mo vs systemic"
+      ]
+     ]
+    },
+    {
+     "t": 4,
+     "when": "Salvage liver-only disease with systemic plan",
+     "ev": [
+      [
+       "Cercek retrospective",
+       "27566258",
+       "57 liver-only patients: response 33%, median OS 20 months; selected cohort"
+      ]
+     ]
+    },
+    {
+     "t": 5,
+     "when": "HAI-to-LT planning: parallel transplant review; fixed bridge schedule investigational",
+     "ev": [
+      [
+       "Hill technical series",
+       "37210451",
+       "7 transplants: 5 for biliary injury, 2 residual tumour; difficult arterial reconstruction"
       ]
      ]
     }
@@ -933,5 +975,97 @@
     }
    ]
   }
- }
+ },
+ "contra": {
+  "abl": {
+   "items": [
+    "Size: >3 cm (RFA) or >5 cm (MWA) for curative intent; >3–5 lesions (relative)",
+    "Not visible on US/CT or no safe needle path",
+    "<1 cm from hilar / central bile duct (stricture)",
+    "Abutting bowel, stomach, GB, diaphragm or heart without hydro-/pneumodissection",
+    "Heat sink: abutting vessel ≥3 mm (RFA > MWA)",
+    "Bilio-enteric anastomosis, sphincterotomy or stent (abscess; relative)",
+    "Platelets <50k / INR >1.5 uncorrectable; Child-Pugh C; refractory ascites"
+   ],
+   "ref": [
+    "CIRSE SoP",
+    "32382856"
+   ]
+  },
+  "sbrt": {
+   "items": [
+    "Inadequate uninvolved liver (≥700 mL must be spared); Child-Pugh ≥B8 relative, C absolute",
+    "Stomach / duodenum / bowel abutting target (dose limits)",
+    "Overlapping prior hepatic RT",
+    "Cannot manage motion (fiducials, breath-hold) or lie flat",
+    "Very large or multifocal disease (>6–8 cm; relative)"
+   ],
+   "ref": [
+    "HyTEC liver SBRT",
+    "29482870"
+   ]
+  },
+  "y90": {
+   "items": [
+    "Lung shunt: lung dose >30 Gy single / >50 Gy cumulative",
+    "Uncorrectable GI / extrahepatic deposition on MAA",
+    "Bilirubin >2 mg/dL (unless segmental); Child-Pugh C; ECOG ≥2",
+    "Insufficient hepatic reserve; extensive tumour replacement with poor function",
+    "Prior biliary intervention or prior hepatic RT (relative)",
+    "Note: PVTT is NOT a contraindication"
+   ],
+   "ref": [
+    "Y-90 recs 2022",
+    "36114872"
+   ]
+  },
+  "tace": {
+   "items": [
+    "Main PV occlusion / hepatofugal flow without collaterals (selective TACE may still be possible)",
+    "Decompensated cirrhosis: Child-Pugh C (≥B8 relative), bilirubin >3 mg/dL, refractory ascites, HE",
+    "Tumour burden >50% of liver",
+    "Bilio-enteric anastomosis, stent or sphincterotomy (abscess)",
+    "CrCl <30, uncorrectable coagulopathy, large AV shunt",
+    "DEB-TACE in NET (biliary injury)"
+   ],
+   "ref": [
+    "CIRSE SoP",
+    "34694454"
+   ]
+  },
+  "hai": {
+   "items": [
+    "Uncorrectable extrahepatic perfusion or inadequate hepatic perfusion",
+    "Unsuitable arterial anatomy or impaired portal inflow; significant portal hypertension or poor hepatic reserve",
+    "Unrelieved biliary obstruction / infection; unsuitable for pump surgery",
+    "No reliable refill, laboratory surveillance or rescue service",
+    "Prior liver radiation requires review before sequencing; retain NCCN CRLM restriction",
+    "Avoid concurrent bevacizumab with FUDR. Disease extent and transplant eligibility remain tumour-specific."
+   ],
+   "ref": [
+    "Surgical toolkit / programme requirements / biliary toxicity",
+    "36346892"
+   ]
+  },
+  "htx": {
+   "items": [
+    "No acoustic window: rib / lung shadow or bowel gas in beam path",
+    "Target not visible on diagnostic US or beyond transducer focal depth",
+    "Unable to tolerate general anaesthesia (needed for respiratory control)",
+    "Beyond trial limits: >3 tumours or >3 cm",
+    "Lung or bowel immediately adjacent to the treatment zone"
+   ],
+   "ref": [
+    "#HOPE4LIVER",
+    "39225612"
+   ]
+  }
+ },
+ "notes": [
+  "Resection and liver transplantation remain the reference standard; tiers describe each modality's role relative to them.",
+  "Cell colour = principal role; tagged lines = other evidence-supported roles. Numbers in boxes are PubMed IDs.",
+  "*RETNET results presented at NANETS 2025 (abstract); not yet PubMed-indexed — PMID shown is the protocol.",
+  "Abbrev.: LT liver transplant; LC local control; LTP local tumour progression; FFLP freedom from local progression; MVI macrovascular invasion; PVTT portal vein tumour thrombus; EHD extrahepatic disease; BED biologically effective dose; FLR future liver remnant; DCR disease control rate; HE hepatic encephalopathy.",
+  "15 October 2026 HAI update: Dutch adjuvant PUMP (ASCO LBA3506), US EA2222 (NCT05863195, unresectable CRLM) and iCCA PUMP-2 are distinct trials. Lecture and published PUMP analyses differ; this matrix uses the published abstract. HAI does not establish MELD exception or LT eligibility. Shared programme safeguards: PMIDs 39962001, 36346892, 24154839."
+ ]
 }

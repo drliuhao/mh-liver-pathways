@@ -547,7 +547,7 @@ footer p + p{margin-top:8px}
 
   <div class="mcards" id="mcards"></div>
   <div class="lrtdetail" id="lrtDetail"><p class="muted">Loading the matrix…</p></div>
-  <p class="small muted" style="margin-top:10px">Source: <code>LRT_Evidence_Matrix</code>, Batch 07, filtered to the hepatocellular carcinoma column. The full matrix also covers iCCA, colorectal and neuroendocrine liver metastases; perihilar cholangiocarcinoma is not in it.</p>
+  <p class="small muted" style="margin-top:10px">Source: <code>LRT_Evidence_Matrix</code>, Batch 09 HAI update (15 October 2026), filtered to the hepatocellular carcinoma column. The full matrix also covers iCCA, colorectal and neuroendocrine liver metastases; perihilar cholangiocarcinoma is not in it.</p>
 </section>
 
 <section id="topics">
@@ -1537,10 +1537,13 @@ function renderCell(){
     </div>
     <p style="margin-top:12px; font-size:14.5px"><b>${esc(expandAbbr(c.head))}</b></p>
     ${c.roles.map(r=>`<div class="role">
-        <div class="rolewhen">${tchip(r.t, MX.tiers[r.t].short)}<span>${esc(expandAbbr(r.when))}</span></div>
+        <div class="rolewhen">${tchip(r.t, (MX.tiers[r.t] || {short:"Caution"}).short)}<span>${esc(expandAbbr(r.when))}</span></div>
         <details class="more"><summary>${r.ev.length} ${r.ev.length===1?"trial":"trials"}</summary>
           <div class="moreinner">${r.ev.map(evLine).join("")}</div></details>
       </div>`).join("")}`;
+  const ci = MX.contra && MX.contra[mod[0]];
+  if(ci) document.getElementById("lrtDetail").innerHTML += `<div class="role" style="border-top:1px solid var(--line2);margin-top:16px;padding-top:12px"><h4>Contraindications and feasibility</h4><ul>${ci.items.map(x=>`<li>${esc(x)}</li>`).join("")}</ul><p class="small muted">${esc(ci.ref.join(" · "))}</p></div>`;
+
 }
 document.getElementById("mcards").addEventListener("click", e=>{
   const b = e.target.closest(".mcell"); if(!b) return;
@@ -1550,17 +1553,17 @@ document.getElementById("mcards").addEventListener("click", e=>{
 
 /* the critique store loads on its own and re-renders the library when it lands,
    so a missing or slow file never holds up the rest of the page */
-fetch("data/critique.json").then(r=>r.ok?r.json():{}).catch(()=>({}))
+fetch("data/critique.json?v=20261015").then(r=>r.ok?r.json():{}).catch(()=>({}))
   .then(c=>{ CRIT = c || {}; renderEv(); });
 
 Promise.all([
-  fetch("data/lrt_matrix.json").then(r=>r.json()),
-  fetch("data/lrt_refs.json").then(r=>r.json())
+  fetch("data/lrt_matrix.json?v=20261015").then(r=>r.json()),
+  fetch("data/lrt_refs.json?v=20261015").then(r=>r.json())
 ]).then(([mx, refs])=>{
   MX = mx;
   renderTierLegend(); renderCards(); renderCell();
   // only the papers this tumour's cells actually cite go into the library
-  const used = new Set();
+  const used = new Set(["39962001", "36346892", "24154839"]);
   for(const [key, c] of Object.entries(MX.cells)){
     if(!key.startsWith(TUM+"|")) continue;
     for(const role of c.roles) for(const e of role.ev) if(e[1]) used.add(e[1]);

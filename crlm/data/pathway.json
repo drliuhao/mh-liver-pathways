@@ -2,8 +2,8 @@
   "key": "crlm",
   "short": "CRLM",
   "name": "Colorectal liver metastases",
-  "version": "v0.7",
-  "batch": "Batch 08, 7 October 2026",
+  "version": "v0.8",
+  "batch": "Batch 09, 15 October 2026",
   "lead": "Whether every site of hepatic disease can be eradicated — now, after a defined course of conversion therapy, or only by replacing the liver — and what to do when the answer is no.",
   "gatelabel": "The decision in front of you",
   "gates": [
@@ -430,11 +430,14 @@
           ],
           "refs": [
             "19470932",
-            "38608150"
+            "38608150",
+            "24646562",
+            "39565488",
+            "39962001"
           ],
-          "pref": "Liver-dominant or liver-only disease where a high hepatic response could convert to clearance, or where biology needs testing before transplant referral, at a centre with an established pump programme. The Memorial Sloan Kettering phase I experience converted 47% (23 of 49) of technically unresectable patients to resection with 92% radiologic response; a two-centre Dutch phase II study met its feasibility endpoint with 90% receiving at least two combined cycles, partial response in 34% and hepatic disease control in 93% at first evaluation.",
+          "pref": "Selected unresectable liver-only CRLM at a credentialed pump centre. Review during first-line planning, reassess after systemic therapy, and discuss before hepatic radiation. Early referral does not waive NCCN treatment eligibility. D’Angelica phase II (PMID 24646562): n=49, 47% conversion, 76% response, median OS 38 months. Distinct from Kemeny phase I (PMID 19470932): n=49, 47% conversion and 92% response.",
           "avoid": "No dedicated pump programme; unsuitable arterial anatomy; extrahepatic disease; portal hypertension; prior liver radiation; direct bilirubin above 1.5 mg/dL or alkaline phosphatase at or above twice the upper limit of normal. NCCN also requires at least one prior systemic line and operative fitness, and HAI cannot be delivered with concurrent bevacizumab or other VEGF inhibitors.",
-          "note": "Conversion is a surrogate and the evidence is single-arm and centre-concentrated: median disease-free survival after R0 resection was only 7.6 months, 12 of 23 resected patients needed portal vein embolisation and 10 needed intraoperative ablation, and response in that series was scored by WHO-type criteria rather than RECIST, which inflates the 92% figure against modern trials. The only baseline factor that predicted conversion was female sex (81% versus 30%), from an uncorrected univariate scan in 49 patients, so nothing here lets a surgeon predict who converts. Toxicity rises with exposure — grade 3 or worse chemotherapy toxicity in 38% during the first two cycles and 66% by six months in the Dutch study, with late biliary sclerosis unresolved at six months and expected later. Biliary toxicity and pump complications are not occasional-case risks, and delivery depends on payer authorisation in a clinically useful interval."
+          "note": "Conversion is a surrogate and the evidence is single-arm and centre-concentrated: median disease-free survival after R0 resection was only 7.6 months, 12 of 23 resected patients needed portal vein embolisation and 10 needed intraoperative ablation, and response in that series was scored by WHO-type criteria rather than RECIST, which inflates the 92% figure against modern trials. The only baseline factor that predicted conversion was female sex (81% versus 30%), from an uncorrected univariate scan in 49 patients, so nothing here lets a surgeon predict who converts. Toxicity rises with exposure — grade 3 or worse chemotherapy toxicity in 38% during the first two cycles and 66% by six months in the Dutch study, with late biliary sclerosis unresolved at six months and expected later. Biliary toxicity and pump complications are not occasional-case risks, and delivery depends on payer authorisation in a clinically useful interval. Duke expanding-program cohort (PMID 39565488): 102 patients, 97% previously treated, 20% conversion, 23% HAI-specific complications and 6% biliary sclerosis. Selected cohort outcomes are not institutional performance targets. Record conversion to complete clearance separately from pump response."
         },
         {
           "t": "Leave an asymptomatic primary in situ during systemic therapy when liver disease is broadly unresectable; resect it for a defined local threat, and before transplantation after a favourable response.",
@@ -455,7 +458,7 @@
           "l": "Reasonable",
           "g": "C",
           "pref": "A patient whose remnant will not come up by embolisation and in whom lobar radioembolisation is technically attractive, planned as a route to an operation.",
-          "avoid": "Do not present it as the curative treatment, and do not extrapolate HCC segmentectomy cure claims to CRLM. Assess any future HAI pathway before liver irradiation, because prior liver radiation bars the pump.",
+          "avoid": "Do not present it as the curative treatment, and do not extrapolate HCC segmentectomy cure claims to CRLM. Assess any future HAI pathway before liver irradiation, because NCCN Colon v2.2026, original PDF p. 39, excludes prior liver radiation from HAI selection. Any proposed departure requires explicit MDT review; this is not a claim of universal technical impossibility.",
           "note": "Depends on personalised dosimetry planning and radiation-safety review; the CRLM hypertrophy evidence is a small part of mixed series."
         },
         {
@@ -468,11 +471,12 @@
           "refs": [
             "10615075",
             "28426374",
-            "30953467"
+            "30953467",
+            "pump2026"
           ],
-          "pref": "A completely resected patient at a credentialed pump centre. The randomised Memorial Sloan Kettering trial gave 2-year survival free of hepatic progression of 90% versus 60% (p<0.001) and 2-year overall survival 86% versus 72% (p=0.03).",
+          "pref": "A completely resected patient at a credentialed pump centre. The randomised Memorial Sloan Kettering trial gave 2-year survival free of hepatic progression of 90% versus 60% (p<0.001) and 2-year overall survival 86% versus 72% (p=0.03). Selective MDT discussion; not routine for every low-risk resection.",
           "avoid": "Extrahepatic disease or a positive margin, where the propensity-matched series found no benefit (37 versus 33 months and 37 versus 28 months). Do not offer it outside a programme with credentialed surgeons, oncologists and pump management.",
-          "note": "Both halves: in that trial the whole overall survival curves were not significantly different (p=0.21 by log-rank) and the positive result is the prespecified two-year landmark, against an obsolete bolus fluorouracil comparator, with only 26% of patients receiving more than half the planned floxuridine because of biliary toxicity. The 2368-patient propensity analysis (median overall survival 67 versus 44 months, adjusted HR 0.67, 0.59–0.76) is retrospective across 21 years in patients six years younger and more recently treated, a published letter argued the propensity model and covariate balance were reported in too little detail to assess, and its largest effects fell in node-negative and low-risk patients — the opposite of where a regional therapy should help most. The randomised PUMP trial exists in the depot only as a published protocol with no outcome data, and it gives pump floxuridine without concurrent systemic chemotherapy in clinical risk score 0–2 patients only, so even its result will not test the regimen described here."
+          "note": "Both halves: in that trial the whole overall survival curves were not significantly different (p=0.21 by log-rank) and the positive result is the prespecified two-year landmark, against an obsolete bolus fluorouracil comparator, with only 26% of patients receiving more than half the planned floxuridine because of biliary toxicity. The 2368-patient propensity analysis (median overall survival 67 versus 44 months, adjusted HR 0.67, 0.59–0.76) is retrospective across 21 years in patients six years younger and more recently treated, a published letter argued the propensity model and covariate balance were reported in too little detail to assess, and its largest effects fell in node-negative and low-risk patients — the opposite of where a regional therapy should help most. Dutch adjuvant PUMP has reported at ASCO 2026 (LBA3506; DOI 10.1200/JCO.2026.44.17_suppl.LBA3506): CRS 0–2, 243 randomized and 218 analysed, HAIP alone versus resection alone without adjuvant systemic therapy in either arm. PFS HR 0.88 (95% CI 0.62–1.25), P=.48; median PFS 15 versus 16 months. No significant PFS benefit; overall survival is immature. This does not support routine adjuvant HAI after every low-risk resection and does not test HAI plus modern systemic therapy or unresectable conversion."
         }
       ],
       "avoid": [
@@ -524,7 +528,7 @@
               ],
               "when": "TransMet randomised 94 patients with permanently unresectable liver-only disease controlled on chemotherapy: intention-to-treat 5-year overall survival 56.6% versus 12.6% with chemotherapy alone, HR 0.37 (95% CI 0.21–0.65), p=0.0003; per protocol 73.3% versus 9.3%, HR 0.16. CRLM is not a standardised OPTN exception, so listing goes through nonstandard Adult Transplant Oncology Review Board review with the CRLM diagnosis form and a written narrative requesting consideration at MMaT-20, with Policy 9.4.E setting a floor of 15.",
               "pref": "A patient inside both the OPTN guidance gates and the local protocol: BRAF wild type, microsatellite stable, 12 months from CRLM diagnosis, six months of stability or regression, CEA at or below 80 µg/L, no pretreatment lesion above 10 cm, primary resected R0 with a clear colonoscopy, ECOG 0–1, age considered with physiologic reserve rather than alone.",
-              "avoid": "Any uncontrolled or non-curable extrahepatic disease, progression on an appropriate regimen, new lesions, declining reserve, prohibitive comorbidity, active infection or psychosocial risk. Disease clearable by reasonable resection, margin-verified ablation, augmentation, staged surgery or HAI is not a transplant indication.",
+              "avoid": "Any uncontrolled or non-curable extrahepatic disease, progression on an appropriate regimen, new lesions, declining reserve, prohibitive comorbidity, active infection or psychosocial risk. Disease clearable by reasonable resection, margin-verified ablation, augmentation, staged surgery is not a transplant indication. Assess HAI conversion feasibility alongside transplant candidacy; do not require exhaustion of HAI before referral.",
               "note": "Both halves: 19% of the transplantation arm never received a graft, recurrence after transplant was 74% with 5-year progression-free survival 19.9%, and the survival gain rests on repeatedly treating recurrence — mostly pulmonary, 54% of isolated recurrences lung-only, with 46% of those treated with curative intent. Selection was extreme: an independent panel excluded 40% of screened patients, and the trial depended on negotiated national prioritisation that delivered grafts at a median 50.5 days after randomisation. Without exception points these low-MELD patients do not compete, and a longer wait raises the 19% dropout.",
               "refs": [
                 "39306468"
@@ -691,9 +695,10 @@
               "when": "CALGB 9481 randomised 135 patients with unresectable liver-only disease: median overall survival 24.4 versus 20.0 months (p=0.0034), hepatic response 47% versus 24% and time to hepatic progression 9.8 versus 7.3 months.",
               "pref": "Liver-only disease at a credentialed pump centre where hepatic control is the objective and conversion has not been achieved.",
               "avoid": "No pump programme, extrahepatic disease, prior liver radiation or concurrent VEGF inhibition. Time to extrahepatic progression was shorter with HAI (7.7 versus 14.8 months) and overall time to progression did not differ, so the survival claim rests entirely on hepatic control.",
-              "note": "The comparator was bolus fluorouracil and leucovorin, the 1996 standard, and biliary toxicity was the price: bilirubin above 3 mg/dL in 18.6% versus 0%, with four patients needing biliary stents.",
+              "note": "The comparator was bolus fluorouracil and leucovorin, the 1996 standard, and biliary toxicity was the price: bilirubin above 3 mg/dL in 18.6% versus 0%, with four patients needing biliary stents. Cercek retrospective salvage series (PMID 27566258): 57 liver-only patients, response 33% and median OS 20 months; 53 with limited extrahepatic disease, response 36% and OS 11.4 months. The latter subgroup does not broaden routine local eligibility.",
               "refs": [
-                "16505413"
+                "16505413",
+                "27566258"
               ]
             }
           ],
@@ -852,12 +857,50 @@
       ],
       "foot": "Genotype is prognostic; observed response is the stronger signal, and the direction and duration of response during effective therapy carry more decision weight than genotype alone. A single mutation should not set margin width, the extent of parenchymal resection, or exclusion from otherwise feasible clearance. Two molecular results do close a door, but it is the transplant door: BRAF mutation and MSI-high or dMMR status both fall outside the described exception route.",
       "src": "BREAKWATER PMID 40444708; CheckMate 8HW PMID 39874977 and KEYNOTE-177 PMID 33264544; ASCO 2023 PMID 36252154, FIRE-3 PMID 27575024, CALGB/SWOG 80405 PMID 28632865; CAIRO5 PMID 37329889; CodeBreaK 300 PMID 37870968"
+    },
+    {
+      "title": "HAI evidence and programme update · 15 October 2026",
+      "intro": "Reconciled with the current roadmap; clinical candidacy and transplant allocation remain separate decisions.",
+      "rows": [
+        [
+          "Earlier HAI review with a clearance endpoint",
+          "Offer early pump-program review for selected unresectable liver-only CRLM during first-line treatment planning, with formal reassessment after systemic therapy and before hepatic radiation. Record conversion-to-complete-clearance, regional control, or adjuvant intent separately. D’Angelica phase II: 49 patients, 47% resection conversion and 76% response (PMID 24646562). This is distinct from Kemeny’s 49-patient phase I series with 92% response (PMID 19470932). Resection conversion is not a pump-alone cure rate."
+        ],
+        [
+          "Adjuvant HAI: updated evidence",
+          "Dutch PUMP (ASCO 2026 LBA3506; DOI 10.1200/JCO.2026.44.17_suppl.LBA3506) has reported randomized conference results: in low-risk resected CRLM (CRS 0–2), adjuvant HAIP alone did not significantly improve PFS versus resection alone (HR 0.88, 95% CI 0.62–1.25; P=.48). Neither arm received adjuvant systemic chemotherapy. Overall survival is immature. This does not test HAI plus modern systemic therapy or the unresectable conversion setting. Adjuvant HAI remains selective expert-centre consideration; routine use for every low-risk resection is not supported by these results."
+        ],
+        [
+          "Salvage evidence and external delivery",
+          "Cercek’s refractory cohort included 57 liver-only and 53 low-volume extrahepatic cases. Response and median survival were 33% and 20 months in liver-only disease versus 36% and 11.4 months with extrahepatic disease (PMID 27566258). These retrospective results do not broaden routine eligibility. Duke’s 102-patient series reported 20% conversion to resection, HAI-specific complications in 23% and biliary sclerosis in 6% (PMID 39565488); these are selected-cohort outcomes, not institutional performance targets."
+        ],
+        [
+          "Parallel transplant assessment",
+          "For persistently unresectable liver-only CRLM potentially eligible for LT, obtain transplant review in parallel with HAI/conversion planning. HAI response does not establish listing or MELD-exception eligibility and completing every HAI option is not a prerequisite for evaluation. LT after HAI is technically feasible but evidence is limited: Hill et al. reported seven transplants, five for biliary complications and two for residual tumour, with difficult dissection and frequent atypical arterial reconstruction (PMID 37210451). Review arterial inflow/conduit, biliary injury and donor strategy before pump placement. The lecture’s fixed 6+3+3-month bridge and systemic-therapy withdrawal schedule remain investigational."
+        ],
+        [
+          "Radiation sequencing",
+          "Review potential HAI before Y90 or hepatic external-beam radiation. The existing NCCN Colon v2.2026 original PDF p39 eligibility row excludes prior liver radiation; the lecture describes prior Y90 as a relative contraindication at Duke. Preserve that guideline restriction and require an explicit specialist exception decision if considering a different institutional approach. Do not describe prior irradiation as a universal technical impossibility."
+        ],
+        [
+          "Trial referral",
+          "EA2222 / NCT05863195 tests systemic therapy with or without HAI for unresectable CRLM. It is separate from Dutch adjuvant PUMP and iCCA PUMP-2. Use current trial eligibility and site availability; no efficacy result is inferred from its registration."
+        ],
+        [
+          "Programme readiness",
+          "Before starting HAI, approve a named HPB surgeon with backup, medical oncologist, trained infusion nurses and pharmacy, nuclear-medicine perfusion assessment, IR rescue access, refill/maintenance coverage, liver-test monitoring and dose-hold rules, biliary-toxicity escalation and an outcomes registry. Reliable repeated visits are essential. Credentialing must cover the whole service, not pump implantation alone (PMIDs 39962001, 36346892)."
+        ],
+        [
+          "Feasibility and medication safeguards",
+          "Avoid concurrent bevacizumab with HAI floxuridine because of increased biliary toxicity (PMID 24154839). Retain the broader no-concurrent-VEGF wording in the existing NCCN CRLM row. Assess hepatic reserve, portal hypertension/portal inflow, arterial anatomy, biliary obstruction or infection, prior liver radiation, operative fitness and reliable refill access. Age under 80 and lecture shunt cutoffs are centre practices, not universal evidence-based thresholds."
+        ]
+      ]
     }
   ],
   "honest": [
     {
       "t": "Hepatic arterial infusion converts unresectable disease.",
-      "why": "What is actually known is high hepatic response in single-arm, centre-concentrated series with no randomised conversion endpoint. The 47% conversion rate comes from a 49-patient phase I experience at one high-volume pump centre, where resectability was adjudicated by the surgeons who then operated, response was scored by WHO-type criteria rather than RECIST, median disease-free survival after R0 resection was 7.6 months, and more than half the resected patients needed portal vein embolisation or intraoperative ablation. The Dutch phase II study met a feasibility endpoint, not an efficacy one, and its 83% disease control rate is not comparable with the 37–58% complete local treatment CAIRO5 achieved on systemic therapy alone. Selection turns on liver-dominant burden, arterial anatomy, prior therapy and pump programme maturity, and the programme commits to tracking the conversion-to-resection rate, biliary toxicity and 6-month grade 3 or worse toxicity.",
+      "why": "What is actually known is high hepatic response in single-arm, centre-concentrated series with no randomised conversion endpoint. The 47% conversion rate comes from a 49-patient phase I experience at one high-volume pump centre, where resectability was adjudicated by the surgeons who then operated, response was scored by WHO-type criteria rather than RECIST, median disease-free survival after R0 resection was 7.6 months, and more than half the resected patients needed portal vein embolisation or intraoperative ablation. The Dutch phase II study met a feasibility endpoint, not an efficacy one, and its 83% disease control rate is not comparable with the 37–58% complete local treatment CAIRO5 achieved on systemic therapy alone. Selection turns on liver-dominant burden, arterial anatomy, prior therapy and pump programme maturity, and the programme commits to tracking the conversion-to-resection rate, biliary toxicity and 6-month grade 3 or worse toxicity. The separate D’Angelica phase II study also enrolled 49 patients and achieved 47% conversion, but response was 76%, not 92% (PMID 24646562). Neither is a randomized conversion comparison.",
       "refs": [
         "19470932",
         "38608150",
@@ -993,11 +1036,12 @@
     },
     {
       "t": "Adjuvant hepatic arterial infusion after resection is established.",
-      "why": "The randomised evidence is one 1999 single-centre trial in which the whole overall survival curves did not differ (p=0.21); the positive result is a prespecified two-year landmark against bolus fluorouracil, and biliary toxicity meant only 26% of patients received more than half the planned floxuridine, so the regimen tested is not the regimen designed. The 2368-patient propensity series spans 21 years, its hepatic arterial infusion patients were six years younger and more recently treated, a published letter argued the propensity model and post-adjustment balance were reported in too little detail to assess, and the largest effects fell in node-negative and low-risk patients — the opposite of where a regional therapy should help most, and with no benefit at all with extrahepatic disease or a positive margin. The confirmatory PUMP trial is in this depot only as a protocol; it gives pump floxuridine without concurrent systemic chemotherapy in clinical risk score 0–2 patients, so neither result will test what this page describes.",
+      "why": "The randomised evidence is one 1999 single-centre trial in which the whole overall survival curves did not differ (p=0.21); the positive result is a prespecified two-year landmark against bolus fluorouracil, and biliary toxicity meant only 26% of patients received more than half the planned floxuridine, so the regimen tested is not the regimen designed. The 2368-patient propensity series spans 21 years, its hepatic arterial infusion patients were six years younger and more recently treated, a published letter argued the propensity model and post-adjustment balance were reported in too little detail to assess, and the largest effects fell in node-negative and low-risk patients — the opposite of where a regional therapy should help most, and with no benefit at all with extrahepatic disease or a positive margin. Dutch adjuvant PUMP has reported at ASCO 2026 (LBA3506; DOI 10.1200/JCO.2026.44.17_suppl.LBA3506): CRS 0–2, 243 randomized and 218 analysed, HAIP alone versus resection alone without adjuvant systemic therapy in either arm. PFS HR 0.88 (95% CI 0.62–1.25), P=.48; median PFS 15 versus 16 months. No significant PFS benefit; overall survival is immature. This does not support routine adjuvant HAI after every low-risk resection and does not test HAI plus modern systemic therapy or unresectable conversion.",
       "refs": [
         "10615075",
         "28426374",
-        "30953467"
+        "30953467",
+        "pump2026"
       ]
     },
     {
@@ -1095,6 +1139,13 @@
       "refs": [
         "40201962"
       ]
+    },
+    {
+      "t": "HAI referral and transplant evaluation should proceed in parallel.",
+      "why": "Do not require exhaustion of HAI before transplant review in otherwise eligible persistently unresectable liver-only CRLM. Response does not establish listing or a MELD exception. Hill (PMID 37210451) describes seven transplants after HAI: five for biliary complications and two for residual tumour, with difficult dissection and arterial reconstruction. This supports early technical planning, not a validated fixed HAI-to-LT schedule.",
+      "refs": [
+        "37210451"
+      ]
     }
   ],
   "ops": {
@@ -1109,7 +1160,8 @@
       "Documentation: an Epic note within one business day recording the phase, the recommendation, the alternatives considered, the owner, the due date and the reassessment plan. Owner: the designated documenting clinician.",
       "Closure: the registry tracks completion, outside communication, scheduling barriers, results and re-presentation. Owner: navigator and coordinator.",
       "Community relationship: return the recommendation promptly and state whether treatment remains local or transfers; do not absorb longitudinal care without the referring clinician's agreement. Owner: treating and referring clinicians.",
-      "These operating requirements are reproduced from the Memorial Hermann HCC roadmap so that one tumour board runs one standard across hepatobiliary diseases. They are evidence grade D by construction and should be audited for adherence, not effectiveness."
+      "These operating requirements are reproduced from the Memorial Hermann HCC roadmap so that one tumour board runs one standard across hepatobiliary diseases. They are evidence grade D by construction and should be audited for adherence, not effectiveness.",
+      "Before activation, name the HPB pump surgeon and backup, medical oncology lead, nursing/pharmacy team, nuclear-medicine perfusion service and IR rescue service; define refill/maintenance coverage, laboratory monitoring and dose holds, biliary-toxicity escalation, and an outcomes registry. Minimum programme requirements: PMID 39962001; surgical toolkit: PMID 36346892. Avoid concurrent bevacizumab with FUDR (PMID 24154839); retain the NCCN CRLM restriction on concurrent VEGF inhibitors."
     ],
     "dashboard": [
       "Clearance discipline: proportion of non-clearance treatment decisions that record why resection, margin-verified ablation, augmentation, staged surgery and HAI were each unsuitable — the pathway's central claim. Target 95% or more.",
@@ -1230,6 +1282,12 @@
         "q": "Pilot for 90 days, audit 20 consecutive cases, then revise before approval as a clinical practice guideline.",
         "why": "This is a draft for multidisciplinary and institutional governance review, not active clinical policy, and the operating measures are grade D by construction.",
         "audit": "The 20-case audit against the dashboard measures, with revisions recorded before approval."
+      },
+      {
+        "n": 19,
+        "q": "Ratify early HAI review, disease-specific selection and programme safeguards.",
+        "why": "Before activation, name the HPB pump surgeon and backup, medical oncology lead, nursing/pharmacy team, nuclear-medicine perfusion service and IR rescue service; define refill/maintenance coverage, laboratory monitoring and dose holds, biliary-toxicity escalation, and an outcomes registry. Minimum programme requirements: PMID 39962001; surgical toolkit: PMID 36346892. Avoid concurrent bevacizumab with FUDR (PMID 24154839); retain the NCCN CRLM restriction on concurrent VEGF inhibitors. Separate conversion, regional-control and selective adjuvant intent; transplant review proceeds in parallel.",
+        "audit": "Record intent, referral timing, systemic plan, perfusion verification, dose intensity, biliary complications, reassessment and complete resection/ablation outcomes."
       }
     ]
   },
@@ -1458,6 +1516,41 @@
       "Chinese 2024 consensus",
       "Guidelines & policy",
       "Zhang W, Bi X, Sun Y, et al. Diagnosis and treatment of colorectal liver metastases: Chinese expert consensus-based multidisciplinary team (2024 edition). Chin Med J (Engl). 2025;138(15):1765-1768. doi:10.1097/CM9.0000000000003688. PMID:40640089."
+    ],
+    "24646562": [
+      "Phase II trial of hepatic artery infusional and systemic chemotherapy for patients with unresectable hepatic metastases from colorectal cancer: conversion to resection and long-term outcomes",
+      "HAI evidence · October 2026",
+      "Phase II trial of hepatic artery infusional and systemic chemotherapy for patients with unresectable hepatic metastases from colorectal cancer: conversion to resection and long-term outcomes. DOI: 10.1097/SLA.0000000000000614. PMID: 24646562."
+    ],
+    "27566258": [
+      "Response rates of hepatic arterial infusion pump therapy in patients with metastatic colorectal cancer liver metastases refractory to all standard chemotherapies",
+      "HAI evidence · October 2026",
+      "Response rates of hepatic arterial infusion pump therapy in patients with metastatic colorectal cancer liver metastases refractory to all standard chemotherapies. DOI: 10.1002/jso.24399. PMID: 27566258."
+    ],
+    "39565488": [
+      "Perioperative and Oncologic Outcomes of Hepatic Arterial Infusion (HAI) Pump Chemotherapy for Patients with Unresectable Colorectal Liver Metastases at an Expanding HAI Program",
+      "HAI evidence · October 2026",
+      "Perioperative and Oncologic Outcomes of Hepatic Arterial Infusion (HAI) Pump Chemotherapy for Patients with Unresectable Colorectal Liver Metastases at an Expanding HAI Program. DOI: 10.1245/s10434-024-16488-y. PMID: 39565488."
+    ],
+    "39962001": [
+      "Minimum Requirements to Safely Establish and Sustain New Hepatic Arterial Infusion Pump Programs: An International Expert Perspective",
+      "HAI evidence · October 2026",
+      "Minimum Requirements to Safely Establish and Sustain New Hepatic Arterial Infusion Pump Programs: An International Expert Perspective. DOI: 10.1245/s10434-025-17009-1. PMID: 39962001."
+    ],
+    "36346892": [
+      "Hepatic Artery Infusion Pumps: A Surgical Toolkit for Intraoperative Decision-Making and Management of Hepatic Artery Infusion-Specific Complications",
+      "HAI evidence · October 2026",
+      "Hepatic Artery Infusion Pumps: A Surgical Toolkit for Intraoperative Decision-Making and Management of Hepatic Artery Infusion-Specific Complications. DOI: 10.1097/SLA.0000000000005434. PMID: 36346892."
+    ],
+    "37210451": [
+      "Liver Transplantation After Hepatic Artery Infusion Pump Therapy: Single-Center Experience and Technical Considerations",
+      "HAI evidence · October 2026",
+      "Liver Transplantation After Hepatic Artery Infusion Pump Therapy: Single-Center Experience and Technical Considerations. DOI: 10.1245/s10434-023-13652-8. PMID: 37210451."
+    ],
+    "24154839": [
+      "Floxuridine hepatic arterial infusion associated biliary toxicity is increased by concurrent administration of systemic bevacizumab",
+      "HAI evidence · October 2026",
+      "Floxuridine hepatic arterial infusion associated biliary toxicity is increased by concurrent administration of systemic bevacizumab. DOI: 10.1245/s10434-013-3275-0. PMID: 24154839."
     ]
   },
   "nonpm": {
@@ -1493,7 +1586,67 @@
       "CRLM alignment worksheet",
       "Guidelines & policy",
       "Guideline alignment worksheet — adult colorectal liver metastases, Memorial Hermann CRLM System Roadmap Draft v0.6, 4 October 2026. Sixteen areas where NCCN 2.2026, IHPBA 2021, OPTN 2025 guidance, ASCO 2023, Adam 2015 and the Chinese 2024 consensus can disagree, with the institutional position and the open ratification decisions."
+    ],
+    "pump2026": [
+      "Dutch adjuvant PUMP · ASCO 2026",
+      "HAI randomized conference results",
+      "Dutch adjuvant PUMP has reported at ASCO 2026 (LBA3506; DOI 10.1200/JCO.2026.44.17_suppl.LBA3506): CRS 0–2, 243 randomized and 218 analysed, HAIP alone versus resection alone without adjuvant systemic therapy in either arm. PFS HR 0.88 (95% CI 0.62–1.25), P=.48; median PFS 15 versus 16 months. No significant PFS benefit; overall survival is immature. This does not support routine adjuvant HAI after every low-risk resection and does not test HAI plus modern systemic therapy or unresectable conversion.",
+      "https://doi.org/10.1200/JCO.2026.44.17_suppl.LBA3506"
+    ],
+    "ea2222": [
+      "EA2222 / NCT05863195",
+      "Ongoing trial",
+      "US randomized phase III study of systemic therapy with or without HAI for unresectable CRLM; distinct from Dutch adjuvant PUMP. No efficacy results inferred.",
+      "https://clinicaltrials.gov/study/NCT05863195"
+    ],
+    "tmc24646562": [
+      "TMC full text · PMID 24646562",
+      "HAI library access",
+      "Phase II trial of hepatic artery infusional and systemic chemotherapy for patients with unresectable hepatic metastases from colorectal cancer: conversion to resection and long-term outcomes.",
+      "https://go.openathens.net/redirector/library.tmc.edu?url=https://doi.org/10.1097/SLA.0000000000000614"
+    ],
+    "tmc27566258": [
+      "TMC full text · PMID 27566258",
+      "HAI library access",
+      "Response rates of hepatic arterial infusion pump therapy in patients with metastatic colorectal cancer liver metastases refractory to all standard chemotherapies.",
+      "https://go.openathens.net/redirector/library.tmc.edu?url=https://doi.org/10.1002/jso.24399"
+    ],
+    "tmc39565488": [
+      "TMC full text · PMID 39565488",
+      "HAI library access",
+      "Perioperative and Oncologic Outcomes of Hepatic Arterial Infusion (HAI) Pump Chemotherapy for Patients with Unresectable Colorectal Liver Metastases at an Expanding HAI Program.",
+      "https://go.openathens.net/redirector/library.tmc.edu?url=https://doi.org/10.1245/s10434-024-16488-y"
+    ],
+    "tmc39962001": [
+      "TMC full text · PMID 39962001",
+      "HAI library access",
+      "Minimum Requirements to Safely Establish and Sustain New Hepatic Arterial Infusion Pump Programs: An International Expert Perspective.",
+      "https://go.openathens.net/redirector/library.tmc.edu?url=https://doi.org/10.1245/s10434-025-17009-1"
+    ],
+    "tmc36346892": [
+      "TMC full text · PMID 36346892",
+      "HAI library access",
+      "Hepatic Artery Infusion Pumps: A Surgical Toolkit for Intraoperative Decision-Making and Management of Hepatic Artery Infusion-Specific Complications.",
+      "https://go.openathens.net/redirector/library.tmc.edu?url=https://doi.org/10.1097/SLA.0000000000005434"
+    ],
+    "tmc37210451": [
+      "TMC full text · PMID 37210451",
+      "HAI library access",
+      "Liver Transplantation After Hepatic Artery Infusion Pump Therapy: Single-Center Experience and Technical Considerations.",
+      "https://go.openathens.net/redirector/library.tmc.edu?url=https://doi.org/10.1245/s10434-023-13652-8"
+    ],
+    "tmc24154839": [
+      "TMC full text · PMID 24154839",
+      "HAI library access",
+      "Floxuridine hepatic arterial infusion associated biliary toxicity is increased by concurrent administration of systemic bevacizumab.",
+      "https://go.openathens.net/redirector/library.tmc.edu?url=https://doi.org/10.1245/s10434-013-3275-0"
+    ],
+    "tmcpump2026": [
+      "TMC · Dutch PUMP ASCO 2026",
+      "HAI library access",
+      "Published conference abstract LBA3506.",
+      "https://go.openathens.net/redirector/library.tmc.edu?url=https://doi.org/10.1200/JCO.2026.44.17_suppl.LBA3506"
     ]
   },
-  "provenance": "Built from the Memorial Hermann Colorectal Liver Metastasis System Roadmap Draft v0.6 (4 October 2026, liver-directed section revised 3 October 2026, evidence current to 20 September 2026) and its companion guideline alignment worksheet of the same date, which supplied the institutional positions, the NCCN decisions 1-16 and the open ratification items. Revised on 7 October 2026 (Batch 08) after a full-text read of the whole CRLM reference depot: 45 papers, each with an independently recorded critique, covering all 45 PubMed-indexed references cited on this page. Every evidence string was re-checked against the paper's own reported results rather than against a guideline quoting it, and the grades were re-set where the full text showed the recommendation rested on a surrogate endpoint, a subset analysis, an unvalidated threshold or a single centre's practice; 20 evidence entries changed and 13 grades were lowered in that pass, and the honest section was rewritten and expanded from 5 entries to 27. Three references are cited only for what they do not yet show: the PUMP trial appears as a published protocol with no outcome data, so no efficacy claim rests on it; the LIGRO survival analysis is published separately and was not read, so ALPPS is cited for resectability only; and the NCCN guideline, the OPTN policy and guidance documents, the Memorial Hermann roadmap and its alignment worksheet are not PubMed-indexed papers and were read as documents, not trials. Policy wording follows NCCN Colon Cancer v2.2026 (7 April 2026), OPTN Policy 9 as retrieved 1 October 2026, and the OPTN Adult MELD Exceptions for Transplant Oncology review-board guidance of December 2025, which is guidance and not Policy. The roadmap itself is a draft pending multidisciplinary and institutional governance review: it is not active clinical policy, does not replace clinician judgement, current drug labelling, OPTN policy or patient-specific informed consent, and every transplant criterion must be confirmed against current policy at implementation."
+  "provenance": "Built from the Memorial Hermann Colorectal Liver Metastasis System Roadmap Draft v0.6 (4 October 2026, liver-directed section revised 3 October 2026, evidence current to 20 September 2026) and its companion guideline alignment worksheet of the same date, which supplied the institutional positions, the NCCN decisions 1-16 and the open ratification items. Revised on 7 October 2026 (Batch 08) after a full-text read of the whole CRLM reference depot: 45 papers, each with an independently recorded critique, covering all 45 PubMed-indexed references cited on this page. Every evidence string was re-checked against the paper's own reported results rather than against a guideline quoting it, and the grades were re-set where the full text showed the recommendation rested on a surrogate endpoint, a subset analysis, an unvalidated threshold or a single centre's practice; 20 evidence entries changed and 13 grades were lowered in that pass, and the honest section was rewritten and expanded from 5 entries to 27. Three references are cited only for what they do not yet show: the older PUMP protocol is now supplemented by the ASCO 2026 randomized abstract; the LIGRO survival analysis is published separately and was not read, so ALPPS is cited for resectability only; and the NCCN guideline, the OPTN policy and guidance documents, the Memorial Hermann roadmap and its alignment worksheet are not PubMed-indexed papers and were read as documents, not trials. Policy wording follows NCCN Colon Cancer v2.2026 (7 April 2026), OPTN Policy 9 as retrieved 1 October 2026, and the OPTN Adult MELD Exceptions for Transplant Oncology review-board guidance of December 2025, which is guidance and not Policy. The roadmap itself is a draft pending multidisciplinary and institutional governance review: it is not active clinical policy, does not replace clinician judgement, current drug labelling, OPTN policy or patient-specific informed consent, and every transplant criterion must be confirmed against current policy at implementation. HAI sections updated 15 October 2026 to Batch 09. New studies were checked against indexed abstracts and the published ASCO abstract; new full-text PDFs remain to be acquired. No new full-text review is claimed for these additions."
 }

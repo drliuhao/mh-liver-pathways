@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<meta name="description" content="Colorectal liver metastases — Memorial Hermann system roadmap v0.7, draft under development.">
+<meta name="description" content="Colorectal liver metastases — Memorial Hermann system roadmap v0.8, draft under development.">
 <title>Memorial Hermann CRLM Pathway</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
 </head>
 <body>
 <style>
-/* One renderer, four tumours: the gates come from data/pathway.json, the
+/* One renderer, four tumours: the gates come from data/pathway.json?v=20261015, the
    liver-directed matrix from the shared LRT_Evidence_Matrix export. Layout
    follows the HCC console: a gate strip, the answer below it, then the
    evidence library everything links back into. */
@@ -649,10 +649,13 @@ function renderCell(){
     </div>
     <p style="margin-top:12px; font-size:14.5px"><b>${esc(expandAbbr(c.head))}</b></p>
     ${c.roles.map(r=>`<div class="role">
-        <div class="rolewhen">${tchip(r.t, MX.tiers[r.t].short)}<span>${esc(expandAbbr(r.when))}</span></div>
+        <div class="rolewhen">${tchip(r.t, (MX.tiers[r.t] || {short:"Caution"}).short)}<span>${esc(expandAbbr(r.when))}</span></div>
         <details class="more"><summary>${r.ev.length} ${r.ev.length===1?"trial":"trials"}</summary>
           <div class="moreinner">${r.ev.map(evLine).join("")}</div></details>
       </div>`).join("")}`;
+  const ci = MX.contra && MX.contra[mod[0]];
+  if(ci) document.getElementById("lrtDetail").innerHTML += `<div class="role" style="border-top:1px solid var(--line2);margin-top:16px;padding-top:12px"><h4>Contraindications and feasibility</h4><ul>${ci.items.map(x=>`<li>${esc(x)}</li>`).join("")}</ul><p class="small muted">${esc(ci.ref.join(" · "))}</p></div>`;
+
 }
 document.getElementById("mcards").addEventListener("click", e=>{
   const b = e.target.closest(".mcell"); if(!b) return;
@@ -797,8 +800,8 @@ function build(){
 
 /* ---------- load ---------- */
 Promise.all([
-  fetch("data/pathway.json").then(r=>r.json()),
-  fetch("data/critique.json").then(r=>r.ok ? r.json() : {}).catch(()=>({}))
+  fetch("data/pathway.json?v=20261015").then(r=>r.json()),
+  fetch("data/critique.json?v=20261015").then(r=>r.ok ? r.json() : {}).catch(()=>({}))
 ]).then(([p, crit])=>{
   P = p;
   CRIT = crit || {};
@@ -808,8 +811,8 @@ Promise.all([
   document.getElementById("lrt").hidden = false;
   document.getElementById("navLrt").hidden = false;
   return Promise.all([
-    fetch("data/lrt_matrix.json").then(r=>r.json()),
-    fetch("data/lrt_refs.json").then(r=>r.json())
+    fetch("data/lrt_matrix.json?v=20261015").then(r=>r.json()),
+    fetch("data/lrt_refs.json?v=20261015").then(r=>r.json())
   ]).then(([mx, refs])=>{
     MX = mx;
     const first = MX.modalities.map(m=>P.matrix+"|"+m[0]).find(k=>MX.cells[k]);
@@ -818,10 +821,10 @@ Promise.all([
     renderMatrix(); renderCell();
     const others = MX.tumours.filter(t=>t[0]!==P.matrix).map(t=>t[2]);
     document.getElementById("lrtsrc").innerHTML =
-      `Source: <code>LRT_Evidence_Matrix</code>, Batch 07, filtered to the ${esc(P.name.toLowerCase())} column. `
+      `Source: <code>LRT_Evidence_Matrix</code>, Batch 09 HAI update (15 October 2026), filtered to the ${esc(P.name.toLowerCase())} column. `
       + `The full matrix also covers ${esc(others.join(", ").toLowerCase())}; perihilar cholangiocarcinoma is not in it.`;
     /* only the papers this tumour's cells actually cite go into the library */
-    const used = new Set();
+    const used = new Set(["39962001", "36346892", "24154839"]);
     for(const [key, c] of Object.entries(MX.cells)){
       if(!key.startsWith(P.matrix+"|")) continue;
       for(const role of c.roles) for(const e of role.ev) if(e[1]) used.add(e[1]);

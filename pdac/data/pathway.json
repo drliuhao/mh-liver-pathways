@@ -2,8 +2,8 @@
  "key": "pdac",
  "short": "PDAC",
  "name": "Pancreatic ductal adenocarcinoma",
- "version": "v0.2",
- "batch": "Batch 08, 7 October 2026",
+ "version": "v0.3",
+ "batch": "Batch 09, 15 October 2026",
  "lead": "Which resectability box this patient is in, what the next act must not foreclose, and where the neoadjuvant trials disagree badly enough that the sequence has to be decided locally rather than quoted. Revised after reading every paper in the depot in full: the biggest single finding is that almost no trial on this page had a control arm receiving the therapy this page recommends.",
  "gatelabel": "The decision in front of you",
  "gates": [
@@ -80,7 +80,7 @@
      "g": "C",
      "pref": "NCCN defines high-risk features as equivocal or indeterminate imaging findings, markedly elevated CA 19-9, a large primary tumour, or large regional lymph nodes. PET before and after starting neoadjuvant therapy also gives the metabolic arm of the three-metric response assessment.",
      "avoid": "It is not a substitute for high-quality contrast-enhanced CT and does not belong in routine staging. Order it to answer a question, and name the question.",
-     "note": "Metabolic tumour volume and total lesion glycolysis appear as hard thresholds in the local liver-only transplant protocol, so if that gate is live the baseline PET has to be acquired in a way that lets those be measured."
+     "note": "Use PET selectively for staging when its result would change the treatment plan; it does not replace pancreas-protocol cross-sectional imaging."
     },
     {
      "t": "EUS in selected cases where it is complementary to CT — but not as a routine staging tool.",
@@ -1137,7 +1137,7 @@
      "l": "Avoid",
      "g": "C",
      "pref": "NCCN's wording is the ceiling of what can be said: in select rare cases, surgery can be considered in patients with a sustained and deep response to systemic therapy, ideally at high-volume centres, and patients with indolent or oligometastatic disease should be referred to a high-volume centre for evaluation.",
-     "avoid": "Everything beyond that sentence is retrospective and selected. The liver-only question has its own gate on this page and is protocol-only."
+     "avoid": "Evidence for resection of metastatic PDAC remains retrospective and highly selected; do not present it as established curative treatment."
     },
     {
      "t": "Do not let the molecular report arrive after it can be used.",
@@ -1145,155 +1145,6 @@
      "g": "D",
      "pref": "Order profiling at the first visit, bank the extra passes at the index biopsy, and name the person who chases the result.",
      "avoid": "This is an operational failure, not a clinical judgement, and it is the one that most often costs a patient a targeted option in this disease — including the two options on this page with randomised support."
-    }
-   ]
-  },
-  {
-   "id": "9",
-   "tone": "cure",
-   "name": "9 · Liver-only metastases — the experimental transplant gate",
-   "req": "all",
-   "crit": [
-    "Liver-only metastatic PDAC, no extrahepatic disease on PET-CT, negative staging laparoscopy with peritoneal washings",
-    "A sustained response through at least 6 months of first-line systemic therapy, with CA 19-9 fall of 85% or more or normalisation, and at least 12 months from diagnosis without progression",
-    "Primary tumour resectable or borderline resectable, so pancreatectomy can be done at the same operation",
-    "Age 18–65, ECOG 0–1, otherwise transplantable on standard AASLD/AST criteria",
-    "An open IRB-approved protocol with DSMB oversight, institutional transplant-selection and allocation-ethics approval, and consent that benefit is unproven and graft access may be unavailable"
-   ],
-   "ask": "Is this patient on a protocol, and does anyone in the room believe the operation adds anything to the chemotherapy that got them here?",
-   "standard": [
-    {
-     "t": "This is investigational for the whole of its length, and the local protocol says so on its first page: liver transplantation for PDAC with liver metastases is not a standardized OPTN exception diagnosis and is not among the recommended diagnoses in the December 2025 transplant-oncology guidance, and no MELD exception score is recommended or guaranteed.",
-     "l": "Standard",
-     "g": "D",
-     "flags": [
-      "PROTOCOL",
-      "REGISTRY"
-     ],
-     "pref": "Where the question is raised at all, route it to the transplant surgeon and to research governance at the same time, not to one and then the other. The programme's own V2 document states that the protocol must not be activated without prospective IRB approval, DSMB oversight, institutional transplant-selection and allocation-ethics approval, independent living-donor advocacy where applicable, and explicit consent that benefit is unproven and graft access may be unavailable.",
-     "avoid": "Do not raise transplantation with a patient or family as an available option before an open protocol exists. The controlling allocation sources are OPTN Policies 9.4 and 9.5 as currently posted and the December 2025 National Liver Review Board transplant-oncology guidance, and the guidance is not OPTN policy and does not define a clinical standard of care.",
-     "note": "Policy review date on the local document is 16 July 2026, and V2 is dated 23 July 2026. The V2 revision note records what was wrong with V1: it conflated phase 3 daraxonrasib survival results with phase 1–2 response and ctDNA findings, proposed unapproved post-transplant drug combinations without IND controls, omitted inequality operators from its stopping rules, and included a non-retrievable personal citation. Read V2."
-    },
-    {
-     "t": "Off protocol, the treatment for liver-only metastatic PDAC is systemic therapy — this is the metastatic gate on this page, and nothing else.",
-     "l": "Standard",
-     "g": "A",
-     "refs": [
-      "21561347",
-      "37708904"
-     ],
-     "pref": "Every patient with liver-only metastatic disease, including every patient who is later considered for a protocol, since 6 to 12 months of systemic therapy with a documented sustained response is itself the entry condition.",
-     "avoid": "Do not let the existence of a protocol change the first-line conversation. NCCN's position on surgery in metastatic disease is confined to select rare cases with a sustained and deep response, ideally at high-volume centres.",
-     "note": "Both first-line trials cited here enrolled narrower populations than the patients this gate will see: PRODIGE 4 capped age at 76 with bilirubin at or below 1.5 times normal, and NAPOLI 3 required ECOG 0–1 while allowing any age and clinical ascites. Neither says anything about surgery or transplantation."
-    },
-    {
-     "t": "Know the survival benchmark this operation would have to beat — and it is not the all-comer figure for stage IV disease.",
-     "l": "Standard",
-     "g": "C",
-     "refs": [
-      "36353987"
-     ],
-     "pref": "Quote this at the board before any protocol discussion. In a single-centre registry cohort of 241 patients with clinical stage IV PDAC and synchronous metastases, median overall survival was 7 months (95% CI 5–9), the same in the 144 patients with liver-only metastases. Among the 54 patients who received chemotherapy <b>and</b> survived to a 12-month landmark, median overall survival was 26 months (19–33) with 1-, 3- and 5-year survival of 91%, 34% and 25%; for the 27 with liver-only disease who met the same two conditions it was 26 months (17–39) with 96%, 33% and 24%. The 9 patients (4% of the cohort) who had a resectable or borderline resectable primary <b>and</b> resectable liver-only metastases and met both conditions had median overall survival of 39 months (13–not reached), with 2-, 3- and 5-year survival of 67%, 56% and <b>0%</b> — there were no 5-year survivors.",
-     "avoid": "The benchmark for a protocol operation in this population is therefore roughly 26 to 39 months, not the 7 to 12 months usually quoted for metastatic disease, and all of it was achieved with <b>no operation at all</b>. The authors' own conclusion is that outcomes of resection in metastatic pancreatic cancer should be assessed against the expected survival of patients potentially eligible for surgery, not against all-comers with stage IV disease. Note also how far from <i>oligometastatic</i> this population is: of the 80 patients whose imaging was reviewed, 5 (6%) had a single liver lesion, 17 (20%) had 2 to 4 and 58 (74%) had 5 or more, and only 35 of 80 (44%) had resectable liver disease.",
-     "note": "That 39-month figure rests on nine patients, five of whom had died, with a confidence interval from 13 months to not reached, and the 12-month landmark was imposed specifically to mitigate immortal-time bias. Two features make it a conservative comparator rather than a flattering one: imaging was available for review in only 80 of 183 patients with liver metastases (44%), and CA 19-9 was deliberately excluded from the selection criteria, so median CA 19-9 in the benchmark cohort was 3,101 U/mL and 64% of those with a trend available were <b>rising</b> — patients no surgeon would operate on. The durable finding is methodological: a landmark analysis is mandatory and resected-only denominators are uninterpretable. It is still the right comparator, and it is the number the local protocol's own consent section alludes to when it says median overall survival may approach 40 months without surgery in patients with favourable biology who survive beyond 12 months on chemotherapy."
-    }
-   ],
-   "alt": [
-    {
-     "l": "Reasonable",
-     "g": "D",
-     "opts": [
-      {
-       "name": "Protocol A — investigational lower-risk cohort",
-       "g": "D",
-       "flags": [
-        "PROTOCOL",
-        "REGISTRY",
-        "EXPERTISE"
-       ],
-       "when": "Prospective single-arm phase 2, primary endpoint 3-year overall survival after transplant. Entry: five or fewer liver metastases confirmed on PET-CT and cross-sectional imaging; at least 6 months of first-line FOLFIRINOX, mFOLFIRINOX, NALIRIFOX or gemcitabine with nab-paclitaxel; RECIST 1.1 partial response or stable disease sustained for at least 6 months; CA 19-9 fall of 85% or more or normalisation; declining or undetectable RAS-mutant ctDNA; at least 12 months from diagnosis without progression; primary resectable or borderline resectable; no extrahepatic disease on PET-CT within 4 weeks of listing; negative staging laparoscopy with peritoneal washings and portal nodal sampling. The operation is simultaneous pancreatectomy and orthotopic liver transplantation, aborted if peritoneal cytology or distant nodes are positive on frozen section.",
-       "pref": "A patient whose biology has already declared itself over a year of treatment, who is young and fit, and who understands that this has no established precedent.",
-       "avoid": "The exclusions do as much work as the inclusions and should be read as part of the definition: any extrahepatic disease including bone, lung or peritoneum; poorly differentiated or undifferentiated histology; signet-ring cell features; disease progression at <b>any</b> point during neoadjuvant therapy; PET metabolic tumour volume above 70 cm³ or total lesion glycolysis above 260 g; CA 19-9 rising or above 500 U/mL at listing; prior liver radiation; uncontrolled biliary obstruction or active cholangitis; medical contraindication to transplantation or immunosuppression; another malignancy within 5 years. The protocol's own stopping rules are perioperative mortality above 10% in the first 10 patients, 1-year overall survival below 50%, and a 1-year recurrence rate above 60%, each triggering an enrolment pause and DSMB review."
-      },
-      {
-       "name": "Protocol B — high-risk experimental cohort",
-       "g": "D",
-       "flags": [
-        "PROTOCOL",
-        "REGISTRY",
-        "EXPERTISE"
-       ],
-       "when": "Prospective single-arm phase 1/2; phase 1 endpoints are 30- and 90-day perioperative morbidity and mortality, phase 2 endpoint is 2-year overall survival. Entry: ten or fewer liver metastases with bilobar disease permitted; at least one prior line with progression or intolerance; an eligible RAS mutation as defined by the current daraxonrasib investigational protocol, with drug exposure requiring an FDA-authorized IND and sponsor confirmation; no extrahepatic disease on PET-CT; willingness to be evaluated for living donor liver transplantation. Conversion is assessed at 6 months and requires all of: RECIST partial or complete response; CA 19-9 fall of 85% or more or normalisation; ctDNA fall of 50% or more; PET metabolic tumour volume of 70 cm³ or less; no new disease sites; negative staging laparoscopy with washings; resectable primary.",
-       "pref": "Nobody, until the phase 1 safety lead-in has been run under an IND with an independent DSMB. The conversion-rate stopping rule — a pause and DSMB review if conversion to transplant is below 20% at the interim analysis after 20 enrolled patients — is the honest statement of how uncertain the premise is.",
-       "avoid": "V2 removed most of what V1 permitted at investigator discretion, and the differences matter: investigational daraxonrasib only at the IND-authorized dose and schedule within a formal phase 1 safety lead-in, because 300 mg daily is not a transplant-validated dose; no discretionary daraxonrasib-plus-chemotherapy combinations, each of which requires its own prespecified IND dose-escalation cohort and stopping rules; no routine post-transplant daraxonrasib maintenance and no mandatory 12-month course; daraxonrasib plus afatinib must not be administered under the protocol at all. Deceased-donor transplantation is not a fallback entitlement and may proceed only through lawful allocation at calculated MELD or a separately approved non-standard exception with institutional allocation-ethics approval. Living donation does not remove the need for independent donor-risk review."
-      }
-     ],
-     "order": "Ordered by how much of each is unproven, and the order is not a ranking of benefit — there is no outcome data for either cohort, in this programme or anywhere. Protocol A is first only because its entry conditions select patients whose disease has already behaved indolently for a year, so the selection is doing work that the operation has not been shown to do. Protocol B's premise — that a RAS inhibitor response can convert higher-burden liver-only disease into transplantable disease — rests on a drug result in previously treated metastatic disease and on preclinical work, and nothing more.",
-     "flagnote": "Ratification item 9: does this programme open either cohort at all, and under whose governance? This is a graft-stewardship and research-ethics decision before it is a clinical one, and the page records only what the local protocol says — it takes no institutional position of its own, because none has been ratified. Ratification item 10: if a cohort opens, what is the consent standard, given that the honest comparator (26–39 months on systemic therapy in a responder) is close to anything the operation could plausibly deliver? Registry entry for every patient enrolled is required by the protocol."
-    },
-    {
-     "t": "Pancreatectomy with liver metastasectomy, rather than transplantation, within a prospective protocol — the nearer-term version of the same question.",
-     "l": "Reasonable",
-     "g": "D",
-     "refs": [
-      "39837137",
-      "40002281",
-      "35115154"
-     ],
-     "pref": "A sustained and deep response on systemic therapy, low-volume liver-only disease, a resectable primary, and a prospective protocol with registry entry. Two 2025 meta-analyses report a pooled overall survival hazard ratio of 0.41 for resection against non-surgical therapy — 0.41 (95% CI 0.31–0.53) across 7 studies pooled from a review of 16 studies and 999 resected patients in one, and 0.41 (0.32–0.52) across 6 studies and 1,348 patients in the other.",
-     "avoid": "Treat that as one estimate, not two. The two reviews draw on substantially overlapping studies (Shao, Shi, Pausch and Hank appear in both), so citing both double-counts a single evidence base, and both are built entirely from retrospective series with complete selection asymmetry. One pooled only <b>univariate</b> hazard ratios by explicit design and never mentions immortal-time bias, reporting I² of 12% from seven retrospective studies with different definitions of oligometastasis; the other found I² of 64.5% in the same literature. The meta-regression in the second is the finding that matters: the relative rate of chemotherapy between arms explained 87.1% of the between-study heterogeneity, roughly half the non-surgical patients received <b>gemcitabine monotherapy</b> against multi-agent regimens in the surgical arm, and the adjusted effect reached HR 0.18 (0.08–0.40) only where <b>both</b> pre- and postoperative systemic chemotherapy were given, with no difference in any other scenario — an estimate fitted to 7 comparisons with 11 candidate covariates that the authors themselves describe as mathematical rather than empirical. The first review's own data point the same way: three studies that mandated a RECIST response plus a CA 19-9 fall reported an average median overall survival of 32.5 months in 114 resected patients against 9.2 months in 148 who did not meet the response criteria, a 23-month gap generated by a response criterion rather than an operation, and the best outcomes in the whole review came from 52 patients whose liver metastases had completely regressed and who had only the primary resected (median 23 months). Three of its included studies found synchronous-resection patients did <b>worse</b> than patients resected for non-metastatic disease at the same centres (14.9 versus 22.5 months).",
-     "note": "Downgraded from C to D. The National Cancer Database picture shows what the national experience actually is: of 47,785 patients with liver-only stage IV disease, 891 (1.9%) underwent pancreatic resection and only 137 (0.29%) had simultaneous liver metastasectomy; only 120 of the 891 (13.5%) received any preoperative chemotherapy, and 85% had the primary removed without touching the liver metastases, a practice with no supporting evidence. Median overall survival in the whole surgical cohort was 10.74 months against 3.4 months unmatched — essentially what PRODIGE 4 and MPACT achieved with chemotherapy alone in unselected metastatic disease — and the quoted 15.6 versus 8.1 months comes from matching 137 surgical patients to 137 of 25,268 chemotherapy patients on six demographic variables, with none of the variables that decide the operation (metastasis number or size, response to chemotherapy, CA 19-9 trajectory, performance status) matched at all. Its adjusted Cox model reports well-to-moderately differentiated tumours at HR 4.09 (2.32–7.23) for death, the opposite of the known direction and of the paper's own logistic model, which suggests a coding problem in the analysis that produced the headline HR 0.5. Operative cost is real: in the meta-analysis that reported it, overall morbidity was 53%, major morbidity 4% and 30-day mortality 2%, with 99% of liver resections being wedge excisions. The NCDB authors' own conclusion is the one to quote: attempts at an aggressive surgical approach for liver-only stage IV pancreatic adenocarcinoma should only be performed under a well-designed prospective clinical trial. And the matched comparator figure of 8.1 months is far below the 26 to 39 months seen in patients selected for 12-month survival, which is why the benchmark question above matters more than any of these hazard ratios. [REGISTRY]"
-    },
-    {
-     "t": "mTOR-inhibitor-based immunosuppression if a transplant is performed under protocol — borrowed reasoning, and labelled as such.",
-     "l": "Reasonable",
-     "g": "D",
-     "refs": [
-      "34919773",
-      "34506756",
-      "41405234"
-     ],
-     "pref": "The local protocol's regimen is basiliximab induction, low-dose tacrolimus with mycophenolate for weeks 1–4, then conversion to everolimus (trough 5–8 ng/mL) with tacrolimus tapered to 3–5 ng/mL, with everolimus preferred over sirolimus for a lower risk of hepatic artery thrombosis, adapted from the IHPBA consensus guidelines for transplantation in non-resectable colorectal liver metastases and from AASLD/AST candidate-evaluation guidance.",
-     "avoid": "The antitumour rationale is entirely extrapolated, and the two papers behind it are <b>not pancreatic cancer papers</b>. The hepatocellular carcinoma meta-analysis found, in its three randomised trials, overall survival relative risks for mTOR-inhibitor-based immunosuppression of 1.04 (95% CI 1.00–1.08) at 1 year, 1.09 (1.02–1.16) at 2 years, 1.13 (1.04–1.24) at 3 years and 1.13 (1.02–1.26) at 5 years, with recurrence-free survival 1.08 (1.02–1.15) at 1 year, 0.98 (0.75–1.28) at 2 years and 1.14 (1.03–1.25) at 3 years — the 1-year overall survival estimate touches the null and the 2-year recurrence-free estimate is non-significant. Its 14 cohort studies gave consistently larger estimates (1.13 to 1.24), which is the signature of confounding by indication, since an mTOR inhibitor is preferentially given to patients judged fit for it. Renal toxicity was lower (RR 0.75, 0.60–0.93). There is no equivalent evidence in PDAC, and no reason to assume a different tumour responds the same way to the same manoeuvre.",
-     "note": "Downgraded from C to D, and flagged for provenance. The page previously quoted a recurrence relative risk of 0.69 (0.53–0.88) and a 5-year overall survival relative risk of 1.16 (1.07–1.26) for this meta-analysis; neither figure appears in the paper as read in full, and the figures above replace them. Both supporting papers are used <b>only</b> in this gate and neither can support any claim about pancreatic cancer: one concerns immunosuppression after liver transplantation for hepatocellular carcinoma, the other is the AASLD and American Society of Transplantation practice guideline on evaluating adult liver transplant candidates, whose only mentions of the pancreas concern neuroendocrine tumour liver metastases. The IHPBA consensus on transplantation for non-resectable colorectal liver metastases is cited from its abstract only; its full text was not retrieved for this depot."
-    }
-   ],
-   "avoid": [
-    {
-     "t": "Do not transplant for PDAC outside an approved protocol.",
-     "l": "Avoid",
-     "g": "D",
-     "pref": "Systemic therapy, as in the metastatic gate, with trial screening.",
-     "avoid": "There is no standardized OPTN exception for this diagnosis, it is not among the recommended diagnoses in the December 2025 transplant-oncology guidance, and no MELD exception is recommended or guaranteed. A one-off compassionate case is not a protocol."
-    },
-    {
-     "t": "Do not use the TransMet result to justify transplantation for PDAC.",
-     "l": "Avoid",
-     "g": "C",
-     "refs": [
-      "39306468"
-     ],
-     "pref": "Cite it for what it is — the trial that validated liver transplantation in a different disease. TransMet randomised 94 patients with permanently unresectable colorectal liver metastases from a resected BRAF-non-mutated primary, responsive to at least 3 months and no more than 3 lines of chemotherapy, with no extrahepatic disease: 5-year overall survival 56.6% (95% CI 43.2–74.1) versus 12.6% (5.2–30.1) by intention to treat, hazard ratio 0.37 (0.21–0.65), P=0.0003, and 73.3% versus 9.3% per protocol.",
-     "avoid": "It is a colorectal trial in a disease with a different metastatic biology and a vastly better natural history after liver-only metastasectomy, it required organ allocation priority that PDAC does not have, serious adverse events occurred in 32 of 40 transplanted patients (80%), three needed retransplantation and one of those died of multi-organ failure. There is no equivalent trial in PDAC and no result to extrapolate from.",
-     "note": "Downgraded from B to C and flagged for provenance: <b>TransMet is cited from its abstract only.</b> No new papers were obtained for this depot and the full text was not retrieved, so none of its figures has been checked against the published report, and its limitations have not been read."
-    },
-    {
-     "t": "Do not use the daraxonrasib result as a transplant-enabling result.",
-     "l": "Avoid",
-     "g": "A",
-     "refs": [
-      "42223072"
-     ],
-     "pref": "Cite RASolute 302 in the metastatic gate, where it belongs: previously treated metastatic disease, overall survival and progression-free survival endpoints, 13.2 versus 6.6 months, hazard ratio 0.40.",
-     "avoid": "These data do not establish transplant benefit or peri-transplant safety, and V2 of the local protocol says so in those words. Nothing in the trial addresses immunosuppression interaction, wound healing, graft function, infection risk or the CYP3A4 interaction with tacrolimus and everolimus. The response and ctDNA figures come from the earlier phase 1–2 cohorts, not from the phase 3 report — V1 of the protocol conflated the two and V2 corrected it — and the phase 1–2 figures themselves do not match what the local protocol quotes.",
-     "note": "The phase 1–2 report, read in full for this depot, gives the following for the subgroup it describes: among patients with a RAS G12 mutation receiving 300 mg as <b>second-line</b> therapy (n=26 of 38 with any RAS mutation), objective response 35% (95% CI 17–56), disease control 92% (75–99), median duration of response 8.2 months, median progression-free survival 8.5 months (6.7–10.5) and median overall survival <b>13.1 months (10.9 to not evaluable)</b>; across all any-RAS patients at 300 mg in the second line, 11 of 38 responded (29%, 15–46). Two figures the local protocol and an earlier version of this page carried are not supported by that report: median overall survival of 14.5 months (the published figure is 13.1 months), and 47% complete ctDNA clearance, which does not appear in the paper as read and must be re-sourced before it is quoted anywhere. The subgroup itself is defined by three simultaneous filters applied after the data were seen — allele, dose and line — out of 168 treated patients, and its reported 6-month overall survival of 100% (95% CI 100–100) is a marker of that selection rather than of drug effect. The study's stated primary objective was <b>safety</b>, with no hypothesis tested and no threshold it could have failed: treatment-related adverse events occurred in 96% of 168 patients, treatment-related grade 3 or higher in 30%, any-cause grade 3 or higher in 65%, and 48% of the 300-mg group needed a dose interruption or reduction. Three exploratory 300-mg cohorts, including the untreated-PDAC and RAS wild-type cohorts, were removed from the report."
-    },
-    {
-     "t": "Do not place a deceased-donor organ against a calculated MELD without a separately approved non-standard exception and institutional allocation-ethics approval.",
-     "l": "Avoid",
-     "g": "D",
-     "pref": "The local protocol prefers living donation specifically to avoid competing with established indications, with independent living-donor advocacy — and states that living donation does not remove the need for independent donor-risk review.",
-     "avoid": "Deceased-donor use requires lawful allocation at calculated MELD or a separately approved non-standard request plus institutional allocation-ethics approval. It is not a fallback entitlement if a living donor is not found."
     }
    ]
   }
@@ -1443,62 +1294,6 @@
    ],
    "foot": "Two operational points matter more than any single row. Order profiling and germline testing at the first visit and bank two extra needle passes at the index biopsy, because the commonest failure in this disease is a report that arrives after the patient is too unwell to act on it — and do not wait for the result to start treatment, since NCCN states that if BRCA1/2 status is unknown the patient is treated as clinically indicated. Then read the denominators. Apart from daraxonrasib and olaparib, every row here is a single-arm result in a pancreatic subset of between one and thirty-eight patients, usually drawn from a mixed-tumour basket trial, with no screening denominator reported, and response rates from baskets do not transfer cleanly to this disease; two of the rows — sotorasib's pancreatic cohort and the subgroup reads from the adagrasib basket — had no prespecified efficacy threshold applying to pancreatic patients at all, so there was nothing they could have failed. Read the germline row the same way: 5.5% is a prevalence estimate from a clinic-based case series compared with public sequencing databases rather than a recruited control group, carriage was not associated with survival, and of the six genes only <i>BRCA1/2</i> carries a randomised treatment consequence in this disease — so 5.5% is not the actionable fraction. Do not treat the gene as the target; different alterations in the same gene do not predict the same response, which is the point the non-G12 subgroup of RASolute 302 makes (HR 1.38, 0.60–3.17).",
    "src": "NCCN Pancreatic Adenocarcinoma, extracted text supplied to the programme (dated 22 April 2026), Principles of Systemic Therapy and Discussion; Hu 2018, PMID 29922827; O'Reilly 2026 RASolute 302, PMID 42223072; Golan 2019 POLO, PMID 31157963; Strickler 2023, PMID 36546651; Bekaii-Saab 2023, PMID 37099736; Schram 2025 eNRGy, PMID 39908431"
-  },
-  {
-   "title": "The experimental liver-only transplant protocol — and its comparator",
-   "intro": "What the local protocol requires, and the survival figure it would have to beat. Protocol-only, investigational throughout.",
-   "rows": [
-    [
-     "Policy status",
-     "Not a standardized OPTN exception diagnosis; not among the recommended diagnoses in the December 2025 transplant-oncology guidance; no MELD exception score recommended or guaranteed"
-    ],
-    [
-     "Required before activation",
-     "Prospective IRB approval, DSMB oversight, institutional transplant-selection and allocation-ethics approval, independent living-donor advocacy where applicable, consent that benefit is unproven and graft access may be unavailable"
-    ],
-    [
-     "Protocol A — disease burden",
-     "Liver-only, ≤5 metastases on PET-CT and cross-sectional imaging; no extrahepatic disease on PET-CT within 4 weeks of listing"
-    ],
-    [
-     "Protocol A — therapy and response",
-     "≥6 months first-line FOLFIRINOX, mFOLFIRINOX, NALIRIFOX or gemcitabine/nab-paclitaxel; RECIST partial response or stable disease sustained ≥6 months; CA 19-9 fall ≥85% or normalisation; declining or undetectable RAS-mutant ctDNA; ≥12 months from diagnosis without progression"
-    ],
-    [
-     "Protocol A — patient and primary",
-     "Age 18–65, ECOG 0–1, biopsy-proven PDAC, primary resectable or borderline resectable, negative staging laparoscopy with peritoneal washings and portal nodal sampling, standard transplant evaluation complete"
-    ],
-    [
-     "Protocol A — exclusions",
-     "Any extrahepatic disease; poorly differentiated or undifferentiated histology; signet-ring features; progression at any point on neoadjuvant therapy; PET metabolic tumour volume >70 cm³ or total lesion glycolysis >260 g; CA 19-9 rising or >500 U/mL at listing; prior liver radiation; uncontrolled biliary obstruction or cholangitis; another malignancy within 5 years"
-    ],
-    [
-     "Protocol A — stopping rules",
-     "Perioperative mortality >10% in the first 10 patients; 1-year OS <50%; 1-year recurrence >60% — each triggers enrolment pause and DSMB review"
-    ],
-    [
-     "Protocol B — who",
-     "Liver-only, ≤10 metastases, bilobar permitted; ≥1 prior line with progression or intolerance; eligible RAS mutation per the current daraxonrasib investigational protocol, with an FDA-authorized IND and sponsor confirmation; willing to be evaluated for living donation"
-    ],
-    [
-     "Protocol B — conversion gate at 6 months",
-     "All of: RECIST partial or complete response; CA 19-9 fall ≥85% or normalisation; ctDNA fall ≥50%; PET metabolic tumour volume ≤70 cm³; no new sites; negative staging laparoscopy; resectable primary"
-    ],
-    [
-     "Protocol B — stopping rules",
-     "Perioperative mortality >15% in the first 5 patients; conversion <20% at interim after 20 enrolled; 1-year OS <40%"
-    ],
-    [
-     "Operation and immunosuppression",
-     "Simultaneous pancreatectomy and orthotopic liver transplantation; abort on positive peritoneal cytology or distant nodal involvement on frozen section. Basiliximab induction, low-dose tacrolimus with mycophenolate weeks 1–4, conversion to everolimus (trough 5–8 ng/mL) with tacrolimus tapered to 3–5 ng/mL"
-    ],
-    [
-     "The comparator to beat",
-     "In 241 patients with stage IV PDAC and synchronous liver metastases, median OS was 7 months (5–9) overall and the same in the 144 with liver-only disease. Among the 54 who received chemotherapy <b>and</b> survived to a 12-month landmark, median OS was 26 months (19–33); for the 27 of those with liver-only disease, 26 months (17–39). The 9 patients (4%) who also had a resectable or borderline resectable primary and resectable liver-only metastases reached 39 months (13–not reached) — with 5-year survival of <b>0%</b>, and with no operation. The 39-month figure rests on 9 patients, 5 of them dead, and the benchmark cohort's median CA 19-9 was 3,101 U/mL with 64% rising"
-    ]
-   ],
-   "foot": "The benchmark row is the most important one on this page's transplant gate. A protocol that selects for a sustained response over 12 months is selecting the patients whose expected survival on chemotherapy alone is 26 to 39 months, not the 7 to 12 months usually quoted for metastatic disease — so the margin any operation has to generate is much narrower than it looks; the 39-month figure rests on nine patients, five of them dead, and that cohort had no 5-year survivors. Version control matters here: V2 of the protocol (revised 23 July 2026, policy review 16 July 2026) removed what V1 permitted at investigator discretion — daraxonrasib only at an IND-authorized dose within a formal phase 1 safety lead-in rather than 300 mg daily, no discretionary chemotherapy combinations, no routine post-transplant maintenance or mandatory 12-month course, and no daraxonrasib plus afatinib under the protocol at all. <b>Two of the protocol's own daraxonrasib figures do not survive the full-text read and should be corrected before activation:</b> the phase 1–2 median overall survival it quotes as 14.5 months is 13.1 months (95% CI 10.9 to not evaluable) in the published report, in a 26-patient subgroup defined by allele, dose and line after the data were seen, and the 47% complete ctDNA clearance figure does not appear in that report as read. The second is not cosmetic — declining or undetectable RAS-mutant ctDNA is an entry criterion in Protocol A and a ctDNA fall of 50% or more is a conversion criterion in Protocol B, so both gates are calibrated against an unverified number. Deceased-donor transplantation is not a fallback entitlement and requires lawful allocation at calculated MELD or a separately approved non-standard exception with institutional allocation-ethics approval; living donation does not remove the need for independent donor-risk review. Verify the current OPTN policy text and the review-board guidance before any listing decision.",
-   "src": "UTHealth Houston experimental liver transplantation protocol for PDAC with liver-only metastases, V2, revision 23 July 2026, policy review 16 July 2026 (with V1 for comparison); OPTN Policies 9.4 and 9.5 as currently posted; OPTN NLRB adult MELD exceptions for transplant oncology guidance, December 2025; Kaslow 2023, PMID 36353987; Wolpin 2026 RMC-6236-001, PMID 42090791"
   }
  ],
  "honest": [
@@ -1591,28 +1386,12 @@
    "why": "The dual primary endpoints were met in the RAS G12 population: median overall survival 13.2 versus 6.6 months, hazard ratio 0.40, P<0.001, and progression-free survival by blinded central review 7.3 versus 3.5 months, hazard ratio 0.45. In patients <b>without</b> a G12 mutation the hazard ratio was 1.38 (95% CI 0.60–3.17), a point estimate favouring chemotherapy. And 38 of 252 patients (15.1%) allocated to chemotherapy never received it, against 7 of 248 (2.8%) allocated daraxonrasib — 29 of them withdrawing, and some no longer eligible because ECOG had risen above 1 by the time treatment was due, which an oral agent started the same day does not face. Those patients remain in the comparator's intention-to-treat survival curve. The comparator itself was unconstrained investigator's choice given per local prescribing practice, with a 6.6-month median at the low end of published second-line outcomes, and its quality is not auditable from the report. The sponsor supported the trial and performed and validated the analyses. The direction of the result is not in doubt; the magnitude should be read with the comparator in view."
   },
   {
-   "t": "The daraxonrasib figures the local transplant protocol relies on do not match the published phase 1–2 report, and one of them could not be found in it at all.",
-   "why": "The phase 1–2 study, read in full for this depot, reports for its RAS G12 second-line 300 mg subgroup (n=26 of 168 treated patients) an objective response of 35% (95% CI 17–56), median progression-free survival 8.5 months (6.7–10.5) and median overall survival <b>13.1 months (10.9 to not evaluable)</b>; across all any-RAS second-line 300 mg patients, 11 of 38 responded (29%, 15–46). The local protocol and an earlier version of this page carried a median overall survival of 14.5 months and a 47% complete ctDNA clearance figure. The 14.5-month figure is wrong against the published report, and the ctDNA figure does not appear in it as read — it must be re-sourced before it is quoted, in the protocol or anywhere else, since ctDNA decline is an entry and conversion criterion in both local cohorts. The subgroup is also defined by three filters applied after the data were seen (allele, dose, line), its reported 6-month overall survival of 100% (95% CI 100–100) is a marker of that selection, the study's stated primary objective was safety with no hypothesis tested, and three exploratory 300 mg cohorts including the untreated-PDAC and RAS wild-type cohorts were removed from the report."
-  },
-  {
-   "t": "Liver transplantation for PDAC with liver-only metastases has no outcome data, in this programme or anywhere, and this page takes no institutional position on whether either cohort should open.",
-   "why": "Where the page speaks in an institutional voice about this gate it is quoting the local V2 protocol, which states its own investigational status, its allocation position and its governance requirements. There is no ratified roadmap behind any of it. The supporting arguments are an analogy to a colorectal trial (TransMet: 94 patients, different disease, allocation priority PDAC does not have, serious adverse events in 32 of 40 transplanted patients — and cited here from its abstract only), retrospective resection series with complete selection asymmetry, a systemic-therapy trial in previously treated metastatic disease that says nothing about transplantation, and immunosuppression reasoning extrapolated from hepatocellular carcinoma. That is four kinds of borrowed evidence and no direct evidence."
-  },
-  {
-   "t": "Two of the papers in this page's depot are not pancreatic cancer papers at all, and nothing on this page about pancreatic cancer rests on them.",
-   "why": "The hepatocellular carcinoma meta-analysis of mTOR-inhibitor immunosuppression and the AASLD and American Society of Transplantation guideline on evaluating adult liver transplant candidates are both legitimately cited by the liver-only-metastasis gate — the first for the borrowed antitumour rationale behind the protocol's everolimus conversion, the second for the standard transplant candidacy criteria the protocol requires — and they are used <b>only</b> there. Neither can support any claim about pancreatic cancer: the guideline's only mentions of the pancreas concern neuroendocrine tumour liver metastases. The figures this page previously attributed to the hepatocellular meta-analysis (recurrence RR 0.69, 0.53–0.88, and 5-year overall survival RR 1.16, 1.07–1.26) do not appear in it as read; what it reports is, in its three randomised trials, overall survival relative risks of 1.04 (1.00–1.08) at 1 year rising to 1.13 (1.02–1.26) at 5 years, with recurrence-free survival non-significant at 2 years (0.98, 0.75–1.28), and consistently larger estimates from its 14 cohort studies, which is the signature of confounding by indication."
-  },
-  {
    "t": "The pooled hazard ratio of 0.41 for resecting liver-only metastatic PDAC appears twice in the 2025 literature from largely the same patients, and the better of the two analyses shows it tracks chemotherapy rather than surgery.",
    "why": "Two 2025 meta-analyses report 0.41 (0.31–0.53) and 0.41 (0.32–0.52) from substantially overlapping study sets, so citing both double-counts one evidence base. The first pooled only <b>univariate</b> hazard ratios by explicit design, reported I² of 12% from seven retrospective studies with different definitions of oligometastasis, and never mentions immortal-time bias; the second found I² of 64.5% in the same literature. The second's meta-regression is the finding: the relative rate of chemotherapy between arms explained 87.1% of between-study heterogeneity, roughly half the non-surgical patients received gemcitabine monotherapy against multi-agent regimens in the surgical arm, and the adjusted effect reached HR 0.18 (0.08–0.40) only where both pre- and postoperative chemotherapy were given, with no difference in any other scenario — an estimate fitted to 7 comparisons with 11 candidate covariates that its own authors call mathematical rather than empirical. The first review's own data say the same thing: a 32.5-versus-9.2-month gap generated by a RECIST response criterion, and the best outcomes in the whole review coming from 52 patients whose liver metastases had completely regressed and who had only the primary resected. Nationally, 891 of 47,785 patients with liver-only stage IV disease (1.9%) had the primary resected, only 137 (0.29%) had a metastasectomy, only 13.5% had preoperative chemotherapy, 85% had the primary removed without touching the liver metastases, and the whole surgical cohort's median survival was 10.74 months — no better than chemotherapy alone in unselected metastatic disease."
   },
   {
-   "t": "The comparator for the transplant question is 26 to 39 months, not 7 to 12 — and that makes the case harder, not easier.",
-   "why": "A protocol that requires a sustained response through at least 12 months selects precisely the patients whose expected survival on systemic therapy alone is long. In the registry cohort that quantifies this, median overall survival was 7 months (5–9) for all 241 stage IV patients with synchronous liver metastases and the same in the 144 with liver-only disease; 26 months (19–33) for the 54 who received chemotherapy and survived past 12 months; 26 months (17–39) for the 27 of those with liver-only disease; and 39 months (13–not reached) for the 9 who also had a resectable primary and resectable liver-only metastases. All of that was achieved with no operation. The 39-month figure rests on nine patients, five of them dead, and the 12-month landmark was imposed specifically to mitigate immortal-time bias. Two features make it conservative rather than flattering: CA 19-9 was deliberately excluded from the selection criteria, so the benchmark cohort's median CA 19-9 was 3,101 U/mL with 64% rising — patients no surgeon would operate on — and imaging was available for review in only 80 of 183 patients with liver metastases. It is still the right comparator, and the local protocol's own consent section concedes the point. There were no 5-year survivors in the benchmark cohort."
-  },
-  {
-   "t": "Three of the references on this page are still cited from abstract only, and several more are carried only in the machine-extracted guideline text.",
-   "why": "No new papers were obtained for this depot in this pass. The ISGPS lymphadenectomy consensus (PMID 25061003), which supplies the nodal stations and the no-benefit claim for extended lymphadenectomy in the surgery gate, the IHPBA consensus on transplantation for non-resectable colorectal liver metastases (PMID 34506756), and TransMet (PMID 39306468) were not retrieved and are cited from their abstracts; their figures have not been checked against their published reports and their limitations have not been read. Separately, PAXG, RTOG 0848, the ESPAC-3 completion analysis, CONKO-004, maintenance rucaparib, the EUS staging figures, the 56% re-imaging figure and the margin-clearance survival figures in the pathology discussion are carried only in the NCCN discussion text supplied to the programme, with no primary report retrieved. Every one of those is graded D or flagged on the page, and every one should be read before it is leaned on."
+   "t": "One reference remains cited from abstract only, and some results are carried only in guideline discussion.",
+   "why": "The ISGPS lymphadenectomy consensus (PMID 25061003) remains cited from abstract only. PAXG, RTOG 0848, ESPAC-3 completion, CONKO-004, maintenance rucaparib, EUS staging, re-imaging and margin-clearance figures require their primary reports. The remaining PDAC pathway retains these evidence limitations."
   },
   {
    "t": "Industry sponsors chose the comparator in four of the trials this page cites, and in each case the choice was the one most favourable to the sponsor.",
@@ -1630,14 +1409,14 @@
    "Imaging currency — the staging scan's date is read out with the case. High-quality CT older than 4 weeks is re-acquired before an operative decision is taken, and a case that waits two board cycles is re-imaged. This is the one operating rule specific to this disease. Owner: coordinator.",
    "Agenda — stable at least 24 hours ahead, approximately 10–12 decision cases per session, each carrying one focused question. Owner: coordinator.",
    "Urgent lane — a same-week slot with chair approval, used routinely here: cholangitis, a rising bilirubin and gastric outlet obstruction are time-critical, and so is a borderline resectable patient whose scan is about to expire. Owner: chair.",
-   "Attendance — surgical oncology or hepatopancreatobiliary surgery, medical oncology, radiation oncology, diagnostic radiology, advanced endoscopy, pathology, genetics or a genetic counsellor, nutrition, palliative care and coordination are all required. Transplant surgery attends only for cases routed to the liver-only metastasis gate, and attends with research governance. Owners: specialty leads.",
+   "Attendance — surgical oncology or hepatopancreatobiliary surgery, medical oncology, radiation oncology, diagnostic radiology, advanced endoscopy, pathology, genetics or a genetic counsellor, nutrition, palliative care and coordination are all required. Owners: specialty leads.",
    "Resectability call — the category is assigned in the meeting, by consensus, and recorded with the degrees of contact, the date and the names of those who agreed it. A single-reader determination is not accepted as the category, and the category is recorded as what it is: a consensus threshold nobody derived, applied to a measurement with no published inter-reader reproducibility. Owner: chair.",
    "Pathology — pre-alerted for every resection specimen, with the agreed inking and slicing protocol and millimetre reporting of every margin within 1.0 cm of tumour; peritoneal washing results are reported to the board, not only to the chart. Owner: pathology.",
    "Margin reporting agreement — the inking, slicing and millimetre-reporting format is agreed with pathology in writing once, and the local R1 rate is tracked, because applying the 1 mm rule moved the R1 rate at the centre that derived it from 44% to 79% and R0 rates are therefore not comparable between units or trials. Owner: pathology and chair.",
    "Molecular — germline testing offered to every patient at the first board appearance regardless of family history, and comprehensive genomic profiling plus HER2 immunohistochemistry ordered for every patient with metastatic disease, with a named person responsible for chasing the report. Owner: medical oncology.",
    "Output — one recommendation, one owner, one due date, one reassessment date, one documented alternative considered. For every resectable and borderline resectable patient the output also names who delivers chemotherapy and when, before the operation. Owner: chair.",
    "Documentation — an Epic note within one business day, in the agreed structured format, recording the resectability category, the sequence chosen and the reason. Owner: named owner.",
-   "Registry — the case closed in the registry with the category, the decision, the modality delivered, the resection and margin outcome, and the outcome at reassessment. Any case discussed under the liver-only metastasis gate is entered in the research registry whether or not it proceeds. Owner: coordinator.",
+   "Registry — the case closed in the registry with the category, the decision, the modality delivered, the resection and margin outcome, and the outcome at reassessment. Owner: coordinator.",
    "Referring relationships — the referring clinician is informed of the recommendation and of who owns the next step. Community-referring relationships are protected explicitly: the pathway returns patients with a plan, it does not capture them. Owner: named owner."
   ],
   "dashboard": [
@@ -1653,8 +1432,7 @@
    "In locally advanced disease, separately: 30- and 90-day mortality after conversion surgery, against the 8% 30-day figure in the only randomised trial that reports it (ratification item 14).",
    "First-line metastatic regimen, performance status at start, and reason for discontinuation (ratification item 7).",
    "Proportion of metastatic patients with a completed germline result and completed genomic profile before second line, time from biopsy to report, and proportion of actionable results acted on (ratification item 8).",
-   "Every case discussed under the liver-only metastasis gate: whether a protocol was open, whether the patient met criteria, the decision taken, and the outcome — recorded whether or not any operation was performed (ratification items 9 and 10).",
-   "Registry closure rate, and reassessment adherence: restaging before adjuvant therapy, restaging 4–8 weeks after neoadjuvant therapy, every 8 weeks on neoadjuvant or induction therapy, and per protocol on the research pathway.",
+   "Registry closure rate, and reassessment adherence: restaging before adjuvant therapy, restaging 4–8 weeks after neoadjuvant therapy, every 8 weeks on neoadjuvant or induction therapy,.",
    "Source currency: for every numeric criterion on the page, the edition and date of the source it was verified against, which references remain cited from abstract only, and which figures are carried solely in the machine-extracted guideline text (ratification items 11, 15 and 16)."
   ],
   "approvals": [
@@ -1707,21 +1485,9 @@
     "audit": "Registry: proportion with completed germline and genomic results before second line, time from biopsy to report, proportion of actionable results acted on, second-line agent."
    },
    {
-    "n": 9,
-    "q": "Does this programme open either liver-only metastasis transplant cohort at all, and under whose governance?",
-    "why": "PDAC with liver metastases is not a standardized OPTN exception diagnosis and is not among the recommended diagnoses in the December 2025 transplant-oncology guidance; no MELD exception is recommended or guaranteed. There is no outcome data for either cohort anywhere. This is a graft-stewardship and research-ethics decision before it is a clinical one, and it requires prospective IRB approval, DSMB oversight, institutional transplant-selection and allocation-ethics approval, and independent living-donor advocacy where applicable.",
-    "audit": "Research registry required if either cohort opens, with the protocol's own stopping rules as standing triggers. Until then, record every case discussed under this gate and the decision taken."
-   },
-   {
-    "n": 10,
-    "q": "If a cohort opens, what is the consent standard — given that the honest comparator is 26 to 39 months of expected survival on systemic therapy in exactly the responders the protocol selects?",
-    "why": "Patients must understand that transplantation for PDAC liver metastases is investigational with no established precedent, and that the incremental benefit of the operation over continued chemotherapy is unknown. The honest comparator is 26 to 39 months: in the registry cohort that quantifies it, patients who received chemotherapy and survived to a 12-month landmark reached a median of 26 months, and the 9 who also had a resectable primary and resectable liver-only disease reached 39 months (13–not reached) with no operation and with 5-year survival of 0%. The local protocol concedes the point. Consent must also state that the protocol's own ctDNA criteria rest on a figure (47% complete ctDNA clearance) that could not be found in the published phase 1–2 report, and that the daraxonrasib overall survival figure the protocol quotes (14.5 months) is 13.1 months in that report.",
-    "audit": "Consent document on file and approved; every enrolled patient in the prospective registry; DSMB minutes recorded against the protocol's stopping rules."
-   },
-   {
     "n": 11,
-    "q": "What is the surveillance schedule after resection, and who owns the NCCN and OPTN update check?",
-    "why": "The guideline footnote defining the surveillance interval did not survive the machine extraction supplied to this page, so no interval is quoted here. What is known is that regular surveillance CT showed no significant survival benefit in a SEER-Medicare analysis, CA 19-9 is category 2B, and serial ctDNA monitoring has no evidence of benefit — so the interval is a local choice about what surveillance is for. Separately, every numeric criterion on this page needs an owner for re-verification against the next guideline edition and the current OPTN policy text.",
+    "q": "What is the surveillance schedule after resection, and who owns the NCCN update check?",
+    "why": "The guideline footnote defining the surveillance interval did not survive the machine extraction supplied to this page, so no interval is quoted here. What is known is that regular surveillance CT showed no significant survival benefit in a SEER-Medicare analysis, CA 19-9 is category 2B, and serial ctDNA monitoring has no evidence of benefit — so the interval is a local choice about what surveillance is for. Separately, every numeric criterion on this page needs an owner for re-verification against the next guideline edition.",
     "audit": "Named owner plus edition and date, with an agreed update cycle; surveillance interval recorded and adherence audited once set."
    },
    {
@@ -1743,15 +1509,9 @@
     "audit": "Registry: proportion reaching exploration and resection, R0 rate with millimetre clearance, 30- and 90-day mortality, and overall survival from the start of induction including patients who progressed before any surgical assessment."
    },
    {
-    "n": 15,
-    "q": "Who re-sources the daraxonrasib figures in the local transplant protocol, and does either cohort open before that is done?",
-    "why": "Two figures the protocol relies on do not match the published phase 1–2 report read for this depot: the median overall survival quoted as 14.5 months is 13.1 months (95% CI 10.9 to not evaluable) in that report, and the 47% complete ctDNA clearance figure does not appear in it as read. The second matters operationally, because a declining or undetectable RAS-mutant ctDNA is an entry criterion in Protocol A and a ctDNA fall of 50% or more is a conversion criterion in Protocol B, so the protocol's own gates are calibrated against a figure that has not been verified. V2 already corrected V1's conflation of phase 3 survival with phase 1–2 response and ctDNA data; this is the same class of error one layer down.",
-    "audit": "Named owner, source document and date for every daraxonrasib figure in the protocol, recorded before activation; V3 revision note if any figure changes."
-   },
-   {
     "n": 16,
-    "q": "Who owns retrieving the three references still cited from abstract only, and the figures carried solely in the machine-extracted guideline text?",
-    "why": "No new papers were obtained for this depot in this pass. The ISGPS lymphadenectomy consensus supplies the nodal stations and the no-benefit claim for extended lymphadenectomy in the surgery gate; the IHPBA consensus supplies the immunosuppression reasoning borrowed into the transplant gate; TransMet supplies the whole analogy the transplant gate rests on. None of the three was read in full, so none of their figures has been checked and none of their limitations has been read. Separately, PAXG, RTOG 0848, the ESPAC-3 completion analysis, CONKO-004, maintenance rucaparib, the EUS staging figures, the 56% re-imaging figure and the margin-clearance survival figures are carried only in the NCCN discussion text supplied to the programme, and the margin-clearance figures appear in a sentence that inverts them.",
+    "q": "Who owns retrieving the remaining full texts and verifying guideline-only figures?",
+    "why": "Retrieve the full ISGPS lymphadenectomy consensus (PMID 25061003) and the primary reports behind guideline-only figures, including PAXG, RTOG 0848, ESPAC-3 completion, CONKO-004 and maintenance rucaparib.",
     "audit": "Named owner per reference, with retrieval date and a note of any figure that changed on reading; the page's grades revisited where a D was assigned for provenance rather than for design."
    }
   ]
@@ -1912,75 +1672,33 @@
    "Guidelines & policy",
    "Conroy T, Pfeiffer P, Vilgrain V, et al. Pancreatic cancer: ESMO Clinical Practice Guideline for diagnosis, treatment and follow-up. Ann Oncol. 2023;34(11):987-1002. doi:10.1016/j.annonc.2023.08.009. PMID:37678671."
   ],
-  "41405234": [
-   "AASLD/AST candidate evaluation",
-   "Guidelines & policy",
-   "Dove L, Chadha RM, Lai JC, et al. AASLD AST practice guideline on adult liver transplantation: candidate evaluation. Hepatology. 2025;83(6):1609-1645. doi:10.1097/HEP.0000000000001644. PMID:41405234."
-  ],
-  "34506756": [
-   "IHPBA transplant consensus",
-   "Guidelines & policy",
-   "Bonney GK, Chew CA, Lodge P, et al. Liver transplantation for non-resectable colorectal liver metastases: the International Hepato-Pancreato-Biliary Association consensus guidelines. Lancet Gastroenterol Hepatol. 2021;6(11):933-946. doi:10.1016/S2468-1253(21)00219-3. PMID:34506756."
-  ],
   "36353987": [
    "Kaslow benchmarks",
-   "Transplant & oligometastatic",
+   "Oligometastatic disease",
    "Kaslow SR, Sacks GD, Berman RS, Lee AY, Correa-Gallego C. Natural history of stage IV pancreatic cancer: identifying survival benchmarks for curative-intent resection in patients with synchronous liver-only metastases. Ann Surg. 2023;278(4):e798-e804. doi:10.1097/SLA.0000000000005753. PMID:36353987."
   ],
   "35115154": [
    "NCDB oligometastatic",
-   "Transplant & oligometastatic",
+   "Oligometastatic disease",
    "Hamad A, Underhill J, Ansari A, et al. Surgical treatment of hepatic oligometastatic pancreatic ductal adenocarcinoma: an analysis of the National Cancer Database. Surgery. 2022;171(6):1464-1470. doi:10.1016/j.surg.2021.12.029. PMID:35115154."
   ],
   "39837137": [
    "D'Ambra meta-analysis",
-   "Transplant & oligometastatic",
+   "Oligometastatic disease",
    "D'Ambra V, Ricci C, Ingaldi C, et al. Stage IV pancreatic ductal adenocarcinoma (PDAC) with synchronous liver metastasis: are there survival benefits in liver resection? A systematic review and meta-analysis. Eur J Surg Oncol. 2025;51(5):109598. doi:10.1016/j.ejso.2025.109598. PMID:39837137."
   ],
   "40002281": [
    "Clements meta-analysis",
-   "Transplant & oligometastatic",
+   "Oligometastatic disease",
    "Clements N, Gaskins J, Martin RCG. Surgical outcomes in stage IV pancreatic cancer with liver metastasis, current evidence and future directions: a systematic review and meta-analysis of surgical resection. Cancers (Basel). 2025;17(4):688. doi:10.3390/cancers17040688. PMID:40002281."
-  ],
-  "39306468": [
-   "TransMet",
-   "Transplant & oligometastatic",
-   "Adam R, Piedvache C, Chiche L, et al. Liver transplantation plus chemotherapy versus chemotherapy alone in patients with permanently unresectable colorectal liver metastases (TransMet): results from a multicentre, open-label, prospective, randomised controlled trial. Lancet. 2024;404(10458):1107-1118. doi:10.1016/S0140-6736(24)01595-2. PMID:39306468."
-  ],
-  "34919773": [
-   "mTOR after LT for HCC",
-   "Transplant & oligometastatic",
-   "Yan X, Huang S, Yang Y, et al. Sirolimus or everolimus improves survival after liver transplantation for hepatocellular carcinoma: a systematic review and meta-analysis. Liver Transpl. 2022;28(6):1063-1077. doi:10.1002/lt.26387. PMID:34919773."
   ]
  },
  "nonpm": {
   "nccn": [
    "NCCN pancreatic adenocarcinoma",
    "Guidelines & policy",
-   "National Comprehensive Cancer Network. Pancreatic Adenocarcinoma. NCCN Clinical Practice Guidelines in Oncology. Machine-converted guideline text supplied to the programme; the local transplant protocol dates the same source to 22 April 2026. The extraction carries no printed version number, and the version string must be confirmed and recorded before publication. Sections used: Clinical Presentation and Workup; Principles of Diagnosis, Imaging and Staging, including the MDCT and MRI protocols and the radiology reporting template; Criteria Defining Resectability Status at Diagnosis; Criteria for Resection Following Neoadjuvant Therapy and its Table 1; Biliary Drainage and Tissue Acquisition; Pathologic Analysis; Principles of Systemic Therapy; Principles of Radiation Therapy; Palliative and Supportive Care; and the Discussion sections on diagnosis and staging, management of resectable and borderline resectable disease, postoperative therapy, surveillance, recurrent disease, locally advanced disease, metastatic disease and systemic therapy approaches. The extraction is layout-mangled in places — the margin-clearance survival figures in the pathology discussion appear in an inverted sentence, and the footnote defining the post-resection surveillance interval is missing — so both were flagged on the page rather than quoted as read.",
+   "National Comprehensive Cancer Network. Pancreatic Adenocarcinoma. NCCN Clinical Practice Guidelines in Oncology. Machine-converted guideline text supplied to the programme; source dated 22 April 2026 in the prior reference record. The extraction carries no printed version number, and the version string must be confirmed and recorded before publication. Sections used: Clinical Presentation and Workup; Principles of Diagnosis, Imaging and Staging, including the MDCT and MRI protocols and the radiology reporting template; Criteria Defining Resectability Status at Diagnosis; Criteria for Resection Following Neoadjuvant Therapy and its Table 1; Biliary Drainage and Tissue Acquisition; Pathologic Analysis; Principles of Systemic Therapy; Principles of Radiation Therapy; Palliative and Supportive Care; and the Discussion sections on diagnosis and staging, management of resectable and borderline resectable disease, postoperative therapy, surveillance, recurrent disease, locally advanced disease, metastatic disease and systemic therapy approaches. The extraction is layout-mangled in places — the margin-clearance survival figures in the pathology discussion appear in an inverted sentence, and the footnote defining the post-resection surveillance interval is missing — so both were flagged on the page rather than quoted as read.",
    "https://www.nccn.org/guidelines/category_1"
-  ],
-  "optn": [
-   "OPTN Policies 9.4 and 9.5",
-   "Guidelines & policy",
-   "Organ Procurement and Transplantation Network. Policy 9: Allocation of Livers and Liver-Intestines, including Policies 9.4 and 9.5 on MELD or PELD score exceptions. US Department of Health and Human Services, HRSA. Named in the local protocol as a controlling allocation source at its policy review date of 16 July 2026. PDAC with liver metastases is not a standardized exception diagnosis under Policy 9.5. The current posted text was not re-verified for this page and must be checked before any listing decision.",
-   "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf"
-  ],
-  "optnonc": [
-   "OPTN NLRB transplant-oncology guidance",
-   "Guidelines & policy",
-   "Organ Procurement and Transplantation Network, Liver and Intestinal Organ Transplantation Committee. Guidance to Liver Transplant Programs and the National Liver Review Board for Adult MELD Exceptions for Transplant Oncology. December 2025. PDAC with liver metastases is not among the recommended diagnoses. This document is review-board guidance, not OPTN policy, and does not define a clinical standard of care.",
-   "https://www.hrsa.gov/sites/default/files/hrsa/optn/adult-meld-exception-transplant-oncology-review-guidance.pdf"
-  ],
-  "uthv2": [
-   "UTHealth PDAC liver-only LT protocol V2",
-   "Guidelines & policy",
-   "UTHealth Houston Experimental Liver Transplantation Protocol for PDAC with Liver-Only Metastases, Version 2. Revision timestamp 23 July 2026; policy review date 16 July 2026. Labelled HIGH-RISK / INVESTIGATIONAL throughout. This is the controlling local document for the liver-only metastasis gate on this page, and the only document from which this page speaks in an institutional voice. Its V2 revision note records that V1 conflated phase 3 daraxonrasib survival results with phase 1–2 response and ctDNA findings, proposed unapproved post-transplant drug combinations without IND controls, omitted inequality operators from its stopping rules, and included a non-retrievable personal citation."
-  ],
-  "uthv1": [
-   "UTHealth PDAC liver-only LT protocol V1",
-   "Guidelines & policy",
-   "UTHealth Houston Liver Transplantation Protocol for Pancreatic Ductal Adenocarcinoma with Liver-Only Metastases, Version 1 (undated, superseded). Retained on this page only to document what V2 removed: a fixed daraxonrasib dose of 300 mg daily outside an IND-authorized safety lead-in, chemotherapy combinations at investigator discretion, routine post-transplant daraxonrasib maintenance for a minimum of 12 months, an optional daraxonrasib-plus-afatinib cohort, deceased-donor transplantation described as acceptable if living donation were unavailable, and stopping rules written without inequality operators. V1 must not be used."
   ],
   "a021806": [
    "Alliance A021806 registry record",
@@ -2018,17 +1736,7 @@
    "ISGPS lymphadenectomy — abstract only",
    "Surgery & pathology",
    "Tol JAMG, Gouma DJ, Bassi C, et al. Definition of a standard lymphadenectomy in surgery for pancreatic ductal adenocarcinoma: a consensus statement by the International Study Group on Pancreatic Surgery (ISGPS). Surgery. 2014;156(3):591-600. doi:10.1016/j.surg.2014.06.016. PMID:25061003. Listed here as well as in the reference library to record that no full text was obtained for this depot: the nodal station list, the claim that extended lymphadenectomy gives no survival benefit, and the absence of consensus on what to do when a frozen-section node outside the resection field is positive are all taken from the abstract and the consensus statement's own summary, not from the trials behind them. The item it supports in the surgery gate is graded C for that reason."
-  ],
-  "transmet": [
-   "TransMet — abstract only",
-   "Transplant & oligometastatic",
-   "Adam R, Piedvache C, Chiche L, et al. Liver transplantation plus chemotherapy versus chemotherapy alone in patients with permanently unresectable colorectal liver metastases (TransMet): results from a multicentre, open-label, prospective, randomised controlled trial. Lancet. 2024;404(10458):1107-1118. PMID:39306468. No full text was obtained for this depot, so the survival figures, the adverse-event counts and the trial's own stated limitations have not been checked against the published report. It is cited on this page only to say what cannot be extrapolated from it."
-  ],
-  "ihpba": [
-   "IHPBA transplant consensus — abstract only",
-   "Guidelines & policy",
-   "International Hepato-Pancreato-Biliary Association consensus guidelines on liver transplantation for non-resectable colorectal liver metastases (PMID 34506756). No full text was obtained for this depot. It is named on this page because the local protocol's immunosuppression regimen is adapted from it; none of its recommendations has been read in full or checked."
   ]
  },
- "provenance": "<b>Revised on 7 October 2026 after a full-text read of this pathway's entire reference depot — 36 papers, each read in full and abstracted with the authors' stated limitations and an independent critique.</b> The first draft was built from the extracted NCCN Pancreatic Adenocarcinoma guideline text supplied to the programme (undated in the extraction; the local transplant protocol dates the same source to 22 April 2026) as the spine, together with the two local liver-only-metastasis transplant documents — the UTHealth Houston experimental protocol Version 2, revised 23 July 2026 with a policy review date of 16 July 2026, and its superseded Version 1 — and primary literature retrieved and verified through PubMed on 6 October 2026, with every PMID confirmed against its journal, year, volume, first page and first author. This revision replaces figures read from abstracts with figures read from the full reports, corrects the figures that were wrong, and downgrades the evidence grade on every item where the full text showed the design would not carry the claim. The grades moved on roughly thirty strings and almost all of them moved down. The single most consequential finding, which runs through the resectable, borderline resectable and adjuvant gates, is that <b>almost no trial on this page compared its intervention with the therapy this page recommends</b>: every adjuvant comparator is gemcitabine monotherapy or observation, and every neoadjuvant comparator is upfront surgery followed by adjuvant gemcitabine or S-1, except NORPACT-1, where only 19 of 44 resected control patients received adjuvant mFOLFIRINOX. <b>No new papers were obtained for this depot in this pass.</b> Three references remain cited from abstract only, and the items they support are graded and flagged accordingly: the ISGPS lymphadenectomy consensus (PMID 25061003), which supplies the nodal stations and the extended-lymphadenectomy claim in the surgery gate; the IHPBA consensus on transplantation for non-resectable colorectal liver metastases (PMID 34506756), from which the local protocol's immunosuppression regimen is adapted; and TransMet (PMID 39306468), the colorectal trial the transplant gate's analogy rests on. For none of the three have the figures been checked against the published report or the stated limitations been read. Two files in the depot are not pancreatic cancer papers at all — a meta-analysis of mTOR-inhibitor immunosuppression after liver transplantation for hepatocellular carcinoma (PMID 34919773) and the AASLD and American Society of Transplantation guideline on evaluating adult liver transplant candidates (PMID 41405234). Both are legitimately cited by the liver-only-metastasis transplant gate, for the borrowed antitumour rationale and for standard transplant candidacy respectively, and both are used <b>only</b> in that gate; neither can support any claim about pancreatic cancer and the page does not use them for one. The figures previously attributed to the hepatocellular meta-analysis were not in it and have been replaced with what it reports. Several figures are still carried only in the machine-extracted guideline text supplied to the programme, with no primary report retrieved, and every item resting on one is now graded D: PAXG, RTOG 0848, the ESPAC-3 completion analysis, CONKO-004, maintenance rucaparib, the pembrolizumab and dostarlimab listings, the NTRK, RET, BRAF and FGFR basket results, the EUS staging sensitivities and the 56% re-imaging figure. Where the extraction is mangled the page still says so: the margin-clearance survival figures in the pathology discussion appear in a sentence that inverts them, and the footnote defining the post-resection surveillance interval is missing, so no interval is stated here. Three figures the first draft carried could not be verified against the full text and have been corrected or flagged: POLO's placebo-arm median overall survival is 18.1 months and not 16.1; the phase 1–2 daraxonrasib median overall survival is 13.1 months and not 14.5; and the 47% complete ctDNA clearance figure quoted by the local protocol does not appear in the published phase 1–2 report as read, which matters because ctDNA decline is an entry and conversion criterion in both local cohorts. SWOG S1505's perioperative completion rate, previously given as 76%, is 49% and 40% by arm. Allocation statements for the transplant gate remain those of the local Version 2 document, which names OPTN Policies 9.4 and 9.5 as currently posted and the December 2025 National Liver Review Board transplant-oncology guidance as its controlling sources; neither was re-verified for this page and both must be checked before any listing decision. Alliance A021806 is cited only from its ClinicalTrials.gov record (NCT04340141, checked 6 October 2026) because it has reported nothing. <b>This remains a draft and there is no ratified roadmap behind it.</b> Unlike the programme's five existing disease roadmaps, this pathway transcribes no approved institutional document other than the investigational transplant protocol, and it takes no institutional position of its own: where the published guidelines and the randomised trials disagree — most sharply on whether an anatomically resectable patient goes to theatre first, where ESMO now recommends against neoadjuvant therapy at grade II, E and the pooled trial data neither confirm nor refute it against a modern comparator — the page shows the disagreement and refers the choice to the sixteen ratification items in the approvals section. It is not active clinical policy, it does not replace clinician judgement, and every numeric criterion must be verified against the current source before use."
+ "provenance": "Revised 15 October 2026, Batch 09, PDAC roadmap v0.3. Gates 0–8 cover diagnosis, resectability, perioperative treatment, locally advanced and metastatic disease. The pancreatic adenocarcinoma liver-metastasis experimental branch and its associated eligibility rules, activation questions and reference material have been removed. Evidence limitations for the retained PDAC pathway remain visible. Draft for multidisciplinary review; not ratified clinical policy."
 }

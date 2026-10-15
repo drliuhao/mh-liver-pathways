@@ -2,8 +2,8 @@
   "key": "icca",
   "short": "iCCA",
   "name": "Intrahepatic cholangiocarcinoma",
-  "version": "v0.7",
-  "batch": "Batch 08, 7 October 2026",
+  "version": "v0.8",
+  "batch": "Batch 09, 15 October 2026",
   "lead": "Where this patient sits in the intrahepatic cholangiocarcinoma pathway, and what the evidence behind the next step actually shows.",
   "gatelabel": "The decision in front of you",
   "gates": [
@@ -406,12 +406,14 @@
               ],
               "when": "Conversion or hepatic control in an approved expert programme, generally with systemic therapy; no established cure as monotherapy. In a single-arm, single-institution phase 2 study of 38 treated patients, HAI floxuridine with systemic gemcitabine–oxaliplatin gave partial response in 22 of 38 (58%) and 6-month progression-free survival of 84.1% against an 80% target, with median progression-free survival 11.8 months and median overall survival 25.0 months, and four patients went on to resection.",
               "pref": "Liver-confined unresectable disease with favourable arterial anatomy in a centre with a functioning pump programme, where conversion or durable hepatic control is the stated goal. It can be considered early rather than only after a systemic line fails.",
-              "avoid": "No dedicated pump programme, any extrahepatic disease, or unrelieved biliary obstruction. Do not treat it as interchangeable with a modern chemo-immunotherapy regimen, and do not count response as the curative event — conversion to a complete operation is.",
-              "note": "Grade 4 toxicity forcing withdrawal occurred in 4 of 38 (11%) of the phase 2 cohort (portal hypertension, two gastroduodenal artery aneurysms, pump-pocket infection), grade 3 ALT in 42% and AST in 34%, and 11% needed biliary stents, two for chemotherapy-induced biliary sclerosis. Delivery decayed: 71% received the expected floxuridine dose over the first 3 months but only 47% over the next 6. The cohort was heavily selected — 38 of 84 screened, median tumour 8.3 cm — and the comparison is with historical systemic series; the linked JAMA Oncology editorial judged the case for locoregional therapy in unresectable cholangiocarcinoma still unsettled without a randomised trial. A retrospective single-centre comparison gave median overall survival of 30.8 months with HAI plus systemic therapy versus 18.4 months with systemic therapy alone in liver-confined disease, but all HAI patients were surgically staged and only 42% of the comparator was, so stage migration favours HAI; the comparator was 26 patients of whom only 30% had gemcitabine–cisplatin, and 44 of the 93 HAI patients came from two previously reported phase 2 trials. In that whole series only 8 of 236 patients (3%) converted to a curative-intent resection.",
+              "avoid": "No dedicated pump programme; distant extrahepatic metastases; unrelieved biliary obstruction or infection; unsuitable arterial/perfusion anatomy or inadequate hepatic reserve. Selected resectable regional nodal disease was included in HAI evidence and is distinct from distant spread. This does not change transplant eligibility. Avoid concurrent bevacizumab with FUDR.",
+              "note": "Grade 4 toxicity forcing withdrawal occurred in 4 of 38 (11%) of the phase 2 cohort (portal hypertension, two gastroduodenal artery aneurysms, pump-pocket infection), grade 3 ALT in 42% and AST in 34%, and 11% needed biliary stents, two for chemotherapy-induced biliary sclerosis. Delivery decayed: 71% received the expected floxuridine dose over the first 3 months but only 47% over the next 6. The cohort was heavily selected — 38 of 84 screened, median tumour 8.3 cm — and the comparison is with historical systemic series; the linked JAMA Oncology editorial judged the case for locoregional therapy in unresectable cholangiocarcinoma still unsettled without a randomised trial. A retrospective single-centre comparison gave median overall survival of 30.8 months with HAI plus systemic therapy versus 18.4 months with systemic therapy alone in liver-confined disease, but all HAI patients were surgically staged and only 42% of the comparator was, so stage migration favours HAI; the comparator was 26 patients of whom only 30% had gemcitabine–cisplatin, and 44 of the 93 HAI patients came from two previously reported phase 2 trials. In that whole series only 8 of 236 patients (3%) converted to a curative-intent resection. PUMP-2 (PMID 41082695), a three-centre nonrandomized phase II study: 50 pumps placed, 48 patients started HAI, partial response 44%, six-month disease control 84%, resection 5/50 (10%), median OS 22.3 months and three-year OS 31.5%. The 2026 pooled analysis of four phase II trials (PMID 42331230) reports 142 treated patients, median OS 26 months, five-year OS 15% (ITT 14%), and 13/142 resections (9%). The pooled cohorts overlap the constituent trials; these are not independent replications or randomized comparisons with modern chemo-immunotherapy.",
               "refs": [
                 "31670750",
                 "26695839",
-                "nccn"
+                "nccn",
+                "41082695",
+                "42331230"
               ]
             },
             {
@@ -441,8 +443,8 @@
               ]
             }
           ],
-          "order": "No head-to-head comparison exists between these, and none has been tested against a modern chemo-immunotherapy backbone. The order follows the depth of the conversion data specifically — HAI and Y90 both report patients actually taken to resection (4 of 38 and 9 of 41), radiotherapy does not — and the roadmap's own condition that conversion be the explicit goal and the programme exist. It carries no survival claim.",
-          "flagnote": "Unresolved decisions 1 and 2: whether the programme runs a hepatic arterial infusion service for iCCA at all, and which liver-directed modality is first choice for unresectable liver-confined disease. Supporting data for HAI are a single-arm, largely single-institution phase 2 experience; the deciding variables are pump expertise, nursing infrastructure and case volume, not the evidence."
+          "order": "No established head-to-head hierarchy among HAI, Y90 and ablative radiotherapy. Select by tumour distribution, anatomy, reserve, systemic-treatment plan and centre expertise. Reassess for complete resection; conversion treatment is not itself a curative operation.",
+          "flagnote": "Ratify HAI programme capability and patient selection. Evidence now includes multicentre PUMP-2 and pooled prospective phase II cohorts, but remains nonrandomized; no superiority over modern systemic therapy is established."
         }
       ],
       "avoid": [
@@ -511,12 +513,15 @@
                 "EXPERTISE"
               ],
               "when": "Preferred for a defined phenotype: liver-confined unresectable disease, favourable arterial anatomy, with durable hepatic control or conversion as the stated goal. 6-month progression-free survival 84.1% and median overall survival 25.0 months in a 38-patient phase 2 cohort; 30.8 versus 18.4 months against systemic therapy alone in a retrospective liver-confined comparison.",
-              "pref": "The strongest regional dataset in this disease, in a centre with a pump programme and the nursing infrastructure to run it. Resectable regional nodal disease did not separate outcomes in the phase 2 cohort (24-month survival 60% node-negative versus 50% node-positive, p=0.66).",
-              "avoid": "No dedicated pump programme, extrahepatic disease, unrelieved biliary obstruction. Grade 4 toxicity requiring withdrawal occurred in 11% of the phase 2 cohort and in 30% of the 10-patient confirmatory cohort.",
+              "pref": "Expert-centre regional control with a systemic-treatment plan. Selected resectable regional nodes were included in phase II evidence; no comparative superiority over other regional treatments or chemo-immunotherapy is established.",
+              "avoid": "No dedicated pump programme; distant extrahepatic metastases; unrelieved biliary obstruction or infection; unsuitable arterial/perfusion anatomy or inadequate hepatic reserve. Selected resectable regional nodal disease was included in HAI evidence and is distinct from distant spread. This does not change transplant eligibility. Avoid concurrent bevacizumab with FUDR.",
               "refs": [
                 "31670750",
-                "26695839"
-              ]
+                "26695839",
+                "41082695",
+                "42331230"
+              ],
+              "note": " PUMP-2 (PMID 41082695), a three-centre nonrandomized phase II study: 50 pumps placed, 48 patients started HAI, partial response 44%, six-month disease control 84%, resection 5/50 (10%), median OS 22.3 months and three-year OS 31.5%. The 2026 pooled analysis of four phase II trials (PMID 42331230) reports 142 treated patients, median OS 26 months, five-year OS 15% (ITT 14%), and 13/142 resections (9%). The pooled cohorts overlap the constituent trials; these are not independent replications or randomized comparisons with modern chemo-immunotherapy."
             },
             {
               "name": "Radioembolisation or chemoembolisation",
@@ -742,12 +747,15 @@
               ],
               "when": "Goal: hepatic control or conversion. Preferred for a defined phenotype. Fits liver-confined unresectable disease, favourable arterial anatomy, with durable hepatic control or conversion as the stated goal. NCCN permits HAI in trials or experienced centres for carefully selected patients.",
               "pref": "An approved expert programme with pump and arterial expertise, biliary toxicity monitoring and systemic coverage; it can be considered early rather than as a generic second line.",
-              "avoid": "No dedicated pump programme; extrahepatic disease; unrelieved biliary obstruction. Grade 4 toxicity requiring withdrawal occurred in 11% of the phase 2 cohort.",
+              "avoid": "No dedicated pump programme; distant extrahepatic metastases; unrelieved biliary obstruction or infection; unsuitable arterial/perfusion anatomy or inadequate hepatic reserve. Selected resectable regional nodal disease was included in HAI evidence and is distinct from distant spread. This does not change transplant eligibility. Avoid concurrent bevacizumab with FUDR.",
               "refs": [
                 "31670750",
                 "26695839",
-                "nccn"
-              ]
+                "nccn",
+                "41082695",
+                "42331230"
+              ],
+              "note": " PUMP-2 (PMID 41082695), a three-centre nonrandomized phase II study: 50 pumps placed, 48 patients started HAI, partial response 44%, six-month disease control 84%, resection 5/50 (10%), median OS 22.3 months and three-year OS 31.5%. The 2026 pooled analysis of four phase II trials (PMID 42331230) reports 142 treated patients, median OS 26 months, five-year OS 15% (ITT 14%), and 13/142 resections (9%). The pooled cohorts overlap the constituent trials; these are not independent replications or randomized comparisons with modern chemo-immunotherapy."
             },
             {
               "name": "SBRT or proton therapy",
@@ -1310,6 +1318,36 @@
       ],
       "foot": "Local label: Reasonable consideration, grade B. NCCN Biliary Tract Cancers v1.2026 designates capecitabine preferred, category 1, while acknowledging the nonsignificant intention-to-treat analysis; AASLD 2023 and BSG 2023 treat it as standard, and LCSGJ 2022 makes a weak recommendation and reports no significant benefit in the intrahepatic subgroup. Lymphadenectomy was not mandated for intrahepatic patients, yet nodal status is one of the covariates that turns the sensitivity analysis positive. Offer capecitabine, discuss it with these numbers, and do not present it as settled — whether the label moves to Standard is unresolved decision 3.",
       "src": "BILCAP PMID 30922733; ASCOT PMID 36681415; PRODIGE-12 PMID 30707660; BCAT PMID 29405274; roadmap §7.1 and alignment worksheet area 11"
+    },
+    {
+      "title": "HAI evidence and programme update · 15 October 2026",
+      "intro": "Reconciled with the current roadmap; clinical candidacy and transplant allocation remain separate decisions.",
+      "rows": [
+        [
+          "Multicentre phase II evidence",
+          "PUMP-2, a three-centre nonrandomized phase II trial, enrolled 50 patients with unresectable liver-confined iCCA: 48 started HAI, partial response was 44%, disease control at six months 84%, and 5/50 (10%) underwent resection. Median OS was 22.3 months; three-year OS 31.5%. The historical comparator does not establish superiority over contemporary chemo-immunotherapy (PMID 41082695)."
+        ],
+        [
+          "Mature pooled outcomes",
+          "The pooled individual-patient analysis of four phase II iCCA trials included 142 HAI-treated patients, with or without resectable regional nodes: median OS 26 months, five-year OS 15%, and 13/142 (9%) resected. Intention-to-treat five-year OS was 14%. This reuses constituent trial patients and must not be counted as independent replication or randomized comparative evidence (PMID 42331230)."
+        ],
+        [
+          "Regional nodes and transplant separation",
+          "For iCCA HAI selection, distinguish resectable regional nodes from distant extrahepatic metastases. Selected regional nodal disease was permitted in prospective HAI evidence; distant spread is outside the proposed liver-confined HAI pathway. This allowance does not extend to transplant eligibility. Document nodal basin, resectability and separate LT assessment (PMIDs 31670750, 42331230)."
+        ],
+        [
+          "Treatment position",
+          "Discuss HAI early for selected unresectable liver-confined iCCA at an experienced programme, with a systemic-treatment plan and a defined reassessment for resection. HAI, Y90 and ablative RT have no established head-to-head hierarchy. HAI is a control/conversion option, not proven standalone cure or a replacement for contemporary chemo-immunotherapy. Keep separate protocol-based transplant review and existing allocation requirements."
+        ],
+        [
+          "Programme readiness",
+          "Before starting HAI, approve a named HPB surgeon with backup, medical oncologist, trained infusion nurses and pharmacy, nuclear-medicine perfusion assessment, IR rescue access, refill/maintenance coverage, liver-test monitoring and dose-hold rules, biliary-toxicity escalation and an outcomes registry. Reliable repeated visits are essential. Credentialing must cover the whole service, not pump implantation alone (PMIDs 39962001, 36346892)."
+        ],
+        [
+          "Feasibility and medication safeguards",
+          "Avoid concurrent bevacizumab with HAI floxuridine because of increased biliary toxicity (PMID 24154839). Retain the broader no-concurrent-VEGF wording in the existing NCCN CRLM row. Assess hepatic reserve, portal hypertension/portal inflow, arterial anatomy, biliary obstruction or infection, prior liver radiation, operative fitness and reliable refill access. Age under 80 and lecture shunt cutoffs are centre practices, not universal evidence-based thresholds."
+        ]
+      ]
     }
   ],
   "honest": [
@@ -1464,7 +1502,7 @@
     },
     {
       "t": "Hepatic arterial infusion as the strongest regional option.",
-      "why": "The phase 2 evidence is 38 treated patients at one institution, selected from 84 screened, with the comparison drawn from historical systemic series; the linked editorial judged the case for locoregional therapy in unresectable cholangiocarcinoma still unsettled without a randomised trial, and the authors themselves called for one. The retrospective comparison that gives 30.8 versus 18.4 months had all HAI patients surgically staged against 42% of a 26-patient comparator of whom only 30% received gemcitabine–cisplatin, so stage migration favours HAI; 44 of its 93 HAI patients came from earlier phase 2 trials, and it reports no pump complication or biliary toxicity rate at all. Conversion to curative-intent resection occurred in 8 of 236 patients (3%). Delivery is harder than the figures suggest: 71% received the expected floxuridine dose over the first 3 months and 47% over the next 6, and grade 4 pump or arterial complications forced withdrawal in 11% of the lead-centre cohort and 30% of the 10-patient confirmatory cohort. The deciding variables for the programme are pump expertise, nursing infrastructure and case volume, not the evidence.",
+      "why": "The earlier phase 2 study included 38 treated patients at one institution, selected from 84 screened, with the comparison drawn from historical systemic series; the linked editorial judged the case for locoregional therapy in unresectable cholangiocarcinoma still unsettled without a randomised trial, and the authors themselves called for one. The retrospective comparison that gives 30.8 versus 18.4 months had all HAI patients surgically staged against 42% of a 26-patient comparator of whom only 30% received gemcitabine–cisplatin, so stage migration favours HAI; 44 of its 93 HAI patients came from earlier phase 2 trials, and it reports no pump complication or biliary toxicity rate at all. Conversion to curative-intent resection occurred in 8 of 236 patients (3%). Delivery is harder than the figures suggest: 71% received the expected floxuridine dose over the first 3 months and 47% over the next 6, and grade 4 pump or arterial complications forced withdrawal in 11% of the lead-centre cohort and 30% of the 10-patient confirmatory cohort. The deciding variables for the programme are pump expertise, nursing infrastructure and case volume, not the evidence. Updated evidence: PUMP-2 (PMID 41082695), a three-centre nonrandomized phase II study: 50 pumps placed, 48 patients started HAI, partial response 44%, six-month disease control 84%, resection 5/50 (10%), median OS 22.3 months and three-year OS 31.5%. The 2026 pooled analysis of four phase II trials (PMID 42331230) reports 142 treated patients, median OS 26 months, five-year OS 15% (ITT 14%), and 13/142 resections (9%). The pooled cohorts overlap the constituent trials; these are not independent replications or randomized comparisons with modern chemo-immunotherapy.",
       "refs": [
         "31670750",
         "26695839",
@@ -1619,7 +1657,8 @@
       "Output: one recommendation, one owner, one due date, one reassessment date, one documented alternative considered — owner: chair.",
       "Documentation: an Epic note within one business day, in the agreed structured format — owner: named owner.",
       "Registry: the case is closed in the registry with the decision, the modality delivered and the outcome at reassessment — owner: coordinator.",
-      "Referring relationships: the referring clinician is informed of the recommendation and who owns the next step. Community-referring relationships are protected explicitly — the pathway returns patients with a plan, it does not capture them — owner: named owner."
+      "Referring relationships: the referring clinician is informed of the recommendation and who owns the next step. Community-referring relationships are protected explicitly — the pathway returns patients with a plan, it does not capture them — owner: named owner.",
+      "Before activation, name the HPB pump surgeon and backup, medical oncology lead, nursing/pharmacy team, nuclear-medicine perfusion service and IR rescue service; define refill/maintenance coverage, laboratory monitoring and dose holds, biliary-toxicity escalation, and an outcomes registry. Minimum programme requirements: PMID 39962001; surgical toolkit: PMID 36346892. Avoid concurrent bevacizumab with FUDR (PMID 24154839); retain the NCCN CRLM restriction on concurrent VEGF inhibitors."
     ],
     "dashboard": [
       "Proportion of patients profiled before the second-line decision (audit).",
@@ -1636,7 +1675,7 @@
       {
         "n": 1,
         "q": "Does the programme run a hepatic arterial infusion service for intrahepatic cholangiocarcinoma?",
-        "why": "Supporting data are a single-arm, largely single-institution phase 2 experience. Benefit is plausible and toxicity is real; the deciding variables are pump expertise, nursing infrastructure and case volume.",
+        "why": "PUMP-2 (PMID 41082695), a three-centre nonrandomized phase II study: 50 pumps placed, 48 patients started HAI, partial response 44%, six-month disease control 84%, resection 5/50 (10%), median OS 22.3 months and three-year OS 31.5%. The 2026 pooled analysis of four phase II trials (PMID 42331230) reports 142 treated patients, median OS 26 months, five-year OS 15% (ITT 14%), and 13/142 resections (9%). The pooled cohorts overlap the constituent trials; these are not independent replications or randomized comparisons with modern chemo-immunotherapy. Before activation, name the HPB pump surgeon and backup, medical oncology lead, nursing/pharmacy team, nuclear-medicine perfusion service and IR rescue service; define refill/maintenance coverage, laboratory monitoring and dose holds, biliary-toxicity escalation, and an outcomes registry. Minimum programme requirements: PMID 39962001; surgical toolkit: PMID 36346892. Avoid concurrent bevacizumab with FUDR (PMID 24154839); retain the NCCN CRLM restriction on concurrent VEGF inhibitors.",
         "audit": "Registry: every HAI case, toxicity, hepatic progression-free survival."
       },
       {
@@ -1716,6 +1755,12 @@
         "q": "Post-resection surveillance — 3-monthly or 6-monthly imaging for the first two years?",
         "why": "NCCN states there are no data supporting a specific surveillance schedule. The argument for 3-monthly is that most recurrences are intrahepatic and some are re-resectable or ablatable; the argument for 6-monthly is that most UK centres practise it and no study shows the shorter interval changes outcome. Alignment worksheet, area 16.",
         "audit": "Audit: interval actually achieved, recurrence pattern, and proportion of recurrences treated with curative intent."
+      },
+      {
+        "n": 15,
+        "q": "Ratify early HAI review, disease-specific selection and programme safeguards.",
+        "why": "Before activation, name the HPB pump surgeon and backup, medical oncology lead, nursing/pharmacy team, nuclear-medicine perfusion service and IR rescue service; define refill/maintenance coverage, laboratory monitoring and dose holds, biliary-toxicity escalation, and an outcomes registry. Minimum programme requirements: PMID 39962001; surgical toolkit: PMID 36346892. Avoid concurrent bevacizumab with FUDR (PMID 24154839); retain the NCCN CRLM restriction on concurrent VEGF inhibitors. Selected resectable regional nodes in HAI evidence do not confer transplant eligibility. No established head-to-head modality hierarchy.",
+        "audit": "Record intent, referral timing, systemic plan, perfusion verification, dose intensity, biliary complications, reassessment and complete resection/ablation outcomes."
       }
     ]
   },
@@ -1904,6 +1949,31 @@
       "ESMO BTC 2023 guideline",
       "Guidelines & policy",
       "Vogel A, Bridgewater J, Edeline J, et al. Biliary tract cancer: ESMO Clinical Practice Guideline for diagnosis, treatment and follow-up. Ann Oncol. 2023;34(2):127-140. doi:10.1016/j.annonc.2022.10.506. PMID:36372281. The parent guideline to the 2024 interim update (PMID:39864891), which covers only molecular diagnostics and advanced disease; the surgical, adjuvant and locoregional recommendations are here."
+    ],
+    "39962001": [
+      "Minimum Requirements to Safely Establish and Sustain New Hepatic Arterial Infusion Pump Programs: An International Expert Perspective",
+      "HAI evidence · October 2026",
+      "Minimum Requirements to Safely Establish and Sustain New Hepatic Arterial Infusion Pump Programs: An International Expert Perspective. DOI: 10.1245/s10434-025-17009-1. PMID: 39962001."
+    ],
+    "36346892": [
+      "Hepatic Artery Infusion Pumps: A Surgical Toolkit for Intraoperative Decision-Making and Management of Hepatic Artery Infusion-Specific Complications",
+      "HAI evidence · October 2026",
+      "Hepatic Artery Infusion Pumps: A Surgical Toolkit for Intraoperative Decision-Making and Management of Hepatic Artery Infusion-Specific Complications. DOI: 10.1097/SLA.0000000000005434. PMID: 36346892."
+    ],
+    "41082695": [
+      "PUMP-2",
+      "HAI evidence · October 2026",
+      "Hepatic Arterial Infusion Pump Chemotherapy in Patients With Unresectable Intrahepatic Cholangiocarcinoma-PUMP-2 Trial. DOI: 10.1200/JCO-25-00923. PMID: 41082695."
+    ],
+    "42331230": [
+      "Hepatic artery infusion pump chemotherapy for unresectable intrahepatic cholangiocarcinoma: Pooled individual patient-level analysis of four clinical trials",
+      "HAI evidence · October 2026",
+      "Hepatic artery infusion pump chemotherapy for unresectable intrahepatic cholangiocarcinoma: Pooled individual patient-level analysis of four clinical trials. DOI: 10.1016/j.jhep.2026.06.022. PMID: 42331230."
+    ],
+    "24154839": [
+      "Floxuridine hepatic arterial infusion associated biliary toxicity is increased by concurrent administration of systemic bevacizumab",
+      "HAI evidence · October 2026",
+      "Floxuridine hepatic arterial infusion associated biliary toxicity is increased by concurrent administration of systemic bevacizumab. DOI: 10.1245/s10434-013-3275-0. PMID: 24154839."
     ]
   },
   "nonpm": {
@@ -1942,7 +2012,37 @@
       "Guidelines & policy",
       "Guideline alignment worksheet — Adult intrahepatic cholangiocarcinoma. Memorial Hermann Intrahepatic Cholangiocarcinoma System Roadmap, Draft v0.6, 4 October 2026: 16 areas where the published guidelines can disagree, with NCCN included in every area.",
       ""
+    ],
+    "tmc39962001": [
+      "TMC full text · PMID 39962001",
+      "HAI library access",
+      "Minimum Requirements to Safely Establish and Sustain New Hepatic Arterial Infusion Pump Programs: An International Expert Perspective.",
+      "https://go.openathens.net/redirector/library.tmc.edu?url=https://doi.org/10.1245/s10434-025-17009-1"
+    ],
+    "tmc36346892": [
+      "TMC full text · PMID 36346892",
+      "HAI library access",
+      "Hepatic Artery Infusion Pumps: A Surgical Toolkit for Intraoperative Decision-Making and Management of Hepatic Artery Infusion-Specific Complications.",
+      "https://go.openathens.net/redirector/library.tmc.edu?url=https://doi.org/10.1097/SLA.0000000000005434"
+    ],
+    "tmc41082695": [
+      "TMC full text · PMID 41082695",
+      "HAI library access",
+      "Hepatic Arterial Infusion Pump Chemotherapy in Patients With Unresectable Intrahepatic Cholangiocarcinoma-PUMP-2 Trial.",
+      "https://go.openathens.net/redirector/library.tmc.edu?url=https://doi.org/10.1200/JCO-25-00923"
+    ],
+    "tmc42331230": [
+      "TMC full text · PMID 42331230",
+      "HAI library access",
+      "Hepatic artery infusion pump chemotherapy for unresectable intrahepatic cholangiocarcinoma: Pooled individual patient-level analysis of four clinical trials.",
+      "https://go.openathens.net/redirector/library.tmc.edu?url=https://doi.org/10.1016/j.jhep.2026.06.022"
+    ],
+    "tmc24154839": [
+      "TMC full text · PMID 24154839",
+      "HAI library access",
+      "Floxuridine hepatic arterial infusion associated biliary toxicity is increased by concurrent administration of systemic bevacizumab.",
+      "https://go.openathens.net/redirector/library.tmc.edu?url=https://doi.org/10.1245/s10434-013-3275-0"
     ]
   },
-  "provenance": "Revised 7 October 2026 (Batch 08) after a full-text read of this page's reference depot: 37 structured abstracts, each carrying the authors' own stated limitations and an independent critique with its sources identified, against which every evidence string on this page was rechecked for the published number, for whether the critique undercuts what the string claims, and for whether the grade still follows. Thirty-three evidence strings changed. Three grades were lowered and the reason is recorded in each note: first-line chemo-immunotherapy in permanently unresectable liver-confined disease from A to B, because TOPAZ-1 and KEYNOTE-966 were 86% and 89% metastatic and say nothing about this population; offering adjuvant capecitabine from B to C, because BILCAP did not meet its intention-to-treat primary endpoint and only 19% of its patients had intrahepatic disease; and sequencing a dedicated biliary specimen at ERCP from B to C, because specimens were submitted non-consecutively, the reference standard allowed clinical and radiographic progression in place of tissue, and all testing was done in the laboratory that developed the assay. The transplant gate was corrected most: the international explant series is now cited only for what it studied — 15 patients with single tumours of 2 cm or less, diagnosed on explant pathology, with mixed hepatocellular-cholangiocarcinoma excluded and no requirement for disease stability on therapy — and the 3 cm ceiling and the six-month stability clock in our criteria are attributed to EASL-ILCA, the OPTN review-board guidance and ILTS-ILCA rather than to that series. The ILTS-ILCA 2024 consensus is published twice and both records are cited (PMID 40014003, Liver Transplantation 2025; PMID 42312290, Liver Cancer 2026); the ESMO 2023 parent guideline (PMID 36372281) is now cited alongside its 2024 interim update, since the update covers only molecular diagnostics and advanced disease and leaves the surgical recommendations to the parent. Every reference the page cites was read in full. Still cited from the source document rather than from a full-text read: NCCN Biliary Tract Cancers v1.2026, OPTN Policy 9 and the OPTN Adult MELD Exceptions for Transplant Oncology guidance (December 2025), the Memorial Hermann roadmap and its alignment worksheet, and the HOPE4LIVER one-year histotripsy update, which in any case enrolled hepatocellular carcinoma and metastases rather than intrahepatic cholangiocarcinoma. Built from the Memorial Hermann Intrahepatic Cholangiocarcinoma System Roadmap, Draft v0.6 (4 October 2026, including the 3 October 2026 liver-directed treatment revision), and its companion Guideline alignment worksheet of the same date, which compares the roadmap against AASLD 2023, OPTN 2025 review-board guidance, ESMO 2024 interim update, BSG 2023, LCSGJ 2022, ILTS-ILCA 2024 and NCCN Biliary Tract Cancers v1.2026 across 16 areas. Evidence strings carry the published numbers and the published criticism; where the roadmap's label and the trial's primary endpoint diverge, both are stated and the ratification item is named. No recommendation was removed because its evidence turned out to be weak; the roadmap's position stands and the page now says how well supported it is. The liver-directed therapy matrix is read directly from the shared matrix file and is not reproduced here. This page reproduces a draft pending multidisciplinary approval: it is not active clinical policy, does not replace clinician judgement, and every numeric criterion must be verified against the current source before use."
+  "provenance": "Revised 7 October 2026 (Batch 08) after a full-text read of this page's reference depot: 37 structured abstracts, each carrying the authors' own stated limitations and an independent critique with its sources identified, against which every evidence string on this page was rechecked for the published number, for whether the critique undercuts what the string claims, and for whether the grade still follows. Thirty-three evidence strings changed. Three grades were lowered and the reason is recorded in each note: first-line chemo-immunotherapy in permanently unresectable liver-confined disease from A to B, because TOPAZ-1 and KEYNOTE-966 were 86% and 89% metastatic and say nothing about this population; offering adjuvant capecitabine from B to C, because BILCAP did not meet its intention-to-treat primary endpoint and only 19% of its patients had intrahepatic disease; and sequencing a dedicated biliary specimen at ERCP from B to C, because specimens were submitted non-consecutively, the reference standard allowed clinical and radiographic progression in place of tissue, and all testing was done in the laboratory that developed the assay. The transplant gate was corrected most: the international explant series is now cited only for what it studied — 15 patients with single tumours of 2 cm or less, diagnosed on explant pathology, with mixed hepatocellular-cholangiocarcinoma excluded and no requirement for disease stability on therapy — and the 3 cm ceiling and the six-month stability clock in our criteria are attributed to EASL-ILCA, the OPTN review-board guidance and ILTS-ILCA rather than to that series. The ILTS-ILCA 2024 consensus is published twice and both records are cited (PMID 40014003, Liver Transplantation 2025; PMID 42312290, Liver Cancer 2026); the ESMO 2023 parent guideline (PMID 36372281) is now cited alongside its 2024 interim update, since the update covers only molecular diagnostics and advanced disease and leaves the surgical recommendations to the parent. Every reference the page cites was read in full. Still cited from the source document rather than from a full-text read: NCCN Biliary Tract Cancers v1.2026, OPTN Policy 9 and the OPTN Adult MELD Exceptions for Transplant Oncology guidance (December 2025), the Memorial Hermann roadmap and its alignment worksheet, and the HOPE4LIVER one-year histotripsy update, which in any case enrolled hepatocellular carcinoma and metastases rather than intrahepatic cholangiocarcinoma. Built from the Memorial Hermann Intrahepatic Cholangiocarcinoma System Roadmap, Draft v0.6 (4 October 2026, including the 3 October 2026 liver-directed treatment revision), and its companion Guideline alignment worksheet of the same date, which compares the roadmap against AASLD 2023, OPTN 2025 review-board guidance, ESMO 2024 interim update, BSG 2023, LCSGJ 2022, ILTS-ILCA 2024 and NCCN Biliary Tract Cancers v1.2026 across 16 areas. Evidence strings carry the published numbers and the published criticism; where the roadmap's label and the trial's primary endpoint diverge, both are stated and the ratification item is named. No recommendation was removed because its evidence turned out to be weak; the roadmap's position stands and the page now says how well supported it is. The liver-directed therapy matrix is read directly from the shared matrix file and is not reproduced here. This page reproduces a draft pending multidisciplinary approval: it is not active clinical policy, does not replace clinician judgement, and every numeric criterion must be verified against the current source before use. HAI sections updated 15 October 2026 to Batch 09. New studies were checked against indexed abstracts and the published ASCO abstract; new full-text PDFs remain to be acquired. No new full-text review is claimed for these additions."
 }
