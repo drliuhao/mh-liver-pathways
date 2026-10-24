@@ -9,5 +9,5 @@ search.addEventListener('input',()=>{
     lane.querySelectorAll('.portal-group').forEach(group=>{group.hidden=![...group.querySelectorAll('.portal-card')].some(card=>!card.hidden);});
     lane.querySelector('.portal-empty').hidden=found!==0;
   });
-  document.getElementById('portal-count').textContent=q?`${total} matching pathways`:'12 treatment roadmaps · 7 transplant pathways';
+  document.getElementById('portal-count').textContent=q?`${total} matching entries`:'12 roadmaps · 2 therapy matrices · standard & high-risk transplant reviews';
 });

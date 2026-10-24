@@ -8,7 +8,7 @@ from content import DIST, PATHWAYS, SOURCES
 from decision_assistants import ASSISTANTS, JOURNEYS, VERSION
 from care_options import CARE, build_continuations
 
-STAMP='20261024-pathway-overview'
+STAMP='20261024-matrices-high-risk'
 
 def document(title, data):
     payload=json.dumps(data,ensure_ascii=False).replace('</','<\\/')

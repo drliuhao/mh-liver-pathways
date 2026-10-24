@@ -95,7 +95,7 @@
   "clinical_changes": "Source revised for plain clinical language and iCCA focality clarification; export preserves source content except hosting and evidence-access URLs.",
   "language_revision": "2026-10-24",
   "next_actions_revision": "2026-10-24",
-  "decision_assistant_version": "2026-10-24.5",
+  "decision_assistant_version": "2026-10-24.6",
   "decision_assistants": 46,
   "recording_templates": 0,
   "research_data_kits": 0,
@@ -105,5 +105,9 @@
   "example_presets": 46,
   "journey_overviews": 7,
   "sticky_decision_navigation": true,
-  "interface_changes": "Each pathway opens with clearly labeled example choices toward transplantation. A four-stage overview and sticky step navigation show the full journey. Restore-example and clear-all controls are available. Changing a finding clears later examples; no automatic refill on navigation. No clinical criteria or matching rules changed."
+  "interface_changes": "Each pathway opens with clearly labeled example choices toward transplantation. A four-stage overview and sticky step navigation show the full journey. Restore-example and clear-all controls are available. Changing a finding clears later examples; no automatic refill on navigation. No clinical criteria or matching rules changed.",
+  "high_risk_review_revision": "2026-10-24",
+  "standard_selection_rules_changed": false,
+  "high_risk_integration": "Selected standard outcomes now link to V7 review proposals or explanations of closed boundaries. Five cancer reviews and HEHE/HCA addenda; proposals remain open and no study is activated.",
+  "systemic_matrix": "../systemic/"
 }

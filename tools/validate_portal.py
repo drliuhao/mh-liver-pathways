@@ -13,7 +13,7 @@ actual=json.loads((ROOT/'transplant/assets/content.json').read_text())
 assert actual==transform(expected), 'Clinical payload changed beyond URL transform'
 problems=[]
 checked=0
-for file in [ROOT/'index.html']+list((ROOT/'transplant').rglob('*.html')):
+for file in [ROOT/'index.html']+list((ROOT/'transplant').rglob('*.html'))+list((ROOT/'systemic').rglob('*.html')):
     text=file.read_text()
     for url in re.findall(r'(?:href|src)="([^"]+)"',text):
         url=unescape(url);parsed=urlsplit(url)
@@ -33,7 +33,7 @@ for p in actual['index']:
         for issue in s['issues']:assert any(i['id']==issue for i in p['issues'])
     old=next(x for x in expected['index'] if x['slug']==p['slug'])
     assert len(p['steps'])==len(old['steps'])
-assert len(re.findall(r'class="portal-card"', (ROOT/'index.html').read_text()))==19
+assert len(re.findall(r'class="portal-card"', (ROOT/'index.html').read_text()))==22
 for _,slug,_,_,_ in ROADMAPS:assert 'portal-navigation.js' in (ROOT/slug/'index.html').read_text()
 assert len(list((ROOT/'transplant/protocols').glob('*.docx')))==7
 assert len(list((ROOT/'transplant/docs').glob('*.docx')))==14
@@ -42,4 +42,4 @@ for file in (ROOT/'transplant').rglob('*'):
     if file.is_file() and file.suffix in ('.json','.html','.js'):
         assert '/evidence/' not in file.read_text(),str(file)
 if problems:raise SystemExit('\n'.join(problems))
-print(f'PASS: {checked} static local links; 19 cards; 7 protocol + 14 governance documents; 46 clinical steps and 45 questions preserved; no licensed PDF upload.')
+print(f'PASS: {checked} static local links; 22 portal cards; 7 standard protocol + 14 governance documents; 46 clinical steps and 45 questions preserved; no licensed PDF upload.')

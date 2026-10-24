@@ -4,7 +4,7 @@ These rules select a passage to review, not a transplant eligibility verdict.
 Stop/clarification rules precede proceed rules. Every proceed rule specifies all
 questions in that decision. No identifiers, raw clinical records or dates.
 """
-VERSION = '2026-10-24.5'
+VERSION = '2026-10-24.6'
 
 def option(value, label, *details):
     return dict(value=value, label=label, details=list(details))
