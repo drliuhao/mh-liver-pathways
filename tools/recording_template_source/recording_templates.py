@@ -1,7 +1,7 @@
 """Blank clinical recording instruments. These fields do not add eligibility rules.
 
-Stable field IDs and repeated modules support a future governed registry. No entered
-patient data is accepted, saved or transmitted by the public website.
+Stable field IDs and repeated modules support a future governed registry. Form entries
+remain in the browser tab until the user explicitly copies or downloads them.
 """
 from pathlib import Path
 from html import escape as e
@@ -10,7 +10,7 @@ import io
 import json
 import zipfile
 
-VERSION = '2026-10-24.1'
+VERSION = '2026-10-24.2'
 MISSING = ['recorded', 'pending', 'not_done', 'not_applicable', 'unknown', 'not_documented']
 MODULES = {}
 
@@ -451,6 +451,9 @@ benefit|Expected individual benefit, competing risks and team decision|text
 ''')
 
 
+from electronic_fields import configure
+configure(MODULES)
+
 # Explicit mapping, reviewed against every Tests and information needed item.
 MAPPING = {
  'hcc': {
@@ -508,68 +511,89 @@ MAPPING = {
   'follow-up':['adenoma','response','transplant','followup','milestones']}
 }
 
-README = '''# Transplant oncology recording templates
+README = """# Electronic transplant oncology assessments
 
-Version: {version}. These are blank documentation tools for the existing review pathways,
-not additional test orders, eligibility rules or automatic clearance. Complete applicable
-fields in the EHR or an institution-approved data system. The public website has no patient
-entry or upload function. Do not publish completed forms or identifying linkage files.
+Version: {version}. Complete dropdowns, numeric inputs with units, date controls, and
+narrative fields directly in the browser. These documentation fields do not determine
+eligibility or add test requirements.
 
-## Clinical use
-Use one assessment ID for each decision encounter and a stable coded record ID across care.
-Copy the clinical template into the EHR, or print it. Reconcile source reports with the
-responsible clinician. A copied prior value must retain its date and source. Record what is
-unknown and who will resolve it. Record clinical candidacy separately from allocation review.
-Fields can be not applicable; their presence does not mandate a test or procedure.
+## Working with an assessment
+- Open a decision-specific form. No normal/negative clinical values are preselected.
+- Expand relevant sections. Use Add another entry for each lesion, study, specimen,
+  treatment episode, adverse event or follow-up record; retain stable clinical IDs.
+- Use Notes / missing value to record uncertainty, pending / not-done / not-applicable
+  findings or an explanation of Other. Blank is not negative, normal or zero.
+- Record source/date once per section; optional field-level source/date overrides are
+  available. There is one optional reviewer / typed signature and date for the assessment.
+- Review status returns to Draft if clinical information is edited after review. Typed
+  sign-off is not identity-authenticated or integrated with the EHR.
+- Save / download JSON creates a local file containing the entered values. Reopen saved
+  JSON restores the same decision and template version, including repeated entries.
+- Copy completed note / Download note produces a readable note of entered values and
+  explicitly marked missing data. Export CSV creates a structured long-format data file.
+  Print / PDF prints the completed note rather than blank writing lines.
+
+## Local data handling
+Entries stay in the current tab. There is no server submission, database, analytics,
+automatic browser storage or background save. Refreshing/closing loses unsaved entries.
+The page blocks connection requests and form submissions through its content policy.
+Save completed files only in an institution-approved location and use the approved EHR
+for the clinical record. The public GitHub repository must contain only blank templates
+and test data that is explicitly synthetic. This site is not an institutional EHR or
+an authenticated signature system.
 
 ## Research structure
-The dictionary is a local draft, not an endorsed NIH CDE set, a validated registry, or a direct
-REDCap import. Stable field IDs, units and response choices support mapping into a governed
-registry. Validate that mapping and endpoint definitions before prospective collection.
-The package includes all pathway decisions and a blank long-format values CSV for each.
+The dictionary is a local draft, not a validated registry or direct REDCap import.
+Stable field IDs, units, response choices, date precision and repeated instances support
+mapping to an approved registry. Validate that mapping and endpoint definitions before
+prospective collection. The electronic version separates previously combined narrative
+items into typed fields; earlier blank dictionaries must not be treated as equivalent.
 
-Each values row is one field observation. Key: record_id + assessment_id + module_id +
-repeat_instance + field_id. A repeating module uses one instance per imaging study, lesion
-time point, specimen, treatment episode, adverse event or follow-up. A field ID is stable
-across decisions; an assessment ID distinguishes repeated encounters. Link imaging, lesion,
-specimen and treatment IDs explicitly. Add rows/instances without overwriting earlier ones.
+JSON format: mh-transplant-assessment, format_version 1, template_version {version}.
+A saved file must match the form's disease, decision and template version. Unknown fields,
+invalid choices, invalid numeric types and malformed dates are rejected without replacing
+the current assessment. An integer count can be zero; missing data is not converted to zero.
+Dates support exact day, month-only or year-only precision; no date is imputed.
+The form permits clinical incompleteness. Numeric bounds enforce basic units (nonnegative
+counts/lengths and 0–100 percentages); no clinical eligibility score is calculated.
 
-value_status: recorded / pending / not_done / not_applicable / unknown / not_documented.
-If recorded, enter value and unit where applicable. If not recorded, leave value empty and
-state why. Empty, zero, no and not applicable are different. Preserve reported units and
-qualifiers. Dates use YYYY-MM-DD (day), YYYY-MM (month), or YYYY (year). Use
-value_date_precision for a date-valued field and observed_date_precision for the clinical
-measurement date: day / month / year / unknown. Never invent a day to complete a partial date.
-The date of a result is separate from data-entry date.
-source_document and source_locator identify the report and section; observed_date is the
-clinical measurement date. verified_by and verified_date document adjudication. The date and
-source columns also apply to the blank narrative fields in the printable/EHR template.
+Each JSON module contains one or more instances, with source/observed_date and a values
+object keyed by field ID. Every value has value, missing, notes, source, observed_date and
+precision. Blank value is null. Missing uses pending / not_done / not_applicable / unknown /
+not_documented; an absent value with no explicit status is exported as not_documented.
+The single sign-off is stored under decision.signoff, decision.signoff_date and
+ decision.review_status. Field-level reviewer signatures are not collected.
+
+The live CSV export includes record/assessment IDs, pathway and decision, module and
+instance IDs, field ID and label, typed value, unit, missing status, date precision,
+observation date, source, notes, and the assessment-level sign-off. Checklist data use
+module information_checklist and field IDs checklist.<item>.<property>. Values starting
+with spreadsheet formula characters are escaped in the CSV. JSON preserves literal text.
+The blank values/*.csv files retain the original research-mapping scaffold; the live
+export includes the typed electronic fields and expanded note/sign-off columns.
 
 ## Longitudinal outcomes
-Include evaluated patients who are declined, never listed or never transplanted; record why.
-Keep diagnosis, treatment start, listing, exception decision and transplant dates separately.
-Define time zero for every analysis. Record death, recurrence, progression, dropout and graft
-failure with their ascertainment dates, definitions and sources. Preserve last contact and
-censoring reason. Do not assume missing follow-up means no event. Record patient-reported
-function using the named instrument/version rather than merging incompatible scales.
+Include evaluated patients who are declined, never listed or never transplanted, with
+reasons. Preserve diagnosis, treatment, listing and transplant dates separately. Define
+time zero and endpoint ascertainment for each analysis. Record last contact, censoring,
+dropout, recurrence, death and graft outcomes; missing follow-up is not absence of an event.
 
-## Files
-- clinical_templates.md: all decision templates for this pathway.
-- dictionary.csv / schema.json: field IDs, meanings, types, units and allowed choices.
-- decision_modules.csv: modules used at each clinical decision.
-- blank_values/*.csv: blank observations for each decision; duplicate repeat instances as needed.
-- source_checklist.csv: the pathway's required-information items, with blank documentation status.
-- sources.json: source IDs, titles, authority, locators and official access links.
+## Kit contents
+- clinical_templates.md: blank fallback notes for every decision in this pathway.
+- dictionary.csv / schema.json: field IDs, types, units, choices, numeric bounds and definitions.
+- decision_modules.csv: fields grouped by decision.
+- blank_values/*.csv: blank long-format research-mapping scaffold.
+- source_checklist.csv: original required-information items and source IDs.
+- sources.json: source titles, authority, locators and official access links.
 
 ## Basis
-The information checklist and source links come from the existing transplant pathways.
-Additional documentation/research fields are local design proposals. OPTN policy and NLRB
-guidance remain distinct sources. Current sources checked 2026-10-24:
+Clinical information checklists come from the existing source-linked pathways. Additional
+documentation and research fields are local design proposals. Clinical criteria are unchanged.
+Sources checked 2026-10-24:
 - https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf
 - https://www.hrsa.gov/sites/default/files/hrsa/optn/adult-meld-exception-transplant-oncology-review-guidance.pdf
-The NIH CDE repository informs the use of defined fields and value sets, not endorsement:
-https://cde.nlm.nih.gov/home
-'''
+- https://cde.nlm.nih.gov/home (data-definition approach; no endorsement implied)
+"""
 
 
 def groups(pathway, step):
@@ -590,17 +614,18 @@ def note_md(pathway, step):
     out=[f'# {pathway["code"]} · {step["title"]} — recording template',
          f'Template {VERSION} · {step["question"]}',
          'Complete applicable fields in the EHR / approved clinical system. Blank does not mean negative. These fields record findings; they do not add test requirements or determine eligibility.',
-         'For each entry retain the clinical date, source report/section and reviewer. Status: recorded / pending / not done / not applicable / unknown / not documented.',
+         'Record a source and clinical date for each section; use one assessment-level sign-off. Status: recorded / pending / not done / not applicable / unknown / not documented.',
          '## Information checklist']
     for x in checklist(step):
         out += [f'- [ ] {x["group"]}: {x["text"]}', '  Documentation status: ____  Result / record reference: ____  Date: ____  Outstanding action / clinician / due date: ____']
     for g in groups(pathway,step):
         out += [f'## {g["title"]}'+(' [repeat as needed]' if g['repeat'] else '')]
         if g['repeat']:out += ['Repeat instance ID: ____  Linked assessment ID: ____']
+        out += ['Section source / report: ____  Observation date: ____']
         for f in g['fields']:
             unit=f' ({f["unit"]})' if f['unit'] else ''
             options=f' Options: {" / ".join(c.replace("_", " ") for c in f["choices"])}.' if f['choices'] else ''
-            out += [f'- {f["label"]}{unit}: ____________________'+options+(f' {f["help"]}' if f['help'] else ''), '  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____']
+            out += [f'- {f["label"]}{unit}: ____________________'+options+(f' {f["help"]}' if f['help'] else '')]
     return '\n\n'.join(out)+'\n'
 
 
@@ -626,35 +651,8 @@ def blank_values(pathway,step):
 
 
 def template_page(pathway, step, sources):
-    title=f'{pathway["code"]} · {step["title"]} — recording template'
-    gs=groups(pathway,step); sections=[]
-    for g in gs:
-        rows=[]
-        for f in g['fields']:
-            unit=f' <span class="unit">({e(f["unit"])})</span>' if f['unit'] else ''
-            helptext=f'<small>{e(f["help"])}</small>' if f['help'] else ''
-            options=f'<small>Options: {e(" / ".join(c.replace("_", " ") for c in f["choices"]))}</small>' if f['choices'] else ''
-            rows.append(f'<tr><th scope="row">{e(f["label"])}{unit}{helptext}{options}</th><td><span class="write-line"></span></td><td class="record-meta">Date: __________<br>Source / section: __________<br>Status: __________<br>Reviewer: __________</td></tr>')
-        repeat='<p class="repeat">Repeat this section for each item / time point. Instance ID: __________</p>' if g['repeat'] else ''
-        sections.append(f'<section class="record-section" id="{g["id"]}"><h2>{e(g["title"])}</h2>{repeat}<table><thead><tr><th>Information to record</th><th>Value / finding</th><th>Date, source and status</th></tr></thead><tbody>{"".join(rows)}</tbody></table></section>')
-    checks=''.join(f'<li><small>{e(x["group"])}</small><b>{e(x["text"])}</b><p>Status: __________ &nbsp; Record / result: __________ &nbsp; Date: __________</p><p>Outstanding action / responsible clinician / due date: ____________________________________</p></li>' for x in checklist(step))
-    ref_ids=list(dict.fromkeys(r for x in checklist(step) for r in x['refs']))
-    reflinks=''.join(f'<li><a href="{e(sources[r]["url"],quote=True)}">{e(sources[r]["short"])}</a> · {e(sources[r]["locator"])}</li>' for r in ref_ids)
-    slug=pathway['slug'];stem=slug+'--'+step['id'];md=note_md(pathway,step)
-    dictionary_rows=''.join(f'<tr><td>{e(f["id"])}</td><td>{e(f["type"])}</td><td>{e(f["unit"] or "—")}</td><td>{e("; ".join(f["choices"]) or "—")}</td></tr>' for g in gs for f in g['fields'])
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>{e(title)}</title><link rel="stylesheet" href="templates.css?v={VERSION}"><script src="templates.js?v={VERSION}" defer></script></head><body><main>
-<nav><a href="../{slug}/#{step['id']}">← Return to this decision</a> · <a href="index.html">All recording templates</a></nav>
-<p class="eyebrow">Memorial Hermann · Transplant oncology · Documentation draft</p><h1>{e(title)}</h1><p class="question">{e(step['question'])}</p>
-<div class="actions"><button type="button" data-copy>Copy blank template for EHR</button><button type="button" data-print>Print / save as PDF</button><a href="{stem}.md" download>Download Markdown</a><a href="{slug}-recording-kit.zip" download>Research data kit · ZIP</a></div><p id="copy-status" role="status" aria-live="polite"></p>
-<aside><b>Use in the EHR or an approved clinical system.</b> This public page provides a blank template and accepts no patient entries. Record applicable information; the template does not order tests or determine eligibility. Field definitions and repeatable logs are local proposals for clinical documentation and future registry design.</aside>
-<p class="instructions">For each value, retain its clinical date, source report / section and reviewer. Use <b>recorded, pending, not done, not applicable, unknown, or not documented</b>; blank does not mean normal or negative. Dates: YYYY-MM-DD, with precision stated for partial dates. Preserve earlier assessments and stable lesion / treatment / specimen IDs.</p>
-<details class="section-index"><summary>Sections in this template</summary><ul>{''.join(f'<li><a href="#{g["id"]}">{e(g["title"])}</a></li>' for g in gs)}</ul></details>
-<section class="record-section"><h2>Information checklist for this decision</h2><ol class="checklist">{checks}</ol></section>
-{''.join(sections)}
-<details class="dictionary"><summary>Field IDs and data types for registry mapping</summary><p>Local draft dictionary; not a validated registry or direct REDCap import. The research kit supplies field definitions, units, choices, missing-value rules and blank longitudinal CSVs.</p><div class="table-scroll"><table><thead><tr><th>Field ID</th><th>Type</th><th>Unit</th><th>Choices</th></tr></thead><tbody>{dictionary_rows}</tbody></table></div></details>
-<section class="sources"><h2>Sources for the required information</h2><ul>{reflinks}</ul><p>Additional recording and research fields are documentation proposals, not new source-mandated requirements. <a href="README.md">Instructions and research data model</a>.</p></section>
-<footer>Template version {VERSION} · Clinical source dates remain on the pathway. Clinical candidacy and allocation eligibility require separate clinician review.</footer>
-<pre id="copy-text" hidden>{e(md)}</pre></main></body></html>'''
+    from electronic_form import render_template
+    return render_template(pathway, step, sources, VERSION, groups(pathway, step), checklist(step))
 
 
 def build_templates(dist, pathways, sources):
@@ -668,7 +666,7 @@ def build_templates(dist, pathways, sources):
         assert set(MAPPING[p['slug']])=={s['id'] for s in p['steps']},p['slug']
         schema=dict(version=VERSION,pathway=p['slug'],missing_value_status=MISSING,modules=dictionary(p))
         fields=[(g,f) for g in schema['modules'] for f in g['fields']]
-        dict_csv=csv_text(['module_id','module_label','repeatable','field_id','label','type','unit','choices','definition'],[[g['id'],g['title'],g['repeat'],f['id'],f['label'],f['type'],f['unit'],';'.join(f['choices']),f['help']] for g,f in fields])
+        dict_csv=csv_text(['module_id','module_label','repeatable','field_id','label','type','unit','choices','definition','minimum','maximum'],[[g['id'],g['title'],g['repeat'],f['id'],f['label'],f['type'],f['unit'],';'.join(f['choices']),f['help'],f.get('min',''),f.get('max','')] for g,f in fields])
         all_md='\n\n---\n\n'.join(note_md(p,s) for s in p['steps'])
         (target/(p['slug']+'-all-decisions.md')).write_text(all_md)
         with zipfile.ZipFile(target/(p['slug']+'-recording-kit.zip'),'w',zipfile.ZIP_DEFLATED) as z:
@@ -689,5 +687,5 @@ def build_templates(dist, pathways, sources):
         links=''.join(f'<li><a href="{p["slug"]}--{s["id"]}.html">{i+1}. {e(s["title"])}</a></li>' for i,s in enumerate(p['steps']))
         cards.append(f'<section><h2>{e(p["name"])}</h2><ul>{links}</ul><p><a href="{p["slug"]}-all-decisions.md" download>All decision templates · Markdown</a> · <a href="{p["slug"]}-recording-kit.zip" download>Research data kit · ZIP</a></p></section>')
     assert count==46,count
-    (target/'index.html').write_text(f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Transplant oncology recording templates</title><link rel="stylesheet" href="templates.css?v={VERSION}"></head><body><main><nav><a href="../">← Transplant pathways</a></nav><p class="eyebrow">Documentation draft · {VERSION}</p><h1>Clinical recording templates</h1><p>46 decision-specific templates across seven transplant pathways. Copy into the EHR, print, or download blank structured files for an approved registry. This public site accepts no patient entries.</p><p><a href="README.md">Instructions and data definitions</a></p>{"".join(cards)}</main></body></html>')
+    (target/'index.html').write_text(f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Transplant oncology recording templates</title><link rel="stylesheet" href="templates.css?v={VERSION}"></head><body><main><nav><a href="../">← Transplant pathways</a></nav><p class="eyebrow">Documentation draft · {VERSION}</p><h1>Electronic clinical assessments</h1><p>46 decision-specific templates across seven transplant pathways. Complete dropdowns, number and date fields in your browser. Save and reopen a local JSON file, copy a completed note, or export structured CSV data. Entries are not sent to a server or saved automatically.</p><p><a href="README.md">Instructions and data definitions</a></p>{"".join(cards)}</main></body></html>')
     print(f'Built {count} clinical recording templates and {len(pathways)} research data kits.')

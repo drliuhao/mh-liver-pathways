@@ -111,7 +111,7 @@ def export(source):
             shutil.copy2(source/rel, target)
             copied.append({'path':'transplant/'+rel,'sha256':hashlib.sha256(target.read_bytes()).hexdigest()})
     manifest={'hosting_export':STAMP,'clinical_source_date':'2026-10-23','pathways':len(data['index']),'steps':sum(len(p['steps']) for p in data['index']),'meeting_questions':sum(len(p['issues']) for p in data['index']),'evidence_sources':len(data['sources']),'licensed_pdfs_published':0,'documents':copied,'clinical_changes':'Source revised for plain clinical language and iCCA focality clarification; export preserves source content except hosting and evidence-access URLs.'}
-    manifest.update(recording_template_version='2026-10-24.1',recording_templates=len(list(template_dest.glob('*--*.html'))),research_data_kits=len(list(template_dest.glob('*.zip'))),documentation_changes='Blank decision-specific recording templates, printable and EHR-copy versions, and draft research dictionaries added; clinical criteria unchanged.')
+    manifest.update(recording_template_version='2026-10-24.2',recording_templates=len(list(template_dest.glob('*--*.html'))),research_data_kits=len(list(template_dest.glob('*.zip'))),documentation_changes='Electronic decision-specific assessments with typed fields, repeat entries, local JSON save/reopen, note/CSV export and one sign-off; clinical criteria unchanged.')
     (dest/'export-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     (ROOT/'index.html').write_text(home(data))
     for _,slug,_,_,_ in ROADMAPS:

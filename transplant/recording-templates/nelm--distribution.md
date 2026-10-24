@@ -1,10 +1,10 @@
 # NELM · Stage disease and confirm primary treatment — recording template
 
-Template 2026-10-24.1 · Is disease currently confined to the liver, and has the primary been removed?
+Template 2026-10-24.2 · Is disease currently confined to the liver, and has the primary been removed?
 
 Complete applicable fields in the EHR / approved clinical system. Blank does not mean negative. These fields record findings; they do not add test requirements or determine eligibility.
 
-For each entry retain the clinical date, source report/section and reviewer. Status: recorded / pending / not done / not applicable / unknown / not documented.
+Record a source and clinical date for each section; use one assessment-level sign-off. Status: recorded / pending / not done / not applicable / unknown / not documented.
 
 ## Information checklist
 
@@ -18,344 +18,228 @@ For each entry retain the clinical date, source report/section and reviewer. Sta
 
 ## Assessment identification
 
-- Coded patient / registry ID: ____________________ Use a coded ID in research exports. Keep any identifying linkage in the approved clinical system.
+Section source / report: ____  Observation date: ____
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Coded patient / registry ID: ____________________ Use a coded ID in research exports. Keep any identifying linkage in the approved clinical system.
 
 - Unique assessment ID: ____________________ New ID for each encounter or reassessment; retain earlier records.
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Date of clinical assessment: ____________________ YYYY-MM-DD; document date precision if only month or year is known.
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
 
 - Phase of care: ____________________ Options: referral / evaluation / pretransplant treatment / listed / temporarily inactive / posttransplant / other.
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Treating center / service: ____________________
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
 
 - Responsible clinician and role: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Person recording / abstracting the information: ____________________
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
 
 - Date entered: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Local protocol name, version and approval status: ____________________
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
 
 - Policy / guidance version used and date checked: ____________________ Record the version actually used for this assessment.
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
-## Imaging studies — one row per examination [repeat as needed]
+## Imaging studies — one entry per examination [repeat as needed]
 
 Repeat instance ID: ____  Linked assessment ID: ____
 
-- Stable imaging-study ID: ____________________
+Section source / report: ____  Observation date: ____
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Stable imaging-study ID: ____________________
 
 - Acquisition date: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
-- Modality and protocol: ____________________ CT / MRI / CEUS / PET; contrast phases or tracer as relevant.
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Imaging modality: ____________________ Options: CT / MRI / CEUS / PET CT / PET MRI / ultrasound / other.
 
 - Anatomic coverage: ____________________ Liver, chest, abdomen, pelvis or other sites; record what was actually examined.
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
-- Technical adequacy and limitations: ____________________
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Technical adequacy: ____________________ Options: adequate / limited / nondiagnostic.
 
 - Comparison study IDs and dates: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Expert radiology review, reviewer and date: ____________________
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
 
 - Overall impression and uncertain findings: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Contrast phases / imaging protocol: ____________________
 
 ## Functional imaging and treatment timing [repeat as needed]
 
 Repeat instance ID: ____  Linked assessment ID: ____
 
-- Linked functional-imaging study ID: ____________________
+Section source / report: ____  Observation date: ____
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Linked functional-imaging study ID: ____________________
 
 - Acquisition date: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Tracer / modality and protocol: ____________________
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
 
 - Last relevant systemic-treatment date and elapsed interval: ____________________ For CRLM record actual chemotherapy timing; any pause is an oncology decision.
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Sites of uptake / negative metastatic survey and interpretation: ____________________
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
 
 - Discordance with anatomic imaging, biomarkers or pathology: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Additional evaluation / MDT interpretation: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
-## Liver lesion map — one row per lesion at each imaging time point [repeat as needed]
+## Liver lesion map — one entry per lesion at each imaging time point [repeat as needed]
 
 Repeat instance ID: ____  Linked assessment ID: ____
 
-- Stable lesion ID: ____________________ Keep the same ID across scans, treatments and explant correlation; include disappeared sites.
+Section source / report: ____  Observation date: ____
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Stable lesion ID: ____________________ Keep the same ID across scans, treatments and explant correlation; include disappeared sites.
 
 - Linked imaging-study ID: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
-- Liver segment / lobe and location: ____________________
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Liver segment / distribution: ____________________ Options: I / II / III / IVa / IVb / V / VI / VII / VIII / multiple segments / other.
 
 - Maximum total lesion diameter (mm): ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Maximum viable enhancing component, if applicable (mm): ____________________ Do not substitute treated-cavity size for viable-tumor size.
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Pretreatment maximum diameter (mm): ____________________
 
-- Pretreatment diameter and date / source: ____________________
+- Lesion diagnosis / suspicion: ____________________ Options: HCC / iCCA / mixed HCC iCCA / metastasis / benign / indeterminate / treated site / other.
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
-- Lesion diagnosis / suspicion and certainty: ____________________ iCCA, HCC, metastasis, benign, indeterminate, treated site or other; do not count uncertain nodules as confirmed tumor.
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
-- Imaging classification and version: ____________________ LI-RADS / LR-TR if applicable. Record Class 5 adjudication separately when relevant to HCC allocation.
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Imaging classification: ____________________ Options: LR 1 / LR 2 / LR 3 / LR 4 / LR 5 / LR M / LR TIV / LR NC / LR TR nonviable / LR TR viable / LR TR equivocal / LR TR nonevaluable / LR TR nonprogressing / not applicable / other. Use the classification and algorithm version in the radiology report.
 
 - Relation to dominant tumor / nearby separate nodules: ____________________ Record distance, segment and distribution if available; a satellite label alone does not prove clonal origin.
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Linked treatment episode IDs: ____________________
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
 
 - Linked tissue / explant specimen IDs: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Diagnostic certainty: ____________________ Options: confirmed / suspected / indeterminate.
+
+- Pretreatment measurement date: ____________________
+
+- Classification / treatment-response algorithm version: ____________________
+
+- Distance from dominant lesion, if relevant (mm): ____________________
 
 ## Disease extent and staging assessment
 
-- Number and distribution of confirmed tumors: ____________________ Separate confirmed tumors, indeterminate nodules and treated sites.
+Section source / report: ____  Observation date: ____
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Confirmed liver tumor count: ____________________
 
-- Vascular involvement: vessel, level, extent and certainty: ____________________ Distinguish tumor invasion from bland thrombosis and microscopic from macroscopic invasion.
+- Vascular tumor involvement: ____________________ Options: present / absent / uncertain / not assessed. Describe vessel, level, extent and distinction from bland thrombosis in Notes.
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Regional nodal status: ____________________ Options: not detected / suspected / confirmed / indeterminate / not assessed.
 
-- Regional nodal findings and confirmation method: ____________________
+- Extrahepatic disease: ____________________ Options: not detected / suspected / confirmed / indeterminate / not assessed.
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
-- Extrahepatic sites: suspected / confirmed / excluded / indeterminate: ____________________
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
-- Peritoneal assessment and evidence: ____________________
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Peritoneal disease: ____________________ Options: not detected / suspected / confirmed / indeterminate / not assessed.
 
 - Clinical TNM, staging edition and date: ____________________ T, N, M and overall stage separately; record uncertainty rather than deriving stage from lesion count alone.
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Unresolved staging findings and plan: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Tumor distribution: ____________________ Options: solitary / multiple unilobar / multiple bilobar / diffuse / indeterminate.
 
 ## NET differentiation, function and primary origin
 
+Section source / report: ____  Observation date: ____
+
 - Primary site and evidence / portal drainage: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- NET differentiation: ____________________ Options: well differentiated / poorly differentiated / uncertain.
 
-- Well / poorly differentiated / uncertain and expert review: ____________________
+- Reported NET grade: ____________________ Options: G1 / G2 / G3 / other / uncertain. Record classification version and specimen in Notes; grade and differentiation are separate.
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Ki-67 (%): ____________________ Record method, hotspot and specimen/date in Notes.
 
-- Grade, classification/version and specimen: ____________________
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
-- Ki-67 percentage, method, hotspot and specimen/date: ____________________
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
-- Mitotic count, reporting unit and specimen: ____________________
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Mitotic count: ____________________
 
 - Primary versus liver pathology discordance and resolution: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Functional syndrome, biomarkers and control: ____________________
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
 
 - Carcinoid-heart-disease assessment if clinically indicated: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - SSTR expression / imaging assessment and date: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
-- Liver tumor volume / percentage, method and date: ____________________
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Liver tumor burden (%): ____________________ Record method, imaging date and source.
 
 - Primary / permitted extrahepatic resection dates, sites and clearance evidence: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Mitotic-count reporting unit: ____________________ Options: per 2 mm2 / per 10 HPF / other.
 
 ## Resection and alternative-treatment assessment
 
-- HPB review date and reviewing surgeons: ____________________
+Section source / report: ____  Observation date: ____
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- HPB review date: ____________________
 
 - Complete safe resection / ablation assessment: ____________________ Options: feasible / potentially feasible after treatment / not feasible / uncertain.
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Proposed operation / combined treatment and sites addressed: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
-- Future liver remnant volume, percentage, method and functional assessment: ____________________
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Future liver remnant (%): ____________________
 
 - Inflow, outflow, biliary drainage and reconstruction requirements: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Specific technical or liver-function barriers: ____________________ State the anatomical / functional reason; lesion count alone is insufficient.
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
 
 - Alternatives assessed and reasons accepted or rejected: ____________________ Include staged/parenchymal-sparing surgery, ablation, remnant augmentation or observation when relevant.
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Conditions for reassessment, date and responsible clinician: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Reviewing surgeons: ____________________
+
+- Future liver remnant volume (mL): ____________________
+
+- Volumetry method and functional assessment: ____________________
 
 ## Clinical decision, actions and sign-off
 
-- Multidisciplinary review date and participants: ____________________
+Section source / report: ____  Observation date: ____
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Multidisciplinary review date: ____________________
 
 - Clinical assessment: ____________________ Options: proceed with evaluation / proceed with treatment / pause for information / use alternative treatment / decline transplant / continue follow up / other.
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Clinical rationale, alternatives and benefit-risk discussion: ____________________
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
 
 - Separate allocation conclusion / unresolved question: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Discordant findings, uncertainty and how they will be resolved: ____________________
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
 
 - Next actions, responsible clinician and due dates: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Departure from protocol / pathway and rationale: ____________________
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
 
 - Patient / referring-team communication and date: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Next review date: ____________________
 
-- Next review date and triggers for earlier review: ____________________
+- Reviewer / typed signature: ____________________ One sign-off for this entire assessment; a typed name is not identity-authenticated by this site.
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- MDT participants: ____________________
 
-- Reviewing clinician, signature / attestation and date: ____________________
+- Sign-off date: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Assessment review status: ____________________ Options: draft / reviewed.
 
 ## Research and data-quality extension
 
-- Registry / study name and local approval reference: ____________________ Optional research fields; collection/use requires the applicable institutional process.
+Section source / report: ____  Observation date: ____
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
+- Registry / study name and local approval reference: ____________________ Optional research fields; collection/use requires the applicable institutional process.
 
 - Consent / waiver / permitted-use status and date: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Analysis time-zero event and date: ____________________ Preserve referral, diagnosis, treatment, listing and transplant dates separately; specify which defines each endpoint.
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
 
 - Outcome definition / protocol version used: ____________________ Specify survival, recurrence, progression, graft failure or dropout definition and time origin.
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Last date the endpoint was assessed and method: ____________________
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
 
 - Censoring / lost-to-follow-up status, date and reason: ____________________ Do not equate missing follow-up with absence of an event.
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Data queries, discordance, resolution and adjudicator/date: ____________________
 
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____
-
 - Record version, correction reason and superseded record ID: ____________________ Retain the earlier value and its source in the governed system.
-
-  Clinical date: ____  Source / section: ____  Status: ____  Reviewer: ____

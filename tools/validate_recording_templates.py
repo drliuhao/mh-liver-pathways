@@ -36,7 +36,10 @@ for p in data['index']:
             html=(folder/(stem+'.html')).read_text()
             md=(folder/(stem+'.md')).read_text()
             assert 'data-copy' in html and 'data-print' in html
-            assert '<input' not in html and '<textarea' not in html and 'contenteditable' not in html
+            assert '<form id="assessment"' in html and 'data-save' in html and 'data-import' in html
+            assert html.count('id="signoff-decision-signoff"')==1
+            assert "connect-src 'none'" in html and "form-action 'none'" in html
+            assert 'data-module-source' in html
             assert f'../{p["slug"]}/#{s["id"]}' in html
             assert stem+'.md' in html and p['slug']+'-recording-kit.zip' in html
             source_items=[x['text'] for g in s['orders'] for x in leaves(g['items'])]
@@ -56,6 +59,13 @@ for p in data['index']:
                 assert v['pathway_id']==p['slug'] and v['decision_id']==s['id']
                 assert all(not v[k] for k in ('record_id','assessment_id','value','value_status','observed_date','source_document','verified_by'))
                 assert fields[v['field_id']]['label'] in md
+            import re
+            schema_html=json.loads(re.search(r'<script type="application/json" id="form-schema">(.*?)</script>',html,re.S)[1].replace('<\\/','</'))
+            assert {f['id'] for g in schema_html['modules'] for f in g['fields']}==expected
+            if any(g['repeat'] for g in schema_html['modules']):assert 'data-add' in html
+            for g in schema_html['modules']:
+                for f in g['fields']:
+                    assert 'data-field="'+f['id']+'"' in html
             count+=1; observations+=len(values); checklist_items+=len(actual)
 assert count==46
 assert len(list(folder.glob('*--*.html')))==count
@@ -63,4 +73,4 @@ assert len(list(folder.glob('*.zip')))==7
 assert len(list(folder.glob('*--*.md')))==count
 js=(folder/'templates.js').read_text()
 assert not any(x in js for x in ('fetch(', 'XMLHttpRequest', 'localStorage', 'sessionStorage', 'indexedDB'))
-print(f'PASS: {count} decision templates; 7 intact kits; {checklist_items} original checklist items retained; {observations} blank field rows; schema, source references, field mapping and no-patient-input checks.')
+print(f'PASS: {count} decision templates; 7 intact kits; {checklist_items} original checklist items retained; {observations} blank field rows; schema, source references, field mapping and electronic-control checks.')
