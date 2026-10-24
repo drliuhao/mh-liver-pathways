@@ -9,7 +9,7 @@
   const match=transplant?pairs[key]:inverse[key];
   const nav=document.createElement('nav');nav.className='shared-portal-nav';nav.setAttribute('aria-label','Shared oncology portal');
   const add=(url,label,current=false)=>{const a=document.createElement('a');a.href=new URL(url,root);a.textContent=label;if(current)a.setAttribute('aria-current','true');nav.append(a);};
-  add('','← Shared home');add('#hpb-roadmaps','HPB oncology roadmaps',!transplant);add('transplant/','Standard-risk transplant protocols',transplant);
+  add('','← Shared home');add('lrt/','Liver-directed therapy matrix');add('#hpb-roadmaps','HPB oncology roadmaps',!transplant);add('transplant/','Standard-risk transplant protocols',transplant);
   if(match)add(transplant?match+'/':'transplant/'+match+'/',transplant?'This tumor’s treatment roadmap →':'This tumor’s transplant pathway →');
   document.body.prepend(nav);
 })();
