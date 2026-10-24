@@ -17,7 +17,7 @@ for config in data['continuations'].values():
 for plans in data['care'].values():
  for plan in plans:links.extend(a['url'] for a in plan['actions'] if a.get('url'))
 review_links=[x for x in links if '/transplant/high-risk/' in x]
-assert len(review_links)==23
+assert len(review_links)==2, "Only specific continuing-care reference links remain; decisions use tested conditional routing"
 for url in review_links:
  u=urlsplit(url);p=ROOT/unquote(u.path).removeprefix('/mh-liver-pathways/');p=p/'index.html' if p.is_dir() else p
  assert p.is_file(),url

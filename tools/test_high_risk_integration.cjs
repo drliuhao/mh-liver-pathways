@@ -70,6 +70,6 @@ let onward=0;
 for(const c of Object.values(data.continuations))for(const kind of ['branches','rules'])for(const actions of Object.values(c[kind]))for(const a of actions){
  const dest=HR.destination(a.url);if(dest){onward++;assert(h.pathways[dest.slug]);if(dest.id)assert(h.pathways[dest.slug].reviews.some(x=>x.anchor===dest.id));}
 }
-assert.equal(onward,20);
-console.log(`PASS: ${count} reviews in ${placements} decision placements; ${h.readiness.length} shared readiness reviews; 105 attached sources; ${pdfCount} direct PDF sources; seven protocol PDFs; 20 branch links resolve within the standard protocol.`);
+assert.equal(onward,0,"Unconditional high-risk links on broad branches must be removed");
+console.log(`PASS: ${count} reviews in ${placements} reference-catalog placements; ${h.readiness.length} shared readiness reviews; 105 attached sources; ${pdfCount} direct PDF sources; seven protocol PDFs; broad branch links removed in favor of separately tested contextual routing.`);
 console.log(`PASS: ${studySummaries} study summaries and ${sourceSlots} unique-per-review source records preserve every criterion, synthesis, result, limitation and review-depth statement; no nested study disclosures.`);

@@ -240,49 +240,7 @@ def build_continuations(pathways, assistants):
         custom(key,condition,[action('Confirm diagnosis and arrange the appropriate specialist care',
             'Use pathology and imaging to select the treatment pathway for the confirmed tumor type.',step=step),
             action('Open cancer roadmaps',url=ROADMAP)])
-    # Review destinations preserve the standard selection rules and their stop states.
-    def review(key, bucket, index, slug, anchor, label, detail):
-        result[key][bucket][str(index)].append(action(label, detail, url=HIGH_RISK+slug+'/#'+anchor))
-    review('hcc/allocation','branches',3,'hcc','hcc-b1','Review the proposed beyond-UNOS study',
-        'A bounded study proposal; reaching Milan does not automatically create standardized MELD-exception eligibility.')
-    review('hcc/curative-route','rules',1,'hcc','hcc-b2','Review previously treated portal-vein invasion',
-        'Only selected portal-branch invasion is proposed for study. This does not open a transplant route for prior rupture or other excluded findings.')
-    review('pcca/phenotype','branches',1,'pcca','pcca-b1','Review the size, biopsy and nodal boundaries',
-        'These expanded transplant groups remain closed in the V7 proposal; review clarifies the limit rather than granting eligibility.')
-    review('pcca/phenotype','branches',1,'pcca','pcca-b2','Review resection as the curative option',
-        'Resection remains preferred when complete removal and an adequate functional remnant are feasible.')
-    review('pcca/diagnosis','rules',0,'pcca','pcca-b1','Review the primary-biopsy exclusion',
-        'Confirm the biopsy route. Expansion after a transperitoneal primary-tumor biopsy remains closed in this proposal.')
-    review('pcca/neoadjuvant','branches',1,'pcca','pcca-b3','Review alternative neoadjuvant proposals',
-        'Alternative regimens require separate approval; they are not automatically equivalent to the established transplant regimen.')
-    review('icca/phenotype','branches',1,'icca','icca-b1','Review the proposed advanced-iCCA study',
-        'Distinguish adjacent satellites from separate multifocal tumors. The initial proposal excludes separate multifocal disease, nodes and extrahepatic spread.')
-    review('icca/therapy','rules',0,'icca','icca-b2','Review whether a future study reassessment is possible',
-        'The proposal allows only a defined liver-only salvage scenario after renewed control. Nodal or extrahepatic progression does not qualify.')
-    review('icca/stability','branches',1,'icca','icca-b2','Review the proposed observation requirements',
-        'Continue appropriate treatment and reassessment; the required period of control is not waived.')
-    review('icca/review','branches',1,'icca','icca-b3','Review living-donor study readiness',
-        'Study development only. Donor availability does not establish recipient eligibility or permission to transplant.')
-    review('crlm/unresectability','branches',2,'crlm','crlm-b1','Obtain the high-risk resectability review',
-        'Two experienced HPB reviews should address resection, ablation and appropriate conversion options before a transplant study is considered.')
-    review('crlm/biology','branches',1,'crlm','crlm-b3','Review the molecular selection limits',
-        'The initial proposal does not open BRAF-mutant or MSI-H/dMMR expansion. KRAS mutation alone is treated differently.')
-    review('crlm/biology','rules',3,'crlm','crlm-b3','Review the proposed CEA boundary',
-        'The local proposed threshold and NLRB guidance are distinct; neither should be silently substituted for the other.')
-    review('nelm/options','branches',1,'nelm','net-b1','Compare expected transplant benefit with other treatment',
-        'Review symptoms, threat to liver function and available systemic or liver-directed options. Stable low-burden disease usually favors nontransplant care.')
-    review('nelm/distribution','branches',1,'nelm','net-b2','Review previously cleared extrahepatic disease',
-        'Prior nodes and prior solid-organ metastases have different boundaries; confirm the required disease-free interval.')
-    review('nelm/review','branches',1,'nelm','net-b3','Review age and liver-burden boundaries',
-        'Age is an individual review factor; any proposed burden expansion requires separate approval.')
-    review('hehe/stage','branches',2,'hehe','hehe-b2','Review the HEHE clinical boundary',
-        'NLRB guidance and the narrower proposed opening cohort are different. Stable extrahepatic disease is not automatically accepted by the local proposal.')
-    review('hehe/risk','branches',1,'hehe','hehe-b1','Review observation and expected transplant benefit',
-        'A proposed observation period should not mechanically delay review of urgent liver failure.')
-    review('hca/exception-route','branches',1,'hca','hca-b1','Review the four HCA exception routes',
-        'Clarify whether a guidance route is met; exception criteria and a clinical need for transplantation remain separate.')
-    review('hca/standard-care','branches',1,'hca','hca-b2','Review whether transplantation is clinically justified',
-        'First assess feasible nontransplant treatment. Tumor size alone is not an indication for transplantation.')
+    # Conditional high-risk review placement is handled by risk-routing.js.
     return result
 
 CARE['hcc'].append(plan('t1','T1 HCC: agree surveillance or treatment',
@@ -300,9 +258,6 @@ for slug in ('hcc','pcca','icca','crlm','nelm'):
     treatment=next(p for p in CARE[slug] if p['id']==('systemic' if slug=='hcc' else 'treatment'))
     treatment['actions'].append(action('Open the systemic therapy matrix',
         'Compare treatment setting, biomarkers, pivotal trials and major precautions.',url=SYSTEMIC+'?tumor='+slug))
-next(p for p in CARE['hcc'] if p['id']=='exception')['actions'].append(action(
-    'Review high-risk HCC study proposals',
-    'Selected scenarios require separate review and study approval; unmet AFP criteria alone do not create an alternative transplant entitlement.',url=HIGH_RISK+'hcc/'))
 next(p for p in CARE['hcc'] if p['id']=='systemic')['actions'].append(action(
     'Review immunotherapy and transplant timing',
     'Previous checkpoint therapy requires assessment of immune toxicity and rejection risk; no washout interval guarantees safety.',url=HIGH_RISK+'hcc/#hcc-b3'))

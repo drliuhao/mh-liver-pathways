@@ -8,7 +8,7 @@ from content import DIST, PATHWAYS, SOURCES
 from decision_assistants import ASSISTANTS, JOURNEYS, VERSION
 from care_options import CARE, build_continuations
 
-STAMP='20261024-evidence-flow-v3'
+STAMP='20261024-contextual-risk-v2'
 HIGH_RISK=json.loads((Path(__file__).parent/'high_risk_data.json').read_text())
 
 def document(title, data):
@@ -17,7 +17,7 @@ def document(title, data):
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex"><meta name="description" content="Source-linked, decision-by-decision transplant oncology pathways. Clinical review draft.">
 <title>{e(title)} · Memorial Hermann Transplant Oncology</title><link rel="stylesheet" href="/assets/style.css?v={STAMP}"><link rel="stylesheet" href="/assets/assistant.css?v={STAMP}">
-<link rel="stylesheet" href="/assets/high-risk.css?v={STAMP}"><script src="/assets/high-risk.js?v={STAMP}" defer></script><script src="/assets/assistant.js?v={STAMP}" defer></script><script src="/assets/app.js?v={STAMP}" defer></script></head><body><div id="app"></div>
+<link rel="stylesheet" href="/assets/high-risk.css?v={STAMP}"><script src="/assets/high-risk.js?v={STAMP}" defer></script><script src="/assets/assistant.js?v={STAMP}" defer></script><script src="/assets/risk-routing.js?v={STAMP}" defer></script><script src="/assets/app.js?v={STAMP}" defer></script></head><body><div id="app"></div>
 <dialog id="source-dialog" aria-labelledby="source-title"></dialog><script id="protocol-data" type="application/json">{payload}</script>
 <noscript><main><h1>{e(title)}</h1><p>This interactive reference needs JavaScript. The printable alignment records and original protocols remain available.</p><ul>{''.join(f'<li><a href="/meeting-records/{p["slug"]}.html">{e(p["name"])} alignment record</a> · <a href="{p["protocol"]}">V3 protocol</a></li>' for p in PATHWAYS)}</ul></main></noscript></body></html>'''
 
@@ -34,7 +34,7 @@ def printable(p):
 
 def build():
     (DIST/'assets').mkdir(exist_ok=True)
-    for asset in ['app.js','style.css','assistant.js','assistant.css','high-risk.js','high-risk.css']:
+    for asset in ['app.js','style.css','assistant.js','assistant.css','high-risk.js','high-risk.css','risk-routing.js']:
         shutil.copyfile(Path(__file__).parent/asset,DIST/'assets'/asset)
     base=dict(index=PATHWAYS,sources=SOURCES,assistants=ASSISTANTS,assistant_version=VERSION,journeys=JOURNEYS,high_risk=HIGH_RISK,
               care=CARE,continuations=build_continuations(PATHWAYS,ASSISTANTS))

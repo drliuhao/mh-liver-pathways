@@ -100,7 +100,7 @@ def export(source, preserve_documents=False):
     app = app.replace('The linked source supports the adjacent statement.', 'Access through the publisher or official source; institutional sign-in may be required. The linked source supports the adjacent statement.')
     (assets/'app.js').write_text(app)
     shutil.copy2(source/'assets/style.css', assets/'style.css')
-    for name in ['assistant.js','assistant.css','high-risk.js','high-risk.css']:
+    for name in ['assistant.js','assistant.css','high-risk.js','high-risk.css','risk-routing.js']:
         shutil.copyfile(source/'assets'/name,assets/name)
     (assets/'content.json').write_text(json.dumps(data, ensure_ascii=False, indent=2))
     template_dest=dest/'recording-templates'; template_dest.mkdir(exist_ok=True)
@@ -120,6 +120,7 @@ def export(source, preserve_documents=False):
     manifest.update(interface_revision='2026-10-24',example_presets=len(original['assistants']),journey_overviews=len(original['journeys']),sticky_decision_navigation=True,
                     interface_changes='Each pathway opens with clearly labeled example choices toward transplantation. A four-stage overview and sticky step navigation show the full journey. Restore-example and clear-all controls are available. Changing a finding clears later examples; no automatic refill on navigation. No clinical criteria or matching rules changed.')
     manifest.update(high_risk_integration='2026-10-24',high_risk_reviews=21,high_risk_protocol_pdfs=7,high_risk_sources=105,high_risk_interface='Orange-labeled reviews at relevant standard decisions, with selection criteria, study evidence and PDF/TMC access. Standard matching rules unchanged.')
+    manifest.update(contextual_routing_revision='2026-10-24',contextual_routing='Answer-specific review options appear inside matching next actions after ordinary care. Clarification selectors distinguish conflated findings. Closed expansions remain explanatory; HCC-B4 remains research reference only. Earlier adverse findings carry forward and upstream edits clear dependent choices. All 46 decisions and 21 reviews checked with B/C mapping reviews and D/E clinical reviews; no selection threshold or source evidence changed.')
     manifest.update(evidence_organization_revision='2026-10-24',evidence_organization='Status, proposed position and next action precede open criteria. Searchable study summaries pair results with limitations and retain population and time-origin wording. One access record per source within each review; authority types, review coverage and approval limits are explicit. No selection criteria or matching rules changed.')
     (dest/'export-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     (ROOT/'index.html').write_text(home(data))
