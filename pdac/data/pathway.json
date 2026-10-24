@@ -4,13 +4,13 @@
  "name": "Pancreatic ductal adenocarcinoma",
  "version": "v0.3",
  "batch": "Batch 09, 15 October 2026",
- "lead": "Which resectability box this patient is in, what the next act must not foreclose, and where the neoadjuvant trials disagree badly enough that the sequence has to be decided locally rather than quoted. Revised after reading every paper in the depot in full: the biggest single finding is that almost no trial on this page had a control arm receiving the therapy this page recommends.",
- "gatelabel": "The decision in front of you",
+ "lead": "Determine resectability, obtain the information needed for treatment, and select the sequence of surgery, systemic therapy, and radiotherapy.",
+ "gatelabel": "Clinical decisions",
  "gates": [
   {
    "id": "0",
    "tone": "loco",
-   "name": "0 · Get a stageable scan before anything else",
+   "name": "0 · Obtain adequate staging imaging",
    "req": "all",
    "crit": [
     "Pancreas-protocol multiphase CT with a pancreatic parenchymal phase at 40–50 seconds and a portal venous phase at 65–70 seconds",
@@ -19,7 +19,7 @@
     "Genetic counselling and germline testing offered to every patient, whatever the stage",
     "High-quality imaging no more than 4 weeks old at the time of the operation"
    ],
-   "ask": "Is this scan good enough to decide an operation on, and did anyone put a stent in before it was done?",
+   "ask": "Is pancreatic-protocol imaging adequate for staging and treatment planning?",
    "standard": [
     {
      "t": "Repeat the scan as a pancreas-protocol CT if the one in front of you is not one — a non-protocol CT is not a staging study.",
@@ -87,7 +87,7 @@
      "l": "Reasonable",
      "g": "C",
      "pref": "Separating a benign from a malignant stricture, evaluating a periampullary mass, and characterising a cystic lesion. Across 20 studies and 726 cases, EUS had sensitivity 0.72 and specificity 0.90 for T1–2 and 0.90 and 0.72 for T3–4.",
-     "avoid": "The T-stage figures are not good enough to overturn a protocol CT, and the procedure is operator dependent. Where EUS is being done anyway, combine it with ERCP in one anaesthetic — see the tissue and drainage gate.",
+     "avoid": "The T-stage figures are not good enough to overturn a protocol CT, and the procedure is operator dependent. Where EUS is being done anyway, combine it with ERCP in one anaesthetic — see the tissue and drainage assessment.",
      "note": "The sensitivity and specificity figures are carried in the NCCN discussion text supplied to this page, not in any paper read in full for this depot; the primary reports were not retrieved."
     }
    ],
@@ -97,7 +97,7 @@
      "l": "Avoid",
      "g": "D",
      "pref": "Where urgent decompression is unavoidable, document why, and complete pancreas-protocol imaging promptly afterwards.",
-     "avoid": "Drainage is not routinely recommended before planned upfront surgery, so a stent placed for convenience buys a procedure, its complications, and a degraded baseline CA 19-9, for no benefit."
+     "avoid": "Drainage is not routinely recommended before planned upfront surgery, so a stent placed for convenience adds a procedure, its complications, and a degraded baseline CA 19-9, for no benefit."
     },
     {
      "t": "Do not call a scan negative for metastases and treat that as proof.",
@@ -111,7 +111,7 @@
   {
    "id": "1",
    "tone": "loco",
-   "name": "1 · Assign the resectability category",
+   "name": "1 · Classify resectability",
    "req": "all",
    "crit": [
     "Arterial contact stated in degrees against the celiac axis, superior mesenteric artery and common hepatic artery",
@@ -121,7 +121,7 @@
     "The category agreed by consensus at a multidisciplinary meeting, not assigned by one reader",
     "Someone has asked whether this scan would survive a central review, because roughly a third of patients called resectable by their own centres do not"
    ],
-   "ask": "Which of the four boxes is this patient in, and who agreed it?",
+   "ask": "Is the cancer resectable, borderline resectable, locally advanced, or metastatic?",
    "standard": [
     {
      "t": "Place the patient in exactly one of resectable, borderline resectable, locally advanced or metastatic, by consensus at a multidisciplinary meeting, using the stated degrees of contact.",
@@ -132,12 +132,12 @@
       "33475684",
       "37678671"
      ],
-     "pref": "Every non-metastatic patient, before any treatment is offered, because every later gate on this page hangs off which box was ticked. The thresholds are in the quick reference. NCCN is explicit that decisions about resectability status should be made in consensus at multidisciplinary meetings, and ESMO's 2023 guideline asks for the anatomical NCCN criteria to be read alongside the biological and conditional features of the International Association of Pancreatology consensus [III, B], with board discussion in an expert centre [III, A].",
+     "pref": "Every non-metastatic patient, before any treatment is offered, because every later assessment on this page hangs off which box was ticked. The thresholds are in the quick reference. NCCN is explicit that decisions about resectability status should be made in consensus at multidisciplinary meetings, and ESMO's 2023 guideline asks for the anatomical NCCN criteria to be read alongside the biological and conditional features of the International Association of Pancreatology consensus [III, B], with board discussion in an expert centre [III, A].",
      "avoid": "Do not treat the thresholds as biologically derived. The 180-degree cut-point was adopted into the Society of Abdominal Radiology and American Pancreatic Association consensus reporting statement from the NCCN criteria of the time rather than derived or validated in it, no outcome study derived it, no inter-reader reproducibility data for measuring circumferential contact were presented with it, and the criteria for resectable disease were deliberately written to favour specificity over sensitivity so that a potentially resectable patient is not denied an operation. They are a shared language, not a prognostic model.",
      "note": "Downgraded to D: the category is assigned against a consensus threshold nobody derived. It is also assigned less reliably than the page previously implied. In SWOG S1505, which required formal surgical consultation plus a resectability checklist at 20-plus experienced US centres, central radiology review found 43 of 146 patients (29%) did not meet the trial's resectability criteria — 22 (51%) had arterial interface, 15 (35%) venous interface of 180 degrees or more and 28 (65%) suspicion of distant disease — and all of them had already started protocol therapy. After neoadjuvant therapy, solid tumour contact may be replaced by increased hazy density or stranding around the peripancreatic vessels; NCCN asks for this to be reported on both the staging and the follow-up scans so that the two are comparable."
     },
     {
-     "t": "A distant metastasis, including a non-regional nodal metastasis, takes upfront resection off the table regardless of how favourable the local anatomy is.",
+     "t": "A distant metastasis, including a non-regional nodal metastasis, rules out upfront resection regardless of how favourable the local anatomy is.",
      "l": "Standard",
      "g": "C",
      "pref": "State this at the board before the anatomy is discussed, so the discussion does not drift into an operative plan for a stage IV patient.",
@@ -177,7 +177,7 @@
      "l": "Avoid",
      "g": "D",
      "pref": "Send it to the board with the degrees of contact, and record who agreed the category and on what date.",
-     "avoid": "This is a sequence and governance error rather than a judgement call: the guideline requires multidisciplinary consensus, and a single-reader determination removes the patient from every curative gate without one."
+     "avoid": "This is a sequence and governance error rather than a judgement call: the guideline requires multidisciplinary consensus, and a single-reader determination removes the patient from every curative assessment without one."
     },
     {
      "t": "Do not re-stage off a post-neoadjuvant scan alone and declare the operation off.",
@@ -191,7 +191,7 @@
   {
    "id": "2",
    "tone": "loco",
-   "name": "2 · Tissue and drainage, in one anaesthetic",
+   "name": "2 · Plan tissue sampling and biliary drainage",
    "req": "any",
    "crit": [
     "Obstructive jaundice with cholangitis, fever, or intense pruritus",
@@ -200,7 +200,7 @@
     "The diagnosis is uncertain and a removable stent would preserve the option of re-biopsy",
     "Metastatic disease, where enough tissue for next-generation sequencing is itself an indication"
    ],
-   "ask": "Does this patient need tissue before I operate, and if they need a stent, which stent and for how long?",
+   "ask": "Is tissue confirmation or biliary drainage needed before treatment?",
    "standard": [
     {
      "t": "In a patient going straight to resection with a high clinical suspicion, do not wait for tissue — biopsy proof of malignancy is not required before resection, and a non-diagnostic biopsy should not delay it.",
@@ -289,7 +289,7 @@
   {
    "id": "3",
    "tone": "cure",
-   "name": "3 · Resectable — upfront resection or chemotherapy first",
+   "name": "3 · Resectable disease: surgery or neoadjuvant treatment",
    "req": "all",
    "crit": [
     "No arterial tumour contact with the celiac axis, superior mesenteric artery or common hepatic artery",
@@ -298,7 +298,7 @@
     "Fit for pancreatoduodenectomy or distal pancreatectomy at a high-volume centre",
     "High-risk features either absent, or present and named in the note"
    ],
-   "ask": "Does this patient go to theatre first or to chemotherapy first — and can I say honestly what the five trials show?",
+   "ask": "Should treatment begin with surgery or neoadjuvant therapy?",
    "standard": [
     {
      "l": "Standard",
@@ -358,7 +358,7 @@
       }
      ],
      "order": "Ordered by what the randomised evidence actually supports in <b>anatomically resectable</b> disease, which is upfront resection with adjuvant mFOLFIRINOX — not by effect size. The full-text read strengthens that ordering and weakens the page's confidence in everything behind it. ESMO's 2023 guideline recommends against neoadjuvant therapy in resectable disease at [II, E]. The only trial restricted to this population that compared the two sequences directly, NORPACT-1, had a primary endpoint significant in favour of upfront surgery, though at a two-sided alpha of 0.15, non-significant per protocol, and with 21% of the neoadjuvant arm never receiving the drug and going straight to resection. The decisive structural fact is the comparator: <b>no neoadjuvant trial in this depot gave its control arm modern adjuvant therapy except NORPACT-1, and there only 19 of 44 resected control patients (43%) received adjuvant mFOLFIRINOX</b>. PREOPANC's control arm received adjuvant gemcitabine monotherapy and only 51% of it received any chemotherapy; PREOPANC-2 has no upfront-surgery arm at all and gave its FOLFIRINOX arm no adjuvant treatment; ESPAC5's adjuvant therapy was gemcitabine-based in 41 of 43 patients; S1505 and A021501 had no randomised control. So PREOPANC's long-term hazard ratio of 0.73 was obtained in a mixed population against a comparator no pathway would now offer, PREOPANC-2 showed two neoadjuvant regimens to be indistinguishable rather than either to beat surgery first, and NORPACT-1 pointed the other way in a phase 2 trial with a 38.5-month control-arm median that no other trial matches. Pooled across nine randomised trials the resectable subgroup shows no benefit (HR 0.90, 0.63–1.28), the borderline resectable subgroup does (HR 0.60, 0.38–0.96), and the test for a difference between them is not significant (p=0.081). Neoadjuvant treatment lowers the resection rate (72.6% versus 80.6%, RR 0.94, 0.89–0.99) while raising the R0 rate (43.8% versus 33.0% of the R0 denominator, RR 1.35, 1.16–1.57) and the N0 rate (30.9% versus 15.0%, RR 2.03, 1.50–2.74), neither of which translated into survival in any individual trial, and roughly doubles serious adverse events (56.1% versus 27.0%). It does not raise the proportion of patients who start adjuvant therapy (57.7% versus 55.6%, p=0.353), which was the mechanism the whole strategy was built on.",
-     "flagnote": "Ratification item 1, and the live choice on this page. The trials genuinely disagree and the page does not resolve them. PREOPANC is positive on long-term overall survival after a negative primary analysis, in a mixed population, against adjuvant gemcitabine monotherapy half of whose arm received no chemotherapy; PREOPANC-2 is a failed superiority trial between two neoadjuvant regimens with no upfront-surgery arm; NORPACT-1's primary endpoint favours upfront surgery in exactly the population at issue but at alpha 0.15, with 21% non-receipt and a control arm that outperforms every comparator in the literature; ESPAC5 favours short-course neoadjuvant chemotherapy on a secondary endpoint after failing both primary endpoints, in 86 analysed patients with 12 months of follow-up; ESMO recommends against neoadjuvant therapy in resectable disease at [II, E]; and A021806 has not reported. The group must decide whether the local default for an anatomically resectable tumour without high-risk features is upfront resection, and if it is not, which neoadjuvant regimen and on what grounds — knowing that no trial has compared a neoadjuvant strategy with upfront surgery followed by adjuvant mFOLFIRINOX delivered to everyone who can take it. Audit: resectability category at diagnosis, sequence chosen, resection rate, R0 rate with millimetre clearance, time from diagnosis to first treatment, and the proportion of resected patients who never start adjuvant therapy."
+     "flagnote": "Local approval item 1, and the live choice on this page. The trials genuinely disagree and the page does not resolve them. PREOPANC is positive on long-term overall survival after a negative primary analysis, in a mixed population, against adjuvant gemcitabine monotherapy half of whose arm received no chemotherapy; PREOPANC-2 is a failed superiority trial between two neoadjuvant regimens with no upfront-surgery arm; NORPACT-1's primary endpoint favours upfront surgery in exactly the population at issue but at alpha 0.15, with 21% non-receipt and a control arm that outperforms every comparator in the literature; ESPAC5 favours short-course neoadjuvant chemotherapy on a secondary endpoint after failing both primary endpoints, in 86 analysed patients with 12 months of follow-up; ESMO recommends against neoadjuvant therapy in resectable disease at [II, E]; and A021806 has not reported. The group must decide whether the local default for an anatomically resectable tumour without high-risk features is upfront resection, and if it is not, which neoadjuvant regimen and on what grounds — knowing that no trial has compared a neoadjuvant strategy with upfront surgery followed by adjuvant mFOLFIRINOX delivered to everyone who can take it. Audit: resectability category at diagnosis, sequence chosen, resection rate, R0 rate with millimetre clearance, time from diagnosis to first treatment, and the proportion of resected patients who never start adjuvant therapy."
     },
     {
      "t": "Whichever sequence is chosen, write down before the operation who delivers the chemotherapy, when it starts, and who restages before it does.",
@@ -383,7 +383,7 @@
      ],
      "pref": "NCCN allows neoadjuvant therapy in resectable disease, especially with high-risk features, which it defines as equivocal or indeterminate imaging findings, markedly elevated CA 19-9, a large primary tumour, or large regional lymph nodes. The rationale is selection: treating micrometastatic disease earlier, and identifying surgical futility before an operation rather than after it.",
      "avoid": "Do not present it as evidence based in this group. The pooled resectable subgroup shows no overall survival benefit (HR 0.90, 95% CI 0.63–1.28), none of the randomised trials was restricted to high-risk resectable disease, ESMO recommends against neoadjuvant therapy in resectable disease outside a trial at [II, E], and NCCN itself says there is limited evidence to recommend specific neoadjuvant regimens outside a clinical trial and that panel practice varies.",
-     "note": "Downgraded to D on the full-text read: this is a guideline permission with no trial behind it in the population named. Two numbers set the price. Pooled across the nine trials, neoadjuvant treatment lowered the resection rate (72.6% versus 80.6%, RR 0.94, 0.89–0.99) and roughly doubled serious adverse events (56.1% versus 27.0%) — though the published risk ratio for that harm, 1.92 with a reported 95% CI of 1.28 to 1.89, does not contain its own point estimate in either the abstract or the table, so the magnitude as published cannot be relied on even though its direction is clear. If this route is taken, tissue is mandatory first, and the response assessment in the borderline resectable gate applies — including the rule that a patient with no shrinkage but no extrapancreatic progression is still explored."
+     "note": "Downgraded to D on the full-text read: this is a guideline permission with no trial behind it in the population named. Two numbers set the price. Pooled across the nine trials, neoadjuvant treatment lowered the resection rate (72.6% versus 80.6%, RR 0.94, 0.89–0.99) and roughly doubled serious adverse events (56.1% versus 27.0%) — though the published risk ratio for that harm, 1.92 with a reported 95% CI of 1.28 to 1.89, does not contain its own point estimate in either the abstract or the table, so the magnitude as published cannot be relied on even though its direction is clear. If this route is taken, tissue is mandatory first, and the response assessment in the borderline resectable assessment applies — including the rule that a patient with no shrinkage but no extrapancreatic progression is still explored."
     },
     {
      "t": "Perioperative chemotherapy as studied in SWOG S1505 — mFOLFIRINOX or nab-paclitaxel with gemcitabine, given before and after resection — only with its result stated.",
@@ -394,7 +394,7 @@
      ],
      "pref": "A randomised phase 2 pick-the-winner trial in resectable disease, designed to select a regimen for further study, with 147 patients enrolled and 102 eligible and evaluable after central radiology review. Preoperative chemotherapy was started by 96% of each arm and completed by 84% and 85%; 40 of 55 (73%) and 33 of 47 (70%) underwent resection; R0 was achieved in 34 of 40 (85%) and 28 of 33 (85%) of those resected.",
      "avoid": "It selected no winner and cleared no bar. <b>Both arms missed the primary endpoint</b>: 2-year overall survival 47% (95% CI 31–61), P=.15 with mFOLFIRINOX and 48% (31–63), P=.14 with nab-paclitaxel and gemcitabine, against a prespecified historical threshold of 40%, so the between-arm comparison was never performed. Median overall survival was 23.2 and 23.6 months. Do not quote the completion figure the way this page previously did: only 31 of 40 (78% of those resected, 56% of eligible patients) and 26 of 33 (79%, 55%) started postoperative chemotherapy, and all treatment was completed by 49% and 40% — 16 of the 73 patients who had surgery (22%) could not start adjuvant chemotherapy at all. Pathologic complete or major response was 10 of 40 (25%) and 14 of 33 (42%), in resected-only denominators.",
-     "note": "Downgraded from B to C. There is no randomised control arm: both arms were tested against a historical 2-year survival of 40% drawn from adjuvant trials, whose populations were selected after surviving surgery and recovering, so the comparison is biased against a strategy randomised at diagnosis and the failure to beat 40% is not evidence that perioperative chemotherapy is worse. Nobody in the trial received upfront surgery followed by adjuvant mFOLFIRINOX. Forty-five of 147 randomised patients (31%) were removed from the analysed population, 43 of them for failing central radiology review, after they had already received protocol therapy. Age was capped at 75 and performance status at Zubrod 0–1. Its most durable contribution is the misclassification finding in the resectability gate, not a survival result."
+     "note": "Downgraded from B to C. There is no randomised control arm: both arms were tested against a historical 2-year survival of 40% drawn from adjuvant trials, whose populations were selected after surviving surgery and recovering, so the comparison is biased against a strategy randomised at diagnosis and the failure to beat 40% is not evidence that perioperative chemotherapy is worse. Nobody in the trial received upfront surgery followed by adjuvant mFOLFIRINOX. Forty-five of 147 randomised patients (31%) were removed from the analysed population, 43 of them for failing central radiology review, after they had already received protocol therapy. Age was capped at 75 and performance status at Zubrod 0–1. Its most durable contribution is the misclassification finding in the resectability assessment, not a survival result."
     },
     {
      "t": "PAXG — cisplatin, nab-paclitaxel, capecitabine and gemcitabine — as a neoadjuvant option in certain circumstances only.",
@@ -437,7 +437,7 @@
   {
    "id": "4",
    "tone": "cure",
-   "name": "4 · Borderline resectable — treat, then re-ask the question",
+   "name": "4 · Borderline resectable disease: treat and reassess",
    "req": "any",
    "crit": [
     "Head or uncinate: solid tumour contact with the SMA of ≤180°, or with the common hepatic artery without extension to the celiac axis or hepatic artery bifurcation",
@@ -446,7 +446,7 @@
     "Solid tumour contact with the inferior vena cava",
     "Solid tumour contact with variant arterial anatomy, with the degree of contact recorded"
    ],
-   "ask": "Has this patient responded enough to justify the operation their anatomy is going to require?",
+   "ask": "After treatment, is resection technically feasible and clinically appropriate?",
    "standard": [
     {
      "t": "Multiagent neoadjuvant chemotherapy first, then restage and re-ask the resectability question — this is where the randomised evidence for the neoadjuvant route is strongest.",
@@ -459,7 +459,7 @@
      ],
      "pref": "A fit borderline resectable patient with a tissue diagnosis. In the pooled analysis of nine randomised trials, the borderline resectable subgroup showed an overall survival benefit for neoadjuvant treatment, hazard ratio 0.60 (95% CI 0.38–0.96), against none in the resectable subgroup, 0.90 (0.63–1.28). In the long-term PREOPANC analysis the borderline resectable subgroup was the only significant one, hazard ratio 0.67 (0.45–0.99), P=.045. In ESPAC5, 1-year overall survival was 39% (95% CI 24–61) with immediate surgery, 78% (60–100) with gemcitabine plus capecitabine, 84% (70–100) with FOLFIRINOX and 60% (37–97) with capecitabine-based chemoradiotherapy, p=0.0028, with pooled neoadjuvant versus surgery hazard ratio 0.29 (0.14–0.60), p=0.0052.",
      "avoid": "State the limits in the same breath, because they are large. ESPAC5 randomised 90 patients against a target of 100 and analysed 86; its primary endpoints were recruitment rate and resection rate and <b>both were negative</b> — recruitment ran at 2.16 patients per month across 16 sites, and resection occurred in 21 of 31 (68%) after immediate surgery versus 30 of 55 (55%) after neoadjuvant therapy, p=0.33, numerically favouring immediate surgery, with R0 resection in 3 of 21 (14%) versus 7 of 30 (23%), p=0.49. Follow-up was capped at 12 months and there were 31 deaths in the whole trial. The control arm's median CA 19-9 was 802 kU/L against 322 to 623 kU/L in the neoadjuvant arms, an unadjusted and strongly prognostic imbalance in a trial with 16 to 31 patients per arm. Of the 43 patients who received adjuvant therapy anywhere in the trial, 41 (95%) got gemcitabine or gemcitabine plus capecitabine and only 2 (5%) got modified FOLFIRINOX.",
-     "note": "Downgraded from B to C on the full-text read. The resectable-versus-borderline split that this gate depends on is not statistically established: the between-subgroup test in the pooled analysis was not significant (p=0.081), PREOPANC's interaction test was not significant in either report, and PREOPANC-2 found no treatment-effect heterogeneity in any subgroup (all interaction p at or above 0.23). The pooled estimate is also unstable — it depends on post hoc removal of NORPACT-1 and the pooled ESPAC5 chemotherapy comparison as outliers, which drops the only trial whose control arm partly resembles current practice and collapses heterogeneity from I² 55.8% to 0% by construction. ESPAC5's own internals cut against its mechanism: the chemoradiotherapy arm had the best pathology (37% R0, 25% node positive) and the worst neoadjuvant survival, and the authors note the survival benefit was unrelated to the resection rate. Disease-free survival from surgery was 33% (19–58) after immediate surgery and 59% (46–74) after the combined neoadjuvant arms, hazard ratio 0.53 (0.28–0.98), reported as p=0.016 in the abstract and p=0.043 in the results text. Grade 3 or worse adverse events occurred in 2 of 28 (7%) after immediate surgery and 17 of 50 (34%) after neoadjuvant therapy."
+     "note": "Downgraded from B to C on the full-text read. The resectable-versus-borderline split that this assessment depends on is not statistically established: the between-subgroup test in the pooled analysis was not significant (p=0.081), PREOPANC's interaction test was not significant in either report, and PREOPANC-2 found no treatment-effect heterogeneity in any subgroup (all interaction p at or above 0.23). The pooled estimate is also unstable — it depends on post hoc removal of NORPACT-1 and the pooled ESPAC5 chemotherapy comparison as outliers, which drops the only trial whose control arm partly resembles current practice and collapses heterogeneity from I² 55.8% to 0% by construction. ESPAC5's own internals cut against its mechanism: the chemoradiotherapy arm had the best pathology (37% R0, 25% node positive) and the worst neoadjuvant survival, and the authors note the survival benefit was unrelated to the resection rate. Disease-free survival from surgery was 33% (19–58) after immediate surgery and 59% (46–74) after the combined neoadjuvant arms, hazard ratio 0.53 (0.28–0.98), reported as p=0.016 in the abstract and p=0.043 in the results text. Grade 3 or worse adverse events occurred in 2 of 28 (7%) after immediate surgery and 17 of 50 (34%) after neoadjuvant therapy."
     },
     {
      "t": "Restage with pancreas-protocol CT or MRI of the abdomen plus chest and pelvis CT after neoadjuvant therapy, and judge response on two of three metrics.",
@@ -467,7 +467,7 @@
      "g": "D",
      "pref": "Every patient at the end of neoadjuvant therapy. The three metrics are radiologic (RECIST change on high-quality triple-phase CT or contrast-enhanced MRI), biochemical (CA 19-9 or CEA, interpretable only if the baseline was elevated and liver function has normalised) and metabolic (FDG-PET SUV or metabolic tumour volume against a baseline treatment-naive avid scan). Where the metrics conflict — tumour smaller on CT but CA 19-9 rising — NCCN asks for a third metric and a board discussion, deciding on two of three. The biochemical metric is the one with the most supporting data: ESMO cites a pooled analysis of 17 studies and 2,242 patients in which a CA 19-9 fall of more than 50% or normalisation after neoadjuvant treatment was associated with better overall survival (P<0.0001).",
      "avoid": "Do not read mild increases in perivascular soft tissue as progression; NCCN states this alone does not represent progression, ESMO states that persistent perivascular soft tissue is not synonymous with residual tumour, and after neoadjuvant therapy solid contact is often replaced by hazy density or stranding.",
-     "note": "Examples of an optimal response given by NCCN are CA 19-9 normalisation, or near-normalisation, or at least a 50% decrease, and a complete or near-complete metabolic response on PET. The degree of <i>significance</i> is explicitly left to the local treatment team, which makes it a ratification item. ESMO adds the relevant caveat about the radiologic metric: imaging performance for restaging after chemotherapy or chemoradiotherapy is lower than in treatment-naive settings. The trials bear that out — pathologic and nodal response in PREOPANC-2 and NORPACT-1 moved substantially without survival moving at all.",
+     "note": "Examples of an optimal response given by NCCN are CA 19-9 normalisation, or near-normalisation, or at least a 50% decrease, and a complete or near-complete metabolic response on PET. The degree of <i>significance</i> is explicitly left to the local treatment team, which makes it a local approval item. ESMO adds the relevant caveat about the radiologic metric: imaging performance for restaging after chemotherapy or chemoradiotherapy is lower than in treatment-naive settings. The trials bear that out — pathologic and nodal response in PREOPANC-2 and NORPACT-1 moved substantially without survival moving at all.",
      "refs": [
       "37678671",
       "40945523",
@@ -523,7 +523,7 @@
       }
      ],
      "order": "Ordered by how well the guideline supports each, not by survival data — there is no randomised comparison of any of these three in borderline resectable disease, and the one randomised trial that tested adding radiotherapy to neoadjuvant chemotherapy in this population stopped that arm for futility. Venous resection is the only one NCCN says is supported by evidence; consolidative chemoradiation is a <i>may be considered</i> whose necessity the guideline calls poorly defined; arterial resection is a highly selected salvage at specialist centres with an explicitly unknown long-term benefit.",
-     "flagnote": "Ratification item 2: does this programme offer arterial resection or arterial divestment for PDAC at all, and if so under what minimum volume, which surgeons, and with what consent document? NCCN leaves the decision to centres with proven experience and requires explicit counselling that the chance of cure is unknown — that is a governance decision, not a case-by-case one. Ratification item 3: what counts locally as a <i>significant</i> response, since NCCN hands the definition to the local treatment team. Audit: response category recorded, resection attempted, R0 rate and 90-day mortality, by vascular resection type."
+     "flagnote": "Local approval item 2: does this programme offer arterial resection or arterial divestment for PDAC at all, and if so under what minimum volume, which surgeons, and with what consent document? NCCN leaves the decision to centres with proven experience and requires explicit counselling that the chance of cure is unknown — that is a governance decision, not a case-by-case one. Local approval item 3: what counts locally as a <i>significant</i> response, since NCCN hands the definition to the local treatment team. Audit: response category recorded, resection attempted, R0 rate and 90-day mortality, by vascular resection type."
     },
     {
      "t": "Switch to a different regimen and reassess, rather than operating, where the response is minimal or there has been local progression without metastases.",
@@ -572,7 +572,7 @@
   {
    "id": "5",
    "tone": "cure",
-   "name": "5 · The operation, and what R0 actually means",
+   "name": "5 · Resection margins and lymph-node staging",
    "req": "all",
    "crit": [
     "Pancreatoduodenectomy for head and uncinate tumours; distal pancreatectomy for body and tail",
@@ -581,7 +581,7 @@
     "Specimen inked and sliced to a protocol that allows millimetre reporting of every margin",
     "Done at a high-volume centre, by a surgeon who does them"
    ],
-   "ask": "Did I take the right nodes, and will the pathologist be able to tell me the margin in millimetres?",
+   "ask": "Are the resection margins and lymph-node assessment adequate?",
    "standard": [
     {
      "t": "Standard lymphadenectomy, to the stations the International Study Group on Pancreatic Surgery names — extended lymphadenectomy gives no survival benefit.",
@@ -630,7 +630,7 @@
      "t": "A written minimum annual volume for pancreatoduodenectomy at this centre, with a textbook-outcome audit behind it.",
      "l": "Reasonable",
      "g": "D",
-     "pref": "NCCN's opening line in this guideline is that decisions about diagnosis, resectability and management should involve multidisciplinary consultation at a high-volume centre, and it repeats <i>high-volume centre</i> at the drainage, vascular resection, recurrence and gastric outlet gates. A threshold that is written down makes the referral decision auditable.",
+     "pref": "NCCN's opening line in this guideline is that decisions about diagnosis, resectability and management should involve multidisciplinary consultation at a high-volume centre, and it repeats <i>high-volume centre</i> at the drainage, vascular resection, recurrence and gastric outlet decision points. A threshold that is written down makes the referral decision auditable.",
      "avoid": "The guideline never states a number, and no number here is evidence based. Volume-outcome relationships in pancreatic surgery are observational and consistent; the threshold itself is a governance choice. [EXPERTISE]",
      "note": "NCCN never states a number, and no number here is evidence based. Volume-outcome relationships in pancreatic surgery are observational and consistent; the threshold itself is a governance choice. The one randomised dataset in this depot that looked at it found centre volume associated with survival in a post hoc multivariable model (10 or more patients enrolled, HR 0.77, 95% CI 0.61–0.98, P=.03, in PRODIGE-24's 77 hospitals) — a finding confounded with case mix, surgical quality, access to relapse therapy and country, and selected by a stepwise procedure with no multiplicity correction. Do not cite it as a derived threshold. [EXPERTISE]",
      "refs": [
@@ -642,7 +642,7 @@
      "l": "Reasonable",
      "g": "C",
      "pref": "In a pooled analysis of 55 patients from 19 studies who underwent pancreatectomy for recurrent pancreatic cancer, 1-, 3- and 5-year survival were 82.2%, 49.2% and 40.6%. NCCN asks for careful evaluation in a multidisciplinary clinic with detailed restaging, and a plan that may include neoadjuvant chemotherapy with or without radiotherapy and then resection.",
-     "avoid": "Fifty-five patients across nineteen studies is a selected series of selected series. Chemoradiation can be considered for local recurrence if radiation was not given before, but NCCN notes limited data to support specific radiotherapy recommendations in this setting. Where there is metastatic disease with or without local recurrence, this is a systemic problem — see the metastatic gate."
+     "avoid": "Fifty-five patients across nineteen studies is a selected series of selected series. Chemoradiation can be considered for local recurrence if radiation was not given before, but NCCN notes limited data to support specific radiotherapy recommendations in this setting. Where there is metastatic disease with or without local recurrence, this is a systemic problem — see the metastatic assessment."
     },
     {
      "t": "Resection of limited pulmonary-only metastases after resection, in a selected patient.",
@@ -682,7 +682,7 @@
   {
    "id": "6",
    "tone": "sys",
-   "name": "6 · Adjuvant therapy, and what surveillance is actually for",
+   "name": "6 · Adjuvant therapy and surveillance",
    "req": "any",
    "crit": [
     "A macroscopically complete resection has been performed",
@@ -691,7 +691,7 @@
     "No neoadjuvant therapy was given — or it was, and the response is known",
     "Germline and somatic results are back, or have been chased"
    ],
-   "ask": "Which regimen, when does it start, and does this patient still have resected-stage disease at all?",
+   "ask": "Which adjuvant treatment and surveillance plan are appropriate after restaging?",
    "standard": [
     {
      "l": "Standard",
@@ -715,7 +715,7 @@
        "g": "A",
        "when": "NCCN's other preferred adjuvant option for patients who had no neoadjuvant therapy, and ESMO's alternative for patients over 75, ECOG performance status 2 or a contraindication to mFOLFIRINOX at [I, B]. ESPAC-4 (n=730 analysed) gave median overall survival 28.0 months (95% CI 23.5–31.5) versus 25.5 months (22.7–27.9) against gemcitabine monotherapy, hazard ratio 0.82 (0.68–0.98), stratified log-rank p=0.032.",
        "pref": "A patient who wants adjuvant treatment but cannot take a triplet — poorer performance status, neuropathy, a slow recovery, or a preference against irinotecan and oxaliplatin. Its population is the least selected in the adjuvant literature: WHO performance status up to 2, R1 margins allowed and <b>no ceiling on postoperative CA 19-9</b>, which is why its medians sit below PRODIGE-24's and CONKO-001's.",
-       "avoid": "Do not offer it as equivalent to mFOLFIRINOX, and state both halves. The comparator was gemcitabine alone, the two combinations have never been compared directly, and the difference in medians bought over gemcitabine was 2.5 months. The relapse-free survival endpoint was <b>negative</b> (13.9 versus 13.1 months, hazard ratio 0.86, 95% CI 0.73–1.02, p=0.082), the trial was stopped and published early at 458 of 480 target deaths on a signal of efficacy, and the widely quoted 5-year figures (28.8% versus 16.3%) are estimates extrapolated well past the bulk of the data at 43.2 months median follow-up. Grade 3–4 events occurred in 226 of 359 (63%) versus 196 of 366 (54%), with neutropenia 38% versus 24% and hand-foot syndrome 7% versus 0%, and 169 of 364 combination patients (46%) did not complete all six cycles.",
+       "avoid": "Do not offer it as equivalent to mFOLFIRINOX, and state both halves. The comparator was gemcitabine alone, the two combinations have never been compared directly, and the difference in medians against gemcitabine was 2.5 months. The relapse-free survival endpoint was <b>negative</b> (13.9 versus 13.1 months, hazard ratio 0.86, 95% CI 0.73–1.02, p=0.082), the trial was stopped and published early at 458 of 480 target deaths on a signal of efficacy, and the widely quoted 5-year figures (28.8% versus 16.3%) are estimates extrapolated well past the bulk of the data at 43.2 months median follow-up. Grade 3–4 events occurred in 226 of 359 (63%) versus 196 of 366 (54%), with neutropenia 38% versus 24% and hand-foot syndrome 7% versus 0%, and 169 of 364 combination patients (46%) did not complete all six cycles.",
        "refs": [
         "28129987",
         "37678671"
@@ -741,14 +741,14 @@
        "avoid": "No trial establishes a fluoropyrimidine alone as equivalent to the combinations above. The arms that support it sit inside ESPAC-1 and ESPAC-3, neither of which was retrieved or read in full for this depot; their medians (20.1 and 23.0 months) are in the same range as every other single-agent arm from that era, and NCCN notes scepticism about the efficacy of the fluorouracil and folinic acid regimens used in those trials."
       }
      ],
-     "order": "Ordered by the size and quality of the randomised comparison each regimen won, which is a real ranking here — unusually for this page — but a narrower one than the medians suggest. PRODIGE 24 is the only adjuvant trial to put an 18-month difference in median overall survival on the table, and it did so against the then-standard, in a population restricted to age under 80, no cardiac disease, WHO performance status 0 or 1, full surgical recovery and postoperative CA 19-9 below 180 U/mL; nothing in it describes what to do for a patient who has not recovered from a pancreatoduodenectomy, and its 5-year disease-free survival advantage is 7.1 percentage points. Every comparator in this list is adjuvant gemcitabine monotherapy or observation, so the ordering is a chain of comparisons against regimens no pathway would now offer a fit patient, and the two preferred options have never been compared with each other. NCCN also notes how similar the single-agent arms of the older trials were to one another — 22.8 months in the gemcitabine arm of CONKO-001, 20.5 in the gemcitabine-containing arm of RTOG 9704, 20.1 in the bolus fluorouracil arm of ESPAC-1, and 23.6 and 23.0 in the two arms of ESPAC-3 — which is a useful reminder of how small the single-agent era's differences were, and a reminder that those arms were selected very differently on CA 19-9 and age.",
-     "flagnote": "Ratification item 4: is mFOLFIRINOX the local default for every recovered good-performance-status patient who had no neoadjuvant therapy, given 75.9% grade 3–4 toxicity, a relative dose intensity of 0.80 or more in only 33.6% of patients, no significant benefit in the 101 patients aged 70 or older (HR 0.86, 0.53–1.39) and post-relapse survival numerically worse than in the gemcitabine arm — and what performance-status or recovery threshold moves a patient to gemcitabine with capecitabine? Ratification item 5: what is the local rule for adjuvant therapy <b>after</b> neoadjuvant therapy? NCCN says only that the options depend on the response to neoadjuvant therapy and other clinical factors, and ESMO states plainly that the benefit of adjuvant chemotherapy following neoadjuvant therapy and pancreatectomy remains to be established with randomised data lacking. No trial defines total duration, whether to continue the same regimen or switch, or what to do after a complete pathologic response — and PREOPANC-2's FOLFIRINOX arm gave no adjuvant treatment at all. Audit: regimen, cycles completed, dose intensity, time from surgery to first cycle, and grade 3–4 toxicity."
+     "order": "Ordered by the size and quality of the randomised comparison each regimen achieved, which is a real ranking here — unusually for this page — but a narrower one than the medians suggest. PRODIGE 24 is the only adjuvant trial to report an 18-month difference in median overall survival, and it did so against the then-standard, in a population restricted to age under 80, no cardiac disease, WHO performance status 0 or 1, full surgical recovery and postoperative CA 19-9 below 180 U/mL; nothing in it describes what to do for a patient who has not recovered from a pancreatoduodenectomy, and its 5-year disease-free survival advantage is 7.1 percentage points. Every comparator in this list is adjuvant gemcitabine monotherapy or observation, so the ordering is a chain of comparisons against regimens no pathway would now offer a fit patient, and the two preferred options have never been compared with each other. NCCN also notes how similar the single-agent arms of the older trials were to one another — 22.8 months in the gemcitabine arm of CONKO-001, 20.5 in the gemcitabine-containing arm of RTOG 9704, 20.1 in the bolus fluorouracil arm of ESPAC-1, and 23.6 and 23.0 in the two arms of ESPAC-3 — which is a useful reminder of how small the single-agent era's differences were, and a reminder that those arms were selected very differently on CA 19-9 and age.",
+     "flagnote": "Local approval item 4: is mFOLFIRINOX the local default for every recovered good-performance-status patient who had no neoadjuvant therapy, given 75.9% grade 3–4 toxicity, a relative dose intensity of 0.80 or more in only 33.6% of patients, no significant benefit in the 101 patients aged 70 or older (HR 0.86, 0.53–1.39) and post-relapse survival numerically worse than in the gemcitabine arm — and what performance-status or recovery threshold moves a patient to gemcitabine with capecitabine? Local approval item 5: what is the local rule for adjuvant therapy <b>after</b> neoadjuvant therapy? NCCN says only that the options depend on the response to neoadjuvant therapy and other clinical factors, and ESMO states plainly that the benefit of adjuvant chemotherapy following neoadjuvant therapy and pancreatectomy remains to be established with randomised data lacking. No trial defines total duration, whether to continue the same regimen or switch, or what to do after a complete pathologic response — and PREOPANC-2's FOLFIRINOX arm gave no adjuvant treatment at all. Audit: regimen, cycles completed, dose intensity, time from surgery to first cycle, and grade 3–4 toxicity."
     },
     {
      "t": "Restage before the first cycle — a proportion of patients have already relapsed.",
      "l": "Standard",
      "g": "D",
-     "pref": "Every patient. NCCN states it is important to evaluate for disease recurrence before initiating adjuvant therapy because of the risk of early relapse. A patient who has relapsed is on the metastatic gate, not this one.",
+     "pref": "Every patient. NCCN states it is important to evaluate for disease recurrence before initiating adjuvant therapy because of the risk of early relapse. A patient who has relapsed is on the metastatic assessment, not this one.",
      "avoid": "Do not start a 24-week adjuvant course on the assumption that the postoperative scan will be clean."
     },
     {
@@ -822,7 +822,7 @@
   {
    "id": "7",
    "tone": "sys",
-   "name": "7 · Locally advanced — induction therapy and the conversion question",
+   "name": "7 · Locally advanced disease: treatment and reassessment",
    "req": "any",
    "crit": [
     "Head or uncinate: solid tumour contact of >180° with the SMA or celiac axis",
@@ -831,7 +831,7 @@
     "No distant metastasis",
     "Performance status and biliary drainage adequate for multiagent therapy, or not"
    ],
-   "ask": "Can induction therapy turn this into an operation, and does adding radiation help me get there?",
+   "ask": "Could induction treatment make resection possible, and is radiotherapy appropriate?",
    "standard": [
     {
      "t": "Multiagent induction chemotherapy for a patient with adequate performance status, good biliary drainage and adequate nutritional intake — with the reassessment date set when it starts.",
@@ -850,7 +850,7 @@
      "g": "D",
      "pref": "NCCN states the term <i>locally advanced</i> should only be used at initial diagnosis, that locally advanced does not imply unresectable tumour, and that once neoadjuvant therapy has been delivered the criteria for resection should be based on the biological response. Where there is a response, a second opinion at a centre with expertise in vascular resection and reconstruction is recommended even if the patient is considered technically unresectable locally.",
      "avoid": "Do not let the second opinion be the step that is skipped because the first assessment was done by the person who would have to do the operation.",
-     "note": "The response assessment and the resection criteria are those in the borderline resectable gate — two of three metrics, and the rule that a riskier operation needs a bigger response to justify it."
+     "note": "The response assessment and the resection criteria are those in the borderline resectable assessment — two of three metrics, and the rule that a riskier operation needs a bigger response to justify it."
     },
     {
      "t": "Offer conversion surgery only where R0 is achievable, and only after an objective response.",
@@ -904,7 +904,7 @@
       }
      ],
      "order": "Ordered by what each option is <i>for</i>, not by survival, because no option here improves survival over another: both randomised trials of adding radiation after induction therapy were null for overall survival, and one of them was stopped early for futility while the other failed a primary endpoint it had rewritten mid-trial from its own unblinded interim data. Continuing chemotherapy is first because it is what the negative trials support; chemoradiotherapy is second because its demonstrated gains are local control (CONKO-007 locoregional recurrence HR 0.33, P<.001; LAP07 32% versus 46%, P=.03) and margin quality in the operated subgroup (69.4% versus 50.0%, P=.04), both legitimate objectives and neither of which is survival; upfront radiotherapy without induction is last because it treats the organ and not the disease.",
-     "flagnote": "Ratification item 6: does this programme offer consolidative chemoradiotherapy after induction in locally advanced disease routinely, only where conversion to resection is the explicit objective, or not at all? The two randomised trials are both null for overall survival; CONKO-007's R0 benefit is confined to patients who reached theatre, its primary endpoint was changed mid-trial and powered from its own unblinded interim data, and its radiotherapy was never centrally reviewed; LAP07 was stopped at interim for futility with 18% major radiotherapy protocol deviations. Neither trial tested radiotherapy after a FOLFIRINOX backbone followed by modern surgery with modern adjuvant therapy. Ratification item 14 covers the operation itself: CONKO-007's 30-day postoperative mortality after conversion surgery was 8% in both arms. Audit: induction regimen, proportion reaching exploration, resection rate, R0 rate with millimetre clearance, 30- and 90-day postoperative mortality, local progression, and overall survival from the start of induction."
+     "flagnote": "Local approval item 6: does this programme offer consolidative chemoradiotherapy after induction in locally advanced disease routinely, only where conversion to resection is the explicit objective, or not at all? The two randomised trials are both null for overall survival; CONKO-007's R0 benefit is confined to patients who reached theatre, its primary endpoint was changed mid-trial and powered from its own unblinded interim data, and its radiotherapy was never centrally reviewed; LAP07 was stopped at interim for futility with 18% major radiotherapy protocol deviations. Neither trial tested radiotherapy after a FOLFIRINOX backbone followed by modern surgery with modern adjuvant therapy. Local approval item 14 covers the operation itself: CONKO-007's 30-day postoperative mortality after conversion surgery was 8% in both arms. Audit: induction regimen, proportion reaching exploration, resection rate, R0 rate with millimetre clearance, 30- and 90-day postoperative mortality, local progression, and overall survival from the start of induction."
     },
     {
      "t": "Palliative and best supportive care, single-agent chemotherapy, or palliative radiotherapy, for a patient with poor performance status.",
@@ -949,7 +949,7 @@
   {
    "id": "8",
    "tone": "sys",
-   "name": "8 · Metastatic disease — the line, and what the molecular report changes",
+   "name": "8 · Metastatic disease: systemic treatment",
    "req": "any",
    "crit": [
     "Distant metastasis on imaging, or positive peritoneal cytology",
@@ -958,7 +958,7 @@
     "Germline testing and comprehensive genomic profiling ordered, with HER2 immunohistochemistry",
     "Biliary and gastric outlet patency, pain, nutrition and thrombosis addressed as treatment, not afterthoughts"
    ],
-   "ask": "What is the right first-line regimen for this performance status, and what will the molecular report actually change?",
+   "ask": "Which systemic treatment fits the patient’s functional status and molecular findings?",
    "standard": [
     {
      "l": "Standard",
@@ -975,7 +975,7 @@
         "40945523",
         "38237621"
        ],
-       "note": "Two things the trial does not establish. The regimen as delivered was already dose-attenuated (relative dose intensity 78% to 82%), which is part of why modified FOLFIRINOX performs similarly, so the trial does not show full-dose FOLFIRINOX is necessary. And 82.5% of FOLFIRINOX patients received gemcitabine afterwards while about half the gemcitabine patients received an oxaliplatin-based regimen, with post-second-line survival identical at 4.4 months in both arms — so the 4.3-month difference reflects first-line sequencing rather than anything unique to the four-drug combination. The phase 2 and phase 3 patients were pooled, with the trial continued only because the phase 2 response gate was met. Nothing in the trial addresses adjuvant or neoadjuvant use, and PREOPANC-2 and NORPACT-1 show that extrapolation does not hold."
+       "note": "Two things the trial does not establish. The regimen as delivered was already dose-attenuated (relative dose intensity 78% to 82%), which is part of why modified FOLFIRINOX performs similarly, so the trial does not show full-dose FOLFIRINOX is necessary. And 82.5% of FOLFIRINOX patients received gemcitabine afterwards while about half the gemcitabine patients received an oxaliplatin-based regimen, with post-second-line survival identical at 4.4 months in both arms — so the 4.3-month difference reflects first-line sequencing rather than anything unique to the four-drug combination. The phase 2 and phase 3 patients were pooled, with the trial continued only because the phase 2 response assessment was met. Nothing in the trial addresses adjuvant or neoadjuvant use, and PREOPANC-2 and NORPACT-1 show that extrapolation does not hold."
       },
       {
        "name": "NALIRIFOX",
@@ -1011,7 +1011,7 @@
       }
      ],
      "order": "Ordered by performance-status fit and by the comparator each trial beat, not by head-to-head data. There is no randomised comparison of NALIRIFOX with FOLFIRINOX, and NCCN says so; the two triplets sit at the same median (11.1 months) against different comparators in different eras. The sequence down the list tracks declining fitness, which is the variable that actually decides.",
-     "flagnote": "Ratification item 7: which triplet is the local first-line standard — (m)FOLFIRINOX or NALIRIFOX — and on what grounds, given no comparative trial, identical medians (11.1 months) against different comparators in different eras, and a cost difference? The full-text read adds that the cross-trial comparison is not like for like either: PRODIGE 4 capped age at 76 and allowed bilirubin up to 1.5 times normal, MPACT had no age cap but required bilirubin within normal limits, and NAPOLI 3 had neither cap and allowed ascites, so the three populations are selected differently on opposite axes. NAPOLI 3's margin is narrow (HR 0.83, upper bound 0.99, against a design threshold of 0.844) and its hierarchical testing broke at the response-rate step. The group should also decide what counts locally as <i>good biliary drainage and adequate nutritional intake</i>, since that phrase, not the ECOG score alone, is NCCN's eligibility definition. Audit: first-line regimen, performance status at start, drainage and nutritional status, dose intensity, cycles delivered, and reason for discontinuation."
+     "flagnote": "Local approval item 7: which triplet is the local first-line standard — (m)FOLFIRINOX or NALIRIFOX — and on what grounds, given no comparative trial, identical medians (11.1 months) against different comparators in different eras, and a cost difference? The full-text read adds that the cross-trial comparison is not like for like either: PRODIGE 4 capped age at 76 and allowed bilirubin up to 1.5 times normal, MPACT had no age cap but required bilirubin within normal limits, and NAPOLI 3 had neither cap and allowed ascites, so the three populations are selected differently on opposite axes. NAPOLI 3's margin is narrow (HR 0.83, upper bound 0.99, against a design threshold of 0.844) and its hierarchical testing broke at the response-rate step. The group should also decide what counts locally as <i>good biliary drainage and adequate nutritional intake</i>, since that phrase, not the ECOG score alone, is NCCN's eligibility definition. Audit: first-line regimen, performance status at start, drainage and nutritional status, dose intensity, cycles delivered, and reason for discontinuation."
     },
     {
      "t": "Order comprehensive genomic profiling and germline testing at the first visit, and bank enough tissue for it.",
@@ -1100,7 +1100,7 @@
       }
      ],
      "order": "Ordered by the strength of the evidence in pancreatic cancer specifically and by how many patients the alteration reaches, not by response rate. Daraxonrasib is first because it is the only randomised phase 3 result here, and the only one with a survival endpoint — but its benefit is established in the RAS <b>G12</b> population that was its primary analysis set, and the non-G12 subgroup points the other way (HR 1.38, 0.60–3.17). Olaparib is second because POLO is randomised and double-blind but in 154 patients found from 3,315 screened, against placebo rather than continued chemotherapy, and positive only for progression-free survival with no overall survival or quality-of-life difference at interim. Everything below is single-arm, in rare alterations, with pancreatic subsets of 21 to 38 patients, no control groups, and in two cases no prespecified efficacy threshold at all.",
-     "flagnote": "Ratification item 8: what is the local sequence after first-line failure, and where does daraxonrasib sit in it given its availability, cost, the absence of any first-line or perioperative data, and the fact that 15.1% of its comparator arm never received the chemotherapy it was allocated? The group should also agree who owns chasing the molecular report, because the commonest failure in this disease is a result that arrives after the patient is too unwell to act on it. Audit: proportion of metastatic patients with a completed germline result and a completed genomic profile before second line, time from biopsy to report, and proportion of actionable results acted on. [PAYER]"
+     "flagnote": "Local approval item 8: what is the local sequence after first-line failure, and where does daraxonrasib sit in it given its availability, cost, the absence of any first-line or perioperative data, and the fact that 15.1% of its comparator arm never received the chemotherapy it was allocated? The group should also agree who owns chasing the molecular report, because the commonest failure in this disease is a result that arrives after the patient is too unwell to act on it. Audit: proportion of metastatic patients with a completed germline result and a completed genomic profile before second line, time from biopsy to report, and proportion of actionable results acted on. [PAYER]"
     },
     {
      "t": "A chemotherapy holiday or maintenance therapy for a patient doing well on first-line treatment.",
@@ -1153,7 +1153,7 @@
  "quickref": [
   {
    "title": "Resectability criteria at diagnosis",
-   "intro": "The arterial and venous thresholds, in degrees, that decide which gate this patient is on.",
+   "intro": "The arterial and venous thresholds, in degrees, that decide which assessment this patient is on.",
    "rows": [
     [
      "Resectable — arterial",
@@ -1225,7 +1225,7 @@
     ],
     [
      "Alliance A021806 (n=358, resectable)",
-     "Perioperative vs adjuvant mFOLFIRINOX, primary endpoint overall survival — the only trial that asks the question this gate faces. <b>No results.</b> Active, not recruiting; primary completion scheduled December 2028"
+     "Perioperative vs adjuvant mFOLFIRINOX, primary endpoint overall survival — the only trial that asks the question this assessment faces. <b>No results.</b> Active, not recruiting; primary completion scheduled December 2028"
     ],
     [
      "Pooled, 9 randomised trials (n=1,194)",
@@ -1311,7 +1311,7 @@
   },
   {
    "t": "The resectable-versus-borderline split that this entire page is organised around is not statistically established.",
-   "why": "Every test of it has failed. In the pooled analysis the between-subgroup test was p=0.081, and the paper nonetheless concludes that neoadjuvant therapy should be regarded as standard of care in borderline resectable disease. In PREOPANC's initial report the interaction test was P=.14, and in the long-term report no interaction test was significant across any of seven prespecified subgroups. In PREOPANC-2 no subgroup showed treatment-effect heterogeneity at all (every interaction p at or above 0.23). The split is a coherent and probably correct clinical hypothesis — it matches the biology and the pathology data — but it is a hypothesis, and the page uses it to route patients to different gates."
+   "why": "Every test of it has failed. In the pooled analysis the between-subgroup test was p=0.081, and the paper nonetheless concludes that neoadjuvant therapy should be regarded as standard of care in borderline resectable disease. In PREOPANC's initial report the interaction test was P=.14, and in the long-term report no interaction test was significant across any of seven prespecified subgroups. In PREOPANC-2 no subgroup showed treatment-effect heterogeneity at all (every interaction p at or above 0.23). The split is a coherent and probably correct clinical hypothesis — it matches the biology and the pathology data — but it is a hypothesis, and the page uses it to route patients to different decision points."
   },
   {
    "t": "ESMO's 2023 guideline recommends <b>against</b> neoadjuvant therapy in resectable disease, at grade II, E — and this page had not said so.",
@@ -1322,8 +1322,8 @@
    "why": "Pooled across the nine randomised trials, the proportion of patients who started adjuvant therapy was no different between the two strategies: 57.7% after neoadjuvant treatment against 55.6% after upfront surgery, RR 0.92 (95% CI 0.76–1.12), p=0.353. NORPACT-1 shows the same pattern in detail: any chemotherapy was more often received with the neoadjuvant strategy (95% versus 75%, p=0.0006) but adjuvant initiation (66% versus 75%, p=0.21) and completion (53% versus 49%, p=0.40) did not differ. PREOPANC's neoadjuvant arm had more total chemotherapy exposure, but that is a design artefact: the comparator arm was allowed only postoperative chemotherapy, which half of it never received. The up-to-30% attrition figure is real and is a system failure worth fixing with a named owner — it is just not an argument that these trials settle."
   },
   {
-   "t": "Roughly a third of patients called resectable are not, and that misclassification sits under every gate on this page.",
-   "why": "SWOG S1505 required a pancreas-protocol scan within 28 days, formal surgical consultation confirming resectability within 21 days, and enrolment at experienced US trial centres. Central radiology review then found that 43 of 146 patients reviewed (29%) did not meet the trial's own resectability criteria: 22 (51%) had arterial interface, 15 (35%) venous interface of 180 degrees or more, and 28 (65%) suspicion of distant disease. All of them had already started protocol therapy, because the review was retrospective. Adding a mandatory site radiologist checklist after the interim analysis moved the rate only from 33% to 26%. Nothing on this page assumes a misclassification rate at all, and the resectability category is what decides which gate a patient enters."
+   "t": "Roughly a third of patients called resectable are not, and that misclassification sits under every assessment on this page.",
+   "why": "SWOG S1505 required a pancreas-protocol scan within 28 days, formal surgical consultation confirming resectability within 21 days, and enrolment at experienced US trial centres. Central radiology review then found that 43 of 146 patients reviewed (29%) did not meet the trial's own resectability criteria: 22 (51%) had arterial interface, 15 (35%) venous interface of 180 degrees or more, and 28 (65%) suspicion of distant disease. All of them had already started protocol therapy, because the review was retrospective. Adding a mandatory site radiologist checklist after the interim analysis moved the rate only from 33% to 26%. Nothing on this page assumes a misclassification rate at all, and the resectability category is what decides which assessment a patient enters."
   },
   {
    "t": "The resectability thresholds are a shared language, not a biological boundary, and nobody derived them. A tumour with 181 degrees of SMA contact is not categorically different from one with 179.",
@@ -1405,10 +1405,10 @@
  "ops": {
   "board": [
    "Submission — an Epic form captures the clinical question, the resectability category with arterial and venous contact in degrees, the date and protocol of the staging CT, bilirubin and drainage status, CA 19-9 with the bilirubin it was drawn against, performance status with nutritional intake, germline and genomic profiling status, prior treatment, referring clinician and urgency. Owner: submitting clinician.",
-   "Triage — a coordinator and a clinically trained gatekeeper check completeness, imaging quality and protocol, duplicate cases, the urgent lane, and whether the question is actually a decision question. A non-pancreas-protocol CT is returned for re-imaging rather than discussed, and the degrees of arterial and venous contact are checked against the images by a named reader before the case is listed — in SWOG S1505, 29% of patients called resectable by their own centres did not meet the criteria on central review. Owners: coordinator and chair.",
+   "Triage — a coordinator and a clinical reviewer check completeness, imaging quality and protocol, duplicate cases, urgent referrals, and whether the question is actually a decision question. A non-pancreas-protocol CT is returned for re-imaging rather than discussed, and the degrees of arterial and venous contact are checked against the images by a named reader before the case is listed — in SWOG S1505, 29% of patients called resectable by their own centres did not meet the criteria on central review. Owners: coordinator and chair.",
    "Imaging currency — the staging scan's date is read out with the case. High-quality CT older than 4 weeks is re-acquired before an operative decision is taken, and a case that waits two board cycles is re-imaged. This is the one operating rule specific to this disease. Owner: coordinator.",
    "Agenda — stable at least 24 hours ahead, approximately 10–12 decision cases per session, each carrying one focused question. Owner: coordinator.",
-   "Urgent lane — a same-week slot with chair approval, used routinely here: cholangitis, a rising bilirubin and gastric outlet obstruction are time-critical, and so is a borderline resectable patient whose scan is about to expire. Owner: chair.",
+   "Urgent referral route — a same-week slot with chair approval, used routinely here: cholangitis, a rising bilirubin and gastric outlet obstruction are time-critical, and so is a borderline resectable patient whose scan is about to expire. Owner: chair.",
    "Attendance — surgical oncology or hepatopancreatobiliary surgery, medical oncology, radiation oncology, diagnostic radiology, advanced endoscopy, pathology, genetics or a genetic counsellor, nutrition, palliative care and coordination are all required. Owners: specialty leads.",
    "Resectability call — the category is assigned in the meeting, by consensus, and recorded with the degrees of contact, the date and the names of those who agreed it. A single-reader determination is not accepted as the category, and the category is recorded as what it is: a consensus threshold nobody derived, applied to a measurement with no published inter-reader reproducibility. Owner: chair.",
    "Pathology — pre-alerted for every resection specimen, with the agreed inking and slicing protocol and millimetre reporting of every margin within 1.0 cm of tumour; peritoneal washing results are reported to the board, not only to the chart. Owner: pathology.",
@@ -1420,20 +1420,20 @@
    "Referring relationships — the referring clinician is informed of the recommendation and of who owns the next step. Community-referring relationships are protected explicitly: the pathway returns patients with a plan, it does not capture them. Owner: named owner."
   ],
   "dashboard": [
-   "Resectability category at diagnosis, sequence chosen (upfront resection or neoadjuvant), resection rate, R0 rate and time from diagnosis to first treatment — the audit that tests ratification item 1.",
-   "Proportion of staging scans that are pancreas-protocol, proportion re-imaged after referral, proportion of operations performed on a scan more than 4 weeks old, and the proportion of cases in which the board's resectability category differed from the referring report — the local equivalent of the 29% misclassification rate found on central review in SWOG S1505 (ratification item 12).",
+   "Resectability category at diagnosis, sequence chosen (upfront resection or neoadjuvant), resection rate, R0 rate and time from diagnosis to first treatment — the audit that tests local approval item 1.",
+   "Proportion of staging scans that are pancreas-protocol, proportion re-imaged after referral, proportion of operations performed on a scan more than 4 weeks old, and the proportion of cases in which the board's resectability category differed from the referring report — the local equivalent of the 29% misclassification rate found on central review in SWOG S1505 (local approval item 12).",
    "Proportion of staging reports stating arterial and venous contact in degrees against the SAR/APA template.",
    "Proportion of jaundiced patients whose EUS biopsy and ERCP were done in one anaesthetic, and proportion of patients going to upfront surgery who were stented without an indication.",
-   "Jaundiced patients going on to neoadjuvant therapy: stent type, time to start of chemotherapy, cholangitis and re-intervention episodes, and treatment delays attributable to persistent jaundice — the population the one randomised drainage trial excluded (ratification item 13).",
+   "Jaundiced patients going on to neoadjuvant therapy: stent type, time to start of chemotherapy, cholangitis and re-intervention episodes, and treatment delays attributable to persistent jaundice — the population the one randomised drainage trial excluded (local approval item 13).",
    "Stent type by diagnostic certainty, occlusion and re-intervention rate, and cholangitis episodes.",
-   "R0 rate with margin clearance reported in millimetres, by procedure and by vascular resection type; nodal yield and station compliance; 90-day mortality; annual volume (ratification items 2 and 3).",
-   "Adjuvant regimen, cycles completed, dose intensity, and time from surgery to first cycle — including the proportion of resected patients who never start adjuvant therapy, which is the number both sides of the sequencing argument rely on (ratification items 4 and 5).",
-   "In locally advanced disease: induction regimen, proportion reaching exploration, resection rate, R0 rate, local progression, and overall survival from the start of induction (ratification item 6).",
-   "In locally advanced disease, separately: 30- and 90-day mortality after conversion surgery, against the 8% 30-day figure in the only randomised trial that reports it (ratification item 14).",
-   "First-line metastatic regimen, performance status at start, and reason for discontinuation (ratification item 7).",
-   "Proportion of metastatic patients with a completed germline result and completed genomic profile before second line, time from biopsy to report, and proportion of actionable results acted on (ratification item 8).",
+   "R0 rate with margin clearance reported in millimetres, by procedure and by vascular resection type; nodal yield and station compliance; 90-day mortality; annual volume (local approval items 2 and 3).",
+   "Adjuvant regimen, cycles completed, dose intensity, and time from surgery to first cycle — including the proportion of resected patients who never start adjuvant therapy, which is the number both sides of the sequencing argument rely on (local approval items 4 and 5).",
+   "In locally advanced disease: induction regimen, proportion reaching exploration, resection rate, R0 rate, local progression, and overall survival from the start of induction (local approval item 6).",
+   "In locally advanced disease, separately: 30- and 90-day mortality after conversion surgery, against the 8% 30-day figure in the only randomised trial that reports it (local approval item 14).",
+   "First-line metastatic regimen, performance status at start, and reason for discontinuation (local approval item 7).",
+   "Proportion of metastatic patients with a completed germline result and completed genomic profile before second line, time from biopsy to report, and proportion of actionable results acted on (local approval item 8).",
    "Registry closure rate, and reassessment adherence: restaging before adjuvant therapy, restaging 4–8 weeks after neoadjuvant therapy, every 8 weeks on neoadjuvant or induction therapy,.",
-   "Source currency: for every numeric criterion on the page, the edition and date of the source it was verified against, which references remain cited from abstract only, and which figures are carried solely in the machine-extracted guideline text (ratification items 11, 15 and 16)."
+   "Source currency: for every numeric criterion on the page, the edition and date of the source it was verified against, which references remain cited from abstract only, and which figures are carried solely in the machine-extracted guideline text (local approval items 11, 15 and 16)."
   ],
   "approvals": [
    {
@@ -1493,7 +1493,7 @@
    {
     "n": 12,
     "q": "Who adjudicates the resectability category before it is used to route a patient, given that roughly a third of patients called resectable by their own centres do not meet the criteria?",
-    "why": "In SWOG S1505, at experienced US trial centres with a mandatory pancreas-protocol scan within 28 days and formal surgical consultation within 21 days, central radiology review found 43 of 146 patients (29%) did not meet the resectability criteria — 51% with arterial interface, 35% with venous interface of 180 degrees or more, 65% with suspicion of distant disease — and all had already started protocol therapy. A site radiologist checklist moved the rate only from 33% to 26%. The category decides which gate on this page a patient enters, so the group must decide whether a second independent read, a radiology lead sign-off or an external review is required, and for which categories.",
+    "why": "In SWOG S1505, at experienced US trial centres with a mandatory pancreas-protocol scan within 28 days and formal surgical consultation within 21 days, central radiology review found 43 of 146 patients (29%) did not meet the resectability criteria — 51% with arterial interface, 35% with venous interface of 180 degrees or more, 65% with suspicion of distant disease — and all had already started protocol therapy. A site radiologist checklist moved the rate only from 33% to 26%. The category decides which assessment on this page a patient enters, so the group must decide whether a second independent read, a radiology lead sign-off or an external review is required, and for which categories.",
     "audit": "Registry: proportion of cases where the board's category differed from the referring report, by referring source; proportion of operations abandoned at exploration for disease more advanced than imaging suggested."
    },
    {
@@ -1735,8 +1735,8 @@
   "isgps": [
    "ISGPS lymphadenectomy — abstract only",
    "Surgery & pathology",
-   "Tol JAMG, Gouma DJ, Bassi C, et al. Definition of a standard lymphadenectomy in surgery for pancreatic ductal adenocarcinoma: a consensus statement by the International Study Group on Pancreatic Surgery (ISGPS). Surgery. 2014;156(3):591-600. doi:10.1016/j.surg.2014.06.016. PMID:25061003. Listed here as well as in the reference library to record that no full text was obtained for this depot: the nodal station list, the claim that extended lymphadenectomy gives no survival benefit, and the absence of consensus on what to do when a frozen-section node outside the resection field is positive are all taken from the abstract and the consensus statement's own summary, not from the trials behind them. The item it supports in the surgery gate is graded C for that reason."
+   "Tol JAMG, Gouma DJ, Bassi C, et al. Definition of a standard lymphadenectomy in surgery for pancreatic ductal adenocarcinoma: a consensus statement by the International Study Group on Pancreatic Surgery (ISGPS). Surgery. 2014;156(3):591-600. doi:10.1016/j.surg.2014.06.016. PMID:25061003. Listed here as well as in the reference library to record that no full text was obtained for this depot: the nodal station list, the claim that extended lymphadenectomy gives no survival benefit, and the absence of consensus on what to do when a frozen-section node outside the resection field is positive are all taken from the abstract and the consensus statement's own summary, not from the trials behind them. The item it supports in the surgery assessment is graded C for that reason."
   ]
  },
- "provenance": "Revised 15 October 2026, Batch 09, PDAC roadmap v0.3. Gates 0–8 cover diagnosis, resectability, perioperative treatment, locally advanced and metastatic disease. The pancreatic adenocarcinoma liver-metastasis experimental branch and its associated eligibility rules, activation questions and reference material have been removed. Evidence limitations for the retained PDAC pathway remain visible. Draft for multidisciplinary review; not ratified clinical policy."
+ "provenance": "Revised 15 October 2026, Batch 09, PDAC roadmap v0.3. Decision points 0–8 cover diagnosis, resectability, perioperative treatment, locally advanced and metastatic disease. The pancreatic adenocarcinoma liver-metastasis experimental branch and its associated eligibility rules, activation questions and reference material have been removed. Evidence limitations for the retained PDAC pathway remain visible. Draft for multidisciplinary review; not ratified clinical policy."
 }

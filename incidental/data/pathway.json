@@ -4,13 +4,13 @@
  "name": "Incidental liver mass",
  "version": "v0.2",
  "batch": "Batch 08, 7 October 2026",
- "lead": "Whether this lesion needs anything at all, which single test will say so, and — if it is not benign — which disease pathway the patient belongs on, named, before anyone passes a needle.",
- "gatelabel": "The decision in front of you",
+ "lead": "Characterize the liver lesion, decide whether further testing is needed, and select the appropriate disease-specific treatment pathway.",
+ "gatelabel": "Clinical decisions",
  "gates": [
   {
    "id": "0",
    "tone": "loco",
-   "name": "0 · Is this an at-risk liver?",
+   "name": "0 · Assess background liver disease",
    "req": "any",
    "crit": [
     "Cirrhosis of any aetiology",
@@ -19,7 +19,7 @@
     "None of the above — a liver with no risk factor for primary liver cancer",
     "A vascular liver disorder, congenital hepatic fibrosis, or age under 18 — a separate category in which LI-RADS does not apply at all"
    ],
-   "ask": "Before I order anything else: is this liver in the population whose imaging criteria are allowed to make a diagnosis?",
+   "ask": "Does the patient have a liver disease or risk factor that permits a noninvasive HCC diagnosis?",
    "standard": [
     {
      "t": "Answer the at-risk question first, because it decides which diagnostic criteria you are permitted to use for the rest of the workup.",
@@ -57,7 +57,7 @@
      ],
      "pref": "The young patient, the patient with no liver disease, and the patient with MASLD and no cirrhosis. EASL 2025: the non-invasive criteria should only be applied to patients with cirrhosis, chronic HBV infection or a history of HCC, and in other patients the diagnosis of HCC should be confirmed by biopsy (LoE 1, strong recommendation). The guideline gives its own reason — the pre-test probability in these populations has not been precisely established.",
      "avoid": "Do not apply a LI-RADS category outside the at-risk population and then act on it. The number means nothing there, and it will be read as though it did.",
-     "note": "This does not mean every solid lesion in a normal liver needs a needle. Most are haemangioma, focal fat or focal nodular hyperplasia and are resolved on this page at gates 4 and 5. It means that an unresolved <i>solid</i> lesion in a normal liver cannot be declared malignant or benign by imaging category alone."
+     "note": "This does not mean every solid lesion in a normal liver needs a needle. Most are haemangioma, focal fat or focal nodular hyperplasia and are resolved on this page at decision points 4 and 5. It means that an unresolved <i>solid</i> lesion in a normal liver cannot be declared malignant or benign by imaging category alone."
     }
    ],
    "alt": [
@@ -69,7 +69,7 @@
      "avoid": "Do not default to the at-risk pathway because it feels safer. It is not neutral: it licenses a treat-without-tissue decision for LR-5, and in a non-cirrhotic liver that decision has no evidence behind it."
     },
     {
-     "t": "In a liver with a vascular disorder — Budd-Chiari, chronic portal vein occlusion, obliterative portal venopathy, hereditary haemorrhagic telangiectasia, cardiac congestion — treat the case as its own category and get it to a benign-liver-tumour multidisciplinary review rather than through either arm of this gate.",
+     "t": "In a liver with a vascular disorder — Budd-Chiari, chronic portal vein occlusion, obliterative portal venopathy, hereditary haemorrhagic telangiectasia, cardiac congestion — treat the case as its own category and get it to a benign-liver-tumour multidisciplinary review rather than through either arm of this assessment.",
      "l": "Reasonable",
      "g": "D",
      "refs": [
@@ -109,7 +109,7 @@
   {
    "id": "1",
    "tone": "loco",
-   "name": "1 · Known extrahepatic malignancy?",
+   "name": "1 · Known cancer outside the liver",
    "req": "any",
    "crit": [
     "An active or previously treated extrahepatic primary with a propensity to metastasise to the liver",
@@ -117,7 +117,7 @@
     "On, or recently off, systemic therapy — which changes both the parenchyma and the appearance of the lesion",
     "No known primary — in which case the pre-test probability of malignancy in a small lesion is close to nil"
    ],
-   "ask": "Does this patient have a primary that explains the lesion, and does that primary have a pathway page of its own?",
+   "ask": "Could the lesion be a metastasis from a known cancer?",
    "standard": [
     {
      "t": "Characterise with MRI, including diffusion-weighted imaging, rather than repeating the CT — but order it for the sub-centimetre lesion, which is the only place MRI has been shown to beat CT.",
@@ -152,7 +152,7 @@
      "refs": [
       "15997444"
      ],
-     "pref": "As soon as the primary is established. Those pathways carry their own resectability, sequencing and biopsy rules, and the most common way to damage a patient at this gate is to start a generic workup instead of entering the right pathway. For colorectal disease in particular the consequence is concrete — biopsy of a resectable colorectal liver metastasis is contraindicated on that pathway, and this page's job is to get the patient there before anyone books one.",
+     "pref": "As soon as the primary is established. Those pathways carry their own resectability, sequencing and biopsy rules, and the most common way to damage a patient at this assessment is to start a generic workup instead of entering the right pathway. For colorectal disease in particular the consequence is concrete — biopsy of a resectable colorectal liver metastasis is contraindicated on that pathway, and this page's job is to get the patient there before anyone books one.",
      "avoid": "Do not route on an assumption. A liver lesion in a patient with a treated colorectal cancer is not automatically a colorectal metastasis, and the local master workup CPG requires colorectal origin to be confirmed and the primary's status verified before the CRLM pathway is entered.",
      "note": "The local Master Workup and Staging CPG sets the minimum staging bundle for each destination: CT or MRI of chest, abdomen and pelvis plus FDG PET-CT, CEA, colonoscopy and molecular profile for CRLM; somatostatin-receptor imaging, cross-sectional staging and central review of grade and Ki-67 for neuroendocrine liver metastases."
     }
@@ -187,7 +187,7 @@
       }
      ],
      "order": "Ordered by how often each is the right answer in an unselected incidental population, not by any comparative trial — none compares them for this indication. Both are second tests ordered for a named reason; neither characterises a lesion the liver MRI left indeterminate.",
-     "flagnote": "Ratification item: whether FDG PET-CT may be ordered from the radiology report alone for an indeterminate lesion in a cancer patient, or only after the primary team has named the question. The ACR criteria support the test in one narrow variant and the commonest local failure is ordering it in the other seven — but note that those ratings are panel medians from a RAND/UCLA process whose rating dispersion and evidence grading are published on a separate ACR website and not in the paper, so the group cannot tell from the publication which ratings were near-unanimous and which were marginal. Audit: PET-CT ordered for liver characterisation, by lesion size and risk category."
+     "flagnote": "Local approval item: whether FDG PET-CT may be ordered from the radiology report alone for an indeterminate lesion in a cancer patient, or only after the primary team has named the question. The ACR criteria support the test in one narrow variant and the commonest local failure is ordering it in the other seven — but note that those ratings are panel medians from a RAND/UCLA process whose rating dispersion and evidence grading are published on a separate ACR website and not in the paper, so the group cannot tell from the publication which ratings were near-unanimous and which were marginal. Audit: PET-CT ordered for liver characterisation, by lesion size and risk category."
     },
     {
      "t": "Where the lesion is the only evidence of metastatic disease and would change the treatment plan from curative to palliative, treat that as a multidisciplinary question rather than a radiological one.",
@@ -208,7 +208,7 @@
      "refs": [
       "15997444"
      ],
-     "pref": "Confirm colorectal origin from the primary's pathology and operate. This is the position of the CRLM pathway and the reason routing by name matters at this gate.",
+     "pref": "Confirm colorectal origin from the primary's pathology and operate. This is the position of the CRLM pathway and the reason routing by name matters at this assessment.",
      "avoid": "In 598 patients resected with curative intent for colorectal metastases, 90 had been biopsied before referral and 17 of those 90 (19%) had needle-track deposits; 4-year overall survival after resection was 32.5% (standard error 5.5) against 46.7% (2.8) in the 508 not biopsied, p=0.008, an absolute difference of 14.2% (95% CI 2.0-26.4). Read the limits honestly, because they are larger than the paper admits. Every biopsy happened at a referring hospital, so the exposure is really a referral route and a marker of diagnostic uncertainty; the biopsied group had synchronous colorectal and hepatic disease in 61% against 26%, p<0.001, the single largest prognostic imbalance in the paper, dismissed without any multivariable model; the claimed independent effect of biopsy is reported as 'p=0.001, Student's t test' with no hazard ratio, confidence interval or covariate list; and conditioning the denominator on having reached a curative resection removes the patients whom dissemination had already made inoperable. The 19% track-deposit rate is the harder number, though open biopsy at laparotomy produced as many deposits as a percutaneous needle (22% against 15%, p=0.398), which suggests some of what was counted is laparotomy implantation rather than needle tracking.",
      "note": "The counterweight is real and also thin: in the same series, inadvertent resection for benign disease without preoperative histology occurred in 6 of 514 (1.2%) — two haemangiomas and four cysts — in a specialist unit with intraoperative ultrasound. Six events in expert hands is not a rate that transports to a general surgical setting."
     },
@@ -227,7 +227,7 @@
   {
    "id": "2",
    "tone": "loco",
-   "name": "2 · The cystic lesion — resolved here or escalated here",
+   "name": "2 · Characterize a cystic lesion",
    "req": "any",
    "crit": [
     "Homogeneous water attenuation, roughly −10 to +20 HU, sharply marginated, no wall thickening, no septation, no mural nodule, no enhancement",
@@ -236,7 +236,7 @@
     "Any septation, mural nodularity, wall thickening, enhancing component, or a daughter-cyst or membrane pattern — not a simple cyst",
     "Measured enhancement greater than 20 HU between pre- and post-contrast phases, with pseudoenhancement excluded"
    ],
-   "ask": "Is this water in a bag, or is it something that needs an operation or a drain?",
+   "ask": "Is this a simple cyst, or are there features requiring further investigation or treatment?",
    "standard": [
     {
      "t": "A homogeneous, sharply marginated, non-enhancing lesion of water attenuation is a simple cyst: say so, give no follow-up interval, and discharge it.",
@@ -260,7 +260,7 @@
      ],
      "pref": "The patient whose CT was read as multiple sub-centimetre hypodensities, which is the point at which a cancer patient gets labelled metastatic by mistake. These are ductal plate malformations, usually 1 to 15 mm and mostly under 5 mm, subcapsular and periportal, and they are common: a single autopsy series of 2,843 cases gives a prevalence of about 5.6%, and in 95 forensic autopsies of men aged 35 to 69 with targeted sectioning, bile duct tumours were the most frequent finding at 26 cases (27%), mean diameter 1.3 mm, multiple in 46% of the men.",
      "avoid": "The published difficulty is exactly the one that matters here. The review states that on CT these lesions cannot be distinguished from small metastases in a patient with a known primary, and that ultrasound is non-specific. It then recommends heavily T2-weighted MRI with MR cholangiography as the discriminator without reporting a single sensitivity, specificity or predictive value for any of those features, and concedes that fibrous-predominant complexes may not be visible on MRI at all. If the clinical setting is a known primary and the foci are not uniform, resolve it on MRI and accept that the resolution is a judgement, not a measurement.",
-     "note": "Grade D, downgraded from C after the full-text read: the entire imaging recommendation rests on a narrative single-centre review with no search strategy, no accuracy data and no interobserver agreement, and the autopsy prevalence is one secondhand figure from one 1996 series. Discharge rule with a caveat: no surveillance interval is established, and the pathway discharges them. About 35 cases of cholangiocarcinoma arising in von Meyenburg complexes have been reported in roughly fifty years, against a carrier prevalence of about 5.6% — so the absolute risk is vanishingly small and has never been computed. See the honest section."
+     "note": "Grade D, downgraded from C after the full-text read: the entire imaging recommendation rests on a narrative single-centre review with no search strategy, no accuracy data and no interobserver agreement, and the autopsy prevalence is one secondhand figure from one 1996 series. Discharge rule with a caveat: no surveillance interval is established, and the pathway discharges them. About 35 cases of cholangiocarcinoma arising in von Meyenburg complexes have been reported in roughly fifty years, against a carrier prevalence of about 5.6% — so the absolute risk is vanishingly small and has never been computed. See the limited-evidence section."
     },
     {
      "t": "A rim-enhancing collection in a febrile patient is an abscess until proved otherwise: take cultures, start antibiotics, and drain it with a catheter rather than a needle.",
@@ -271,7 +271,7 @@
      ],
      "pref": "Fever, rigors, right upper quadrant pain and a raised white count with a cystic-looking lesion. In a meta-analysis of 12 randomised trials and 1,425 adults, percutaneous catheter drainage gave a higher clinical success rate than percutaneous needle aspiration, odds ratio 4.12 (95% CI 2.01-8.45), p<0.001.",
      "avoid": "Carry four limits with that odds ratio. The abscess size subgroup that matters most is the one that fails: in the 5-10 cm stratum, which is 8 of the 12 trials and the commonest clinical scenario, the confidence interval crossed the line of no effect, and only the >5 cm and >10 cm strata — three trials between them — excluded it; the paper's abstract nonetheless reports that the subgroups 'confirmed the consistency of this benefit', which is true of the direction of point estimates and not of significance. Nine of the 12 trials were Indian and 8 enrolled mixed amoebic-predominant abscesses, so pyogenic abscess is represented by 3 trials and 212 patients with no pyogenic-only pooled estimate reported. 'Clinical treatment success' is never defined, and the authors name varying definitions as a likely source of the 56% heterogeneity, so the pooled effect is an odds ratio on an undefined composite. And the safety claim is not equivalence: the complication odds ratio of 1.02 comes from 7 of the 12 trials with a 95% interval of 0.30-3.50, which permits a 70% reduction or a 3.5-fold increase.",
-     "note": "Treat the odds ratio as a direction, not a threshold, and note that the pooled comparison does not identify a size below which a single aspiration is sufficient. A necrotic metastasis and a necrotic cholangiocarcinoma can both look like an abscess, and an abscess can be the first sign of an occult cancer — see the alternative column. The ACR incidental-findings algorithm explicitly does not cover hepatic infection, so nothing on this gate comes from it."
+     "note": "Treat the odds ratio as a direction, not a threshold, and note that the pooled comparison does not identify a size below which a single aspiration is sufficient. A necrotic metastasis and a necrotic cholangiocarcinoma can both look like an abscess, and an abscess can be the first sign of an occult cancer — see the alternative column. The ACR incidental-findings algorithm explicitly does not cover hepatic infection, so nothing on this assessment comes from it."
     }
    ],
    "alt": [
@@ -284,7 +284,7 @@
      ],
      "pref": "Every cryptogenic pyogenic abscess, and particularly a diabetic patient. In a Taiwanese claims cohort of 1,257 patients with ICD-coded pyogenic liver abscess and no prior cancer, followed a median 3.33 years, the standardised incidence ratio against national rates was 3.83 (95% CI 3.30-4.42) for all cancers, 7.87 (5.94-10.21) for liver cancer, 34.58 (21.67-52.36) for biliary tract cancer and 5.27 (3.76-7.18) for colorectal cancer.",
      "avoid": "Read the time course and the denominator before acting on those ratios. The highest ratios all fell in the first 90 days to one year — all cancers 360.82 (278.46-459.91), biliary tract 1,153 (694-1,801) — which cannot be a biological effect of an abscess; it is the result of imaging and endoscoping a patient intensively, and in some cases the cancer caused the abscess or was the abscess. Several of those ratios are built on expected counts of 0.01 to 0.02 cases and are numerically meaningless however many decimal places they carry. The comparison is to the general Taiwanese population adjusted for age and sex only, in a cohort that was 47.6% diabetic and 7.8% cirrhotic; cirrhosis alone moves the liver-cancer ratio from 4.21 to 59.77, so the unstratified 7.87 is a confounded average, and no matched internal comparator was constructed although the same database could have supplied one. Exposure is two or more appearances of one ICD-9 code with no imaging, culture or clinical validation. The only estimate consistent with a genuine late effect is the all-cancer ratio beyond 5 years, 1.52 (1.09-2.05).",
-     "note": "The practical inference is to complete the search now, not to enrol the patient in long-term surveillance — and the inference runs the opposite way from how this cohort is usually cited: it is evidence that a lesion called an abscess may be a cancer, not that an abscess will become one. What 'the search' consists of is a local decision: cross-sectional imaging is already done, and the cohort gives no yield estimate, no modality and no stratification, so whether every cryptogenic abscess gets a colonoscopy is not settled by it."
+     "note": "The practical inference is to complete the search now, not to enrol the patient in long-term surveillance — and the inference runs the opposite way from how this cohort is usually cited: it is evidence that a lesion called an abscess may be a cancer, not that an abscess will become one. What 'the search' consists of is a local decision: cross-sectional imaging is already done, and the cohort gives no yield estimate, no modality and no stlocal approval, so whether every cryptogenic abscess gets a colonoscopy is not settled by it."
     },
     {
      "t": "A cystic lesion with septations, mural nodularity or an enhancing component is a surgical lesion — get it to MRI and to a hepatobiliary surgeon, and plan for resection rather than drainage.",
@@ -336,7 +336,7 @@
   {
    "id": "3",
    "tone": "loco",
-   "name": "3 · Which test next, and what each one actually adds",
+   "name": "3 · Select the next imaging test",
    "req": "any",
    "crit": [
     "The lesion is solid and not resolved by the study in front of you",
@@ -345,7 +345,7 @@
     "The question is whether there is a second lesion anywhere else — a staging question, not a characterising one",
     "The patient cannot have the obvious test: renal function, claustrophobia, pacemaker, pregnancy, body habitus"
    ],
-   "ask": "What exactly am I asking this scan, and is there a scan that answers it rather than one that repeats the last one?",
+   "ask": "Which imaging test will resolve the remaining diagnostic uncertainty?",
    "standard": [
     {
      "t": "A multiphase contrast study is the characterising test, and the phases and the agent depend on the question — say which question you are asking when you order it.",
@@ -358,7 +358,7 @@
      ],
      "pref": "Every solid lesion the index study left unresolved. The technical minimum, stated by the ACR Appropriateness Criteria and applying equally to CT, MRI and contrast-enhanced ultrasound, is at least two dynamic phases — late arterial and portal venous. The ACR white paper prefers MRI over CT for characterisation on three grounds: better assessment of internal features, more reliable assessment of enhancement, and no ionising radiation. EASL 2025 prefers CT or MRI over contrast-enhanced ultrasound as the first-line non-invasive test in at-risk patients because of higher sensitivity (LoE 3, strong recommendation).",
      "avoid": "Do not read 'MRI is preferred' as a measured advantage. The ACR Appropriateness Criteria rate contrast-enhanced ultrasound, multiphase CT and contrast-enhanced MRI as equivalent and usually appropriate alternatives for an indeterminate lesion larger than 1 cm, both in a normal liver and in known chronic liver disease, and they do so on narrative accuracy ranges from different studies in different populations with no head-to-head data and no equivalence testing. The same document's own text cites specificity for contrast-enhanced CT in ultrasound-detected lesions as 38-82%, and one cited MRI study at 43% specificity for an exact diagnosis. A pathway that reads only the rating table never sees the 38%. And do not order 'MRI liver' and leave the agent to chance — the two guidelines ask for different agents for different questions, and that choice cannot be made by the scheduler.",
-     "note": "Where contrast is contraindicated, say what the unenhanced study can and cannot do rather than treating it as the characterising test. Note that the ACR Appropriateness Criteria and the ACR white paper, from the same organisation, use incompatible risk taxonomies: the white paper merges low and average risk into one low-risk tier, while the Appropriateness Criteria split high risk into chronic liver disease versus known extrahepatic malignancy. A pathway using both has to reconcile them, and this page does so by treating the liver-disease fork at gate 0 as primary."
+     "note": "Where contrast is contraindicated, say what the unenhanced study can and cannot do rather than treating it as the characterising test. Note that the ACR Appropriateness Criteria and the ACR white paper, from the same organisation, use incompatible risk taxonomies: the white paper merges low and average risk into one low-risk tier, while the Appropriateness Criteria split high risk into chronic liver disease versus known extrahepatic malignancy. A pathway using both has to reconcile them, and this page does so by treating the liver-disease fork at clinical decision 0 as primary."
     },
     {
      "t": "Contrast-enhanced ultrasound characterises a solid lesion in real time and is the right test when the question is vascular pattern rather than anatomy.",
@@ -385,7 +385,7 @@
      ],
      "pref": "The cirrhotic or chronic hepatitis B patient whose nodule is being worked up by ultrasound. EASL 2025 gives the CEUS criterion explicitly — non-rim arterial hyperenhancement with late-onset washout (later than 60 seconds) of mild intensity (LoE 1). In a meta-analysis of 10 studies, 5,543 patients and 6,124 lesions including 4,492 HCCs, 97% (95-98) of CEUS LR-5 observations were HCC, and CEUS LR-5 had sensitivity 0.76 (0.70-0.81), specificity 0.95 (0.91-0.97) and accuracy 0.82 (0.75-0.88) for HCC.",
      "avoid": "The categories are not interchangeable between modalities, and the evidence that they are not is weaker than the page previously implied. In a 43-study comparison, CEUS LR-3 was 21% HCC against 35% for CT/MRI LR-3 (p=0.02) and CEUS LR-M was 56% HCC against 33% (p=0.01), with non-HCC malignancy in LR-M 35% against 58% (p=0.01) — but few paired studies exist, so these are comparisons between different populations with different HCC prevalence and different reference standards, presented with p-values as though they were head-to-head tests. Heterogeneity across the pooled proportions is I-squared 78-93%, the authors concede meta-regression could not explain it, and the LR-3 proportion itself moves from 14% in Asian to 32% in non-Asian studies, which shows these are population artefacts rather than properties of the categories. The two meta-analyses this page used to make the point come from the same Tianjin department, share authors, grants and included studies, were published two months apart, and report CEUS LR-M as 44% and 56% HCC from largely the same primary literature — they are one body of work, not independent corroboration.",
-     "note": "CEUS LI-RADS remains at v2017 while CT/MRI LI-RADS is at v2018, and the diagnostic versions are not synchronised. For a CT or MRI observation that is LR-3 or non-characterizable, the prospective evidence that CEUS resolves it comes from one multicentre sub-analysis of 75 observations in 68 patients who were 97.1% cirrhotic — see gate 6, where the figures and their limits are set out. That study licenses nothing about a lesion in a liver that is not at risk."
+     "note": "CEUS LI-RADS remains at v2017 while CT/MRI LI-RADS is at v2018, and the diagnostic versions are not synchronised. For a CT or MRI observation that is LR-3 or non-characterizable, the prospective evidence that CEUS resolves it comes from one multicentre sub-analysis of 75 observations in 68 patients who were 97.1% cirrhotic — see clinical decision 6, where the figures and their limits are set out. That study licenses nothing about a lesion in a liver that is not at risk."
     }
    ],
    "alt": [
@@ -427,7 +427,7 @@
       }
      ],
      "order": "Ordered by how often each is the right agent in an incidental population, not by any trial that compared them for this purpose. The order reflects guideline wording: EASL 2025 prefers the extracellular agent for the HCC question, and the ACR white paper prefers the hepatobiliary agent for the adenoma question. Both cannot be satisfied in one acquisition, which is why the question must be named on the request.",
-     "flagnote": "Ratification item: the programme needs a written rule for which agent is used when the question has not been narrowed — the at-risk liver, where EASL prefers an extracellular agent, versus the normal liver with a hepatocellular lesion, where the ACR prefers gadoxetate. The group should decide whether a hepatobiliary-phase iso-intense lesion may still be called focal nodular hyperplasia without tissue, and should do so on the right number: specificity against all adenoma subtypes is 89% (82-94%), falling to 65% (44-80%) only against beta-catenin-activated and unclassified adenoma once the other subtypes are excluded by conventional MRI. Audit: agent used, question stated on the request, and whether the study answered it."
+     "flagnote": "Local approval item: the programme needs a written rule for which agent is used when the question has not been narrowed — the at-risk liver, where EASL prefers an extracellular agent, versus the normal liver with a hepatocellular lesion, where the ACR prefers gadoxetate. The group should decide whether a hepatobiliary-phase iso-intense lesion may still be called focal nodular hyperplasia without tissue, and should do so on the right number: specificity against all adenoma subtypes is 89% (82-94%), falling to 65% (44-80%) only against beta-catenin-activated and unclassified adenoma once the other subtypes are excluded by conventional MRI. Audit: agent used, question stated on the request, and whether the study answered it."
     },
     {
      "t": "Where the index study is adequate and the lesion has distinctly benign features, order nothing.",
@@ -437,7 +437,7 @@
       "28927870"
      ],
      "pref": "The ACR benign-feature list on non-contrast or portal-venous-phase CT is a sharp margin with homogeneous low attenuation at or below 20 HU, or the characteristic appearance of haemangioma, focal nodular hyperplasia, focal fatty sparing or deposition, or a perfusion change. Any of those needs no follow-up regardless of risk category, and the first two of the white paper's four core recommendations say exactly that.",
-     "avoid": "Do not apply the list to a lesion with ill-defined margins, heterogeneous density, mural thickening or nodularity, thick septa, or intermediate-to-high attenuation above 20 HU on portal venous phase with pseudoenhancement excluded. Those features earn prompt MRI, not reassurance. And do not mistake the lists for measurements: sharp versus ill-defined margin, homogeneous versus heterogeneous density, thick versus thin septa and the judgement of whether pseudoenhancement is present are all reader calls on which the whole algorithm pivots, and no interobserver agreement is reported for any of them anywhere in either white paper. The 2010 document's own benign-feature footnote permits 'sharp but irregular margins' while its suspicious-feature footnote lists 'ill-defined margins', leaving irregular-but-sharp to the reader.",
+     "avoid": "Do not apply the list to a lesion with ill-defined margins, heterogeneous density, mural thickening or nodularity, thick septa, or intermediate-to-high attenuation above 20 HU on portal venous phase with pseudoenhancement excluded. Those features require prompt MRI, not reassurance. And do not mistake the lists for measurements: sharp versus ill-defined margin, homogeneous versus heterogeneous density, thick versus thin septa and the judgement of whether pseudoenhancement is present are all reader calls on which the whole algorithm pivots, and no interobserver agreement is reported for any of them anywhere in either white paper. The 2010 document's own benign-feature footnote permits 'sharp but irregular margins' while its suspicious-feature footnote lists 'ill-defined margins', leaving irregular-but-sharp to the reader.",
      "note": "Grade D, downgraded from C after the full-text read. This is a consensus feature list with no derivation and no reproducibility data, in a document whose committee states that its process meets no specific formal national standard and that its content should not be considered standard of care."
     }
    ],
@@ -469,7 +469,7 @@
   {
    "id": "4",
    "tone": "pall",
-   "name": "4 · Haemangioma and focal nodular hyperplasia — resolved and discharged here",
+   "name": "4 · Hemangioma or focal nodular hyperplasia",
    "req": "any",
    "crit": [
     "Haemangioma on ultrasound: homogeneously hyperechoic, sharp margin, posterior acoustic enhancement, no halo sign, under 3 cm, in a normal liver",
@@ -478,7 +478,7 @@
     "Central scar hyperintense on T2 and enhancing on delayed phase with an extracellular agent",
     "No underlying vascular liver disease, and no feature on the suspicious list"
    ],
-   "ask": "Can I name this lesion and send the patient away today, without an interval?",
+   "ask": "Is imaging diagnostic of a benign hemangioma or focal nodular hyperplasia, and is follow-up needed?",
    "standard": [
     {
      "t": "In a normal liver, a hyperechoic lesion under 3 cm with a sharp margin, posterior acoustic enhancement and no halo sign is a haemangioma on ultrasound alone, and no contrast study is needed.",
@@ -569,7 +569,7 @@
   {
    "id": "5",
    "tone": "pall",
-   "name": "5 · Pseudolesions and nodules of the diseased liver — nothing to follow",
+   "name": "5 · Pseudolesions and benign liver nodules",
    "req": "any",
    "crit": [
     "Focal fat or focal fat sparing in a characteristic site — adjacent to the falciform ligament or ligamentum venosum, the gallbladder fossa, the porta hepatis, or subcapsular",
@@ -578,7 +578,7 @@
     "A regenerative nodule in a cirrhotic liver with no major feature and nothing suspicious",
     "A regenerative or focal-nodular-hyperplasia-like nodule in a liver with a vascular disorder"
    ],
-   "ask": "Is this actually a lesion, or is it normal liver behaving differently from the liver next to it?",
+   "ask": "Is this a true lesion or a benign change in the background liver?",
    "standard": [
     {
      "t": "Focal fat and focal fat sparing in a characteristic location with no vessel displacement and no mass effect are definitively characterised on the study in front of you and need no follow-up.",
@@ -590,7 +590,7 @@
       "26830608"
      ],
      "pref": "The commonest finding of all — focal fatty sparing was the single largest contributor to the 15.1% benign-finding rate in 45,319 university-hospital ultrasound examinations, 2,839 cases (6.26%), mean size 20.6 mm, every one of them solitary and every one of them in the segment IV and gallbladder-bed location. It is a pseudolesion rather than a tumour, which is part of why that 15.1% figure cannot be read as a lesion prevalence. The ACR white paper states that the characteristic locations enable definitive characterisation without further follow-up, naming the region near the falciform ligament and the gallbladder fossa. The pattern review adds the diagnostic features: the distribution is heterogeneous or non-uniform, the margin may be geometric, and traversing vessels are not displaced.",
-     "avoid": "Know the patterns that do not look like this. Multinodular and perivascular fat accumulation are specifically described as mimicking neoplastic, inflammatory or vascular conditions, and patchy foci of normal parenchyma in an otherwise fatty liver can be a genuinely difficult problem. Where the pattern is nodular rather than geometric, treat it as unresolved and go to gate 3.",
+     "avoid": "Know the patterns that do not look like this. Multinodular and perivascular fat accumulation are specifically described as mimicking neoplastic, inflammatory or vascular conditions, and patchy foci of normal parenchyma in an otherwise fatty liver can be a genuinely difficult problem. Where the pattern is nodular rather than geometric, treat it as unresolved and go to clinical decision 3.",
      "note": "Chemical-shift or fat-fraction MRI settles the question directly when it matters; opposed-phase signal loss confirms fat."
     },
     {
@@ -630,7 +630,7 @@
      ],
      "pref": "Budd-Chiari syndrome, obliterative portal venopathy, congenital portosystemic shunt, cardiac congestion, and what is now called porto-sinusoidal vascular disorder or non-cirrhotic portal fibrosis. These livers generate multiple arterially hyperenhancing benign nodules, LI-RADS explicitly excludes them from its population, and EASL's benign-tumour guideline removes its own no-follow-up rule for focal nodular hyperplasia in this setting.",
      "avoid": "Neither guideline states an interval for this situation. Setting one is a local decision and should be recorded as such rather than presented as guideline-derived. One thing has changed since this page was drafted and it changes what a report can safely say: the 2026 multisociety consensus makes nodular regenerative hyperplasia one of three major histological criteria for porto-sinusoidal vascular disorder, alongside muscularised portal venules and portal venule stenosis in 50% or more of portal tracts. Nodular regenerative hyperplasia is therefore no longer a benign nodular tumour to reassure a patient about; it is a marker of a vascular disorder, and EASL's benign-tumour guideline had already placed it outside its own scope on exactly that ground.",
-     "note": "Grade D, and labelled as an operating rule rather than a result. Take the 2026 consensus for what it is: liver biopsy is mandatory for the diagnosis (95% agreement) with adequacy set at a 15 mm specimen including one fragment of 10 mm or more, but the criteria were derived in 88 European patients who all had specific signs of portal hypertension while the definition permits diagnosis without portal hypertension — which is exactly the patient an incidental nodular liver produces — a major criterion needs a sensitivity of only 0.10 provided specificity exceeds 0.95, and the diagnostic score was fitted to votes on 36 hypothetical scenarios and then shown to reproduce those votes, which is arithmetic consistency rather than diagnostic validity. The consensus says nothing about how incidentally detected nodular regenerative hyperplasia should be handled, and nothing about the harms of biopsying incidental nodularity. The EASL vascular-liver guidance this page otherwise relies on is the 2015 edition, superseded by a 2026 edition not obtained for this page. See the honest section and the approvals list."
+     "note": "Grade D, and labelled as an operating rule rather than a result. Take the 2026 consensus for what it is: liver biopsy is mandatory for the diagnosis (95% agreement) with adequacy set at a 15 mm specimen including one fragment of 10 mm or more, but the criteria were derived in 88 European patients who all had specific signs of portal hypertension while the definition permits diagnosis without portal hypertension — which is exactly the patient an incidental nodular liver produces — a major criterion needs a sensitivity of only 0.10 provided specificity exceeds 0.95, and the diagnostic score was fitted to votes on 36 hypothetical scenarios and then shown to reproduce those votes, which is arithmetic consistency rather than diagnostic validity. The consensus says nothing about how incidentally detected nodular regenerative hyperplasia should be handled, and nothing about the harms of biopsying incidental nodularity. The EASL vascular-liver guidance this page otherwise relies on is the 2015 edition, superseded by a 2026 edition not obtained for this page. See the limited-evidence section and the approvals list."
     },
     {
      "t": "Where a pseudolesion cannot be distinguished from a mass on the available study, re-image on the modality that answers the mechanism rather than repeating the one that raised the question.",
@@ -671,7 +671,7 @@
   {
    "id": "6",
    "tone": "loco",
-   "name": "6 · The lesion imaging cannot characterise",
+   "name": "6 · Indeterminate liver lesion",
    "req": "any",
    "crit": [
     "Under 10 mm, and reported as too small to characterise",
@@ -680,7 +680,7 @@
     "LR-3 or LR-4 in an at-risk liver, where the category is itself a statement of uncertainty",
     "Indeterminate in a patient whose treatment decision cannot wait for an interval"
    ],
-   "ask": "Does this lesion need to be resolved now, and if an interval is the answer, what exactly will I do differently when it comes back unchanged?",
+   "ask": "Does the indeterminate lesion require immediate investigation or interval imaging?",
    "standard": [
     {
      "t": "Decide before you set an interval what a stable repeat scan will change, and write that down.",
@@ -690,7 +690,7 @@
       "20889105",
       "28927870"
      ],
-     "pref": "Every indeterminate lesion. If the answer is that stability discharges the patient, say so and name the interval. If the answer is that stability changes nothing because the lesion will be resected either way, go to gate 7 or gate 8 now.",
+     "pref": "Every indeterminate lesion. If the answer is that stability discharges the patient, say so and name the interval. If the answer is that stability changes nothing because the lesion will be resected either way, go to clinical decision 7 or clinical decision 8 now.",
      "avoid": "An interval set without a stopping rule becomes indefinite surveillance. The ACR Incidental Findings Committee exists because of exactly this cascade — its founding paper describes the inclination to evaluate incidental findings as driven by physician and patient unwillingness to accept uncertainty, and names the potentially injurious and expensive cascade of tests and procedures as the harm.",
      "note": "Grade D by construction. No trial compares interval strategies for the indeterminate liver lesion, and this is an operating rule the programme chooses."
     },
@@ -704,7 +704,7 @@
       "20829538",
       "9885589"
      ],
-     "pref": "This is the ACR algorithm's most consequential single rule and it follows the risk fork at gate 0, not the lesion. In a low-risk patient, lesions 1 cm or smaller require no workup at all. In a high-risk patient, MRI is advised in 3 to 6 months to characterise the lesion and assess growth, and for a sub-centimetre lesion found on ultrasound in a patient with a known extrahepatic malignancy the ACR Appropriateness Criteria make MRI without and with contrast the only option they rate usually appropriate.",
+     "pref": "This is the ACR algorithm's most consequential single rule and it follows the risk fork at clinical decision 0, not the lesion. In a low-risk patient, lesions 1 cm or smaller require no workup at all. In a high-risk patient, MRI is advised in 3 to 6 months to characterise the lesion and assess growth, and for a sub-centimetre lesion found on ultrasound in a patient with a known extrahepatic malignancy the ACR Appropriateness Criteria make MRI without and with contrast the only option they rate usually appropriate.",
      "avoid": "Four honest qualifications, and the first is the most important. Every number in this rule is a convention. The small-lesion stratum was 0.5 cm in the 2010 white paper and 1 cm in 2017; the interval was 6 months and became 3 to 6 months; the three risk tiers became two; the focal-nodular-hyperplasia-versus-adenoma threshold moved from 4 cm to 3 cm. Four thresholds changed in seven years with no new evidence cited and the same subcommittee chair on both occasions, and the committee states that its consensus process meets no specific formal national standard and that its content should not be considered standard of care. Second, the test being ordered is not reliable at that size: per-lesion sensitivity for colorectal metastases below 10 mm was 60.2% for MRI and 47.3% for CT. Third, in the 2,978-patient cancer cohort, 8.2% of small lesions were followed for under 6 months, remained stable and were still classed indeterminate — so a 3-month repeat often resolves nothing. Fourth, the white paper permits the radiologist to deviate from the under-1-cm rule even in low-risk patients when a lesion has suspicious features, in which case MRI is suggested.",
      "note": "Growth over a year is concerning; growth over a shorter timeframe is more urgent. That is the white paper's wording and it is a judgement, not a threshold — and growth was deliberately left out of the algorithm altogether because thresholds vary by risk category, then reinserted as narrative advice. Downgraded from C to D: an underived consensus threshold is grade D however firmly it is stated."
     },
@@ -733,7 +733,7 @@
      ],
      "pref": "LI-RADS v2018 specifies repeat or alternative diagnostic imaging in 3 to 6 months for LR-3, and multidisciplinary discussion with consideration of biopsy or shorter-interval imaging for LR-4. The pooled malignancy figures justify the difference — 40% (95% CI 31-50) of LR-3 and 80% (75-85) of LR-4 observations were confirmed malignant. Where the unresolved observation is in a cirrhotic liver, contrast-enhanced ultrasound is a reasonable next step before an interval is set: in a prospective multicentre cohort of 75 CT/MRI-indeterminate observations in 68 patients, CEUS re-categorised 25 of 75 (33.3%) with a management change that was correct in 24 of 25 (96.0%), and avoided follow-up imaging altogether in 21 of 75 (28.0%).",
      "avoid": "Do not treat LR-4 as a diagnosis and do not treat it as benign. It is 74% (67-80) HCC and 80% malignant in pooled retrospective data with acknowledged verification bias, which is exactly the range in which a board decision beats an algorithm. And do not over-read the CEUS study. Its population was 97.1% cirrhotic with 23.5% having a personal history of HCC, enrolled because a lesion had already been found — the baseline risk in that cohort was 25.9% HCC for a CT/MRI LR-3 observation and 52.4% for a non-characterizable one. In a liver that is not at risk the same appearances carry a far lower probability and none of those predictive values holds. The quoted 100% positive and negative predictive values rest on 7, 7, 6 and 1 observations with no confidence interval anywhere in the paper — 7 of 7 has an exact interval of roughly 59-100%. CEUS readers could see the CT or MRI in most cases, the reference standard was follow-up CT or MRI in 72% of observations, persistently LR-3 nodules at one year were counted non-malignant, and 74.1% of LR-3 observations remained indeterminate after CEUS. The study was funded in part by the manufacturer of the contrast agent.",
-     "note": "A lesion with both hepatocellular and cholangiocytic phenotypes, or an LR-M observation, goes to gate 8 and to the cHCC-CCA pathway, not into an interval. Downgraded from B to C: the LI-RADS management figures are retrospective and the CEUS evidence is a sub-analysis of a trial powered for a different question."
+     "note": "A lesion with both hepatocellular and cholangiocytic phenotypes, or an LR-M observation, goes to clinical decision 8 and to the cHCC-CCA pathway, not into an interval. Downgraded from B to C: the LI-RADS management figures are retrospective and the CEUS evidence is a sub-analysis of a trial powered for a different question."
     },
     {
      "t": "Where an interval is chosen, name the owner, the date and the modality in the record, and close the loop in the registry.",
@@ -752,7 +752,7 @@
       "20889105"
      ],
      "pref": "Either resolve it with tissue, or resect it, or discharge it, and say which.",
-     "avoid": "Repeated imaging of a stable indeterminate lesion is the pathway's commonest way to spend a year. The ACR's founding incidental-findings paper puts standardisation forward precisely to limit cost and reduce risk to patients from this cascade."
+     "avoid": "Repeated imaging of a stable indeterminate lesion is the pathway's commonest source of a year's delay. The ACR's founding incidental-findings paper puts standardisation forward precisely to limit cost and reduce risk to patients from this cascade."
     },
     {
      "t": "Do not resolve diagnostic uncertainty by escalating to a more invasive test before the cheaper one has been done properly.",
@@ -770,7 +770,7 @@
   {
    "id": "7",
    "tone": "loco",
-   "name": "7 · Biopsy — when it adds something, and when it costs an option",
+   "name": "7 · Decide whether and how to biopsy",
    "req": "all",
    "crit": [
     "The destination is named before any needle is passed: resection, transplant pathway, systemic therapy, or discharge",
@@ -779,7 +779,7 @@
     "Suspected perihilar cholangiocarcinoma has been excluded, or the transplant pathway has been reviewed first",
     "Core biopsy rather than fine-needle aspiration, with the route and the specimen priorities agreed in advance"
    ],
-   "ask": "Will this result change what I do, and will the route I am about to use cost this patient an option they currently have?",
+   "ask": "Will biopsy change management, and could the biopsy route affect future treatment options?",
    "standard": [
     {
      "t": "Do not perform a transperitoneal or primary-tumour needle biopsy in a patient with suspected perihilar cholangiocarcinoma until the transplant pathway has been reviewed — this is the local programme's written safety rule and it is not a weighing of evidence.",
@@ -805,7 +805,7 @@
      ],
      "pref": "The resectable colorectal liver metastasis in a patient with a confirmed colorectal primary, the resectable solitary mass in a fit patient where the operation is the same whatever the histology shows, and the lesion whose imaging phenotype and clinical context leave no competing diagnosis that would change the plan.",
      "avoid": "The quantitative case rests on two different kinds of evidence and they are not equally strong. For colorectal metastases, 17 of 90 biopsied patients (19%) had needle-track deposits and 4-year survival was 32.5% against 46.7%, p=0.008 — in a retrospective comparison in which every biopsy was done at a referring hospital, synchronous disease was present in 61% of the biopsied against 26% of the non-biopsied (p<0.001) with no multivariable adjustment, and the denominator is conditioned on having reached a resection. For hepatocellular carcinoma, a meta-analysis of 8 observational studies put needle-track seeding at 2.7% per patient (95% CI 1.8-4.0) or 0.9% per patient per year (0.6-1.3), with no case demonstrably affecting survival — but seven of the eight studies were retrospective, the largest and only prospective one found zero events in 239 patients, median follow-up in several series was shorter than the 17-month median time to seeding, and the abstract misstates its own units by a factor of 100. Do not quote one number for both diseases.",
-     "note": "Procedural harm is quoted inconsistently across every source this page uses, and the group should know that before it writes a consent line. The ACR white paper gives morbidity of about 0.5% and mortality about 0.05% and prefers core biopsy over fine-needle aspiration; the same committee's 2010 document gave morbidity of 2.0% to 4.8%, with no explanation for the revision. The AASLD position paper gives severe bleeding at 1 in 2,500 to 1 in 10,000 and mortality at about 1 in 10,000 — but explicitly for the intercostal percutaneous approach in diffuse non-focal disease, while noting that death from bleeding may be greater after biopsy of a malignant lesion — and gives tumour seeding as 0.13% from one study, twenty-fold below the pooled HCC figure. If the route under discussion is endoscopic ultrasound-guided fine-needle biopsy, a meta-analysis of 99 studies and 9,303 patients puts the overall adverse-event rate at 1.8% but the liver subgroup at 14.0% (95% CI 7.7-24.0) — on 133 patients in 4 studies with 18 events, 13 of which were abdominal pain, 3 bleeds and one suspected death from anticoagulant interruption that the paper's own conclusion denies occurred. No source in this depot reports comparable harm figures for the competing routes, which is a ratification item rather than a finding."
+     "note": "Procedural harm is quoted inconsistently across every source this page uses, and the group should know that before it writes a consent line. The ACR white paper gives morbidity of about 0.5% and mortality about 0.05% and prefers core biopsy over fine-needle aspiration; the same committee's 2010 document gave morbidity of 2.0% to 4.8%, with no explanation for the revision. The AASLD position paper gives severe bleeding at 1 in 2,500 to 1 in 10,000 and mortality at about 1 in 10,000 — but explicitly for the intercostal percutaneous approach in diffuse non-focal disease, while noting that death from bleeding may be greater after biopsy of a malignant lesion — and gives tumour seeding as 0.13% from one study, twenty-fold below the pooled HCC figure. If the route under discussion is endoscopic ultrasound-guided fine-needle biopsy, a meta-analysis of 99 studies and 9,303 patients puts the overall adverse-event rate at 1.8% but the liver subgroup at 14.0% (95% CI 7.7-24.0) — on 133 patients in 4 studies with 18 events, 13 of which were abdominal pain, 3 bleeds and one suspected death from anticoagulant interruption that the paper's own conclusion denies occurred. No source in this depot reports comparable harm figures for the competing routes, which is a local approval item rather than a finding."
     },
     {
      "t": "Biopsy is the right move when imaging criteria cannot be applied or have failed, and the result will change the plan — and in a liver that is not at risk, that is the guideline position rather than a fallback.",
@@ -872,7 +872,7 @@
   {
    "id": "8",
    "tone": "cure",
-   "name": "8 · Routing — name the destination page",
+   "name": "8 · Select the disease-specific roadmap",
    "req": "any",
    "crit": [
     "LR-5, or LR-4 after board discussion, in an at-risk liver",
@@ -881,7 +881,7 @@
     "A hepatocellular lesion in a normal liver that is not focal nodular hyperplasia",
     "A lesion carrying both hepatocellular and cholangiocytic phenotypes, or discordant markers"
    ],
-   "ask": "Which page does this patient belong on, and have I named it rather than describing it?",
+   "ask": "Which disease-specific roadmap should guide further care?",
    "standard": [
     {
      "t": "An LR-5 observation in an at-risk liver is hepatocellular carcinoma and this is the HCC pathway from here — including the transplant question, which that page opens.",
@@ -907,7 +907,7 @@
       "30843343"
      ],
      "pref": "Rim arterial hyperenhancement, peripheral washout, delayed central enhancement, an infiltrative pattern, marked diffusion restriction, or necrosis. 93% (95% CI 87-97) of pooled CT/MRI LR-M observations were malignant but only 36% (26-48) were HCC, which is precisely why the category exists and why it routes away from the HCC page.",
-     "avoid": "LR-M is not a diagnosis of cholangiocarcinoma, and on contrast-enhanced ultrasound the mix is different again — but less precisely than this page previously said. In a meta-analysis of 1,046 CEUS LR-M observations, 54% (44-65) were HCC and 40% (28-53) non-HCC malignancy, with heterogeneity of I-squared 84% and 88%; the widely quoted 94% malignant is the arithmetic sum of those two separately pooled proportions, carries no confidence interval anywhere, and does not match the raw counts, which give 1,011 of 1,046 or 96.7%. Removing a single case-control study moves the HCC proportion from 54% to 59% and halves the heterogeneity, 31% of the non-HCC malignancies have no specified diagnosis, and the non-HCC proportion is 35% in Asian and hepatitis-B-dominant studies against 54% in Western ones. The direction is reliable — a CEUS LR-M carries a materially higher chance of being HCC than a CT or MRI LR-M — and the numbers are not. Tissue decides, and gate 7 governs the route by which it is obtained. Note too the surgical position: no imaging feature is unique to intrahepatic cholangiocarcinoma, so a peripherally enhancing mass in a non-cirrhotic liver cannot be called cholangiocarcinoma, metastasis or HCC on imaging alone.",
+     "avoid": "LR-M is not a diagnosis of cholangiocarcinoma, and on contrast-enhanced ultrasound the mix is different again — but less precisely than this page previously said. In a meta-analysis of 1,046 CEUS LR-M observations, 54% (44-65) were HCC and 40% (28-53) non-HCC malignancy, with heterogeneity of I-squared 84% and 88%; the widely quoted 94% malignant is the arithmetic sum of those two separately pooled proportions, carries no confidence interval anywhere, and does not match the raw counts, which give 1,011 of 1,046 or 96.7%. Removing a single case-control study moves the HCC proportion from 54% to 59% and halves the heterogeneity, 31% of the non-HCC malignancies have no specified diagnosis, and the non-HCC proportion is 35% in Asian and hepatitis-B-dominant studies against 54% in Western ones. The direction is reliable — a CEUS LR-M carries a materially higher chance of being HCC than a CT or MRI LR-M — and the numbers are not. Tissue decides, and clinical decision 7 governs the route by which it is obtained. Note too the surgical position: no imaging feature is unique to intrahepatic cholangiocarcinoma, so a peripherally enhancing mass in a non-cirrhotic liver cannot be called cholangiocarcinoma, metastasis or HCC on imaging alone.",
      "note": "Washout timing is the practical discriminator at the scanner. In a 320-patient subanalysis, intrahepatic cholangiocarcinoma showed early portal-venous washout in the tumour centre in 85.8% of cases against 49.8% for HCC, initial peripheral enhancement in 85.7% against 61%, and late-phase hypoenhancement in 92.9% against 75%; cirrhosis was present in 76.9% of the HCC patients and 16.7% of the cholangiocarcinoma patients. That subanalysis is one of the papers on this page still read from its abstract only. Downgraded from B to C."
     },
     {
@@ -944,7 +944,7 @@
       "30445016"
      ],
      "pref": "The mass with both hepatocellular and cholangiocytic features, the discordant marker profile, the lesion whose phenotype changed between studies. The cHCC-CCA pathway exists for the first of these and should be named explicitly.",
-     "avoid": "Do not default to the HCC pathway because it is the busiest one. An LR-M observation treated as HCC is the error this gate exists to prevent, and the pooled CT/MRI LR-M HCC proportion is 36% (95% CI 26-48) — so most LR-M observations are malignancies that are not HCC, and the category routes accordingly."
+     "avoid": "Do not default to the HCC pathway because it is the busiest one. An LR-M observation treated as HCC is the error this assessment exists to prevent, and the pooled CT/MRI LR-M HCC proportion is 36% (95% CI 26-48) — so most LR-M observations are malignancies that are not HCC, and the category routes accordingly."
     }
    ],
    "avoid": [
@@ -953,7 +953,7 @@
      "l": "Avoid",
      "g": "D",
      "pref": "One destination page, one owner, one date, recorded in the conference note alongside the staging adequacy and the allocation classification, as the local CPG's minimum conference note requires.",
-     "avoid": "A recommendation to 'refer to hepatobiliary' with no named destination is how a patient re-enters this pathway six months later at the same gate."
+     "avoid": "A recommendation to 'refer to hepatobiliary' with no named destination is how a patient re-enters this pathway six months later at the same assessment."
     },
     {
      "t": "Do not discharge a patient from this page without telling them, in writing, what the lesion is and that no follow-up is needed.",
@@ -972,7 +972,7 @@
  "quickref": [
   {
    "title": "Who the at-risk algorithms apply to",
-   "intro": "The fork at gate 0. Getting this wrong invalidates every category assigned downstream.",
+   "intro": "The fork at clinical decision 0. Getting this wrong invalidates every category assigned downstream.",
    "rows": [
     [
      "Cirrhosis of any aetiology",
@@ -1015,7 +1015,7 @@
      "Two incompatible ACR ones: the white paper merges low and average risk; the Appropriateness Criteria split high risk into liver disease versus extrahepatic malignancy"
     ]
    ],
-   "foot": "EASL 2025 states that the non-invasive criteria should only be applied to patients with cirrhosis, chronic HBV infection or a history of HCC, and that in other patients the diagnosis of HCC should be confirmed by biopsy (LoE 1, strong recommendation, consensus), giving as its reason that the pre-test probability in those other populations has not been precisely established. It also states that LI-RADS should be preferred over the 2018 EASL algorithm because of the LR-M and LR-TIV refinements, while noting the two have similar performance for HCC (LoE 3). LI-RADS v2018 itself excludes patients under 18 and cirrhosis due to congenital hepatic fibrosis or to vascular disorders, and its own authors state that nothing in the system licenses applying a category outside the at-risk population, because every probability in it was derived under high HCC prevalence. The two agent recommendations point in opposite directions because they answer different questions; the request form must say which question is being asked. The two ACR documents define risk differently, which a pathway using both has to reconcile — this page forks on liver disease first, at gate 0.",
+   "foot": "EASL 2025 states that the non-invasive criteria should only be applied to patients with cirrhosis, chronic HBV infection or a history of HCC, and that in other patients the diagnosis of HCC should be confirmed by biopsy (LoE 1, strong recommendation, consensus), giving as its reason that the pre-test probability in those other populations has not been precisely established. It also states that LI-RADS should be preferred over the 2018 EASL algorithm because of the LR-M and LR-TIV refinements, while noting the two have similar performance for HCC (LoE 3). LI-RADS v2018 itself excludes patients under 18 and cirrhosis due to congenital hepatic fibrosis or to vascular disorders, and its own authors state that nothing in the system licenses applying a category outside the at-risk population, because every probability in it was derived under high HCC prevalence. The two agent recommendations point in opposite directions because they answer different questions; the request form must say which question is being asked. The two ACR documents define risk differently, which a pathway using both has to reconcile — this page forks on liver disease first, at clinical decision 0.",
    "src": "ACR CT/MRI LI-RADS v2018 Core; Chernyak 2018, PMID 30251931; ACR Appropriateness Criteria Liver Lesion-Initial Characterization, Chernyak 2020, PMID 33153555; EASL HCC CPG 2025, PMID 39690085; AASLD 2023, PMID 37199193; Gore 2017, PMID 28927870; Kim 2023, PMID 35920706"
   },
   {
@@ -1193,12 +1193,12 @@
    "why": "The only local document behind this page is that CPG, which is itself a draft for institutional review and is effective only after its approval block is completed. Every interval, threshold and discharge rule here is drawn from a published guideline or from the primary literature, and every one of them is a proposal to the group rather than a position the group holds. The second pass, on 7 October 2026, replaced numbers taken from abstracts with numbers from the full texts, added their confidence intervals, and downgraded fifteen evidence strings; it did not remove any recommendation."
   },
   {
-   "t": "The at-risk fork at gate 0 is treated as binary. In practice a substantial number of patients sit between the two arms — advanced fibrosis without established cirrhosis, MASLD with a nodular liver, long-standing alcohol use with normal synthetic function.",
+   "t": "The at-risk fork at clinical decision 0 is treated as binary. In practice a substantial number of patients sit between the two arms — advanced fibrosis without established cirrhosis, MASLD with a nodular liver, long-standing alcohol use with normal synthetic function.",
    "why": "Neither LI-RADS nor EASL 2025 defines what to do with these patients, and EASL says only that the pre-test probability in non-cirrhotic populations has not been precisely established. The page's rule — name the uncertainty and treat the pathway as undetermined — is grade D and is an operating convention, not a finding."
   },
   {
    "t": "The follow-up interval for a regenerative or focal-nodular-hyperplasia-like nodule in a liver with a vascular disorder is not stated on this page because no guideline states one.",
-   "why": "LI-RADS excludes these livers from its population, and EASL's benign-tumour guideline withdraws its own no-follow-up rule for focal nodular hyperplasia in this setting without replacing it with an interval. Setting an interval is a local decision and belongs in the approvals list, not in a gate. The relevant EASL vascular-liver guidance on this page is the 2015 edition, which has since been superseded."
+   "why": "LI-RADS excludes these livers from its population, and EASL's benign-tumour guideline withdraws its own no-follow-up rule for focal nodular hyperplasia in this setting without replacing it with an interval. Setting an interval is a local decision and belongs in the approvals list, not in a assessment. The relevant EASL vascular-liver guidance on this page is the 2015 edition, which has since been superseded."
   },
   {
    "t": "Biliary hamartomas are discharged on this page with no interval, and that is an inference rather than a demonstrated safe practice.",
@@ -1218,7 +1218,7 @@
   },
   {
    "t": "No evidence quantifies how often a liver lesion that appears on one modality and not on another proves malignant, and this page does not pretend otherwise.",
-   "why": "Targeted searching returns nothing. The reconciliation step at gate 6 — compare the images rather than the reports, check phase timing, coverage, dose and breath-hold — is mechanistic reasoning plus a local failure pattern, graded D. What is documented is only that 6.8% of lesions unclear on greyscale ultrasound remained undiagnosed after a standardised contrast-enhanced ultrasound in a 1,349-patient multicentre study, and that most of those were benign."
+   "why": "Targeted searching returns nothing. The reconciliation step at clinical decision 6 — compare the images rather than the reports, check phase timing, coverage, dose and breath-hold — is mechanistic reasoning plus a local failure pattern, graded D. What is documented is only that 6.8% of lesions unclear on greyscale ultrasound remained undiagnosed after a standardised contrast-enhanced ultrasound in a 1,349-patient multicentre study, and that most of those were benign."
   },
   {
    "t": "Contrast-enhanced ultrasound is presented on this page as a characterising test, and its specificity for a benign diagnosis is the weak half of its performance.",
@@ -1229,7 +1229,7 @@
    "why": "The ACR white paper itself warns that assessing small liver lesions is challenging when aggressive dose-reduction has been used, particularly in high-risk patients, without defining adequacy, and separately concedes that in a lesion under 1 cm an accurate attenuation measurement may not be attainable at all — which is the measurement the 20 HU benign-feature rule depends on. It also recommends eliminating the unenhanced phase whenever possible, while its own benign-feature definition rests on non-contrast attenuation. What counts as an adequate study for the purpose of discharging a lesion is a local imaging-standards question and has no published answer."
   },
   {
-   "t": "The cystic gate names mucinous cystic neoplasm as a surgical lesion on the basis of surgical series with no denominator.",
+   "t": "The cystic assessment names mucinous cystic neoplasm as a surgical lesion on the basis of surgical series with no denominator.",
    "why": "Grade D. The best available support is a six-case report from one Karachi pathology file in which every lesion had been operated on under a preoperative impression of simple or hydatid cyst, recurrence occurred in three of the five patients with any follow-up, margins could not be assessed in at least three of six because specimens arrived opened or in pieces, no dysplasia or malignancy was found in any case, and the 20% malignant-transformation figure invoked to justify radical resection is a single citation with no denominator. The authors attribute their recurrence rate partly to limited local hepatobiliary surgical expertise. There is no comparative evidence for resection over observation in a radiologically suspected mucinous cystic neoplasm, no study establishes how often a septated cystic liver lesion is one, and the septation sign is contradicted by the series' own figure legend."
   },
   {
@@ -1274,7 +1274,7 @@
   },
   {
    "t": "The EASL vascular-liver guidance this page cites is the 2015 edition and has been superseded by a 2026 edition that was not obtained for this page.",
-   "why": "Every statement on this page sourced to that document — the Budd-Chiari nodule prevalence of 60-80%, the 4% cumulative HCC incidence at a median 5 years, the biopsy triggers for a Budd-Chiari nodule, and the scope rule that these livers are managed outside the HCC algorithms — comes from a guideline built on the agenda of a single 2012 conference, with a PubMed-only search, no search string or date limits, and committee opinion where evidence was absent. It never reports the inverse probability a radiologist needs, which is the chance of underlying vascular disease given multiple hypervascular nodules in a non-cirrhotic liver. A 2026 EASL edition exists and this page has not read it, so the whole of gate 0's vascular arm and gate 5's alternative column are provisional pending that read. Obtaining it is an approvals item."
+   "why": "Every statement on this page sourced to that document — the Budd-Chiari nodule prevalence of 60-80%, the 4% cumulative HCC incidence at a median 5 years, the biopsy triggers for a Budd-Chiari nodule, and the scope rule that these livers are managed outside the HCC algorithms — comes from a guideline built on the agenda of a single 2012 conference, with a PubMed-only search, no search string or date limits, and committee opinion where evidence was absent. It never reports the inverse probability a radiologist needs, which is the chance of underlying vascular disease given multiple hypervascular nodules in a non-cirrhotic liver. A 2026 EASL edition exists and this page has not read it, so the whole of clinical decision 0's vascular arm and clinical decision 5's alternative column are provisional pending that read. Obtaining it is an approvals item."
   },
   {
    "t": "Nodular regenerative hyperplasia has been reclassified as a marker of a vascular disorder rather than a benign nodular tumour, and the consensus that did it describes its own diagnostic score as unvalidated.",
@@ -1286,17 +1286,17 @@
   },
   {
    "t": "MRI is not better than CT for a liver lesion in a cancer patient except below 10 mm, and below 10 mm it still misses two metastases in five.",
-   "why": "In the meta-analysis of 39 prospective studies and 3,391 treatment-naive colorectal cancer patients, per-lesion sensitivity was 80.3% for MRI against 74.4% for CT with overlapping intervals, and per-patient sensitivity 88.2% against 83.6%, p=0.653 — neither significant. The only significant advantage was below 10 mm, 60.2% against 47.3%, p=0.006, and at 10 mm or larger there was no difference at all. The earlier draft of this page presented both the per-lesion and per-patient figures as MRI outperforming CT, which they do not. Three negative findings in the same paper also restrain protocol claims that are often made: multisection CT was no better than single-section, dual-phase no better than portal-phase alone, and liver-specific contrast agents gave no measurable benefit. The uncomfortable consequence for gate 6 is that the test the algorithm sends a sub-centimetre lesion to has a sensitivity of 60% at that size, in a staging population with a far higher prior than an incidental one."
+   "why": "In the meta-analysis of 39 prospective studies and 3,391 treatment-naive colorectal cancer patients, per-lesion sensitivity was 80.3% for MRI against 74.4% for CT with overlapping intervals, and per-patient sensitivity 88.2% against 83.6%, p=0.653 — neither significant. The only significant advantage was below 10 mm, 60.2% against 47.3%, p=0.006, and at 10 mm or larger there was no difference at all. The earlier draft of this page presented both the per-lesion and per-patient figures as MRI outperforming CT, which they do not. Three negative findings in the same paper also restrain protocol claims that are often made: multisection CT was no better than single-section, dual-phase no better than portal-phase alone, and liver-specific contrast agents gave no measurable benefit. The uncomfortable consequence for clinical decision 6 is that the test the algorithm sends a sub-centimetre lesion to has a sensitivity of 60% at that size, in a staging population with a far higher prior than an incidental one."
   },
   {
    "t": "Several documents this page relies on were read only as abstracts or guideline text and not in full, and their numbers have not been checked against a full text.",
-   "why": "The full-text read of 7 October 2026 covered thirty papers. It did not cover the EASL hepatocellular carcinoma guideline of 2025, the AASLD practice guidance of 2023, the three DEGUM contrast-enhanced ultrasound papers (the 1,349-patient multicentre study, its unclear-lesion companion and the 320-patient HCC-versus-cholangiocarcinoma subanalysis), the perihilar fine-needle aspiration series, or the fatty-liver imaging review. Every figure on this page attributed to those six sources is therefore at the same evidentiary standard as the first draft, including the DEGUM sensitivity and specificity of 95.8% and 83.1%, the washout-timing percentages at gate 8, and the 5-of-6 perihilar figure at gate 7. Two further documents named in the gap scan were sought and not obtained: the 2026 EASL vascular-liver guideline and the CAMINO study. Neither is cited here as read."
+   "why": "The full-text read of 7 October 2026 covered thirty papers. It did not cover the EASL hepatocellular carcinoma guideline of 2025, the AASLD practice guidance of 2023, the three DEGUM contrast-enhanced ultrasound papers (the 1,349-patient multicentre study, its unclear-lesion companion and the 320-patient HCC-versus-cholangiocarcinoma subanalysis), the perihilar fine-needle aspiration series, or the fatty-liver imaging review. Every figure on this page attributed to those six sources is therefore at the same evidentiary standard as the first draft, including the DEGUM sensitivity and specificity of 95.8% and 83.1%, the washout-timing percentages at clinical decision 8, and the 5-of-6 perihilar figure at clinical decision 7. Two further documents named in the gap scan were sought and not obtained: the 2026 EASL vascular-liver guideline and the CAMINO study. Neither is cited here as read."
   }
  ],
  "ops": {
   "board": [
    "Submission — an Epic form captures the index study and its protocol adequacy, whether the liver is at risk and on what basis, any known extrahepatic primary, lesion number and size, the imaging phenotype and LI-RADS category where one applies, prior imaging available for comparison, the specific question being asked, the referring clinician and the urgency. Owner: submitting clinician.",
-   "Triage — a coordinator and a clinically trained gatekeeper check whether the case is a decision question at all. A large share of incidental liver lesions are resolved by the radiologist against the ACR algorithm and never need the board; the triage step exists to protect agenda time for the lesions that fork the pathway. Owners: coordinator and chair.",
+   "Triage — a coordinator and a clinical reviewer check whether the case is a decision question at all. A large share of incidental liver lesions are resolved by the radiologist against the ACR algorithm and never need the board; the triage step exists to protect agenda time for the lesions that fork the pathway. Owners: coordinator and chair.",
    "Safety screen — suspected perihilar cholangiocarcinoma is flagged before any primary-tumour biopsy, as the local Master Workup and Staging CPG requires; active infection, biliary sepsis, renal dysfunction, decompensation and pregnancy are flagged at the same step. Owner: coordinator with the transplant hepatology on-call.",
    "Central imaging review — transplant and diagnostic radiology review the index study and all priors together, in DICOM, before any recommendation. Reports are not reviewed in place of images. Where the protocol was inadequate, the team documents whether repeat imaging is required before selection. Owner: diagnostic radiology.",
    "Agenda — stable at least 24 hours ahead. Incidental cases are grouped so that the at-risk and not-at-risk arms are discussed as separate blocks, because the criteria differ. Owner: coordinator.",
@@ -1412,7 +1412,7 @@
    {
     "n": 15,
     "q": "Which edition of the EASL vascular-liver guidance governs this pathway, and who obtains and reads the 2026 edition?",
-    "why": "Everything on this page about nodules in a vascular liver is sourced to the 2015 guideline, which was built on one 2012 conference agenda with a PubMed-only search and committee opinion where evidence was absent, and which has been superseded. The 2026 edition was not obtained for this revision, so the vascular arm of gate 0 and the alternative column of gate 5 are provisional.",
+    "why": "Everything on this page about nodules in a vascular liver is sourced to the 2015 guideline, which was built on one 2012 conference agenda with a PubMed-only search and committee opinion where evidence was absent, and which has been superseded. The 2026 edition was not obtained for this revision, so the vascular arm of clinical decision 0 and the alternative column of clinical decision 5 are provisional.",
     "audit": "Named owner, edition and date on file; cases managed under the superseded edition after the new one became available."
    },
    {
@@ -1641,5 +1641,5 @@
    "UTHealth Houston / Memorial Hermann Transplant Oncology. Master Workup and Staging CPG. Programme companion clinical practice guideline, draft for institutional review; companion disease-specific protocol set reviewed 20 July 2026, OPTN policy reference current to the posting updated 24 June 2026. The source of this page's safety screen, central imaging and pathology review requirements, disease-specific minimum staging bundles, disposition categories, minimum conference note and tissue-priority order. It carries the critical safety rule that no transperitoneal or primary-tumour needle biopsy is performed in suspected perihilar cholangiocarcinoma until the transplant pathway has been reviewed. The document is effective only after its approval block is completed and it is published in the controlled document repository."
   ]
  },
- "provenance": "Revised on 7 October 2026 after a full-text read of this pathway's depot: thirty papers read in full and abstracted, each with the authors' own stated limitations and an independent critique. The revision corrected or qualified forty-one evidence strings, rewrote the prevalence quick reference so that every figure carries its denominator, downgraded fifteen evidence grades, added five papers, and roughly doubled the honest section. No recommendation was removed; the page's positions stand, and what changed is how well supported they are said to be. Built originally as a first draft from the UTHealth Houston / Memorial Hermann Transplant Oncology Master Workup and Staging CPG — a programme companion document that is itself a draft for institutional review, with its companion protocol set reviewed 20 July 2026 — together with the published imaging and benign-liver literature. The imaging backbone is the ACR Incidental Findings Committee white paper on incidental liver lesions on CT (Gore 2017, still the current version; no liver revision has been published and the ACR lists no liver topic under development), its 2010 predecessor, ACR CT/MRI LI-RADS v2018 Core and CEUS LI-RADS v2017 (both checked 6 October 2026 and both still the current diagnostic versions; the 2024 LI-RADS releases cover treatment response and ultrasound surveillance only), and the ACR Appropriateness Criteria topic Liver Lesion-Initial Characterization of 2020, now read in full as Chernyak 2020. The benign entities follow the EASL Clinical Practice Guidelines on the management of benign liver tumours of 2016 — still the last full guideline for haemangioma and focal nodular hyperplasia — with the subsequent literature used to say where that document has been overtaken, principally the 2022 subtype-stratified meta-analysis of hepatobiliary-phase signal. The LI-RADS evidence now includes the 2022 individual-patient-data meta-analysis of the major features and the prospective CEUS LI-RADS validation sub-analysis of 2024. Nodules in vascular livers are governed by the EASL vascular-liver guidance of 2015 together with the 2026 multisociety consensus on porto-sinusoidal vascular disorder. The at-risk fork and the diagnostic criteria for hepatocellular carcinoma follow the EASL hepatocellular carcinoma guideline of 2025 and the AASLD practice guidance of 2023. Say plainly what was not read. Six sources on this page are still cited from abstract or guideline text only and were not in the full-text depot: the EASL hepatocellular carcinoma guideline 2025 (PMID 39690085), the AASLD practice guidance 2023 (37199193), the three DEGUM contrast-enhanced ultrasound papers (19241506, 20740399, 25812115), the perihilar fine-needle aspiration series (21492336) and the fatty-liver imaging review (17102041). Every figure attributed to those sources is at the first draft's evidentiary standard. Two documents named in the gap scan were sought and not obtained, and are not cited here as read: the 2026 EASL guideline on vascular diseases of the liver, which supersedes the 2015 edition this page quotes and makes the whole of the vascular arm provisional, and the CAMINO study. Every PMID was verified against PubMed on 6 October 2026. This is a triage page: it starts at the scan and ends by routing to the HCC, iCCA, cHCC-CCA, CRLM, NELM or HCA pathway, and it makes no treatment recommendation beyond drainage of an abscess and the decision not to intervene on a lesion it resolves. Plainly: there is no ratified roadmap behind this page. No institutional decision has been taken on any threshold, interval or discharge rule in it except where the local CPG is quoted directly, every one of the sixteen ratification items in the approvals list is genuinely open, and every numeric criterion must be verified against the current source before use."
+ "provenance": "Revised on 7 October 2026 after a full-text read of this pathway's depot: thirty papers read in full and abstracted, each with the authors' own stated limitations and an independent critique. The revision corrected or qualified forty-one evidence strings, rewrote the prevalence quick reference so that every figure carries its denominator, downgraded fifteen evidence grades, added five papers, and roughly doubled the limited-evidence section. No recommendation was removed; the page's positions stand, and what changed is how well supported they are said to be. Built originally as a first draft from the UTHealth Houston / Memorial Hermann Transplant Oncology Master Workup and Staging CPG — a programme companion document that is itself a draft for institutional review, with its companion protocol set reviewed 20 July 2026 — together with the published imaging and benign-liver literature. The imaging backbone is the ACR Incidental Findings Committee white paper on incidental liver lesions on CT (Gore 2017, still the current version; no liver revision has been published and the ACR lists no liver topic under development), its 2010 predecessor, ACR CT/MRI LI-RADS v2018 Core and CEUS LI-RADS v2017 (both checked 6 October 2026 and both still the current diagnostic versions; the 2024 LI-RADS releases cover treatment response and ultrasound surveillance only), and the ACR Appropriateness Criteria topic Liver Lesion-Initial Characterization of 2020, now read in full as Chernyak 2020. The benign entities follow the EASL Clinical Practice Guidelines on the management of benign liver tumours of 2016 — still the last full guideline for haemangioma and focal nodular hyperplasia — with the subsequent literature used to say where that document has been overtaken, principally the 2022 subtype-stratified meta-analysis of hepatobiliary-phase signal. The LI-RADS evidence now includes the 2022 individual-patient-data meta-analysis of the major features and the prospective CEUS LI-RADS validation sub-analysis of 2024. Nodules in vascular livers are governed by the EASL vascular-liver guidance of 2015 together with the 2026 multisociety consensus on porto-sinusoidal vascular disorder. The at-risk fork and the diagnostic criteria for hepatocellular carcinoma follow the EASL hepatocellular carcinoma guideline of 2025 and the AASLD practice guidance of 2023. Say plainly what was not read. Six sources on this page are still cited from abstract or guideline text only and were not in the full-text depot: the EASL hepatocellular carcinoma guideline 2025 (PMID 39690085), the AASLD practice guidance 2023 (37199193), the three DEGUM contrast-enhanced ultrasound papers (19241506, 20740399, 25812115), the perihilar fine-needle aspiration series (21492336) and the fatty-liver imaging review (17102041). Every figure attributed to those sources is at the first draft's evidentiary standard. Two documents named in the gap scan were sought and not obtained, and are not cited here as read: the 2026 EASL guideline on vascular diseases of the liver, which supersedes the 2015 edition this page quotes and makes the whole of the vascular arm provisional, and the CAMINO study. Every PMID was verified against PubMed on 6 October 2026. This is a triage page: it starts at the scan and ends by routing to the HCC, iCCA, cHCC-CCA, CRLM, NELM or HCA pathway, and it makes no treatment recommendation beyond drainage of an abscess and the decision not to intervene on a lesion it resolves. Plainly: there is no ratified roadmap behind this page. No institutional decision has been taken on any threshold, interval or discharge rule in it except where the local CPG is quoted directly, every one of the sixteen local approval items in the approvals list is genuinely open, and every numeric criterion must be verified against the current source before use."
 }

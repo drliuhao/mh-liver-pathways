@@ -11,7 +11,7 @@
         {
           "id": "diagnosis",
           "title": "Confirm HCC",
-          "question": "Is each observation sufficiently characterized to diagnose HCC?",
+          "question": "Is each liver lesion sufficiently characterized to diagnose HCC?",
           "owner": "Hepatology · transplant radiology",
           "timing": "Before treatment / exception lesion counting",
           "orders": [
@@ -104,7 +104,7 @@
         },
         {
           "id": "curative-route",
-          "title": "Choose curative route",
+          "title": "Choose treatment with curative intent",
           "question": "Is transplantation clinically preferable to a safe, complete resection?",
           "owner": "HPB surgery · hepatology · transplant surgery",
           "timing": "After diagnosis; before committing to bridge therapy",
@@ -192,8 +192,8 @@
         },
         {
           "id": "allocation",
-          "title": "Classify exception route",
-          "question": "Does pretreatment tumor burden fit T2 or the standardized downstaging envelope?",
+          "title": "Check MELD-exception criteria",
+          "question": "Does pretreatment tumor burden fit T2 or the standardized downstaging criteria?",
           "owner": "Transplant radiology · coordinator · hepatology",
           "timing": "Use pretreatment CT/MRI, not only the post-treatment scan",
           "orders": [
@@ -266,7 +266,7 @@
               "refs": []
             },
             {
-              "title": "Within downstaging envelope",
+              "title": "Within downstaging criteria",
               "criteria": [
                 {
                   "text": "Pretreatment burden — any ONE pattern:",
@@ -317,10 +317,10 @@
               "refs": []
             },
             {
-              "title": "Beyond standardized downstaging envelope",
+              "title": "Beyond standardized downstaging criteria",
               "criteria": [
                 {
-                  "text": "Even a favorable response requires nonstandard NLRB consideration if baseline burden was outside the standardized envelope.",
+                  "text": "Even a favorable response requires nonstandard NLRB consideration if baseline burden was outside the standardized criteria.",
                   "refs": [
                     "H-policy",
                     "N-hcc"
@@ -349,7 +349,7 @@
         {
           "id": "treatment",
           "title": "Bridge or downstage",
-          "question": "What treatment intent and response assessment will protect the transplant route?",
+          "question": "What treatment and response assessment are needed to maintain or achieve transplant eligibility?",
           "owner": "IR · radiation oncology · hepatology · oncology",
           "timing": "Before LRT; reassess after treatment",
           "orders": [
@@ -596,7 +596,7 @@
         },
         {
           "id": "after-transplant",
-          "title": "Close the loop",
+          "title": "Post-transplant follow-up",
           "question": "What must be recorded and monitored after transplant?",
           "owner": "Transplant surgery · pathology · hepatology",
           "timing": "At explant and long-term follow-up",
@@ -706,7 +706,7 @@
             },
             {
               "ref": "N-hcc",
-              "text": "Guidance permits selected beyond-envelope downstaging review. For previously treated rupture or primary portal-vein branch invasion, it describes a prolonged stable interval of at least 12 months before some cases may be considered.",
+              "text": "Guidance permits selected review after downstaging beyond standardized criteria. For previously treated rupture or primary portal-vein branch invasion, it describes a prolonged stable interval of at least 12 months before some cases may be considered.",
               "quote": false,
               "locator": ""
             }
@@ -827,7 +827,7 @@
       "code": "pCCA",
       "name": "Perihilar cholangiocarcinoma",
       "route": "Standardized exception · OPTN 9.5.A",
-      "entry": "A suspected hilar stricture needs an anatomy-first, transplant-preserving diagnostic strategy.",
+      "entry": "For a suspected hilar stricture, define the anatomy and consult the transplant team before choosing the biopsy approach.",
       "roadmap": "https://drliuhao.github.io/mh-liver-pathways/hilar/",
       "steps": [
         {
@@ -868,7 +868,7 @@
                   ]
                 }
               ],
-              "action": "Select a transplant-preserving tissue/staging strategy.",
+              "action": "Plan diagnostic sampling and staging with the transplant team.",
               "to": "diagnosis",
               "kind": "advance",
               "refs": []
@@ -896,8 +896,8 @@
         },
         {
           "id": "diagnosis",
-          "title": "Diagnose without seeding",
-          "question": "Can the diagnosis and nodal stage be established without traversing the primary?",
+          "title": "Plan diagnostic sampling",
+          "question": "Can diagnosis and nodal staging be completed without transperitoneal biopsy of the primary tumor?",
           "owner": "Advanced GI · transplant/HPB surgery",
           "timing": "Before EUS-guided or percutaneous sampling",
           "orders": [
@@ -1005,7 +1005,7 @@
         },
         {
           "id": "phenotype",
-          "title": "Confirm pathway fit",
+          "title": "Check protocol criteria",
           "question": "Are disease extent, size and resectability compatible with this protocol?",
           "owner": "Transplant radiology · HPB surgery · coordinator",
           "timing": "Before enrollment / initial exception",
@@ -1030,10 +1030,10 @@
           ],
           "branches": [
             {
-              "title": "All phenotype conditions satisfied",
+              "title": "All disease criteria satisfied",
               "criteria": [
                 {
-                  "text": "Hilar diagnostic criteria + unresectability + permitted mass phenotype + no metastatic disease; general transplant fitness remains a separate review.",
+                  "text": "Hilar diagnostic criteria + unresectability + permitted tumor size and distribution + no metastatic disease; general transplant fitness remains a separate review.",
                   "refs": [
                     "P-policy"
                   ]
@@ -1074,7 +1074,7 @@
         },
         {
           "id": "neoadjuvant",
-          "title": "Deliver integrated therapy",
+          "title": "Deliver approved neoadjuvant therapy",
           "question": "Is the center-approved regimen being delivered with safe drainage and infection control?",
           "owner": "Medical/radiation oncology · advanced GI · transplant team",
           "timing": "Before and throughout neoadjuvant therapy",
@@ -1145,7 +1145,7 @@
         },
         {
           "id": "staging",
-          "title": "Operatively stage",
+          "title": "Perform operative staging",
           "question": "Has occult regional or peritoneal disease been excluded after neoadjuvant therapy?",
           "owner": "Transplant/HPB surgery · pathology",
           "timing": "After neoadjuvant therapy and before transplantation",
@@ -1291,7 +1291,7 @@
         {
           "id": "follow-up",
           "title": "Surveil after transplant",
-          "question": "Who owns recurrence assessment and ongoing protocol review?",
+          "question": "Who is responsible for recurrence assessment and ongoing protocol review?",
           "owner": "Transplant team · oncology · pathology",
           "timing": "Explant review and longitudinal follow-up",
           "orders": [
@@ -1340,7 +1340,7 @@
       "issues": [
         {
           "id": "anatomy",
-          "question": "Which proximal strictures should trigger a transplant-preserving diagnostic discussion?",
+          "question": "Which proximal strictures require transplant-team review before diagnostic sampling?",
           "comparisons": [
             {
               "ref": "P-policy",
@@ -1415,7 +1415,7 @@
         },
         {
           "id": "regimen",
-          "question": "Which neoadjuvant regimen and modifications will our center ratify?",
+          "question": "Which neoadjuvant regimen and modifications will our center approve?",
           "comparisons": [
             {
               "ref": "P-policy",
@@ -1467,7 +1467,7 @@
         },
         {
           "id": "ownership",
-          "question": "Who ratifies the program and its surveillance plan?",
+          "question": "Who approves the program and its surveillance plan?",
           "comparisons": [
             {
               "ref": "P-policy",
@@ -1506,7 +1506,7 @@
       "code": "iCCA",
       "name": "Intrahepatic cholangiocarcinoma",
       "route": "Nonstandard review · NLRB guidance",
-      "entry": "A narrow cirrhosis-associated, solitary ≤3 cm phenotype; transplantation remains a selected program decision.",
+      "entry": "Assess biopsy-proven, unresectable, solitary iCCA or mixed HCC-iCCA ≤3 cm in cirrhosis under the current NLRB guidance and local protocol.",
       "roadmap": "https://drliuhao.github.io/mh-liver-pathways/icca/",
       "steps": [
         {
@@ -1547,13 +1547,13 @@
                   ]
                 }
               ],
-              "action": "Assess resectability and the narrow review phenotype.",
+              "action": "Assess resectability and the clinical profile described in guidance.",
               "to": "phenotype",
               "kind": "advance",
               "refs": []
             },
             {
-              "title": "Uncertain primary or mixed phenotype",
+              "title": "Uncertain primary tumor type or mixed histology",
               "criteria": [
                 {
                   "text": "The current NLRB text includes mixed HCC-iCCA, but local program acceptance must be explicit.",
@@ -1575,11 +1575,30 @@
         },
         {
           "id": "phenotype",
-          "title": "Check narrow phenotype",
+          "title": "Check clinical selection criteria",
           "question": "Does the patient fit the current guidance population and lack a curative resection option?",
           "owner": "HPB surgery · transplant governance",
           "timing": "Before declaring a transplant-directed treatment plan",
           "orders": [
+            {
+              "label": "Multiple nodules: terminology and eligibility",
+              "items": [
+                {
+                  "text": "Multifocal means two or more separate tumor nodules; satellite nodules are nearby separate nodules, with no universal iCCA distance definition. Intrahepatic metastases describe spread within the liver. These terms overlap; imaging distribution alone does not establish clonality. An additional indeterminate nodule may be HCC or benign, especially in cirrhosis. Pause the eligibility decision and clarify the diagnosis; consider biopsy when it would change management. Separate HCC alongside iCCA requires explicit program/NLRB interpretation, not assumed eligibility or exclusion.",
+                  "refs": [
+                    "I-focality",
+                    "I-satellites"
+                  ]
+                },
+                {
+                  "text": "Satellites and other additional malignant nodules count as multiple tumors for AJCC8 T staging; they do not alone establish distant M1 disease. Confirmed multifocal disease does not meet the solitary-tumor requirement of this guidance route.",
+                  "refs": [
+                    "I-focality",
+                    "N-icca"
+                  ]
+                }
+              ]
+            },
             {
               "label": "All guidance features",
               "items": [
@@ -1600,7 +1619,7 @@
           ],
           "branches": [
             {
-              "title": "All narrow-phenotype conditions met",
+              "title": "All clinical selection criteria met",
               "criteria": [
                 {
                   "text": "Local prospective/registry program review also accepts the case; NLRB eligibility alone is not a clinical endorsement.",
@@ -1645,7 +1664,7 @@
         },
         {
           "id": "therapy",
-          "title": "Treat with declared intent",
+          "title": "Plan pretransplant treatment",
           "question": "What therapy and observation plan will establish durable tumor control?",
           "owner": "Oncology · IR · radiation oncology · transplant team",
           "timing": "Before treatment; reassess after each course",
@@ -1674,7 +1693,7 @@
               "title": "Control strategy delivered and tolerable",
               "criteria": [
                 {
-                  "text": "Maintain the ≤3 cm solitary phenotype and absence of extrahepatic disease during observation.",
+                  "text": "Maintain a solitary tumor ≤3 cm and absence of extrahepatic disease during observation.",
                   "refs": [
                     "N-icca"
                   ]
@@ -1703,7 +1722,7 @@
           ],
           "stops": [
             {
-              "text": "New tumor lesions, metastatic spread or growth outside the described phenotype prevents advancement on this route.",
+              "text": "New tumor lesions, metastatic spread or growth beyond the described selection criteria prevents advancement on this route.",
               "refs": [
                 "N-icca"
               ]
@@ -1716,7 +1735,7 @@
         {
           "id": "stability",
           "title": "Demonstrate stability",
-          "question": "Is the full six-month control window supported by dated evidence?",
+          "question": "Is the full six-month stability interval supported by dated evidence?",
           "owner": "Radiology · coordinator · oncology",
           "timing": "Before the nonstandard request",
           "orders": [
@@ -1730,7 +1749,7 @@
                   ]
                 },
                 {
-                  "text": "Guidance specifies six months of stability from diagnosis or last treatment, with ≤3 cm tumor size and no new lesions/extrahepatic disease. Resolve the applicable clock explicitly.",
+                  "text": "Guidance specifies six months of stability from diagnosis or last treatment, with ≤3 cm tumor size and no new lesions/extrahepatic disease. Resolve the applicable observation period explicitly.",
                   "refs": [
                     "N-icca"
                   ]
@@ -1740,10 +1759,10 @@
           ],
           "branches": [
             {
-              "title": "Window and phenotype documented",
+              "title": "Stability interval and clinical criteria documented",
               "criteria": [
                 {
-                  "text": "At least six months of qualifying stable disease with the clock origin agreed and documented.",
+                  "text": "At least six months of qualifying stable disease with the start date of the observation period agreed and documented.",
                   "refs": [
                     "N-icca"
                   ]
@@ -1755,10 +1774,10 @@
               "refs": []
             },
             {
-              "title": "Short interval / uncertain clock",
+              "title": "Observation interval incomplete or start date uncertain",
               "criteria": [
                 {
-                  "text": "A good early response is not the full observation interval. Further treatment may change the documented clock origin.",
+                  "text": "A good early response is not the full observation interval. Further treatment may change the documented start date of the observation period.",
                   "refs": [
                     "N-icca"
                   ]
@@ -1772,7 +1791,7 @@
           ],
           "stops": [
             {
-              "text": "Progression, new lesions or extrahepatic disease stops routine advancement; do not simply reset the clock without program review.",
+              "text": "Progression, new lesions or extrahepatic disease stops routine advancement; do not simply restart the stability interval without program review.",
               "refs": [
                 "N-icca"
               ]
@@ -1785,7 +1804,7 @@
         {
           "id": "review",
           "title": "Submit nonstandard review",
-          "question": "Are pathology, phenotype, stability and clinical approval all documented?",
+          "question": "Are pathology, clinical criteria, stability and clinical approval all documented?",
           "owner": "Transplant physician · coordinator · program governance",
           "timing": "At request and every renewal",
           "orders": [
@@ -1824,7 +1843,7 @@
               "refs": []
             },
             {
-              "title": "Pending approval or stale evidence",
+              "title": "Pending approval or outdated tests or imaging",
               "criteria": [
                 {
                   "text": "Nonstandard guidance does not grant an automatic exception.",
@@ -1841,7 +1860,7 @@
           ],
           "stops": [
             {
-              "text": "Loss of the required phenotype or metastatic progression ends this routine guidance-aligned route.",
+              "text": "Loss of the required clinical criteria or metastatic progression ends this routine guidance-aligned route.",
               "refs": [
                 "N-icca"
               ]
@@ -1869,7 +1888,7 @@
                   ]
                 },
                 {
-                  "text": "Review explant pathology, record outcomes and assign oncology/transplant surveillance ownership.",
+                  "text": "Review explant pathology, record outcomes and assign responsibility for oncology and transplant surveillance.",
                   "refs": [
                     "I-cohort"
                   ]
@@ -1913,7 +1932,7 @@
             },
             {
               "ref": "I-cohort",
-              "text": "Very-early iCCA cohort evidence does not automatically establish the same benefit for every mixed tumor phenotype.",
+              "text": "Very-early iCCA cohort evidence does not automatically establish the same benefit for every mixed tumor presentation.",
               "quote": false,
               "locator": ""
             }
@@ -1941,7 +1960,7 @@
               "locator": ""
             }
           ],
-          "proposal": "Retain a prospective/registry-based institutional restriction until the group ratifies the program and consent requirements.",
+          "proposal": "Retain a prospective/registry-based institutional restriction until the group approves the program and consent requirements.",
           "rationale": "An allocation review pathway is not an institution-wide adoption decision.",
           "owners": "Transplant governance · oncology",
           "record": "iCCA G2",
@@ -1972,7 +1991,7 @@
         },
         {
           "id": "stability-clock",
-          "question": "Which event starts or restarts the six-month stability clock?",
+          "question": "Which event starts or restarts the six-month stability interval?",
           "comparisons": [
             {
               "ref": "N-icca",
@@ -1982,7 +2001,7 @@
             },
             {
               "ref": "I-cohort",
-              "text": "The very-early cohort is outcome evidence, not an allocation-clock definition.",
+              "text": "The very-early cohort is outcome evidence, not an definition of the allocation observation interval.",
               "quote": false,
               "locator": ""
             }
@@ -2004,7 +2023,7 @@
               "locator": "Extension imaging requirement"
             }
           ],
-          "proposal": "Name an allocation owner and separate clinical reviewer; reconcile each renewal to the original histology and phenotype.",
+          "proposal": "Name the clinician responsible for allocation and a separate clinical reviewer; compare each renewal with the original histology and selection criteria.",
           "rationale": "A prior exception does not remove the requirement for ongoing control.",
           "owners": "Coordinator · transplant physician",
           "record": "iCCA G5",
@@ -2056,7 +2075,7 @@
       "steps": [
         {
           "id": "map-disease",
-          "title": "Map disease",
+          "title": "Stage the disease",
           "question": "Are the primary, liver burden and extrahepatic distribution established?",
           "owner": "Colorectal oncology · radiology · HPB surgery",
           "timing": "At referral; preserve pretreatment imaging",
@@ -2218,8 +2237,8 @@
         },
         {
           "id": "unresectability",
-          "title": "Prove unresectability",
-          "question": "Can an expert liver team clear all clinically relevant disease without replacing the liver?",
+          "title": "Confirm unresectability",
+          "question": "Can an expert liver team treat all clinically relevant disease with resection or ablation?",
           "owner": "HPB liver surgeon · transplant surgeon · radiology · IR",
           "timing": "At baseline and again after response",
           "orders": [
@@ -2344,7 +2363,7 @@
                   ]
                 }
               ],
-              "action": "Verify primary clearance and all calendar milestones.",
+              "action": "Confirm treatment of the primary tumor and all required time intervals.",
               "to": "clocks",
               "kind": "advance",
               "refs": []
@@ -2381,8 +2400,8 @@
         },
         {
           "id": "clocks",
-          "title": "Verify primary and clocks",
-          "question": "Are the primary-tumor clearance and timing requirements all met?",
+          "title": "Confirm primary treatment and timing",
+          "question": "Has the primary tumor been completely treated, and have all required time intervals been met?",
           "owner": "Colorectal surgery · coordinator · oncology",
           "timing": "Before transplant-grade restaging / request",
           "orders": [
@@ -2425,7 +2444,7 @@
                   ]
                 },
                 {
-                  "text": "Record the actual sequence. Do not delay appropriate primary treatment just to fit a transplant clock; seek interpretation for a different sequence.",
+                  "text": "Record the actual sequence. Do not delay appropriate primary treatment just to fit a transplant timeline; seek interpretation for a different sequence.",
                   "refs": [
                     "C-consensus",
                     "N-crlm"
@@ -2436,7 +2455,7 @@
           ],
           "branches": [
             {
-              "title": "All applicable clocks and primary clearance verified",
+              "title": "All applicable observation periods and primary clearance verified",
               "criteria": [
                 {
                   "text": "Dates, margin report, colonoscopy and stability evidence reconcile to the same timeline.",
@@ -2481,7 +2500,7 @@
         {
           "id": "restaging",
           "title": "Restage for transplant",
-          "question": "Do current imaging and biomarker results confirm the liver-limited phenotype?",
+          "question": "Do current imaging and biomarker results confirm the disease confined to the liver?",
           "owner": "Radiology · nuclear medicine · oncology · coordinator",
           "timing": "Within the initial-request imaging window",
           "orders": [
@@ -2564,7 +2583,7 @@
               "label": "Review packet",
               "items": [
                 {
-                  "text": "Include histology/molecular results, primary R0 report, unresectability assessment, baseline burden, all clocks and current imaging/CEA. Guidance supports MMaT−20, with floor 15.",
+                  "text": "Include histology/molecular results, primary R0 report, unresectability assessment, baseline tumor burden, all required time intervals and current imaging/CEA. Guidance supports MMaT−20, with floor 15.",
                   "refs": [
                     "N-crlm"
                   ]
@@ -2659,7 +2678,7 @@
               "title": "Final clinical acceptance",
               "criteria": [
                 {
-                  "text": "Current selection criteria, consent and follow-up ownership are documented; donor acceptance remains a separate clinical decision.",
+                  "text": "Current selection criteria, consent and responsibility for follow-up are documented; donor acceptance remains a separate clinical decision.",
                   "refs": [
                     "C-consensus"
                   ]
@@ -2778,7 +2797,7 @@
         },
         {
           "id": "primary-clocks",
-          "question": "How should nonconforming synchronous-primary timing be handled?",
+          "question": "What if the timing of primary-tumor treatment does not meet the guidance?",
           "comparisons": [
             {
               "ref": "N-crlm",
@@ -2859,7 +2878,7 @@
         },
         {
           "id": "ownership",
-          "question": "Who owns renewal, final clearance and recurrence planning?",
+          "question": "Who is responsible for renewal, final clearance and recurrence planning?",
           "comparisons": [
             {
               "ref": "N-crlm",
@@ -2903,8 +2922,8 @@
       "steps": [
         {
           "id": "biology",
-          "title": "Confirm NET biology",
-          "question": "Is this the differentiated G1/G2 GEP phenotype described in guidance?",
+          "title": "Confirm differentiation and grade",
+          "question": "Is this a well-differentiated grade 1 or 2 gastroenteropancreatic neuroendocrine tumor, as described in guidance?",
           "owner": "NET oncology · expert pathology",
           "timing": "At referral; review the most relevant current tissue",
           "orders": [
@@ -2947,7 +2966,7 @@
               "title": "G3 / poorly differentiated NEC or discordant grade",
               "criteria": [
                 {
-                  "text": "Outside the described standard NET exception phenotype; an older low-grade sample does not resolve new aggressive behavior.",
+                  "text": "Outside the described standard NET exception criteria; an older low-grade sample does not resolve new aggressive behavior.",
                   "refs": [
                     "N-net"
                   ]
@@ -2973,7 +2992,7 @@
         },
         {
           "id": "distribution",
-          "title": "Map and clear disease",
+          "title": "Stage disease and confirm primary treatment",
           "question": "Is disease currently confined to the liver, and has the primary been removed?",
           "owner": "NET surgery · radiology · nuclear medicine",
           "timing": "Before transplant selection and with any new finding",
@@ -3072,7 +3091,7 @@
               "title": "No suitable curative clearance; transplant may add benefit",
               "criteria": [
                 {
-                  "text": "The selected phenotype, expected natural history, available alternatives and patient priorities support continued evaluation.",
+                  "text": "The tumor characteristics, expected natural history, available alternatives and patient priorities support continued evaluation.",
                   "refs": [
                     "NET-milan"
                   ]
@@ -3134,7 +3153,7 @@
               "title": "Reserve and control strategy acceptable",
               "criteria": [
                 {
-                  "text": "No unresolved treatment-related barrier; disease remains within the selected phenotype.",
+                  "text": "No unresolved treatment-related barrier; disease remains within the selection criteria.",
                   "refs": [
                     "N-net"
                   ]
@@ -3200,7 +3219,7 @@
           ],
           "branches": [
             {
-              "title": "Clearance and selected phenotype maintained",
+              "title": "No remaining extrahepatic disease and selection criteria still met",
               "criteria": [
                 {
                   "text": "No active extrahepatic recurrence; required observation and imaging documentation are complete.",
@@ -3310,7 +3329,7 @@
         },
         {
           "id": "follow-up",
-          "title": "Transplant and surveil",
+          "title": "Transplant and follow-up",
           "question": "Is there a disease-specific plan for recurrence and function?",
           "owner": "Transplant team · NET oncology",
           "timing": "Explant review and long-term follow-up",
@@ -3375,7 +3394,7 @@
             }
           ],
           "proposal": "Obtain expert pathology review and reconcile discordant samples/units. Do not carry a historical G1 label forward if current biology suggests G3 or NEC.",
-          "rationale": "Grade is a selection gate, not merely a prognostic annotation.",
+          "rationale": "Tumor grade affects transplant selection as well as prognosis.",
           "owners": "NET pathology · oncology",
           "record": "NELM G1",
           "status": "Discussion required — not ratified"
@@ -3444,7 +3463,7 @@
           "comparisons": [
             {
               "ref": "N-net",
-              "text": "Guidance defines phenotype and staging, not a mandatory PRRT/Y90 sequence.",
+              "text": "Guidance defines disease features and staging, not a mandatory PRRT/Y90 sequence.",
               "quote": false,
               "locator": ""
             },
@@ -3479,14 +3498,14 @@
             }
           ],
           "proposal": "Track clearance, control and scan dates separately. Confirm allocation interpretation rather than assuming the wording means a simple maximum scan age.",
-          "rationale": "Different observation and imaging clocks must not be collapsed.",
+          "rationale": "Different observation periods and imaging intervals must not be collapsed.",
           "owners": "Coordinator · NET oncology · allocation leadership",
           "record": "NELM G5 / G6",
           "status": "Discussion required — not ratified"
         },
         {
           "id": "ownership",
-          "question": "Who owns functional restaging and long-term recurrence surveillance?",
+          "question": "Who is responsible for functional restaging and long-term recurrence surveillance?",
           "comparisons": [
             {
               "ref": "N-net",
@@ -3673,7 +3692,7 @@
           ],
           "stops": [
             {
-              "text": "Macrovascular invasion excludes the described guidance-aligned exception phenotype.",
+              "text": "Macrovascular invasion excludes the described guidance-aligned exception criteria.",
               "refs": [
                 "N-hehe"
               ]
@@ -3714,7 +3733,7 @@
               "title": "Acceptable expected benefit after MDT review",
               "criteria": [
                 {
-                  "text": "Unresectable phenotype, no macrovascular invasion and a documented patient-specific benefit-risk judgment.",
+                  "text": "Unresectable disease, no macrovascular invasion and a documented patient-specific benefit-risk judgment.",
                   "refs": [
                     "N-hehe",
                     "E-consensus"
@@ -3794,7 +3813,7 @@
               "title": "New vascular / extrahepatic finding",
               "criteria": [
                 {
-                  "text": "Reassess the phenotype and expected benefit; previous approval is not automatic current clearance.",
+                  "text": "Reassess disease features and expected benefit; previous approval is not automatic current clearance.",
                   "refs": [
                     "N-hehe"
                   ]
@@ -3848,7 +3867,7 @@
               "title": "Risk and follow-up documented",
               "criteria": [
                 {
-                  "text": "A named team owns imaging, suspicious findings and long-term outcome review; no universal OPTN post-LT interval is specified.",
+                  "text": "A named team is responsible for imaging, suspicious findings and long-term outcome review; no universal OPTN post-LT interval is specified.",
                   "refs": [
                     "N-hehe",
                     "E-consensus"
@@ -3954,7 +3973,7 @@
               "locator": "HEHE criterion"
             }
           ],
-          "proposal": "Document disease tempo, symptoms, alternatives and expected benefit before graft-stewardship approval; choose observation selectively, not by a universal mandatory clock.",
+          "proposal": "Document disease tempo, symptoms, alternatives and expected benefit before approval of the transplant plan; choose observation selectively, without imposing a universal mandatory observation interval.",
           "rationale": "Unresectability alone does not resolve the whole clinical benefit-risk decision.",
           "owners": "Selection committee · sarcoma oncology",
           "record": "HEHE G4",
@@ -4174,7 +4193,7 @@
         {
           "id": "exception-route",
           "title": "Identify exception route",
-          "question": "Which ONE of the guidance alternatives supports consideration?",
+          "question": "Which guidance criterion supports considering an exception request?",
           "owner": "Transplant hepatology · HPB surgery · coordinator",
           "timing": "Before submitting a nonstandard request",
           "orders": [
@@ -4247,8 +4266,8 @@
         },
         {
           "id": "transformation",
-          "title": "Resolve transformation",
-          "question": "Does the patient still belong in the benign adenoma route?",
+          "title": "Assess possible malignant transformation",
+          "question": "Is this still a benign adenoma, or has malignant transformation occurred?",
           "owner": "Pathology · radiology · hepatology · HPB surgery",
           "timing": "Whenever malignancy is suspected",
           "orders": [
@@ -4292,7 +4311,7 @@
               "title": "Malignancy established",
               "criteria": [
                 {
-                  "text": "Cancer phenotype and stage are determined; a benign-HCA label no longer adequately describes the management problem.",
+                  "text": "Cancer type and stage are determined; a benign-HCA label no longer adequately describes the management problem.",
                   "refs": [
                     "A-easl"
                   ]
@@ -4384,7 +4403,7 @@
         {
           "id": "follow-up",
           "title": "Reassess and follow up",
-          "question": "Are complications controlled, and is longitudinal care assigned?",
+          "question": "Are complications controlled, and has a team been assigned for long-term follow-up?",
           "owner": "Transplant team · hepatology · relevant metabolic service",
           "timing": "While awaiting transplant and after explant review",
           "orders": [
@@ -4554,7 +4573,7 @@
         },
         {
           "id": "ownership",
-          "question": "Who owns waiting-list complication management and long-term follow-up?",
+          "question": "Who is responsible for waiting-list complication management and long-term follow-up?",
           "comparisons": [
             {
               "ref": "N-hca",
@@ -4590,6 +4609,24 @@
     }
   ],
   "sources": {
+    "I-focality": {
+      "short": "CAP · tumor focality",
+      "title": "Intrahepatic bile ducts resection protocol v4.3.0.0",
+      "kind": "Pathology reporting standard",
+      "locator": "June 2025 · AJCC8 pT categories PDF p8; focality PDF p11",
+      "url": "https://www.cap.org/wp-content/uploads/documents/New-Cancer-Protocols-June-2025/BileDuctIH_4.3.0.0.REL_CAPCP.pdf",
+      "pdf": "https://www.cap.org/wp-content/uploads/documents/New-Cancer-Protocols-June-2025/BileDuctIH_4.3.0.0.REL_CAPCP.pdf",
+      "note": ""
+    },
+    "I-satellites": {
+      "short": "RCPA · tumor focality",
+      "title": "Structured pathology reporting: liver cancer, tumor focality",
+      "kind": "Pathology reporting standard",
+      "locator": "iCCA focality: no clear universal satellite definition",
+      "url": "https://www.rcpa.edu.au/Library/Practising-Pathology/Structured-Pathology-Reporting-of-Cancer/Cancer-Protocols-Pre/Gastrointestinal/Elements-liver-cancer",
+      "pdf": "https://www.rcpa.edu.au/Library/Practising-Pathology/Structured-Pathology-Reporting-of-Cancer/Cancer-Protocols-Pre/Gastrointestinal/Elements-liver-cancer",
+      "note": ""
+    },
     "H-policy": {
       "short": "OPTN 9.5.I",
       "title": "OPTN Policies — HCC standardized exception",
@@ -4759,7 +4796,7 @@
       "locator": "Nault et al. · Gastroenterology · 2017",
       "url": "https://doi.org/10.1053/j.gastro.2016.11.042",
       "pdf": "https://doi.org/10.1053/j.gastro.2016.11.042",
-      "note": "Molecular risk stratification informs clinical judgment. A local exon-specific threshold is not the NLRB wording."
+      "note": "Molecular risk stapproval informs clinical judgment. A local exon-specific threshold is not the NLRB wording."
     }
   }
 }

@@ -4,13 +4,13 @@
  "name": "Combined hepatocellular-cholangiocarcinoma",
  "version": "v0.2",
  "batch": "Batch 08, 7 October 2026",
- "lead": "Which gate this patient is at when the diagnosis is still provisional, and which document will actually govern the transplant decision.",
- "gatelabel": "The decision in front of you",
+ "lead": "Confirm combined HCC–cholangiocarcinoma, stage the disease, and assess treatment using the evidence and transplant criteria specific to this diagnosis.",
+ "gatelabel": "Clinical decisions",
  "gates": [
   {
    "id": "0",
    "tone": "loco",
-   "name": "0 · Is this cHCC-CCA, and can imaging tell you?",
+   "name": "0 · Assess the suspected diagnosis",
    "req": "any",
    "crit": [
     "A liver mass whose enhancement carries both hepatocellular and non-hepatocellular features, or an LR-M observation in an at-risk liver",
@@ -19,7 +19,7 @@
     "A biopsy or specimen already reporting one component with features of the other",
     "A tumour already resected or transplanted whose pathology reports both differentiations"
    ],
-   "ask": "Is this one tumour with two differentiations, and have I stopped expecting imaging to settle it?",
+   "ask": "Is combined HCC–cholangiocarcinoma suspected, and what is needed to confirm the diagnosis?",
    "standard": [
     {
      "t": "The diagnosis is histological. WHO 2019 requires unequivocal hepatocytic and cholangiocytic differentiation within a single tumour, made on routine haematoxylin and eosin, with immunostains supportive rather than essential.",
@@ -62,7 +62,7 @@
      ],
      "pref": "Every new liver mass in which cHCC-CCA is on the differential. In a 137-patient three-centre gadoxetate study separating 52 cHCC-CCA from 85 mass-forming iCCA, all in hepatitis B infection or HBV cirrhosis, AFP above 100 ng/mL was the only independent predictor of cHCC-CCA (OR 3.42, p=0.012); AFP was raised in 69.2% of cHCC-CCA against 31.8% of iCCA (p<0.001) while CA 19-9 was raised in 50.0% against 70.6% (p=0.019). AFP above 100 ng/mL alone gave an AUC of 0.687 (sensitivity 69.2%, specificity 68.2%); adding targetoid diffusion restriction raised it to 0.807 (sensitivity 88.5%, specificity 64.7%, Z=3.196, p=0.001).",
      "avoid": "Do not expect dual marker elevation to make the diagnosis, and do not quote a single figure for how often it happens: the review literature puts simultaneous AFP and CA 19-9 elevation at about 15% and at about 20% of patients, while a 21-patient Japanese cohort using a wider definition — any HCC marker with any biliary marker — reported 57.1%. Do not use a normal AFP to exclude the diagnosis either: in the Japanese nationwide survey AFP was under 10 ng/mL in 46.2% and CA 19-9 under 37 U/mL in 60.0%, and NCCN notes AFP levels in cHCC-CCA do not differ significantly from those in HCC. A normal CA 19-9 is equally unhelpful — it was in the normal range in 57.9% of 19 transplant recipients whose explants showed cHCC-CCA.",
-     "note": "NCCN's Principles of Core Needle Biopsy lists raised CA 19-9 or CEA with suspicion of iCCA or cHCC-CCA as an indication for biopsy even when the lesion meets imaging criteria for HCC. That footnote is the practical trigger this gate turns on. What the marker work cannot do is the thing that matters most for a transplant pathway: the 137-patient study had no HCC comparator group at all, so it says nothing about the error of calling a cHCC-CCA an HCC and listing it."
+     "note": "NCCN's Principles of Core Needle Biopsy lists raised CA 19-9 or CEA with suspicion of iCCA or cHCC-CCA as an indication for biopsy even when the lesion meets imaging criteria for HCC. That footnote is the practical trigger this assessment turns on. What the marker work cannot do is the thing that matters most for a transplant pathway: the 137-patient study had no HCC comparator group at all, so it says nothing about the error of calling a cHCC-CCA an HCC and listing it."
     }
    ],
    "alt": [
@@ -105,7 +105,7 @@
       }
      ],
      "order": "Ordered by how much published data exist on each, not by a demonstrated difference in accuracy — no study compares these modalities head to head in this tumour. Every one of these series had pathological proof in every lesion, which means the lesions managed on imaging alone, the ones the criteria are aimed at, are absent from all three denominators. None of them is diagnostic, and the correct endpoint of all three is the same: a decision about tissue.",
-     "flagnote": "Ratification item: does the programme want a standing rule that an LR-M observation, or any observation with a mixed enhancement pattern, is reviewed by the transplant surgeon before any needle is passed? NCCN's HCC algorithm already carries the footnote 'if patient is a potential transplant candidate, consider referral to transplant center before biopsy'. Registry: imaging category assigned, biopsy route, and the final histology."
+     "flagnote": "Local approval item: does the programme want a standing rule that an LR-M observation, or any observation with a mixed enhancement pattern, is reviewed by the transplant surgeon before any needle is passed? NCCN's HCC algorithm already carries the footnote 'if patient is a potential transplant candidate, consider referral to transplant center before biopsy'. Registry: imaging category assigned, biopsy route, and the final histology."
     }
    ],
    "avoid": [
@@ -133,7 +133,7 @@
       "27481548"
      ],
      "pref": "Report it as what it is: synchronous primary liver cancers. The WHO definition is one tumour containing both differentiations, and the fifth edition explicitly excludes the double-cancer and collision types from the category. In the 19-patient multicentre transplant series, the 8 patients with genuinely mixed tumours had a mean survival of 61.6 months against 15.5 months in the 11 with separate HCC and cholangiocarcinoma lesions (p=0.025) — on 8 and 11 patients, which is as readily a chance finding as a biological one.",
-     "avoid": "The international very-early-iCCA study made mixed hepatocellular-cholangiocarcinoma in the same nodule an explicit exclusion criterion, and analysed 48 of the 81 explant cholangiocarcinomas it found among 25,016 transplants. Mixing true mixed tumours with separate synchronous primaries is the commonest way the published outcome figures in this disease become uninterpretable — and, as Gate 5 says, that same paper is the one whose 3 cm threshold now governs cHCC-CCA listing."
+     "avoid": "The international very-early-iCCA study made mixed hepatocellular-cholangiocarcinoma in the same nodule an explicit exclusion criterion, and analysed 48 of the 81 explant cholangiocarcinomas it found among 25,016 transplants. Mixing true mixed tumours with separate synchronous primaries is the commonest way the published outcome figures in this disease become uninterpretable — and, as clinical decision 5 says, that same paper is the one whose 3 cm threshold now governs cHCC-CCA listing."
     },
     {
      "t": "Do not let a radiomic or deep-learning classifier stand in for histology, however good its published performance.",
@@ -151,7 +151,7 @@
   {
    "id": "1",
    "tone": "loco",
-   "name": "1 · Tissue — one component does not exclude the other",
+   "name": "1 · Plan tissue sampling",
    "req": "all",
    "crit": [
     "The destination is named before the needle: resection, the transplant pathway, or systemic therapy",
@@ -160,7 +160,7 @@
     "Enough tissue preserved for multigene panel testing in advanced or recurrent disease",
     "The report states which component predominates, and the margin, vascular and nodal findings"
    ],
-   "ask": "Do I need tissue for where this patient is going, and does a result showing one component mean anything about the other?",
+   "ask": "Is biopsy needed, and could limited sampling miss one tumor component?",
    "standard": [
     {
      "t": "A biopsy showing only HCC, or only cholangiocarcinoma, does not exclude the other component — the sampling problem is the central diagnostic fact of this disease.",
@@ -222,7 +222,7 @@
        "g": "C",
        "when": "NCCN's Principles of Surgery for intrahepatic biliary disease state that a pre-operative biopsy is not always necessary before a definitive potentially curative resection, and that a suspicious mass in the proper clinical setting should be treated as malignant. Surgical resection without core needle biopsy should be considered with multidisciplinary review.",
        "pref": "The fit patient with a resectable mass in whom the operation would not change whichever histology came back — because the operation this page recommends, anatomical resection with regional lymphadenectomy, covers both components.",
-       "avoid": "Do not use it to skip the transplant question in a cirrhotic patient with a small tumour, and do not use it when the plan includes an extent of lymphadenectomy that depends on the answer. A resection done without tissue makes the diagnosis but forfeits the option of starting on the OPTN pathway, which needs biopsy proof and six months of stability.",
+       "avoid": "Do not use it to skip the transplant question in a cirrhotic patient with a small tumour, and do not use it when the plan includes an extent of lymphadenectomy that depends on the answer. A resection done without tissue makes the diagnosis but forfeits the option of starting on the NLRB guidance route (nonstandard review), which needs biopsy proof and six months of stability.",
        "refs": [
         "41639545"
        ]
@@ -232,7 +232,7 @@
        "g": "C",
        "when": "NCCN recommends considering repeat biopsy in metastatic or locally advanced recurrence after prior resection or local therapy, to establish the dominant histology at recurrence, and again at progression where areas of response and progression are discordant.",
        "pref": "Any recurrence in which an isolated HCC or cholangiocarcinoma component would change the regimen, in a patient still fit for further systemic therapy.",
-       "avoid": "Do not re-biopsy when the result would not change the plan, and do not assume the recurrence carries the same component mix as the primary. The sampling problem of this gate applies unchanged to the recurrence, and no study has measured how often a recurrence biopsy in this disease reproduces the primary's histology.",
+       "avoid": "Do not re-biopsy when the result would not change the plan, and do not assume the recurrence carries the same component mix as the primary. The sampling problem of this assessment applies unchanged to the recurrence, and no study has measured how often a recurrence biopsy in this disease reproduces the primary's histology.",
        "refs": [
         "33276780",
         "41781152"
@@ -240,7 +240,7 @@
       }
      ],
      "order": "Ordered by how often each is the right first move, not by evidence of superiority — there is no comparative study of biopsy strategy in this disease. What drives the order is the destination: a transplant pathway needs tissue, a resection usually does not, and a recurrence often needs it again.",
-     "flagnote": "Ratification item: does a biopsy reporting pure HCC in a tumour with discordant markers or imaging close the cHCC-CCA question for this programme, or does the board record it as unresolved and plan on that basis? With 48% sensitivity, 100% specificity and CK19 positive in 33% of biopsies against 84% of the matching specimens, those are materially different operating rules and the group has to pick one. A second question follows: who re-reads the slide? In the large genomic series, 117 cases called HCC that carried iCCA-typical alterations were sent for histopathological re-review and the HCC diagnosis was confirmed in only 48 (41%), being changed to iCCA in 23, to cHCC-CCA in 13 and to gallbladder carcinoma in 1, with 32 left indeterminate. Audit: pre-operative histology against explant or resection histology, every case."
+     "flagnote": "Local approval item: does a biopsy reporting pure HCC in a tumour with discordant markers or imaging close the cHCC-CCA question for this programme, or does the board record it as unresolved and plan on that basis? With 48% sensitivity, 100% specificity and CK19 positive in 33% of biopsies against 84% of the matching specimens, those are materially different operating rules and the group has to pick one. A second question follows: who re-reads the slide? In the large genomic series, 117 cases called HCC that carried iCCA-typical alterations were sent for histopathological re-review and the HCC diagnosis was confirmed in only 48 (41%), being changed to iCCA in 23, to cHCC-CCA in 13 and to gallbladder carcinoma in 1, with 32 left indeterminate. Audit: pre-operative histology against explant or resection histology, every case."
     }
    ],
    "avoid": [
@@ -260,7 +260,7 @@
   {
    "id": "2",
    "tone": "loco",
-   "name": "2 · Stage it as a biliary cancer, not as HCC",
+   "name": "2 · Stage the disease",
    "req": "all",
    "crit": [
     "Multiphase CT or MRI of the liver and abdomen, plus CT of the chest",
@@ -269,7 +269,7 @@
     "Which component predominates, stated as a proportion where the specimen allows it",
     "Baseline AFP and CA 19-9, with the date and clinical state at which each was drawn"
    ],
-   "ask": "Which staging system am I actually in, and have I looked at the nodes?",
+   "ask": "Has the tumor been staged using the intrahepatic bile duct cancer system, including regional nodes?",
    "standard": [
     {
      "t": "Stage with the AJCC 8th edition intrahepatic bile duct system: it explicitly covers combined hepatocellular cholangiocarcinoma, and it is the system that has a nodal category.",
@@ -294,7 +294,7 @@
      ],
      "pref": "Every case. In a single-centre Japanese series of 19 resected cHCC-CCA, the tumour behaved like a biliary cancer in this respect: the liver was the commonest recurrence site but the lymph node was second, where in HCC it is not, and biliary invasion was present in 36.8% against 5.0% of the institution's HCC resections. The narrative surgical literature puts nodal metastasis in cHCC-CCA at 25–35%. Where nodal recurrence happens, it concentrates proximally: in a mapping study of 53 patients whose first recurrence after resection of a primary liver cancer was in regional nodes, the hepatic hilum was involved in 62.3% and the portal vein–vena cava region in 39.6%.",
      "avoid": "Do not accept a staging package built for HCC. A liver-only protocol with no chest imaging and no deliberate nodal assessment will miss the two findings that most often change the plan. And read the mapping study for what it is: only 11 of its 53 patients had cHCC-CCA, the denominator is patients who recurred in nodes rather than patients at risk, so the percentages describe where disease goes and not how likely it is to go there, and the median node count at the original operation was 6.",
-     "note": "The local CPG asks for CT of the chest, contrasted liver-protocol MR of the abdomen and pelvis, and an MR bone survey, with FDG-PET added where CA 19-9 is raised and other imaging shows no metastasis. The chest and liver imaging are standard practice; the routine MR bone survey appears in no guideline and is not supported by comparative data — see the honest section."
+     "note": "The local CPG asks for CT of the chest, contrasted liver-protocol MR of the abdomen and pelvis, and an MR bone survey, with FDG-PET added where CA 19-9 is raised and other imaging shows no metastasis. The chest and liver imaging are standard practice; the routine MR bone survey appears in no guideline and is not supported by comparative data — see the limited-evidence section."
     },
     {
      "t": "Record which component predominates, with a proportion where the specimen allows it, because the proportion tracks outcome.",
@@ -359,7 +359,7 @@
   {
    "id": "3",
    "tone": "cure",
-   "name": "3 · Resectable disease",
+   "name": "3 · Assess resection",
    "req": "all",
    "crit": [
     "A single tumour, or limited multifocal disease in a highly selected patient, with a technically achievable negative margin",
@@ -368,7 +368,7 @@
     "Patient fit for an anatomical hepatectomy with regional lymphadenectomy, at a centre that performs them",
     "The patient has been told what the recurrence figures in this histology actually are"
    ],
-   "ask": "Can I get a negative margin with a regional lymphadenectomy, and has the patient been told what recurrence looks like in this disease?",
+   "ask": "Can resection achieve negative margins with adequate lymph-node staging?",
    "standard": [
     {
      "t": "Anatomical liver resection to a negative margin, with regional lymphadenectomy, is the only established curative treatment — resection is the standard of care for resectable disease in both NCCN guidelines that address it.",
@@ -413,7 +413,7 @@
      "note": "[EXPERTISE]"
     },
     {
-     "t": "In a cirrhotic patient with a small tumour, decide resection against transplantation as one question rather than two — this is Gate 5, and taking the knife to the liver first may close it.",
+     "t": "In a cirrhotic patient with a small tumour, decide resection against transplantation as one question rather than two — this is clinical decision 5, and operating on the liver first may make transplantation unsuitable.",
      "l": "Reasonable",
      "g": "C",
      "refs": [
@@ -421,7 +421,7 @@
       "33316425"
      ],
      "pref": "Any cirrhotic patient with a tumour of 3 cm or less in whom both operations are technically possible. In a three-centre French study of cirrhotic patients with iCCA or cHCC-CCA of 5 cm or less, 49 transplanted patients had lower recurrence than 26 resected patients (18% versus 46%, p=0.01) and higher 5-year recurrence-free survival (75% versus 36%, p=0.004). Note which endpoint moved: 5-year overall survival was 67% against 40% and did not reach significance (p=0.17). The protective hazard ratio for transplantation, 0.23 (95% CI 0.07–0.82, p=0.02), comes from a multivariable model in the 2–5 cm subgroup of 24 transplant against 21 resection patients.",
-     "avoid": "Do not read that as a treatment effect, and this time the authors say so themselves. A known cholangiocarcinoma diagnosis was an absolute contraindication to transplantation throughout the study period, so all 49 transplant diagnoses were made on the explant — 44 had been listed for HCC and 5 for decompensated cirrhosis. The transplant arm waited a median of 394 days from diagnosis to surgery against 131 days in the resection arm, which the authors state inevitably selected tumours that had not progressed, and 63% of them had pre-operative TACE against 15% of the resected patients. There was no intention-to-treat analysis and no dropout denominator. Read Gate 5 before the decision is made.",
+     "avoid": "Do not read that as a treatment effect, and this time the authors say so themselves. A known cholangiocarcinoma diagnosis was an absolute contraindication to transplantation throughout the study period, so all 49 transplant diagnoses were made on the explant — 44 had been listed for HCC and 5 for decompensated cirrhosis. The transplant arm waited a median of 394 days from diagnosis to surgery against 131 days in the resection arm, which the authors state inevitably selected tumours that had not progressed, and 63% of them had pre-operative TACE against 15% of the resected patients. There was no intention-to-treat analysis and no dropout denominator. Read clinical decision 5 before the decision is made.",
      "note": "The local CPG does allow a prior attempted resection onto the transplant pathway, provided there has been a sustained response to neoadjuvant therapy for at least six months after the most recent intervention."
     }
    ],
@@ -434,7 +434,7 @@
       "33276780",
       "41639545"
      ],
-     "pref": "Route these patients to Gate 7. NCCN's Principles of Surgery for intrahepatic disease are explicit: lymph node metastases beyond the porta hepatis and distant metastatic disease contraindicate resection, gross nodal metastases to the porta hepatis portend a poor prognosis and resection should only be considered in highly selected cases, and multifocal liver disease is generally representative of metastatic disease.",
+     "pref": "Route these patients to clinical decision 7. NCCN's Principles of Surgery for intrahepatic disease are explicit: lymph node metastases beyond the porta hepatis and distant metastatic disease contraindicate resection, gross nodal metastases to the porta hepatis portend a poor prognosis and resection should only be considered in highly selected cases, and multifocal liver disease generally represents intrahepatic spread. This does not establish distant M1 disease: multiple intrahepatic tumors meet T2 criteria unless higher T features apply.",
      "avoid": "Those statements were written for intrahepatic cholangiocarcinoma. Applying them to cHCC-CCA is an extrapolation — but it is the extrapolation that matches this tumour's nodal recurrence pattern, which is biliary rather than hepatocellular."
     },
     {
@@ -454,7 +454,7 @@
   {
    "id": "4",
    "tone": "cure",
-   "name": "4 · The node question in theatre",
+   "name": "4 · Plan regional lymph-node assessment",
    "req": "any",
    "crit": [
     "cHCC-CCA known or suspected before the operation, on histology, markers or imaging",
@@ -462,7 +462,7 @@
     "Radiologically suspicious porta hepatis nodes",
     "An intra-operative finding — a firm, pale or desmoplastic tumour — that does not look like HCC"
    ],
-   "ask": "Am I taking the porta hepatis nodes, and if I am not, can I write down why?",
+   "ask": "Is regional lymphadenectomy planned, and is any reason for omission documented?",
    "standard": [
     {
      "t": "Perform a regional lymphadenectomy of the porta hepatis when cHCC-CCA is known or suspected, and record the number of nodes retrieved and the number involved.",
@@ -475,7 +475,7 @@
       "38425471"
      ],
      "pref": "Every resection in which the histology is known or suspected pre-operatively. NCCN's Principles of Surgery for intrahepatic biliary disease state that a regional lymphadenectomy of the porta hepatis is carried out; the contemporary surgical review makes nodal dissection part of the definition of a potentially curative operation and puts nodal metastasis in cHCC-CCA at 25–35%; and where nodal recurrence occurs it concentrates at the hepatic hilum, involved in 62.3% of the 53 patients in the mapping study whose first recurrence was nodal.",
-     "avoid": "Do not make the dissection contingent on how the tumour looks: the whole problem of this gate is that the histology is usually not known until afterwards. Nodal status is also an AJCC category — N1 is stage IIIB regardless of T — so an unsampled node leaves the patient unstaged rather than node-negative.",
+     "avoid": "Do not make the dissection contingent on how the tumour looks: the whole problem of this assessment is that the histology is usually not known until afterwards. Nodal status is also an AJCC category — N1 is stage IIIB regardless of T — so an unsampled node leaves the patient unstaged rather than node-negative.",
      "note": "Grade C, and the honest position is that no study has shown that lymphadenectomy improves survival in cHCC-CCA. The case for it is staging information, the nodal recurrence pattern, and concordance with the iCCA guideline that governs the staging system. The mapping study it leans on had only 11 cHCC-CCA patients among 53, counts recurrences rather than patients at risk, and was designed to define radiotherapy volumes. It is not a demonstrated survival benefit."
     },
     {
@@ -527,7 +527,7 @@
       }
      ],
      "order": "The order reflects guideline wording, not a survival advantage: no study in cHCC-CCA compares nodal strategies with an outcome endpoint, and the one cohort that addresses selective dissection is retrospective, has the indication confounded by the pre-operative label, reaches opposite conclusions on its two endpoints, and is non-significant in its own cHCC-CCA subgroup. What the order does reflect is that the staging information is lost irreversibly if the nodes are not taken.",
-     "flagnote": "Ratification item: does this programme adopt routine porta hepatis lymphadenectomy for every resection in which cHCC-CCA is known or suspected, as the iCCA guideline would, or a selective policy with a documented reason in each case? This is a live choice and the evidence does not settle it — the single cohort usually cited for selective dissection shows no adjusted difference in overall survival and a significantly worse adjusted progression-free survival without dissection. A second decision follows from it: whether a pre-operative diagnosis of HCC with a raised CA 19-9 is enough to trigger the dissection. A third: what counts as an adequate harvest, given that only 26% of dissections in that cohort reached 6 nodes. Audit: nodes retrieved and nodes involved, by pre-operative diagnosis, with nodal recurrence at two years."
+     "flagnote": "Local approval item: does this programme adopt routine porta hepatis lymphadenectomy for every resection in which cHCC-CCA is known or suspected, as the iCCA guideline would, or a selective policy with a documented reason in each case? This is a live choice and the evidence does not settle it — the single cohort usually cited for selective dissection shows no adjusted difference in overall survival and a significantly worse adjusted progression-free survival without dissection. A second decision follows from it: whether a pre-operative diagnosis of HCC with a raised CA 19-9 is enough to trigger the dissection. A third: what counts as an adequate harvest, given that only 26% of dissections in that cohort reached 6 nodes. Audit: nodes retrieved and nodes involved, by pre-operative diagnosis, with nodal recurrence at two years."
     }
    ],
    "avoid": [
@@ -546,7 +546,7 @@
   {
    "id": "5",
    "tone": "cure",
-   "name": "5 · Transplant — ask which document governs the listing",
+   "name": "5 · Assess transplant eligibility",
    "req": "all",
    "crit": [
     "Cirrhosis, with disease unresectable on technical grounds or because of the underlying liver",
@@ -555,10 +555,10 @@
     "Well or moderately differentiated, with no macrovascular invasion and no nodal disease",
     "A programme that has written down which criteria it is using, and a registry that records every case"
    ],
-   "ask": "Does this patient meet the criteria of the document that will actually govern the listing — not the criteria of the paper I read?",
+   "ask": "Does the patient meet the applicable transplant protocol and allocation guidance?",
    "standard": [
     {
-     "t": "Ask the transplant question at the first board, before a resection attempt or a long course of palliative systemic therapy forecloses it.",
+     "t": "Discuss transplant eligibility at the first multidisciplinary meeting, before an attempted resection or non-protocol treatment that could affect eligibility.",
      "l": "Standard",
      "g": "D",
      "refs": [
@@ -581,7 +581,7 @@
      ],
      "pref": "Every listing decision. The guidance also sets the extension rule: imaging every three months confirming the tumour remains 3 cm or less with no extrahepatic disease. Confirm the current OPTN text before any listing decision — this page reflects the guidance as retrieved on 6 October 2026 and the document carries no printed version line.",
      "avoid": "Do not plan a pathway against the local CPG's criteria and then discover at submission that they do not match. The local document, approved 11 April 2022, states that candidates are eligible 'regardless of size', does not require cirrhosis, and asks only for biopsy or cytology showing malignancy rather than mixed histology. It also states that the MELD exception application will be made 'once the exception is available from UNOS' — it is now available, and it is narrower than the protocol.",
-     "note": "Mind the distinction between referral and allocation. NCCN sets no size limit and says patients whose tumour is limited in size by centre-specific criteria should be evaluated at a transplant centre; the OPTN pathway sets 3 cm; the published series used Milan. A patient can be reasonably referred, reasonably transplanted under a local protocol, and still fail the exception criteria. Know where the 3 cm came from: it is an extrapolation from the 17-centre 'very early' intrahepatic cholangiocarcinoma study, which excluded mixed hepatocellular-cholangiocarcinoma in the same nodule by design, defined its favourable group on explant pathology in 15 patients of whom 46.7% were incidental findings, and supports the 3 cm extension on an intermediate subgroup of 6 patients with 61% 5-year survival. Grade D is generous. [TX-TIMING] [PAYER]"
+     "note": "Mind the distinction between referral and allocation. NCCN sets no size limit and says patients whose tumour is limited in size by centre-specific criteria should be evaluated at a transplant centre; the NLRB guidance route (nonstandard review) sets 3 cm; the published series used Milan. A patient can be reasonably referred, reasonably transplanted under a local protocol, and still fail the exception criteria. Know where the 3 cm came from: it is an extrapolation from the 17-centre 'very early' intrahepatic cholangiocarcinoma study, which excluded mixed hepatocellular-cholangiocarcinoma in the same nodule by design, defined its favourable group on explant pathology in 15 patients of whom 46.7% were incidental findings, and supports the 3 cm extension on an intermediate subgroup of 6 patients with 61% 5-year survival. Grade D is generous. [TX-TIMING] [PAYER]"
     }
    ],
    "alt": [
@@ -618,7 +618,7 @@
      ],
      "pref": "Every candidacy discussion. In the three-centre French cirrhosis cohort, poor differentiation was independently predictive of recurrence in the 2–5 cm subgroup (HR 4.16, 95% CI 1.37–12.66, p=0.01) alongside nodule diameter (HR 1.10, 95% CI 1.02–1.73). In 40 Korean registry recipients, microvascular invasion was the only independent predictor of recurrence-free survival (HR 4.56, 95% CI 1.36–15.22) while perineural invasion (HR 5.14, 95% CI 1.07–24.69) and portal vein tumour thrombosis (HR 13.43, 95% CI 2.17–83.21) predicted worse overall survival — and in that cohort no pre-operative variable predicted anything.",
      "avoid": "The problem is that all of these are explant variables. Pre-transplant biopsy grading of a tumour with two components is unreliable, the biopsy may sample only one component, and no study has tested whether biopsy grade predicts explant grade in this disease. So this is the right criterion measured at the wrong time, and the page should not pretend otherwise. The hazard ratios above also rest on 45, 19, 4 and 3 patients respectively, with confidence intervals to match.",
-     "note": "The 2018 propensity-matched series of 12 recipients, on which the local protocol rests, was not obtained for this revision and is not cited here as read. Its figures are taken from the 2026 transplant overview's secondary report of it: 5-year recurrence-free survival 42% against 44% when matched on explant pathology (p=0.45), but 28% against 61% when matched on pre-transplant characteristics (p=0.12). The direction of that asymmetry is the whole argument — matched on what you know before transplant, the cHCC-CCA patients did worse — and it points the same way as the 2026 double-matched cohort in the avoid column below. A separate 2026 comparison table reproduces the same series as 12 patients with 1-, 3- and 5-year overall survival of 75%, 54% and 42%. See the honest section."
+     "note": "The 2018 propensity-matched series of 12 recipients, on which the local protocol rests, was not obtained for this revision and is not cited here as read. Its figures are taken from the 2026 transplant overview's secondary report of it: 5-year recurrence-free survival 42% against 44% when matched on explant pathology (p=0.45), but 28% against 61% when matched on pre-transplant characteristics (p=0.12). The direction of that asymmetry is the whole argument — matched on what you know before transplant, the cHCC-CCA patients did worse — and it points the same way as the 2026 double-matched cohort in the avoid column below. A separate 2026 comparison table reproduces the same series as 12 patients with 1-, 3- and 5-year overall survival of 75%, 54% and 42%. See the limited-evidence section."
     },
     {
      "t": "Where the local protocol is used, run the induction, restaging and adjuvant structure it specifies, and enter every patient in the prospective database.",
@@ -632,8 +632,8 @@
       "41781153"
      ],
      "pref": "Protocol candidates at this programme. The CPG requires platinum-based biliary chemotherapy or another standard regimen at the discretion of a protocol-approved oncologist; permits locoregional therapy other than external-beam radiation, but not as the sole pre-transplant therapy except for a solitary tumour under 3 cm; restages every three months; requires full explant histopathology with next-generation sequencing; sets tiered adjuvant therapy; and withdraws steroids rapidly with a view to mTOR-inhibitor conversion at four weeks.",
-     "avoid": "Do not treat the induction regimen list as current. It names FOLFOX, FOLFIRI, gemcitabine–capecitabine and gemcitabine–cisplatin and predates every immunotherapy combination now recommended; NCCN's current position for advanced mixed tumours is cisplatin–gemcitabine with either durvalumab or pembrolizumab. See Gate 7.",
-     "note": "The protocol's own adjuvant tiers have an internal gap: the moderate-risk tier requires a single lesion under 3 cm among its criteria, while the high-risk tier is triggered by a single lesion of 6 cm or more, so a single 4 cm well-differentiated tumour with clear margins and negative nodes falls into neither. Flagged for ratification. Its explant next-generation sequencing requirement is the right test ordered at the wrong time: in the largest genomic series, 34.7% of 150 cHCC-CCA carried a potentially actionable alteration, and a result that arrives on the explant cannot inform the induction regimen."
+     "avoid": "Do not treat the induction regimen list as current. It names FOLFOX, FOLFIRI, gemcitabine–capecitabine and gemcitabine–cisplatin and predates every immunotherapy combination now recommended; NCCN's current position for advanced mixed tumours is cisplatin–gemcitabine with either durvalumab or pembrolizumab. See clinical decision 7.",
+     "note": "The protocol's own adjuvant tiers have an internal gap: the moderate-risk tier requires a single lesion under 3 cm among its criteria, while the high-risk tier is triggered by a single lesion of 6 cm or more, so a single 4 cm well-differentiated tumour with clear margins and negative nodes falls into neither. Flagged for local approval. Its explant next-generation sequencing requirement is the right test ordered at the wrong time: in the largest genomic series, 34.7% of 150 cHCC-CCA carried a potentially actionable alteration, and a result that arrives on the explant cannot inform the induction regimen."
     }
    ],
    "avoid": [
@@ -647,7 +647,7 @@
       "24441817"
      ],
      "pref": "Size is the variable on which the older and newer evidence agree. In the 19-patient multicentre transplant series, tumour size above 3 cm (p=0.038) and lymphatic invasion (p=0.023) were associated with mortality; recurrence occurred in 11 of 17 evaluable patients (64.7%) at a median of 4 months, and 1- and 3-year survival were 57.1% and 38.1% — with 95% confidence intervals of 0.301 to 1 and 0.137 to 1, which is to say those point estimates carry almost no information. The reason that series did so badly is in its baseline data: mean tumour 6.1 cm, 73.7% multinodular, 42.1% with vascular invasion, 36.8% beyond Milan, 10.5% with unsuspected nodal metastases, and 30-day mortality 10.5%.",
-     "avoid": "The local CPG's 'regardless of size' is the single widest gap between it and every other document and every dataset: the OPTN pathway sets 3 cm, the ILTS-ILCA intrahepatic cholangiocarcinoma statement sets 3 cm, the published series used Milan, and the UNOS analysis of 94 earlier recipients showed 1-, 3- and 5-year survival of 82%, 47% and 40%, similar to cholangiocarcinoma and significantly worse than HCC (86%, 72%, 62%, p=0.002). That UNOS cohort spans 1994 to 2013, records nothing about the tumour, coded only 6.3% as incidental — which the authors state is an undercount — and had recurrence data for just 27 of the 94, among whom 3-year recurrence was 93%. No Cox predictor in it reached significance, which with 94 patients means underpowered rather than absent.",
+     "avoid": "The local CPG's 'regardless of size' is the single widest gap between it and every other document and every dataset: the NLRB guidance route (nonstandard review) sets 3 cm, the ILTS-ILCA intrahepatic cholangiocarcinoma statement sets 3 cm, the published series used Milan, and the UNOS analysis of 94 earlier recipients showed 1-, 3- and 5-year survival of 82%, 47% and 40%, similar to cholangiocarcinoma and significantly worse than HCC (86%, 72%, 62%, p=0.002). That UNOS cohort spans 1994 to 2013, records nothing about the tumour, coded only 6.3% as incidental — which the authors state is an undercount — and had recurrence data for just 27 of the 94, among whom 3-year recurrence was 93%. No Cox predictor in it reached significance, which with 94 patients means underpowered rather than absent.",
      "note": "The Spanish matched multicentre study is the one cohort here composed of knowingly abnormal nodules — incidental tumours were excluded by design — and in its 15 mixed HCC-CC patients 5-year survival was 78% against 86% in their matched HCC controls (p=0.9), with recurrence 7% against 4% (p=0.6). It is the most favourable comparison in the literature and it is 15 patients with a non-significant p value, matched on explant pathology that cannot be known at listing. Three exclusions matter: 8 patients beyond UCSF criteria, 16 patients who could not be matched because their disease was more advanced than any available HCC control, and whose 5-year survival was 28% with 51% recurrence, and the incidental cases. Even its uninodular subgroup of 2 cm or less, 12 per arm, showed 62% against 80% 5-year survival (p=0.4). The 27 pure iCCA patients in the same paper had 51% against 93% (p<0.001), so the pooled 42-patient figures should never be quoted."
     },
     {
@@ -680,7 +680,7 @@
   {
    "id": "6",
    "tone": "sys",
-   "name": "6 · The diagnosis arrived on the specimen",
+   "name": "6 · Unexpected diagnosis after surgery",
    "req": "any",
    "crit": [
     "A liver transplanted for presumed HCC whose explant shows a cholangiocytic component",
@@ -688,7 +688,7 @@
     "A specimen in which the predominant component differs from the pre-operative biopsy",
     "A margin, nodal, vascular or perineural finding that was not anticipated pre-operatively"
    ],
-   "ask": "The diagnosis changed after the operation — what changes now, and what does not?",
+   "ask": "How does an unexpected combined diagnosis on the surgical specimen change follow-up and treatment?",
    "standard": [
     {
      "t": "Treat the explant or resection specimen as the commonest route to this diagnosis, and build the pathway so that an unexpected result has a defined next step rather than a phone call.",
@@ -761,7 +761,7 @@
       }
      ],
      "order": "The order is by strength of signal within an entirely retrospective literature, not by demonstrated benefit. There is no reported randomised evidence for any adjuvant strategy in cHCC-CCA, the two chemotherapy datasets are a 19-patient positive and a 59-patient uninformative null, and the TACE evidence is confined to early recurrence in HCC-dominant tumours in hepatitis-B-endemic populations and reverses direction between strata in a national registry.",
-     "flagnote": "Ratification item: does this programme offer adjuvant systemic therapy after resection or transplantation for cHCC-CCA, to whom, and with which regimen? The local CPG already specifies a post-transplant structure — six months total of neoadjuvant plus adjuvant therapy for a complete pathological response, three to six months for moderate-risk explants, and six months of a regimen different from the neoadjuvant one for high-risk explants — and none of that has comparative data behind it. It also leaves a gap: a single well-differentiated tumour between 3 and 6 cm with clear margins and negative nodes meets neither the moderate- nor the high-risk definition. There is now a prospective option to weigh against both: a single-arm phase II study of cadonilimab with capecitabine as adjuvant therapy after R0 resection of cHCC-CCA (NCT07243951, 75 patients planned, recurrence-free survival primary, powered against a historical median of 12.2 months). Audit: adjuvant modality, completion rate, and recurrence at two years by explant risk tier."
+     "flagnote": "Local approval item: does this programme offer adjuvant systemic therapy after resection or transplantation for cHCC-CCA, to whom, and with which regimen? The local CPG already specifies a post-transplant structure — six months total of neoadjuvant plus adjuvant therapy for a complete pathological response, three to six months for moderate-risk explants, and six months of a regimen different from the neoadjuvant one for high-risk explants — and none of that has comparative data behind it. It also leaves a gap: a single well-differentiated tumour between 3 and 6 cm with clear margins and negative nodes meets neither the moderate- nor the high-risk definition. There is now a prospective option to weigh against both: a single-arm phase II study of cadonilimab with capecitabine as adjuvant therapy after R0 resection of cHCC-CCA (NCT07243951, 75 patients planned, recurrence-free survival primary, powered against a historical median of 12.2 months). Audit: adjuvant modality, completion rate, and recurrence at two years by explant risk tier."
     }
    ],
    "avoid": [
@@ -790,7 +790,7 @@
   {
    "id": "7",
    "tone": "sys",
-   "name": "7 · Systemic therapy — which backbone, and why",
+   "name": "7 · Select systemic therapy",
    "req": "any",
    "crit": [
     "Unresectable, metastatic or recurrent disease, with no transplant pathway available or the patient declining it",
@@ -798,7 +798,7 @@
     "Multigene panel results in hand or requested",
     "Performance status and hepatic reserve that will tolerate a platinum doublet"
    ],
-   "ask": "HCC backbone or biliary backbone — and on what am I basing that, other than habit?",
+   "ask": "Which systemic regimen is supported by the available evidence and tumor features?",
    "standard": [
     {
      "l": "Standard",
@@ -852,7 +852,7 @@
       }
      ],
      "order": "The first option is first because NCCN names it and because it is now the only one with a direct comparison behind it — a 21-patient matched cohort in which cHCC-CCA did as well as pure cholangiocarcinoma on the TOPAZ-1 regimen. That is a failure to detect a difference in 21 patients, not a demonstration of equivalence, and no study compares an HCC backbone with a biliary backbone in this disease: no patient in either supporting cohort crossed over. The third option is third because it depends on a test result, not because it is weaker.",
-     "flagnote": "Ratification item: does this programme adopt NCCN's cisplatin–gemcitabine plus checkpoint inhibitor as the default first line for all advanced cHCC-CCA, or does it choose the backbone by predominant component, and if so on what threshold? The component proportion data — median overall survival 3.16 years for HCC-dominant against 1.86 years for CCA-dominant among 306 resected tumours — are prognostic, not predictive, and the one advanced-disease cohort that tested them found no difference between HCC-dominant and iCCA-dominant tumours at any threshold from 20% to 80%. Using them to pick a regimen is reasoning rather than evidence. The local CPG's induction list predates all of this and needs replacing. Registry: backbone chosen, predominant component, response, overall survival."
+     "flagnote": "Local approval item: does this programme adopt NCCN's cisplatin–gemcitabine plus checkpoint inhibitor as the default first line for all advanced cHCC-CCA, or does it choose the backbone by predominant component, and if so on what threshold? The component proportion data — median overall survival 3.16 years for HCC-dominant against 1.86 years for CCA-dominant among 306 resected tumours — are prognostic, not predictive, and the one advanced-disease cohort that tested them found no difference between HCC-dominant and iCCA-dominant tumours at any threshold from 20% to 80%. Using them to pick a regimen is reasoning rather than evidence. The local CPG's induction list predates all of this and needs replacing. Registry: backbone chosen, predominant component, response, overall survival."
     },
     {
      "t": "Order multigene panel testing in every patient entering systemic therapy, and screen for trial eligibility at the same visit — there are now open trials in this histology, and the only one that ever randomised patients closed with four.",
@@ -866,7 +866,7 @@
      ],
      "pref": "Every advanced case. No prospective trial in this disease has ever reported, so a trial is often the best available option and the panel result is what opens it. Four studies are currently open or about to open, all single-arm: durvalumab with a single priming dose of tremelimumab plus gemcitabine–cisplatin (NCT06855225, 29 patients, response rate primary, University of Alabama at Birmingham); hepatic arterial infusion chemotherapy with camrelizumab and rivoceranib (NCT07105748, TASK-05, 45 patients, recruiting in Shanghai); GEMOX with anlotinib and sintilimab (NCT06033118, 25 patients, Sichuan University, registry status last recorded as unknown); and the adjuvant study of cadonilimab with capecitabine after R0 resection (NCT07243951, 75 patients). A Japanese single-arm study of atezolizumab–bevacizumab in 12 patients (jRCTs031220099) is also reported. Reviews of the retrospective experience put gemcitabine–platinum median overall survival at 10.2–16.2 months with objective response 15–29%, and checkpoint-inhibitor objective response at 20–33%, with roughly 57% of tumours showing an immune-high phenotype and about a quarter carrying a targetable alteration.",
      "avoid": "Do not wait for the explant to sequence, which is what the local CPG currently specifies — by then the result cannot inform induction. Do not read the immune-high figure as a predictive biomarker; it is a descriptive finding in 96 patients. And do not read those ranges as pooled estimates: the review that assembles them states plainly that they are the span of two or three cohorts of 7 to 101 patients, with no weighting and no confidence intervals, and that the molecular treatment algorithm it proposes is unvalidated for efficacy.",
-     "note": "The correction this page needed most in this gate is a factual one. It is not true that no prospective trial has ever existed: NCT05211323, a National Cancer Institute randomised phase II comparing gemcitabine–cisplatin–atezolizumab with and without bevacizumab in advanced cHCC-CCA, with progression-free survival as its primary endpoint, opened in December 2022 across 37 US sites against a planned enrolment of 88. It accrued 4 patients, is listed as active but not recruiting with a primary completion date of 20 January 2026, and has posted no results. The accurate statement is that no prospective trial in this disease has ever reported, and that the one randomised attempt failed on accrual — which is the single most important fact for anyone deciding whether to refer a patient to one of the four studies now open."
+     "note": "The correction this page needed most in this assessment is a factual one. It is not true that no prospective trial has ever existed: NCT05211323, a National Cancer Institute randomised phase II comparing gemcitabine–cisplatin–atezolizumab with and without bevacizumab in advanced cHCC-CCA, with progression-free survival as its primary endpoint, opened in December 2022 across 37 US sites against a planned enrolment of 88. It accrued 4 patients, is listed as active but not recruiting with a primary completion date of 20 January 2026, and has posted no results. The accurate statement is that no prospective trial in this disease has ever reported, and that the one randomised attempt failed on accrual — which is the single most important fact for anyone deciding whether to refer a patient to one of the four studies now open."
     }
    ],
    "alt": [
@@ -923,7 +923,7 @@
   {
    "id": "8",
    "tone": "loco",
-   "name": "8 · Liver-directed therapy, entirely borrowed",
+   "name": "8 · Consider liver-directed therapy",
    "req": "any",
    "crit": [
     "Liver-confined unresectable disease, or bridging or downstaging on a transplant pathway",
@@ -931,7 +931,7 @@
     "Preserved liver function, a patent portal vein, and no extrahepatic disease driving the prognosis",
     "Explicit acknowledgement that no trial of any liver-directed modality has been conducted in this disease"
    ],
-   "ask": "Am I treating this because the tumour is arterialised, or because it is in the liver and there is a catheter available?",
+   "ask": "Is liver-directed therapy appropriate, given the limited disease-specific evidence?",
    "standard": [
     {
      "t": "Record every liver-directed treatment in this disease as borrowed evidence, and expect lower response than in hepatocellular carcinoma.",
@@ -944,8 +944,8 @@
       "42409696"
      ],
      "pref": "Every case. The reviews that address this question directly reach the same conclusion: liver-directed methods — TACE, percutaneous ethanol injection, hepatic arterial infusion, radioembolisation and ablation — are less effective here than in HCC because of the cholangiocytic component's vascularity and desmoplasia, and transarterial chemoembolisation may be effective in unresectable disease particularly where the tumour is hypervascular. The one dataset that tested vascularity as a selection variable agrees: adjuvant TACE improved early recurrence-free survival only in the HCC-dominant third of 306 resected tumours (53.3% against 32.3% at two years, p=0.028) and not in balanced (p=0.276) or CCA-dominant (p=0.433) patients.",
-     "avoid": "Do not quote an HCC response rate, a BCLC stage-based algorithm, or an iCCA radioembolisation series as though either applied directly. There is no prospective trial of any liver-directed modality in cHCC-CCA, and the evidence base for this gate is review-level synthesis of HCC and iCCA experience plus small retrospective cohorts. Both interventional reviews are explicit that essentially all their quantitative material concerns cholangiocarcinoma, and neither distinguishes the hypervascular HCC-dominant tumour that might respond to an arterial therapy from the hypovascular CCA-dominant one that will not.",
-     "note": "Grade D is the honest grade for this whole gate. It is labelled Standard because liver-directed therapy is what gets done, and the page's job is to say what is known about it, not to pretend the modality is unevidenced and then recommend it silently."
+     "avoid": "Do not quote an HCC response rate, a BCLC stage-based algorithm, or an iCCA radioembolisation series as though either applied directly. There is no prospective trial of any liver-directed modality in cHCC-CCA, and the evidence base for this assessment is review-level synthesis of HCC and iCCA experience plus small retrospective cohorts. Both interventional reviews are explicit that essentially all their quantitative material concerns cholangiocarcinoma, and neither distinguishes the hypervascular HCC-dominant tumour that might respond to an arterial therapy from the hypovascular CCA-dominant one that will not.",
+     "note": "Grade D is the honest grade for this whole assessment. It is labelled Standard because liver-directed therapy is what gets done, and the page's job is to say what is known about it, not to pretend the modality is unevidenced and then recommend it silently."
     },
     {
      "t": "On a transplant pathway, locoregional therapy is the instrument that generates the six months of documented stability the exception requires — plan it as part of the listing strategy, not as treatment in parallel with it.",
@@ -956,7 +956,7 @@
       "40014003"
      ],
      "pref": "Every protocol candidate. The OPTN review-board criteria require six months from diagnosis or last treatment with the tumour remaining 3 cm or less, no new lesions and no extrahepatic disease, with imaging every three months; the ILTS-ILCA consensus frames bridging with neoadjuvant therapy as a way of identifying favourable tumour biology, with more than six months of stability or successful downstaging (low evidence, weak strength).",
-     "avoid": "Do not let the locoregional plan and the listing clock be owned by different people. And note what the consensus statement actually claims: that bridging helps identify favourable biology, not that it improves outcome.",
+     "avoid": "Do not let the locoregional plan and the listing timeline be managed by different people. And note what the consensus statement actually claims: that bridging helps identify favourable biology, not that it improves outcome.",
      "note": "The local CPG permits locoregional therapy other than external-beam radiation — TACE, radiofrequency ablation, Y-90 — but states it should not be the sole pre-transplant therapy except for a solitary tumour under 3 cm. That is the one place where the local document is more conservative than it needs to be and more specific than the evidence; it is also the only written local rule on the subject, so it stands until the group changes it."
     }
    ],
@@ -1003,7 +1003,7 @@
       }
      ],
      "order": "Ordered by how much published experience each has in this disease, which for the second and third options is none and for the first is retrospective adjuvant data confined to HCC-dominant tumours. No comparative study exists, so the order carries no survival claim whatsoever and should not be read as one.",
-     "flagnote": "Ratification item: does this programme adopt the local CPG's rule that locoregional therapy may not be the sole pre-transplant therapy except for a solitary tumour under 3 cm, or does it align with the OPTN wording, which requires only locoregional or systemic therapy with six months of stability and sets no such restriction? These two documents disagree and the patient in the gap — a solitary 3 to 5 cm tumour treated with TACE alone and stable for six months — is a real one. Audit: modality, response, time to listing, dropout."
+     "flagnote": "Local approval item: does this programme adopt the local CPG's rule that locoregional therapy may not be the sole pre-transplant therapy except for a solitary tumour under 3 cm, or does it align with the OPTN wording, which requires only locoregional or systemic therapy with six months of stability and sets no such restriction? These two documents disagree and the patient in the gap — a solitary 3 to 5 cm tumour treated with TACE alone and stable for six months — is a real one. Audit: modality, response, time to listing, dropout."
     }
    ],
    "avoid": [
@@ -1030,7 +1030,7 @@
   {
    "id": "9",
    "tone": "pall",
-   "name": "9 · Surveillance, and what to do at recurrence",
+   "name": "9 · Surveillance and recurrent disease",
    "req": "any",
    "crit": [
     "A resected or transplanted patient under surveillance",
@@ -1038,7 +1038,7 @@
     "Nodal recurrence at the porta hepatis or portal vein–vena cava region",
     "An isolated recurrence that local re-treatment could address"
    ],
-   "ask": "Is this disease recurring, which component is recurring, and is any of it still treatable locally?",
+   "ask": "What is the extent of recurrence, and are local treatments feasible?",
    "standard": [
     {
      "t": "Surveil at biliary rather than hepatocellular intensity — cross-sectional imaging of the liver and chest with AFP and CA 19-9 every three months for the first two years — because most recurrences happen inside that window.",
@@ -1052,7 +1052,7 @@
       "38425471"
      ],
      "pref": "Every resected and transplanted patient. Median recurrence-free survival was 7.27 months in a 95-patient multicentre radical-resection cohort and 5-year recurrence-free survival was 12.2% in a 19-patient single-centre series, against a 5-year overall survival of 44.7% in the same 19 patients — most of these patients recur, and recur early. The contemporary surgical review puts post-operative recurrence above 60%. In the 306-patient component-proportion cohort, extrahepatic or combined recurrence accounted for 26.9% of recurrences in HCC-dominant tumours, 37.2% in balanced and 50.5% in CCA-dominant ones (p=0.043), so the more biliary the tumour the more the surveillance has to look outside the liver.",
-     "avoid": "Do not run a six-monthly HCC surveillance schedule. Grade D: no study has tested a surveillance interval in this disease, and the three-monthly interval is reasoning from the recurrence timing plus concordance with the OPTN pathway's own three-monthly imaging requirement. It is an operating rule, not an evidence threshold.",
+     "avoid": "Do not run a six-monthly HCC surveillance schedule. Grade D: no study has tested a surveillance interval in this disease, and the three-monthly interval is reasoning from the recurrence timing plus concordance with the NLRB guidance route (nonstandard review)'s own three-monthly imaging requirement. It is an operating rule, not an evidence threshold.",
      "note": "Include the porta hepatis deliberately in the reporting request. The lymph node was the second commonest site of first recurrence in the Japanese resection series, unlike HCC, and where nodal recurrence occurs it concentrates at the hepatic hilum (62.3%) and the portal vein–vena cava region (39.6%) — from 53 patients who had already recurred in nodes, of whom 11 had cHCC-CCA, so that is a map of where to look rather than a measure of how often."
     },
     {
@@ -1064,7 +1064,7 @@
       "31544304"
      ],
      "pref": "Any recurrence in a patient still fit for systemic therapy, particularly where response is discordant across lesions. NCCN recommends considering repeat biopsy in metastatic or locally advanced recurrence after prior resection or local therapy, to establish the dominant histology — and treating an isolated single-component recurrence with the regimen for that component.",
-     "avoid": "Do not re-biopsy where the result cannot change the plan, and do not read a single-component recurrence biopsy as proof that only that component remains. The sampling problem of Gate 1 applies unchanged: CK19 was positive in 33% of pre-operative biopsies against 84% of the matching specimens. No study has measured biopsy performance at recurrence in this disease."
+     "avoid": "Do not re-biopsy where the result cannot change the plan, and do not read a single-component recurrence biopsy as proof that only that component remains. The sampling problem of clinical decision 1 applies unchanged: CK19 was positive in 33% of pre-operative biopsies against 84% of the matching specimens. No study has measured biopsy performance at recurrence in this disease."
     }
    ],
    "alt": [
@@ -1087,7 +1087,7 @@
       {
        "name": "Systemic therapy at recurrence",
        "g": "C",
-       "when": "The default for multifocal, nodal or extrahepatic recurrence. This is Gate 7, with the component question re-asked on the recurrence biopsy rather than the primary.",
+       "when": "The default for multifocal, nodal or extrahepatic recurrence. This is clinical decision 7, with the component question re-asked on the recurrence biopsy rather than the primary.",
        "pref": "Most recurrences. Recurrent disease does worse than primary disease on the only cohort that separated them — median overall survival 11.4 against 21.4 months, p=0.011 — so the conversation should start from that figure, not from the first-line figures.",
        "avoid": "Do not carry over a first-line regimen that has already failed, and do not assume the backbone chosen for the primary is still the right one.",
        "refs": [
@@ -1108,7 +1108,7 @@
       }
      ],
      "order": "Ordered from the narrowest applicable option to the broadest, not by comparative evidence — none exists for recurrence management in this disease. The one quantitative anchor is that recurrent disease does substantially worse than primary disease.",
-     "flagnote": "Ratification item: what surveillance schedule does this programme adopt after resection and after transplantation for cHCC-CCA, and for how long? No guideline specifies one for this histology; NCCN says plainly for biliary tract cancer that there are no data to support a specific surveillance schedule. Audit: surveillance adherence, site of first recurrence, and interval from operation to recurrence."
+     "flagnote": "Local approval item: what surveillance schedule does this programme adopt after resection and after transplantation for cHCC-CCA, and for how long? No guideline specifies one for this histology; NCCN says plainly for biliary tract cancer that there are no data to support a specific surveillance schedule. Audit: surveillance adherence, site of first recurrence, and interval from operation to recurrence."
     }
    ],
    "avoid": [
@@ -1322,7 +1322,7 @@
      "Confirmed in 48 of 117 (41%); changed to iCCA in 23, cHCC-CCA in 13, gallbladder in 1, indeterminate in 32"
     ]
    ],
-   "foot": "The pattern across every row is the same: nothing here is sensitive enough to exclude the diagnosis, and only the biopsy is specific enough to confirm it — and the biopsy misses half. A biopsy reporting cHCC-CCA is almost certainly right; a biopsy reporting pure HCC in a tumour whose markers or imaging do not fit has told you very little, and the CK19 figures say why: the needle sees the hepatocellular component and misses the biliary one. The explant literature is the proof — in one transplant series all 32 cases, in another all 40, in another all 49 and in another all 19 were diagnosed only after the organ came out, and in the UNOS registry 89.9% of transplanted cHCC-CCA patients carried a pre-transplant HCC diagnosis. Every series in this table had pathological proof in every lesion and down-sampled HCC relative to true prevalence, so only sensitivity and specificity transfer; the lesions managed on imaging alone are absent from all of them. The operational consequence is in Gate 1: decide in advance what a single-component biopsy will change, because with 48% sensitivity the answer is usually nothing.",
+   "foot": "The pattern across every row is the same: nothing here is sensitive enough to exclude the diagnosis, and only the biopsy is specific enough to confirm it — and the biopsy misses half. A biopsy reporting cHCC-CCA is almost certainly right; a biopsy reporting pure HCC in a tumour whose markers or imaging do not fit has told you very little, and the CK19 figures say why: the needle sees the hepatocellular component and misses the biliary one. The explant literature is the proof — in one transplant series all 32 cases, in another all 40, in another all 49 and in another all 19 were diagnosed only after the organ came out, and in the UNOS registry 89.9% of transplanted cHCC-CCA patients carried a pre-transplant HCC diagnosis. Every series in this table had pathological proof in every lesion and down-sampled HCC relative to true prevalence, so only sensitivity and specificity transfer; the lesions managed on imaging alone are absent from all of them. The operational consequence is in clinical decision 1: decide in advance what a single-component biopsy will change, because with 48% sensitivity the answer is usually nothing.",
    "src": "Lee 2019, PMID 30552477; Fowler 2018, PMID 28580538; Ludwig 2019, PMID 30798397; Yang 2020, PMID 33362387; He 2025, PMID 40603768; Gigante 2019, PMID 31544304; Chi 2019, PMID 30876788; Jung 2017, PMID 28027599; Kim 2025, PMID 41399117; De Martin 2020, PMID 32090444; Jaradat 2021, PMID 32970878; Kodali 2026, PMID 41685088; Sierra 2026, PMID 42049568; Gerdes 2026, PMID 41564818; Hong 2026, PMID 41781152; Lee 2026, PMID 41639545; Tanabe 2025, PMID 40037890"
   }
  ],
@@ -1381,7 +1381,7 @@
   },
   {
    "t": "The local CPG's \"regardless of size\" is the widest gap between any two documents on this page, and the evidence does not support it.",
-   "why": "The OPTN pathway sets solitary and 3 cm or less; the ILTS-ILCA iCCA statement sets 3 cm; the 12-centre series used Milan; the most favourable subgroups in the Spanish and Korean series were 2 cm or less. Size above 3 cm was associated with mortality in the 19-patient multicentre transplant series, whose mean tumour was 6.1 cm with 73.7% multinodular disease and 36.8% beyond Milan, and which recurred in 64.7% at a median of 4 months. In the Spanish matched cohort even the uninodular tumours of 2 cm or less gave 62% against 80% 5-year survival (12 per arm, p=0.4), and 16 patients were removed from that study because their disease was too advanced to match any HCC control — those 16 had 28% 5-year survival and 51% recurrence. The CPG was written when there was no exception pathway to align with; there is one now. Two further gaps sit alongside it. The CPG's adjuvant risk tiers contradict themselves — the moderate-risk tier requires a single lesion under 3 cm while the high-risk tier is triggered at 6 cm or more, so a single 4 cm well-differentiated tumour with clear margins and negative nodes meets neither definition. And its induction regimen list (FOLFOX, FOLFIRI, gemcitabine-capecitabine, gemcitabine-cisplatin) predates TOPAZ-1, KEYNOTE-966, IMbrave150 and HIMALAYA, where NCCN's current position for advanced mixed tumours is cisplatin-gemcitabine with durvalumab or pembrolizumab. The document's newest reference is from 2018 and it cites NCCN v1.2017."
+   "why": "The NLRB guidance route (nonstandard review) sets solitary and 3 cm or less; the ILTS-ILCA iCCA statement sets 3 cm; the 12-centre series used Milan; the most favourable subgroups in the Spanish and Korean series were 2 cm or less. Size above 3 cm was associated with mortality in the 19-patient multicentre transplant series, whose mean tumour was 6.1 cm with 73.7% multinodular disease and 36.8% beyond Milan, and which recurred in 64.7% at a median of 4 months. In the Spanish matched cohort even the uninodular tumours of 2 cm or less gave 62% against 80% 5-year survival (12 per arm, p=0.4), and 16 patients were removed from that study because their disease was too advanced to match any HCC control — those 16 had 28% 5-year survival and 51% recurrence. The CPG was written when there was no exception pathway to align with; there is one now. Two further gaps sit alongside it. The CPG's adjuvant risk tiers contradict themselves — the moderate-risk tier requires a single lesion under 3 cm while the high-risk tier is triggered at 6 cm or more, so a single 4 cm well-differentiated tumour with clear margins and negative nodes meets neither definition. And its induction regimen list (FOLFOX, FOLFIRI, gemcitabine-capecitabine, gemcitabine-cisplatin) predates TOPAZ-1, KEYNOTE-966, IMbrave150 and HIMALAYA, where NCCN's current position for advanced mixed tumours is cisplatin-gemcitabine with durvalumab or pembrolizumab. The document's newest reference is from 2018 and it cites NCCN v1.2017."
   },
   {
    "t": "Regional lymphadenectomy is recommended here on staging logic and recurrence pattern, not on a demonstrated survival benefit — and the cohort usually cited against it contradicts its own title.",
@@ -1397,11 +1397,11 @@
   },
   {
    "t": "Liver-directed therapy in this disease has no trial, no series of any size, and no modality comparison. Its entire evidence base is review-level synthesis of HCC and iCCA experience.",
-   "why": "Both interventional reviews state that essentially all their quantitative material concerns cholangiocarcinoma, and neither distinguishes the hypervascular HCC-dominant tumour that might respond to an arterial therapy from the hypovascular CCA-dominant one that will not — which is the single most important selection variable in this gate. The one dataset that stratified by component found adjuvant TACE helped only HCC-dominant tumours and only for early recurrence. The strongest number anywhere in this area is adjuvant post-operative TACE in 95 resected patients (HR 0.2 for overall survival, p=0.005, no confidence interval reported), from a hepatitis-B-endemic population, retrospective, with adjuvant TACE almost certainly given to selected patients. The page labels this Standard because it is what gets done and the board needs the honest figures, not because the modality is evidenced."
+   "why": "Both interventional reviews state that essentially all their quantitative material concerns cholangiocarcinoma, and neither distinguishes the hypervascular HCC-dominant tumour that might respond to an arterial therapy from the hypovascular CCA-dominant one that will not — which is the single most important selection variable in this assessment. The one dataset that stratified by component found adjuvant TACE helped only HCC-dominant tumours and only for early recurrence. The strongest number anywhere in this area is adjuvant post-operative TACE in 95 resected patients (HR 0.2 for overall survival, p=0.005, no confidence interval reported), from a hepatitis-B-endemic population, retrospective, with adjuvant TACE almost certainly given to selected patients. The page labels this Standard because it is what gets done and the board needs the honest figures, not because the modality is evidenced."
   },
   {
    "t": "Two intervals on this page are operating rules rather than evidence thresholds: the local protocol's three-monthly MR bone survey, and the three-monthly surveillance schedule this page recommends after treatment.",
-   "why": "The MR bone survey appears in no guideline and has no supporting data in this disease. It is a plausible safeguard in a tumour that metastasises to bone and it is the local written rule, so it stands until the group changes it — but it is grade D, it runs three times per listing cycle, and nobody has measured what it finds. The post-treatment surveillance interval is derived from recurrence timing: median recurrence-free survival of 7.27 months in a 95-patient resection cohort, 5-year recurrence-free survival of 12.2% in another, and recurrence above 60% in the narrative literature, so most events fall inside the window. No study has tested a surveillance interval in this histology, and NCCN states plainly for biliary tract cancer that there are no data supporting a specific schedule or set of tests. That the interval also matches the OPTN pathway's own imaging requirement is convenient, not evidential."
+   "why": "The MR bone survey appears in no guideline and has no supporting data in this disease. It is a plausible safeguard in a tumour that metastasises to bone and it is the local written rule, so it stands until the group changes it — but it is grade D, it runs three times per listing cycle, and nobody has measured what it finds. The post-treatment surveillance interval is derived from recurrence timing: median recurrence-free survival of 7.27 months in a 95-patient resection cohort, 5-year recurrence-free survival of 12.2% in another, and recurrence above 60% in the narrative literature, so most events fall inside the window. No study has tested a surveillance interval in this histology, and NCCN states plainly for biliary tract cancer that there are no data supporting a specific schedule or set of tests. That the interval also matches the NLRB guidance route (nonstandard review)'s own imaging requirement is convenient, not evidential."
   },
   {
    "t": "Several of the registry papers this page relies on contain internal numerical contradictions, and their affected figures should not be quoted at a board.",
@@ -1413,15 +1413,15 @@
   },
   {
    "t": "This page has no ratified roadmap behind it and no institutional position to report, so where the documents disagree it shows the disagreement rather than resolving it.",
-   "why": "The five existing disease pages transcribe a Memorial Hermann system roadmap that already exists and has been through specialty review. This one does not. Its only local source is a five-page transplant clinical practice guideline approved on 11 April 2022, which is authoritative for the transplant gate and silent on everything else — diagnosis outside the transplant context, staging, resection, lymphadenectomy, systemic therapy for non-candidates, liver-directed therapy, surveillance. Every one of those gates on this page is a draft written from guidelines and primary literature, and every flagnote is a decision the group has not yet taken."
+   "why": "The five existing disease pages transcribe a Memorial Hermann system roadmap that already exists and has been through specialty review. This one does not. Its only local source is a five-page transplant clinical practice guideline approved on 11 April 2022, which is authoritative for the transplant assessment and silent on everything else — diagnosis outside the transplant context, staging, resection, lymphadenectomy, systemic therapy for non-candidates, liver-directed therapy, surveillance. Every one of those decision points on this page is a draft written from guidelines and primary literature, and every flagnote is a decision the group has not yet taken."
   }
  ],
  "ops": {
   "board": [
    "Submission — an Epic form captures the imaging category and the specific LR-M features present, AFP and CA 19-9 with their dates, cirrhosis status and aetiology, whether tissue has been obtained and by what route, the histology including component proportion if known, nodal and extrahepatic findings, prior treatment, and whether the question is diagnosis, resectability, transplant candidacy or systemic therapy. Owner: submitting clinician.",
-   "Triage — a coordinator and a clinically trained gatekeeper check completeness, imaging adequacy and currency, whether histology exists, and whether the case is really a cHCC-CCA case or a separate synchronous HCC and iCCA, which is a different problem. Owners: coordinator and chair.",
+   "Triage — a coordinator and a clinical reviewer check completeness, imaging adequacy and whether the imaging is recent enough, whether histology exists, and whether the case is really a cHCC-CCA case or a separate synchronous HCC and iCCA, which is a different problem. Owners: coordinator and chair.",
    "The diagnosis flag — any case submitted as HCC with a raised CA 19-9 or CEA, or with any LR-M feature, is tagged at triage so the mixed question is asked explicitly rather than discovered on the specimen. This is the single highest-yield operational step in this disease. Owner: coordinator.",
-   "Attendance — hepatobiliary and transplant surgery, hepatology, medical oncology, diagnostic radiology, interventional radiology, radiation oncology and pathology are all required. A transplant surgeon must be present for any cirrhotic patient with a tumour of 3 cm or less, whatever the submitted question, because the needle and the operation can both close that door. Owners: specialty leads.",
+   "Attendance — hepatobiliary and transplant surgery, hepatology, medical oncology, diagnostic radiology, interventional radiology, radiation oncology and pathology are all required. A transplant surgeon must be present for any cirrhotic patient with a tumour of 3 cm or less, whatever the submitted question, so that diagnosis, biopsy planning, resection and transplant assessment are coordinated. Biopsy confirmation is required for the described mixed HCC–iCCA exception-review route; the perihilar primary-tumor biopsy restriction must not be applied to it. Owners: specialty leads.",
    "Pathology — pre-alerted for every case where cHCC-CCA is the question, so that both differentiations are looked for and the report states the component proportion, differentiation grade, lymphovascular and perineural invasion, margin status and nodes retrieved and involved. A biopsy originally read as HCC or iCCA in a flagged case is re-reviewed. Owner: pathology.",
    "Radiology — the observation is categorised with the LI-RADS version stated, the individual LR-M features are listed rather than summarised, and the porta hepatis and portal vein–vena cava nodal stations are reported explicitly on every study. Owner: diagnostic radiology.",
    "Staging statement — every case leaves the board with an AJCC 8th edition intrahepatic bile duct stage recorded, or an explicit note that it cannot yet be assigned and why. A BCLC stage alone is not an acceptable output. Owner: chair.",
@@ -1460,7 +1460,7 @@
    {
     "n": 2,
     "q": "Is the local Mixed Hepatocholangiocarcinoma CPG of 11 April 2022 reaffirmed, revised, or replaced?",
-    "why": "Its diagnostic criterion cannot be met as written — there is no cHCC-CCA imaging phenotype, and it asks only for biopsy or cytology showing malignancy where the OPTN pathway requires biopsy-proven mixed histology. It permits listing 'regardless of size' where every other document and every dataset sets a limit. It does not require cirrhosis. It states that the MELD exception will be sought 'once the exception is available from UNOS', and it is now available and narrower than the protocol. Its induction regimen list predates every immunotherapy combination now recommended, it specifies next-generation sequencing on the explant rather than the diagnostic specimen when 34.7% of these tumours carry a potentially actionable alteration, its adjuvant tiers leave a 3-to-6 cm gap, and its newest reference is from 2018.",
+    "why": "Its diagnostic criterion cannot be met as written — there is no cHCC-CCA imaging phenotype, and it asks only for biopsy or cytology showing malignancy where the NLRB guidance route (nonstandard review) requires biopsy-proven mixed histology. It permits listing 'regardless of size' where every other document and every dataset sets a limit. It does not require cirrhosis. It states that the MELD exception will be sought 'once the exception is available from UNOS', and it is now available and narrower than the protocol. Its induction regimen list predates every immunotherapy combination now recommended, it specifies next-generation sequencing on the explant rather than the diagnostic specimen when 34.7% of these tumours carry a potentially actionable alteration, its adjuvant tiers leave a 3-to-6 cm gap, and its newest reference is from 2018.",
     "audit": "Named owner, a revision date, and a standing reconciliation against the current OPTN guidance text and NCCN editions."
    },
    {
@@ -1502,13 +1502,13 @@
    {
     "n": 9,
     "q": "Surveillance schedule after resection and after transplantation, and for how long?",
-    "why": "No guideline specifies one for this histology, and NCCN says plainly for biliary tract cancer that there are no data to support a specific schedule or set of tests. The three-monthly interval on this page is derived from recurrence timing — median recurrence-free survival of 7.27 months in one resection cohort, 5-year recurrence-free survival of 12.2% in another — and from the OPTN pathway's own imaging requirement, not from a comparative study. The one variable that should shape it is the component proportion: extrahepatic or combined recurrence rose from 26.9% in HCC-dominant tumours to 50.5% in CCA-dominant ones (p=0.043).",
+    "why": "No guideline specifies one for this histology, and NCCN says plainly for biliary tract cancer that there are no data to support a specific schedule or set of tests. The three-monthly interval on this page is derived from recurrence timing — median recurrence-free survival of 7.27 months in one resection cohort, 5-year recurrence-free survival of 12.2% in another — and from the NLRB guidance route (nonstandard review)'s own imaging requirement, not from a comparative study. The one variable that should shape it is the component proportion: extrahepatic or combined recurrence rose from 26.9% in HCC-dominant tumours to 50.5% in CCA-dominant ones (p=0.043).",
     "audit": "Surveillance adherence, site of first recurrence, interval from operation to recurrence."
    },
    {
     "n": 10,
     "q": "Does this draft become the programme's pathway for this disease, and who owns it?",
-    "why": "Unlike the five existing disease pages, this one has no ratified roadmap behind it. The only local source is a transplant clinical practice guideline that is authoritative for one gate and silent on the other nine. Every gate outside the transplant question is a first draft written from guidelines and primary literature, and it needs specialty review before it is treated as institutional policy.",
+    "why": "Unlike the five existing disease pages, this one has no ratified roadmap behind it. The only local source is a transplant clinical practice guideline that is authoritative for one assessment and silent on the other nine. Every assessment outside the transplant question is a first draft written from guidelines and primary literature, and it needs specialty review before it is treated as institutional policy.",
     "audit": "Named owner, version and date, a multidisciplinary approval record, and an agreed update cycle covering NCCN editions, OPTN guidance revisions and the WHO classification."
    },
    {
@@ -1876,12 +1876,12 @@
   "localcpg": [
    "Local cHCC-CCA transplant CPG, 11 April 2022",
    "Guidelines & policy",
-   "Mixed Hepatocholangiocarcinoma (HCC-CCA) Clinical Practice Guideline. Liver Transplant Program; five pages; approved by the Liver CMPI Subcommittee 11 April 2022. Revision history: initial draft 27 April 2018 (Dr Keri Lunsford), initial approval 9 July 2018 by the Liver CMPI Subcommittee with Dr Ghobrial's revisions changing 'must' to 'should' and to 'may be excluded', revision 20 March 2022 (Dr Sudha Kodali) to read 'mixed hepato-cholangiocarcinoma', approved 11 April 2022. The authority for Gate 5 and for the induction, restaging, explant, adjuvant and immunosuppression structure on this page. Its newest cited reference is from 2018 and it cites NCCN Hepatobiliary Cancers v1.2017; the 2022 revision was a change of terminology, not of content, and it therefore predates the WHO 2019 reclassification, the 12-centre transplant analysis, the 2024 ILTS-ILCA consensus and the OPTN transplant-oncology guidance that now covers this diagnosis."
+   "Mixed Hepatocholangiocarcinoma (HCC-CCA) Clinical Practice Guideline. Liver Transplant Program; five pages; approved by the Liver CMPI Subcommittee 11 April 2022. Revision history: initial draft 27 April 2018 (Dr Keri Lunsford), initial approval 9 July 2018 by the Liver CMPI Subcommittee with Dr Ghobrial's revisions changing 'must' to 'should' and to 'may be excluded', revision 20 March 2022 (Dr Sudha Kodali) to read 'mixed hepato-cholangiocarcinoma', approved 11 April 2022. The authority for clinical decision 5 and for the induction, restaging, explant, adjuvant and immunosuppression structure on this page. Its newest cited reference is from 2018 and it cites NCCN Hepatobiliary Cancers v1.2017; the 2022 revision was a change of terminology, not of content, and it therefore predates the WHO 2019 reclassification, the 12-centre transplant analysis, the 2024 ILTS-ILCA consensus and the OPTN transplant-oncology guidance that now covers this diagnosis."
   ],
   "roadmapnone": [
    "No system roadmap exists",
    "Guidelines & policy",
-   "Unlike the five existing disease pages (hepatocellular carcinoma, colorectal liver metastases, intrahepatic cholangiocarcinoma, perihilar cholangiocarcinoma and neuroendocrine liver metastases), combined hepatocellular-cholangiocarcinoma has no Memorial Hermann system roadmap and no guideline alignment worksheet. There is therefore no ratified institutional position to report for any gate on this page other than the transplant gate, and no approved alignment decision anywhere on it."
+   "Unlike the five existing disease pages (hepatocellular carcinoma, colorectal liver metastases, intrahepatic cholangiocarcinoma, perihilar cholangiocarcinoma and neuroendocrine liver metastases), combined hepatocellular-cholangiocarcinoma has no Memorial Hermann system roadmap and no guideline alignment worksheet. There is therefore no ratified institutional position to report for any assessment on this page other than the transplant assessment, and no approved alignment decision anywhere on it."
   ],
   "trials2026": [
    "ClinicalTrials.gov, checked 7 October 2026",
@@ -1890,5 +1890,5 @@
    "https://clinicaltrials.gov/"
   ]
  },
- "provenance": "Second pass, revised 7 October 2026 after a full-text read of the page's primary literature. Every paper in the depot — 52 of them — was read in full and abstracted to a structured record carrying the authors' own stated limitations and an independent critique, and this page was then reworked gate by gate against those records. The revision corrected numbers, added the halves of results that had been left out, downgraded items whose critique undercut the claim, and removed figures that could not be verified; the honest section grew from 12 items to 22 and is the most useful part of the page. Three papers were added: the WHO editorial board's own summary of the 2019 classification (PMID 31433515), the first real-world comparison of the TOPAZ-1 regimen in cHCC-CCA against pure cholangiocarcinoma (PMID 42413329), and the largest genomic series in the entity, 150 cHCC-CCA against 2,372 HCC (PMID 41564818). The trial registry was read directly on 7 October 2026 to correct this page's previous claim that no prospective trial had ever existed: one randomised phase II did exist, accrued 4 patients of a planned 88 and has never reported, and four single-arm studies are now open or about to open. What is still cited from an abstract rather than a full-text read, and should be checked before any figure from it is used at a board: Beaufrère 2021 (33545267), the 2024 ILTS-ILCA consensus (40014003), the multicentre perineural invasion study (40675210), and the five trials quoted for their effect sizes — TOPAZ-1 (38319896), KEYNOTE-966 (37075781), ABC-02 (20375404), IMbrave150 (32402160) and HIMALAYA (38319892). Two papers could not be obtained at all: the 2018 propensity-matched transplant series (29573187), whose figures appear here only as reported by Lee 2026 and by the comparison table of Kodali 2026 and which is not cited as read, and Campani 2026 (41865801), which is not cited on this page. The AJCC manual and the WHO volume were likewise not in hand; the AJCC tables are as reproduced in NCCN and the WHO content is from the editorial board's summary and the consensus literature. There is no ratified Memorial Hermann system roadmap for combined hepatocellular-cholangiocarcinoma and no guideline alignment worksheet, so this page states no institutional position outside the transplant gate and resolves no guideline disagreement on its own authority. The one local source is the Mixed Hepatocholangiocarcinoma (HCC-CCA) Clinical Practice Guideline of the Liver Transplant Program, approved by the Liver CMPI Subcommittee on 11 April 2022 (initial draft 27 April 2018, approved 9 July 2018, revised 20 March 2022); it is the authority for Gate 5 and for the induction, restaging, explant, adjuvant and immunosuppression structure, and it is silent on diagnosis outside the transplant context, staging, resection, lymphadenectomy, systemic therapy for non-candidates, liver-directed therapy and surveillance. Its newest reference is from 2018, it cites NCCN Hepatobiliary Cancers v1.2017, and its 2022 revision changed terminology rather than content, so the page flags where it has fallen behind: the WHO 2019 reclassification and the definitional requirement for one tumour with two differentiations; the OPTN National Liver Review Board transplant-oncology guidance, which now provides the MELD exception the CPG says is awaited, at a narrower threshold of biopsy-proven solitary mixed HCC-iCCA of 3 cm or less with cirrhosis against the CPG's 'regardless of size'; the requirement for biopsy-proven mixed histology rather than cytology showing malignancy; the softening of poor differentiation to a feature that 'may be excluded'; an induction regimen list that predates every immunotherapy combination now recommended; a 3-to-6 cm gap in its own adjuvant risk tiers; and next-generation sequencing specified on the explant rather than the diagnostic specimen. The guideline sources are the programme-supplied NCCN extractions — Hepatocellular Carcinoma, Principles of Mixed HCC-CCA, Principles of Core Needle Biopsy and Principles of Pathology, whose Discussion is dated 14 August 2026 but which carries no printed version number in the extraction, and Biliary Tract Cancers v1.2026 of 10 March 2026, Principles of Mixed HCC-CCA, Principles of Surgery for intrahepatic disease and the AJCC 8th edition intrahepatic bile duct tables — together with the OPTN transplant-oncology guidance as retrieved on 6 October 2026, the 2024 ILTS-ILCA consensus (which makes no cHCC-CCA-specific statement), and WHO Digestive System Tumours 5th edition 2019 as reported in the editorial board's summary and the consensus and review literature rather than from the volume itself. The primary literature is 61 papers, every PMID verified against PubMed on 6 October 2026. Every treatment claim on this page is retrospective or extrapolated: no prospective trial in this disease has ever reported, patients with this histology were excluded from the landmark trials in both hepatocellular carcinoma and biliary tract cancer — by name in the case of KEYNOTE-966 — and so no item on the page is graded above C and most of the operating rules are D. This page is a draft for multidisciplinary review, it is not active clinical policy, it does not replace clinician judgement, and every numeric criterion — the OPTN text above all — must be verified against the current source before use."
+ "provenance": "Second pass, revised 7 October 2026 after a full-text read of the page's primary literature. Every paper in the depot — 52 of them — was read in full and abstracted to a structured record carrying the authors' own stated limitations and an independent critique, and this page was then reworked assessment by assessment against those records. The revision corrected numbers, added the halves of results that had been left out, downgraded items whose critique undercut the claim, and removed figures that could not be verified; the limited-evidence section grew from 12 items to 22 and is the most useful part of the page. Three papers were added: the WHO editorial board's own summary of the 2019 classification (PMID 31433515), the first real-world comparison of the TOPAZ-1 regimen in cHCC-CCA against pure cholangiocarcinoma (PMID 42413329), and the largest genomic series in the entity, 150 cHCC-CCA against 2,372 HCC (PMID 41564818). The trial registry was read directly on 7 October 2026 to correct this page's previous claim that no prospective trial had ever existed: one randomised phase II did exist, accrued 4 patients of a planned 88 and has never reported, and four single-arm studies are now open or about to open. What is still cited from an abstract rather than a full-text read, and should be checked before any figure from it is used at a board: Beaufrère 2021 (33545267), the 2024 ILTS-ILCA consensus (40014003), the multicentre perineural invasion study (40675210), and the five trials quoted for their effect sizes — TOPAZ-1 (38319896), KEYNOTE-966 (37075781), ABC-02 (20375404), IMbrave150 (32402160) and HIMALAYA (38319892). Two papers could not be obtained at all: the 2018 propensity-matched transplant series (29573187), whose figures appear here only as reported by Lee 2026 and by the comparison table of Kodali 2026 and which is not cited as read, and Campani 2026 (41865801), which is not cited on this page. The AJCC manual and the WHO volume were likewise not in hand; the AJCC tables are as reproduced in NCCN and the WHO content is from the editorial board's summary and the consensus literature. There is no ratified Memorial Hermann system roadmap for combined hepatocellular-cholangiocarcinoma and no guideline alignment worksheet, so this page states no institutional position outside the transplant assessment and resolves no guideline disagreement on its own authority. The one local source is the Mixed Hepatocholangiocarcinoma (HCC-CCA) Clinical Practice Guideline of the Liver Transplant Program, approved by the Liver CMPI Subcommittee on 11 April 2022 (initial draft 27 April 2018, approved 9 July 2018, revised 20 March 2022); it is the authority for clinical decision 5 and for the induction, restaging, explant, adjuvant and immunosuppression structure, and it is silent on diagnosis outside the transplant context, staging, resection, lymphadenectomy, systemic therapy for non-candidates, liver-directed therapy and surveillance. Its newest reference is from 2018, it cites NCCN Hepatobiliary Cancers v1.2017, and its 2022 revision changed terminology rather than content, so the page flags where it has fallen behind: the WHO 2019 reclassification and the definitional requirement for one tumour with two differentiations; the OPTN National Liver Review Board transplant-oncology guidance, which now provides the MELD exception the CPG says is awaited, at a narrower threshold of biopsy-proven solitary mixed HCC-iCCA of 3 cm or less with cirrhosis against the CPG's 'regardless of size'; the requirement for biopsy-proven mixed histology rather than cytology showing malignancy; the softening of poor differentiation to a feature that 'may be excluded'; an induction regimen list that predates every immunotherapy combination now recommended; a 3-to-6 cm gap in its own adjuvant risk tiers; and next-generation sequencing specified on the explant rather than the diagnostic specimen. The guideline sources are the programme-supplied NCCN extractions — Hepatocellular Carcinoma, Principles of Mixed HCC-CCA, Principles of Core Needle Biopsy and Principles of Pathology, whose Discussion is dated 14 August 2026 but which carries no printed version number in the extraction, and Biliary Tract Cancers v1.2026 of 10 March 2026, Principles of Mixed HCC-CCA, Principles of Surgery for intrahepatic disease and the AJCC 8th edition intrahepatic bile duct tables — together with the OPTN transplant-oncology guidance as retrieved on 6 October 2026, the 2024 ILTS-ILCA consensus (which makes no cHCC-CCA-specific statement), and WHO Digestive System Tumours 5th edition 2019 as reported in the editorial board's summary and the consensus and review literature rather than from the volume itself. The primary literature is 61 papers, every PMID verified against PubMed on 6 October 2026. Every treatment claim on this page is retrospective or extrapolated: no prospective trial in this disease has ever reported, patients with this histology were excluded from the landmark trials in both hepatocellular carcinoma and biliary tract cancer — by name in the case of KEYNOTE-966 — and so no item on the page is graded above C and most of the operating rules are D. This page is a draft for multidisciplinary review, it is not active clinical policy, it does not replace clinician judgement, and every numeric criterion — the OPTN text above all — must be verified against the current source before use."
 }

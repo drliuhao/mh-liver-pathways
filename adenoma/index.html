@@ -7,10 +7,10 @@
 <meta name="description" content="Hepatocellular adenoma — Memorial Hermann system roadmap v0.2, draft under development.">
 <title>Memorial Hermann Hepatocellular Adenoma Pathway</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
-<link rel="stylesheet" href="../assets/portal-navigation.css"><script src="../assets/portal-navigation.js?v=20261023-consistent" defer></script></head>
+<link rel="stylesheet" href="../assets/portal-navigation.css"><script src="../assets/portal-navigation.js?v=20261023-language" defer></script></head>
 <body>
 <style>
-/* One renderer, four tumours: the gates come from data/pathway.json, the
+/* One renderer, four tumours: the gates come from data/pathway.json?v=20261023-language, the
    liver-directed matrix from the shared LRT_Evidence_Matrix export. Layout
    follows the HCC console: a gate strip, the answer below it, then the
    evidence library everything links back into. */
@@ -87,7 +87,7 @@ nav.sec a:hover{color:var(--ink); background:var(--surface2)}
 .p-reas{color:var(--amber); border-color:var(--amber); background:var(--amber-soft)}
 .p-trial{color:var(--violet); border-color:var(--violet); background:var(--violet-soft)}
 .p-avoid{color:var(--clay); border-color:var(--clay); background:var(--clay-soft)}
-.grade{display:inline-flex; align-items:center; justify-content:center; width:19px; height:19px; border-radius:4px;
+.grade{display:inline-flex; align-items:center; justify-content:center; min-width:19px; width:auto; padding:0 5px; white-space:nowrap; height:19px; border-radius:4px;
   font-size:11.5px; font-weight:700; border:1px solid var(--line); background:var(--surface2); color:var(--ink); flex:none}
 .grade.A{background:var(--navy); color:var(--surface); border-color:var(--navy)}
 .grade.B{background:var(--teal); color:var(--surface); border-color:var(--teal)}
@@ -316,7 +316,7 @@ footer p + p{margin-top:8px}
 </style>
 
 <header class="top">
-  <div class="devbar">Under development — draft content under active revision. Not ratified clinical policy, and not for patient care decisions.</div>
+  <div class="devbar">Clinical review draft · Not approved institutional policy · Not an automated eligibility tool.</div>
   <div class="topin">
     <div class="brand" id="brand">Memorial Hermann pathway<span>Loading…</span></div>
     <nav class="sec" id="nav">
@@ -328,7 +328,7 @@ footer p + p{margin-top:8px}
 <div class="wrap">
 
 <div class="hero">
-  <h1>What we do, and how good the evidence is</h1>
+  <h1>Treatment decisions and supporting evidence</h1>
   <p class="sub" id="lead">Loading the pathway…</p>
   <div class="statusbar" id="statusbar"></div>
 </div>
@@ -337,7 +337,7 @@ footer p + p{margin-top:8px}
 
 <section id="tree">
   <div class="sechead">
-    <h2 id="gatelabel">The decision in front of you</h2>
+    <h2 id="gatelabel">Clinical decisions</h2>
     <p id="gateintro"></p>
   </div>
   <div class="entry" id="entry"></div>
@@ -347,7 +347,7 @@ footer p + p{margin-top:8px}
 
 <section id="stage">
   <div class="answer" id="answer"></div>
-  <p class="small muted" style="margin-top:10px">Departure from a gate default is permitted when anatomy, biology, liver function, transplant strategy, comorbidity, access or patient goals make it unsuitable — the reason must be recorded. It is not a licence to substitute a lower-evidence modality for a proven curative option.</p>
+  <p class="small muted" style="margin-top:10px">Individualize treatment for anatomy, tumor behavior, liver function, transplant plans, other illnesses, treatment access, and patient goals. Document the reason for a different approach and discuss established curative options when appropriate.</p>
 </section>
 
 <section id="lrt" hidden>
@@ -356,7 +356,7 @@ footer p + p{margin-top:8px}
     <p>Intent is assigned before a device is chosen. Curative intent means an attempt to eradicate all known cancer; it does not establish a cure rate. Local control, complete radiographic response, complete pathologic necrosis in a treated lesion, and overall survival are four different outcomes.</p>
   </div>
   <div class="card" style="margin-top:16px">
-    <h3>There is no ladder</h3>
+    <h3>Choose treatment by its goal and suitability</h3>
     <p>Do not use a universal ablation → SBRT → Y-90 → TACE → HAI → histotripsy sequence. <b>An upfront alternative chosen because of anatomy or organ reserve is not a post-progression second line.</b> Bridge, downstaging and conversion preserve a later resection or transplant opportunity; conversion treatment is not itself the curative operation.</p>
     <p class="small muted">The tiers below are a clinical synthesis of treatment intent. They are not the roadmap's A–D evidence grading system, and the two should not be read as equivalent.</p>
   </div>
@@ -368,13 +368,13 @@ footer p + p{margin-top:8px}
 
 <section id="honest">
   <div class="sechead">
-    <h2>What we do that is not evidence based</h2>
-    <p>Retained because they are defensible practice here, but each rests on anatomy, physiology or consensus rather than comparative outcome data. Each requires prospective outcome tracking, and none should be quoted to a patient, a payer or a referring clinician as evidence based.</p>
+    <h2>Practice choices with limited evidence</h2>
+    <p>These proposed practice choices rely mainly on clinical reasoning or expert consensus, with limited comparative outcome data. Discuss the uncertainty and track outcomes prospectively.</p>
     <button class="xpand" type="button" data-fold="honestBodyWrap">Show</button>
   </div>
   <div id="honestBodyWrap" hidden><div class="tablewrap" style="margin-top:16px">
     <table class="big">
-      <thead><tr><th style="width:38%">What the roadmap says</th><th>What is actually known, and why it is kept</th></tr></thead>
+      <thead><tr><th style="width:38%">What the roadmap says</th><th>Evidence, limitations, and rationale</th></tr></thead>
       <tbody id="honestBody"></tbody>
     </table>
   </div></div>
@@ -382,8 +382,8 @@ footer p + p{margin-top:8px}
 
 <section id="ops">
   <div class="sechead">
-    <h2>Operating model, quality and approvals</h2>
-    <p>The tumour board model, the quality dashboard and the decisions that need local approval. These are stakeholder-derived operating requirements — <b>evidence grade D by construction</b>, local policy choices with no comparative outcome evidence. They are labelled Standard because the programme chose them, not because trials support them.</p>
+    <h2>Team responsibilities, quality monitoring, and approvals</h2>
+    <p>These proposed team processes and quality measures need local approval. They are based on operational consensus (grade D), not comparative treatment trials.</p>
     <button class="xpand" type="button" data-fold="opsBody">Show</button>
   </div>
   <div id="opsBody" hidden>
@@ -409,7 +409,7 @@ footer p + p{margin-top:8px}
 </section>
 
 <footer>
-  <p id="prov"></p>
+  <details class="source-history"><summary>Source history and review limitations</summary><p id="prov"></p></details>
   <p><b>Status.</b> Draft for multidisciplinary and institutional governance review. Not active clinical policy. It does not replace clinician judgement, current drug labelling, OPTN policy, or patient-specific informed consent. Every criterion drawn from OPTN policy, drug labelling or device authorisation must be re-verified against the current source at implementation and at each scheduled review. Clinical transplant candidacy and allocation eligibility are separate judgements.</p>
 </footer>
 
@@ -421,8 +421,8 @@ const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":
 /* the quantifier is highlighted: ALL and ANY decide how the criteria combine */
 function reqLabel(req){
   return req === "any"
-    ? '<b class="qw any">Any</b> one of the following'
-    : '<b class="qw all">All</b> of the following';
+    ? '<b class="qw any">Any</b>&nbsp;one of the following'
+    : '<b class="qw all">All</b>&nbsp;of the following';
 }
 const LABELCLS = {"Standard":"p-std","Preferred":"p-pref","Reasonable":"p-reas","Trial only":"p-trial","Avoid":"p-avoid"};
 const FLAGDEF = {
@@ -467,16 +467,16 @@ function recHTML(r){
       <div class="opt">
         <div class="optn">${r.rank === true ? i+1 : "·"}</div>
         <div style="min-width:0">
-          <div class="optname">${esc(o.name)}${o.g?`<span class="grade ${esc(o.g)}">${esc(o.g)}</span>`:""}${(o.flags||[]).map(f=>`<span class="flag">${esc(f)}</span>`).join(" ")}</div>
+          <div class="optname">${esc(o.name)}${o.g?`<span class="grade ${esc(o.g)}">Evidence ${esc(o.g)}</span>`:""}${(o.flags||[]).map(f=>`<span class="flag">${esc(f)}</span>`).join(" ")}</div>
           <div class="optwhen">${esc(o.when)}</div>
           ${detail(o)}
         </div>
       </div>`).join("")}</div>
-    ${r.order?`<details class="more"><summary>Why this order</summary><div class="moreinner"><div class="orderrule" style="border-top:0; margin-top:2px; padding-top:0">${esc(r.order)}</div></div></details>`:""}
-    ${r.flagnote?`<details class="more"><summary>Ratification item</summary><div class="moreinner"><div class="callout amber" style="font-size:12.8px">${esc(r.flagnote)}</div></div></details>`:""}`
+    ${r.order?`<details class="more"><summary>How to choose among these options</summary><div class="moreinner"><div class="orderrule" style="border-top:0; margin-top:2px; padding-top:0">${esc(r.order)}</div></div></details>`:""}
+    ${r.flagnote?`<details class="more"><summary>Decision requiring local approval</summary><div class="moreinner"><div class="callout amber" style="font-size:12.8px">${esc(r.flagnote)}</div></div></details>`:""}`
     : `<div>${esc(r.t)}</div>${detail(r)}`;
   return `<div class="rec">
-    <div class="recmeta"><span class="pill ${cls}">${esc(r.l)}</span>${r.g?`<span class="grade ${esc(r.g)}">${esc(r.g)}</span>`:""}${flags}</div>
+    <div class="recmeta"><span class="pill ${cls}">${esc(r.l)}</span>${r.g?`<span class="grade ${esc(r.g)}">Evidence ${esc(r.g)}</span>`:""}${flags}</div>
     ${body}
   </div>`;
 }
@@ -487,7 +487,7 @@ function renderGate(id){
   document.querySelectorAll(".st").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.stage===id)));
   const col = (name, items) => `<div class="acol"><div class="eyebrow">${name}</div>${
     (items&&items.length) ? items.map(recHTML).join("")
-      : `<p class="small muted">Nothing is listed here for this gate.</p>`}</div>`;
+      : `<p class="small muted">No additional recommendation is listed for this decision.</p>`}</div>`;
   document.getElementById("answer").innerHTML = `
     <div class="ahead">
       <h3>${esc(s.name)}</h3>
@@ -668,13 +668,13 @@ function build(){
   document.getElementById("lead").textContent = P.lead;
   document.getElementById("gatelabel").textContent = P.gatelabel;
   document.getElementById("gateintro").innerHTML =
-    "The gates run in the order the roadmap asks them, and the order is the point: each one can foreclose the next. "
-    + "Choose a gate to see the standard, the reasonable alternative, what to avoid, and the grade behind each — "
-    + "every claim tied to the paper it came from.";
+    "Review the decisions that apply to the patient. Some assessments should occur before biopsy or treatment. "
+    + "Select a decision to see the recommended approach, alternatives, precautions, and supporting evidence. "
+    + "Open the source links for details.";
   document.getElementById("statusbar").innerHTML =
-    `<span class="chip warn">Draft — not ratified clinical policy</span>
+    `<span class="chip warn">Draft — not approved clinical policy</span>
      <span class="chip">${esc(P.short)} roadmap ${esc(P.version)} · ${esc((P.batch || "Batch 07").split(",")[0])}</span>
-     <span class="chip">${P.gates.length} gates · ${Object.keys(REF).length} papers</span>
+     <span class="chip">${P.gates.length} decisions · ${Object.keys(REF).length} papers</span>
      <button class="xpand" type="button" id="expandAllSections" data-open="0" style="margin-left:0">Expand all sections</button>`;
   document.getElementById("expandAllSections").addEventListener("click", e=>{
     const b = e.currentTarget, open = b.dataset.open !== "1";
@@ -690,9 +690,9 @@ function build(){
     for(const o of (it.opts||[])) for(const f of (o.flags||[])) usedFlags.add(f);
   }
   const labelRows = [
-    ["p-std","Standard","Default when eligibility is met; departure needs a recorded reason."],
-    ["p-reas","Reasonable","Acceptable after documented MDT review; benefit is context dependent."],
-    ["p-avoid","Avoid","Expected harm, futility, or absent benefit generally outweighs benefit."]
+    ["p-std","Standard","Recommended approach for the stated situation. Document reasons for another approach."],
+    ["p-reas","Reasonable","An option after multidisciplinary review of benefits and risks."],
+    ["p-avoid","Avoid","Not recommended in the stated situation; see the specific reason and evidence."]
   ];
   document.getElementById("legend").innerHTML = `
     <div class="lg">
@@ -705,18 +705,18 @@ function build(){
       <div class="lgrow"><b class="grade B">B</b><span>One randomised trial, prospective comparative evidence, or strong prospective cohorts.</span></div>
       <div class="lgrow"><b class="grade C">C</b><span>Single-arm prospective, retrospective comparative, or inconsistent evidence.</span></div>
       <div class="lgrow"><b class="grade D">D</b><span>Expert consensus or local operational requirement, no comparative outcome data.</span></div>
-      <div class="lgrow small muted" style="margin-top:6px"><span>A strong label does not imply a high grade. Several operating requirements are deliberately Standard at grade D because they are local policy choices.</span></div>
+      <div class="lgrow small muted" style="margin-top:6px"><span>Recommendation strength and evidence quality are separate. Local workflow proposals may have grade D evidence and still require institutional approval.</span></div>
     </div>
     ${usedFlags.size ? `<div class="lg">
-      <h4>Dependency flags — what it rests on locally</h4>
+      <h4>Requirements for delivery</h4>
       ${[...usedFlags].map(f=>`<div class="lgrow"><b class="flag">${esc(f)}</b><span>${esc(FLAGDEF[f]||"A local dependency named by the roadmap.")}</span></div>`).join("")}
     </div>` : ""}`;
 
   /* the tree in one line: the order of the questions is itself the pathway */
   document.getElementById("entry").innerHTML =
-    `<b>The order of the questions.</b> ` +
+    `<b>Clinical assessment and treatment.</b> ` +
     P.gates.map(g=>esc(g.name)).join(" &nbsp;→&nbsp; ") +
-    `. Each gate can foreclose the ones after it.`;
+    `. Revisit relevant decisions when the patient’s condition or treatment response changes.`;
 
   /* quick reference: the scores and criteria people look up mid-discussion */
   const icon = `<svg class="ricon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="2.5"/><path d="M8 7.5h8M8 12h8M8 16.5h5"/></svg>`;
@@ -792,13 +792,13 @@ function build(){
   for(const [k,v] of Object.entries(NONPM)) ALL.push({id:k, tag:v[0], group:v[1], cit:v[2], url:v[3]});
   renderEvGroups(); renderEv();
 
-  document.getElementById("prov").innerHTML = "<b>Provenance.</b> " + esc(P.provenance);
+  document.getElementById("prov").innerHTML = "<b>Source history.</b> " + esc(P.provenance);
 }
 
 /* ---------- load ---------- */
 Promise.all([
-  fetch("data/pathway.json").then(r=>r.json()),
-  fetch("data/critique.json").then(r=>r.ok ? r.json() : {}).catch(()=>({}))
+  fetch("data/pathway.json?v=20261023-language").then(r=>r.json()),
+  fetch("data/critique.json?v=20261023-language").then(r=>r.ok ? r.json() : {}).catch(()=>({}))
 ]).then(([p, crit])=>{
   P = p;
   CRIT = crit || {};
@@ -819,7 +819,7 @@ Promise.all([
     const others = MX.tumours.filter(t=>t[0]!==P.matrix).map(t=>t[2]);
     document.getElementById("lrtsrc").innerHTML =
       `Source: <code>LRT_Evidence_Matrix</code>, Batch 07, filtered to the ${esc(P.name.toLowerCase())} column. `
-      + `The full matrix also covers ${esc(others.join(", ").toLowerCase())}; perihilar cholangiocarcinoma is not in it.`;
+      + `The full matrix also covers ${esc(others.join(", ").toLowerCase())}; the shared matrix also includes perihilar cholangiocarcinoma.`;
     /* only the papers this tumour's cells actually cite go into the library */
     const used = new Set();
     for(const [key, c] of Object.entries(MX.cells)){

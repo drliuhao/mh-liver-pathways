@@ -4,13 +4,13 @@
   "name": "Colorectal liver metastases",
   "version": "v0.8",
   "batch": "Batch 09, 15 October 2026",
-  "lead": "Whether every site of hepatic disease can be eradicated — now, after a defined course of conversion therapy, or only by replacing the liver — and what to do when the answer is no.",
-  "gatelabel": "The decision in front of you",
+  "lead": "Assess whether all known disease can be removed or ablated, whether treatment could make this possible, and whether a defined transplant pathway applies.",
+  "gatelabel": "Clinical decisions",
   "gates": [
     {
       "id": "1",
       "tone": "sys",
-      "name": "1 · Staged and genotyped",
+      "name": "1 · Complete staging and molecular testing",
       "req": "all",
       "crit": [
         "Contrast CT of chest, abdomen and pelvis, plus liver MRI with hepatocyte-specific or diffusion-weighted sequences whenever local therapy is contemplated",
@@ -19,7 +19,7 @@
         "Primary tumour status recorded, with pelvic MRI and baseline bowel, urinary and sexual function for a rectal primary",
         "Future liver remnant, prior treatment map including previous ablation zones, and the clinical risk score recorded"
       ],
-      "ask": "Do I know the whole disease, the liver and the biology well enough to say which phase this patient is in?",
+      "ask": "Are staging, molecular testing, and liver assessment complete enough to plan treatment?",
       "standard": [
         {
           "t": "Stage with contrast CT of chest, abdomen and pelvis and add a liver MRI with hepatocyte-specific or diffusion-weighted sequences before any hepatectomy or ablation.",
@@ -168,7 +168,7 @@
     {
       "id": "2",
       "tone": "cure",
-      "name": "2 · Clearable now",
+      "name": "2 · Resection or ablation feasible now",
       "req": "all",
       "crit": [
         "Every original site of hepatic disease treatable by resection, margin-verified thermal ablation, or the two combined",
@@ -177,7 +177,7 @@
         "No extrahepatic disease, or disease that is limited, controllable and itself completely treatable",
         "Patient fit for the operation that clearance actually requires"
       ],
-      "ask": "Can I eradicate every deposit in this liver now, and prove the margin afterwards?",
+      "ask": "Can all known disease be removed or ablated now with adequate margins and liver function?",
       "standard": [
         {
           "t": "Parenchymal-sparing resection is the reference clearance strategy, because it is the only route that permits pathologic margin assessment.",
@@ -350,7 +350,7 @@
     {
       "id": "3",
       "tone": "loco",
-      "name": "3 · Clearable after conversion",
+      "name": "3 · Treat and reassess for resection or ablation",
       "req": "any",
       "crit": [
         "Anatomic unresectability only — remnant too small or vascular and biliary relations prohibitive — with biology controlled",
@@ -359,7 +359,7 @@
         "Hepatic burden drives the risk and liver-first sequencing would bring clearance forward",
         "Disease in the planned future remnant that a defined course of therapy could clear"
       ],
-      "ask": "If I cannot clear this liver today, what specific step would make clearance possible, who owns it, and by when?",
+      "ask": "What treatment could make complete tumor removal or ablation possible, and when will resectability be reassessed?",
       "standard": [
         {
           "t": "Give conversion therapy against a defined surgical endpoint, and reassess resectability with a surgeon in the room every 8 weeks.",
@@ -504,7 +504,7 @@
     {
       "id": "4",
       "tone": "cure",
-      "name": "4 · Transplant candidate",
+      "name": "4 · Assess transplant eligibility",
       "req": "all",
       "crit": [
         "Permanent unresectability formally determined, with a written record of why resection, margin-verified ablation, portal vein embolisation or liver venous deprivation, staged hepatectomy, ALPPS and hepatic arterial infusion each cannot clear the liver at acceptable functional risk",
@@ -513,7 +513,7 @@
         "At least 12 months from CRLM diagnosis and at least six months of stability or regression on systemic or locoregional therapy; CEA not above 80 µg/L; no hepatic lesion above 10 cm before treatment",
         "ECOG 0–1 with adequate organ function and low frailty, under a written protocol with a transplant-oncology MDT, a defined graft strategy, a prospective registry and an agreed recurrence plan"
       ],
-      "ask": "Is this permanently unresectable, liver-only, biologically controlled disease that this programme can actually list — and under whose criteria?",
+      "ask": "Is the disease permanently unresectable, confined to the liver, and controlled sufficiently to meet transplant selection criteria?",
       "standard": [
         {
           "l": "Standard",
@@ -527,7 +527,7 @@
                 "REGISTRY"
               ],
               "when": "TransMet randomised 94 patients with permanently unresectable liver-only disease controlled on chemotherapy: intention-to-treat 5-year overall survival 56.6% versus 12.6% with chemotherapy alone, HR 0.37 (95% CI 0.21–0.65), p=0.0003; per protocol 73.3% versus 9.3%, HR 0.16. CRLM is not a standardised OPTN exception, so listing goes through nonstandard Adult Transplant Oncology Review Board review with the CRLM diagnosis form and a written narrative requesting consideration at MMaT-20, with Policy 9.4.E setting a floor of 15.",
-              "pref": "A patient inside both the OPTN guidance gates and the local protocol: BRAF wild type, microsatellite stable, 12 months from CRLM diagnosis, six months of stability or regression, CEA at or below 80 µg/L, no pretreatment lesion above 10 cm, primary resected R0 with a clear colonoscopy, ECOG 0–1, age considered with physiologic reserve rather than alone.",
+              "pref": "A patient inside both the OPTN guidance decision points and the local protocol: BRAF wild type, microsatellite stable, 12 months from CRLM diagnosis, six months of stability or regression, CEA at or below 80 µg/L, no pretreatment lesion above 10 cm, primary resected R0 with a clear colonoscopy, ECOG 0–1, age considered with physiologic reserve rather than alone.",
               "avoid": "Any uncontrolled or non-curable extrahepatic disease, progression on an appropriate regimen, new lesions, declining reserve, prohibitive comorbidity, active infection or psychosocial risk. Disease clearable by reasonable resection, margin-verified ablation, augmentation, staged surgery is not a transplant indication. Assess HAI conversion feasibility alongside transplant candidacy; do not require exhaustion of HAI before referral.",
               "note": "Both halves: 19% of the transplantation arm never received a graft, recurrence after transplant was 74% with 5-year progression-free survival 19.9%, and the survival gain rests on repeatedly treating recurrence — mostly pulmonary, 54% of isolated recurrences lung-only, with 46% of those treated with curative intent. Selection was extreme: an independent panel excluded 40% of screened patients, and the trial depended on negotiated national prioritisation that delivered grafts at a median 50.5 days after randomisation. Without exception points these low-MELD patients do not compete, and a longer wait raises the 19% dropout.",
               "refs": [
@@ -576,7 +576,7 @@
       ],
       "alt": [
         {
-          "t": "Use the Oslo score, the largest lesion diameter and PET metabolic tumour volume as prognostic refinements inside the eligibility gates, not as substitutes for them.",
+          "t": "Use the Oslo score, the largest lesion diameter and PET metabolic tumour volume as prognostic refinements inside the eligibility decision points, not as substitutes for them.",
           "l": "Reasonable",
           "g": "D",
           "refs": [
@@ -586,8 +586,8 @@
             "31188200",
             "31674105"
           ],
-          "pref": "Counselling and protocol stratification. In the 61-patient Oslo cohort median overall survival was 60.3 months, with an Oslo score of 0 giving 5- and 10-year survival of 88.9% while a score of 3–4 gave 8.3% and 0%; a largest lesion of 5.5 cm or more gave 25.3 versus 92.0 months and CEA above 80 µg/L 26.6 versus 90.5 months. Metabolic tumour volume below 70 cm³ on PET gave 5- and 10-year survival of 76% and 50% versus 21% and 7%, and the signal held only when the scan was within 90 days of transplant. The SECA-II 10-year report gives median overall survival 128.2 months with 5-year 77.8% and 10-year 51.5% in 25 patients.",
-          "avoid": "Do not relax the allocation gates because the prognostic scores look good, and do not use a favourable score to justify listing outside the protocol. These are separate prognostic considerations and do not replace the pretreatment 10-cm limit or the CEA exclusion.",
+          "pref": "Counselling and protocol stlocal approval. In the 61-patient Oslo cohort median overall survival was 60.3 months, with an Oslo score of 0 giving 5- and 10-year survival of 88.9% while a score of 3–4 gave 8.3% and 0%; a largest lesion of 5.5 cm or more gave 25.3 versus 92.0 months and CEA above 80 µg/L 26.6 versus 90.5 months. Metabolic tumour volume below 70 cm³ on PET gave 5- and 10-year survival of 76% and 50% versus 21% and 7%, and the signal held only when the scan was within 90 days of transplant. The SECA-II 10-year report gives median overall survival 128.2 months with 5-year 77.8% and 10-year 51.5% in 25 patients.",
+          "avoid": "Do not relax the allocation decision points because the prognostic scores look good, and do not use a favourable score to justify listing outside the protocol. These are separate prognostic considerations and do not replace the pretreatment 10-cm limit or the CEA exclusion.",
           "note": "Graded D: these are one centre's thresholds tested in the patients they were derived from. The Oslo score was derived from the first 21 SECA-I patients, the 70 cm³ cut-off was defined by ROC analysis in the same 40-patient cohort in which it is then tested, the CEA 80 µg/L bar comes from SECA-I, and prognostic factors were tested one at a time by log-rank in 60 patients with no multivariable model and no correction for multiple testing. In the 19-patient score comparison every patient with a Fong score of 0–2 also had a metabolic tumour volume below 70 cm³ and an Oslo score of 0–2, so the three scores cannot be separated, and the PET signal held only when the scan was within 90 days of transplant. The SECA-II survival figures come from 25 highly selected patients at one centre — the authors' own simulation found only 2 to 3 eligible patients per year in a population of 5.5 million — with relapse in 48% at a median relapse-free survival of 24.3 months and one death from hepatic artery thrombosis (4% operative mortality). Survival calculated from transplant excludes the 11 of 72 listed patients never grafted; from listing, median overall survival for all 72 was 50.8 months with 5-year survival 42.6%."
         }
       ],
@@ -627,7 +627,7 @@
     {
       "id": "5",
       "tone": "pall",
-      "name": "5 · Control, not clearance",
+      "name": "5 · Disease control when complete removal is not feasible",
       "req": "any",
       "crit": [
         "Progression despite an appropriate systemic regimen — biologic unresectability, which surgery cannot correct",
@@ -635,14 +635,14 @@
         "Oligoprogression in a patient otherwise controlled on systemic therapy",
         "Reserve, parenchymal quality or frailty makes any clearance operation intolerable and recovery is not expected"
       ],
-      "ask": "If clearance is off the table, what keeps this liver quiet without burning the next option?",
+      "ask": "When complete tumor removal is not feasible, which treatment best controls disease and preserves future options?",
       "standard": [
         {
           "t": "Record the intent as control, name the reassessment date, and restage before repeating any procedure.",
           "l": "Standard",
           "g": "D",
           "pref": "Every control-intent decision: record the intended outcome, why the clearance alternatives do not fit, the systemic-treatment plan, the reassessment date and the next action. After progression or toxicity, restage and reconsider complete treatment rather than automatically repeating the same procedure.",
-          "avoid": "Do not run a universal ablation, SBRT, Y90, TACE, HAI, histotripsy ladder. An upfront alternative chosen for anatomy or organ reserve is not a post-progression second line, and there is no established priority between the transarterial options.",
+          "avoid": "Do not apply a fixed sequence of ablation, SBRT, Y90, TACE, HAI and histotripsy. An upfront alternative chosen for anatomy or organ reserve is not a post-progression second line, and there is no established priority between the transarterial options.",
           "note": "Protect what is left: remnant volume, vascular and biliary integrity, prior ablation zones, marrow and nutritional reserve, and the ability to treat recurrence. Clinical-trial eligibility is reassessed here too."
         }
       ],
@@ -679,7 +679,7 @@
               "name": "SBRT for oligoprogression",
               "g": "C",
               "when": "SBRT can also treat oligoprogression with a control goal, and is not restricted to use after failed embolisation.",
-              "pref": "One or a few progressing deposits in a patient otherwise controlled, where safe ablative dosing is feasible and the rest of the disease is quiet.",
+              "pref": "One or a few progressing deposits in a patient otherwise controlled, where safe ablative dosing is feasible and the remaining disease is stable.",
               "avoid": "Insufficient uninvolved liver or an unsafe normal-organ dose; and do not label the result clearance.",
               "note": "Liver lesional control after SABR in the long-term SABR-COMET analysis was 50%, the lowest of any treated site.",
               "refs": [
@@ -702,7 +702,7 @@
               ]
             }
           ],
-          "order": "There is no established ladder and no proven priority between these options; sequence by what the liver and the arterial anatomy will tolerate, by whether a future clearance or transplant route must be protected, and by what the patient wants. Only Y90 in the second line and HAI against an obsolete comparator have randomised support, and neither improved overall survival in a modern control arm.",
+          "order": "There is no established sequence and no proven priority between these options; sequence by what the liver and the arterial anatomy will tolerate, by whether a future clearance or transplant route must be protected, and by what the patient wants. Only Y90 in the second line and HAI against an obsolete comparator have randomised support, and neither improved overall survival in a modern control arm.",
           "flagnote": "Interventional radiology must ratify that transarterial therapy is labelled regional control rather than clearance and is not first line, and radiation oncology must define response interpretation, cumulative radiation records and review of HAI eligibility before liver radiation."
         }
       ],
@@ -779,8 +779,8 @@
       "src": "Memorial Hermann CRLM System Roadmap v0.6, §3.1–3.2, 4 October 2026"
     },
     {
-      "title": "Transplant: the Oslo score and the eligibility gates",
-      "intro": "The Oslo score is prognostic and the allocation gates are binary. Keep them apart — a good score does not relax a gate, and the three documents a board will be handed do not agree with each other.",
+      "title": "Transplant: the Oslo score and the eligibility decision points",
+      "intro": "The Oslo score is prognostic and the allocation decision points are binary. Keep them apart — a good score does not relax a assessment, and the three documents a board will be handed do not agree with each other.",
       "rows": [
         [
           "Oslo score — largest lesion over 5.5 cm",
@@ -799,7 +799,7 @@
           "1"
         ],
         [
-          "OPTN guidance (Dec 2025): diagnosis and molecular gates",
+          "OPTN guidance (Dec 2025): diagnosis and molecular decision points",
           "Colorectal adenocarcinoma, BRAF wild type, microsatellite stable; R0 primary resection and colonoscopy within 12 months before the request; KRAS mutation is a negative prognostic footnote, not an exclusion"
         ],
         [
@@ -823,7 +823,7 @@
           "BRAF wild type, CEA under 80 ng/mL, stabilisation of three months or more no later than third line, never any extrahepatic disease, resected primary, performance status under 2, age 18–65 — no MSI and no PET tumour-volume exclusion"
         ]
       ],
-      "foot": "Oslo score 0 gave median overall survival 151.6 months with 5- and 10-year survival both 88.9% in the 61-patient Oslo cohort, against 8.3% and 0% for a score of 3–4; a Fong score of 0–2 gave 5-year survival 75.4% versus 39.7% for 3–5, and metabolic tumour volume below 70 cm³ gave 66.7% versus 23.3%. These are prognostic refinements from small, internally derived, non-randomised cohorts and they do not replace the guidance gates. Note the contradiction the board must settle: ESMO 2026 asks only for three months of stabilisation up to third line and sets no MSI or PET-volume bar, so a dMMR patient with four months of stability, or a patient with a metabolic tumour volume of 90 cm³, is transplantable under ESMO and excluded under IHPBA 2021 and the OPTN route. The roadmap's rule is that where the randomised evidence (TransMet), the consensus (IHPBA 2021) and the institution's own protocol conflict, the stricter governs. Two numeric boundaries still need clarification before filing: the initial CEA exclusion is above 80 while renewal wording is below 80, so an exact 80 needs explicit review; and the guidance defines progression as a 10% increase in diameter or new lesions while labelling it RECIST 1.1.",
+      "foot": "Oslo score 0 gave median overall survival 151.6 months with 5- and 10-year survival both 88.9% in the 61-patient Oslo cohort, against 8.3% and 0% for a score of 3–4; a Fong score of 0–2 gave 5-year survival 75.4% versus 39.7% for 3–5, and metabolic tumour volume below 70 cm³ gave 66.7% versus 23.3%. These are prognostic refinements from small, internally derived, non-randomised cohorts and they do not replace the guidance decision points. Note the contradiction the board must settle: ESMO 2026 asks only for three months of stabilisation up to third line and sets no MSI or PET-volume bar, so a dMMR patient with four months of stability, or a patient with a metabolic tumour volume of 90 cm³, is transplantable under ESMO and excluded under IHPBA 2021 and the OPTN route. The roadmap's rule is that where the randomised evidence (TransMet), the consensus (IHPBA 2021) and the institution's own protocol conflict, the stricter governs. Two numeric boundaries still need clarification before filing: the initial CEA exclusion is above 80 while renewal wording is below 80, so an exact 80 needs explicit review; and the guidance defines progression as a 10% increase in diameter or new lesions while labelling it RECIST 1.1.",
       "src": "Oslo score as derived in the first 21 SECA-I patients and reported in Dueland 2020, PMID 31674105, with the definition as printed in Dueland 2026, PMID 42572136, and survival by score from Dueland 2023, PMID 37494056; metabolic tumour volume threshold from Grut 2022, PMID 36241941; OPTN Adult MELD Exceptions for Transplant Oncology guidance, December 2025 (guidance, not Policy); IHPBA 2021, PMID 34506756; ESMO 2026, PMID 41990853"
     },
     {
@@ -855,7 +855,7 @@
           "Tested at diagnosis of metastatic disease with broader profiling where the result would change treatment. A POLE or POLD1 variant needs variant-level and phenotype interpretation before it justifies checkpoint therapy."
         ]
       ],
-      "foot": "Genotype is prognostic; observed response is the stronger signal, and the direction and duration of response during effective therapy carry more decision weight than genotype alone. A single mutation should not set margin width, the extent of parenchymal resection, or exclusion from otherwise feasible clearance. Two molecular results do close a door, but it is the transplant door: BRAF mutation and MSI-high or dMMR status both fall outside the described exception route.",
+      "foot": "Genotype is prognostic; observed response is the stronger signal, and the direction and duration of response during effective therapy carry more decision weight than genotype alone. A single mutation should not set margin width, the extent of parenchymal resection, or exclusion from otherwise feasible clearance. BRAF mutation and MSI-high or dMMR status fall outside the described NLRB exception guidance; this is an allocation distinction, not a universal clinical transplant rule.",
       "src": "BREAKWATER PMID 40444708; CheckMate 8HW PMID 39874977 and KEYNOTE-177 PMID 33264544; ASCO 2023 PMID 36252154, FIRE-3 PMID 27575024, CALGB/SWOG 80405 PMID 28632865; CAIRO5 PMID 37329889; CodeBreaK 300 PMID 37870968"
     },
     {
@@ -925,7 +925,7 @@
     },
     {
       "t": "Transplantation should be offered beyond TransMet criteria.",
-      "why": "There is no randomised evidence outside that population, and the single randomised trial recruited 94 patients in 5.5 years across 20 centres after an independent panel rejected 40% of those local boards thought eligible. Selection turns on the Oslo score, CEA, largest lesion, metabolic tumour volume, interval from the primary and donor strategy — all of them one centre's prognostic work rather than validated gates — and the commitment is a mandatory registry recording whether criteria were met or exceeded, recurrence site and post-recurrence survival.",
+      "why": "There is no randomised evidence outside that population, and the single randomised trial recruited 94 patients in 5.5 years across 20 centres after an independent panel rejected 40% of those local boards thought eligible. Selection turns on the Oslo score, CEA, largest lesion, metabolic tumour volume, interval from the primary and donor strategy — all of them one centre's prognostic work rather than validated decision points — and the commitment is a mandatory registry recording whether criteria were met or exceeded, recurrence site and post-recurrence survival.",
       "refs": [
         "39306468",
         "37494056",
@@ -942,7 +942,7 @@
     },
     {
       "t": "There is one set of criteria for transplanting colorectal liver metastases.",
-      "why": "There are at least four, and they disagree on gates that decide individual patients. The OPTN guidance route requires BRAF wild type, microsatellite stability, 12 months from CRLM diagnosis, six months of stability or regression, CEA at or below 80 µg/L and no pretreatment lesion above 10 cm. IHPBA 2021 adds exclusion for metabolic tumour volume above 70 cm³ with total lesion glycolysis above 260 g, bars MSI-high and mismatch-repair-deficient patients outright, limits the BRAF exclusion to V600E, and excludes undifferentiated and signet-ring histology. ESMO 2026 asks only for stabilisation of three months or more no later than third line and sets no MSI and no PET-volume bar at all. TransMet's own entry criteria are a fifth filter again. A dMMR patient with four months of stability and a metabolic tumour volume of 90 cm³ is transplantable under ESMO and barred under IHPBA and the OPTN route; a non-V600E BRAF-mutant patient is eligible under IHPBA and excluded by the OPTN wording. The roadmap's rule that the stricter governs is a defensible institutional choice, but it is a choice, not a finding — no study compares these filters against each other, and none of the thresholds was derived in a cohort large enough to validate it.",
+      "why": "There are at least four, and they disagree on decision points that decide individual patients. The OPTN guidance route requires BRAF wild type, microsatellite stability, 12 months from CRLM diagnosis, six months of stability or regression, CEA at or below 80 µg/L and no pretreatment lesion above 10 cm. IHPBA 2021 adds exclusion for metabolic tumour volume above 70 cm³ with total lesion glycolysis above 260 g, bars MSI-high and mismatch-repair-deficient patients outright, limits the BRAF exclusion to V600E, and excludes undifferentiated and signet-ring histology. ESMO 2026 asks only for stabilisation of three months or more no later than third line and sets no MSI and no PET-volume bar at all. TransMet's own entry criteria are a fifth filter again. A dMMR patient with four months of stability and a metabolic tumour volume of 90 cm³ is transplantable under ESMO and barred under IHPBA and the OPTN route; a non-V600E BRAF-mutant patient is eligible under IHPBA and excluded by the OPTN wording. The roadmap's rule that the stricter governs is a defensible institutional choice, but it is a choice, not a finding — no study compares these filters against each other, and none of the thresholds was derived in a cohort large enough to validate it.",
       "refs": [
         "34506756",
         "41990853",
@@ -1151,11 +1151,11 @@
   "ops": {
     "board": [
       "Submission: an Epic form captures the clinical question, phase, disease extent, biology, prior treatment, transplant status, referring clinician and urgency. Owner: submitting clinician.",
-      "Triage: the coordinator and a clinically trained gatekeeper check completeness, imaging quality, duplicate cases, the urgent lane and pathology needs. Owner: coordinator with an APP or physician.",
+      "Triage: the coordinator and a clinical reviewer check completeness, imaging quality, duplicate cases, urgent referrals and pathology needs. Owner: coordinator with an APP or physician.",
       "Agenda: stable at least 24 hours ahead, target 10–12 decision cases, incomplete routine cases deferred, urgent exceptions by chair approval. Owner: coordinator and chair.",
       "Attendance: hepatobiliary and transplant surgery, medical oncology, diagnostic radiology, interventional radiology, radiation oncology and colorectal surgery are required; pathology when pre-identified; nursing, navigation and the coordinator attend. Owner: programme leadership.",
       "Pathology pre-alert: cases needing tissue or molecular review are flagged at triage so results are available at discussion. Owner: coordinator and pathology.",
-      "Urgent lane: a same or next business day pathway for obstructing, bleeding or rapidly progressing patients, with chair approval and a named owner at intake. Owner: chair and coordinator.",
+      "Urgent referral route: a same or next business day pathway for obstructing, bleeding or rapidly progressing patients, with chair approval and a named owner at intake. Owner: chair and coordinator.",
       "Conference: state the question, radiology first, then clinical context, phase assignment, an explicit clearance assessment, options compared with evidence labels, and the chair synthesises one recommendation. Name uncertainty rather than forcing consensus. Owner: a neutral clinical chair.",
       "Documentation: an Epic note within one business day recording the phase, the recommendation, the alternatives considered, the owner, the due date and the reassessment plan. Owner: the designated documenting clinician.",
       "Closure: the registry tracks completion, outside communication, scheduling barriers, results and re-presentation. Owner: navigator and coordinator.",
@@ -1232,8 +1232,8 @@
       {
         "n": 10,
         "q": "Decide which transplant criteria set governs locally, and record the resolution of each named disagreement between the OPTN guidance route, IHPBA 2021 and ESMO 2026 — MSI-high and dMMR status, BRAF V600E versus any BRAF mutation, the metabolic tumour volume and total lesion glycolysis bars, the months of stability required and the line of therapy by which transplantation may be considered.",
-        "why": "The documents a review board will be handed disagree on gates that decide individual patients, and the rule that the stricter governs does not by itself say which document supplies the stricter value for each criterion.",
-        "audit": "A single written criteria table in the protocol, with the source of every gate named and every conflict shown as resolved; conformance checked for each listed patient."
+        "why": "The documents a review board will be handed disagree on decision points that decide individual patients, and the rule that the stricter governs does not by itself say which document supplies the stricter value for each criterion.",
+        "audit": "A single written criteria table in the protocol, with the source of every assessment named and every conflict shown as resolved; conformance checked for each listed patient."
       },
       {
         "n": 11,
@@ -1585,7 +1585,7 @@
     "mh-align": [
       "CRLM alignment worksheet",
       "Guidelines & policy",
-      "Guideline alignment worksheet — adult colorectal liver metastases, Memorial Hermann CRLM System Roadmap Draft v0.6, 4 October 2026. Sixteen areas where NCCN 2.2026, IHPBA 2021, OPTN 2025 guidance, ASCO 2023, Adam 2015 and the Chinese 2024 consensus can disagree, with the institutional position and the open ratification decisions."
+      "Guideline alignment worksheet — adult colorectal liver metastases, Memorial Hermann CRLM System Roadmap Draft v0.6, 4 October 2026. Sixteen areas where NCCN 2.2026, IHPBA 2021, OPTN 2025 guidance, ASCO 2023, Adam 2015 and the Chinese 2024 consensus can disagree, with the institutional position and the open local approval decisions."
     ],
     "pump2026": [
       "Dutch adjuvant PUMP · ASCO 2026",
@@ -1648,5 +1648,5 @@
       "https://go.openathens.net/redirector/library.tmc.edu?url=https://doi.org/10.1200/JCO.2026.44.17_suppl.LBA3506"
     ]
   },
-  "provenance": "Built from the Memorial Hermann Colorectal Liver Metastasis System Roadmap Draft v0.6 (4 October 2026, liver-directed section revised 3 October 2026, evidence current to 20 September 2026) and its companion guideline alignment worksheet of the same date, which supplied the institutional positions, the NCCN decisions 1-16 and the open ratification items. Revised on 7 October 2026 (Batch 08) after a full-text read of the whole CRLM reference depot: 45 papers, each with an independently recorded critique, covering all 45 PubMed-indexed references cited on this page. Every evidence string was re-checked against the paper's own reported results rather than against a guideline quoting it, and the grades were re-set where the full text showed the recommendation rested on a surrogate endpoint, a subset analysis, an unvalidated threshold or a single centre's practice; 20 evidence entries changed and 13 grades were lowered in that pass, and the honest section was rewritten and expanded from 5 entries to 27. Three references are cited only for what they do not yet show: the older PUMP protocol is now supplemented by the ASCO 2026 randomized abstract; the LIGRO survival analysis is published separately and was not read, so ALPPS is cited for resectability only; and the NCCN guideline, the OPTN policy and guidance documents, the Memorial Hermann roadmap and its alignment worksheet are not PubMed-indexed papers and were read as documents, not trials. Policy wording follows NCCN Colon Cancer v2.2026 (7 April 2026), OPTN Policy 9 as retrieved 1 October 2026, and the OPTN Adult MELD Exceptions for Transplant Oncology review-board guidance of December 2025, which is guidance and not Policy. The roadmap itself is a draft pending multidisciplinary and institutional governance review: it is not active clinical policy, does not replace clinician judgement, current drug labelling, OPTN policy or patient-specific informed consent, and every transplant criterion must be confirmed against current policy at implementation. HAI sections updated 15 October 2026 to Batch 09. New studies were checked against indexed abstracts and the published ASCO abstract; new full-text PDFs remain to be acquired. No new full-text review is claimed for these additions."
+  "provenance": "Built from the Memorial Hermann Colorectal Liver Metastasis System Roadmap Draft v0.6 (4 October 2026, liver-directed section revised 3 October 2026, evidence current to 20 September 2026) and its companion guideline alignment worksheet of the same date, which supplied the institutional positions, the NCCN decisions 1-16 and the open local approval items. Revised on 7 October 2026 (Batch 08) after a full-text read of the whole CRLM reference depot: 45 papers, each with an independently recorded critique, covering all 45 PubMed-indexed references cited on this page. Every evidence string was re-checked against the paper's own reported results rather than against a guideline quoting it, and the grades were re-set where the full text showed the recommendation rested on a surrogate endpoint, a subset analysis, an unvalidated threshold or a single centre's practice; 20 evidence entries changed and 13 grades were lowered in that pass, and the limited-evidence section was rewritten and expanded from 5 entries to 27. Three references are cited only for what they do not yet show: the older PUMP protocol is now supplemented by the ASCO 2026 randomized abstract; the LIGRO survival analysis is published separately and was not read, so ALPPS is cited for resectability only; and the NCCN guideline, the OPTN policy and guidance documents, the Memorial Hermann roadmap and its alignment worksheet are not PubMed-indexed papers and were read as documents, not trials. Policy wording follows NCCN Colon Cancer v2.2026 (7 April 2026), OPTN Policy 9 as retrieved 1 October 2026, and the OPTN Adult MELD Exceptions for Transplant Oncology review-board guidance of December 2025, which is guidance and not Policy. The roadmap itself is a draft pending multidisciplinary and institutional governance review: it is not active clinical policy, does not replace clinician judgement, current drug labelling, OPTN policy or patient-specific informed consent, and every transplant criterion must be confirmed against current policy at implementation. HAI sections updated 15 October 2026 to Batch 09. New studies were checked against indexed abstracts and the published ASCO abstract; new full-text PDFs remain to be acquired. No new full-text review is claimed for these additions."
 }

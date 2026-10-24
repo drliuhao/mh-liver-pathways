@@ -4,13 +4,13 @@
   "name": "Perihilar cholangiocarcinoma",
   "version": "v0.7",
   "batch": "Batch 08, 7 October 2026",
-  "lead": "Which gate this patient is at, and what the next act must not foreclose — drainage before extent, extent before tissue, and the transplant question before palliative therapy.",
-  "gatelabel": "The decision in front of you",
+  "lead": "Assess tumor extent, plan biliary drainage when needed, and discuss resection or transplantation before choosing biopsy and treatment.",
+  "gatelabel": "Clinical decisions",
   "gates": [
     {
       "id": "0",
       "tone": "loco",
-      "name": "0 · Biliary drainage comes first",
+      "name": "0 · Assess the need for biliary drainage",
       "req": "any",
       "crit": [
         "Cholangitis, or a bilirubin that is rising",
@@ -20,7 +20,7 @@
         "Malnutrition, or hepatic or renal insufficiency from prolonged jaundice",
         "Note that routine preoperative drainage of every jaundiced patient is not what the guidelines say: this is an indication list, not a default"
       ],
-      "ask": "Which sectors am I draining, and does an operative plan exist yet to tell me which ones they are?",
+      "ask": "Is biliary drainage needed, and which liver segments should be drained for the planned treatment?",
       "standard": [
         {
           "t": "Drain the sectors that will form the future liver remnant, not the most accessible duct, and name one owner for the drainage strategy.",
@@ -31,7 +31,7 @@
             "42692059",
             "26172136"
           ],
-          "pref": "Every patient drained with a resection or protocol destination in mind — the objective is decompression of the sectors you intend to keep, which is why Gate 0 and the resectability gate are discussed together at the first tumour board. ESGE 2026 suggests <i>against</i> routine preoperative drainage and lists severe jaundice, cholangitis and a predicted remnant of 30% or less as the accepted indications (conditional, low quality); the Milan consensus restricts it to a small remnant needing hypertrophy, cholangitis, renal or hepatic failure, severe malnutrition or pruritus, and says to drain the future liver remnant exclusively.",
+          "pref": "Every patient drained with a resection or protocol destination in mind — the objective is decompression of the sectors you intend to keep, which is why clinical decision 0 and the resectability assessment are discussed together at the first tumour board. ESGE 2026 suggests <i>against</i> routine preoperative drainage and lists severe jaundice, cholangitis and a predicted remnant of 30% or less as the accepted indications (conditional, low quality); the Milan consensus restricts it to a small remnant needing hypertrophy, cholangitis, renal or hepatic failure, severe malnutrition or pruritus, and says to drain the future liver remnant exclusively.",
           "avoid": "Do not drain an atrophic or to-be-resected lobe: it relieves jaundice without enabling the operation, and hypertrophy after portal vein embolisation is poor in a liver that remains cholestatic. Cholangitis after a poorly planned drain is the most common avoidable disaster in this disease. Equally, do not drain reflexively: the Coelen investigators' own conclusion from their trial was that drainage should follow resectability assessment at a specialist centre and may be unnecessary when the remnant exceeds 50% of liver volume.",
           "note": "Grade D. No trial compares remnant-focused drainage with draining the most accessible duct; the position follows from the physiology of hypertrophy in a cholestatic liver and from the guidelines' own wording, not from comparative outcome data. The Asia-Pacific panel reached only 56% full agreement on its preoperative-drainage statement. Antibiotics with the procedure, cultures sent, and a named owner for drain management. As few drains as achieve remnant decompression — multiple uncoordinated drains placed by different services is a recognised failure pattern. [EXPERTISE]"
         },
@@ -84,7 +84,7 @@
             }
           ],
           "order": "Downgraded from B to C. The order reflects guideline wording and one prematurely stopped trial, not a demonstrated survival advantage. The roadmap's own position is that route is unsettled: DRAINAGE was negative on its primary endpoint — one or more severe drainage-related complications in 17 of 27 (63%) after percutaneous versus 18 of 27 (67%) after endoscopic drainage, relative risk 0.94 (95% CI 0.64–1.40) — and the mortality signal that stopped it came from 54 of a planned 106 patients, is acknowledged by the authors as prone to type I error, and had no mechanism identified by the safety board. Pooled across three randomised trials, ASGE found 30-day mortality only trending lower with endoscopic drainage (RR 0.53, 95% CI 0.28–1.01, p=0.05). What is not optional is draining the correct sectors.",
-          "flagnote": "Ratification item (§11 item 2): should the roadmap name endoscopic drainage as the default first route for potential resection and protocol candidates, as AASLD and ESGE 2026 do, or keep route unsettled as written? The 2015 AHPBA consensus preferred the percutaneous route and that preference has not held up, but the 2026 reversal rests on a single stopped trial extrapolated from the preoperative to the palliative setting. Note before ratifying: five ESGE authors declare relationships with stent manufacturers, many ASGE panel members declare the same, and one ASGE panel member is at this institution. Registry: route, cholangitis, re-intervention."
+          "flagnote": "Local approval item (§11 item 2): should the roadmap name endoscopic drainage as the default first route for potential resection and protocol candidates, as AASLD and ESGE 2026 do, or keep route unsettled as written? The 2015 AHPBA consensus preferred the percutaneous route and that preference has not held up, but the 2026 reversal rests on a single stopped trial extrapolated from the preoperative to the palliative setting. Note before ratifying: five ESGE authors declare relationships with stent manufacturers, many ASGE panel members declare the same, and one ASGE panel member is at this institution. Registry: route, cholangitis, re-intervention."
         }
       ],
       "alt": [
@@ -99,7 +99,7 @@
           ],
           "pref": "Patients whose drainage strategy is not yet defined, or who may respond well to systemic therapy and outlive uncovered-stent patency.",
           "avoid": "Avoid uncovered metal stents in a potential transplant candidate — they cannot be removed and are difficult to deal with surgically. Metal stents give better patency and fewer reinterventions (OR 0.34) and 56 days more survival (95% CI 12–101) in the pooled ASGE analysis, but the comparator plastic arms were waited out to occlusion rather than exchanged on schedule, which is why the ASGE panel declined a strong recommendation.",
-          "note": "The roadmap itself does not set a stent rule — it says to choose stent and access route through multidisciplinary review, and that the algorithm does not establish a universal stent material. The rule above is the alignment worksheet's proposal (area 3) and needs ratification. The page also takes no position on bilateral versus unilateral stenting, which is a live question: ASGE suggests bilateral absent lobar atrophy, but its pooled survival gain was 11 days (95% CI −12 to 35) and pooled patency showed no difference (SMD 0.38, −0.22 to 0.99, I² 78%), while one randomised trial reported in ESGE 2026 gave bilateral stenting clinical success 95.3% versus 84.9% and patency 252 versus 139 days."
+          "note": "The roadmap itself does not set a stent rule — it says to choose stent and access route through multidisciplinary review, and that the algorithm does not establish a universal stent material. The rule above is the alignment worksheet's proposal (area 3) and needs local approval. The page also takes no position on bilateral versus unilateral stenting, which is a live question: ASGE suggests bilateral absent lobar atrophy, but its pooled survival gain was 11 days (95% CI −12 to 35) and pooled patency showed no difference (SMD 0.38, −0.22 to 0.99, I² 78%), while one randomised trial reported in ESGE 2026 gave bilateral stenting clinical success 95.3% versus 84.9% and patency 252 versus 139 days."
         }
       ],
       "avoid": [
@@ -127,7 +127,7 @@
     {
       "id": "1",
       "tone": "loco",
-      "name": "1 · Define the extent",
+      "name": "1 · Define tumor extent",
       "req": "all",
       "crit": [
         "Multiphase CT of chest, abdomen and pelvis plus MRI with MRCP, obtained before stenting where the clinical situation allows",
@@ -136,10 +136,10 @@
         "Bilirubin trajectory and performance status",
         "Whether the patient has primary sclerosing cholangitis — it changes both the differential and the transplant discussion"
       ],
-      "ask": "Do I know the extent well enough to say whether this is resectable, and did I get the imaging before anyone stented?",
+      "ask": "Is imaging adequate to define tumor extent and assess resectability?",
       "standard": [
         {
-          "t": "Stage with multiphase CT of the chest, abdomen and pelvis plus MRI with MRCP; chest imaging is part of staging because distant spread changes every later gate.",
+          "t": "Stage with multiphase CT of the chest, abdomen and pelvis plus MRI with MRCP; chest imaging is part of staging because distant spread changes every later assessment.",
           "l": "Standard",
           "g": "C",
           "refs": [
@@ -195,7 +195,7 @@
           "t": "Do not carry an iCCA or distal cholangiocarcinoma pathway into this disease.",
           "l": "Avoid",
           "g": "D",
-          "pref": "Perihilar disease has its own gates: central biliary and vascular anatomy and longitudinal tumour spread differ from a small peripheral liver mass, and the transplant route, the biopsy constraint and the drainage problem are all specific to it.",
+          "pref": "Perihilar disease has its own decision points: central biliary and vascular anatomy and longitudinal tumour spread differ from a small peripheral liver mass, and the transplant route, the biopsy constraint and the drainage problem are all specific to it.",
           "avoid": "Intrahepatic and distal cholangiocarcinoma are covered separately and are not interchangeable with this pathway. Gallbladder cancer is out of scope."
         }
       ]
@@ -203,16 +203,16 @@
     {
       "id": "2",
       "tone": "loco",
-      "name": "2 · Tissue — what the destination needs, and what the route costs",
+      "name": "2 · Plan tissue sampling",
       "req": "all",
       "crit": [
-        "The destination is named before any needle is passed: resection, transplant protocol, or systemic therapy",
-        "Transperitoneal routes — percutaneous, operative and endoscopic ultrasound — are off the table in anyone who may be protocol-eligible",
+        "Discuss the intended treatment before biopsy: resection, a transplant protocol, or systemic therapy",
+        "Do not use a transperitoneal approach to biopsy the primary tumor (percutaneous, operative, or EUS-guided) when transplantation remains an option",
         "Tissue is taken at the index ERCP, before or at the time the first stent is placed",
         "A separate specimen from the same ERCP goes for molecular testing where it is available",
         "Nodal sampling and sampling of the primary are treated as different decisions"
       ],
-      "ask": "Do I actually need tissue for where this patient is going, and will the route I am about to use cost them an option?",
+      "ask": "Is tissue confirmation needed, and which sampling route preserves transplant eligibility?",
       "standard": [
         {
           "t": "A transperitoneal biopsy of the primary tumour must be avoided in any patient who may be protocol-eligible — and that includes the endoscopic ultrasound route.",
@@ -242,7 +242,7 @@
           "note": "Downgraded from B to C: every recommendation in both guidelines on this question is conditional on low or very low quality evidence, and neither panel found a randomised trial for any perihilar question. How much tissue is itself unsettled — ESGE says three to four intraductal biopsies appear sufficient, while the real-world cholangioscopy cohort below took a median of 3 and had 33% inconclusive specimens, and its authors recommend a minimum of four. Cytology sensitivity rises with brush passes: 38% at 10, 47% at 20 and 57% at 30 in a multicentre randomised trial of more than 400 patients. For an indeterminate stricture, add cholangioscopy-guided biopsies — pooled incremental yield 27% (10–45) from 13 studies and 1,529 patients, sensitivity 0.72 against 0.61 — but do not repeat the guidelines' claim that this costs nothing: the PSC meta-analysis records post-procedure cholangitis in 11% and procedural failure in 15% of PSC ducts against 2% of controls, and the Groningen cohort had adverse events in 10 of 80 (13%), including two episodes of cholangitis and one cardiac arrest with subsequent stroke."
         },
         {
-          "t": "Send a separate specimen from the same ERCP for next-generation sequencing: it raises yield on the one route that does not jeopardise protocol candidacy.",
+          "t": "Send a separate specimen from the same ERCP for next-generation sequencing: it raises yield on the one sampling route that does not disqualify the patient from the transplant protocol.",
           "l": "Standard",
           "g": "C",
           "refs": [
@@ -251,7 +251,7 @@
             "39716538",
             "42698384"
           ],
-          "pref": "Potential protocol candidates above all, where confirmed malignancy is a protocol condition and the route that would most readily provide it is the one route excluded. In a 6-year prospective study of 2,908 ERCP-obtained specimens from 2,116 patients at 28 US institutions, with accuracy computed on the 1,979 patients who had follow-up (1,108 neoplastic, 871 benign), a DNA/RNA panel gave 82% sensitivity and 98% specificity for a neoplastic stricture, against 44% and 99% for pathological assessment of separate specimens; combining the two gave 88% at 97%. In intrahepatic or hilar strictures specifically it was 80% versus 36%, and 86% combined. Actionable alterations were found in 23% of positive malignancies and in 137 of 458 cholangiocarcinomas (30%), so the same specimen can serve diagnosis and target identification. Assay failure was about 1%. [PAYER] [DEVICE]",
+          "pref": "Potential transplant-protocol candidates need an accepted diagnostic basis, not necessarily a positive primary-tumor biopsy. OPTN accepts a malignant-appearing stricture plus at least one of these diagnostic findings: biopsy or cytology showing malignancy, CA 19-9 >100 U/mL without cholangitis, aneuploidy, or a hilar mass <3 cm in radial diameter; transperitoneal biopsy of the primary must be avoided. In a 6-year prospective study of 2,908 ERCP-obtained specimens from 2,116 patients at 28 US institutions, with accuracy computed on the 1,979 patients who had follow-up (1,108 neoplastic, 871 benign), a DNA/RNA panel gave 82% sensitivity and 98% specificity for a neoplastic stricture, against 44% and 99% for pathological assessment of separate specimens; combining the two gave 88% at 97%. In intrahepatic or hilar strictures specifically it was 80% versus 36%, and 86% combined. Actionable alterations were found in 23% of positive malignancies and in 137 of 458 cholangiocarcinomas (30%), so the same specimen can serve diagnosis and target identification. Assay failure was about 1%. [PAYER] [DEVICE]",
           "avoid": "Four cautions. Specificity is high but not perfect, and a false positive commits a patient to neoadjuvant chemoradiation and transplantation — the consequence of error is not symmetrical with the consequence in an ordinary diagnostic setting; sixteen false positives occurred, at variant allele frequencies of 1.5–30%. The endpoint was a neoplastic stricture, which is broader than malignancy, and a stricture could be called neoplastic on imaging plus clinical or radiographic progression over 12 months rather than on tissue, which tends to flatter the test that often prompted that work-up. Only 2% of neoplastic strictures were purely dysplastic, so outside PSC this is earlier diagnosis of established cancer, not early detection, and no survival or resectability benefit has been shown. And a negative result still does not exclude malignancy.",
           "note": "Downgraded from B to C. Identical specimens were never compared — sequencing and pathology were run on different specimens — specimens were submitted at the endoscopist's discretion rather than consecutively, FISH was never compared head to head, and all testing was done in the laboratory that developed the assay. The earlier single-centre prospective study (252 patients, 346 specimens) raised pathology sensitivity from 35% to 71% on 132 paired brushings and from 52% to 75% on 114 paired biopsies, and reported 83% versus 8% in primary sclerosing cholangitis on 12 malignant cases (95% CI 0.51–0.98). Two real-world cohorts reproduce the overall direction (65% versus 52% alone and 78% combined on 47 biopsies in one; 75% versus 42.9% in 77 patients in the other) but neither supports the PSC result — one found 20% sensitivity in PSC against 40% for brush cytology — and in the one cohort that reported it separately, the gain in cholangiocarcinoma itself was not significant (70% versus 60%, P=.72). The test is a laboratory-developed test from a single CLIA-certified laboratory, not FDA cleared, and coverage must be verified in writing before it is written into routine practice."
         }
@@ -265,7 +265,7 @@
               "name": "Proceed to resection without tissue",
               "g": "C",
               "when": "NCCN: surgery may be performed when the index of suspicion is high, and biopsy is not required. BSG accepts surgery without histological certainty. The AHPBA consensus states pathologic confirmation is not required before resection or before starting the transplant protocol.",
-              "pref": "A malignant-appearing stricture with no alternative explanation, where the operative plan would not change whatever the result. The biopsy route is unconstrained in a resection-only candidate — biopsy does not foreclose resection.",
+              "pref": "A malignant-appearing stricture with no alternative explanation, where the operative plan would not change whatever the result. For a resection-only candidate, select a safe biopsy route when tissue confirmation will change management.",
               "avoid": "A benign aetiology is found in about 10% of resections done on a presumptive diagnosis by the AHPBA panel's figure, and about 15% in a 30-year tertiary series, in an operation whose 90-day mortality reaches 13% even in benchmark patients at expert centres. Do not use it to skip the transplant question in a patient who might be a protocol candidate.",
               "refs": [
                 "26172136"
@@ -296,7 +296,7 @@
             }
           ],
           "order": "Ordered by what the destination requires, not by diagnostic yield. The pooled comparison that favours EUS over ERCP — mean sensitivity 75% versus 49%, specificity 100% versus 96% — comes from 294 patients at a pretest probability of 77%, is not specific to perihilar disease, and only 3 of its 8 studies applied both tests to the same patients; three of its proximal-stricture studies enrolled patients only after ERCP sampling had already failed, which guarantees a low ERCP figure by design. QUADAS-2 scored all eight studies at high risk of selection bias, the results are simple means rather than a pooled bivariate model, and the review never mentions that transperitoneal aspiration disqualifies a transplant candidate. Negative predictive values were 47% (SD 14.73) and 34% (SD 24.63), so on either modality a negative result excludes nothing — and those standard deviations are as large as the estimates.",
-          "flagnote": "Ratification item (§11 item 6): how tissue is obtained in a potentially protocol-eligible patient needs a standing agreement, so that no one disqualifies a candidate inadvertently. §11 item 8: whether a molecular result satisfies the protocol's confirmed-malignancy condition is a governance decision the published criteria do not address — agree it with the transplant team in advance, not case by case. Audit: biopsy route in protocol candidates; NGS result, protocol decision, explant finding."
+          "flagnote": "Local approval item (§11 item 6): how tissue is obtained in a potentially protocol-eligible patient needs a standing agreement, so that no one disqualifies a candidate inadvertently. §11 item 8: whether a molecular result satisfies the protocol's confirmed-malignancy condition is a governance decision the published criteria do not address — agree it with the transplant team in advance, not case by case. Audit: biopsy route in protocol candidates; NGS result, protocol decision, explant finding."
         },
         {
           "t": "Where a stent is already in place, take tissue after removing it and send material for molecular testing — and do not assume cholangioscopic biopsy will outperform the brush.",
@@ -314,16 +314,16 @@
       ],
       "avoid": [
         {
-          "t": "Do not pass a needle across the peritoneum toward a perihilar tumour in a patient who still has a curative option.",
+          "t": "Do not biopsy the primary perihilar tumor through a transperitoneal route when transplantation remains an option. The diagnostic plan for a resection-only candidate requires separate multidisciplinary review.",
           "l": "Avoid",
           "g": "C",
           "refs": [
             "21492336",
             "39689874"
           ],
-          "pref": "Keep a mandatory local pre-biopsy transplant gate: before biopsy, evaluate whether the patient is a resection or transplant candidate.",
+          "pref": "Keep a mandatory local pre-biopsy transplant assessment: before biopsy, evaluate whether the patient is a resection or transplant candidate.",
           "avoid": "Also avoid an exploratory resection attempt that violates the tumour plane in a borderline candidate — AASLD and the programme's own protocol list surgical violation of the tumour plane as a transplant exclusion, and the roadmap's route logic covers needles only.",
-          "note": "The roadmap is internally inconsistent here and says so: its §4 Resection row calls the biopsy route unconstrained, while this callout extends the rule to anyone with a curative option, which includes resection. BSG states the stricter rule, and a resection candidate judged unresectable before any operative violation of the tumour plane may become a protocol candidate. Unresolved — see the honest section."
+          "note": "The roadmap is internally inconsistent here and says so: its §4 Resection row does not specify a restriction on the biopsy route, while this callout extends the rule to anyone with a curative option, which includes resection. BSG states the stricter rule, and a resection candidate judged unresectable before any operative violation of the tumour plane may become a protocol candidate. Unresolved — see the limited-evidence section."
         },
         {
           "t": "Do not keep resampling in pursuit of a negative result that will not be believed.",
@@ -334,7 +334,7 @@
             "24360654"
           ],
           "pref": "Decide in advance what a negative result will change. If the answer is nothing, the patient needs a destination decision, not another ERCP.",
-          "avoid": "Negative predictive values are 34% for ERCP-based sampling and 47% for EUS aspiration in a 294-patient meta-analysis at 77% pretest probability, so with either modality a negative result does not exclude malignancy; repeated sampling is a common way to lose time. FISH trisomy or tetrasomy alone is uninformative (sensitivity 31%, 22–40; specificity 71%, 67–75; positive likelihood ratio 1.19, 0.65–2.21). Only polysomy carries information (51%, 43–59, and 93%, 91–95), and it is a named protocol criterion — but its positive predictive value in PSC was only 0.68 (0.58–0.76), and all eight studies in that meta-analysis came from a single centre with overlapping recruitment windows.",
+          "avoid": "Negative predictive values are 34% for ERCP-based sampling and 47% for EUS aspiration in a 294-patient meta-analysis at 77% pretest probability, so with either modality a negative result does not exclude malignancy; repeated sampling is a common way to lose time. FISH trisomy or tetrasomy alone is uninformative (sensitivity 31%, 22–40; specificity 71%, 67–75; positive likelihood ratio 1.19, 0.65–2.21). Only polysomy carries information (51%, 43–59, and 93%, 91–95), and OPTN lists aneuploidy; how FISH polysomy satisfies the center protocol requires explicit agreement. Its positive predictive value in PSC was only 0.68 (0.58–0.76), and all eight studies in that meta-analysis came from a single centre with overlapping recruitment windows.",
           "note": "Downgraded from B to C. Both pooled estimates rest on analyses the spec's own standard would not call B: the ERCP-versus-EUS review scored high risk of selection bias in every included study and reported simple means, and the FISH meta-analysis is effectively one institution's experience with likely verification bias, since a FISH-positive patient is more likely to reach the surgery that classifies them."
         }
       ]
@@ -342,16 +342,16 @@
     {
       "id": "3",
       "tone": "cure",
-      "name": "3 · Resectable disease",
+      "name": "3 · Assess resection",
       "req": "all",
       "crit": [
         "Biliary and vascular extent that permits a technically achievable R0 resection",
         "Contralateral liver with intact arterial and portal inflow as well as biliary drainage",
         "Future liver remnant adequate, or made adequate by embolisation after the remnant has been drained",
         "No intrahepatic, extrahepatic, nodal or peritoneal metastases on the staging package",
-        "Patient fit for extended hepatectomy with biliary reconstruction, at a centre that does them"
+        "Patient fit for extended hepatectomy with biliary reconstruction, at a center with appropriate surgical expertise"
       ],
-      "ask": "Can I take this out with a negative margin and leave behind a liver that works?",
+      "ask": "Can resection achieve negative margins while preserving adequate liver function?",
       "standard": [
         {
           "t": "Extended hepatectomy with en bloc extrahepatic bile duct resection, regional lymphadenectomy and biliary reconstruction, with portal vein resection and reconstruction where it is required to achieve R0.",
@@ -424,7 +424,7 @@
             }
           ],
           "order": "Ordered as the guidelines order augmentation, not by comparative survival data — no trial compares these in perihilar disease, and the Milan recommendations on augmentation sit at level 4. The registry mortality figure for ALPPS is the one hard number in the group and it argues against it.",
-          "flagnote": "Ratification item (§11 item 4, and alignment area 11): the roadmap states no numeric remnant threshold and does not list ALPPS in its Avoid row. The alignment worksheet recommends adding both — a written threshold makes the embolisation decision auditable, and BSG's 48% registry mortality is strong enough to justify an explicit Avoid line. Audit: volume, 90-day mortality, R0 rate."
+          "flagnote": "Local approval item (§11 item 4, and alignment area 11): the roadmap states no numeric remnant threshold and does not list ALPPS in its Avoid row. The alignment worksheet recommends adding both — a written threshold makes the embolisation decision auditable, and BSG's 48% registry mortality is strong enough to justify an explicit Avoid line. Audit: volume, 90-day mortality, R0 rate."
         },
         {
           "t": "Capecitabine for 6 months is a reasonable option after resection, not an obligation — offer it with the actual numbers.",
@@ -436,7 +436,7 @@
           ],
           "pref": "A resected patient fit for 8 cycles who wants adjuvant treatment, particularly with adverse features. BILCAP (n=447) gave median overall survival 51.1 versus 36.4 months with an adjusted hazard ratio of 0.81 (95% CI 0.63–1.04), p=0.097 — the intention-to-treat primary analysis did not meet significance. Significance appeared per protocol (210 versus 220 patients, HR 0.75, 0.58–0.97) and in the protocol-specified intention-to-treat sensitivity analysis adjusted for nodal status, grade and sex (HR 0.71, 0.55–0.92), and the trial was unmasked.",
           "avoid": "Do not present it as established benefit in this tumour. 128 of 447 patients (29%) had hilar tumours, the trial was not powered for site-specific effects, and the Milan consensus records that these trials showed no benefit in the perihilar subgroup. The recurrence-free survival advantage was confined to the first 24 months (HR 0.75, 0.58–0.98) with none from 24 to 60 months (HR 1.48, 0.80–2.77), which the authors read as recurrence deferred rather than prevented. Grade 3 events occurred in 44% of treated patients, 55% completed all eight cycles, 46% needed a dose reduction and 32% stopped for toxicity.",
-          "note": "Downgraded from B to C, because the trial is negative on its prespecified primary endpoint and the positive signal rests on a per-protocol analysis and an adjusted model; the linked commentary asks whether that is enough to define a standard of care. NCCN designates capecitabine preferred, category 1, while also acknowledging BILCAP's nonsignificant intention-to-treat analysis; the local label and grade remain more cautious and require explicit multidisciplinary ratification. ASCOT (n=440) was positive for S-1 — 3-year survival 77.1% versus 67.6%, HR 0.69 (0.51–0.94) — but relapse-free survival did not reach significance (HR 0.80, 0.61–1.04, p=0.088), the analysis was taken at 179 deaths against 285 planned events, the R1 subgroup showed nothing (HR 1.04, 0.57–1.92), the trial was conducted only in Japan and S-1 is unavailable in the United States."
+          "note": "Downgraded from B to C, because the trial is negative on its prespecified primary endpoint and the positive signal rests on a per-protocol analysis and an adjusted model; the linked commentary asks whether that is enough to define a standard of care. NCCN designates capecitabine preferred, category 1, while also acknowledging BILCAP's nonsignificant intention-to-treat analysis; the local label and grade remain more cautious and require explicit multidisciplinary local approval. ASCOT (n=440) was positive for S-1 — 3-year survival 77.1% versus 67.6%, HR 0.69 (0.51–0.94) — but relapse-free survival did not reach significance (HR 0.80, 0.61–1.04, p=0.088), the analysis was taken at 179 deaths against 285 planned events, the R1 subgroup showed nothing (HR 1.04, 0.57–1.92), the trial was conducted only in Japan and S-1 is unavailable in the United States."
         },
         {
           "t": "After an R1 resection, discuss adjuvant chemoradiation in addition to systemic therapy as a shared decision, weighing toxicity against local-recurrence benefit.",
@@ -478,40 +478,40 @@
           "l": "Avoid",
           "g": "D",
           "pref": "Drain the remnant, confirm the bilirubin is falling within 1–2 weeks, and only then proceed.",
-          "avoid": "This is the roadmap's named Avoid for Gate 1 and it is a sequence error, not a judgement call."
+          "avoid": "This is the roadmap's named Avoid for clinical decision 1 and it is a sequence error, not a judgement call."
         }
       ]
     },
     {
       "id": "4",
       "tone": "cure",
-      "name": "4 · Transplant protocol candidate",
+      "name": "4 · Assess transplant eligibility",
       "req": "all",
       "crit": [
-        "Unresectable for technical reasons or because of underlying liver disease, or arising in primary sclerosing cholangitis",
+        "Unresectable for technical reasons or because of underlying liver disease, including primary sclerosing cholangitis; assess clinical candidacy and OPTN exception criteria separately",
         "If a mass is present, a single mass under 3 cm in radial diameter — longitudinal duct extension is not the measured criterion",
         "No intrahepatic or extrahepatic metastases on chest and abdominal imaging within 90 days of the initial request, and no regional nodal disease",
-        "Confirmed malignancy, and no transperitoneal biopsy of the primary tumour",
+        "Diagnosis established by the accepted OPTN criteria; avoid transperitoneal biopsy of the primary tumor",
         "A centre holding an OPTN-committee-approved written patient-care protocol, with operative staging before transplantation"
       ],
-      "ask": "Has the transplant question been asked and answered before anything forecloses it?",
+      "ask": "Has the transplant team assessed eligibility before biopsy or treatment that could affect candidacy?",
       "standard": [
         {
-          "t": "Ask this gate before starting palliative systemic therapy — months of chemotherapy, or a transperitoneal biopsy obtained for convenience, commonly forecloses it.",
+          "t": "Refer potentially eligible patients to the transplant team before primary-tumor biopsy, chemotherapy or radiation outside the transplant protocol, or attempted resection. Coordinate assessment in parallel with surgical planning; do not delay an indicated curative resection. Do not perform transperitoneal biopsy of the primary perihilar tumor, including percutaneous or EUS-guided biopsy, while transplantation remains an option. Coordinate ERCP brushings or intraductal sampling and, when indicated, regional lymph-node sampling with the team; do not delay urgent drainage or infection treatment.",
           "l": "Standard",
           "g": "D",
           "refs": [
             "21492336",
             "22504095"
           ],
-          "pref": "Every unresectable perihilar patient who is small-volume, node-negative and medically transplantable, and every patient with primary sclerosing cholangitis. The protocol population is defined by being unresectable and small.",
+          "pref": "Patients with potentially protocol-eligible unresectable pCCA, including PSC-associated disease, should receive early transplant review alongside assessment of biliary drainage and resection.",
           "avoid": "The sequencing recommendation rests on protocol eligibility criteria, not on a randomised comparison of referral timing — that trial does not exist.",
           "note": "AASLD goes further than the roadmap and states that transplantation is preferred over resection in all cases of primary sclerosing cholangitis, but that document is expert consensus rather than a GRADE-rated guideline. The 12-centre series found no difference in outcome by PSC status, so the PSC preference is not a finding of the primary data. Whether PSC-associated tumours should be routed here even when technically resectable is an open local decision (alignment area 9)."
         }
       ],
       "alt": [
         {
-          "t": "Neoadjuvant chemoradiation followed by staging laparotomy and liver transplantation, under a written protocol with registry entry.",
+          "t": "Use the transplant center’s approved neoadjuvant treatment protocol, followed by operative staging and liver transplantation when all criteria remain met.",
           "l": "Reasonable",
           "g": "C",
           "flags": [
@@ -526,7 +526,7 @@
           ],
           "pref": "A protocol candidate meeting every policy condition at a programme that holds the approval. In 287 patients across 12 US centres, intention-to-treat survival from the start of therapy was 68% at 2 years and 53% at 5 years. The recurrence-free survival figures quoted elsewhere are on a different and smaller denominator: 78% at 2 years (95% CI 72–84), 65% at 5 years (57–73) and 59% at 10 years among the 214 who reached transplantation, with graft survival 77%, 60% and 51%. Keep the two apart — 53% at 5 years is what the pathway delivers to a patient who enters it, 65% is what it delivers to a patient who gets through it.",
           "avoid": "Do not read these as a treatment effect. The experience is retrospective and multicentre with no arm of transplantation without neoadjuvant therapy and none of resection, so the benefit credited to chemoradiation is inferred from historical recurrence rates; 193 of 287 patients (67%) came from one centre; neoadjuvant protocols differed widely between centres (brachytherapy in 75%, maintenance chemotherapy in 65%, external beam dose 2,100–6,000 cGy), and that heterogeneity meant the independent effect of maintenance chemotherapy could not be determined. Selection is doing substantial work: patients transplanted outside criteria did significantly worse (HR 2.98, 95% CI 1.79–4.95, P<.001) and selection was the only independent predictor of recurrence-free survival. 71 of 287 (25%) dropped out at a median of 4.6 months, a rate averaging 11.5% per 3-month interval from the end of chemoradiation (range 7–17%). Staging surgery still found metastases in 17% (40 of 229), though with only 30 transplanted patients unstaged that comparison was underpowered (HR 0.73, 0.37–1.43).",
-          "note": "Two further honesty points about the denominator. 15 patients (5%) were transplanted on clinical suspicion alone with no histologic proof of malignancy; excluding them, 5-year intention-to-treat survival was 50% and recurrence-free survival 62% — little changed, but it means the cohort includes patients who may not have had cancer. And the widely quoted 5-year figures of 55–65% in primary sclerosing cholangitis and 35–55% in de novo disease are an ungraded 2015 consensus statement, not a result of this series, which found no difference by PSC status; do not quote them as outcomes of the protocol. Toxicity is real: radiation caused portal vein friability in 23% and hepatic artery friability in 12%, gastroduodenal ulcers in 34%, biliary anastomotic strictures in 17%, ischaemic cholangiopathy in 7%, postsurgical bile leak in 11%, and 22 of 214 (10%) needed re-transplantation, 11 of them for arterial compromise. The regimen is typically 4500 cGy external beam in 30 fractions with 5-FU, a 1500–3000 cGy brachytherapy boost, then capecitabine until transplant. [TX-TIMING] [PAYER]"
+          "note": "Published chemoradiation protocols provide much of the clinical evidence. OPTN Policy 9.5.A requires neoadjuvant therapy and operative staging but does not prescribe a specific radiotherapy regimen. The approved center protocol determines chemotherapy, radiotherapy if included, and treatment milestones. Protocol modifications require center review."
         },
         {
           "t": "Radiotherapy, sometimes SBRT in a centre-specific protocol, may contribute to a curative transplant strategy — as a component of the approved regimen, not as a substitute for it.",
@@ -542,11 +542,11 @@
       ],
       "avoid": [
         {
-          "t": "Starting palliative systemic therapy in a potentially protocol-eligible patient before the transplant question has been asked and answered.",
+          "t": "Do not start non-protocol cancer treatment in a potentially eligible patient before the transplant team has reviewed the case.",
           "l": "Avoid",
           "g": "D",
-          "pref": "Route the case through the transplant surgeon at the first board, together with the drainage plan.",
-          "avoid": "This is the roadmap's named Avoid for Gate 2, and the commonest way the option is lost."
+          "pref": "Discuss transplant eligibility at the first multidisciplinary review, together with the drainage and tissue-sampling plan.",
+          "avoid": "Prior treatment may affect eligibility under the center protocol. Review the actual regimen and timing; prior chemotherapy is not listed as a universal exclusion in OPTN Policy 9.5.A; clinical protocols may be more restrictive."
         },
         {
           "t": "Do not use Rea 2005 to tell a resectable patient that transplantation is the better operation.",
@@ -560,13 +560,13 @@
           "note": "The node-negative R0 resection subgroup fared no better (87%, 53% and 18% at 1, 3 and 5 years), and the 20–21% 5-year survival after resection matches other specialist centres, so the comparator is not substandard. Three of 26 resections (12%) died within 30 days, and the discussants' point was that non-cancer deaths, not recurrence, drive much of the gap — recurrence after resection was 35% while 5-year survival was 20%. There is no intention-to-treat analysis and no accounting of organ cost: 38 grafts, 7 of them living donor, for 71 patients enrolled. The Milan jury acknowledged benefit in node-negative patients independent of resectability; that is a consensus position resting on one benchmark study and mixed retrospective comparisons, and TRANSPHIL, the randomised trial meant to settle it, failed to recruit."
         },
         {
-          "t": "Do not treat the transplant eligibility criteria as clinical thresholds that can be stretched for a good candidate.",
+          "t": "Apply OPTN allocation criteria exactly as written. A favorable clinical assessment does not override the requirements for a standardized exception.",
           "l": "Avoid",
           "g": "D",
           "refs": [
             "22504095"
           ],
-          "pref": "They are conditions of OPTN Policy 9.5.A, not entry criteria of the 12-centre series, which transplanted 48 patients outside them. Exactly 3 cm does not meet the policy mass-size gate; referral and allocation are distinct, and NCCN's ≤3 cm referral wording is looser than the policy.",
+          "pref": "They are conditions of OPTN Policy 9.5.A, not entry criteria of the 12-centre series, which transplanted 48 patients outside them. Exactly 3 cm does not meet the policy mass-size assessment; referral and allocation are distinct, and NCCN's ≤3 cm referral wording is looser than the policy.",
           "avoid": "Mass size caused the greatest disparity in the multicentre series: 5-year recurrence-free survival was 32% for a mass over 3 cm against 69% for 3 cm or smaller (P<.001).",
           "note": "Confirm the current OPTN policy text before any listing decision. The transplant coordinator records source version, eligibility dates, request and extension dates, imaging, laboratory values and a named renewal owner; transplant leadership signs the allocation assessment."
         }
@@ -575,15 +575,15 @@
     {
       "id": "5",
       "tone": "sys",
-      "name": "5 · Unresectable outside the protocol",
+      "name": "5 · Unresectable disease outside a transplant protocol",
       "req": "any",
       "crit": [
-        "Regional nodal disease, or a mass of 3 cm or more in radial diameter",
+        "Regional nodal disease, or a mass of 3 cm or more in radial diameter: these do not meet the standardized exception criteria. Confirm borderline measurements and clinical options with the transplant team before excluding transplantation",
         "Intrahepatic or extrahepatic metastases",
         "Comorbidity or performance status that rules out transplantation",
         "No OPTN-approved protocol available, or the patient declines that route"
       ],
-      "ask": "What is the best systemic plan, and is the biliary tree drained well enough to deliver it?",
+      "ask": "Which systemic treatment is appropriate, and is biliary drainage adequate to deliver it safely?",
       "standard": [
         {
           "l": "Standard",
@@ -615,7 +615,7 @@
             }
           ],
           "order": "Downgraded from A to B for this page, and the reason is subgroup, not design: both trials are properly conducted positive phase 3 trials in biliary tract cancer as a whole, but neither was powered for perihilar disease, and in the one that reported it the extrahepatic subgroup hazard ratio was 0.99 (0.73–1.35). The order carries no meaning: NCCN lists both, ESMO grades both [I, A], and no trial compares them. The backbone is cisplatin–gemcitabine, which established the standard in ABC-02 (n=410: median overall survival 11.7 versus 8.1 months, hazard ratio 0.64, 95% CI 0.52–0.80); 57 of those 410 patients had hilar tumours and no differential effect by site was seen, but the trial was not powered to find one.",
-          "flagnote": "The roadmap retains an unranked choice between the two combinations; that is the institutional position and it matches NCCN and ESMO. New ratification question (§11 item 12): is first-line chemo-immunotherapy offered here on the biliary-tract-wide result, given the null extrahepatic subgroup in KEYNOTE-966 and the absence of a perihilar-specific estimate in either trial?"
+          "flagnote": "The roadmap retains an unranked choice between the two combinations; that is the institutional position and it matches NCCN and ESMO. New local approval question (§11 item 12): is first-line chemo-immunotherapy offered here on the biliary-tract-wide result, given the null extrahepatic subgroup in KEYNOTE-966 and the absence of a perihilar-specific estimate in either trial?"
         },
         {
           "t": "Order molecular profiling at diagnosis and screen for clinical-trial eligibility at the same visit.",
@@ -638,7 +638,7 @@
             "42692059",
             "34023067"
           ],
-          "pref": "Recurrent cholangitis, not tumour progression, is often what ends treatment. Adequate drainage and an acceptable bilirubin come before the first cycle, and new jaundice or fever goes down the urgent lane rather than waiting for the next scan.",
+          "pref": "Recurrent cholangitis, not tumour progression, is often what ends treatment. Adequate drainage and an acceptable bilirubin come before the first cycle, and new jaundice or fever is managed as an urgent referral rather than waitinging for the next scan.",
           "avoid": "Do not deliver liver-directed therapy without relieving obstruction first."
         }
       ],
@@ -659,7 +659,7 @@
             "33798493"
           ],
           "pref": "A patient who has kept performance status and wants further treatment. ABC-06 (n=162) gave median overall survival 6.2 versus 5.3 months against active symptom control, adjusted hazard ratio 0.69 (95% CI 0.50–0.97), p=0.031; 6-month survival 50.6% versus 35.5% and 12-month survival 25.9% versus 11.4%.",
-          "avoid": "The absolute gain is 0.9 months of median survival, with grade 3–5 events in 69% versus 52% and three chemotherapy-related deaths. Objective response was seen in only 4 of 81 patients (5%), so the benefit is disease stabilisation, not shrinkage. More patients in the FOLFOX arm were platinum resistant or refractory (67% versus 58%), an imbalance in a factor that was itself independently prognostic, and stratification errors found during data cleaning required a post-hoc sensitivity analysis (adjusted HR 0.68, 0.49–0.95). Say both halves out loud."
+          "avoid": "The absolute gain is 0.9 months of median survival, with grade 3–5 events in 69% versus 52% and three chemotherapy-related deaths. Objective response was seen in only 4 of 81 patients (5%), so the benefit is disease stabilisation, not shrinkage. More patients in the FOLFOX arm were platinum resistant or refractory (67% versus 58%), an imbalance in a factor that was itself independently prognostic, and stlocal approval errors found during data cleaning required a post-hoc sensitivity analysis (adjusted HR 0.68, 0.49–0.95). Say both halves out loud."
         },
         {
           "t": "Where a driver is present, use the agent matched to that specific alteration.",
@@ -718,14 +718,14 @@
     {
       "id": "6",
       "tone": "pall",
-      "name": "6 · Best supportive care",
+      "name": "6 · Supportive and symptom-directed care",
       "req": "any",
       "crit": [
         "Poor performance status that is not explained by jaundice or sepsis",
         "Uncontrolled sepsis",
         "Patient choice"
       ],
-      "ask": "Is anything I can offer going to help this patient, and has drainage been given its chance first?",
+      "ask": "Would symptom-directed care provide more benefit than further cancer treatment?",
       "standard": [
         {
           "t": "Effective drainage, pruritus and pain control, nutritional support, and early specialist palliative involvement.",
@@ -734,18 +734,18 @@
           "refs": [
             "42692059"
           ],
-          "pref": "Every patient at this gate, and alongside antitumour treatment at the earlier ones. Effective drainage is part of supportive care, not an alternative to it.",
+          "pref": "Every patient at this assessment, and alongside antitumour treatment at the earlier ones. Effective drainage is part of supportive care, not an alternative to it.",
           "avoid": "Do not let a decision for supportive care become a decision against drainage — a blocked, infected biliary tree is the commonest reversible cause of the state that put the patient here.",
           "note": "Downgraded from A to C, because the package is not one intervention and only part of it has evidence in this depot. Drainage rests on guideline recommendations graded low to very low quality; early specialist palliative involvement rests on trial evidence in other cancers that this reference depot does not contain; pruritus control, pain control and nutritional support are uncontroversial but untested here. The grade should not be read as though a trial had tested the bundle."
         }
       ],
       "alt": [
         {
-          "t": "If jaundice and sepsis are driving performance status, re-evaluate after drainage before assigning this gate.",
+          "t": "If jaundice and sepsis are driving performance status, re-evaluate after drainage before assigning this assessment.",
           "l": "Reasonable",
           "g": "C",
           "pref": "The acutely unwell, newly presenting patient. This reverses more often than expected.",
-          "avoid": "Do not assign the gate on a performance status measured during cholangitis."
+          "avoid": "Do not assign the assessment on a performance status measured during cholangitis."
         }
       ],
       "avoid": [
@@ -800,7 +800,7 @@
         ],
         [
           "If a mass is present, a single mass under 3 cm in radial diameter",
-          "Required — exactly 3 cm does not meet the gate; longitudinal duct extension is not measured"
+          "Required — exactly 3 cm does not meet the assessment; longitudinal duct extension is not measured"
         ],
         [
           "No intrahepatic or extrahepatic metastases, on chest and abdominal cross-sectional imaging within 90 days before the initial request",
@@ -921,7 +921,7 @@
   ],
   "honest": [
     {
-      "t": "Which sectors are drained? Those forming the future liver remnant. This requires the operative plan to exist before the drainage plan, which is why Gate 0 and Gate 1 are discussed together at the first tumour board.",
+      "t": "Which sectors are drained? Those forming the future liver remnant. This requires the operative plan to exist before the drainage plan, which is why clinical decision 0 and clinical decision 1 are discussed together at the first tumour board.",
       "why": "Grade D. No trial tests remnant-focused drainage against draining the most accessible duct. The position follows from the physiology of hypertrophy in a cholestatic liver and from a local failure pattern, not from comparative outcome data.",
       "refs": [
         "40478744",
@@ -973,7 +973,7 @@
     },
     {
       "t": "Transperitoneal biopsy of the primary must be avoided in any patient who may be protocol-eligible. Whether the same constraint should extend to resection-only candidates is a genuine local decision and is unresolved.",
-      "why": "The avoidance rule for protocol candidates is a policy condition, not a weighing of evidence, and needs no vote. The scope question does: the roadmap's §4 Resection row says the route is unconstrained, while its own ESGE callout says not to pass a needle toward a perihilar tumour in any patient who still has a curative option, which includes resection. BSG states the stricter rule, and a resection candidate judged unresectable before any operative violation of the tumour plane may become a protocol candidate.",
+      "why": "The avoidance rule for protocol candidates is a policy condition, not a weighing of evidence, and needs no vote. The scope question does: the roadmap's §4 Resection row does not specify a restriction on the biopsy route, while its own ESGE callout says not to pass a needle toward a perihilar tumour in any patient who still has a curative option, which includes resection. BSG states the stricter rule, and a resection candidate judged unresectable before any operative violation of the tumour plane may become a protocol candidate.",
       "refs": [
         "21492336",
         "37770126"
@@ -1000,8 +1000,8 @@
       ]
     },
     {
-      "t": "Gate 0 is named 'Biliary drainage comes first', and that is a sequencing rule, not an indication. ESGE 2026 suggests against routine preoperative drainage in malignant hilar obstruction.",
-      "why": "The guidelines accept drainage for severe jaundice, cholangitis or a predicted remnant of 30% or less; the Milan consensus restricts it to a small remnant needing hypertrophy, cholangitis, renal or hepatic failure, severe malnutrition or pruritus; and the Coelen investigators' own conclusion was that drainage should follow resectability assessment and may be unnecessary when the remnant exceeds 50% of liver volume. The Asia-Pacific panel reached only 56% full agreement on its own preoperative-drainage statement. What Gate 0 establishes is that <i>if</i> you drain, you drain the remnant and you do it before anything that depends on hypertrophy — not that every jaundiced patient is drained.",
+      "t": "clinical decision 0 is named 'Biliary drainage comes first', and that is a sequencing rule, not an indication. ESGE 2026 suggests against routine preoperative drainage in malignant hilar obstruction.",
+      "why": "The guidelines accept drainage for severe jaundice, cholangitis or a predicted remnant of 30% or less; the Milan consensus restricts it to a small remnant needing hypertrophy, cholangitis, renal or hepatic failure, severe malnutrition or pruritus; and the Coelen investigators' own conclusion was that drainage should follow resectability assessment and may be unnecessary when the remnant exceeds 50% of liver volume. The Asia-Pacific panel reached only 56% full agreement on its own preoperative-drainage statement. What clinical decision 0 establishes is that <i>if</i> you drain, you drain the remnant and you do it before anything that depends on hypertrophy — not that every jaundiced patient is drained.",
       "refs": [
         "42692059",
         "40478744",
@@ -1052,8 +1052,8 @@
       ]
     },
     {
-      "t": "Two of the protocol's alternative diagnostic criteria — FISH polysomy and CA 19-9 above 100 U/mL — are weaker than their place in a listing decision implies.",
-      "why": "Pooled polysomy sensitivity is 51% (43–59) at 93% specificity (91–95), but roughly three in ten benign PSC strictures test positive on any FISH result, and polysomy alone can qualify a patient for neoadjuvant chemoradiation and transplantation. All eight studies in that meta-analysis came from one centre with overlapping recruitment windows, so the pooled estimate is effectively one institution's experience, and verification bias is likely because a FISH-positive patient is more likely to reach the surgery that classifies them. Trisomy or tetrasomy alone is uninformative and must not be counted (positive likelihood ratio 1.19, 0.65–2.21). CA 19-9 is the other: pooled accuracy for separating benign from malignant stricture is 81% (76–87) with a 15% false-positive rate, from a recommendation graded very low quality, and the marker rises in primary sclerosing cholangitis, cirrhosis and obstructive jaundice — all three of which describe this population. Record the bilirubin and drainage status with every value, and do not let an undrained or cholangitic measurement count toward candidacy.",
+      "t": "Interpret FISH results and CA 19-9 with their diagnostic limitations. OPTN lists aneuploidy; the center must define how FISH polysomy satisfies its diagnostic protocol.",
+      "why": "Pooled polysomy sensitivity is 51% (43–59) at 93% specificity (91–95), but roughly three in ten benign PSC strictures test positive on any FISH result, and FISH polysomy must be interpreted within the full diagnostic and transplant assessment; it does not independently establish transplant eligibility. All eight studies in that meta-analysis came from one centre with overlapping recruitment windows, so the pooled estimate is effectively one institution's experience, and verification bias is likely because a FISH-positive patient is more likely to reach the surgery that classifies them. Trisomy or tetrasomy alone is uninformative and must not be counted (positive likelihood ratio 1.19, 0.65–2.21). CA 19-9 is the other: pooled accuracy for separating benign from malignant stricture is 81% (76–87) with a 15% false-positive rate, from a recommendation graded very low quality, and the marker rises in primary sclerosing cholangitis, cirrhosis and obstructive jaundice — all three of which describe this population. Record the bilirubin and drainage status with every value, and do not let an undrained or cholangitic measurement count toward candidacy.",
       "refs": [
         "24360654",
         "27696456",
@@ -1158,7 +1158,7 @@
     },
     {
       "t": "Device-industry relationships run through most of the evidence this page depends on for drainage, stenting and cholangioscopy.",
-      "why": "Five ESGE 2026 authors declare consultancy, advisory or lecture relationships with stent manufacturers; many ASGE panel members declare the same across both the hilar-obstruction and the stricture-diagnosis guidelines; multiple ESGE 2025 panel members declare relationships with endoscopy device manufacturers; and the senior authors of the PSC meta-analysis that puts cholangioscopy first declare consultancy for the manufacturers of the cholangioscopy platforms. None of these guidelines was industry funded. This is not a reason to discount them, but it is a reason to read a strong recommendation on moderate evidence carefully, and it should be on the table when the programme ratifies a route or a stent default. One ASGE panel member on the hilar-obstruction guideline is at this institution.",
+      "why": "Five ESGE 2026 authors declare consultancy, advisory or lecture relationships with stent manufacturers; many ASGE panel members declare the same across both the hilar-obstruction and the stricture-diagnosis guidelines; multiple ESGE 2025 panel members declare relationships with endoscopy device manufacturers; and the senior authors of the PSC meta-analysis that puts cholangioscopy first declare consultancy for the manufacturers of the cholangioscopy platforms. None of these guidelines was industry funded. This is not a reason to discount them, but it is a reason to read a strong recommendation on moderate evidence carefully, and it should be considered when the programme ratifies a route or a stent default. One ASGE panel member on the hilar-obstruction guideline is at this institution.",
       "refs": [
         "42692059",
         "34023067",
@@ -1170,13 +1170,13 @@
   "ops": {
     "board": [
       "Submission — an Epic form captures the clinical question, biliary anatomy and drainage status, bilirubin trajectory, resectability assessment, remnant volume, transplant-protocol candidacy, prior treatment, referring clinician and urgency. Owner: submitting clinician.",
-      "Triage — a coordinator and a clinically trained gatekeeper check completeness, imaging quality, duplicate cases, the urgent lane, and whether the question is actually a decision question. Owners: coordinator and chair.",
+      "Triage — a coordinator and a clinical reviewer check completeness, imaging quality, duplicate cases, urgent referrals, and whether the question is actually a decision question. Owners: coordinator and chair.",
       "Agenda — stable at least 24 hours ahead, approximately 10–12 decision cases per session, each case carrying one focused question. Owner: coordinator.",
-      "Urgent lane — a same-week slot with chair approval. In this disease the urgent lane is used routinely: cholangitis and a rising bilirubin are time-critical. Owner: chair.",
+      "Urgent referral route — a same-week slot with chair approval. In this disease the urgent route is used routinely: cholangitis and a rising bilirubin are time-critical. Owner: chair.",
       "Attendance — hepatobiliary and transplant surgery, medical oncology, radiation oncology, interventional radiology, advanced endoscopy, diagnostic radiology, pathology, hepatology and coordination are all required. Owners: specialty leads.",
       "Imaging — adequate and current imaging reviewed before the recommendation, with MRI/MRCP obtained before stenting wherever possible because stents degrade assessment of ductal extent. Owner: diagnostic radiology.",
       "Pathology — pre-alerted for every case requiring confirmation, and for every case where transplant-protocol candidacy depends on establishing malignancy. Owner: pathology.",
-      "Output — one recommendation, one owner, one due date, one reassessment date, one documented alternative considered; drain ownership is named separately. Owner: chair.",
+      "Output — one recommendation, one owner, one due date, one reassessment date, one documented alternative considered; responsibility for drain management is named separately. Owner: chair.",
       "Documentation — an Epic note within one business day, in the agreed structured format. Owner: named owner.",
       "Registry — the case closed in the registry with the decision, the modality delivered, drainage events and the outcome at reassessment. Owner: coordinator.",
       "Referring relationships — the referring clinician is informed of the recommendation and of who owns the next step. Community-referring relationships are protected explicitly: the pathway returns patients with a plan, it does not capture them. Owner: named owner."
@@ -1275,13 +1275,13 @@
       {
         "n": 14,
         "q": "Does FISH polysomy alone satisfy the programme's diagnostic threshold for entering a patient on the transplant protocol?",
-        "why": "Polysomy is a named protocol criterion, but its positive predictive value in primary sclerosing cholangitis is 0.68, roughly three in ten benign PSC strictures are positive on any FISH result, and all eight studies in the pooled estimate came from one centre with overlapping cohorts. Trisomy and tetrasomy alone must be excluded explicitly, since their positive likelihood ratio is 1.19. A written local rule prevents a benign stricture entering neoadjuvant chemoradiation.",
+        "why": "OPTN lists aneuploidy; whether FISH polysomy alone satisfies the center’s diagnostic criterion requires local protocol agreement. Its positive predictive value in primary sclerosing cholangitis is 0.68, roughly three in ten benign PSC strictures are positive on any FISH result, and all eight studies in the pooled estimate came from one centre with overlapping cohorts. Trisomy and tetrasomy alone must be excluded explicitly, since their positive likelihood ratio is 1.19. A written local rule prevents a benign stricture entering neoadjuvant chemoradiation.",
         "audit": "Registry: diagnostic criterion used at protocol entry, and the explant finding."
       },
       {
         "n": 15,
         "q": "A written minimum for brush passes and intraductal biopsies at the index ERCP.",
-        "why": "ESGE says three to four biopsies appear sufficient; the real-world cohort that took a median of three had 33% inconclusive specimens and 15% biopsy sensitivity, and its authors recommend at least four. Cytology sensitivity rises with passes — 38% at 10, 47% at 20, 57% at 30. This is the cheapest available improvement in yield on the one sampling route that does not jeopardise protocol candidacy.",
+        "why": "ESGE says three to four biopsies appear sufficient; the real-world cohort that took a median of three had 33% inconclusive specimens and 15% biopsy sensitivity, and its authors recommend at least four. Cytology sensitivity rises with passes — 38% at 10, 47% at 20, 57% at 30. This is the cheapest available improvement in yield on the one sampling route that does not disqualify the patient from the transplant protocol.",
         "audit": "Audit: brush passes and biopsy number per index ERCP, inconclusive-specimen rate, sensitivity against final diagnosis."
       },
       {
@@ -1511,7 +1511,7 @@
     "uthprotocol": [
       "UTHealth perihilar CCA protocol v2",
       "Guidelines & policy",
-      "UTHealth Houston standard perihilar cholangiocarcinoma transplant protocol, version 2; policy review 16 July 2026. The internal document on which the roadmap's corrected allocation statement rests; the OPTN policy text itself was not in hand at the time of the alignment review, hence the requirement to cite Policy 9.5.A directly before ratification."
+      "UTHealth Houston standard perihilar cholangiocarcinoma transplant protocol, version 2; policy review 16 July 2026. The internal document on which the roadmap's corrected allocation statement rests; the OPTN policy text itself was not in hand at the time of the alignment review, hence the requirement to cite Policy 9.5.A directly before local approval."
     ],
     "hope4liver": [
       "HOPE4LIVER",
@@ -1532,8 +1532,8 @@
     "align": [
       "Guideline alignment worksheet v0.6",
       "Guidelines & policy",
-      "Guideline alignment worksheet — Adult perihilar cholangiocarcinoma. Memorial Hermann Perihilar Cholangiocarcinoma System Roadmap, Draft v0.6, 4 October 2026. Sixteen areas where the published guidelines can disagree, with the institutional position, the closest guideline and the ratification decision for each."
+      "Guideline alignment worksheet — Adult perihilar cholangiocarcinoma. Memorial Hermann Perihilar Cholangiocarcinoma System Roadmap, Draft v0.6, 4 October 2026. Sixteen areas where the published guidelines can disagree, with the institutional position, the closest guideline and the local approval decision for each."
     ]
   },
-  "provenance": "Revised on 7 October 2026 (Batch 08) after a full-text read of this page's reference depot. All 39 PubMed-indexed references were read in full and abstracted with an independent critique: 19 from the perihilar cholangiocarcinoma depot and 20 shared papers drawn from the intrahepatic CCA depot, which supplies the biliary systemic-therapy trials (ABC-02, TOPAZ-1, KEYNOTE-966, ABC-06, BILCAP, BCAT, PRODIGE-12, ASCOT), the targeted-therapy trials (ClarIDHy, FIGHT-202, FOENIX-CCA2, ROAR, HERIZON-BTC-01), the hepatic arterial infusion trial, the AASLD, BSG, ESMO 2023 and ESMO 2024 interim guidelines, and the two next-generation sequencing studies from the developing centre. Three limits of that read should be named rather than implied. First, one reference is effectively abstract-level: in Gillmeister 2026 (PMID 42698384, a brief report) the Results section did not survive text extraction, so every figure quoted from it comes from its Table 1, abstract and Discussion and is expressed per biopsy rather than per patient, and its patient count, malignancy prevalence and PSC subgroup size could not be read. Second, several linked editorials and correspondence were identified in PubMed but not obtained in full, so no critique point on this page is attributed to them: Alipour's editorial on Bardhi 2025 (PMID 40518235), Bridgewater, Webster and Amin's comment on the DRAINAGE trial (PMID 30122357), the four ABC-06 correspondence letters, and the paywalled Lancet Oncology comments on ClarIDHy, where the cost-of-benefit point is reported second-hand and should be treated as provisional. Third, SWOG S0809 is cited only as quoted by BSG 2023; the primary report is not in this depot, and the non-PubMed sources — NCCN Biliary Tract Cancers v1.2026, OPTN Policy 9, the OPTN review-board guidance, the UTHealth protocol v2, the HOPE4LIVER one-year update, the roadmap itself and its alignment worksheet — were read as documents but not abstracted or critiqued in the same way. Where a figure in the earlier draft could not be traced to any of these sources it has been replaced with one that can, and the removals are visible in the text: the reported incidence split for IDH1 between intrahepatic and extrahepatic disease, and a per-site adjuvant hazard ratio for hilar tumours, are both gone. Built from the Memorial Hermann Perihilar Cholangiocarcinoma System Roadmap, Draft v0.6, dated 4 October 2026 (with the liver-directed treatment revision of 3 October 2026), and its companion Guideline alignment worksheet of the same version and date, which compares AASLD 2023, BSG 2023, the ESMO 2024 interim update, the Asia-Pacific 2024 consensus, OPTN policy and review-board guidance, and NCCN Biliary Tract Cancers v1.2026 (10 March 2026) across sixteen areas. The gates follow the roadmap's own sequence: §2 (its Gate 0, drainage), §3 (define the extent), §4 and §4.1 (tissue and route), §5 (its Gate 1, resectable disease), §6 (its Gate 2, the transplant protocol), and §7 (its Gates 3 and 4). Allocation criteria are from OPTN Policy 9.5.A and 9.4.C–E, official PDF checked 1 October 2026, with the programme's own standard perihilar CCA protocol v2 (policy review 16 July 2026). Perihilar cholangiocarcinoma has no column in the liver-directed therapy matrix, so that section is omitted and the modality positions appear as explicit avoid items instead. This revision changed grades as well as numbers. Forty-five evidence strings were rewritten and twenty-seven of them were regraded downward where the full-text critique did not support the grade assigned from study design, and the reason is given in each string's note; the page now carries one grade-A string where it previously carried seven. No recommendation was removed: the roadmap's positions stand, and the page's job is to say how well supported each one is. This page reproduces a draft pending multidisciplinary and institutional governance review: it is not active clinical policy, it does not replace clinician judgement, and every numeric criterion must be verified against the current source before use."
+  "provenance": "Website language revised 23 October 2026 to use direct clinical questions and consistent terminology. Revised on 7 October 2026 (Batch 08) after a full-text read of this page's reference depot. All 39 PubMed-indexed references were read in full and abstracted with an independent critique: 19 from the perihilar cholangiocarcinoma depot and 20 shared papers drawn from the intrahepatic CCA depot, which supplies the biliary systemic-therapy trials (ABC-02, TOPAZ-1, KEYNOTE-966, ABC-06, BILCAP, BCAT, PRODIGE-12, ASCOT), the targeted-therapy trials (ClarIDHy, FIGHT-202, FOENIX-CCA2, ROAR, HERIZON-BTC-01), the hepatic arterial infusion trial, the AASLD, BSG, ESMO 2023 and ESMO 2024 interim guidelines, and the two next-generation sequencing studies from the developing centre. Three limits of that read should be named rather than implied. First, one reference is effectively abstract-level: in Gillmeister 2026 (PMID 42698384, a brief report) the Results section did not survive text extraction, so every figure quoted from it comes from its Table 1, abstract and Discussion and is expressed per biopsy rather than per patient, and its patient count, malignancy prevalence and PSC subgroup size could not be read. Second, several linked editorials and correspondence were identified in PubMed but not obtained in full, so no critique point on this page is attributed to them: Alipour's editorial on Bardhi 2025 (PMID 40518235), Bridgewater, Webster and Amin's comment on the DRAINAGE trial (PMID 30122357), the four ABC-06 correspondence letters, and the paywalled Lancet Oncology comments on ClarIDHy, where the cost-of-benefit point is reported second-hand and should be treated as provisional. Third, SWOG S0809 is cited only as quoted by BSG 2023; the primary report is not in this depot, and the non-PubMed sources — NCCN Biliary Tract Cancers v1.2026, OPTN Policy 9, the OPTN review-board guidance, the UTHealth protocol v2, the HOPE4LIVER one-year update, the roadmap itself and its alignment worksheet — were read as documents but not abstracted or critiqued in the same way. Where a figure in the earlier draft could not be traced to any of these sources it has been replaced with one that can, and the removals are visible in the text: the reported incidence split for IDH1 between intrahepatic and extrahepatic disease, and a per-site adjuvant hazard ratio for hilar tumours, are both gone. Built from the Memorial Hermann Perihilar Cholangiocarcinoma System Roadmap, Draft v0.6, dated 4 October 2026 (with the liver-directed treatment revision of 3 October 2026), and its companion Guideline alignment worksheet of the same version and date, which compares AASLD 2023, BSG 2023, the ESMO 2024 interim update, the Asia-Pacific 2024 consensus, OPTN policy and review-board guidance, and NCCN Biliary Tract Cancers v1.2026 (10 March 2026) across sixteen areas. The decision points follow the roadmap's own sequence: §2 (its clinical decision 0, drainage), §3 (define the extent), §4 and §4.1 (tissue and route), §5 (its clinical decision 1, resectable disease), §6 (its clinical decision 2, the transplant protocol), and §7 (its Decision points 3 and 4). Allocation criteria are from OPTN Policy 9.5.A and 9.4.C–E, official PDF checked 1 October 2026, with the programme's own standard perihilar CCA protocol v2 (policy review 16 July 2026). Perihilar cholangiocarcinoma is included in the shared liver-directed therapy matrix. The matrix link provides the current cross-disease comparison. This revision changed grades as well as numbers. Forty-five evidence strings were rewritten and twenty-seven of them were regraded downward where the full-text critique did not support the grade assigned from study design, and the reason is given in each string's note; the page now carries one grade-A string where it previously carried seven. No recommendation was removed: the roadmap's positions stand, and the page's job is to say how well supported each one is. This page reproduces a draft pending multidisciplinary and institutional governance review: it is not active clinical policy, it does not replace clinician judgement, and every numeric criterion must be verified against the current source before use."
 }
