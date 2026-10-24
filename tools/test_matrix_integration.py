@@ -1,5 +1,5 @@
 """Check evidence identifiers, public-file boundaries and clinical review destinations."""
-import json,re,subprocess
+import json,re,subprocess,hashlib
 from pathlib import Path
 from urllib.parse import urlsplit,unquote
 
@@ -44,7 +44,11 @@ for pm,r in refs.items():
  assert r['pmid']==pm
  assert not any(k in r for k in ['abstract','pdf_file','origin']),pm
 assert not list((ROOT/'systemic').rglob('*.pdf'))
-assert not list((ROOT/'transplant/high-risk').rglob('*.pdf'))
+authored=json.loads((ROOT/'transplant/high-risk/authored-documents.json').read_text())
+allowed={x['path']:x['sha256'] for x in authored if x['path'].endswith('.pdf')}
+public_pdfs=list((ROOT/'transplant').rglob('*.pdf'))
+assert len(public_pdfs)==len(allowed)==7
+for pdf in public_pdfs:assert hashlib.sha256(pdf.read_bytes()).hexdigest()==allowed[str(pdf.relative_to(ROOT))]
 home=(ROOT/'index.html').read_text()
 assert home.index('id="therapy-matrices"')>home.index('id="hpb-roadmaps"')
 assert 'href="systemic/"' in home and 'href="transplant/high-risk/"' in home

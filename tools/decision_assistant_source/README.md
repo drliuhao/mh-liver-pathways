@@ -14,3 +14,12 @@ Validation includes 1,851 categorical states, all continuation destinations, the
 ## October 24 overview and preselected examples
 
 Each of the seven pathways opens with explicit example selections that follow an existing proceed result at all 46 decisions. The interface labels these as examples, offers restore-example and clear-all controls, and never describes the prefilled choices as completed clinical assessments. Editing a finding clears choices in every later decision; navigation preserves those cleared states. The four-stage overview preserves the original decision order, and the step bar remains visible while scrolling, with an Overview shortcut. On phones the step bar scrolls horizontally. No clinical content, criteria, source statements, matching rules or continuing-care options were changed. No persistent storage was introduced.
+
+
+## Integrated high-risk protocols — 24 October 2026
+
+`high_risk_data.json` is the normalized reconciled V7 source, without local depot paths or article full texts. `high-risk.js` renders the 21 disease reviews at 31 relevant decisions in the seven standard protocols, plus four shared approval/readiness reviews. Orange labels identify high-risk protocols; each section retains its proposed, research-only or closed status. The renderer does not participate in eligibility matching or modify example answers.
+
+`tools/integrate_high_risk.py <V7-package> <access-lookup.json> <canonical-source/high_risk_data.json>` regenerates the source from `decision_records.json`, `evidence_reviews_combined.json` and bibliographic/access metadata. The lookup used for this release is retained in the local integration audit. Rebuild standard pages, run `tools/build_high_risk.py <V7-package>` for the directory/legacy redirects, then export. Use `--preserve-existing-documents` when exporting into a checkout with independently edited Word documents.
+
+Run `node tools/test_high_risk_integration.cjs` as well as the standard checks. Only the seven author-created V7 protocol PDFs in `transplant/high-risk/authored-documents.json` are allowed; the validators check their hashes. Licensed primary-source PDFs remain in the local depot. The website links to PMC, Europe PMC, publisher/repository PDFs where found, and TMC catalogue DOI searches for institutional access. A discovered PDF endpoint does not guarantee unauthenticated access; primary-source sites may require sign-in or a browser check.

@@ -1,5 +1,6 @@
 """Check local URLs, retained clinical payloads, and the public-file allowlist."""
 import json
+import hashlib
 import re
 import sys
 from html import unescape
@@ -37,7 +38,11 @@ assert len(re.findall(r'class="portal-card"', (ROOT/'index.html').read_text()))=
 for _,slug,_,_,_ in ROADMAPS:assert 'portal-navigation.js' in (ROOT/slug/'index.html').read_text()
 assert len(list((ROOT/'transplant/protocols').glob('*.docx')))==7
 assert len(list((ROOT/'transplant/docs').glob('*.docx')))==14
-assert not list((ROOT/'transplant').rglob('*.pdf'))
+authored=json.loads((ROOT/'transplant/high-risk/authored-documents.json').read_text())
+allowed={x['path']:x['sha256'] for x in authored if x['path'].endswith('.pdf')}
+public_pdfs=list((ROOT/'transplant').rglob('*.pdf'))
+assert len(public_pdfs)==len(allowed)==7
+for pdf in public_pdfs:assert hashlib.sha256(pdf.read_bytes()).hexdigest()==allowed[str(pdf.relative_to(ROOT))]
 for file in (ROOT/'transplant').rglob('*'):
     if file.is_file() and file.suffix in ('.json','.html','.js'):
         assert '/evidence/' not in file.read_text(),str(file)

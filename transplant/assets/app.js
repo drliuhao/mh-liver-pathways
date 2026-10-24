@@ -59,7 +59,7 @@ function home() {
 
 function pathwayShell() {
  app.innerHTML=header()+`<main class="wrap"><div class="pathhero"><div><a class="back" href="/mh-liver-pathways/transplant/">← All pathways</a><p class="eyebrow">${e(active.route)}</p><h1>${e(active.name)}</h1><p class="lead">${e(active.entry)}</p></div><div class="herolinks">${active.roadmap?external(active.roadmap,`${active.code} treatment roadmap`,'btn secondary'):external(DATA.sources['E-consensus'].pdf,'HEHE treatment consensus','btn secondary')}<a href="#meeting" class="plain-link" data-view="meeting">Protocol & meeting documents ↓</a></div></div>
- <div class="viewbar" role="tablist" aria-label="Pathway sections"><button role="tab" id="tab-pathway" data-view="pathway">Decision pathway</button><button role="tab" id="tab-meeting" data-view="meeting">Meeting record <span>${active.issues.length}</span></button><button role="tab" id="tab-care" data-view="care">Treatment & continuing care</button><button role="tab" id="tab-evidence" data-view="evidence">Evidence library <span>${allRefs(active).length}</span></button><span class="viewnote">Compare choices · nothing is saved</span></div>
+ <div class="viewbar" role="tablist" aria-label="Pathway sections"><button role="tab" id="tab-pathway" data-view="pathway">Decision pathway</button><button role="tab" id="tab-meeting" data-view="meeting">Meeting record <span>${active.issues.length}</span></button><button role="tab" id="tab-care" data-view="care">Treatment & continuing care</button><button role="tab" id="tab-high-risk" class="high-risk-tab" data-view="high-risk">High-risk protocols <span>${HighRisk.reviews(DATA.high_risk,active.slug).length}</span></button><button role="tab" id="tab-evidence" data-view="evidence">Evidence library</button><span class="viewnote">Compare choices · nothing is saved</span></div>
  <div id="view"></div></main>`+footer();
  renderView();
 }
@@ -68,7 +68,7 @@ function renderView(){
  document.querySelectorAll('[role="tab"]').forEach(t=>t.setAttribute('aria-selected',t.dataset.view===view?'true':'false'));
  const out=document.getElementById('view');
  out.setAttribute('role','tabpanel');out.setAttribute('aria-labelledby','tab-'+view);
- const content=view==='pathway'?renderStep():view==='meeting'?renderMeeting():view==='evidence'?renderEvidence():renderCare();
+ const content=view==='pathway'?renderStep():view==='meeting'?renderMeeting():view==='evidence'?renderEvidence():view==='high-risk'?HighRisk.overview(DATA.high_risk,active.slug):renderCare();
  out.innerHTML=(view==='pathway'?renderOverview():'')+renderNavigation()+content;
  if(view==='pathway')updateDecision();
  navigationObserver?.disconnect();
@@ -95,7 +95,7 @@ function renderOverview(){
  const status=exampleStatus();
  return `<section class="journey-overview" aria-labelledby="journey-title"><div class="journey-heading"><div><p class="eyebrow">The whole pathway</p><h2 id="journey-title">From diagnosis to transplant and follow-up</h2></div><a href="#care-treatment" data-care="treatment" class="journey-alternative">Treatment and care alternatives →</a></div>
  <nav class="journey-phases" aria-label="Pathway overview">${DATA.journeys[active.slug].map((phase,n)=>{const first=active.steps.findIndex(s=>s.id===phase.steps[0])+1;const last=first+phase.steps.length-1;const current=phase.steps.includes(active.steps[stepIndex].id);return `<button data-step="${e(phase.steps[0])}" class="journey-phase ${current?'current':''}" ${current?'aria-current="true"':''}><span class="phase-number">${n+1}</span><span><b>${e(phase.title)}</b><small>Decision${first===last?'':'s'} ${first}${first===last?'':'–'+last}</small></span><span class="phase-arrow" aria-hidden="true">→</span></button>`;}).join('')}</nav>
- <div class="example-controls"><div aria-live="polite"><strong data-example-status>${e(status[0])}</strong><p data-example-description>${e(status[1])}</p></div><div class="example-buttons"><button data-pathway-example>Restore transplant example</button><button data-pathway-clear>Clear all choices</button></div></div></section>`;
+ <div class="example-controls"><div aria-live="polite"><strong data-example-status>${e(status[0])}</strong><p data-example-description>${e(status[1])}</p></div><div class="example-buttons"><button data-pathway-example>Restore transplant example</button><button data-pathway-clear>Clear all choices</button></div></div><div class="hr-overview-note">${HighRisk.badge()}<a href="#high-risk" data-view="high-risk">Proposed high-risk options and their evidence are integrated at the relevant decisions →</a></div></section>`;
 }
 
 function renderNavigation(){
@@ -117,8 +117,13 @@ function updateExampleLabels(){
  if(intro)intro.textContent=origin==='example'?'Example findings are preselected to show the path toward transplant. Change any choice to explore another result.':origin==='edited'&&stepIndex<active.steps.length-1?'Findings changed. Later decisions have been cleared; review them again before continuing.':'Choose the findings that matter for this decision. The matching next step will be highlighted.';
 }
 
+function highRiskAction(a){
+ const target=HighRisk.destination(a.url);
+ if(!target||target.slug&&target.slug!==active.slug)return external(a.url,a.label,'route-button');
+ return `<a class="route-button high-risk-route" href="#high-risk${target.id?'-'+e(target.id):''}" ${target.id?`data-high-risk="${e(target.id)}"`:'data-view="high-risk"'}><small>High-risk protocol</small>${e(a.label)} →</a>`;
+}
 function renderActions(actions){
- return `<div class="next-actions">${actions.map(a=>`<div class="next-action">${a.detail?`<p>${e(a.detail)}</p>`:''}${a.step?`<button class="route-button" data-step="${e(a.step)}">${e(a.label)} →</button>`:a.care?`<a class="route-button" href="#care-${e(a.care)}" data-care="${e(a.care)}">${e(a.label)} →</a>`:external(a.url,a.label,'route-button')}</div>`).join('')}</div>`;
+ return `<div class="next-actions">${actions.map(a=>`<div class="next-action">${a.detail?`<p>${e(a.detail)}</p>`:''}${a.step?`<button class="route-button" data-step="${e(a.step)}">${e(a.label)} →</button>`:a.care?`<a class="route-button" href="#care-${e(a.care)}" data-care="${e(a.care)}">${e(a.label)} →</a>`:highRiskAction(a)}</div>`).join('')}</div>`;
 }
 
 function updateDecision(){
@@ -144,9 +149,9 @@ function renderCare(){
 function renderStep(){
  const s=active.steps[stepIndex];
  return `<section class="decision" aria-labelledby="question"><div class="question-head"><div><p class="eyebrow">Decision ${stepIndex+1} of ${active.steps.length} <span> / ${e(s.title)}</span></p><h2 id="question" tabindex="-1">${e(s.question)}</h2></div><a class="permalink" href="#${s.id}" aria-label="Link to this decision">#</a></div><div class="contextline"><span><b>When</b> ${e(s.timing)}</span><span><b>Responsible team</b> ${e(s.owner)}</span></div>
- <div class="decision-grid"><section class="orders"><div class="section-head"><span class="number-dot">1</span><h3>Tests and information needed</h3></div>${DecisionAssistant.render(assistantConfig(),DATA.sources,assistantSession.answers[assistantKey()],assistantSession.origins[assistantKey()])}<details class="full-tests"><summary>Full test checklist and source details</summary>${s.orders.map(g=>`<div class="ordergroup"><h4>${e(g.label)}</h4>${bullets(g.items)}</div>`).join('')}</details></section>
+ ${HighRisk.prompt(DATA.high_risk,active.slug,s.id)}<div class="decision-grid"><section class="orders"><div class="section-head"><span class="number-dot">1</span><h3>Tests and information needed</h3></div>${DecisionAssistant.render(assistantConfig(),DATA.sources,assistantSession.answers[assistantKey()],assistantSession.origins[assistantKey()])}<details class="full-tests"><summary>Full test checklist and source details</summary>${s.orders.map(g=>`<div class="ordergroup"><h4>${e(g.label)}</h4>${bullets(g.items)}</div>`).join('')}</details></section>
  <section class="results" id="decision-results"><div class="section-head"><span class="number-dot">2</span><h3>Review results and select the next step</h3></div><p class="logic-note">Your choices highlight the relevant recommendation and next actions. Review each option with the treating team.</p><article class="assistant-other-result" hidden></article>${s.branches.map((b,bi)=>`<article class="branch ${e(b.kind)} is-muted" data-branch-index="${bi}"><span class="branch-match" hidden>Matches these choices</span><div class="branch-title"><span class="route-label">${b.kind==='advance'?'Proceed when':b.kind==='hold'?'Pause and clarify':b.kind==='redirect'?'Use another pathway':'Do not proceed on this pathway'}</span><h4>${e(b.title)}</h4></div><details class="branch-details"><summary>Criteria and supporting sources</summary>${bullets(b.criteria)}</details><div class="branch-action"><span class="action-arrow">→</span><p>${e(b.action)} ${refs(b.refs)}</p></div><div data-next-branch="${bi}"></div></article>`).join('')}</section></div>
- <div class="safety-grid"><section class="stops"><div class="section-head"><span class="status-icon">!</span><h3>Findings that change the treatment or transplant plan</h3></div>${s.stops.length?bullets(s.stops):'<p class="muted">No additional exclusion is listed at this step. Apply the earlier disease-specific criteria and complete the full transplant assessment.</p>'}<p class="small stopnote">Each statement identifies what the finding affects: treatment, a MELD-exception request, or transplantation under this protocol.</p></section>
+ ${HighRisk.inline(DATA.high_risk,active.slug,s.id)}<div class="safety-grid"><section class="stops"><div class="section-head"><span class="status-icon">!</span><h3>Findings that change the treatment or transplant plan</h3></div>${s.stops.length?bullets(s.stops):'<p class="muted">No additional exclusion is listed at this step. Apply the earlier disease-specific criteria and complete the full transplant assessment.</p>'}<p class="small stopnote">Each statement identifies what the finding affects: treatment, a MELD-exception request, or transplantation under this protocol.</p></section>
  <section class="gray"><div class="section-head"><span class="status-icon">?</span><h3>Questions for multidisciplinary discussion</h3></div>${s.issues.map(id=>{const i=active.issues.find(x=>x.id===id);return `<a class="issue-link" href="/mh-liver-pathways/transplant/alignment/${active.slug}/#${i.id}"><span>Discussion ${active.issues.indexOf(i)+1}</span><b>${e(i.question)}</b><span class="issue-arrow">Compare sources · proposed decision →</span></a>`;}).join('')}</section></div>
  <nav class="stepfooter" aria-label="Previous and next decision"><button ${stepIndex===0?'disabled':''} data-step="${active.steps[Math.max(0,stepIndex-1)].id}">← Previous decision</button><span>${stepIndex+1} / ${active.steps.length}</span><button ${stepIndex===active.steps.length-1?'disabled':''} data-step="${active.steps[Math.min(active.steps.length-1,stepIndex+1)].id}">Next decision →</button></nav></section>`;
 }
@@ -154,7 +159,7 @@ function renderStep(){
 function renderMeeting(){
  return `<section class="meetingintro"><div><p class="eyebrow">Source comparison + local decision record</p><h2>Questions to resolve together</h2><p>Each question below is linked from the relevant pathway step. Source wording and our proposed interpretation are separate. <b>No local proposal is marked approved.</b></p></div><div class="docbox"><b>Protocol & meeting documents</b><a href="${active.protocol}" download>Clinical protocol · Oct 16 V3 DOCX ↓</a>${active.docs.map(d=>`<a href="${d.url}" download>${e(d.label)} · Oct 16 DOCX ↓</a>`).join('')}<a href="/mh-liver-pathways/transplant/meeting-records/${active.slug}.html" target="_blank" rel="noopener">Current web alignment record · print / save ↓</a><small>Word downloads retain their October 16 wording; the website language was revised October 24. Reconcile agreed changes in the source documents before clinical activation.</small></div></section>
  <div class="versionnote"><b>Version clarity:</b> the web source-comparison addendum was reviewed October 17, with language and next-action revisions October 24. The linked V3 Word documents retain their October 16/source wording. Record an agreed change there before clinical activation.</div>
- <nav class="issue-index" aria-label="Meeting questions">${active.issues.map((i,n)=>`<a href="#${i.id}" data-issue="${i.id}">${n+1}. ${e(i.question)}</a>`).join('')}</nav>
+ <aside class="high-risk-doc-note">${HighRisk.badge()}<p>The V7 high-risk reviews are integrated beside the standard pathway decisions, with proposed criteria, study results and full-text access.</p><a href="#high-risk" data-view="high-risk">Open the integrated high-risk protocols →</a>${HighRisk.downloads(DATA.high_risk,active.slug)}</aside><nav class="issue-index" aria-label="Meeting questions">${active.issues.map((i,n)=>`<a href="#${i.id}" data-issue="${i.id}">${n+1}. ${e(i.question)}</a>`).join('')}</nav>
  <div class="issue-records">${active.issues.map((i,n)=>renderIssue(i,n)).join('')}</div>`;
 }
 
@@ -166,7 +171,7 @@ function renderIssue(i,n){
 }
 
 function renderEvidence(){
- return `<section class="evidenceintro"><p class="eyebrow">Evidence is also linked at the point of use</p><h2>Sources for ${e(active.code)}</h2><p>Policy, review guidance, clinical recommendations and study evidence have different roles. Open a source to see its locator and full text. Publisher access may require an institutional sign-in. A source link does not imply high-level or definitive evidence.</p></section><div class="evidencegrid">${allRefs(active).map(id=>{const r=DATA.sources[id];return `<article class="evidencecard"><span class="source-kind">${e(r.kind)}</span><h3>${e(r.title)}</h3><p>${e(r.locator)}</p><button class="btn secondary" data-ref="${id}">Source details & full text ↗</button></article>`;}).join('')}</div>`;
+ return `<section class="evidenceintro"><p class="eyebrow">Evidence is also linked at the point of use</p><h2>Sources for ${e(active.code)}</h2><p>Policy, review guidance, clinical recommendations and study evidence have different roles. Open a source to see its locator and full text. Publisher access may require an institutional sign-in. A source link does not imply high-level or definitive evidence.</p></section><div class="evidencegrid">${allRefs(active).map(id=>{const r=DATA.sources[id];return `<article class="evidencecard"><span class="source-kind">${e(r.kind)}</span><h3>${e(r.title)}</h3><p>${e(r.locator)}</p><button class="btn secondary" data-ref="${id}">Source details & full text ↗</button></article>`;}).join('')}</div>${HighRisk.library(DATA.high_risk,active.slug)}`;
 }
 
 function showSource(id, trigger){
@@ -184,9 +189,23 @@ function setStep(id,push=true){
  document.getElementById('question').focus({preventScroll:true});
  document.querySelector('.decision').scrollIntoView({block:'start',behavior:'instant'});
 }
+function showHighRisk(id,push=true){
+ const record=HighRisk.reviews(DATA.high_risk,active.slug).find(r=>r.anchor===id);
+ if(record){
+  const current=active.steps[stepIndex].id;
+  if(!record.steps.includes(current))stepIndex=active.steps.findIndex(s=>s.id===record.steps[0]);
+  view='pathway';
+ }else{view='high-risk';}
+ if(push)history.pushState(null,'','#high-risk-'+id);
+ renderView();
+ const target=document.getElementById('high-risk-'+id);
+ if(target){const heading=target.querySelector('h2,h3');heading?.focus({preventScroll:true});target.scrollIntoView({block:'start',behavior:'instant'});}
+}
 function hashState(){
  const h=decodeURIComponent(location.hash.slice(1));
  const idx=active.steps.findIndex(s=>s.id===h);
+ if(h.startsWith('high-risk-')){showHighRisk(h.slice(10),false);return;}
+ if(h==='high-risk'){view='high-risk';renderView();return;}
  if(h.startsWith('care-')&&DATA.care[active.slug].some(p=>p.id===h.slice(5))){view='care';careId=h.slice(5);}
  else if(DATA.mode==='alignment'&&active.issues.some(i=>i.id===h))view='meeting';
  else if(idx>=0){view='pathway';stepIndex=idx;}
@@ -207,6 +226,7 @@ document.addEventListener('change',ev=>{
 });
 
 document.addEventListener('click',ev=>{
+ const highRisk=ev.target.closest('[data-high-risk]');if(highRisk){ev.preventDefault();showHighRisk(highRisk.dataset.highRisk);return;}
  if(ev.target.closest('[data-pathway-overview]')){
   if(view!=='pathway'){view='pathway';history.pushState(null,'','#'+active.steps[stepIndex].id);renderView();}
   const title=document.getElementById('journey-title');title.setAttribute('tabindex','-1');title.focus({preventScroll:true});
