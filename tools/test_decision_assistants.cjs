@@ -133,3 +133,42 @@ for(const key of Object.keys(D.assistants)){
  assert(!html.includes('<form'),key);
 }
 console.log(`PASS: all 46 decisions; ${combinations} categorical states; explicit clinical boundary/exclusion scenarios; unknown and missing findings cannot proceed; source links and redirects; no record collection/storage/export.`);
+
+// Each displayed outcome has a navigable next action. Continuing-care endpoints
+// must contain real clinical tasks and sources, not just a terminal label.
+let actionCount=0, customOutcomes=0;
+for(const p of D.index){
+ const careById=new Map(D.care[p.slug].map(c=>[c.id,c]));
+ const validateAction=a=>{
+  actionCount++;
+  assert(a.label && [a.step,a.care,a.url].filter(Boolean).length===1,JSON.stringify(a));
+  if(a.step)assert(p.steps.some(s=>s.id===a.step),`${p.slug}: ${a.step}`);
+  if(a.care)assert(careById.has(a.care),`${p.slug}: ${a.care}`);
+  if(a.url)assert(/^https:\/\//.test(a.url),a.url);
+ };
+ for(const c of careById.values()){
+  assert(c.tasks.length>=2&&c.refs.length,c.id);
+  c.refs.forEach(id=>assert(D.sources[id],id));
+  assert(c.endpoint||c.actions.length,c.id);
+  c.actions.forEach(validateAction);
+ }
+ for(const s of p.steps){
+  const key=`${p.slug}/${s.id}`,next=D.continuations[key];assert(next,key);
+  s.branches.forEach((b,n)=>{assert(next.branches[n].length,key);next.branches[n].forEach(validateAction);});
+  D.assistants[key].rules.forEach((r,n)=>{if(r.branch===null){customOutcomes++;assert(next.rules[n].length,key);next.rules[n].forEach(validateAction);}});
+  assert(next.clarify.length,key);next.clarify.forEach(validateAction);
+ }
+ if(p.slug!=='hca')assert(careById.get('supportive').endpoint,p.slug);
+ else assert(!careById.has('supportive'),'Benign HCA must not be assigned a cancer end-of-life pathway');
+}
+const afp=result('hcc/allocation',{burden:'t2',afp:'not-met',spread:'yes'});
+const afpActions=D.continuations['hcc/allocation'].rules[afp.ruleIndex];
+assert.equal(afpActions.length,6);
+assert.deepEqual(new Set(afpActions.map(a=>a.care)),new Set(['local','systemic','resection','exception','supportive']));
+assert(afp.refs.includes('NCCN-hcc'));
+const t1=result('hcc/allocation',{burden:'t1',afp:'met',spread:'yes'});
+assert(t1.text.includes('does not qualify for HCC MELD-exception points'));
+assert(t1.text.includes('does not rule out liver transplantation'));
+assert(!t1.text.includes('medical contraindication'));
+for(const key of ['NCCN-hcc','NCCN-pcca','NCCN-icca','NCCN-crlm','NCCN-net'])assert(D.sources[key].locator.includes('original PDF'));
+console.log(`PASS: ${actionCount} next-action links; ${customOutcomes} custom outcomes; every branch has a destination; six AFP options; supportive/ongoing-care endpoints; original NCCN page locations.`);

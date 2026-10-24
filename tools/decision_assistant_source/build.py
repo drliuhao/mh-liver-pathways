@@ -6,8 +6,9 @@ import shutil
 import sys
 from content import DIST, PATHWAYS, SOURCES
 from decision_assistants import ASSISTANTS, VERSION
+from care_options import CARE, build_continuations
 
-STAMP='20261024-decisions'
+STAMP='20261024-clear-actions'
 
 def document(title, data):
     payload=json.dumps(data,ensure_ascii=False).replace('</','<\\/')
@@ -27,14 +28,15 @@ def printable(p):
     sections=[]
     for i in p['issues']:
         comparisons=''.join(f'<section class="comparison"><div class="source-kind">{e(SOURCES[c["ref"]]["kind"])}</div><h4>{e(SOURCES[c["ref"]]["short"])}</h4><p class="quotation">{("“" if c["quote"] else "")+e(c["text"])+("”" if c["quote"] else "")}</p><p class="small muted">{"Short verbatim excerpt" if c["quote"] else "Source summary / scope"} · {e(c["locator"] or SOURCES[c["ref"]]["locator"])}</p>{ref_link(c)}</section>' for c in i['comparisons'])
-        sections.append(f'<article class="issue-record" id="{i["id"]}"><p class="eyebrow">{e(i["record"])}</p><h2>{e(i["question"])}</h2><p class="small">Status: discussion required — not ratified. <a href="/{p["slug"]}/">Return to interactive pathway</a></p><div class="comparison-grid">{comparisons}</div><div class="proposal"><div><b>Proposed local approach</b><p>{e(i["proposal"])}</p></div><div><b>Rationale</b><p>{e(i["rationale"])}</p></div></div><p class="small">Proposed owners: {e(i["owners"])}</p><p>Meeting decision: ____________________ &nbsp; Owner/date: ____________________</p><p>Implementation / protocol changes: __________________________________________________</p></article>')
-    return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(p["code"])} — alignment meeting record</title><link rel="stylesheet" href="/assets/style.css?v={STAMP}"></head><body><main class="wrap"><div class="pathhero"><div><p class="eyebrow">October 17, 2026 · web source-comparison addendum</p><h1>{e(p["code"])} alignment & decision record</h1><p>Draft for meeting discussion. No proposal is approved. Use browser Print to save this current record as PDF; reconcile agreed decisions with the separately linked V3 Word documents.</p></div></div>{"".join(sections)}</main></body></html>'
+        sections.append(f'<article class="issue-record" id="{i["id"]}"><p class="eyebrow">{e(i["record"])}</p><h2>{e(i["question"])}</h2><p class="small">Status: discussion required — not yet approved. <a href="/{p["slug"]}/">Return to interactive pathway</a></p><div class="comparison-grid">{comparisons}</div><div class="proposal"><div><b>Proposed local approach</b><p>{e(i["proposal"])}</p></div><div><b>Rationale</b><p>{e(i["rationale"])}</p></div></div><p class="small">Proposed responsible team: {e(i["owners"])}</p><p>Meeting decision: ____________________ &nbsp; Responsible team/date: ____________________</p><p>Implementation / protocol changes: __________________________________________________</p></article>')
+    return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(p["code"])} — alignment meeting record</title><link rel="stylesheet" href="/assets/style.css?v={STAMP}"></head><body><main class="wrap"><div class="pathhero"><div><p class="eyebrow">Source comparison: October 17, 2026 · language revision: October 24, 2026</p><h1>{e(p["code"])} alignment & decision record</h1><p>Draft for meeting discussion. No proposal is approved. Use browser Print to save this current record as PDF; reconcile agreed decisions with the separately linked V3 Word documents.</p></div></div>{"".join(sections)}</main></body></html>'
 
 def build():
     (DIST/'assets').mkdir(exist_ok=True)
     for asset in ['app.js','style.css','assistant.js','assistant.css']:
         shutil.copyfile(Path(__file__).parent/asset,DIST/'assets'/asset)
-    base=dict(index=PATHWAYS,sources=SOURCES,assistants=ASSISTANTS,assistant_version=VERSION)
+    base=dict(index=PATHWAYS,sources=SOURCES,assistants=ASSISTANTS,assistant_version=VERSION,
+              care=CARE,continuations=build_continuations(PATHWAYS,ASSISTANTS))
     (DIST/'index.html').write_text(document('Decision pathways',dict(base,mode='home')),encoding='utf8')
     (DIST/'meeting-records').mkdir(exist_ok=True)
     (DIST/'alignment').mkdir(exist_ok=True)
@@ -65,12 +67,23 @@ def build():
 
 def validate():
     problems=[]
+    continuations=build_continuations(PATHWAYS,ASSISTANTS)
     def local(url):
         if url.startswith('/'):
             if not (DIST/url.split('#')[0].lstrip('/')).exists():problems.append(f'Missing local resource: {url}')
     for id,r in SOURCES.items():local(r['pdf'])
     for p in PATHWAYS:
         ids=[s['id'] for s in p['steps']];issues={i['id'] for i in p['issues']}
+        care_ids={c['id'] for c in CARE[p['slug']]}
+        def validate_action(a):
+            if a['step'] and a['step'] not in ids:problems.append(f'Unknown continuation step: {a}')
+            if a['care'] and a['care'] not in care_ids:problems.append(f'Unknown care plan: {a}')
+        for c in CARE[p['slug']]:
+            if not c['tasks'] or not c['refs']:problems.append(f'Incomplete care plan: {c["id"]}')
+            if not c['actions'] and not c['endpoint']:problems.append(f'Care plan has no next action: {c["id"]}')
+            for r in c['refs']:
+                if r not in SOURCES:problems.append(f'Unknown care source: {r}')
+            for a in c['actions']:validate_action(a)
         if len(set(ids))!=len(ids):problems.append(f'Duplicate steps: {p["slug"]}')
         local(p['protocol'])
         for d in p['docs']:local(d['url'])
@@ -78,6 +91,16 @@ def validate():
         used=set()
         for s in p['steps']:
             a=ASSISTANTS.get(f'{p["slug"]}/{s["id"]}')
+            onward=continuations[f'{p["slug"]}/{s["id"]}']
+            for n,b in enumerate(s['branches']):
+                actions=onward['branches'].get(str(n),[])
+                if not actions:problems.append(f'Branch without next action: {p["slug"]}/{s["id"]}/{n}')
+                for x in actions:validate_action(x)
+            for n,r in enumerate(a['rules']):
+                if r['branch'] is None:
+                    actions=onward['rules'].get(str(n),[])
+                    if not actions:problems.append(f'Rule without next action: {p["slug"]}/{s["id"]}/{n}')
+                    for x in actions:validate_action(x)
             if not a:problems.append(f'Missing decision assistant: {p["slug"]}/{s["id"]}')
             else:
                 qids={q['id']:q for q in a['questions']}

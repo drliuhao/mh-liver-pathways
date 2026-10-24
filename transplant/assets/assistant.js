@@ -13,14 +13,14 @@
  function evaluate(config, answers, branches){
   const known={};
   config.questions.forEach(q=>{if(q.options.some(o=>o.value===answers[q.id]))known[q.id]=answers[q.id];});
-  for(const rule of config.rules){
+  for(const [ruleIndex,rule] of config.rules.entries()){
    const match=Object.entries(rule.when).every(([q,values])=>(Array.isArray(values)?values:[values]).includes(known[q]));
    if(!match)continue;
    const branch=rule.branch===null?null:branches[rule.branch];
    const kind=branch?.kind||rule.kind;
    // A proceed highlight requires every essential question to be resolved.
    if(kind==='advance'&&config.questions.some(q=>!known[q.id]||known[q.id]==='unknown'))continue;
-   return {state:'matched',branch:rule.branch,kind,title:branch?.title||rule.title,
+   return {state:'matched',branch:rule.branch,ruleIndex,kind,title:branch?.title||rule.title,
     text:branch?.action||rule.text,refs:rule.refs};
   }
   const uncertain=config.questions.filter(q=>known[q.id]==='unknown');
@@ -29,7 +29,7 @@
   const remaining=config.questions.filter(q=>!known[q.id]);
   return {state:'pending',branch:null,kind:'pending',title:remaining.length?'Choose the essential findings':'Review the combination with the team',
    text:remaining.length?`${remaining.length} ${remaining.length===1?'choice remains':'choices remain'}. The relevant next step will light up as the findings support it.`:
-    'This combination needs individual review; no proceed option is selected.',refs:[]};
+    'Review this combination with the treating team before choosing treatment or transplantation.',refs:[]};
  }
  function evidence(ids,sources){
   return `<span class="assistant-evidence">${[...new Set(ids)].map(id=>{
@@ -54,7 +54,7 @@
    ${evidence(q.refs.filter(id=>!q.criteria.some(c=>c.refs.includes(id))),sources)}</div>`).join('')}
    <div class="assistant-feedback" role="status" aria-live="polite" aria-atomic="true"></div>
    <div class="assistant-actions"><button type="button" data-assistant-reset>Clear choices</button><button type="button" data-assistant-show>See next step ↓</button></div>
-   <p class="assistant-footnote">For this decision only. Choices are not saved. Clinical suitability and allocation approval still require team review.</p></div>`;
+   <p class="assistant-footnote">For this decision only. Choices are not saved. The team must assess transplant suitability and MELD-exception eligibility separately.</p></div>`;
  }
  function update(container,config,answers,branches,sources){
   const result=evaluate(config,answers,branches);
@@ -72,7 +72,7 @@
   const custom=result.branch===null&&result.kind!=='pending';
   extra.hidden=!custom;
   extra.className='assistant-other-result branch '+result.kind+' is-highlighted';
-  extra.innerHTML=custom?`<span class="branch-match">${result.kind==='stop'?'Reassessment needed':'Clarification needed'}</span><h4>${esc(result.title)}</h4><p>${esc(result.text)}</p>${evidence(result.refs,sources)}`:'';
+  extra.innerHTML=custom?`<span class="branch-match">${result.state==='matched'?'Review next actions':'Clarification needed'}</span><h4>${esc(result.title)}</h4><p>${esc(result.text)}</p>${evidence(result.refs,sources)}`:'';
   return result;
  }
  const API={evaluate,evidence,definitions,render,update};

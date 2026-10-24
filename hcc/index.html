@@ -1339,6 +1339,12 @@ tabsEl.addEventListener("click", e => { const b=e.target.closest(".tab"); if(b) 
 let startTopic = "dx";
 try{ const v = localStorage.getItem("hcc.topic"); if(v) startTopic = v; }catch(e){}
 if(!TOPICS.some(t=>t.id===startTopic) && startTopic!=="sys") startTopic="dx";
+const linkedTopic = new URLSearchParams(location.search).get("topic");
+if(linkedTopic && (TOPICS.some(t=>t.id===linkedTopic) || linkedTopic==="sys")){
+  startTopic=linkedTopic;
+  document.getElementById("topicsBody").hidden=false;
+  document.querySelector('[data-fold="topicsBody"]').textContent="Hide";
+}
 renderTopic(startTopic);
 
 /* ---------- honest table ---------- */

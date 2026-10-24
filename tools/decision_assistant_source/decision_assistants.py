@@ -4,7 +4,7 @@ These rules select a passage to review, not a transplant eligibility verdict.
 Stop/clarification rules precede proceed rules. Every proceed rule specifies all
 questions in that decision. No identifiers, raw clinical records or dates.
 """
-VERSION = '2026-10-24.3'
+VERSION = '2026-10-24.4'
 
 def option(value, label, *details):
     return dict(value=value, label=label, details=list(details))
@@ -22,7 +22,7 @@ def rule(when, branch=None, kind=None, title=None, text=None, refs=()):
 def pause(when, title, text, refs):
     return rule(when, kind='hold', title=title, text=text, refs=refs)
 
-def stop(when, text, refs, title='Review another route'):
+def stop(when, text, refs, title='Review the treatment and transplant plan'):
     return rule(when, kind='stop', title=title, text=text, refs=refs)
 
 def yesno(id, label, refs, help='', yes='Yes', no='No'):
@@ -63,14 +63,14 @@ add('hcc','diagnosis',[
  rule({'diagnosis':['lr4','lr3','inadequate']},1),rule({'diagnosis':'hcc'},0)])
 
 add('hcc','curative-route',[
- question('spread','Is disease free of macrovascular invasion, extrahepatic spread and rupture?',[
-  option('clear','Yes'),option('excluded','Active invasion, spread or rupture'),option('prior','Previously treated rupture or vascular invasion')],['N-hcc']),
+ question('spread','What is the status of vascular invasion, extrahepatic spread or prior tumor rupture?',[
+  option('clear','None of these findings'),option('excluded','Active invasion, spread or rupture'),option('prior','Previously treated rupture or vascular invasion')],['N-hcc']),
  question('operation','Which curative approach is supported by liver reserve and anatomy?',[
   option('resection','Safe complete resection is feasible'),option('transplant','Transplant is favored and fitness is acceptable'),
   option('review','Neither approach is established / fitness unresolved')],H,
   'Resection is favored by limited burden, compensated liver, no clinically significant portal hypertension and adequate remnant. Early HCC with decompensation or significant portal hypertension may favor transplant.'),
-], [stop({'spread':'excluded'},'Active spread, macrovascular invasion or rupture prevents progression on the standard HCC exception route. Review cancer treatment options.',['N-hcc']),
- pause({'spread':'prior'},'Separate transplant-program review','Previously treated rupture or portal-branch invasion needs individual review; do not assume standard exception eligibility.',['N-hcc']),
+], [stop({'spread':'excluded'},'Active extrahepatic spread, macrovascular invasion or tumor rupture prevents a standardized HCC MELD exception. Reassess the transplant plan and review other HCC treatments.',['N-hcc']),
+ pause({'spread':'prior'},'Review prior rupture or vascular invasion','Previously treated rupture or portal-branch invasion requires individual review by the transplant program and the NLRB if HCC MELD-exception points are requested.',['N-hcc']),
  pause({'operation':'review'},'Clarify the curative treatment plan','Review liver reserve, resection feasibility and transplant fitness.',H),
  rule({'spread':'clear','operation':'resection'},0),rule({'spread':'clear','operation':'transplant'},1)])
 
@@ -80,14 +80,14 @@ add('hcc','allocation',[
   option('ds','Beyond Milan, within UNOS downstaging criteria'),option('beyond','Beyond UNOS downstaging criteria'),
   option('other','Other / qualifying lesion classification unresolved')],['H-milan','H-policy','H-merits'],
   'Use the confirmed pretreatment lesion count and sizes, not just the treated scan.',[MILAN,T2,DS]),
- question('afp','Does AFP meet the standard exception rule?',[
+ question('afp','Does AFP meet the HCC MELD-exception requirement?',[
   option('met','Yes — applicable AFP rule met'),option('not-met','No — AFP requirement not met')],['H-policy'],AFP_HELP),
- yesno('spread','No macrovascular tumor invasion or extrahepatic disease?', ['H-policy','N-hcc']),
-], [stop({'spread':'no'},'Do not advance on the standard HCC exception route; review disease-directed treatment and any separate program assessment.',['H-policy','N-hcc']),
- pause({'burden':'other'},'Clarify the qualifying tumor burden','Reconcile Class 5 classification and baseline measurements before selecting an exception route.',['H-policy']),
+ yesno('spread','Has imaging excluded macrovascular tumor invasion and extrahepatic disease?', ['H-policy','N-hcc']),
+], [stop({'spread':'no'},'Macrovascular tumor invasion or extrahepatic disease prevents a standardized HCC MELD exception. Reassess transplant suitability and review other HCC treatment options.',['H-policy','N-hcc']),
+ pause({'burden':'other'},'Clarify the qualifying tumor burden','Confirm qualifying Class 5 lesions and pretreatment measurements before determining whether a standardized HCC MELD-exception request is appropriate.',['H-policy']),
  rule({'burden':'beyond'},3),
  rule({'burden':'t1','spread':'yes'},2),
- pause({'afp':'not-met'},'AFP response or individual review is needed','An otherwise acceptable size pattern does not establish standard exception eligibility. Address AFP response and the appropriate review route.',['H-policy']),
+ pause({'afp':'not-met'},'AFP does not meet the HCC MELD-exception requirement','Reassess AFP trend, viable tumor, liver function and treatment response. Choose the next treatment or individual exception review from the options below; tumor size alone does not establish eligibility for HCC MELD-exception points.',['H-policy','N-hcc','NCCN-hcc']),
  rule({'burden':'t2','afp':'met','spread':'yes'},0),rule({'burden':'ds','afp':'met','spread':'yes'},1)])
 
 add('hcc','treatment',[
@@ -98,12 +98,12 @@ add('hcc','treatment',[
  yesno('afp','Required AFP response maintained?', ['H-policy'],AFP_HELP),
  yesno('reserve','Liver reserve and treatment safety acceptable?', ['H-aasld'],
   'Treatment-related decompensation needs reassessment. Prior checkpoint immunotherapy requires transplant/pharmacy review before transplantation.'),
-], [stop({'response':'spread'},'New macrovascular invasion or extrahepatic disease stops the standard route.',['N-hcc']),
+], [stop({'response':'spread'},'New macrovascular invasion or extrahepatic disease prevents a standardized HCC MELD exception and requires a new treatment and transplant assessment.',['N-hcc']),
  rule({'response':'residual'},1),rule({'afp':'no'},1),rule({'reserve':'no'},1),
  rule({'response':'controlled','afp':'yes','reserve':'yes'},0)])
 
 add('hcc','listing',[
- yesno('exception','Correct exception route and supporting evidence verified?', ['H-policy'],
+ yesno('exception','Applicable HCC MELD-exception criteria and supporting evidence verified?', ['H-policy'],
   'Baseline/response imaging, qualifying lesions, AFP history, chest staging and resection assessment. Adults retain calculated MELD initially and at first extension; later eligible extensions use MMaT−3.'),
  yesno('fitness','Transplant selection and treatment-safety reviews complete?', ['H-aasld','N-hcc'],
   'Include cardiopulmonary, infectious, functional and psychosocial suitability; any prior ICI exposure needs a specific rejection-risk plan.'),
@@ -112,11 +112,11 @@ add('hcc','listing',[
 add('hcc','waitlist',[
  question('control','Current tumor / AFP assessment?',[
   option('maintained','Qualifying disease control and AFP maintained'),option('equivocal','Equivocal enhancement or AFP change'),
-  option('lost','Outside automatic renewal criteria / new spread')],H,
+  option('lost','HCC exception renewal criteria no longer met, or new tumor spread')],H,
   'Use updated liver imaging, AFP and treatment history. No residual enhancement is required after complete treatment; preserve the original qualifying history.'),
  yesno('fitness','Still clinically suitable for transplantation?', ['H-aasld']),
-], [stop({'control':'lost'},'Stop automatic renewal and obtain formal review. New metastasis or macrovascular invasion stops the standard route.',['H-policy','N-hcc']),
- rule({'control':'equivocal'},1),pause({'fitness':'no'},'Reassess transplant readiness','Resolve the new clinical barrier before activation or organ acceptance.',['H-aasld']),
+], [stop({'control':'lost'},'Request individual review if automatic HCC MELD-exception renewal criteria are no longer met. New metastasis or macrovascular invasion also requires reassessment of transplant suitability.',['H-policy','N-hcc']),
+ rule({'control':'equivocal'},1),pause({'fitness':'no'},'Reassess transplant readiness','Resolve the new clinical safety concern before activating the patient for organ offers or accepting an organ.',['H-aasld']),
  rule({'control':'maintained','fitness':'yes'},0)])
 
 def follow_up(pathway, step, refs, help, title='Are pathology review and the follow-up plan in place?'):
@@ -124,8 +124,8 @@ def follow_up(pathway, step, refs, help, title='Are pathology review and the fol
   yesno('plan',title,refs,help),
   question('concern','Any new concerning finding?',[
    option('none','No unresolved concern'),option('concern','Possible recurrence, progression or new safety concern')],refs),
- ],[pause({'concern':'concern'},'Evaluate the new finding','Obtain disease-specific multidisciplinary review before continuing the routine plan.',refs),
-    pause({'plan':'no'},'Complete the follow-up plan','Review pathology and agree surveillance and the route for evaluating suspicious findings.',refs),
+ ],[pause({'concern':'concern'},'Evaluate the new finding','Ask the relevant tumor and transplant teams to assess the new finding and revise treatment or surveillance as needed.',refs),
+    pause({'plan':'no'},'Complete the follow-up plan','Review pathology, agree the surveillance schedule and identify the team that will evaluate suspected recurrence.',refs),
     rule({'plan':'yes','concern':'none'},0)])
 
 follow_up('hcc','after-transplant',['H-aasld','H-policy'],
@@ -135,9 +135,9 @@ add('pcca','localize',[
  question('origin','Where does the lesion arise?',[
   option('hilar','Perihilar bile duct'),option('other','Intrahepatic or distal bile duct')],['C-aasld'],
   'Use MRI/MRCP or appropriate CT to establish the duct of origin; distinguish the radial mass from its length along the bile duct.'),
- yesno('review','Potential transplant relevance reviewed before primary-tumor sampling?',P,
-  'Assess liver disease, resection options and benign mimics before choosing a biopsy route.'),
-], [rule({'origin':'other'},1),pause({'review':'no'},'Review the transplant option before sampling','Discuss with the transplant/HPB team before a primary-tumor biopsy could compromise this pathway.',P),
+ yesno('review','Has the transplant team considered transplantation before primary-tumor sampling?',P,
+  'Assess liver disease, resection options and benign causes of the stricture before choosing a biopsy approach.'),
+], [rule({'origin':'other'},1),pause({'review':'no'},'Review the transplant option before sampling','Consult the transplant and HPB teams before primary-tumor sampling. A transperitoneal primary-tumor biopsy can affect eligibility for the pCCA transplant protocol.',P),
  rule({'origin':'hilar','review':'yes'},0)])
 
 add('pcca','diagnosis',[
@@ -145,7 +145,7 @@ add('pcca','diagnosis',[
  question('biopsy','Has the primary tumor been sampled through the peritoneum?',[
   option('no','No'),option('yes','Yes — transperitoneal primary-tumor biopsy')],P,
   'Avoid transperitoneal EUS, percutaneous or operative biopsy of the primary. Sampling a regional node without traversing the primary is a different procedure.'),
-], [stop({'biopsy':'yes'},'Obtain transplant-program review of the primary-biopsy route and seeding risk before further pathway advancement.',P,'Primary-biopsy history requires review'),
+], [stop({'biopsy':'yes'},'Ask the transplant program to review the biopsy approach, tumor-seeding risk and eligibility for its pCCA transplant protocol before enrollment.',P,'Primary-biopsy history requires review'),
  rule({'diagnosis':'no'},1),rule({'diagnosis':'yes','biopsy':'no'},0)])
 
 add('pcca','phenotype',[
@@ -158,9 +158,9 @@ add('pcca','phenotype',[
   'Chest/abdominal imaging must exclude metastases within 90 days before the initial exception request.'),
  yesno('diagnosis','Hilar diagnostic criteria met and primary-biopsy history acceptable?',P,
   'Confirm the preceding diagnostic assessment, including avoidance of transperitoneal primary-tumor biopsy.'),
-], [stop({'spread':'present'},'Metastatic disease excludes this standard pCCA transplant route.',P),
+], [stop({'spread':'present'},'Metastatic disease excludes transplantation under this pCCA protocol. Review other cancer treatments and symptom management.',P),
  rule({'size':'large'},1),rule({'unresectable':'no'},1),
- pause({'diagnosis':'no'},'Resolve diagnosis and biopsy-route concerns','Return to the diagnostic assessment with the transplant team.',P),
+ pause({'diagnosis':'no'},'Resolve diagnosis and biopsy-related eligibility concerns','Return to the diagnostic assessment with the transplant team.',P),
  rule({'size':['small','none'],'unresectable':'yes','spread':'clear','diagnosis':'yes'},0)])
 
 add('pcca','neoadjuvant',[
@@ -169,7 +169,7 @@ add('pcca','neoadjuvant',[
  question('status','Current disease control and clinical condition?',[
   option('safe','No progression; drainage, infection and toxicity controlled'),option('complication','Cholangitis, toxicity or incomplete recovery'),
   option('spread','Metastatic progression')],P),
-], [stop({'status':'spread'},'Metastatic progression ends the standard curative transplant route.',P),
+], [stop({'status':'spread'},'Metastatic progression excludes transplantation under this pCCA protocol. Review other cancer treatments and symptom management.',P),
  rule({'protocol':'no'},1),rule({'status':'complication'},1),rule({'protocol':'yes','status':'safe'},0)])
 
 add('pcca','staging',[
@@ -180,17 +180,17 @@ add('pcca','staging',[
   'Assess regional hepatic nodes and the peritoneum after neoadjuvant therapy, before transplant. Negative EUS before therapy does not replace operative staging.'),
  yesno('ready','Interval imaging, protocol milestones and clinical fitness acceptable?',P,
   'Reconcile interval imaging with operative findings; resolve cholangitis and other active safety issues.'),
-], [stop({'stage':'positive'},'Positive regional nodes, intrahepatic or other metastasis excludes this standard transplant route.',P),
- rule({'stage':'incomplete'},1),pause({'ready':'no'},'Resolve the remaining transplant-readiness issue','Reassess interval imaging, treatment completion, infection control and fitness before listing/offer clearance.',P),
+], [stop({'stage':'positive'},'Positive regional nodes, intrahepatic metastases or other metastases exclude transplantation under this pCCA protocol.',P),
+ rule({'stage':'incomplete'},1),pause({'ready':'no'},'Resolve the remaining transplant-readiness issue','Review interval imaging, treatment completion, infection control and clinical fitness before confirming readiness for transplantation.',P),
  rule({'stage':'negative','ready':'yes'},0)])
 
 add('pcca','listing',[
  yesno('evidence','Required exception evidence and imaging current?',P,
   'Diagnostic and approved-protocol evidence must be complete. Chest/abdomen imaging: within 90 days for the initial request; within 30 days for extension.'),
  question('ready','Final staging and transplant readiness?',[
-  option('ready','Required negative operative staging; protocol and fitness cleared'),
-  option('pending','Incomplete clearance or a new unresolved abnormality'),option('spread','New metastatic disease')],P),
-], [stop({'ready':'spread'},'New metastatic disease stops this standard route.',P),rule({'evidence':'no'},1),rule({'ready':'pending'},1),
+  option('ready','No metastases at operative staging; protocol requirements met and fitness confirmed'),
+  option('pending','Transplant assessment incomplete or a new abnormality unresolved'),option('spread','New metastatic disease')],P),
+], [stop({'ready':'spread'},'New metastatic disease excludes transplantation under this pCCA protocol; review other cancer treatments.',P),rule({'evidence':'no'},1),rule({'ready':'pending'},1),
  rule({'evidence':'yes','ready':'ready'},0)])
 follow_up('pcca','follow-up',P,'Review residual disease, nodes and margins. Agree recurrence surveillance jointly with oncology and transplantation; there is no universal OPTN surveillance regimen.')
 
@@ -208,7 +208,7 @@ add('icca','phenotype',[
   option('uncertain','An additional nodule is indeterminate / separate HCC possible')],['N-icca','I-focality','I-satellites'],
   'Multifocal = ≥2 separate tumor nodules. Satellites = nearby separate nodules, without a universal distance cutoff. Intrahepatic metastasis describes spread within the liver; distribution alone cannot establish clonality.',[
    criterion('How this changes the transplant discussion',[
-    'A confirmed satellite or other additional malignant nodule does not satisfy the solitary-tumor guidance route.',
+    'A confirmed iCCA satellite or additional iCCA nodule does not meet the solitary-tumor criterion for the described MELD exception. A separate HCC requires individual program and NLRB interpretation.',
     'Multiple liver nodules do not by themselves establish distant M1 disease.',
     'An indeterminate nodule may be benign or another tumor: clarify it rather than assuming multifocal iCCA.'
    ],['N-icca','I-focality','I-satellites'],['multiple','uncertain'])]),
@@ -216,12 +216,12 @@ add('icca','phenotype',[
   option('fits','≤3 cm, cirrhosis, and no safe complete resection'),
   option('outside','>3 cm, noncirrhotic, or resectable')],I,
   'These are the current NLRB guidance criteria. The foundational “very early” cohort studied a narrower ≤2 cm group; it does not alone validate every ≤3 cm case.'),
- yesno('spread','No extrahepatic disease?', ['N-icca']),
- yesno('program','Selected-program review supports continued evaluation?',I),
-], [stop({'spread':'no'},'Extrahepatic disease is outside this guidance-aligned transplant route.',['N-icca']),
+ yesno('spread','Has staging excluded extrahepatic disease?', ['N-icca']),
+ yesno('program','Has the local iCCA transplant program accepted the case for continued evaluation?',I),
+], [stop({'spread':'no'},'Extrahepatic disease excludes the patient from the iCCA transplant protocol described here; review other cancer treatments.',['N-icca']),
  rule({'focality':'multiple'},1),rule({'profile':'outside'},1),
  pause({'focality':'uncertain'},'Clarify the additional nodule','Review imaging and pathology; biopsy may help if it would change management. Separate HCC alongside iCCA requires explicit program/NLRB interpretation.',['N-icca','I-focality']),
- pause({'program':'no'},'Obtain selected-program review','Meeting the size and cirrhosis criteria does not establish clinical acceptance.',I),
+ pause({'program':'no'},"Obtain the iCCA transplant program's selection decision",'The transplant program must assess expected benefit and fitness for transplantation even when tumor size and cirrhosis criteria are met.',I),
  rule({'focality':'solitary','profile':'fits','spread':'yes','program':'yes'},0)])
 
 add('icca','therapy',[
@@ -229,8 +229,8 @@ add('icca','therapy',[
   option('controlled','Solitary tumor ≤3 cm, no new lesions or extrahepatic disease'),option('unclear','Response unclear'),
   option('progression','Growth beyond criteria / new tumor or metastasis')],['N-icca']),
  yesno('safe','Treatment tolerable and transplant safety reviewed?', ['N-icca','C-aasld'],
-  'Review liver reserve and toxicity. Checkpoint immunotherapy requires a separate transplant-safety discussion; HCC exception wording is not iCCA safety clearance.'),
-], [stop({'control':'progression'},'Reassess this transplant strategy; do not advance routinely beyond the guidance population.',['N-icca']),
+  'Review liver function and toxicity. Assess rejection risk with the transplant team before checkpoint immunotherapy when transplantation remains an option.'),
+], [stop({'control':'progression'},'The patient no longer meets the described iCCA transplant criteria. Reassess treatment and obtain program review before proposing further transplant evaluation.',['N-icca']),
  rule({'control':'unclear'},1),rule({'safe':'no'},1),rule({'control':'controlled','safe':'yes'},0)])
 
 add('icca','stability',[
@@ -239,15 +239,15 @@ add('icca','stability',[
   'Guidance specifies 6 months from diagnosis or last treatment. The team must establish the applicable start; a good early response is not the full interval.'),
  question('disease','Disease throughout that period?',[
   option('stable','Solitary ≤3 cm, no new lesions or extrahepatic disease'),option('progression','Progression or a new malignant lesion')],['N-icca']),
-], [stop({'disease':'progression'},'Stop routine advancement and review the strategy. Do not simply restart the observation interval.',['N-icca']),
+], [stop({'disease':'progression'},'Reassess the iCCA treatment and transplant plan. A new observation interval requires program review after progression or a new malignant lesion.',['N-icca']),
  rule({'duration':'short'},1),rule({'duration':'met','disease':'stable'},0)])
 
-def review_step(pathway, step, refs, help, target=0, hold=1, loss_text='Reassess the disease-specific route before further progression.'):
+def review_step(pathway, step, refs, help, target=0, hold=1, loss_text='Reassess the treatment plan and eligibility for the disease-specific MELD exception. Any further transplant proposal needs an explicit selection-team decision.'):
  add(pathway,step,[
-  question('criteria','Are the disease-specific criteria still satisfied?',[
+  question('criteria','Are the disease-specific MELD-exception criteria still met?',[
    option('met','Yes, with current supporting tests'),option('pending','Tests incomplete / a finding unresolved'),option('lost','A required criterion is no longer met')],refs,help),
-  yesno('reviews','Clinical selection and the appropriate allocation review complete?',refs,
-   'Clinical acceptance and exception disposition are separate. This assistant highlights the next passage; it does not approve either decision.'),
+  yesno('reviews','Are the transplant selection decision and applicable MELD-exception review complete?',refs,
+   "Record the transplant team's decision on clinical suitability separately from the decision on MELD-exception points. The highlighted text does not approve either decision."),
  ],[stop({'criteria':'lost'},loss_text,refs),rule({'criteria':'pending'},hold),rule({'reviews':'no'},hold),
     rule({'criteria':'met','reviews':'yes'},target)])
 
@@ -261,7 +261,7 @@ add('crlm','map-disease',[
  question('spread','Extrahepatic disease / local primary recurrence?',[
   option('clear','No excluded extrahepatic site or local recurrence'),option('equivocal','Indeterminate extrahepatic finding'),
   option('present','Extrahepatic disease after primary resection or local relapse')],['N-crlm']),
-], [stop({'spread':'present'},'This finding excludes the described NLRB CRLM route; review oncologic alternatives.',['N-crlm']),
+], [stop({'spread':'present'},'This finding excludes CRLM MELD-exception consideration under the described NLRB guidance. Review other colorectal cancer treatments.',['N-crlm']),
  rule({'spread':'equivocal'},1),pause({'primary':'no'},'Complete diagnosis and the disease map','Confirm primary histology and baseline/current disease extent.',C),
  rule({'primary':'yes','spread':'clear'},0)])
 
@@ -272,13 +272,13 @@ add('crlm','biology',[
   option('low','<80 µg/L'),option('boundary','Exactly 80 µg/L'),option('high','>80 µg/L')],['N-crlm'],
   'µg/L and ng/mL have the same numeric value. Initial guidance excludes >80; extensions require <80. Resolve exactly 80 explicitly.'),
  yesno('size','Every pretreatment liver lesion ≤10 cm?', ['N-crlm']),
-], [rule({'molecular':'outside'},1),stop({'cea':'high'},'CEA >80 breaches the initial guidance threshold; a falling trend does not override it.',['N-crlm']),
- stop({'size':'no'},'A pretreatment lesion >10 cm is outside the described NLRB population.',['N-crlm']),
+], [rule({'molecular':'outside'},1),stop({'cea':'high'},'CEA >80 µg/L excludes an initial CRLM MELD exception under the described guidance, even if the value is falling.',['N-crlm']),
+ stop({'size':'no'},'A pretreatment liver lesion >10 cm does not meet the CRLM MELD-exception criteria described in NLRB guidance.',['N-crlm']),
  pause({'cea':'boundary'},'Clarify the CEA boundary','Obtain allocation review rather than assuming that exactly 80 satisfies both initial and extension wording.',['N-crlm']),
  rule({'molecular':'fits','cea':'low','size':'yes'},0)])
 
 add('crlm','unresectability',[
- question('clearance','Can an expert liver team achieve complete safe clearance?',[
+ question('clearance','Can an expert liver team safely treat all liver disease by resection or ablation?',[
   option('yes','Yes — resection and/or ablation is feasible'),option('no','No — unresectable after expert review'),
   option('uncertain','Only scars / disappearing lesions or disputed viability')],['C-consensus','C-transmet'],
   'Review remnant, vascular/biliary anatomy, staged or parenchymal-sparing resection and combined ablation. Tumor count alone does not establish unresectability.'),
@@ -290,8 +290,8 @@ add('crlm','control',[
   'The NLRB footnote describes >10% lesion-diameter growth or a new lesion. Do not equate that threshold with usual RECIST 1.1 progression.'),
  yesno('duration','At least 6 months of qualifying control during systemic and/or local therapy?', ['N-crlm']),
  yesno('unresectable','Still no feasible curative resection / ablation after response?', ['C-consensus']),
-], [stop({'response':'progression'},'Progression prevents routine advancement on this guidance-aligned route.',['N-crlm']),
- rule({'duration':'no'},1),pause({'unresectable':'no'},'Revisit the nontransplant curative option','A response that enables complete safe clearance should prompt expert HPB reassessment.',['C-consensus']),
+], [stop({'response':'progression'},'Progression does not meet the CRLM MELD-exception guidance criteria. Reassess systemic treatment and other cancer-control options.',['N-crlm']),
+ rule({'duration':'no'},1),pause({'unresectable':'no'},'Revisit the nontransplant curative option','If all liver disease may now be treated safely by resection or ablation, obtain an updated HPB surgical assessment.',['C-consensus']),
  rule({'response':'controlled','duration':'yes','unresectable':'yes'},0)])
 
 add('crlm','clocks',[
@@ -308,7 +308,7 @@ add('crlm','clocks',[
     'At least 12 months total disease stability after initial diagnosis.',
     'Do not delay appropriate primary treatment to fit this sequence; seek individual interpretation when it differs.'
    ],['N-crlm'],['met','different'])]),
-], [stop({'primary':'no'},'Address the primary tumor or local recurrence before routine advancement.',['N-crlm']),
+], [stop({'primary':'no'},'Treat residual or recurrent primary colorectal cancer before reconsidering a CRLM MELD-exception request.',['N-crlm']),
  rule({'interval':'no'},1),rule({'synchronous':'different'},1),
  rule({'primary':'yes','interval':'yes','synchronous':['na','met']},0)])
 
@@ -319,11 +319,11 @@ add('crlm','restaging',[
  yesno('timing','Required studies and PET timing satisfied?', ['N-crlm'],
   'CT/MRI chest, abdomen and pelvis AND PET within 1 month of the initial request. Guidance specifies PET after ≥4 weeks off chemotherapy; coordinate any pause with oncology. ctDNA does not substitute.'),
  yesno('control','Tumor control and CEA still satisfy the reviewed criteria?',C),
-], [stop({'stage':'spread'},'Confirmed extrahepatic disease or local relapse excludes this guidance-aligned route.',['N-crlm']),
- rule({'stage':'equivocal'},1),rule({'timing':'no'},1),pause({'control':'no'},'Reassess control and biomarker criteria','Review the new change before submission.',C),
+], [stop({'stage':'spread'},'Confirmed extrahepatic disease or local primary recurrence excludes CRLM MELD-exception consideration under the described guidance.',['N-crlm']),
+ rule({'stage':'equivocal'},1),rule({'timing':'no'},1),pause({'control':'no'},'Reassess control and biomarker criteria','Review the change in imaging or CEA before submitting a CRLM MELD-exception request.',C),
  rule({'stage':'clear','timing':'yes','control':'yes'},0)])
 review_step('crlm','review',C,'Confirm the initial selection evidence. For renewal: CT/MRI chest/abdomen/pelvis and CEA every 3 months, no progression or extrahepatic disease, and CEA <80 µg/L.')
-follow_up('crlm','transplant',C,'Recheck disease control, fitness and consent, and whether complete nontransplant clearance has become feasible. Agree recurrence surveillance and postoperative oncology care.',
+follow_up('crlm','transplant',C,'Recheck disease control, fitness and consent, and whether resection or ablation can now treat all liver disease. Agree recurrence surveillance and postoperative oncology care.',
  'Final benefit–risk review supports transplant and follow-up is agreed?')
 
 add('nelm','biology',[
@@ -332,8 +332,8 @@ add('nelm','biology',[
   option('outside','G3, poorly differentiated NEC or discordant aggressive biology')],N,
   'Guidance specifies Ki-67 (proliferative index) <20% and mitoses <20 per 10 HPF. Reconcile discordant primary and liver samples.'),
  yesno('primary','Gastroenteropancreatic primary with portal-system drainage?', ['N-net'],
-  'Lower rectal, esophageal, lung, adrenal and thyroid primaries are excluded from this exception route.'),
-], [stop({'primary':'no'},'The primary site is outside this NET exception pathway.',['N-net']),
+  'Lower rectal, esophageal, lung, adrenal and thyroid primaries do not meet the NET MELD-exception criteria.'),
+], [stop({'primary':'no'},'The primary site does not meet the NET MELD-exception criteria; use the treatment pathway for the confirmed tumor type.',['N-net']),
  rule({'grade':'outside'},1),rule({'grade':'fits','primary':'yes'},0)])
 
 add('nelm','distribution',[
@@ -342,15 +342,15 @@ add('nelm','distribution',[
   option('none','No active or prior excluded extrahepatic site'),option('cleared','Permitted prior extrahepatic disease now cleared'),
   option('active','Active extrahepatic progression'),option('solid','Lung or bone metastasis history')],['N-net'],
   'Confirm anatomic and somatostatin-receptor functional staging. A treated node is different from an active metastatic node; lung/bone exclusions remain separate.'),
-], [stop({'spread':'solid'},'The guidance describes lung or bone metastases as permanent exclusions.',['N-net']),
- stop({'spread':'active'},'Active extrahepatic progression prevents routine listing progression; reassess with the NET team.',['N-net']),
- pause({'primary':'no'},'Resolve primary control and liver resectability','Complete primary treatment and assess nontransplant clearance options.',['N-net']),
+], [stop({'spread':'solid'},'NLRB guidance describes lung or bone metastases as permanent exclusions from this NET transplant selection framework. Review nontransplant treatment options.',['N-net']),
+ stop({'spread':'active'},'Active extrahepatic progression requires transplant-listing review; NLRB guidance advises delisting. Review the treatment plan with the NET team.',['N-net']),
+ pause({'primary':'no'},'Resolve primary control and liver resectability','Complete treatment of the primary and assess whether resection or ablation can treat all liver disease.',['N-net']),
  rule({'primary':'yes','spread':'cleared'},1),rule({'primary':'yes','spread':'none'},0)])
 
 add('nelm','options',[
  question('strategy','Which strategy currently offers the best clinical benefit?',[
-  option('transplant','No suitable curative clearance; transplant benefit supported by MDT'),
-  option('other','Complete clearance or lower-risk disease control is preferable')],N,
+  option('transplant','Complete resection or ablation unsuitable; tumor board supports transplant evaluation'),
+  option('other','Resection, ablation or lower-risk disease control is preferable')],N,
   'Consider complete resection/ablation, symptoms, tempo, SSTR status, SSA, PRRT, systemic and embolization options. Debulking is not complete clearance.',[
    criterion('Milan-NET evidence versus allocation guidance',[
     'The selected Milan-NET cohort used <50% liver involvement and ≥6 months of stable/responding disease.',
@@ -359,20 +359,20 @@ add('nelm','options',[
 ], [rule({'strategy':'other'},1),rule({'strategy':'transplant'},0)])
 
 add('nelm','exposure',[
- question('safety','Are treatment reserve and sequencing acceptable?',[
+ question('safety','Do organ function and prior treatment toxicity permit the planned treatment sequence?',[
   option('acceptable','Yes — hepatic, renal and marrow reserve reviewed'),
   option('concern','Cumulative toxicity or sequencing remains unresolved')],N,
   'Review PRRT, Y90/embolization, operations and systemic therapy. There is no universal NLRB PRRT/Y90 sequence or numerical cumulative-dose cutoff.'),
 ], [rule({'safety':'concern'},1),rule({'safety':'acceptable'},0)])
 
 add('nelm','observation',[
- question('clearance','Status of primary / permitted extrahepatic clearance?',[
-  option('met','Removed and recurrence-free for ≥6 months'),option('short','Less than 6 months / unresolved clearance'),
+ question('clearance','Have the primary and any permitted extrahepatic disease been removed without recurrence?',[
+  option('met','Removed and recurrence-free for ≥6 months'),option('short','Less than 6 months without recurrence, or removal of extrahepatic disease uncertain'),
   option('recurrence','Extrahepatic recurrence or excluded lung/bone history')],['N-net']),
  yesno('imaging','Negative metastatic workup, including functional imaging, accepted?', ['N-net'],
   'The guidance says “at least 3 months prior” to initial/extension request. Clarify chronology and current imaging adequacy with allocation leadership rather than silently reversing that wording.'),
  yesno('control','Liver disease and clinical profile still appropriate for this program?',N),
-], [stop({'clearance':'recurrence'},'Reassess extrahepatic disease before further progression. Permitted prior disease and lung/bone exclusions must be distinguished.',['N-net']),
+], [stop({'clearance':'recurrence'},'Review transplant listing and treatment after extrahepatic recurrence. Previously removed nodal disease may allow later reconsideration; lung or bone metastases remain a separate exclusion in the guidance.',['N-net']),
  rule({'clearance':'short'},1),rule({'imaging':'no'},1),rule({'control':'no'},1),
  rule({'clearance':'met','imaging':'yes','control':'yes'},0)])
 review_step('nelm','review',N,'Confirm grade, portal-drained primary, resection/clearance interval, liver-only disease, functional staging and clinical benefit. Age/burden restrictions derived from a cohort remain local selection choices.')
@@ -386,12 +386,12 @@ add('hehe','diagnosis',[
 ], [stop({'pathology':'angiosarcoma'},'Do not use the HEHE transplant pathway for angiosarcoma.',E),rule({'pathology':'uncertain'},1),rule({'pathology':'hehe'},0)])
 
 add('hehe','stage',[
- yesno('vascular','No macrovascular invasion?', ['N-hehe']),
+ yesno('vascular','Has imaging or biopsy excluded macrovascular invasion?', ['N-hehe']),
  question('strategy','Resection, observation or transplant consideration?',[
   option('transplant','Unresectable liver disease; transplant discussion appropriate'),option('other','Resection or observation currently preferable')],E),
  question('extrahepatic','Extrahepatic disease?',[
   option('none','None identified'),option('limited','Limited disease needing case-level review'),option('other','Progressive / incompletely characterized disease')],E,
-  'Unlike several other tumor pathways, extrahepatic disease is not an absolute contraindication in HEHE guidance. Sites and behavior still matter.'),
+  'Extrahepatic disease alone does not exclude HEHE MELD-exception consideration under NLRB guidance. Review its sites, behavior and effect on expected transplant benefit.'),
 ], [stop({'vascular':'no'},'Macrovascular invasion is outside the described HEHE exception criteria.',['N-hehe']),
  pause({'extrahepatic':'other'},'Characterize disease behavior and benefit','Obtain rare-tumor/transplant MDT review rather than applying a blanket extrahepatic exclusion.',E),
  rule({'vascular':'yes','strategy':'other'},1),rule({'vascular':'yes','strategy':'transplant','extrahepatic':'limited'},2),
@@ -402,9 +402,9 @@ add('hehe','risk',[
  question('benefit','What is the MDT assessment of expected transplant benefit?',[
   option('supported','Benefit supported after review of tempo, sites and alternatives'),option('uncertain','Tempo / benefit remains uncertain')],['E-score','E-consensus'],
   'HEHE-LT registry findings inform counseling; they are not a MELD score or an automatic selection rule. Some prognostic features are known only on explant.'),
-], [stop({'criteria':'no'},'Reassess resectability or vascular involvement before advancing on this route.',['N-hehe']),
+], [stop({'criteria':'no'},'Reassess resectability and vascular involvement before requesting a HEHE MELD exception.',['N-hehe']),
  rule({'benefit':'uncertain'},1),rule({'criteria':'yes','benefit':'supported'},0)])
-review_step('hehe','review',E,'Confirm biopsy-proven HEHE, unresectability and no macrovascular invasion. Any extrahepatic finding needs an explicit case-level decision; it is not automatically disqualifying.')
+review_step('hehe','review',E,'Confirm biopsy-proven HEHE, unresectability and absence of macrovascular invasion. Document how any extrahepatic disease affects expected transplant benefit and MELD-exception consideration.')
 follow_up('hehe','follow-up',['E-score','E-consensus'],'Reconcile explant and pretransplant findings; agree risk-informed imaging and long-term recurrence assessment. No universal OPTN surveillance interval is specified.')
 
 add('hca','characterize',[
@@ -426,7 +426,7 @@ add('hca','standard-care',[
  rule({'bleeding':'no','management':'yes'},0),rule({'bleeding':'no','management':'no'},1)])
 
 add('hca','exception-route',[
- question('route','Which NLRB alternative is supported?',[
+ question('route','Which HCA criterion supports an individual MELD-exception request?',[
   option('syndrome','HCA with glycogen storage disease or Abernethy malformation'),
   option('beta','Unresectable HCA with β-catenin mutation'),
   option('adenomatosis','Unresectable HCA with >10 adenomas'),
@@ -443,11 +443,11 @@ add('hca','exception-route',[
 add('hca','transformation',[
  question('diagnosis','Is malignant transformation established?',[
   option('benign','HCA remains the verified diagnosis'),option('malignant','Malignancy established'),option('uncertain','Malignancy remains unresolved')],A,
-  'If HCC is diagnosed, use the appropriate HCC diagnostic/staging route. Transformation does not automatically satisfy the standardized HCC exception.'),
+  'If HCC is diagnosed, use the HCC diagnostic and staging assessments. Malignant transformation alone does not establish eligibility for a standardized HCC MELD exception.'),
 ], [pause({'diagnosis':'uncertain'},'Resolve the diagnosis','Review imaging/pathology and consider additional tissue when management depends on it.',A),
  rule({'diagnosis':'malignant'},1),rule({'diagnosis':'benign'},0)])
 review_step('hca','review',A,'Confirm the specific guidance alternative, unresectability where required, prior management and expected benefit. Molecular thresholds narrower than guidance need explicit local agreement.')
 follow_up('hca','follow-up',A,'Reassess bleeding or transformation while waiting. After transplant, review explant findings and continuing care for the underlying metabolic/vascular condition.',
- 'Clinical clearance and condition-specific follow-up agreed?')
+ 'Fitness for transplantation confirmed and follow-up for the underlying condition agreed?')
 
 assert len(ASSISTANTS)==46
