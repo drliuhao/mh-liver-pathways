@@ -67,7 +67,7 @@ const HighRisk = (() => {
   'alloc-b3':'Population donor-risk estimates do not predict an individual donor’s outcome or replace independent donor review.',
   'alloc-b4':'Small pilot survival estimates cannot establish efficacy or justify automatic expansion; the proposed stopping rules require independent review.'
  };
- const sourceKinds={optn:'OPTN policy',nlrb:'NLRB guidance',hhs_irb:'Research regulation',optn_ethics:'Ethics guidance',aasld:'Clinical guidance',acg_fll2024:'Clinical guideline',candidate2026:'Clinical guideline',dgvs_lt2024:'Clinical guideline',easl_benign:'Clinical guideline',ehe_consensus:'Consensus statement',enets:'Position statement',hcc_design:'Consensus statement',ihpba:'Consensus guideline',ilts:'Consensus recommendations',cirse:'Technical guidance'};
+ const sourceKinds={consort_pilot:'Reporting guideline',optn:'OPTN policy',nlrb:'NLRB guidance',hhs_irb:'Research regulation',optn_ethics:'Ethics guidance',aasld:'Clinical guidance',acg_fll2024:'Clinical guideline',candidate2026:'Clinical guideline',dgvs_lt2024:'Clinical guideline',easl_benign:'Clinical guideline',ehe_consensus:'Consensus statement',enets:'Position statement',hcc_design:'Consensus statement',ihpba:'Consensus guideline',ilts:'Consensus recommendations',cirse:'Technical guidance'};
  const sourceKind=r=>sourceKinds[r.key]||'Published research';
  const statusLabel=anchor=>states[anchor]?.[1]||'Local review · approval pending';
  const isResearch=r=>sourceKind(r)==='Published research';
