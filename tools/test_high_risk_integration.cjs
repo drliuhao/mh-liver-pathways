@@ -7,17 +7,41 @@ const HR=require(path.join(root,'transplant/assets/high-risk.js'));
 const h=data.high_risk;
 assert.equal(Object.keys(h.pathways).length,7);
 let count=0, placements=0;
+const escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let sourceSlots=0,studySummaries=0;
+function checkEvidenceCard(slug,r){
+ const card=HR.card(h,slug,r,r.id.startsWith('ALLOC-'));
+ assert(card.indexOf('class="hr-next"')<card.indexOf('class="hr-criteria"'),r.id+' next action is buried');
+ assert(card.includes('class="hr-criteria" open'),r.id+' criteria hidden by default');
+ assert(card.includes(escapeHTML(r.stance)),r.id+' position missing');
+ for(const rule of r.rules)assert(card.includes(escapeHTML(rule)),r.id+' rule lost');
+ for(const key of ['synthesis','counterevidence','certainty','threshold_basis','policy_context']){
+  const value=r.evidence[key];
+  for(const item of Array.isArray(value)?value:[value].filter(Boolean))assert(card.includes(escapeHTML(item)),r.id+' evidence lost: '+key);
+ }
+ const sourceKeys=[...card.matchAll(/data-source-key="([^"]+)"/g)].map(x=>x[1]);
+ assert.deepEqual(sourceKeys.slice().sort(),r.references.slice().sort(),r.id+' duplicate or missing access records');
+ sourceSlots+=sourceKeys.length;
+ for(const s of r.evidence.studies||[]){
+  studySummaries++;
+  for(const k of ['design_population','selection','results','limits','limitations','locator'])if(s[k])assert(card.includes(escapeHTML(s[k])),r.id+' study field lost: '+s.key+'/'+k);
+  assert(card.includes(escapeHTML(h.sources[s.key].review_depth)),r.id+' review depth lost');
+ }
+ assert(!card.includes('<details class="hr-study"'),r.id+' nested study disclosure');
+ assert(card.includes('not formal GRADE'),r.id+' certainty limitation missing');
+}
 for(const p of data.index){
  const rr=HR.reviews(h,p.slug);count+=rr.length;
  const full=HR.overview(h,p.slug);
  assert(full.includes('High-risk protocol'));
  for(const r of rr){
+  checkEvidenceCard(p.slug,r);
   assert(r.steps.length>0,r.id);
   for(const id of r.steps){
    assert(p.steps.some(x=>x.id===id),r.id+': '+id);
    const rendered=HR.inline(h,p.slug,id);
    assert(rendered.includes('id="high-risk-'+r.anchor+'"'),r.id);
-   assert(rendered.includes('High-risk evidence and full-text access'),r.id);
+   assert(rendered.includes('Studies and full-text access'),r.id);
    assert(rendered.includes('institutional approval pending'),r.id);
    assert(rendered.includes('Treatment and continuing care'),r.id);
    placements++;
@@ -32,6 +56,7 @@ for(const p of data.index){
  assert.equal(new Set(ids).size,ids.length,p.slug+' duplicate IDs');
 }
 assert.equal(count,21);assert.equal(h.readiness.length,4);assert.equal(Object.keys(h.sources).length,105);
+for(const r of h.readiness)checkEvidenceCard('hcc',r);
 for(const r of Object.values(h.sources)){
  if(r.doi){assert(r.author&&r.journal&&r.year&&r.pmid,r.key);assert(decodeURIComponent(r.tmc).includes(r.doi),r.key);}
  for(const pdf of r.pdf_links){assert(/^https?:\/\//.test(pdf.url),r.key);assert(pdf.method,r.key);}
@@ -47,3 +72,4 @@ for(const c of Object.values(data.continuations))for(const kind of ['branches','
 }
 assert.equal(onward,20);
 console.log(`PASS: ${count} reviews in ${placements} decision placements; ${h.readiness.length} shared readiness reviews; 105 attached sources; ${pdfCount} direct PDF sources; seven protocol PDFs; 20 branch links resolve within the standard protocol.`);
+console.log(`PASS: ${studySummaries} study summaries and ${sourceSlots} unique-per-review source records preserve every criterion, synthesis, result, limitation and review-depth statement; no nested study disclosures.`);

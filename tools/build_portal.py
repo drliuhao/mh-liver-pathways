@@ -120,6 +120,7 @@ def export(source, preserve_documents=False):
     manifest.update(interface_revision='2026-10-24',example_presets=len(original['assistants']),journey_overviews=len(original['journeys']),sticky_decision_navigation=True,
                     interface_changes='Each pathway opens with clearly labeled example choices toward transplantation. A four-stage overview and sticky step navigation show the full journey. Restore-example and clear-all controls are available. Changing a finding clears later examples; no automatic refill on navigation. No clinical criteria or matching rules changed.')
     manifest.update(high_risk_integration='2026-10-24',high_risk_reviews=21,high_risk_protocol_pdfs=7,high_risk_sources=105,high_risk_interface='Orange-labeled reviews at relevant standard decisions, with selection criteria, study evidence and PDF/TMC access. Standard matching rules unchanged.')
+    manifest.update(evidence_organization_revision='2026-10-24',evidence_organization='Status, proposed position and next action precede open criteria. Searchable study summaries pair results with limitations and retain population and time-origin wording. One access record per source within each review; authority types, review coverage and approval limits are explicit. No selection criteria or matching rules changed.')
     (dest/'export-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     (ROOT/'index.html').write_text(home(data))
     for _,slug,_,_,_ in ROADMAPS:

@@ -120,7 +120,7 @@ function updateExampleLabels(){
 function highRiskAction(a){
  const target=HighRisk.destination(a.url);
  if(!target||target.slug&&target.slug!==active.slug)return external(a.url,a.label,'route-button');
- return `<a class="route-button high-risk-route" href="#high-risk${target.id?'-'+e(target.id):''}" ${target.id?`data-high-risk="${e(target.id)}"`:'data-view="high-risk"'}><small>High-risk protocol</small>${e(a.label)} →</a>`;
+ return `<a class="route-button high-risk-route" href="#high-risk${target.id?'-'+e(target.id):''}" ${target.id?`data-high-risk="${e(target.id)}"`:'data-view="high-risk"'}><small>High-risk protocol · ${e(HighRisk.statusLabel(target.id))}</small>${e(a.label)} →</a>`;
 }
 function renderActions(actions){
  return `<div class="next-actions">${actions.map(a=>`<div class="next-action">${a.detail?`<p>${e(a.detail)}</p>`:''}${a.step?`<button class="route-button" data-step="${e(a.step)}">${e(a.label)} →</button>`:a.care?`<a class="route-button" href="#care-${e(a.care)}" data-care="${e(a.care)}">${e(a.label)} →</a>`:highRiskAction(a)}</div>`).join('')}</div>`;
@@ -171,7 +171,7 @@ function renderIssue(i,n){
 }
 
 function renderEvidence(){
- return `<section class="evidenceintro"><p class="eyebrow">Evidence is also linked at the point of use</p><h2>Sources for ${e(active.code)}</h2><p>Policy, review guidance, clinical recommendations and study evidence have different roles. Open a source to see its locator and full text. The presence of a PDF does not imply high-level or definitive evidence.</p></section><div class="evidencegrid">${allRefs(active).map(id=>{const r=DATA.sources[id];return `<article class="evidencecard"><span class="source-kind">${e(r.kind)}</span><h3>${e(r.title)}</h3><p>${e(r.locator)}</p><button class="btn secondary" data-ref="${id}">Source details & full text ↗</button></article>`;}).join('')}</div>${HighRisk.library(DATA.high_risk,active.slug)}`;
+ return `<section class="evidenceintro"><p class="eyebrow">Evidence is also linked at the point of use</p><h2>Sources for ${e(active.code)}</h2><p>Policy, review guidance, clinical recommendations and study evidence have different roles. Open a source to see its locator and full text. The presence of a PDF does not imply high-level or definitive evidence.</p></section><div class="evidence-search"><label for="evidence-search">Find a source across this pathway</label><input id="evidence-search" type="search" data-evidence-search placeholder="Author, trial, guideline, PMID or DOI…"><span role="status" data-evidence-count>All sources shown</span></div><h3 class="evidence-group-title">Sources linked to standard decisions</h3><div class="evidencegrid">${allRefs(active).map(id=>{const r=DATA.sources[id];return `<article class="evidencecard" data-evidence-item data-search-text="${e([r.short,r.title,r.locator,r.url,r.pmid,r.doi].filter(Boolean).join(' '))}"><span class="source-kind">${e(r.kind)}</span><h3>${e(r.title)}</h3><p>${e(r.locator)}</p><button class="btn secondary" data-ref="${id}">Source details & full text ↗</button></article>`;}).join('')}</div>${HighRisk.library(DATA.high_risk,active.slug)}`;
 }
 
 function showSource(id, trigger){
@@ -215,6 +215,20 @@ function hashState(){
  renderView();
  if(view==='meeting'&&active.issues.some(i=>i.id===h))requestAnimationFrame(()=>document.getElementById(h)?.scrollIntoView({block:'start'}));
 }
+
+document.addEventListener('input',ev=>{
+ if(ev.target.matches('[data-study-search]')){
+  const box=ev.target.closest('.hr-evidence'),q=ev.target.value.trim().toLowerCase();
+  const studies=[...box.querySelectorAll('.hr-study')];
+  studies.forEach(el=>el.hidden=!!q&&!el.textContent.toLowerCase().includes(q));
+  box.querySelector('[data-study-count]').textContent=`${studies.filter(el=>!el.hidden).length} of ${studies.length} study summaries shown`;
+ }
+ if(ev.target.matches('[data-evidence-search]')){
+  const q=ev.target.value.trim().toLowerCase(),items=[...document.querySelectorAll('[data-evidence-item]')];
+  items.forEach(el=>el.hidden=!!q&&!`${el.textContent} ${el.dataset.searchText||''}`.toLowerCase().includes(q));
+  document.querySelector('[data-evidence-count]').textContent=`${items.filter(el=>!el.hidden).length} of ${items.length} source records shown`;
+ }
+});
 
 document.addEventListener('change',ev=>{
  const id=ev.target.dataset.assistantQuestion;if(!id||!active)return;
