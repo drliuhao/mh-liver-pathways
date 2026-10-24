@@ -12,4 +12,7 @@
   add('','← Shared home');add('lrt/','Liver-directed therapy matrix');add('#hpb-roadmaps','HPB oncology roadmaps',!transplant);add('transplant/','Standard-risk transplant protocols',transplant);
   if(match)add(transplant?match+'/':'transplant/'+match+'/',transplant?'This tumor’s treatment roadmap →':'This tumor’s transplant pathway →');
   document.body.prepend(nav);
+  const footer=document.createElement('footer');footer.className='portal-change-log';
+  const log=document.createElement('a');log.href=new URL('changes/',root);log.textContent='Change log';
+  footer.append(log);document.body.append(footer);
 })();
