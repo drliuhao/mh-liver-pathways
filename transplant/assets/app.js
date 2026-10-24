@@ -1,4 +1,4 @@
-/* Shared, buildless renderer. No patient data entry, scoring, or persistent decisions. */
+/* Shared renderer and local decision choices; no records, scoring or persistent storage. */
 'use strict';
 const DATA = JSON.parse(document.getElementById('protocol-data').textContent);
 const app = document.getElementById('app');
@@ -8,6 +8,9 @@ let active = DATA.pathway || null;
 let view = DATA.mode === 'alignment' ? 'meeting' : 'pathway';
 let stepIndex = 0;
 let lastTrigger = null;
+const assistantSelections = {};
+const assistantKey = () => `${active.slug}/${active.steps[stepIndex].id}`;
+const assistantConfig = () => DATA.assistants[assistantKey()];
 const refs = ids => (ids || []).map(id => `<button type="button" class="cite" data-ref="${e(id)}" aria-label="Evidence: ${e(DATA.sources[id].short)}">${e(DATA.sources[id].short)} ↗</button>`).join(' ');
 const bullets = items => `<ul>${items.map(x=>`<li>${x.children?`<b>${e(x.text)}</b>`:e(x.text)} ${x.children?bullets(x.children):`<span class="citations">${refs(x.refs)}</span>`}</li>`).join('')}</ul>`;
 const external = (url,label,cls='') => `<a class="${cls}" href="${e(url)}" target="_blank" rel="noopener">${e(label)} ↗</a>`;
@@ -15,6 +18,7 @@ const allRefs = p => {
   const ids = new Set();
   p.steps.forEach(s=>{s.orders.forEach(g=>g.items.forEach(x=>x.refs.forEach(r=>ids.add(r))));s.branches.forEach(b=>{b.criteria.forEach(x=>x.refs.forEach(r=>ids.add(r)));b.refs.forEach(r=>ids.add(r));});s.stops.forEach(x=>x.refs.forEach(r=>ids.add(r)));});
   p.issues.forEach(i=>i.comparisons.forEach(c=>ids.add(c.ref)));
+  p.steps.forEach(s=>{const a=DATA.assistants[`${p.slug}/${s.id}`];a.questions.forEach(q=>{q.refs.forEach(r=>ids.add(r));q.criteria.forEach(c=>c.refs.forEach(r=>ids.add(r)));});a.rules.forEach(r=>r.refs.forEach(id=>ids.add(id)));});
   return [...ids];
 };
 
@@ -26,14 +30,14 @@ function header() {
 }
 
 function footer() {
- return `<footer><b>Clinical suitability and allocation eligibility are separate decisions.</b> This draft supports, but does not replace, specialist judgment and the center’s full transplant evaluation. Proposed local decisions are not institutional approvals.<br><span>Language revised October 23, 2026; clinical source review October 17, 2026 · OPTN policies checked October 17, 2026 (effective October 1, 2026) · NLRB guidance: December 2025. Check current requirements when submitting an exception request.</span></footer>`;
+ return `<footer><b>Clinical suitability and allocation eligibility are separate decisions.</b> This draft supports, but does not replace, specialist judgment and the center’s full transplant evaluation. Proposed local decisions are not institutional approvals.<br><span>Decision assistant revised October 24, 2026; clinical source review October 17, 2026 · OPTN policies checked October 24, 2026 (effective October 1, 2026) · NLRB guidance: December 2025. Check current requirements when submitting an exception request.</span></footer>`;
 }
 
 function home() {
- app.innerHTML = header()+`<main class="wrap home"><div class="homehero"><div><p class="eyebrow">Diagnosis → selection → disease control → transplant</p><h1>Liver transplant assessment and treatment pathways</h1><p class="lead">Transplant oncology pathways with the information to collect, the results that change the route, and the evidence beside each decision.</p></div><div class="how"><b>How to use the pathways</b><ol><li>Choose the tumor and current decision.</li><li>Review the required tests and findings; open the recording template to document the assessment.</li><li>Follow the matching result branch.</li><li>Open evidence or an unresolved meeting question in context.</li></ol></div></div>
+ app.innerHTML = header()+`<main class="wrap home"><div class="homehero"><div><p class="eyebrow">Diagnosis → selection → disease control → transplant</p><h1>Liver transplant assessment and treatment pathways</h1><p class="lead">Transplant oncology pathways with the information to collect, the results that change the route, and the evidence beside each decision.</p></div><div class="how"><b>How to use the pathways</b><ol><li>Choose the tumor and current decision.</li><li>Choose the essential findings; read the criteria and key papers beside each choice.</li><li>Review the highlighted next step; clarify uncertain findings.</li><li>Open evidence or an unresolved meeting question in context.</li></ol></div></div>
  <div class="searchbar"><label for="search">Find a pathway or clinical question</label><input id="search" type="search" placeholder="Try “LR-4”, “biopsy”, “CEA”, “nodes” or “unresectability”…" autocomplete="off"><p id="search-count" class="muted small" aria-live="polite">Seven disease-specific pathways · different step counts, one shared decision structure.</p></div>
  <section id="pathway-grid" class="pathway-grid" aria-label="Choose a pathway">${DATA.index.map(p=>`<article class="pathway-tile" data-slug="${p.slug}"><div class="tiletop"><span class="code">${e(p.code)}</span><span class="small muted">${p.steps.length} decisions</span></div><h2><a href="/mh-liver-pathways/transplant/${p.slug}/">${e(p.name)}</a></h2><span class="authority">${e(p.route)}</span><p>${e(p.entry)}</p><div class="tileflow">${e(p.steps[0].title)} <span>→</span> ${e(p.steps[p.steps.length-1].title)}</div><a class="tilego" href="/mh-liver-pathways/transplant/${p.slug}/">Open pathway <span>→</span></a></article>`).join('')}</section><section id="search-results" hidden aria-label="Matching decisions"></section>
- <p class="template-library"><a href="/mh-liver-pathways/transplant/recording-templates/">Browse all clinical recording templates and research data kits →</a></p><section class="key"><div><span class="keyline go"></span><b>Proceed</b><p>Required results support the next decision.</p></div><div><span class="keyline hold"></span><b>Pause and clarify</b><p>Assign a clinician to resolve missing or uncertain information.</p></div><div><span class="keyline stop"></span><b>Stop and review</b><p>Check whether the finding requires a temporary pause, a different pathway, or exclusion from this transplant protocol.</p></div><div><span class="keyline discuss"></span><b>Meeting question</b><p>Compare sources and see the proposed local approach.</p></div></section></main>`+footer();
+ <section class="key"><div><span class="keyline go"></span><b>Proceed</b><p>Required results support the next decision.</p></div><div><span class="keyline hold"></span><b>Pause and clarify</b><p>Assign a clinician to resolve missing or uncertain information.</p></div><div><span class="keyline stop"></span><b>Stop and review</b><p>Check whether the finding requires a temporary pause, a different pathway, or exclusion from this transplant protocol.</p></div><div><span class="keyline discuss"></span><b>Meeting question</b><p>Compare sources and see the proposed local approach.</p></div></section></main>`+footer();
  document.getElementById('search').addEventListener('input', ev=>{
   const q=ev.target.value.trim().toLowerCase();
   const results=document.getElementById('search-results');
@@ -52,7 +56,7 @@ function home() {
 
 function pathwayShell() {
  app.innerHTML=header()+`<main class="wrap"><div class="pathhero"><div><a class="back" href="/mh-liver-pathways/transplant/">← All pathways</a><p class="eyebrow">${e(active.route)}</p><h1>${e(active.name)}</h1><p class="lead">${e(active.entry)}</p></div><div class="herolinks">${active.roadmap?external(active.roadmap,`${active.code} treatment roadmap`,'btn secondary'):external(DATA.sources['E-consensus'].pdf,'HEHE treatment consensus','btn secondary')}<a href="#meeting" class="plain-link" data-view="meeting">Protocol & meeting documents ↓</a></div></div>
- <div class="viewbar" role="tablist" aria-label="Pathway sections"><button role="tab" id="tab-pathway" data-view="pathway">Decision pathway</button><button role="tab" id="tab-meeting" data-view="meeting">Meeting record <span>${active.issues.length}</span></button><button role="tab" id="tab-evidence" data-view="evidence">Evidence library <span>${allRefs(active).length}</span></button><span class="viewnote">Browse the pathway · no patient status is saved</span></div>
+ <div class="viewbar" role="tablist" aria-label="Pathway sections"><button role="tab" id="tab-pathway" data-view="pathway">Decision pathway</button><button role="tab" id="tab-meeting" data-view="meeting">Meeting record <span>${active.issues.length}</span></button><button role="tab" id="tab-evidence" data-view="evidence">Evidence library <span>${allRefs(active).length}</span></button><span class="viewnote">Compare choices · nothing is saved</span></div>
  <div id="view"></div></main>`+footer();
  renderView();
 }
@@ -61,7 +65,7 @@ function renderView(){
  document.querySelectorAll('[role="tab"]').forEach(t=>t.setAttribute('aria-selected',t.dataset.view===view?'true':'false'));
  const out=document.getElementById('view');
  out.setAttribute('role','tabpanel');out.setAttribute('aria-labelledby','tab-'+view);
- if(view==='pathway')out.innerHTML=renderStep();
+ if(view==='pathway'){out.innerHTML=renderStep();DecisionAssistant.update(out,assistantConfig(),assistantSelections[assistantKey()]||{},active.steps[stepIndex].branches,DATA.sources);}
  if(view==='meeting')out.innerHTML=renderMeeting();
  if(view==='evidence')out.innerHTML=renderEvidence();
  const strip=out.querySelector('.stepstrip');const selected=out.querySelector('.step-tab.active');
@@ -72,8 +76,8 @@ function renderStep(){
  const s=active.steps[stepIndex];
  return `<nav class="stepstrip" aria-label="${e(active.code)} decision steps">${active.steps.map((s,i)=>`<button class="step-tab ${i===stepIndex?'active':''}" data-step="${s.id}" ${i===stepIndex?'aria-current="step"':''}><span>${String(i+1).padStart(2,'0')}</span><b>${e(s.title)}</b></button>`).join('')}</nav>
  <section class="decision" aria-labelledby="question"><div class="question-head"><div><p class="eyebrow">Decision ${stepIndex+1} of ${active.steps.length} <span> / ${e(s.title)}</span></p><h2 id="question" tabindex="-1">${e(s.question)}</h2></div><a class="permalink" href="#${s.id}" aria-label="Link to this decision">#</a></div><div class="contextline"><span><b>When</b> ${e(s.timing)}</span><span><b>Responsible team</b> ${e(s.owner)}</span></div>
- <div class="decision-grid"><section class="orders"><div class="section-head"><span class="number-dot">1</span><h3>Tests and information needed</h3></div><div class="recording-tools"><b>Record this assessment</b><p>Enter findings using dropdowns, numeric fields and dates. Save and reopen an assessment, or export a completed note.</p><a class="btn" href="/mh-liver-pathways/transplant/recording-templates/${active.slug}--${s.id}.html">Open electronic assessment →</a><div class="recording-downloads"><a href="/mh-liver-pathways/transplant/recording-templates/${active.slug}--${s.id}.md" download>Markdown ↓</a><a href="/mh-liver-pathways/transplant/recording-templates/${active.slug}-recording-kit.zip" download>Research data kit ↓</a></div><small>Entries stay in the current tab. Download JSON to save; copy the completed note into the EHR.</small></div>${s.orders.map(g=>`<div class="ordergroup"><h4>${e(g.label)}</h4>${bullets(g.items)}</div>`).join('')}</section>
- <section class="results"><div class="section-head"><span class="number-dot">2</span><h3>Review results and select the next step</h3></div><p class="logic-note">Within a branch, all listed conditions apply unless an <b>OR</b> is stated. These links support review; they do not determine a patient’s eligibility.</p>${s.branches.map(b=>`<article class="branch ${e(b.kind)}"><div class="branch-title"><span class="route-label">${b.kind==='advance'?'Proceed when':b.kind==='hold'?'Pause and clarify':b.kind==='redirect'?'Use another pathway':'Do not proceed on this pathway'}</span><h4>${e(b.title)}</h4></div>${bullets(b.criteria)}<div class="branch-action"><span class="action-arrow">→</span><p>${e(b.action)} ${refs(b.refs)}</p>${b.to?`<button class="route-button" data-step="${e(b.to)}">${e(active.steps.find(x=>x.id===b.to).title)} →</button>`:b.kind==='redirect'&&active.roadmap?external(active.roadmap,'Treatment roadmap','route-button'):''}</div></article>`).join('')}</section></div>
+ <div class="decision-grid"><section class="orders"><div class="section-head"><span class="number-dot">1</span><h3>Tests and information needed</h3></div>${DecisionAssistant.render(assistantConfig(),DATA.sources,assistantSelections[assistantKey()]||{})}<details class="full-tests"><summary>Full test checklist and source details</summary>${s.orders.map(g=>`<div class="ordergroup"><h4>${e(g.label)}</h4>${bullets(g.items)}</div>`).join('')}</details></section>
+ <section class="results" id="decision-results"><div class="section-head"><span class="number-dot">2</span><h3>Review results and select the next step</h3></div><p class="logic-note">Your choices highlight the matching passage. Other routes remain available to review; each decision still requires clinical judgment.</p><article class="assistant-other-result" hidden></article>${s.branches.map((b,bi)=>`<article class="branch ${e(b.kind)} is-muted" data-branch-index="${bi}"><span class="branch-match" hidden>Matches these choices</span><div class="branch-title"><span class="route-label">${b.kind==='advance'?'Proceed when':b.kind==='hold'?'Pause and clarify':b.kind==='redirect'?'Use another pathway':'Do not proceed on this pathway'}</span><h4>${e(b.title)}</h4></div><details class="branch-details"><summary>Criteria and supporting sources</summary>${bullets(b.criteria)}</details><div class="branch-action"><span class="action-arrow">→</span><p>${e(b.action)} ${refs(b.refs)}</p>${b.to?`<button class="route-button" data-step="${e(b.to)}">${e(active.steps.find(x=>x.id===b.to).title)} →</button>`:b.kind==='redirect'&&active.roadmap?external(active.roadmap,'Treatment roadmap','route-button'):''}</div></article>`).join('')}</section></div>
  <div class="safety-grid"><section class="stops"><div class="section-head"><span class="status-icon">!</span><h3>Findings that require stopping or reassessment</h3></div>${s.stops.length?bullets(s.stops):'<p class="muted">No additional stopping condition is listed here. Earlier exclusions and the full transplant evaluation still apply.</p>'}<p class="small stopnote">Check whether each finding requires a temporary pause, excludes this allocation route, or rules out transplantation clinically.</p></section>
  <section class="gray"><div class="section-head"><span class="status-icon">?</span><h3>Questions for multidisciplinary discussion</h3></div>${s.issues.map(id=>{const i=active.issues.find(x=>x.id===id);return `<a class="issue-link" href="/mh-liver-pathways/transplant/alignment/${active.slug}/#${i.id}"><span>${e(i.record)}</span><b>${e(i.question)}</b><span class="issue-arrow">Compare sources · proposed decision →</span></a>`;}).join('')}</section></div>
  <nav class="stepfooter" aria-label="Previous and next decision"><button ${stepIndex===0?'disabled':''} data-step="${active.steps[Math.max(0,stepIndex-1)].id}">← Previous decision</button><span>${stepIndex+1} / ${active.steps.length}</span><button ${stepIndex===active.steps.length-1?'disabled':''} data-step="${active.steps[Math.min(active.steps.length-1,stepIndex+1)].id}">Next decision →</button></nav></section>`;
@@ -124,7 +128,22 @@ function hashState(){
  if(view==='meeting'&&active.issues.some(i=>i.id===h))requestAnimationFrame(()=>document.getElementById(h)?.scrollIntoView({block:'start'}));
 }
 
+document.addEventListener('change',ev=>{
+ const id=ev.target.dataset.assistantQuestion;if(!id||!active)return;
+ const config=assistantConfig(),q=config.questions.find(q=>q.id===id);if(!q)return;
+ const key=assistantKey(),answers=assistantSelections[key]||{};
+ answers[id]=ev.target.value;assistantSelections[key]=answers;
+ active.steps.slice(stepIndex+1).forEach(s=>delete assistantSelections[`${active.slug}/${s.id}`]);
+ document.querySelector(`[data-definitions="${id}"]`).innerHTML=DecisionAssistant.definitions(q,answers[id],DATA.sources);
+ DecisionAssistant.update(document.getElementById('view'),config,answers,active.steps[stepIndex].branches,DATA.sources);
+});
+
 document.addEventListener('click',ev=>{
+ if(ev.target.closest('[data-assistant-reset]')){
+  active.steps.slice(stepIndex).forEach(s=>delete assistantSelections[`${active.slug}/${s.id}`]);renderView();document.querySelector('[data-assistant-reset]').focus({preventScroll:true});return;
+ }
+ if(ev.target.closest('[data-assistant-show]')){const target=(matchMedia('(max-width:900px)').matches?document.querySelector('.results .branch.is-highlighted:not([hidden])'):null)||document.getElementById('decision-results');target.scrollIntoView({block:'start',behavior:'instant'});return;}
+
  const cite=ev.target.closest('[data-ref]');if(cite){showSource(cite.dataset.ref,cite);return;}
  if(ev.target.closest('.close-dialog')){document.getElementById('source-dialog').close();return;}
  const step=ev.target.closest('[data-step]');if(step&&!step.disabled){setStep(step.dataset.step);return;}

@@ -4609,6 +4609,33 @@
     }
   ],
   "sources": {
+    "H-yao": {
+      "short": "Yao · Hepatology 2015",
+      "title": "Downstaging of hepatocellular cancer before liver transplant: long-term outcome compared to tumors within Milan criteria",
+      "kind": "Cohort evidence",
+      "locator": "Yao et al. · Hepatology · 2015 · PMID 25689978 · DOI 10.1002/hep.27752",
+      "url": "https://doi.org/10.1002/hep.27752",
+      "pdf": "https://doi.org/10.1002/hep.27752",
+      "note": "Long-term downstaging cohort compared with patients initially within T2. Supports the downstaging approach; it is not the source of current allocation-policy wording."
+    },
+    "H-milan": {
+      "short": "Mazzaferro · NEJM 1996",
+      "title": "Liver transplantation for the treatment of small hepatocellular carcinomas in patients with cirrhosis",
+      "kind": "Cohort evidence",
+      "locator": "Mazzaferro et al. · New England Journal of Medicine · 1996 · PMID 8594428 · DOI 10.1056/NEJM199603143341104",
+      "url": "https://doi.org/10.1056/NEJM199603143341104",
+      "pdf": "https://doi.org/10.1056/NEJM199603143341104",
+      "note": "Foundational Milan selection cohort; Milan tumor criteria are not identical to OPTN T2 exception requirements."
+    },
+    "H-merits": {
+      "short": "Mehta · Gastroenterology 2021 · MERITS-LT",
+      "title": "Downstaging Outcomes for Hepatocellular Carcinoma: Results From the MERITS-LT Consortium",
+      "kind": "Prospective cohort evidence",
+      "locator": "Mehta et al. · Gastroenterology · 2021 · PMID 34331914 · DOI 10.1053/j.gastro.2021.07.033",
+      "url": "https://doi.org/10.1053/j.gastro.2021.07.033",
+      "pdf": "https://doi.org/10.1053/j.gastro.2021.07.033",
+      "note": "Prospective multicenter UNOS-downstaging cohort. The current allocation policy controls exact numerical boundaries; cohort selection does not establish exception approval."
+    },
     "I-focality": {
       "short": "CAP · tumor focality",
       "title": "Intrahepatic bile ducts resection protocol v4.3.0.0",
@@ -4798,5 +4825,5110 @@
       "pdf": "https://doi.org/10.1053/j.gastro.2016.11.042",
       "note": "Molecular risk stapproval informs clinical judgment. A local exon-specific threshold is not the NLRB wording."
     }
-  }
+  },
+  "assistants": {
+    "hcc/diagnosis": {
+      "questions": [
+        {
+          "id": "diagnosis",
+          "label": "What establishes the diagnosis?",
+          "options": [
+            {
+              "value": "hcc",
+              "label": "HCC established by eligible LR-5 imaging or pathology",
+              "details": []
+            },
+            {
+              "value": "lr4",
+              "label": "LR-4: probable HCC",
+              "details": []
+            },
+            {
+              "value": "lr3",
+              "label": "LR-3: intermediate probability",
+              "details": []
+            },
+            {
+              "value": "inadequate",
+              "label": "Imaging incomplete or technically inadequate",
+              "details": []
+            },
+            {
+              "value": "other",
+              "label": "LR-M or a non-HCC diagnosis",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "H-policy",
+            "H-aasld"
+          ],
+          "help": "Imaging-only diagnosis requires the appropriate at-risk population. AFP alone does not diagnose HCC.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "diagnosis": "other"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Establish the tumor type before using the HCC pathway. LR-M requires diagnostic assessment; do not count it as HCC.",
+          "refs": [
+            "H-policy",
+            "H-aasld"
+          ]
+        },
+        {
+          "when": {
+            "diagnosis": [
+              "lr4",
+              "lr3",
+              "inadequate"
+            ]
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "diagnosis": "hcc"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "hcc/curative-route": {
+      "questions": [
+        {
+          "id": "spread",
+          "label": "Is disease free of macrovascular invasion, extrahepatic spread and rupture?",
+          "options": [
+            {
+              "value": "clear",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "excluded",
+              "label": "Active invasion, spread or rupture",
+              "details": []
+            },
+            {
+              "value": "prior",
+              "label": "Previously treated rupture or vascular invasion",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-hcc"
+          ],
+          "help": "",
+          "criteria": []
+        },
+        {
+          "id": "operation",
+          "label": "Which curative approach is supported by liver reserve and anatomy?",
+          "options": [
+            {
+              "value": "resection",
+              "label": "Safe complete resection is feasible",
+              "details": []
+            },
+            {
+              "value": "transplant",
+              "label": "Transplant is favored and fitness is acceptable",
+              "details": []
+            },
+            {
+              "value": "review",
+              "label": "Neither approach is established / fitness unresolved",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "H-policy",
+            "H-aasld"
+          ],
+          "help": "Resection is favored by limited burden, compensated liver, no clinically significant portal hypertension and adequate remnant. Early HCC with decompensation or significant portal hypertension may favor transplant.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "spread": "excluded"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Active spread, macrovascular invasion or rupture prevents progression on the standard HCC exception route. Review cancer treatment options.",
+          "refs": [
+            "N-hcc"
+          ]
+        },
+        {
+          "when": {
+            "spread": "prior"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Separate transplant-program review",
+          "text": "Previously treated rupture or portal-branch invasion needs individual review; do not assume standard exception eligibility.",
+          "refs": [
+            "N-hcc"
+          ]
+        },
+        {
+          "when": {
+            "operation": "review"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Clarify the curative treatment plan",
+          "text": "Review liver reserve, resection feasibility and transplant fitness.",
+          "refs": [
+            "H-policy",
+            "H-aasld"
+          ]
+        },
+        {
+          "when": {
+            "spread": "clear",
+            "operation": "resection"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "spread": "clear",
+            "operation": "transplant"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "hcc/allocation": {
+      "questions": [
+        {
+          "id": "burden",
+          "label": "Which pretreatment tumor pattern applies?",
+          "options": [
+            {
+              "value": "t2",
+              "label": "Within Milan and meets T2",
+              "details": []
+            },
+            {
+              "value": "t1",
+              "label": "Within Milan, but single T1 tumor (1 to <2 cm)",
+              "details": []
+            },
+            {
+              "value": "ds",
+              "label": "Beyond Milan, within UNOS downstaging criteria",
+              "details": []
+            },
+            {
+              "value": "beyond",
+              "label": "Beyond UNOS downstaging criteria",
+              "details": []
+            },
+            {
+              "value": "other",
+              "label": "Other / qualifying lesion classification unresolved",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "H-milan",
+            "H-policy",
+            "H-merits"
+          ],
+          "help": "Use the confirmed pretreatment lesion count and sizes, not just the treated scan.",
+          "criteria": [
+            {
+              "title": "Milan criteria",
+              "items": [
+                "One HCC ≤5 cm, OR 2–3 HCCs each ≤3 cm.",
+                "No macrovascular tumor invasion or extrahepatic tumor spread.",
+                "Milan describes tumor selection. It is not identical to the T2 MELD-exception definition."
+              ],
+              "refs": [
+                "H-milan",
+                "H-aasld"
+              ],
+              "show_for": [
+                "",
+                "t2",
+                "t1"
+              ]
+            },
+            {
+              "title": "T2 size criteria for the standard exception",
+              "items": [
+                "One qualifying Class 5 lesion 2–5 cm, OR 2–3 qualifying lesions each 1–3 cm.",
+                "A single 1 to <2 cm HCC is T1: within Milan size limits but outside standard T2 exception criteria."
+              ],
+              "refs": [
+                "H-policy"
+              ],
+              "show_for": [
+                "t2",
+                "t1"
+              ]
+            },
+            {
+              "title": "UNOS downstaging: pretreatment inclusion criteria",
+              "items": [
+                "One Class 5 lesion >5 to ≤8 cm; OR",
+                "2–3 Class 5 lesions: at least one >3 cm, each ≤5 cm, and summed diameters ≤8 cm; OR",
+                "4–5 Class 5 lesions: each <3 cm, with summed diameters ≤8 cm.",
+                "No macrovascular invasion or extrahepatic disease. After treatment, viable tumor burden must meet T2 size requirements; AFP and observation requirements also apply.",
+                "The current OPTN policy uses strictly <3 cm for the 4–5 lesion group, even though some study summaries use ≤3 cm."
+              ],
+              "refs": [
+                "H-policy",
+                "H-yao",
+                "H-merits"
+              ],
+              "show_for": [
+                "ds"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "afp",
+          "label": "Does AFP meet the standard exception rule?",
+          "options": [
+            {
+              "value": "met",
+              "label": "Yes — applicable AFP rule met",
+              "details": []
+            },
+            {
+              "value": "not-met",
+              "label": "No — AFP requirement not met",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "H-policy"
+          ],
+          "help": "If AFP has never exceeded 1,000 ng/mL: current AFP ≤1,000. If it ever exceeded 1,000: treatment must reduce AFP to <500 and it must remain <500.",
+          "criteria": []
+        },
+        {
+          "id": "spread",
+          "label": "No macrovascular tumor invasion or extrahepatic disease?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "H-policy",
+            "N-hcc"
+          ],
+          "help": "",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "spread": "no"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Do not advance on the standard HCC exception route; review disease-directed treatment and any separate program assessment.",
+          "refs": [
+            "H-policy",
+            "N-hcc"
+          ]
+        },
+        {
+          "when": {
+            "burden": "other"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Clarify the qualifying tumor burden",
+          "text": "Reconcile Class 5 classification and baseline measurements before selecting an exception route.",
+          "refs": [
+            "H-policy"
+          ]
+        },
+        {
+          "when": {
+            "burden": "beyond"
+          },
+          "branch": 3,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "burden": "t1",
+            "spread": "yes"
+          },
+          "branch": 2,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "afp": "not-met"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "AFP response or individual review is needed",
+          "text": "An otherwise acceptable size pattern does not establish standard exception eligibility. Address AFP response and the appropriate review route.",
+          "refs": [
+            "H-policy"
+          ]
+        },
+        {
+          "when": {
+            "burden": "t2",
+            "afp": "met",
+            "spread": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "burden": "ds",
+            "afp": "met",
+            "spread": "yes"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "hcc/treatment": {
+      "questions": [
+        {
+          "id": "response",
+          "label": "What does post-treatment imaging show?",
+          "options": [
+            {
+              "value": "controlled",
+              "label": "Viable burden within required limits / no viable tumor",
+              "details": []
+            },
+            {
+              "value": "residual",
+              "label": "Residual burden above limits or equivocal response",
+              "details": []
+            },
+            {
+              "value": "spread",
+              "label": "New macrovascular invasion or extrahepatic disease",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "H-policy",
+            "H-aasld"
+          ],
+          "help": "Assess viable tumor separately from the treated cavity and retain pretreatment stage. For downstaging, guidance advises imaging ≥4 weeks after the last treatment.",
+          "criteria": []
+        },
+        {
+          "id": "afp",
+          "label": "Required AFP response maintained?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "H-policy"
+          ],
+          "help": "If AFP has never exceeded 1,000 ng/mL: current AFP ≤1,000. If it ever exceeded 1,000: treatment must reduce AFP to <500 and it must remain <500.",
+          "criteria": []
+        },
+        {
+          "id": "reserve",
+          "label": "Liver reserve and treatment safety acceptable?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "H-aasld"
+          ],
+          "help": "Treatment-related decompensation needs reassessment. Prior checkpoint immunotherapy requires transplant/pharmacy review before transplantation.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "response": "spread"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "New macrovascular invasion or extrahepatic disease stops the standard route.",
+          "refs": [
+            "N-hcc"
+          ]
+        },
+        {
+          "when": {
+            "response": "residual"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "afp": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "reserve": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "response": "controlled",
+            "afp": "yes",
+            "reserve": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "hcc/listing": {
+      "questions": [
+        {
+          "id": "exception",
+          "label": "Correct exception route and supporting evidence verified?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "H-policy"
+          ],
+          "help": "Baseline/response imaging, qualifying lesions, AFP history, chest staging and resection assessment. Adults retain calculated MELD initially and at first extension; later eligible extensions use MMaT−3.",
+          "criteria": []
+        },
+        {
+          "id": "fitness",
+          "label": "Transplant selection and treatment-safety reviews complete?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "H-aasld",
+            "N-hcc"
+          ],
+          "help": "Include cardiopulmonary, infectious, functional and psychosocial suitability; any prior ICI exposure needs a specific rejection-risk plan.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "exception": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "fitness": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "exception": "yes",
+            "fitness": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "hcc/waitlist": {
+      "questions": [
+        {
+          "id": "control",
+          "label": "Current tumor / AFP assessment?",
+          "options": [
+            {
+              "value": "maintained",
+              "label": "Qualifying disease control and AFP maintained",
+              "details": []
+            },
+            {
+              "value": "equivocal",
+              "label": "Equivocal enhancement or AFP change",
+              "details": []
+            },
+            {
+              "value": "lost",
+              "label": "Outside automatic renewal criteria / new spread",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "H-policy",
+            "H-aasld"
+          ],
+          "help": "Use updated liver imaging, AFP and treatment history. No residual enhancement is required after complete treatment; preserve the original qualifying history.",
+          "criteria": []
+        },
+        {
+          "id": "fitness",
+          "label": "Still clinically suitable for transplantation?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "H-aasld"
+          ],
+          "help": "",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "control": "lost"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Stop automatic renewal and obtain formal review. New metastasis or macrovascular invasion stops the standard route.",
+          "refs": [
+            "H-policy",
+            "N-hcc"
+          ]
+        },
+        {
+          "when": {
+            "control": "equivocal"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "fitness": "no"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Reassess transplant readiness",
+          "text": "Resolve the new clinical barrier before activation or organ acceptance.",
+          "refs": [
+            "H-aasld"
+          ]
+        },
+        {
+          "when": {
+            "control": "maintained",
+            "fitness": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "hcc/after-transplant": {
+      "questions": [
+        {
+          "id": "plan",
+          "label": "Are pathology review and the follow-up plan in place?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "H-aasld",
+            "H-policy"
+          ],
+          "help": "Review explant viable burden and vascular invasion; arrange abdominal/chest surveillance. The HCC exception explant report is due within 60 days. Surveillance intervals are individualized.",
+          "criteria": []
+        },
+        {
+          "id": "concern",
+          "label": "Any new concerning finding?",
+          "options": [
+            {
+              "value": "none",
+              "label": "No unresolved concern",
+              "details": []
+            },
+            {
+              "value": "concern",
+              "label": "Possible recurrence, progression or new safety concern",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "H-aasld",
+            "H-policy"
+          ],
+          "help": "",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "concern": "concern"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Evaluate the new finding",
+          "text": "Obtain disease-specific multidisciplinary review before continuing the routine plan.",
+          "refs": [
+            "H-aasld",
+            "H-policy"
+          ]
+        },
+        {
+          "when": {
+            "plan": "no"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Complete the follow-up plan",
+          "text": "Review pathology and agree surveillance and the route for evaluating suspicious findings.",
+          "refs": [
+            "H-aasld",
+            "H-policy"
+          ]
+        },
+        {
+          "when": {
+            "plan": "yes",
+            "concern": "none"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "pcca/localize": {
+      "questions": [
+        {
+          "id": "origin",
+          "label": "Where does the lesion arise?",
+          "options": [
+            {
+              "value": "hilar",
+              "label": "Perihilar bile duct",
+              "details": []
+            },
+            {
+              "value": "other",
+              "label": "Intrahepatic or distal bile duct",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "C-aasld"
+          ],
+          "help": "Use MRI/MRCP or appropriate CT to establish the duct of origin; distinguish the radial mass from its length along the bile duct.",
+          "criteria": []
+        },
+        {
+          "id": "review",
+          "label": "Potential transplant relevance reviewed before primary-tumor sampling?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ],
+          "help": "Assess liver disease, resection options and benign mimics before choosing a biopsy route.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "origin": "other"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "review": "no"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Review the transplant option before sampling",
+          "text": "Discuss with the transplant/HPB team before a primary-tumor biopsy could compromise this pathway.",
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ]
+        },
+        {
+          "when": {
+            "origin": "hilar",
+            "review": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "pcca/diagnosis": {
+      "questions": [
+        {
+          "id": "diagnosis",
+          "label": "Malignant-appearing stricture plus at least one diagnostic criterion?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ],
+          "help": "At least one: malignant biopsy/cytology; CA 19-9 >100 U/mL without cholangitis; aneuploidy; or a hilar mass <3 cm radially.",
+          "criteria": []
+        },
+        {
+          "id": "biopsy",
+          "label": "Has the primary tumor been sampled through the peritoneum?",
+          "options": [
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "yes",
+              "label": "Yes — transperitoneal primary-tumor biopsy",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ],
+          "help": "Avoid transperitoneal EUS, percutaneous or operative biopsy of the primary. Sampling a regional node without traversing the primary is a different procedure.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "biopsy": "yes"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Primary-biopsy history requires review",
+          "text": "Obtain transplant-program review of the primary-biopsy route and seeding risk before further pathway advancement.",
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ]
+        },
+        {
+          "when": {
+            "diagnosis": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "diagnosis": "yes",
+            "biopsy": "no"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "pcca/phenotype": {
+      "questions": [
+        {
+          "id": "size",
+          "label": "What is the radial mass size?",
+          "options": [
+            {
+              "value": "small",
+              "label": "Single mass <3 cm",
+              "details": []
+            },
+            {
+              "value": "none",
+              "label": "No discrete mass",
+              "details": []
+            },
+            {
+              "value": "large",
+              "label": "Mass ≥3 cm or multiple masses",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ],
+          "help": "Measure perpendicular to the bile duct. Exactly 3 cm does not meet <3 cm; longitudinal duct involvement is not this measurement.",
+          "criteria": []
+        },
+        {
+          "id": "unresectable",
+          "label": "Unresectable because of anatomy or underlying liver disease?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ],
+          "help": "",
+          "criteria": []
+        },
+        {
+          "id": "spread",
+          "label": "Regional nodes, intrahepatic metastases or extrahepatic spread?",
+          "options": [
+            {
+              "value": "clear",
+              "label": "No metastatic disease identified",
+              "details": []
+            },
+            {
+              "value": "present",
+              "label": "Metastatic disease present",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ],
+          "help": "Chest/abdominal imaging must exclude metastases within 90 days before the initial exception request.",
+          "criteria": []
+        },
+        {
+          "id": "diagnosis",
+          "label": "Hilar diagnostic criteria met and primary-biopsy history acceptable?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ],
+          "help": "Confirm the preceding diagnostic assessment, including avoidance of transperitoneal primary-tumor biopsy.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "spread": "present"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Metastatic disease excludes this standard pCCA transplant route.",
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ]
+        },
+        {
+          "when": {
+            "size": "large"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "unresectable": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "diagnosis": "no"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Resolve diagnosis and biopsy-route concerns",
+          "text": "Return to the diagnostic assessment with the transplant team.",
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ]
+        },
+        {
+          "when": {
+            "size": [
+              "small",
+              "none"
+            ],
+            "unresectable": "yes",
+            "spread": "clear",
+            "diagnosis": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "pcca/neoadjuvant": {
+      "questions": [
+        {
+          "id": "protocol",
+          "label": "Approved center protocol and required treatment milestones satisfied?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ],
+          "help": "The written protocol includes selection, neoadjuvant therapy and operative staging. Regimen modifications require program review.",
+          "criteria": []
+        },
+        {
+          "id": "status",
+          "label": "Current disease control and clinical condition?",
+          "options": [
+            {
+              "value": "safe",
+              "label": "No progression; drainage, infection and toxicity controlled",
+              "details": []
+            },
+            {
+              "value": "complication",
+              "label": "Cholangitis, toxicity or incomplete recovery",
+              "details": []
+            },
+            {
+              "value": "spread",
+              "label": "Metastatic progression",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ],
+          "help": "",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "status": "spread"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Metastatic progression ends the standard curative transplant route.",
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ]
+        },
+        {
+          "when": {
+            "protocol": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "status": "complication"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "protocol": "yes",
+            "status": "safe"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "pcca/staging": {
+      "questions": [
+        {
+          "id": "stage",
+          "label": "What did operative staging after neoadjuvant therapy show?",
+          "options": [
+            {
+              "value": "negative",
+              "label": "Complete staging: no nodal, liver or peritoneal metastasis",
+              "details": []
+            },
+            {
+              "value": "positive",
+              "label": "Regional node, intrahepatic or extrahepatic metastasis",
+              "details": []
+            },
+            {
+              "value": "incomplete",
+              "label": "Not performed, incomplete or pathology indeterminate",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ],
+          "help": "Assess regional hepatic nodes and the peritoneum after neoadjuvant therapy, before transplant. Negative EUS before therapy does not replace operative staging.",
+          "criteria": []
+        },
+        {
+          "id": "ready",
+          "label": "Interval imaging, protocol milestones and clinical fitness acceptable?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ],
+          "help": "Reconcile interval imaging with operative findings; resolve cholangitis and other active safety issues.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "stage": "positive"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Positive regional nodes, intrahepatic or other metastasis excludes this standard transplant route.",
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ]
+        },
+        {
+          "when": {
+            "stage": "incomplete"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "ready": "no"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Resolve the remaining transplant-readiness issue",
+          "text": "Reassess interval imaging, treatment completion, infection control and fitness before listing/offer clearance.",
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ]
+        },
+        {
+          "when": {
+            "stage": "negative",
+            "ready": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "pcca/listing": {
+      "questions": [
+        {
+          "id": "evidence",
+          "label": "Required exception evidence and imaging current?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ],
+          "help": "Diagnostic and approved-protocol evidence must be complete. Chest/abdomen imaging: within 90 days for the initial request; within 30 days for extension.",
+          "criteria": []
+        },
+        {
+          "id": "ready",
+          "label": "Final staging and transplant readiness?",
+          "options": [
+            {
+              "value": "ready",
+              "label": "Required negative operative staging; protocol and fitness cleared",
+              "details": []
+            },
+            {
+              "value": "pending",
+              "label": "Incomplete clearance or a new unresolved abnormality",
+              "details": []
+            },
+            {
+              "value": "spread",
+              "label": "New metastatic disease",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ],
+          "help": "",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "ready": "spread"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "New metastatic disease stops this standard route.",
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ]
+        },
+        {
+          "when": {
+            "evidence": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "ready": "pending"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "evidence": "yes",
+            "ready": "ready"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "pcca/follow-up": {
+      "questions": [
+        {
+          "id": "plan",
+          "label": "Are pathology review and the follow-up plan in place?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ],
+          "help": "Review residual disease, nodes and margins. Agree recurrence surveillance jointly with oncology and transplantation; there is no universal OPTN surveillance regimen.",
+          "criteria": []
+        },
+        {
+          "id": "concern",
+          "label": "Any new concerning finding?",
+          "options": [
+            {
+              "value": "none",
+              "label": "No unresolved concern",
+              "details": []
+            },
+            {
+              "value": "concern",
+              "label": "Possible recurrence, progression or new safety concern",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ],
+          "help": "",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "concern": "concern"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Evaluate the new finding",
+          "text": "Obtain disease-specific multidisciplinary review before continuing the routine plan.",
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ]
+        },
+        {
+          "when": {
+            "plan": "no"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Complete the follow-up plan",
+          "text": "Review pathology and agree surveillance and the route for evaluating suspicious findings.",
+          "refs": [
+            "P-policy",
+            "P-cohort"
+          ]
+        },
+        {
+          "when": {
+            "plan": "yes",
+            "concern": "none"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "icca/diagnosis": {
+      "questions": [
+        {
+          "id": "histology",
+          "label": "What does expert pathology show?",
+          "options": [
+            {
+              "value": "icca",
+              "label": "Biopsy-proven iCCA",
+              "details": []
+            },
+            {
+              "value": "mixed",
+              "label": "Mixed HCC–iCCA",
+              "details": []
+            },
+            {
+              "value": "other",
+              "label": "Other primary / metastatic cancer",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-icca",
+            "C-aasld"
+          ],
+          "help": "Confirm tissue diagnosis; exclude metastasis from another primary. Mixed HCC–iCCA is included in current guidance, but local program acceptance must be explicit.",
+          "criteria": []
+        },
+        {
+          "id": "extent",
+          "label": "Liver tumor map and metastatic staging complete?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-icca",
+            "I-cohort"
+          ],
+          "help": "",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "histology": "other"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Use the pathway for the verified tumor type.",
+          "refs": [
+            "C-aasld"
+          ]
+        },
+        {
+          "when": {
+            "histology": "mixed"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "extent": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "histology": "icca",
+            "extent": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "icca/phenotype": {
+      "questions": [
+        {
+          "id": "focality",
+          "label": "How many confirmed malignant liver nodules?",
+          "options": [
+            {
+              "value": "solitary",
+              "label": "One solitary iCCA / mixed HCC–iCCA",
+              "details": []
+            },
+            {
+              "value": "multiple",
+              "label": "Multiple malignant nodules, including satellites",
+              "details": []
+            },
+            {
+              "value": "uncertain",
+              "label": "An additional nodule is indeterminate / separate HCC possible",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-icca",
+            "I-focality",
+            "I-satellites"
+          ],
+          "help": "Multifocal = ≥2 separate tumor nodules. Satellites = nearby separate nodules, without a universal distance cutoff. Intrahepatic metastasis describes spread within the liver; distribution alone cannot establish clonality.",
+          "criteria": [
+            {
+              "title": "How this changes the transplant discussion",
+              "items": [
+                "A confirmed satellite or other additional malignant nodule does not satisfy the solitary-tumor guidance route.",
+                "Multiple liver nodules do not by themselves establish distant M1 disease.",
+                "An indeterminate nodule may be benign or another tumor: clarify it rather than assuming multifocal iCCA."
+              ],
+              "refs": [
+                "N-icca",
+                "I-focality",
+                "I-satellites"
+              ],
+              "show_for": [
+                "multiple",
+                "uncertain"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "profile",
+          "label": "Size, liver background and resection assessment?",
+          "options": [
+            {
+              "value": "fits",
+              "label": "≤3 cm, cirrhosis, and no safe complete resection",
+              "details": []
+            },
+            {
+              "value": "outside",
+              "label": ">3 cm, noncirrhotic, or resectable",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-icca",
+            "I-cohort"
+          ],
+          "help": "These are the current NLRB guidance criteria. The foundational “very early” cohort studied a narrower ≤2 cm group; it does not alone validate every ≤3 cm case.",
+          "criteria": []
+        },
+        {
+          "id": "spread",
+          "label": "No extrahepatic disease?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-icca"
+          ],
+          "help": "",
+          "criteria": []
+        },
+        {
+          "id": "program",
+          "label": "Selected-program review supports continued evaluation?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-icca",
+            "I-cohort"
+          ],
+          "help": "",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "spread": "no"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Extrahepatic disease is outside this guidance-aligned transplant route.",
+          "refs": [
+            "N-icca"
+          ]
+        },
+        {
+          "when": {
+            "focality": "multiple"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "profile": "outside"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "focality": "uncertain"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Clarify the additional nodule",
+          "text": "Review imaging and pathology; biopsy may help if it would change management. Separate HCC alongside iCCA requires explicit program/NLRB interpretation.",
+          "refs": [
+            "N-icca",
+            "I-focality"
+          ]
+        },
+        {
+          "when": {
+            "program": "no"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Obtain selected-program review",
+          "text": "Meeting the size and cirrhosis criteria does not establish clinical acceptance.",
+          "refs": [
+            "N-icca",
+            "I-cohort"
+          ]
+        },
+        {
+          "when": {
+            "focality": "solitary",
+            "profile": "fits",
+            "spread": "yes",
+            "program": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "icca/therapy": {
+      "questions": [
+        {
+          "id": "control",
+          "label": "Tumor status during therapy?",
+          "options": [
+            {
+              "value": "controlled",
+              "label": "Solitary tumor ≤3 cm, no new lesions or extrahepatic disease",
+              "details": []
+            },
+            {
+              "value": "unclear",
+              "label": "Response unclear",
+              "details": []
+            },
+            {
+              "value": "progression",
+              "label": "Growth beyond criteria / new tumor or metastasis",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-icca"
+          ],
+          "help": "",
+          "criteria": []
+        },
+        {
+          "id": "safe",
+          "label": "Treatment tolerable and transplant safety reviewed?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-icca",
+            "C-aasld"
+          ],
+          "help": "Review liver reserve and toxicity. Checkpoint immunotherapy requires a separate transplant-safety discussion; HCC exception wording is not iCCA safety clearance.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "control": "progression"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Reassess this transplant strategy; do not advance routinely beyond the guidance population.",
+          "refs": [
+            "N-icca"
+          ]
+        },
+        {
+          "when": {
+            "control": "unclear"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "safe": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "control": "controlled",
+            "safe": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "icca/stability": {
+      "questions": [
+        {
+          "id": "duration",
+          "label": "Has the full qualifying stability period been met?",
+          "options": [
+            {
+              "value": "met",
+              "label": "At least 6 months, with the starting point agreed",
+              "details": []
+            },
+            {
+              "value": "short",
+              "label": "Less than 6 months / starting point unresolved",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-icca"
+          ],
+          "help": "Guidance specifies 6 months from diagnosis or last treatment. The team must establish the applicable start; a good early response is not the full interval.",
+          "criteria": []
+        },
+        {
+          "id": "disease",
+          "label": "Disease throughout that period?",
+          "options": [
+            {
+              "value": "stable",
+              "label": "Solitary ≤3 cm, no new lesions or extrahepatic disease",
+              "details": []
+            },
+            {
+              "value": "progression",
+              "label": "Progression or a new malignant lesion",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-icca"
+          ],
+          "help": "",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "disease": "progression"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Stop routine advancement and review the strategy. Do not simply restart the observation interval.",
+          "refs": [
+            "N-icca"
+          ]
+        },
+        {
+          "when": {
+            "duration": "short"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "duration": "met",
+            "disease": "stable"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "icca/review": {
+      "questions": [
+        {
+          "id": "criteria",
+          "label": "Are the disease-specific criteria still satisfied?",
+          "options": [
+            {
+              "value": "met",
+              "label": "Yes, with current supporting tests",
+              "details": []
+            },
+            {
+              "value": "pending",
+              "label": "Tests incomplete / a finding unresolved",
+              "details": []
+            },
+            {
+              "value": "lost",
+              "label": "A required criterion is no longer met",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-icca",
+            "I-cohort"
+          ],
+          "help": "Confirm biopsy, cirrhosis, unresectability, solitary ≤3 cm disease and ≥6 months stability. Extensions require imaging every 3 months with continuing control.",
+          "criteria": []
+        },
+        {
+          "id": "reviews",
+          "label": "Clinical selection and the appropriate allocation review complete?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-icca",
+            "I-cohort"
+          ],
+          "help": "Clinical acceptance and exception disposition are separate. This assistant highlights the next passage; it does not approve either decision.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "criteria": "lost"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Reassess the disease-specific route before further progression.",
+          "refs": [
+            "N-icca",
+            "I-cohort"
+          ]
+        },
+        {
+          "when": {
+            "criteria": "pending"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "reviews": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "criteria": "met",
+            "reviews": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "icca/follow-up": {
+      "questions": [
+        {
+          "id": "plan",
+          "label": "Final clinical review and recurrence-surveillance plan complete?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-icca",
+            "I-cohort"
+          ],
+          "help": "Reconfirm disease control, fitness and informed consent. Review explant findings and agree oncology/transplant surveillance; selected cohort evidence does not establish a universal interval.",
+          "criteria": []
+        },
+        {
+          "id": "concern",
+          "label": "Any new concerning finding?",
+          "options": [
+            {
+              "value": "none",
+              "label": "No unresolved concern",
+              "details": []
+            },
+            {
+              "value": "concern",
+              "label": "Possible recurrence, progression or new safety concern",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-icca",
+            "I-cohort"
+          ],
+          "help": "",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "concern": "concern"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Evaluate the new finding",
+          "text": "Obtain disease-specific multidisciplinary review before continuing the routine plan.",
+          "refs": [
+            "N-icca",
+            "I-cohort"
+          ]
+        },
+        {
+          "when": {
+            "plan": "no"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Complete the follow-up plan",
+          "text": "Review pathology and agree surveillance and the route for evaluating suspicious findings.",
+          "refs": [
+            "N-icca",
+            "I-cohort"
+          ]
+        },
+        {
+          "when": {
+            "plan": "yes",
+            "concern": "none"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "crlm/map-disease": {
+      "questions": [
+        {
+          "id": "primary",
+          "label": "Colorectal adenocarcinoma confirmed and liver burden mapped?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-crlm",
+            "C-transmet"
+          ],
+          "help": "Use primary pathology, pretreatment liver imaging and current liver/chest/abdomen/pelvis staging.",
+          "criteria": []
+        },
+        {
+          "id": "spread",
+          "label": "Extrahepatic disease / local primary recurrence?",
+          "options": [
+            {
+              "value": "clear",
+              "label": "No excluded extrahepatic site or local recurrence",
+              "details": []
+            },
+            {
+              "value": "equivocal",
+              "label": "Indeterminate extrahepatic finding",
+              "details": []
+            },
+            {
+              "value": "present",
+              "label": "Extrahepatic disease after primary resection or local relapse",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-crlm"
+          ],
+          "help": "",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "spread": "present"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "This finding excludes the described NLRB CRLM route; review oncologic alternatives.",
+          "refs": [
+            "N-crlm"
+          ]
+        },
+        {
+          "when": {
+            "spread": "equivocal"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "primary": "no"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Complete diagnosis and the disease map",
+          "text": "Confirm primary histology and baseline/current disease extent.",
+          "refs": [
+            "N-crlm",
+            "C-transmet"
+          ]
+        },
+        {
+          "when": {
+            "primary": "yes",
+            "spread": "clear"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "crlm/biology": {
+      "questions": [
+        {
+          "id": "molecular",
+          "label": "BRAF and MSI/MMR profile?",
+          "options": [
+            {
+              "value": "fits",
+              "label": "BRAF wild type and microsatellite stable",
+              "details": []
+            },
+            {
+              "value": "outside",
+              "label": "BRAF-mutant or MSI-H / dMMR",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-crlm",
+            "C-consensus"
+          ],
+          "help": "",
+          "criteria": []
+        },
+        {
+          "id": "cea",
+          "label": "Current CEA?",
+          "options": [
+            {
+              "value": "low",
+              "label": "<80 µg/L",
+              "details": []
+            },
+            {
+              "value": "boundary",
+              "label": "Exactly 80 µg/L",
+              "details": []
+            },
+            {
+              "value": "high",
+              "label": ">80 µg/L",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-crlm"
+          ],
+          "help": "µg/L and ng/mL have the same numeric value. Initial guidance excludes >80; extensions require <80. Resolve exactly 80 explicitly.",
+          "criteria": []
+        },
+        {
+          "id": "size",
+          "label": "Every pretreatment liver lesion ≤10 cm?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-crlm"
+          ],
+          "help": "",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "molecular": "outside"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "cea": "high"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "CEA >80 breaches the initial guidance threshold; a falling trend does not override it.",
+          "refs": [
+            "N-crlm"
+          ]
+        },
+        {
+          "when": {
+            "size": "no"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "A pretreatment lesion >10 cm is outside the described NLRB population.",
+          "refs": [
+            "N-crlm"
+          ]
+        },
+        {
+          "when": {
+            "cea": "boundary"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Clarify the CEA boundary",
+          "text": "Obtain allocation review rather than assuming that exactly 80 satisfies both initial and extension wording.",
+          "refs": [
+            "N-crlm"
+          ]
+        },
+        {
+          "when": {
+            "molecular": "fits",
+            "cea": "low",
+            "size": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "crlm/unresectability": {
+      "questions": [
+        {
+          "id": "clearance",
+          "label": "Can an expert liver team achieve complete safe clearance?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes — resection and/or ablation is feasible",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No — unresectable after expert review",
+              "details": []
+            },
+            {
+              "value": "uncertain",
+              "label": "Only scars / disappearing lesions or disputed viability",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "C-consensus",
+            "C-transmet"
+          ],
+          "help": "Review remnant, vascular/biliary anatomy, staged or parenchymal-sparing resection and combined ablation. Tumor count alone does not establish unresectability.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "clearance": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "clearance": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "clearance": "uncertain"
+          },
+          "branch": 2,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "crlm/control": {
+      "questions": [
+        {
+          "id": "response",
+          "label": "Disease course during therapy?",
+          "options": [
+            {
+              "value": "controlled",
+              "label": "Stable or regressing, without new extrahepatic disease",
+              "details": []
+            },
+            {
+              "value": "progression",
+              "label": "Progression / new lesion",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-crlm",
+            "C-transmet"
+          ],
+          "help": "The NLRB footnote describes >10% lesion-diameter growth or a new lesion. Do not equate that threshold with usual RECIST 1.1 progression.",
+          "criteria": []
+        },
+        {
+          "id": "duration",
+          "label": "At least 6 months of qualifying control during systemic and/or local therapy?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-crlm"
+          ],
+          "help": "",
+          "criteria": []
+        },
+        {
+          "id": "unresectable",
+          "label": "Still no feasible curative resection / ablation after response?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "C-consensus"
+          ],
+          "help": "",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "response": "progression"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Progression prevents routine advancement on this guidance-aligned route.",
+          "refs": [
+            "N-crlm"
+          ]
+        },
+        {
+          "when": {
+            "duration": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "unresectable": "no"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Revisit the nontransplant curative option",
+          "text": "A response that enables complete safe clearance should prompt expert HPB reassessment.",
+          "refs": [
+            "C-consensus"
+          ]
+        },
+        {
+          "when": {
+            "response": "controlled",
+            "duration": "yes",
+            "unresectable": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "crlm/clocks": {
+      "questions": [
+        {
+          "id": "primary",
+          "label": "Primary R0-resected with no local recurrence?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-crlm"
+          ],
+          "help": "Confirm negative margins and colonoscopy excluding recurrence within 12 months before the request.",
+          "criteria": []
+        },
+        {
+          "id": "interval",
+          "label": "At least 12 months since CRLM diagnosis?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-crlm"
+          ],
+          "help": "",
+          "criteria": []
+        },
+        {
+          "id": "synchronous",
+          "label": "For synchronous disease, does the actual treatment sequence fit guidance?",
+          "options": [
+            {
+              "value": "na",
+              "label": "Not synchronous — additional sequence does not apply",
+              "details": []
+            },
+            {
+              "value": "met",
+              "label": "Synchronous — all listed intervals met",
+              "details": []
+            },
+            {
+              "value": "different",
+              "label": "Synchronous — different sequence / interval incomplete",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-crlm"
+          ],
+          "help": "Synchronous = primary colorectal cancer and liver metastases present together.",
+          "criteria": [
+            {
+              "title": "Additional guidance for synchronous disease",
+              "items": [
+                "Primary resection more than 6 months after initial diagnosis.",
+                "At least 6 months of chemotherapy after primary resection before the request.",
+                "At least 12 months total disease stability after initial diagnosis.",
+                "Do not delay appropriate primary treatment to fit this sequence; seek individual interpretation when it differs."
+              ],
+              "refs": [
+                "N-crlm"
+              ],
+              "show_for": [
+                "met",
+                "different"
+              ]
+            }
+          ]
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "primary": "no"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Address the primary tumor or local recurrence before routine advancement.",
+          "refs": [
+            "N-crlm"
+          ]
+        },
+        {
+          "when": {
+            "interval": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "synchronous": "different"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "primary": "yes",
+            "interval": "yes",
+            "synchronous": [
+              "na",
+              "met"
+            ]
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "crlm/restaging": {
+      "questions": [
+        {
+          "id": "stage",
+          "label": "What does current restaging show?",
+          "options": [
+            {
+              "value": "clear",
+              "label": "Liver-only disease; no local primary recurrence",
+              "details": []
+            },
+            {
+              "value": "equivocal",
+              "label": "Equivocal PET or other unresolved lesion",
+              "details": []
+            },
+            {
+              "value": "spread",
+              "label": "Confirmed extrahepatic disease / local relapse",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-crlm"
+          ],
+          "help": "",
+          "criteria": []
+        },
+        {
+          "id": "timing",
+          "label": "Required studies and PET timing satisfied?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-crlm"
+          ],
+          "help": "CT/MRI chest, abdomen and pelvis AND PET within 1 month of the initial request. Guidance specifies PET after ≥4 weeks off chemotherapy; coordinate any pause with oncology. ctDNA does not substitute.",
+          "criteria": []
+        },
+        {
+          "id": "control",
+          "label": "Tumor control and CEA still satisfy the reviewed criteria?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-crlm",
+            "C-transmet"
+          ],
+          "help": "",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "stage": "spread"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Confirmed extrahepatic disease or local relapse excludes this guidance-aligned route.",
+          "refs": [
+            "N-crlm"
+          ]
+        },
+        {
+          "when": {
+            "stage": "equivocal"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "timing": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "control": "no"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Reassess control and biomarker criteria",
+          "text": "Review the new change before submission.",
+          "refs": [
+            "N-crlm",
+            "C-transmet"
+          ]
+        },
+        {
+          "when": {
+            "stage": "clear",
+            "timing": "yes",
+            "control": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "crlm/review": {
+      "questions": [
+        {
+          "id": "criteria",
+          "label": "Are the disease-specific criteria still satisfied?",
+          "options": [
+            {
+              "value": "met",
+              "label": "Yes, with current supporting tests",
+              "details": []
+            },
+            {
+              "value": "pending",
+              "label": "Tests incomplete / a finding unresolved",
+              "details": []
+            },
+            {
+              "value": "lost",
+              "label": "A required criterion is no longer met",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-crlm",
+            "C-transmet"
+          ],
+          "help": "Confirm the initial selection evidence. For renewal: CT/MRI chest/abdomen/pelvis and CEA every 3 months, no progression or extrahepatic disease, and CEA <80 µg/L.",
+          "criteria": []
+        },
+        {
+          "id": "reviews",
+          "label": "Clinical selection and the appropriate allocation review complete?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-crlm",
+            "C-transmet"
+          ],
+          "help": "Clinical acceptance and exception disposition are separate. This assistant highlights the next passage; it does not approve either decision.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "criteria": "lost"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Reassess the disease-specific route before further progression.",
+          "refs": [
+            "N-crlm",
+            "C-transmet"
+          ]
+        },
+        {
+          "when": {
+            "criteria": "pending"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "reviews": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "criteria": "met",
+            "reviews": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "crlm/transplant": {
+      "questions": [
+        {
+          "id": "plan",
+          "label": "Final benefit–risk review supports transplant and follow-up is agreed?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-crlm",
+            "C-transmet"
+          ],
+          "help": "Recheck disease control, fitness and consent, and whether complete nontransplant clearance has become feasible. Agree recurrence surveillance and postoperative oncology care.",
+          "criteria": []
+        },
+        {
+          "id": "concern",
+          "label": "Any new concerning finding?",
+          "options": [
+            {
+              "value": "none",
+              "label": "No unresolved concern",
+              "details": []
+            },
+            {
+              "value": "concern",
+              "label": "Possible recurrence, progression or new safety concern",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-crlm",
+            "C-transmet"
+          ],
+          "help": "",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "concern": "concern"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Evaluate the new finding",
+          "text": "Obtain disease-specific multidisciplinary review before continuing the routine plan.",
+          "refs": [
+            "N-crlm",
+            "C-transmet"
+          ]
+        },
+        {
+          "when": {
+            "plan": "no"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Complete the follow-up plan",
+          "text": "Review pathology and agree surveillance and the route for evaluating suspicious findings.",
+          "refs": [
+            "N-crlm",
+            "C-transmet"
+          ]
+        },
+        {
+          "when": {
+            "plan": "yes",
+            "concern": "none"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "nelm/biology": {
+      "questions": [
+        {
+          "id": "grade",
+          "label": "Differentiation / grade?",
+          "options": [
+            {
+              "value": "fits",
+              "label": "Well-differentiated G1/G2; Ki-67 and mitoses below guidance limits",
+              "details": []
+            },
+            {
+              "value": "outside",
+              "label": "G3, poorly differentiated NEC or discordant aggressive biology",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-net",
+            "NET-milan"
+          ],
+          "help": "Guidance specifies Ki-67 (proliferative index) <20% and mitoses <20 per 10 HPF. Reconcile discordant primary and liver samples.",
+          "criteria": []
+        },
+        {
+          "id": "primary",
+          "label": "Gastroenteropancreatic primary with portal-system drainage?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-net"
+          ],
+          "help": "Lower rectal, esophageal, lung, adrenal and thyroid primaries are excluded from this exception route.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "primary": "no"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "The primary site is outside this NET exception pathway.",
+          "refs": [
+            "N-net"
+          ]
+        },
+        {
+          "when": {
+            "grade": "outside"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "grade": "fits",
+            "primary": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "nelm/distribution": {
+      "questions": [
+        {
+          "id": "primary",
+          "label": "Primary removed, with unresectable liver metastases remaining?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-net"
+          ],
+          "help": "",
+          "criteria": []
+        },
+        {
+          "id": "spread",
+          "label": "Extrahepatic disease history and current status?",
+          "options": [
+            {
+              "value": "none",
+              "label": "No active or prior excluded extrahepatic site",
+              "details": []
+            },
+            {
+              "value": "cleared",
+              "label": "Permitted prior extrahepatic disease now cleared",
+              "details": []
+            },
+            {
+              "value": "active",
+              "label": "Active extrahepatic progression",
+              "details": []
+            },
+            {
+              "value": "solid",
+              "label": "Lung or bone metastasis history",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-net"
+          ],
+          "help": "Confirm anatomic and somatostatin-receptor functional staging. A treated node is different from an active metastatic node; lung/bone exclusions remain separate.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "spread": "solid"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "The guidance describes lung or bone metastases as permanent exclusions.",
+          "refs": [
+            "N-net"
+          ]
+        },
+        {
+          "when": {
+            "spread": "active"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Active extrahepatic progression prevents routine listing progression; reassess with the NET team.",
+          "refs": [
+            "N-net"
+          ]
+        },
+        {
+          "when": {
+            "primary": "no"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Resolve primary control and liver resectability",
+          "text": "Complete primary treatment and assess nontransplant clearance options.",
+          "refs": [
+            "N-net"
+          ]
+        },
+        {
+          "when": {
+            "primary": "yes",
+            "spread": "cleared"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "primary": "yes",
+            "spread": "none"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "nelm/options": {
+      "questions": [
+        {
+          "id": "strategy",
+          "label": "Which strategy currently offers the best clinical benefit?",
+          "options": [
+            {
+              "value": "transplant",
+              "label": "No suitable curative clearance; transplant benefit supported by MDT",
+              "details": []
+            },
+            {
+              "value": "other",
+              "label": "Complete clearance or lower-risk disease control is preferable",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-net",
+            "NET-milan"
+          ],
+          "help": "Consider complete resection/ablation, symptoms, tempo, SSTR status, SSA, PRRT, systemic and embolization options. Debulking is not complete clearance.",
+          "criteria": [
+            {
+              "title": "Milan-NET evidence versus allocation guidance",
+              "items": [
+                "The selected Milan-NET cohort used <50% liver involvement and ≥6 months of stable/responding disease.",
+                "These cohort criteria are not identical to the NLRB list and do not alone establish a transplant indication."
+              ],
+              "refs": [
+                "N-net",
+                "NET-milan"
+              ],
+              "show_for": [
+                "transplant"
+              ]
+            }
+          ]
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "strategy": "other"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "strategy": "transplant"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "nelm/exposure": {
+      "questions": [
+        {
+          "id": "safety",
+          "label": "Are treatment reserve and sequencing acceptable?",
+          "options": [
+            {
+              "value": "acceptable",
+              "label": "Yes — hepatic, renal and marrow reserve reviewed",
+              "details": []
+            },
+            {
+              "value": "concern",
+              "label": "Cumulative toxicity or sequencing remains unresolved",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-net",
+            "NET-milan"
+          ],
+          "help": "Review PRRT, Y90/embolization, operations and systemic therapy. There is no universal NLRB PRRT/Y90 sequence or numerical cumulative-dose cutoff.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "safety": "concern"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "safety": "acceptable"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "nelm/observation": {
+      "questions": [
+        {
+          "id": "clearance",
+          "label": "Status of primary / permitted extrahepatic clearance?",
+          "options": [
+            {
+              "value": "met",
+              "label": "Removed and recurrence-free for ≥6 months",
+              "details": []
+            },
+            {
+              "value": "short",
+              "label": "Less than 6 months / unresolved clearance",
+              "details": []
+            },
+            {
+              "value": "recurrence",
+              "label": "Extrahepatic recurrence or excluded lung/bone history",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-net"
+          ],
+          "help": "",
+          "criteria": []
+        },
+        {
+          "id": "imaging",
+          "label": "Negative metastatic workup, including functional imaging, accepted?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-net"
+          ],
+          "help": "The guidance says “at least 3 months prior” to initial/extension request. Clarify chronology and current imaging adequacy with allocation leadership rather than silently reversing that wording.",
+          "criteria": []
+        },
+        {
+          "id": "control",
+          "label": "Liver disease and clinical profile still appropriate for this program?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-net",
+            "NET-milan"
+          ],
+          "help": "",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "clearance": "recurrence"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Reassess extrahepatic disease before further progression. Permitted prior disease and lung/bone exclusions must be distinguished.",
+          "refs": [
+            "N-net"
+          ]
+        },
+        {
+          "when": {
+            "clearance": "short"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "imaging": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "control": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "clearance": "met",
+            "imaging": "yes",
+            "control": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "nelm/review": {
+      "questions": [
+        {
+          "id": "criteria",
+          "label": "Are the disease-specific criteria still satisfied?",
+          "options": [
+            {
+              "value": "met",
+              "label": "Yes, with current supporting tests",
+              "details": []
+            },
+            {
+              "value": "pending",
+              "label": "Tests incomplete / a finding unresolved",
+              "details": []
+            },
+            {
+              "value": "lost",
+              "label": "A required criterion is no longer met",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-net",
+            "NET-milan"
+          ],
+          "help": "Confirm grade, portal-drained primary, resection/clearance interval, liver-only disease, functional staging and clinical benefit. Age/burden restrictions derived from a cohort remain local selection choices.",
+          "criteria": []
+        },
+        {
+          "id": "reviews",
+          "label": "Clinical selection and the appropriate allocation review complete?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-net",
+            "NET-milan"
+          ],
+          "help": "Clinical acceptance and exception disposition are separate. This assistant highlights the next passage; it does not approve either decision.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "criteria": "lost"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Reassess the disease-specific route before further progression.",
+          "refs": [
+            "N-net",
+            "NET-milan"
+          ]
+        },
+        {
+          "when": {
+            "criteria": "pending"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "reviews": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "criteria": "met",
+            "reviews": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "nelm/follow-up": {
+      "questions": [
+        {
+          "id": "plan",
+          "label": "Are pathology review and the follow-up plan in place?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-net",
+            "NET-milan"
+          ],
+          "help": "Review explant grade/burden, functional symptoms and treatment history. Agree disease-specific recurrence surveillance with the NET and transplant teams.",
+          "criteria": []
+        },
+        {
+          "id": "concern",
+          "label": "Any new concerning finding?",
+          "options": [
+            {
+              "value": "none",
+              "label": "No unresolved concern",
+              "details": []
+            },
+            {
+              "value": "concern",
+              "label": "Possible recurrence, progression or new safety concern",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-net",
+            "NET-milan"
+          ],
+          "help": "",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "concern": "concern"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Evaluate the new finding",
+          "text": "Obtain disease-specific multidisciplinary review before continuing the routine plan.",
+          "refs": [
+            "N-net",
+            "NET-milan"
+          ]
+        },
+        {
+          "when": {
+            "plan": "no"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Complete the follow-up plan",
+          "text": "Review pathology and agree surveillance and the route for evaluating suspicious findings.",
+          "refs": [
+            "N-net",
+            "NET-milan"
+          ]
+        },
+        {
+          "when": {
+            "plan": "yes",
+            "concern": "none"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "hehe/diagnosis": {
+      "questions": [
+        {
+          "id": "pathology",
+          "label": "Expert pathology conclusion?",
+          "options": [
+            {
+              "value": "hehe",
+              "label": "Biopsy-proven HEHE; angiosarcoma excluded",
+              "details": []
+            },
+            {
+              "value": "angiosarcoma",
+              "label": "Angiosarcoma / hemangiosarcoma",
+              "details": []
+            },
+            {
+              "value": "uncertain",
+              "label": "Diagnosis not established",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-hehe",
+            "E-consensus"
+          ],
+          "help": "Use expert morphology and appropriate immunohistochemical/molecular assessment.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "pathology": "angiosarcoma"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Do not use the HEHE transplant pathway for angiosarcoma.",
+          "refs": [
+            "N-hehe",
+            "E-consensus"
+          ]
+        },
+        {
+          "when": {
+            "pathology": "uncertain"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "pathology": "hehe"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "hehe/stage": {
+      "questions": [
+        {
+          "id": "vascular",
+          "label": "No macrovascular invasion?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-hehe"
+          ],
+          "help": "",
+          "criteria": []
+        },
+        {
+          "id": "strategy",
+          "label": "Resection, observation or transplant consideration?",
+          "options": [
+            {
+              "value": "transplant",
+              "label": "Unresectable liver disease; transplant discussion appropriate",
+              "details": []
+            },
+            {
+              "value": "other",
+              "label": "Resection or observation currently preferable",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-hehe",
+            "E-consensus"
+          ],
+          "help": "",
+          "criteria": []
+        },
+        {
+          "id": "extrahepatic",
+          "label": "Extrahepatic disease?",
+          "options": [
+            {
+              "value": "none",
+              "label": "None identified",
+              "details": []
+            },
+            {
+              "value": "limited",
+              "label": "Limited disease needing case-level review",
+              "details": []
+            },
+            {
+              "value": "other",
+              "label": "Progressive / incompletely characterized disease",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-hehe",
+            "E-consensus"
+          ],
+          "help": "Unlike several other tumor pathways, extrahepatic disease is not an absolute contraindication in HEHE guidance. Sites and behavior still matter.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "vascular": "no"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Macrovascular invasion is outside the described HEHE exception criteria.",
+          "refs": [
+            "N-hehe"
+          ]
+        },
+        {
+          "when": {
+            "extrahepatic": "other"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Characterize disease behavior and benefit",
+          "text": "Obtain rare-tumor/transplant MDT review rather than applying a blanket extrahepatic exclusion.",
+          "refs": [
+            "N-hehe",
+            "E-consensus"
+          ]
+        },
+        {
+          "when": {
+            "vascular": "yes",
+            "strategy": "other"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "vascular": "yes",
+            "strategy": "transplant",
+            "extrahepatic": "limited"
+          },
+          "branch": 2,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "vascular": "yes",
+            "strategy": "transplant",
+            "extrahepatic": "none"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "hehe/risk": {
+      "questions": [
+        {
+          "id": "criteria",
+          "label": "Unresectable disease without macrovascular invasion remains confirmed?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-hehe"
+          ],
+          "help": "",
+          "criteria": []
+        },
+        {
+          "id": "benefit",
+          "label": "What is the MDT assessment of expected transplant benefit?",
+          "options": [
+            {
+              "value": "supported",
+              "label": "Benefit supported after review of tempo, sites and alternatives",
+              "details": []
+            },
+            {
+              "value": "uncertain",
+              "label": "Tempo / benefit remains uncertain",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "E-score",
+            "E-consensus"
+          ],
+          "help": "HEHE-LT registry findings inform counseling; they are not a MELD score or an automatic selection rule. Some prognostic features are known only on explant.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "criteria": "no"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Reassess resectability or vascular involvement before advancing on this route.",
+          "refs": [
+            "N-hehe"
+          ]
+        },
+        {
+          "when": {
+            "benefit": "uncertain"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "criteria": "yes",
+            "benefit": "supported"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "hehe/review": {
+      "questions": [
+        {
+          "id": "criteria",
+          "label": "Are the disease-specific criteria still satisfied?",
+          "options": [
+            {
+              "value": "met",
+              "label": "Yes, with current supporting tests",
+              "details": []
+            },
+            {
+              "value": "pending",
+              "label": "Tests incomplete / a finding unresolved",
+              "details": []
+            },
+            {
+              "value": "lost",
+              "label": "A required criterion is no longer met",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-hehe",
+            "E-consensus"
+          ],
+          "help": "Confirm biopsy-proven HEHE, unresectability and no macrovascular invasion. Any extrahepatic finding needs an explicit case-level decision; it is not automatically disqualifying.",
+          "criteria": []
+        },
+        {
+          "id": "reviews",
+          "label": "Clinical selection and the appropriate allocation review complete?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-hehe",
+            "E-consensus"
+          ],
+          "help": "Clinical acceptance and exception disposition are separate. This assistant highlights the next passage; it does not approve either decision.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "criteria": "lost"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Reassess the disease-specific route before further progression.",
+          "refs": [
+            "N-hehe",
+            "E-consensus"
+          ]
+        },
+        {
+          "when": {
+            "criteria": "pending"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "reviews": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "criteria": "met",
+            "reviews": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "hehe/follow-up": {
+      "questions": [
+        {
+          "id": "plan",
+          "label": "Are pathology review and the follow-up plan in place?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "E-score",
+            "E-consensus"
+          ],
+          "help": "Reconcile explant and pretransplant findings; agree risk-informed imaging and long-term recurrence assessment. No universal OPTN surveillance interval is specified.",
+          "criteria": []
+        },
+        {
+          "id": "concern",
+          "label": "Any new concerning finding?",
+          "options": [
+            {
+              "value": "none",
+              "label": "No unresolved concern",
+              "details": []
+            },
+            {
+              "value": "concern",
+              "label": "Possible recurrence, progression or new safety concern",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "E-score",
+            "E-consensus"
+          ],
+          "help": "",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "concern": "concern"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Evaluate the new finding",
+          "text": "Obtain disease-specific multidisciplinary review before continuing the routine plan.",
+          "refs": [
+            "E-score",
+            "E-consensus"
+          ]
+        },
+        {
+          "when": {
+            "plan": "no"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Complete the follow-up plan",
+          "text": "Review pathology and agree surveillance and the route for evaluating suspicious findings.",
+          "refs": [
+            "E-score",
+            "E-consensus"
+          ]
+        },
+        {
+          "when": {
+            "plan": "yes",
+            "concern": "none"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "hca/characterize": {
+      "questions": [
+        {
+          "id": "diagnosis",
+          "label": "Current diagnosis and complication status?",
+          "options": [
+            {
+              "value": "hca",
+              "label": "HCA confirmed; risk features characterized",
+              "details": []
+            },
+            {
+              "value": "malignant",
+              "label": "Possible malignant transformation",
+              "details": []
+            },
+            {
+              "value": "bleeding",
+              "label": "Active unstable hemorrhage",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-hca",
+            "A-easl"
+          ],
+          "help": "MRI assesses burden, growth and bleeding. Consider sex, hormonal exposure, metabolic disease and subtype. Imaging cannot reliably establish β-catenin activation or exclude HCC in every case.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "diagnosis": "bleeding"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Treat the bleeding emergency",
+          "text": "Stabilize urgently and assess embolization; pause elective transplant decision-making.",
+          "refs": [
+            "A-easl"
+          ]
+        },
+        {
+          "when": {
+            "diagnosis": "malignant"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "diagnosis": "hca"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "hca/standard-care": {
+      "questions": [
+        {
+          "id": "bleeding",
+          "label": "Any hemodynamically unstable bleeding?",
+          "options": [
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "A-easl"
+          ],
+          "help": "",
+          "criteria": []
+        },
+        {
+          "id": "management",
+          "label": "Can the risk be addressed with standard nontransplant management?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes — observation, resection or local treatment is suitable",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No suitable conventional approach / exceptional syndrome",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-hca",
+            "A-easl"
+          ],
+          "help": "In men or proven β-catenin-mutated HCA, resection is recommended irrespective of size. In women, after lifestyle modification/observation, ≥5 cm or continued growth favors resection when feasible.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "bleeding": "yes"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Treat the bleeding emergency",
+          "text": "Treat the acute hemorrhage before elective transplant review.",
+          "refs": [
+            "A-easl"
+          ]
+        },
+        {
+          "when": {
+            "bleeding": "no",
+            "management": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "bleeding": "no",
+            "management": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "hca/exception-route": {
+      "questions": [
+        {
+          "id": "route",
+          "label": "Which NLRB alternative is supported?",
+          "options": [
+            {
+              "value": "syndrome",
+              "label": "HCA with glycogen storage disease or Abernethy malformation",
+              "details": []
+            },
+            {
+              "value": "beta",
+              "label": "Unresectable HCA with β-catenin mutation",
+              "details": []
+            },
+            {
+              "value": "adenomatosis",
+              "label": "Unresectable HCA with >10 adenomas",
+              "details": []
+            },
+            {
+              "value": "complicated",
+              "label": "Unresectable + nonoperative treatment failure + progression/complication",
+              "details": []
+            },
+            {
+              "value": "none",
+              "label": "None of these / multiplicity alone",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-hca"
+          ],
+          "help": "These are alternatives (OR), not requirements that must all be present.",
+          "criteria": [
+            {
+              "title": "Treatment-failure alternative: all three required",
+              "items": [
+                "Unresectable.",
+                "Unresponsive to nonoperative management.",
+                "Progressive, or complicated by hemorrhage, rupture or malignant transformation."
+              ],
+              "refs": [
+                "N-hca"
+              ],
+              "show_for": [
+                "complicated"
+              ]
+            }
+          ]
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "route": "none"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "route": [
+              "syndrome",
+              "beta",
+              "adenomatosis",
+              "complicated"
+            ]
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "hca/transformation": {
+      "questions": [
+        {
+          "id": "diagnosis",
+          "label": "Is malignant transformation established?",
+          "options": [
+            {
+              "value": "benign",
+              "label": "HCA remains the verified diagnosis",
+              "details": []
+            },
+            {
+              "value": "malignant",
+              "label": "Malignancy established",
+              "details": []
+            },
+            {
+              "value": "uncertain",
+              "label": "Malignancy remains unresolved",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-hca",
+            "A-easl"
+          ],
+          "help": "If HCC is diagnosed, use the appropriate HCC diagnostic/staging route. Transformation does not automatically satisfy the standardized HCC exception.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "diagnosis": "uncertain"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Resolve the diagnosis",
+          "text": "Review imaging/pathology and consider additional tissue when management depends on it.",
+          "refs": [
+            "N-hca",
+            "A-easl"
+          ]
+        },
+        {
+          "when": {
+            "diagnosis": "malignant"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "diagnosis": "benign"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "hca/review": {
+      "questions": [
+        {
+          "id": "criteria",
+          "label": "Are the disease-specific criteria still satisfied?",
+          "options": [
+            {
+              "value": "met",
+              "label": "Yes, with current supporting tests",
+              "details": []
+            },
+            {
+              "value": "pending",
+              "label": "Tests incomplete / a finding unresolved",
+              "details": []
+            },
+            {
+              "value": "lost",
+              "label": "A required criterion is no longer met",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-hca",
+            "A-easl"
+          ],
+          "help": "Confirm the specific guidance alternative, unresectability where required, prior management and expected benefit. Molecular thresholds narrower than guidance need explicit local agreement.",
+          "criteria": []
+        },
+        {
+          "id": "reviews",
+          "label": "Clinical selection and the appropriate allocation review complete?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-hca",
+            "A-easl"
+          ],
+          "help": "Clinical acceptance and exception disposition are separate. This assistant highlights the next passage; it does not approve either decision.",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "criteria": "lost"
+          },
+          "branch": null,
+          "kind": "stop",
+          "title": "Review another route",
+          "text": "Reassess the disease-specific route before further progression.",
+          "refs": [
+            "N-hca",
+            "A-easl"
+          ]
+        },
+        {
+          "when": {
+            "criteria": "pending"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "reviews": "no"
+          },
+          "branch": 1,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "criteria": "met",
+            "reviews": "yes"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    },
+    "hca/follow-up": {
+      "questions": [
+        {
+          "id": "plan",
+          "label": "Clinical clearance and condition-specific follow-up agreed?",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes",
+              "details": []
+            },
+            {
+              "value": "no",
+              "label": "No",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-hca",
+            "A-easl"
+          ],
+          "help": "Reassess bleeding or transformation while waiting. After transplant, review explant findings and continuing care for the underlying metabolic/vascular condition.",
+          "criteria": []
+        },
+        {
+          "id": "concern",
+          "label": "Any new concerning finding?",
+          "options": [
+            {
+              "value": "none",
+              "label": "No unresolved concern",
+              "details": []
+            },
+            {
+              "value": "concern",
+              "label": "Possible recurrence, progression or new safety concern",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-hca",
+            "A-easl"
+          ],
+          "help": "",
+          "criteria": []
+        }
+      ],
+      "rules": [
+        {
+          "when": {
+            "concern": "concern"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Evaluate the new finding",
+          "text": "Obtain disease-specific multidisciplinary review before continuing the routine plan.",
+          "refs": [
+            "N-hca",
+            "A-easl"
+          ]
+        },
+        {
+          "when": {
+            "plan": "no"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Complete the follow-up plan",
+          "text": "Review pathology and agree surveillance and the route for evaluating suspicious findings.",
+          "refs": [
+            "N-hca",
+            "A-easl"
+          ]
+        },
+        {
+          "when": {
+            "plan": "yes",
+            "concern": "none"
+          },
+          "branch": 0,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        }
+      ]
+    }
+  },
+  "assistant_version": "2026-10-24.3"
 }

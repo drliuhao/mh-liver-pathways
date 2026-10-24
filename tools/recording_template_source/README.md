@@ -1,7 +1,5 @@
-# Electronic recording-template source
+# Retired recording implementation
 
-Canonical authoring files are in `standard_protocol_website/src` in the local transplant-protocol workspace. This snapshot preserves the generator, typed-field configuration, HTML renderer and browser assets with the published site.
+This source snapshot is historical. The user replaced the recording/research workflow with essential decision choices on 24 October 2026. Do not run this generator for the maintained website.
 
-Build the canonical site with `python3 build.py`, export with `tools/build_portal.py <canonical-dist>`, then run `tools/validate_portal.py <canonical-dist>`, `tools/validate_recording_templates.py`, and `node tools/test_electronic_forms.cjs`.
-
-Browser validation uses synthetic data only: dropdowns, decimals and integer zero, repeat entries, sign-off reset, JSON save/reopen, completed note, print and CSV. No completed clinical records belong in this repository.
+Current source snapshot: `../decision_assistant_source/`. The canonical authoring location remains `standard_protocol_website/src` in the transplant-protocol workspace. Validate the current workflow with `node tools/test_decision_assistants.cjs`; old form URLs are redirects.

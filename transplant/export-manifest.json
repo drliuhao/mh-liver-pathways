@@ -4,7 +4,7 @@
   "pathways": 7,
   "steps": 46,
   "meeting_questions": 45,
-  "evidence_sources": 21,
+  "evidence_sources": 24,
   "licensed_pdfs_published": 0,
   "documents": [
     {
@@ -93,8 +93,9 @@
     }
   ],
   "clinical_changes": "Source revised for plain clinical language and iCCA focality clarification; export preserves source content except hosting and evidence-access URLs.",
-  "recording_template_version": "2026-10-24.2",
-  "recording_templates": 46,
-  "research_data_kits": 7,
-  "documentation_changes": "Electronic decision-specific assessments with typed fields, repeat entries, local JSON save/reopen, note/CSV export and one sign-off; clinical criteria unchanged."
+  "decision_assistant_version": "2026-10-24.3",
+  "decision_assistants": 46,
+  "recording_templates": 0,
+  "research_data_kits": 0,
+  "documentation_changes": "Essential source-linked choices embedded in all 46 decisions; matching routes highlighted. Former recording forms replaced by redirects. No recording, signatures, export or persistent storage. Milan and UNOS downstaging evidence added; existing clinical pathway criteria retained."
 }
