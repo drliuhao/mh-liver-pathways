@@ -95,10 +95,15 @@
   "clinical_changes": "Source revised for plain clinical language and iCCA focality clarification; export preserves source content except hosting and evidence-access URLs.",
   "language_revision": "2026-10-24",
   "next_actions_revision": "2026-10-24",
-  "decision_assistant_version": "2026-10-24.4",
+  "decision_assistant_version": "2026-10-24.5",
   "decision_assistants": 46,
   "recording_templates": 0,
   "research_data_kits": 0,
   "care_plans": 26,
-  "documentation_changes": "Reviewed all 46 transplant decisions and 45 linked discussion questions for explicit treatment, transplant-listing and MELD-exception language. Added next actions for every decision result, including conditional AFP treatment choices, reassessment after treatment, and best supportive care. NCCN sources cite original PDF pages. Existing selection thresholds and matching rules are retained; Word documents keep their separately dated wording. No recording, signatures, export or persistent storage."
+  "documentation_changes": "Reviewed all 46 transplant decisions and 45 linked discussion questions for explicit treatment, transplant-listing and MELD-exception language. Added next actions for every decision result, including conditional AFP treatment choices, reassessment after treatment, and best supportive care. NCCN sources cite original PDF pages. Existing selection thresholds and matching rules are retained; Word documents keep their separately dated wording. No recording, signatures, export or persistent storage.",
+  "interface_revision": "2026-10-24",
+  "example_presets": 46,
+  "journey_overviews": 7,
+  "sticky_decision_navigation": true,
+  "interface_changes": "Each pathway opens with clearly labeled example choices toward transplantation. A four-stage overview and sticky step navigation show the full journey. Restore-example and clear-all controls are available. Changing a finding clears later examples; no automatic refill on navigation. No clinical criteria or matching rules changed."
 }

@@ -5,10 +5,10 @@ import json
 import shutil
 import sys
 from content import DIST, PATHWAYS, SOURCES
-from decision_assistants import ASSISTANTS, VERSION
+from decision_assistants import ASSISTANTS, JOURNEYS, VERSION
 from care_options import CARE, build_continuations
 
-STAMP='20261024-clear-actions'
+STAMP='20261024-pathway-overview'
 
 def document(title, data):
     payload=json.dumps(data,ensure_ascii=False).replace('</','<\\/')
@@ -35,7 +35,7 @@ def build():
     (DIST/'assets').mkdir(exist_ok=True)
     for asset in ['app.js','style.css','assistant.js','assistant.css']:
         shutil.copyfile(Path(__file__).parent/asset,DIST/'assets'/asset)
-    base=dict(index=PATHWAYS,sources=SOURCES,assistants=ASSISTANTS,assistant_version=VERSION,
+    base=dict(index=PATHWAYS,sources=SOURCES,assistants=ASSISTANTS,assistant_version=VERSION,journeys=JOURNEYS,
               care=CARE,continuations=build_continuations(PATHWAYS,ASSISTANTS))
     (DIST/'index.html').write_text(document('Decision pathways',dict(base,mode='home')),encoding='utf8')
     (DIST/'meeting-records').mkdir(exist_ok=True)
@@ -74,6 +74,8 @@ def validate():
     for id,r in SOURCES.items():local(r['pdf'])
     for p in PATHWAYS:
         ids=[s['id'] for s in p['steps']];issues={i['id'] for i in p['issues']}
+        if [id for phase in JOURNEYS[p['slug']] for id in phase['steps']] != ids:
+            problems.append(f'Overview must preserve the complete decision sequence: {p["slug"]}')
         care_ids={c['id'] for c in CARE[p['slug']]}
         def validate_action(a):
             if a['step'] and a['step'] not in ids:problems.append(f'Unknown continuation step: {a}')
@@ -104,6 +106,10 @@ def validate():
             if not a:problems.append(f'Missing decision assistant: {p["slug"]}/{s["id"]}')
             else:
                 qids={q['id']:q for q in a['questions']}
+                if set(a['example']) != set(qids):problems.append(f'Incomplete example: {p["slug"]}/{s["id"]}')
+                for q in a['questions']:
+                    if a['example'].get(q['id']) not in {o['value'] for o in q['options'] if o['value']!='unknown'}:
+                        problems.append(f'Invalid example choice: {p["slug"]}/{s["id"]}/{q["id"]}')
                 if not 1<=len(qids)<=4:problems.append('Expected 1–4 essential choices')
                 for q in a['questions']:
                     for ref in q['refs']+[r for c in q['criteria'] for r in c['refs']]:

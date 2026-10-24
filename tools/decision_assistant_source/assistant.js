@@ -10,6 +10,21 @@
   'A-molecular':'Nault · Gastroenterology 2017'
  };
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ function createSession(pathway,configs,examples=true){
+  const answers={},origins={};
+  pathway.steps.forEach(s=>{const key=`${pathway.slug}/${s.id}`;answers[key]=examples?{...configs[key].example}:{};origins[key]=examples?'example':'empty';});
+  return {answers,origins};
+ }
+ function clearFrom(session,pathway,index){
+  pathway.steps.slice(index).forEach(s=>{const key=`${pathway.slug}/${s.id}`;session.answers[key]={};session.origins[key]='empty';});
+ }
+ function changeAnswer(session,pathway,index,id,value){
+  const key=`${pathway.slug}/${pathway.steps[index].id}`;
+  if(session.answers[key][id]===value)return false;
+  session.answers[key][id]=value;session.origins[key]='edited';
+  clearFrom(session,pathway,index+1);
+  return true;
+ }
  function evaluate(config, answers, branches){
   const known={};
   config.questions.forEach(q=>{if(q.options.some(o=>o.value===answers[q.id]))known[q.id]=answers[q.id];});
@@ -45,8 +60,8 @@
    (selected?.details?.length?`<ul>${selected.details.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'')+
    q.criteria.map(c=>`<details class="assistant-criteria" ${!c.show_for.length||c.show_for.includes(value||'')?'open':''}><summary>${esc(c.title)}</summary><ul>${c.items.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>${evidence(c.refs,sources)}</details>`).join('');
  }
- function render(config,sources,answers={}){
-  return `<div class="decision-assistant"><p class="assistant-intro">Choose the findings that matter for this decision. The matching next step will be highlighted.</p>
+ function render(config,sources,answers={},origin='empty'){
+  return `<div class="decision-assistant"><p class="assistant-intro">${origin==='example'?'Example findings are preselected to show the path toward transplant. Change any choice to explore another result.':'Choose the findings that matter for this decision. The matching next step will be highlighted.'}</p>
    ${config.questions.map((q,n)=>`<div class="assistant-question"><label for="assistant-${esc(q.id)}"><span>${n+1}</span>${esc(q.label)}</label>
    ${q.help?`<p class="assistant-help" id="assistant-help-${esc(q.id)}">${esc(q.help)}</p>`:''}
    <select id="assistant-${esc(q.id)}" data-assistant-question="${esc(q.id)}" ${q.help?`aria-describedby="assistant-help-${esc(q.id)}"`:''}><option value="">Choose a finding…</option>${q.options.map(o=>`<option value="${esc(o.value)}" ${answers[q.id]===o.value?'selected':''}>${esc(o.label)}</option>`).join('')}</select>
@@ -56,7 +71,7 @@
    <div class="assistant-actions"><button type="button" data-assistant-reset>Clear choices</button><button type="button" data-assistant-show>See next step ↓</button></div>
    <p class="assistant-footnote">For this decision only. Choices are not saved. The team must assess transplant suitability and MELD-exception eligibility separately.</p></div>`;
  }
- function update(container,config,answers,branches,sources){
+ function update(container,config,answers,branches,sources,origin='empty'){
   const result=evaluate(config,answers,branches);
   const feedback=container.querySelector('.assistant-feedback');
   feedback.className='assistant-feedback '+result.kind;
@@ -67,6 +82,7 @@
    card.classList.toggle('is-muted',!selected);
    if(selected)card.setAttribute('aria-current','true');else card.removeAttribute('aria-current');
    const marker=card.querySelector('.branch-match');marker.hidden=!selected;
+   marker.textContent=origin==='example'?'Matches the example':'Matches these choices';
   });
   const extra=container.querySelector('.assistant-other-result');
   const custom=result.branch===null&&result.kind!=='pending';
@@ -75,7 +91,7 @@
   extra.innerHTML=custom?`<span class="branch-match">${result.state==='matched'?'Review next actions':'Clarification needed'}</span><h4>${esc(result.title)}</h4><p>${esc(result.text)}</p>${evidence(result.refs,sources)}`:'';
   return result;
  }
- const API={evaluate,evidence,definitions,render,update};
+ const API={evaluate,evidence,definitions,render,update,createSession,clearFrom,changeAnswer};
  if(typeof module==='object'&&module.exports)module.exports=API;
  else root.DecisionAssistant=API;
 })(typeof window==='undefined'?{}:window);

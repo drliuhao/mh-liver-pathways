@@ -9,7 +9,8 @@ let view = DATA.mode === 'alignment' ? 'meeting' : 'pathway';
 let stepIndex = 0;
 let careId = 'treatment';
 let lastTrigger = null;
-const assistantSelections = {};
+let assistantSession = active ? DecisionAssistant.createSession(active,DATA.assistants) : null;
+let navigationObserver = null;
 const assistantKey = () => `${active.slug}/${active.steps[stepIndex].id}`;
 const assistantConfig = () => DATA.assistants[assistantKey()];
 const refs = ids => (ids || []).map(id => `<button type="button" class="cite" data-ref="${e(id)}" aria-label="Evidence: ${e(DATA.sources[id].short)}">${e(DATA.sources[id].short)} ↗</button>`).join(' ');
@@ -36,7 +37,7 @@ function footer() {
 }
 
 function home() {
- app.innerHTML = header()+`<main class="wrap home"><div class="homehero"><div><p class="eyebrow">Diagnosis → selection → disease control → transplant</p><h1>Liver transplant assessment and treatment pathways</h1><p class="lead">Transplant oncology pathways with the information to collect, the findings that change treatment or transplant plans, and the evidence beside each decision.</p></div><div class="how"><b>How to use the pathways</b><ol><li>Choose the tumor and current decision.</li><li>Choose the essential findings; read the criteria and key papers beside each choice.</li><li>Review the highlighted next step; clarify uncertain findings.</li><li>Open evidence or an unresolved meeting question in context.</li></ol></div></div>
+ app.innerHTML = header()+`<main class="wrap home"><div class="homehero"><div><p class="eyebrow">Diagnosis → selection → disease control → transplant</p><h1>Liver transplant assessment and treatment pathways</h1><p class="lead">Transplant oncology pathways with the information to collect, the findings that change treatment or transplant plans, and the evidence beside each decision.</p></div><div class="how"><b>How to use the pathways</b><ol><li>Choose the tumor and current decision.</li><li>Start with the preselected transplant example, or clear all choices.</li><li>Change findings and follow the highlighted next step; read the criteria and key papers beside each choice.</li><li>Open evidence or an unresolved meeting question in context.</li></ol></div></div>
  <div class="searchbar"><label for="search">Find a pathway or clinical question</label><input id="search" type="search" placeholder="Try “LR-4”, “biopsy”, “CEA”, “nodes” or “unresectability”…" autocomplete="off"><p id="search-count" class="muted small" aria-live="polite">Seven disease-specific pathways · different step counts, one shared decision structure.</p></div>
  <section id="pathway-grid" class="pathway-grid" aria-label="Choose a pathway">${DATA.index.map(p=>`<article class="pathway-tile" data-slug="${p.slug}"><div class="tiletop"><span class="code">${e(p.code)}</span><span class="small muted">${p.steps.length} decisions</span></div><h2><a href="/${p.slug}/">${e(p.name)}</a></h2><span class="authority">${e(p.route)}</span><p>${e(p.entry)}</p><div class="tileflow">${e(p.steps[0].title)} <span>→</span> ${e(p.steps[p.steps.length-1].title)}</div><a class="tilego" href="/${p.slug}/">Open pathway <span>→</span></a></article>`).join('')}</section><section id="search-results" hidden aria-label="Matching decisions"></section>
  <section class="key"><div><span class="keyline go"></span><b>Proceed</b><p>The findings support reviewing the next decision.</p></div><div><span class="keyline hold"></span><b>Pause and clarify</b><p>Assign a clinician to resolve missing or uncertain information.</p></div><div><span class="keyline stop"></span><b>Stop and review</b><p>Read which decision is affected, then follow the stated assessment, treatment or continuing-care action.</p></div><div><span class="keyline discuss"></span><b>Meeting question</b><p>Compare sources and see the proposed local approach.</p></div></section></main>`+footer();
@@ -67,12 +68,53 @@ function renderView(){
  document.querySelectorAll('[role="tab"]').forEach(t=>t.setAttribute('aria-selected',t.dataset.view===view?'true':'false'));
  const out=document.getElementById('view');
  out.setAttribute('role','tabpanel');out.setAttribute('aria-labelledby','tab-'+view);
- if(view==='pathway'){out.innerHTML=renderStep();updateDecision();}
- if(view==='meeting')out.innerHTML=renderMeeting();
- if(view==='evidence')out.innerHTML=renderEvidence();
- if(view==='care')out.innerHTML=renderCare();
- const strip=out.querySelector('.stepstrip');const selected=out.querySelector('.step-tab.active');
+ const content=view==='pathway'?renderStep():view==='meeting'?renderMeeting():view==='evidence'?renderEvidence():renderCare();
+ out.innerHTML=(view==='pathway'?renderOverview():'')+renderNavigation()+content;
+ if(view==='pathway')updateDecision();
+ navigationObserver?.disconnect();
+ navigationObserver=new ResizeObserver(syncNavigationHeight);
+ navigationObserver.observe(out.querySelector('.pathway-nav'));
+ syncNavigationHeight();
+}
+
+function syncNavigationHeight(){
+ const height=document.querySelector('.pathway-nav')?.getBoundingClientRect().height||0;
+ document.documentElement.style.setProperty('--pathway-nav-height',`${Math.ceil(height)}px`);
+ const strip=document.querySelector('.stepstrip'),selected=strip?.querySelector('.step-tab.active');
  if(strip&&selected&&strip.scrollWidth>strip.clientWidth)strip.scrollLeft=selected.offsetLeft-strip.offsetLeft-(strip.clientWidth-selected.offsetWidth)/2;
+}
+
+function exampleStatus(){
+ const origins=active.steps.map(s=>assistantSession.origins[`${active.slug}/${s.id}`]);
+ if(origins.every(x=>x==='example'))return ['Preselected transplant example','Choices show one path toward transplant. Change findings to explore other options.'];
+ if(origins.every(x=>x==='empty'))return ['All choices cleared','Choose findings at each decision. No results are assumed.'];
+ return ['Exploring different findings','Changing a finding clears later choices. Review those decisions again, or restore the full example.'];
+}
+
+function renderOverview(){
+ const status=exampleStatus();
+ return `<section class="journey-overview" aria-labelledby="journey-title"><div class="journey-heading"><div><p class="eyebrow">The whole pathway</p><h2 id="journey-title">From diagnosis to transplant and follow-up</h2></div><a href="#care-treatment" data-care="treatment" class="journey-alternative">Treatment and care alternatives →</a></div>
+ <nav class="journey-phases" aria-label="Pathway overview">${DATA.journeys[active.slug].map((phase,n)=>{const first=active.steps.findIndex(s=>s.id===phase.steps[0])+1;const last=first+phase.steps.length-1;const current=phase.steps.includes(active.steps[stepIndex].id);return `<button data-step="${e(phase.steps[0])}" class="journey-phase ${current?'current':''}" ${current?'aria-current="true"':''}><span class="phase-number">${n+1}</span><span><b>${e(phase.title)}</b><small>Decision${first===last?'':'s'} ${first}${first===last?'':'–'+last}</small></span><span class="phase-arrow" aria-hidden="true">→</span></button>`;}).join('')}</nav>
+ <div class="example-controls"><div aria-live="polite"><strong data-example-status>${e(status[0])}</strong><p data-example-description>${e(status[1])}</p></div><div class="example-buttons"><button data-pathway-example>Restore transplant example</button><button data-pathway-clear>Clear all choices</button></div></div></section>`;
+}
+
+function renderNavigation(){
+ const s=active.steps[stepIndex];
+ const origin=assistantSession.origins[assistantKey()];
+ const label=origin==='example'?'Example choices':origin==='edited'?'Choices changed':'Choices needed';
+ return `<div class="pathway-nav"><div class="pathway-location"><span><b>${e(active.code)}</b> <span class="location-count">Decision ${stepIndex+1} of ${active.steps.length}</span><span class="location-title">${e(s.title)}</span></span><div class="location-tools"><span class="selection-label" data-selection-label>${label}</span><button data-pathway-overview>Overview ↑</button></div></div>
+ <nav class="stepstrip" aria-label="${e(active.code)} decision steps">${active.steps.map((s,i)=>`<button class="step-tab ${i===stepIndex?'active':''}" data-step="${s.id}" ${i===stepIndex?'aria-current="step"':''}><span>${String(i+1).padStart(2,'0')}</span><b>${e(s.title)}</b></button>`).join('')}</nav></div>`;
+}
+
+function updateExampleLabels(){
+ const status=exampleStatus();
+ const title=document.querySelector('[data-example-status]'),description=document.querySelector('[data-example-description]');
+ if(title)title.textContent=status[0];if(description)description.textContent=status[1];
+ const origin=assistantSession.origins[assistantKey()];
+ const label=document.querySelector('[data-selection-label]');
+ if(label)label.textContent=origin==='example'?'Example choices':origin==='edited'?'Choices changed':'Choices needed';
+ const intro=document.querySelector('.assistant-intro');
+ if(intro)intro.textContent=origin==='example'?'Example findings are preselected to show the path toward transplant. Change any choice to explore another result.':origin==='edited'&&stepIndex<active.steps.length-1?'Findings changed. Later decisions have been cleared; review them again before continuing.':'Choose the findings that matter for this decision. The matching next step will be highlighted.';
 }
 
 function renderActions(actions){
@@ -81,7 +123,8 @@ function renderActions(actions){
 
 function updateDecision(){
  const out=document.getElementById('view');
- const result=DecisionAssistant.update(out,assistantConfig(),assistantSelections[assistantKey()]||{},active.steps[stepIndex].branches,DATA.sources);
+ const result=DecisionAssistant.update(out,assistantConfig(),assistantSession.answers[assistantKey()],active.steps[stepIndex].branches,DATA.sources,assistantSession.origins[assistantKey()]);
+ updateExampleLabels();
  const onward=DATA.continuations[assistantKey()];
  out.querySelectorAll('[data-next-branch]').forEach(el=>{el.innerHTML=renderActions(onward.branches[el.dataset.nextBranch]);});
  const extra=out.querySelector('.assistant-other-result');
@@ -100,9 +143,8 @@ function renderCare(){
 
 function renderStep(){
  const s=active.steps[stepIndex];
- return `<nav class="stepstrip" aria-label="${e(active.code)} decision steps">${active.steps.map((s,i)=>`<button class="step-tab ${i===stepIndex?'active':''}" data-step="${s.id}" ${i===stepIndex?'aria-current="step"':''}><span>${String(i+1).padStart(2,'0')}</span><b>${e(s.title)}</b></button>`).join('')}</nav>
- <section class="decision" aria-labelledby="question"><div class="question-head"><div><p class="eyebrow">Decision ${stepIndex+1} of ${active.steps.length} <span> / ${e(s.title)}</span></p><h2 id="question" tabindex="-1">${e(s.question)}</h2></div><a class="permalink" href="#${s.id}" aria-label="Link to this decision">#</a></div><div class="contextline"><span><b>When</b> ${e(s.timing)}</span><span><b>Responsible team</b> ${e(s.owner)}</span></div>
- <div class="decision-grid"><section class="orders"><div class="section-head"><span class="number-dot">1</span><h3>Tests and information needed</h3></div>${DecisionAssistant.render(assistantConfig(),DATA.sources,assistantSelections[assistantKey()]||{})}<details class="full-tests"><summary>Full test checklist and source details</summary>${s.orders.map(g=>`<div class="ordergroup"><h4>${e(g.label)}</h4>${bullets(g.items)}</div>`).join('')}</details></section>
+ return `<section class="decision" aria-labelledby="question"><div class="question-head"><div><p class="eyebrow">Decision ${stepIndex+1} of ${active.steps.length} <span> / ${e(s.title)}</span></p><h2 id="question" tabindex="-1">${e(s.question)}</h2></div><a class="permalink" href="#${s.id}" aria-label="Link to this decision">#</a></div><div class="contextline"><span><b>When</b> ${e(s.timing)}</span><span><b>Responsible team</b> ${e(s.owner)}</span></div>
+ <div class="decision-grid"><section class="orders"><div class="section-head"><span class="number-dot">1</span><h3>Tests and information needed</h3></div>${DecisionAssistant.render(assistantConfig(),DATA.sources,assistantSession.answers[assistantKey()],assistantSession.origins[assistantKey()])}<details class="full-tests"><summary>Full test checklist and source details</summary>${s.orders.map(g=>`<div class="ordergroup"><h4>${e(g.label)}</h4>${bullets(g.items)}</div>`).join('')}</details></section>
  <section class="results" id="decision-results"><div class="section-head"><span class="number-dot">2</span><h3>Review results and select the next step</h3></div><p class="logic-note">Your choices highlight the relevant recommendation and next actions. Review each option with the treating team.</p><article class="assistant-other-result" hidden></article>${s.branches.map((b,bi)=>`<article class="branch ${e(b.kind)} is-muted" data-branch-index="${bi}"><span class="branch-match" hidden>Matches these choices</span><div class="branch-title"><span class="route-label">${b.kind==='advance'?'Proceed when':b.kind==='hold'?'Pause and clarify':b.kind==='redirect'?'Use another pathway':'Do not proceed on this pathway'}</span><h4>${e(b.title)}</h4></div><details class="branch-details"><summary>Criteria and supporting sources</summary>${bullets(b.criteria)}</details><div class="branch-action"><span class="action-arrow">→</span><p>${e(b.action)} ${refs(b.refs)}</p></div><div data-next-branch="${bi}"></div></article>`).join('')}</section></div>
  <div class="safety-grid"><section class="stops"><div class="section-head"><span class="status-icon">!</span><h3>Findings that change the treatment or transplant plan</h3></div>${s.stops.length?bullets(s.stops):'<p class="muted">No additional exclusion is listed at this step. Apply the earlier disease-specific criteria and complete the full transplant assessment.</p>'}<p class="small stopnote">Each statement identifies what the finding affects: treatment, a MELD-exception request, or transplantation under this protocol.</p></section>
  <section class="gray"><div class="section-head"><span class="status-icon">?</span><h3>Questions for multidisciplinary discussion</h3></div>${s.issues.map(id=>{const i=active.issues.find(x=>x.id===id);return `<a class="issue-link" href="/alignment/${active.slug}/#${i.id}"><span>Discussion ${active.issues.indexOf(i)+1}</span><b>${e(i.question)}</b><span class="issue-arrow">Compare sources · proposed decision →</span></a>`;}).join('')}</section></div>
@@ -140,7 +182,7 @@ function setStep(id,push=true){
  const index=active.steps.findIndex(s=>s.id===id);if(index<0)return;
  stepIndex=index;view='pathway';if(push)history.pushState(null,'','#'+id);renderView();
  document.getElementById('question').focus({preventScroll:true});
- document.querySelector('.stepstrip').scrollIntoView({block:'start',behavior:'instant'});
+ document.querySelector('.decision').scrollIntoView({block:'start',behavior:'instant'});
 }
 function hashState(){
  const h=decodeURIComponent(location.hash.slice(1));
@@ -158,17 +200,26 @@ function hashState(){
 document.addEventListener('change',ev=>{
  const id=ev.target.dataset.assistantQuestion;if(!id||!active)return;
  const config=assistantConfig(),q=config.questions.find(q=>q.id===id);if(!q)return;
- const key=assistantKey(),answers=assistantSelections[key]||{};
- answers[id]=ev.target.value;assistantSelections[key]=answers;
- active.steps.slice(stepIndex+1).forEach(s=>delete assistantSelections[`${active.slug}/${s.id}`]);
+ DecisionAssistant.changeAnswer(assistantSession,active,stepIndex,id,ev.target.value);
+ const answers=assistantSession.answers[assistantKey()];
  document.querySelector(`[data-definitions="${id}"]`).innerHTML=DecisionAssistant.definitions(q,answers[id],DATA.sources);
  updateDecision();
 });
 
 document.addEventListener('click',ev=>{
+ if(ev.target.closest('[data-pathway-overview]')){
+  if(view!=='pathway'){view='pathway';history.pushState(null,'','#'+active.steps[stepIndex].id);renderView();}
+  const title=document.getElementById('journey-title');title.setAttribute('tabindex','-1');title.focus({preventScroll:true});
+  document.querySelector('.journey-overview').scrollIntoView({block:'start',behavior:'instant'});return;
+ }
+ if(ev.target.closest('[data-pathway-example],[data-pathway-clear]')){
+  const examples=!!ev.target.closest('[data-pathway-example]');
+  assistantSession=DecisionAssistant.createSession(active,DATA.assistants,examples);
+  renderView();document.querySelector(examples?'[data-pathway-example]':'[data-pathway-clear]').focus({preventScroll:true});return;
+ }
  const care=ev.target.closest('[data-care]');if(care){ev.preventDefault();careId=care.dataset.care;view='care';history.pushState(null,'','#care-'+careId);renderView();document.getElementById('care-title').focus({preventScroll:true});document.querySelector('.care-view').scrollIntoView({block:'start',behavior:'instant'});return;}
  if(ev.target.closest('[data-assistant-reset]')){
-  active.steps.slice(stepIndex).forEach(s=>delete assistantSelections[`${active.slug}/${s.id}`]);renderView();document.querySelector('[data-assistant-reset]').focus({preventScroll:true});return;
+  DecisionAssistant.clearFrom(assistantSession,active,stepIndex);renderView();document.querySelector('[data-assistant-reset]').focus({preventScroll:true});return;
  }
  if(ev.target.closest('[data-assistant-show]')){const target=(matchMedia('(max-width:900px)').matches?document.querySelector('.results .branch.is-highlighted:not([hidden])'):null)||document.getElementById('decision-results');target.scrollIntoView({block:'start',behavior:'instant'});return;}
 

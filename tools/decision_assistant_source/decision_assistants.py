@@ -4,7 +4,7 @@ These rules select a passage to review, not a transplant eligibility verdict.
 Stop/clarification rules precede proceed rules. Every proceed rule specifies all
 questions in that decision. No identifiers, raw clinical records or dates.
 """
-VERSION = '2026-10-24.4'
+VERSION = '2026-10-24.5'
 
 def option(value, label, *details):
     return dict(value=value, label=label, details=list(details))
@@ -451,3 +451,70 @@ follow_up('hca','follow-up',A,'Reassess bleeding or transformation while waiting
  'Fitness for transplantation confirmed and follow-up for the underlying condition agreed?')
 
 assert len(ASSISTANTS)==46
+
+# One explicit illustrative path per disease. These are example choices, not
+# inferred findings, completion flags, or changes to the matching rules.
+EXAMPLES = {
+ 'hcc/diagnosis': {'diagnosis':'hcc'},
+ 'hcc/curative-route': {'spread':'clear','operation':'transplant'},
+ 'hcc/allocation': {'burden':'t2','afp':'met','spread':'yes'},
+ 'hcc/treatment': {'response':'controlled','afp':'yes','reserve':'yes'},
+ 'hcc/listing': {'exception':'yes','fitness':'yes'},
+ 'hcc/waitlist': {'control':'maintained','fitness':'yes'},
+ 'hcc/after-transplant': {'plan':'yes','concern':'none'},
+ 'pcca/localize': {'origin':'hilar','review':'yes'},
+ 'pcca/diagnosis': {'diagnosis':'yes','biopsy':'no'},
+ 'pcca/phenotype': {'size':'small','unresectable':'yes','spread':'clear','diagnosis':'yes'},
+ 'pcca/neoadjuvant': {'protocol':'yes','status':'safe'},
+ 'pcca/staging': {'stage':'negative','ready':'yes'},
+ 'pcca/listing': {'evidence':'yes','ready':'ready'},
+ 'pcca/follow-up': {'plan':'yes','concern':'none'},
+ 'icca/diagnosis': {'histology':'icca','extent':'yes'},
+ 'icca/phenotype': {'focality':'solitary','profile':'fits','spread':'yes','program':'yes'},
+ 'icca/therapy': {'control':'controlled','safe':'yes'},
+ 'icca/stability': {'duration':'met','disease':'stable'},
+ 'icca/review': {'criteria':'met','reviews':'yes'},
+ 'icca/follow-up': {'plan':'yes','concern':'none'},
+ 'crlm/map-disease': {'primary':'yes','spread':'clear'},
+ 'crlm/biology': {'molecular':'fits','cea':'low','size':'yes'},
+ 'crlm/unresectability': {'clearance':'no'},
+ 'crlm/control': {'response':'controlled','duration':'yes','unresectable':'yes'},
+ 'crlm/clocks': {'primary':'yes','interval':'yes','synchronous':'na'},
+ 'crlm/restaging': {'stage':'clear','timing':'yes','control':'yes'},
+ 'crlm/review': {'criteria':'met','reviews':'yes'},
+ 'crlm/transplant': {'plan':'yes','concern':'none'},
+ 'nelm/biology': {'grade':'fits','primary':'yes'},
+ 'nelm/distribution': {'primary':'yes','spread':'none'},
+ 'nelm/options': {'strategy':'transplant'},
+ 'nelm/exposure': {'safety':'acceptable'},
+ 'nelm/observation': {'clearance':'met','imaging':'yes','control':'yes'},
+ 'nelm/review': {'criteria':'met','reviews':'yes'},
+ 'nelm/follow-up': {'plan':'yes','concern':'none'},
+ 'hehe/diagnosis': {'pathology':'hehe'},
+ 'hehe/stage': {'vascular':'yes','strategy':'transplant','extrahepatic':'none'},
+ 'hehe/risk': {'criteria':'yes','benefit':'supported'},
+ 'hehe/review': {'criteria':'met','reviews':'yes'},
+ 'hehe/follow-up': {'plan':'yes','concern':'none'},
+ 'hca/characterize': {'diagnosis':'hca'},
+ 'hca/standard-care': {'bleeding':'no','management':'no'},
+ 'hca/exception-route': {'route':'syndrome'},
+ 'hca/transformation': {'diagnosis':'benign'},
+ 'hca/review': {'criteria':'met','reviews':'yes'},
+ 'hca/follow-up': {'plan':'yes','concern':'none'},
+}
+assert EXAMPLES.keys() == ASSISTANTS.keys()
+for key, answers in EXAMPLES.items():
+    ASSISTANTS[key]['example'] = answers
+
+# Groups are navigation only. They preserve the existing decision sequence.
+_GROUPS = {
+ 'hcc': [['diagnosis'],['curative-route','allocation'],['treatment','listing','waitlist'],['after-transplant']],
+ 'pcca': [['localize','diagnosis'],['phenotype'],['neoadjuvant','staging','listing'],['follow-up']],
+ 'icca': [['diagnosis'],['phenotype'],['therapy','stability','review'],['follow-up']],
+ 'crlm': [['map-disease','biology'],['unresectability'],['control','clocks','restaging','review'],['transplant']],
+ 'nelm': [['biology','distribution'],['options'],['exposure','observation','review'],['follow-up']],
+ 'hehe': [['diagnosis'],['stage','risk'],['review'],['follow-up']],
+ 'hca': [['characterize'],['standard-care','exception-route','transformation'],['review'],['follow-up']],
+}
+_TITLES = ['Diagnosis and extent','Transplant suitability','Preparation and reassessment','Transplant and follow-up']
+JOURNEYS = {slug:[dict(title=title,steps=steps) for title,steps in zip(_TITLES,groups)] for slug,groups in _GROUPS.items()}

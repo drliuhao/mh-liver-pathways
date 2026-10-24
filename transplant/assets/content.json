@@ -4964,7 +4964,10 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "diagnosis": "hcc"
+      }
     },
     "hcc/curative-route": {
       "questions": [
@@ -5092,7 +5095,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "spread": "clear",
+        "operation": "transplant"
+      }
     },
     "hcc/allocation": {
       "questions": [
@@ -5328,7 +5335,12 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "burden": "t2",
+        "afp": "met",
+        "spread": "yes"
+      }
     },
     "hcc/treatment": {
       "questions": [
@@ -5472,7 +5484,12 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "response": "controlled",
+        "afp": "yes",
+        "reserve": "yes"
+      }
     },
     "hcc/listing": {
       "questions": [
@@ -5562,7 +5579,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "exception": "yes",
+        "fitness": "yes"
+      }
     },
     "hcc/waitlist": {
       "questions": [
@@ -5672,7 +5693,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "control": "maintained",
+        "fitness": "yes"
+      }
     },
     "hcc/after-transplant": {
       "questions": [
@@ -5769,7 +5794,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "plan": "yes",
+        "concern": "none"
+      }
     },
     "pcca/localize": {
       "questions": [
@@ -5862,7 +5891,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "origin": "hilar",
+        "review": "yes"
+      }
     },
     "pcca/diagnosis": {
       "questions": [
@@ -5956,7 +5989,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "diagnosis": "yes",
+        "biopsy": "no"
+      }
     },
     "pcca/phenotype": {
       "questions": [
@@ -6137,7 +6174,13 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "size": "small",
+        "unresectable": "yes",
+        "spread": "clear",
+        "diagnosis": "yes"
+      }
     },
     "pcca/neoadjuvant": {
       "questions": [
@@ -6246,7 +6289,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "protocol": "yes",
+        "status": "safe"
+      }
     },
     "pcca/staging": {
       "questions": [
@@ -6358,7 +6405,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "stage": "negative",
+        "ready": "yes"
+      }
     },
     "pcca/listing": {
       "questions": [
@@ -6467,7 +6518,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "evidence": "yes",
+        "ready": "ready"
+      }
     },
     "pcca/follow-up": {
       "questions": [
@@ -6564,7 +6619,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "plan": "yes",
+        "concern": "none"
+      }
     },
     "icca/diagnosis": {
       "questions": [
@@ -6672,7 +6731,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "histology": "icca",
+        "extent": "yes"
+      }
     },
     "icca/phenotype": {
       "questions": [
@@ -6880,7 +6943,13 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "focality": "solitary",
+        "profile": "fits",
+        "spread": "yes",
+        "program": "yes"
+      }
     },
     "icca/therapy": {
       "questions": [
@@ -6987,7 +7056,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "control": "controlled",
+        "safe": "yes"
+      }
     },
     "icca/stability": {
       "questions": [
@@ -7078,7 +7151,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "duration": "met",
+        "disease": "stable"
+      }
     },
     "icca/review": {
       "questions": [
@@ -7187,7 +7264,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "criteria": "met",
+        "reviews": "yes"
+      }
     },
     "icca/follow-up": {
       "questions": [
@@ -7284,7 +7365,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "plan": "yes",
+        "concern": "none"
+      }
     },
     "crlm/map-disease": {
       "questions": [
@@ -7394,7 +7479,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "primary": "yes",
+        "spread": "clear"
+      }
     },
     "crlm/biology": {
       "questions": [
@@ -7542,7 +7631,12 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "molecular": "fits",
+        "cea": "low",
+        "size": "yes"
+      }
     },
     "crlm/unresectability": {
       "questions": [
@@ -7610,7 +7704,10 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "clearance": "no"
+      }
     },
     "crlm/control": {
       "questions": [
@@ -7741,7 +7838,12 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "response": "controlled",
+        "duration": "yes",
+        "unresectable": "yes"
+      }
     },
     "crlm/clocks": {
       "questions": [
@@ -7894,7 +7996,12 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "primary": "yes",
+        "interval": "yes",
+        "synchronous": "na"
+      }
     },
     "crlm/restaging": {
       "questions": [
@@ -8041,7 +8148,12 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "stage": "clear",
+        "timing": "yes",
+        "control": "yes"
+      }
     },
     "crlm/review": {
       "questions": [
@@ -8150,7 +8262,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "criteria": "met",
+        "reviews": "yes"
+      }
     },
     "crlm/transplant": {
       "questions": [
@@ -8247,7 +8363,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "plan": "yes",
+        "concern": "none"
+      }
     },
     "nelm/biology": {
       "questions": [
@@ -8339,7 +8459,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "grade": "fits",
+        "primary": "yes"
+      }
     },
     "nelm/distribution": {
       "questions": [
@@ -8465,7 +8589,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "primary": "yes",
+        "spread": "none"
+      }
     },
     "nelm/options": {
       "questions": [
@@ -8533,7 +8661,10 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "strategy": "transplant"
+      }
     },
     "nelm/exposure": {
       "questions": [
@@ -8586,7 +8717,10 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "safety": "acceptable"
+      }
     },
     "nelm/observation": {
       "questions": [
@@ -8730,7 +8864,12 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "clearance": "met",
+        "imaging": "yes",
+        "control": "yes"
+      }
     },
     "nelm/review": {
       "questions": [
@@ -8839,7 +8978,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "criteria": "met",
+        "reviews": "yes"
+      }
     },
     "nelm/follow-up": {
       "questions": [
@@ -8936,7 +9079,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "plan": "yes",
+        "concern": "none"
+      }
     },
     "hehe/diagnosis": {
       "questions": [
@@ -9007,7 +9154,10 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "pathology": "hehe"
+      }
     },
     "hehe/stage": {
       "questions": [
@@ -9158,7 +9308,12 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "vascular": "yes",
+        "strategy": "transplant",
+        "extrahepatic": "none"
+      }
     },
     "hehe/risk": {
       "questions": [
@@ -9250,7 +9405,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "criteria": "yes",
+        "benefit": "supported"
+      }
     },
     "hehe/review": {
       "questions": [
@@ -9359,7 +9518,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "criteria": "met",
+        "reviews": "yes"
+      }
     },
     "hehe/follow-up": {
       "questions": [
@@ -9456,7 +9619,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "plan": "yes",
+        "concern": "none"
+      }
     },
     "hca/characterize": {
       "questions": [
@@ -9526,7 +9693,10 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "diagnosis": "hca"
+      }
     },
     "hca/standard-care": {
       "questions": [
@@ -9619,7 +9789,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "bleeding": "no",
+        "management": "no"
+      }
     },
     "hca/exception-route": {
       "questions": [
@@ -9706,7 +9880,10 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "route": "syndrome"
+      }
     },
     "hca/transformation": {
       "questions": [
@@ -9777,7 +9954,10 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "diagnosis": "benign"
+      }
     },
     "hca/review": {
       "questions": [
@@ -9886,7 +10066,11 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "criteria": "met",
+        "reviews": "yes"
+      }
     },
     "hca/follow-up": {
       "questions": [
@@ -9983,10 +10167,216 @@
           "text": null,
           "refs": []
         }
-      ]
+      ],
+      "example": {
+        "plan": "yes",
+        "concern": "none"
+      }
     }
   },
-  "assistant_version": "2026-10-24.4",
+  "assistant_version": "2026-10-24.5",
+  "journeys": {
+    "hcc": [
+      {
+        "title": "Diagnosis and extent",
+        "steps": [
+          "diagnosis"
+        ]
+      },
+      {
+        "title": "Transplant suitability",
+        "steps": [
+          "curative-route",
+          "allocation"
+        ]
+      },
+      {
+        "title": "Preparation and reassessment",
+        "steps": [
+          "treatment",
+          "listing",
+          "waitlist"
+        ]
+      },
+      {
+        "title": "Transplant and follow-up",
+        "steps": [
+          "after-transplant"
+        ]
+      }
+    ],
+    "pcca": [
+      {
+        "title": "Diagnosis and extent",
+        "steps": [
+          "localize",
+          "diagnosis"
+        ]
+      },
+      {
+        "title": "Transplant suitability",
+        "steps": [
+          "phenotype"
+        ]
+      },
+      {
+        "title": "Preparation and reassessment",
+        "steps": [
+          "neoadjuvant",
+          "staging",
+          "listing"
+        ]
+      },
+      {
+        "title": "Transplant and follow-up",
+        "steps": [
+          "follow-up"
+        ]
+      }
+    ],
+    "icca": [
+      {
+        "title": "Diagnosis and extent",
+        "steps": [
+          "diagnosis"
+        ]
+      },
+      {
+        "title": "Transplant suitability",
+        "steps": [
+          "phenotype"
+        ]
+      },
+      {
+        "title": "Preparation and reassessment",
+        "steps": [
+          "therapy",
+          "stability",
+          "review"
+        ]
+      },
+      {
+        "title": "Transplant and follow-up",
+        "steps": [
+          "follow-up"
+        ]
+      }
+    ],
+    "crlm": [
+      {
+        "title": "Diagnosis and extent",
+        "steps": [
+          "map-disease",
+          "biology"
+        ]
+      },
+      {
+        "title": "Transplant suitability",
+        "steps": [
+          "unresectability"
+        ]
+      },
+      {
+        "title": "Preparation and reassessment",
+        "steps": [
+          "control",
+          "clocks",
+          "restaging",
+          "review"
+        ]
+      },
+      {
+        "title": "Transplant and follow-up",
+        "steps": [
+          "transplant"
+        ]
+      }
+    ],
+    "nelm": [
+      {
+        "title": "Diagnosis and extent",
+        "steps": [
+          "biology",
+          "distribution"
+        ]
+      },
+      {
+        "title": "Transplant suitability",
+        "steps": [
+          "options"
+        ]
+      },
+      {
+        "title": "Preparation and reassessment",
+        "steps": [
+          "exposure",
+          "observation",
+          "review"
+        ]
+      },
+      {
+        "title": "Transplant and follow-up",
+        "steps": [
+          "follow-up"
+        ]
+      }
+    ],
+    "hehe": [
+      {
+        "title": "Diagnosis and extent",
+        "steps": [
+          "diagnosis"
+        ]
+      },
+      {
+        "title": "Transplant suitability",
+        "steps": [
+          "stage",
+          "risk"
+        ]
+      },
+      {
+        "title": "Preparation and reassessment",
+        "steps": [
+          "review"
+        ]
+      },
+      {
+        "title": "Transplant and follow-up",
+        "steps": [
+          "follow-up"
+        ]
+      }
+    ],
+    "hca": [
+      {
+        "title": "Diagnosis and extent",
+        "steps": [
+          "characterize"
+        ]
+      },
+      {
+        "title": "Transplant suitability",
+        "steps": [
+          "standard-care",
+          "exception-route",
+          "transformation"
+        ]
+      },
+      {
+        "title": "Preparation and reassessment",
+        "steps": [
+          "review"
+        ]
+      },
+      {
+        "title": "Transplant and follow-up",
+        "steps": [
+          "follow-up"
+        ]
+      }
+    ]
+  },
   "care": {
     "hcc": [
       {

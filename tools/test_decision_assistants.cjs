@@ -172,3 +172,37 @@ assert(t1.text.includes('does not rule out liver transplantation'));
 assert(!t1.text.includes('medical contraindication'));
 for(const key of ['NCCN-hcc','NCCN-pcca','NCCN-icca','NCCN-crlm','NCCN-net'])assert(D.sources[key].locator.includes('original PDF'));
 console.log(`PASS: ${actionCount} next-action links; ${customOutcomes} custom outcomes; every branch has a destination; six AFP options; supportive/ongoing-care endpoints; original NCCN page locations.`);
+
+// Curated examples must show an existing proceed branch without changing rules.
+// Editing an earlier decision clears later examples; navigating never fills them.
+for(const p of D.index){
+ assert.deepEqual(D.journeys[p.slug].flatMap(g=>g.steps),p.steps.map(s=>s.id));
+ const session=R.createSession(p,D.assistants);
+ for(const [i,s] of p.steps.entries()){
+  const key=`${p.slug}/${s.id}`,config=D.assistants[key];
+  assert.deepEqual(config.example,proceed[key],key);
+  assert.deepEqual(session.answers[key],config.example,key);
+  assert.equal(session.origins[key],'example',key);
+  assert.equal(result(key,session.answers[key]).kind,'advance',key);
+  assert(R.render(config,D.sources,session.answers[key],'example').includes('Example findings are preselected'));
+  const changed=R.createSession(p,D.assistants);
+  const question=config.questions[0].id;
+  assert.equal(R.changeAnswer(changed,p,i,question,config.example[question]),false);
+  assert.equal(R.changeAnswer(changed,p,i,question,'unknown'),true);
+  assert.equal(changed.origins[key],'edited');
+  assert.notEqual(result(key,changed.answers[key]).kind,'advance',key);
+  assert.deepEqual(config.example,proceed[key],'Example configuration must not mutate');
+  for(const before of p.steps.slice(0,i))assert.equal(changed.origins[`${p.slug}/${before.id}`],'example');
+  for(const after of p.steps.slice(i+1)){
+   const afterKey=`${p.slug}/${after.id}`;
+   assert.deepEqual(changed.answers[afterKey],{});
+   assert.equal(changed.origins[afterKey],'empty');
+   assert.equal(result(afterKey,changed.answers[afterKey]).state,'pending');
+  }
+  R.clearFrom(changed,p,i);
+  assert.deepEqual(changed.answers[key],{});
+ }
+ const empty=R.createSession(p,D.assistants,false);
+ for(const s of p.steps){const key=`${p.slug}/${s.id}`;assert.deepEqual(empty.answers[key],{});assert.equal(empty.origins[key],'empty');assert.equal(result(key,empty.answers[key]).state,'pending');}
+}
+console.log('PASS: 46 explicit transplant examples; 7 ordered journey overviews; immutable defaults; changed/unknown findings clear every later example; clear-all starts empty.');
