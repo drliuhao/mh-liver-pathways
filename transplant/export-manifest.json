@@ -1,5 +1,5 @@
 {
-  "hosting_export": "2026-10-23",
+  "hosting_export": "2026-10-24",
   "clinical_source_date": "2026-10-23",
   "pathways": 7,
   "steps": 46,
@@ -92,5 +92,9 @@
       "sha256": "8c1106738efea8710ffe457add354a0ec6047ca1c5b3101ce6a539ea4ff3d479"
     }
   ],
-  "clinical_changes": "Source revised for plain clinical language and iCCA focality clarification; export preserves source content except hosting and evidence-access URLs."
+  "clinical_changes": "Source revised for plain clinical language and iCCA focality clarification; export preserves source content except hosting and evidence-access URLs.",
+  "recording_template_version": "2026-10-24.1",
+  "recording_templates": 46,
+  "research_data_kits": 7,
+  "documentation_changes": "Blank decision-specific recording templates, printable and EHR-copy versions, and draft research dictionaries added; clinical criteria unchanged."
 }

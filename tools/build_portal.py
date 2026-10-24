@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '/mh-liver-pathways'
 TP = BASE + '/transplant'
-STAMP = '2026-10-23'
+STAMP = '2026-10-24'
 ROADMAPS = [
     ('Liver', 'hcc', 'HCC', 'Hepatocellular carcinoma', 'Diagnosis, liver reserve, locoregional and systemic treatment'),
     ('Liver', 'crlm', 'CRLM', 'Colorectal liver metastases', 'Resectability, conversion treatment, liver-directed options'),
@@ -74,6 +74,7 @@ def export(source):
     dest.mkdir(exist_ok=True)
     replacements = {r['pdf']: r['url'] for r in original['sources'].values() if r['pdf'].startswith('/')}
     html_files = [source/'index.html']
+    html_files += sorted((source/'recording-templates').glob('*.html'))
     for p in original['index']:
         slug=p['slug']
         html_files += [source/slug/'index.html', source/slug/'clinical-roadmap.html', source/'alignment'/f'{slug}.html', source/'alignment'/slug/'index.html', source/'meeting-records'/f'{slug}.html']
@@ -99,6 +100,10 @@ def export(source):
     (assets/'app.js').write_text(app)
     shutil.copy2(source/'assets/style.css', assets/'style.css')
     (assets/'content.json').write_text(json.dumps(data, ensure_ascii=False, indent=2))
+    template_dest=dest/'recording-templates'; template_dest.mkdir(exist_ok=True)
+    for file in (source/'recording-templates').iterdir():
+        if file.is_file() and file.suffix in ('.md','.zip','.css','.js'):
+            shutil.copyfile(file,template_dest/file.name)
     copied=[]
     for p in original['index']:
         for url in [p['protocol']] + [d['url'] for d in p['docs']]:
@@ -106,6 +111,7 @@ def export(source):
             shutil.copy2(source/rel, target)
             copied.append({'path':'transplant/'+rel,'sha256':hashlib.sha256(target.read_bytes()).hexdigest()})
     manifest={'hosting_export':STAMP,'clinical_source_date':'2026-10-23','pathways':len(data['index']),'steps':sum(len(p['steps']) for p in data['index']),'meeting_questions':sum(len(p['issues']) for p in data['index']),'evidence_sources':len(data['sources']),'licensed_pdfs_published':0,'documents':copied,'clinical_changes':'Source revised for plain clinical language and iCCA focality clarification; export preserves source content except hosting and evidence-access URLs.'}
+    manifest.update(recording_template_version='2026-10-24.1',recording_templates=len(list(template_dest.glob('*--*.html'))),research_data_kits=len(list(template_dest.glob('*.zip'))),documentation_changes='Blank decision-specific recording templates, printable and EHR-copy versions, and draft research dictionaries added; clinical criteria unchanged.')
     (dest/'export-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     (ROOT/'index.html').write_text(home(data))
     for _,slug,_,_,_ in ROADMAPS:
