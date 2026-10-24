@@ -25,7 +25,8 @@ function questions(slug,step,a,prior={}){
   if(['treatment','listing','waitlist'].includes(step))add('ici','Immune checkpoint inhibitor exposure or plan',[['none','No exposure and none planned'],['planned','Being considered or planned'],['current','Currently receiving treatment'],['prior','Previously received']], 'Select the actual exposure or plan to display the transplant-safety review. No washout interval guarantees safety.');
   if(['treatment','listing','waitlist'].includes(step)&&prior.ici)add('ici_review','Has the transplant team completed the safety and sequencing review?',[['pending','Review or treatment plan remains pending'],['complete','Review completed and a case-specific plan agreed']], 'This selection does not approve transplantation or establish a safe washout interval. Reassess after changes in exposure or planned timing; document the team conclusion in the clinical record.');
   if(step==='treatment'&&a.response!=='spread'&&!prior.knownBurden)add('burden_history','Original tumor burden before treatment',[['standard','Within standard T2 / UNOS downstaging limits'],['beyond','Beyond UNOS downstaging limits']], 'Current tumor shrinkage does not erase the pretreatment burden. If recorded at decision 3, revise it there.');
-  if(step==='waitlist'&&a.control==='lost')add('loss','Which requirement is no longer met?',[['burden','Tumor burden / AFP, without new invasion or extrahepatic spread'],['spread','New macrovascular invasion or extrahepatic spread']], 'New spread requires oncologic reassessment; an expanded-burden proposal does not waive this exclusion.');
+  if(step==='listing'&&a.exception==='no')add('exception_reason','Which exception requirement needs individual review?',[['afp','AFP requirement is not met'],['other','Tumor burden, documentation or another requirement']], 'An AFP-only departure needs its own high-risk clinical and allocation review, separate from an expanded-tumor-burden study.');
+  if(step==='waitlist'&&a.control==='lost')add('loss','Which requirement is no longer met?',[['afp','AFP requirement, without new invasion or extrahepatic spread'],['burden','Tumor burden, without new invasion or extrahepatic spread'],['burden-afp','Both tumor burden and AFP, without new invasion or extrahepatic spread'],['spread','New macrovascular invasion or extrahepatic spread']], 'New spread requires oncologic reassessment; an AFP review does not waive this finding.');
  }
  if(slug==='pcca'){
   if(step==='phenotype'&&a.size==='large')add('mass_pattern','Which mass finding is present?',[['single-large','One mass with radial diameter ≥3 cm'],['multiple','Multiple separate masses']], 'Radial diameter is different from longitudinal duct involvement. Multiple masses are not a size-only expansion.');
@@ -197,6 +198,18 @@ function hardStop(slug,step,a,x){
  if(slug==='hehe'&&step==='stage'&&a.vascular==='no')return yes('Macrovascular invasion does not meet the stated HEHE exception-guidance criterion. Review clinical suitability and any individual allocation request separately before continuing.');
  return null;
 }
+function afpReview(pathway,index,session,context={}){
+ if(pathway.slug!=='hcc'||pathway.steps[index].id==='after-transplant')return null;
+ let finding=null;
+ for(const s of pathway.steps.slice(0,index+1)){
+  const a=session.answers['hcc/'+s.id]||{},x=context['hcc/'+s.id]||{};
+  const failed=(s.id==='allocation'&&a.afp==='not-met')||(s.id==='treatment'&&a.afp==='no')||(s.id==='listing'&&a.exception==='no'&&x.exception_reason==='afp')||(s.id==='waitlist'&&a.control==='lost'&&is(x.loss,'afp','burden-afp'));
+  const recovered=(s.id==='allocation'&&a.afp==='met')||(s.id==='treatment'&&a.afp==='yes')||(s.id==='waitlist'&&a.control==='maintained');
+  if(failed)finding={origin:s.id,why:'The AFP requirement is not met. Continue high-risk HCC clinical review and individual allocation assessment alongside treatment; radiographic response alone does not resolve the AFP finding.'};
+  else if(recovered)finding=null;
+ }
+ return finding;
+}
 function evaluate(pathway,index,session,context={},configs={}){
  const slug=pathway.slug,step=pathway.steps[index].id,key=slug+'/'+step;
  if(post.has(key))return {options:[],clarify:[],questions:[],guard:null,route:null};
@@ -246,7 +259,8 @@ function evaluate(pathway,index,session,context={},configs={}){
   hehe:'Macrovascular invasion does not meet the stated HEHE exception-guidance criterion. Clinical suitability and any individual allocation request require separate expert review.',
   hca:'No listed HCA exception-guidance route was identified earlier. Assess the clinical indication and any individual allocation request separately; do not infer exception eligibility from a favorable later review.'
  };
- const route=nonstandard?{origin:nonstandard.origin,why:routeText[slug]}:null;
+ const afp=afpReview(pathway,index,session,context);
+ const route=nonstandard?{origin:nonstandard.origin,why:routeText[slug]}:afp;
  const unknown=unresolved[0]?{origin:unresolved[0].origin,why:unresolved[0].label}:null;
  const clarify=[...(current?.clarify||[]),...unresolved];
  const incomplete=(configs[key]?.questions||Object.keys(a).map(id=>({id}))).some(q=>!a[q.id]||a[q.id]==='unknown');
@@ -255,7 +269,7 @@ function evaluate(pathway,index,session,context={},configs={}){
  if(deferred&&out.some(o=>is(o.mode,'review','readiness'))&&!hard&&!blocked)clarify.push({label:'Complete or clarify the essential findings before choosing proposed study options. Known safety findings are shown separately.'});
  const visible=deferred?out.filter(o=>!is(o.mode,'review','readiness')).map(o=>o.mode==='safety'?{...o,mode:'safety-note',reason:o.reason+' Keep this safety issue visible while the other findings are clarified; it does not establish transplant eligibility.'}:o):out;
  const currentUnknown=clarify.length?{origin:step,why:clarify[0].label}:null;
- return {options:visible,clarify,questions:questions(slug,step,a,{beyond,knownBurden,advanced:priorAdvanced,ici:!!ici,iciStatus:history.iciStatus,extra:context[key]||{}}),guard:hard||unknown||currentUnknown||finalReview,route};
+ return {options:visible,clarify,afpReview:afp?{...afp,carried:afp.origin!==step,deferred:!!hard}:null,questions:questions(slug,step,a,{beyond,knownBurden,advanced:priorAdvanced,ici:!!ici,iciStatus:history.iciStatus,extra:context[key]||{}}),guard:hard||unknown||currentUnknown||finalReview,route};
 }
 function renderQuestions(qs,values={}){
  if(!qs.length)return '';

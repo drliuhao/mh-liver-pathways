@@ -65,6 +65,7 @@ CARE['hcc']=[
       'Standardized exception criteria are not met, but the transplant team considers an individually justified request.',[
       'Document pretreatment tumor burden, treatment response, AFP history, staging, liver function and expected transplant benefit. Review calculated MELD and donor options separately from an exception request.',
       'For prior AFP >1,000, the standardized requirement remains a treatment response to <500 and continued AFP <500. NLRB guidance permits individual consideration in selected cases; approval is not assured.',
+      'For an AFP-only departure, arrange a high-risk HCC multidisciplinary review of AFP trend, treatment response, occult spread, liver reserve and expected benefit. The guidance generally views persistent AFP nonresponse unfavorably, but allows selected individual cases. The beyond-UNOS tumor-burden pilot has its own AFP <100 entry limit and is not an AFP-only protocol.',
       'If the request is deferred or declined, continue an appropriate cancer-treatment or supportive-care plan. Do not leave the patient waiting without a care plan.'
       ],['H-policy','N-hcc'],[
        action('Review the listing and exception evidence',step='listing'),
@@ -217,7 +218,7 @@ def build_continuations(pathways, assistants):
         action('Change liver-directed modality', 'If response is inadequate and anatomy and liver function permit another modality.',care='local'),
         action('Systemic therapy or clinical trial', 'If local treatment is unsuitable or ineffective; review liver function and transplant intent.',care='systemic'),
         action('Reassess resection', 'If complete removal may now be safe; AFP failure alone does not justify surgery.',care='resection'),
-        action('Individual MELD-exception review', 'If the transplant team supports an individually justified request.',care='exception'),
+        action('High-risk HCC and individual MELD-exception review', 'Review clinical transplant suitability and the justification for a nonstandard request separately.',care='exception'),
         action('Best supportive care', 'If further tumor-directed treatment is unsuitable or declined.',care='supportive'),
     ])
     result['hcc/allocation']['branches']['2']=[

@@ -22,6 +22,20 @@ noAction(fixture('hcc/allocation',{burden:'beyond',spread:'unknown'}));
 noAction(fixture('hcc/allocation',{burden:'beyond',spread:'no'}));
 noAction(fixture('hcc/allocation',{burden:'beyond',afp:'not-met'}));
 absent(fixture('hcc/allocation',{afp:'not-met'}),'hcc-b1');
+// AFP failure is a separate clinical-review route, not admission to the burden pilot.
+const afpOnly=fixture('hcc/allocation',{afp:'not-met'});
+assert(afpOnly.result.afpReview&&!afpOnly.result.afpReview.deferred);
+assert(afpOnly.result.route.why.includes('AFP'));
+assert(fixture('hcc/allocation',{burden:'beyond',afp:'not-met'}).result.afpReview);
+assert(fixture('hcc/treatment',{afp:'no'}).result.afpReview);
+assert(!fixture('hcc/treatment',{afp:'yes'}, {},{allocation:{afp:'not-met'}}).result.afpReview,'Confirmed biochemical response updates the active AFP review');
+assert(fixture('hcc/listing',{}, {},{treatment:{afp:'no'}}).result.afpReview.carried);
+assert(fixture('hcc/listing',{exception:'no'},{exception_reason:'afp'}).result.afpReview);
+assert(!fixture('hcc/listing',{exception:'no'},{exception_reason:'other'}).result.afpReview);
+for(const loss of ['afp','burden-afp'])assert(fixture('hcc/waitlist',{control:'lost'},{loss}).result.afpReview);
+assert(!fixture('hcc/waitlist',{control:'lost'},{loss:'burden'}).result.afpReview);
+assert(fixture('hcc/treatment',{afp:'no',response:'spread'}).result.afpReview.deferred,'Clinical exclusions remain visible and the review is neutral');
+assert(!fixture('hcc/after-transplant',{}, {},{allocation:{afp:'not-met'},treatment:{afp:'no'}}).result.afpReview);
 has(fixture('hcc/curative-route',{spread:'prior'},{history:'vp12'}),'hcc-b2','review');
 for(const history of ['vp3','vp4','rupture','both'])noAction(has(fixture('hcc/curative-route',{spread:'prior'},{history}),'hcc-b2','closed'));
 for(const ici of ['planned','current','prior'])has(fixture('hcc/treatment',{}, {ici}),'hcc-b3','safety');
@@ -112,7 +126,7 @@ assert(fixture('hcc/treatment',{}, {burden_history:'beyond'}).result.guard.why.i
 // All 46 example paths and categorical states, including missing/unknown values.
 let states=0;
 for(const p of D.index)for(const [i,s] of p.steps.entries()){
- const key=p.slug+'/'+s.id,f=fixture(key);noAction(f);
+  const key=p.slug+'/'+s.id,f=fixture(key);noAction(f);assert(!f.result.afpReview,'No AFP review on the standard example');
  const config=D.assistants[key];
  function visit(n,a){
   if(n<config.questions.length){const q=config.questions[n];for(const value of ['',...q.options.map(o=>o.value)])visit(n+1,{...a,[q.id]:value});return;}

@@ -14903,6 +14903,7 @@
         "tasks": [
           "Document pretreatment tumor burden, treatment response, AFP history, staging, liver function and expected transplant benefit. Review calculated MELD and donor options separately from an exception request.",
           "For prior AFP >1,000, the standardized requirement remains a treatment response to <500 and continued AFP <500. NLRB guidance permits individual consideration in selected cases; approval is not assured.",
+          "For an AFP-only departure, arrange a high-risk HCC multidisciplinary review of AFP trend, treatment response, occult spread, liver reserve and expected benefit. The guidance generally views persistent AFP nonresponse unfavorably, but allows selected individual cases. The beyond-UNOS tumor-burden pilot has its own AFP <100 entry limit and is not an AFP-only protocol.",
           "If the request is deferred or declined, continue an appropriate cancer-treatment or supportive-care plan. Do not leave the patient waiting without a care plan."
         ],
         "refs": [
@@ -15853,8 +15854,8 @@
             "url": null
           },
           {
-            "label": "Individual MELD-exception review",
-            "detail": "If the transplant team supports an individually justified request.",
+            "label": "High-risk HCC and individual MELD-exception review",
+            "detail": "Review clinical transplant suitability and the justification for a nonstandard request separately.",
             "step": null,
             "care": "exception",
             "url": null
