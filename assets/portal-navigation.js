@@ -11,7 +11,7 @@
   const nav=document.createElement('nav');nav.className='shared-portal-nav';nav.setAttribute('aria-label','Shared oncology portal');
   const add=(url,label,current=false)=>{const a=document.createElement('a');a.href=new URL(url,root);a.textContent=label;if(current)a.setAttribute('aria-current','true');nav.append(a);};
   add('','← Shared home');add('#hpb-roadmaps','Roadmaps',!transplant&&!['lrt','systemic'].includes(key));add('lrt/','Liver-directed therapy matrix',key==='lrt');add('systemic/','Systemic therapy matrix',key==='systemic');add('transplant/','Transplant pathways',transplant&&!highRisk);add('transplant/high-risk/','High-risk protocol index',highRisk);
-  if(match)add(transplant?match+'/':'transplant/'+match+'/',transplant?'This tumor’s treatment roadmap →':'This tumor’s transplant pathway →');
+  if(match)add(transplant?match+'/':'transplant/'+match+'/',transplant?'This tumor’s treatment roadmap →':key==='chcca'?'iCCA / mixed HCC-iCCA transplant criteria →':'Transplant assessment criteria →');
   document.body.prepend(nav);
   const footer=document.createElement('footer');footer.className='portal-change-log';
   const log=document.createElement('a');log.href=new URL('changes/',root);log.textContent='Change log';

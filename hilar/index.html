@@ -314,6 +314,8 @@ footer p + p{margin-top:8px}
 @media (max-width:640px){ .ev .evtag{width:auto} }
 @media (prefers-reduced-motion:reduce){ *{transition:none !important} }
 </style>
+<link rel="stylesheet" href="../assets/roadmap-flow.css?v=20261025">
+<script src="../assets/roadmap-flow.js?v=20261025"></script>
 
 <header class="top">
   <div class="devbar">Clinical review draft · Not approved institutional policy · Not an automated eligibility tool.</div>
@@ -485,20 +487,9 @@ function recHTML(r){
 /* ---------- gates ---------- */
 function renderGate(id){
   const s = P.gates.find(x=>x.id===id);
-  document.querySelectorAll(".st").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.stage===id)));
-  const col = (name, items) => `<div class="acol"><div class="eyebrow">${name}</div>${
-    (items&&items.length) ? items.map(recHTML).join("")
-      : `<p class="small muted">No additional recommendation is listed for this decision.</p>`}</div>`;
-  document.getElementById("answer").innerHTML = `
-    <div class="ahead">
-      <h3>${esc(s.name)}</h3>
-      <button class="xpand" type="button" id="xpandAll" data-open="0">Expand all</button>
-      <p class="ask">${esc(s.ask)}</p>
-      <span class="chip">${reqLabel(s.req)}: ${esc(s.crit.join(" · "))}</span>
-    </div>
-    <div class="abody">
-      ${col("Standard", s.standard)}${col("Reasonable alternative", s.alt)}${col("Avoid", s.avoid)}
-    </div>`;
+  if(!s) return;
+  document.getElementById("answer").innerHTML = RoadmapFlow.render(s,recHTML);
+  RoadmapFlow.update(s);
   try{ localStorage.setItem(KEY+".gate", id); }catch(e){}
 }
 /* Changing gate must not move the page under the reader: only scroll when the
@@ -747,10 +738,13 @@ function build(){
     const open = b.dataset.open !== "1";
     document.querySelectorAll("#answer details.more").forEach(d=>{ d.open = open; });
     b.dataset.open = open ? "1" : "0";
-    b.textContent = open ? "Collapse all" : "Expand all";
+    b.textContent = open ? "Collapse criteria and evidence" : "Expand criteria and evidence";
+    b.setAttribute("aria-expanded", String(open));
   });
+  RoadmapFlow.setup({slug:P.key,stages:P.gates,select:renderGate});
   let startGate = P.gates[0].id;
   try{ const v = localStorage.getItem(KEY+".gate"); if(v && P.gates.some(g=>g.id===v)) startGate = v; }catch(e){}
+  startGate = RoadmapFlow.initial(P.gates,startGate);
   renderGate(startGate);
 
   /* what is not evidence based */

@@ -1,0 +1,1421 @@
+{
+  "crlm": {
+    "1": [
+      {
+        "when": "If complete local treatment may be feasible",
+        "decision": "2"
+      },
+      {
+        "when": "If treatment might make local clearance feasible",
+        "decision": "3"
+      },
+      {
+        "when": "If complete clearance is not feasible",
+        "decision": "5"
+      }
+    ],
+    "2": [
+      {
+        "when": "If staging or molecular results are incomplete",
+        "decision": "1"
+      },
+      {
+        "when": "If adequate margins or liver remnant cannot yet be achieved",
+        "decision": "3"
+      },
+      {
+        "when": "If progression or fitness changes the treatment goal",
+        "decision": "5"
+      }
+    ],
+    "3": [
+      {
+        "when": "After treatment, if complete clearance may be feasible",
+        "decision": "2"
+      },
+      {
+        "when": "If disease remains permanently unresectable and liver-only",
+        "decision": "4"
+      },
+      {
+        "when": "If progression or organ reserve limits conversion",
+        "decision": "5"
+      }
+    ],
+    "4": [
+      {
+        "when": "If conversion to resection or ablation remains possible",
+        "decision": "3"
+      },
+      {
+        "when": "For disease-specific transplant and allocation assessment",
+        "url": "transplant/crlm/",
+        "label": "Open CRLM transplant assessment"
+      },
+      {
+        "when": "If transplant criteria are not met or transplant is not pursued",
+        "decision": "5"
+      }
+    ],
+    "5": [
+      {
+        "when": "If response creates a credible route to complete clearance",
+        "decision": "3"
+      },
+      {
+        "when": "For systemic treatment and molecularly selected options",
+        "url": "systemic/?tumor=crlm",
+        "label": "Compare systemic therapies"
+      },
+      {
+        "when": "For symptom management alongside or without cancer treatment",
+        "url": "systemic/?tumor=crlm#supportive",
+        "label": "Best supportive care"
+      }
+    ]
+  },
+  "icca": {
+    "1": [
+      {
+        "when": "If systemic treatment may be needed; profiling can proceed in parallel",
+        "decision": "2"
+      },
+      {
+        "when": "If complete resection may be feasible",
+        "decision": "3"
+      },
+      {
+        "when": "If unresectable and transplant assessment may be relevant",
+        "decision": "10"
+      },
+      {
+        "when": "If the primary tumor is perihilar rather than intrahepatic",
+        "url": "hilar/#decision-1",
+        "label": "Review the perihilar CCA assessment"
+      },
+      {
+        "when": "If mixed HCC-iCCA is established or suspected",
+        "url": "chcca/#decision-0",
+        "label": "Review combined HCC-CCA diagnosis"
+      }
+    ],
+    "2": [
+      {
+        "when": "If systemic treatment is planned or progression occurs",
+        "decision": "9"
+      },
+      {
+        "when": "If resectability remains under assessment",
+        "decision": "3"
+      }
+    ],
+    "3": [
+      {
+        "when": "If a specific obstacle to resection may be reversible",
+        "decision": "4"
+      },
+      {
+        "when": "After macroscopically complete resection",
+        "decision": "8"
+      },
+      {
+        "when": "If unresectable and transplant assessment may be relevant",
+        "decision": "10"
+      }
+    ],
+    "4": [
+      {
+        "when": "At planned reassessment, if resection may now be feasible",
+        "decision": "3"
+      },
+      {
+        "when": "If disease remains unresectable and liver-confined",
+        "decision": "5"
+      },
+      {
+        "when": "If distant disease is identified",
+        "decision": "6"
+      }
+    ],
+    "5": [
+      {
+        "when": "When choosing or changing systemic treatment",
+        "decision": "9"
+      },
+      {
+        "when": "When considering an additional liver-directed approach",
+        "decision": "7"
+      },
+      {
+        "when": "When assessing a defined transplant protocol",
+        "decision": "10"
+      }
+    ],
+    "6": [
+      {
+        "when": "When selecting systemic treatment",
+        "decision": "9"
+      },
+      {
+        "when": "If actionable molecular results remain unavailable",
+        "decision": "2"
+      },
+      {
+        "when": "For symptom care alongside or without cancer treatment",
+        "url": "systemic/?tumor=icca#supportive",
+        "label": "Best supportive care"
+      }
+    ],
+    "7": [
+      {
+        "when": "If response may permit complete resection",
+        "decision": "3"
+      },
+      {
+        "when": "For systemic treatment coordination",
+        "decision": "9"
+      },
+      {
+        "when": "For reassessment of persistent liver-confined disease",
+        "decision": "5"
+      }
+    ],
+    "8": [
+      {
+        "when": "If recurrent disease requires systemic treatment",
+        "decision": "9"
+      },
+      {
+        "when": "If a recurrence may be completely resectable",
+        "decision": "3"
+      }
+    ],
+    "9": [
+      {
+        "when": "If molecular testing needs completion or review",
+        "decision": "2"
+      },
+      {
+        "when": "If treatment response may permit resection",
+        "decision": "3"
+      },
+      {
+        "when": "At any treatment stage, according to symptoms and goals",
+        "url": "systemic/?tumor=icca#supportive",
+        "label": "Best supportive care"
+      }
+    ],
+    "10": [
+      {
+        "when": "For the exact disease-specific transplant and allocation criteria",
+        "url": "transplant/icca/",
+        "label": "Open iCCA transplant assessment"
+      },
+      {
+        "when": "If safe complete resection is feasible",
+        "decision": "3"
+      },
+      {
+        "when": "If a transplant route is unavailable or not pursued",
+        "decision": "9"
+      }
+    ]
+  },
+  "hilar": {
+    "0": [
+      {
+        "when": "Once urgent infection or obstruction is addressed; staging may proceed in parallel",
+        "decision": "1"
+      },
+      {
+        "when": "If transplant remains relevant to drainage or biopsy planning",
+        "decision": "4"
+      }
+    ],
+    "1": [
+      {
+        "when": "Before choosing a tissue-sampling route",
+        "decision": "2"
+      },
+      {
+        "when": "If R0 resection may be feasible",
+        "decision": "3"
+      },
+      {
+        "when": "If unresectable or underlying liver disease prompts transplant assessment",
+        "decision": "4"
+      },
+      {
+        "when": "If the primary tumor is intrahepatic rather than perihilar",
+        "url": "icca/#decision-1",
+        "label": "Review the iCCA assessment"
+      }
+    ],
+    "2": [
+      {
+        "when": "Before primary-tumor sampling that could affect transplant candidacy",
+        "decision": "4"
+      },
+      {
+        "when": "If resection is the planned treatment",
+        "decision": "3"
+      },
+      {
+        "when": "If transplant is not pursued and cancer treatment is needed",
+        "decision": "5"
+      }
+    ],
+    "3": [
+      {
+        "when": "If drainage or remnant optimization is needed",
+        "decision": "0"
+      },
+      {
+        "when": "If resection is unsuitable and transplant assessment is relevant",
+        "decision": "4"
+      },
+      {
+        "when": "If neither curative route can be pursued",
+        "decision": "5"
+      }
+    ],
+    "4": [
+      {
+        "when": "For protocol-specific diagnosis, staging and allocation assessment",
+        "url": "transplant/pcca/",
+        "label": "Open pCCA transplant assessment"
+      },
+      {
+        "when": "If complete resection remains feasible",
+        "decision": "3"
+      },
+      {
+        "when": "If the transplant protocol is unavailable or criteria are not met",
+        "decision": "5"
+      }
+    ],
+    "5": [
+      {
+        "when": "For systemic treatment options and selection conditions",
+        "url": "systemic/?tumor=pcca",
+        "label": "Compare systemic therapies"
+      },
+      {
+        "when": "If obstruction or cholangitis changes the plan",
+        "decision": "0"
+      },
+      {
+        "when": "For symptom and supportive care at any stage",
+        "decision": "6"
+      }
+    ],
+    "6": [
+      {
+        "when": "If biliary obstruction or infection needs treatment",
+        "decision": "0"
+      },
+      {
+        "when": "If anticancer treatment is appropriate and consistent with goals",
+        "decision": "5"
+      }
+    ]
+  },
+  "nelm": {
+    "1": [
+      {
+        "when": "If G3 NET or poorly differentiated NEC is being considered",
+        "decision": "4"
+      },
+      {
+        "when": "If well-differentiated G1\u2013G2 disease is low volume",
+        "decision": "2"
+      },
+      {
+        "when": "If well-differentiated G1\u2013G2 disease is high volume or progressing",
+        "decision": "3"
+      }
+    ],
+    "2": [
+      {
+        "when": "If complete treatment or cytoreduction is being considered",
+        "decision": "5"
+      },
+      {
+        "when": "For systemic-treatment selection",
+        "decision": "6"
+      },
+      {
+        "when": "If hormone-related symptoms need control",
+        "decision": "8"
+      }
+    ],
+    "3": [
+      {
+        "when": "If surgical cytoreduction may be feasible",
+        "decision": "5"
+      },
+      {
+        "when": "For systemic-treatment selection",
+        "decision": "6"
+      },
+      {
+        "when": "If liver-directed therapy is being considered",
+        "decision": "7"
+      }
+    ],
+    "4": [
+      {
+        "when": "If differentiation or grade needs confirmation",
+        "decision": "1"
+      },
+      {
+        "when": "For grade-appropriate systemic treatment",
+        "decision": "6"
+      },
+      {
+        "when": "If hormone-related symptoms need treatment",
+        "decision": "8"
+      }
+    ],
+    "5": [
+      {
+        "when": "When surgery is unsuitable or systemic coordination is needed",
+        "decision": "6"
+      },
+      {
+        "when": "For liver-directed alternatives",
+        "decision": "7"
+      },
+      {
+        "when": "If liver-only unresectable disease prompts transplant assessment",
+        "decision": "9"
+      }
+    ],
+    "6": [
+      {
+        "when": "If liver-directed treatment may complement the systemic plan",
+        "decision": "7"
+      },
+      {
+        "when": "For hormone-related symptoms and crisis prevention",
+        "decision": "8"
+      },
+      {
+        "when": "For supportive care throughout treatment",
+        "url": "systemic/?tumor=nelm#supportive",
+        "label": "Best supportive care"
+      }
+    ],
+    "7": [
+      {
+        "when": "If the surgical options need reassessment",
+        "decision": "5"
+      },
+      {
+        "when": "To coordinate systemic and liver-directed therapy",
+        "decision": "6"
+      },
+      {
+        "when": "If treatment carries hormone-release risk",
+        "decision": "8"
+      }
+    ],
+    "8": [
+      {
+        "when": "To coordinate symptom control with anticancer therapy",
+        "decision": "6"
+      },
+      {
+        "when": "If cytoreduction may help selected symptoms",
+        "decision": "5"
+      }
+    ],
+    "9": [
+      {
+        "when": "For exact differentiation, distribution and observation requirements",
+        "url": "transplant/nelm/",
+        "label": "Open NELM transplant assessment"
+      },
+      {
+        "when": "If nontransplant surgery remains feasible",
+        "decision": "5"
+      },
+      {
+        "when": "If transplant is not suitable or not pursued",
+        "decision": "6"
+      }
+    ]
+  },
+  "chcca": {
+    "0": [
+      {
+        "when": "If diagnosis remains uncertain and tissue would change management",
+        "decision": "1"
+      },
+      {
+        "when": "For full staging",
+        "decision": "2"
+      },
+      {
+        "when": "For diagnostic comparison only; HCC-like imaging does not exclude a combined tumor",
+        "url": "hcc/?topic=dx#topics",
+        "label": "Review HCC imaging criteria"
+      }
+    ],
+    "1": [
+      {
+        "when": "Once diagnosis and sampling limitations are reviewed",
+        "decision": "2"
+      },
+      {
+        "when": "If the separate iCCA/mixed-tumor transplant criteria may apply",
+        "decision": "5"
+      }
+    ],
+    "2": [
+      {
+        "when": "If complete resection may be feasible",
+        "decision": "3"
+      },
+      {
+        "when": "If unresectable and transplant assessment is relevant",
+        "decision": "5"
+      },
+      {
+        "when": "If advanced disease needs systemic treatment",
+        "decision": "7"
+      }
+    ],
+    "3": [
+      {
+        "when": "For regional-node assessment as part of surgical planning",
+        "decision": "4"
+      },
+      {
+        "when": "After surgical pathology is available",
+        "decision": "6"
+      },
+      {
+        "when": "If resection is unsuitable",
+        "decision": "7"
+      }
+    ],
+    "4": [
+      {
+        "when": "To integrate nodal findings with resectability",
+        "decision": "3"
+      },
+      {
+        "when": "If extent of disease changes the treatment goal",
+        "decision": "7"
+      }
+    ],
+    "5": [
+      {
+        "when": "For the separate mixed HCC-iCCA criteria within iCCA guidance",
+        "url": "transplant/icca/",
+        "label": "Open iCCA / mixed HCC-iCCA transplant assessment"
+      },
+      {
+        "when": "If resection remains feasible",
+        "decision": "3"
+      },
+      {
+        "when": "If transplant is not available or pursued",
+        "decision": "7"
+      }
+    ],
+    "6": [
+      {
+        "when": "To plan surveillance and reassess recurrent disease",
+        "decision": "9"
+      },
+      {
+        "when": "If systemic treatment is needed after pathology review",
+        "decision": "7"
+      }
+    ],
+    "7": [
+      {
+        "when": "If liver-directed treatment is being considered",
+        "decision": "8"
+      },
+      {
+        "when": "To reassess response, recurrence and local options",
+        "decision": "9"
+      }
+    ],
+    "8": [
+      {
+        "when": "If response may create a resection option",
+        "decision": "3"
+      },
+      {
+        "when": "To coordinate the systemic-treatment plan",
+        "decision": "7"
+      },
+      {
+        "when": "For reassessment after treatment",
+        "decision": "9"
+      }
+    ],
+    "9": [
+      {
+        "when": "If recurrent disease needs restaging",
+        "decision": "2"
+      },
+      {
+        "when": "If isolated recurrence may be resectable",
+        "decision": "3"
+      },
+      {
+        "when": "If systemic treatment is appropriate",
+        "decision": "7"
+      }
+    ]
+  },
+  "adenoma": {
+    "1": [
+      {
+        "when": "If diagnosis supports risk-factor modification",
+        "decision": "2"
+      },
+      {
+        "when": "For an adenoma in a male patient",
+        "decision": "3"
+      },
+      {
+        "when": "If acute bleeding or rupture is present",
+        "decision": "5"
+      },
+      {
+        "when": "If the background liver or lesion requires HCC-specific diagnostic assessment",
+        "url": "hcc/?topic=dx#topics",
+        "label": "Review HCC diagnosis and imaging criteria"
+      }
+    ],
+    "2": [
+      {
+        "when": "At size and growth reassessment",
+        "decision": "4"
+      },
+      {
+        "when": "If pregnancy is planned or present",
+        "decision": "6"
+      },
+      {
+        "when": "If multiple adenomas affect management",
+        "decision": "7"
+      }
+    ],
+    "3": [
+      {
+        "when": "For operative and alternative-intervention assessment",
+        "decision": "4"
+      },
+      {
+        "when": "If malignant transformation is suspected",
+        "decision": "9"
+      }
+    ],
+    "4": [
+      {
+        "when": "If surveillance and risk-factor modification remain appropriate",
+        "decision": "2"
+      },
+      {
+        "when": "If bleeding or rupture occurs",
+        "decision": "5"
+      },
+      {
+        "when": "If malignant transformation is suspected",
+        "decision": "9"
+      }
+    ],
+    "5": [
+      {
+        "when": "After acute stabilization, reassess definitive treatment",
+        "decision": "4"
+      },
+      {
+        "when": "If bleeding remains recurrent or uncontrollable despite appropriate treatment",
+        "decision": "10"
+      }
+    ],
+    "6": [
+      {
+        "when": "If growth or size changes the intervention discussion",
+        "decision": "4"
+      },
+      {
+        "when": "If acute bleeding occurs",
+        "decision": "5"
+      }
+    ],
+    "7": [
+      {
+        "when": "For lesion-specific size and growth decisions",
+        "decision": "4"
+      },
+      {
+        "when": "If genetic, metabolic or vascular disease is relevant",
+        "decision": "8"
+      },
+      {
+        "when": "If disease is unresectable with a qualifying complication",
+        "decision": "10"
+      }
+    ],
+    "8": [
+      {
+        "when": "For management of multiple lesions",
+        "decision": "7"
+      },
+      {
+        "when": "If transformation is suspected",
+        "decision": "9"
+      },
+      {
+        "when": "If a defined transplant indication may apply",
+        "decision": "10"
+      }
+    ],
+    "9": [
+      {
+        "when": "If HCC is confirmed, reassess under the HCC roadmap",
+        "url": "hcc/",
+        "label": "Open HCC roadmap"
+      },
+      {
+        "when": "For resection assessment",
+        "decision": "4"
+      },
+      {
+        "when": "If malignant disease is unresectable and transplant review is relevant",
+        "decision": "10"
+      }
+    ],
+    "10": [
+      {
+        "when": "For the specific clinical indication and allocation review",
+        "url": "transplant/hca/",
+        "label": "Open hepatic adenoma transplant assessment"
+      },
+      {
+        "when": "If nontransplant intervention remains feasible",
+        "decision": "4"
+      },
+      {
+        "when": "For ongoing management when transplant is not pursued",
+        "decision": "2"
+      }
+    ]
+  },
+  "incidental": {
+    "0": [
+      {
+        "when": "If there is a known cancer outside the liver",
+        "decision": "1"
+      },
+      {
+        "when": "If the lesion needs further characterization",
+        "decision": "3"
+      },
+      {
+        "when": "If an HCC-specific assessment is indicated",
+        "url": "hcc/",
+        "label": "Open HCC roadmap"
+      }
+    ],
+    "1": [
+      {
+        "when": "If further imaging can clarify the lesion",
+        "decision": "3"
+      },
+      {
+        "when": "If biopsy would change management",
+        "decision": "7"
+      },
+      {
+        "when": "If a disease-specific diagnosis is established",
+        "decision": "8"
+      },
+      {
+        "when": "If colorectal liver metastases are established",
+        "url": "crlm/#decision-1",
+        "label": "Open CRLM staging and treatment assessment"
+      },
+      {
+        "when": "If neuroendocrine liver metastases are established",
+        "url": "nelm/#decision-1",
+        "label": "Open NELM diagnosis and grade assessment"
+      }
+    ],
+    "2": [
+      {
+        "when": "If cyst characterization remains uncertain",
+        "decision": "3"
+      },
+      {
+        "when": "If the cyst is indeterminate or complex",
+        "decision": "6"
+      }
+    ],
+    "3": [
+      {
+        "when": "If imaging supports hemangioma or FNH",
+        "decision": "4"
+      },
+      {
+        "when": "If imaging supports a pseudolesion or other benign nodule",
+        "decision": "5"
+      },
+      {
+        "when": "If the lesion remains indeterminate",
+        "decision": "6"
+      }
+    ],
+    "4": [
+      {
+        "when": "If symptoms, atypical features or diagnostic discordance require reassessment",
+        "decision": "6"
+      }
+    ],
+    "5": [
+      {
+        "when": "If the benign interpretation remains uncertain",
+        "decision": "6"
+      }
+    ],
+    "6": [
+      {
+        "when": "If further imaging can resolve uncertainty",
+        "decision": "3"
+      },
+      {
+        "when": "If biopsy would change the plan",
+        "decision": "7"
+      },
+      {
+        "when": "If the diagnosis is established",
+        "decision": "8"
+      }
+    ],
+    "7": [
+      {
+        "when": "If tissue remains inconclusive",
+        "decision": "6"
+      },
+      {
+        "when": "If tissue establishes a disease-specific diagnosis",
+        "decision": "8"
+      },
+      {
+        "when": "If the working diagnosis is hepatocellular adenoma and subtype assessment is needed",
+        "url": "adenoma/#decision-1",
+        "label": "Review adenoma diagnosis and subtype"
+      }
+    ],
+    "8": [
+      {
+        "when": "For confirmed or appropriately imaging-diagnosed HCC",
+        "url": "hcc/",
+        "label": "Open HCC roadmap"
+      },
+      {
+        "when": "For intrahepatic cholangiocarcinoma",
+        "url": "icca/",
+        "label": "Open iCCA roadmap"
+      },
+      {
+        "when": "For hepatocellular adenoma",
+        "url": "adenoma/",
+        "label": "Open adenoma roadmap"
+      },
+      {
+        "when": "For other established diagnoses",
+        "url": "#hpb-roadmaps",
+        "label": "Choose the disease-specific roadmap"
+      },
+      {
+        "when": "For combined HCC-cholangiocarcinoma",
+        "url": "chcca/#decision-0",
+        "label": "Open combined HCC-CCA roadmap"
+      },
+      {
+        "when": "For established colorectal liver metastases",
+        "url": "crlm/#decision-1",
+        "label": "Open CRLM roadmap"
+      },
+      {
+        "when": "For established neuroendocrine liver metastases",
+        "url": "nelm/#decision-1",
+        "label": "Open NELM roadmap"
+      },
+      {
+        "when": "If perihilar cholangiocarcinoma is established",
+        "url": "hilar/#decision-1",
+        "label": "Open perihilar CCA roadmap"
+      },
+      {
+        "when": "If liver metastases from pancreatic adenocarcinoma are established",
+        "url": "pdac/#decision-8",
+        "label": "Open metastatic PDAC treatment assessment"
+      }
+    ]
+  },
+  "pdac": {
+    "0": [
+      {
+        "when": "When staging is adequate to classify resectability",
+        "decision": "1"
+      },
+      {
+        "when": "If tissue confirmation or drainage is needed",
+        "decision": "2"
+      }
+    ],
+    "1": [
+      {
+        "when": "If disease is resectable",
+        "decision": "3"
+      },
+      {
+        "when": "If disease is borderline resectable",
+        "decision": "4"
+      },
+      {
+        "when": "If disease is locally advanced",
+        "decision": "7"
+      },
+      {
+        "when": "If metastatic disease is present",
+        "decision": "8"
+      }
+    ],
+    "2": [
+      {
+        "when": "After integrating tissue and staging findings",
+        "decision": "1"
+      },
+      {
+        "when": "If the disease is resectable",
+        "decision": "3"
+      },
+      {
+        "when": "If metastatic disease requires systemic treatment",
+        "decision": "8"
+      }
+    ],
+    "3": [
+      {
+        "when": "If proceeding to resection",
+        "decision": "5"
+      },
+      {
+        "when": "After neoadjuvant treatment or a change in staging",
+        "decision": "1"
+      }
+    ],
+    "4": [
+      {
+        "when": "At reassessment after treatment",
+        "decision": "1"
+      },
+      {
+        "when": "If surgery is selected after multidisciplinary review",
+        "decision": "5"
+      },
+      {
+        "when": "If disease remains locally advanced",
+        "decision": "7"
+      }
+    ],
+    "5": [
+      {
+        "when": "After postoperative recovery and pathology review",
+        "decision": "6"
+      }
+    ],
+    "6": [
+      {
+        "when": "If recurrence is suspected and restaging is needed",
+        "decision": "0"
+      },
+      {
+        "when": "If recurrent disease is metastatic",
+        "decision": "8"
+      }
+    ],
+    "7": [
+      {
+        "when": "If response prompts resectability reassessment",
+        "decision": "1"
+      },
+      {
+        "when": "If distant spread is identified",
+        "decision": "8"
+      }
+    ],
+    "8": [
+      {
+        "when": "If obstruction or tissue requirements need attention",
+        "decision": "2"
+      },
+      {
+        "when": "If new findings require restaging",
+        "decision": "0"
+      }
+    ]
+  },
+  "pnet": {
+    "1": [
+      {
+        "when": "For anatomical and functional staging",
+        "decision": "2"
+      },
+      {
+        "when": "If G3 NET or NEC is being considered",
+        "decision": "8"
+      },
+      {
+        "when": "If hormone-related symptoms require treatment",
+        "decision": "3"
+      }
+    ],
+    "2": [
+      {
+        "when": "For a small nonfunctional tumor",
+        "decision": "4"
+      },
+      {
+        "when": "When an operation is being considered",
+        "decision": "5"
+      },
+      {
+        "when": "If neuroendocrine liver metastases are present",
+        "url": "nelm/",
+        "label": "Open NELM roadmap"
+      }
+    ],
+    "3": [
+      {
+        "when": "To coordinate symptom treatment with staging",
+        "decision": "2"
+      },
+      {
+        "when": "If surgery is being considered",
+        "decision": "5"
+      },
+      {
+        "when": "For the functional-syndrome and crisis-prevention plan",
+        "url": "nelm/#decision-8",
+        "label": "Review hormone-related symptom and crisis care"
+      }
+    ],
+    "4": [
+      {
+        "when": "If resection is selected after assessment",
+        "decision": "5"
+      },
+      {
+        "when": "For surveillance planning",
+        "decision": "9"
+      }
+    ],
+    "5": [
+      {
+        "when": "For regional-node assessment in surgical planning",
+        "decision": "6"
+      },
+      {
+        "when": "If hereditary disease affects the operation",
+        "decision": "7"
+      },
+      {
+        "when": "After resection",
+        "decision": "9"
+      },
+      {
+        "when": "If liver metastases affect the operation being considered",
+        "url": "nelm/#decision-5",
+        "label": "Review NELM surgical cytoreduction"
+      }
+    ],
+    "6": [
+      {
+        "when": "To integrate nodal assessment with the operation",
+        "decision": "5"
+      },
+      {
+        "when": "After pathology review",
+        "decision": "9"
+      }
+    ],
+    "7": [
+      {
+        "when": "If a small nonfunctional tumor is under review",
+        "decision": "4"
+      },
+      {
+        "when": "If hereditary disease affects surgical planning",
+        "decision": "5"
+      }
+    ],
+    "8": [
+      {
+        "when": "If differentiation or grade is uncertain",
+        "decision": "1"
+      },
+      {
+        "when": "To stage confirmed G3 NET or NEC",
+        "decision": "2"
+      },
+      {
+        "when": "If liver metastases need grade-specific management",
+        "url": "nelm/",
+        "label": "Open NELM roadmap"
+      }
+    ],
+    "9": [
+      {
+        "when": "If recurrence is suspected",
+        "decision": "2"
+      },
+      {
+        "when": "If hormone-related symptoms recur",
+        "decision": "3"
+      },
+      {
+        "when": "If liver metastases are found during follow-up",
+        "url": "nelm/#decision-1",
+        "label": "Open NELM assessment"
+      }
+    ]
+  },
+  "pcyst": {
+    "1": [
+      {
+        "when": "If IPMN high-risk features need assessment",
+        "decision": "2"
+      },
+      {
+        "when": "If IPMN worrisome features need assessment",
+        "decision": "3"
+      },
+      {
+        "when": "If the cyst is not IPMN",
+        "decision": "5"
+      }
+    ],
+    "2": [
+      {
+        "when": "For surgical fitness and expected-benefit assessment",
+        "decision": "6"
+      },
+      {
+        "when": "If additional testing would change management",
+        "decision": "4"
+      },
+      {
+        "when": "If an obstructing lesion is confirmed as pancreatic adenocarcinoma",
+        "url": "pdac/#decision-0",
+        "label": "Open PDAC staging assessment"
+      }
+    ],
+    "3": [
+      {
+        "when": "If cyst-fluid testing is appropriate",
+        "decision": "4"
+      },
+      {
+        "when": "If surgery is being considered",
+        "decision": "6"
+      },
+      {
+        "when": "If surveillance is selected",
+        "decision": "8"
+      }
+    ],
+    "4": [
+      {
+        "when": "To integrate the test result with cyst diagnosis",
+        "decision": "1"
+      },
+      {
+        "when": "If surgery is being considered",
+        "decision": "6"
+      },
+      {
+        "when": "If surveillance is selected",
+        "decision": "8"
+      }
+    ],
+    "5": [
+      {
+        "when": "If surgery may be beneficial",
+        "decision": "6"
+      },
+      {
+        "when": "If surveillance is indicated for the established cyst type",
+        "decision": "8"
+      }
+    ],
+    "6": [
+      {
+        "when": "If resection is appropriate and selected",
+        "decision": "7"
+      },
+      {
+        "when": "If surveillance remains appropriate",
+        "decision": "8"
+      },
+      {
+        "when": "If stopping surveillance is being considered",
+        "decision": "9"
+      }
+    ],
+    "7": [
+      {
+        "when": "After resection and final pathology review",
+        "decision": "10"
+      },
+      {
+        "when": "If invasive adenocarcinoma is found after cyst resection",
+        "url": "pdac/#decision-6",
+        "label": "Review the PDAC postoperative pathway"
+      }
+    ],
+    "8": [
+      {
+        "when": "If a high-risk feature appears",
+        "decision": "2"
+      },
+      {
+        "when": "If a worrisome feature appears",
+        "decision": "3"
+      },
+      {
+        "when": "If surveillance benefit or fitness changes",
+        "decision": "9"
+      }
+    ],
+    "9": [
+      {
+        "when": "If operative fitness or anticipated benefit needs clarification",
+        "decision": "6"
+      },
+      {
+        "when": "If surveillance continues after review",
+        "decision": "8"
+      }
+    ],
+    "10": [
+      {
+        "when": "If surveillance of the remnant pancreas is planned",
+        "decision": "8"
+      },
+      {
+        "when": "If a new high-risk feature develops",
+        "decision": "2"
+      }
+    ]
+  },
+  "ampullary": {
+    "0": [
+      {
+        "when": "If an adenoma biopsy may not reflect the full lesion",
+        "decision": "1"
+      },
+      {
+        "when": "If endoscopic removal may be feasible",
+        "decision": "2"
+      },
+      {
+        "when": "If invasive carcinoma is established",
+        "decision": "5"
+      }
+    ],
+    "1": [
+      {
+        "when": "If extent or origin needs further assessment",
+        "decision": "0"
+      },
+      {
+        "when": "If endoscopic removal remains under consideration",
+        "decision": "2"
+      },
+      {
+        "when": "If surgical treatment is being considered",
+        "decision": "4"
+      }
+    ],
+    "2": [
+      {
+        "when": "After papillectomy, review the complete pathology",
+        "decision": "3"
+      },
+      {
+        "when": "If endoscopic removal is unsuitable",
+        "decision": "4"
+      }
+    ],
+    "3": [
+      {
+        "when": "If residual disease or adverse pathology changes the operation",
+        "decision": "4"
+      },
+      {
+        "when": "If surveillance is appropriate",
+        "decision": "9"
+      }
+    ],
+    "4": [
+      {
+        "when": "If pancreaticoduodenectomy is selected for invasive disease",
+        "decision": "5"
+      },
+      {
+        "when": "After treatment, for surveillance planning",
+        "decision": "9"
+      }
+    ],
+    "5": [
+      {
+        "when": "To establish subtype and molecular features",
+        "decision": "6"
+      },
+      {
+        "when": "After postoperative recovery and pathology review",
+        "decision": "7"
+      }
+    ],
+    "6": [
+      {
+        "when": "For adjuvant-treatment assessment",
+        "decision": "7"
+      },
+      {
+        "when": "For advanced-disease treatment",
+        "decision": "8"
+      }
+    ],
+    "7": [
+      {
+        "when": "For follow-up after treatment",
+        "decision": "9"
+      },
+      {
+        "when": "If recurrent disease is advanced",
+        "decision": "8"
+      }
+    ],
+    "8": [
+      {
+        "when": "If subtype or molecular testing needs completion",
+        "decision": "6"
+      },
+      {
+        "when": "If new findings require reassessment of extent",
+        "decision": "0"
+      }
+    ],
+    "9": [
+      {
+        "when": "If recurrence is suspected",
+        "decision": "0"
+      },
+      {
+        "when": "If a new ampullary lesion has an uncertain biopsy",
+        "decision": "1"
+      }
+    ]
+  },
+  "hcc": {
+    "0": [
+      {
+        "when": "For anatomy, liver reserve and curative-treatment comparison",
+        "topic": "cure",
+        "label": "Review curative options"
+      },
+      {
+        "when": "If transplant assessment is relevant",
+        "url": "transplant/hcc/",
+        "label": "Open HCC transplant assessment"
+      },
+      {
+        "when": "After treatment or a change in imaging",
+        "topic": "resp",
+        "label": "Review response assessment"
+      }
+    ],
+    "A": [
+      {
+        "when": "To compare resection, ablation and transplantation",
+        "topic": "cure",
+        "label": "Review curative options"
+      },
+      {
+        "when": "For tumor burden, AFP and allocation assessment",
+        "url": "transplant/hcc/",
+        "label": "Open HCC transplant assessment"
+      },
+      {
+        "when": "When considering liver-directed treatment",
+        "topic": "loco",
+        "label": "Review local treatment selection"
+      }
+    ],
+    "B": [
+      {
+        "when": "For liver-directed treatment selection and feasibility",
+        "topic": "loco",
+        "label": "Review liver-directed therapy"
+      },
+      {
+        "when": "If downstaging or transplant assessment is being considered",
+        "url": "transplant/hcc/#allocation",
+        "label": "Review HCC transplant criteria"
+      },
+      {
+        "when": "If systemic therapy is appropriate",
+        "url": "systemic/?tumor=hcc",
+        "label": "Compare systemic therapies"
+      }
+    ],
+    "C": [
+      {
+        "when": "For systemic treatment selection and precautions",
+        "url": "systemic/?tumor=hcc",
+        "label": "Compare systemic therapies"
+      },
+      {
+        "when": "At treatment-response reassessment",
+        "topic": "resp",
+        "label": "Review response assessment"
+      },
+      {
+        "when": "For symptom care alongside or without cancer treatment",
+        "url": "systemic/?tumor=hcc#supportive",
+        "label": "Best supportive care"
+      }
+    ],
+    "D": [
+      {
+        "when": "If liver dysfunction may be addressed by transplant; assess full suitability",
+        "url": "transplant/hcc/",
+        "label": "Open HCC transplant assessment"
+      },
+      {
+        "when": "For symptom management and goals of care",
+        "url": "systemic/?tumor=hcc#supportive",
+        "label": "Best supportive care"
+      },
+      {
+        "when": "If reversible causes improve or the clinical situation changes",
+        "topic": "resp",
+        "label": "Reassess the treatment plan"
+      }
+    ]
+  }
+}

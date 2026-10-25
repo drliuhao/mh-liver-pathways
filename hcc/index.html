@@ -345,6 +345,8 @@ footer p + p{margin-top:8px}
 }
 @media (prefers-reduced-motion:reduce){ *{transition:none !important} }
 </style>
+<link rel="stylesheet" href="../assets/roadmap-flow.css?v=20261025">
+<script src="../assets/roadmap-flow.js?v=20261025"></script>
 
 <header class="top">
   <div class="devbar">Clinical review draft · Not approved institutional policy · Not an automated eligibility tool.</div>
@@ -1200,18 +1202,9 @@ function recHTML(r){
 }
 function renderStage(id){
   const s = STAGES.find(x=>x.id===id);
-  document.querySelectorAll(".st").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.stage===id)));
-  document.getElementById("answer").innerHTML = `
-    <div class="ahead">
-      <h3>${esc(s.name)}</h3>
-      <span class="chip">${reqLabel(s.req)}: ${esc(s.crit.join(" · "))}</span>
-      <button class="xpand" type="button" id="xpandAll" data-open="0">Expand all</button>
-    </div>
-    <div class="abody">
-      <div class="acol"><div class="eyebrow">Standard</div>${s.standard.map(recHTML).join("")}</div>
-      <div class="acol"><div class="eyebrow">Reasonable alternative</div>${s.alt.map(recHTML).join("")}</div>
-      <div class="acol"><div class="eyebrow">Avoid</div>${s.avoid.map(recHTML).join("")}</div>
-    </div>`;
+  if(!s) return;
+  document.getElementById("answer").innerHTML = RoadmapFlow.render(s,recHTML);
+  RoadmapFlow.update(s);
   try{ localStorage.setItem("hcc.stage", id); }catch(e){}
 }
 /* Child-Pugh: five parameters, 1–3 points each */
@@ -1263,7 +1256,8 @@ document.getElementById("answer").addEventListener("click", e=>{
   const open = b.dataset.open !== "1";
   document.querySelectorAll("#answer details.more").forEach(d=>{ d.open = open; });
   b.dataset.open = open ? "1" : "0";
-  b.textContent = open ? "Collapse all" : "Expand all";
+  b.textContent = open ? "Collapse criteria and evidence" : "Expand criteria and evidence";
+    b.setAttribute("aria-expanded", String(open));
 });
 /* Changing stage must not move the page under the reader: the stage row and the
    answer are both in view on a laptop, and on a phone the answer panel sits
@@ -1278,13 +1272,15 @@ function selectStage(id){
   }
 }
 stageBtns.addEventListener("click", e => {
-  const b = e.target.closest(".st"); if(b) selectStage(b.dataset.stage);
+  const b = e.target.closest(".st"); if(b) RoadmapFlow.navigate(b.dataset.stage);
 });
 document.getElementById("qrow").addEventListener("click", e => {
-  const b = e.target.closest(".goto"); if(b) selectStage(b.dataset.goto);
+  const b = e.target.closest(".goto"); if(b) RoadmapFlow.navigate(b.dataset.goto);
 });
+RoadmapFlow.setup({slug:'hcc',stages:STAGES,select:renderStage,topic:renderTopic});
 let start = "A";
 try{ const v = localStorage.getItem("hcc.stage"); if(v && STAGES.some(s=>s.id===v)) start = v; }catch(e){}
+start = RoadmapFlow.initial(STAGES,start);
 renderStage(start);
 
 /* ---------- topic tabs ---------- */
