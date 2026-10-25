@@ -1,0 +1,107 @@
+/* Systemic-only presentation layer; clinical content and shared pages unchanged. */
+[data-systemic-ui] .evidence-wrap{max-width:1220px;padding-top:20px}
+[data-systemic-ui] .tool-hero{margin:12px 0 18px;max-width:1000px}
+[data-systemic-ui] .tool-hero h1{margin:8px 0 12px}
+[data-systemic-ui] .tool-hero p{margin:8px 0}
+[data-systemic-ui] .matrix-caution{font-size:13px!important;color:var(--muted)}
+[data-systemic-ui] .flow-reading-guide{display:none}
+.review-disclosure{font-size:13px;margin:14px 0 22px;color:var(--muted)}
+.review-disclosure summary{cursor:pointer;color:var(--amber)}
+.review-disclosure p{max-width:95ch;padding:5px 16px;border-left:2px solid #ddb77c}
+.matrix-views{display:flex;gap:5px;border-bottom:2px solid var(--line);padding:0;margin:0 0 16px}
+.matrix-views button{border:0;border-bottom:3px solid transparent;margin-bottom:-2px;padding:12px 18px;background:none;color:var(--muted);cursor:pointer;font-weight:650;font-size:14px}
+.matrix-views button[aria-selected=true]{border-bottom-color:var(--teal);color:var(--teal);background:#e8f1f2;border-radius:6px 6px 0 0}
+.tumor-tabs{position:static;flex-wrap:wrap;overflow:visible;border:0;padding:0;margin:0 0 6px;gap:7px}
+.tumor-tabs button{padding:7px 13px}
+.treatment-controls{display:grid;grid-template-columns:auto minmax(180px,1fr) auto minmax(180px,1fr);gap:8px 12px;padding:12px 0 2px;font-size:13px}
+.treatment-controls #result-count{grid-column:1/-1;color:var(--muted)}
+.treatment-controls #result-count{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%)}
+.treatment-controls input{min-width:0;width:100%}
+.selection-context{font-size:13px;color:var(--muted);margin:8px 0 16px}
+.matrix-panel{outline-offset:4px}
+.matrix-panel h2{font:600 27px/1.25 Georgia,serif;margin:20px 0 8px}
+.matrix-panel .screen-note{margin:8px 0 12px;max-width:95ch}
+.disclosure-controls{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+.options-heading{display:flex;gap:15px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.options-heading h2{margin:12px 0}
+.options-heading .disclosure-controls{margin:12px 0}
+.matrix-reading-note{font-size:12px;color:var(--muted);margin:26px 0}
+.matrix-reading-note>summary{cursor:pointer}
+.disclosure-controls button,.quiet-button{background:#fff;border:1px solid var(--line);border-radius:5px;color:var(--teal);padding:7px 12px;cursor:pointer;font:600 12px/1.5 system-ui}
+.setting-group{margin:25px 0}
+.setting-group>h3{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 9px}
+.regimen-grid{grid-template-columns:1fr;gap:8px;margin:0}
+.regimen-card{padding:0;border:1px solid var(--line);border-radius:7px;overflow:hidden;scroll-margin-top:90px}
+.regimen-card:has(>.regimen-disclosure[open]){border-color:#6c9da5;box-shadow:0 3px 12px #19334308}
+.regimen-card>.regimen-disclosure{border:0;padding:0}
+.regimen-disclosure>summary{display:flex;align-items:center;gap:16px;list-style:none;padding:16px 18px;cursor:pointer}
+.regimen-disclosure>summary::-webkit-details-marker{display:none}
+.regimen-disclosure>summary::before{content:'+';font:500 22px/1 system-ui;color:var(--teal);width:18px;flex-shrink:0}
+.regimen-disclosure[open]>summary::before{content:'−'}
+.regimen-disclosure>summary:hover{background:#f3f8f9}
+.regimen-disclosure[open]>summary{background:#edf5f6;border-bottom:1px solid var(--line)}
+.regimen-label{flex:1;min-width:0;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.regimen-title{font:600 19px/1.35 Georgia,serif;max-width:64ch}
+.regimen-label .badge{flex-shrink:0;max-width:44%;font-size:11px;font-weight:600;line-height:1.5;background:#eef3f4;color:#375b66}
+.disclosure-hint{font-size:11px;font-weight:500;color:var(--muted)}
+.regimen-body{padding:18px 24px 22px 52px;max-width:1040px}
+.regimen-body>p{font-size:15px;line-height:1.65;margin:16px 0}
+.regimen-body .evidence-result{padding:16px 18px}
+.regimen-body .limits{color:var(--ink);border-left:3px solid #bb9b67;padding-left:16px}
+.evidence-source-link{display:block;font-size:12px;font-weight:650;margin-top:10px}
+.regimen-sources{margin-top:18px;scroll-margin-top:90px}
+.regimen-sources>summary{padding:4px 0;font-size:13px}
+.regimen-body .sources{margin:8px 0}
+.regimen-body .sources li:last-child{border-bottom:0}
+.abbreviations{font-size:11px!important}
+.matrix-scroll{margin-top:16px}
+.therapy-matrix td{min-width:190px}
+.therapy-matrix td p{margin-bottom:14px}
+.therapy-matrix .matrix-option{margin-bottom:16px}
+.cell-sources summary{font-size:11px;font-weight:500;color:var(--muted);cursor:pointer;margin-top:6px}
+.cell-sources small{font-size:11px}
+.context-disclosure,.safety-disclosure{background:white;border:1px solid var(--line);border-radius:7px;margin:10px 0}
+.context-disclosure>summary,.safety-disclosure>summary{padding:16px 18px;color:var(--ink);font-weight:650;cursor:pointer;font-size:15px}
+.context-disclosure[open]>summary,.safety-disclosure[open]>summary{background:#edf5f6;border-bottom:1px solid var(--line)}
+.context-body{padding:4px 20px 18px;font-size:14px;line-height:1.7}
+.context-body h4{font-size:13px;color:var(--teal);margin:16px 0 6px}
+.safety-grid{margin:15px 0 26px}
+.context-disclosure#guidelines{margin:20px 0}
+.library-list{grid-template-columns:1fr;gap:0}
+.library-entry{padding:0;border:0;margin:0 0 8px}
+.paper-disclosure{border:1px solid var(--line);border-radius:6px;background:white}
+.paper-disclosure>summary{padding:14px 18px;cursor:pointer;font-weight:600;font-size:14px;line-height:1.5}
+.paper-body{padding:0 20px 16px 34px}
+.paper-body>p{margin:6px 0 12px}
+.paper-body small{display:block;line-height:1.6}
+.context-disclosure .button-row{margin-top:15px}
+.matrix-panel[hidden]{display:none!important}
+@media(max-width:760px){
+ .matrix-views{display:grid;grid-template-columns:1fr 1fr;gap:4px;border-bottom:0}
+ .matrix-views button{margin:0;text-align:center;padding:11px 7px;border:1px solid var(--line);border-radius:5px!important;font-size:12px}
+ .matrix-views button[aria-selected=true]{border:1px solid var(--teal)}
+ .treatment-controls{grid-template-columns:1fr}
+ .treatment-controls label{margin-top:4px}
+ .regimen-label{align-items:flex-start;flex-direction:column;gap:6px}
+ .regimen-label .badge{max-width:100%}
+ .regimen-title{font-size:18px}
+ .disclosure-hint{display:none}
+ .regimen-disclosure>summary{padding:14px;gap:10px}
+ .regimen-body{padding:12px 17px 18px}
+ .regimen-body>p{font-size:14px}
+ .matrix-panel h2{font-size:24px}
+ .tumor-tabs{margin:0;gap:6px}
+ .tumor-tabs button{font-size:12px;padding:7px 10px}
+ .paper-disclosure>summary{padding:13px}
+ .context-body,.paper-body{padding:4px 15px 16px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{
+ .matrix-views,.tumor-tabs,.disclosure-controls,.quiet-button,.selection-context,.evidence-source-link,.review-disclosure{display:none!important}
+ .matrix-panel[hidden]{display:block!important}
+ .regimen-disclosure>summary::before,.disclosure-hint{display:none}
+ .regimen-body{padding:8px 0}
+ .regimen-card{break-inside:auto;margin:12px 0}
+ .regimen-label .badge{max-width:50%}
+ .context-disclosure,.safety-disclosure{break-inside:avoid}
+}
