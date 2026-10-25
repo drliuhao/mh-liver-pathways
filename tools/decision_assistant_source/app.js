@@ -11,7 +11,10 @@ let view = DATA.mode === 'alignment' ? 'meeting' : 'pathway';
 let stepIndex = 0;
 let careId = 'treatment';
 let lastTrigger = null;
-let assistantSession = active ? DecisionAssistant.createSession(active,DATA.assistants) : null;
+let assistantSession = active ? DecisionAssistant.createStagedSession(active,DATA.assistants,!location.hash||location.hash==='#'+active.steps[0].id) : null;
+let decisionTrail=[];
+let focusedCriteria=null;
+let layerActionTargets=[];
 let navigationObserver = null;
 let riskContext = {};
 let riskReference = null;
@@ -73,11 +76,11 @@ function renderView(){
  const out=document.getElementById('view');
  out.setAttribute('role','tabpanel');out.setAttribute('aria-labelledby','tab-'+(view==='risk-reference'?'high-risk':view));
  const content=view==='pathway'?renderStep():view==='meeting'?renderMeeting():view==='evidence'?renderEvidence():view==='high-risk'?HighRisk.overview(DATA.high_risk,active.slug):view==='risk-reference'?renderRiskReference():renderCare();
- out.innerHTML=(view==='pathway'?renderOverview():'')+(view==='care'?'':renderNavigation())+content;
- if(view==='pathway')updateDecision();
+ out.innerHTML=(view==='pathway'?renderOverview():'')+renderNavigation()+content;
+ if(view==='pathway')updateDecision();else if(view==='care')renderLayerStack();
  navigationObserver?.disconnect();
  navigationObserver=new ResizeObserver(syncNavigationHeight);
- const nav=out.querySelector('.pathway-nav');if(nav)navigationObserver.observe(nav);
+ const nav=out.querySelector('.pathway-nav');if(nav)navigationObserver.observe(nav);if(!['pathway','care'].includes(view))renderLayerStack();
  syncNavigationHeight();
 }
 
@@ -90,24 +93,99 @@ function syncNavigationHeight(){
 
 function exampleStatus(){
  const origins=active.steps.map(s=>assistantSession.origins[`${active.slug}/${s.id}`]);
- if(origins.every(x=>x==='example'))return ['Preselected transplant example','Choices show one path toward transplant. Change findings to explore other options.'];
- if(origins.every(x=>x==='empty'))return ['All choices cleared','Choose findings at each decision. No results are assumed.'];
- return ['Exploring different findings','Changing a finding clears later choices. Review those decisions again, or restore the full example.'];
+ if(Object.values(assistantSession.presets||{}).some(a=>Object.keys(a).length))return ['Entry example selected','Only the first finding is preselected toward transplant. Choose each later finding; changing an earlier choice clears later choices.'];
+ if(origins.every(x=>x==='empty'))return ['Choose the first finding','Each new decision starts unanswered. Choices stay in this page only.'];
+ return ['Your decision trail','Earlier choices stay above the current decision. Change an earlier finding to explore a different path.'];
 }
 
 function renderOverview(){
  const status=exampleStatus();
  return `<section class="journey-overview" aria-labelledby="journey-title"><div class="journey-heading"><div><p class="eyebrow">The whole pathway</p><h2 id="journey-title">From diagnosis to transplant and follow-up</h2></div><a href="#care-treatment" data-care="treatment" class="journey-alternative">Browse treatment options →</a></div>
  <details class="journey-map" ${window.matchMedia('(max-width:760px)').matches||active.steps.some(s=>'#'+s.id===location.hash)?'':'open'}><summary>View the whole pathway</summary><nav class="journey-phases" aria-label="Pathway overview">${DATA.journeys[active.slug].map((phase,n)=>{const first=active.steps.findIndex(s=>s.id===phase.steps[0])+1;const last=first+phase.steps.length-1;const current=phase.steps.includes(active.steps[stepIndex].id);return `<button data-step="${e(phase.steps[0])}" class="journey-phase ${current?'current':''}" ${current?'aria-current="true"':''}><span class="phase-number">${n+1}</span><span><b>${e(phase.title)}</b><small>Decision${first===last?'':'s'} ${first}${first===last?'':'–'+last}</small></span><span class="phase-arrow" aria-hidden="true">→</span></button>`;}).join('')}</nav></details>
- <div class="example-controls"><div aria-live="polite"><strong data-example-status>${e(status[0])}</strong><p data-example-description>${e(status[1])}</p></div><div class="example-buttons"><button data-pathway-example>Restore transplant example</button><button data-pathway-clear>Clear all choices</button></div></div></section>`;
+ <div class="example-controls"><div aria-live="polite"><strong data-example-status>${e(status[0])}</strong><p data-example-description>${e(status[1])}</p></div><div class="example-buttons"><button data-pathway-example>Restart with entry example</button><button data-pathway-clear>Clear all choices</button></div></div></section>`;
 }
 
 function renderNavigation(){
- const s=active.steps[stepIndex];
- const origin=assistantSession.origins[assistantKey()];
- const label=origin==='example'?'Example choices':origin==='edited'?'Choices changed':'Choices needed';
- return `<div class="pathway-nav"><div class="pathway-location"><span><b>${e(active.code)}</b> <span class="location-count">Decision ${stepIndex+1} of ${active.steps.length}</span><span class="location-title">${e(s.title)}</span></span><div class="location-tools"><span class="selection-label" data-selection-label>${label}</span><button data-pathway-overview>Overview ↑</button></div></div>
- <nav class="stepstrip" aria-label="${e(active.code)} decision steps">${active.steps.map((s,i)=>`<button class="step-tab ${i===stepIndex?'active':''}" data-step="${s.id}" ${i===stepIndex?'aria-current="step"':''}><span>${String(i+1).padStart(2,'0')}</span><b>${e(s.title)}</b></button>`).join('')}</nav></div>`;
+ return `<div class="pathway-nav layer-nav" aria-label="Decision trail"><div class="layer-heading"><b>${e(active.code)} · Decision trail</b><button data-pathway-overview>All decisions</button></div><div id="layer-history" class="layer-history"></div><div id="layer-current" class="layer-current"></div></div>`;
+}
+function layerQuestionRow(step,q,value,number,example=false,risk=false){
+ const key=active.slug+'/'+step.id,short=window.ContextualCopy?.help?.[key+'/'+q.id]?.label||q.label;
+ const selected=q.options.find(o=>o.value===value),id='layer-'+(risk?'risk-':'')+step.id+'-'+q.id;
+ return `<div class="layer-row ${value?'is-chosen':'is-current'}"><span class="layer-number">${number}</span><div class="layer-choice"><label for="${e(id)}"><small>${e(step.title)}${example?' · entry example':''}</small>${e(short)}</label><select id="${e(id)}" data-layer-step="${e(step.id)}" data-layer-${risk?'risk':'question'}="${e(q.id)}"><option value="">Choose a finding…</option>${q.options.map(o=>`<option value="${e(o.value)}" ${o.value===value?'selected':''}>${e(o.label)}</option>`).join('')}</select>${selected?`<span class="layer-value">${e(selected.label)}</span>`:''}</div><button class="layer-criteria" data-layer-criteria="${e(q.id)}" data-layer-step="${e(step.id)}" ${risk?'data-risk-criteria':''}>Criteria</button></div>`;
+}
+function renderLayerStack(){
+ const historyEl=document.getElementById('layer-history'),currentEl=document.getElementById('layer-current');if(!historyEl)return;
+ if(view==='care'&&!currentCareOrigin()){historyEl.innerHTML='';currentEl.innerHTML='<div class="layer-care"><b>Care reference · no findings attached</b><button data-view="pathway">Decision choices →</button></div>';return;}
+ if(!['pathway','care'].includes(view)){historyEl.innerHTML='';currentEl.innerHTML='<button data-view="pathway">Return to decision choices →</button>';return;}
+ const coreResult=view==='pathway'?DecisionAssistant.evaluate(assistantConfig(),assistantSession.answers[assistantKey()],active.steps[stepIndex].branches):null;
+ const stopEarly=coreResult?.state==='matched'&&coreResult.kind==='stop';
+ const current=active.steps[stepIndex],visited=[...decisionTrail.filter(id=>id!==current.id),current.id];let chosen='',pending='',n=0;
+ for(const id of visited){const step=active.steps.find(s=>s.id===id);if(!step)continue;const key=active.slug+'/'+id,config=DATA.assistants[key],answers=assistantSession.answers[key];
+  for(const q of (id===current.id&&stopEarly?config.questions.filter(q=>answers[q.id]):DecisionAssistant.visibleQuestions(config,answers))){
+   const value=answers[q.id]||'';
+   if(id!==current.id&&!value)continue;
+   const row=layerQuestionRow(step,q,value,++n,assistantSession.presets?.[key]?.[q.id]===value);
+   if(value)chosen+=row;else if(view==='pathway')pending=row;
+  }
+  if((id!==current.id||view==='care')&&riskContext[key]){
+   const index=active.steps.findIndex(s=>s.id===id),extra=RiskRouting.evaluate(active,index,assistantSession,riskContext,DATA.assistants).questions;
+   for(const question of extra){const value=riskContext[key][question.id];if(!value)continue;const q={...question,options:question.options.map(([value,label])=>({value,label}))};chosen+=layerQuestionRow(step,q,value,++n,false,true);}
+  }
+ }
+ // Additional high-risk and safety findings join the same sequential trail.
+ if(view==='pathway'){
+  const coreDone=assistantConfig().questions.every(q=>!!assistantSession.answers[assistantKey()][q.id]);
+  const riskRows=[...document.querySelectorAll('#risk-question-panel .risk-question')];let riskPending=false;
+  riskRows.forEach(node=>{const select=node.querySelector('select'),id=select.dataset.riskQuestion,value=riskContext[assistantKey()]?.[id]||'';select.value=value;
+   const allowed=coreDone&&!riskPending&&!stopEarly;node.hidden=!allowed;select.classList.add('layer-source-select');node.classList.add('layer-question-detail');
+   if(stopEarly){node.hidden=false;select.classList.remove('layer-source-select');return;}
+   if(!allowed)return;
+   const q={id,label:node.querySelector('label').textContent,options:[...select.options].slice(1).map(o=>({value:o.value,label:o.textContent}))};
+   const row=layerQuestionRow(current,q,value,++n,false,true);
+   if(value){chosen+=row;node.hidden=true;}else{pending=row;riskPending=true;}
+  });
+  const riskSection=document.querySelector('.risk-questions');if(riskSection)riskSection.hidden=!riskRows.some(n=>!n.hidden);
+ }
+ historyEl.innerHTML=chosen;
+ layerActionTargets=[];
+ if(view==='pathway'){
+  const config=assistantConfig(),answers=assistantSession.answers[assistantKey()],visible=DecisionAssistant.visibleQuestions(config,answers),last=visible[visible.length-1];
+  const riskPending=!!document.querySelector('#risk-question-panel .risk-question:not([hidden])');
+  const display=focusedCriteria||(!riskPending?(stopEarly?config.questions.filter(q=>answers[q.id]).at(-1)?.id:last.id):null);
+  document.querySelectorAll('.assistant-question').forEach(node=>{const id=node.querySelector('select').dataset.assistantQuestion;node.hidden=id!==display;node.classList.add('layer-question-detail');node.querySelector('select').classList.add('layer-source-select');});
+  const allAnswered=config.questions.every(q=>!!answers[q.id]);
+  if((allAnswered&&!riskPending)||stopEarly){
+   layerActionTargets=[...document.querySelectorAll('#current-result .next-action > .route-button')].filter(node=>!node.closest('[data-afp-review]'));
+   if(layerActionTargets.length)pending=`<div class="layer-row is-current"><span class="layer-number">${n+1}</span><div class="layer-choice"><label for="layer-next-action">Next step</label><select id="layer-next-action" data-layer-action><option value="">Choose an action…</option>${layerActionTargets.map((node,i)=>`<option value="${i}">${e(node.textContent.trim().replace(/\s*→$/,''))}</option>`).join('')}</select></div><button class="layer-criteria" data-layer-options>Options &amp; criteria</button></div>`;
+  }
+ }else pending=`<div class="layer-care"><b>Care plan: ${e(DATA.care[active.slug].find(c=>c.id===careId)?.title||careId)}</b><button data-view="pathway">Review findings</button></div>`;
+ if(view==='pathway'){
+  const missingRisk=!stopEarly&&!!document.querySelector('#risk-question-panel .risk-question:not([hidden])');
+  const result=document.getElementById('current-result');result.querySelector('.layer-missing-note')?.remove();
+  if(missingRisk&&coreResult.kind==='advance'){const note=document.createElement('p');note.className='layer-missing-note';note.textContent='Choose the remaining finding above before continuing to the next assessment.';result.prepend(note);}
+  result.querySelectorAll('.next-action button[data-step]').forEach(button=>{button.disabled=!!(missingRisk&&coreResult.kind==='advance'&&active.steps.findIndex(s=>s.id===button.dataset.step)>stepIndex);});
+ }
+ currentEl.innerHTML=pending;
+ document.querySelector('.pathway-nav').classList.toggle('has-layer-history',!!chosen);
+
+ syncNavigationHeight();
+}
+function editLayer(stepId,id,value){
+ const index=active.steps.findIndex(s=>s.id===stepId);if(index<0)return;
+ const changed=DecisionAssistant.changeStagedAnswer(assistantSession,active,DATA.assistants,index,id,value);if(!changed)return;
+ const found=decisionTrail.indexOf(stepId);if(found>=0)decisionTrail=decisionTrail.slice(0,found);
+ else decisionTrail=decisionTrail.filter(x=>active.steps.findIndex(s=>s.id===x)<index);
+ stepIndex=index;view='pathway';focusedCriteria=null;RiskRouting.clearFrom(riskContext,active,index);
+ history.replaceState(null,'','#'+stepId);renderView();
+ const next=document.querySelector('#layer-current select')||document.querySelector('#layer-history select:last-of-type');next?.focus({preventScroll:true});
+}
+function showLayerCriteria(stepId,id,riskQuestion=false){
+ const index=active.steps.findIndex(s=>s.id===stepId);if(index<0)return;
+ if(index!==stepIndex){const found=decisionTrail.indexOf(stepId);decisionTrail=found>=0?decisionTrail.slice(0,found):[];stepIndex=index;view='pathway';history.pushState(null,'','#'+stepId);}
+ focusedCriteria=id;renderView();
+ const risk=riskQuestion?document.getElementById('risk-'+id)?.closest('.risk-question'):null;if(risk){risk.hidden=false;risk.closest('.risk-questions').hidden=false;risk.scrollIntoView({block:'start',behavior:'instant'});return;}
+ const node=document.querySelector(`[data-definitions="${id}"]`),details=node?.querySelector('details[data-relevant="true"]')||node?.querySelector('details');if(details)details.open=true;
+ const target=details?node?.closest('.assistant-question'):document.querySelector('.assistant-question:not([hidden]) .assistant-help-criteria')||document.querySelector('.full-tests');if(target?.tagName==='DETAILS')target.open=true;target?.scrollIntoView({block:'start',behavior:'instant'});target?.querySelector('summary')?.focus({preventScroll:true});
 }
 
 function updateExampleLabels(){
@@ -118,7 +196,7 @@ function updateExampleLabels(){
  const label=document.querySelector('[data-selection-label]');
  if(label)label.textContent=origin==='example'?'Example choices':origin==='edited'?'Choices changed':'Choices needed';
  const intro=document.querySelector('.assistant-intro');
- if(intro)intro.textContent=origin==='example'?'Example findings are preselected. Change a choice to explore.':origin==='edited'&&stepIndex<active.steps.length-1?'Findings changed. Later decisions have been cleared; review them again before continuing.':'Choose the findings that matter for this decision. The matching next step will be highlighted.';
+ if(intro)intro.textContent=origin==='example'?'The first finding is a transplant-oriented example. Each later finding needs a choice.':origin==='edited'&&stepIndex<active.steps.length-1?'Choose the next unanswered finding. Earlier choices remain above.':'Choose the findings that matter for this decision. The matching next step will be highlighted.';
 }
 
 function highRiskAction(a){
@@ -197,6 +275,7 @@ function updateDecision(){
   destination.insertAdjacentHTML('beforeend',`<div class="risk-next-options">${content}</div>`);
  }
  streamlineResult(out,result,context);
+ renderLayerStack();
  return result;
 }
 function streamlineResult(out,result,context){
@@ -219,7 +298,7 @@ function streamlineResult(out,result,context){
  if(selected){
   const config=assistantConfig(),answers=assistantSession.answers[assistantKey()];
   const when=config.rules[result.ruleIndex]?.when;
-  const ids=when?Object.keys(when):config.questions.filter(q=>!answers[q.id]||answers[q.id]==='unknown').map(q=>q.id);
+  const ids=when?Object.keys(when):config.questions.filter(q=>answers[q.id]).map(q=>q.id);
   const facts=ids.map(id=>{const q=config.questions.find(q=>q.id===id);const label=q?.options.find(o=>o.value===answers[id])?.label;return label?q.label.replace(/\?$/,'')+': '+label:q?.label;}).filter(Boolean);
   context.questions.forEach(q=>{const value=riskContext[assistantKey()]?.[q.id];const label=q.options.find(o=>o[0]===value)?.[1];if(label)facts.push(q.label.replace(/\?$/,'')+': '+label);});
   if(facts.length&&result.kind!=='advance'&&Object.values(answers).some(Boolean))selected.insertAdjacentHTML('afterbegin',`<p class="selected-basis"><b>${assistantSession.origins[assistantKey()]==='example'?'Example findings':'Selected findings'}</b> ${[...new Set(facts)].map(e).join(' · ')}</p>`);
@@ -341,9 +420,13 @@ function showSource(id, trigger){
  d.showModal();
 }
 
-function setStep(id,push=true){
+function setStep(id,push=true,fromAction=false){
  const index=active.steps.findIndex(s=>s.id===id);if(index<0)return;
- stepIndex=index;view='pathway';if(push)history.pushState(null,'','#'+id);renderView();
+ const previous=active.steps[stepIndex].id,found=decisionTrail.indexOf(id);
+ if(found>=0)decisionTrail=decisionTrail.slice(0,found);
+ else if(fromAction&&id!==previous){if(!decisionTrail.includes(previous))decisionTrail.push(previous);}
+ else if(id!==previous)decisionTrail=[];
+ focusedCriteria=null;stepIndex=index;view='pathway';if(push)history.pushState({decisionTrail:[...decisionTrail]},'','#'+id);renderView();
  document.getElementById('question').focus({preventScroll:true});
  document.querySelector('.decision').scrollIntoView({block:'start',behavior:'instant'});
 }
@@ -362,7 +445,7 @@ function hashState(){
  if(h==='high-risk'){view='high-risk';renderView();return;}
  if(h.startsWith('care-')&&DATA.care[active.slug].some(p=>p.id===h.slice(5))){view='care';careId=h.slice(5);careOriginToken=history.state?.careToken||null;}
  else if(DATA.mode==='alignment'&&active.issues.some(i=>i.id===h))view='meeting';
- else if(idx>=0){view='pathway';stepIndex=idx;}
+ else if(idx>=0){view='pathway';if(idx!==stepIndex){const saved=history.state?.decisionTrail;const found=decisionTrail.indexOf(h);decisionTrail=Array.isArray(saved)?saved.filter(id=>{const key=active.slug+'/'+id;return id!==h&&DATA.assistants[key]?.questions.every(q=>!!assistantSession.answers[key]?.[q.id]);}):found>=0?decisionTrail.slice(0,found):[];focusedCriteria=null;}stepIndex=idx;}
  else if(h==='evidence')view='evidence';
  else if(h==='meeting'||active.issues.some(i=>i.id===h)||DATA.mode==='alignment')view='meeting';
  else view='pathway';
@@ -387,24 +470,28 @@ document.addEventListener('input',ev=>{
 
 document.addEventListener('change',ev=>{
  if(!active)return;
+ if(ev.target.matches('[data-layer-action]')){const target=layerActionTargets[Number(ev.target.value)];if(ev.target.value!==''&&target)target.click();return;}
+ if(ev.target.matches('[data-layer-risk]')){const id=ev.target.dataset.layerRisk,value=ev.target.value,step=ev.target.dataset.layerStep,index=active.steps.findIndex(s=>s.id===step);if(index!==stepIndex){const found=decisionTrail.indexOf(step);decisionTrail=found>=0?decisionTrail.slice(0,found):[];stepIndex=index;view='pathway';history.replaceState(null,'','#'+step);renderView();}const select=document.getElementById('risk-'+id);if(select){select.value=value;select.dispatchEvent(new Event('change',{bubbles:true}));}return;}
+ if(ev.target.matches('[data-layer-question]')){editLayer(ev.target.dataset.layerStep,ev.target.dataset.layerQuestion,ev.target.value);return;}
  if(ev.target.matches('[data-care-select]')){careId=ev.target.value;careOriginToken=null;view='care';history.replaceState(null,'','#care-'+careId);renderView();document.querySelector('.care-alternatives').open=true;document.getElementById('care-topic').focus();return;}
  const riskId=ev.target.dataset.riskQuestion;
  if(riskId){
-  const key=assistantKey();riskContext[key]||={};riskContext[key][riskId]=ev.target.value;
+  const key=assistantKey();riskContext[key]||={};
+  const questions=[...document.querySelectorAll('#risk-question-panel [data-risk-question]')].map(n=>n.dataset.riskQuestion),position=questions.indexOf(riskId);
+  questions.slice(position+1).forEach(id=>delete riskContext[key][id]);
+  riskContext[key][riskId]=ev.target.value;
   if(riskId==='ici')delete riskContext[key].ici_review;
   RiskRouting.clearFrom(riskContext,active,stepIndex+1);DecisionAssistant.clearFrom(assistantSession,active,stepIndex+1);assistantSession.origins[key]='edited';
-  updateDecision();document.getElementById('risk-'+riskId)?.focus({preventScroll:true});return;
+  focusedCriteria=null;updateDecision();document.querySelector('#layer-current select')?.focus({preventScroll:true});return;
  }
  const id=ev.target.dataset.assistantQuestion;if(!id)return;
  const config=assistantConfig(),q=config.questions.find(q=>q.id===id);if(!q)return;
- DecisionAssistant.changeAnswer(assistantSession,active,stepIndex,id,ev.target.value);
- RiskRouting.clearFrom(riskContext,active,stepIndex);
- const answers=assistantSession.answers[assistantKey()];
- document.querySelector(`[data-definitions="${id}"]`).innerHTML=DecisionAssistant.definitions(q,answers[id],DATA.sources);
- updateDecision();
+ editLayer(active.steps[stepIndex].id,id,ev.target.value);
 });
 
 document.addEventListener('click',ev=>{
+ const criteria=ev.target.closest('[data-layer-criteria]');if(criteria){showLayerCriteria(criteria.dataset.layerStep,criteria.dataset.layerCriteria,criteria.hasAttribute('data-risk-criteria'));return;}
+ if(ev.target.closest('[data-layer-options]')){const target=document.getElementById('current-result');target.querySelectorAll('.branch-details').forEach(d=>d.open=true);target.scrollIntoView({block:'start',behavior:'instant'});return;}
  const highRisk=ev.target.closest('[data-high-risk]');if(highRisk){ev.preventDefault();showHighRisk(highRisk.dataset.highRisk);return;}
  if(ev.target.closest('[data-pathway-overview]')){
   if(view!=='pathway'){view='pathway';history.pushState(null,'','#'+active.steps[stepIndex].id);renderView();}
@@ -414,18 +501,18 @@ document.addEventListener('click',ev=>{
  }
  if(ev.target.closest('[data-pathway-example],[data-pathway-clear]')){
   const examples=!!ev.target.closest('[data-pathway-example]');
-  assistantSession=DecisionAssistant.createSession(active,DATA.assistants,examples);riskContext={};clearCareOrigins();
+  assistantSession=DecisionAssistant.createStagedSession(active,DATA.assistants,examples);riskContext={};clearCareOrigins();decisionTrail=[];focusedCriteria=null;stepIndex=0;view='pathway';history.replaceState(null,'','#'+active.steps[0].id);
   renderView();document.querySelector(examples?'[data-pathway-example]':'[data-pathway-clear]').focus({preventScroll:true});return;
  }
  const care=ev.target.closest('[data-care]');if(care){ev.preventDefault();showCare(care);return;}
  if(ev.target.closest('[data-assistant-reset]')){
-  clearCareOrigins();DecisionAssistant.clearFrom(assistantSession,active,stepIndex);RiskRouting.clearFrom(riskContext,active,stepIndex);renderView();document.querySelector('[data-assistant-reset]').focus({preventScroll:true});return;
+  focusedCriteria=null;clearCareOrigins();DecisionAssistant.clearFrom(assistantSession,active,stepIndex);RiskRouting.clearFrom(riskContext,active,stepIndex);renderView();document.querySelector('[data-assistant-reset]').focus({preventScroll:true});return;
  }
  if(ev.target.closest('[data-assistant-show]')){const target=document.querySelector('.results .branch.is-highlighted:not([hidden])')||document.getElementById('decision-results');target.scrollIntoView({block:'start',behavior:'instant'});return;}
 
  const cite=ev.target.closest('[data-ref]');if(cite){showSource(cite.dataset.ref,cite);return;}
  if(ev.target.closest('.close-dialog')){document.getElementById('source-dialog').close();return;}
- const step=ev.target.closest('[data-step]');if(step&&!step.disabled){ev.preventDefault();setStep(step.dataset.step);return;}
+ const step=ev.target.closest('[data-step]');if(step&&!step.disabled){ev.preventDefault();setStep(step.dataset.step,true,!!step.closest('.next-action'));return;}
  const tab=ev.target.closest('[data-view]');if(tab){ev.preventDefault();view=tab.dataset.view;if(view==='care')careOriginToken=null;history.pushState(null,'',view==='pathway'?'#'+active.steps[stepIndex].id:view==='care'?'#care-'+careId:'#'+view);renderView();return;}
  const issue=ev.target.closest('[data-issue]');if(issue){ev.preventDefault();history.pushState(null,'','#'+issue.dataset.issue);document.getElementById(issue.dataset.issue).scrollIntoView({block:'start'});}
 });

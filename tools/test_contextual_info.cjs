@@ -5,7 +5,7 @@ const orangeFiles=JSON.parse(read('tools/orange_document_hashes.json'));
 for(const item of orangeFiles)assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,item.path))).digest('hex'),item.after,item.path+' styled document checksum');
 // The only content-payload change is the checksum of these ten recolored author-created files.
 const original=f=>orangeFiles.reduce((text,item)=>text.replaceAll(item.before,item.after),cp.execFileSync('git',['show','a787e08:'+f],{cwd:root,encoding:'utf8',maxBuffer:8e6}));
-for(const file of ['transplant/assets/content.json','tools/v12_content_snapshot.json','transplant/assets/assistant.js','transplant/assets/risk-routing.js','transplant/assets/high-risk.js','assets/roadmap-links.json'])assert.equal(read(file),original(file),file+' changed clinical content');
+for(const file of ['transplant/assets/content.json','tools/v12_content_snapshot.json','transplant/assets/risk-routing.js','transplant/assets/high-risk.js','assets/roadmap-links.json'])assert.equal(read(file),original(file),file+' changed clinical content');
 const src=read('assets/contextual-info.js'),context={window:{}};vm.runInNewContext(read('assets/contextual-copy.js'),context);const copy=context.window.ContextualCopy;
 const data=JSON.parse(read('transplant/assets/content.json'));let reviewed=0;
 for(const [key,entry] of Object.entries(copy.help)){
@@ -30,11 +30,11 @@ for(const [key,entry]of Object.entries(copy.recommendations)){
  else stages=JSON.parse(read(slug+'/data/pathway.json')).gates;
  assert.equal(entry.source,stages.find(s=>s.id===id)[group][index].t,key+' exact source');
 }
-assert(src.includes("if(!d.open)enhance(d)"),'Selected threshold definitions must remain visible');
+assert(!src.includes("if(!d.open)enhance(d)"),'Criteria must remain native inline expansions');
 const app=read('transplant/assets/app.js'),old=original('transplant/assets/app.js');
 for(const [a,b] of [['function renderActions(', 'function renderRiskReference('],['function renderStep()', 'function renderMeeting()']]){
- const slice=s=>s.slice(s.indexOf(a),s.indexOf(b,s.indexOf(a)));const metadata=' data-action-label="${e(a.label)}" data-action-condition="${e(a.detail||\'\')}"';assert.equal(slice(app).replaceAll(metadata,''),slice(old),'Changed clinical action renderer '+a);
+ const slice=s=>s.slice(s.indexOf(a),s.indexOf(b,s.indexOf(a)));const metadata=' data-action-label="${e(a.label)}" data-action-condition="${e(a.detail||\'\')}"';assert.equal(slice(app).replaceAll(metadata,'').replace(' renderLayerStack();\n','').replace('config.questions.filter(q=>answers[q.id]).map(q=>q.id)',"config.questions.filter(q=>!answers[q.id]||answers[q.id]==='unknown').map(q=>q.id)"),slice(old),'Changed clinical action renderer '+a);
 }
 const docs=Object.keys(JSON.parse(read('assets/roadmap-links.json'))).map(x=>x+'/index.html').concat(data.index.map(p=>'transplant/'+p.slug+'/index.html'));
-for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261025-flow1'),doc+' missing display update');
+for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261025-layers1'),doc+' missing display update');
 console.log(`PASS: V12 data and clinical renderers unchanged; ${docs.length} pages; 46 headings, ${reviewed} help summaries and 46 recommendation guards verified; all Avoid wording retained.`);

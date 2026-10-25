@@ -1,0 +1,44 @@
+/* The same display hierarchy serves both roadmaps and transplant decisions. */
+.layer-nav,.roadmap-streamlined .rf-selector{display:block;position:sticky;top:0;z-index:45;background:#fff;border:1px solid #b9cdc8;border-radius:10px;box-shadow:0 4px 16px #173c3020;padding:0;overflow:visible;margin:18px 0}
+.layer-heading{display:flex;align-items:center;gap:12px;padding:8px 14px;color:#204d46;font:600 12px/1.35 var(--sans,system-ui)}
+.layer-heading>b{margin-right:auto}.layer-heading button,.layer-heading a{font:500 12px var(--sans,system-ui);padding:5px 8px;color:#205f53;background:#f3f8f6;border:1px solid #d1ded9;border-radius:5px;cursor:pointer}
+.layer-history{max-height:min(28dvh,240px);overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;border-top:1px solid #dce6e2}
+.layer-history:empty{display:none}.layer-row{display:flex;align-items:center;gap:10px;padding:8px 14px;border-bottom:1px solid #e2eae7;background:#f8fbfa}
+.layer-number{width:24px;height:24px;display:grid;place-items:center;flex:0 0 24px;border-radius:50%;background:#e3eeea;color:#315d51;font:600 12px system-ui}
+.layer-choice{min-width:0;flex:1}.layer-choice label{display:block!important;color:#263c35;font:600 12px/1.35 var(--sans,system-ui)!important;margin:0 0 4px!important;max-width:none!important}
+.layer-choice label small{display:inline;color:#566c63;font-size:10px;font-weight:500;margin-right:8px}
+.layer-choice select{display:block;width:100%;min-width:0;max-width:100%;margin:0!important;border:1px solid #b9cec5!important;border-radius:6px!important;padding:8px 30px 8px 10px!important;color:#173f34!important;background:#fff!important;font:500 14px/1.4 var(--sans,system-ui)!important;min-height:38px}
+.layer-value{display:block;font:400 11px/1.4 var(--sans,system-ui);color:#425c50;margin-top:3px;overflow-wrap:anywhere}
+.layer-current .layer-row{background:#edf5f1;border-left:3px solid #276b56;border-bottom:0;border-radius:0 0 10px 10px}
+.layer-current .layer-number{color:#fff;background:#276b56}.layer-criteria{flex:0 0 auto;max-width:100px;white-space:normal!important;font:600 12px/1.3 var(--sans,system-ui)!important;border:1px solid #b3cbbf!important;border-radius:6px;background:#fff!important;color:#225544!important;padding:9px!important;cursor:pointer}
+.layer-nav :is(select,button):focus-visible,.rf-selector :is(select,button):focus-visible{outline:3px solid #cc8f29;outline-offset:2px}
+.layer-care{padding:10px 14px;display:flex;gap:12px;align-items:center;font-size:13px;background:#edf5f1}.layer-care button{margin-left:auto}
+.layer-question-detail{scroll-margin-top:calc(var(--pathway-nav-height,180px) + 12px)}
+.layer-question-detail .layer-source-select,.layer-question-detail>.assistant-selected{display:none!important}
+.assistant-question[hidden],.risk-question[hidden]{display:none!important}
+.layer-question-detail>label{font-size:16px!important}.layer-question-detail .assistant-definitions{margin-top:8px}
+.assistant-criteria,.branch-details,.roadmap-streamlined .rf-criteria,#answer details.more:not(.ci-source){border:1px solid #cedbd5;border-radius:7px;padding:10px 12px;background:#f7faf8;margin:10px 0;font-size:13px}
+.assistant-criteria>summary,.branch-details>summary,.roadmap-streamlined .rf-criteria>summary,#answer details.more:not(.ci-source)>summary{cursor:pointer;color:#234f40;font:600 13px/1.5 var(--sans,system-ui)}
+.layer-nav~.decision #current-result,.care-view{scroll-margin-top:calc(var(--pathway-nav-height,180px) + 14px)}
+.roadmap-streamlined header.top{position:relative;top:auto}.roadmap-streamlined #answer,.roadmap-streamlined .rf-related,.roadmap-streamlined .rf-criteria{scroll-margin-top:calc(var(--roadmap-trail-height,180px) + 12px)}
+.roadmap-streamlined .rf-selector{margin-top:18px}.roadmap-streamlined .rf-selector .ci-reading{margin:5px 12px}
+.roadmap-streamlined .optline.bad{padding:8px 10px;margin:8px 0;border-left:3px solid #aa5841;background:#fff7f3;color:#713924}
+.roadmap-streamlined .callout.amber{margin-top:10px}.care-breadcrumb{position:relative!important;top:auto!important}
+@media(max-width:760px){.layer-heading{padding:6px 9px;gap:7px}.layer-row{padding:7px 9px;gap:7px}.layer-number{width:20px;height:20px;flex-basis:20px;font-size:11px}.layer-choice label{font-size:11px!important}.layer-choice label small{display:block;font-size:9px}.layer-choice select{font-size:16px!important;padding:7px 24px 7px 8px!important;min-height:38px}.layer-criteria{max-width:67px;font-size:11px!important;padding:8px 5px!important}.layer-history{max-height:24dvh}.layer-value{font-size:10px}.layer-nav,.roadmap-streamlined .rf-selector{margin:10px 0}.layer-care{font-size:12px;padding:9px}}
+@media print{.layer-nav,.rf-selector{display:none!important}.assistant-question[hidden],.risk-question[hidden]{display:block!important}.layer-question-detail .layer-source-select{display:block!important}.assistant-criteria,.branch-details,.rf-criteria,#answer details.more{break-inside:avoid}}
+
+@media(min-width:761px){.layer-history .layer-choice{display:grid;grid-template-columns:minmax(180px,30%) minmax(0,1fr);gap:8px;align-items:center}.layer-history .layer-choice label{margin:0!important}.layer-history .layer-choice label small{display:block}.layer-history .layer-value{display:none}.layer-history .layer-row{min-height:55px}.layer-history{max-height:30dvh}}
+.layer-source-select{display:none!important}
+
+.rf-background-reference{border:1px solid #d4e0da;background:#fff;border-radius:8px;padding:10px 14px;margin:14px 0}.rf-background-reference>summary{cursor:pointer;font:600 13px/1.4 var(--sans,system-ui);color:#305d4d}.rf-background-reference[open]>summary{margin-bottom:12px}
+.layer-history{scrollbar-gutter:stable}
+
+.layer-missing-note{padding:12px;border-left:3px solid #946324;background:#fff8e9;color:#674311;font:600 13px/1.5 var(--sans,system-ui)}
+
+.decision-grid>*{min-width:0}.layer-question-detail .ci-trigger{max-width:100%}.layer-question-detail .ci-label{min-width:0;overflow-wrap:anywhere}
+@media(max-width:900px){.decision-grid{grid-template-columns:minmax(0,1fr)}}
+/* A pending result shares its name with the meeting badge; reset badge nowrap. */
+.results .branch,.results .branch p,.results .next-action{white-space:normal;overflow-wrap:anywhere}
+.assistant-criteria,.branch-details,.full-tests,.risk-question{scroll-margin-top:calc(var(--pathway-nav-height,180px) + 12px)}
+
+.ci-trigger,.question-head{scroll-margin-top:calc(var(--pathway-nav-height,var(--roadmap-trail-height,180px)) + 12px)}

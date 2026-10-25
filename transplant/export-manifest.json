@@ -101,11 +101,11 @@
   "research_data_kits": 0,
   "care_plans": 26,
   "documentation_changes": "Reviewed all 46 transplant decisions and 45 linked discussion questions for explicit treatment, transplant-listing and MELD-exception language. Added next actions for every decision result, including conditional AFP treatment choices, reassessment after treatment, and best supportive care. NCCN sources cite original PDF pages. Existing selection thresholds and matching rules are retained; Word documents keep their separately dated wording. No recording, signatures, export or persistent storage.",
-  "interface_revision": "2026-10-24",
-  "example_presets": 46,
+  "interface_revision": "2026-10-25",
+  "example_presets": 7,
   "journey_overviews": 7,
   "sticky_decision_navigation": true,
-  "interface_changes": "Each pathway opens with clearly labeled example choices toward transplantation. A four-stage overview and sticky step navigation show the full journey. Restore-example and clear-all controls are available. Changing a finding clears later examples; no automatic refill on navigation. No clinical criteria or matching rules changed.",
+  "interface_changes": "Added a pinned, layered decision trail to all 12 roadmaps and seven transplant pathways. Only the first transplant finding is preselected as a labeled example; each later finding and action starts unanswered. Changing an earlier finding clears later questions and decisions. Selection criteria expand inline, explanations use information panels, and cautions remain visible. Supplemental safety questions join the same trail; treatment and high-risk alternatives remain available when a standard path stops. Desktop and phone checks cover 46 decisions and 103 roadmap topics. Clinical matching rules, source evidence and orange high-risk documents are retained.",
   "high_risk_integration": "2026-10-24",
   "high_risk_reviews": 21,
   "high_risk_protocol_pdfs": 7,
@@ -118,5 +118,11 @@
   "afp_review_revision": "2026-10-24",
   "afp_review": "Separate AFP-related clinical and individual allocation review at allocation, treatment, listing and waitlist decisions. This is not enrollment in the beyond-UNOS tumor-burden pilot; standard AFP thresholds and existing study criteria are unchanged.",
   "evidence_organization_revision": "2026-10-24",
-  "evidence_organization": "Status, proposed position and next action precede open criteria. Searchable study summaries pair results with limitations and retain population and time-origin wording. One access record per source within each review; authority types, review coverage and approval limits are explicit. No selection criteria or matching rules changed."
+  "evidence_organization": "Status, proposed position and next action precede open criteria. Searchable study summaries pair results with limitations and retain population and time-origin wording. One access record per source within each review; authority types, review coverage and approval limits are explicit. No selection criteria or matching rules changed.",
+  "configured_example_sets": 46,
+  "layered_decision_interface": "2026-10-25",
+  "entry_presets_only": true,
+  "later_findings_unselected": true,
+  "criteria_display": "Inline expansion",
+  "explanation_display": "Floating info panel; phone tap/optional hold"
 }

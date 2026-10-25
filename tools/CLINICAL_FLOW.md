@@ -11,3 +11,5 @@ High-risk headings use dark orange #A8470A with explicit existing status text. T
 Validation includes all 46 decisions, 103 roadmap topics, 26 care plans, 1,851 categorical states, all six distinct AFP actions, desktop/phone care navigation, Back/Forward, stale and clear behavior, reference-only reload, information sheets, and navigation-only cross-page return. The preserved Markdown reviews distinguish each analyst's testing scope.
 
 Run the existing release, matrix, contextual, routing, action, roadmap and high-risk tests, plus `node tools/test_clinical_flow.cjs`.
+
+The layered decision interface now supersedes the former preset/disclosure behavior. See [DECISION_LAYERS.md](DECISION_LAYERS.md); use cache version `20261025-layers1`.

@@ -21,7 +21,7 @@
  }
  function evidenceLabel(node){const count=node.matches('.assistant-evidence')?node.children.length:node.querySelectorAll('.cite,.refchip').length;return authority(node)||'Evidence'+(count?' ('+count+')':'');}
  function compactHelp(node,entry){
-  if(!entry||node.textContent!==entry.source||node.closest('.ci-unit'))return;
+  if(!entry||node.textContent!==entry.source||node.closest('.ci-unit,.assistant-criteria'))return;
   const question=node.closest('.assistant-question'),d=document.createElement('details'),s=document.createElement('summary');
   d.className='ci-prose';d.dataset.contextTitle=entry.title;s.textContent=entry.concise;d.append(s);node.before(d);
   const id=node.id;node.removeAttribute('id');d.append(node);
@@ -44,8 +44,7 @@
   document.querySelectorAll('#answer .rec > div:not(.recmeta):not(.opts):not(.ci-unit)').forEach(node=>{
    const entry=recommendationCopy.get(node.textContent);if(!entry||node.dataset.contextCopy||node.closest('.rf-cautions'))return;
    node.dataset.contextCopy='true';node.textContent=entry.concise;
-   let details=node.parentElement.querySelector(':scope > details.more');
-   if(!details){details=document.createElement('details');details.className='more';const s=document.createElement('summary');s.textContent='Rationale and evidence';details.append(s);node.after(details);}
+   const details=document.createElement('details');details.className='ci-prose';const summary=document.createElement('summary');summary.textContent='Full explanation';details.append(summary);node.after(details);
    const original=document.createElement('p');original.className='ci-original';original.textContent=entry.source;
    details.querySelector('summary').after(original);details.dataset.contextTitle='Recommendation: full explanation and evidence';
    const item=enhance(details);item.copyTarget=node;if(expanded)inline(item,true);
@@ -155,7 +154,7 @@
    compactHelp(n,copy.help[slug+'/'+step+'/'+q]);
   });
   // Citation lists become contextual. Selected definition bullets and all next actions stay visible.
-  document.querySelectorAll('.assistant-evidence,.stops .citations').forEach(n=>{if(n.children.length&&!n.closest('.ci-panel'))note(n,evidenceLabel(n));});
+  document.querySelectorAll('.assistant-evidence,.stops .citations').forEach(n=>{if(n.children.length&&!n.closest('.ci-panel,.assistant-criteria,.branch-details'))note(n,evidenceLabel(n));});
   document.querySelectorAll('.branch-action > p').forEach(p=>{
    const sources=[...p.querySelectorAll(':scope > .cite')];if(!sources.length)return;
    const group=document.createElement('div');p.after(group);group.append(...sources);note(group,evidenceLabel(group));
@@ -165,9 +164,20 @@
    const group=document.createElement('div');paragraphs[0].before(group);group.append(...paragraphs);note(group,'Using these criteria');
   });
   compactRecommendations();
-  // Keep selected quantitative/clinical definitions inline. Other reference definitions are contextual.
-  document.querySelectorAll('.assistant-criteria:not([data-context-ready])').forEach(d=>{if(!d.open)enhance(d);});
-  document.querySelectorAll('.branch-details, #answer details.more, .care-evidence').forEach(enhance);
+  // Next-step criteria are native inline disclosures. Warnings are immediate;
+  // explanatory notes and citations alone use floating information panels.
+  document.querySelectorAll('#answer details.more:not([data-disclosure-sorted])').forEach(d=>{
+   d.dataset.disclosureSorted='true';
+   const warning=d.querySelector('.optline.bad');if(warning)d.before(warning);
+   const approval=d.querySelector('.callout.amber');if(approval)d.before(approval);
+   const noteText=d.querySelector('.recnote');
+   if(noteText){const holder=document.createElement('div');d.after(holder);holder.append(noteText);const info=note(holder,'Explanation and evidence');const refs=d.querySelector('.refchip')?.parentElement;if(refs)info.panel.querySelector('.ci-body').append(refs);}
+   const criteria=d.querySelector('.optline,.orderrule');
+   if(criteria){d.querySelector('summary').textContent=criteria.classList.contains('orderrule')?'How to choose among these options':'Selection criteria';}
+   else if(d.querySelector('.refchip'))enhance(d);
+   else d.remove();
+  });
+  document.querySelectorAll('.care-evidence').forEach(enhance);
   document.querySelectorAll('.gray').forEach(section=>{
    if(section.querySelector('.ci-discussions'))return;
    const links=[...section.querySelectorAll(':scope > .issue-link')];if(!links.length)return;
@@ -186,7 +196,7 @@
  function handleHistory(){if(ignoreBack){ignoreBack=false;if(pendingEvidence){const id=pendingEvidence;pendingEvidence=null;revealEvidence(id);}return true;}if(current?.modal&&mobileHistory){close({focus:true,fromBack:true});return true;}return false;}
  window.ContextualInfo={handleHistory,sourceOrigin(trigger){if(current?.panel.contains(trigger)){const origin=current.button;close();return origin;}return trigger;}};
  window.addEventListener('popstate',()=>{if(!document.getElementById('protocol-data'))handleHistory();});
- const beforePrint=()=>{if(printing)return;close();printing=true;printDetails=[...document.querySelectorAll('.full-tests,.ci-discussions,.assistant-criteria:not(.ci-source)')].map(d=>[d,d.open]);printDetails.forEach(([d])=>d.open=true);for(const item of items)if(item.button.isConnected){item.beforePrint=item.inline;inline(item,true);}};
+ const beforePrint=()=>{if(printing)return;close();printing=true;printDetails=[...document.querySelectorAll('.full-tests,.ci-discussions,.assistant-criteria:not(.ci-source),.branch-details,.rf-criteria,#answer details.more:not(.ci-source)')].map(d=>[d,d.open]);printDetails.forEach(([d])=>d.open=true);for(const item of items)if(item.button.isConnected){item.beforePrint=item.inline;inline(item,true);}};
  const afterPrint=()=>{if(!printing)return;printing=false;printDetails.forEach(([d,open])=>d.open=open);printDetails=[];for(const item of items)if(item.button.isConnected)inline(item,!!item.beforePrint);};
  window.addEventListener('beforeprint',beforePrint);window.addEventListener('afterprint',afterPrint);
  const media=matchMedia('print');media.addEventListener('change',ev=>ev.matches?beforePrint():afterPrint());
