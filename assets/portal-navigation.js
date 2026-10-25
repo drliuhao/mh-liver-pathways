@@ -2,8 +2,8 @@
 (() => {
   const root=new URL('../',document.currentScript.src);
   // Shared, progressive presentation layer for roadmaps and decision protocols.
-  const infoCSS=document.createElement('link');infoCSS.rel='stylesheet';infoCSS.href=new URL('assets/contextual-info.css?v=20261025-1',root);document.head.append(infoCSS);
-  const infoJS=document.createElement('script');infoJS.src=new URL('assets/contextual-info.js?v=20261025-1',root);document.head.append(infoJS);
+  const infoCSS=document.createElement('link');infoCSS.rel='stylesheet';infoCSS.href=new URL('assets/contextual-info.css?v=20261025-2',root);document.head.append(infoCSS);
+  for(const file of ['contextual-copy.js','contextual-info.js']){const script=document.createElement('script');script.async=false;script.src=new URL('assets/'+file+'?v=20261025-2',root);document.head.append(script);}
   const path=location.pathname.slice(root.pathname.length).split('/').filter(Boolean);
   const transplant=path[0]==='transplant';
   const highRisk=transplant&&path[1]==='high-risk';

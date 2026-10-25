@@ -1,4 +1,4 @@
-/* Presentation only: source text and clinical decision state are never rewritten. */
+/* Presentation only: full source text is retained; clinical decision state is unchanged. */
 (() => {
  'use strict';
  const supported=typeof HTMLElement.prototype.showPopover==='function';
@@ -6,21 +6,61 @@
  let printDetails=[],pendingEvidence=null;
  let counter=0,current=null,expanded=false,queued=false,printing=false,scrollLock='',mobileHistory=false,ignoreBack=false;
  const items=new Set(),touch=()=>matchMedia('(max-width:760px)').matches;
- const criticalHelp={
-  // Exact, individually reviewed explanatory suffixes; the clinical prefix stays visible.
-  'hcc/listing/exception':'Adults retain calculated MELD initially and at first extension; later eligible extensions use MMaT−3.',
-  'hcc/after-transplant/plan':'Surveillance intervals are individualized.',
-  'icca/review/reviews':'Record the transplant team\'s decision on clinical suitability separately from the decision on MELD-exception points. The highlighted text does not approve either decision.',
-  'crlm/review/reviews':'Record the transplant team\'s decision on clinical suitability separately from the decision on MELD-exception points. The highlighted text does not approve either decision.',
-  'nelm/review/reviews':'Record the transplant team\'s decision on clinical suitability separately from the decision on MELD-exception points. The highlighted text does not approve either decision.',
-  'hehe/review/reviews':'Record the transplant team\'s decision on clinical suitability separately from the decision on MELD-exception points. The highlighted text does not approve either decision.',
-  'hca/review/reviews':'Record the transplant team\'s decision on clinical suitability separately from the decision on MELD-exception points. The highlighted text does not approve either decision.',
-  'hehe/risk/benefit':'Some prognostic features are known only on explant.'
- };
+ const copy=window.ContextualCopy||{headings:{},help:{},recommendations:{}};
+ const recommendationCopy=new Map(Object.values(copy.recommendations).map(c=>[c.source,c]));
+ const sources=JSON.parse(document.getElementById('protocol-data')?.textContent||'{}').sources||{};
+ function authority(node){
+  const records=[...node.querySelectorAll('[data-ref],a[href]')].map(n=>sources[n.dataset.ref]||Object.values(sources).find(s=>s.url===n.getAttribute('href'))).filter(Boolean);
+  const labels={'Allocation policy':'OPTN policy','NLRB guidance':'NLRB guidance','Clinical guidance':'Guideline','Cohort evidence':'Cohort evidence','Prospective cohort evidence':'Prospective cohort','Randomized trial':'Randomized trial','Expert consensus':'Consensus','Full-text clinical evidence':'Clinical study','Pathology reporting standard':'Pathology standard','Supportive-care reference':'Supportive care'};
+  return [...new Set(records.map(s=>labels[s.kind]||s.kind))].join(' · ');
+ }
  function note(node,label){
   if(!node||node.closest('.ci-unit,.ci-prose,.ci-panel'))return;
   const d=document.createElement('details');d.className='ci-prose';
-  const s=document.createElement('summary');s.textContent=label;d.append(s);node.before(d);d.append(node);enhance(d);
+  const s=document.createElement('summary');s.textContent=label;d.append(s);node.before(d);d.append(node);return enhance(d);
+ }
+ function evidenceLabel(node){const count=node.matches('.assistant-evidence')?node.children.length:node.querySelectorAll('.cite,.refchip').length;return authority(node)||'Evidence'+(count?' ('+count+')':'');}
+ function compactHelp(node,entry){
+  if(!entry||node.textContent!==entry.source||node.closest('.ci-unit'))return;
+  const question=node.closest('.assistant-question'),d=document.createElement('details'),s=document.createElement('summary');
+  d.className='ci-prose';d.dataset.contextTitle=entry.title;s.textContent=entry.concise;d.append(s);node.before(d);
+  const id=node.id;node.removeAttribute('id');d.append(node);
+  const evidence=question.querySelector(':scope > .assistant-evidence');if(evidence?.children.length)d.append(evidence);
+  const item=enhance(d);item.wrapper.classList.add('ci-summary');item.button.id=id;
+  item.wrapper.dataset.copySource=entry.source;
+  const label=question.querySelector('label'),text=label?.lastChild;if(text?.nodeType===Node.TEXT_NODE&&text.textContent===entry.title)text.textContent=entry.label||entry.title;
+  const types=authority(d);if(types){const small=document.createElement('small');small.className='ci-authority';small.textContent=types;item.button.append(small);}
+ }
+ function compactHeading(node,entry){
+  if(!node||!entry||node.textContent!==entry.source||node.dataset.contextCopy)return;
+  node.dataset.contextCopy='true';node.textContent=entry.concise;
+  if(entry.concise===entry.source)return;
+  const full=document.createElement('p');full.textContent=entry.source;node.after(full);const item=note(full,'Full decision question');
+  item.wrapper.classList.add('ci-heading-info');item.button.setAttribute('aria-label','Read the full decision question');
+  item.heading=node;item.displayCopy=entry;
+  if(expanded)inline(item,true);
+ }
+ function compactRecommendations(){
+  document.querySelectorAll('#answer .rec > div:not(.recmeta):not(.opts):not(.ci-unit)').forEach(node=>{
+   const entry=recommendationCopy.get(node.textContent);if(!entry||node.dataset.contextCopy||node.closest('.rf-cautions'))return;
+   node.dataset.contextCopy='true';node.textContent=entry.concise;
+   let details=node.parentElement.querySelector(':scope > details.more');
+   if(!details){details=document.createElement('details');details.className='more';const s=document.createElement('summary');s.textContent='Rationale and evidence';details.append(s);node.after(details);}
+   const original=document.createElement('p');original.className='ci-original';original.textContent=entry.source;
+   details.querySelector('summary').after(original);details.dataset.contextTitle='Recommendation: full explanation and evidence';
+   const item=enhance(details);item.copyTarget=node;if(expanded)inline(item,true);
+  });
+ }
+ function compactChrome(){
+  const section=document.querySelector('.decision');if(!section||section.dataset.contextChrome)return;
+  section.dataset.contextChrome='true';
+  const heading=(selector,text)=>{const n=section.querySelector(selector);if(n)n.textContent=text;};
+  heading('.orders .section-head h3','Findings');heading('.stops .section-head h3','Reasons to reassess');
+  heading('.full-tests > summary','Full checklist and sources');
+  const usage=document.createElement('div'),logic=section.querySelector('.logic-note');
+  if(logic){const original=logic.cloneNode(true);original.removeAttribute('class');usage.append(original);logic.textContent='Transplant suitability and exception eligibility are separate decisions.';}
+  section.querySelectorAll('.assistant-footnote,.stopnote').forEach(n=>usage.append(n));
+  section.querySelector('.contextline').append(usage);note(usage,'Using this page');
  }
  function position(item){
   if(!item||item.modal||item.inline)return;
@@ -50,13 +90,15 @@
   close();current=item;item.pinned=pin;item.inline=false;item.details.classList.remove('ci-inline');item.details.open=true;
   item.button.setAttribute('aria-expanded','true');item.panel.setAttribute('role','dialog');
   if(touch()){
-   item.modal=true;item.panel.removeAttribute('popover');item.panel.classList.add('ci-sheet');scrollLock=document.body.style.overflow;document.body.style.overflow='hidden';const host=document.createElement('dialog');host.className='ci-modal-shell';host.setAttribute('aria-labelledby',item.panel.id+'-title');item.modalHost=host;host.append(item.panel);document.body.append(host);host.addEventListener('cancel',ev=>{ev.preventDefault();close({focus:true});});host.addEventListener('click',ev=>{if(ev.target===host)close({focus:true});});host.showModal();
+   item.modal=true;item.panel.removeAttribute('popover');item.panel.removeAttribute('role');item.panel.classList.add('ci-sheet');scrollLock=document.body.style.overflow;document.body.style.overflow='hidden';const host=document.createElement('dialog');host.className='ci-modal-shell';host.setAttribute('aria-labelledby',item.panel.id+'-title');item.modalHost=host;host.append(item.panel);document.body.append(host);host.addEventListener('cancel',ev=>{ev.preventDefault();close({focus:true});});host.addEventListener('click',ev=>{if(ev.target===host)close({focus:true});});host.showModal();
    history.pushState({...history.state,contextualExplanation:true},'',location.href);mobileHistory=true;
   }else{item.panel.setAttribute('popover','manual');item.panel.showPopover();position(item);if(keyboard)item.closeButton.focus();}
  }
  function inline(item,on){
   resetPanel(item);item.inline=on;item.details.classList.toggle('ci-inline',on);item.details.open=on;
   item.button.setAttribute('aria-expanded',String(on));item.panel.removeAttribute('popover');item.panel.setAttribute('role','region');item.panel.classList.toggle('ci-inline-panel',on);
+  if(item.copyTarget)item.copyTarget.hidden=on;
+  if(item.heading)item.heading.textContent=on?item.displayCopy.source:item.displayCopy.concise;
  }
  function enhance(details){
   if(details.dataset.contextReady||details.closest('.ci-panel'))return;
@@ -67,7 +109,7 @@
   const label=summary.textContent.trim();button.innerHTML='<span class="ci-label"></span><span class="ci-icon" aria-hidden="true">i</span>';button.querySelector('.ci-label').textContent=label;
   const panel=document.createElement('div');panel.className='ci-panel';panel.id='context-info-'+(++counter);panel.setAttribute('aria-labelledby',panel.id+'-title');
   const header=document.createElement('div');header.className='ci-panel-head';
-  const title=document.createElement('strong');title.id=panel.id+'-title';title.textContent=label;
+  const title=document.createElement('strong');title.id=panel.id+'-title';title.textContent=details.dataset.contextTitle||label;
   const closeButton=document.createElement('button');closeButton.type='button';closeButton.className='ci-close';closeButton.setAttribute('aria-label','Close '+label);closeButton.textContent='×';
   header.append(title,closeButton);const body=document.createElement('div');body.className='ci-body';
   [...details.childNodes].filter(n=>n!==summary).forEach(n=>body.append(n));panel.append(header,body);details.append(panel);summary.hidden=true;details.classList.add('ci-source');details.open=false;
@@ -88,6 +130,7 @@
   // Existing expand-all controls and browser find-in-page can open the native details.
   details.addEventListener('toggle',()=>{if(details.open&&current!==item&&!item.inline)inline(item,true);else if(!details.open&&item.inline)inline(item,false);});
   if(expanded)inline(item,true);
+  return item;
  }
  function toggleAll(on){close();expanded=on;for(const item of items)if(item.button.isConnected)inline(item,on);document.querySelectorAll('[data-context-reading]').forEach(b=>{b.setAttribute('aria-pressed',String(on));b.textContent=on?'Hide explanations':'Show explanations';});}
  function toolbar(){
@@ -97,6 +140,7 @@
  function enhancePage(){
   queued=false;
   for(const item of items)if(!item.button.isConnected){if(current===item)close();items.delete(item);}
+  compactChrome();
   // Team attribution is contextual; all order-setting timing remains on the page.
   document.querySelectorAll('.contextline > span:nth-child(2)').forEach(n=>note(n,'Responsible team'));
   document.querySelectorAll('.assistant-footnote').forEach(n=>note(n,'How to use these choices'));
@@ -105,20 +149,29 @@
   document.querySelectorAll('.rf-evidence-controls > span').forEach(n=>note(n,'Using related decisions'));
   document.querySelectorAll('.rf-related > p').forEach(n=>note(n,'How these decisions connect'));
   const slug=location.pathname.split('/').filter(Boolean).pop(),step=document.querySelector('.permalink')?.getAttribute('href')?.slice(1);
+  compactHeading(document.querySelector('.question-head h2'),copy.headings[slug+'/'+step]);
   document.querySelectorAll('.assistant-help:not([data-context-checked])').forEach(n=>{
    n.dataset.contextChecked='true';const q=n.closest('.assistant-question')?.querySelector('select')?.dataset.assistantQuestion;
-   const suffix=criticalHelp[slug+'/'+step+'/'+q];if(!suffix||!n.textContent.endsWith(suffix))return;
-   const prefix=n.textContent.slice(0,-suffix.length).trim(),copy=document.createElement('p');copy.textContent=suffix;
-   if(prefix){n.textContent=prefix;n.after(copy);note(copy,q==='exception'?'How exception points are assigned':q==='reviews'?'Selection and allocation review':q==='plan'?'Surveillance planning':'Information available before transplant');}
-   else note(n,q==='reviews'?'Selection and allocation review':'Additional context');
+   compactHelp(n,copy.help[slug+'/'+step+'/'+q]);
   });
+  // Citation lists become contextual. Selected definition bullets and all next actions stay visible.
+  document.querySelectorAll('.assistant-evidence,.stops .citations').forEach(n=>{if(n.children.length&&!n.closest('.ci-panel'))note(n,evidenceLabel(n));});
+  document.querySelectorAll('.branch-action > p').forEach(p=>{
+   const sources=[...p.querySelectorAll(':scope > .cite')];if(!sources.length)return;
+   const group=document.createElement('div');p.after(group);group.append(...sources);note(group,evidenceLabel(group));
+  });
+  document.querySelectorAll('.rf-criteria:not([data-context-copy])').forEach(n=>{
+   n.dataset.contextCopy='true';const paragraphs=[...n.querySelectorAll(':scope > p')];if(!paragraphs.length)return;
+   const group=document.createElement('div');paragraphs[0].before(group);group.append(...paragraphs);note(group,'Using these criteria');
+  });
+  compactRecommendations();
   // Keep selected quantitative/clinical definitions inline. Other reference definitions are contextual.
   document.querySelectorAll('.assistant-criteria:not([data-context-ready])').forEach(d=>{if(!d.open)enhance(d);});
   document.querySelectorAll('.branch-details, #answer details.more').forEach(enhance);
   document.querySelectorAll('.gray').forEach(section=>{
    if(section.querySelector('.ci-discussions'))return;
    const links=[...section.querySelectorAll(':scope > .issue-link')];if(!links.length)return;
-   const d=document.createElement('details');d.className='ci-discussions';const s=document.createElement('summary');s.textContent=`Open discussion questions (${links.length})`;d.append(s,...links);section.append(d);
+   const d=document.createElement('details');d.className='ci-discussions';const s=document.createElement('summary');s.textContent=`Discussion questions (${links.length})`;d.append(s,...links);section.append(d);
   });
   document.querySelectorAll('.assistant-selected').forEach(n=>n.classList.toggle('ci-long-selection',n.textContent.length>45));
   toolbar();

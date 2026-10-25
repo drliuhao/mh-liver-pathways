@@ -34,3 +34,26 @@ button.ci-close{display:flex;justify-content:center;align-items:center;flex-shri
 /* Long study titles must wrap after opening the phone evidence library. */
 .roadmap-streamlined .ev .evtag{max-width:100%;min-width:0;white-space:normal;overflow-wrap:anywhere}
 .roadmap-streamlined .ev .evcit{overflow-wrap:anywhere}
+
+/* The short clinical summary itself opens the complete explanation and sources. */
+.ci-summary{display:block;margin:5px 0 0}
+.ci-summary>.ci-trigger{display:grid;grid-template-columns:minmax(0,1fr) 18px;gap:3px 8px;font:400 13px/1.5 system-ui,sans-serif;align-items:start;min-height:0;padding:3px 0;color:#355d69}
+.ci-summary .ci-icon{margin-top:2px}
+.ci-summary .ci-label{text-underline-offset:3px;text-decoration-color:#7ea0a7}
+.ci-heading-info{margin:0 0 0 8px;vertical-align:baseline}
+.contextual-explanations .question-head h2{display:inline}
+.ci-heading-info .ci-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.ci-heading-info .ci-trigger{padding:5px;min-height:36px}
+.ci-original{border-bottom:1px solid #d7e5e6;padding-bottom:12px}
+.contextual-explanations .assistant-question{margin-bottom:12px;padding-bottom:12px}
+.contextual-explanations .assistant-question>.ci-unit:not(.ci-summary){margin:0 8px 0 0}
+.contextual-explanations .branch-action{flex-wrap:wrap}
+.contextual-explanations .branch-action>.ci-unit{margin-left:24px}
+.contextual-explanations .rf-criteria>.ci-unit{margin:0 0 6px;display:block}
+.contextual-explanations .rf-context{display:none}
+.ci-authority{grid-column:1;font:500 10px/1.5 system-ui,sans-serif;color:#526a75}
+.ci-summary:has(.ci-inline)>.ci-trigger{display:none}
+.ci-heading-info:has(.ci-inline){display:none}
+.contextual-explanations .gray:has(.ci-discussions)>.section-head{display:none}
+.contextual-explanations .rf-option-group .recmeta>.pill{display:none}
+@media(max-width:760px){.ci-summary>.ci-trigger{min-height:44px;padding:7px 0;align-items:center}.ci-summary .ci-icon{margin-top:0}}

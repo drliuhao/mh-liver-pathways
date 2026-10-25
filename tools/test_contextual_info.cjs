@@ -3,22 +3,35 @@ const fs=require('node:fs'),cp=require('node:child_process'),vm=require('node:vm
 const root=path.resolve(__dirname,'..'),read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const original=f=>cp.execFileSync('git',['show','a787e08:'+f],{cwd:root,encoding:'utf8',maxBuffer:8e6});
 for(const file of ['transplant/assets/content.json','tools/v12_content_snapshot.json','transplant/assets/assistant.js','transplant/assets/risk-routing.js','transplant/assets/high-risk.js','assets/roadmap-links.json'])assert.equal(read(file),original(file),file+' changed clinical content');
-const src=read('assets/contextual-info.js');const start=src.indexOf(' const criticalHelp='),end=src.indexOf('\n function note(',start);
-const map=vm.runInNewContext(src.slice(start,end)+';criticalHelp;');
-const data=JSON.parse(read('transplant/assets/content.json'));let reviewed=0,flags=[];
-for(const [key,suffix] of Object.entries(map)){
+const src=read('assets/contextual-info.js'),context={window:{}};vm.runInNewContext(read('assets/contextual-copy.js'),context);const copy=context.window.ContextualCopy;
+const data=JSON.parse(read('transplant/assets/content.json'));let reviewed=0;
+for(const [key,entry] of Object.entries(copy.help)){
  const [slug,step,id]=key.split('/');const q=data.assistants[slug+'/'+step].questions.find(q=>q.id===id);
- assert(q?.help.endsWith(suffix),key+' does not match its exact source');reviewed++;
- if(/[\d≤≥<>]|must|only|not|never|exclude|contraindicat|hold|stop/i.test(suffix))flags.push(key);
+ assert.equal(entry.source,q.help,key+' exact source');assert.equal(entry.title,q.label,key+' original prompt');assert(entry.concise&&entry.label);reviewed++;
 }
-assert.equal(reviewed,8);
-for(const key of ['hcc/allocation/afp','hcc/treatment/afp','pcca/diagnosis/biopsy','pcca/phenotype/size','crlm/biology/cea','icca/phenotype/focality'])assert(!map[key],'Critical selection help moved: '+key);
+assert.equal(reviewed,63);assert.equal(Object.keys(copy.headings).length,46);
+for(const p of data.index)for(const s of p.steps)assert.equal(copy.headings[p.slug+'/'+s.id].source,s.question);
+for(const key of ['hcc/allocation/afp','hcc/treatment/afp'])assert.equal(copy.help[key].concise,copy.help[key].source,'AFP rule must remain complete');
+assert(copy.help['pcca/phenotype/size'].concise.includes('Exactly 3 cm fails <3 cm'));
+assert(copy.help['crlm/biology/cea'].concise.includes('Initial request excludes >80; extensions require <80. Exactly 80'));
+assert(copy.help['icca/phenotype/focality'].concise.includes('≥2 separate nodules'));
+assert(copy.help['icca/phenotype/focality'].concise.includes('no universal distance cutoff'));
+assert(copy.help['pcca/diagnosis/biopsy'].concise.includes('EUS, percutaneous or operative'));
+assert(copy.help['pcca/diagnosis/biopsy'].concise.includes('without traversing the primary is a different procedure'));
+assert(src.includes('node.textContent!==entry.source'),'Stale help must fall back to original');
+assert(src.includes("node.closest('.rf-cautions')"),'Avoid wording must stay fully visible');
+assert.equal(Object.keys(copy.recommendations).length,46);
+for(const [key,entry]of Object.entries(copy.recommendations)){
+ const [slug,id,group,index]=key.split('/');let stages;
+ if(slug==='hcc'){const s=read('hcc/index.html');stages=vm.runInNewContext(s.slice(s.indexOf('const STAGES = ['),s.indexOf('/* the quantifier'))+';STAGES');}
+ else stages=JSON.parse(read(slug+'/data/pathway.json')).gates;
+ assert.equal(entry.source,stages.find(s=>s.id===id)[group][index].t,key+' exact source');
+}
 assert(src.includes("if(!d.open)enhance(d)"),'Selected threshold definitions must remain visible');
 const app=read('transplant/assets/app.js'),old=original('transplant/assets/app.js');
 for(const [a,b] of [['function renderActions(', 'function renderRiskReference('],['function renderStep()', 'function renderMeeting()']]){
  const slice=s=>s.slice(s.indexOf(a),s.indexOf(b,s.indexOf(a)));assert.equal(slice(app),slice(old),'Changed clinical action renderer '+a);
 }
 const docs=Object.keys(JSON.parse(read('assets/roadmap-links.json'))).map(x=>x+'/index.html').concat(data.index.map(p=>'transplant/'+p.slug+'/index.html'));
-for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261025-contextual'),doc+' missing display update');
-console.log(`PASS: V12 data and clinical renderers unchanged; ${docs.length} active pages load shared UI; ${reviewed} exact explanatory suffixes verified.`);
-console.log('Manually reviewed lint flags (allocation explanation, repeated review disclaimer, and explant context): '+flags.join(', '));
+for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261025-contextual2'),doc+' missing display update');
+console.log(`PASS: V12 data and clinical renderers unchanged; ${docs.length} pages; 46 headings, ${reviewed} help summaries and 46 recommendation guards verified; all Avoid wording retained.`);
