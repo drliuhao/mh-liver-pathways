@@ -24,5 +24,6 @@
   document.body.prepend(nav);
   const footer=document.createElement('footer');footer.className='portal-change-log';
   const log=document.createElement('a');log.href=new URL('changes/',root);log.textContent='Change log';
-  footer.append(log);document.body.append(footer);
+  const library=document.createElement('a');library.href=new URL('evidence-libraries/',root);library.textContent='Evidence libraries and PPT index';
+  footer.append(log,document.createTextNode(' · '),library);document.body.append(footer);
 })();
