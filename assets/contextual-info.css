@@ -1,0 +1,36 @@
+/* Explanation controls are dotted; navigation retains arrows/solid links. */
+.ci-unit{display:inline-block;vertical-align:top;max-width:100%;margin:3px 8px 3px 0}
+button.ci-trigger{display:inline-flex;align-items:center;gap:7px;max-width:100%;min-height:32px;padding:4px 0;border:0;border-radius:3px;background:none;color:#116674;font:600 13px/1.45 system-ui,sans-serif;text-align:left;cursor:pointer;touch-action:pan-y;-webkit-touch-callout:none;user-select:none}
+.ci-trigger .ci-label{text-decoration:underline;text-decoration-style:dotted;text-underline-offset:4px;text-decoration-thickness:1px}.ci-trigger:hover{color:#063b47}.ci-trigger .ci-icon{display:inline-flex;align-items:center;justify-content:center;width:17px;height:17px;flex-shrink:0;border:1px solid currentColor;border-radius:50%;font:700 11px/1 Georgia,serif;text-decoration:none}
+.ci-trigger:focus-visible,.ci-close:focus-visible,.ci-reading:focus-visible{outline:3px solid #ca9237;outline-offset:3px}
+.ci-source{margin:0!important;padding:0!important;border:0!important;background:none!important}.ci-source>summary[hidden]{display:none!important}
+.ci-panel{box-sizing:border-box;position:fixed;inset:auto;margin:0;padding:0;border:1px solid #bacdd0;border-radius:13px;background:#fff;color:#173441;box-shadow:0 12px 42px #092c3a38;font:400 14px/1.6 system-ui,sans-serif;max-width:calc(100vw - 24px);overflow:auto;overscroll-behavior:contain}
+.ci-panel:not(.ci-inline-panel):not(.ci-sheet):not(:popover-open){display:none}.ci-panel:popover-open{display:block}.ci-panel::backdrop{background:transparent;backdrop-filter:none}
+.ci-panel-head{position:sticky;top:0;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 12px 10px 18px;background:#edf5f5;border-bottom:1px solid #d7e5e6}.ci-panel-head strong{font:700 14px/1.4 system-ui,sans-serif}
+button.ci-close{display:flex;justify-content:center;align-items:center;flex-shrink:0;width:44px;height:44px;min-width:44px;border:0;border-radius:8px;background:transparent;color:#173441;font:400 28px/1 system-ui,sans-serif;cursor:pointer}.ci-close:hover{background:#dcebed}
+.ci-body{padding:16px 18px}.ci-body>:first-child{margin-top:0}.ci-body>:last-child{margin-bottom:0}.ci-body ul{padding-left:22px}.ci-body p,.ci-body li{font-size:14px;line-height:1.6}.ci-body .moreinner{display:block;padding:0;border:0}.ci-body a{overflow-wrap:anywhere}.ci-body .contextline,.ci-body .assistant-help{margin:0}
+.ci-panel.ci-sheet{position:fixed;top:auto;left:0;right:0;bottom:0;width:100%;max-width:100%;max-height:70dvh;border-radius:18px 18px 0 0;padding-bottom:env(safe-area-inset-bottom);margin:0;animation:ci-arrive .15s ease-out}.ci-sheet::backdrop{background:#102c4566}
+.ci-inline .ci-panel{position:static;inset:auto!important;width:auto!important;max-width:100%;max-height:none!important;margin:5px 0;box-shadow:none;border-color:#d7e5e6;border-radius:8px;overflow:visible}.ci-inline .ci-panel-head{display:none}.ci-inline .ci-body{padding:12px}.ci-unit:has(.ci-inline){display:block;margin-right:0}
+.ci-reading{margin-left:auto;padding:7px 10px;min-height:36px;border:1px solid #c6d7da;border-radius:6px;background:#f4f9f9;color:#185768;font:600 12px/1.4 system-ui,sans-serif;cursor:pointer;white-space:nowrap}
+.contextual-explanations .contextline{align-items:center;gap:6px 18px}.contextual-explanations .contextline>span:first-child{flex:1 1 480px}.contextual-explanations .contextline>.ci-unit{margin:0}
+.ci-discussions>summary{cursor:pointer;color:#16616f;font:600 14px/1.5 system-ui,sans-serif;min-height:44px;align-content:center}.ci-discussions>.issue-link:first-of-type{margin-top:12px}
+.contextual-explanations .assistant-intro{font-size:12px;margin:0 0 14px;color:#516973}
+.contextual-explanations .decision .question-head h2{font-size:clamp(23px,2.2vw,32px);line-height:1.25}
+.contextual-explanations .rf-evidence-controls .ci-unit{margin:0}.contextual-explanations .rf-evidence-controls .ci-label{font-size:12px}.contextual-explanations .rf-related>.ci-unit{margin-bottom:12px}
+.contextual-explanations .gray{align-self:start}
+@keyframes ci-arrive{from{transform:translateY(12px);opacity:.7}to{transform:translateY(0);opacity:1}}
+@media(prefers-reduced-motion:reduce){.ci-panel.ci-sheet{animation:none}}
+@media(max-width:760px){button.ci-trigger{min-height:44px;padding:7px 2px}.ci-reading{min-height:44px}.contextual-explanations .contextline{gap:4px 12px}.contextual-explanations .contextline>span:first-child{font-size:12px}.contextual-explanations .decision .question-head h2{font-size:24px}.contextual-explanations .rf-selector .ci-reading{order:4}.ci-panel button,.ci-panel a{touch-action:manipulation}}
+@media print{.ci-trigger,.ci-reading{display:none!important}.ci-unit{display:block!important}.ci-panel{position:static!important;inset:auto!important;width:auto!important;max-height:none!important;box-shadow:none!important;border:0!important;overflow:visible!important}.ci-panel-head{position:static!important;display:block!important;padding:4px 0;background:none}.ci-close{display:none!important}.ci-body{padding:6px 0!important}}
+
+.contextual-explanations .viewnote{display:none}.contextual-explanations .assistant-selected{display:none}
+@media(max-width:900px){.contextual-explanations .assistant-selected.ci-long-selection{display:block}}
+
+.ci-modal-shell{position:fixed;inset:0;margin:0;width:100vw;max-width:none;height:100dvh;max-height:none;padding:0;border:0;background:transparent;color:inherit;overflow:hidden}.ci-modal-shell::backdrop{background:#102c4566;backdrop-filter:none}.ci-modal-shell .ci-panel{display:block}
+
+@media print{.ci-body .cite{display:inline!important}.ci-panel-head .ci-close{display:none!important}}
+
+.contextual-explanations .example-controls [aria-live]>.ci-unit{margin-left:8px}
+/* Long study titles must wrap after opening the phone evidence library. */
+.roadmap-streamlined .ev .evtag{max-width:100%;min-width:0;white-space:normal;overflow-wrap:anywhere}
+.roadmap-streamlined .ev .evcit{overflow-wrap:anywhere}

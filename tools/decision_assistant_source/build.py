@@ -8,7 +8,7 @@ from content import DIST, PATHWAYS, SOURCES
 from decision_assistants import ASSISTANTS, JOURNEYS, VERSION
 from care_options import CARE, build_continuations
 
-STAMP='20261025-streamlined-v1'
+STAMP='20261025-contextual'
 HIGH_RISK=json.loads((Path(__file__).parent/'high_risk_data.json').read_text())
 
 def document(title, data):

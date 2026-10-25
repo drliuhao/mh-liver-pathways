@@ -16,3 +16,5 @@ node tools/test_high_risk_integration.cjs
 python3 tools/test_matrix_integration.py
 python3 tools/test_v12_release.py
 ```
+
+Contextual explanation interface (25 October): also follow `CONTEXTUAL_INFO.md`. Preserve the current renderer’s contextual-history and source-focus hooks plus the shared contextual-info assets and portal-navigation loader when restoring V12.

@@ -98,7 +98,7 @@ function exampleStatus(){
 function renderOverview(){
  const status=exampleStatus();
  return `<section class="journey-overview" aria-labelledby="journey-title"><div class="journey-heading"><div><p class="eyebrow">The whole pathway</p><h2 id="journey-title">From diagnosis to transplant and follow-up</h2></div><a href="#care-treatment" data-care="treatment" class="journey-alternative">Treatment and care alternatives →</a></div>
- <details class="journey-map" ${window.matchMedia('(max-width:760px)').matches?'':'open'}><summary>View the whole pathway</summary><nav class="journey-phases" aria-label="Pathway overview">${DATA.journeys[active.slug].map((phase,n)=>{const first=active.steps.findIndex(s=>s.id===phase.steps[0])+1;const last=first+phase.steps.length-1;const current=phase.steps.includes(active.steps[stepIndex].id);return `<button data-step="${e(phase.steps[0])}" class="journey-phase ${current?'current':''}" ${current?'aria-current="true"':''}><span class="phase-number">${n+1}</span><span><b>${e(phase.title)}</b><small>Decision${first===last?'':'s'} ${first}${first===last?'':'–'+last}</small></span><span class="phase-arrow" aria-hidden="true">→</span></button>`;}).join('')}</nav></details>
+ <details class="journey-map" ${window.matchMedia('(max-width:760px)').matches||active.steps.some(s=>'#'+s.id===location.hash)?'':'open'}><summary>View the whole pathway</summary><nav class="journey-phases" aria-label="Pathway overview">${DATA.journeys[active.slug].map((phase,n)=>{const first=active.steps.findIndex(s=>s.id===phase.steps[0])+1;const last=first+phase.steps.length-1;const current=phase.steps.includes(active.steps[stepIndex].id);return `<button data-step="${e(phase.steps[0])}" class="journey-phase ${current?'current':''}" ${current?'aria-current="true"':''}><span class="phase-number">${n+1}</span><span><b>${e(phase.title)}</b><small>Decision${first===last?'':'s'} ${first}${first===last?'':'–'+last}</small></span><span class="phase-arrow" aria-hidden="true">→</span></button>`;}).join('')}</nav></details>
  <div class="example-controls"><div aria-live="polite"><strong data-example-status>${e(status[0])}</strong><p data-example-description>${e(status[1])}</p></div><div class="example-buttons"><button data-pathway-example>Restore transplant example</button><button data-pathway-clear>Clear all choices</button></div></div></section>`;
 }
 
@@ -118,7 +118,7 @@ function updateExampleLabels(){
  const label=document.querySelector('[data-selection-label]');
  if(label)label.textContent=origin==='example'?'Example choices':origin==='edited'?'Choices changed':'Choices needed';
  const intro=document.querySelector('.assistant-intro');
- if(intro)intro.textContent=origin==='example'?'Example findings are preselected to show the path toward transplant. Change any choice to explore another result.':origin==='edited'&&stepIndex<active.steps.length-1?'Findings changed. Later decisions have been cleared; review them again before continuing.':'Choose the findings that matter for this decision. The matching next step will be highlighted.';
+ if(intro)intro.textContent=origin==='example'?'Example findings are preselected. Change a choice to explore.':origin==='edited'&&stepIndex<active.steps.length-1?'Findings changed. Later decisions have been cleared; review them again before continuing.':'Choose the findings that matter for this decision. The matching next step will be highlighted.';
 }
 
 function highRiskAction(a){
@@ -289,7 +289,7 @@ function renderEvidence(){
 function showSource(id, trigger){
  const r=DATA.sources[id];
  if(!r)return;
- lastTrigger=trigger;
+ lastTrigger=window.ContextualInfo?.sourceOrigin(trigger)||trigger;
  const d=document.getElementById('source-dialog');
  d.innerHTML=`<button type="button" class="close-dialog" aria-label="Close evidence">×</button><p class="eyebrow">${e(r.kind)}</p><h2 id="source-title">${e(r.title)}</h2><p class="locator">${e(r.locator)}</p>${r.note?`<div class="source-note">${e(r.note)}</div>`:''}<div class="source-actions">${external(r.url,r.kind==='Allocation policy'||r.kind==='NLRB guidance'?'Open official source':'Publisher / full-text access','btn')}</div><p class="small muted">Access through the publisher or official source; institutional sign-in may be required. The linked source supports the adjacent statement. Guidance is not binding allocation policy; cohort results and local proposals are not universal eligibility rules.</p>`;
  d.showModal();
@@ -321,6 +321,7 @@ function hashState(){
  else if(h==='meeting'||active.issues.some(i=>i.id===h)||DATA.mode==='alignment')view='meeting';
  else view='pathway';
  renderView();
+ if(view==='pathway'&&idx>=0)requestAnimationFrame(()=>document.querySelector('.decision')?.scrollIntoView({block:'start'}));
  if(view==='meeting'&&active.issues.some(i=>i.id===h))requestAnimationFrame(()=>document.getElementById(h)?.scrollIntoView({block:'start'}));
 }
 
@@ -383,7 +384,7 @@ document.addEventListener('click',ev=>{
 });
 document.getElementById('source-dialog').addEventListener('click',ev=>{if(ev.target===ev.currentTarget){const r=ev.currentTarget.getBoundingClientRect();if(ev.clientX<r.left||ev.clientX>r.right||ev.clientY<r.top||ev.clientY>r.bottom)ev.currentTarget.close();}});
 document.getElementById('source-dialog').addEventListener('close',()=>lastTrigger?.focus());
-window.addEventListener('popstate',()=>active?hashState():null);
+window.addEventListener('popstate',()=>{if(window.ContextualInfo?.handleHistory())return;active?hashState():null;});
 window.addEventListener('hashchange',()=>active?hashState():null);
 document.addEventListener('keydown',ev=>{
  if(!ev.target.matches('[role="tab"]')||!['ArrowLeft','ArrowRight','Home','End'].includes(ev.key))return;
