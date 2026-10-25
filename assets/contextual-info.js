@@ -167,7 +167,7 @@
   compactRecommendations();
   // Keep selected quantitative/clinical definitions inline. Other reference definitions are contextual.
   document.querySelectorAll('.assistant-criteria:not([data-context-ready])').forEach(d=>{if(!d.open)enhance(d);});
-  document.querySelectorAll('.branch-details, #answer details.more').forEach(enhance);
+  document.querySelectorAll('.branch-details, #answer details.more, .care-evidence').forEach(enhance);
   document.querySelectorAll('.gray').forEach(section=>{
    if(section.querySelector('.ci-discussions'))return;
    const links=[...section.querySelectorAll(':scope > .issue-link')];if(!links.length)return;

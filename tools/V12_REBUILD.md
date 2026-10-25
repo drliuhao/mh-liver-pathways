@@ -18,3 +18,5 @@ python3 tools/test_v12_release.py
 ```
 
 Contextual explanation interface (25 October): also follow `CONTEXTUAL_INFO.md`. Preserve the current renderer’s contextual-history and source-focus hooks plus the shared contextual-info assets and portal-navigation loader when restoring V12.
+
+For the clinical-flow interface and orange protocol downloads, also follow `CLINICAL_FLOW.md`. Preserve the current styled files and their checksums when rebuilding.

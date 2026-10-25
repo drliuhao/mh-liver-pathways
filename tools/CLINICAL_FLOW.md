@@ -1,0 +1,13 @@
+# Clinical flow and context
+
+25 October 2026. This presentation update was reviewed by external Analyst B (Claude.ai, rendered candidate review at 1400 and 390 px) and Analyst C (Claude.science, static context/routing audit). Their original comments and Analyst A's reconciliation are kept in the local `Clinical_Flow_Redesign_2026-10-25` review folder. This is interface review, not clinical or institutional approval.
+
+All 12 roadmaps use the same sequence: review the situation, compare treatment options, then choose the next assessment or care. The seven transplant pathways keep their 46 existing decisions and all clinical matching rules. A care plan opened from a current result carries the exact source decision, result, status, option and condition. The condition remains a condition, not a recorded finding. Reassessment links are grouped separately from alternative treatments. Opening a plan directly or reloading opens a reference without findings. Previous findings become stale if earlier choices change; clearing choices also clears all in-memory care origins. No selections are persisted or placed in the URL. Cross-page `via` links carry only a validated navigation location.
+
+`clinical-flow.css` and `clinical-flow.js` are loaded by `portal-navigation.js`. Keep the current `transplant/assets/app.js` and its mirror in `decision_assistant_source/app.js`; do not replace them with a legacy build. Follow `V12_REBUILD.md` and `CONTEXTUAL_INFO.md`. The HTML loader cache key is `20261025-flow1`.
+
+High-risk headings use dark orange #A8470A with explicit existing status text. The current seven author-created protocol/boundary DOCX downloads and the three currently linked PDF versions were recolored, with every word, font size and position preserved across 190 rendered pages. HEHE/HCA remain clinical-protocol boundary addenda with their original qualifications. Prior superseded versions remain archived. `orange_document_hashes.json` records the narrowly scoped file changes; clinical payload comparisons normalize only those checksums. Keep the current styled downloads when running a release builder.
+
+Validation includes all 46 decisions, 103 roadmap topics, 26 care plans, 1,851 categorical states, all six distinct AFP actions, desktop/phone care navigation, Back/Forward, stale and clear behavior, reference-only reload, information sheets, and navigation-only cross-page return. The preserved Markdown reviews distinguish each analyst's testing scope.
+
+Run the existing release, matrix, contextual, routing, action, roadmap and high-risk tests, plus `node tools/test_clinical_flow.cjs`.

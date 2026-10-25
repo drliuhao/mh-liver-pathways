@@ -63,7 +63,7 @@ function home() {
 
 function pathwayShell() {
  app.innerHTML=header()+`<main class="wrap"><div class="pathhero"><div><a class="back" href="/mh-liver-pathways/transplant/">← All pathways</a><p class="eyebrow">${e(active.route)}</p><h1>${e(active.name)}</h1><p class="lead">${e(active.entry)}</p></div><div class="herolinks">${active.roadmap?external(active.roadmap,`${active.code} treatment roadmap`,'btn secondary'):external(DATA.sources['E-consensus'].pdf,'HEHE treatment consensus','btn secondary')}<a href="#meeting" class="plain-link" data-view="meeting">Protocol & meeting documents ↓</a></div></div>
- <div class="viewbar" role="tablist" aria-label="Pathway sections"><button role="tab" id="tab-pathway" data-view="pathway">Decision pathway</button><button role="tab" id="tab-meeting" data-view="meeting">Meeting record <span>${active.issues.length}</span></button><button role="tab" id="tab-care" data-view="care">Treatment & continuing care</button><button role="tab" id="tab-high-risk" class="high-risk-tab" data-view="high-risk">High-risk protocols <span>${HighRisk.reviews(DATA.high_risk,active.slug).length}</span></button><button role="tab" id="tab-evidence" data-view="evidence">Evidence library</button><span class="viewnote">Compare choices · nothing is saved</span></div>
+ <div class="viewbar" role="tablist" aria-label="Pathway sections"><button role="tab" id="tab-pathway" data-view="pathway">Decision pathway</button><button role="tab" id="tab-meeting" data-view="meeting">Meeting record <span>${active.issues.length}</span></button><button role="tab" id="tab-care" data-view="care">Treatment reference</button><button role="tab" id="tab-high-risk" class="high-risk-tab" data-view="high-risk">High-risk protocols <span>${HighRisk.reviews(DATA.high_risk,active.slug).length}</span></button><button role="tab" id="tab-evidence" data-view="evidence">Evidence library</button><span class="viewnote">Compare choices · nothing is saved</span></div>
  <div id="view"></div></main>`+footer();
  renderView();
 }
@@ -73,11 +73,11 @@ function renderView(){
  const out=document.getElementById('view');
  out.setAttribute('role','tabpanel');out.setAttribute('aria-labelledby','tab-'+(view==='risk-reference'?'high-risk':view));
  const content=view==='pathway'?renderStep():view==='meeting'?renderMeeting():view==='evidence'?renderEvidence():view==='high-risk'?HighRisk.overview(DATA.high_risk,active.slug):view==='risk-reference'?renderRiskReference():renderCare();
- out.innerHTML=(view==='pathway'?renderOverview():'')+renderNavigation()+content;
+ out.innerHTML=(view==='pathway'?renderOverview():'')+(view==='care'?'':renderNavigation())+content;
  if(view==='pathway')updateDecision();
  navigationObserver?.disconnect();
  navigationObserver=new ResizeObserver(syncNavigationHeight);
- navigationObserver.observe(out.querySelector('.pathway-nav'));
+ const nav=out.querySelector('.pathway-nav');if(nav)navigationObserver.observe(nav);
  syncNavigationHeight();
 }
 
@@ -97,7 +97,7 @@ function exampleStatus(){
 
 function renderOverview(){
  const status=exampleStatus();
- return `<section class="journey-overview" aria-labelledby="journey-title"><div class="journey-heading"><div><p class="eyebrow">The whole pathway</p><h2 id="journey-title">From diagnosis to transplant and follow-up</h2></div><a href="#care-treatment" data-care="treatment" class="journey-alternative">Treatment and care alternatives →</a></div>
+ return `<section class="journey-overview" aria-labelledby="journey-title"><div class="journey-heading"><div><p class="eyebrow">The whole pathway</p><h2 id="journey-title">From diagnosis to transplant and follow-up</h2></div><a href="#care-treatment" data-care="treatment" class="journey-alternative">Browse treatment options →</a></div>
  <details class="journey-map" ${window.matchMedia('(max-width:760px)').matches||active.steps.some(s=>'#'+s.id===location.hash)?'':'open'}><summary>View the whole pathway</summary><nav class="journey-phases" aria-label="Pathway overview">${DATA.journeys[active.slug].map((phase,n)=>{const first=active.steps.findIndex(s=>s.id===phase.steps[0])+1;const last=first+phase.steps.length-1;const current=phase.steps.includes(active.steps[stepIndex].id);return `<button data-step="${e(phase.steps[0])}" class="journey-phase ${current?'current':''}" ${current?'aria-current="true"':''}><span class="phase-number">${n+1}</span><span><b>${e(phase.title)}</b><small>Decision${first===last?'':'s'} ${first}${first===last?'':'–'+last}</small></span><span class="phase-arrow" aria-hidden="true">→</span></button>`;}).join('')}</nav></details>
  <div class="example-controls"><div aria-live="polite"><strong data-example-status>${e(status[0])}</strong><p data-example-description>${e(status[1])}</p></div><div class="example-buttons"><button data-pathway-example>Restore transplant example</button><button data-pathway-clear>Clear all choices</button></div></div></section>`;
 }
@@ -129,7 +129,7 @@ function highRiskAction(a){
 function renderActions(actions){
  // Distinct clinical choices stay distinct even when they open the same care page.
  const seen=new Set();
- return `<div class="next-actions">${(actions||[]).filter(a=>{const key=JSON.stringify([a.step,a.care,a.url,a.label,a.detail]);if(seen.has(key))return false;seen.add(key);return true;}).map(a=>`<div class="next-action">${a.detail?`<p>${e(a.detail)}</p>`:''}${a.step?`<button class="route-button" data-step="${e(a.step)}">${e(a.label.replace(/^Continue: /,''))} →</button>`:a.care?`<a class="route-button" href="#care-${e(a.care)}" data-care="${e(a.care)}">${e(a.label)} →</a>`:highRiskAction(a)}</div>`).join('')}</div>`;
+ return `<div class="next-actions">${(actions||[]).filter(a=>{const key=JSON.stringify([a.step,a.care,a.url,a.label,a.detail]);if(seen.has(key))return false;seen.add(key);return true;}).map(a=>`<div class="next-action">${a.detail?`<p>${e(a.detail)}</p>`:''}${a.step?`<button class="route-button" data-step="${e(a.step)}">${e(a.label.replace(/^Continue: /,''))} →</button>`:a.care?`<a class="route-button" href="#care-${e(a.care)}" data-care="${e(a.care)}" data-action-label="${e(a.label)}" data-action-condition="${e(a.detail||'')}">${e(a.label)} →</a>`:highRiskAction(a)}</div>`).join('')}</div>`;
 }
 
 function afpReviewHTML(finding){
@@ -252,10 +252,56 @@ function renderRiskReference(){
  return `<section class="risk-reference"><div class="risk-reference-note"><b>Reference view</b><p>Opening this reference does not match it to the selected findings. In the decision pathway, specific reviews appear with the relevant next-step choices.</p><button data-step="${e(active.steps[stepIndex].id)}">Return to the decision →</button></div>${content||HighRisk.overview(DATA.high_risk,active.slug)}</section>`;
 }
 
+// Navigation context is in memory only. URLs/history carry an opaque token, never findings.
+let careOrigins=new Map(),careOriginToken=null,careSequence=0;
+const canonicalChoices=value=>Object.fromEntries(Object.entries(value||{}).sort(([a],[b])=>a.localeCompare(b)));
+function clearCareOrigins(){careOrigins.clear();careOriginToken=null;}
+function careFingerprint(origin){
+ const end=active.steps.findIndex(s=>s.id===origin);
+ return JSON.stringify(active.steps.slice(0,end+1).map(s=>{const key=active.slug+'/'+s.id;return [canonicalChoices(assistantSession.answers[key]),assistantSession.origins[key],canonicalChoices(riskContext[key])];}));
+}
+function currentCareOrigin(){
+ const origin=careOrigins.get(careOriginToken);
+ return origin&&origin.care===careId?origin:null;
+}
+function captureCareOrigin(trigger){
+ if(view!=='pathway'||!trigger.closest('#current-result'))return null;
+ const action=trigger.closest('.next-action'),result=trigger.closest('.branch,.assistant-other-result');
+ const step=active.steps[stepIndex],key=assistantKey(),answers=assistantSession.answers[key]||{};
+ return {step:step.id,care:trigger.dataset.care,title:step.title,number:stepIndex+1,
+  option:trigger.dataset.actionLabel||trigger.textContent.trim().replace(/\s*→$/,''),condition:trigger.dataset.actionCondition??action?.querySelector(':scope > p')?.textContent??'',
+  kind:result?.classList.contains('hold')?'hold':result?.classList.contains('stop')?'stop':'review',
+  result:result?.querySelector('.branch-title h4,h4')?.textContent||'',
+  status:result?.querySelector('.route-label')?.textContent||(result?.classList.contains('hold')?'Hold at the originating decision':result?.classList.contains('stop')?'Stop and review at the originating decision':result?.querySelector('.branch-match')?.textContent||''),
+  example:assistantSession.origins[key]==='example',fingerprint:careFingerprint(step.id),
+  reviews:[...document.querySelectorAll('#current-result [data-risk-anchor],#current-result [data-afp-review]')].map(n=>({anchor:n.dataset.riskAnchor||'hcc-b1-1',title:n.querySelector('summary>b')?.textContent||'AFP criterion not met: review transplant options',status:n.querySelector('.risk-next-status')?.textContent||''})),
+  choices:assistantConfig().questions.filter(q=>answers[q.id]).map(q=>({question:q.label,answer:q.options.find(o=>o.value===answers[q.id])?.label||answers[q.id]}))};
+}
+function showCare(trigger){
+ const nextId=trigger.dataset.care;if(!DATA.care[active.slug].some(p=>p.id===nextId))return;
+ const original=currentCareOrigin();
+ let origin=captureCareOrigin(trigger);
+ if(!origin&&view==='care'&&original&&original.fingerprint===careFingerprint(original.step)){
+  origin={...original,care:nextId,via:careId,option:trigger.textContent.trim().replace(/\s*→$/,''),condition:trigger.closest('.next-action')?.querySelector(':scope > p')?.textContent||''};
+ }
+ careId=nextId;careOriginToken=origin?'care-'+(++careSequence):null;
+ if(origin){careOrigins.set(careOriginToken,origin);while(careOrigins.size>24)careOrigins.delete(careOrigins.keys().next().value);}
+ view='care';history.pushState({careToken:careOriginToken},'','#care-'+careId);renderView();
+ document.getElementById('care-title').focus({preventScroll:true});document.querySelector('.care-view').scrollIntoView({block:'start',behavior:'instant'});
+}
+function careOriginHTML(){
+ const o=currentCareOrigin();
+ if(!o)return `<p class="care-reference-note">Opened as a reference. No findings are attached to this care plan. Check the conditions below, or open the decision pathway to compare options.</p>`;
+ const stale=o.fingerprint!==careFingerprint(o.step);
+ return `<section class="care-origin ${stale?'stale':''}" aria-label="Decision context"><div class="care-origin-heading"><h3>${stale?'Earlier choices changed':'Why this plan is open'}</h3><span class="care-origin-label">${o.example?'Example findings':'Choices in this session'} · not saved</span></div>${stale?'<p>This plan no longer represents the current choices. Return to the originating decision and review its result.</p>':`<span class="care-origin-status" data-kind="${e(o.kind)}">${e(o.status)}</span><p class="care-result">${e(o.result)}</p><p><b>${o.via?'Option opened from another care plan':'Option opened'}:</b> ${e(o.option)}</p>${o.condition?`<p><b>Condition for this option:</b> ${e(o.condition)}</p>`:''}<details class="care-origin-choices"><summary>Findings at decision ${o.number}</summary><dl>${o.choices.map(q=>`<dt>${e(q.question)}</dt><dd>${e(q.answer)}</dd>`).join('')}</dl></details>`}<button class="care-return" data-step="${e(o.step)}">← Return to decision ${o.number}: ${e(o.title)} (choices kept)</button></section>`;
+}
+function carePlanHTML(selected){
+ const reassess=selected.actions.filter(a=>a.step),other=selected.actions.filter(a=>!a.step);
+ return `<div class="care-plan"><section class="care-condition"><h3>Use this plan when</h3><p>${e(selected.when)}</p></section><section class="care-tasks"><h3>${selected.endpoint?'Care to arrange':'What to do'}</h3><ol>${selected.tasks.map(t=>`<li>${e(t)}</li>`).join('')}</ol></section><details class="care-evidence"><summary>Supporting guidance and sources</summary><div class="care-sources">${selected.refs.map(id=>`<div>${refs([id])}<p class="small muted">${e(DATA.sources[id].locator)}</p></div>`).join('')}</div></details><section class="care-following"><h3>${selected.endpoint?'Continuing care and review':reassess.length?'Next assessment and other options':'Choose the next care plan'}</h3>${reassess.length?`<div class="care-following-group"><h4>${selected.endpoint?'Return to the assessment when appropriate':'Continue or revisit an assessment'}</h4>${renderActions(reassess)}</div>`:''}${other.length?`<div class="care-following-group"><h4>Other treatment and care options</h4>${renderActions(other)}</div>`:''}</section></div>`;
+}
 function renderCare(){
- const plans=DATA.care[active.slug];
- const selected=plans.find(p=>p.id===careId)||plans[0];
- return `<section class="care-view" aria-labelledby="care-title"><a class="back" href="#${e(active.steps[stepIndex].id)}" data-step="${e(active.steps[stepIndex].id)}">← Back to the decision</a><p class="eyebrow">${e(active.code)} · Treatment and continuing care</p><h2 id="care-title" tabindex="-1">${e(selected.title)}</h2><p class="lead">${e(selected.when)}</p><details class="care-alternatives"><summary>Other treatment and care options</summary><nav class="care-index" aria-label="Care options">${plans.map(p=>`<a href="#care-${e(p.id)}" data-care="${e(p.id)}" ${p.id===selected.id?'aria-current="page"':''}>${e(p.title)}</a>`).join('')}</nav></details><article class="care-plan"><h3>${selected.endpoint?'Care to arrange':'Clinical actions'}</h3><ol>${selected.tasks.map(t=>`<li>${e(t)}</li>`).join('')}</ol><div class="care-sources"><h4>Supporting sources</h4>${selected.refs.map(id=>`<div>${refs([id])}<p class="small muted">${e(DATA.sources[id].locator)}</p></div>`).join('')}</div><h3>${selected.endpoint?'Reassess when circumstances change':'What follows this decision'}</h3>${renderActions(selected.actions)}</article></section>`;
+ const plans=DATA.care[active.slug],selected=plans.find(p=>p.id===careId)||plans[0],origin=currentCareOrigin();
+ return `<section class="care-view ${active.slug==='hcc'&&selected.id==='exception'?'care-high-risk':''}" aria-labelledby="care-title"><nav class="care-breadcrumb" aria-label="Care plan location"><span>${e(active.code)} pathway</span><span aria-hidden="true">›</span>${origin?`<button data-step="${e(origin.step)}">Decision ${origin.number}: ${e(origin.title)}</button><span aria-hidden="true">›</span>`:''}<strong>${origin?'Care plan':'Treatment reference'}</strong></nav><p class="eyebrow">${e(active.code)} · ${active.slug==='hcc'&&selected.id==='exception'?'High-risk and individual review':origin?'Care plan':'Treatment reference'}</p><h2 id="care-title" tabindex="-1">${e(selected.title)}</h2>${careOriginHTML()}${carePlanHTML(selected)}${origin&&origin.fingerprint===careFingerprint(origin.step)&&origin.reviews?.length?`<section class="care-risk-references"><h3>High-risk reviews from decision ${origin.number}</h3><p>Reference links retain the original review status.</p>${origin.reviews.map(r=>`<a href="#high-risk-${e(r.anchor)}" data-high-risk="${e(r.anchor)}"><strong>${e(r.title)}</strong><span>${e(r.status)}</span></a>`).join('')}</section>`:''}<details class="care-alternatives"><summary>Browse all ${e(active.code)} care plans (${plans.length})</summary><div class="care-reference-nav"><label for="care-topic">Choose a care plan</label><select id="care-topic" data-care-select>${plans.map(p=>`<option value="${e(p.id)}" ${p.id===selected.id?'selected':''}>${e(p.title)}</option>`).join('')}</select><a href="#${e(origin?.step||active.steps[stepIndex].id)}" data-step="${e(origin?.step||active.steps[stepIndex].id)}">Open decision pathway →</a></div></details></section>`;
 }
 
 function renderStep(){
@@ -314,7 +360,7 @@ function hashState(){
  const idx=active.steps.findIndex(s=>s.id===h);
  if(h.startsWith('high-risk-')){showHighRisk(h.slice(10),false);return;}
  if(h==='high-risk'){view='high-risk';renderView();return;}
- if(h.startsWith('care-')&&DATA.care[active.slug].some(p=>p.id===h.slice(5))){view='care';careId=h.slice(5);}
+ if(h.startsWith('care-')&&DATA.care[active.slug].some(p=>p.id===h.slice(5))){view='care';careId=h.slice(5);careOriginToken=history.state?.careToken||null;}
  else if(DATA.mode==='alignment'&&active.issues.some(i=>i.id===h))view='meeting';
  else if(idx>=0){view='pathway';stepIndex=idx;}
  else if(h==='evidence')view='evidence';
@@ -341,6 +387,7 @@ document.addEventListener('input',ev=>{
 
 document.addEventListener('change',ev=>{
  if(!active)return;
+ if(ev.target.matches('[data-care-select]')){careId=ev.target.value;careOriginToken=null;view='care';history.replaceState(null,'','#care-'+careId);renderView();document.querySelector('.care-alternatives').open=true;document.getElementById('care-topic').focus();return;}
  const riskId=ev.target.dataset.riskQuestion;
  if(riskId){
   const key=assistantKey();riskContext[key]||={};riskContext[key][riskId]=ev.target.value;
@@ -367,19 +414,19 @@ document.addEventListener('click',ev=>{
  }
  if(ev.target.closest('[data-pathway-example],[data-pathway-clear]')){
   const examples=!!ev.target.closest('[data-pathway-example]');
-  assistantSession=DecisionAssistant.createSession(active,DATA.assistants,examples);riskContext={};
+  assistantSession=DecisionAssistant.createSession(active,DATA.assistants,examples);riskContext={};clearCareOrigins();
   renderView();document.querySelector(examples?'[data-pathway-example]':'[data-pathway-clear]').focus({preventScroll:true});return;
  }
- const care=ev.target.closest('[data-care]');if(care){ev.preventDefault();careId=care.dataset.care;view='care';history.pushState(null,'','#care-'+careId);renderView();document.getElementById('care-title').focus({preventScroll:true});document.querySelector('.care-view').scrollIntoView({block:'start',behavior:'instant'});return;}
+ const care=ev.target.closest('[data-care]');if(care){ev.preventDefault();showCare(care);return;}
  if(ev.target.closest('[data-assistant-reset]')){
-  DecisionAssistant.clearFrom(assistantSession,active,stepIndex);RiskRouting.clearFrom(riskContext,active,stepIndex);renderView();document.querySelector('[data-assistant-reset]').focus({preventScroll:true});return;
+  clearCareOrigins();DecisionAssistant.clearFrom(assistantSession,active,stepIndex);RiskRouting.clearFrom(riskContext,active,stepIndex);renderView();document.querySelector('[data-assistant-reset]').focus({preventScroll:true});return;
  }
  if(ev.target.closest('[data-assistant-show]')){const target=document.querySelector('.results .branch.is-highlighted:not([hidden])')||document.getElementById('decision-results');target.scrollIntoView({block:'start',behavior:'instant'});return;}
 
  const cite=ev.target.closest('[data-ref]');if(cite){showSource(cite.dataset.ref,cite);return;}
  if(ev.target.closest('.close-dialog')){document.getElementById('source-dialog').close();return;}
  const step=ev.target.closest('[data-step]');if(step&&!step.disabled){ev.preventDefault();setStep(step.dataset.step);return;}
- const tab=ev.target.closest('[data-view]');if(tab){ev.preventDefault();view=tab.dataset.view;history.pushState(null,'',view==='pathway'?'#'+active.steps[stepIndex].id:view==='care'?'#care-'+careId:'#'+view);renderView();return;}
+ const tab=ev.target.closest('[data-view]');if(tab){ev.preventDefault();view=tab.dataset.view;if(view==='care')careOriginToken=null;history.pushState(null,'',view==='pathway'?'#'+active.steps[stepIndex].id:view==='care'?'#care-'+careId:'#'+view);renderView();return;}
  const issue=ev.target.closest('[data-issue]');if(issue){ev.preventDefault();history.pushState(null,'','#'+issue.dataset.issue);document.getElementById(issue.dataset.issue).scrollIntoView({block:'start'});}
 });
 document.getElementById('source-dialog').addEventListener('click',ev=>{if(ev.target===ev.currentTarget){const r=ev.currentTarget.getBoundingClientRect();if(ev.clientX<r.left||ev.clientX>r.right||ev.clientY<r.top||ev.clientY>r.bottom)ev.currentTarget.close();}});
