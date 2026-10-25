@@ -37,7 +37,7 @@ function header() {
 }
 
 function footer() {
- return `<footer><b>Suitability for liver transplantation and eligibility for MELD-exception points are assessed separately.</b> This draft supports, but does not replace, specialist judgment and the center’s full transplant evaluation. Proposed local decisions are not institutional approvals.<br><span>Language and next actions revised October 24, 2026; pathway source review October 17, 2026 · OPTN policies checked October 24, 2026 (effective October 1, 2026) · NLRB guidance: December 2025. Check current requirements when submitting an exception request.</span></footer>`;
+ return `<footer><b>Suitability for liver transplantation and eligibility for MELD-exception points are assessed separately.</b> This draft supports, but does not replace, specialist judgment and the center’s full transplant evaluation. Proposed local decisions are not institutional approvals.<br><span>Language and next-action display revised October 25, 2026; pathway source review October 17, 2026 · OPTN policies checked October 24, 2026 (effective October 1, 2026) · NLRB guidance: December 2025. Check current requirements when submitting an exception request.</span></footer>`;
 }
 
 function home() {
@@ -98,7 +98,7 @@ function exampleStatus(){
 function renderOverview(){
  const status=exampleStatus();
  return `<section class="journey-overview" aria-labelledby="journey-title"><div class="journey-heading"><div><p class="eyebrow">The whole pathway</p><h2 id="journey-title">From diagnosis to transplant and follow-up</h2></div><a href="#care-treatment" data-care="treatment" class="journey-alternative">Treatment and care alternatives →</a></div>
- <nav class="journey-phases" aria-label="Pathway overview">${DATA.journeys[active.slug].map((phase,n)=>{const first=active.steps.findIndex(s=>s.id===phase.steps[0])+1;const last=first+phase.steps.length-1;const current=phase.steps.includes(active.steps[stepIndex].id);return `<button data-step="${e(phase.steps[0])}" class="journey-phase ${current?'current':''}" ${current?'aria-current="true"':''}><span class="phase-number">${n+1}</span><span><b>${e(phase.title)}</b><small>Decision${first===last?'':'s'} ${first}${first===last?'':'–'+last}</small></span><span class="phase-arrow" aria-hidden="true">→</span></button>`;}).join('')}</nav>
+ <details class="journey-map" ${window.matchMedia('(max-width:760px)').matches?'':'open'}><summary>View the whole pathway</summary><nav class="journey-phases" aria-label="Pathway overview">${DATA.journeys[active.slug].map((phase,n)=>{const first=active.steps.findIndex(s=>s.id===phase.steps[0])+1;const last=first+phase.steps.length-1;const current=phase.steps.includes(active.steps[stepIndex].id);return `<button data-step="${e(phase.steps[0])}" class="journey-phase ${current?'current':''}" ${current?'aria-current="true"':''}><span class="phase-number">${n+1}</span><span><b>${e(phase.title)}</b><small>Decision${first===last?'':'s'} ${first}${first===last?'':'–'+last}</small></span><span class="phase-arrow" aria-hidden="true">→</span></button>`;}).join('')}</nav></details>
  <div class="example-controls"><div aria-live="polite"><strong data-example-status>${e(status[0])}</strong><p data-example-description>${e(status[1])}</p></div><div class="example-buttons"><button data-pathway-example>Restore transplant example</button><button data-pathway-clear>Clear all choices</button></div></div></section>`;
 }
 
@@ -127,7 +127,9 @@ function highRiskAction(a){
  return `<a class="route-button high-risk-route" href="#high-risk${target.id?'-'+e(target.id):''}" ${target.id?`data-high-risk="${e(target.id)}"`:'data-view="high-risk"'}><small>High-risk protocol · ${e(HighRisk.statusLabel(target.id))}</small>${e(a.label)} →</a>`;
 }
 function renderActions(actions){
- return `<div class="next-actions">${actions.map(a=>`<div class="next-action">${a.detail?`<p>${e(a.detail)}</p>`:''}${a.step?`<button class="route-button" data-step="${e(a.step)}">${e(a.label)} →</button>`:a.care?`<a class="route-button" href="#care-${e(a.care)}" data-care="${e(a.care)}">${e(a.label)} →</a>`:highRiskAction(a)}</div>`).join('')}</div>`;
+ // Distinct clinical choices stay distinct even when they open the same care page.
+ const seen=new Set();
+ return `<div class="next-actions">${(actions||[]).filter(a=>{const key=JSON.stringify([a.step,a.care,a.url,a.label,a.detail]);if(seen.has(key))return false;seen.add(key);return true;}).map(a=>`<div class="next-action">${a.detail?`<p>${e(a.detail)}</p>`:''}${a.step?`<button class="route-button" data-step="${e(a.step)}">${e(a.label.replace(/^Continue: /,''))} →</button>`:a.care?`<a class="route-button" href="#care-${e(a.care)}" data-care="${e(a.care)}">${e(a.label)} →</a>`:highRiskAction(a)}</div>`).join('')}</div>`;
 }
 
 function afpReviewHTML(finding){
@@ -143,35 +145,50 @@ function riskOptionsHTML(context){
  return guardNote+notes+afpReviewHTML(context.afpReview)+context.options.map(o=>{
   const record=HighRisk.reviews(DATA.high_risk,active.slug).find(r=>r.anchor===o.anchor);if(!record)return '';
   const ordinary=['closed','notice','checklist','safety-note'].includes(o.mode);
-  return `<details class="risk-next-option ${ordinary?'risk-neutral':'risk-proposed'}" data-risk-anchor="${e(o.anchor)}" data-risk-mode="${e(o.mode)}"><summary><span class="risk-next-status">${e(descriptions[o.mode])}</span><b>${e(record.title)}</b><span class="risk-trigger">${o.carried?'From decision '+(active.steps.findIndex(s=>s.id===o.origin)+1)+': ':'Selected finding: '}${e(o.reason)}</span><span class="risk-open-label">${ordinary?'Read the relevant criteria and evidence':'Review this option, criteria and evidence'} ↓</span></summary><div class="risk-next-body"><button class="risk-change" data-step="${e(o.origin)}">Review the triggering finding →</button>${HighRisk.card(DATA.high_risk,active.slug,{...record,steps:[active.steps[stepIndex].id]})}</div></details>`;
+  return `<details class="risk-next-option ${ordinary?'risk-neutral':'risk-proposed'}" data-risk-anchor="${e(o.anchor)}" data-risk-mode="${e(o.mode)}"><summary><span class="risk-next-status">${e(descriptions[o.mode])}</span><b>${e(record.title)}</b><span class="risk-trigger">${o.carried?'From decision '+(active.steps.findIndex(s=>s.id===o.origin)+1)+': ':'Selected finding: '}${e(o.reason)}</span>${o.anchor==='hehe-b2'?'<span class="risk-trigger">National guidance permits case-level review; this narrower local proposal is not approved.</span>':''}<span class="risk-open-label">${ordinary?'Read the relevant criteria and evidence':'Review this option, criteria and evidence'} ↓</span></summary><div class="risk-next-body"><button class="risk-change" data-step="${e(o.origin)}">Review the triggering finding →</button>${HighRisk.card(DATA.high_risk,active.slug,{...record,steps:[active.steps[stepIndex].id]})}</div></details>`;
  }).join('');
+}
+function canContinueIndividualReview(context){
+ // A closed local option cannot supply the next protocol step. Inactive study
+ // proposals also need approval even when their display mode is review/readiness.
+ return !context.guard&&!context.options.some(o=>o.mode==='closed'||['pcca-b1','pcca-b3','icca-b1','icca-b2','icca-b3'].includes(o.anchor));
+}
+function isReadinessOnlyReview(context){
+ return !context.guard&&context.options.length>0&&context.options.every(o=>o.anchor==='icca-b3'&&o.mode==='readiness');
 }
 function updateDecision(){
  const out=document.getElementById('view');
  out.querySelectorAll('.risk-next-options').forEach(node=>node.remove());
  const result=DecisionAssistant.update(out,assistantConfig(),assistantSession.answers[assistantKey()],active.steps[stepIndex].branches,DATA.sources,assistantSession.origins[assistantKey()]);
- const context=RiskRouting.evaluate(active,stepIndex,assistantSession,riskContext,DATA.assistants);
+ const evaluatedContext=RiskRouting.evaluate(active,stepIndex,assistantSession,riskContext,DATA.assistants);
+ // Interest in a living-donor study does not remove an otherwise valid standard route.
+ const context=isReadinessOnlyReview(evaluatedContext)?{...evaluatedContext,route:null}:evaluatedContext;
  out.querySelector('#risk-question-panel').innerHTML=RiskRouting.renderQuestions(context.questions,riskContext[assistantKey()]);
  // An unresolved upstream exclusion cannot be cleared by a later favorable example.
  const reviewContext=context.guard||context.route;
  const override=reviewContext&&result.kind==='advance';
  if(override){
   out.querySelectorAll('[data-branch-index]').forEach(card=>{card.classList.remove('is-highlighted');card.classList.add('is-muted');card.removeAttribute('aria-current');card.querySelector('.branch-match').hidden=true;});
-  const feedback=out.querySelector('.assistant-feedback');feedback.className='assistant-feedback hold';feedback.innerHTML=`<strong>${context.guard?'Review the selected finding before proceeding':'Continue case-specific review'}</strong><p>${e(reviewContext.why)}</p>`;
+  const feedback=out.querySelector('.assistant-feedback');feedback.className='assistant-feedback sr-only hold';feedback.textContent=(context.guard?'Further review needed. ':'Individual review route. ')+reviewContext.why;
  }
  updateExampleLabels();
  const onward=DATA.continuations[assistantKey()];
- out.querySelectorAll('[data-next-branch]').forEach(el=>{el.innerHTML=renderActions(onward.branches[el.dataset.nextBranch]);});
+ out.querySelectorAll('[data-next-branch]').forEach(el=>{el.innerHTML=el.closest('.is-highlighted')?renderActions(onward.branches[el.dataset.nextBranch]):'';});
  const extra=out.querySelector('.assistant-other-result');
  if(override){
   extra.hidden=false;extra.className='assistant-other-result branch hold is-highlighted';
   const actions=[{label:'Review the triggering finding',step:reviewContext.origin},{label:'Review treatment and continuing care',care:'treatment'}];
   if(active.slug==='hcc')actions.push({label:'Review individual exception assessment and treatment options',care:'exception'});
-  if(!context.guard&&active.steps[stepIndex+1])actions.push({label:'Continue case-specific review: '+active.steps[stepIndex+1].title,step:active.steps[stepIndex+1].id});
+  if(canContinueIndividualReview(context)&&active.steps[stepIndex+1])actions.push({label:'Next decision for individual review: '+active.steps[stepIndex+1].title,step:active.steps[stepIndex+1].id});
   extra.innerHTML=`<span class="branch-match">${context.guard?'Additional review required':'Individual review route'}</span><h4>${context.guard?'Resolve the selection or safety issue':'Continue case-specific assessment'}</h4><p>${e(reviewContext.why)}</p><h5 class="next-heading">Choose the next action</h5>${renderActions(actions)}`;
  }else if(!extra.hidden){
-  const actions=result.state==='matched'?onward.rules[String(result.ruleIndex)]:onward.clarify;
-  extra.insertAdjacentHTML('beforeend',`<h5 class="next-heading">Choose the next action</h5>${renderActions(actions)}`);
+  const noAnswers=Object.values(assistantSession.answers[assistantKey()]).every(v=>!v);
+  const actions=result.state==='matched'?onward.rules[String(result.ruleIndex)]:noAnswers?[]:onward.clarify;
+  if(actions.length)extra.insertAdjacentHTML('beforeend',`<h5 class="next-heading">Choose the next action</h5>${renderActions(actions)}`);
+ }
+ if(result.state==='pending'&&extra.hidden){
+  extra.hidden=false;extra.className='assistant-other-result branch pending is-highlighted';
+  extra.innerHTML=`<span class="branch-match">Choices needed</span><h4>${e(result.title)}</h4><p>${e(result.text)}</p>${Object.values(assistantSession.answers[assistantKey()]).some(Boolean)?renderActions(onward.clarify):''}`;
  }
  const content=riskOptionsHTML({...context,showGuard:!override});
  if(content){
@@ -179,8 +196,55 @@ function updateDecision(){
   if(!destination){extra.hidden=false;extra.className='assistant-other-result branch hold is-highlighted';extra.innerHTML=`<h4>Clarify the selected findings</h4><h5 class="next-heading">Choose the next action</h5>${renderActions(onward.clarify)}`;destination=extra;}
   destination.insertAdjacentHTML('beforeend',`<div class="risk-next-options">${content}</div>`);
  }
+ streamlineResult(out,result,context);
  return result;
 }
+function streamlineResult(out,result,context){
+ const current=out.querySelector('#current-result'),other=out.querySelector('#other-result-list');
+ const extra=out.querySelector('.assistant-other-result');
+ const selected=!extra.hidden?extra:out.querySelector('[data-branch-index].is-highlighted');
+ out.querySelectorAll('.selected-basis').forEach(el=>el.remove());
+ out.querySelectorAll('[data-branch-index]').forEach(card=>{
+  const matched=card===selected;
+  (matched?current:other).append(card);
+  card.querySelector('.branch-action').hidden=!matched;
+  card.querySelector('[data-next-branch]').hidden=!matched;
+  const branch=active.steps[stepIndex].branches[Number(card.dataset.branchIndex)];
+  const kind=branch.kind;card.querySelector('h4').textContent=branch.title;
+  const superseded=result.branch===Number(card.dataset.branchIndex)&&!matched;
+  card.querySelector('.route-label').textContent=matched?({advance:'Continue assessment',hold:'Clarify before continuing',redirect:'Review another route',stop:'Review treatment options'}[kind]):superseded?'Matches these answers; another finding or safety review takes priority':'Reference · applies to different findings';
+  if(!matched){card.classList.remove('is-highlighted');card.classList.add('is-muted');card.removeAttribute('aria-current');card.querySelector('.branch-match').hidden=true;}
+ });
+ if(selected===extra)current.append(extra);else current.prepend(extra);
+ if(selected){
+  const config=assistantConfig(),answers=assistantSession.answers[assistantKey()];
+  const when=config.rules[result.ruleIndex]?.when;
+  const ids=when?Object.keys(when):config.questions.filter(q=>!answers[q.id]||answers[q.id]==='unknown').map(q=>q.id);
+  const facts=ids.map(id=>{const q=config.questions.find(q=>q.id===id);const label=q?.options.find(o=>o.value===answers[id])?.label;return label?q.label.replace(/\?$/,'')+': '+label:q?.label;}).filter(Boolean);
+  context.questions.forEach(q=>{const value=riskContext[assistantKey()]?.[q.id];const label=q.options.find(o=>o[0]===value)?.[1];if(label)facts.push(q.label.replace(/\?$/,'')+': '+label);});
+  if(facts.length&&result.kind!=='advance'&&Object.values(answers).some(Boolean))selected.insertAdjacentHTML('afterbegin',`<p class="selected-basis"><b>${assistantSession.origins[assistantKey()]==='example'?'Example findings':'Selected findings'}</b> ${[...new Set(facts)].map(e).join(' · ')}</p>`);
+  // The grouped source title remains in the reference; show the actual selected reason here.
+  if(assistantKey()==='icca/phenotype'&&result.branch===1&&selected!==extra)selected.querySelector('h4').textContent='Review the selected finding outside the standard criteria';
+ }
+ const disclosure=out.querySelector('.other-results');
+ disclosure.hidden=!other.children.length;
+ disclosure.querySelector('[data-other-count]').textContent=other.children.length;
+ // Remove exact repeated actions only; different treatments may share a care page.
+ const seen=new Map();
+ current.querySelectorAll('.route-button').forEach(link=>{
+  const key=link.dataset.step?'step:'+link.dataset.step:link.dataset.care?'care:'+link.dataset.care:link.getAttribute('href');
+  if(!key)return;
+  const actionKey=key+'|'+link.textContent.trim();
+  if(seen.has(actionKey)){const box=link.closest('.next-action');if(box)box.remove();else link.remove();}else seen.set(actionKey,link);
+ });
+ // The nested AFP review repeats navigation, not distinct treatment choices.
+ // Keep those choices in the main result and retain only new destinations here.
+ const destination=link=>link.dataset.step?'step:'+link.dataset.step:link.dataset.care?'care:'+link.dataset.care:link.getAttribute('href');
+ const mainDestinations=new Set([...current.querySelectorAll('.route-button')].filter(link=>!link.closest('[data-afp-review]')).map(destination));
+ current.querySelectorAll('[data-afp-review] .route-button').forEach(link=>{if(mainDestinations.has(destination(link)))link.closest('.next-action').remove();});
+ current.querySelectorAll('[data-afp-review] .next-actions:empty').forEach(el=>el.remove());
+}
+
 function renderRiskReference(){
  const records=HighRisk.reviews(DATA.high_risk,active.slug);
  const record=records.find(r=>r.anchor===riskReference);
@@ -198,10 +262,10 @@ function renderStep(){
  const s=active.steps[stepIndex];
  return `<section class="decision" aria-labelledby="question"><div class="question-head"><div><p class="eyebrow">Decision ${stepIndex+1} of ${active.steps.length} <span> / ${e(s.title)}</span></p><h2 id="question" tabindex="-1">${e(s.question)}</h2></div><a class="permalink" href="#${s.id}" aria-label="Link to this decision">#</a></div><div class="contextline"><span><b>When</b> ${e(s.timing)}</span><span><b>Responsible team</b> ${e(s.owner)}</span></div>
  <div class="decision-grid"><section class="orders"><div class="section-head"><span class="number-dot">1</span><h3>Tests and information needed</h3></div>${DecisionAssistant.render(assistantConfig(),DATA.sources,assistantSession.answers[assistantKey()],assistantSession.origins[assistantKey()])}<div id="risk-question-panel"></div><details class="full-tests"><summary>Full test checklist and source details</summary>${s.orders.map(g=>`<div class="ordergroup"><h4>${e(g.label)}</h4>${bullets(g.items)}</div>`).join('')}</details></section>
- <section class="results" id="decision-results"><div class="section-head"><span class="number-dot">2</span><h3>Review results and select the next step</h3></div><p class="logic-note">Your choices highlight the relevant recommendation and next actions. Review each option with the treating team.</p><article class="assistant-other-result" hidden></article>${s.branches.map((b,bi)=>`<article class="branch ${e(b.kind)} is-muted" data-branch-index="${bi}"><span class="branch-match" hidden>Matches these choices</span><div class="branch-title"><span class="route-label">${b.kind==='advance'?'Proceed when':b.kind==='hold'?'Pause and clarify':b.kind==='redirect'?'Use another pathway':'Do not proceed on this pathway'}</span><h4>${e(b.title)}</h4></div><details class="branch-details"><summary>Criteria and supporting sources</summary>${bullets(b.criteria)}</details><div class="branch-action"><span class="action-arrow">→</span><p>${e(b.action)} ${refs(b.refs)}</p></div><div data-next-branch="${bi}"></div></article>`).join('')}</section></div>
+ <section class="results" id="decision-results"><div class="section-head"><span class="number-dot">2</span><h3>Next step</h3></div><p class="logic-note">Based on the selected findings. Review clinical suitability and allocation separately.</p><div class="assistant-feedback sr-only" role="status" aria-live="polite" aria-atomic="true"></div><div id="current-result"><article class="assistant-other-result" hidden></article></div><details class="other-results"><summary>Other possible results (<span data-other-count></span>)</summary><p class="small muted">Reference only. These are not the current next step. They require different findings, or a safety or earlier finding takes priority.</p><div id="other-result-list">${s.branches.map((b,bi)=>`<article class="branch ${e(b.kind)} is-muted" data-branch-index="${bi}"><span class="branch-match" hidden>Matches these choices</span><div class="branch-title"><span class="route-label">${b.kind==='advance'?'Proceed when':b.kind==='hold'?'Pause and clarify':b.kind==='redirect'?'Use another pathway':'Do not proceed on this pathway'}</span><h4>${e(b.title)}</h4></div><details class="branch-details"><summary>Criteria and supporting sources</summary>${bullets(b.criteria)}</details><div class="branch-action"><span class="action-arrow">→</span><p>${e(b.action)} ${refs(b.refs)}</p></div><div data-next-branch="${bi}"></div></article>`).join('')}</div></details></section></div>
  <div class="safety-grid"><section class="stops"><div class="section-head"><span class="status-icon">!</span><h3>Findings that change the treatment or transplant plan</h3></div>${s.stops.length?bullets(s.stops):'<p class="muted">No additional exclusion is listed at this step. Apply the earlier disease-specific criteria and complete the full transplant assessment.</p>'}<p class="small stopnote">Each statement identifies what the finding affects: treatment, a MELD-exception request, or transplantation under this protocol.</p></section>
  <section class="gray"><div class="section-head"><span class="status-icon">?</span><h3>Questions for multidisciplinary discussion</h3></div>${s.issues.map(id=>{const i=active.issues.find(x=>x.id===id);return `<a class="issue-link" href="/alignment/${active.slug}/#${i.id}"><span>Discussion ${active.issues.indexOf(i)+1}</span><b>${e(i.question)}</b><span class="issue-arrow">Compare sources · proposed decision →</span></a>`;}).join('')}</section></div>
- <nav class="stepfooter" aria-label="Previous and next decision"><button ${stepIndex===0?'disabled':''} data-step="${active.steps[Math.max(0,stepIndex-1)].id}">← Previous decision</button><span>${stepIndex+1} / ${active.steps.length}</span><button ${stepIndex===active.steps.length-1?'disabled':''} data-step="${active.steps[Math.min(active.steps.length-1,stepIndex+1)].id}">Next decision →</button></nav></section>`;
+ <nav class="stepfooter" aria-label="Browse decisions, not clinical clearance"><button ${stepIndex===0?'disabled':''} data-step="${active.steps[Math.max(0,stepIndex-1)].id}">Browse previous</button><span>Browse decisions · ${stepIndex+1} / ${active.steps.length}</span><button ${stepIndex===active.steps.length-1?'disabled':''} data-step="${active.steps[Math.min(active.steps.length-1,stepIndex+1)].id}">Browse next</button></nav></section>`;
 }
 
 function renderMeeting(){
@@ -296,6 +360,7 @@ document.addEventListener('click',ev=>{
  const highRisk=ev.target.closest('[data-high-risk]');if(highRisk){ev.preventDefault();showHighRisk(highRisk.dataset.highRisk);return;}
  if(ev.target.closest('[data-pathway-overview]')){
   if(view!=='pathway'){view='pathway';history.pushState(null,'','#'+active.steps[stepIndex].id);renderView();}
+  const map=document.querySelector('.journey-map');if(map)map.open=true;
   const title=document.getElementById('journey-title');title.setAttribute('tabindex','-1');title.focus({preventScroll:true});
   document.querySelector('.journey-overview').scrollIntoView({block:'start',behavior:'instant'});return;
  }

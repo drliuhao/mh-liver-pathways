@@ -161,7 +161,7 @@ function local(slug,step,a,x,history={}){
  }
  if(slug==='hehe'){
   if(step==='stage'){
-   if(a.vascular==='no'||a.extrahepatic==='limited')add('hehe-b2','Macrovascular invasion or limited extrahepatic disease needs the specific local-boundary review. The initial proposal is narrower than national case-level review.','closed',true,true);
+   if(a.vascular==='no'||a.extrahepatic==='limited')add('hehe-b2',(a.vascular==='no'&&a.extrahepatic==='limited'?'Macrovascular invasion and limited extrahepatic disease require':a.vascular==='no'?'Macrovascular invasion requires':'Limited extrahepatic disease requires')+' the specific local-boundary review. The initial proposal is narrower than national case-level review.','closed',true,true);
    if(a.extrahepatic==='other')add('hehe-b2','Characterize the extrahepatic finding and disease behavior before selection.','notice',true);
   }
   if(step==='risk'&&(a.benefit==='uncertain'||is(x.tempo,'short','urgent')))add('hehe-b1',x.tempo==='urgent'?'Threatening liver failure or progressive symptoms require urgent multidisciplinary review; do not delay solely to complete six months.':'Observation, disease tempo or incremental benefit needs review. Stability alone does not mandate transplantation.','checklist',true);

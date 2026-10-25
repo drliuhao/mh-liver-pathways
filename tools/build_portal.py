@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '/mh-liver-pathways'
 TP = BASE + '/transplant'
-STAMP = '2026-10-24'
+STAMP = '2026-10-25'
 ROADMAPS = [
     ('Liver', 'hcc', 'HCC', 'Hepatocellular carcinoma', 'Diagnosis, liver reserve, locoregional and systemic treatment'),
     ('Liver', 'crlm', 'CRLM', 'Colorectal liver metastases', 'Resectability, conversion treatment, liver-directed options'),
@@ -121,6 +121,7 @@ def export(source, preserve_documents=False):
                     interface_changes='Each pathway opens with clearly labeled example choices toward transplantation. A four-stage overview and sticky step navigation show the full journey. Restore-example and clear-all controls are available. Changing a finding clears later examples; no automatic refill on navigation. No clinical criteria or matching rules changed.')
     manifest.update(high_risk_integration='2026-10-24',high_risk_reviews=21,high_risk_protocol_pdfs=7,high_risk_sources=105,high_risk_interface='Orange-labeled reviews at relevant standard decisions, with selection criteria, study evidence and PDF/TMC access. Standard matching rules unchanged.')
     manifest.update(contextual_routing_revision='2026-10-24',contextual_routing='Answer-specific review options appear inside matching next actions after ordinary care. Clarification selectors distinguish conflated findings. Closed expansions remain explanatory; HCC-B4 remains research reference only. Earlier adverse findings carry forward and upstream edits clear dependent choices. All 46 decisions and 21 reviews checked with B/C mapping reviews and D/E clinical reviews; no selection threshold or source evidence changed.')
+    manifest.update(streamlining_revision='2026-10-25',streamlining='One current next-step result; unmatched or superseded results are reference-only. Distinct treatments keep separate conditional actions. Closed local protocols and inactive study proposals do not produce forward protocol buttons. Smaller sticky navigation and a collapsible mobile overview. Three rounds of external B/C/D/E review, with coverage limits recorded. No clinical thresholds, sources or matching rules changed.')
     manifest.update(afp_review_revision='2026-10-24',afp_review='Separate AFP-related clinical and individual allocation review at allocation, treatment, listing and waitlist decisions. This is not enrollment in the beyond-UNOS tumor-burden pilot; standard AFP thresholds and existing study criteria are unchanged.')
     manifest.update(evidence_organization_revision='2026-10-24',evidence_organization='Status, proposed position and next action precede open criteria. Searchable study summaries pair results with limitations and retain population and time-origin wording. One access record per source within each review; authority types, review coverage and approval limits are explicit. No selection criteria or matching rules changed.')
     (dest/'export-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')

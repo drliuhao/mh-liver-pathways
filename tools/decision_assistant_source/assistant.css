@@ -77,3 +77,27 @@
  .decision,.results,.branch,.care-view,.issue-record{scroll-margin-top:calc(var(--pathway-nav-height,120px) + 12px)}
 }
 @media print{.journey-overview,.pathway-nav{display:none!important}.decision,.results,.branch{scroll-margin-top:0}}
+
+/* One current result; unmatched results are references, never forward actions. */
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+#current-result>.branch{margin-top:0}
+.selected-basis{font-size:12px;line-height:1.5;color:#476077;margin:0 0 12px;padding:0 0 10px;border-bottom:1px solid #cfddd9}
+.selected-basis b{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px}
+.other-results{border-top:1px solid var(--line);margin-top:18px;padding-top:14px}
+.other-results>summary{cursor:pointer;font-size:13px;font-weight:600;color:#52677a;padding:4px 0}
+.other-results>p{margin:9px 0 12px}
+.other-results .branch{padding:14px;margin-top:10px;background:#fff!important}
+.other-results .branch h4{font-size:16px}.other-results .branch-details{margin-top:7px}
+.next-actions{grid-template-columns:1fr;gap:7px}
+.next-action{padding:10px 12px}.next-action .route-button{margin:0;font-size:13px}
+.next-action p{margin-bottom:6px}
+.risk-next-option{margin-top:12px!important}
+.stepfooter{font-size:12px}.stepfooter button{background:transparent;color:#52677a;border:1px solid #ccd7df;box-shadow:none}
+.pathway-nav .step-tab{min-height:57px;padding:8px 10px}
+.journey-heading{padding:12px 18px}.journey-heading h2{font-size:20px}.journey-phases{padding-bottom:12px}.journey-phase{padding:10px}
+.assistant-intro{font-size:12px;margin-bottom:13px}.assistant-question{margin-bottom:14px;padding-bottom:13px}
+@media(max-width:760px){.pathway-nav .step-tab{min-height:55px}.stepfooter{gap:8px;flex-wrap:wrap}.stepfooter span{font-size:10px}.selected-basis{font-size:12px}}
+@media print{.other-results>div{display:block!important}.sr-only{display:none!important}}
+
+.journey-map>summary{cursor:pointer;padding:0 18px 12px;font-size:13px;color:var(--teal);font-weight:600}
+@media(max-width:760px){.journey-heading .eyebrow{display:none}.journey-heading h2{font-size:17px}.pathway-nav{padding:6px 0}.pathway-nav .step-tab{min-height:44px;padding:5px 8px}.pathway-location{margin-bottom:4px}.pathhero{gap:14px}.pathhero h1{font-size:28px}.pathhero .lead{font-size:14px}}

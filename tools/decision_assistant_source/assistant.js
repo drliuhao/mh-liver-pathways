@@ -67,15 +67,14 @@
    <select id="assistant-${esc(q.id)}" data-assistant-question="${esc(q.id)}" ${q.help?`aria-describedby="assistant-help-${esc(q.id)}"`:''}><option value="">Choose a finding…</option>${q.options.map(o=>`<option value="${esc(o.value)}" ${answers[q.id]===o.value?'selected':''}>${esc(o.label)}</option>`).join('')}</select>
    <div class="assistant-definitions" data-definitions="${esc(q.id)}">${definitions(q,answers[q.id],sources)}</div>
    ${evidence(q.refs.filter(id=>!q.criteria.some(c=>c.refs.includes(id))),sources)}</div>`).join('')}
-   <div class="assistant-feedback" role="status" aria-live="polite" aria-atomic="true"></div>
    <div class="assistant-actions"><button type="button" data-assistant-reset>Clear choices</button><button type="button" data-assistant-show>See next step ↓</button></div>
    <p class="assistant-footnote">For this decision only. Choices are not saved. The team must assess transplant suitability and MELD-exception eligibility separately.</p></div>`;
  }
  function update(container,config,answers,branches,sources,origin='empty'){
   const result=evaluate(config,answers,branches);
   const feedback=container.querySelector('.assistant-feedback');
-  feedback.className='assistant-feedback '+result.kind;
-  feedback.innerHTML=`<strong>${esc(result.state==='matched'?'Next to review: '+result.title:result.title)}</strong><p>${esc(result.text)}</p>`;
+  feedback.className='assistant-feedback sr-only '+result.kind;
+  feedback.textContent=(origin==='example'?'Example result: ':'Result updated: ')+result.title+'. See Next step.';
   container.querySelectorAll('[data-branch-index]').forEach(card=>{
    const selected=result.state==='matched'&&result.branch===Number(card.dataset.branchIndex);
    card.classList.toggle('is-highlighted',selected);
