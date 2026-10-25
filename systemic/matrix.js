@@ -1,6 +1,6 @@
 (()=>{
  'use strict';
- const params=new URLSearchParams(location.search),allowed=['all','hcc','pcca','icca','crlm','nelm'];
+ const params=new URLSearchParams(location.search),allowed=['all','hcc','pcca','icca','crlm','nelm','pdac','pnet','ampullary','chcca'];
  let tumor=allowed.includes(params.get('tumor'))?params.get('tumor'):'all';
  const buttons=[...document.querySelectorAll('[data-filter]')],cards=[...document.querySelectorAll('.regimen-card')],papers=[...document.querySelectorAll('.library-entry')];
  const search=document.querySelector('#therapy-search'),setting=document.querySelector('#setting');

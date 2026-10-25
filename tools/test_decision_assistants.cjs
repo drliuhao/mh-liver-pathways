@@ -144,7 +144,16 @@ for(const p of D.index){
   assert(a.label && [a.step,a.care,a.url].filter(Boolean).length===1,JSON.stringify(a));
   if(a.step)assert(p.steps.some(s=>s.id===a.step),`${p.slug}: ${a.step}`);
   if(a.care)assert(careById.has(a.care),`${p.slug}: ${a.care}`);
-  if(a.url)assert(/^https:\/\//.test(a.url),a.url);
+  if(a.url){
+   assert(/^https:\/\//.test(a.url)||a.url.startsWith('/mh-liver-pathways/'),a.url);
+   if(a.url.startsWith('/mh-liver-pathways/')){
+    const u=new URL(a.url,'https://drliuhao.github.io');
+    let target=path.join(root,u.pathname.slice('/mh-liver-pathways/'.length));
+    if(u.pathname.endsWith('/'))target=path.join(target,'index.html');
+    assert(fs.existsSync(target),a.url);
+    if(u.hash)assert(fs.readFileSync(target,'utf8').includes(`id="${decodeURIComponent(u.hash.slice(1))}"`),a.url);
+   }
+  }
  };
  for(const c of careById.values()){
   assert(c.tasks.length>=2&&c.refs.length,c.id);

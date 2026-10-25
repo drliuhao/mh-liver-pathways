@@ -49,13 +49,16 @@ for(const p of data.index){
   for(const key of r.references)assert(h.sources[key],r.id+': '+key);
   for(const study of r.evidence.studies||[])assert(r.references.includes(study.key),r.id+': missing study reference');
  }
- assert.equal(h.pathways[p.slug].documents.filter(x=>x.format==='pdf').length,1);
+ const docs=h.pathways[p.slug].documents;
+ assert.equal(docs.filter(x=>x.format==='docx').length,1);
+ if(['hcc','pcca','icca','crlm'].includes(p.slug))assert(docs.some(x=>x.url.endsWith('_v12.docx')),'Current V12 source document missing');
+ else assert.equal(docs.filter(x=>x.format==='pdf').length,1);
  assert(!full.includes('data-branch-index'), 'High-risk content must not become a standard selection branch');
  assert(!full.includes('/Users/')&&!full.includes('file://'));
  const ids=[...full.matchAll(/ id="([^"]+)"/g)].map(x=>x[1]);
  assert.equal(new Set(ids).size,ids.length,p.slug+' duplicate IDs');
 }
-assert.equal(count,21);assert.equal(h.readiness.length,4);assert.equal(Object.keys(h.sources).length,105);
+assert.equal(count,22);assert.equal(h.readiness.length,4);assert.equal(Object.keys(h.sources).length,119);
 for(const r of h.readiness)checkEvidenceCard('hcc',r);
 for(const r of Object.values(h.sources)){
  if(r.doi){assert(r.author&&r.journal&&r.year&&r.pmid,r.key);assert(decodeURIComponent(r.tmc).includes(r.doi),r.key);}
@@ -71,5 +74,5 @@ for(const c of Object.values(data.continuations))for(const kind of ['branches','
  const dest=HR.destination(a.url);if(dest){onward++;assert(h.pathways[dest.slug]);if(dest.id)assert(h.pathways[dest.slug].reviews.some(x=>x.anchor===dest.id));}
 }
 assert.equal(onward,0,"Unconditional high-risk links on broad branches must be removed");
-console.log(`PASS: ${count} reviews in ${placements} reference-catalog placements; ${h.readiness.length} shared readiness reviews; 105 attached sources; ${pdfCount} direct PDF sources; seven protocol PDFs; broad branch links removed in favor of separately tested contextual routing.`);
+console.log(`PASS: ${count} reviews in ${placements} reference-catalog placements; ${h.readiness.length} shared readiness reviews; 119 attached sources; ${pdfCount} direct PDF sources; four current V12 DOCX protocols plus three unchanged protocol packages; broad branch links removed in favor of separately tested contextual routing.`);
 console.log(`PASS: ${studySummaries} study summaries and ${sourceSlots} unique-per-review source records preserve every criterion, synthesis, result, limitation and review-depth statement; no nested study disclosures.`);

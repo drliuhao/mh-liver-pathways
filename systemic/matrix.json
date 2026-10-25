@@ -1,5 +1,5 @@
 {
-  "review_date": "2026-10-24",
+  "review_date": "2026-10-25",
   "cards": [
     {
       "id": "hcc-atezo-bev",
@@ -82,8 +82,8 @@
       "title": "Lenvatinib or sorafenib",
       "position": "Alternative when immunotherapy is unsuitable",
       "who": "Unresectable HCC with adequate liver reserve; consider when checkpoint therapy is contraindicated or inconsistent with the transplant plan.",
-      "evidence": "REFLECT: lenvatinib was noninferior to sorafenib for overall survival (13.6 versus 12.3 months). SHARP established sorafenib benefit over placebo (10.7 versus 7.9 months).",
-      "limits": "REFLECT excluded main portal-vein invasion, ≥50% liver occupation and bile-duct invasion. Dose tolerance and hepatic function matter; trial medians are not individual predictions.",
+      "evidence": "REFLECT: lenvatinib was noninferior to sorafenib for overall survival (13.6 versus 12.3 months). SHARP established sorafenib benefit over placebo (10.7 versus 7.9 months). Full-text update: Median OS 10.7 versus 7.9 months; HR 0.69 (0.55–0.87). Radiologic time to progression 5.5 versus 2.8 months, HR 0.58; this is not PFS. ORR 2% versus 1%, no complete responses.",
+      "limits": "REFLECT excluded main portal-vein invasion, ≥50% liver occupation and bile-duct invasion. Dose tolerance and hepatic function matter; trial medians are not individual predictions. Historical placebo comparison, not a comparison with current ICI combinations. Grade 3 diarrhea and hand–foot reaction each 8%; dose interruptions/reductions frequent. Little evidence for decompensated cirrhosis.",
       "transplant": "Coordinate perioperative treatment interruption and liver reserve with the transplant team.",
       "refs": [
         "29433850",
@@ -158,11 +158,12 @@
       "position": "Preferred first-line options",
       "who": "Unresectable or metastatic biliary cancer after addressing biliary obstruction, infection, renal function and performance status.",
       "evidence": "TOPAZ-1: overall-survival HR 0.80 for durvalumab + chemotherapy versus chemotherapy. KEYNOTE-966: median overall survival 12.7 versus 10.9 months, HR 0.83, with pembrolizumab added.",
-      "limits": "Mixed biliary-tract populations; neither trial establishes a separate pCCA-specific effect or superiority between these two checkpoint regimens.",
+      "limits": "Mixed biliary-tract populations; neither trial establishes a separate pCCA-specific effect or superiority between these two checkpoint regimens. ASCO 2026.1.0 is an advanced-BTC systemic guideline, not a transplant-neoadjuvant or eligibility guideline.",
       "transplant": "For potentially transplant-eligible pCCA or iCCA, obtain transplant-program review first. Palliative chemoimmunotherapy is not an interchangeable transplant neoadjuvant protocol.",
       "refs": [
         "38319896",
-        "37075781"
+        "37075781",
+        "42874012"
       ],
       "links": []
     },
@@ -177,10 +178,11 @@
       "position": "When checkpoint therapy is unsuitable",
       "who": "Use chemotherapy alone when immunotherapy is unsuitable. Renal impairment, neuropathy, hearing loss or frailty may require a different platinum, regimen or single agent after oncology review.",
       "evidence": "ABC-02 established cisplatin–gemcitabine over gemcitabine: median overall survival 11.7 versus 8.1 months; HR 0.64.",
-      "limits": "Alternative platinum substitutions and dose reductions do not reproduce the exact ABC-02 evidence. Treat infection and improve drainage before reassessing fitness.",
+      "limits": "Alternative platinum substitutions and dose reductions do not reproduce the exact ABC-02 evidence. Treat infection and improve drainage before reassessing fitness. ASCO 2026.1.0 is an advanced-BTC systemic guideline, not a transplant-neoadjuvant or eligibility guideline.",
       "transplant": "An approved transplant regimen may use chemotherapy differently; confirm the protocol before starting treatment.",
       "refs": [
-        "20375404"
+        "20375404",
+        "42874012"
       ],
       "links": []
     },
@@ -195,10 +197,11 @@
       "position": "Evidence-based subsequent option",
       "who": "Progression after gemcitabine–cisplatin, with adequate function and performance status; obtain molecular results before choosing the next treatment.",
       "evidence": "ABC-06: FOLFOX + active symptom control versus active symptom control alone; median overall survival 6.2 versus 5.3 months, HR 0.69.",
-      "limits": "Benefit was modest and toxicity substantial, including three treatment-related deaths. The trial preceded routine first-line chemoimmunotherapy.",
+      "limits": "Benefit was modest and toxicity substantial, including three treatment-related deaths. The trial preceded routine first-line chemoimmunotherapy. ASCO 2026.1.0 is an advanced-BTC systemic guideline, not a transplant-neoadjuvant or eligibility guideline.",
       "transplant": "Persistent progression calls for reassessment of transplant candidacy and treatment goals.",
       "refs": [
-        "33798493"
+        "33798493",
+        "42874012"
       ],
       "links": []
     },
@@ -234,12 +237,13 @@
       "position": "Previously treated, biomarker-selected CCA",
       "who": "Confirm an actionable FGFR2 fusion or rearrangement. Pemigatinib and lirafugratinib have CCA indications; futibatinib evidence and indication are specific to iCCA. Most evidence comes from iCCA.",
       "evidence": "FIGHT-202 final: pemigatinib ORR 37.0%. FOENIX-CCA2: futibatinib ORR 42%. FDA approval of lirafugratinib in September 2026 was based on REFOCUS: ORR 46%, median response duration 11.8 months.",
-      "limits": "Single-arm response studies do not establish a survival advantage or the preferred FGFR inhibitor. REFOCUS efficacy cohort was FGFR-inhibitor-naïve; sequence after an FGFR inhibitor needs separate evidence.",
+      "limits": "Single-arm response studies do not establish a survival advantage or the preferred FGFR inhibitor. REFOCUS efficacy cohort was FGFR-inhibitor-naïve; sequence after an FGFR inhibitor needs separate evidence. ASCO 2026.1.0 is an advanced-BTC systemic guideline, not a transplant-neoadjuvant or eligibility guideline.",
       "transplant": "Response may prompt reassessment of resectability or a study, but does not establish transplant eligibility.",
       "refs": [
         "32203698",
         "38838500",
-        "36652354"
+        "36652354",
+        "42874012"
       ],
       "links": [
         [
@@ -259,11 +263,12 @@
       "position": "Previously treated, biomarker-selected disease",
       "who": "Confirmed susceptible IDH1 mutation after previous treatment; most enrolled tumors were intrahepatic.",
       "evidence": "ClarIDHy: median PFS 2.7 versus 1.4 months, HR 0.37. Final unadjusted overall survival was 10.3 versus 7.5 months, HR 0.79, with extensive crossover.",
-      "limits": "Primarily a disease-control strategy. Crossover-adjusted survival analyses require modeling assumptions; do not present them as the unadjusted randomized result.",
+      "limits": "Primarily a disease-control strategy. Crossover-adjusted survival analyses require modeling assumptions; do not present them as the unadjusted randomized result. ASCO 2026.1.0 is an advanced-BTC systemic guideline, not a transplant-neoadjuvant or eligibility guideline.",
       "transplant": "Continue multidisciplinary reassessment; a molecular response is not a transplant selection rule.",
       "refs": [
         "32416072",
-        "34554208"
+        "34554208",
+        "42874012"
       ],
       "links": []
     },
@@ -278,11 +283,12 @@
       "position": "Selected molecular options after prior treatment",
       "who": "For HER2-positive disease, use the exact assay/label: zanidatamab requires IHC 3+ for its US indication. For BRAF V600E, consider dabrafenib + trametinib. Other HER2 options require agent-specific review.",
       "evidence": "HERIZON-BTC-01 supports zanidatamab activity in previously treated HER2-positive biliary cancer. ROAR: investigator-assessed ORR 51% with dabrafenib + trametinib in 43 BRAF V600E-mutant biliary cancers.",
-      "limits": "Single-arm cohorts; do not infer superiority over chemotherapy or assume all HER2 assay categories have the same activity. Confirm the current indication, cardiac status and relevant toxicities.",
+      "limits": "Single-arm cohorts; do not infer superiority over chemotherapy or assume all HER2 assay categories have the same activity. Confirm the current indication, cardiac status and relevant toxicities. ASCO 2026.1.0 is an advanced-BTC systemic guideline, not a transplant-neoadjuvant or eligibility guideline.",
       "transplant": "Treat the confirmed molecular alteration while reviewing the separate surgical and transplant options.",
       "refs": [
         "41264278",
-        "32818466"
+        "32818466",
+        "42874012"
       ],
       "links": []
     },
@@ -422,13 +428,14 @@
       "title": "HER2 or KRAS G12C-directed combinations",
       "position": "After appropriate prior therapy",
       "who": "HER2-positive, RAS-wild-type disease: tucatinib + trastuzumab. KRAS G12C: sotorasib + panitumumab or adagrasib + cetuximab, subject to the agent’s prior-treatment indication.",
-      "evidence": "MOUNTAINEER: ORR 38.1% in its combination cohorts. CodeBreaK 300: PFS 5.6 versus 2.2 months with the approved-dose sotorasib combination versus standard care. KRYSTAL-1: adagrasib–cetuximab ORR 34% in 94 patients.",
-      "limits": "MOUNTAINEER and KRYSTAL-1 do not establish randomized survival superiority. Do not compare their response rates across different molecular groups.",
+      "evidence": "MOUNTAINEER: ORR 38.1% in its combination cohorts. CodeBreaK 300: PFS 5.6 versus 2.2 months with the approved-dose sotorasib combination versus standard care. KRYSTAL-1: adagrasib–cetuximab ORR 34% in 94 patients. Tucatinib plus trastuzumab: confirmed ORR 39.3% (28.8–50.5), median response duration 15.2 months, PFS 8.1 months, OS 23.9 months. Grade 3 and 4 events 33.7% and 7.0%; 5.8% discontinued for adverse events.",
+      "limits": "MOUNTAINEER and KRYSTAL-1 do not establish randomized survival superiority. Do not compare their response rates across different molecular groups. No randomized combination comparator or proven best sequence after other HER2 drugs. Do not rank its median OS against unrelated later-line trials. Exploratory HER2 copy-number thresholds are not mandatory selection cutoffs.",
       "transplant": "Review the full tumor biology and donor/allocation requirements separately from the treatment response.",
       "refs": [
         "37142372",
         "37870968",
-        "38587856"
+        "38587856",
+        "41526345"
       ],
       "links": []
     },
@@ -461,8 +468,8 @@
       "title": "Trifluridine–tipiracil + bevacizumab; fruquintinib or regorafenib",
       "position": "Later-line options when treatment remains appropriate",
       "who": "Disease progressing after relevant standard chemotherapy and biomarker-directed options; select according to performance status and toxicity.",
-      "evidence": "SUNLIGHT: OS 10.8 versus 7.5 months for trifluridine–tipiracil + bevacizumab versus trifluridine–tipiracil alone. FRESCO-2 and CORRECT demonstrated survival benefit of fruquintinib and regorafenib, respectively, versus placebo.",
-      "limits": "Different prior-treatment populations and comparators; these numbers do not rank the options. RECOURSE supports trifluridine–tipiracil alone when combination treatment is unsuitable.",
+      "evidence": "SUNLIGHT: OS 10.8 versus 7.5 months for trifluridine–tipiracil + bevacizumab versus trifluridine–tipiracil alone. FRESCO-2 and CORRECT demonstrated survival benefit of fruquintinib and regorafenib, respectively, versus placebo. Full-text update: OS 10.8 versus 7.5 months, HR 0.61 (0.49–0.77); PFS 5.6 versus 2.4 months, HR 0.44. ORR 6.1% versus 1.2%. Grade ≥3 events 72.4% versus 69.5%; neutropenia 43.1% versus 32.1%. Fruquintinib versus placebo plus supportive care: OS 7.4 versus 4.8 months, HR 0.66 (0.55–0.80); PFS 3.7 versus 1.8, HR 0.32. Seven partial responses among 461; no complete response. Grade ≥3 events 63% versus 50%.",
+      "limits": "Different prior-treatment populations and comparators; these numbers do not rank the options. RECOURSE supports trifluridine–tipiracil alone when combination treatment is unsuitable. Open-label; no head-to-head comparison with fruquintinib/regorafenib. Low response rate and an advanced refractory population: not a preferred curative conversion regimen or LT trial. Very late-line population, no direct comparison with SUNLIGHT. Grade ≥3 hypertension 14%, asthenia 8%, hand–foot syndrome 6%; one treatment-related intestinal-perforation death.",
       "transplant": "If further treatment offers little benefit or is declined, agree best supportive care and symptom management.",
       "refs": [
         "37133585",
@@ -496,7 +503,8 @@
     {
       "id": "net-ssa",
       "tumors": [
-        "nelm"
+        "nelm",
+        "pnet"
       ],
       "setting": "first",
       "title": "Octreotide LAR or lanreotide",
@@ -514,7 +522,8 @@
     {
       "id": "net-prrt",
       "tumors": [
-        "nelm"
+        "nelm",
+        "pnet"
       ],
       "setting": "later",
       "title": "177Lu-DOTATATE peptide receptor radionuclide therapy",
@@ -532,7 +541,8 @@
     {
       "id": "net-prrt-first",
       "tumors": [
-        "nelm"
+        "nelm",
+        "pnet"
       ],
       "setting": "first",
       "title": "First-line PRRT for selected higher-grade NET",
@@ -550,7 +560,8 @@
     {
       "id": "net-captem",
       "tumors": [
-        "nelm"
+        "nelm",
+        "pnet"
       ],
       "setting": "first",
       "title": "Capecitabine + temozolomide (CAPTEM)",
@@ -567,7 +578,8 @@
     {
       "id": "net-targeted",
       "tumors": [
-        "nelm"
+        "nelm",
+        "pnet"
       ],
       "setting": "later",
       "title": "Everolimus or sunitinib",
@@ -586,7 +598,8 @@
     {
       "id": "net-cabo",
       "tumors": [
-        "nelm"
+        "nelm",
+        "pnet"
       ],
       "setting": "later",
       "title": "Cabozantinib",
@@ -603,7 +616,8 @@
     {
       "id": "net-emerging",
       "tumors": [
-        "nelm"
+        "nelm",
+        "pnet"
       ],
       "setting": "combination",
       "title": "PRRT sequencing: OCLURANDOM and COMPETE",
@@ -621,7 +635,8 @@
     {
       "id": "net-nec",
       "tumors": [
-        "nelm"
+        "nelm",
+        "pnet"
       ],
       "setting": "first",
       "title": "Platinum + etoposide or irinotecan for poorly differentiated NEC",
@@ -632,6 +647,300 @@
       "transplant": "Poorly differentiated NEC is outside the NET transplant pathway.",
       "refs": [
         "35980649"
+      ],
+      "links": []
+    },
+    {
+      "id": "v12-pdac-modified-folfirinox-adjuvant",
+      "tumors": [
+        "pdac"
+      ],
+      "setting": "perioperative",
+      "title": "Modified FOLFIRINOX — Adjuvant",
+      "position": "Setting-specific MDT option",
+      "who": "Fit patient recovered after R0/R1 resection, with adequate performance status and organ function. Plan approximately six months, adjusted for prior neoadjuvant exposure and recovery.",
+      "evidence": "PRODIGE 24 provides randomized survival evidence over gemcitabine in selected postoperative patients. It does not establish tolerability in every postoperative patient or prove neoadjuvant superiority.",
+      "limits": "Evidence and label requirements vary by regimen and setting; confirm the source and pharmacy plan.",
+      "transplant": "This is a cancer-treatment roadmap update only. The withdrawn PDAC liver-transplant pathway remains closed; chemotherapy response does not reopen it.",
+      "refs": [
+        "36048453",
+        "37678671"
+      ],
+      "links": []
+    },
+    {
+      "id": "v12-pdac-gemcitabine-capecitabine-or-single-agent-adjuvant-alternatives",
+      "tumors": [
+        "pdac"
+      ],
+      "setting": "perioperative",
+      "title": "Gemcitabine capecitabine or single agent — Adjuvant alternatives",
+      "position": "Setting-specific MDT option",
+      "who": "GemCap when mFOLFIRINOX is unsuitable; gemcitabine or a fluoropyrimidine for patients unable to tolerate a combination. Check renal function, hand-foot toxicity and fluoropyrimidine safety.",
+      "evidence": "ESPAC-4 supports GemCap over gemcitabine; these are PDAC trials. Applying them to ampullary or mixed histology is extrapolation, not direct evidence.",
+      "limits": "Evidence and label requirements vary by regimen and setting; confirm the source and pharmacy plan.",
+      "transplant": "This is a cancer-treatment roadmap update only. The withdrawn PDAC liver-transplant pathway remains closed; chemotherapy response does not reopen it.",
+      "refs": [
+        "28129987",
+        "37678671"
+      ],
+      "links": []
+    },
+    {
+      "id": "v12-pdac-mfolfirinox-or-gemcitabine-nab-paclitaxel-neoadjuvant-or-induction",
+      "tumors": [
+        "pdac"
+      ],
+      "setting": "perioperative",
+      "title": "mFOLFIRINOX or gemcitabine nab-paclitaxel — Neoadjuvant or induction",
+      "position": "Setting-specific MDT option",
+      "who": "Tissue-confirmed borderline resectable or locally advanced disease after MDT review; define anatomical and biological reassessment points. Clearly resectable PDAC needs a separate surgery-first versus neoadjuvant discussion.",
+      "evidence": "A021501 supports a chemotherapy-first approach in its borderline-resectable setting but is not a definitive head-to-head proof against all radiation. NORPACT-1 did not establish benefit of routine neoadjuvant FOLFIRINOX in resectable pancreatic-head cancer.",
+      "limits": "Evidence and label requirements vary by regimen and setting; confirm the source and pharmacy plan.",
+      "transplant": "This is a cancer-treatment roadmap update only. The withdrawn PDAC liver-transplant pathway remains closed; chemotherapy response does not reopen it.",
+      "refs": [
+        "35834226",
+        "38237621",
+        "37678671"
+      ],
+      "links": []
+    },
+    {
+      "id": "v12-pdac-paxg-selected-neoadjuvant-use",
+      "tumors": [
+        "pdac"
+      ],
+      "setting": "perioperative",
+      "title": "PAXG — Selected neoadjuvant use",
+      "position": "Setting-specific MDT option",
+      "who": "Cisplatin, nab-paclitaxel, capecitabine and gemcitabine. Consider only with regimen-specific expertise and explicit multidisciplinary agreement; not an automatic replacement for established induction options. Discuss PAXG as an evidence-supported preoperative option for selected patients, with local MDT/formulary adoption still OPEN. Not a blanket replacement for mFOLFIRINOX, not a metastatic comparison, and not a PDAC transplant indication.",
+      "evidence": "Median event-free survival 16.0 versus 10.2 months, HR 0.63 (0.47–0.84). EFS included confirmed CA19-9 rises and unresectability, not just progression/death. Resection 75% versus 67% (not significant); R0 rates similar. Grade ≥3 toxicity 66% versus 61%. OS immature; no established OS superiority.",
+      "limits": "Open-label, high-volume Italian centers, all White population, age cap. Converted phase II to III after 86% enrollment; no independent monitoring committee. Thirty-three EFS events were marker-only. Do not relabel EFS as OS or PFS.",
+      "transplant": "This is a cancer-treatment roadmap update only. The withdrawn PDAC liver-transplant pathway remains closed; chemotherapy response does not reopen it.",
+      "refs": [
+        "41275879"
+      ],
+      "links": []
+    },
+    {
+      "id": "v12-pdac-folfirinox-or-nalirifox-metastatic-first-line",
+      "tumors": [
+        "pdac"
+      ],
+      "setting": "first",
+      "title": "FOLFIRINOX or NALIRIFOX — Metastatic first line",
+      "position": "Setting-specific MDT option",
+      "who": "For fit patients with adequate hepatic function and controlled biliary obstruction. The irinotecan formulations are different; do not interchange milligram doses. Assess neuropathy, diarrhea and nutrition.",
+      "evidence": "FOLFIRINOX improved OS over gemcitabine. NAPOLI-3 showed NALIRIFOX OS 11.1 versus 9.2 months with gemcitabine-nab-paclitaxel; this does not compare NALIRIFOX directly with FOLFIRINOX.",
+      "limits": "Evidence and label requirements vary by regimen and setting; confirm the source and pharmacy plan.",
+      "transplant": "This is a cancer-treatment roadmap update only. The withdrawn PDAC liver-transplant pathway remains closed; chemotherapy response does not reopen it.",
+      "refs": [
+        "21561347",
+        "37708904"
+      ],
+      "links": []
+    },
+    {
+      "id": "v12-pdac-gemcitabine-nab-paclitaxel-metastatic-first-line",
+      "tumors": [
+        "pdac"
+      ],
+      "setting": "first",
+      "title": "Gemcitabine nab-paclitaxel — Metastatic first line",
+      "position": "Setting-specific MDT option",
+      "who": "Alternative multiagent treatment based on fitness, neuropathy, bilirubin and patient priorities. Gemcitabine alone or symptom-focused care may be more appropriate when combinations are not tolerable.",
+      "evidence": "MPACT improved OS over gemcitabine. Avoid ranking it against FOLFIRINOX by comparing medians from different trials; NAPOLI-3 supplies a direct comparison only with NALIRIFOX.",
+      "limits": "Evidence and label requirements vary by regimen and setting; confirm the source and pharmacy plan.",
+      "transplant": "This is a cancer-treatment roadmap update only. The withdrawn PDAC liver-transplant pathway remains closed; chemotherapy response does not reopen it.",
+      "refs": [
+        "24131140",
+        "37708904",
+        "37678671"
+      ],
+      "links": []
+    },
+    {
+      "id": "v12-pdac-liposomal-irinotecan-fluorouracil-leucovorin-or-switch-backbone-subsequent-treatment",
+      "tumors": [
+        "pdac"
+      ],
+      "setting": "later",
+      "title": "Liposomal irinotecan fluorouracil leucovorin or switch backbone — Subsequent treatment",
+      "position": "Setting-specific MDT option",
+      "who": "nal-IRI plus 5-FU/LV after gemcitabine-based therapy when eligible. Gemcitabine-based therapy may follow a fluoropyrimidine regimen. Account for prior irinotecan and residual neuropathy. Use the combination after gemcitabine when fit; avoid treating nal-IRI as interchangeable with conventional irinotecan. Dose conventions differ: 70 mg/m² free base equals 80 mg/m² salt in the publication. Pharmacy must verify the actual product/order set.",
+      "evidence": "nal-IRI plus 5-FU/LV: OS 6.1 versus 4.2 months, HR 0.67 (0.49–0.92); PFS 3.1 versus 1.5, HR 0.56. ORR 16% versus 1%. nal-IRI monotherapy did not improve OS (HR 0.99). Grade 3–4 neutropenia 27%, diarrhea 13%.",
+      "limits": "Small prior-irinotecan subgroup, different 5-FU schedules, selected organ function. No validated immediate reuse after FOLFIRINOX/NALIRIFOX. One combination treatment-related septic-shock death.",
+      "transplant": "This is a cancer-treatment roadmap update only. The withdrawn PDAC liver-transplant pathway remains closed; chemotherapy response does not reopen it.",
+      "refs": [
+        "26615328",
+        "37678671"
+      ],
+      "links": []
+    },
+    {
+      "id": "v12-pdac-daraxonrasib-current-us-option",
+      "tumors": [
+        "pdac"
+      ],
+      "setting": "first",
+      "title": "Daraxonrasib — Current US option",
+      "position": "Setting-specific MDT option",
+      "who": "US approval August 2026: metastatic pancreatic adenocarcinoma after at least one prior systemic treatment or when not a candidate for multiagent systemic therapy. The indication is not restricted to a RAS mutation.",
+      "evidence": "RASolute 302 randomized previously treated patients: overall-population OS 13.2 versus 6.7 months, HR 0.40. That trial does not independently establish the same effect in treatment-naive frail patients included in the broader label.",
+      "limits": "Evidence and label requirements vary by regimen and setting; confirm the source and pharmacy plan.",
+      "transplant": "This is a cancer-treatment roadmap update only. The withdrawn PDAC liver-transplant pathway remains closed; chemotherapy response does not reopen it.",
+      "refs": [
+        "42223072"
+      ],
+      "links": [
+        [
+          "FDA approves daraxonrasib for metastatic pancreatic adenocarcinoma",
+          "https://www.fda.gov/drugs/resources-information-approved-drugs/fda-approves-daraxonrasib-metastatic-pancreatic-adenocarcinoma"
+        ]
+      ]
+    },
+    {
+      "id": "v12-pdac-platinum-and-olaparib-maintenance-hereditary-dna-repair-setting",
+      "tumors": [
+        "pdac"
+      ],
+      "setting": "biomarker",
+      "title": "Platinum and olaparib maintenance — Hereditary DNA repair setting",
+      "position": "Setting-specific MDT option",
+      "who": "Prioritize platinum discussion for germline BRCA1/2 or PALB2-associated PDAC. Olaparib maintenance is for metastatic germline BRCA1/2 disease without progression after at least 16 weeks of first-line platinum.",
+      "evidence": "POLO improved PFS, not a demonstrated OS benefit. PALB2-associated platinum sensitivity does not automatically confer the olaparib PDAC label. Germline and somatic findings are not interchangeable.",
+      "limits": "Evidence and label requirements vary by regimen and setting; confirm the source and pharmacy plan.",
+      "transplant": "This is a cancer-treatment roadmap update only. The withdrawn PDAC liver-transplant pathway remains closed; chemotherapy response does not reopen it.",
+      "refs": [
+        "31157963",
+        "37678671"
+      ],
+      "links": []
+    },
+    {
+      "id": "v12-pdac-zenocutuzumab-and-rare-molecular-options",
+      "tumors": [
+        "pdac"
+      ],
+      "setting": "biomarker",
+      "title": "Zenocutuzumab and rare molecular options",
+      "position": "Setting-specific MDT option",
+      "who": "NRG1 fusion-positive advanced unresectable/metastatic PDAC after prior systemic therapy may receive zenocutuzumab. Also review MSI/MMR, NTRK, RET and other actionable alterations with molecular oncology.",
+      "evidence": "eNRGy supplies rare-fusion single-arm evidence. Molecular selection does not justify using unvalidated combinations or every RAS inhibitor interchangeably. See shared biomarker section.",
+      "limits": "Evidence and label requirements vary by regimen and setting; confirm the source and pharmacy plan.",
+      "transplant": "This is a cancer-treatment roadmap update only. The withdrawn PDAC liver-transplant pathway remains closed; chemotherapy response does not reopen it.",
+      "refs": [
+        "39908431",
+        "37678671"
+      ],
+      "links": []
+    },
+    {
+      "id": "v12-ampullary-ampullary-intestinal-subtype",
+      "tumors": [
+        "ampullary"
+      ],
+      "setting": "first",
+      "title": "Ampullary intestinal subtype",
+      "position": "Setting-specific MDT option",
+      "who": "After resection, consider fluoropyrimidine-based therapy, often FOLFOX/CAPOX, according to stage and risk. In advanced disease, an intestinal chemotherapy approach is commonly used. Confirm true ampullary origin and subtype.",
+      "evidence": "ESPAC-3 periampullary did not meet its primary unadjusted OS endpoint. Modern combinations are largely extrapolated from other GI cancers; the existing ampullary roadmap details this uncertainty.",
+      "limits": "Evidence and label requirements vary by regimen and setting; confirm the source and pharmacy plan.",
+      "transplant": "A cancer treatment response does not by itself establish transplant candidacy.",
+      "refs": [
+        "22782416"
+      ],
+      "links": []
+    },
+    {
+      "id": "v12-ampullary-ampullary-pancreatobiliary-or-mixed-subtype",
+      "tumors": [
+        "ampullary"
+      ],
+      "setting": "first",
+      "title": "Ampullary pancreatobiliary or mixed subtype",
+      "position": "Setting-specific MDT option",
+      "who": "Consider a gemcitabine-based regimen or selected modified FOLFIRINOX according to fitness and setting. GemCap is an adjuvant option; advanced-disease choices require a separate rationale.",
+      "evidence": "These are largely pancreatic or biliary extrapolations, not ampullary-specific phase III comparisons. Document subtype, margin/nodal risk, molecular results and why a borrowed regimen fits.",
+      "limits": "Evidence and label requirements vary by regimen and setting; confirm the source and pharmacy plan.",
+      "transplant": "A cancer treatment response does not by itself establish transplant candidacy.",
+      "refs": [
+        "22782416",
+        "28129987",
+        "36048453"
+      ],
+      "links": []
+    },
+    {
+      "id": "v12-chcca-combined-hcc-cca-advanced-disease",
+      "tumors": [
+        "chcca"
+      ],
+      "setting": "first",
+      "title": "Combined HCC CCA — Advanced disease",
+      "position": "Setting-specific MDT option",
+      "who": "Expert pathology and molecular review first. Gemcitabine-platinum is commonly considered; adding an ICI, or choosing an HCC-directed regimen, needs an explicit extrapolation rationale and transplant-intent safety review. Prefer a suitable trial. Supports cautious platinum-based treatment discussion and expert pathology/molecular review, not a definitive superiority claim or transplant-selection benefit. Adding ICI is extrapolation and requires LT-intent safety review.",
+      "evidence": "Overall OS 8.9 months, PFS 2.8 months, ORR 5.6%. Pooled platinum regimens had longer observed OS than sorafenib; adjusted sorafenib-versus-platinum mortality HR 15.83 (2.25–111.43). All seven sorafenib exposures including later line had progression.",
+      "limits": "Tiny nonrandomized groups, major confounding and very wide CI. Abstract and body reverse individual GemCis/5-FU-cisplatin median ordering; do not present those medians as settled. Old pathology classification; no modern ICI comparison.",
+      "transplant": "Combined HCC-CCA is not interchangeable with pure HCC or pure BTC. Regimen borrowing and any transplant proposal require explicit multidisciplinary rationale; these data do not validate a new LT cutoff.",
+      "refs": [
+        "29856900",
+        "41781152"
+      ],
+      "links": []
+    },
+    {
+      "id": "v12-chcca-combined-hcc-cca-after-resection",
+      "tumors": [
+        "chcca"
+      ],
+      "setting": "perioperative",
+      "title": "Combined HCC CCA — After resection",
+      "position": "Setting-specific MDT option",
+      "who": "No established adjuvant systemic standard specific to this histology. Discuss surveillance, trial participation or an individualized borrowed regimen in MDT.",
+      "evidence": "Do not describe BILCAP, PRODIGE 24 or HCC adjuvant evidence as direct cHCC-CCA evidence. Record the uncertainty in the decision document.",
+      "limits": "Evidence and label requirements vary by regimen and setting; confirm the source and pharmacy plan.",
+      "transplant": "Combined HCC-CCA is not interchangeable with pure HCC or pure BTC. Regimen borrowing and any transplant proposal require explicit multidisciplinary rationale; these data do not validate a new LT cutoff.",
+      "refs": [
+        "41781152"
+      ],
+      "links": []
+    },
+    {
+      "id": "v12-icca-liposomal-irinotecan-plus-fluorouracil-leucovorin-selected-later-line",
+      "tumors": [
+        "icca",
+        "pcca"
+      ],
+      "setting": "later",
+      "title": "Liposomal irinotecan plus fluorouracil leucovorin — Selected later line",
+      "position": "Setting-specific MDT option",
+      "who": "Discuss only with an explicit explanation of the inconsistent randomized evidence, prior irinotecan exposure, bilirubin and diarrhea risk. Not an interchangeable default with FOLFOX. Show NALIRICC alongside NIFTY. Do not call nal-IRI/5-FU an unqualified preferred second-line BTC regimen. Consider only a qualified alternative after target review, especially if oxaliplatin is unsuitable, with explicit benefit/toxicity discussion.",
+      "evidence": "PFS 2.6 versus 2.3 months, HR 0.87 (0.56–1.35); OS 6.9 versus 8.2 months, HR 1.08 (0.68–1.72). ORR 14% versus 4% did not translate into PFS/OS benefit. Grade ≥3 events 71% versus 50%; treatment-related serious events 33% versus 2%.",
+      "limits": "Small phase II trial; subsequent therapy differed (more control patients received later therapy). This does not erase the negative primary PFS result. Contrasts with positive NIFTY; population and treatment differences do not resolve the inconsistency.",
+      "transplant": "Systemic disease control is not proof of transplant benefit. Preserve the route-specific histology, liver-only status, unresectability and observation gates. A cHCC-CCA component changes the evidence base; use expert pathology review.",
+      "refs": [
+        "39864891",
+        "38870977"
+      ],
+      "links": []
+    },
+    {
+      "id": "v12-nelm-folfiri-or-other-selected-salvage-after-nec-progression",
+      "tumors": [
+        "nelm",
+        "pnet"
+      ],
+      "setting": "later",
+      "title": "FOLFIRI or other selected salvage — After NEC progression",
+      "position": "Setting-specific MDT option",
+      "who": "Consider FOLFIRI, FOLFOX, selected temozolomide-based treatment or a trial according to prior exposure, pathology and pace. Supportive care may be the best option when toxicity exceeds likely benefit.",
+      "evidence": "Later-line NEC evidence is limited; no universally superior sequence. Do not import PRRT or NET targeted-drug results into receptor-negative poorly differentiated NEC.",
+      "limits": "Evidence and label requirements vary by regimen and setting; confirm the source and pharmacy plan.",
+      "transplant": "A cancer treatment response does not by itself establish transplant candidacy.",
+      "refs": [
+        "36924180",
+        "37774329"
       ],
       "links": []
     }

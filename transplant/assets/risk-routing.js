@@ -6,6 +6,7 @@ const is=(v,...xs)=>xs.includes(v), known=v=>!!v&&v!=='unknown';
 const post=new Set(['hcc/after-transplant','pcca/follow-up']);
 const referenceOnly=['hcc-b4'];
 const coverage={
+ 'hcc-b1-1':['allocation','treatment','listing','waitlist'],
  'hcc-b1':['allocation','treatment','listing','waitlist'], 'hcc-b2':['curative-route','allocation','treatment','listing','waitlist'], 'hcc-b3':['treatment','listing','waitlist'], 'hcc-b4':[],
  'pcca-b1':['diagnosis','phenotype','neoadjuvant','staging','listing'], 'pcca-b2':['phenotype'], 'pcca-b3':['neoadjuvant','staging','listing'],
  'icca-b1':['phenotype','therapy','stability','review'], 'icca-b2':['therapy','stability','review'], 'icca-b3':['review'],
@@ -205,7 +206,7 @@ function afpReview(pathway,index,session,context={}){
   const a=session.answers['hcc/'+s.id]||{},x=context['hcc/'+s.id]||{};
   const failed=(s.id==='allocation'&&a.afp==='not-met')||(s.id==='treatment'&&a.afp==='no')||(s.id==='listing'&&a.exception==='no'&&x.exception_reason==='afp')||(s.id==='waitlist'&&a.control==='lost'&&is(x.loss,'afp','burden-afp'));
   const recovered=(s.id==='allocation'&&a.afp==='met')||(s.id==='treatment'&&a.afp==='yes')||(s.id==='waitlist'&&a.control==='maintained');
-  if(failed)finding={origin:s.id,why:'The AFP requirement is not met. Continue high-risk HCC clinical review and individual allocation assessment alongside treatment; radiographic response alone does not resolve the AFP finding.'};
+  if(failed)finding={anchor:'hcc-b1-1',origin:s.id,why:'The AFP requirement is not met. Continue high-risk HCC clinical review and individual allocation assessment alongside treatment; radiographic response alone does not resolve the AFP finding.'};
   else if(recovered)finding=null;
  }
  return finding;

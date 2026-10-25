@@ -25,6 +25,10 @@ absent(fixture('hcc/allocation',{afp:'not-met'}),'hcc-b1');
 // AFP failure is a separate clinical-review route, not admission to the burden pilot.
 const afpOnly=fixture('hcc/allocation',{afp:'not-met'});
 assert(afpOnly.result.afpReview&&!afpOnly.result.afpReview.deferred);
+assert.equal(afpOnly.result.afpReview.anchor,'hcc-b1-1');
+seen.add(afpOnly.result.afpReview.anchor);
+assert(D.high_risk.pathways.hcc.reviews.some(r=>r.anchor===afpOnly.result.afpReview.anchor));
+assert(R.coverage['hcc-b1-1'].includes('allocation'));
 assert(afpOnly.result.route.why.includes('AFP'));
 assert(fixture('hcc/allocation',{burden:'beyond',afp:'not-met'}).result.afpReview);
 assert(fixture('hcc/treatment',{afp:'no'}).result.afpReview);
@@ -150,4 +154,4 @@ const js=fs.readFileSync(path.join(root,'transplant/assets/app.js'),'utf8');
 assert(!js.includes('HighRisk.inline(')&&!js.includes('HighRisk.prompt('),'Unconditional inserts must stay removed');
 assert(js.includes('risk-next-options')&&js.includes('renderActions(onward.clarify)'));
 assert(!/localStorage|sessionStorage|indexedDB|\bfetch\s*\(/.test(fs.readFileSync(path.join(root,'transplant/assets/risk-routing.js'),'utf8')));
-console.log(`PASS: ${cases} targeted assertions; ${states} categorical states across all 46 decisions; 20 clinical review triggers and HCC-B4 reference-only; unknown/excluded/composite findings, prior context and reset.`);
+console.log(`PASS: ${cases} targeted assertions; ${states} categorical states across all 46 decisions; ${seen.size} clinical review triggers (including distinct AFP-only review) and HCC-B4 reference-only; unknown/excluded/composite findings, prior context and reset.`);

@@ -5,10 +5,24 @@ from urllib.parse import urlsplit,unquote
 
 ROOT=Path(__file__).resolve().parents[1]
 data=json.loads((ROOT/'transplant/assets/content.json').read_text())
-base=json.loads(subprocess.check_output(['git','show','5892f481471a5487046beb9fd6349bc8383c3d06:transplant/assets/content.json'],cwd=ROOT))
-assert data['index']==base['index'], 'Standard clinical criteria changed'
+base=json.loads(subprocess.check_output(['git','show','f77348e:transplant/assets/content.json'],cwd=ROOT))
+for old,new in zip(base['index'],data['index']):
+ assert old['slug']==new['slug']
+ for k in old:
+  if k not in ['docs','protocol','issues','steps']:assert old[k]==new[k],(old['slug'],k)
+ assert new['issues'][:len(old['issues'])]==old['issues'],'An earlier decision was changed'
+ additions=new['issues'][len(old['issues']):]
+ assert len(additions)==(6 if old['slug']=='hcc' else 0)
+ assert all(x['record'].startswith('HCC B1.1') and x['status']=='OPEN — not approved' for x in additions)
+ assert len(old['steps'])==len(new['steps'])
+ for a,b in zip(old['steps'],new['steps']):
+  assert {k:v for k,v in a.items() if k!='issues'}=={k:v for k,v in b.items() if k!='issues'},'Standard clinical criteria changed'
+  assert b['issues'][:len(a['issues'])]==a['issues']
+  assert set(b['issues'][len(a['issues']):]).issubset({x['id'] for x in additions})
 assert data['assistants']==base['assistants'], 'Standard matching rules changed'
-assert data['sources']==base['sources'], 'Standard source content changed'
+assert all(data['sources'][k]==v for k,v in base['sources'].items()), 'An inherited source changed'
+new_sources=set(data['sources'])-set(base['sources'])
+assert len(new_sources)==14 and all(k.startswith('V12-') for k in new_sources)
 
 links=[]
 for config in data['continuations'].values():
@@ -17,7 +31,7 @@ for config in data['continuations'].values():
 for plans in data['care'].values():
  for plan in plans:links.extend(a['url'] for a in plan['actions'] if a.get('url'))
 review_links=[x for x in links if '/transplant/high-risk/' in x]
-assert len(review_links)==2, "Only specific continuing-care reference links remain; decisions use tested conditional routing"
+assert len(review_links)==3, "Specific AFP, ICI and CRLM continuing-care links; decisions use tested conditional routing"
 for url in review_links:
  u=urlsplit(url);p=ROOT/unquote(u.path).removeprefix('/mh-liver-pathways/');p=p/'index.html' if p.is_dir() else p
  assert p.is_file(),url
@@ -32,14 +46,14 @@ assert 'separate multifocal tumors in different segments' in (ROOT/'transplant/h
 assert 'Systemic treatment options' not in (ROOT/'transplant/high-risk/hca/index.html').read_text()
 
 matrix=json.loads((ROOT/'systemic/matrix.json').read_text());refs=json.loads((ROOT/'systemic/references.json').read_text())
-assert len({c['id'] for c in matrix['cards']})==len(matrix['cards'])==33
-assert set(t for c in matrix['cards'] for t in c['tumors'])=={'hcc','pcca','icca','crlm','nelm'}
+assert len({c['id'] for c in matrix['cards']})==len(matrix['cards'])==49
+assert set(t for c in matrix['cards'] for t in c['tumors'])=={'hcc','pcca','icca','crlm','nelm','pdac','pnet','ampullary','chcca'}
 for c in matrix['cards']:
  assert c['refs'] or c['links'],c['id']
  for pm in c['refs']:assert pm in refs,(c['id'],pm)
 for pm,r in refs.items():
  assert all(r[k] for k in ['author','journal','year','doi','pmid','title','tmc']),pm
- assert 'thslc-houston.primo.exlibrisgroup.com/discovery/search' in r['tmc'],pm
+ assert ('thslc-houston.primo.exlibrisgroup.com/discovery/search' in r['tmc'] or r['tmc'].startswith('https://libkey.io/libraries/480/')),pm
  assert r['doi'] in unquote(r['tmc']),pm
  assert r['pmid']==pm
  assert not any(k in r for k in ['abstract','pdf_file','origin']),pm
@@ -52,4 +66,4 @@ for pdf in public_pdfs:assert hashlib.sha256(pdf.read_bytes()).hexdigest()==allo
 home=(ROOT/'index.html').read_text()
 assert home.index('id="therapy-matrices"')>home.index('id="hpb-roadmaps"')
 assert 'href="systemic/"' in home and 'href="transplant/high-risk/"' in home
-print(f'PASS: unchanged standard criteria/rules; {len(review_links)} valid high-risk review destinations; 33 treatment summaries; {len(refs)} complete citations and TMC links; no PDAC transplant route, local paths or licensed PDFs published.')
+print(f'PASS: unchanged standard criteria/rules; six OPEN AFP meeting questions; {len(review_links)} valid high-risk review destinations; 49 treatment summaries; {len(refs)} complete citations and TMC links; no PDAC transplant route, local paths or licensed PDFs published.')

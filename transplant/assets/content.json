@@ -343,7 +343,13 @@
           ],
           "issues": [
             "lesion-counting",
-            "beyond-downstaging"
+            "beyond-downstaging",
+            "afp-b1-1a",
+            "afp-b1-1b",
+            "afp-b1-1c",
+            "afp-b1-1d",
+            "afp-b1-1e",
+            "afp-b1-1f"
           ]
         },
         {
@@ -433,7 +439,13 @@
           ],
           "issues": [
             "bridging",
-            "checkpoint"
+            "checkpoint",
+            "afp-b1-1a",
+            "afp-b1-1b",
+            "afp-b1-1c",
+            "afp-b1-1d",
+            "afp-b1-1e",
+            "afp-b1-1f"
           ]
         },
         {
@@ -521,7 +533,13 @@
           ],
           "issues": [
             "checkpoint",
-            "ownership"
+            "ownership",
+            "afp-b1-1a",
+            "afp-b1-1b",
+            "afp-b1-1c",
+            "afp-b1-1d",
+            "afp-b1-1e",
+            "afp-b1-1f"
           ]
         },
         {
@@ -591,7 +609,13 @@
             }
           ],
           "issues": [
-            "response-uncertainty"
+            "response-uncertainty",
+            "afp-b1-1a",
+            "afp-b1-1b",
+            "afp-b1-1c",
+            "afp-b1-1d",
+            "afp-b1-1e",
+            "afp-b1-1f"
           ]
         },
         {
@@ -808,10 +832,196 @@
           "owners": "Radiology · hepatology · treating LRT service",
           "record": "HCC G6",
           "status": "Discussion required — not yet approved"
+        },
+        {
+          "id": "afp-b1-1a",
+          "question": "Should AFP-only failure have a distinct high-risk review entry even when tumor burden is within Milan?",
+          "comparisons": [
+            {
+              "ref": "H-policy",
+              "text": "as long as the candidate’s AFP level remains below 500 ng/mL",
+              "quote": true,
+              "locator": "OPTN 9.5.I.iv; after prior AFP >1000"
+            },
+            {
+              "ref": "V12-AFP_500",
+              "text": "Five-year OS at final AFP <100 / 100–499 / ≥500: 72.7% / 70.4% / 56.1%; recurrence: 13.1% / 18.7% / 24.2%. Final AFP ≥500: adjusted mortality HR 1.50 (95% CI 1.07–2.10), recurrence HR 1.88 (1.13–3.14).",
+              "quote": false,
+              "locator": "Main PDF pp 4–9; Tables 1–3 and Figures 1–3."
+            },
+            {
+              "ref": "V12-AFP_SLOPE",
+              "text": "Small, data-selected cutoff group; no prospective hold/release validation. The long-term fitted slope cannot be inferred reliably from two closely spaced noisy results. Death was censored for recurrence-free probability.",
+              "quote": false,
+              "locator": "Main PDF pp 2–6; Tables 1–4 and Figure 1."
+            }
+          ],
+          "proposal": "Propose yes; cross-reference the standard AFP gate. Do not require beyond-UNOS burden or inherit its AFP below 100 rule. OPEN; not activated.",
+          "rationale": "These data justify risk review but do not validate the proposed operational thresholds or AFP-only transplant benefit.",
+          "owners": "Transplant surgery · hepatology · oncology · radiology · allocation coordination",
+          "record": "HCC B1.1a",
+          "status": "OPEN — not approved"
+        },
+        {
+          "id": "afp-b1-1b",
+          "question": "Should confirmed AFP at least 500 trigger a clinical hold even without a prior AFP above 1000?",
+          "comparisons": [
+            {
+              "ref": "H-policy",
+              "text": "as long as the candidate’s AFP level remains below 500 ng/mL",
+              "quote": true,
+              "locator": "OPTN 9.5.I.iv; after prior AFP >1000"
+            },
+            {
+              "ref": "V12-AFP_500",
+              "text": "Five-year OS at final AFP <100 / 100–499 / ≥500: 72.7% / 70.4% / 56.1%; recurrence: 13.1% / 18.7% / 24.2%. Final AFP ≥500: adjusted mortality HR 1.50 (95% CI 1.07–2.10), recurrence HR 1.88 (1.13–3.14).",
+              "quote": false,
+              "locator": "Main PDF pp 4–9; Tables 1–3 and Figures 1–3."
+            },
+            {
+              "ref": "V12-AFP_SLOPE",
+              "text": "Small, data-selected cutoff group; no prospective hold/release validation. The long-term fitted slope cannot be inferred reliably from two closely spaced noisy results. Death was censored for recurrence-free probability.",
+              "quote": false,
+              "locator": "Main PDF pp 2–6; Tables 1–4 and Figure 1."
+            }
+          ],
+          "proposal": "Propose yes for the high-risk LT review, with documented MDT reassessment. State clearly that this is stricter than the automatic exception rule for some patients. OPEN; not activated.",
+          "rationale": "These data justify risk review but do not validate the proposed operational thresholds or AFP-only transplant benefit.",
+          "owners": "Transplant surgery · hepatology · oncology · radiology · allocation coordination",
+          "record": "HCC B1.1b",
+          "status": "OPEN — not approved"
+        },
+        {
+          "id": "afp-b1-1c",
+          "question": "How should rising AFP below 500 with controlled imaging be handled?",
+          "comparisons": [
+            {
+              "ref": "H-policy",
+              "text": "as long as the candidate’s AFP level remains below 500 ng/mL",
+              "quote": true,
+              "locator": "OPTN 9.5.I.iv; after prior AFP >1000"
+            },
+            {
+              "ref": "V12-AFP_500",
+              "text": "Five-year OS at final AFP <100 / 100–499 / ≥500: 72.7% / 70.4% / 56.1%; recurrence: 13.1% / 18.7% / 24.2%. Final AFP ≥500: adjusted mortality HR 1.50 (95% CI 1.07–2.10), recurrence HR 1.88 (1.13–3.14).",
+              "quote": false,
+              "locator": "Main PDF pp 4–9; Tables 1–3 and Figures 1–3."
+            },
+            {
+              "ref": "V12-AFP_SLOPE",
+              "text": "Small, data-selected cutoff group; no prospective hold/release validation. The long-term fitted slope cannot be inferred reliably from two closely spaced noisy results. Death was censored for recurrence-free probability.",
+              "quote": false,
+              "locator": "Main PDF pp 2–6; Tables 1–4 and Figure 1."
+            }
+          ],
+          "proposal": "Propose repeat in 2–4 weeks and expedited restaging. AFP at least 200 plus serial rise or confirmed doubling triggers a temporary hold; slope alone is an alert, not a permanent exclusion. OPEN; not activated.",
+          "rationale": "These data justify risk review but do not validate the proposed operational thresholds or AFP-only transplant benefit.",
+          "owners": "Transplant surgery · hepatology · oncology · radiology · allocation coordination",
+          "record": "HCC B1.1c",
+          "status": "OPEN — not approved"
+        },
+        {
+          "id": "afp-b1-1d",
+          "question": "What permits release from a biochemical hold?",
+          "comparisons": [
+            {
+              "ref": "H-policy",
+              "text": "as long as the candidate’s AFP level remains below 500 ng/mL",
+              "quote": true,
+              "locator": "OPTN 9.5.I.iv; after prior AFP >1000"
+            },
+            {
+              "ref": "V12-AFP_500",
+              "text": "Five-year OS at final AFP <100 / 100–499 / ≥500: 72.7% / 70.4% / 56.1%; recurrence: 13.1% / 18.7% / 24.2%. Final AFP ≥500: adjusted mortality HR 1.50 (95% CI 1.07–2.10), recurrence HR 1.88 (1.13–3.14).",
+              "quote": false,
+              "locator": "Main PDF pp 4–9; Tables 1–3 and Figures 1–3."
+            },
+            {
+              "ref": "V12-AFP_SLOPE",
+              "text": "Small, data-selected cutoff group; no prospective hold/release validation. The long-term fitted slope cannot be inferred reliably from two closely spaced noisy results. Death was censored for recurrence-free probability.",
+              "quote": false,
+              "locator": "Main PDF pp 2–6; Tables 1–4 and Figure 1."
+            }
+          ],
+          "proposal": "Propose two stable/falling AFP measurements at least 4 weeks apart below the applicable threshold, reviewed imaging and documented allocation plan. Preserve every longer route-specific observation interval. OPEN; not activated.",
+          "rationale": "These data justify risk review but do not validate the proposed operational thresholds or AFP-only transplant benefit.",
+          "owners": "Transplant surgery · hepatology · oncology · radiology · allocation coordination",
+          "record": "HCC B1.1d",
+          "status": "OPEN — not approved"
+        },
+        {
+          "id": "afp-b1-1e",
+          "question": "Can persistent AFP failure ever proceed to LT or LDLT?",
+          "comparisons": [
+            {
+              "ref": "H-policy",
+              "text": "as long as the candidate’s AFP level remains below 500 ng/mL",
+              "quote": true,
+              "locator": "OPTN 9.5.I.iv; after prior AFP >1000"
+            },
+            {
+              "ref": "V12-AFP_500",
+              "text": "Five-year OS at final AFP <100 / 100–499 / ≥500: 72.7% / 70.4% / 56.1%; recurrence: 13.1% / 18.7% / 24.2%. Final AFP ≥500: adjusted mortality HR 1.50 (95% CI 1.07–2.10), recurrence HR 1.88 (1.13–3.14).",
+              "quote": false,
+              "locator": "Main PDF pp 4–9; Tables 1–3 and Figures 1–3."
+            },
+            {
+              "ref": "V12-AFP_SLOPE",
+              "text": "Small, data-selected cutoff group; no prospective hold/release validation. The long-term fitted slope cannot be inferred reliably from two closely spaced noisy results. Death was censored for recurrence-free probability.",
+              "quote": false,
+              "locator": "Main PDF pp 2–6; Tables 1–4 and Figure 1."
+            }
+          ],
+          "proposal": "No routine bypass. Require individual oncology/transplant review, expected-benefit justification, donor-risk review for LDLT and the appropriate allocation route. Whether to establish a prospective AFP-only study remains OPEN. OPEN; not activated.",
+          "rationale": "These data justify risk review but do not validate the proposed operational thresholds or AFP-only transplant benefit.",
+          "owners": "Transplant surgery · hepatology · oncology · radiology · allocation coordination",
+          "record": "HCC B1.1e",
+          "status": "OPEN — not approved"
+        },
+        {
+          "id": "afp-b1-1f",
+          "question": "What must be audited?",
+          "comparisons": [
+            {
+              "ref": "H-policy",
+              "text": "as long as the candidate’s AFP level remains below 500 ng/mL",
+              "quote": true,
+              "locator": "OPTN 9.5.I.iv; after prior AFP >1000"
+            },
+            {
+              "ref": "V12-AFP_500",
+              "text": "Five-year OS at final AFP <100 / 100–499 / ≥500: 72.7% / 70.4% / 56.1%; recurrence: 13.1% / 18.7% / 24.2%. Final AFP ≥500: adjusted mortality HR 1.50 (95% CI 1.07–2.10), recurrence HR 1.88 (1.13–3.14).",
+              "quote": false,
+              "locator": "Main PDF pp 4–9; Tables 1–3 and Figures 1–3."
+            },
+            {
+              "ref": "V12-AFP_SLOPE",
+              "text": "Small, data-selected cutoff group; no prospective hold/release validation. The long-term fitted slope cannot be inferred reliably from two closely spaced noisy results. Death was censored for recurrence-free probability.",
+              "quote": false,
+              "locator": "Main PDF pp 2–6; Tables 1–4 and Figure 1."
+            }
+          ],
+          "proposal": "Peak and serial AFP with dates; liver inflammation; imaging viability; treatment exposure; reason and duration of hold; exception decision; waitlist dropout; explant viability/MVI; recurrence and post-LT survival. Include all evaluated patients, not only those transplanted. OPEN; not activated.",
+          "rationale": "These data justify risk review but do not validate the proposed operational thresholds or AFP-only transplant benefit.",
+          "owners": "Transplant surgery · hepatology · oncology · radiology · allocation coordination",
+          "record": "HCC B1.1f",
+          "status": "OPEN — not approved"
         }
       ],
-      "protocol": "/mh-liver-pathways/transplant/protocols/hcc_v3_protocol.docx",
+      "protocol": "/mh-liver-pathways/evidence/2026-10-25/docs/01_HCC_Standard_Guidance_Aligned_Protocol_v12.docx",
       "docs": [
+        {
+          "label": "B1.1 evidence and OPEN meeting record",
+          "url": "/mh-liver-pathways/evidence/2026-10-25/docs/HCC_B1_1_AFP_Evidence_and_Open_Meeting_Record_v12.docx"
+        },
+        {
+          "label": "V12 HCC alignment and meeting decisions",
+          "url": "/mh-liver-pathways/evidence/2026-10-25/docs/01_HCC_Alignment_and_Meeting_Decisions_v12.docx"
+        },
+        {
+          "label": "V12 complete protocol",
+          "url": "/mh-liver-pathways/evidence/2026-10-25/docs/01_HCC_Standard_Guidance_Aligned_Protocol_v12.docx"
+        },
         {
           "label": "Decision document",
           "url": "/mh-liver-pathways/transplant/docs/01_HCC_Alignment_Meeting_Decision_Document_2026-10-16_v3.docx"
@@ -1489,8 +1699,12 @@
           "status": "Discussion required — not yet approved"
         }
       ],
-      "protocol": "/mh-liver-pathways/transplant/protocols/pcca_v3_protocol.docx",
+      "protocol": "/mh-liver-pathways/evidence/2026-10-25/docs/02_PCCA_Standard_Guidance_Aligned_Protocol_v12.docx",
       "docs": [
+        {
+          "label": "V12 complete protocol",
+          "url": "/mh-liver-pathways/evidence/2026-10-25/docs/02_PCCA_Standard_Guidance_Aligned_Protocol_v12.docx"
+        },
         {
           "label": "Decision document",
           "url": "/mh-liver-pathways/transplant/docs/02_Perihilar_CCA_Alignment_Meeting_Decision_Document_2026-10-16_v3.docx"
@@ -2053,8 +2267,12 @@
           "status": "Discussion required — not yet approved"
         }
       ],
-      "protocol": "/mh-liver-pathways/transplant/protocols/icca_v3_protocol.docx",
+      "protocol": "/mh-liver-pathways/evidence/2026-10-25/docs/03_ICCA_Standard_Guidance_Aligned_Protocol_v12.docx",
       "docs": [
+        {
+          "label": "V12 complete protocol",
+          "url": "/mh-liver-pathways/evidence/2026-10-25/docs/03_ICCA_Standard_Guidance_Aligned_Protocol_v12.docx"
+        },
         {
           "label": "Decision document",
           "url": "/mh-liver-pathways/transplant/docs/03_iCCA_Alignment_Meeting_Decision_Document_2026-10-16_v3.docx"
@@ -2900,8 +3118,12 @@
           "status": "Discussion required — not yet approved"
         }
       ],
-      "protocol": "/mh-liver-pathways/transplant/protocols/crlm_v3_protocol.docx",
+      "protocol": "/mh-liver-pathways/evidence/2026-10-25/docs/04_CRLM_Standard_Guidance_Aligned_Protocol_v12.docx",
       "docs": [
+        {
+          "label": "V12 complete protocol",
+          "url": "/mh-liver-pathways/evidence/2026-10-25/docs/04_CRLM_Standard_Guidance_Aligned_Protocol_v12.docx"
+        },
         {
           "label": "Decision document",
           "url": "/mh-liver-pathways/transplant/docs/04_CRLM_Alignment_Meeting_Decision_Document_2026-10-16_v3.docx"
@@ -4878,6 +5100,146 @@
       "url": "https://doi.org/10.1053/j.gastro.2016.11.042",
       "pdf": "https://doi.org/10.1053/j.gastro.2016.11.042",
       "note": "Molecular risk stratification informs clinical judgment. Any local restriction to a particular β-catenin exon must be distinguished from the NLRB criteria for MELD-exception review."
+    },
+    "V12-AFP_RESPONSE": {
+      "short": "Mehta 2019: AFP response",
+      "title": "Alpha-Fetoprotein Decrease from > 1,000 to < 500 ng/mL in Patients with Hepatocellular Carcinoma Leads to Improved Posttransplant Outcomes.",
+      "kind": "Full-text clinical evidence",
+      "locator": "Main PDF pp 3–9; Tables 1–3 and Figures 1–3.",
+      "url": "https://doi.org/10.1002/hep.30413",
+      "doi": "10.1002/hep.30413",
+      "pmid": "30548884",
+      "note": "Five-year post-LT OS: 48.8% with final AFP >1000, 67.0% at 101–499, and 88.4% at ≤100. Corresponding Kaplan–Meier recurrence estimates: 35.0%, 13.3%, and 7.2%. The 500–1000 group had only 17 patients. Differences between ≤100 and 101–499 were not statistically significant. Recipient-only, selected historical cohort; treatment and waiting time differed substantially between groups. Non-HCC death was censored for recurrence. No proof that forcing AFP lower causes benefit, no AFP-only/imaging-complete-response subgroup, and no LDLT validation. Full PDF saved privately; TMC: https://libkey.io/libraries/480/10.1002/hep.30413"
+    },
+    "V12-AFP_500": {
+      "short": "Goldman 2022: final AFP ≥500",
+      "title": "Lower Alpha-Fetoprotein Threshold of 500 ng/mL for Liver Transplantation May Improve Posttransplant Outcomes in Patients With Hepatocellular Carcinoma.",
+      "kind": "Full-text clinical evidence",
+      "locator": "Main PDF pp 4–9; Tables 1–3 and Figures 1–3.",
+      "url": "https://doi.org/10.1002/lt.26392",
+      "doi": "10.1002/lt.26392",
+      "pmid": "34927344",
+      "note": "Five-year OS at final AFP <100 / 100–499 / ≥500: 72.7% / 70.4% / 56.1%; recurrence: 13.1% / 18.7% / 24.2%. Final AFP ≥500: adjusted mortality HR 1.50 (95% CI 1.07–2.10), recurrence HR 1.88 (1.13–3.14). Historical recipient-only study, not a comparison of transplant versus no transplant. Many had only one AFP. In the ≥500 subgroup, 40.4% were ≥1000; small subgroups cannot establish equivalence. Recurrence estimates censor competing death. Full PDF saved privately; TMC: https://libkey.io/libraries/480/10.1002/lt.26392"
+    },
+    "V12-AFP_SLOPE": {
+      "short": "Giard 2018: AFP slope",
+      "title": "Alpha-Fetoprotein Slope >7.5 ng/mL per Month Predicts Microvascular Invasion and Tumor Recurrence After Liver Transplantation for Hepatocellular Carcinoma.",
+      "kind": "Full-text clinical evidence",
+      "locator": "Main PDF pp 2–6; Tables 1–4 and Figure 1.",
+      "url": "https://doi.org/10.1097/TP.0000000000002094",
+      "doi": "10.1097/TP.0000000000002094",
+      "pmid": "29505494",
+      "note": "AFP slope >7.5 ng/mL/month: adjusted recurrence HR 3.0 (1.1–8.1), microvascular invasion OR 6.8 (1.6–28.7). Five-year recurrence-free probability 69.8% versus 87.4%; survival without recurrence 59.5% versus 75.3%. These are different endpoints, neither pair should be labeled overall survival. Small, data-selected cutoff group; no prospective hold/release validation. The long-term fitted slope cannot be inferred reliably from two closely spaced noisy results. Death was censored for recurrence-free probability. Full PDF saved privately; TMC: https://libkey.io/libraries/480/10.1097/TP.0000000000002094"
+    },
+    "V12-AFP_NYCA": {
+      "short": "Halazun 2021: dynamic AFP/NYCA",
+      "title": "Dynamic α-Fetoprotein Response and Outcomes After Liver Transplant for Hepatocellular Carcinoma.",
+      "kind": "Full-text clinical evidence",
+      "locator": "Main PDF pp 1–8; Table 1, Figures 1–3. Trailing commentary is not a separate reviewed study.",
+      "url": "https://doi.org/10.1001/jamasurg.2021.0954",
+      "doi": "10.1001/jamasurg.2021.0954",
+      "pmid": "33950167",
+      "note": "Five-year competing-risk cumulative recurrence: 9.5%, 20.5%, 40.5% for low/intermediate/high NYCA categories. Discrimination C statistic 0.66. These are composite-score categories, not isolated AFP ranges. Recipient selection, exclusion of early deaths, no waitlist dropout or transplant-benefit comparison. Maximum-to-final AFP can miss a rebound below the original peak. Extreme-AFP response subgroup was tiny. Full PDF saved privately; TMC: https://libkey.io/libraries/480/10.1001/jamasurg.2021.0954"
+    },
+    "V12-AFP_OCCULT": {
+      "short": "Moriyama 2026: markers before imaging recurrence",
+      "title": "Management and Prognosis of HCC Patients With Elevated Tumor Markers but no Imaging Recurrence After Radiofrequency Ablation.",
+      "kind": "Full-text clinical evidence",
+      "locator": "All nine main-PDF pages; methods, Tables 2–4, Figures 1–3. External Tables S1/S2 not supplied.",
+      "url": "https://doi.org/10.1002/cam4.71812",
+      "doi": "10.1002/cam4.71812",
+      "pmid": "42010805",
+      "note": "Recurrence was subsequently identified in 886 episodes; median detection interval 89 days. Local curative treatment 83.5% versus 78.8% and post-recurrence OS 3.55 versus 3.31 years for detection ≤180 versus >180 days; differences were not statistically significant. RFA-specific, repeated episodes and competing losses; no LT cohort or tested optimal recall interval. Routine imaging is described as every four months in methods versus quarterly in abstract. Case-level AFP discrepancy between Figure 3 and Table 4 is not used. Full PDF saved privately; TMC: https://libkey.io/libraries/480/10.1002/cam4.71812"
+    },
+    "V12-SHARP": {
+      "short": "SHARP: sorafenib",
+      "title": "Sorafenib in Advanced Hepatocellular Carcinoma",
+      "kind": "Full-text clinical evidence",
+      "locator": "NEJM main PDF pp 1–13, especially efficacy and safety Tables 2–3.",
+      "url": "https://doi.org/10.1056/NEJMoa0708857",
+      "doi": "10.1056/NEJMoa0708857",
+      "pmid": "18650514",
+      "note": "Median OS 10.7 versus 7.9 months; HR 0.69 (0.55–0.87). Radiologic time to progression 5.5 versus 2.8 months, HR 0.58; this is not PFS. ORR 2% versus 1%, no complete responses. Historical placebo comparison, not a comparison with current ICI combinations. Grade 3 diarrhea and hand–foot reaction each 8%; dose interruptions/reductions frequent. Little evidence for decompensated cirrhosis. Full PDF saved privately; TMC: https://libkey.io/libraries/480/10.1056/NEJMoa0708857"
+    },
+    "V12-ASCO_BTC": {
+      "short": "ASCO BTC living guideline 2026.1.0",
+      "title": "Treatment of Advanced Biliary Tract Cancer: ASCO Living Guideline, Version 2026.1.0.",
+      "kind": "Full-text clinical evidence",
+      "locator": "All 56 pages; recommendations Table 1 pp 40–42; Figure 1 p 34 visually inspected. Separate data supplement not reviewed.",
+      "url": "https://doi.org/10.1200/JCO-26-02462",
+      "doi": "10.1200/JCO-26-02462",
+      "pmid": "42874012",
+      "note": "Broad tissue DNA/RNA profiling, MMR and HER2 testing at diagnosis. For eligible MSS/pMMR disease: GemCis plus durvalumab or pembrolizumab (high-quality/strong); GemCis without ICI if unsuitable (conditional). After progression without an actionable target: FOLFOX plus active symptom control or active symptom control alone (conditional). For oxaliplatin-ineligible patients, irinotecan/nal-IRI-based options have low-quality conditional support, not equal default status. Rare targets often rely on small basket cohorts. Accepted-manuscript tables/narrative contain inconsistent estimates; primary trial results govern this update. Full PDF saved privately; TMC: https://libkey.io/libraries/480/10.1200/JCO-26-02462"
+    },
+    "V12-NALIRICC": {
+      "short": "NALIRICC: negative BTC randomized trial",
+      "title": "Nanoliposomal irinotecan and fluorouracil plus leucovorin versus fluorouracil plus leucovorin in patients with cholangiocarcinoma and gallbladder carcinoma previously treated with gemcitabine-based therapies (AIO NALIRICC): a multicentre, open-label, randomised, phase 2 trial",
+      "kind": "Full-text clinical evidence",
+      "locator": "Main PDF pp 1–11; Figure 2 and Tables 1–3.",
+      "url": "https://doi.org/10.1016/S2468-1253(24)00119-5",
+      "doi": "10.1016/S2468-1253(24)00119-5",
+      "pmid": "38870977",
+      "note": "PFS 2.6 versus 2.3 months, HR 0.87 (0.56–1.35); OS 6.9 versus 8.2 months, HR 1.08 (0.68–1.72). ORR 14% versus 4% did not translate into PFS/OS benefit. Grade ≥3 events 71% versus 50%; treatment-related serious events 33% versus 2%. Small phase II trial; subsequent therapy differed (more control patients received later therapy). This does not erase the negative primary PFS result. Contrasts with positive NIFTY; population and treatment differences do not resolve the inconsistency. Full PDF saved privately; TMC: https://libkey.io/libraries/480/10.1016/S2468-1253(24)00119-5"
+    },
+    "V12-MOUNTAINEER": {
+      "short": "MOUNTAINEER final: HER2-positive CRC",
+      "title": "Tucatinib plus trastuzumab for chemotherapy-refractory, HER2 + , RAS wild-type metastatic colorectal cancer (MOUNTAINEER): final analysis.",
+      "kind": "Full-text clinical evidence",
+      "locator": "All 12 main-PDF pages; methods, efficacy Table 2, safety Table 4 and biomarker figures.",
+      "url": "https://doi.org/10.1038/s41467-025-67824-z",
+      "doi": "10.1038/s41467-025-67824-z",
+      "pmid": "41526345",
+      "note": "Tucatinib plus trastuzumab: confirmed ORR 39.3% (28.8–50.5), median response duration 15.2 months, PFS 8.1 months, OS 23.9 months. Grade 3 and 4 events 33.7% and 7.0%; 5.8% discontinued for adverse events. No randomized combination comparator or proven best sequence after other HER2 drugs. Do not rank its median OS against unrelated later-line trials. Exploratory HER2 copy-number thresholds are not mandatory selection cutoffs. Full PDF saved privately; TMC: https://libkey.io/libraries/480/10.1038/s41467-025-67824-z"
+    },
+    "V12-SUNLIGHT": {
+      "short": "SUNLIGHT: FTD/TPI plus bevacizumab",
+      "title": "Trifluridine-Tipiracil and Bevacizumab in Refractory Metastatic Colorectal Cancer.",
+      "kind": "Full-text clinical evidence",
+      "locator": "All 11 main-PDF pages; Figures 1–2 and Tables 1–2.",
+      "url": "https://doi.org/10.1056/NEJMoa2214963",
+      "doi": "10.1056/NEJMoa2214963",
+      "pmid": "37133585",
+      "note": "OS 10.8 versus 7.5 months, HR 0.61 (0.49–0.77); PFS 5.6 versus 2.4 months, HR 0.44. ORR 6.1% versus 1.2%. Grade ≥3 events 72.4% versus 69.5%; neutropenia 43.1% versus 32.1%. Open-label; no head-to-head comparison with fruquintinib/regorafenib. Low response rate and an advanced refractory population: not a preferred curative conversion regimen or LT trial. Full PDF saved privately; TMC: https://libkey.io/libraries/480/10.1056/NEJMoa2214963"
+    },
+    "V12-FRESCO2": {
+      "short": "FRESCO-2: fruquintinib",
+      "title": "Fruquintinib versus placebo in patients with refractory metastatic colorectal cancer (FRESCO-2): an international, multicentre, randomised, double-blind, phase 3 study.",
+      "kind": "Full-text clinical evidence",
+      "locator": "All 13 main-PDF pages; Figures 2–3 and Tables 1–3.",
+      "url": "https://doi.org/10.1016/S0140-6736(23)00772-9",
+      "doi": "10.1016/S0140-6736(23)00772-9",
+      "pmid": "37331369",
+      "note": "Fruquintinib versus placebo plus supportive care: OS 7.4 versus 4.8 months, HR 0.66 (0.55–0.80); PFS 3.7 versus 1.8, HR 0.32. Seven partial responses among 461; no complete response. Grade ≥3 events 63% versus 50%. Very late-line population, no direct comparison with SUNLIGHT. Grade ≥3 hypertension 14%, asthenia 8%, hand–foot syndrome 6%; one treatment-related intestinal-perforation death. Full PDF saved privately; TMC: https://libkey.io/libraries/480/10.1016/S0140-6736(23)00772-9"
+    },
+    "V12-CASSANDRA": {
+      "short": "CASSANDRA: preoperative PAXG",
+      "title": "Preoperative mFOLFIRINOX versus PAXG for stage I–III resectable and borderline resectable pancreatic ductal adenocarcinoma (PACT-21 CASSANDRA): results of the first randomisation analysis of a randomised, open-label, 2 × 2 factorial phase 3 trial",
+      "kind": "Full-text clinical evidence",
+      "locator": "All 12 main-PDF pages; endpoint definition, Figure 3 and Tables 1–3.",
+      "url": "https://doi.org/10.1016/S0140-6736(25)01685-X",
+      "doi": "10.1016/S0140-6736(25)01685-X",
+      "pmid": "41275879",
+      "note": "Median event-free survival 16.0 versus 10.2 months, HR 0.63 (0.47–0.84). EFS included confirmed CA19-9 rises and unresectability, not just progression/death. Resection 75% versus 67% (not significant); R0 rates similar. Grade ≥3 toxicity 66% versus 61%. OS immature; no established OS superiority. Open-label, high-volume Italian centers, all White population, age cap. Converted phase II to III after 86% enrollment; no independent monitoring committee. Thirty-three EFS events were marker-only. Do not relabel EFS as OS or PFS. Full PDF saved privately; TMC: https://libkey.io/libraries/480/10.1016/S0140-6736(25)01685-X"
+    },
+    "V12-NAPOLI1": {
+      "short": "NAPOLI-1: nal-IRI after gemcitabine",
+      "title": "Nanoliposomal irinotecan with fluorouracil and folinic acid in metastatic pancreatic cancer after previous gemcitabine-based therapy (NAPOLI-1): a global, randomised, open-label, phase 3 trial.",
+      "kind": "Full-text clinical evidence",
+      "locator": "All 13 main-PDF pages; Figures 1–3 and Tables 1–3.",
+      "url": "https://doi.org/10.1016/S0140-6736(15)00986-1",
+      "doi": "10.1016/S0140-6736(15)00986-1",
+      "pmid": "26615328",
+      "note": "nal-IRI plus 5-FU/LV: OS 6.1 versus 4.2 months, HR 0.67 (0.49–0.92); PFS 3.1 versus 1.5, HR 0.56. ORR 16% versus 1%. nal-IRI monotherapy did not improve OS (HR 0.99). Grade 3–4 neutropenia 27%, diarrhea 13%. Small prior-irinotecan subgroup, different 5-FU schedules, selected organ function. No validated immediate reuse after FOLFIRINOX/NALIRIFOX. One combination treatment-related septic-shock death. Full PDF saved privately; TMC: https://libkey.io/libraries/480/10.1016/S0140-6736(15)00986-1"
+    },
+    "V12-MIXED_PRIMARY": {
+      "short": "Kobayashi 2018: combined HCC-CCA",
+      "title": "Multicenter retrospective analysis of systemic chemotherapy for unresectable combined hepatocellular and cholangiocarcinoma.",
+      "kind": "Full-text clinical evidence",
+      "locator": "All nine main-PDF pages; Table 2 and Figure 3 p 5 visually inspected; Table 3 p 6.",
+      "url": "https://doi.org/10.1111/cas.13656",
+      "doi": "10.1111/cas.13656",
+      "pmid": "29856900",
+      "note": "Overall OS 8.9 months, PFS 2.8 months, ORR 5.6%. Pooled platinum regimens had longer observed OS than sorafenib; adjusted sorafenib-versus-platinum mortality HR 15.83 (2.25–111.43). All seven sorafenib exposures including later line had progression. Tiny nonrandomized groups, major confounding and very wide CI. Abstract and body reverse individual GemCis/5-FU-cisplatin median ordering; do not present those medians as settled. Old pathology classification; no modern ICI comparison. Full PDF saved privately; TMC: https://libkey.io/libraries/480/10.1111/cas.13656"
     }
   },
   "assistants": {
@@ -10378,8 +10740,8 @@
     ]
   },
   "high_risk": {
-    "version": "2026-10-24-integrated-v7",
-    "review_date": "2026-10-24",
+    "version": "V12-full-text-14-paper-update",
+    "review_date": "2026-10-25",
     "pathways": {
       "hcc": {
         "name": "Hepatocellular carcinoma",
@@ -10484,6 +10846,100 @@
                   "results": "Ten-year post-LT overall survival was 61.5%, 52.1% and 43.3%; ten-year recurrence was 13.3%, 20.6% and 41.1%, respectively. Median follow-up was 55.3 months.",
                   "limits": "Longer-term cancer risk persists after successful downstaging. Recipient-only retrospective data do not estimate entry survival or probability of ever reaching LT; long-term tails have fewer patients.",
                   "locator": "Primary PMC Methods/Results and survival tables, PMC9301590; complete PDF pending."
+                }
+              ]
+            }
+          },
+          {
+            "id": "HCC-B1.1",
+            "anchor": "hcc-b1-1",
+            "title": "AFP-only failure or discordance with imaging",
+            "status": "OPEN clinical proposal — not active",
+            "steps": [
+              "allocation",
+              "treatment",
+              "listing",
+              "waitlist"
+            ],
+            "context": "High or rising AFP despite controlled/uncertain imaging, including patients otherwise within Milan. Do not inherit B1 expanded-burden AFP <100.",
+            "stance": "Use a distinct biological-risk review; confirm the signal and restage. Do not permanently delist or treat a nonexistent target based on one AFP result.",
+            "rules": [
+              "Repeat AFP using the same laboratory/assay in 2–4 weeks, sooner for a major jump or clinical concern. Review all dated prior values, baseline and peak AFP, treatment dates and the current response scan. The 2–4 week interval is an OPEN local operational proposal.",
+              "Check ALT/AST, bilirubin and active viral hepatitis or other plausible hepatic inflammation. Consider assay interference or an extrahepatic AFP source when clinically indicated; do not order indiscriminate tests without a differential diagnosis.",
+              "Have transplant radiology re-review adequate multiphasic CT/MRI and the treatment-specific response category. With a persistent unexplained rise, consider the alternate contrast modality and chest/pelvic evaluation. PET is selective after unrevealing evaluation, not routine proof of no HCC.",
+              "The governing allocation rule is met, or an individual review outcome is documented; technically adequate imaging shows no exclusionary progression, vascular invasion or extrahepatic disease; no unresolved alternative cause or unexplained accelerating AFP remains.",
+              "OPEN proposal after a biochemical hold: at least two AFP values at least 4 weeks apart showing a stable or falling trajectory below the applicable threshold, with contemporaneous reviewed imaging. Do not require AFP normalization or below 100 for every within-Milan patient. This confirmation interval is not prospectively validated.",
+              "All other observation requirements remain in force. B1 expanded-burden patients retain the separately proposed AFP below 100 and longer biology observation; satisfying B1.1 does not shorten B1, ICI washout, or OPTN waiting requirements.",
+              "POLICY: after any prior AFP above 1000, AFP at least 500 after treatment prevents automatic advancement through the standardized exception route and requires NLRB consideration. The team should not promise exception approval.",
+              "OPEN clinical proposal: confirmed AFP at least 500 is a high-risk LT hold pending biological and allocation review even if AFP never exceeded 1000. This deliberately conservative local rule is supported by retrospective outcomes, not mandated by OPTN for every candidate.",
+              "OPEN clinical proposal below 500: AFP at least 200 with two consecutive increases or a confirmed doubling prompts temporary hold and expedited restaging if the rise is unexplained. Lesser rises prompt repeat testing and MDT review, not automatic delisting. These combined thresholds are operational proposals, not a validated prediction rule.",
+              "A fitted slope above 7.5 ng/mL per month is an additional warning, not a stand-alone stop. Review multiple dated values, timing of LRT and inflammation; do not extrapolate a long-term slope model from two closely spaced noisy measurements.",
+              "Do not permanently exclude for one AFP result. Persistent biochemical nonresponse after adequate evaluation may lead the group to decline the current transplant plan, but the rationale and possibility of reassessment must be documented.",
+              "Do not call AFP-only rise RECIST or LI-RADS treatment progression. Do not give empiric LRT without an identified target, or add systemic therapy solely to make the AFP cross an allocation threshold without a justified oncologic indication.",
+              "Do not treat LDLT as an automatic escape from unfavorable tumor biology. Donor risk, recipient benefit and recurrence must be reviewed independently. New ICI use requires the separate B3 transplant safety decision."
+            ],
+            "tests": "Dated AFP series and peak; repeat same assay, liver inflammation/viral activity review; expert multiphasic CT/MRI review and alternate imaging when indicated; current allocation route; all treatment dates. Proposed 2–4-week repeat and 4-week confirmation intervals are unvalidated local choices.",
+            "allocation": "After prior AFP >1000, standardized exception requires AFP <500 and remaining <500. Persistent failure requires individual NLRB review, without a promise of approval. LDLT does not bypass unfavorable biology or donor-risk review.",
+            "references": [
+              "AFP_RESPONSE",
+              "AFP_500",
+              "AFP_SLOPE",
+              "AFP_NYCA",
+              "AFP_OCCULT",
+              "optn",
+              "nlrb"
+            ],
+            "evidence": {
+              "synthesis": "AFP level and trajectory add risk information to imaging. Selected recipient cohorts support concern, not a validated AFP-only transplant-benefit cutoff.",
+              "counterevidence": "Most studies excluded waitlist dropout; NYCA is a composite and excluded early deaths. Post-RFA marker episodes are not AFP-only transplant candidates.",
+              "certainty": "Observational association; very low certainty for the proposed hold/release combination.",
+              "threshold_basis": "Confirmed AFP ≥500 clinical hold; AFP ≥200 plus two rises or confirmed doubling; release after two stable/falling values ≥4 weeks apart: OPEN proposals, not validated rules.",
+              "policy_context": "Clinical suitability and allocation exceptions are separate.",
+              "studies": [
+                {
+                  "key": "AFP_RESPONSE",
+                  "title": "Mehta 2019: AFP response",
+                  "design": "Retrospective UNOS recipient cohort, 2005–2015; 407 patients with AFP >1000 at least once and final AFP within 90 days of LT. Living-donor and multiorgan recipients excluded; 93.6% initially within Milan.",
+                  "results": "Five-year post-LT OS: 48.8% with final AFP >1000, 67.0% at 101–499, and 88.4% at ≤100. Corresponding Kaplan–Meier recurrence estimates: 35.0%, 13.3%, and 7.2%. The 500–1000 group had only 17 patients. Differences between ≤100 and 101–499 were not statistically significant.",
+                  "limitations": "Recipient-only, selected historical cohort; treatment and waiting time differed substantially between groups. Non-HCC death was censored for recurrence. No proof that forcing AFP lower causes benefit, no AFP-only/imaging-complete-response subgroup, and no LDLT validation.",
+                  "implication": "Supports response-based biological review and the existing >1000-to-<500 allocation framework. Does not require AFP <100 for every within-Milan candidate or prove a safe AFP-only exception.",
+                  "locator": "Main PDF pp 3–9; Tables 1–3 and Figures 1–3."
+                },
+                {
+                  "key": "AFP_500",
+                  "title": "Goldman 2022: final AFP ≥500",
+                  "design": "UNOS 2005–2015; 1766 LT recipients with initial AFP 100–999. Only 879 had serial values; final AFP ≥500 subgroup n=109. LDLT excluded.",
+                  "results": "Five-year OS at final AFP <100 / 100–499 / ≥500: 72.7% / 70.4% / 56.1%; recurrence: 13.1% / 18.7% / 24.2%. Final AFP ≥500: adjusted mortality HR 1.50 (95% CI 1.07–2.10), recurrence HR 1.88 (1.13–3.14).",
+                  "limitations": "Historical recipient-only study, not a comparison of transplant versus no transplant. Many had only one AFP. In the ≥500 subgroup, 40.4% were ≥1000; small subgroups cannot establish equivalence. Recurrence estimates censor competing death.",
+                  "implication": "Supports discussing a conservative clinical hold at confirmed AFP ≥500, even without a prior >1000 result. This is an OPEN local proposal, not a universal OPTN contraindication or a proven transplant-benefit cutoff.",
+                  "locator": "Main PDF pp 4–9; Tables 1–3 and Figures 1–3."
+                },
+                {
+                  "key": "AFP_SLOPE",
+                  "title": "Giard 2018: AFP slope",
+                  "design": "Single-center 336 transplanted T2/Milan patients, 2003–2013; 98.2% received LRT. Median five AFP measurements over 9.8 months. Slope fitted to all values; >7.5 subgroup n=23.",
+                  "results": "AFP slope >7.5 ng/mL/month: adjusted recurrence HR 3.0 (1.1–8.1), microvascular invasion OR 6.8 (1.6–28.7). Five-year recurrence-free probability 69.8% versus 87.4%; survival without recurrence 59.5% versus 75.3%. These are different endpoints, neither pair should be labeled overall survival.",
+                  "limitations": "Small, data-selected cutoff group; no prospective hold/release validation. The long-term fitted slope cannot be inferred reliably from two closely spaced noisy results. Death was censored for recurrence-free probability.",
+                  "implication": "Use slope as an alert to reassess biology, imaging and inflammation, not a stand-alone absolute stop or permanent delisting rule.",
+                  "locator": "Main PDF pp 2–6; Tables 1–4 and Figure 1."
+                },
+                {
+                  "key": "AFP_NYCA",
+                  "title": "Halazun 2021: dynamic AFP/NYCA",
+                  "design": "External retrospective validation in 2236 LT recipients at eight centers, 2001–2013; 545 beyond Milan. Composite score combines tumor size, count and AFP response. Deaths within 90 postoperative days excluded.",
+                  "results": "Five-year competing-risk cumulative recurrence: 9.5%, 20.5%, 40.5% for low/intermediate/high NYCA categories. Discrimination C statistic 0.66. These are composite-score categories, not isolated AFP ranges.",
+                  "limitations": "Recipient selection, exclusion of early deaths, no waitlist dropout or transplant-benefit comparison. Maximum-to-final AFP can miss a rebound below the original peak. Extreme-AFP response subgroup was tiny.",
+                  "implication": "Use dynamic AFP as complementary risk information. The NYCA definition of response does not supersede the stricter OPTN requirement to fall below 500 after AFP >1000.",
+                  "locator": "Main PDF pp 1–8; Table 1, Figures 1–3. Trailing commentary is not a separate reviewed study."
+                },
+                {
+                  "key": "AFP_OCCULT",
+                  "title": "Moriyama 2026: markers before imaging recurrence",
+                  "design": "Retrospective post-RFA, nontransplant cohort. Among 1620 initially treated patients, 907 episodes in 509 patients had elevated AFP, AFP-L3 and/or DCP without imaging evidence. Episodes are not independent patients and this is not AFP alone.",
+                  "results": "Recurrence was subsequently identified in 886 episodes; median detection interval 89 days. Local curative treatment 83.5% versus 78.8% and post-recurrence OS 3.55 versus 3.31 years for detection ≤180 versus >180 days; differences were not statistically significant.",
+                  "limitations": "RFA-specific, repeated episodes and competing losses; no LT cohort or tested optimal recall interval. Routine imaging is described as every four months in methods versus quarterly in abstract. Case-level AFP discrepancy between Figure 3 and Table 4 is not used.",
+                  "implication": "Supports prompt repeat markers and high-quality/alternate imaging for an unexplained rise. Does not prove occult recurrence in every individual, justify empiric systemic/LRT treatment without a target, or validate an AFP-only transplant cutoff.",
+                  "locator": "All nine main-PDF pages; methods, Tables 2–4, Figures 1–3. External Tables S1/S2 not supplied."
                 }
               ]
             }
@@ -10770,16 +11226,9 @@
         ],
         "documents": [
           {
-            "url": "/mh-liver-pathways/transplant/high-risk/docs/01_HCC_High_Risk_Protocol_v7.pdf",
-            "label": "V7 high-risk protocol · PDF",
-            "format": "pdf",
-            "sha256": "6d0a96b63c06ef4f001488447c5f0f018a356c3645f48072ec642c377119f140"
-          },
-          {
-            "url": "/mh-liver-pathways/transplant/high-risk/docs/01_HCC_High_Risk_Protocol_v7.docx",
-            "label": "V7 high-risk protocol · DOCX",
-            "format": "docx",
-            "sha256": "7a73a1df289f90ac3f05de2ecd742843380600c5e8d66ece1e1c44acfe2b1e29"
+            "label": "V12 high-risk protocol · DOCX",
+            "url": "/mh-liver-pathways/evidence/2026-10-25/docs/01_HCC_High_Risk_Protocol_v12.docx",
+            "format": "docx"
           }
         ]
       },
@@ -11031,16 +11480,9 @@
         ],
         "documents": [
           {
-            "url": "/mh-liver-pathways/transplant/high-risk/docs/02_PCCA_High_Risk_Protocol_v7.pdf",
-            "label": "V7 high-risk protocol · PDF",
-            "format": "pdf",
-            "sha256": "608f12cc30f698659c064ca9291db300bf7f87064c92c12ff15c4fe183af9925"
-          },
-          {
-            "url": "/mh-liver-pathways/transplant/high-risk/docs/02_PCCA_High_Risk_Protocol_v7.docx",
-            "label": "V7 high-risk protocol · DOCX",
-            "format": "docx",
-            "sha256": "aab4818abe73aab7c5b6291db605d32c11022e1cfa625f3c16843ead96772392"
+            "label": "V12 high-risk protocol · DOCX",
+            "url": "/mh-liver-pathways/evidence/2026-10-25/docs/02_PCCA_High_Risk_Protocol_v12.docx",
+            "format": "docx"
           }
         ]
       },
@@ -11329,16 +11771,9 @@
         ],
         "documents": [
           {
-            "url": "/mh-liver-pathways/transplant/high-risk/docs/03_ICCA_High_Risk_Protocol_v7.pdf",
-            "label": "V7 high-risk protocol · PDF",
-            "format": "pdf",
-            "sha256": "b55f69dd59bac6bb6d05b9e11a9b2475bc85e23a60e21b66104bc7040abd86e3"
-          },
-          {
-            "url": "/mh-liver-pathways/transplant/high-risk/docs/03_ICCA_High_Risk_Protocol_v7.docx",
-            "label": "V7 high-risk protocol · DOCX",
-            "format": "docx",
-            "sha256": "cdb31e947184d4c09685d32d529139e594ae64c58412500d36946aea637ed275"
+            "label": "V12 high-risk protocol · DOCX",
+            "url": "/mh-liver-pathways/evidence/2026-10-25/docs/03_ICCA_High_Risk_Protocol_v12.docx",
+            "format": "docx"
           }
         ]
       },
@@ -11689,16 +12124,9 @@
         ],
         "documents": [
           {
-            "url": "/mh-liver-pathways/transplant/high-risk/docs/04_CRLM_High_Risk_Protocol_v7.pdf",
-            "label": "V7 high-risk protocol · PDF",
-            "format": "pdf",
-            "sha256": "4bd5e60cde4908d75c2b72f9db5235af6e88e915dfc0cded3c8cd8ed50121c9b"
-          },
-          {
-            "url": "/mh-liver-pathways/transplant/high-risk/docs/04_CRLM_High_Risk_Protocol_v7.docx",
-            "label": "V7 high-risk protocol · DOCX",
-            "format": "docx",
-            "sha256": "76b30fb1de09edb3d2ea1889afa6a8df56bccb0b49511e9a14b5c51276b59319"
+            "label": "V12 high-risk protocol · DOCX",
+            "url": "/mh-liver-pathways/evidence/2026-10-25/docs/04_CRLM_High_Risk_Protocol_v12.docx",
+            "format": "docx"
           }
         ]
       },
@@ -14698,6 +15126,202 @@
         ],
         "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1016%2FS1470-2045%2820%2930224-2&lang=en",
         "review_depth": "Complete accepted manuscript including protocol appendix plus final published abstract; version-dependent hazard ratios not merged."
+      },
+      "AFP_RESPONSE": {
+        "key": "AFP_RESPONSE",
+        "short": "Mehta 2019: AFP response",
+        "title": "Alpha-Fetoprotein Decrease from > 1,000 to < 500 ng/mL in Patients with Hepatocellular Carcinoma Leads to Improved Posttransplant Outcomes.",
+        "author": "Mehta N",
+        "journal": "Hepatology (Baltimore, Md.)",
+        "year": 2019,
+        "doi": "10.1002/hep.30413",
+        "pmid": "30548884",
+        "url": "https://doi.org/10.1002/hep.30413",
+        "tmc": "https://libkey.io/libraries/480/10.1002/hep.30413",
+        "pdf_links": [],
+        "review_depth": "All 13 main-PDF pages read; external supplements not separately reviewed. PDF saved in private Synology depot."
+      },
+      "AFP_500": {
+        "key": "AFP_500",
+        "short": "Goldman 2022: final AFP ≥500",
+        "title": "Lower Alpha-Fetoprotein Threshold of 500 ng/mL for Liver Transplantation May Improve Posttransplant Outcomes in Patients With Hepatocellular Carcinoma.",
+        "author": "Goldman ML",
+        "journal": "Liver transplantation : official publication of the American Association for the Study of Liver Diseases and the International Liver Transplantation Society",
+        "year": 2022,
+        "doi": "10.1002/lt.26392",
+        "pmid": "34927344",
+        "url": "https://doi.org/10.1002/lt.26392",
+        "tmc": "https://libkey.io/libraries/480/10.1002/lt.26392",
+        "pdf_links": [],
+        "review_depth": "All 11 main-PDF pages read; external supplements not separately reviewed. PDF saved in private Synology depot."
+      },
+      "AFP_SLOPE": {
+        "key": "AFP_SLOPE",
+        "short": "Giard 2018: AFP slope",
+        "title": "Alpha-Fetoprotein Slope >7.5 ng/mL per Month Predicts Microvascular Invasion and Tumor Recurrence After Liver Transplantation for Hepatocellular Carcinoma.",
+        "author": "Giard JM",
+        "journal": "Transplantation",
+        "year": 2018,
+        "doi": "10.1097/TP.0000000000002094",
+        "pmid": "29505494",
+        "url": "https://doi.org/10.1097/TP.0000000000002094",
+        "tmc": "https://libkey.io/libraries/480/10.1097/TP.0000000000002094",
+        "pdf_links": [],
+        "review_depth": "All 7 main-PDF pages read; external supplements not separately reviewed. PDF saved in private Synology depot."
+      },
+      "AFP_NYCA": {
+        "key": "AFP_NYCA",
+        "short": "Halazun 2021: dynamic AFP/NYCA",
+        "title": "Dynamic α-Fetoprotein Response and Outcomes After Liver Transplant for Hepatocellular Carcinoma.",
+        "author": "Halazun KJ",
+        "journal": "JAMA surgery",
+        "year": 2021,
+        "doi": "10.1001/jamasurg.2021.0954",
+        "pmid": "33950167",
+        "url": "https://doi.org/10.1001/jamasurg.2021.0954",
+        "tmc": "https://libkey.io/libraries/480/10.1001/jamasurg.2021.0954",
+        "pdf_links": [],
+        "review_depth": "All 9 main-PDF pages read; external supplements not separately reviewed. PDF saved in private Synology depot."
+      },
+      "AFP_OCCULT": {
+        "key": "AFP_OCCULT",
+        "short": "Moriyama 2026: markers before imaging recurrence",
+        "title": "Management and Prognosis of HCC Patients With Elevated Tumor Markers but no Imaging Recurrence After Radiofrequency Ablation.",
+        "author": "Moriyama M",
+        "journal": "Cancer medicine",
+        "year": 2026,
+        "doi": "10.1002/cam4.71812",
+        "pmid": "42010805",
+        "url": "https://doi.org/10.1002/cam4.71812",
+        "tmc": "https://libkey.io/libraries/480/10.1002/cam4.71812",
+        "pdf_links": [],
+        "review_depth": "All 9 main-PDF pages read; external supplements not separately reviewed. PDF saved in private Synology depot."
+      },
+      "SHARP": {
+        "key": "SHARP",
+        "short": "SHARP: sorafenib",
+        "title": "Sorafenib in Advanced Hepatocellular Carcinoma",
+        "author": "Llovet",
+        "journal": "New England Journal of Medicine",
+        "year": 2008,
+        "doi": "10.1056/NEJMoa0708857",
+        "pmid": "18650514",
+        "url": "https://doi.org/10.1056/NEJMoa0708857",
+        "tmc": "https://libkey.io/libraries/480/10.1056/NEJMoa0708857",
+        "pdf_links": [],
+        "review_depth": "All 13 main-PDF pages read; external supplements not separately reviewed. PDF saved in private Synology depot."
+      },
+      "ASCO_BTC": {
+        "key": "ASCO_BTC",
+        "short": "ASCO BTC living guideline 2026.1.0",
+        "title": "Treatment of Advanced Biliary Tract Cancer: ASCO Living Guideline, Version 2026.1.0.",
+        "author": "Shroff RT",
+        "journal": "Journal of clinical oncology : official journal of the American Society of Clinical Oncology",
+        "year": 2026,
+        "doi": "10.1200/JCO-26-02462",
+        "pmid": "42874012",
+        "url": "https://doi.org/10.1200/JCO-26-02462",
+        "tmc": "https://libkey.io/libraries/480/10.1200/JCO-26-02462",
+        "pdf_links": [],
+        "review_depth": "All 56 main-PDF pages read; external supplements not separately reviewed. PDF saved in private Synology depot."
+      },
+      "NALIRICC": {
+        "key": "NALIRICC",
+        "short": "NALIRICC: negative BTC randomized trial",
+        "title": "Nanoliposomal irinotecan and fluorouracil plus leucovorin versus fluorouracil plus leucovorin in patients with cholangiocarcinoma and gallbladder carcinoma previously treated with gemcitabine-based therapies (AIO NALIRICC): a multicentre, open-label, randomised, phase 2 trial",
+        "author": "Vogel A",
+        "journal": "The lancet. Gastroenterology & hepatology",
+        "year": 2024,
+        "doi": "10.1016/S2468-1253(24)00119-5",
+        "pmid": "38870977",
+        "url": "https://doi.org/10.1016/S2468-1253(24)00119-5",
+        "tmc": "https://libkey.io/libraries/480/10.1016/S2468-1253(24)00119-5",
+        "pdf_links": [],
+        "review_depth": "All 11 main-PDF pages read; external supplements not separately reviewed. PDF saved in private Synology depot."
+      },
+      "MOUNTAINEER": {
+        "key": "MOUNTAINEER",
+        "short": "MOUNTAINEER final: HER2-positive CRC",
+        "title": "Tucatinib plus trastuzumab for chemotherapy-refractory, HER2 + , RAS wild-type metastatic colorectal cancer (MOUNTAINEER): final analysis.",
+        "author": "Strickler JH",
+        "journal": "Nature communications",
+        "year": 2026,
+        "doi": "10.1038/s41467-025-67824-z",
+        "pmid": "41526345",
+        "url": "https://doi.org/10.1038/s41467-025-67824-z",
+        "tmc": "https://libkey.io/libraries/480/10.1038/s41467-025-67824-z",
+        "pdf_links": [],
+        "review_depth": "All 12 main-PDF pages read; external supplements not separately reviewed. PDF saved in private Synology depot."
+      },
+      "SUNLIGHT": {
+        "key": "SUNLIGHT",
+        "short": "SUNLIGHT: FTD/TPI plus bevacizumab",
+        "title": "Trifluridine-Tipiracil and Bevacizumab in Refractory Metastatic Colorectal Cancer.",
+        "author": "Prager GW",
+        "journal": "The New England journal of medicine",
+        "year": 2023,
+        "doi": "10.1056/NEJMoa2214963",
+        "pmid": "37133585",
+        "url": "https://doi.org/10.1056/NEJMoa2214963",
+        "tmc": "https://libkey.io/libraries/480/10.1056/NEJMoa2214963",
+        "pdf_links": [],
+        "review_depth": "All 11 main-PDF pages read; external supplements not separately reviewed. PDF saved in private Synology depot."
+      },
+      "FRESCO2": {
+        "key": "FRESCO2",
+        "short": "FRESCO-2: fruquintinib",
+        "title": "Fruquintinib versus placebo in patients with refractory metastatic colorectal cancer (FRESCO-2): an international, multicentre, randomised, double-blind, phase 3 study.",
+        "author": "Dasari A",
+        "journal": "Lancet (London, England)",
+        "year": 2023,
+        "doi": "10.1016/S0140-6736(23)00772-9",
+        "pmid": "37331369",
+        "url": "https://doi.org/10.1016/S0140-6736(23)00772-9",
+        "tmc": "https://libkey.io/libraries/480/10.1016/S0140-6736(23)00772-9",
+        "pdf_links": [],
+        "review_depth": "All 13 main-PDF pages read; external supplements not separately reviewed. PDF saved in private Synology depot."
+      },
+      "CASSANDRA": {
+        "key": "CASSANDRA",
+        "short": "CASSANDRA: preoperative PAXG",
+        "title": "Preoperative mFOLFIRINOX versus PAXG for stage I–III resectable and borderline resectable pancreatic ductal adenocarcinoma (PACT-21 CASSANDRA): results of the first randomisation analysis of a randomised, open-label, 2 × 2 factorial phase 3 trial",
+        "author": "Reni M",
+        "journal": "Lancet (London, England)",
+        "year": 2026,
+        "doi": "10.1016/S0140-6736(25)01685-X",
+        "pmid": "41275879",
+        "url": "https://doi.org/10.1016/S0140-6736(25)01685-X",
+        "tmc": "https://libkey.io/libraries/480/10.1016/S0140-6736(25)01685-X",
+        "pdf_links": [],
+        "review_depth": "All 12 main-PDF pages read; external supplements not separately reviewed. PDF saved in private Synology depot."
+      },
+      "NAPOLI1": {
+        "key": "NAPOLI1",
+        "short": "NAPOLI-1: nal-IRI after gemcitabine",
+        "title": "Nanoliposomal irinotecan with fluorouracil and folinic acid in metastatic pancreatic cancer after previous gemcitabine-based therapy (NAPOLI-1): a global, randomised, open-label, phase 3 trial.",
+        "author": "Wang-Gillam A",
+        "journal": "Lancet (London, England)",
+        "year": 2016,
+        "doi": "10.1016/S0140-6736(15)00986-1",
+        "pmid": "26615328",
+        "url": "https://doi.org/10.1016/S0140-6736(15)00986-1",
+        "tmc": "https://libkey.io/libraries/480/10.1016/S0140-6736(15)00986-1",
+        "pdf_links": [],
+        "review_depth": "All 13 main-PDF pages read; external supplements not separately reviewed. PDF saved in private Synology depot."
+      },
+      "MIXED_PRIMARY": {
+        "key": "MIXED_PRIMARY",
+        "short": "Kobayashi 2018: combined HCC-CCA",
+        "title": "Multicenter retrospective analysis of systemic chemotherapy for unresectable combined hepatocellular and cholangiocarcinoma.",
+        "author": "Kobayashi S",
+        "journal": "Cancer science",
+        "year": 2018,
+        "doi": "10.1111/cas.13656",
+        "pmid": "29856900",
+        "url": "https://doi.org/10.1111/cas.13656",
+        "tmc": "https://libkey.io/libraries/480/10.1111/cas.13656",
+        "pdf_links": [],
+        "review_depth": "All 9 main-PDF pages read; external supplements not separately reviewed. PDF saved in private Synology depot."
       }
     },
     "status": "Proposed high-risk protocols; not activated. Standard selection and allocation rules are unchanged."
@@ -14709,15 +15333,29 @@
         "title": "Reassess the HCC treatment plan",
         "when": "An AFP requirement is unmet, tumor response is inadequate, or transplantation is currently unsuitable.",
         "tasks": [
+          "AFP level, AFP trajectory and radiographic viability answer different questions. Repeat an unexplained result, assess liver inflammation and obtain expert review of adequate multiphasic imaging; do not label AFP-only rise radiographic progression. No empiric LRT without a target. B1.1 proposals are OPEN, not automatic delisting rules.",
           "Review AFP trend together with multiphase imaging, viable tumor, extrahepatic staging, liver function, performance status and prior toxicity.",
           "Select a treatment below based on the findings and patient goals. An unmet AFP threshold alone does not show that every option is feasible.",
           "After treatment, reassess response and liver function. Reconsider resection and transplant only when the full clinical and allocation criteria support them."
         ],
         "refs": [
           "NCCN-hcc",
-          "H-policy"
+          "H-policy",
+          "V12-AFP_RESPONSE",
+          "V12-AFP_500",
+          "V12-AFP_SLOPE",
+          "V12-AFP_NYCA",
+          "V12-AFP_OCCULT",
+          "V12-SHARP"
         ],
         "actions": [
+          {
+            "label": "AFP-only review · HCC B1.1 (OPEN)",
+            "detail": "",
+            "step": null,
+            "care": null,
+            "url": "/mh-liver-pathways/transplant/high-risk/hcc/#hcc-b1-1"
+          },
           {
             "label": "Continue or change liver-directed treatment",
             "detail": "",
@@ -14752,6 +15390,13 @@
             "step": null,
             "care": "supportive",
             "url": null
+          },
+          {
+            "label": "V12 full-text appraisals",
+            "detail": "",
+            "step": null,
+            "care": null,
+            "url": "/mh-liver-pathways/evidence/2026-10-25/#afp_response"
           }
         ],
         "endpoint": false
@@ -14808,6 +15453,7 @@
         "title": "Systemic therapy or a clinical trial",
         "when": "Liver-directed treatment is unsuitable or has not controlled the disease, or the disease extent favors systemic treatment.",
         "tasks": [
+          "AFP level, AFP trajectory and radiographic viability answer different questions. Repeat an unexplained result, assess liver inflammation and obtain expert review of adequate multiphasic imaging; do not label AFP-only rise radiographic progression. No empiric LRT without a target. B1.1 proposals are OPEN, not automatic delisting rules.",
           "Medical oncology should choose the regimen using liver function, performance status, prior drugs, toxicity, bleeding risk and patient goals. Select subsequent-line therapy or a trial after progression when appropriate.",
           "Most systemic-therapy evidence is in Child-Pugh A disease. Treatment in Child-Pugh B requires individual assessment; Child-Pugh C or progressive liver failure generally limits treatment to selected circumstances or trials.",
           "If transplantation remains a possibility, discuss immune checkpoint inhibitors with transplant surgery, hepatology and pharmacy before treatment because later transplantation carries rejection risk.",
@@ -14817,7 +15463,13 @@
         "refs": [
           "NCCN-hcc",
           "H-aasld",
-          "N-hcc"
+          "N-hcc",
+          "V12-AFP_RESPONSE",
+          "V12-AFP_500",
+          "V12-AFP_SLOPE",
+          "V12-AFP_NYCA",
+          "V12-AFP_OCCULT",
+          "V12-SHARP"
         ],
         "actions": [
           {
@@ -14854,6 +15506,13 @@
             "step": null,
             "care": null,
             "url": "https://drliuhao.github.io/mh-liver-pathways/transplant/high-risk/hcc/#hcc-b3"
+          },
+          {
+            "label": "V12 full-text appraisals",
+            "detail": "",
+            "step": null,
+            "care": null,
+            "url": "/mh-liver-pathways/evidence/2026-10-25/#afp_response"
           }
         ],
         "endpoint": false
@@ -15028,6 +15687,7 @@
         "title": "Treatment when the pCCA transplant protocol is unsuitable",
         "when": "Transplant selection criteria are not met, the patient is unfit for transplant, or transplantation is declined.",
         "tasks": [
+          "These systemic studies inform advanced biliary cancer care, not the established pCCA transplant-neoadjuvant regimen. Preserve biopsy-route precautions and existing staging, neoadjuvant and operative gates. ICI exposure requires prospective transplant safety review.",
           "If disease remains localized, review whether complete resection is feasible with the HPB team. Reconfirm the diagnosis and stage before choosing nontransplant treatment.",
           "Address biliary obstruction and cholangitis. For unresectable disease, review systemic therapy, a clinical trial, or selected radiotherapy/chemoradiation with oncology.",
           "Use palliative procedures or radiation when they are expected to relieve symptoms. If further cancer treatment is unsuitable or declined, arrange best supportive care.",
@@ -15036,7 +15696,9 @@
         "refs": [
           "NCCN-pcca",
           "P-policy",
-          "C-aasld"
+          "C-aasld",
+          "V12-ASCO_BTC",
+          "V12-NALIRICC"
         ],
         "actions": [
           {
@@ -15066,6 +15728,13 @@
             "step": null,
             "care": null,
             "url": "https://drliuhao.github.io/mh-liver-pathways/systemic/?tumor=pcca"
+          },
+          {
+            "label": "V12 full-text appraisals",
+            "detail": "",
+            "step": null,
+            "care": null,
+            "url": "/mh-liver-pathways/evidence/2026-10-25/#asco_btc"
           }
         ],
         "endpoint": false
@@ -15125,6 +15794,7 @@
         "title": "Treatment when iCCA transplant criteria are not met",
         "when": "The tumor is resectable, multifocal, outside the described transplant criteria, or transplant is unsuitable.",
         "tasks": [
+          "Systemic disease control is not proof of transplant benefit. Preserve the route-specific histology, liver-only status, unresectability and observation gates. A cHCC-CCA component changes the evidence base; use expert pathology review.",
           "Assess complete resection with the HPB team when technically and clinically feasible.",
           "For unresectable or metastatic disease, review molecularly informed systemic therapy or a clinical trial. Selected liver-directed treatment or radiotherapy may be appropriate after multidisciplinary review.",
           "Assess response and reconsider resection or local treatment when feasible. Transplant reconsideration requires the program to review all selection criteria; an additional confirmed iCCA nodule does not meet the solitary-tumor criterion.",
@@ -15133,7 +15803,10 @@
         "refs": [
           "NCCN-icca",
           "N-icca",
-          "C-aasld"
+          "C-aasld",
+          "V12-ASCO_BTC",
+          "V12-NALIRICC",
+          "V12-MIXED_PRIMARY"
         ],
         "actions": [
           {
@@ -15170,6 +15843,13 @@
             "step": null,
             "care": null,
             "url": "https://drliuhao.github.io/mh-liver-pathways/systemic/?tumor=icca"
+          },
+          {
+            "label": "V12 full-text appraisals",
+            "detail": "",
+            "step": null,
+            "care": null,
+            "url": "/mh-liver-pathways/evidence/2026-10-25/#asco_btc"
           }
         ],
         "endpoint": false
@@ -15228,6 +15908,7 @@
         "title": "Continue colorectal cancer care when transplant is unsuitable",
         "when": "MELD-exception criteria are not met, disease progresses, or another treatment is preferable.",
         "tasks": [
+          "Later-line efficacy does not define persistent unresectability. HPB MDT must document why complete clearance of every original disease site cannot be achieved with a credible resection/ablation strategy, liver reserve and staged options. Treated/nonviable lesions alone are not proof of active unresectable disease. Preserve all biology, extrahepatic and allocation gates.",
           "Review whether response permits complete treatment of liver disease by resection or ablation; assess the primary and any extrahepatic disease separately.",
           "Medical oncology should review the molecular profile, prior regimens, response, toxicity and performance status to choose systemic treatment or a clinical trial.",
           "After treatment, reassess resectability and disease control. Reconsider transplantation only if the program accepts the full clinical and MELD-exception evidence.",
@@ -15236,7 +15917,10 @@
         "refs": [
           "NCCN-crlm",
           "C-consensus",
-          "N-crlm"
+          "N-crlm",
+          "V12-MOUNTAINEER",
+          "V12-SUNLIGHT",
+          "V12-FRESCO2"
         ],
         "actions": [
           {
@@ -15280,6 +15964,13 @@
             "step": null,
             "care": null,
             "url": "https://drliuhao.github.io/mh-liver-pathways/transplant/high-risk/crlm/#crlm-b2"
+          },
+          {
+            "label": "V12 full-text appraisals",
+            "detail": "",
+            "step": null,
+            "care": null,
+            "url": "/mh-liver-pathways/evidence/2026-10-25/#mountaineer"
           }
         ],
         "endpoint": false
