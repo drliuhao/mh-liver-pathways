@@ -7,10 +7,10 @@
 <meta name="description" content="Colorectal liver metastases — Memorial Hermann system roadmap v0.8, draft under development.">
 <title>Memorial Hermann CRLM Pathway</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap">
-<link rel="stylesheet" href="../assets/portal-navigation.css"><script src="../assets/portal-navigation.js?v=20261026-tools1" defer></script></head>
+<link rel="stylesheet" href="../assets/portal-navigation.css"><script src="../assets/portal-navigation.js?v=20261026-tools1" defer></script><link rel="stylesheet" href="/mh-liver-pathways/assets/roadmap-evidence.css?v=20261026-library1"><script src="/mh-liver-pathways/assets/roadmap-evidence.js?v=20261026-library1"></script></head>
 <body>
 <style>
-/* One renderer, four tumours: the gates come from data/pathway.json?v=20261023-language, the
+/* One renderer, four tumours: the gates come from data/pathway.json?v=20261026-library1, the
    liver-directed matrix from the shared LRT_Evidence_Matrix export. Layout
    follows the HCC console: a gate strip, the answer below it, then the
    evidence library everything links back into. */
@@ -407,7 +407,91 @@ footer p + p{margin-top:8px}
       <span class="evcount" id="evCount"></span>
     </div>
     <div class="evlist" id="evList"></div>
-  <div id="v12-treatment-evidence" class="study-appraisals"><p>Later-line efficacy does not define persistent unresectability. HPB MDT must document why complete clearance of every original disease site cannot be achieved with a credible resection/ablation strategy, liver reserve and staged options. Treated/nonviable lesions alone are not proof of active unresectable disease. Preserve all biology, extrahepatic and allocation gates.</p><p><a href="/mh-liver-pathways/systemic/?tumor=crlm">Open the systemic treatment matrix</a> · <a href="/mh-liver-pathways/evidence/2026-10-25/docs/Memorial_Hermann_CRLM_System_Roadmap_v12.docx">Roadmap document · Word</a></p><details id="mountaineer" class="study-appraisal"><summary>MOUNTAINEER final: HER2-positive CRC</summary><p><b>Application.</b> Use local validated HER2 IHC3+, IHC2+/ISH+, or qualifying tissue amplification with RAS wild type and prior-treatment review. A negative plasma result may require tissue testing. Response can prompt HPB reassessment but does not establish persistent unresectability or transplant benefit.</p><p><a href="https://doi.org/10.1038/s41467-025-67824-z">MOUNTAINEER final: HER2-positive CRC · paper</a> · <a href="https://libkey.io/libraries/480/10.1038/s41467-025-67824-z">TMC full-text access</a></p><details><summary>Population, results and limitations</summary><p>Phase II open-label, noncomparative combination cohorts: 84 efficacy patients, 86 safety. HER2-positive/RAS-wild-type refractory CRC after fluoropyrimidine, oxaliplatin, irinotecan and anti-VEGF; no prior HER2 therapy. LVEF ≥50%.</p><p>Tucatinib plus trastuzumab: confirmed ORR 39.3% (28.8–50.5), median response duration 15.2 months, PFS 8.1 months, OS 23.9 months. Grade 3 and 4 events 33.7% and 7.0%; 5.8% discontinued for adverse events.</p><p>No randomized combination comparator or proven best sequence after other HER2 drugs. Do not rank its median OS against unrelated later-line trials. Exploratory HER2 copy-number thresholds are not mandatory selection cutoffs.</p><p><small>All 12 main-PDF pages; methods, efficacy Table 2, safety Table 4 and biomarker figures.</small></p></details></details><details id="sunlight" class="study-appraisal"><summary>SUNLIGHT: FTD/TPI plus bevacizumab</summary><p><b>Application.</b> Offer a later-line disease-control option when marrow reserve and anti-VEGF safety permit. Record bleeding, wound-healing and operative timing; do not translate disease control automatically into LT eligibility.</p><p><a href="https://doi.org/10.1056/NEJMoa2214963">SUNLIGHT: FTD/TPI plus bevacizumab · paper</a> · <a href="https://libkey.io/libraries/480/10.1056/NEJMoa2214963">TMC full-text access</a></p><details><summary>Population, results and limitations</summary><p>Randomized phase III, 492 refractory mCRC patients, ECOG 0–1; 92% had two prior treatment regimens. FTD/TPI plus bevacizumab versus FTD/TPI alone.</p><p>OS 10.8 versus 7.5 months, HR 0.61 (0.49–0.77); PFS 5.6 versus 2.4 months, HR 0.44. ORR 6.1% versus 1.2%. Grade ≥3 events 72.4% versus 69.5%; neutropenia 43.1% versus 32.1%.</p><p>Open-label; no head-to-head comparison with fruquintinib/regorafenib. Low response rate and an advanced refractory population: not a preferred curative conversion regimen or LT trial.</p><p><small>All 11 main-PDF pages; Figures 1–2 and Tables 1–2.</small></p></details></details><details id="fresco2" class="study-appraisal"><summary>FRESCO-2: fruquintinib</summary><p><b>Application.</b> Retain a later-line option with BP, proteinuria, hand–foot, bleeding/perforation and operative safety assessment. Not an evidence-based curative conversion strategy or new transplant-selection route.</p><p><a href="https://doi.org/10.1016/S0140-6736(23)00772-9">FRESCO-2: fruquintinib · paper</a> · <a href="https://libkey.io/libraries/480/10.1016/S0140-6736(23)00772-9">TMC full-text access</a></p><details><summary>Population, results and limitations</summary><p>Double-blind phase III, 691 refractory mCRC patients (461 versus 230); median four prior lines, prior FTD/TPI and/or regorafenib required; ECOG 0–1.</p><p>Fruquintinib versus placebo plus supportive care: OS 7.4 versus 4.8 months, HR 0.66 (0.55–0.80); PFS 3.7 versus 1.8, HR 0.32. Seven partial responses among 461; no complete response. Grade ≥3 events 63% versus 50%.</p><p>Very late-line population, no direct comparison with SUNLIGHT. Grade ≥3 hypertension 14%, asthenia 8%, hand–foot syndrome 6%; one treatment-related intestinal-perforation death.</p><p><small>All 13 main-PDF pages; Figures 2–3 and Tables 1–3.</small></p></details></details></div></div>
+  <details id="v12-treatment-evidence" class="more evidence-context"><summary>Scope and interpretation</summary><div class="moreinner"><p>Later-line efficacy does not define persistent unresectability. HPB MDT must document why complete clearance of every original disease site cannot be achieved with a credible resection/ablation strategy, liver reserve and staged options. Treated/nonviable lesions alone are not proof of active unresectable disease. Preserve all biology, extrahepatic and allocation gates.</p><p><a href="/mh-liver-pathways/systemic/?tumor=crlm">Open the systemic treatment matrix</a> · <a href="/mh-liver-pathways/evidence/2026-10-25/docs/Memorial_Hermann_CRLM_System_Roadmap_v12.docx">Roadmap document · Word</a></p></div></details><script type="application/json" id="roadmap-evidence-data">{
+  "papers": [
+    {
+      "id": "mountaineer",
+      "pmid": "41526345",
+      "tag": "MOUNTAINEER final: HER2-positive CRC",
+      "cit": "Strickler JH Tucatinib plus trastuzumab for chemotherapy-refractory, HER2 + , RAS wild-type metastatic colorectal cancer (MOUNTAINEER): final analysis. Nature communications 2026 DOI: 10.1038/s41467-025-67824-z. PMID: 41526345.",
+      "doi": "10.1038/s41467-025-67824-z",
+      "group": "Systemic therapy",
+      "design": "Noncomparative phase II study",
+      "depot": true,
+      "access": [
+        {
+          "label": "MOUNTAINEER final: HER2-positive CRC · paper",
+          "url": "https://doi.org/10.1038/s41467-025-67824-z"
+        },
+        {
+          "label": "TMC full-text access",
+          "url": "https://libkey.io/libraries/480/10.1038/s41467-025-67824-z"
+        }
+      ],
+      "appraisal": {
+        "application": "Use local validated HER2 IHC3+, IHC2+/ISH+, or qualifying tissue amplification with RAS wild type and prior-treatment review. A negative plasma result may require tissue testing. Response can prompt HPB reassessment but does not establish persistent unresectability or transplant benefit.",
+        "population": "Phase II open-label, noncomparative combination cohorts: 84 efficacy patients, 86 safety. HER2-positive/RAS-wild-type refractory CRC after fluoropyrimidine, oxaliplatin, irinotecan and anti-VEGF; no prior HER2 therapy. LVEF ≥50%.",
+        "results": "Tucatinib plus trastuzumab: confirmed ORR 39.3% (28.8–50.5), median response duration 15.2 months, PFS 8.1 months, OS 23.9 months. Grade 3 and 4 events 33.7% and 7.0%; 5.8% discontinued for adverse events.",
+        "limitations": "No randomized combination comparator or proven best sequence after other HER2 drugs. Do not rank its median OS against unrelated later-line trials. Exploratory HER2 copy-number thresholds are not mandatory selection cutoffs.",
+        "locator": "All 12 main-PDF pages; methods, efficacy Table 2, safety Table 4 and biomarker figures."
+      }
+    },
+    {
+      "id": "sunlight",
+      "pmid": "37133585",
+      "tag": "SUNLIGHT: FTD/TPI plus bevacizumab",
+      "cit": "Prager GW Trifluridine-Tipiracil and Bevacizumab in Refractory Metastatic Colorectal Cancer. The New England journal of medicine 2023 DOI: 10.1056/NEJMoa2214963. PMID: 37133585.",
+      "doi": "10.1056/NEJMoa2214963",
+      "group": "Systemic therapy",
+      "design": "Randomized phase III trial",
+      "depot": true,
+      "access": [
+        {
+          "label": "SUNLIGHT: FTD/TPI plus bevacizumab · paper",
+          "url": "https://doi.org/10.1056/NEJMoa2214963"
+        },
+        {
+          "label": "TMC full-text access",
+          "url": "https://libkey.io/libraries/480/10.1056/NEJMoa2214963"
+        }
+      ],
+      "appraisal": {
+        "application": "Offer a later-line disease-control option when marrow reserve and anti-VEGF safety permit. Record bleeding, wound-healing and operative timing; do not translate disease control automatically into LT eligibility.",
+        "population": "Randomized phase III, 492 refractory mCRC patients, ECOG 0–1; 92% had two prior treatment regimens. FTD/TPI plus bevacizumab versus FTD/TPI alone.",
+        "results": "OS 10.8 versus 7.5 months, HR 0.61 (0.49–0.77); PFS 5.6 versus 2.4 months, HR 0.44. ORR 6.1% versus 1.2%. Grade ≥3 events 72.4% versus 69.5%; neutropenia 43.1% versus 32.1%.",
+        "limitations": "Open-label; no head-to-head comparison with fruquintinib/regorafenib. Low response rate and an advanced refractory population: not a preferred curative conversion regimen or LT trial.",
+        "locator": "All 11 main-PDF pages; Figures 1–2 and Tables 1–2."
+      }
+    },
+    {
+      "id": "fresco2",
+      "pmid": "37331369",
+      "tag": "FRESCO-2: fruquintinib",
+      "cit": "Dasari A Fruquintinib versus placebo in patients with refractory metastatic colorectal cancer (FRESCO-2): an international, multicentre, randomised, double-blind, phase 3 study. Lancet (London, England) 2023 DOI: 10.1016/S0140-6736(23)00772-9. PMID: 37331369.",
+      "doi": "10.1016/S0140-6736(23)00772-9",
+      "group": "Systemic therapy",
+      "design": "Randomized phase III trial",
+      "depot": true,
+      "access": [
+        {
+          "label": "FRESCO-2: fruquintinib · paper",
+          "url": "https://doi.org/10.1016/S0140-6736(23)00772-9"
+        },
+        {
+          "label": "TMC full-text access",
+          "url": "https://libkey.io/libraries/480/10.1016/S0140-6736(23)00772-9"
+        }
+      ],
+      "appraisal": {
+        "application": "Retain a later-line option with BP, proteinuria, hand–foot, bleeding/perforation and operative safety assessment. Not an evidence-based curative conversion strategy or new transplant-selection route.",
+        "population": "Double-blind phase III, 691 refractory mCRC patients (461 versus 230); median four prior lines, prior FTD/TPI and/or regorafenib required; ECOG 0–1.",
+        "results": "Fruquintinib versus placebo plus supportive care: OS 7.4 versus 4.8 months, HR 0.66 (0.55–0.80); PFS 3.7 versus 1.8, HR 0.32. Seven partial responses among 461; no complete response. Grade ≥3 events 63% versus 50%.",
+        "limitations": "Very late-line population, no direct comparison with SUNLIGHT. Grade ≥3 hypertension 14%, asthenia 8%, hand–foot syndrome 6%; one treatment-related intestinal-perforation death.",
+        "locator": "All 13 main-PDF pages; Figures 2–3 and Tables 1–3."
+      }
+    }
+  ]
+}</script></div>
 </section>
 
 <footer>
@@ -524,44 +608,18 @@ document.querySelectorAll("nav.sec a").forEach(a=>{
 
 /* ---------- evidence library ---------- */
 let ALL = [], evGroup = "All", evQuery = "", CRIT = {};
-function evRow(r){
-  const links = r.pmid
-    ? `<a class="lnk" href="https://libkey.io/libraries/480/pmid/${esc(r.pmid)}" target="_blank" rel="noopener">TMC full text</a>
-       <a class="lnk" href="https://pubmed.ncbi.nlm.nih.gov/${esc(r.pmid)}/" target="_blank" rel="noopener">PubMed ${esc(r.pmid)}</a>`
-    : (r.url ? `<a class="lnk" href="${esc(r.url)}" target="_blank" rel="noopener">Source</a>`
-             : `<span class="chip" style="font-size:11px">Internal document</span>`);
-  const depot = r.depot === undefined ? "" :
-    (r.depot ? `<span class="chip" style="font-size:11px">In depot</span>`
-             : `<span class="chip warn" style="font-size:11px">To download</span>`);
-  const c = CRIT[r.pmid] || CRIT[r.id] || null;
-  let crit = "";
-  if(c){
-    const lim = c.limitations || [], ind = c.critique || [];
-    const li = a => a.length ? a.map(t=>`<li>${esc(t)}</li>`).join("") : "<li>None found in the full text.</li>";
-    const meta = [];
-    if(c.n) meta.push(`<b>Population.</b> ${esc(c.n)}`);
-    if(c.bottom_line) meta.push(`<b>Bottom line.</b> ${esc(c.bottom_line)}`);
-    if(c.funding) meta.push(`<b>Funding.</b> ${esc(c.funding)}`);
-    crit = `<details class="evcrit"><summary>How far this one goes
-        <span>${lim.length} stated \u00b7 ${ind.length} unstated</span></summary>
-      ${meta.length ? `<div class="evmeta">${meta.join(" ")}</div>` : ""}
-      <div class="evcritin">
-        <div class="lim"><h5>Limitations the authors state</h5><ul>${li(lim)}</ul></div>
-        <div class="crit"><h5>What they do not say</h5><ul>${li(ind)}</ul></div>
-      </div></details>`;
-  }
-  return `<div class="ev" id="ev-${esc(r.id)}"><div class="evtag">${esc(r.tag)}</div><div class="evcit">${esc(r.cit)}</div><div class="evlinks">${depot}${links}</div>${crit}</div>`;
+function evRow(r){ return RoadmapEvidence.row(r, CRIT);
 }
 function renderEvGroups(){
+  RoadmapEvidence.merge(ALL);
   const groups = [...new Set(ALL.map(r=>r.group))];
   document.getElementById("evGroups").innerHTML = ["All",...groups].map(g=>
     `<button class="tab" type="button" data-group="${esc(g)}" aria-selected="${String(g===evGroup)}">${esc(g)}</button>`).join("");
 }
-function critText(r){
-  const c = CRIT[r.pmid] || CRIT[r.id];
-  return c ? (c.limitations||[]).concat(c.critique||[], [c.bottom_line||""]).join(" ") : "";
+function critText(r){ return RoadmapEvidence.text(r, CRIT);
 }
 function renderEv(){
+  RoadmapEvidence.merge(ALL);
   const q = evQuery.trim().toLowerCase();
   const rows = ALL.filter(r =>
     (evGroup==="All" || r.group===evGroup) &&
@@ -570,6 +628,7 @@ function renderEv(){
     ? rows.map(evRow).join("")
     : `<div class="card"><p class="muted">Nothing matches “${esc(evQuery)}”. Try a trial name, an author, or a journal.</p></div>`;
   document.getElementById("evCount").textContent = rows.length + " of " + ALL.length + " sources";
+  RoadmapEvidence.reveal();
 }
 document.getElementById("evGroups").addEventListener("click", e=>{
   const b = e.target.closest(".tab"); if(!b) return;
@@ -584,7 +643,7 @@ document.addEventListener("click", e=>{
   evGroup = "All"; evQuery = "";
   document.getElementById("evSearch").value = "";
   renderEvGroups(); renderEv();
-  const el = document.getElementById("ev-"+c.dataset.ref);
+  const el = document.getElementById("ev-"+c.dataset.ref)?.closest(".ev");
   if(el){
     el.scrollIntoView({behavior:"smooth", block:"center"});
     document.querySelectorAll(".ev.hit").forEach(x=>x.classList.remove("hit"));
@@ -794,7 +853,7 @@ function build(){
 
 /* ---------- load ---------- */
 Promise.all([
-  fetch("data/pathway.json?v=20261023-language").then(r=>r.json()),
+  fetch("data/pathway.json?v=20261026-library1").then(r=>r.json()),
   fetch("data/critique.json?v=20261023-language").then(r=>r.ok ? r.json() : {}).catch(()=>({}))
 ]).then(([p, crit])=>{
   P = p;
@@ -815,7 +874,7 @@ Promise.all([
     renderMatrix(); renderCell();
     const others = MX.tumours.filter(t=>t[0]!==P.matrix).map(t=>t[2]);
     document.getElementById("lrtsrc").innerHTML =
-      `Source: <code>LRT_Evidence_Matrix</code>, Batch 09 HAI update (15 October 2026), filtered to the ${esc(P.name.toLowerCase())} column. `
+      `Source: <code>LRT_Evidence_Matrix</code>, filtered to the ${esc(P.name.toLowerCase())} column. `
       + `The full matrix also covers ${esc(others.join(", ").toLowerCase())}; the shared matrix also includes perihilar cholangiocarcinoma.`;
     /* only the papers this tumour's cells actually cite go into the library */
     const used = new Set(["39962001", "36346892", "24154839"]);
@@ -826,7 +885,7 @@ Promise.all([
     const have = new Set(ALL.map(r=>r.id));
     for(const r of refs){
       if(have.has(r.pmid) || !used.has(r.pmid)) continue;
-      ALL.push({id:r.pmid, tag:((r.au||"")+" "+(r.y||"")).trim(), group:"Liver-directed ("+P.short+")",
+      ALL.push({id:r.pmid, tag:((r.au||"")+" "+(r.y||"")).trim(), group:"Liver-directed",
                 cit:`${r.au} et al. ${r.t} ${r.j}. ${r.y}.`.replace(/\s+/g," "),
                 pmid:r.pmid, depot:r.st==="depot"});
       have.add(r.pmid);
@@ -852,6 +911,14 @@ Promise.all([
   a.href = "../"; a.textContent = "\u2190 All pathways";
   nav.insertBefore(a, nav.firstChild);
 })();
+
+window.addEventListener('hashchange', () => {
+  let id; try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+  if (!ALL.some(r => id === 'ev-' + r.id || (r.aliases || []).some(a => id === a || id === 'ev-' + a))) return;
+  evGroup = 'All'; evQuery = ''; document.getElementById('evSearch').value = '';
+  document.querySelectorAll('#evGroups .tab').forEach(b => b.setAttribute('aria-selected', String(b.dataset.group === 'All')));
+  renderEv();
+});
 </script>
 </body>
 </html>

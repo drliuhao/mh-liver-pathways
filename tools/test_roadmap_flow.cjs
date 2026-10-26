@@ -5,6 +5,19 @@ const map=JSON.parse(fs.readFileSync(path.join(root,'assets/roadmap-links.json')
 let topics=0,links=0;const expected={};
 function stagesFromHCC(s){const a=s.indexOf('const STAGES = ['),b=s.indexOf('/* the quantifier',a);return vm.runInNewContext(s.slice(a,b)+';STAGES');}
 function rec(s){const a=s.indexOf('function recHTML('),b=s.indexOf('\nfunction render',a);return s.slice(a,b);}
+// Only the explicitly requested library category / editorial heading changes.
+function libraryPresentation(raw){
+ const d=JSON.parse(raw);
+ for(const [key,ref] of [...Object.entries(d.refs),...Object.entries(d.nonpm)]){
+  if(!['HAI evidence · October 2026','HAI library access','HAI randomized conference results'].includes(ref[1]))continue;
+  const id=key.replace(/^tmc/,'');ref[1]=id==='37210451'?'Transplant':id==='39962001'?'Guidelines & policy':'Liver-directed';
+ }
+ for(const topic of d.quickref||[]){
+  if(topic.title==='HAI evidence and programme update · 15 October 2026')topic.title='Hepatic arterial infusion: selection, evidence and delivery';
+  for(const row of topic.rows||[])if(row[0]==='Adjuvant HAI: updated evidence')row[0]='Adjuvant HAI: randomized evidence';
+ }
+ return d;
+}
 for(const slug of Object.keys(map)){
  const rel=`${slug}/index.html`,s=fs.readFileSync(path.join(root,rel),'utf8'),old=cp.execFileSync('git',['show',`f77348e:${rel}`],{cwd:root,encoding:'utf8',maxBuffer:4e6});
  assert(s.includes('RoadmapFlow.setup(')&&s.includes('RoadmapFlow.render('));
@@ -14,7 +27,7 @@ for(const slug of Object.keys(map)){
    stages=JSON.parse(JSON.stringify(stagesFromHCC(s)));assert.deepEqual(JSON.parse(JSON.stringify(stages)),JSON.parse(JSON.stringify(stagesFromHCC(old))));
    for(const marker of ['const REF =','const NONPM =','const TOPICS =','const LOCO =','const SYSTEMIC =','const HONEST ='])assert(s.includes(old.slice(old.indexOf(marker),old.indexOf('\n];',old.indexOf(marker))+3))||marker==='const REF ='||marker==='const NONPM =');
  }else{
-   const rel=`${slug}/data/pathway.json`;const data=fs.readFileSync(path.join(root,rel),'utf8');assert.equal(data,cp.execFileSync('git',['show',`f77348e:${rel}`],{cwd:root,encoding:'utf8',maxBuffer:4e6}));stages=JSON.parse(data).gates;
+   const rel=`${slug}/data/pathway.json`;const data=fs.readFileSync(path.join(root,rel),'utf8');assert.deepEqual(JSON.parse(data),libraryPresentation(cp.execFileSync('git',['show',`f77348e:${rel}`],{cwd:root,encoding:'utf8',maxBuffer:4e6})));stages=JSON.parse(data).gates;
  }
  expected[slug]=[];assert.deepEqual(Object.keys(map[slug]).sort(),stages.map(s=>s.id).sort(),slug+' coverage');
  for(const s of stages){

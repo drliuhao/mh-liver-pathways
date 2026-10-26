@@ -1,0 +1,8 @@
+/* Preserve the original evidence card layout for every source. */
+.ev{position:relative}
+.ev .evidence-anchor{position:absolute;top:0;left:0;width:0;height:0;overflow:hidden}
+.ev .evtag,.ev .evcit{overflow-wrap:anywhere}
+.ev .evmeta p{margin:7px 0;line-height:1.55}
+.evidence-context{margin-top:16px}
+.ev .evlinks{max-width:100%}
+@media(max-width:640px){.ev .evtag{width:100%}.ev .evlinks{flex:1 1 100%}}

@@ -7,7 +7,7 @@
 <meta name="description" content="Hepatocellular carcinoma — Memorial Hermann system roadmap v0.9, draft under development.">
 <title>Memorial Hermann HCC Pathway</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap">
-<link rel="stylesheet" href="../assets/portal-navigation.css"><script src="../assets/portal-navigation.js?v=20261026-tools1" defer></script></head>
+<link rel="stylesheet" href="../assets/portal-navigation.css"><script src="../assets/portal-navigation.js?v=20261026-tools1" defer></script><link rel="stylesheet" href="/mh-liver-pathways/assets/roadmap-evidence.css?v=20261026-library1"><script src="/mh-liver-pathways/assets/roadmap-evidence.js?v=20261026-library1"></script></head>
 <body>
 <style>
 /* Layout: a decision strip on top, a stage answer below it, then topic sections, then the evidence library everything links back into. */
@@ -549,7 +549,7 @@ footer p + p{margin-top:8px}
 
   <div class="mcards" id="mcards"></div>
   <div class="lrtdetail" id="lrtDetail"><p class="muted">Loading the matrix…</p></div>
-  <p class="small muted" style="margin-top:10px">Source: <code>LRT_Evidence_Matrix</code>, Batch 09 HAI update (15 October 2026), filtered to the hepatocellular carcinoma column. The full matrix also covers iCCA, colorectal and neuroendocrine liver metastases; the shared matrix also includes perihilar cholangiocarcinoma.</p>
+  <p class="small muted" style="margin-top:10px">Source: <code>LRT_Evidence_Matrix</code>, filtered to the hepatocellular carcinoma column. The full matrix also covers iCCA, colorectal and neuroendocrine liver metastases; the shared matrix also includes perihilar cholangiocarcinoma.</p>
 </section>
 
 <section id="topics">
@@ -603,7 +603,172 @@ footer p + p{margin-top:8px}
     <span class="evcount" id="evCount"></span>
   </div>
   <div class="evlist" id="evList"></div>
-  <div id="v12-treatment-evidence" class="study-appraisals"><p>AFP level, AFP trajectory and radiographic viability answer different questions. Repeat an unexplained result, assess liver inflammation and obtain expert review of adequate multiphasic imaging; do not label AFP-only rise radiographic progression. No empiric LRT without a target. B1.1 proposals are OPEN, not automatic delisting rules.</p><p><a href="/mh-liver-pathways/systemic/?tumor=hcc">Open the systemic treatment matrix</a> · <a href="/mh-liver-pathways/evidence/2026-10-25/docs/Memorial_Hermann_HCC_System_Roadmap_v12.docx">Roadmap document · Word</a></p><details id="afp_response" class="study-appraisal"><summary>Mehta 2019: AFP response</summary><p><b>Application.</b> Supports response-based biological review and the existing &gt;1000-to-&lt;500 allocation framework. Does not require AFP &lt;100 for every within-Milan candidate or prove a safe AFP-only exception.</p><p><a href="https://doi.org/10.1002/hep.30413">Mehta 2019: AFP response · paper</a> · <a href="https://libkey.io/libraries/480/10.1002/hep.30413">TMC full-text access</a></p><details><summary>Population, results and limitations</summary><p>Retrospective UNOS recipient cohort, 2005–2015; 407 patients with AFP &gt;1000 at least once and final AFP within 90 days of LT. Living-donor and multiorgan recipients excluded; 93.6% initially within Milan.</p><p>Five-year post-LT OS: 48.8% with final AFP &gt;1000, 67.0% at 101–499, and 88.4% at ≤100. Corresponding Kaplan–Meier recurrence estimates: 35.0%, 13.3%, and 7.2%. The 500–1000 group had only 17 patients. Differences between ≤100 and 101–499 were not statistically significant.</p><p>Recipient-only, selected historical cohort; treatment and waiting time differed substantially between groups. Non-HCC death was censored for recurrence. No proof that forcing AFP lower causes benefit, no AFP-only/imaging-complete-response subgroup, and no LDLT validation.</p><p><small>Main PDF pp 3–9; Tables 1–3 and Figures 1–3.</small></p></details></details><details id="afp_500" class="study-appraisal"><summary>Goldman 2022: final AFP ≥500</summary><p><b>Application.</b> Supports discussing a conservative clinical hold at confirmed AFP ≥500, even without a prior &gt;1000 result. This is an OPEN local proposal, not a universal OPTN contraindication or a proven transplant-benefit cutoff.</p><p><a href="https://doi.org/10.1002/lt.26392">Goldman 2022: final AFP ≥500 · paper</a> · <a href="https://libkey.io/libraries/480/10.1002/lt.26392">TMC full-text access</a></p><details><summary>Population, results and limitations</summary><p>UNOS 2005–2015; 1766 LT recipients with initial AFP 100–999. Only 879 had serial values; final AFP ≥500 subgroup n=109. LDLT excluded.</p><p>Five-year OS at final AFP &lt;100 / 100–499 / ≥500: 72.7% / 70.4% / 56.1%; recurrence: 13.1% / 18.7% / 24.2%. Final AFP ≥500: adjusted mortality HR 1.50 (95% CI 1.07–2.10), recurrence HR 1.88 (1.13–3.14).</p><p>Historical recipient-only study, not a comparison of transplant versus no transplant. Many had only one AFP. In the ≥500 subgroup, 40.4% were ≥1000; small subgroups cannot establish equivalence. Recurrence estimates censor competing death.</p><p><small>Main PDF pp 4–9; Tables 1–3 and Figures 1–3.</small></p></details></details><details id="afp_slope" class="study-appraisal"><summary>Giard 2018: AFP slope</summary><p><b>Application.</b> Use slope as an alert to reassess biology, imaging and inflammation, not a stand-alone absolute stop or permanent delisting rule.</p><p><a href="https://doi.org/10.1097/TP.0000000000002094">Giard 2018: AFP slope · paper</a> · <a href="https://libkey.io/libraries/480/10.1097/TP.0000000000002094">TMC full-text access</a></p><details><summary>Population, results and limitations</summary><p>Single-center 336 transplanted T2/Milan patients, 2003–2013; 98.2% received LRT. Median five AFP measurements over 9.8 months. Slope fitted to all values; &gt;7.5 subgroup n=23.</p><p>AFP slope &gt;7.5 ng/mL/month: adjusted recurrence HR 3.0 (1.1–8.1), microvascular invasion OR 6.8 (1.6–28.7). Five-year recurrence-free probability 69.8% versus 87.4%; survival without recurrence 59.5% versus 75.3%. These are different endpoints, neither pair should be labeled overall survival.</p><p>Small, data-selected cutoff group; no prospective hold/release validation. The long-term fitted slope cannot be inferred reliably from two closely spaced noisy results. Death was censored for recurrence-free probability.</p><p><small>Main PDF pp 2–6; Tables 1–4 and Figure 1.</small></p></details></details><details id="afp_nyca" class="study-appraisal"><summary>Halazun 2021: dynamic AFP/NYCA</summary><p><b>Application.</b> Use dynamic AFP as complementary risk information. The NYCA definition of response does not supersede the stricter OPTN requirement to fall below 500 after AFP &gt;1000.</p><p><a href="https://doi.org/10.1001/jamasurg.2021.0954">Halazun 2021: dynamic AFP/NYCA · paper</a> · <a href="https://libkey.io/libraries/480/10.1001/jamasurg.2021.0954">TMC full-text access</a></p><details><summary>Population, results and limitations</summary><p>External retrospective validation in 2236 LT recipients at eight centers, 2001–2013; 545 beyond Milan. Composite score combines tumor size, count and AFP response. Deaths within 90 postoperative days excluded.</p><p>Five-year competing-risk cumulative recurrence: 9.5%, 20.5%, 40.5% for low/intermediate/high NYCA categories. Discrimination C statistic 0.66. These are composite-score categories, not isolated AFP ranges.</p><p>Recipient selection, exclusion of early deaths, no waitlist dropout or transplant-benefit comparison. Maximum-to-final AFP can miss a rebound below the original peak. Extreme-AFP response subgroup was tiny.</p><p><small>Main PDF pp 1–8; Table 1, Figures 1–3. Trailing commentary is not a separate reviewed study.</small></p></details></details><details id="afp_occult" class="study-appraisal"><summary>Moriyama 2026: markers before imaging recurrence</summary><p><b>Application.</b> Supports prompt repeat markers and high-quality/alternate imaging for an unexplained rise. Does not prove occult recurrence in every individual, justify empiric systemic/LRT treatment without a target, or validate an AFP-only transplant cutoff.</p><p><a href="https://doi.org/10.1002/cam4.71812">Moriyama 2026: markers before imaging recurrence · paper</a> · <a href="https://libkey.io/libraries/480/10.1002/cam4.71812">TMC full-text access</a></p><details><summary>Population, results and limitations</summary><p>Retrospective post-RFA, nontransplant cohort. Among 1620 initially treated patients, 907 episodes in 509 patients had elevated AFP, AFP-L3 and/or DCP without imaging evidence. Episodes are not independent patients and this is not AFP alone.</p><p>Recurrence was subsequently identified in 886 episodes; median detection interval 89 days. Local curative treatment 83.5% versus 78.8% and post-recurrence OS 3.55 versus 3.31 years for detection ≤180 versus &gt;180 days; differences were not statistically significant.</p><p>RFA-specific, repeated episodes and competing losses; no LT cohort or tested optimal recall interval. Routine imaging is described as every four months in methods versus quarterly in abstract. Case-level AFP discrepancy between Figure 3 and Table 4 is not used.</p><p><small>All nine main-PDF pages; methods, Tables 2–4, Figures 1–3. External Tables S1/S2 not supplied.</small></p></details></details><details id="sharp" class="study-appraisal"><summary>SHARP: sorafenib</summary><p><b>Application.</b> Retain sorafenib as a guideline-supported TKI option when appropriate; not routine LT bridging or a way to treat an isolated AFP rise without a justified cancer indication.</p><p><a href="https://doi.org/10.1056/NEJMoa0708857">SHARP: sorafenib · paper</a> · <a href="https://libkey.io/libraries/480/10.1056/NEJMoa0708857">TMC full-text access</a></p><details><summary>Population, results and limitations</summary><p>Randomized double-blind phase III, 602 advanced HCC patients without prior systemic therapy; 97% Child-Pugh A, ECOG 0–2. Sorafenib 400 mg twice daily versus placebo.</p><p>Median OS 10.7 versus 7.9 months; HR 0.69 (0.55–0.87). Radiologic time to progression 5.5 versus 2.8 months, HR 0.58; this is not PFS. ORR 2% versus 1%, no complete responses.</p><p>Historical placebo comparison, not a comparison with current ICI combinations. Grade 3 diarrhea and hand–foot reaction each 8%; dose interruptions/reductions frequent. Little evidence for decompensated cirrhosis.</p><p><small>NEJM main PDF pp 1–13, especially efficacy and safety Tables 2–3.</small></p></details></details></div></div>
+  <details id="v12-treatment-evidence" class="more evidence-context"><summary>Scope and interpretation</summary><div class="moreinner"><p>AFP level, AFP trajectory and radiographic viability answer different questions. Repeat an unexplained result, assess liver inflammation and obtain expert review of adequate multiphasic imaging; do not label AFP-only rise radiographic progression. No empiric LRT without a target. B1.1 proposals are OPEN, not automatic delisting rules.</p><p><a href="/mh-liver-pathways/systemic/?tumor=hcc">Open the systemic treatment matrix</a> · <a href="/mh-liver-pathways/evidence/2026-10-25/docs/Memorial_Hermann_HCC_System_Roadmap_v12.docx">Roadmap document · Word</a></p></div></details><script type="application/json" id="roadmap-evidence-data">{
+  "papers": [
+    {
+      "id": "afp_response",
+      "pmid": "30548884",
+      "tag": "Mehta 2019: AFP response",
+      "cit": "Mehta N Alpha-Fetoprotein Decrease from > 1,000 to < 500 ng/mL in Patients with Hepatocellular Carcinoma Leads to Improved Posttransplant Outcomes. Hepatology (Baltimore, Md.) 2019 DOI: 10.1002/hep.30413. PMID: 30548884.",
+      "doi": "10.1002/hep.30413",
+      "group": "Transplant & downstaging",
+      "design": "Retrospective cohort",
+      "depot": true,
+      "access": [
+        {
+          "label": "Mehta 2019: AFP response · paper",
+          "url": "https://doi.org/10.1002/hep.30413"
+        },
+        {
+          "label": "TMC full-text access",
+          "url": "https://libkey.io/libraries/480/10.1002/hep.30413"
+        }
+      ],
+      "appraisal": {
+        "application": "Supports response-based biological review and the existing >1000-to-<500 allocation framework. Does not require AFP <100 for every within-Milan candidate or prove a safe AFP-only exception.",
+        "population": "Retrospective UNOS recipient cohort, 2005–2015; 407 patients with AFP >1000 at least once and final AFP within 90 days of LT. Living-donor and multiorgan recipients excluded; 93.6% initially within Milan.",
+        "results": "Five-year post-LT OS: 48.8% with final AFP >1000, 67.0% at 101–499, and 88.4% at ≤100. Corresponding Kaplan–Meier recurrence estimates: 35.0%, 13.3%, and 7.2%. The 500–1000 group had only 17 patients. Differences between ≤100 and 101–499 were not statistically significant.",
+        "limitations": "Recipient-only, selected historical cohort; treatment and waiting time differed substantially between groups. Non-HCC death was censored for recurrence. No proof that forcing AFP lower causes benefit, no AFP-only/imaging-complete-response subgroup, and no LDLT validation.",
+        "locator": "Main PDF pp 3–9; Tables 1–3 and Figures 1–3."
+      }
+    },
+    {
+      "id": "afp_500",
+      "pmid": "34927344",
+      "tag": "Goldman 2022: final AFP ≥500",
+      "cit": "Goldman ML Lower Alpha-Fetoprotein Threshold of 500 ng/mL for Liver Transplantation May Improve Posttransplant Outcomes in Patients With Hepatocellular Carcinoma. Liver transplantation : official publication of the American Association for the Study of Liver Diseases and the International Liver Transplantation Society 2022 DOI: 10.1002/lt.26392. PMID: 34927344.",
+      "doi": "10.1002/lt.26392",
+      "group": "Transplant & downstaging",
+      "design": "Retrospective cohort",
+      "depot": true,
+      "access": [
+        {
+          "label": "Goldman 2022: final AFP ≥500 · paper",
+          "url": "https://doi.org/10.1002/lt.26392"
+        },
+        {
+          "label": "TMC full-text access",
+          "url": "https://libkey.io/libraries/480/10.1002/lt.26392"
+        }
+      ],
+      "appraisal": {
+        "application": "Supports discussing a conservative clinical hold at confirmed AFP ≥500, even without a prior >1000 result. This is an OPEN local proposal, not a universal OPTN contraindication or a proven transplant-benefit cutoff.",
+        "population": "UNOS 2005–2015; 1766 LT recipients with initial AFP 100–999. Only 879 had serial values; final AFP ≥500 subgroup n=109. LDLT excluded.",
+        "results": "Five-year OS at final AFP <100 / 100–499 / ≥500: 72.7% / 70.4% / 56.1%; recurrence: 13.1% / 18.7% / 24.2%. Final AFP ≥500: adjusted mortality HR 1.50 (95% CI 1.07–2.10), recurrence HR 1.88 (1.13–3.14).",
+        "limitations": "Historical recipient-only study, not a comparison of transplant versus no transplant. Many had only one AFP. In the ≥500 subgroup, 40.4% were ≥1000; small subgroups cannot establish equivalence. Recurrence estimates censor competing death.",
+        "locator": "Main PDF pp 4–9; Tables 1–3 and Figures 1–3."
+      }
+    },
+    {
+      "id": "afp_slope",
+      "pmid": "29505494",
+      "tag": "Giard 2018: AFP slope",
+      "cit": "Giard JM Alpha-Fetoprotein Slope >7.5 ng/mL per Month Predicts Microvascular Invasion and Tumor Recurrence After Liver Transplantation for Hepatocellular Carcinoma. Transplantation 2018 DOI: 10.1097/TP.0000000000002094. PMID: 29505494.",
+      "doi": "10.1097/TP.0000000000002094",
+      "group": "Transplant & downstaging",
+      "design": "Retrospective cohort",
+      "depot": true,
+      "access": [
+        {
+          "label": "Giard 2018: AFP slope · paper",
+          "url": "https://doi.org/10.1097/TP.0000000000002094"
+        },
+        {
+          "label": "TMC full-text access",
+          "url": "https://libkey.io/libraries/480/10.1097/TP.0000000000002094"
+        }
+      ],
+      "appraisal": {
+        "application": "Use slope as an alert to reassess biology, imaging and inflammation, not a stand-alone absolute stop or permanent delisting rule.",
+        "population": "Single-center 336 transplanted T2/Milan patients, 2003–2013; 98.2% received LRT. Median five AFP measurements over 9.8 months. Slope fitted to all values; >7.5 subgroup n=23.",
+        "results": "AFP slope >7.5 ng/mL/month: adjusted recurrence HR 3.0 (1.1–8.1), microvascular invasion OR 6.8 (1.6–28.7). Five-year recurrence-free probability 69.8% versus 87.4%; survival without recurrence 59.5% versus 75.3%. These are different endpoints, neither pair should be labeled overall survival.",
+        "limitations": "Small, data-selected cutoff group; no prospective hold/release validation. The long-term fitted slope cannot be inferred reliably from two closely spaced noisy results. Death was censored for recurrence-free probability.",
+        "locator": "Main PDF pp 2–6; Tables 1–4 and Figure 1."
+      }
+    },
+    {
+      "id": "afp_nyca",
+      "pmid": "33950167",
+      "tag": "Halazun 2021: dynamic AFP/NYCA",
+      "cit": "Halazun KJ Dynamic α-Fetoprotein Response and Outcomes After Liver Transplant for Hepatocellular Carcinoma. JAMA surgery 2021 DOI: 10.1001/jamasurg.2021.0954. PMID: 33950167.",
+      "doi": "10.1001/jamasurg.2021.0954",
+      "group": "Transplant & downstaging",
+      "design": "Retrospective validation cohort",
+      "depot": true,
+      "access": [
+        {
+          "label": "Halazun 2021: dynamic AFP/NYCA · paper",
+          "url": "https://doi.org/10.1001/jamasurg.2021.0954"
+        },
+        {
+          "label": "TMC full-text access",
+          "url": "https://libkey.io/libraries/480/10.1001/jamasurg.2021.0954"
+        }
+      ],
+      "appraisal": {
+        "application": "Use dynamic AFP as complementary risk information. The NYCA definition of response does not supersede the stricter OPTN requirement to fall below 500 after AFP >1000.",
+        "population": "External retrospective validation in 2236 LT recipients at eight centers, 2001–2013; 545 beyond Milan. Composite score combines tumor size, count and AFP response. Deaths within 90 postoperative days excluded.",
+        "results": "Five-year competing-risk cumulative recurrence: 9.5%, 20.5%, 40.5% for low/intermediate/high NYCA categories. Discrimination C statistic 0.66. These are composite-score categories, not isolated AFP ranges.",
+        "limitations": "Recipient selection, exclusion of early deaths, no waitlist dropout or transplant-benefit comparison. Maximum-to-final AFP can miss a rebound below the original peak. Extreme-AFP response subgroup was tiny.",
+        "locator": "Main PDF pp 1–8; Table 1, Figures 1–3. Trailing commentary is not a separate reviewed study."
+      }
+    },
+    {
+      "id": "afp_occult",
+      "pmid": "42010805",
+      "tag": "Moriyama 2026: markers before imaging recurrence",
+      "cit": "Moriyama M Management and Prognosis of HCC Patients With Elevated Tumor Markers but no Imaging Recurrence After Radiofrequency Ablation. Cancer medicine 2026 DOI: 10.1002/cam4.71812. PMID: 42010805.",
+      "doi": "10.1002/cam4.71812",
+      "group": "Transplant & downstaging",
+      "design": "Retrospective cohort",
+      "depot": true,
+      "access": [
+        {
+          "label": "Moriyama 2026: markers before imaging recurrence · paper",
+          "url": "https://doi.org/10.1002/cam4.71812"
+        },
+        {
+          "label": "TMC full-text access",
+          "url": "https://libkey.io/libraries/480/10.1002/cam4.71812"
+        }
+      ],
+      "appraisal": {
+        "application": "Supports prompt repeat markers and high-quality/alternate imaging for an unexplained rise. Does not prove occult recurrence in every individual, justify empiric systemic/LRT treatment without a target, or validate an AFP-only transplant cutoff.",
+        "population": "Retrospective post-RFA, nontransplant cohort. Among 1620 initially treated patients, 907 episodes in 509 patients had elevated AFP, AFP-L3 and/or DCP without imaging evidence. Episodes are not independent patients and this is not AFP alone.",
+        "results": "Recurrence was subsequently identified in 886 episodes; median detection interval 89 days. Local curative treatment 83.5% versus 78.8% and post-recurrence OS 3.55 versus 3.31 years for detection ≤180 versus >180 days; differences were not statistically significant.",
+        "limitations": "RFA-specific, repeated episodes and competing losses; no LT cohort or tested optimal recall interval. Routine imaging is described as every four months in methods versus quarterly in abstract. Case-level AFP discrepancy between Figure 3 and Table 4 is not used.",
+        "locator": "All nine main-PDF pages; methods, Tables 2–4, Figures 1–3. External Tables S1/S2 not supplied."
+      }
+    },
+    {
+      "id": "sharp",
+      "pmid": "18650514",
+      "tag": "SHARP: sorafenib",
+      "cit": "Llovet Sorafenib in Advanced Hepatocellular Carcinoma New England Journal of Medicine 2008 DOI: 10.1056/NEJMoa0708857. PMID: 18650514.",
+      "doi": "10.1056/NEJMoa0708857",
+      "group": "Systemic therapy",
+      "design": "Randomized phase III trial",
+      "depot": true,
+      "access": [
+        {
+          "label": "SHARP: sorafenib · paper",
+          "url": "https://doi.org/10.1056/NEJMoa0708857"
+        },
+        {
+          "label": "TMC full-text access",
+          "url": "https://libkey.io/libraries/480/10.1056/NEJMoa0708857"
+        }
+      ],
+      "appraisal": {
+        "application": "Retain sorafenib as a guideline-supported TKI option when appropriate; not routine LT bridging or a way to treat an isolated AFP rise without a justified cancer indication.",
+        "population": "Randomized double-blind phase III, 602 advanced HCC patients without prior systemic therapy; 97% Child-Pugh A, ECOG 0–2. Sorafenib 400 mg twice daily versus placebo.",
+        "results": "Median OS 10.7 versus 7.9 months; HR 0.69 (0.55–0.87). Radiologic time to progression 5.5 versus 2.8 months, HR 0.58; this is not PFS. ORR 2% versus 1%, no complete responses.",
+        "limitations": "Historical placebo comparison, not a comparison with current ICI combinations. Grade 3 diarrhea and hand–foot reaction each 8%; dose interruptions/reductions frequent. Little evidence for decompensated cirrhosis.",
+        "locator": "NEJM main PDF pp 1–13, especially efficacy and safety Tables 2–3."
+      }
+    }
+  ]
+}</script></div>
 </section>
 
 <footer>
@@ -1350,43 +1515,18 @@ document.getElementById("honestBody").innerHTML = HONEST.map(r=>
 const ALL = [];
 for(const [pmid,v] of Object.entries(REF)) ALL.push({id:pmid, tag:v[0], group:v[1], cit:v[2], pmid:pmid});
 for(const [k,v] of Object.entries(NONPM)) ALL.push({id:k, tag:v[0], group:v[1], cit:v[2], url:v[3]});
+RoadmapEvidence.merge(ALL);
 const GROUPS = [...new Set(ALL.map(r=>r.group))];
 let evGroup = "All", evQuery = "", CRIT = {};
 document.getElementById("evGroups").innerHTML = ["All",...GROUPS].map((g,i)=>
   `<button class="tab" type="button" data-group="${esc(g)}" aria-selected="${i===0}">${esc(g)}</button>`).join("");
 
-function evRow(r){
-  const links = r.pmid
-    ? `<a class="lnk" href="https://libkey.io/libraries/480/pmid/${r.pmid}" target="_blank" rel="noopener">TMC full text</a>
-       <a class="lnk" href="https://pubmed.ncbi.nlm.nih.gov/${r.pmid}/" target="_blank" rel="noopener">PubMed ${r.pmid}</a>`
-    : `<a class="lnk" href="${r.url}" target="_blank" rel="noopener">Source</a>`;
-  const depot = r.depot === undefined ? "" :
-    (r.depot ? `<span class="chip" style="font-size:11px">In depot</span>`
-             : `<span class="chip warn" style="font-size:11px">To download</span>`);
-  const c = CRIT[r.pmid] || CRIT[r.id] || null;
-  let crit = "";
-  if(c){
-    const lim = c.limitations || [], ind = c.critique || [];
-    const li = a => a.length ? a.map(t=>`<li>${esc(t)}</li>`).join("") : "<li>None found in the full text.</li>";
-    const meta = [];
-    if(c.n) meta.push(`<b>Population.</b> ${esc(c.n)}`);
-    if(c.bottom_line) meta.push(`<b>Bottom line.</b> ${esc(c.bottom_line)}`);
-    if(c.funding) meta.push(`<b>Funding.</b> ${esc(c.funding)}`);
-    crit = `<details class="evcrit"><summary>How far this one goes
-        <span>${lim.length} stated \u00b7 ${ind.length} unstated</span></summary>
-      ${meta.length ? `<div class="evmeta">${meta.join(" ")}</div>` : ""}
-      <div class="evcritin">
-        <div class="lim"><h5>Limitations the authors state</h5><ul>${li(lim)}</ul></div>
-        <div class="crit"><h5>What they do not say</h5><ul>${li(ind)}</ul></div>
-      </div></details>`;
-  }
-  return `<div class="ev" id="ev-${esc(r.id)}"><div class="evtag">${esc(r.tag)}</div><div class="evcit">${esc(r.cit)}</div><div class="evlinks">${depot}${links}</div>${crit}</div>`;
+function evRow(r){ return RoadmapEvidence.row(r, CRIT);
 }
-function critText(r){
-  const c = CRIT[r.pmid] || CRIT[r.id];
-  return c ? (c.limitations||[]).concat(c.critique||[], [c.bottom_line||""]).join(" ") : "";
+function critText(r){ return RoadmapEvidence.text(r, CRIT);
 }
 function renderEv(){
+  RoadmapEvidence.merge(ALL);
   const q = evQuery.trim().toLowerCase();
   const rows = ALL.filter(r =>
     (evGroup==="All" || r.group===evGroup) &&
@@ -1395,6 +1535,7 @@ function renderEv(){
     ? rows.map(evRow).join("")
     : `<div class="card"><p class="muted">Nothing matches “${esc(evQuery)}”. Try a trial name, an author, or a journal.</p></div>`;
   document.getElementById("evCount").textContent = rows.length + " of " + ALL.length + " sources";
+  RoadmapEvidence.reveal();
 }
 document.getElementById("evGroups").addEventListener("click", e=>{
   const b = e.target.closest(".tab"); if(!b) return;
@@ -1573,11 +1714,12 @@ Promise.all([
   const have = new Set(ALL.map(r=>r.id));
   for(const r of refs){
     if(have.has(r.pmid) || !used.has(r.pmid)) continue;
-    ALL.push({id:r.pmid, tag:(r.au||"")+" "+(r.y||""), group:"Liver-directed (HCC)",
+    ALL.push({id:r.pmid, tag:(r.au||"")+" "+(r.y||""), group:"Liver-directed",
               cit:`${r.au} et al. ${r.t} ${r.j}. ${r.y}.`.replace(/\s+/g," "),
               pmid:r.pmid, depot:r.st==="depot"});
     have.add(r.pmid);
   }
+  RoadmapEvidence.merge(ALL);
   const groups = [...new Set(ALL.map(r=>r.group))];
   document.getElementById("evGroups").innerHTML = ["All",...groups].map((g,i)=>
     `<button class="tab" type="button" data-group="${esc(g)}" aria-selected="${String(g===evGroup)}">${esc(g)}</button>`).join("");
@@ -1597,7 +1739,7 @@ document.addEventListener("click", e=>{
   document.getElementById("evSearch").value = "";
   document.querySelectorAll("#evGroups .tab").forEach((x,i)=>x.setAttribute("aria-selected", String(i===0)));
   renderEv();
-  const el = document.getElementById("ev-"+id);
+  const el = document.getElementById("ev-"+id)?.closest(".ev");
   if(el){
     el.scrollIntoView({behavior:"smooth", block:"center"});
     document.querySelectorAll(".ev.hit").forEach(x=>x.classList.remove("hit"));
@@ -1615,6 +1757,14 @@ document.addEventListener("click", e=>{
   a.href = "../"; a.textContent = "\u2190 All pathways";
   nav.insertBefore(a, nav.firstChild);
 })();
+
+window.addEventListener('hashchange', () => {
+  let id; try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+  if (!ALL.some(r => id === 'ev-' + r.id || (r.aliases || []).some(a => id === a || id === 'ev-' + a))) return;
+  evGroup = 'All'; evQuery = ''; document.getElementById('evSearch').value = '';
+  document.querySelectorAll('#evGroups .tab').forEach(b => b.setAttribute('aria-selected', String(b.dataset.group === 'All')));
+  renderEv();
+});
 </script>
 </body>
 </html>
