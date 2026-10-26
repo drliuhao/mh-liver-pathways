@@ -3,7 +3,7 @@
  'use strict';
  const ref=window.ClinicalReference;if(!ref)return;
  let data;try{data=JSON.parse(document.getElementById('protocol-data')?.textContent||'null');}catch{}
- const pathway=data?.pathway,roadmap=document.getElementById('answer');if(!pathway&&!roadmap)return;
+ const pathway=data?.pathway,roadmap=document.getElementById('answer');if(!pathway&&!roadmap&&!document.querySelector('[data-allocation-page]'))return;
  const {esc,link}=ref,root=new URL('../',document.currentScript.src),supplementCache=new Map();
  let queued=false,dialog=null,dialogOrigin=null;
  const node=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n;};
@@ -53,6 +53,7 @@
   const show=(step,focus=true)=>{
    nav.querySelectorAll('button').forEach(b=>{const active=b.dataset.previewStep===step.id;b.classList.toggle('is-selected',active);if(active)b.setAttribute('aria-current','true');else b.removeAttribute('aria-current');});
    content.innerHTML=ref.renderPreview(data,step.id,supplemental(step));
+   if(window.AllocationReference?.diseases[pathway.slug]?.steps.includes(step.id))content.insertAdjacentHTML('afterbegin',window.AllocationReference.overview(pathway.slug));
    const reviews=data.high_risk.pathways[pathway.slug]?.reviews.filter(r=>(window.RiskRouting.coverage[r.anchor]||[]).includes(step.id))||[];
    if(reviews.length){const risk=node('section','clinical-preview-risk');risk.innerHTML='<h4>High-risk reviews · only when relevant</h4><p>Each review retains its own eligibility limits and approval status. Reading it does not select a protocol.</p>'+reviews.map(r=>`<p>${link(new URL('transplant/'+pathway.slug+'/#high-risk-'+r.anchor,root),r.title||r.anchor)}</p>`).join('');content.querySelector('.clinical-preview-sources').before(risk);}
    termRow(content.querySelector('.clinical-preview-checklist'),content.textContent);

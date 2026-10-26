@@ -1,0 +1,548 @@
+{
+  "analysis_date": "2026-10-26",
+  "seed": 20261026,
+  "bootstrap_replicates": 2000,
+  "method": "Aalen\u2013Johansen cumulative incidence; pointwise 95% person-bootstrap intervals",
+  "geography": "Three adult Houston listing programs; institutional identities inferred from audited aggregate matches",
+  "cohorts": {
+    "hcc": {
+      "key": "hcc",
+      "n": 425,
+      "label": "HCC exception applicants",
+      "origin": "First recorded HCC exception application",
+      "entry": "4 Feb 2020\u201331 Dec 2024",
+      "followup": "Through 31 Dec 2025",
+      "points": [
+        {
+          "month": 0,
+          "at_risk": 425,
+          "ddlt": 0.0,
+          "ddlt_low": 0.0,
+          "ddlt_high": 0.0,
+          "death_or_too_sick": 0.0,
+          "dropout_low": 0.0,
+          "dropout_high": 0.0
+        },
+        {
+          "month": 1,
+          "at_risk": 412,
+          "ddlt": 0.021176,
+          "ddlt_low": 0.009412,
+          "ddlt_high": 0.035294,
+          "death_or_too_sick": 0.009412,
+          "dropout_low": 0.002353,
+          "dropout_high": 0.018824
+        },
+        {
+          "month": 2,
+          "at_risk": 400,
+          "ddlt": 0.04,
+          "ddlt_low": 0.023529,
+          "ddlt_high": 0.058824,
+          "death_or_too_sick": 0.018824,
+          "dropout_low": 0.007059,
+          "dropout_high": 0.032941
+        },
+        {
+          "month": 3,
+          "at_risk": 377,
+          "ddlt": 0.056471,
+          "ddlt_low": 0.035294,
+          "ddlt_high": 0.08,
+          "death_or_too_sick": 0.047059,
+          "dropout_low": 0.028235,
+          "dropout_high": 0.068235
+        },
+        {
+          "month": 4,
+          "at_risk": 357,
+          "ddlt": 0.075294,
+          "ddlt_low": 0.051765,
+          "ddlt_high": 0.101176,
+          "death_or_too_sick": 0.070588,
+          "dropout_low": 0.047059,
+          "dropout_high": 0.096471
+        },
+        {
+          "month": 5,
+          "at_risk": 336,
+          "ddlt": 0.089412,
+          "ddlt_low": 0.063529,
+          "ddlt_high": 0.117647,
+          "death_or_too_sick": 0.094118,
+          "dropout_low": 0.068235,
+          "dropout_high": 0.122353
+        },
+        {
+          "month": 6,
+          "at_risk": 318,
+          "ddlt": 0.098824,
+          "ddlt_low": 0.070588,
+          "ddlt_high": 0.127059,
+          "death_or_too_sick": 0.12,
+          "dropout_low": 0.089412,
+          "dropout_high": 0.150588
+        },
+        {
+          "month": 7,
+          "at_risk": 281,
+          "ddlt": 0.171765,
+          "ddlt_low": 0.136471,
+          "ddlt_high": 0.207059,
+          "death_or_too_sick": 0.127059,
+          "dropout_low": 0.096471,
+          "dropout_high": 0.16
+        },
+        {
+          "month": 8,
+          "at_risk": 256,
+          "ddlt": 0.204706,
+          "ddlt_low": 0.167059,
+          "ddlt_high": 0.242353,
+          "death_or_too_sick": 0.138824,
+          "dropout_low": 0.105882,
+          "dropout_high": 0.171765
+        },
+        {
+          "month": 9,
+          "at_risk": 221,
+          "ddlt": 0.261176,
+          "ddlt_low": 0.221118,
+          "ddlt_high": 0.301176,
+          "death_or_too_sick": 0.162353,
+          "dropout_low": 0.127059,
+          "dropout_high": 0.197706
+        },
+        {
+          "month": 10,
+          "at_risk": 201,
+          "ddlt": 0.287059,
+          "ddlt_low": 0.244706,
+          "ddlt_high": 0.331765,
+          "death_or_too_sick": 0.178824,
+          "dropout_low": 0.143529,
+          "dropout_high": 0.216471
+        },
+        {
+          "month": 11,
+          "at_risk": 169,
+          "ddlt": 0.331765,
+          "ddlt_low": 0.287059,
+          "ddlt_high": 0.376471,
+          "death_or_too_sick": 0.195294,
+          "dropout_low": 0.157647,
+          "dropout_high": 0.232941
+        },
+        {
+          "month": 12,
+          "at_risk": 159,
+          "ddlt": 0.352941,
+          "ddlt_low": 0.308235,
+          "ddlt_high": 0.4,
+          "death_or_too_sick": 0.197647,
+          "dropout_low": 0.16,
+          "dropout_high": 0.235294
+        },
+        {
+          "month": 13,
+          "at_risk": 140,
+          "ddlt": 0.378936,
+          "ddlt_low": 0.334118,
+          "ddlt_high": 0.425883,
+          "death_or_too_sick": 0.207107,
+          "dropout_low": 0.169426,
+          "dropout_high": 0.247059
+        },
+        {
+          "month": 14,
+          "at_risk": 124,
+          "ddlt": 0.400796,
+          "ddlt_low": 0.353961,
+          "ddlt_high": 0.44788,
+          "death_or_too_sick": 0.209546,
+          "dropout_low": 0.171812,
+          "dropout_high": 0.249503
+        },
+        {
+          "month": 15,
+          "at_risk": 110,
+          "ddlt": 0.418265,
+          "ddlt_low": 0.370725,
+          "ddlt_high": 0.465293,
+          "death_or_too_sick": 0.217,
+          "dropout_low": 0.178989,
+          "dropout_high": 0.256888
+        },
+        {
+          "month": 16,
+          "at_risk": 99,
+          "ddlt": 0.435943,
+          "ddlt_low": 0.388082,
+          "ddlt_high": 0.482895,
+          "death_or_too_sick": 0.222093,
+          "dropout_low": 0.18416,
+          "dropout_high": 0.264013
+        },
+        {
+          "month": 17,
+          "at_risk": 83,
+          "ddlt": 0.45122,
+          "ddlt_low": 0.404637,
+          "ddlt_high": 0.498881,
+          "death_or_too_sick": 0.23737,
+          "dropout_low": 0.198875,
+          "dropout_high": 0.280168
+        },
+        {
+          "month": 18,
+          "at_risk": 71,
+          "ddlt": 0.461723,
+          "ddlt_low": 0.414856,
+          "ddlt_high": 0.508701,
+          "death_or_too_sick": 0.250446,
+          "dropout_low": 0.211643,
+          "dropout_high": 0.294118
+        },
+        {
+          "month": 19,
+          "at_risk": 59,
+          "ddlt": 0.477664,
+          "ddlt_low": 0.428813,
+          "ddlt_high": 0.523836,
+          "death_or_too_sick": 0.258417,
+          "dropout_low": 0.219552,
+          "dropout_high": 0.301035
+        },
+        {
+          "month": 20,
+          "at_risk": 53,
+          "ddlt": 0.491086,
+          "ddlt_low": 0.440972,
+          "ddlt_high": 0.537428,
+          "death_or_too_sick": 0.258417,
+          "dropout_low": 0.219552,
+          "dropout_high": 0.301035
+        },
+        {
+          "month": 21,
+          "at_risk": 48,
+          "ddlt": 0.496455,
+          "ddlt_low": 0.44741,
+          "ddlt_high": 0.54355,
+          "death_or_too_sick": 0.258417,
+          "dropout_low": 0.219552,
+          "dropout_high": 0.301035
+        },
+        {
+          "month": 22,
+          "at_risk": 46,
+          "ddlt": 0.499139,
+          "ddlt_low": 0.450017,
+          "ddlt_high": 0.545692,
+          "death_or_too_sick": 0.258417,
+          "dropout_low": 0.219552,
+          "dropout_high": 0.301035
+        },
+        {
+          "month": 23,
+          "at_risk": 43,
+          "ddlt": 0.504624,
+          "ddlt_low": 0.455252,
+          "ddlt_high": 0.550866,
+          "death_or_too_sick": 0.261159,
+          "dropout_low": 0.222195,
+          "dropout_high": 0.303135
+        },
+        {
+          "month": 24,
+          "at_risk": 40,
+          "ddlt": 0.507367,
+          "ddlt_low": 0.457948,
+          "ddlt_high": 0.554072,
+          "death_or_too_sick": 0.261159,
+          "dropout_low": 0.222195,
+          "dropout_high": 0.303135
+        }
+      ],
+      "ddlt_50pct_months": 22.0,
+      "recipient_only_wait": {
+        "n": 218,
+        "median_months": 8.9,
+        "q1_months": 6.5,
+        "q3_months": 13.2
+      },
+      "other_12m": 0.075294,
+      "still_listed_12m": 0.374118,
+      "listing_to_request_median_months": 0.1
+    },
+    "all": {
+      "key": "all",
+      "n": 2668,
+      "label": "All adult first listings",
+      "origin": "First national liver listing",
+      "entry": "4 Feb 2020\u201331 Dec 2024",
+      "followup": "Through 31 Dec 2025",
+      "points": [
+        {
+          "month": 0,
+          "at_risk": 2668,
+          "ddlt": 0.000375,
+          "ddlt_low": 0.0,
+          "ddlt_high": 0.001124,
+          "death_or_too_sick": 0.000375,
+          "dropout_low": 0.0,
+          "dropout_high": 0.001124
+        },
+        {
+          "month": 1,
+          "at_risk": 1760,
+          "ddlt": 0.271739,
+          "ddlt_low": 0.254123,
+          "ddlt_high": 0.28824,
+          "death_or_too_sick": 0.063343,
+          "dropout_low": 0.053973,
+          "dropout_high": 0.072714
+        },
+        {
+          "month": 2,
+          "at_risk": 1586,
+          "ddlt": 0.315967,
+          "ddlt_low": 0.297976,
+          "ddlt_high": 0.333208,
+          "death_or_too_sick": 0.08096,
+          "dropout_low": 0.070465,
+          "dropout_high": 0.091454
+        },
+        {
+          "month": 3,
+          "at_risk": 1470,
+          "ddlt": 0.341829,
+          "ddlt_low": 0.323838,
+          "ddlt_high": 0.359455,
+          "death_or_too_sick": 0.092204,
+          "dropout_low": 0.08096,
+          "dropout_high": 0.103448
+        },
+        {
+          "month": 4,
+          "at_risk": 1378,
+          "ddlt": 0.363193,
+          "ddlt_low": 0.345202,
+          "ddlt_high": 0.381559,
+          "death_or_too_sick": 0.101949,
+          "dropout_low": 0.090705,
+          "dropout_high": 0.113568
+        },
+        {
+          "month": 5,
+          "at_risk": 1291,
+          "ddlt": 0.379685,
+          "ddlt_low": 0.360945,
+          "ddlt_high": 0.398051,
+          "death_or_too_sick": 0.112819,
+          "dropout_low": 0.101199,
+          "dropout_high": 0.125187
+        },
+        {
+          "month": 6,
+          "at_risk": 1220,
+          "ddlt": 0.38943,
+          "ddlt_low": 0.371439,
+          "ddlt_high": 0.408171,
+          "death_or_too_sick": 0.125562,
+          "dropout_low": 0.113193,
+          "dropout_high": 0.137931
+        },
+        {
+          "month": 7,
+          "at_risk": 1129,
+          "ddlt": 0.409295,
+          "ddlt_low": 0.390555,
+          "ddlt_high": 0.42916,
+          "death_or_too_sick": 0.133433,
+          "dropout_low": 0.120315,
+          "dropout_high": 0.145811
+        },
+        {
+          "month": 8,
+          "at_risk": 1053,
+          "ddlt": 0.425037,
+          "ddlt_low": 0.405922,
+          "ddlt_high": 0.444903,
+          "death_or_too_sick": 0.141679,
+          "dropout_low": 0.128561,
+          "dropout_high": 0.154798
+        },
+        {
+          "month": 9,
+          "at_risk": 991,
+          "ddlt": 0.436282,
+          "ddlt_low": 0.417532,
+          "ddlt_high": 0.455772,
+          "death_or_too_sick": 0.149925,
+          "dropout_low": 0.136432,
+          "dropout_high": 0.163053
+        },
+        {
+          "month": 10,
+          "at_risk": 929,
+          "ddlt": 0.449025,
+          "ddlt_low": 0.430285,
+          "ddlt_high": 0.468516,
+          "death_or_too_sick": 0.156297,
+          "dropout_low": 0.142804,
+          "dropout_high": 0.170165
+        },
+        {
+          "month": 11,
+          "at_risk": 873,
+          "ddlt": 0.459895,
+          "ddlt_low": 0.44078,
+          "ddlt_high": 0.479385,
+          "death_or_too_sick": 0.161544,
+          "dropout_low": 0.147676,
+          "dropout_high": 0.175787
+        },
+        {
+          "month": 12,
+          "at_risk": 810,
+          "ddlt": 0.472639,
+          "ddlt_low": 0.453523,
+          "ddlt_high": 0.492504,
+          "death_or_too_sick": 0.165667,
+          "dropout_low": 0.151799,
+          "dropout_high": 0.17991
+        },
+        {
+          "month": 13,
+          "at_risk": 753,
+          "ddlt": 0.478741,
+          "ddlt_low": 0.459648,
+          "ddlt_high": 0.498208,
+          "death_or_too_sick": 0.169474,
+          "dropout_low": 0.155192,
+          "dropout_high": 0.183732
+        },
+        {
+          "month": 14,
+          "at_risk": 701,
+          "ddlt": 0.484222,
+          "ddlt_low": 0.465034,
+          "ddlt_high": 0.504029,
+          "death_or_too_sick": 0.171808,
+          "dropout_low": 0.157219,
+          "dropout_high": 0.186046
+        },
+        {
+          "month": 15,
+          "at_risk": 649,
+          "ddlt": 0.490232,
+          "ddlt_low": 0.471312,
+          "ddlt_high": 0.510076,
+          "death_or_too_sick": 0.176225,
+          "dropout_low": 0.161506,
+          "dropout_high": 0.190849
+        },
+        {
+          "month": 16,
+          "at_risk": 602,
+          "ddlt": 0.497194,
+          "ddlt_low": 0.4783,
+          "ddlt_high": 0.517247,
+          "death_or_too_sick": 0.1791,
+          "dropout_low": 0.164387,
+          "dropout_high": 0.193954
+        },
+        {
+          "month": 17,
+          "at_risk": 566,
+          "ddlt": 0.501781,
+          "ddlt_low": 0.482613,
+          "ddlt_high": 0.521481,
+          "death_or_too_sick": 0.182848,
+          "dropout_low": 0.167789,
+          "dropout_high": 0.197755
+        },
+        {
+          "month": 18,
+          "at_risk": 515,
+          "ddlt": 0.50943,
+          "ddlt_low": 0.490526,
+          "ddlt_high": 0.52926,
+          "death_or_too_sick": 0.186679,
+          "dropout_low": 0.171312,
+          "dropout_high": 0.202084
+        },
+        {
+          "month": 19,
+          "at_risk": 472,
+          "ddlt": 0.515502,
+          "ddlt_low": 0.496362,
+          "ddlt_high": 0.534967,
+          "death_or_too_sick": 0.190572,
+          "dropout_low": 0.17556,
+          "dropout_high": 0.205689
+        },
+        {
+          "month": 20,
+          "at_risk": 437,
+          "ddlt": 0.520389,
+          "ddlt_low": 0.50137,
+          "ddlt_high": 0.540191,
+          "death_or_too_sick": 0.192798,
+          "dropout_low": 0.177572,
+          "dropout_high": 0.208266
+        },
+        {
+          "month": 21,
+          "at_risk": 413,
+          "ddlt": 0.524894,
+          "ddlt_low": 0.505875,
+          "ddlt_high": 0.544512,
+          "death_or_too_sick": 0.194603,
+          "dropout_low": 0.179165,
+          "dropout_high": 0.209969
+        },
+        {
+          "month": 22,
+          "at_risk": 392,
+          "ddlt": 0.526719,
+          "ddlt_low": 0.507412,
+          "ddlt_high": 0.546366,
+          "death_or_too_sick": 0.198255,
+          "dropout_low": 0.182762,
+          "dropout_high": 0.213636
+        },
+        {
+          "month": 23,
+          "at_risk": 363,
+          "ddlt": 0.529491,
+          "ddlt_low": 0.510281,
+          "ddlt_high": 0.5491,
+          "death_or_too_sick": 0.200119,
+          "dropout_low": 0.184533,
+          "dropout_high": 0.215586
+        },
+        {
+          "month": 24,
+          "at_risk": 345,
+          "ddlt": 0.530903,
+          "ddlt_low": 0.511782,
+          "ddlt_high": 0.550531,
+          "death_or_too_sick": 0.201529,
+          "dropout_low": 0.186077,
+          "dropout_high": 0.217196
+        }
+      ],
+      "ddlt_50pct_months": 16.6,
+      "recipient_only_wait": {
+        "n": 1461,
+        "median_months": 1.0,
+        "q1_months": 0.2,
+        "q3_months": 7.1
+      },
+      "other_12m": 0.058096,
+      "still_listed_12m": 0.303598
+    }
+  }
+}
