@@ -105,7 +105,7 @@
   "example_presets": 7,
   "journey_overviews": 7,
   "sticky_decision_navigation": true,
-  "interface_changes": "Separated staged choices from confirmed findings, removed the redundant next-action selector, and collapsed optional history. Clinical decision numbering, conditional actions, safety findings and review statuses are retained. Roadmap topic navigation requires Open topic. Relevant numeric definitions stay visible. All seven transplant pathways and 12 roadmaps use the shared presentation.",
+  "interface_changes": "Separated staged choices from confirmed findings and removed the redundant next-action selector. A compact strip opens one prior-finding editor at a time. Clinical decision numbering, conditional actions, safety findings and review statuses are retained. Roadmap topic navigation requires Open topic. Relevant numeric definitions stay visible. All seven transplant pathways and 12 roadmaps use the shared presentation.",
   "high_risk_integration": "2026-10-24",
   "high_risk_reviews": 21,
   "high_risk_protocol_pdfs": 7,
@@ -214,5 +214,12 @@
       "before": "0649cceb2e1ea0db01a7df6ad9ee06037a6ad97b78c52b72d3fa1b0dd08a053e"
     }
   ],
-  "review_scope": "Analyst A implementation and regression/layout checks; external Analyst B interface and textual document review. Not clinical or institutional approval."
+  "review_scope": "Analyst A implementation and regression/layout checks; external Analyst B interface and textual document review. Not clinical or institutional approval.",
+  "compact_trail_revision": "2026-10-26",
+  "compact_trail_display": "A short horizontal strip identifies recorded findings and the current question. Only the strip is sticky. Opening a prior finding does not change it; Apply change commits an edit and clears later dependent findings. Cancel, Escape or closing the editor discards an unapplied draft. Current threshold summaries remain visible. Roadmap chips represent navigation only, not patient findings.",
+  "compact_trail_labels": {
+    "core_findings": 96,
+    "supplemental_findings": 23,
+    "roadmap_topics": 103
+  }
 }
