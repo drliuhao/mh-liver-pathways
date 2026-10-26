@@ -62,7 +62,6 @@
    }else panel.append(el('p','',risk.help));
   };
   info.select.addEventListener('change',refresh);
-  row.addEventListener('click',ev=>{if(ev.target.closest('[data-cancel-finding]'))queueMicrotask(refresh);});
   button.addEventListener('click',ev=>{
    ev.preventDefault();ev.stopPropagation();
    if(!panel){

@@ -508,7 +508,7 @@ document.addEventListener('change',ev=>{
 });
 
 document.addEventListener('click',ev=>{
- const cancel=ev.target.closest('[data-cancel-finding]');if(cancel){const select=document.getElementById(cancel.dataset.cancelFinding);select.value=select.dataset.committed;stageFinding(select);select.focus();return;}
+ const cancel=ev.target.closest('[data-cancel-finding]');if(cancel){const select=document.getElementById(cancel.dataset.cancelFinding);select.value=select.dataset.committed;select.dispatchEvent(new Event('change',{bubbles:true}));select.focus();return;}
  const record=ev.target.closest('[data-record-finding]');if(record&&!record.disabled){const select=document.getElementById(record.dataset.recordFinding);if(select.dataset.layerRisk)recordRiskFinding(select.dataset.layerStep,select.dataset.layerRisk,select.value);else editLayer(select.dataset.layerStep,select.dataset.layerQuestion,select.value);return;}
  const recordRisk=ev.target.closest('[data-record-risk]');if(recordRisk&&!recordRisk.disabled){const select=document.getElementById('risk-'+recordRisk.dataset.recordRisk);recordRiskFinding(active.steps[stepIndex].id,recordRisk.dataset.recordRisk,select.value);return;}
  const criteria=ev.target.closest('[data-layer-criteria]');if(criteria){showLayerCriteria(criteria.dataset.layerStep,criteria.dataset.layerCriteria,criteria.hasAttribute('data-risk-criteria'));return;}

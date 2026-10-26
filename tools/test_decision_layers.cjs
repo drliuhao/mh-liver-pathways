@@ -55,6 +55,7 @@ assert(core.includes('data-layer-question="focality"'));assert(risk.includes('da
 console.log('PASS: core and supplemental focality questions have distinct controls and criteria targets.');
 assert(core.includes('data-record-finding=')&&core.includes('disabled'),'An explicit confirmation commits findings');
 assert(core.includes('data-cancel-finding=')&&core.includes('layer-stage-status'),'Unapplied selections have a status and cancel control');
+assert(app.includes("select.value=select.dataset.committed;select.dispatchEvent(new Event('change',{bubbles:true}))"),'Cancel updates every inline criteria observer, not just the dropdown');
 assert(app.includes('Criteria behind recorded findings'),'Selected threshold definitions remain visible alongside the next question');
 assert(app.includes('createStagedSession(active,DATA.assistants,false)'),'Ordinary entry is unanswered');
 assert(!app.includes('layer-next-action')&&!app.includes('data-layer-action'),'No redundant action selector');
