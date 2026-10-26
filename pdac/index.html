@@ -7,10 +7,10 @@
 <meta name="description" content="Pancreatic ductal adenocarcinoma — Memorial Hermann system roadmap v0.3, draft under development.">
 <title>Memorial Hermann PDAC Pathway</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap">
-<link rel="stylesheet" href="../assets/portal-navigation.css"><script src="../assets/portal-navigation.js?v=20261026-navigation2" defer></script></head>
+<link rel="stylesheet" href="../assets/portal-navigation.css"><script src="../assets/portal-navigation.js?v=20261026-navigation2" defer></script><link rel="stylesheet" href="/mh-liver-pathways/assets/roadmap-evidence.css?v=20261026-library1"><script src="/mh-liver-pathways/assets/roadmap-evidence.js?v=20261026-library1"></script></head>
 <body>
 <style>
-/* One renderer, four tumours: the gates come from data/pathway.json?v=20261023-language, the
+/* One renderer, four tumours: the gates come from data/pathway.json?v=20261026-library1, the
    liver-directed matrix from the shared LRT_Evidence_Matrix export. Layout
    follows the HCC console: a gate strip, the answer below it, then the
    evidence library everything links back into. */
@@ -406,7 +406,64 @@ footer p + p{margin-top:8px}
       <span class="evcount" id="evCount"></span>
     </div>
     <div class="evlist" id="evList"></div>
-  <div id="v12-treatment-evidence" class="study-appraisals"><p>This is a cancer-treatment roadmap update only. The withdrawn PDAC liver-transplant pathway remains closed; chemotherapy response does not reopen it.</p><p><a href="/mh-liver-pathways/systemic/?tumor=pdac">Open the systemic treatment matrix</a> · <a href="/mh-liver-pathways/evidence/2026-10-25/docs/Memorial_Hermann_PDAC_System_Roadmap_v12.docx">Roadmap document · Word</a></p><details id="cassandra" class="study-appraisal"><summary>CASSANDRA: preoperative PAXG</summary><p><b>Application.</b> Discuss PAXG as an evidence-supported preoperative option for selected patients, with local MDT/formulary adoption still OPEN. Not a blanket replacement for mFOLFIRINOX, not a metastatic comparison, and not a PDAC transplant indication.</p><p><a href="https://doi.org/10.1016/S0140-6736(25)01685-X">CASSANDRA: preoperative PAXG · paper</a> · <a href="https://libkey.io/libraries/480/10.1016/S0140-6736(25)01685-X">TMC full-text access</a></p><details><summary>Population, results and limitations</summary><p>Italian phase III, 260 eligible randomized patients, age 18–75, KPS ≥70, resectable/borderline PDAC (including biological borderline CA19-9 ≥500). PAXG versus mFOLFIRINOX; four preoperative months. Second timing randomization not reported in this analysis.</p><p>Median event-free survival 16.0 versus 10.2 months, HR 0.63 (0.47–0.84). EFS included confirmed CA19-9 rises and unresectability, not just progression/death. Resection 75% versus 67% (not significant); R0 rates similar. Grade ≥3 toxicity 66% versus 61%. OS immature; no established OS superiority.</p><p>Open-label, high-volume Italian centers, all White population, age cap. Converted phase II to III after 86% enrollment; no independent monitoring committee. Thirty-three EFS events were marker-only. Do not relabel EFS as OS or PFS.</p><p><small>All 12 main-PDF pages; endpoint definition, Figure 3 and Tables 1–3.</small></p></details></details><details id="napoli1" class="study-appraisal"><summary>NAPOLI-1: nal-IRI after gemcitabine</summary><p><b>Application.</b> Use the combination after gemcitabine when fit; avoid treating nal-IRI as interchangeable with conventional irinotecan. Dose conventions differ: 70 mg/m² free base equals 80 mg/m² salt in the publication. Pharmacy must verify the actual product/order set.</p><p><a href="https://doi.org/10.1016/S0140-6736(15)00986-1">NAPOLI-1: nal-IRI after gemcitabine · paper</a> · <a href="https://libkey.io/libraries/480/10.1016/S0140-6736(15)00986-1">TMC full-text access</a></p><details><summary>Population, results and limitations</summary><p>Global randomized phase III, amended three-arm design. Primary combination comparison: 117 versus 119 concurrent controls. Metastatic PDAC after gemcitabine; KPS ≥70, normal bilirubin, albumin ≥30 g/L.</p><p>nal-IRI plus 5-FU/LV: OS 6.1 versus 4.2 months, HR 0.67 (0.49–0.92); PFS 3.1 versus 1.5, HR 0.56. ORR 16% versus 1%. nal-IRI monotherapy did not improve OS (HR 0.99). Grade 3–4 neutropenia 27%, diarrhea 13%.</p><p>Small prior-irinotecan subgroup, different 5-FU schedules, selected organ function. No validated immediate reuse after FOLFIRINOX/NALIRIFOX. One combination treatment-related septic-shock death.</p><p><small>All 13 main-PDF pages; Figures 1–3 and Tables 1–3.</small></p></details></details></div></div>
+  <details id="v12-treatment-evidence" class="more evidence-context"><summary>Scope and interpretation</summary><div class="moreinner"><p>This evidence applies to the cancer-treatment roadmap only. The withdrawn PDAC liver-transplant pathway remains closed; chemotherapy response does not reopen it.</p><p><a href="/mh-liver-pathways/systemic/?tumor=pdac">Open the systemic treatment matrix</a> · <a href="/mh-liver-pathways/evidence/2026-10-25/docs/Memorial_Hermann_PDAC_System_Roadmap_v12.docx">Roadmap document · Word</a></p></div></details><script type="application/json" id="roadmap-evidence-data">{
+  "papers": [
+    {
+      "id": "cassandra",
+      "pmid": "41275879",
+      "tag": "CASSANDRA: preoperative PAXG",
+      "cit": "Reni M Preoperative mFOLFIRINOX versus PAXG for stage I–III resectable and borderline resectable pancreatic ductal adenocarcinoma (PACT-21 CASSANDRA): results of the first randomisation analysis of a randomised, open-label, 2 × 2 factorial phase 3 trial Lancet (London, England) 2026 DOI: 10.1016/S0140-6736(25)01685-X. PMID: 41275879.",
+      "doi": "10.1016/S0140-6736(25)01685-X",
+      "group": "Systemic & targeted therapy",
+      "design": "Randomized phase III trial",
+      "depot": true,
+      "access": [
+        {
+          "label": "CASSANDRA: preoperative PAXG · paper",
+          "url": "https://doi.org/10.1016/S0140-6736(25)01685-X"
+        },
+        {
+          "label": "TMC full-text access",
+          "url": "https://libkey.io/libraries/480/10.1016/S0140-6736(25)01685-X"
+        }
+      ],
+      "appraisal": {
+        "application": "Discuss PAXG as an evidence-supported preoperative option for selected patients, with local MDT/formulary adoption still OPEN. Not a blanket replacement for mFOLFIRINOX, not a metastatic comparison, and not a PDAC transplant indication.",
+        "population": "Italian phase III, 260 eligible randomized patients, age 18–75, KPS ≥70, resectable/borderline PDAC (including biological borderline CA19-9 ≥500). PAXG versus mFOLFIRINOX; four preoperative months. Second timing randomization not reported in this analysis.",
+        "results": "Median event-free survival 16.0 versus 10.2 months, HR 0.63 (0.47–0.84). EFS included confirmed CA19-9 rises and unresectability, not just progression/death. Resection 75% versus 67% (not significant); R0 rates similar. Grade ≥3 toxicity 66% versus 61%. OS immature; no established OS superiority.",
+        "limitations": "Open-label, high-volume Italian centers, all White population, age cap. Converted phase II to III after 86% enrollment; no independent monitoring committee. Thirty-three EFS events were marker-only. Do not relabel EFS as OS or PFS.",
+        "locator": "All 12 main-PDF pages; endpoint definition, Figure 3 and Tables 1–3."
+      }
+    },
+    {
+      "id": "napoli1",
+      "pmid": "26615328",
+      "tag": "NAPOLI-1: nal-IRI after gemcitabine",
+      "cit": "Wang-Gillam A Nanoliposomal irinotecan with fluorouracil and folinic acid in metastatic pancreatic cancer after previous gemcitabine-based therapy (NAPOLI-1): a global, randomised, open-label, phase 3 trial. Lancet (London, England) 2016 DOI: 10.1016/S0140-6736(15)00986-1. PMID: 26615328.",
+      "doi": "10.1016/S0140-6736(15)00986-1",
+      "group": "Systemic & targeted therapy",
+      "design": "Randomized phase III trial",
+      "depot": true,
+      "access": [
+        {
+          "label": "NAPOLI-1: nal-IRI after gemcitabine · paper",
+          "url": "https://doi.org/10.1016/S0140-6736(15)00986-1"
+        },
+        {
+          "label": "TMC full-text access",
+          "url": "https://libkey.io/libraries/480/10.1016/S0140-6736(15)00986-1"
+        }
+      ],
+      "appraisal": {
+        "application": "Use the combination after gemcitabine when fit; avoid treating nal-IRI as interchangeable with conventional irinotecan. Dose conventions differ: 70 mg/m² free base equals 80 mg/m² salt in the publication. Pharmacy must verify the actual product/order set.",
+        "population": "Global randomized phase III, amended three-arm design. Primary combination comparison: 117 versus 119 concurrent controls. Metastatic PDAC after gemcitabine; KPS ≥70, normal bilirubin, albumin ≥30 g/L.",
+        "results": "nal-IRI plus 5-FU/LV: OS 6.1 versus 4.2 months, HR 0.67 (0.49–0.92); PFS 3.1 versus 1.5, HR 0.56. ORR 16% versus 1%. nal-IRI monotherapy did not improve OS (HR 0.99). Grade 3–4 neutropenia 27%, diarrhea 13%.",
+        "limitations": "Small prior-irinotecan subgroup, different 5-FU schedules, selected organ function. No validated immediate reuse after FOLFIRINOX/NALIRIFOX. One combination treatment-related septic-shock death.",
+        "locator": "All 13 main-PDF pages; Figures 1–3 and Tables 1–3."
+      }
+    }
+  ]
+}</script></div>
 </section>
 
 <footer>
@@ -523,44 +580,18 @@ document.querySelectorAll("nav.sec a").forEach(a=>{
 
 /* ---------- evidence library ---------- */
 let ALL = [], evGroup = "All", evQuery = "", CRIT = {};
-function evRow(r){
-  const links = r.pmid
-    ? `<a class="lnk" href="https://libkey.io/libraries/480/pmid/${esc(r.pmid)}" target="_blank" rel="noopener">TMC full text</a>
-       <a class="lnk" href="https://pubmed.ncbi.nlm.nih.gov/${esc(r.pmid)}/" target="_blank" rel="noopener">PubMed ${esc(r.pmid)}</a>`
-    : (r.url ? `<a class="lnk" href="${esc(r.url)}" target="_blank" rel="noopener">Source</a>`
-             : `<span class="chip" style="font-size:11px">Internal document</span>`);
-  const depot = r.depot === undefined ? "" :
-    (r.depot ? `<span class="chip" style="font-size:11px">In depot</span>`
-             : `<span class="chip warn" style="font-size:11px">To download</span>`);
-  const c = CRIT[r.pmid] || CRIT[r.id] || null;
-  let crit = "";
-  if(c){
-    const lim = c.limitations || [], ind = c.critique || [];
-    const li = a => a.length ? a.map(t=>`<li>${esc(t)}</li>`).join("") : "<li>None found in the full text.</li>";
-    const meta = [];
-    if(c.n) meta.push(`<b>Population.</b> ${esc(c.n)}`);
-    if(c.bottom_line) meta.push(`<b>Bottom line.</b> ${esc(c.bottom_line)}`);
-    if(c.funding) meta.push(`<b>Funding.</b> ${esc(c.funding)}`);
-    crit = `<details class="evcrit"><summary>How far this one goes
-        <span>${lim.length} stated \u00b7 ${ind.length} unstated</span></summary>
-      ${meta.length ? `<div class="evmeta">${meta.join(" ")}</div>` : ""}
-      <div class="evcritin">
-        <div class="lim"><h5>Limitations the authors state</h5><ul>${li(lim)}</ul></div>
-        <div class="crit"><h5>What they do not say</h5><ul>${li(ind)}</ul></div>
-      </div></details>`;
-  }
-  return `<div class="ev" id="ev-${esc(r.id)}"><div class="evtag">${esc(r.tag)}</div><div class="evcit">${esc(r.cit)}</div><div class="evlinks">${depot}${links}</div>${crit}</div>`;
+function evRow(r){ return RoadmapEvidence.row(r, CRIT);
 }
 function renderEvGroups(){
+  RoadmapEvidence.merge(ALL);
   const groups = [...new Set(ALL.map(r=>r.group))];
   document.getElementById("evGroups").innerHTML = ["All",...groups].map(g=>
     `<button class="tab" type="button" data-group="${esc(g)}" aria-selected="${String(g===evGroup)}">${esc(g)}</button>`).join("");
 }
-function critText(r){
-  const c = CRIT[r.pmid] || CRIT[r.id];
-  return c ? (c.limitations||[]).concat(c.critique||[], [c.bottom_line||""]).join(" ") : "";
+function critText(r){ return RoadmapEvidence.text(r, CRIT);
 }
 function renderEv(){
+  RoadmapEvidence.merge(ALL);
   const q = evQuery.trim().toLowerCase();
   const rows = ALL.filter(r =>
     (evGroup==="All" || r.group===evGroup) &&
@@ -569,6 +600,7 @@ function renderEv(){
     ? rows.map(evRow).join("")
     : `<div class="card"><p class="muted">Nothing matches “${esc(evQuery)}”. Try a trial name, an author, or a journal.</p></div>`;
   document.getElementById("evCount").textContent = rows.length + " of " + ALL.length + " sources";
+  RoadmapEvidence.reveal();
 }
 document.getElementById("evGroups").addEventListener("click", e=>{
   const b = e.target.closest(".tab"); if(!b) return;
@@ -583,7 +615,7 @@ document.addEventListener("click", e=>{
   evGroup = "All"; evQuery = "";
   document.getElementById("evSearch").value = "";
   renderEvGroups(); renderEv();
-  const el = document.getElementById("ev-"+c.dataset.ref);
+  const el = document.getElementById("ev-"+c.dataset.ref)?.closest(".ev");
   if(el){
     el.scrollIntoView({behavior:"smooth", block:"center"});
     document.querySelectorAll(".ev.hit").forEach(x=>x.classList.remove("hit"));
@@ -790,7 +822,7 @@ function build(){
 
 /* ---------- load ---------- */
 Promise.all([
-  fetch("data/pathway.json?v=20261023-language").then(r=>r.json()),
+  fetch("data/pathway.json?v=20261026-library1").then(r=>r.json()),
   fetch("data/critique.json?v=20261023-language").then(r=>r.ok ? r.json() : {}).catch(()=>({}))
 ]).then(([p, crit])=>{
   P = p;
@@ -811,7 +843,7 @@ Promise.all([
     renderMatrix(); renderCell();
     const others = MX.tumours.filter(t=>t[0]!==P.matrix).map(t=>t[2]);
     document.getElementById("lrtsrc").innerHTML =
-      `Source: <code>LRT_Evidence_Matrix</code>, Batch 09 HAI update (15 October 2026), filtered to the ${esc(P.name.toLowerCase())} column. `
+      `Source: <code>LRT_Evidence_Matrix</code>, filtered to the ${esc(P.name.toLowerCase())} column. `
       + `The full matrix also covers ${esc(others.join(", ").toLowerCase())}; the shared matrix also includes perihilar cholangiocarcinoma.`;
     /* only the papers this tumour's cells actually cite go into the library */
     const used = new Set();
@@ -822,7 +854,7 @@ Promise.all([
     const have = new Set(ALL.map(r=>r.id));
     for(const r of refs){
       if(have.has(r.pmid) || !used.has(r.pmid)) continue;
-      ALL.push({id:r.pmid, tag:((r.au||"")+" "+(r.y||"")).trim(), group:"Liver-directed ("+P.short+")",
+      ALL.push({id:r.pmid, tag:((r.au||"")+" "+(r.y||"")).trim(), group:"Liver-directed",
                 cit:`${r.au} et al. ${r.t} ${r.j}. ${r.y}.`.replace(/\s+/g," "),
                 pmid:r.pmid, depot:r.st==="depot"});
       have.add(r.pmid);
@@ -848,6 +880,14 @@ Promise.all([
   a.href = "../"; a.textContent = "\u2190 All pathways";
   nav.insertBefore(a, nav.firstChild);
 })();
+
+window.addEventListener('hashchange', () => {
+  let id; try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+  if (!ALL.some(r => id === 'ev-' + r.id || (r.aliases || []).some(a => id === a || id === 'ev-' + a))) return;
+  evGroup = 'All'; evQuery = ''; document.getElementById('evSearch').value = '';
+  document.querySelectorAll('#evGroups .tab').forEach(b => b.setAttribute('aria-selected', String(b.dataset.group === 'All')));
+  renderEv();
+});
 </script>
 </body>
 </html>

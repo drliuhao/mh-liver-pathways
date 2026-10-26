@@ -7,10 +7,10 @@
 <meta name="description" content="Perihilar cholangiocarcinoma — Memorial Hermann system roadmap v0.7, draft under development.">
 <title>Memorial Hermann Perihilar CCA Pathway</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap">
-<link rel="stylesheet" href="../assets/portal-navigation.css"><script src="../assets/portal-navigation.js?v=20261026-navigation2" defer></script></head>
+<link rel="stylesheet" href="../assets/portal-navigation.css"><script src="../assets/portal-navigation.js?v=20261026-navigation2" defer></script><link rel="stylesheet" href="/mh-liver-pathways/assets/roadmap-evidence.css?v=20261026-library1"><script src="/mh-liver-pathways/assets/roadmap-evidence.js?v=20261026-library1"></script></head>
 <body>
 <style>
-/* One renderer, four tumours: the gates come from data/pathway.json?v=20261023-language, the
+/* One renderer, four tumours: the gates come from data/pathway.json?v=20261026-library1, the
    liver-directed matrix from the shared LRT_Evidence_Matrix export. Layout
    follows the HCC console: a gate strip, the answer below it, then the
    evidence library everything links back into. */
@@ -407,7 +407,64 @@ footer p + p{margin-top:8px}
       <span class="evcount" id="evCount"></span>
     </div>
     <div class="evlist" id="evList"></div>
-  <div id="v12-treatment-evidence" class="study-appraisals"><p>These systemic studies inform advanced biliary cancer care, not the established pCCA transplant-neoadjuvant regimen. Preserve biopsy-route precautions and existing staging, neoadjuvant and operative gates. ICI exposure requires prospective transplant safety review.</p><p><a href="/mh-liver-pathways/systemic/?tumor=pcca">Open the systemic treatment matrix</a> · <a href="/mh-liver-pathways/evidence/2026-10-25/docs/Memorial_Hermann_HilarCCA_System_Roadmap_v12.docx">Roadmap document · Word</a></p><details id="asco_btc" class="study-appraisal"><summary>ASCO BTC living guideline 2026.1.0</summary><p><b>Application.</b> Add biomarker-led branches: IDH1 ivosidenib; FGFR2 fusion/rearrangement pemigatinib/futibatinib; BRAF V600E dabrafenib/trametinib; HER2 IHC3+ zanidatamab/T-DXd; qualifying RET/NTRK/NRG1 options. Confirm current label and line. Negative plasma does not exclude a fusion; pursue tissue/RNA when feasible. Pre-LT ICI requires separate safety review.</p><p><a href="https://doi.org/10.1200/JCO-26-02462">ASCO BTC living guideline 2026.1.0 · paper</a> · <a href="https://libkey.io/libraries/480/10.1200/JCO-26-02462">TMC full-text access</a></p><details><summary>Population, results and limitations</summary><p>Full 56-page accepted, unedited living-guideline manuscript (October 2026). Advanced BTC systemic care, not pCCA transplant-neoadjuvant therapy or a transplant eligibility guideline.</p><p>Broad tissue DNA/RNA profiling, MMR and HER2 testing at diagnosis. For eligible MSS/pMMR disease: GemCis plus durvalumab or pembrolizumab (high-quality/strong); GemCis without ICI if unsuitable (conditional). After progression without an actionable target: FOLFOX plus active symptom control or active symptom control alone (conditional).</p><p>For oxaliplatin-ineligible patients, irinotecan/nal-IRI-based options have low-quality conditional support, not equal default status. Rare targets often rely on small basket cohorts. Accepted-manuscript tables/narrative contain inconsistent estimates; primary trial results govern this update.</p><p><small>All 56 pages; recommendations Table 1 pp 40–42; Figure 1 p 34 visually inspected. Separate data supplement not reviewed.</small></p></details></details><details id="naliricc" class="study-appraisal"><summary>NALIRICC: negative BTC randomized trial</summary><p><b>Application.</b> Show NALIRICC alongside NIFTY. Do not call nal-IRI/5-FU an unqualified preferred second-line BTC regimen. Consider only a qualified alternative after target review, especially if oxaliplatin is unsuitable, with explicit benefit/toxicity discussion.</p><p><a href="https://doi.org/10.1016/S2468-1253(24)00119-5">NALIRICC: negative BTC randomized trial · paper</a> · <a href="https://libkey.io/libraries/480/10.1016/S2468-1253(24)00119-5">TMC full-text access</a></p><details><summary>Population, results and limitations</summary><p>German randomized phase II, 100 patients (49 versus 51), ECOG 0–1, after gemcitabine-based therapy; 64% iCCA. nal-IRI plus 5-FU/LV versus 5-FU/LV.</p><p>PFS 2.6 versus 2.3 months, HR 0.87 (0.56–1.35); OS 6.9 versus 8.2 months, HR 1.08 (0.68–1.72). ORR 14% versus 4% did not translate into PFS/OS benefit. Grade ≥3 events 71% versus 50%; treatment-related serious events 33% versus 2%.</p><p>Small phase II trial; subsequent therapy differed (more control patients received later therapy). This does not erase the negative primary PFS result. Contrasts with positive NIFTY; population and treatment differences do not resolve the inconsistency.</p><p><small>Main PDF pp 1–11; Figure 2 and Tables 1–3.</small></p></details></details></div></div>
+  <details id="v12-treatment-evidence" class="more evidence-context"><summary>Scope and interpretation</summary><div class="moreinner"><p>These systemic studies inform advanced biliary cancer care, not the established pCCA transplant-neoadjuvant regimen. Preserve biopsy-route precautions and existing staging, neoadjuvant and operative gates. ICI exposure requires prospective transplant safety review.</p><p><a href="/mh-liver-pathways/systemic/?tumor=pcca">Open the systemic treatment matrix</a> · <a href="/mh-liver-pathways/evidence/2026-10-25/docs/Memorial_Hermann_HilarCCA_System_Roadmap_v12.docx">Roadmap document · Word</a></p></div></details><script type="application/json" id="roadmap-evidence-data">{
+  "papers": [
+    {
+      "id": "asco_btc",
+      "pmid": "42874012",
+      "tag": "ASCO BTC living guideline 2026.1.0",
+      "cit": "Shroff RT Treatment of Advanced Biliary Tract Cancer: ASCO Living Guideline, Version 2026.1.0. Journal of clinical oncology : official journal of the American Society of Clinical Oncology 2026 DOI: 10.1200/JCO-26-02462. PMID: 42874012.",
+      "doi": "10.1200/JCO-26-02462",
+      "group": "Guidelines & policy",
+      "design": "Clinical guidance",
+      "depot": true,
+      "access": [
+        {
+          "label": "ASCO BTC living guideline 2026.1.0 · paper",
+          "url": "https://doi.org/10.1200/JCO-26-02462"
+        },
+        {
+          "label": "TMC full-text access",
+          "url": "https://libkey.io/libraries/480/10.1200/JCO-26-02462"
+        }
+      ],
+      "appraisal": {
+        "application": "Add biomarker-led branches: IDH1 ivosidenib; FGFR2 fusion/rearrangement pemigatinib/futibatinib; BRAF V600E dabrafenib/trametinib; HER2 IHC3+ zanidatamab/T-DXd; qualifying RET/NTRK/NRG1 options. Confirm current label and line. Negative plasma does not exclude a fusion; pursue tissue/RNA when feasible. Pre-LT ICI requires separate safety review.",
+        "population": "Full 56-page accepted, unedited living-guideline manuscript (October 2026). Advanced BTC systemic care, not pCCA transplant-neoadjuvant therapy or a transplant eligibility guideline.",
+        "results": "Broad tissue DNA/RNA profiling, MMR and HER2 testing at diagnosis. For eligible MSS/pMMR disease: GemCis plus durvalumab or pembrolizumab (high-quality/strong); GemCis without ICI if unsuitable (conditional). After progression without an actionable target: FOLFOX plus active symptom control or active symptom control alone (conditional).",
+        "limitations": "For oxaliplatin-ineligible patients, irinotecan/nal-IRI-based options have low-quality conditional support, not equal default status. Rare targets often rely on small basket cohorts. Accepted-manuscript tables/narrative contain inconsistent estimates; primary trial results govern this update.",
+        "locator": "All 56 pages; recommendations Table 1 pp 40–42; Figure 1 p 34 visually inspected. Separate data supplement not reviewed."
+      }
+    },
+    {
+      "id": "naliricc",
+      "pmid": "38870977",
+      "tag": "NALIRICC: negative BTC randomized trial",
+      "cit": "Vogel A Nanoliposomal irinotecan and fluorouracil plus leucovorin versus fluorouracil plus leucovorin in patients with cholangiocarcinoma and gallbladder carcinoma previously treated with gemcitabine-based therapies (AIO NALIRICC): a multicentre, open-label, randomised, phase 2 trial The lancet. Gastroenterology & hepatology 2024 DOI: 10.1016/S2468-1253(24)00119-5. PMID: 38870977.",
+      "doi": "10.1016/S2468-1253(24)00119-5",
+      "group": "Systemic therapy",
+      "design": "Randomized phase II trial",
+      "depot": true,
+      "access": [
+        {
+          "label": "NALIRICC: negative BTC randomized trial · paper",
+          "url": "https://doi.org/10.1016/S2468-1253(24)00119-5"
+        },
+        {
+          "label": "TMC full-text access",
+          "url": "https://libkey.io/libraries/480/10.1016/S2468-1253(24)00119-5"
+        }
+      ],
+      "appraisal": {
+        "application": "Show NALIRICC alongside NIFTY. Do not call nal-IRI/5-FU an unqualified preferred second-line BTC regimen. Consider only a qualified alternative after target review, especially if oxaliplatin is unsuitable, with explicit benefit/toxicity discussion.",
+        "population": "German randomized phase II, 100 patients (49 versus 51), ECOG 0–1, after gemcitabine-based therapy; 64% iCCA. nal-IRI plus 5-FU/LV versus 5-FU/LV.",
+        "results": "PFS 2.6 versus 2.3 months, HR 0.87 (0.56–1.35); OS 6.9 versus 8.2 months, HR 1.08 (0.68–1.72). ORR 14% versus 4% did not translate into PFS/OS benefit. Grade ≥3 events 71% versus 50%; treatment-related serious events 33% versus 2%.",
+        "limitations": "Small phase II trial; subsequent therapy differed (more control patients received later therapy). This does not erase the negative primary PFS result. Contrasts with positive NIFTY; population and treatment differences do not resolve the inconsistency.",
+        "locator": "Main PDF pp 1–11; Figure 2 and Tables 1–3."
+      }
+    }
+  ]
+}</script></div>
 </section>
 
 <footer>
@@ -524,44 +581,18 @@ document.querySelectorAll("nav.sec a").forEach(a=>{
 
 /* ---------- evidence library ---------- */
 let ALL = [], evGroup = "All", evQuery = "", CRIT = {};
-function evRow(r){
-  const links = r.pmid
-    ? `<a class="lnk" href="https://libkey.io/libraries/480/pmid/${esc(r.pmid)}" target="_blank" rel="noopener">TMC full text</a>
-       <a class="lnk" href="https://pubmed.ncbi.nlm.nih.gov/${esc(r.pmid)}/" target="_blank" rel="noopener">PubMed ${esc(r.pmid)}</a>`
-    : (r.url ? `<a class="lnk" href="${esc(r.url)}" target="_blank" rel="noopener">Source</a>`
-             : `<span class="chip" style="font-size:11px">Internal document</span>`);
-  const depot = r.depot === undefined ? "" :
-    (r.depot ? `<span class="chip" style="font-size:11px">In depot</span>`
-             : `<span class="chip warn" style="font-size:11px">To download</span>`);
-  const c = CRIT[r.pmid] || CRIT[r.id] || null;
-  let crit = "";
-  if(c){
-    const lim = c.limitations || [], ind = c.critique || [];
-    const li = a => a.length ? a.map(t=>`<li>${esc(t)}</li>`).join("") : "<li>None found in the full text.</li>";
-    const meta = [];
-    if(c.n) meta.push(`<b>Population.</b> ${esc(c.n)}`);
-    if(c.bottom_line) meta.push(`<b>Bottom line.</b> ${esc(c.bottom_line)}`);
-    if(c.funding) meta.push(`<b>Funding.</b> ${esc(c.funding)}`);
-    crit = `<details class="evcrit"><summary>How far this one goes
-        <span>${lim.length} stated \u00b7 ${ind.length} unstated</span></summary>
-      ${meta.length ? `<div class="evmeta">${meta.join(" ")}</div>` : ""}
-      <div class="evcritin">
-        <div class="lim"><h5>Limitations the authors state</h5><ul>${li(lim)}</ul></div>
-        <div class="crit"><h5>What they do not say</h5><ul>${li(ind)}</ul></div>
-      </div></details>`;
-  }
-  return `<div class="ev" id="ev-${esc(r.id)}"><div class="evtag">${esc(r.tag)}</div><div class="evcit">${esc(r.cit)}</div><div class="evlinks">${depot}${links}</div>${crit}</div>`;
+function evRow(r){ return RoadmapEvidence.row(r, CRIT);
 }
 function renderEvGroups(){
+  RoadmapEvidence.merge(ALL);
   const groups = [...new Set(ALL.map(r=>r.group))];
   document.getElementById("evGroups").innerHTML = ["All",...groups].map(g=>
     `<button class="tab" type="button" data-group="${esc(g)}" aria-selected="${String(g===evGroup)}">${esc(g)}</button>`).join("");
 }
-function critText(r){
-  const c = CRIT[r.pmid] || CRIT[r.id];
-  return c ? (c.limitations||[]).concat(c.critique||[], [c.bottom_line||""]).join(" ") : "";
+function critText(r){ return RoadmapEvidence.text(r, CRIT);
 }
 function renderEv(){
+  RoadmapEvidence.merge(ALL);
   const q = evQuery.trim().toLowerCase();
   const rows = ALL.filter(r =>
     (evGroup==="All" || r.group===evGroup) &&
@@ -570,6 +601,7 @@ function renderEv(){
     ? rows.map(evRow).join("")
     : `<div class="card"><p class="muted">Nothing matches “${esc(evQuery)}”. Try a trial name, an author, or a journal.</p></div>`;
   document.getElementById("evCount").textContent = rows.length + " of " + ALL.length + " sources";
+  RoadmapEvidence.reveal();
 }
 document.getElementById("evGroups").addEventListener("click", e=>{
   const b = e.target.closest(".tab"); if(!b) return;
@@ -584,7 +616,7 @@ document.addEventListener("click", e=>{
   evGroup = "All"; evQuery = "";
   document.getElementById("evSearch").value = "";
   renderEvGroups(); renderEv();
-  const el = document.getElementById("ev-"+c.dataset.ref);
+  const el = document.getElementById("ev-"+c.dataset.ref)?.closest(".ev");
   if(el){
     el.scrollIntoView({behavior:"smooth", block:"center"});
     document.querySelectorAll(".ev.hit").forEach(x=>x.classList.remove("hit"));
@@ -791,7 +823,7 @@ function build(){
 
 /* ---------- load ---------- */
 Promise.all([
-  fetch("data/pathway.json?v=20261023-language").then(r=>r.json()),
+  fetch("data/pathway.json?v=20261026-library1").then(r=>r.json()),
   fetch("data/critique.json?v=20261023-language").then(r=>r.ok ? r.json() : {}).catch(()=>({}))
 ]).then(([p, crit])=>{
   P = p;
@@ -823,7 +855,7 @@ Promise.all([
     const have = new Set(ALL.map(r=>r.id));
     for(const r of refs){
       if(have.has(r.pmid) || !used.has(r.pmid)) continue;
-      ALL.push({id:r.pmid, tag:((r.au||"")+" "+(r.y||"")).trim(), group:"Liver-directed ("+P.short+")",
+      ALL.push({id:r.pmid, tag:((r.au||"")+" "+(r.y||"")).trim(), group:"Liver-directed",
                 cit:`${r.au} et al. ${r.t} ${r.j}. ${r.y}.`.replace(/\s+/g," "),
                 pmid:r.pmid, depot:r.st==="depot"});
       have.add(r.pmid);
@@ -849,6 +881,14 @@ Promise.all([
   a.href = "../"; a.textContent = "\u2190 All pathways";
   nav.insertBefore(a, nav.firstChild);
 })();
+
+window.addEventListener('hashchange', () => {
+  let id; try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+  if (!ALL.some(r => id === 'ev-' + r.id || (r.aliases || []).some(a => id === a || id === 'ev-' + a))) return;
+  evGroup = 'All'; evQuery = ''; document.getElementById('evSearch').value = '';
+  document.querySelectorAll('#evGroups .tab').forEach(b => b.setAttribute('aria-selected', String(b.dataset.group === 'All')));
+  renderEv();
+});
 </script>
 </body>
 </html>

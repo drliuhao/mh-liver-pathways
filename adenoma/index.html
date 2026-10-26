@@ -7,10 +7,10 @@
 <meta name="description" content="Hepatocellular adenoma — Memorial Hermann system roadmap v0.2, draft under development.">
 <title>Memorial Hermann Hepatocellular Adenoma Pathway</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
-<link rel="stylesheet" href="../assets/portal-navigation.css"><script src="../assets/portal-navigation.js?v=20261026-navigation2" defer></script></head>
+<link rel="stylesheet" href="../assets/portal-navigation.css"><script src="../assets/portal-navigation.js?v=20261026-navigation2" defer></script><link rel="stylesheet" href="/mh-liver-pathways/assets/roadmap-evidence.css?v=20261026-library1"><script src="/mh-liver-pathways/assets/roadmap-evidence.js?v=20261026-library1"></script></head>
 <body>
 <style>
-/* One renderer, four tumours: the gates come from data/pathway.json?v=20261023-language, the
+/* One renderer, four tumours: the gates come from data/pathway.json?v=20261026-library1, the
    liver-directed matrix from the shared LRT_Evidence_Matrix export. Layout
    follows the HCC console: a gate strip, the answer below it, then the
    evidence library everything links back into. */
@@ -524,44 +524,18 @@ document.querySelectorAll("nav.sec a").forEach(a=>{
 
 /* ---------- evidence library ---------- */
 let ALL = [], evGroup = "All", evQuery = "", CRIT = {};
-function evRow(r){
-  const links = r.pmid
-    ? `<a class="lnk" href="https://libkey.io/libraries/480/pmid/${esc(r.pmid)}" target="_blank" rel="noopener">TMC full text</a>
-       <a class="lnk" href="https://pubmed.ncbi.nlm.nih.gov/${esc(r.pmid)}/" target="_blank" rel="noopener">PubMed ${esc(r.pmid)}</a>`
-    : (r.url ? `<a class="lnk" href="${esc(r.url)}" target="_blank" rel="noopener">Source</a>`
-             : `<span class="chip" style="font-size:11px">Internal document</span>`);
-  const depot = r.depot === undefined ? "" :
-    (r.depot ? `<span class="chip" style="font-size:11px">In depot</span>`
-             : `<span class="chip warn" style="font-size:11px">To download</span>`);
-  const c = CRIT[r.pmid] || CRIT[r.id] || null;
-  let crit = "";
-  if(c){
-    const lim = c.limitations || [], ind = c.critique || [];
-    const li = a => a.length ? a.map(t=>`<li>${esc(t)}</li>`).join("") : "<li>None found in the full text.</li>";
-    const meta = [];
-    if(c.n) meta.push(`<b>Population.</b> ${esc(c.n)}`);
-    if(c.bottom_line) meta.push(`<b>Bottom line.</b> ${esc(c.bottom_line)}`);
-    if(c.funding) meta.push(`<b>Funding.</b> ${esc(c.funding)}`);
-    crit = `<details class="evcrit"><summary>How far this one goes
-        <span>${lim.length} stated \u00b7 ${ind.length} unstated</span></summary>
-      ${meta.length ? `<div class="evmeta">${meta.join(" ")}</div>` : ""}
-      <div class="evcritin">
-        <div class="lim"><h5>Limitations the authors state</h5><ul>${li(lim)}</ul></div>
-        <div class="crit"><h5>What they do not say</h5><ul>${li(ind)}</ul></div>
-      </div></details>`;
-  }
-  return `<div class="ev" id="ev-${esc(r.id)}"><div class="evtag">${esc(r.tag)}</div><div class="evcit">${esc(r.cit)}</div><div class="evlinks">${depot}${links}</div>${crit}</div>`;
+function evRow(r){ return RoadmapEvidence.row(r, CRIT);
 }
 function renderEvGroups(){
+  RoadmapEvidence.merge(ALL);
   const groups = [...new Set(ALL.map(r=>r.group))];
   document.getElementById("evGroups").innerHTML = ["All",...groups].map(g=>
     `<button class="tab" type="button" data-group="${esc(g)}" aria-selected="${String(g===evGroup)}">${esc(g)}</button>`).join("");
 }
-function critText(r){
-  const c = CRIT[r.pmid] || CRIT[r.id];
-  return c ? (c.limitations||[]).concat(c.critique||[], [c.bottom_line||""]).join(" ") : "";
+function critText(r){ return RoadmapEvidence.text(r, CRIT);
 }
 function renderEv(){
+  RoadmapEvidence.merge(ALL);
   const q = evQuery.trim().toLowerCase();
   const rows = ALL.filter(r =>
     (evGroup==="All" || r.group===evGroup) &&
@@ -570,6 +544,7 @@ function renderEv(){
     ? rows.map(evRow).join("")
     : `<div class="card"><p class="muted">Nothing matches “${esc(evQuery)}”. Try a trial name, an author, or a journal.</p></div>`;
   document.getElementById("evCount").textContent = rows.length + " of " + ALL.length + " sources";
+  RoadmapEvidence.reveal();
 }
 document.getElementById("evGroups").addEventListener("click", e=>{
   const b = e.target.closest(".tab"); if(!b) return;
@@ -584,7 +559,7 @@ document.addEventListener("click", e=>{
   evGroup = "All"; evQuery = "";
   document.getElementById("evSearch").value = "";
   renderEvGroups(); renderEv();
-  const el = document.getElementById("ev-"+c.dataset.ref);
+  const el = document.getElementById("ev-"+c.dataset.ref)?.closest(".ev");
   if(el){
     el.scrollIntoView({behavior:"smooth", block:"center"});
     document.querySelectorAll(".ev.hit").forEach(x=>x.classList.remove("hit"));
@@ -791,7 +766,7 @@ function build(){
 
 /* ---------- load ---------- */
 Promise.all([
-  fetch("data/pathway.json?v=20261023-language").then(r=>r.json()),
+  fetch("data/pathway.json?v=20261026-library1").then(r=>r.json()),
   fetch("data/critique.json?v=20261023-language").then(r=>r.ok ? r.json() : {}).catch(()=>({}))
 ]).then(([p, crit])=>{
   P = p;
@@ -823,7 +798,7 @@ Promise.all([
     const have = new Set(ALL.map(r=>r.id));
     for(const r of refs){
       if(have.has(r.pmid) || !used.has(r.pmid)) continue;
-      ALL.push({id:r.pmid, tag:((r.au||"")+" "+(r.y||"")).trim(), group:"Liver-directed ("+P.short+")",
+      ALL.push({id:r.pmid, tag:((r.au||"")+" "+(r.y||"")).trim(), group:"Liver-directed",
                 cit:`${r.au} et al. ${r.t} ${r.j}. ${r.y}.`.replace(/\s+/g," "),
                 pmid:r.pmid, depot:r.st==="depot"});
       have.add(r.pmid);
@@ -849,6 +824,14 @@ Promise.all([
   a.href = "../"; a.textContent = "\u2190 All pathways";
   nav.insertBefore(a, nav.firstChild);
 })();
+
+window.addEventListener('hashchange', () => {
+  let id; try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+  if (!ALL.some(r => id === 'ev-' + r.id || (r.aliases || []).some(a => id === a || id === 'ev-' + a))) return;
+  evGroup = 'All'; evQuery = ''; document.getElementById('evSearch').value = '';
+  document.querySelectorAll('#evGroups .tab').forEach(b => b.setAttribute('aria-selected', String(b.dataset.group === 'All')));
+  renderEv();
+});
 </script>
 </body>
 </html>

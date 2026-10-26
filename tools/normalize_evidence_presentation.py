@@ -6,6 +6,7 @@ Run after a legacy evidence build; not a replacement for a clinical review.
 from pathlib import Path
 from lxml import html, etree
 import json, re
+from unify_evidence_libraries import unify
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '/mh-liver-pathways/'
@@ -155,4 +156,5 @@ for name in ['systemic/matrix.json', 'systemic/index.html']:
     path = ROOT / name
     raw = path.read_text().replace('Full-text update: ', '')
     path.write_text(raw)
+unify()
 print('Integrated topic evidence; neutral document labels; preserved sources and clinical rules.')
