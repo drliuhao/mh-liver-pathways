@@ -19,7 +19,14 @@ for(const [key,c]of Object.entries(data.cohorts)){
  for(const p of c.points){assert(p.ddlt>=dd&&p.death_or_too_sick>=drop);assert(p.ddlt+p.death_or_too_sick<=1);assert(p.ddlt_low<=p.ddlt&&p.ddlt<=p.ddlt_high);assert(p.dropout_low<=p.death_or_too_sick&&p.death_or_too_sick<=p.dropout_high);assert(p.at_risk<=risk);dd=p.ddlt;drop=p.death_or_too_sick;risk=p.at_risk;}
  assert(c.points[12].ddlt+c.points[12].death_or_too_sick+c.other_12m+c.still_listed_12m<1.000002);
 }
-assert.equal(data.cohorts.hcc.n,425);assert.equal(data.cohorts.all.n,2668);
+assert.equal(data.cohorts.hcc.n,463);assert.equal(data.cohorts.all.n,2890);
+for(const c of Object.values(data.cohorts)){
+ assert.equal(c.entry_start,'2021-01-01');assert.equal(c.entry_end,'2025-12-31');assert.equal(c.followup_end,'2025-12-31');
+ assert(c.entered_2025>0&&c.entered_2025<c.n);assert(c.censored_before_12m>0&&c.censored_before_12m<c.n);
+}
+assert(read('transplant/waiting/index.html').includes('2021–2025 entrants only'));
+assert(read('assets/waiting-analysis.js').includes('2025 entrants have shorter follow-up'));
+assert(!/No one was administratively censored|One-year estimates also match direct endpoint proportions|4 February 2020–31 December 2024/.test(read('transplant/waiting/methods.md')));
 const serialized=JSON.stringify(data);for(const k of ['PT_CODE','WL_ID_CODE','TRR_ID_CODE','/Users/','23839','02418','06510'])assert(!serialized.includes(k),'No patient data or encrypted mapping in public aggregates');
 assert(read('assets/portal-navigation.js').includes('allocation-overview.js'));
 assert(read('assets/clinical-tools.js').includes('AllocationReference.overview'));
