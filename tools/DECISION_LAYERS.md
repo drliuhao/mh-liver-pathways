@@ -36,3 +36,12 @@ Labels are checked against 96 full source questions, 23 supplemental question ty
 The shared loader version is `20261026-compact1`; core layered app/assistant versions remain `20261025-layers1`. The portal loader must retain the compact assets after a rebuild. Run `test_compact_trail.cjs` with the existing regression suite. Review/reconciliation and actual external Analyst B comments are retained in the local `Compact_Trail_Review_2026-10-26` folder.
 
 Final compact layout: only the numbered strip is sticky (54 px at tested phone width). The current control and editor remain in normal page flow. A completed editor expands its exact criteria locally without changing the hash or visible trail. The unnumbered Next steps tile goes to the original conditional action panel, including high-risk review options. No action-only dropdown remains in the sticky strip. Active Yes/No questions retain the full source predicate.
+
+
+## Single progression area — 26 October 2026
+
+Supersedes the compact Next steps jump tile. `compact-trail.js` moves the original decision section and result into one working area beneath the strip. Source controls, result elements, clinical event handlers, evidence and care-origin capture are reused without copying. Each chosen finding reveals the next unanswered finding; when the findings are complete, the same area presents the original named next-action buttons. Actions retain their conditions and high-risk statuses. The numbered buttons reopen earlier choices only; the current marker is noninteractive. Earlier edits still clear dependent answers.
+
+Current and completed Criteria controls expand locally without navigating. The whole-pathway map is secondary, collapsed browsing; browse previous/next controls and duplicate source finding controls are hidden in the enhanced view. Printing restores source findings. The next assessment and current finding receive corrected focus and scroll placement. Roadmaps keep conditional action links as the sole forward controls.
+
+The shared loader version is `20261026-navigation1`; the app, clinical matching engine, source payloads, high-risk routing and authoring documents are unchanged. Run the existing regression suite and verify real browser progression, criteria, rollback, high-risk and care routes. No new external-analyst review is claimed for this follow-up.

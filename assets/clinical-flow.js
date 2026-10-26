@@ -32,7 +32,7 @@
    const a=box.querySelector(':scope > .route-button');if(!a)return;
    let label='Reference';
    if(a.dataset.care){label=protocol.pathway?.slug==='hcc'&&a.dataset.care==='exception'?'High-risk review · care plan':'Care plan';if(label.startsWith('High-risk'))box.classList.add('flow-risk-action');}
-   else if(a.dataset.step){const n=protocol.pathway?.steps.findIndex(s=>s.id===a.dataset.step);label=Number.isInteger(n)&&n>=0?'Decision '+(n+1):'Pathway decision';}
+   else if(a.dataset.step){label=a.dataset.step===location.hash.slice(1)?'Reassess this step':'Next assessment';}
    else if(a.classList.contains('high-risk-route'))label='High-risk review';
    else {try{const u=new URL(a.href,location.href);if(u.pathname.includes('/lrt/')||u.pathname.includes('/systemic/'))label='Treatment matrix';else if(u.origin===location.origin&&u.pathname.startsWith(root.pathname))label='Related roadmap or assessment';}catch{}}
    const type=document.createElement('span');type.className='flow-action-type';type.textContent=label;box.prepend(type);box.dataset.flowLabel='true';

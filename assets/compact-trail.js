@@ -2,6 +2,7 @@
 (() => {
  'use strict';
  const labels=window.CompactTrailLabels, states=new WeakMap(),riskSources=new Map();
+ let followCurrent=null;
  if(!labels)return;
  let protocol;try{protocol=JSON.parse(document.getElementById('protocol-data')?.textContent||'null');}catch{}
  const root=new URL('../',document.currentScript.src),parts=location.pathname.slice(root.pathname.length).split('/').filter(Boolean);
@@ -31,7 +32,7 @@
   return {select,label,short,full,action:!!select?.matches('[data-layer-action],#roadmap-next'),binary:[...(select?.options||[])].some(o=>/^(Yes|No)$/.test(plain(o.textContent))),number:plain(row.querySelector('.layer-number')?.textContent),value:select?.value||'',chosen:plain(select?.selectedOptions[0]?.textContent),example:/entry example/.test(label?.textContent||'')};
  }
  function closeEditor(state,focus=true){
-  const prior=state.open;state.open=null;state.editors.hidden=true;state.current.hidden=false;
+  const prior=state.open;state.open=null;state.editors.hidden=true;state.current.hidden=false;if(state.workspace)state.workspace.hidden=false;
   state.editors.querySelectorAll('.layer-row').forEach(r=>r.hidden=true);
   state.editors.querySelectorAll('.ct-inline-criteria').forEach(p=>p.hidden=true);
   state.editors.querySelectorAll('[data-layer-criteria]').forEach(b=>b.setAttribute('aria-expanded','false'));
@@ -40,7 +41,7 @@
  }
  function openEditor(state,button,row){
   if(state.open===button){closeEditor(state);return;}
-  closeEditor(state,false);state.open=button;state.editors.hidden=false;row.hidden=false;state.current.hidden=true;
+  closeEditor(state,false);state.open=button;state.editors.hidden=false;row.hidden=false;state.current.hidden=true;if(state.workspace)state.workspace.hidden=true;
   button.setAttribute('aria-expanded','true');button.classList.add('is-editing');
   button.scrollIntoView({block:'nearest',inline:'nearest'});state.editors.scrollIntoView({block:'start',behavior:'instant'});
  }
@@ -64,7 +65,7 @@
     row.after(panel);button.setAttribute('aria-controls',panel.id);panel.hidden=true;
    }
    panel.hidden=!panel.hidden;button.setAttribute('aria-expanded',String(!panel.hidden));
-   if(!panel.hidden)row.closest('.ct-editors')?.scrollIntoView({block:'start',behavior:'instant'});
+   if(!panel.hidden)row.closest('.ct-editors,.layer-current')?.scrollIntoView({block:'start',behavior:'instant'});
   });
  }
  function shortControl(row,info,editing=false){
@@ -75,6 +76,7 @@
   info.label.replaceChildren(el('span','ct-short-title',!editing&&info.binary?info.full:info.short));
   if(info.example)info.label.append(el('span','ct-example','Example'));
   info.select.setAttribute('aria-description',info.full);
+  if(!editing)bindInlineCriteria(row,info);
   if(editing){
    const question=el('p','ct-original-question',info.full);info.label.after(question);
    if(context)row.querySelector('.layer-choice').prepend(context);
@@ -83,6 +85,31 @@
    bindInlineCriteria(row,info);
   }
  }
+ function arrangeWorkspace(state){
+  if(!protocol||state.workspace)return;
+  const decision=document.querySelector('.decision'),head=decision?.querySelector('.question-head'),result=decision?.querySelector('#decision-results');
+  if(!head||!result)return;
+  const workspace=decision;workspace.classList.add('ct-workspace');state.current.before(workspace);
+  const context=decision.querySelector('.contextline');
+  const instruction=el('p','ct-workflow-hint','Choose findings below, then choose a next step. Use the numbered trail to review earlier choices.');(context||head).after(instruction,state.current,result);
+  // Move the original controls and result together. Their clinical handlers,
+  // conditions, evidence, high-risk reviews and care-context capture stay intact.
+  state.workspace=workspace;state.result=result;document.body.classList.add('single-decision-workspace');
+  const eyebrow=head.querySelector('.eyebrow');if(eyebrow?.firstChild?.nodeType===3)eyebrow.firstChild.textContent='Current assessment ';
+  const overview=document.querySelector('.journey-map');if(overview){overview.open=false;overview.querySelector('summary').textContent='Browse pathway overview';}
+ }
+ function followWorkspace(state){
+  if(!followCurrent||!state.workspace)return;
+  const kind=followCurrent;followCurrent=null;
+  requestAnimationFrame(()=>{
+   if(!state.workspace.isConnected)return;
+   const pending=state.current.querySelector('select:not([data-layer-action])');
+   const target=kind==='step'?state.workspace:pending?state.current:state.result;
+   target?.scrollIntoView({block:'start',behavior:'instant'});
+   const focus=kind==='step'?state.workspace.querySelector('#question'):pending||state.result?.querySelector('h3');
+   if(focus){if(!focus.matches('select'))focus.setAttribute('tabindex','-1');focus.focus({preventScroll:true});}
+  });
+ }
  function enhance(nav){
   const historyEl=nav.querySelector('.layer-history'),current=nav.querySelector('.layer-current');if(!historyEl||!current)return;
   let state=states.get(nav);
@@ -90,26 +117,27 @@
    const strip=el('div','ct-strip'),heading=nav.querySelector('.layer-heading');nav.prepend(strip);strip.append(heading,historyEl);
    const menu=el('details','ct-menu'),summary=el('summary','',protocol?protocol.pathway.code:slug.toUpperCase()),items=el('div','ct-menu-items');
    summary.setAttribute('aria-label',(protocol?'Findings':'Topics viewed')+' menu');menu.append(summary,items);
-   [...heading.querySelectorAll('button,a')].forEach(n=>items.append(n));heading.replaceChildren(menu);
-   items.prepend(el('p','ct-menu-hint',protocol?'Select a finding to review. Swipe the strip on a phone.':'Topics viewed · navigation only. Swipe the strip on a phone.'));
+   [...heading.querySelectorAll('button,a')].forEach(n=>{if(n.matches('[data-pathway-overview],[data-rf-overview]'))n.textContent='Browse all decisions';items.append(n);});heading.replaceChildren(menu);
+   items.prepend(el('p','ct-menu-hint',protocol?'Numbers reopen earlier findings. Choose findings and next steps in the main panel below.':'Numbers reopen viewed topics. Use the next-step options below to continue.'));
    items.addEventListener('click',ev=>{if(ev.target.closest('button,a'))menu.open=false;});
    const editors=el('div','ct-editors');editors.hidden=true;current.before(editors);
    const entry=el('p','ct-entry-note');entry.hidden=true;editors.before(entry);
-   const close=el('button','ct-close','Back to current question');close.type='button';close.addEventListener('click',()=>closeEditor(state));editors.append(close);
+   const close=el('button','ct-close',protocol?'Back to current step':'Back to current topic');close.type='button';close.addEventListener('click',()=>closeEditor(state));editors.append(close);
    state={nav,strip,items,entry,history:historyEl,current,editors,close,open:null};states.set(nav,state);nav.classList.add('compact-trail');
    const earlier=el('button','ct-scroll-button','‹'),later=el('button','ct-scroll-button','›');earlier.type=later.type='button';earlier.setAttribute('aria-label','Earlier findings');later.setAttribute('aria-label','Later findings');earlier.hidden=later.hidden=true;
    historyEl.before(earlier);historyEl.after(later);state.earlier=earlier;state.later=later;
    [earlier,later].forEach((button,i)=>button.addEventListener('click',()=>historyEl.scrollBy({left:(i?1:-1)*historyEl.clientWidth*.65,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'})));
    historyEl.addEventListener('scroll',()=>scrollControls(state));
-   historyEl.setAttribute('aria-label',protocol?'Chosen findings and next question':'Topics viewed and next step');
+   historyEl.setAttribute('aria-label',protocol?'Earlier findings — review or edit':'Viewed topics — review or change');
    historyEl.addEventListener('keydown',ev=>{
     if(!['ArrowLeft','ArrowRight','Home','End'].includes(ev.key)||!ev.target.matches('.ct-chip'))return;
-    const buttons=[...historyEl.querySelectorAll('.ct-chip')],n=buttons.indexOf(ev.target),i=ev.key==='Home'?0:ev.key==='End'?buttons.length-1:Math.max(0,Math.min(buttons.length-1,n+(ev.key==='ArrowRight'?1:-1)));
+    const buttons=[...historyEl.querySelectorAll('button.ct-chip')],n=buttons.indexOf(ev.target),i=ev.key==='Home'?0:ev.key==='End'?buttons.length-1:Math.max(0,Math.min(buttons.length-1,n+(ev.key==='ArrowRight'?1:-1)));
     ev.preventDefault();buttons[i]?.focus({preventScroll:true});buttons[i]?.scrollIntoView({block:'nearest',inline:'nearest'});
    });
    nav.addEventListener('keydown',ev=>{if(ev.key==='Escape'&&state.open){ev.preventDefault();closeEditor(state);}});
    if(window.ResizeObserver)new ResizeObserver(()=>measure(state)).observe(strip);
   }
+  arrangeWorkspace(state);
   const raw=[...historyEl.children].filter(r=>r.classList.contains('layer-row'));
   if(raw.length||(!historyEl.children.length&&state.editors.querySelector('.layer-row'))){
    closeEditor(state,false);state.editors.replaceChildren(state.close);
@@ -121,6 +149,7 @@
     button.setAttribute('aria-label',protocol?`Finding ${info.number}: ${info.short}. ${info.full} ${info.example?'Example answer: ':'Answer: '}${info.chosen}. Review or edit.`:`Topic ${info.number}: ${info.short}. Viewed topic: ${info.chosen}. Review or change topic.`);
     button.classList.toggle('is-example',info.example);button.classList.toggle('is-unknown',info.value==='unknown');
     button.append(el('span','ct-number',info.number),el('span','ct-label',info.short),el('span','ct-state',info.example?'Example':info.value==='unknown'?'Uncertain / not assessed':protocol?'Chosen':'Viewed'));
+    const editIcon=el('span','ct-edit-icon','✎');editIcon.setAttribute('aria-hidden','true');button.append(editIcon);
     button.addEventListener('click',()=>openEditor(state,button,row));chips.push(button);
    }
    historyEl.replaceChildren(...chips);
@@ -132,11 +161,12 @@
    // A fresh source render replaces the current question after a real choice.
    closeEditor(state,false);const info=describe(pending,nav);shortControl(pending,info);
    historyEl.querySelectorAll('.ct-current-chip').forEach(b=>b.remove());
-   const button=el('button','ct-chip ct-current-chip');button.type='button';button.setAttribute('aria-current','step');
-   button.setAttribute('aria-label',info.action?'Next steps: review options and their conditions below.':`Finding ${info.number}: ${info.short}. Choose below.`);
-   button.append(el('span','ct-number',info.action?'→':info.number),el('span','ct-label',info.action?'Next steps':info.short),el('span','ct-state',info.action?'Options & criteria ↓':'Choose below ↓'));
+   const button=el('span','ct-chip ct-current-chip');button.setAttribute('aria-current','step');
+   button.setAttribute('aria-label',info.action?'Current task: choose a next step below.':`Current finding ${info.number}: ${info.short}. Choose below.`);
+   button.append(el('span','ct-number',info.action?'→':info.number),el('span','ct-label',info.action?'Next step':info.short),el('span','ct-state','Current'));
    current.classList.toggle('ct-action-only',info.action);
-   button.addEventListener('click',()=>{closeEditor(state,false);const target=info.action?document.querySelector(protocol?'#current-result':'.rf-related'):current;target?.scrollIntoView({block:'start',behavior:'instant'});if(!info.action)info.select?.focus({preventScroll:true});});historyEl.append(button);
+   historyEl.append(button);
+   if(state.result){const heading=state.result.querySelector('.section-head h3');if(heading)heading.textContent=info.action?'Choose next step':'Next-step options';}
    requestAnimationFrame(()=>{historyEl.scrollLeft=historyEl.scrollWidth;});
   }else if(!pending){historyEl.querySelectorAll('.ct-current-chip').forEach(b=>b.remove());current.classList.remove('ct-action-only');}
   if(protocol){
@@ -144,12 +174,14 @@
    const start=protocol.pathway.steps.findIndex(s=>s.id===first?.dataset.layerStep);state.entry.hidden=start<=0;
    const text=start>0?'Starting here · earlier decisions are not shown in this trail.':'';if(state.entry.textContent!==text)state.entry.textContent=text;
   }
-  nav.querySelectorAll(':scope>.ci-reading').forEach(n=>state.items.append(n));measure(state);
+  nav.querySelectorAll(':scope>.ci-reading').forEach(n=>state.items.append(n));measure(state);followWorkspace(state);
  }
  function scrollControls(state){const box=state.history,show=matchMedia('(min-width:761px)').matches&&box.scrollWidth>box.clientWidth+2;state.earlier.hidden=state.later.hidden=!show;state.earlier.disabled=box.scrollLeft<2;state.later.disabled=box.scrollLeft+box.clientWidth>=box.scrollWidth-2;}
  function measure(state){scrollControls(state);const h=Math.ceil(state.strip.getBoundingClientRect().height);document.documentElement.style.setProperty(protocol?'--pathway-nav-height':'--roadmap-trail-height',h+'px');}
  const announcement=el('p','sr-only');announcement.setAttribute('aria-live','polite');document.body.append(announcement);
  document.addEventListener('change',ev=>{if(ev.target.matches('.ct-editors select')&&ev.target.value!==ev.target.dataset.compactOriginal)requestAnimationFrame(()=>{announcement.textContent=protocol?'Choice changed. Later findings cleared; choose the next finding.':'Topic changed. Later topics replaced.';});},true);
+ document.addEventListener('change',ev=>{if(ev.target.matches('[data-layer-question],[data-layer-risk],[data-assistant-question],[data-risk-question]'))followCurrent='finding';},true);
+ document.addEventListener('click',ev=>{if(ev.target.closest('.next-action [data-step],[data-pathway-clear],[data-pathway-example]'))followCurrent='step';},true);
  let queued=false;const scan=()=>{queued=false;document.querySelectorAll('.layer-nav,.rf-selector').forEach(enhance);};
  new MutationObserver(()=>{if(!queued){queued=true;queueMicrotask(scan);}}).observe(document.body,{childList:true,subtree:true});
  scan();

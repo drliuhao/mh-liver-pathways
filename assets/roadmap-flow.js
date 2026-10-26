@@ -61,7 +61,7 @@
   history[replace?'replaceState':'pushState']({roadmapTrail:state.trail},'','#decision-'+encodeURIComponent(id));
   state.select(id);
   if(scroll)document.getElementById('answer').scrollIntoView({block:'start',behavior:'instant'});
-  if(focus)document.querySelector('#roadmap-next')?.focus({preventScroll:true});
+  if(focus)document.querySelector('#answer .ahead h3')?.focus({preventScroll:true});
  }
  function render(s,recHTML){
   state.current=s.id;
