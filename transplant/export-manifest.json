@@ -124,5 +124,12 @@
   "entry_presets_only": true,
   "later_findings_unselected": true,
   "criteria_display": "Inline expansion",
-  "explanation_display": "Floating info panel; phone tap/optional hold"
+  "explanation_display": "Floating info panel; phone tap/optional hold",
+  "compact_trail_revision": "2026-10-26",
+  "compact_trail_display": "Completed findings now form a horizontal numbered trail with short titles. Tap a step to review its full question and exact selected answer; one editor opens at a time. The next unanswered question stays below the trail. Bare Yes/No controls retain the complete question to avoid reversing the meaning. Slate marks chosen findings, teal the current question and blue the open editor; orange high-risk status is retained. The same display applies to 12 roadmaps and 7 transplant pathways. Clinical criteria, matching, evidence and documents are unchanged.",
+  "compact_trail_labels": {
+    "core_findings": 96,
+    "supplemental_findings": 23,
+    "roadmap_topics": 103
+  }
 }

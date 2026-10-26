@@ -91,7 +91,7 @@ def export(source, preserve_documents=False):
         text = re.sub(r'content="0;url=/(?!mh-liver-pathways/)', 'content="0;url='+TP+'/', text)
         if '/evidence/' in text:
             raise ValueError(f'Private PDF reference survives in {file}')
-        text = text.replace('</head>', f'<link rel="stylesheet" href="{BASE}/assets/portal-navigation.css"><script src="{BASE}/assets/portal-navigation.js?v=20261025-layers1" defer></script></head>')
+        text = text.replace('</head>', f'<link rel="stylesheet" href="{BASE}/assets/portal-navigation.css"><script src="{BASE}/assets/portal-navigation.js?v=20261026-compact1" defer></script></head>')
         target = dest/file.relative_to(source); target.parent.mkdir(parents=True, exist_ok=True); target.write_text(text)
     assets = dest/'assets'; assets.mkdir(exist_ok=True)
     app = (source/'assets/app.js').read_text().replace('href="/', 'href="'+TP+'/')
@@ -125,12 +125,13 @@ def export(source, preserve_documents=False):
     manifest.update(afp_review_revision='2026-10-24',afp_review='Separate AFP-related clinical and individual allocation review at allocation, treatment, listing and waitlist decisions. This is not enrollment in the beyond-UNOS tumor-burden pilot; standard AFP thresholds and existing study criteria are unchanged.')
     manifest.update(evidence_organization_revision='2026-10-24',evidence_organization='Status, proposed position and next action precede open criteria. Searchable study summaries pair results with limitations and retain population and time-origin wording. One access record per source within each review; authority types, review coverage and approval limits are explicit. No selection criteria or matching rules changed.')
     manifest.update(interface_revision='2026-10-25',example_presets=7,configured_example_sets=46,layered_decision_interface='2026-10-25',entry_presets_only=True,later_findings_unselected=True,criteria_display='Inline expansion',explanation_display='Floating info panel; phone tap/optional hold',interface_changes='Added a pinned, layered decision trail to all 12 roadmaps and seven transplant pathways. Only the first transplant finding is preselected as a labeled example; each later finding and action starts unanswered. Changing an earlier finding clears later questions and decisions. Selection criteria expand inline, explanations use information panels, and cautions remain visible. Supplemental safety questions join the same trail; treatment and high-risk alternatives remain available when a standard path stops. Desktop and phone checks cover 46 decisions and 103 roadmap topics. Clinical matching rules, source evidence and orange high-risk documents are retained.')
+    manifest.update(compact_trail_revision='2026-10-26',compact_trail_display='Completed findings now form a horizontal numbered trail with short titles. Tap a step to review its full question and exact selected answer; one editor opens at a time. The next unanswered question stays below the trail. Bare Yes/No controls retain the complete question to avoid reversing the meaning. Slate marks chosen findings, teal the current question and blue the open editor; orange high-risk status is retained. The same display applies to 12 roadmaps and 7 transplant pathways. Clinical criteria, matching, evidence and documents are unchanged.',compact_trail_labels={'core_findings':96,'supplemental_findings':23,'roadmap_topics':103})
     (dest/'export-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     (ROOT/'index.html').write_text(home(data))
     for _,slug,_,_,_ in ROADMAPS:
         file=ROOT/slug/'index.html'; text=file.read_text()
         if 'portal-navigation.js' not in text:
-            text=text.replace('</head>', '<link rel="stylesheet" href="../assets/portal-navigation.css"><script src="../assets/portal-navigation.js?v=20261025-layers1" defer></script></head>')
+            text=text.replace('</head>', '<link rel="stylesheet" href="../assets/portal-navigation.css"><script src="../assets/portal-navigation.js?v=20261026-compact1" defer></script></head>')
             file.write_text(text)
     assert len(copied)==21
     # Only the seven author-created V7 protocol PDFs may be published here.

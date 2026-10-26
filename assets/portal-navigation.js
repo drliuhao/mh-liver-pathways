@@ -2,10 +2,11 @@
 (() => {
   const root=new URL('../',document.currentScript.src);
   // Shared, progressive presentation layer for roadmaps and decision protocols.
-  const infoCSS=document.createElement('link');infoCSS.rel='stylesheet';infoCSS.href=new URL('assets/contextual-info.css?v=20261025-layers1',root);document.head.append(infoCSS);
+  const infoCSS=document.createElement('link');infoCSS.rel='stylesheet';infoCSS.href=new URL('assets/contextual-info.css?v=20261026-compact1',root);document.head.append(infoCSS);
   const flowCSS=document.createElement('link');flowCSS.rel='stylesheet';flowCSS.href=new URL('assets/clinical-flow.css?v=20261025-1',root);document.head.append(flowCSS);
-  const layerCSS=document.createElement('link');layerCSS.rel='stylesheet';layerCSS.href=new URL('assets/decision-layers.css?v=20261025-layers1',root);document.head.append(layerCSS);
-  for(const file of ['contextual-copy.js','contextual-info.js','clinical-flow.js']){const script=document.createElement('script');script.async=false;script.src=new URL('assets/'+file+'?v=20261025-layers1',root);document.head.append(script);}
+  const layerCSS=document.createElement('link');layerCSS.rel='stylesheet';layerCSS.href=new URL('assets/decision-layers.css?v=20261026-compact1',root);document.head.append(layerCSS);
+  const compactCSS=document.createElement('link');compactCSS.rel='stylesheet';compactCSS.href=new URL('assets/compact-trail.css?v=20261026-compact1',root);document.head.append(compactCSS);
+  for(const file of ['contextual-copy.js','contextual-info.js','clinical-flow.js','compact-trail-labels.js','compact-trail.js']){const script=document.createElement('script');script.async=false;script.src=new URL('assets/'+file+'?v=20261026-compact1',root);document.head.append(script);}
   const path=location.pathname.slice(root.pathname.length).split('/').filter(Boolean);
   const transplant=path[0]==='transplant';
   const highRisk=transplant&&path[1]==='high-risk';

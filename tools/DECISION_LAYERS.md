@@ -25,3 +25,14 @@ Run `test_decision_layers.cjs` with the existing clinical, contextual, high-risk
 Keep the current `transplant/assets/app.js` and `assistant.js`, their `tools/decision_assistant_source` mirrors, `assets/decision-layers.css`, `assets/roadmap-flow.js`, `assets/contextual-info.js`, and the portal loader together. The cache version is `20261025-layers1`. Follow V12_REBUILD.md for source/evidence preservation. Canonical source files are mirrored under `standard_protocol_website/src` in the local workspace. Do not regenerate from stale procedural content.
 
 Analyst A performed this interface revision and validation. Earlier external analyst reviews are retained in the prior review folders; they are not claimed as a new review of this iteration.
+
+
+## Compact trail — 26 October 2026
+
+The shared `compact-trail.js`/`.css` and `compact-trail-labels.js` enhance the existing controls into a horizontal numbered strip. Only one exact-answer editor opens at a time. Tapping to inspect a finding does not change answers; selecting a new answer uses the original reset/routing handlers. Phone history scrolls horizontally, separately from the current question.
+
+Labels are checked against 96 full source questions, 23 supplemental question types and 103 roadmap topics. Short noun labels never replace the complete active question for bare Yes/No choices. Keep full questions, exact options, criteria and citations in the source data. The enhancement does not change matching, actions or source files.
+
+The shared loader version is `20261026-compact1`; core layered app/assistant versions remain `20261025-layers1`. The portal loader must retain the compact assets after a rebuild. Run `test_compact_trail.cjs` with the existing regression suite. Review/reconciliation and actual external Analyst B comments are retained in the local `Compact_Trail_Review_2026-10-26` folder.
+
+Final compact layout: only the numbered strip is sticky (54 px at tested phone width). The current control and editor remain in normal page flow. A completed editor expands its exact criteria locally without changing the hash or visible trail. The unnumbered Next steps tile goes to the original conditional action panel, including high-risk review options. No action-only dropdown remains in the sticky strip. Active Yes/No questions retain the full source predicate.

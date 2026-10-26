@@ -22,3 +22,5 @@ Contextual explanation interface (25 October): also follow `CONTEXTUAL_INFO.md`.
 For the clinical-flow interface and orange protocol downloads, also follow `CLINICAL_FLOW.md`. Preserve the current styled files and their checksums when rebuilding.
 
 The layered decision interface now supersedes the former preset/disclosure behavior. See [DECISION_LAYERS.md](DECISION_LAYERS.md); use cache version `20261025-layers1`.
+
+The 26 October compact trail also requires the three `assets/compact-trail*` files and shared loader version `20261026-compact1`; preserve the underlying layered state engine. See DECISION_LAYERS.md.
