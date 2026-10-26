@@ -75,16 +75,16 @@
  function definitions(q,value,sources){
   const selected=q.options.find(o=>o.value===value);
   return (selected?`<p class="assistant-selected">Selected: ${esc(selected.label)}</p>`:'')+
-   (selected?.details?.length?`<details class="assistant-criteria"><summary>Criteria for this selection</summary><ul>${selected.details.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></details>`:'')+
-   q.criteria.map(c=>`<details class="assistant-criteria" data-relevant="${!c.show_for.length||c.show_for.includes(value||'')}"><summary>${esc(c.title)}</summary><ul>${c.items.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>${evidence(c.refs,sources)}</details>`).join('');
+   (selected?.details?.length?`<details class="assistant-criteria" open><summary>Criteria for this selection</summary><ul>${selected.details.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></details>`:'')+
+   q.criteria.map(c=>`<details class="assistant-criteria" ${!value||!c.show_for.length||c.show_for.includes(value)?'open':''} data-relevant="${!c.show_for.length||c.show_for.includes(value||'')}"><summary>${esc(c.title)}</summary><ul>${c.items.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>${evidence(c.refs,sources)}</details>`).join('');
  }
  function render(config,sources,answers={},origin='empty'){
   return `<div class="decision-assistant"><p class="assistant-intro">${origin==='example'?'Example findings are preselected to show the path toward transplant. Change any choice to explore another result.':'Choose the findings that matter for this decision. The matching next step will be highlighted.'}</p>
    ${config.questions.map((q,n)=>`<div class="assistant-question"><label for="assistant-${esc(q.id)}"><span>${n+1}</span>${esc(q.label)}</label>
-   ${q.help?(q.criteria.length?`<p class="assistant-help" id="assistant-help-${esc(q.id)}">${esc(q.help)}</p>`:`<details class="assistant-criteria assistant-help-criteria" data-relevant="true"><summary>Criteria for this finding</summary><p class="assistant-help" id="assistant-help-${esc(q.id)}">${esc(q.help)}</p>${evidence(q.refs,sources)}</details>`):''}
+   ${q.help?`<p class="assistant-help" id="assistant-help-${esc(q.id)}">${esc(q.help)}</p>`:''}
    <select id="assistant-${esc(q.id)}" data-assistant-question="${esc(q.id)}" ${q.help?`aria-describedby="assistant-help-${esc(q.id)}"`:''}><option value="">Choose a finding…</option>${q.options.map(o=>`<option value="${esc(o.value)}" ${answers[q.id]===o.value?'selected':''}>${esc(o.label)}</option>`).join('')}</select>
    <div class="assistant-definitions" data-definitions="${esc(q.id)}">${definitions(q,answers[q.id],sources)}</div>
-   ${q.help&&!q.criteria.length?'':evidence(q.refs.filter(id=>!q.criteria.some(c=>c.refs.includes(id))),sources)}</div>`).join('')}
+   ${evidence(q.refs.filter(id=>!q.criteria.some(c=>c.refs.includes(id))),sources)}</div>`).join('')}
    <div class="assistant-actions"><button type="button" data-assistant-reset>Clear choices</button><button type="button" data-assistant-show>See next step ↓</button></div>
    <p class="assistant-footnote">For this decision only. Choices are not saved. The team must assess transplant suitability and MELD-exception eligibility separately.</p></div>`;
  }

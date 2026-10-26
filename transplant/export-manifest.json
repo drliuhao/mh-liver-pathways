@@ -1,5 +1,5 @@
 {
-  "hosting_export": "2026-10-25",
+  "hosting_export": "2026-10-26",
   "clinical_source_date": "2026-10-23",
   "pathways": 7,
   "steps": 46,
@@ -100,12 +100,12 @@
   "recording_templates": 0,
   "research_data_kits": 0,
   "care_plans": 26,
-  "documentation_changes": "Reviewed all 46 transplant decisions and 45 linked discussion questions for explicit treatment, transplant-listing and MELD-exception language. Added next actions for every decision result, including conditional AFP treatment choices, reassessment after treatment, and best supportive care. NCCN sources cite original PDF pages. Existing selection thresholds and matching rules are retained; Word documents keep their separately dated wording. No recording, signatures, export or persistent storage.",
-  "interface_revision": "2026-10-25",
+  "documentation_changes": "Reorganized 17 current Word documents by clinical topic, removed release-specific emphasis, retained orange high-risk headings, source links, OPEN decisions and live EndNote field structures. Public and private variants rendered and checked. No clinical threshold or matching-rule change; no native EndNote refresh is claimed.",
+  "interface_revision": "2026-10-26",
   "example_presets": 7,
   "journey_overviews": 7,
   "sticky_decision_navigation": true,
-  "interface_changes": "Added a pinned, layered decision trail to all 12 roadmaps and seven transplant pathways. Only the first transplant finding is preselected as a labeled example; each later finding and action starts unanswered. Changing an earlier finding clears later questions and decisions. Selection criteria expand inline, explanations use information panels, and cautions remain visible. Supplemental safety questions join the same trail; treatment and high-risk alternatives remain available when a standard path stops. Desktop and phone checks cover 46 decisions and 103 roadmap topics. Clinical matching rules, source evidence and orange high-risk documents are retained.",
+  "interface_changes": "Separated staged choices from confirmed findings, removed the redundant next-action selector, and collapsed optional history. Clinical decision numbering, conditional actions, safety findings and review statuses are retained. Roadmap topic navigation requires Open topic. Relevant numeric definitions stay visible. All seven transplant pathways and 12 roadmaps use the shared presentation.",
   "high_risk_integration": "2026-10-24",
   "high_risk_reviews": 21,
   "high_risk_protocol_pdfs": 7,
@@ -120,9 +120,99 @@
   "evidence_organization_revision": "2026-10-24",
   "evidence_organization": "Status, proposed position and next action precede open criteria. Searchable study summaries pair results with limitations and retain population and time-origin wording. One access record per source within each review; authority types, review coverage and approval limits are explicit. No selection criteria or matching rules changed.",
   "configured_example_sets": 46,
-  "layered_decision_interface": "2026-10-25",
+  "layered_decision_interface": "2026-10-26",
   "entry_presets_only": true,
   "later_findings_unselected": true,
-  "criteria_display": "Inline expansion",
-  "explanation_display": "Floating info panel; phone tap/optional hold"
+  "criteria_display": "Current threshold summaries visible; selected definitions expanded; supporting detail on demand",
+  "explanation_display": "Floating info panel; phone tap/optional hold",
+  "ordinary_entry_unanswered": true,
+  "entry_example_opt_in": true,
+  "editorial_documents": [
+    {
+      "path": "evidence/2026-10-25/docs/01_HCC_Alignment_and_Meeting_Decisions_v12.docx",
+      "after": "6347989cbfef28465ef370d83c204573e17fb8afd54e92358e5e7b26b4887f8c",
+      "before": "6151892968a31fdaaa3be3d10123621eabeb1a67c7f2eafb30672ed4a07336ea"
+    },
+    {
+      "path": "evidence/2026-10-25/docs/01_HCC_High_Risk_Protocol_v12.docx",
+      "after": "5d1ca905394e509efbb80fe7933158a3739163e380454667bfd15de6d7196e0b",
+      "before": "a51b032d638a9da9cb5e13d6e8422bf213160d04694f448cc8ab7eeb009b4b7d"
+    },
+    {
+      "path": "evidence/2026-10-25/docs/01_HCC_Standard_Guidance_Aligned_Protocol_v12.docx",
+      "after": "7a9f92ca375e1532aa24fdb66efca7f2b5466ad32e065da900fb8b5294b0d82e",
+      "before": "f5627e5c1b389f42ca57730ec85c4233bae0737e25fbc8e48b4c3feed6d58dea"
+    },
+    {
+      "path": "evidence/2026-10-25/docs/02_PCCA_High_Risk_Protocol_v12.docx",
+      "after": "bcf00ac6a69a03260d3bcf04313952b3f2d525e303542f36166b28059e778574",
+      "before": "1ed015f6248ad8968ac7623c5c449ac9e521d03f40e88b1326047cd6ed1b33b0"
+    },
+    {
+      "path": "evidence/2026-10-25/docs/02_PCCA_Standard_Guidance_Aligned_Protocol_v12.docx",
+      "after": "a87a919c877df625aff98316582578879847c4228bd32a069ea4cbca861a99ad",
+      "before": "b6a82ea280108db17d57e3bf7b00f973dcbab61ca2b141f02e834c79f1df59a8"
+    },
+    {
+      "path": "evidence/2026-10-25/docs/03_ICCA_High_Risk_Protocol_v12.docx",
+      "after": "98302c2653695922b1104638bc29f99fc39d87fab96b4ba89829c6ef9d6425c5",
+      "before": "d9d7cc60921de06ad05e318b6adbf2b37da58c04861f276e8462410e1d957fd0"
+    },
+    {
+      "path": "evidence/2026-10-25/docs/03_ICCA_Standard_Guidance_Aligned_Protocol_v12.docx",
+      "after": "b64109def3f381db4cf0ba58b9c2f038f616f8a8d9aebea818863e14c337e668",
+      "before": "f519c9a6d93ffcfb97c3b0f8a9dbf1d208dc9c32f9e692ed26e3f2c1244924b3"
+    },
+    {
+      "path": "evidence/2026-10-25/docs/04_CRLM_High_Risk_Protocol_v12.docx",
+      "after": "69d39eac80616959b2f6b4549849c88e7b38577d3365ea1d82539cfdc14c1ed4",
+      "before": "d066f4c1a362972a9937d02acabf77eec9d96cce83e1b5ae15459591b46b6c34"
+    },
+    {
+      "path": "evidence/2026-10-25/docs/04_CRLM_Standard_Guidance_Aligned_Protocol_v12.docx",
+      "after": "ffef6e602a4c4a8b6a9856d9c983d2708dbb96ec40f6c14fff3b061c8cad41c3",
+      "before": "033a7b6f616c9eb7433cfb2a4846713c7dde478fe67627a72ebb3008eb0042bd"
+    },
+    {
+      "path": "evidence/2026-10-25/docs/HCC_B1_1_AFP_Evidence_and_Open_Meeting_Record_v12.docx",
+      "after": "64c4b758ce1214e126efa1e69e13b9030bdeda72f505f67698f5867f5b69cd37",
+      "before": "e7bc0f950f02ddfb9eb37fc69f9aceb3c748d4e674c47c4c9643928fea57a756"
+    },
+    {
+      "path": "evidence/2026-10-25/docs/HPB_Cross_Tumor_Systemic_Treatment_Matrix_2026-10-25.docx",
+      "after": "38cf392bf89b33cf81512f5f6223d4668e125e7119150c3acaacfbbaddab86d0",
+      "before": "207f6f14c79062279fa80aa871fa311d86a4e101b8f8e5f6ebae6da21da10bac"
+    },
+    {
+      "path": "evidence/2026-10-25/docs/Memorial_Hermann_CRLM_System_Roadmap_v12.docx",
+      "after": "811ac4648a7c53298946d07bcbc576b77d46a81729e2bb8342746b5a0e535d9f",
+      "before": "dfb9cf17b9c69e946d743e2b443f6cfebeb124de9200f4a70efd32e8a249b8aa"
+    },
+    {
+      "path": "evidence/2026-10-25/docs/Memorial_Hermann_HCC_System_Roadmap_v12.docx",
+      "after": "1215c279fded1c5f1fdbbf0962c91cb747af073e9515c2665d343d7a7b568313",
+      "before": "ab7a84bfbe4d201011d20dc1dac614a4707ba995c6986d050f678f1d87fbcc63"
+    },
+    {
+      "path": "evidence/2026-10-25/docs/Memorial_Hermann_HilarCCA_System_Roadmap_v12.docx",
+      "after": "8ca164ba8fd102f3232aac60f28ac3fc861bdc391dc58fcfb5b50058513a453b",
+      "before": "f7fc632acb40069007603030f58afac8ba387655eb0e1275e96745bc231260c2"
+    },
+    {
+      "path": "evidence/2026-10-25/docs/Memorial_Hermann_MixedTumour_System_Roadmap_v12.docx",
+      "after": "316f5c3f98ae4a24411197a305be0844b90e06e8985225f1e5c9b70d6f4a868b",
+      "before": "eb29cc403f7e09c17eda1b65d3994ccecf5d8f8d28ca12119f4832917e741d96"
+    },
+    {
+      "path": "evidence/2026-10-25/docs/Memorial_Hermann_PDAC_System_Roadmap_v12.docx",
+      "after": "ff2092c1de37eec93336b213fb357a71a9a11d396b499dc9570f090bb70cda46",
+      "before": "fd17445b2a9d041870b0f20b1ac24b2a3fca7dcfcd47ae72d472e7c90eec0af6"
+    },
+    {
+      "path": "evidence/2026-10-25/docs/Memorial_Hermann_iCCA_System_Roadmap_v12.docx",
+      "after": "735c4bfafde2d7951ce91a236a2899adf727e06c4acbc2960afde90a91deb8b0",
+      "before": "0649cceb2e1ea0db01a7df6ad9ee06037a6ad97b78c52b72d3fa1b0dd08a053e"
+    }
+  ],
+  "review_scope": "Analyst A implementation and regression/layout checks; external Analyst B interface and textual document review. Not clinical or institutional approval."
 }

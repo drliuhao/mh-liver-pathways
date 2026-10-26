@@ -2,10 +2,10 @@
 (() => {
   const root=new URL('../',document.currentScript.src);
   // Shared, progressive presentation layer for roadmaps and decision protocols.
-  const infoCSS=document.createElement('link');infoCSS.rel='stylesheet';infoCSS.href=new URL('assets/contextual-info.css?v=20261025-layers1',root);document.head.append(infoCSS);
+  const infoCSS=document.createElement('link');infoCSS.rel='stylesheet';infoCSS.href=new URL('assets/contextual-info.css?v=20261026-clarity2',root);document.head.append(infoCSS);
   const flowCSS=document.createElement('link');flowCSS.rel='stylesheet';flowCSS.href=new URL('assets/clinical-flow.css?v=20261025-1',root);document.head.append(flowCSS);
-  const layerCSS=document.createElement('link');layerCSS.rel='stylesheet';layerCSS.href=new URL('assets/decision-layers.css?v=20261025-layers1',root);document.head.append(layerCSS);
-  for(const file of ['contextual-copy.js','contextual-info.js','clinical-flow.js']){const script=document.createElement('script');script.async=false;script.src=new URL('assets/'+file+'?v=20261025-layers1',root);document.head.append(script);}
+  const layerCSS=document.createElement('link');layerCSS.rel='stylesheet';layerCSS.href=new URL('assets/decision-layers.css?v=20261026-clarity2',root);document.head.append(layerCSS);
+  for(const file of ['contextual-copy.js','contextual-info.js','clinical-flow.js']){const script=document.createElement('script');script.async=false;script.src=new URL('assets/'+file+'?v=20261026-clarity2',root);document.head.append(script);}
   const path=location.pathname.slice(root.pathname.length).split('/').filter(Boolean);
   const transplant=path[0]==='transplant';
   const highRisk=transplant&&path[1]==='high-risk';
@@ -27,4 +27,9 @@
   const log=document.createElement('a');log.href=new URL('changes/',root);log.textContent='Change log';
   const library=document.createElement('a');library.href=new URL('evidence-libraries/',root);library.textContent='Evidence libraries and PPT index';
   footer.append(log,document.createTextNode(' · '),library);document.body.append(footer);
+  // A source deep link should reveal its appraisal, not stop at a closed title.
+  if(path[0]==='evidence'){
+    const revealStudy=()=>{let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{return;}const target=document.getElementById(id);if(!target?.matches('details.study-appraisal'))return;target.open=true;target.style.scrollMarginTop='16px';requestAnimationFrame(()=>target.scrollIntoView({block:'start'}));};
+    window.addEventListener('hashchange',revealStudy);requestAnimationFrame(revealStudy);
+  }
 })();

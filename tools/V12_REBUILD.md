@@ -21,4 +21,4 @@ Contextual explanation interface (25 October): also follow `CONTEXTUAL_INFO.md`.
 
 For the clinical-flow interface and orange protocol downloads, also follow `CLINICAL_FLOW.md`. Preserve the current styled files and their checksums when rebuilding.
 
-The layered decision interface now supersedes the former preset/disclosure behavior. See [DECISION_LAYERS.md](DECISION_LAYERS.md); use cache version `20261025-layers1`.
+The current decision interface supersedes the former preset/disclosure behavior. See [DECISION_LAYERS.md](DECISION_LAYERS.md); use cache version `20261026-clarity2`. After any legacy evidence rebuild, run `python3 tools/normalize_evidence_presentation.py` to integrate appraisals into their clinical topics, normalize document labels and remove release-index clinical actions. Preserve the 17 current editorial document copies recorded in `clarity_document_hashes.json`; a legacy builder must not overwrite them. Revision dates belong in this build record and document revision history, not in prominent clinical navigation.

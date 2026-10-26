@@ -12,4 +12,4 @@ Validation includes all 46 decisions, 103 roadmap topics, 26 care plans, 1,851 c
 
 Run the existing release, matrix, contextual, routing, action, roadmap and high-risk tests, plus `node tools/test_clinical_flow.cjs`.
 
-The layered decision interface now supersedes the former preset/disclosure behavior. See [DECISION_LAYERS.md](DECISION_LAYERS.md); use cache version `20261025-layers1`.
+The current decision interface supersedes the former preset/disclosure behavior. See [DECISION_LAYERS.md](DECISION_LAYERS.md); use cache version `20261026-clarity2`. Ordinary entry is unanswered; confirmation commits findings, and current numeric criteria remain visible. The 17 current document copies have a subsequent presentation-only reorganization recorded in `clarity_document_hashes.json`; those hashes supersede earlier hashes for overlapping files.

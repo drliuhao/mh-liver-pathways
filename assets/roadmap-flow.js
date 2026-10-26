@@ -17,17 +17,16 @@
   const tree=document.getElementById('tree');
   if(tree){const children=[...tree.children].filter(n=>n!==overview&&n.tagName!=='H2');if(children.length){const reference=document.createElement('details');reference.className='rf-background-reference';const summary=document.createElement('summary');summary.textContent='Staging overview and reference definitions';reference.append(summary,...children);tree.prepend(reference);}}
   const bar=document.createElement('nav');bar.className='rf-selector';bar.setAttribute('aria-label','Current roadmap decision');
-  bar.innerHTML='<div class="layer-heading"><b>Decision trail</b><a class="rf-permalink" href="#stage">Link</a><button type="button" data-rf-overview>All decisions</button></div><div class="layer-history"></div><div class="layer-current"></div>';
+  bar.innerHTML='<div class="layer-heading"><b>Clinical topics</b><a class="rf-permalink" href="#stage">Link</a><button type="button" data-rf-overview>All decisions</button></div><div class="layer-history"></div><div class="layer-current"></div>';
   document.getElementById('answer').before(bar);
   bar.addEventListener('change',ev=>{
-   const row=ev.target.dataset.roadmapLayer;if(row===undefined||ev.target.value==='')return;
-   const n=Number(row);
-   if(n===0){state.trail=[];navigate(ev.target.value,{layer:0});return;}
-   const previous=state.trail[n-1],r=links?.[state.slug]?.[previous.id]?.[Number(ev.target.value)];if(!r)return;
-   if(r.decision)navigate(r.decision,{layer:n,via:Number(ev.target.value)});
-   else {const anchor=document.createElement('a');anchor.href=recordHref(r);anchor.className='rf-related-link';anchor.textContent=recordLabel(r);document.body.append(anchor);anchor.click();anchor.remove();}
+   if(ev.target.matches('[data-roadmap-current]'))stageTopic();
   });
+  bar.addEventListener('keydown',ev=>{if(ev.key==='Escape'&&ev.target.matches('[data-roadmap-current]')){ev.target.value=state.current;stageTopic();}});
   bar.addEventListener('click',ev=>{
+   if(ev.target.closest('[data-open-topic]')){navigate(bar.querySelector('[data-roadmap-current]').value);return;}
+   if(ev.target.closest('[data-cancel-topic]')){bar.querySelector('[data-roadmap-current]').value=state.current;stageTopic();bar.querySelector('[data-roadmap-current]').focus();return;}
+   const prior=ev.target.closest('[data-roadmap-trail]');if(prior){const n=Number(prior.dataset.roadmapTrail),node=state.trail[n];if(node)navigate(node.id,{layer:n,via:node.via});return;}
    if(ev.target.closest('[data-rf-overview]')){overview.open=true;overview.scrollIntoView({block:'start',behavior:'smooth'});}
    const criteria=ev.target.closest('[data-roadmap-criteria]');if(criteria){const panel=document.querySelector(criteria.dataset.roadmapCriteria==='next'?'.rf-related':'.rf-criteria');if(panel?.tagName==='DETAILS')panel.open=true;panel?.scrollIntoView({block:'start',behavior:'instant'});panel?.querySelector('summary')?.focus({preventScroll:true});}
   });
@@ -39,20 +38,25 @@
   window.addEventListener('hashchange',restore);window.addEventListener('popstate',restore);
   const header=document.querySelector('header.top');const offsets=()=>document.documentElement.style.setProperty('--roadmap-header',`${header&&getComputedStyle(header).position==='sticky'?header.getBoundingClientRect().height:0}px`);offsets();if(header&&window.ResizeObserver)new ResizeObserver(offsets).observe(header);
   configPromise.then(data=>{links=data;configLoaded=true;if(state.current){renderRelated(state.current);renderTrail();}});
+  const revealAppraisal=()=>{let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{return;}const node=document.getElementById(id);if(!node?.closest('.study-appraisals'))return;const body=document.getElementById('evBody');if(body)body.hidden=false;const toggle=document.querySelector('[data-fold="evBody"]');if(toggle){toggle.textContent='Hide';toggle.setAttribute('aria-expanded','true');}if(node.tagName==='DETAILS')node.open=true;requestAnimationFrame(()=>node.scrollIntoView({block:'start'}));};
+  window.addEventListener('hashchange',revealAppraisal);requestAnimationFrame(revealAppraisal);
  }
  function recordLabel(r){return r.label||(r.decision?title(state.stages.find(s=>s.id===r.decision)):'Review related care');}
  function recordHref(r){return r.decision?'#decision-'+encodeURIComponent(r.decision):r.topic?new URL('hcc/?topic='+encodeURIComponent(r.topic)+'#topics',root).href:new URL(r.url,root).href;}
+ function stageTopic(){
+  const bar=document.querySelector('.rf-selector'),staged=bar.querySelector('[data-roadmap-current]').value!==state.current,status=bar.querySelector('.layer-stage-status');
+  bar.querySelector('[data-open-topic]').disabled=!staged;bar.querySelector('[data-cancel-topic]').hidden=!staged;bar.querySelector('.layer-row').classList.toggle('is-staged',staged);
+  status.hidden=!staged;status.textContent=staged?'Not opened — showing: '+title(state.stages.find(s=>s.id===state.current))+'.':'';
+ }
  function renderTrail(){
   const bar=document.querySelector('.rf-selector');if(!bar||!state.current)return;
   if(!state.trail.length||state.trail.at(-1).id!==state.current)state.trail=[{id:state.current,via:null}];
-  const rootOptions=state.stages.map(s=>`<option value="${esc(s.id)}" ${s.id===state.trail[0].id?'selected':''}>${esc(title(s))}</option>`).join('');
-  let rows=`<div class="layer-row is-chosen"><span class="layer-number">1</span><div class="layer-choice"><label for="roadmap-decision">Starting topic</label><select id="roadmap-decision" data-roadmap-layer="0">${rootOptions}</select></div></div>`;
-  state.trail.slice(1).forEach((node,i)=>{const options=links?.[state.slug]?.[state.trail[i].id]||[],selected=options[node.via];rows+=`<div class="layer-row is-chosen"><span class="layer-number">${i+2}</span><div class="layer-choice"><label for="roadmap-layer-${i+1}">Next assessment or care</label><select id="roadmap-layer-${i+1}" data-roadmap-layer="${i+1}">${options.map((r,j)=>`<option value="${j}" ${j===node.via?'selected':''}>${esc(recordLabel(r))}</option>`).join('')}</select>${selected?`<span class="layer-value">${esc(selected.when)}</span>`:''}</div></div>`;});
-  bar.querySelector('.layer-history').innerHTML=rows;
-  const options=links?.[state.slug]?.[state.current]||[];
-  bar.querySelector('.layer-current').innerHTML=`<div class="layer-row is-current"><span class="layer-number">${state.trail.length+1}</span><div class="layer-choice"><label for="roadmap-next">Next assessment or care</label><select id="roadmap-next" data-roadmap-layer="${state.trail.length}" ${!options.length?'disabled':''}><option value="">${options.length?'Choose the next step…':'Loading next options…'}</option>${options.map((r,i)=>`<option value="${i}">${esc(recordLabel(r))}</option>`).join('')}</select></div><button class="layer-criteria" data-roadmap-criteria="next">Options &amp; criteria</button></div>`;
+  const historyEl=bar.querySelector('.layer-history'),historyOpen=historyEl.querySelector('details')?.open||false;
+  const previous=state.trail.slice(0,-1);
+  historyEl.innerHTML=previous.length?`<details class="layer-history-disclosure" ${historyOpen?'open':''}><summary>Previously viewed (${previous.length}) · revisit</summary><ol class="roadmap-history-list">${previous.map((node,i)=>{const selected=i?links?.[state.slug]?.[state.trail[i-1].id]?.[node.via]:null;return `<li><button type="button" data-roadmap-trail="${i}">${esc(title(state.stages.find(s=>s.id===node.id)))}</button>${selected?`<p>${esc(selected.when)}</p>`:''}</li>`;}).join('')}</ol><p class="layer-history-note">Navigation history only; no patient findings are recorded.</p></details>`:'';
+  const options=state.stages.map(s=>`<option value="${esc(s.id)}" ${s.id===state.current?'selected':''}>${esc(title(s))}</option>`).join('');
+  bar.querySelector('.layer-current').innerHTML=`<div class="layer-row is-current"><div class="layer-choice"><label for="roadmap-decision">Clinical topic</label><select id="roadmap-decision" data-roadmap-current>${options}</select><span class="layer-stage-status" role="status" hidden></span></div><div class="layer-controls"><button class="layer-apply" data-open-topic disabled>Open topic</button><button class="layer-cancel" data-cancel-topic hidden>Cancel</button><button class="layer-criteria" data-roadmap-criteria="next">Next assessments ↓</button></div></div>`;
   bar.querySelector('.rf-permalink').href='#decision-'+encodeURIComponent(state.current);
-  const historyEl=bar.querySelector('.layer-history');
   const size=()=>document.documentElement.style.setProperty('--roadmap-trail-height',Math.ceil(bar.getBoundingClientRect().height)+'px');size();if(!bar.dataset.observed&&window.ResizeObserver){bar.dataset.observed='true';new ResizeObserver(size).observe(bar);}
  }
  function navigate(id,{replace=false,focus=true,scroll=true,layer=0,via=null}={}){
@@ -61,14 +65,14 @@
   history[replace?'replaceState':'pushState']({roadmapTrail:state.trail},'','#decision-'+encodeURIComponent(id));
   state.select(id);
   if(scroll)document.getElementById('answer').scrollIntoView({block:'start',behavior:'instant'});
-  if(focus)document.querySelector('#roadmap-next')?.focus({preventScroll:true});
+  if(focus)document.querySelector('#answer .ahead h3')?.focus({preventScroll:true});
  }
  function render(s,recHTML){
   state.current=s.id;
   renderTrail();
   document.querySelectorAll('[data-roadmap-decision]').forEach(b=>{if(b.classList.contains('rf-topic'))b.setAttribute('aria-current',b.dataset.roadmapDecision===s.id?'true':'false');});
   const group=(label,items,cls)=>items?.length?`<section class="rf-option-group ${cls}"><h4>${label}</h4>${items.map(recHTML).join('')}</section>`:'';
-  return `<div class="ahead"><p class="rf-context">Showing this clinical topic</p><h3 tabindex="-1">${esc(s.name)}</h3>${s.ask?`<p class="ask">${esc(s.ask)}</p>`:''}<details class="rf-criteria"><summary>Selection criteria · ${s.req==='any'?'any one':'all required'}</summary><p>Topic selection does not establish treatment or transplant eligibility.</p><p>Conditions and checks described for this topic:</p><b>${s.req==='any'?'Any one of the following':'All of the following'}</b><ul>${s.crit.map(c=>`<li>${esc(c)}</li>`).join('')}</ul></details></div><div class="rf-recommendations"><h4 class="flow-section-heading"><span>2</span> Compare treatment options</h4><div class="rf-options">${group('Standard approach',s.standard,'rf-standard')}${group('Reasonable alternatives',s.alt,'rf-alternatives')}</div>${group('Avoid / cautions in this situation',s.avoid,'rf-cautions')}</div><section class="rf-related" aria-label="Related clinical decisions" data-related-for="${esc(s.id)}"></section><div class="rf-evidence-controls"><button class="xpand" type="button" id="xpandAll" data-open="0" aria-expanded="false">Expand criteria and evidence</button><span>These links open related assessments. Recheck the destination criteria; topic selections do not carry patient findings or establish eligibility.</span></div>`;
+  return `<div class="ahead"><p class="rf-context">Showing this clinical topic</p><h3 tabindex="-1">${esc(s.name)}</h3>${s.ask?`<p class="ask">${esc(s.ask)}</p>`:''}<p class="rf-eligibility-note">Topic selection does not establish treatment or transplant eligibility.</p><details class="rf-criteria" open><summary>Selection criteria · ${s.req==='any'?'any one':'all required'}</summary><p>Conditions and checks described for this topic:</p><b>${s.req==='any'?'Any one of the following':'All of the following'}</b><ul>${s.crit.map(c=>`<li>${esc(c)}</li>`).join('')}</ul></details></div><div class="rf-recommendations"><h4 class="flow-section-heading"><span>2</span> Compare treatment options</h4><div class="rf-options">${group('Standard approach',s.standard,'rf-standard')}${group('Reasonable alternatives',s.alt,'rf-alternatives')}</div>${group('Avoid / cautions in this situation',s.avoid,'rf-cautions')}</div><section class="rf-related" aria-label="Related clinical decisions" data-related-for="${esc(s.id)}"></section><div class="rf-evidence-controls"><button class="xpand" type="button" id="xpandAll" data-open="0" aria-expanded="false">Expand criteria and evidence</button><span>These links open related assessments. Recheck the destination criteria; topic selections do not carry patient findings or establish eligibility.</span></div>`;
  }
  function update(s){
   renderRelated(s.id);renderTrail();

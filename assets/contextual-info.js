@@ -143,7 +143,7 @@
   // Team attribution is contextual; all order-setting timing remains on the page.
   document.querySelectorAll('.contextline > span:nth-child(2)').forEach(n=>note(n,'Responsible team'));
   document.querySelectorAll('.assistant-footnote').forEach(n=>note(n,'How to use these choices'));
-  document.querySelectorAll('.example-controls [data-example-description]').forEach(n=>note(n,'Using the example'));
+  document.querySelectorAll('.example-controls [data-example-description]').forEach(n=>note(n,'How choices work'));
   document.querySelectorAll('.stopnote').forEach(n=>note(n,'How to read these cautions'));
   document.querySelectorAll('.rf-evidence-controls > span').forEach(n=>note(n,'Using related decisions'));
   document.querySelectorAll('.rf-related > p').forEach(n=>note(n,'How these decisions connect'));

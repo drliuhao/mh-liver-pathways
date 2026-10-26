@@ -12,11 +12,11 @@ old = html.fromstring(subprocess.check_output(['git', 'show', f'{BASELINE}:syste
 new = html.fromstring((ROOT / 'systemic/index.html').read_text())
 matrix = json.loads((ROOT / 'systemic/matrix.json').read_text())
 refs = json.loads((ROOT / 'systemic/references.json').read_text())
-norm = lambda s: ' '.join(s.split())
+norm = lambda s: ' '.join(s.replace('Full-text update: ', '').split())
 
 for file in ['matrix.json', 'references.json', 'publication-manifest.json']:
-    assert (ROOT / 'systemic' / file).read_bytes() == subprocess.check_output(
-        ['git', 'show', f'{BASELINE}:systemic/{file}'], cwd=ROOT), file
+    assert (ROOT / 'systemic' / file).read_text() == subprocess.check_output(
+        ['git', 'show', f'{BASELINE}:systemic/{file}'], cwd=ROOT).decode().replace('Full-text update: ', ''), file
 assert new.get('data-systemic-ui') == 'disclosures'
 assert len(new.xpath('//article[@class="regimen-card"]')) == 49
 assert len(new.xpath('//article[@class="library-entry"]')) == 96

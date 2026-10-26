@@ -2,10 +2,22 @@
 const fs=require('node:fs'),cp=require('node:child_process'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');
 const root=path.resolve(__dirname,'..'),read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const orangeFiles=JSON.parse(read('tools/orange_document_hashes.json'));
-for(const item of orangeFiles)assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,item.path))).digest('hex'),item.after,item.path+' styled document checksum');
+const clarityFiles=JSON.parse(read('tools/clarity_document_hashes.json'));
+for(const item of [...orangeFiles,...clarityFiles])assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,item.path))).digest('hex'),clarityFiles.find(x=>x.path===item.path)?.after||item.after,item.path+' document checksum');
 // The only content-payload change is the checksum of these ten recolored author-created files.
 const original=f=>orangeFiles.reduce((text,item)=>text.replaceAll(item.before,item.after),cp.execFileSync('git',['show','a787e08:'+f],{cwd:root,encoding:'utf8',maxBuffer:8e6}));
-for(const file of ['transplant/assets/content.json','tools/v12_content_snapshot.json','transplant/assets/risk-routing.js','transplant/assets/high-risk.js','assets/roadmap-links.json'])assert.equal(read(file),original(file),file+' changed clinical content');
+function neutralPresentation(raw){
+ const d=JSON.parse(raw);
+ const label=s=>{s=s.replace(/^V\d+\s+/,'').replace(' · DOCX',' · Word');return s[0].toUpperCase()+s.slice(1);};
+ for(const p of d.index){p.docs=p.docs.filter(x=>x.url!==p.protocol);for(const x of p.docs)x.label=label(x.label);}
+ for(const p of Object.values(d.high_risk.pathways))for(const x of p.documents||[])x.label=label(x.label);
+ const designs={AFP_RESPONSE:'Retrospective cohort',AFP_500:'Retrospective cohort',AFP_SLOPE:'Retrospective cohort',AFP_NYCA:'Retrospective validation cohort',AFP_OCCULT:'Retrospective cohort',SHARP:'Randomized phase III trial',ASCO_BTC:'Clinical guidance',NALIRICC:'Randomized phase II trial',MOUNTAINEER:'Noncomparative phase II study',SUNLIGHT:'Randomized phase III trial',FRESCO2:'Randomized phase III trial',CASSANDRA:'Randomized phase III trial',NAPOLI1:'Randomized phase III trial',MIXED_PRIMARY:'Retrospective cohort'};
+ for(const [k,v] of Object.entries(designs))d.sources['V12-'+k].kind=v;
+ for(const plans of Object.values(d.care))for(const p of plans)p.actions=p.actions.filter(a=>a.label!=='V12 full-text appraisals');
+ return d;
+}
+for(const file of ['transplant/assets/content.json','tools/v12_content_snapshot.json'])assert.deepEqual(JSON.parse(read(file)),neutralPresentation(original(file)),file+' changed clinical content beyond approved labels and release-index navigation');
+for(const file of ['transplant/assets/risk-routing.js','transplant/assets/high-risk.js','assets/roadmap-links.json'])assert.equal(read(file),original(file),file+' changed clinical content');
 const src=read('assets/contextual-info.js'),context={window:{}};vm.runInNewContext(read('assets/contextual-copy.js'),context);const copy=context.window.ContextualCopy;
 const data=JSON.parse(read('transplant/assets/content.json'));let reviewed=0;
 for(const [key,entry] of Object.entries(copy.help)){
@@ -36,5 +48,5 @@ for(const [a,b] of [['function renderActions(', 'function renderRiskReference(']
  const slice=s=>s.slice(s.indexOf(a),s.indexOf(b,s.indexOf(a)));const metadata=' data-action-label="${e(a.label)}" data-action-condition="${e(a.detail||\'\')}"';assert.equal(slice(app).replaceAll(metadata,'').replace(' renderLayerStack();\n','').replace('config.questions.filter(q=>answers[q.id]).map(q=>q.id)',"config.questions.filter(q=>!answers[q.id]||answers[q.id]==='unknown').map(q=>q.id)"),slice(old),'Changed clinical action renderer '+a);
 }
 const docs=Object.keys(JSON.parse(read('assets/roadmap-links.json'))).map(x=>x+'/index.html').concat(data.index.map(p=>'transplant/'+p.slug+'/index.html'));
-for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261025-layers1'),doc+' missing display update');
+for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261026-clarity2'),doc+' missing display update');
 console.log(`PASS: V12 data and clinical renderers unchanged; ${docs.length} pages; 46 headings, ${reviewed} help summaries and 46 recommendation guards verified; all Avoid wording retained.`);

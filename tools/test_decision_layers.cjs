@@ -34,8 +34,9 @@ for(const p of D.index){
  }
  for(const step of p.steps){const key=p.slug+'/'+step.id,c=D.assistants[key];for(const q of c.questions){
   const html=A.definitions(q,c.example[q.id],D.sources);
-  const rendered=A.render(c,D.sources,{},'empty');if(q.help&&!q.criteria.length)assert(rendered.includes('assistant-help-criteria'),'Short criteria use inline expansion');
-  assert(!/<details[^>]*\sopen(?:\s|>)/.test(html),'Criteria start as inline expansions');
+  const rendered=A.render(c,D.sources,{},'empty');if(q.help)assert(rendered.includes('<p class="assistant-help"'),'Help remains visible, not inside a closed disclosure');
+  const relevant=q.criteria.filter(x=>!x.show_for.length||x.show_for.includes(c.example[q.id]));
+  if(relevant.length||q.options.find(o=>o.value===c.example[q.id])?.details?.length)assert(/<details[^>]*\sopen(?:\s|>)/.test(html),'Relevant definitions start open');
   q.criteria.forEach(c=>{assert(html.includes(c.title));c.items.forEach(item=>assert(html.includes(item.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;'))));});
  }}
 }
@@ -45,10 +46,18 @@ assert(!/localStorage|sessionStorage|indexedDB|document\.cookie/.test(now+read('
 console.log(`PASS: 7 single-entry presets; ${questions} blank successive layers; ${rollbacks} same-decision and downstream rollbacks; unchanged clinical matcher and sources; criteria stay inline.`);
 
 const vm=require('node:vm'),app=read('transplant/assets/app.js');
-const box={window:{ContextualCopy:{}},active:{slug:'icca'},e:s=>String(s)};vm.createContext(box);
+const box={window:{ContextualCopy:{}},active:{slug:'icca',steps:[{id:'phenotype'}]},e:s=>String(s)};vm.createContext(box);
 vm.runInContext(section(app,'function layerQuestionRow(', 'function renderLayerStack('),box);
 const step={id:'phenotype',title:'Criteria'},q={id:'focality',label:'Distribution',options:[{value:'multiple',label:'Multiple lesions'}]};
 const core=box.layerQuestionRow(step,q,'multiple',1),risk=box.layerQuestionRow(step,q,'multiple',2,false,true);
 const ids=[...((core+risk).matchAll(/ id="([^"]+)"/g))].map(m=>m[1]);assert.equal(new Set(ids).size,ids.length,'Core and supplemental fields must have unique IDs');
 assert(core.includes('data-layer-question="focality"'));assert(risk.includes('data-layer-risk="focality"')&&risk.includes('data-risk-criteria'));
 console.log('PASS: core and supplemental focality questions have distinct controls and criteria targets.');
+assert(core.includes('data-record-finding=')&&core.includes('disabled'),'An explicit confirmation commits findings');
+assert(core.includes('data-cancel-finding=')&&core.includes('layer-stage-status'),'Unapplied selections have a status and cancel control');
+assert(app.includes('Criteria behind recorded findings'),'Selected threshold definitions remain visible alongside the next question');
+assert(app.includes('createStagedSession(active,DATA.assistants,false)'),'Ordinary entry is unanswered');
+assert(!app.includes('layer-next-action')&&!app.includes('data-layer-action'),'No redundant action selector');
+assert(read('assets/roadmap-flow.js').includes('data-open-topic'),'Topic navigation requires an explicit Open action');
+assert(!read('assets/roadmap-flow.js').includes('id="roadmap-next"'),'Conditional navigation is not duplicated in a dropdown');
+console.log('PASS: explicit finding and topic confirmation; blank entry; no single-option or condition-free navigation dropdowns.');
