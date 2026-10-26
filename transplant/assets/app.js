@@ -11,10 +11,9 @@ let view = DATA.mode === 'alignment' ? 'meeting' : 'pathway';
 let stepIndex = 0;
 let careId = 'treatment';
 let lastTrigger = null;
-let assistantSession = active ? DecisionAssistant.createStagedSession(active,DATA.assistants,!location.hash||location.hash==='#'+active.steps[0].id) : null;
+let assistantSession = active ? DecisionAssistant.createStagedSession(active,DATA.assistants,false) : null;
 let decisionTrail=[];
 let focusedCriteria=null;
-let layerActionTargets=[];
 let navigationObserver = null;
 let riskContext = {};
 let riskReference = null;
@@ -40,11 +39,11 @@ function header() {
 }
 
 function footer() {
- return `<footer><b>Suitability for liver transplantation and eligibility for MELD-exception points are assessed separately.</b> This draft supports, but does not replace, specialist judgment and the center’s full transplant evaluation. Proposed local decisions are not institutional approvals.<br><span>Language and next-action display revised October 25, 2026; pathway source review October 17, 2026 · OPTN policies checked October 24, 2026 (effective October 1, 2026) · NLRB guidance: December 2025. Check current requirements when submitting an exception request.</span></footer>`;
+ return `<footer><b>Suitability for liver transplantation and eligibility for MELD-exception points are assessed separately.</b> This draft supports, but does not replace, specialist judgment and the center’s full transplant evaluation. Proposed local decisions are not institutional approvals.<br><span>Source review: October 17–25, 2026 · OPTN policies checked October 24, 2026 (effective October 1, 2026) · NLRB guidance: December 2025. Check current requirements when submitting an exception request.</span></footer>`;
 }
 
 function home() {
- app.innerHTML = header()+`<main class="wrap home"><div class="homehero"><div><p class="eyebrow">Diagnosis → selection → disease control → transplant</p><h1>Liver transplant assessment and treatment pathways</h1><p class="lead">Transplant oncology pathways with the information to collect, the findings that change treatment or transplant plans, and the evidence beside each decision.</p></div><div class="how"><b>How to use the pathways</b><ol><li>Choose the tumor and current decision.</li><li>Start with the preselected transplant example, or clear all choices.</li><li>Change findings and follow the highlighted next step; read the criteria and key papers beside each choice.</li><li>Open evidence or an unresolved meeting question in context.</li></ol></div></div>
+ app.innerHTML = header()+`<main class="wrap home"><div class="homehero"><div><p class="eyebrow">Diagnosis → selection → disease control → transplant</p><h1>Liver transplant assessment and treatment pathways</h1><p class="lead">Transplant oncology pathways with the information to collect, the findings that change treatment or transplant plans, and the evidence beside each decision.</p></div><div class="how"><b>How to use the pathways</b><ol><li>Choose the tumor and current decision.</li><li>Choose each finding and confirm with “Use finding”. A labeled entry example is optional.</li><li>Change findings and follow the highlighted next step; read the criteria and key papers beside each choice.</li><li>Open evidence or an unresolved meeting question in context.</li></ol></div></div>
  <div class="searchbar"><label for="search">Find a pathway or clinical question</label><input id="search" type="search" placeholder="Try “LR-4”, “biopsy”, “CEA”, “nodes” or “unresectability”…" autocomplete="off"><p id="search-count" class="muted small" aria-live="polite">Seven disease-specific pathways · different step counts, one shared decision structure.</p></div>
  <section id="pathway-grid" class="pathway-grid" aria-label="Choose a pathway">${DATA.index.map(p=>`<article class="pathway-tile" data-slug="${p.slug}"><div class="tiletop"><span class="code">${e(p.code)}</span><span class="small muted">${p.steps.length} decisions</span></div><h2><a href="/mh-liver-pathways/transplant/${p.slug}/">${e(p.name)}</a></h2><span class="authority">${e(p.route)}</span><p>${e(p.entry)}</p><div class="tileflow">${e(p.steps[0].title)} <span>→</span> ${e(p.steps[p.steps.length-1].title)}</div><a class="tilego" href="/mh-liver-pathways/transplant/${p.slug}/">Open pathway <span>→</span></a></article>`).join('')}</section><section id="search-results" hidden aria-label="Matching decisions"></section>
  <section class="key"><div><span class="keyline go"></span><b>Proceed</b><p>The findings support reviewing the next decision.</p></div><div><span class="keyline hold"></span><b>Pause and clarify</b><p>Assign a clinician to resolve missing or uncertain information.</p></div><div><span class="keyline stop"></span><b>Stop and review</b><p>Read which decision is affected, then follow the stated assessment, treatment or continuing-care action.</p></div><div><span class="keyline discuss"></span><b>Meeting question</b><p>Compare sources and see the proposed local approach.</p></div></section></main>`+footer();
@@ -102,7 +101,7 @@ function renderOverview(){
  const status=exampleStatus();
  return `<section class="journey-overview" aria-labelledby="journey-title"><div class="journey-heading"><div><p class="eyebrow">The whole pathway</p><h2 id="journey-title">From diagnosis to transplant and follow-up</h2></div><a href="#care-treatment" data-care="treatment" class="journey-alternative">Browse treatment options →</a></div>
  <details class="journey-map" ${window.matchMedia('(max-width:760px)').matches||active.steps.some(s=>'#'+s.id===location.hash)?'':'open'}><summary>View the whole pathway</summary><nav class="journey-phases" aria-label="Pathway overview">${DATA.journeys[active.slug].map((phase,n)=>{const first=active.steps.findIndex(s=>s.id===phase.steps[0])+1;const last=first+phase.steps.length-1;const current=phase.steps.includes(active.steps[stepIndex].id);return `<button data-step="${e(phase.steps[0])}" class="journey-phase ${current?'current':''}" ${current?'aria-current="true"':''}><span class="phase-number">${n+1}</span><span><b>${e(phase.title)}</b><small>Decision${first===last?'':'s'} ${first}${first===last?'':'–'+last}</small></span><span class="phase-arrow" aria-hidden="true">→</span></button>`;}).join('')}</nav></details>
- <div class="example-controls"><div aria-live="polite"><strong data-example-status>${e(status[0])}</strong><p data-example-description>${e(status[1])}</p></div><div class="example-buttons"><button data-pathway-example>Restart with entry example</button><button data-pathway-clear>Clear all choices</button></div></div></section>`;
+ <div class="example-controls"><div aria-live="polite"><strong data-example-status>${e(status[0])}</strong><p data-example-description>${e(status[1])}</p></div><div class="example-buttons"><button data-pathway-example>Show entry example</button><button data-pathway-clear>Clear all choices</button></div></div></section>`;
 }
 
 function renderNavigation(){
@@ -111,7 +110,19 @@ function renderNavigation(){
 function layerQuestionRow(step,q,value,number,example=false,risk=false){
  const key=active.slug+'/'+step.id,short=window.ContextualCopy?.help?.[key+'/'+q.id]?.label||q.label;
  const selected=q.options.find(o=>o.value===value),id='layer-'+(risk?'risk-':'')+step.id+'-'+q.id;
- return `<div class="layer-row ${value?'is-chosen':'is-current'}"><span class="layer-number">${number}</span><div class="layer-choice"><label for="${e(id)}"><small>${e(step.title)}${example?' · entry example':''}</small>${e(short)}</label><select id="${e(id)}" data-layer-step="${e(step.id)}" data-layer-${risk?'risk':'question'}="${e(q.id)}"><option value="">Choose a finding…</option>${q.options.map(o=>`<option value="${e(o.value)}" ${o.value===value?'selected':''}>${e(o.label)}</option>`).join('')}</select>${selected?`<span class="layer-value">${e(selected.label)}</span>`:''}</div><button class="layer-criteria" data-layer-criteria="${e(q.id)}" data-layer-step="${e(step.id)}" ${risk?'data-risk-criteria':''}>Criteria</button></div>`;
+ const decision=active.steps.findIndex(s=>s.id===step.id)+1;
+ const help=window.ContextualCopy?.help?.[key+'/'+q.id]?.concise||q.help||'';
+ return `<div class="layer-row ${value?'is-chosen':'is-current'}"><span class="layer-number" title="Decision ${decision}">${decision}</span><div class="layer-choice"><label for="${e(id)}"><small>Decision ${decision} · ${e(step.title)}${example?' · entry example':''}${risk?' · safety / individual review':''}</small>${e(short)}</label>${help?`<p class="layer-help" id="${e(id)}-help">${e(help)}</p>`:''}<select id="${e(id)}" ${help?`aria-describedby="${e(id)}-help"`:''} data-committed="${e(value)}" data-layer-step="${e(step.id)}" data-layer-${risk?'risk':'question'}="${e(q.id)}"><option value="">Choose a finding…</option>${q.options.map(o=>`<option value="${e(o.value)}" ${o.value===value?'selected':''}>${e(o.label)}</option>`).join('')}</select><span class="layer-stage-status" role="status" hidden></span>${selected?`<span class="layer-value">${e(selected.label)}</span>`:''}</div><div class="layer-controls"><button class="layer-apply" data-record-finding="${e(id)}" disabled>${value?'Apply change':'Use finding'}</button><button class="layer-cancel" data-cancel-finding="${e(id)}" hidden>Cancel</button><button class="layer-criteria" data-layer-criteria="${e(q.id)}" data-layer-step="${e(step.id)}" ${risk?'data-risk-criteria':''}>Criteria &amp; sources</button></div></div>`;
+}
+function stageFinding(select){
+ const row=select.closest('.layer-row'),staged=select.value!==select.dataset.committed;
+ row.classList.toggle('is-staged',staged);row.querySelector('[data-record-finding]').disabled=!staged;row.querySelector('[data-cancel-finding]').hidden=!staged;
+ const status=row.querySelector('.layer-stage-status'),current=[...select.options].find(o=>o.value===select.dataset.committed)?.textContent;
+ status.hidden=!staged;status.textContent=staged?'Not applied — current: '+(select.dataset.committed?current:'no finding recorded')+'.':'';
+ const q=DATA.assistants[active.slug+'/'+select.dataset.layerStep]?.questions.find(q=>q.id===select.dataset.layerQuestion);
+ const definitions=document.querySelector(`.assistant-question:not([hidden]) [data-definitions="${select.dataset.layerQuestion}"]`);
+ if(q&&definitions)definitions.innerHTML=(staged?'<p class="layer-stage-status">Definitions for the unapplied selection; the result below still uses recorded findings.</p>':'')+DecisionAssistant.definitions(q,select.value,DATA.sources);
+ syncNavigationHeight();
 }
 function renderLayerStack(){
  const historyEl=document.getElementById('layer-history'),currentEl=document.getElementById('layer-current');if(!historyEl)return;
@@ -138,26 +149,34 @@ function renderLayerStack(){
   const riskRows=[...document.querySelectorAll('#risk-question-panel .risk-question')];let riskPending=false;
   riskRows.forEach(node=>{const select=node.querySelector('select'),id=select.dataset.riskQuestion,value=riskContext[assistantKey()]?.[id]||'';select.value=value;
    const allowed=coreDone&&!riskPending&&!stopEarly;node.hidden=!allowed;select.classList.add('layer-source-select');node.classList.add('layer-question-detail');
-   if(stopEarly){node.hidden=false;select.classList.remove('layer-source-select');return;}
+   if(stopEarly){node.hidden=false;select.classList.remove('layer-source-select');select.dataset.committed=value;const apply=document.createElement('button');apply.type='button';apply.className='layer-apply';apply.dataset.recordRisk=id;apply.textContent='Use finding';apply.disabled=true;node.append(apply);return;}
    if(!allowed)return;
-   const q={id,label:node.querySelector('label').textContent,options:[...select.options].slice(1).map(o=>({value:o.value,label:o.textContent}))};
+   const q={id,label:node.querySelector('label').textContent,help:node.querySelector('p')?.textContent||'',options:[...select.options].slice(1).map(o=>({value:o.value,label:o.textContent}))};
    const row=layerQuestionRow(current,q,value,++n,false,true);
    if(value){chosen+=row;node.hidden=true;}else{pending=row;riskPending=true;}
   });
   const riskSection=document.querySelector('.risk-questions');if(riskSection)riskSection.hidden=!riskRows.some(n=>!n.hidden);
  }
- historyEl.innerHTML=chosen;
- layerActionTargets=[];
+ const historyOpen=historyEl.querySelector('details')?.open||false;
+ const count=(chosen.match(/class="layer-row/g)||[]).length;
+ historyEl.innerHTML=chosen?`<details class="layer-history-disclosure" ${historyOpen?'open':''}><summary>Selected findings (${count}) · review or change</summary><div class="layer-history-rows">${chosen}</div></details>`:'';
  if(view==='pathway'){
   const config=assistantConfig(),answers=assistantSession.answers[assistantKey()],visible=DecisionAssistant.visibleQuestions(config,answers),last=visible[visible.length-1];
   const riskPending=!!document.querySelector('#risk-question-panel .risk-question:not([hidden])');
   const display=focusedCriteria||(!riskPending?(stopEarly?config.questions.filter(q=>answers[q.id]).at(-1)?.id:last.id):null);
   document.querySelectorAll('.assistant-question').forEach(node=>{const id=node.querySelector('select').dataset.assistantQuestion;node.hidden=id!==display;node.classList.add('layer-question-detail');node.querySelector('select').classList.add('layer-source-select');});
+  // Recorded threshold definitions remain visible while the next finding is answered.
+  document.querySelector('.recorded-criteria')?.remove();
+  const definitions=config.questions.filter(q=>answers[q.id]&&q.id!==display).map(q=>{
+   const criteria=q.criteria.filter(c=>!c.show_for.length||c.show_for.includes(answers[q.id]));
+   if(!criteria.length&&!q.options.find(o=>o.value===answers[q.id])?.details?.length)return '';
+   return DecisionAssistant.definitions({...q,criteria},answers[q.id],DATA.sources);
+  }).join('');
+  if(definitions){const group=document.createElement('section');group.className='recorded-criteria';group.innerHTML='<h4>Criteria behind recorded findings</h4>'+definitions;document.querySelector('.assistant-intro').after(group);}
   const allAnswered=config.questions.every(q=>!!answers[q.id]);
-  if((allAnswered&&!riskPending)||stopEarly){
-   layerActionTargets=[...document.querySelectorAll('#current-result .next-action > .route-button')].filter(node=>!node.closest('[data-afp-review]'));
-   if(layerActionTargets.length)pending=`<div class="layer-row is-current"><span class="layer-number">${n+1}</span><div class="layer-choice"><label for="layer-next-action">Next step</label><select id="layer-next-action" data-layer-action><option value="">Choose an action…</option>${layerActionTargets.map((node,i)=>`<option value="${i}">${e(node.textContent.trim().replace(/\s*→$/,''))}</option>`).join('')}</select></div><button class="layer-criteria" data-layer-options>Options &amp; criteria</button></div>`;
-  }
+  // Navigation is not another patient finding. Actions appear once, with their
+  // conditions in the result below; never ask the reader to select a sole route.
+  if((allAnswered&&!riskPending)||stopEarly)pending=`<div class="layer-complete"><span>Decision ${stepIndex+1} · findings recorded</span><button data-layer-options>View result &amp; next actions ↓</button></div>`;
  }else pending=`<div class="layer-care"><b>Care plan: ${e(DATA.care[active.slug].find(c=>c.id===careId)?.title||careId)}</b><button data-view="pathway">Review findings</button></div>`;
  if(view==='pathway'){
   const missingRisk=!stopEarly&&!!document.querySelector('#risk-question-panel .risk-question:not([hidden])');
@@ -177,7 +196,17 @@ function editLayer(stepId,id,value){
  else decisionTrail=decisionTrail.filter(x=>active.steps.findIndex(s=>s.id===x)<index);
  stepIndex=index;view='pathway';focusedCriteria=null;RiskRouting.clearFrom(riskContext,active,index);
  history.replaceState(null,'','#'+stepId);renderView();
- const next=document.querySelector('#layer-current select')||document.querySelector('#layer-history select:last-of-type');next?.focus({preventScroll:true});
+ const next=document.querySelector('#layer-current select')||document.querySelector('#current-result h4');if(next){if(next.tagName!=='SELECT')next.setAttribute('tabindex','-1');next.focus({preventScroll:true});}
+}
+function recordRiskFinding(step,id,value){
+ const index=active.steps.findIndex(s=>s.id===step);if(index<0)return;
+ if(index!==stepIndex){const found=decisionTrail.indexOf(step);decisionTrail=found>=0?decisionTrail.slice(0,found):[];stepIndex=index;view='pathway';history.replaceState(null,'','#'+step);renderView();}
+ const key=assistantKey();riskContext[key]||={};
+ const questions=[...document.querySelectorAll('#risk-question-panel [data-risk-question]')].map(n=>n.dataset.riskQuestion),position=questions.indexOf(id);
+ questions.slice(position+1).forEach(q=>delete riskContext[key][q]);riskContext[key][id]=value;
+ if(id==='ici')delete riskContext[key].ici_review;
+ RiskRouting.clearFrom(riskContext,active,stepIndex+1);DecisionAssistant.clearFrom(assistantSession,active,stepIndex+1);assistantSession.origins[key]='edited';
+ focusedCriteria=null;updateDecision();document.querySelector('#layer-current select')?.focus({preventScroll:true});
 }
 function showLayerCriteria(stepId,id,riskQuestion=false){
  const index=active.steps.findIndex(s=>s.id===stepId);if(index<0)return;
@@ -394,9 +423,8 @@ function renderStep(){
 }
 
 function renderMeeting(){
- return `<section class="meetingintro"><div><p class="eyebrow">Source comparison + local decision record</p><h2>Questions to resolve together</h2><p>Each question below is linked from the relevant pathway step. Source wording and our proposed interpretation are separate. <b>No local proposal is marked approved.</b></p></div><div class="docbox"><b>Protocol & meeting documents</b><a href="${active.protocol}" download>Clinical protocol · Oct 16 V3 DOCX ↓</a>${active.docs.map(d=>`<a href="${d.url}" download>${e(d.label)} · Oct 16 DOCX ↓</a>`).join('')}<a href="/mh-liver-pathways/transplant/meeting-records/${active.slug}.html" target="_blank" rel="noopener">Current web alignment record · print / save ↓</a><small>Word downloads retain their October 16 wording; the website language was revised October 24. Reconcile agreed changes in the source documents before clinical activation.</small></div></section>
- <div class="versionnote"><b>Version clarity:</b> the web source-comparison addendum was reviewed October 17, with language and next-action revisions October 24. The linked V3 Word documents retain their October 16/source wording. Record an agreed change there before clinical activation.</div>
- <aside class="high-risk-doc-note">${HighRisk.badge()}<p>Specific V7 reviews appear with matching next-step choices. The reference index retains all proposed criteria, study results and full-text access.</p><a href="#high-risk" data-view="high-risk">Open the integrated high-risk protocols →</a>${HighRisk.downloads(DATA.high_risk,active.slug)}</aside><nav class="issue-index" aria-label="Meeting questions">${active.issues.map((i,n)=>`<a href="#${i.id}" data-issue="${i.id}">${n+1}. ${e(i.question)}</a>`).join('')}</nav>
+ return `<section class="meetingintro"><div><p class="eyebrow">Source comparison + local decision record</p><h2>Questions to resolve together</h2><p>Each question is linked from its pathway decision. Source wording and proposed local interpretation are separate. <b>No local proposal is marked approved.</b></p></div><div class="docbox"><b>Protocol & meeting documents</b><a href="${active.protocol}" download>Clinical protocol · Word ↓</a>${active.docs.map(d=>`<a href="${d.url}" download>${e(d.label)} · Word ↓</a>`).join('')}<a href="/mh-liver-pathways/transplant/meeting-records/${active.slug}.html" target="_blank" rel="noopener">Web alignment record · print / save ↓</a><small>Each document retains its source-review dates. Record the group decision, responsible owner and approval before clinical activation.</small></div></section>
+ <aside class="high-risk-doc-note">${HighRisk.badge()}<p>Individual reviews appear with the relevant findings and next-step choices.</p><a href="#high-risk" data-view="high-risk">High-risk protocols and evidence →</a>${HighRisk.downloads(DATA.high_risk,active.slug)}</aside><nav class="issue-index" aria-label="Meeting questions">${active.issues.map((i,n)=>`<a href="#${i.id}" data-issue="${i.id}">${n+1}. ${e(i.question)}</a>`).join('')}</nav>
  <div class="issue-records">${active.issues.map((i,n)=>renderIssue(i,n)).join('')}</div>`;
 }
 
@@ -470,26 +498,19 @@ document.addEventListener('input',ev=>{
 
 document.addEventListener('change',ev=>{
  if(!active)return;
- if(ev.target.matches('[data-layer-action]')){const target=layerActionTargets[Number(ev.target.value)];if(ev.target.value!==''&&target)target.click();return;}
- if(ev.target.matches('[data-layer-risk]')){const id=ev.target.dataset.layerRisk,value=ev.target.value,step=ev.target.dataset.layerStep,index=active.steps.findIndex(s=>s.id===step);if(index!==stepIndex){const found=decisionTrail.indexOf(step);decisionTrail=found>=0?decisionTrail.slice(0,found):[];stepIndex=index;view='pathway';history.replaceState(null,'','#'+step);renderView();}const select=document.getElementById('risk-'+id);if(select){select.value=value;select.dispatchEvent(new Event('change',{bubbles:true}));}return;}
- if(ev.target.matches('[data-layer-question]')){editLayer(ev.target.dataset.layerStep,ev.target.dataset.layerQuestion,ev.target.value);return;}
+ if(ev.target.matches('[data-layer-question],[data-layer-risk]')){stageFinding(ev.target);return;}
  if(ev.target.matches('[data-care-select]')){careId=ev.target.value;careOriginToken=null;view='care';history.replaceState(null,'','#care-'+careId);renderView();document.querySelector('.care-alternatives').open=true;document.getElementById('care-topic').focus();return;}
  const riskId=ev.target.dataset.riskQuestion;
- if(riskId){
-  const key=assistantKey();riskContext[key]||={};
-  const questions=[...document.querySelectorAll('#risk-question-panel [data-risk-question]')].map(n=>n.dataset.riskQuestion),position=questions.indexOf(riskId);
-  questions.slice(position+1).forEach(id=>delete riskContext[key][id]);
-  riskContext[key][riskId]=ev.target.value;
-  if(riskId==='ici')delete riskContext[key].ici_review;
-  RiskRouting.clearFrom(riskContext,active,stepIndex+1);DecisionAssistant.clearFrom(assistantSession,active,stepIndex+1);assistantSession.origins[key]='edited';
-  focusedCriteria=null;updateDecision();document.querySelector('#layer-current select')?.focus({preventScroll:true});return;
- }
+ if(riskId){const button=ev.target.closest('.risk-question').querySelector('[data-record-risk]');if(button)button.disabled=ev.target.value===ev.target.dataset.committed;return;}
  const id=ev.target.dataset.assistantQuestion;if(!id)return;
  const config=assistantConfig(),q=config.questions.find(q=>q.id===id);if(!q)return;
  editLayer(active.steps[stepIndex].id,id,ev.target.value);
 });
 
 document.addEventListener('click',ev=>{
+ const cancel=ev.target.closest('[data-cancel-finding]');if(cancel){const select=document.getElementById(cancel.dataset.cancelFinding);select.value=select.dataset.committed;select.dispatchEvent(new Event('change',{bubbles:true}));select.focus();return;}
+ const record=ev.target.closest('[data-record-finding]');if(record&&!record.disabled){const select=document.getElementById(record.dataset.recordFinding);if(select.dataset.layerRisk)recordRiskFinding(select.dataset.layerStep,select.dataset.layerRisk,select.value);else editLayer(select.dataset.layerStep,select.dataset.layerQuestion,select.value);return;}
+ const recordRisk=ev.target.closest('[data-record-risk]');if(recordRisk&&!recordRisk.disabled){const select=document.getElementById('risk-'+recordRisk.dataset.recordRisk);recordRiskFinding(active.steps[stepIndex].id,recordRisk.dataset.recordRisk,select.value);return;}
  const criteria=ev.target.closest('[data-layer-criteria]');if(criteria){showLayerCriteria(criteria.dataset.layerStep,criteria.dataset.layerCriteria,criteria.hasAttribute('data-risk-criteria'));return;}
  if(ev.target.closest('[data-layer-options]')){const target=document.getElementById('current-result');target.querySelectorAll('.branch-details').forEach(d=>d.open=true);target.scrollIntoView({block:'start',behavior:'instant'});return;}
  const highRisk=ev.target.closest('[data-high-risk]');if(highRisk){ev.preventDefault();showHighRisk(highRisk.dataset.highRisk);return;}
@@ -521,6 +542,7 @@ document.getElementById('source-dialog').addEventListener('close',()=>lastTrigge
 window.addEventListener('popstate',()=>{if(window.ContextualInfo?.handleHistory())return;active?hashState():null;});
 window.addEventListener('hashchange',()=>active?hashState():null);
 document.addEventListener('keydown',ev=>{
+ if(ev.key==='Escape'&&ev.target.matches('[data-layer-question],[data-layer-risk]')){ev.target.value=ev.target.dataset.committed;stageFinding(ev.target);return;}
  if(!ev.target.matches('[role="tab"]')||!['ArrowLeft','ArrowRight','Home','End'].includes(ev.key))return;
  ev.preventDefault();const tabs=[...document.querySelectorAll('[role="tab"]')];let n=tabs.indexOf(ev.target);
  n=ev.key==='Home'?0:ev.key==='End'?tabs.length-1:(n+(ev.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;

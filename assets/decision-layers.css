@@ -1,4 +1,27 @@
 /* The same display hierarchy serves both roadmaps and transplant decisions. */
+.study-appraisals{margin-top:20px}
+.study-appraisal{margin:8px 0;padding:12px 16px;border:1px solid #d7dfda;border-radius:7px;background:#fff}
+.study-appraisal>summary{cursor:pointer;font-weight:600;line-height:1.45}
+.study-appraisal p{line-height:1.55}
+.layer-history-disclosure{margin:0;border:0;background:transparent}
+.layer-history-disclosure>summary{padding:9px 14px;font:600 12px/1.4 var(--sans,system-ui);color:#315b52;cursor:pointer}
+.layer-history-rows{max-height:min(28dvh,240px);overflow:auto}
+.layer-complete{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 14px;font:500 12px/1.4 var(--sans,system-ui)}
+.layer-complete button{border:1px solid #c0d2cb;background:#fff;color:#205f53;border-radius:5px;padding:7px 10px;cursor:pointer}
+.roadmap-history-list{margin:0;padding:4px 18px 4px 34px;font:13px/1.45 var(--sans,system-ui)}
+.roadmap-history-list button{background:transparent;border:0;text-align:left;color:#205f53;text-decoration:underline;cursor:pointer;font:inherit}
+.roadmap-history-list p{margin:2px 0 8px;color:#53665f}
+.layer-history-note{font:12px/1.4 var(--sans,system-ui);padding:0 14px;color:#53665f}
+.layer-controls{display:flex;flex-direction:column;gap:5px;flex-shrink:0}
+.layer-help{margin:4px 0 8px;font:400 12px/1.45 var(--sans,system-ui);color:#324c41;overflow-wrap:anywhere}
+.layer-row.is-chosen .layer-help{display:none}.layer-row.is-staged .layer-help{display:block}
+.layer-stage-status{display:block;margin-top:5px;font:600 12px/1.4 var(--sans,system-ui);color:#79500f;overflow-wrap:anywhere}
+.layer-stage-status[hidden],.layer-cancel[hidden]{display:none}
+.layer-cancel{font:500 12px/1.4 var(--sans,system-ui);padding:5px 10px;border:1px solid #c6d5ce;border-radius:5px;color:#315b4b;background:#fff;cursor:pointer}
+.layer-row.is-staged{box-shadow:inset 3px 0 #af7b24}
+.recorded-criteria{margin:12px 0}.recorded-criteria>h4{font-size:13px;color:#425c50;margin:6px 0}
+.layer-apply{font:600 12px/1.4 var(--sans,system-ui);padding:8px 12px;background:#205f53;color:white;border:1px solid #205f53;border-radius:5px;cursor:pointer}
+.layer-apply:disabled{background:#edf2ef;color:#667a72;border-color:#d1ded9;cursor:default}
 .layer-nav,.roadmap-streamlined .rf-selector{display:block;position:sticky;top:0;z-index:45;background:#fff;border:1px solid #b9cdc8;border-radius:10px;box-shadow:0 4px 16px #173c3020;padding:0;overflow:visible;margin:18px 0}
 .layer-heading{display:flex;align-items:center;gap:12px;padding:8px 14px;color:#204d46;font:600 12px/1.35 var(--sans,system-ui)}
 .layer-heading>b{margin-right:auto}.layer-heading button,.layer-heading a{font:500 12px var(--sans,system-ui);padding:5px 8px;color:#205f53;background:#f3f8f6;border:1px solid #d1ded9;border-radius:5px;cursor:pointer}
@@ -28,6 +51,7 @@
 @media print{.layer-nav,.rf-selector{display:none!important}.assistant-question[hidden],.risk-question[hidden]{display:block!important}.layer-question-detail .layer-source-select{display:block!important}.assistant-criteria,.branch-details,.rf-criteria,#answer details.more{break-inside:avoid}}
 
 @media(min-width:761px){.layer-history .layer-choice{display:grid;grid-template-columns:minmax(180px,30%) minmax(0,1fr);gap:8px;align-items:center}.layer-history .layer-choice label{margin:0!important}.layer-history .layer-choice label small{display:block}.layer-history .layer-value{display:none}.layer-history .layer-row{min-height:55px}.layer-history{max-height:30dvh}}
+.layer-history .layer-help,.layer-history .layer-stage-status{grid-column:1 / -1}
 .layer-source-select{display:none!important}
 
 .rf-background-reference{border:1px solid #d4e0da;background:#fff;border-radius:8px;padding:10px 14px;margin:14px 0}.rf-background-reference>summary{cursor:pointer;font:600 13px/1.4 var(--sans,system-ui);color:#305d4d}.rf-background-reference[open]>summary{margin-bottom:12px}

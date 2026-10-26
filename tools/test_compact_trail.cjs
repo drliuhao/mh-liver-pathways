@@ -35,3 +35,16 @@ assert.equal(labels.core['pcca/phenotype/diagnosis'].label,'Diagnosis / biopsy h
 assert.equal(labels.riskById.visible.label,'Treated-lesion interpretation');
 assert.equal(labels.riskById.molecular.label,'Molecular result outside criteria');
 console.log('PASS: missing editor criteria cannot fall through to navigation; reviewed qualifiers and non-verdict labels retained.');
+assert(js.includes("historyEl.querySelectorAll('.layer-row')"),'Nested fallback history remains compatible');
+assert(js.includes("select.value=select.dataset.committed;select.dispatchEvent"),'Closing an editor discards its unapplied draft');
+assert(js.includes('Unapplied choice. Use Apply change'),'No false announcement that staging cleared findings');
+assert(!js.includes('Choice changed. Later findings cleared'),'Staging is not clinical commitment');
+assert(js.includes("location.hash.startsWith('#decision-')")&&js.includes(':select.value'),'Initial topic chip resolves without a hash');
+assert(read('assets/compact-trail.css').includes('.compact-trail .layer-help{display:block'),'Active thresholds are not hidden by compact mode');
+const closer=js.slice(js.indexOf(' function closeEditor('),js.indexOf(' function openEditor('));
+let changed=0,focused=0;
+const draft={value:'unapplied',dataset:{committed:'recorded'},dispatchEvent(){changed++;}};
+const state={open:{focus(){focused++;}},editors:{hidden:false,querySelectorAll(s){return s==='select[data-committed]'?[draft]:[];}},current:{hidden:true},history:{querySelectorAll(){return [];}}};
+const closeContext={Event:class Event{},state};vm.createContext(closeContext);vm.runInContext(closer+';closeEditor(state);',closeContext);
+assert.equal(draft.value,'recorded');assert.equal(changed,1);assert.equal(focused,1);assert(state.editors.hidden&&!state.current.hidden);
+console.log('PASS: compact integration retains explicit confirmation, cancel-on-close, visible threshold help and source topic labels.');

@@ -1015,12 +1015,8 @@
           "url": "/mh-liver-pathways/evidence/2026-10-25/docs/HCC_B1_1_AFP_Evidence_and_Open_Meeting_Record_v12.docx"
         },
         {
-          "label": "V12 HCC alignment and meeting decisions",
+          "label": "HCC alignment and meeting decisions",
           "url": "/mh-liver-pathways/evidence/2026-10-25/docs/01_HCC_Alignment_and_Meeting_Decisions_v12.docx"
-        },
-        {
-          "label": "V12 complete protocol",
-          "url": "/mh-liver-pathways/evidence/2026-10-25/docs/01_HCC_Standard_Guidance_Aligned_Protocol_v12.docx"
         },
         {
           "label": "Decision document",
@@ -1702,10 +1698,6 @@
       "protocol": "/mh-liver-pathways/evidence/2026-10-25/docs/02_PCCA_Standard_Guidance_Aligned_Protocol_v12.docx",
       "docs": [
         {
-          "label": "V12 complete protocol",
-          "url": "/mh-liver-pathways/evidence/2026-10-25/docs/02_PCCA_Standard_Guidance_Aligned_Protocol_v12.docx"
-        },
-        {
           "label": "Decision document",
           "url": "/mh-liver-pathways/transplant/docs/02_Perihilar_CCA_Alignment_Meeting_Decision_Document_2026-10-16_v3.docx"
         },
@@ -2269,10 +2261,6 @@
       ],
       "protocol": "/mh-liver-pathways/evidence/2026-10-25/docs/03_ICCA_Standard_Guidance_Aligned_Protocol_v12.docx",
       "docs": [
-        {
-          "label": "V12 complete protocol",
-          "url": "/mh-liver-pathways/evidence/2026-10-25/docs/03_ICCA_Standard_Guidance_Aligned_Protocol_v12.docx"
-        },
         {
           "label": "Decision document",
           "url": "/mh-liver-pathways/transplant/docs/03_iCCA_Alignment_Meeting_Decision_Document_2026-10-16_v3.docx"
@@ -3120,10 +3108,6 @@
       ],
       "protocol": "/mh-liver-pathways/evidence/2026-10-25/docs/04_CRLM_Standard_Guidance_Aligned_Protocol_v12.docx",
       "docs": [
-        {
-          "label": "V12 complete protocol",
-          "url": "/mh-liver-pathways/evidence/2026-10-25/docs/04_CRLM_Standard_Guidance_Aligned_Protocol_v12.docx"
-        },
         {
           "label": "Decision document",
           "url": "/mh-liver-pathways/transplant/docs/04_CRLM_Alignment_Meeting_Decision_Document_2026-10-16_v3.docx"
@@ -5104,7 +5088,7 @@
     "V12-AFP_RESPONSE": {
       "short": "Mehta 2019: AFP response",
       "title": "Alpha-Fetoprotein Decrease from > 1,000 to < 500 ng/mL in Patients with Hepatocellular Carcinoma Leads to Improved Posttransplant Outcomes.",
-      "kind": "Full-text clinical evidence",
+      "kind": "Retrospective cohort",
       "locator": "Main PDF pp 3–9; Tables 1–3 and Figures 1–3.",
       "url": "https://doi.org/10.1002/hep.30413",
       "doi": "10.1002/hep.30413",
@@ -5114,7 +5098,7 @@
     "V12-AFP_500": {
       "short": "Goldman 2022: final AFP ≥500",
       "title": "Lower Alpha-Fetoprotein Threshold of 500 ng/mL for Liver Transplantation May Improve Posttransplant Outcomes in Patients With Hepatocellular Carcinoma.",
-      "kind": "Full-text clinical evidence",
+      "kind": "Retrospective cohort",
       "locator": "Main PDF pp 4–9; Tables 1–3 and Figures 1–3.",
       "url": "https://doi.org/10.1002/lt.26392",
       "doi": "10.1002/lt.26392",
@@ -5124,7 +5108,7 @@
     "V12-AFP_SLOPE": {
       "short": "Giard 2018: AFP slope",
       "title": "Alpha-Fetoprotein Slope >7.5 ng/mL per Month Predicts Microvascular Invasion and Tumor Recurrence After Liver Transplantation for Hepatocellular Carcinoma.",
-      "kind": "Full-text clinical evidence",
+      "kind": "Retrospective cohort",
       "locator": "Main PDF pp 2–6; Tables 1–4 and Figure 1.",
       "url": "https://doi.org/10.1097/TP.0000000000002094",
       "doi": "10.1097/TP.0000000000002094",
@@ -5134,7 +5118,7 @@
     "V12-AFP_NYCA": {
       "short": "Halazun 2021: dynamic AFP/NYCA",
       "title": "Dynamic α-Fetoprotein Response and Outcomes After Liver Transplant for Hepatocellular Carcinoma.",
-      "kind": "Full-text clinical evidence",
+      "kind": "Retrospective validation cohort",
       "locator": "Main PDF pp 1–8; Table 1, Figures 1–3. Trailing commentary is not a separate reviewed study.",
       "url": "https://doi.org/10.1001/jamasurg.2021.0954",
       "doi": "10.1001/jamasurg.2021.0954",
@@ -5144,7 +5128,7 @@
     "V12-AFP_OCCULT": {
       "short": "Moriyama 2026: markers before imaging recurrence",
       "title": "Management and Prognosis of HCC Patients With Elevated Tumor Markers but no Imaging Recurrence After Radiofrequency Ablation.",
-      "kind": "Full-text clinical evidence",
+      "kind": "Retrospective cohort",
       "locator": "All nine main-PDF pages; methods, Tables 2–4, Figures 1–3. External Tables S1/S2 not supplied.",
       "url": "https://doi.org/10.1002/cam4.71812",
       "doi": "10.1002/cam4.71812",
@@ -5154,7 +5138,7 @@
     "V12-SHARP": {
       "short": "SHARP: sorafenib",
       "title": "Sorafenib in Advanced Hepatocellular Carcinoma",
-      "kind": "Full-text clinical evidence",
+      "kind": "Randomized phase III trial",
       "locator": "NEJM main PDF pp 1–13, especially efficacy and safety Tables 2–3.",
       "url": "https://doi.org/10.1056/NEJMoa0708857",
       "doi": "10.1056/NEJMoa0708857",
@@ -5164,7 +5148,7 @@
     "V12-ASCO_BTC": {
       "short": "ASCO BTC living guideline 2026.1.0",
       "title": "Treatment of Advanced Biliary Tract Cancer: ASCO Living Guideline, Version 2026.1.0.",
-      "kind": "Full-text clinical evidence",
+      "kind": "Clinical guidance",
       "locator": "All 56 pages; recommendations Table 1 pp 40–42; Figure 1 p 34 visually inspected. Separate data supplement not reviewed.",
       "url": "https://doi.org/10.1200/JCO-26-02462",
       "doi": "10.1200/JCO-26-02462",
@@ -5174,7 +5158,7 @@
     "V12-NALIRICC": {
       "short": "NALIRICC: negative BTC randomized trial",
       "title": "Nanoliposomal irinotecan and fluorouracil plus leucovorin versus fluorouracil plus leucovorin in patients with cholangiocarcinoma and gallbladder carcinoma previously treated with gemcitabine-based therapies (AIO NALIRICC): a multicentre, open-label, randomised, phase 2 trial",
-      "kind": "Full-text clinical evidence",
+      "kind": "Randomized phase II trial",
       "locator": "Main PDF pp 1–11; Figure 2 and Tables 1–3.",
       "url": "https://doi.org/10.1016/S2468-1253(24)00119-5",
       "doi": "10.1016/S2468-1253(24)00119-5",
@@ -5184,7 +5168,7 @@
     "V12-MOUNTAINEER": {
       "short": "MOUNTAINEER final: HER2-positive CRC",
       "title": "Tucatinib plus trastuzumab for chemotherapy-refractory, HER2 + , RAS wild-type metastatic colorectal cancer (MOUNTAINEER): final analysis.",
-      "kind": "Full-text clinical evidence",
+      "kind": "Noncomparative phase II study",
       "locator": "All 12 main-PDF pages; methods, efficacy Table 2, safety Table 4 and biomarker figures.",
       "url": "https://doi.org/10.1038/s41467-025-67824-z",
       "doi": "10.1038/s41467-025-67824-z",
@@ -5194,7 +5178,7 @@
     "V12-SUNLIGHT": {
       "short": "SUNLIGHT: FTD/TPI plus bevacizumab",
       "title": "Trifluridine-Tipiracil and Bevacizumab in Refractory Metastatic Colorectal Cancer.",
-      "kind": "Full-text clinical evidence",
+      "kind": "Randomized phase III trial",
       "locator": "All 11 main-PDF pages; Figures 1–2 and Tables 1–2.",
       "url": "https://doi.org/10.1056/NEJMoa2214963",
       "doi": "10.1056/NEJMoa2214963",
@@ -5204,7 +5188,7 @@
     "V12-FRESCO2": {
       "short": "FRESCO-2: fruquintinib",
       "title": "Fruquintinib versus placebo in patients with refractory metastatic colorectal cancer (FRESCO-2): an international, multicentre, randomised, double-blind, phase 3 study.",
-      "kind": "Full-text clinical evidence",
+      "kind": "Randomized phase III trial",
       "locator": "All 13 main-PDF pages; Figures 2–3 and Tables 1–3.",
       "url": "https://doi.org/10.1016/S0140-6736(23)00772-9",
       "doi": "10.1016/S0140-6736(23)00772-9",
@@ -5214,7 +5198,7 @@
     "V12-CASSANDRA": {
       "short": "CASSANDRA: preoperative PAXG",
       "title": "Preoperative mFOLFIRINOX versus PAXG for stage I–III resectable and borderline resectable pancreatic ductal adenocarcinoma (PACT-21 CASSANDRA): results of the first randomisation analysis of a randomised, open-label, 2 × 2 factorial phase 3 trial",
-      "kind": "Full-text clinical evidence",
+      "kind": "Randomized phase III trial",
       "locator": "All 12 main-PDF pages; endpoint definition, Figure 3 and Tables 1–3.",
       "url": "https://doi.org/10.1016/S0140-6736(25)01685-X",
       "doi": "10.1016/S0140-6736(25)01685-X",
@@ -5224,7 +5208,7 @@
     "V12-NAPOLI1": {
       "short": "NAPOLI-1: nal-IRI after gemcitabine",
       "title": "Nanoliposomal irinotecan with fluorouracil and folinic acid in metastatic pancreatic cancer after previous gemcitabine-based therapy (NAPOLI-1): a global, randomised, open-label, phase 3 trial.",
-      "kind": "Full-text clinical evidence",
+      "kind": "Randomized phase III trial",
       "locator": "All 13 main-PDF pages; Figures 1–3 and Tables 1–3.",
       "url": "https://doi.org/10.1016/S0140-6736(15)00986-1",
       "doi": "10.1016/S0140-6736(15)00986-1",
@@ -5234,7 +5218,7 @@
     "V12-MIXED_PRIMARY": {
       "short": "Kobayashi 2018: combined HCC-CCA",
       "title": "Multicenter retrospective analysis of systemic chemotherapy for unresectable combined hepatocellular and cholangiocarcinoma.",
-      "kind": "Full-text clinical evidence",
+      "kind": "Retrospective cohort",
       "locator": "All nine main-PDF pages; Table 2 and Figure 3 p 5 visually inspected; Table 3 p 6.",
       "url": "https://doi.org/10.1111/cas.13656",
       "doi": "10.1111/cas.13656",
@@ -11226,7 +11210,7 @@
         ],
         "documents": [
           {
-            "label": "V12 high-risk protocol · DOCX",
+            "label": "High-risk protocol · Word",
             "url": "/mh-liver-pathways/evidence/2026-10-25/docs/01_HCC_High_Risk_Protocol_v12.docx",
             "format": "docx"
           }
@@ -11480,7 +11464,7 @@
         ],
         "documents": [
           {
-            "label": "V12 high-risk protocol · DOCX",
+            "label": "High-risk protocol · Word",
             "url": "/mh-liver-pathways/evidence/2026-10-25/docs/02_PCCA_High_Risk_Protocol_v12.docx",
             "format": "docx"
           }
@@ -11771,7 +11755,7 @@
         ],
         "documents": [
           {
-            "label": "V12 high-risk protocol · DOCX",
+            "label": "High-risk protocol · Word",
             "url": "/mh-liver-pathways/evidence/2026-10-25/docs/03_ICCA_High_Risk_Protocol_v12.docx",
             "format": "docx"
           }
@@ -12124,7 +12108,7 @@
         ],
         "documents": [
           {
-            "label": "V12 high-risk protocol · DOCX",
+            "label": "High-risk protocol · Word",
             "url": "/mh-liver-pathways/evidence/2026-10-25/docs/04_CRLM_High_Risk_Protocol_v12.docx",
             "format": "docx"
           }
@@ -12430,13 +12414,13 @@
         "documents": [
           {
             "url": "/mh-liver-pathways/transplant/high-risk/docs/05_NELM_High_Risk_Protocol_v7.pdf",
-            "label": "V7 high-risk protocol · PDF",
+            "label": "High-risk protocol · PDF",
             "format": "pdf",
             "sha256": "cbf1090476a0c446afae784a12b0db2be0f1963859919969ddb86a921aa60cab"
           },
           {
             "url": "/mh-liver-pathways/transplant/high-risk/docs/05_NELM_High_Risk_Protocol_v7.docx",
-            "label": "V7 high-risk protocol · DOCX",
+            "label": "High-risk protocol · Word",
             "format": "docx",
             "sha256": "a6490652635729552f29aa0465101c1964ca6196a98ed90ee952ab86295faefe"
           }
@@ -12621,13 +12605,13 @@
         "documents": [
           {
             "url": "/mh-liver-pathways/transplant/high-risk/docs/06_HEHE_Clinical_Protocol_Boundary_Addendum_v7.pdf",
-            "label": "V7 high-risk boundary addendum · PDF",
+            "label": "High-risk boundary addendum · PDF",
             "format": "pdf",
             "sha256": "23cad6850ee620740d60a0e099da76066ee061471ccdf4f62a74a87b30b4aee6"
           },
           {
             "url": "/mh-liver-pathways/transplant/high-risk/docs/06_HEHE_Clinical_Protocol_Boundary_Addendum_v7.docx",
-            "label": "V7 high-risk boundary addendum · DOCX",
+            "label": "High-risk boundary addendum · Word",
             "format": "docx",
             "sha256": "55252cdb7bc8c33761a79ff229ef38502150e857037221515ee4640447c88c89"
           }
@@ -12803,13 +12787,13 @@
         "documents": [
           {
             "url": "/mh-liver-pathways/transplant/high-risk/docs/07_HCA_Clinical_Protocol_Boundary_Addendum_v7.pdf",
-            "label": "V7 high-risk boundary addendum · PDF",
+            "label": "High-risk boundary addendum · PDF",
             "format": "pdf",
             "sha256": "4d00c4b5386bdbaedc6c8dde26ae97c4639ba0a1b9271ccc1b2bc1cd43e07d5d"
           },
           {
             "url": "/mh-liver-pathways/transplant/high-risk/docs/07_HCA_Clinical_Protocol_Boundary_Addendum_v7.docx",
-            "label": "V7 high-risk boundary addendum · DOCX",
+            "label": "High-risk boundary addendum · Word",
             "format": "docx",
             "sha256": "d24f6ccfba48fd719951ed0171bcc6c97ac54cce16f8e716fc9cc10679ae2765"
           }
@@ -15390,13 +15374,6 @@
             "step": null,
             "care": "supportive",
             "url": null
-          },
-          {
-            "label": "V12 full-text appraisals",
-            "detail": "",
-            "step": null,
-            "care": null,
-            "url": "/mh-liver-pathways/evidence/2026-10-25/#afp_response"
           }
         ],
         "endpoint": false
@@ -15506,13 +15483,6 @@
             "step": null,
             "care": null,
             "url": "https://drliuhao.github.io/mh-liver-pathways/transplant/high-risk/hcc/#hcc-b3"
-          },
-          {
-            "label": "V12 full-text appraisals",
-            "detail": "",
-            "step": null,
-            "care": null,
-            "url": "/mh-liver-pathways/evidence/2026-10-25/#afp_response"
           }
         ],
         "endpoint": false
@@ -15728,13 +15698,6 @@
             "step": null,
             "care": null,
             "url": "https://drliuhao.github.io/mh-liver-pathways/systemic/?tumor=pcca"
-          },
-          {
-            "label": "V12 full-text appraisals",
-            "detail": "",
-            "step": null,
-            "care": null,
-            "url": "/mh-liver-pathways/evidence/2026-10-25/#asco_btc"
           }
         ],
         "endpoint": false
@@ -15843,13 +15806,6 @@
             "step": null,
             "care": null,
             "url": "https://drliuhao.github.io/mh-liver-pathways/systemic/?tumor=icca"
-          },
-          {
-            "label": "V12 full-text appraisals",
-            "detail": "",
-            "step": null,
-            "care": null,
-            "url": "/mh-liver-pathways/evidence/2026-10-25/#asco_btc"
           }
         ],
         "endpoint": false
@@ -15964,13 +15920,6 @@
             "step": null,
             "care": null,
             "url": "https://drliuhao.github.io/mh-liver-pathways/transplant/high-risk/crlm/#crlm-b2"
-          },
-          {
-            "label": "V12 full-text appraisals",
-            "detail": "",
-            "step": null,
-            "care": null,
-            "url": "/mh-liver-pathways/evidence/2026-10-25/#mountaineer"
           }
         ],
         "endpoint": false

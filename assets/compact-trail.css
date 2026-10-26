@@ -95,6 +95,14 @@
 .compact-trail .ct-scroll-button[hidden]{display:none}
 @media(max-width:760px){.compact-trail .ct-scroll-button{display:none}}
 
+/* The short strip never replaces the active question's threshold or staged state. */
+.compact-trail .layer-current .layer-choice{display:block}
+.compact-trail .layer-help{display:block;margin:5px 0 8px}
+.compact-trail .ct-editors .layer-choice{display:block}
+.compact-trail .ct-editors .layer-stage-status{display:block}
+.compact-trail .ct-editors .layer-stage-status[hidden]{display:none}
+.compact-trail .ct-menu .rf-permalink{display:block}
+
 /* One working area: findings reveal the next finding; named actions advance. */
 .compact-trail span.ct-current-chip{cursor:default;pointer-events:none}
 .compact-trail .ct-edit-icon{color:#69808c;font:400 13px/1 system-ui;margin-left:2px}
@@ -106,7 +114,7 @@
 .compact-trail .ct-workspace .results{padding:0;border:0;background:none;scroll-margin-top:calc(var(--pathway-nav-height,60px) + 12px)}
 .compact-trail .ct-workspace .results>.section-head .number-dot{display:none}
 .compact-trail .ct-workspace .results>.section-head h3{font-size:17px}
-.single-decision-workspace .decision-assistant,.single-decision-workspace .orders>.section-head,.single-decision-workspace .stepfooter{display:none}
+.single-decision-workspace .assistant-intro,.single-decision-workspace .assistant-actions,.single-decision-workspace .orders>.section-head,.single-decision-workspace .stepfooter{display:none}
 .single-decision-workspace .decision-grid{display:block}
 .single-decision-workspace .orders{padding:0;border:0;background:none}
 .single-decision-workspace .journey-phase .phase-number,.single-decision-workspace .journey-phase small{display:none}
@@ -115,3 +123,9 @@
  .single-decision-workspace .ct-strip,.single-decision-workspace .ct-editors,.single-decision-workspace .layer-current,.single-decision-workspace .ct-workflow-hint{display:none!important}
  .single-decision-workspace .ct-workspace[hidden],.single-decision-workspace .decision-assistant{display:block!important}
 }
+
+.single-decision-workspace .assistant-question>label{display:none}
+.single-decision-workspace .ct-has-visible-help .assistant-question .assistant-help{display:none}
+.compact-trail .ct-menu-items .layer-current .layer-row{display:block;padding:8px 0}
+.compact-trail .ct-menu-items .layer-controls{flex-direction:row;flex-wrap:wrap;margin-top:8px}
+.compact-trail .ct-workspace>.orders{margin-bottom:16px}

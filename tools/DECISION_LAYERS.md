@@ -1,47 +1,52 @@
-# Layered decision interface — 25 October 2026
+# Decision interface
 
-This supersedes the earlier all-decisions example preset and floating-criteria behavior. It changes navigation and disclosure, not the clinical matcher, source criteria, action conditions, evidence, or approval statuses.
+26 October 2026. Presentation and navigation only: clinical matching, thresholds, uncertainty, source records and approval statuses are retained.
 
 ## Display contract
 
-- Essential actions, next-action conditions, cautions, and high-risk status remain visible.
-- Criteria and definitions use native inline click-to-expand disclosures, including short threshold instructions that previously appeared as floating help. Source links remain inside those criteria.
-- Rationale, explanatory text and evidence summaries use the existing hover/tap/optional-hold information panels. Keyboard and phone Back dismissal remain supported.
+- Current question summaries, threshold rules, relevant selected definitions, cautions and conditional actions are visible without opening an explanation.
+- Definitions start open while selecting a finding; relevant recorded definitions remain visible while answering the next question.
+- Sources, rationale and supplementary explanations can expand. Evidence is organized by clinical topic and study design, never promoted because it was added recently.
+- Recorded findings use a short horizontal strip with one editor at a time; clinical conditions do not disappear into a navigation selector.
 
 ## Transplant pathways
 
-A labeled example fills only the first finding on ordinary entry. Direct links to later decisions start unanswered. Each essential question then appears in sequence, followed by applicable safety/high-risk clarification questions and an unanswered next-action selector. Completed choices stay in a pinned trail above the current question. Long histories scroll within a bounded area on phones; the current question stays outside that scroll area. Earlier edits clear later questions in the same decision, later decisions and dependent risk context. Supplemental safety findings must be chosen before the ordinary forward assessment button can be used; known stop findings still offer appropriate care routes without requiring irrelevant later transplant findings. No matching rule was changed.
+Ordinary entry starts unanswered. **Show entry example** is optional and explicitly labeled. A dropdown stages a finding; **Use finding** or **Apply change** commits it. Arrow keys and Enter on the dropdown do not commit or advance. Unapplied choices identify the current recorded finding and offer Cancel; Escape cancels. Changing an earlier finding clears later dependent findings. Supplemental safety questions follow the same confirmation model.
 
-Care pages preserve their exact originating result, condition and return link. Opening a care plan directly remains a reference. Browser navigation stores only topic/step IDs; findings remain in memory and are not saved. A previously preselected entry finding retains its example label until it is changed.
+Rows use the actual clinical decision number. There is no separate numbered navigation row or next-action dropdown. Each actual action appears once with its condition in the result. A single available action is a direct button, not a redundant selection. Earlier findings are available as short labeled chips; opening a chip displays the full question and recorded answer.
+
+Care plans retain their originating result, status, option and condition. Opening a plan directly is reference-only. Choices remain in memory and are not persisted or included in URLs. Clinical suitability and allocation remain separate.
 
 ## Cancer roadmaps
 
-The starting topic and conditional next assessments form a pinned trail using the existing 284 conditional links. Choosing an earlier alternative truncates subsequent topics and replaces the next options. Each new next-assessment selector is blank. Roadmap topic selection is navigation, not patient classification or eligibility. The older staging diagram remains in a reference expansion. All 103 topic data records and their treatment/evidence renderers are unchanged.
+**Clinical topics** is navigation, not patient classification. A topic choice requires **Open topic**; an unapplied choice identifies the topic still showing. Previously viewed topic chips are navigation history, not clinical findings. The existing 284 conditional links remain beside their When statements. All/any criteria start expanded, with the no-eligibility-inference notice outside the disclosure. The 103 clinical topic records and their treatment renderers are unchanged.
 
-## Validation and rebuild
+## Documents and rebuilding
 
-Run `test_decision_layers.cjs` with the existing clinical, contextual, high-risk, roadmap, action, V12 and matrix tests. New tests exercise 96 essential questions and 96 intra-decision/downstream rollback cases, with unchanged clinical matching and source links. Browser checks cover all 46 decisions and all 103 topics at desktop and 390 px phone width, plus branch replacement, AFP alternatives, inline criteria, info sheets, Back/Forward and care origins. Prior orange document checksums remain unchanged.
+Seventeen current Word documents use subject-based headings and evidence placement. EndNote field instructions, embedded citation data and delimiters are preserved byte-for-byte as multisets. Orange high-risk styling and OPEN status remain. `clarity_document_hashes.json` records current editorial hashes; `orange_document_hashes.json` remains the earlier style-change record.
 
-Keep the current `transplant/assets/app.js` and `assistant.js`, their `tools/decision_assistant_source` mirrors, `assets/decision-layers.css`, `assets/roadmap-flow.js`, `assets/contextual-info.js`, and the portal loader together. The cache version is `20261025-layers1`. Follow V12_REBUILD.md for source/evidence preservation. Canonical source files are mirrored under `standard_protocol_website/src` in the local workspace. Do not regenerate from stale procedural content.
+Preserve the current app/assistant source mirrors, roadmap-flow, contextual-info, decision-layers and portal-navigation assets. Cache key: `20261026-navigation2`. Follow `V12_REBUILD.md`, then run `normalize_evidence_presentation.py` after a legacy evidence rebuild. Do not regenerate the interface from stale procedural sources.
 
-Analyst A performed this interface revision and validation. Earlier external analyst reviews are retained in the prior review folders; they are not claimed as a new review of this iteration.
+## Review and validation
+
+External Analyst B (Claude.ai in Claude Desktop) reviewed the original and candidate interfaces and all 17 documents textually. Raw reviews and reconciliation are retained in the local `Website_Clarity_Review_2026-10-26` folder. Review is editorial/interface review, not clinical or institutional approval. Native Word/EndNote refresh is not part of the field-preservation check.
+
+Run the decision-layer, assistant, clinical-flow, contextual, routing, roadmap, high-risk, action, matrix and release tests. Browser checks include all 46 direct decisions, all 103 topics, phone overflow, staged/committed edits, rollback, AFP alternatives, care origins and Back. Render and inspect both public and private document variants after document changes.
 
 
 ## Compact trail — 26 October 2026
 
-The shared `compact-trail.js`/`.css` and `compact-trail-labels.js` enhance the existing controls into a horizontal numbered strip. Only one exact-answer editor opens at a time. Tapping to inspect a finding does not change answers; selecting a new answer uses the original reset/routing handlers. Phone history scrolls horizontally, separately from the current question.
+The shared `compact-trail.js`/`.css` and `compact-trail-labels.js` enhance the existing controls into a horizontal numbered strip. Only one exact-answer editor opens at a time. Tapping to inspect a finding does not change answers; selecting a new answer stages it; Apply change invokes the original reset/routing handlers. Phone history scrolls horizontally, separately from the current question.
 
 Labels are checked against 96 full source questions, 23 supplemental question types and 103 roadmap topics. Short noun labels never replace the complete active question for bare Yes/No choices. Keep full questions, exact options, criteria and citations in the source data. The enhancement does not change matching, actions or source files.
 
-The shared loader version is `20261026-compact1`; core layered app/assistant versions remain `20261025-layers1`. The portal loader must retain the compact assets after a rebuild. Run `test_compact_trail.cjs` with the existing regression suite. Review/reconciliation and actual external Analyst B comments are retained in the local `Compact_Trail_Review_2026-10-26` folder.
+The shared and core cache version is `20261026-navigation2`. The portal loader must retain the compact assets after a rebuild. Run `test_compact_trail.cjs` with the existing regression suite. Review/reconciliation and actual external Analyst B comments are retained in the local `Compact_Trail_Review_2026-10-26` folder.
 
-Final compact layout: only the numbered strip is sticky (54 px at tested phone width). The current control and editor remain in normal page flow. A completed editor expands its exact criteria locally without changing the hash or visible trail. The unnumbered Next steps tile goes to the original conditional action panel, including high-risk review options. No action-only dropdown remains in the sticky strip. Active Yes/No questions retain the full source predicate.
+Final compact layout: only the numbered strip is sticky (54 px at tested phone width). The current finding, original definitions and original result share one working area. Confirming a finding brings the next unanswered finding into view; completed findings reveal the original named next-action buttons. The current marker is noninteractive. Numbered buttons review earlier findings, and their editors retain staged confirmation, Cancel/Escape and local criteria. There is no separate result-jump tile or browse-next control. Topic browsing on roadmaps sits inside the secondary menu; conditional next-step links remain in the main page. Clinical conditions, safety findings, high-risk status and sources are preserved.
+
+The integrated trail preserves explicit confirmation, unapplied-state labels, Cancel/Escape and visible current thresholds. Closing an earlier editor discards an unapplied draft. Roadmap chips are navigation history, not findings.
 
 
-## Single progression area — 26 October 2026
+## Single progression integration
 
-Supersedes the compact Next steps jump tile. `compact-trail.js` moves the original decision section and result into one working area beneath the strip. Source controls, result elements, clinical event handlers, evidence and care-origin capture are reused without copying. Each chosen finding reveals the next unanswered finding; when the findings are complete, the same area presents the original named next-action buttons. Actions retain their conditions and high-risk statuses. The numbered buttons reopen earlier choices only; the current marker is noninteractive. Earlier edits still clear dependent answers.
-
-Current and completed Criteria controls expand locally without navigating. The whole-pathway map is secondary, collapsed browsing; browse previous/next controls and duplicate source finding controls are hidden in the enhanced view. Printing restores source findings. The next assessment and current finding receive corrected focus and scroll placement. Roadmaps keep conditional action links as the sole forward controls.
-
-The shared loader version is `20261026-navigation1`; the app, clinical matching engine, source payloads, high-risk routing and authoring documents are unchanged. Run the existing regression suite and verify real browser progression, criteria, rollback, high-risk and care routes. No new external-analyst review is claimed for this follow-up.
+The 26 October navigation follow-up was integrated on top of af0d64a, preserving its explicit confirmation, visible definitions, evidence normalization and document revisions. This follow-up changes display, focus and scrolling only. Current and earlier Criteria controls expand locally; staged selections do not route or modify the recorded result until confirmed. The original `.decision` and `.orders` nodes remain intact so contextual explanations and source-definition updates continue working. Shared/core cache version: `20261026-navigation2`. Detailed QA is in the local Single_Progression_Review_2026-10-26 folder.
