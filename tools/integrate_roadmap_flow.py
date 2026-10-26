@@ -5,7 +5,7 @@ r=Path(__file__).resolve().parents[1]
 for slug in 'hcc crlm icca hilar nelm chcca adenoma incidental pdac pnet pcyst ampullary'.split():
  p=r/slug/'index.html'; s=p.read_text()
  if 'RoadmapFlow.setup(' in s: continue
- s=s.replace('</style>','</style>\n<link rel="stylesheet" href="../assets/roadmap-flow.css?v=20261025">\n<script src="../assets/roadmap-flow.js?v=20261026-navigation2"></script>',1)
+ s=s.replace('</style>','</style>\n<link rel="stylesheet" href="../assets/roadmap-flow.css?v=20261025">\n<script src="../assets/roadmap-flow.js?v=20261026-tools1"></script>',1)
  name='Stage' if slug=='hcc' else 'Gate'; data='STAGES' if slug=='hcc' else 'P.gates'; key='"hcc.stage"' if slug=='hcc' else 'KEY+".gate"'
  pat=r'function render'+name+r'\(id\)\{.*?\n\}'
  body=f'''function render{name}(id){{

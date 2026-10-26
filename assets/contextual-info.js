@@ -194,7 +194,7 @@
  window.addEventListener('resize',()=>{if(current)close();});
  window.addEventListener('scroll',()=>{if(current&&!current.modal)position(current);},true);
  function handleHistory(){if(ignoreBack){ignoreBack=false;if(pendingEvidence){const id=pendingEvidence;pendingEvidence=null;revealEvidence(id);}return true;}if(current?.modal&&mobileHistory){close({focus:true,fromBack:true});return true;}return false;}
- window.ContextualInfo={handleHistory,sourceOrigin(trigger){if(current?.panel.contains(trigger)){const origin=current.button;close();return origin;}return trigger;}};
+ window.ContextualInfo={handleHistory,reference:enhance,sourceOrigin(trigger){if(current?.panel.contains(trigger)){const origin=current.button;close();return origin;}return trigger;}};
  window.addEventListener('popstate',()=>{if(!document.getElementById('protocol-data'))handleHistory();});
  const beforePrint=()=>{if(printing)return;close();printing=true;printDetails=[...document.querySelectorAll('.full-tests,.ci-discussions,.assistant-criteria:not(.ci-source),.branch-details,.rf-criteria,#answer details.more:not(.ci-source)')].map(d=>[d,d.open]);printDetails.forEach(([d])=>d.open=true);for(const item of items)if(item.button.isConnected){item.beforePrint=item.inline;inline(item,true);}};
  const afterPrint=()=>{if(!printing)return;printing=false;printDetails.forEach(([d,open])=>d.open=open);printDetails=[];for(const item of items)if(item.button.isConnected)inline(item,!!item.beforePrint);};
