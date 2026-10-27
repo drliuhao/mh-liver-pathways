@@ -193,7 +193,7 @@
    const heading=state.result.querySelector('.section-head h3'),text=complete?'Choose next step':'Next-step options';if(heading&&heading.textContent!==text)heading.textContent=text;
    if(complete&&!historyEl.querySelector('.ct-current-chip')){const marker=el('span','ct-chip ct-current-chip');marker.setAttribute('aria-current','step');marker.append(el('span','ct-number','→'),el('span','ct-label','Next step'),el('span','ct-state','Current'));historyEl.append(marker);}
    // Keep the original current and recorded definitions visible with the finding.
-   if(state.orders){const anchor=complete?state.result:current;if(anchor.nextElementSibling!==state.orders)anchor.after(state.orders);}
+   if(state.orders&&!state.workspace.classList.contains('dw-ready')){const anchor=complete?state.result:current;if(anchor.nextElementSibling!==state.orders)anchor.after(state.orders);}
    state.workspace.classList.toggle('ct-has-visible-help',!!current.querySelector('.layer-help'));
   }
   if(protocol){

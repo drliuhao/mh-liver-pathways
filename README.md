@@ -28,6 +28,12 @@ criteria display, and conditional navigation in `assets/roadmap-links.json`.
 Topic selection opens content; it does not compute patient eligibility.
 Deep links use `#decision-ID`. Preserve the original topic IDs and clinical data.
 After regenerating legacy HTML, run `python3 tools/integrate_roadmap_flow.py`.
+
+All 103 roadmap topics and 46 transplant decisions use the shared three-column
+decision workspace: tests/data, criteria/options, and responsible team/tools.
+See [workspace maintenance](tools/DECISION_WORKSPACE.md) for source metadata,
+responsive behavior and validation. Clinical controls and rules stay in their
+original modules.
 Run `node tools/test_roadmap_flow.cjs` to check clinical-content preservation
 and link coverage.
 

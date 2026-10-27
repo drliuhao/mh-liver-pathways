@@ -1,0 +1,129 @@
+{
+  "hcc": {
+    "0": ["Hepatology · HPB surgery · Interventional radiology", ["Liver imaging: lesion number and diameter", "ECOG performance status", "Child-Pugh class and portal hypertension"], ["lr5", "ecog", "child", "meld"]],
+    "A": ["HPB surgery · Liver transplant surgery · Hepatology · Interventional radiology", ["Liver imaging: lesion number and diameters", "Vascular invasion and extrahepatic staging", "ECOG, liver reserve and resection feasibility"], ["lr5", "ecog", "child", "meld"]],
+    "B": ["Hepatology · Interventional radiology · Medical oncology · Liver transplant surgery", ["Tumor distribution and total liver burden", "Extrahepatic staging", "ECOG and liver reserve"], ["ecog", "child", "meld", "lrt", "systemic"]],
+    "C": ["Medical oncology · Hepatology · Interventional radiology · Radiation oncology", ["Vascular invasion and extrahepatic staging", "ECOG and cause of functional impairment", "Liver function and treatment history"], ["ecog", "child", "systemic"]],
+    "D": ["Hepatology · Palliative care · Liver transplant team", ["ECOG and reversible causes of impairment", "Child-Pugh class", "Transplant suitability and patient goals"], ["ecog", "child", "meld"]]
+  },
+  "crlm": {
+    "1": ["HPB surgery · Colorectal surgery · Medical oncology · Abdominal radiology · Molecular pathology", ["CT chest/abdomen/pelvis and liver MRI", "Primary status; colonoscopy and PET/CT if considering transplant", "RAS, BRAF, MMR/MSI and HER2", "Future liver remnant, prior treatment map and clinical risk score"], ["ecog", "systemic"]],
+    "2": ["HPB surgery · Interventional radiology · Medical oncology · Abdominal radiology", ["Map of every original liver disease site", "Future remnant, inflow, outflow and drainage", "Systemic response and extrahepatic disease", "Operative fitness"], ["ecog", "lrt"]],
+    "3": ["HPB surgery · Medical oncology · Interventional radiology · Abdominal radiology", ["Reason complete liver clearance is not yet feasible", "Future remnant and parenchymal quality", "Disease distribution and response", "Nutrition, reserve and recovery potential"], ["ecog", "lrt", "systemic"]],
+    "4": ["Liver transplant surgery · HPB surgery · Colorectal surgery · Medical oncology", ["Formal unresectability review and alternative local treatments", "CT/MRI, PET/CT and history of extrahepatic disease", "Primary pathology/resection, BRAF, MSI and colonoscopy", "Treatment-response timeline, CEA, baseline size and fitness"], ["ecog", "meld"]],
+    "5": ["Medical oncology · Interventional radiology · Radiation oncology · Palliative care", ["Prior systemic regimens and response", "Liver-dominant progression or oligoprogression", "Liver reserve, frailty and patient goals"], ["ecog", "lrt", "systemic"]]
+  },
+  "icca": {
+    "1": ["HPB surgery · Abdominal radiology · Pathology · Hepatology", ["Histology or documented multidisciplinary diagnostic assessment", "CT chest/abdomen/pelvis and liver MRI/MRCP", "Lesion number, size, distribution, vessels, ducts, nodes and distant sites", "ECOG, liver function, bilirubin, CA 19-9, CEA and hepatitis status"], ["ecog", "child"]],
+    "2": ["Medical oncology · Molecular pathology", ["Disease extent and intended systemic treatment", "Available diagnostic tissue and specimen adequacy", "Existing molecular results; plasma testing feasibility if needed"], ["systemic"]],
+    "3": ["HPB surgery · Abdominal radiology · Hepatology", ["Tumor map and feasibility of negative margins", "Future remnant, inflow, outflow and drainage", "Regional versus distant nodes and extrahepatic sites", "Liver reserve and operative fitness"], ["ecog", "child", "meld"]],
+    "4": ["Medical oncology · HPB surgery · Abdominal radiology · Interventional radiology", ["Specific barrier to complete resection", "Extrahepatic staging", "Treatment fitness and intended conversion target", "Planned response imaging and surgical reassessment"], ["ecog", "lrt", "systemic"]],
+    "5": ["Medical oncology · HPB surgery · Interventional radiology · Advanced gastroenterology", ["Surgical reassessment of convertibility", "Extrahepatic staging", "Liver function, ECOG and biliary drainage"], ["ecog", "child", "lrt", "systemic"]],
+    "6": ["Medical oncology · Abdominal radiology · Palliative care", ["Distant sites on staging or reassessment", "Regional versus nonregional nodes", "Recurrence pattern and treatment history"], ["ecog", "systemic"]],
+    "7": ["Interventional radiology · Radiation oncology · HPB surgery · Medical oncology", ["Treatment goal and alternatives", "Target geometry, liver reserve and biliary drainage", "Local modality expertise and availability", "Systemic plan and response assessment"], ["ecog", "child", "lrt"]],
+    "8": ["Medical oncology · HPB surgery · Pathology", ["Resection pathology, margins and nodes", "Postoperative recovery and time from surgery", "ECOG, organ function and patient preference"], ["ecog", "systemic"]],
+    "9": ["Medical oncology · Molecular pathology · Hepatology", ["Disease extent, prior therapy and progression", "ECOG, renal and hepatic function", "Checkpoint-inhibitor contraindications", "Molecular results and trial eligibility"], ["ecog", "child", "systemic"]],
+    "10": ["Liver transplant surgery · Transplant hepatology · HPB surgery · Medical oncology", ["Biopsy diagnosis, lesion count and diameter", "Cirrhosis and formal unresectability review", "Treatment and serial stability timeline", "New lesions, distant disease and protocol availability"], ["meld", "child"]]
+  },
+  "hilar": {
+    "0": ["Advanced gastroenterology · HPB surgery · Interventional radiology · Abdominal radiology", ["Cholangitis assessment and bilirubin trend", "Future liver remnant and intended drainage sectors", "Planned surgery, embolization or anticancer treatment", "Nutrition, liver and renal function"], ["ecog"]],
+    "1": ["Abdominal radiology · HPB surgery · Advanced gastroenterology", ["CT chest/abdomen/pelvis and MRI/MRCP", "Ductal extent, arterial/portal involvement and lobar atrophy", "Future remnant, nodes and peritoneal staging", "Bilirubin trend, performance status and PSC history"], ["ecog"]],
+    "2": ["Advanced gastroenterology · HPB surgery · Liver transplant surgery · Pathology", ["Intended treatment and transplant suitability before biopsy", "Prior primary-tumor sampling route", "ERCP tissue and molecular specimen plan", "Separate primary-stricture and lymph-node sampling plans"], []],
+    "3": ["HPB surgery · Abdominal radiology · Hepatology", ["Ductal and vascular extent; negative-margin feasibility", "Future remnant volume, function and drainage", "Liver, nodes, peritoneal and distant staging", "Fitness for major hepatectomy and reconstruction"], ["ecog", "child"]],
+    "4": ["Liver transplant surgery · Transplant hepatology · HPB surgery · Advanced gastroenterology", ["Reason for unresectability and underlying liver disease", "Radial mass diameter and staging imaging", "Accepted diagnostic evidence and biopsy history", "Nodal status and approved transplant protocol"], ["meld"]],
+    "5": ["Medical oncology · HPB surgery · Liver transplant team · Advanced gastroenterology", ["Mass diameter and regional nodes", "Intrahepatic and extrahepatic metastases", "Transplant review, medical fitness and patient preference", "Protocol availability"], ["ecog", "systemic"]],
+    "6": ["Palliative care · Medical oncology · Advanced gastroenterology · Hepatology", ["Performance status and reversible jaundice or sepsis", "Infection control and symptom burden", "Patient priorities"], ["ecog"]]
+  },
+  "nelm": {
+    "1": ["NET medical oncology · Pathology · Nuclear medicine · Abdominal radiology", ["Differentiation, exact Ki-67 and mitotic count", "Somatostatin-receptor PET/CT", "Functional syndrome and directed biochemical tests", "Liver distribution, primary status and extrahepatic sites"], []],
+    "2": ["NET medical oncology · HPB surgery · Interventional radiology", ["Differentiation and grade", "Liver burden and local treatment feasibility", "Serial growth and symptom cause"], ["lrt", "systemic"]],
+    "3": ["NET medical oncology · Interventional radiology · Nuclear medicine", ["Liver burden and distribution", "Response to somatostatin analogue", "Hepatic and hormone-related symptoms"], ["lrt", "systemic"]],
+    "4": ["NET medical oncology · Expert pathology", ["Exact Ki-67 and morphology", "Prior grade and interval change", "Mixed histologic components"], ["systemic"]],
+    "5": ["HPB surgery · NET medical oncology · Cardiology · Anesthesiology", ["Differentiation and distribution", "Expected cytoreduction and residual disease", "Extrahepatic response, liver reserve and performance status", "Carcinoid heart assessment"], ["ecog", "child", "lrt"]],
+    "6": ["NET medical oncology · Nuclear medicine", ["Prior somatostatin analogue and response", "Resectability and liver-directed treatment goal", "Receptor imaging and primary site"], ["ecog", "systemic"]],
+    "7": ["Interventional radiology · HPB surgery · NET medical oncology · Nuclear medicine", ["Liver burden, progression and symptom goal", "Lobar or segmental distribution", "Prior Whipple, biliary instrumentation and liver-directed treatment"], ["child", "lrt"]],
+    "8": ["NET medical oncology · Endocrinology · Cardiology · Anesthesiology", ["Functional syndrome and directed markers", "5-HIAA/chromogranin A in clinical context", "Carcinoid heart signs and planned procedure/PRRT"], []],
+    "9": ["Liver transplant surgery · NET medical oncology · Transplant hepatology · Nuclear medicine", ["Differentiation, Ki-67 and mitotic rate", "Primary site, resection and extrahepatic disease history", "Functional imaging and observation timeline", "Cardiac/functional syndrome assessment and protocol"], ["meld", "ecog"]]
+  },
+  "chcca": {
+    "0": ["Abdominal radiology · Hepatology · Expert liver pathology", ["Enhancement pattern and liver-risk background", "AFP and CA 19-9", "Existing biopsy or operative pathology"], ["lr5"]],
+    "1": ["HPB surgery · Liver transplant team · Interventional radiology · Pathology", ["Intended treatment before biopsy", "Core specimen adequacy and both histologic components", "Molecular tissue needs", "Margins, vascular and nodal findings if resected"], []],
+    "2": ["Abdominal radiology · HPB surgery · Pathology", ["Liver/abdominal imaging and chest CT", "Regional nodes and distant sites", "AJCC intrahepatic bile-duct staging and component proportions", "Baseline AFP and CA 19-9"], []],
+    "3": ["HPB surgery · Hepatology · Abdominal radiology", ["Tumor map and negative-margin feasibility", "Nodal, peritoneal and distant staging", "Future liver remnant, reserve and operative fitness"], ["ecog", "child", "meld"]],
+    "4": ["HPB surgery · Abdominal radiology · Pathology", ["Histology, markers and diagnostic uncertainty", "Porta hepatis nodes on imaging", "Intraoperative appearance and nodal plan"], []],
+    "5": ["Liver transplant surgery · Transplant hepatology · Medical oncology · Pathology", ["Cirrhosis and unresectability", "Biopsy, differentiation, tumor count and size", "Treatment and stability timeline", "Vascular, nodal and distant staging; protocol criteria"], ["meld", "child"]],
+    "6": ["Pathology · HPB or liver transplant surgery · Hepatology · Medical oncology", ["Complete resection or explant review", "Component proportions and diagnostic discordance", "Margins, nodes, vascular and perineural invasion"], []],
+    "7": ["Medical oncology · Molecular pathology · Hepatology", ["Disease extent and available treatment routes", "Histology and predominant component", "Molecular panel, performance status and liver reserve"], ["ecog", "child", "systemic"]],
+    "8": ["Interventional radiology · Radiation oncology · HPB surgery · Medical oncology", ["Liver distribution and intended treatment goal", "Arterial enhancement and portal patency", "Liver function and extrahepatic disease"], ["child", "lrt"]],
+    "9": ["HPB or liver transplant surgery · Medical oncology · Abdominal radiology", ["Prior operation and surveillance imaging", "AFP and CA 19-9 trends", "Recurrence sites and local retreatment feasibility"], ["lrt", "systemic"]]
+  },
+  "adenoma": {
+    "1": ["Abdominal radiology · Hepatology · Expert liver pathology", ["Hepatobiliary-contrast MRI and lesion map", "Hormone/androgen exposure, metabolic and family history", "Imaging subtype and background liver disease"], ["lr5"]],
+    "2": ["Hepatology · Primary care · Endocrinology", ["Hormone and androgen exposure", "Weight, diabetes and metabolic risk", "Alcohol history", "Serial lesion size, growth and subtype"], []],
+    "3": ["HPB surgery · Hepatology · Expert liver pathology", ["Sex and androgen exposure", "Expert pathology and subtype markers", "CTNNB1 findings and cellular atypia if sampled"], []],
+    "4": ["HPB surgery · Abdominal radiology · Hepatology · Interventional radiology", ["Serial diameter on comparable imaging", "Duration and response to risk-factor modification", "Exophytic position, segment and lesional arteries", "Symptoms and molecular subtype"], []],
+    "5": ["HPB surgery · Interventional radiology · Critical care", ["Hemodynamics, pain and hemoglobin trend", "Contrast CT for hemorrhage and lesion anatomy", "Pregnancy/postpartum status"], []],
+    "6": ["Maternal-fetal medicine · Hepatology · HPB surgery · Abdominal radiology", ["Pregnancy plans or gestational status", "Confirmed diagnosis, size, growth and exophytic position", "Prior pregnancy-related complications"], []],
+    "7": ["Hepatology · HPB surgery · Abdominal radiology · Genetics", ["MRI lesion count, dominant size and lobar distribution", "HNF1A/MODY3, family and metabolic history", "Prior pathology and resection feasibility"], []],
+    "8": ["Hepatology · Genetics/metabolic medicine · HPB surgery", ["Metabolic or genetic diagnosis", "Vascular liver anatomy and disease", "Iron-overload history and age at presentation"], []],
+    "9": ["HPB surgery · Expert liver pathology · Abdominal radiology · Hepatology", ["Sex, growth and risk-factor response", "Expert histology and immunostains", "CTNNB1/TERT results if tested", "Diagnostic uncertainty and staging"], ["lr5"]],
+    "10": ["Liver transplant surgery · Transplant hepatology · HPB surgery · Interventional radiology", ["Applicable exception-guidance category", "Resection, ablation and embolization feasibility", "Risk-factor modification and complication history", "Staging if transformation is confirmed"], ["meld", "child"]]
+  },
+  "incidental": {
+    "0": ["Hepatology · Abdominal radiology", ["Cirrhosis, chronic hepatitis B and HCC history", "Age and vascular or congenital liver disease"], ["lr5"]],
+    "1": ["Medical oncology · Abdominal radiology", ["Current or previous primary cancer", "Prior and current systemic treatment", "Available baseline imaging"], []],
+    "2": ["Abdominal radiology · Hepatology · HPB surgery", ["Attenuation, enhancement and cyst morphology", "MRCP relationship to bile ducts", "Infectious symptoms and inflammatory markers"], []],
+    "3": ["Abdominal radiology · Hepatology", ["Available imaging phases and contrast quality", "Characterization versus whole-disease staging question", "Renal function and MRI/contrast limitations"], ["lr5"]],
+    "4": ["Abdominal radiology · Hepatology", ["Ultrasound and contrast-enhancement pattern", "MRI T2, diffusion and central scar features", "Background vascular liver disease"], []],
+    "5": ["Abdominal radiology · Hepatology", ["Lesion shape, location, vessels and mass effect", "Phase-specific enhancement", "Cirrhosis or vascular liver disorder"], ["lr5"]],
+    "6": ["Abdominal radiology · Hepatology · Relevant oncology specialty", ["Lesion size and imaging quality", "Cross-modality or interval comparison", "LI-RADS category when applicable", "Urgency of the treatment decision"], ["lr5"]],
+    "7": ["HPB surgery · Liver transplant team · Interventional radiology · Pathology", ["Intended treatment and whether tissue will change it", "Transplant review before sampling suspected pCCA", "Safest route and specimen priorities"], []],
+    "8": ["Abdominal radiology · Hepatology · HPB surgery · Medical oncology", ["Imaging phenotype and background liver disease", "Known primary cancer", "Histology and discordant tumor markers"], ["lr5"]]
+  },
+  "pdac": {
+    "0": ["Abdominal radiology · HPB surgery · Medical oncology · Genetics", ["Pancreas-protocol CT and chest/pelvis staging", "Imaging date and adequate enhancement phases", "CA 19-9 and liver tests after decompression", "Germline testing status"], []],
+    "1": ["HPB surgery · Abdominal radiology · Medical oncology", ["Arterial and venous contact by named vessel", "Contact angle, contour change and thrombosis", "Variant arteries and distant staging", "Multidisciplinary resectability review"], []],
+    "2": ["Advanced gastroenterology · HPB surgery · Medical oncology · Pathology", ["Jaundice, cholangitis and symptom severity", "Timing of surgery or neoadjuvant treatment", "Tissue diagnosis and molecular specimen needs"], []],
+    "3": ["HPB surgery · Medical oncology · Abdominal radiology", ["Vessel contact and venous contour", "Distant and nonregional nodal staging", "Operative fitness and high-risk features"], ["ecog"]],
+    "4": ["HPB surgery · Medical oncology · Abdominal radiology · Radiation oncology", ["Tumor location and arterial contact", "Venous contact, thrombosis and reconstructable segments", "Variant arterial anatomy and IVC contact"], ["ecog"]],
+    "5": ["HPB surgery · Pathology", ["Tumor location and planned operation", "Lymph-node plan and peritoneal cytology", "Specimen orientation and measured margins"], []],
+    "6": ["Medical oncology · HPB surgery · Abdominal radiology", ["Resection pathology and postoperative restaging", "Recovery, performance status and prior treatment response", "Germline and somatic results"], ["ecog"]],
+    "7": ["Medical oncology · HPB surgery · Abdominal radiology · Radiation oncology", ["Arterial/venous involvement and reconstructability", "Distant staging", "Performance status and biliary drainage"], ["ecog"]],
+    "8": ["Medical oncology · Advanced gastroenterology · Palliative care · Genetics", ["Metastatic sites, cytology and tissue diagnosis", "ECOG, nutrition and biliary/gastric outlet patency", "Genomic, germline and HER2 results", "Pain and thrombosis assessment"], ["ecog"]]
+  },
+  "pnet": {
+    "1": ["Expert pathology · NET medical oncology · Endocrinology", ["Differentiation, Ki-67 and mitotic count", "Neuroendocrine immunostains and diagnostic mimics", "Clinical and biochemical functional status"], []],
+    "2": ["Abdominal radiology · Nuclear medicine · HPB surgery · NET medical oncology", ["Multiphase pancreas/abdominal imaging and chest CT", "Receptor imaging and FDG-PET when indicated", "Duct caliber, morphology, liver and nodal status"], []],
+    "3": ["Endocrinology · NET medical oncology · HPB surgery", ["Syndrome-specific symptoms and biochemical testing", "Concurrent glucose and insulin-related tests when relevant", "Medication effects on hormone results"], []],
+    "4": ["HPB surgery · NET medical oncology · Abdominal radiology", ["Functional status, size and grade", "Duct caliber, vascular invasion and nodal/distant staging", "Comorbidity, surgical risk and follow-up feasibility"], ["ecog"]],
+    "5": ["HPB surgery · NET medical oncology · Abdominal radiology", ["Size, location and invasive/nodal features", "Functional syndrome and localization", "Fitness for the required operation"], ["ecog"]],
+    "6": ["HPB surgery · Abdominal radiology · Pathology", ["Planned operation, size and location", "Ki-67 and lymphovascular invasion", "Suspicious nodes on imaging or exploration"], []],
+    "7": ["Genetics · Endocrinology · NET medical oncology", ["Primary site and multifocality", "Known or suspected hereditary syndrome", "Age, parathyroid disease and family history"], []],
+    "8": ["Expert pathology · NET medical oncology", ["Ki-67, mitotic count and differentiation", "Mixed histology and component proportions", "Prior grade and progression"], []],
+    "9": ["HPB surgery · NET medical oncology · Abdominal radiology · Endocrinology", ["Resection status and surveillance imaging", "Grade, nodes and perineural invasion", "Functional syndrome markers and recurrence sites"], []]
+  },
+  "pcyst": {
+    "1": ["Advanced gastroenterology · Abdominal radiology · HPB surgery", ["MRI/MRCP or pancreas-protocol CT", "Duct communication and measured duct diameter", "Cyst morphology, nodule height and prior imaging", "Pancreatitis, alcohol and trauma history"], []],
+    "2": ["Advanced gastroenterology · HPB surgery · Abdominal radiology", ["Obstructive jaundice", "Enhancing nodule/solid component and duct diameter", "Cytology when obtained"], []],
+    "3": ["Advanced gastroenterology · Abdominal radiology · HPB surgery", ["Cyst size and interval growth", "Mural nodules, wall and duct features", "Pancreatitis, diabetes and CA 19-9", "Regional nodes"], []],
+    "4": ["Advanced gastroenterology · Pathology · Molecular pathology", ["Clinical question and aspirate volume", "Cyst-fluid glucose, CEA and cytology", "Need and feasibility of molecular testing"], []],
+    "5": ["Advanced gastroenterology · Abdominal radiology · HPB surgery · Pathology", ["Duct communication and cyst morphology", "Clinical context and pancreatitis history", "Fluid analysis or histology when available"], []],
+    "6": ["HPB surgery · Anesthesiology · Advanced gastroenterology", ["Fitness for the proposed operation", "Age, comorbidity and competing life expectancy", "Patient preference and procedure-specific risk"], ["ecog"]],
+    "7": ["HPB surgery · Pathology · Advanced gastroenterology", ["Suspicion of invasion and duct involvement", "Extent of resection and total-pancreatectomy implications", "Frozen-section and lymph-node plan"], []],
+    "8": ["Advanced gastroenterology · Abdominal radiology · HPB surgery", ["Chosen guideline and surveillance interval", "Comparable imaging, size, duct and nodule measurements", "Growth calculation and recall plan"], []],
+    "9": ["Advanced gastroenterology · HPB surgery · Primary care", ["Current operative fitness and patient preference", "Duration of stability and prior risk features", "Age, cyst size and competing life expectancy"], ["ecog"]],
+    "10": ["HPB surgery · Advanced gastroenterology · Pathology · Abdominal radiology", ["Final histology, highest grade and margin status", "Residual cyst map and family history", "Follow-up schedule and fitness for repeat surgery"], []]
+  },
+  "ampullary": {
+    "0": ["Advanced gastroenterology · HPB surgery · Abdominal radiology", ["Pancreas-protocol CT and chest staging", "Side-viewing duodenoscopy, biopsies and colonoscopy", "EUS/MRCP when indicated", "Tumor epicenter, liver tests, CA 19-9 and CEA"], []],
+    "1": ["Advanced gastroenterology · Pathology · HPB surgery", ["Biopsy grade and architecture", "Duct dilation and endoscopic appearance", "Symptoms, age and tumor markers"], []],
+    "2": ["Advanced gastroenterology · HPB surgery · Abdominal radiology", ["Adenoma pathology and suspicion of invasion", "Lesion size and intraductal extension", "Duodenal access and surveillance feasibility"], []],
+    "3": ["Pathology · Advanced gastroenterology · HPB surgery", ["Margin status, orientation and en-bloc/piecemeal resection", "Invasion, differentiation and tumor budding", "Lymphovascular and perineural invasion"], []],
+    "4": ["HPB surgery · Advanced gastroenterology · Pathology", ["Endoscopic clearance feasibility and duct extension", "Histology and malignancy risk", "Operative fitness and polyposis status"], ["ecog"]],
+    "5": ["HPB surgery · Abdominal radiology · Pathology · Anesthesiology", ["Invasion or malignancy risk", "Peritoneal, liver and distant nodal staging", "Operative fitness and reconstruction plan"], ["ecog"]],
+    "6": ["Pathology · Molecular pathology · Medical oncology", ["Invasive-component subtype and proportions", "Mismatch-repair testing", "Advanced-disease molecular profiling"], []],
+    "7": ["Medical oncology · HPB surgery · Pathology", ["Stage, nodes and margin status", "Recovery, fitness and time from surgery", "Invasive subtype and mismatch-repair result"], ["ecog"]],
+    "8": ["Medical oncology · HPB surgery · Advanced gastroenterology · Palliative care", ["Stage, tissue diagnosis and unresectability review", "ECOG, nutrition and drainage", "Somatic/germline results and recurrence history"], ["ecog"]],
+    "9": ["Advanced gastroenterology · HPB surgery · Genetics · Medical oncology", ["Prior operation and final diagnosis", "Polyposis status and family history", "Endoscopic findings and surveillance schedule"], []]
+  }
+}
