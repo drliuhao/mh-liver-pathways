@@ -56,22 +56,26 @@
   const right=column('dw-tools','dw-tools','Tools & resources');
   right.append(make('h4','dw-team-heading','Decision team'));
   const list=make('ul','dw-team-list');displayTeam(team).forEach(s=>list.append(make('li','',s)));right.append(list);
-  right.append(make('h4','dw-tools-title','Calculators & references'));
   const group=make('div','dw-tool-list');
+  const calculators=make('section','dw-tool-calculators'),treatments=make('section','dw-tool-treatments'),documents=make('section','dw-tool-documents');
+  calculators.append(make('h4','dw-tools-title','Calculators & scores'));
+  treatments.append(make('h4','dw-tools-title','Treatment resources'));
+  documents.append(make('h4','dw-tools-title','Evidence & documents'));
   const terms=[...new Set([...keys,...Object.keys(ref.terms).filter(k=>ref.terms[k].match.test(text)),...(/Class 5/.test(text)?['lr5']:[])])];
-  if(terms.includes('meld')){const b=make('button','clinical-button dw-calculator','MELD 3.0 calculator');b.type='button';b.setAttribute('data-clinical-calculator','');group.append(b);}
+  if(terms.includes('meld')){const b=make('button','clinical-button dw-calculator','MELD 3.0 calculator');b.type='button';b.setAttribute('data-clinical-calculator','');calculators.append(b);}
   for(const key of terms){
    if(ref.terms[key]){
     const term=ref.terms[key],d=make('details','clinical-term');d.dataset.contextTitle=term.title;
     d.innerHTML='<summary>'+ref.esc({ecog:'ECOG scale',child:'Child-Pugh score',lr5:'LI-RADS / LR-5',meld:'MELD: what the score means'}[key])+'</summary>'+term.html;
-    group.append(d);
+    calculators.append(d);
    }else if(key==='lrt'||key==='systemic'){
-    const a=make('a','clinical-button',key==='lrt'?'Liver-directed therapy matrix':'Systemic therapy matrix');a.href=new URL(key+'/',root);group.append(a);
+    const a=make('a','clinical-button',key==='lrt'?'Liver-directed therapy matrix':'Systemic therapy matrix');a.href=new URL(key+'/',root);treatments.append(a);
    }
   }
-  if(isProtocol){for(const [view,label] of [['meeting','Protocol & meeting documents'],['care','Treatment reference']]){const a=make('a','clinical-button',label);a.href='#'+view;a.dataset.view=view;group.append(a);}}
+  if(isProtocol){for(const [view,label] of [['meeting','Protocol & meeting documents'],['care','Treatment reference']]){const a=make('a','clinical-button',label);a.href='#'+view;a.dataset.view=view;(view==='meeting'?documents:treatments).append(a);}}
   const evidence=make(evidenceAction?'button':'a','clinical-button',evidenceAction?'Evidence & sources ↓':'Evidence library (all papers)');
-  if(evidenceAction){evidence.type='button';evidence.addEventListener('click',evidenceAction);}else{evidence.href='#evidence';if(isProtocol)evidence.dataset.view='evidence';}group.append(evidence);
+  if(evidenceAction){evidence.type='button';evidence.addEventListener('click',evidenceAction);}else{evidence.href='#evidence';if(isProtocol)evidence.dataset.view='evidence';}documents.append(evidence);
+  for(const section of [calculators,treatments,documents])if(section.children.length>1)group.append(section);
   right.append(group);
   return right;
  }
@@ -116,7 +120,7 @@
   const recommendations=answer.querySelector('.rf-recommendations'),controls=answer.querySelector('.rf-evidence-controls');
   const recommendationHeading=recommendations.querySelector(':scope>.flow-section-heading');
   if(recommendationHeading)recommendationHeading.textContent='Recommendations within this decision';
-  middle.append(criteria,related,recommendations,controls);
+  middle.append(criteria,recommendations,related,controls);
   const right=toolsColumn(meta.team,meta.tools,meta.criteria.join(' '),false);grid.append(left,middle,right);ahead.after(grid);selectedColumn='criteria';jumps(answer,grid);
  }
  function roadmapNavigation(){

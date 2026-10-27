@@ -172,8 +172,10 @@
    const indication=d.querySelector('.optline:not(.bad)'),warning=d.querySelector('.optline.bad');
    if(indication||warning){
     const pair=document.createElement('div');pair.className='ci-treatment-criteria';d.before(pair);
-    for(const [node,label,kind] of [[indication,'Indications','indications'],[warning,'Contraindications & cautions','contraindications']]){
+    const isAvoid=!!d.closest('.rf-cautions');
+    for(const [node,label,kind] of [[indication,isAvoid?'Why':'Indications','indications'],[warning,isAvoid?'Additional cautions':'Contraindications & cautions','contraindications']]){
      if(!node)continue;
+     if(isAvoid){const field=node.querySelector('.optlab');if(field)field.textContent=label;}
      const disclosure=document.createElement('details');disclosure.className='more ci-criteria-disclosure ci-'+kind;disclosure.dataset.disclosureSorted='true';
      const summary=document.createElement('summary');summary.textContent=label;
      const body=document.createElement('div');body.className='moreinner';body.append(node);disclosure.append(summary,body);pair.append(disclosure);

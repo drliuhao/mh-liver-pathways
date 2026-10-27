@@ -25,23 +25,26 @@
   const preferred=data.placements[fullKey]||[],all=[...new Set([...preferred,...(data.libraries[slug]||[])])];
   if(!all.length)return;
   const middle=workspace.querySelector('.dw-criteria'),right=workspace.querySelector('.dw-tools');if(!middle||!right)return;
-  let box=middle.querySelector('.outcome-evidence');
+  const host=preferred.length?middle:right;
+  let box=host.querySelector('.outcome-evidence');
   if(!box){
    box=make('details','outcome-evidence');box.id='outcome-evidence';
-   const summary=make('summary','',preferred.length?'Outcome evidence':'Related outcome evidence');box.append(summary);
+   const summary=make('summary','',preferred.length?'Outcome evidence for this decision':'Outcome evidence library');box.append(summary);
    // The table is evidence context, separate from recorded findings and next-step rules.
    box.append(make('p','oe-note','Study populations, not an individual prediction.'));
    const label=make('label','oe-label','Evidence topic'),select=make('select');select.id='outcome-topic';label.htmlFor=select.id;
    all.forEach(id=>{const option=make('option','',data.cards[id].title);option.value=id;select.append(option);});
    const content=make('article','oe-card');box.append(label,select,content);select.addEventListener('change',()=>renderCard(select.value,content));renderCard(select.value,content);
-   if(protocol){const alternatives=middle.querySelector('.other-results');if(alternatives)alternatives.before(box);else middle.append(box);}else middle.querySelector('.rf-recommendations')?.before(box);
+   if(!preferred.length){right.querySelector('.dw-tool-documents')?.append(box);}
+   else if(protocol){const alternatives=middle.querySelector('.other-results');if(alternatives)alternatives.after(box);else middle.append(box);}
+   else middle.querySelector('.rf-related')?.after(box);
    const wait=preferred[0]?.startsWith('houston-'),recorded=!!workspace.querySelector('select[data-committed]:not([data-committed=""])');
    box.open=!!preferred.length&&(!protocol||recorded||wait);
   }
   if(protocol&&preferred.length&&!box.dataset.recordedShown){const decision=key.split('/')[1];const recorded=document.querySelector('.ct-editors select[data-layer-step="'+decision+'"][data-committed]:not([data-committed=""])')||workspace.querySelector('select[data-committed]:not([data-committed=""])');if(recorded){box.open=true;box.dataset.recordedShown='true';}}
-  if(!right.querySelector('[data-outcome-jump]')){const b=make('button','clinical-button','Outcome evidence');b.type='button';b.dataset.outcomeJump='';b.addEventListener('click',()=>{document.getElementById('dw-tab-criteria')?.click();box.open=true;box.scrollIntoView({block:'start',behavior:'instant'});box.querySelector('select').focus({preventScroll:true});});right.querySelector('.dw-tool-list')?.append(b);}
+  if(preferred.length&&!right.querySelector('[data-outcome-jump]')){const b=make('button','clinical-button','Outcome evidence for this decision');b.type='button';b.dataset.outcomeJump='';b.addEventListener('click',()=>{document.getElementById('dw-tab-criteria')?.click();box.open=true;box.scrollIntoView({block:'start',behavior:'instant'});box.querySelector('select').focus({preventScroll:true});});right.querySelector('.dw-tool-documents')?.append(b);}
   if(right.querySelector('.allocation-overview'))right.querySelector('[data-waiting-resource]')?.remove();
-  if(protocol&&!right.querySelector('.allocation-overview')&&!right.querySelector('[data-waiting-resource]')){const a=make('a','clinical-button','Transplant waitlisted · policy & outcomes');a.dataset.waitingResource='';a.href=new URL('transplant/waiting/?disease='+slug,root);if(!right.querySelector('.allocation-overview'))right.querySelector('.dw-tool-list')?.append(a);}
+  if(protocol&&!right.querySelector('.allocation-overview')&&!right.querySelector('[data-waiting-resource]')){const a=make('a','clinical-button','Transplant waitlisted · policy & outcomes');a.dataset.waitingResource='';a.href=new URL('transplant/waiting/?disease='+slug,root);if(!right.querySelector('.allocation-overview'))right.querySelector('.dw-tool-documents')?.append(a);}
  }
  function scan(){queued=false;document.querySelectorAll('.dw-ready[data-workspace-key]').forEach(enhance);}
  new MutationObserver(records=>{if(!queued&&records.some(r=>r.type==='childList')){queued=true;requestAnimationFrame(scan);}}).observe(document.body,{childList:true,subtree:true});scan();

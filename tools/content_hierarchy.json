@@ -1,0 +1,500 @@
+{
+  "version": "2026-10-27",
+  "references": {
+    "adenoma": [
+      {
+        "source": "HCA molecular subtypes — frequency, marker, and what each changes",
+        "label": "HCA subtypes",
+        "kind": "criteria",
+        "decisions": [
+          "1",
+          "7",
+          "8",
+          "9"
+        ]
+      },
+      {
+        "source": "The 5 cm convention — what the supporting series actually show, and what the direct tests found",
+        "label": "Size threshold: supporting evidence",
+        "kind": "evidence",
+        "decisions": [
+          "3",
+          "4",
+          "6"
+        ]
+      },
+      {
+        "source": "Surveillance intervals, by source",
+        "label": "Surveillance intervals",
+        "kind": "criteria",
+        "decisions": [
+          "2",
+          "4",
+          "6",
+          "7"
+        ]
+      },
+      {
+        "source": "The transplant routes — what the local protocol requires",
+        "label": "Transplant eligibility",
+        "kind": "criteria",
+        "decisions": [
+          "10"
+        ]
+      }
+    ],
+    "ampullary": [
+      {
+        "source": "How likely is carcinoma under an ampullary \"adenoma\"",
+        "label": "Limits of an adenoma biopsy",
+        "kind": "evidence",
+        "decisions": [
+          "0",
+          "1",
+          "2"
+        ]
+      },
+      {
+        "source": "AJCC 8th edition — ampulla of Vater",
+        "label": "AJCC staging",
+        "kind": "criteria",
+        "decisions": [
+          "0",
+          "3",
+          "5"
+        ]
+      },
+      {
+        "source": "Histologic subtype — reproducibility and what it predicts",
+        "label": "Histologic subtype: supporting evidence",
+        "kind": "evidence",
+        "decisions": [
+          "6",
+          "7",
+          "8"
+        ]
+      },
+      {
+        "source": "Surveillance intervals — after papillectomy, and in polyposis",
+        "label": "Surveillance intervals",
+        "kind": "criteria",
+        "decisions": [
+          "3",
+          "9"
+        ]
+      }
+    ],
+    "chcca": [
+      {
+        "source": "WHO 2019 — what the diagnosis now means",
+        "label": "Diagnostic definition",
+        "kind": "criteria",
+        "decisions": [
+          "0",
+          "1",
+          "6"
+        ]
+      },
+      {
+        "source": "Staging — the intrahepatic bile duct system applies",
+        "label": "AJCC staging",
+        "kind": "criteria",
+        "decisions": [
+          "2"
+        ]
+      },
+      {
+        "source": "Transplant criteria — four documents, four thresholds",
+        "label": "Transplant criteria by source",
+        "kind": "criteria",
+        "decisions": [
+          "5"
+        ]
+      },
+      {
+        "source": "What imaging and biopsy actually deliver",
+        "label": "Imaging and biopsy: diagnostic evidence",
+        "kind": "evidence",
+        "decisions": [
+          "0",
+          "1"
+        ]
+      }
+    ],
+    "crlm": [
+      {
+        "source": "Fong clinical risk score",
+        "label": "Fong risk score",
+        "kind": "tool",
+        "decisions": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      {
+        "source": "The three axes of unresectability",
+        "label": "Resectability assessment",
+        "kind": "criteria",
+        "decisions": [
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      {
+        "source": "Transplant: the Oslo score and the eligibility decision points",
+        "label": "Oslo score and transplant criteria",
+        "kind": "tool",
+        "decisions": [
+          "4"
+        ]
+      },
+      {
+        "source": "Molecular groups that change first-line therapy",
+        "label": "Molecularly selected treatment",
+        "kind": "criteria",
+        "decisions": [
+          "1",
+          "3",
+          "5"
+        ]
+      },
+      {
+        "source": "Hepatic arterial infusion: selection, evidence and delivery",
+        "label": "HAI selection and delivery",
+        "kind": "guide",
+        "decisions": [
+          "2",
+          "3",
+          "5"
+        ]
+      }
+    ],
+    "hilar": [
+      {
+        "source": "Bismuth-Corlette type and the operation it implies",
+        "label": "Bismuth–Corlette classification",
+        "kind": "criteria",
+        "decisions": [
+          "1",
+          "3"
+        ]
+      },
+      {
+        "source": "Transplant protocol — eligibility and exclusions",
+        "label": "Transplant eligibility and exclusions",
+        "kind": "criteria",
+        "decisions": [
+          "4"
+        ]
+      },
+      {
+        "source": "Drainage targets, and the route question",
+        "label": "Drainage targets and route",
+        "kind": "guide",
+        "decisions": [
+          "0",
+          "3",
+          "4"
+        ]
+      },
+      {
+        "source": "Diagnostic yield of the tissue options",
+        "label": "Tissue sampling: diagnostic evidence",
+        "kind": "evidence",
+        "decisions": [
+          "2"
+        ]
+      }
+    ],
+    "icca": [
+      {
+        "source": "Multiple liver tumors: multifocal disease, satellites, and intrahepatic metastases",
+        "label": "Multiple liver tumors: definitions and stage",
+        "kind": "criteria",
+        "decisions": [
+          "1",
+          "3",
+          "10"
+        ]
+      },
+      {
+        "source": "Molecular alterations that change treatment",
+        "label": "Molecularly selected treatment",
+        "kind": "criteria",
+        "decisions": [
+          "2",
+          "6",
+          "9"
+        ]
+      },
+      {
+        "source": "Resectability, as the roadmap defines it",
+        "label": "Resectability criteria",
+        "kind": "criteria",
+        "decisions": [
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      {
+        "source": "Transplant eligibility — the nonstandard MMaT-3 route",
+        "label": "Transplant eligibility",
+        "kind": "criteria",
+        "decisions": [
+          "10"
+        ]
+      },
+      {
+        "source": "BILCAP, as published",
+        "label": "Adjuvant treatment: trial evidence",
+        "kind": "evidence",
+        "decisions": [
+          "8"
+        ]
+      },
+      {
+        "source": "Hepatic arterial infusion: selection, evidence and delivery",
+        "label": "HAI selection and delivery",
+        "kind": "guide",
+        "decisions": [
+          "4",
+          "5",
+          "7"
+        ]
+      }
+    ],
+    "incidental": [
+      {
+        "source": "Who the at-risk algorithms apply to",
+        "label": "Population for liver imaging algorithms",
+        "kind": "criteria",
+        "decisions": [
+          "0",
+          "3",
+          "6"
+        ]
+      },
+      {
+        "source": "CT/MRI LI-RADS v2018 — category, and what each one means",
+        "label": "LI-RADS categories",
+        "kind": "criteria",
+        "decisions": [
+          "0",
+          "3",
+          "6"
+        ]
+      },
+      {
+        "source": "ACR incidental liver lesion algorithm, by risk and size",
+        "label": "ACR incidental lesion algorithm",
+        "kind": "criteria",
+        "decisions": [
+          "1",
+          "3",
+          "6"
+        ]
+      },
+      {
+        "source": "The four prevalence figures, and what each one counted",
+        "label": "Incidental lesions: prevalence evidence",
+        "kind": "evidence",
+        "decisions": [
+          "0",
+          "1"
+        ]
+      }
+    ],
+    "nelm": [
+      {
+        "source": "Ki-67 thresholds that change the pathway",
+        "label": "Grade and Ki-67 thresholds",
+        "kind": "criteria",
+        "decisions": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "6"
+        ]
+      },
+      {
+        "source": "Milan-NET transplant criteria",
+        "label": "Milan-NET transplant criteria",
+        "kind": "criteria",
+        "decisions": [
+          "9"
+        ]
+      },
+      {
+        "source": "Cytoreduction thresholds, and what supports them",
+        "label": "Cytoreduction thresholds: evidence",
+        "kind": "evidence",
+        "decisions": [
+          "5"
+        ]
+      },
+      {
+        "source": "Carcinoid crisis precautions",
+        "label": "Carcinoid crisis precautions",
+        "kind": "guide",
+        "decisions": [
+          "5",
+          "7",
+          "8"
+        ]
+      }
+    ],
+    "pcyst": [
+      {
+        "source": "Kyoto 2024 high-risk stigmata and worrisome features",
+        "label": "High-risk stigmata and worrisome features",
+        "kind": "criteria",
+        "decisions": [
+          "2",
+          "3",
+          "6"
+        ]
+      },
+      {
+        "source": "Surveillance intervals: four guidelines, four answers",
+        "label": "Surveillance intervals by guideline",
+        "kind": "criteria",
+        "decisions": [
+          "8",
+          "9",
+          "10"
+        ]
+      },
+      {
+        "source": "Cyst fluid tests and what each one actually does",
+        "label": "Cyst-fluid test interpretation",
+        "kind": "criteria",
+        "decisions": [
+          "1",
+          "4"
+        ]
+      },
+      {
+        "source": "Resection thresholds compared, and the non-IPMN cysts",
+        "label": "Resection thresholds by cyst type",
+        "kind": "criteria",
+        "decisions": [
+          "2",
+          "3",
+          "5",
+          "6",
+          "7"
+        ]
+      }
+    ],
+    "pdac": [
+      {
+        "source": "Resectability criteria at diagnosis",
+        "label": "Resectability criteria",
+        "kind": "criteria",
+        "decisions": [
+          "0",
+          "1",
+          "3",
+          "4",
+          "7"
+        ]
+      },
+      {
+        "source": "The neoadjuvant trials, side by side — and what each one's control arm got",
+        "label": "Neoadjuvant treatment: trial evidence",
+        "kind": "evidence",
+        "decisions": [
+          "3",
+          "4"
+        ]
+      },
+      {
+        "source": "What the molecular result changes",
+        "label": "Molecularly selected treatment",
+        "kind": "criteria",
+        "decisions": [
+          "8"
+        ]
+      }
+    ],
+    "pnet": [
+      {
+        "source": "WHO 2019 grade and the Ki-67 thresholds",
+        "label": "Grade and Ki-67 thresholds",
+        "kind": "criteria",
+        "decisions": [
+          "1",
+          "8"
+        ]
+      },
+      {
+        "source": "The 2 cm threshold — who says what, and what is behind it",
+        "label": "Small nonfunctional tumors: size-threshold evidence",
+        "kind": "evidence",
+        "decisions": [
+          "4"
+        ]
+      },
+      {
+        "source": "Nodal risk by size and feature, and the node count to aim for",
+        "label": "Nodal assessment: supporting evidence",
+        "kind": "evidence",
+        "decisions": [
+          "5",
+          "6"
+        ]
+      },
+      {
+        "source": "Localising a functional tumour",
+        "label": "Functional tumor localization",
+        "kind": "guide",
+        "decisions": [
+          "2",
+          "3"
+        ]
+      }
+    ],
+    "hcc": [
+      {
+        "source": "Child-Pugh",
+        "label": "Child-Pugh calculator",
+        "kind": "tool",
+        "decisions": [
+          "0",
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "source": "ECOG performance status",
+        "label": "ECOG scale",
+        "kind": "tool",
+        "decisions": [
+          "0",
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      {
+        "source": "LI-RADS, in full",
+        "label": "LI-RADS diagnostic and response criteria",
+        "kind": "criteria",
+        "decisions": [
+          "0",
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      }
+    ]
+  }
+}
