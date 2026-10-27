@@ -57,7 +57,7 @@
   const options=state.stages.map(s=>`<option value="${esc(s.id)}" ${s.id===state.current?'selected':''}>${esc(title(s))}</option>`).join('');
   bar.querySelector('.layer-current').innerHTML=`<div class="layer-row is-current"><div class="layer-choice"><label for="roadmap-decision">Clinical topic</label><select id="roadmap-decision" data-roadmap-current>${options}</select><span class="layer-stage-status" role="status" hidden></span></div><div class="layer-controls"><button class="layer-apply" data-open-topic disabled>Open topic</button><button class="layer-cancel" data-cancel-topic hidden>Cancel</button><button class="layer-criteria" data-roadmap-criteria="next">Next assessments ↓</button></div></div>`;
   bar.querySelector('.rf-permalink').href='#decision-'+encodeURIComponent(state.current);
-  const size=()=>document.documentElement.style.setProperty('--roadmap-trail-height',Math.ceil(bar.getBoundingClientRect().height)+'px');size();if(!bar.dataset.observed&&window.ResizeObserver){bar.dataset.observed='true';new ResizeObserver(size).observe(bar);}
+  const size=()=>document.documentElement.style.setProperty('--roadmap-trail-height',Math.ceil((bar.querySelector('.ct-strip')||bar).getBoundingClientRect().height)+'px');size();if(!bar.dataset.observed&&window.ResizeObserver){bar.dataset.observed='true';new ResizeObserver(size).observe(bar);}
  }
  function navigate(id,{replace=false,focus=true,scroll=true,layer=0,via=null}={}){
   if(!state.stages.some(s=>s.id===id))return;

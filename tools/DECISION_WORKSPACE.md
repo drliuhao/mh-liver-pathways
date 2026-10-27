@@ -17,6 +17,14 @@ decision trail remains fixed above the content. Criteria expand inline;
 explanations retain their information panels. High-risk items retain orange
 styling and their original conditional placement.
 
+Cancer roadmaps show all major clinical questions in the fixed navigation
+row, with the active decision highlighted. Their decision title is the main
+visual heading. Original conditional next-assessment links appear after
+criteria and before the supporting recommendations. Every recommendation,
+caution, grade and source remains available in its original rendering.
+On phones, the major-decision row scrolls horizontally and keeps the active
+question fully visible. Topic navigation does not record patient findings.
+
 `assets/decision-workspace.js` moves existing DOM nodes and never records or
 changes findings. Clinical matching, selection, confirmation, reset, routing,
 citations and calculator logic remain in their original modules.

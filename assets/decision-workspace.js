@@ -77,12 +77,52 @@
   const actual=[...criteria.querySelectorAll(':scope>ul>li')].map(n=>plain(n.textContent));
   if(plain(ahead.querySelector('h3')?.textContent)!==plain(meta.title)||JSON.stringify(actual)!==JSON.stringify(meta.criteria.map(plain)))return;
   answer.classList.add('dw-ready','dw-roadmap');answer.dataset.workspaceKey=slug+'/'+related.dataset.relatedFor;
+  ahead.prepend(make('p','dw-decision-kicker','Current decision'));
   const grid=make('div','dw-grid'),left=column('dw-inputs','dw-inputs','Tests & data','Information to review for this topic.');
   const inputs=make('ul','dw-input-list');meta.inputs.forEach(s=>inputs.append(make('li','',s)));left.append(inputs);
   const middle=column('dw-criteria','dw-criteria','Criteria & next options');
   const recommendations=answer.querySelector('.rf-recommendations'),controls=answer.querySelector('.rf-evidence-controls');
-  middle.append(criteria,recommendations,related,controls);
+  const recommendationHeading=recommendations.querySelector(':scope>.flow-section-heading');
+  if(recommendationHeading)recommendationHeading.textContent='Recommendations within this decision';
+  middle.append(criteria,related,recommendations,controls);
   const right=toolsColumn(meta.team,meta.tools,meta.criteria.join(' '),false);grid.append(left,middle,right);ahead.after(grid);jumps(answer,grid);
+ }
+ function roadmapNavigation(){
+  if(protocol?.pathway||!window.CompactTrailLabels)return;
+  const strip=document.querySelector('.rf-selector .ct-strip'),buttons=document.getElementById('stageBtns');if(!strip||!buttons)return;
+  let nav=strip.querySelector('.dw-major-decisions');
+  if(!nav){
+   const old=buttons.closest('.rf-overview');if(!old)return;
+   nav=make('section','dw-major-decisions');nav.setAttribute('aria-labelledby','dw-major-title');
+   const disease={hcc:'HCC',crlm:'CRLM',icca:'iCCA',hilar:'pCCA',nelm:'NELM',chcca:'cHCC–CCA',adenoma:'Hepatic adenoma',incidental:'Incidental liver lesions',pdac:'PDAC',pnet:'pNET',pcyst:'Pancreatic cysts',ampullary:'Ampullary cancer'}[slug]||slug.toUpperCase();
+   const heading=make('div','dw-major-heading'),title=make('h2','',disease+' · Major decisions');title.id='dw-major-title';
+   heading.append(title,make('p','','Choose a clinical question.'));nav.append(heading,buttons);
+   old.remove();strip.prepend(nav);strip.classList.add('dw-major-strip');
+   buttons.setAttribute('aria-label','Major clinical decisions');buttons.setAttribute('role','group');
+   if(window.ResizeObserver)new ResizeObserver(()=>revealMajorDecision(buttons)).observe(buttons);
+   if(location.hash.startsWith('#decision-'))requestAnimationFrame(()=>{
+    document.documentElement.style.setProperty('--roadmap-trail-height',Math.ceil(strip.getBoundingClientRect().height)+'px');
+    document.getElementById('answer')?.scrollIntoView({block:'start',behavior:'instant'});
+   });
+  }
+  for(const b of buttons.querySelectorAll('.rf-topic')){
+   if(b.dataset.majorReady)continue;
+   const key=slug+'/'+b.dataset.roadmapDecision,meta=data.topics[key];if(!meta||plain(b.textContent)!==plain(meta.title))continue;
+   const full=meta.title.replace(/^\d+\s*·\s*/,''),short=window.CompactTrailLabels.roadmaps[key];
+   const label=short?.source===full?short.label:full;
+   b.title=meta.title;b.setAttribute('aria-label','Review '+meta.title);
+   b.replaceChildren(make('span','dw-major-number',b.dataset.roadmapDecision),make('span','dw-major-label',label));b.dataset.majorReady='true';
+  }
+  const active=buttons.querySelector('[aria-current="true"]');
+  if(active&&nav.dataset.active!==active.dataset.roadmapDecision){
+   nav.dataset.active=active.dataset.roadmapDecision;
+   requestAnimationFrame(()=>revealMajorDecision(buttons));
+  }
+ }
+ function revealMajorDecision(buttons){
+  const active=buttons.querySelector('[aria-current="true"]');if(!active||buttons.scrollWidth<=buttons.clientWidth)return;
+  const parent=buttons.getBoundingClientRect(),child=active.getBoundingClientRect();
+  if(child.left<parent.left-1||child.right>parent.right+1)buttons.scrollLeft+=child.left-parent.left;
  }
  function allocationPlacement(decision){
   const right=decision.querySelector('.dw-tools'),card=decision.querySelector('.allocation-overview');if(!right||!card||right.contains(card))return;
@@ -117,7 +157,7 @@
  }
  function scan(){queued=false;
   document.querySelectorAll('.decision.ct-workspace').forEach(n=>{protocolLayout(n);allocationPlacement(n);supplementalInputs(n);});
-  const answer=document.getElementById('answer');if(answer)roadmapLayout(answer);
+  const answer=document.getElementById('answer');if(answer){roadmapNavigation();roadmapLayout(answer);}
   document.querySelectorAll('.clinical-preview-content').forEach(previewLayout);
  }
  new MutationObserver(records=>{if(!queued&&records.some(r=>r.type==='childList')){queued=true;requestAnimationFrame(scan);}}).observe(document.body,{childList:true,subtree:true});scan();
