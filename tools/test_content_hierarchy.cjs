@@ -13,6 +13,8 @@ for(const [slug,refs] of Object.entries(manifest.references)){
 }
 assert.equal(count,49);assert.equal(Object.keys(manifest.references).length,12);
 const bilcap=manifest.references.icca.find(r=>r.source==='BILCAP, as published');assert.equal(bilcap.kind,'evidence');assert.deepEqual(bilcap.decisions,['8']);
+const crisis=manifest.references.nelm.find(r=>r.source==='Carcinoid crisis precautions');assert.deepEqual(crisis.decisions,['5','6','7','8']);
+assert.equal(crisis.visibleCaution.text,JSON.parse(read('nelm/data/pathway.json')).quickref[3].rows[0][1],'Visible procedural caution must retain its exact source wording');
 for(const file of ['transplant/assets/content.json','transplant/assets/assistant.js','transplant/assets/risk-routing.js','assets/roadmap-links.json']){
  assert.equal(read(file),cp.execFileSync('git',['show','dfda24c:'+file],{encoding:'utf8',maxBuffer:8e6}),file+' clinical matching/source changed');
 }

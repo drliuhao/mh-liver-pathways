@@ -48,6 +48,13 @@
    else if(entry.kind==='guide')target=group(tools,'dw-tool-treatments','Treatment resources');
    else target=group(tools,'ch-decision-references','Decision references');
    target.append(node);
+   if(entry.visibleCaution){
+    const caution=make('aside','ch-procedure-caution');
+    caution.append(make('strong','',entry.visibleCaution.title),make('p','',entry.visibleCaution.text));
+    const button=make('button','','Open crisis precautions');button.type='button';
+    button.addEventListener('click',()=>{document.getElementById('dw-tab-tools')?.click();node.open=true;node.scrollIntoView({block:'start',behavior:'instant'});node.querySelector('summary').focus({preventScroll:true});});
+    caution.append(button);(middle.querySelector('.rf-cautions')||middle.querySelector('.rf-recommendations')).append(caution);
+   }
   }
   for(const cls of ['dw-tool-calculators','ch-decision-references','dw-tool-treatments','dw-tool-documents']){const g=tools.querySelector('.'+cls);if(g)tools.append(g);}
   if(slug==='hcc'){

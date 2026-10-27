@@ -343,9 +343,14 @@ window.ContentHierarchyData = {
         "kind": "guide",
         "decisions": [
           "5",
+          "6",
           "7",
           "8"
-        ]
+        ],
+        "visibleCaution": {
+          "title": "Carcinoid crisis plan",
+          "text": "Required in functional disease and audited: prophylaxis documented before every procedure"
+        }
       }
     ],
     "pcyst": [
