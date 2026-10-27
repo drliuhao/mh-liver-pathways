@@ -54,6 +54,9 @@ def build(src):
  (out/'matrix.json').write_text(json.dumps({'review_date':'2026-10-25','cards':m.CARDS,'safety':m.SAFETY,'guidelines':m.GUIDELINES},ensure_ascii=False,indent=2))
  snapshot=ROOT/'tools/systemic_source';snapshot.mkdir(exist_ok=True);shutil.copyfile(src/'source/matrix_content.py',snapshot/'matrix_content.py')
  (out/'publication-manifest.json').write_text(json.dumps({'review_date':'2026-10-25','tumors':list(TUMORS),'treatment_cards':len(m.CARDS),'references':len(refs),'local_pdfs':count,'missing_pdfs':len(refs)-count,'licensed_pdfs_published':0,'status':'Clinical review draft'},indent=2))
+ style_spec=importlib.util.spec_from_file_location('systemic_matrix_style',ROOT/'tools/systemic_matrix_style.py')
+ style=importlib.util.module_from_spec(style_spec);style_spec.loader.exec_module(style)
+ style.rebuild(out/'index.html')
  print(f'{len(m.CARDS)} treatment cards; {len(refs)} papers; {count} verified local PDFs.')
 
 if __name__=='__main__':

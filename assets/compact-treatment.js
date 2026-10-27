@@ -96,7 +96,7 @@
   function referenceGroup(g, chipFor = new Map()) {
     const box = make('section', 'ct-ref ct-ref-' + g.k);
     const head = make('p', 'ct-ref-head');
-    head.append(make('span', 'ct-ref-kind', g.k === 'lrt' ? 'Source-study evidence · liver-directed therapy reference' : 'Source-study evidence · systemic therapy matrix'));
+    head.append(make('span', 'ct-ref-kind', g.k === 'lrt' ? 'Liver-directed therapy evidence' : 'Systemic therapy evidence'));
     const title = make('span', 'ct-ref-title');
     title.append(make('b', '', g.t));
     if (g.s) title.append(' ', make('span', 'ct-ref-sub', g.s));
@@ -176,7 +176,8 @@
       for (const group of groups) panel.append(referenceGroup(group, chipFor));
       if (unit) { unit.classList.add('ct-discussion'); panel.append(unit); }
       tc.append(panel);
-      const b = peerButton('Evidence & sources', panel, refs.length ? String(refs.length) : '');
+      const sourceCount = new Set([...refs.map(r => r.key), ...inGroups]).size;
+      const b = peerButton('Evidence & sources', panel, sourceCount ? String(sourceCount) : '');
       b.classList.add('ct-peer-ev');
       row.append(b);
     }

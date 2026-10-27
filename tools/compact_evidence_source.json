@@ -1,5 +1,5 @@
 {
- "version": "20261027-matrix1",
+ "version": "20261027-matrix2",
  "note": "Two layers. 'studies': one concise line per cited PMID, curated from the site's existing verified text (critique bottom lines, LRT matrix rows, systemic matrix evidence, high-risk study results, outcome cards); used for study labels and design. 'options': per treatment option (key = page slug + hash of the option's visible statement), the numerical results that the option's own text reports and attributes to a named cited study, restated in LRT style. Only these option rows display numbers under an option; a shared citation alone never brings a number into an option. 'reference_groups' and 'reference_links': explicit, reviewed presentation of source-study evidence from the HCC treatment references (liver-directed reference, systemic matrix, HCC roadmap text and critique records) for the linked modality or regimen, with the studied population, treatment arms and endpoint/horizon; every number is guarded against that study's verified site text or an exact quoted passage. Not an eligibility rule and not a regrading.",
  "studies": {
   "1309988": {
@@ -9841,7 +9841,7 @@
       "35949295"
      ],
      "arms": "Surgery vs RFA",
-     "result": "RFS not different (HR 0.92, 95% CI 0.67–1.25); local recurrence 8.0% vs 15.8%",
+     "result": "No significant RFS difference (HR 0.92, 95% CI 0.67–1.25); local recurrence 8.0% vs 15.8%",
      "caution": "Stopped at 301 of 600 planned patients"
     },
     {
@@ -9850,7 +9850,7 @@
       "29503247"
      ],
      "arms": "MWA vs RFA",
-     "result": "2-y local tumour progression 6% vs 12%; RR 1.62 (95% CI 0.66–3.94), p=0.27 — superiority not shown"
+     "result": "2-y local tumour progression: 6% vs 12% of lesions; p=0.27 — superiority not shown"
     }
    ]
   },
@@ -9892,7 +9892,7 @@
      ],
      "arms": "SBRT vs repeat RFA · recurrent HCC",
      "result": "Local PFS HR 0.45 (95% CI 0.24–0.87); 2-y local PFS 92.7% vs 75.8%",
-     "caution": "No demonstrated PFS or OS difference; not evidence for newly diagnosed HCC",
+     "caution": "No demonstrated PFS or OS difference; applicability to newly diagnosed HCC is uncertain",
      "quote": {
       "file": "hcc/index.html",
       "text": "A randomised study of 166 patients with a single recurrent HCC ≤5 cm favoured SBRT for local progression-free survival (HR 0.45, 95% CI 0.24–0.87, P=.014; 2-year 92.7% versus 75.8%) without a demonstrated difference in progression-free survival (HR 0.76, P=.190) or overall survival (HR 0.91, P=.830)."
@@ -10007,7 +10007,7 @@
       "29498924"
      ],
      "arms": "Y-90 vs sorafenib",
-     "result": "Median OS 8.8 vs 10.0 mo (ITT) — no difference",
+     "result": "Median OS 8.8 vs 10.0 mo (ITT) — no significant survival difference",
      "caution": "28.6% assigned Y-90 never received it"
     },
     {
@@ -10034,7 +10034,7 @@
      ],
      "arms": "Atezolizumab–bevacizumab vs sorafenib",
      "result": "Median OS 19.2 vs 13.4 mo; HR 0.66 — post hoc update, descriptive p values",
-     "caution": "Non-viral HCC: no benefit shown (HR 1.05, 95% CI 0.68–1.63)"
+     "caution": "Exploratory non-viral subgroup: HR 1.05 (95% CI 0.68–1.63); uncertainty does not establish no benefit"
     },
     {
      "trial": "IMbrave150",
@@ -10062,7 +10062,7 @@
       "38319892"
      ],
      "arms": "STRIDE vs sorafenib",
-     "result": "Median OS 16.43 vs 13.77 mo; HR 0.78 (96.02% CI 0.65–0.93); no PFS benefit"
+     "result": "Median OS 16.43 vs 13.77 mo; HR 0.78 (96.02% CI 0.65–0.93); no significant PFS benefit"
     }
    ]
   },
@@ -10083,7 +10083,7 @@
      ],
      "arms": "Nivolumab–ipilimumab vs lenvatinib or sorafenib",
      "result": "Median OS 23.7 vs 20.6 mo; HR 0.79 (95% CI 0.65–0.96)",
-     "caution": "Mortality 65% higher in the first 6 months (HR 1.65, 1.12–2.43); comparator was a kinase inhibitor"
+     "caution": "Higher death hazard in the first 6 months: HR 1.65 (95% CI 1.12–2.43); comparator was a kinase inhibitor"
     }
    ]
   }

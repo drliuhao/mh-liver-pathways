@@ -19,3 +19,12 @@ Use the same hierarchy on every roadmap and transplant pathway. A recent revisio
 - Default to the existing shared structure. Avoid disease-specific global cards when the content applies to one assessment.
 - Regenerate `assets/content-hierarchy-data.js` with `node tools/build_content_hierarchy.cjs`; run `node tools/test_content_hierarchy.cjs` plus the existing presentation and clinical-routing checks.
 - Check every changed decision on desktop and phone. Confirm all original reference content remains accessible and unchanged after topic switches.
+
+## Compact treatment evidence
+
+- Use the shared compact Indications / Contraindications & cautions / Evidence & sources controls on roadmap treatment options. Keep critical safety statements outside optional panels. Phone labels may shorten while accessible names retain their meaning.
+- Keep numerical evidence attached to its actual treatment option and named study. State the population, arms, endpoint/time horizon and material limitations. A shared PMID alone does not justify moving another study result into an option.
+- Source documents and clinical data remain the source of truth. Explicit, reviewed reference groups can reuse treatment-reference results when the option's own text is insufficient; preserve their cohort limits and distinguish a response endpoint from survival.
+- Do not infer equivalence from nonsignificance, or rank regimens by survival from different trials. Keep study evidence separate from patient eligibility and treatment recommendations.
+- The systemic matrix uses tumor tabs, setting filters, a setting overview and compact regimen cards. Its build pipeline applies `tools/systemic_matrix_style.py` after regenerating the source page and data. Evidence row segments and reviewed de-duplication rules are in `tools/systemic_evidence_rows.json`.
+- Regenerate shared evidence with `python3 tools/build_compact_evidence.py`. Validate with `tools/test_compact_evidence.py`, `tools/test_systemic_matrix_style.py`, source-preservation checks and browser checks of both desktop and phone.
