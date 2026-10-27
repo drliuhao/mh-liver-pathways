@@ -21,6 +21,9 @@ for(const p of clinical.index)for(const s of p.steps){
  assert(s.owner&&s.orders.length);assert(clinical.assistants[p.slug+'/'+s.id].questions.length);decisions++;
 }
 assert.equal(decisions,46);
+assert.equal(Object.keys(context.window.DecisionWorkspaceData.protocolNavigation).length,46);
+for(const p of clinical.index)for(const step of p.steps){const entry=context.window.DecisionWorkspaceData.protocolNavigation[p.slug+'/'+step.id];assert.equal(entry.source,step.title);assert(entry.label.length<=30);}
+
 const ui=read('assets/decision-workspace.js');
 assert(ui.includes('middle.append(current,orders,result)'),'Original controls and results stay together');
 assert(ui.includes('left.append(requiredFindings(config,protocol.pathway.slug+\'/\'+id),tests)'),'Original full checklist stays in input column');

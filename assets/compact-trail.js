@@ -97,7 +97,7 @@
   if(!head||!result)return;
   const workspace=decision;workspace.classList.add('ct-workspace');state.current.before(workspace);
   const context=decision.querySelector('.contextline');
-  const instruction=el('p','ct-workflow-hint','Choose a finding → Use finding → choose a next step. Numbers reopen earlier choices.');(context||head).after(instruction,state.current,result);
+  const instruction=el('p','ct-workflow-hint','Choose a finding → Use finding → choose a next step.');(context||head).after(instruction,state.current,result);
   // Move the original controls and result together. Their clinical handlers,
   // conditions, evidence, high-risk reviews and care-context capture stay intact.
   state.workspace=workspace;state.result=result;state.orders=decision.querySelector('.orders');document.body.classList.add('single-decision-workspace');
@@ -106,14 +106,14 @@
  function followWorkspace(state){
   if(!followCurrent||!state.workspace)return;
   const kind=followCurrent;followCurrent=null;
-  requestAnimationFrame(()=>{
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
    if(!state.workspace.isConnected)return;
    const pending=state.current.querySelector('select:not([data-layer-action])');
    const target=kind==='step'?state.workspace:pending?state.current:state.result;
    target?.scrollIntoView({block:'start',behavior:'instant'});
    const focus=kind==='step'?state.workspace.querySelector('#question'):pending||state.result?.querySelector('h3');
    if(focus){if(!focus.matches('select'))focus.setAttribute('tabindex','-1');focus.focus({preventScroll:true});}
-  });
+  }));
  }
  function enhance(nav){
   const historyEl=nav.querySelector('.layer-history'),current=nav.querySelector('.layer-current');if(!historyEl||!current)return;
@@ -123,7 +123,7 @@
    const menu=el('details','ct-menu'),summary=el('summary','',protocol?protocol.pathway.code:slug.toUpperCase()),items=el('div','ct-menu-items');
    summary.setAttribute('aria-label',(protocol?'Findings':'Topics viewed')+' menu');menu.append(summary,items);
    [...heading.querySelectorAll('button,a')].forEach(n=>{if(n.matches('[data-pathway-overview],[data-rf-overview]'))n.textContent='Browse all decisions';items.append(n);});heading.replaceChildren(menu);
-   items.prepend(el('p','ct-menu-hint',protocol?'Numbers reopen earlier findings. Confirm findings and choose next steps below.':'Revisit earlier topics above, or browse another topic here. Use the conditional next-step links to continue.'));
+   items.prepend(el('p','ct-menu-hint',protocol?'Review recorded findings here. Confirm findings and choose next steps below.':'Revisit earlier topics above, or browse another topic here. Use the conditional next-step links to continue.'));
    items.addEventListener('click',ev=>{if(ev.target.closest('button,a'))menu.open=false;});
    const editors=el('div','ct-editors');editors.hidden=true;current.before(editors);
    const entry=el('p','ct-entry-note');entry.hidden=true;editors.before(entry);

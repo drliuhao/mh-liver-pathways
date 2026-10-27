@@ -6,10 +6,10 @@
   const flowCSS=document.createElement('link');flowCSS.rel='stylesheet';flowCSS.href=new URL('assets/clinical-flow.css?v=20261025-1',root);document.head.append(flowCSS);
   const layerCSS=document.createElement('link');layerCSS.rel='stylesheet';layerCSS.href=new URL('assets/decision-layers.css?v=20261026-tools1',root);document.head.append(layerCSS);
   const compactCSS=document.createElement('link');compactCSS.rel='stylesheet';compactCSS.href=new URL('assets/compact-trail.css?v=20261026-visible1',root);document.head.append(compactCSS);
-  for(const file of ['contextual-copy.js','contextual-info.js','clinical-flow.js','clinical-reference.js','decision-workspace-data.js','decision-workspace.js','compact-trail-labels.js','compact-trail.js','allocation-reference.js','clinical-tools.js','allocation-overview.js']){const script=document.createElement('script');script.async=false;script.src=new URL('assets/'+file+'?v=20261026-visible1',root);document.head.append(script);}
+  for(const file of ['contextual-copy.js','contextual-info.js','clinical-flow.js','clinical-reference.js','decision-workspace-data.js','decision-workspace.js','compact-trail-labels.js','compact-trail.js','allocation-reference.js','clinical-tools.js','allocation-overview.js']){const script=document.createElement('script');script.async=false;script.src=new URL('assets/'+file+'?v=20261027-hierarchy1',root);document.head.append(script);}
   const allocationCSS=document.createElement('link');allocationCSS.rel='stylesheet';allocationCSS.href=new URL('assets/allocation-overview.css?v=20261026-wait1',root);document.head.append(allocationCSS);
   const toolsCSS=document.createElement('link');toolsCSS.rel='stylesheet';toolsCSS.href=new URL('assets/clinical-tools.css?v=20261026-tools1',root);document.head.append(toolsCSS);
-  const workspaceCSS=document.createElement('link');workspaceCSS.rel='stylesheet';workspaceCSS.href=new URL('assets/decision-workspace.css?v=20261026-visible1',root);document.head.append(workspaceCSS);
+  const workspaceCSS=document.createElement('link');workspaceCSS.rel='stylesheet';workspaceCSS.href=new URL('assets/decision-workspace.css?v=20261027-hierarchy1',root);document.head.append(workspaceCSS);
   const path=location.pathname.slice(root.pathname.length).split('/').filter(Boolean);
   const transplant=path[0]==='transplant';
   const highRisk=transplant&&path[1]==='high-risk';

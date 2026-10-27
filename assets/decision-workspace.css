@@ -47,3 +47,26 @@ body:has(.dw-ready .dw-grid) .clinical-tool-bar>.ci-unit{display:none}
  .roadmap-streamlined .dw-major-strip{padding:8px;gap:5px}.dw-major-heading{display:block;margin-bottom:7px}.dw-major-heading h2{font-size:13px}.dw-major-heading p{font-size:10px;margin-top:2px}.dw-major-decisions #stageBtns{display:flex;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;gap:6px;padding:0 0 3px;scrollbar-width:thin}.dw-major-decisions .rf-topic{flex:0 0 160px;min-height:62px;font-size:12px;scroll-snap-align:start}.dw-major-strip .clinical-strip-tools .clinical-button{min-height:62px;padding:5px!important;font-size:9px}.dw-major-number{flex-basis:22px;width:22px;height:22px}.roadmap-streamlined #answer.dw-roadmap .ahead{padding:18px 16px}.dw-roadmap .ahead .ask{font-size:14px}.dw-roadmap .rf-recommendations{padding:12px}.dw-roadmap .rf-related-link{min-height:44px}.dw-roadmap .dw-criteria>.dw-column-title{font-size:17px}
 }
 @media print{.roadmap-streamlined #answer.dw-roadmap .ahead{background:#fff;color:#173f4d;border-bottom:2px solid #255969}.roadmap-streamlined #answer.dw-roadmap .ahead h3,.dw-roadmap .ahead .ask,.dw-roadmap .ahead .rf-eligibility-note,.dw-roadmap .dw-decision-kicker{color:#173f4d}.dw-roadmap .rf-recommendations{background:#fff}.dw-major-strip{display:none!important}}
+
+/* The same hierarchy on transplant pathways: decisions, findings, current assessment. */
+.compact-trail .ct-strip.dw-protocol-strip{flex-wrap:wrap;gap:0;padding:10px 12px 0;background:#eaf2f3;border:1px solid #9fbac3;border-top:4px solid #255969}
+.dw-protocol-strip .dw-protocol-nav{flex:1 0 100%;width:100%;padding-bottom:9px;border-bottom:1px solid #c7d9de}
+.dw-protocol-nav .dw-major-heading{margin-bottom:8px}
+.dw-protocol-decisions{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:6px}
+.dw-protocol-decisions .dw-protocol-topic{min-width:0;min-height:50px;padding:8px;text-align:left;border:1px solid #a9c0c9;border-radius:6px;background:#fff;color:#234958;font:650 12px/1.35 var(--sans,system-ui);white-space:normal;cursor:pointer}
+.dw-protocol-topic:hover{border-color:#255969;background:#f5fafb}.dw-protocol-decisions .dw-protocol-topic[aria-current="step"]{background:#245b65;color:#fff;border:2px solid #17434b;padding:7px}
+.dw-protocol-topic:focus-visible{outline:3px solid #3a759c;outline-offset:2px}
+.dw-protocol-strip>.layer-heading{order:1;padding-left:0}.dw-protocol-strip>.ct-scroll-button{order:2}.dw-protocol-strip>.layer-history{order:3}.dw-protocol-strip>.layer-history+.ct-scroll-button{order:4}.dw-protocol-strip>.clinical-strip-tools{order:5}
+.dw-protocol-strip>.clinical-strip-tools>[data-clinical-preview]{display:none}.dw-protocol-strip .ct-menu>summary{font-size:11px}.dw-protocol-strip>.layer-history{padding-top:6px;padding-bottom:6px}
+.compact-trail .dw-protocol .question-head{padding:21px 24px;margin-top:14px;margin-bottom:12px;border-radius:8px;background:#214e5c;color:#fff}
+.dw-protocol .question-head h2{font:750 clamp(23px,2.2vw,30px)/1.25 var(--sans,system-ui)!important;color:#fff}
+.dw-protocol .question-head .eyebrow,.dw-protocol .question-head .eyebrow span{color:#c4dde4}.dw-protocol .question-head .permalink,.dw-protocol .question-head .ci-heading-info>.ci-trigger{color:#fff}
+.dw-protocol .dw-criteria>.dw-column-title{font-size:18px}.dw-protocol .results>.section-head h3{font-size:17px!important;color:#204f5c}
+@media(max-width:1099px){.dw-protocol-decisions{display:flex;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scrollbar-width:thin;gap:6px;padding-bottom:3px}.dw-protocol-decisions .dw-protocol-topic{flex:0 0 140px;scroll-snap-align:start}}
+@media(max-width:760px){
+ .compact-trail .ct-strip.dw-protocol-strip{padding:7px 8px 0}.dw-protocol-nav .dw-major-heading h2{font-size:13px}.dw-protocol-nav .dw-major-heading p{font-size:10px;margin-top:2px}.dw-protocol-nav .dw-major-heading{display:block;margin-bottom:6px}
+ .dw-protocol-decisions{display:flex;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scrollbar-width:thin;gap:6px;padding-bottom:3px}.dw-protocol-decisions .dw-protocol-topic{flex:0 0 130px;min-height:48px;font-size:12px;scroll-snap-align:start}
+ .dw-protocol-strip>.layer-heading{max-width:68px}.dw-protocol-strip .ct-menu>summary{font-size:10px}.dw-protocol-strip>.clinical-strip-tools{padding-left:4px}.dw-protocol-strip>.clinical-strip-tools .clinical-button{padding:5px!important;font-size:10px}
+ .compact-trail .dw-protocol .question-head{padding:18px 16px}.dw-protocol .question-head h2{font-size:24px!important}
+}
+@media print{.compact-trail .dw-protocol .question-head{background:#fff;color:#173f4d;border-bottom:2px solid #255969}.dw-protocol .question-head h2,.dw-protocol .question-head .eyebrow,.dw-protocol .question-head .eyebrow span{color:#173f4d}}

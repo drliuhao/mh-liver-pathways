@@ -34,6 +34,14 @@ citations are retained; an absent source field does not imply that there are
 no contraindications. Standalone Avoid recommendations, local approval
 requirements and selected pathway stop/hold results remain visible.
 
+Transplant pathways also pin all major decisions above the separate recorded-finding
+row. These top buttons preview a decision without advancing the pathway or
+changing findings. Short labels are source-guarded against the exact step title
+and maintained in `tools/protocol_navigation_labels.json`; full titles remain in
+accessible labels and hover titles. The active assessment is highlighted and
+uses the same dark heading and three-column hierarchy as cancer roadmaps.
+Direct links and next-step scrolling account for the full pinned area.
+
 `assets/decision-workspace.js` moves existing DOM nodes and never records or
 changes findings. Clinical matching, selection, confirmation, reset, routing,
 citations and calculator logic remain in their original modules.

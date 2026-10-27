@@ -1929,5 +1929,191 @@ window.DecisionWorkspaceData={
         "meld"
       ]
     }
+  },
+  "protocolNavigation": {
+    "hcc/diagnosis": {
+      "source": "Confirm HCC",
+      "label": "Diagnosis"
+    },
+    "hcc/curative-route": {
+      "source": "Choose treatment with curative intent",
+      "label": "Curative options"
+    },
+    "hcc/allocation": {
+      "source": "Check MELD-exception criteria",
+      "label": "MELD exception"
+    },
+    "hcc/treatment": {
+      "source": "Plan bridging or downstaging treatment",
+      "label": "Bridging / downstaging"
+    },
+    "hcc/listing": {
+      "source": "Review listing and MELD-exception request",
+      "label": "Listing review"
+    },
+    "hcc/waitlist": {
+      "source": "Reassess while awaiting transplant",
+      "label": "Waitlist review"
+    },
+    "hcc/after-transplant": {
+      "source": "Post-transplant follow-up",
+      "label": "Post-transplant care"
+    },
+    "pcca/localize": {
+      "source": "Localize the lesion",
+      "label": "Tumor location"
+    },
+    "pcca/diagnosis": {
+      "source": "Plan diagnostic sampling",
+      "label": "Diagnostic sampling"
+    },
+    "pcca/phenotype": {
+      "source": "Check protocol criteria",
+      "label": "Protocol criteria"
+    },
+    "pcca/neoadjuvant": {
+      "source": "Deliver approved neoadjuvant therapy",
+      "label": "Neoadjuvant therapy"
+    },
+    "pcca/staging": {
+      "source": "Perform operative staging",
+      "label": "Operative staging"
+    },
+    "pcca/listing": {
+      "source": "List and maintain readiness",
+      "label": "Listing / readiness"
+    },
+    "pcca/follow-up": {
+      "source": "Surveil after transplant",
+      "label": "Post-transplant care"
+    },
+    "icca/diagnosis": {
+      "source": "Establish histology",
+      "label": "Histology"
+    },
+    "icca/phenotype": {
+      "source": "Check clinical selection criteria",
+      "label": "Selection criteria"
+    },
+    "icca/therapy": {
+      "source": "Plan pretransplant treatment",
+      "label": "Pretransplant treatment"
+    },
+    "icca/stability": {
+      "source": "Demonstrate stability",
+      "label": "Disease stability"
+    },
+    "icca/review": {
+      "source": "Request an individual iCCA MELD exception",
+      "label": "MELD-exception review"
+    },
+    "icca/follow-up": {
+      "source": "Transplant and follow-up",
+      "label": "Transplant / follow-up"
+    },
+    "crlm/map-disease": {
+      "source": "Stage the disease",
+      "label": "Disease extent"
+    },
+    "crlm/biology": {
+      "source": "Review molecular markers and CEA",
+      "label": "Markers / CEA"
+    },
+    "crlm/unresectability": {
+      "source": "Confirm unresectability",
+      "label": "Unresectability"
+    },
+    "crlm/control": {
+      "source": "Treat and observe",
+      "label": "Treatment / observation"
+    },
+    "crlm/clocks": {
+      "source": "Confirm primary treatment and timing",
+      "label": "Primary treatment / timing"
+    },
+    "crlm/restaging": {
+      "source": "Restage for transplant",
+      "label": "Restaging"
+    },
+    "crlm/review": {
+      "source": "Request and renew the MELD exception",
+      "label": "MELD-exception review"
+    },
+    "crlm/transplant": {
+      "source": "Transplant and follow-up",
+      "label": "Transplant / follow-up"
+    },
+    "nelm/biology": {
+      "source": "Confirm differentiation and grade",
+      "label": "Differentiation / grade"
+    },
+    "nelm/distribution": {
+      "source": "Stage disease and confirm primary treatment",
+      "label": "Extent / primary treatment"
+    },
+    "nelm/options": {
+      "source": "Compare treatment options",
+      "label": "Treatment options"
+    },
+    "nelm/exposure": {
+      "source": "Review treatment exposure",
+      "label": "Treatment exposure"
+    },
+    "nelm/observation": {
+      "source": "Verify disease control",
+      "label": "Disease control"
+    },
+    "nelm/review": {
+      "source": "Request and renew the MELD exception",
+      "label": "MELD-exception review"
+    },
+    "nelm/follow-up": {
+      "source": "Transplant and follow-up",
+      "label": "Transplant / follow-up"
+    },
+    "hehe/diagnosis": {
+      "source": "Verify diagnosis",
+      "label": "Diagnosis"
+    },
+    "hehe/stage": {
+      "source": "Stage and compare options",
+      "label": "Stage / treatment options"
+    },
+    "hehe/risk": {
+      "source": "Assess benefit and risk",
+      "label": "Benefit / risk"
+    },
+    "hehe/review": {
+      "source": "Submit and reassess",
+      "label": "Submission / reassessment"
+    },
+    "hehe/follow-up": {
+      "source": "Transplant and follow-up",
+      "label": "Transplant / follow-up"
+    },
+    "hca/characterize": {
+      "source": "Characterize risk",
+      "label": "Risk assessment"
+    },
+    "hca/standard-care": {
+      "source": "Use standard options first",
+      "label": "Standard treatment"
+    },
+    "hca/exception-route": {
+      "source": "Check HCA MELD-exception criteria",
+      "label": "MELD-exception criteria"
+    },
+    "hca/transformation": {
+      "source": "Assess possible malignant transformation",
+      "label": "Malignant transformation"
+    },
+    "hca/review": {
+      "source": "Review benefit and submit",
+      "label": "Benefit / submission"
+    },
+    "hca/follow-up": {
+      "source": "Reassess and follow up",
+      "label": "Reassessment / follow-up"
+    }
   }
 };

@@ -5,7 +5,8 @@
  const root=new URL('../',document.currentScript.src),slug=location.pathname.slice(root.pathname.length).split('/').filter(Boolean)[0];
  let protocol;try{protocol=JSON.parse(document.getElementById('protocol-data')?.textContent||'null');}catch{}
  if(!protocol?.pathway&&!document.getElementById('answer'))return;
- let queued=false;
+ let queued=false,initialProtocolPositioned=false;
+ const initialProtocolStep=protocol?.pathway?.steps.find(s=>'#'+s.id===location.hash)?.id;
  const make=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n;};
  const plain=s=>String(s||'').replace(/\s+/g,' ').trim();
  const displayTeam=s=>s.split(' · ').map(x=>({
@@ -69,6 +70,14 @@
   const right=toolsColumn(step.owner,[],text,true);grid.append(left,middle,right);jumps(decision,grid);
   // Owner is now explicit above tools. Keep the timing and usage explanation above the grid.
   const owner=[...decision.querySelectorAll('.contextline>span,.contextline>.ci-unit')].find(n=>n.querySelector('b')?.textContent==='Responsible team'||n.querySelector('.ci-label')?.textContent==='Responsible team');if(owner)owner.remove();
+  if(!initialProtocolPositioned&&initialProtocolStep===id){
+   initialProtocolPositioned=true;
+   requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    if(!decision.isConnected)return;
+    const strip=document.querySelector('.dw-protocol-strip');if(strip)document.documentElement.style.setProperty('--pathway-nav-height',Math.ceil(strip.getBoundingClientRect().height)+'px');
+    decision.scrollIntoView({block:'start',behavior:'instant'});
+   }));
+  }
  }
  function roadmapLayout(answer){
   if(answer.classList.contains('dw-ready')&&answer.querySelector('.dw-grid'))return;
@@ -113,14 +122,39 @@
    b.title=meta.title;b.setAttribute('aria-label','Review '+meta.title);
    b.replaceChildren(make('span','dw-major-number',b.dataset.roadmapDecision),make('span','dw-major-label',label));b.dataset.majorReady='true';
   }
-  const active=buttons.querySelector('[aria-current="true"]');
+  const active=buttons.querySelector('[aria-current="true"],[aria-current="step"]');
   if(active&&nav.dataset.active!==active.dataset.roadmapDecision){
    nav.dataset.active=active.dataset.roadmapDecision;
    requestAnimationFrame(()=>revealMajorDecision(buttons));
   }
  }
+ function protocolNavigation(){
+  if(!protocol?.pathway)return;
+  const strip=document.querySelector('.pathway-nav .ct-strip');if(!strip)return;
+  let nav=strip.querySelector('.dw-protocol-nav');
+  if(!nav){
+   nav=make('section','dw-major-decisions dw-protocol-nav');nav.setAttribute('aria-labelledby','dw-protocol-nav-title');
+   const heading=make('div','dw-major-heading'),title=make('h2','',protocol.pathway.code+' · Major decisions');title.id='dw-protocol-nav-title';
+   heading.append(title,make('p','','Tap to preview · use next-step choices to advance'));
+   const choices=make('div','dw-protocol-decisions');choices.setAttribute('role','group');choices.setAttribute('aria-label','Preview any pathway decision');
+   protocol.pathway.steps.forEach((step,i)=>{
+    const short=data.protocolNavigation?.[protocol.pathway.slug+'/'+step.id],label=short?.source===step.title?short.label:step.title;
+    const b=make('button','dw-protocol-topic',label);b.type='button';b.dataset.clinicalPreview='';b.dataset.step=step.id;b.title=step.title;
+    b.setAttribute('aria-label','Preview decision '+(i+1)+': '+step.title);choices.append(b);
+   });
+   nav.append(heading,choices);strip.prepend(nav);strip.classList.add('dw-protocol-strip');
+   const menu=strip.querySelector('.ct-menu>summary');if(menu){menu.textContent='Findings';menu.setAttribute('aria-label','Recorded findings menu');}
+   if(window.ResizeObserver)new ResizeObserver(()=>revealMajorDecision(choices)).observe(choices);
+  }
+  const id=document.querySelector('.decision .permalink')?.getAttribute('href')?.slice(1)||'';
+  if(nav.dataset.current!==id){
+   nav.dataset.current=id;
+   for(const b of nav.querySelectorAll('.dw-protocol-topic')){if(b.dataset.step===id)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');}
+   requestAnimationFrame(()=>revealMajorDecision(nav.querySelector('.dw-protocol-decisions')));
+  }
+ }
  function revealMajorDecision(buttons){
-  const active=buttons.querySelector('[aria-current="true"]');if(!active||buttons.scrollWidth<=buttons.clientWidth)return;
+  const active=buttons.querySelector('[aria-current="true"],[aria-current="step"]');if(!active||buttons.scrollWidth<=buttons.clientWidth)return;
   const parent=buttons.getBoundingClientRect(),child=active.getBoundingClientRect();
   if(child.left<parent.left-1||child.right>parent.right+1)buttons.scrollLeft+=child.left-parent.left;
  }
@@ -156,6 +190,7 @@
   if(allocation)right.append(allocation);
  }
  function scan(){queued=false;
+  protocolNavigation();
   document.querySelectorAll('.decision.ct-workspace').forEach(n=>{protocolLayout(n);allocationPlacement(n);supplementalInputs(n);});
   const answer=document.getElementById('answer');if(answer){roadmapNavigation();roadmapLayout(answer);}
   document.querySelectorAll('.clinical-preview-content').forEach(previewLayout);

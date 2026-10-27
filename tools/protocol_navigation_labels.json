@@ -1,0 +1,62 @@
+{
+  "hcc": {
+    "diagnosis": "Diagnosis",
+    "curative-route": "Curative options",
+    "allocation": "MELD exception",
+    "treatment": "Bridging / downstaging",
+    "listing": "Listing review",
+    "waitlist": "Waitlist review",
+    "after-transplant": "Post-transplant care"
+  },
+  "pcca": {
+    "localize": "Tumor location",
+    "diagnosis": "Diagnostic sampling",
+    "phenotype": "Protocol criteria",
+    "neoadjuvant": "Neoadjuvant therapy",
+    "staging": "Operative staging",
+    "listing": "Listing / readiness",
+    "follow-up": "Post-transplant care"
+  },
+  "icca": {
+    "diagnosis": "Histology",
+    "phenotype": "Selection criteria",
+    "therapy": "Pretransplant treatment",
+    "stability": "Disease stability",
+    "review": "MELD-exception review",
+    "follow-up": "Transplant / follow-up"
+  },
+  "crlm": {
+    "map-disease": "Disease extent",
+    "biology": "Markers / CEA",
+    "unresectability": "Unresectability",
+    "control": "Treatment / observation",
+    "clocks": "Primary treatment / timing",
+    "restaging": "Restaging",
+    "review": "MELD-exception review",
+    "transplant": "Transplant / follow-up"
+  },
+  "nelm": {
+    "biology": "Differentiation / grade",
+    "distribution": "Extent / primary treatment",
+    "options": "Treatment options",
+    "exposure": "Treatment exposure",
+    "observation": "Disease control",
+    "review": "MELD-exception review",
+    "follow-up": "Transplant / follow-up"
+  },
+  "hehe": {
+    "diagnosis": "Diagnosis",
+    "stage": "Stage / treatment options",
+    "risk": "Benefit / risk",
+    "review": "Submission / reassessment",
+    "follow-up": "Transplant / follow-up"
+  },
+  "hca": {
+    "characterize": "Risk assessment",
+    "standard-care": "Standard treatment",
+    "exception-route": "MELD-exception criteria",
+    "transformation": "Malignant transformation",
+    "review": "Benefit / submission",
+    "follow-up": "Reassessment / follow-up"
+  }
+}

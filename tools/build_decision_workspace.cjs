@@ -10,5 +10,11 @@ for(const slug of Object.keys(map)){
  for(const s of stages){const [team,inputs,tools]=source[slug][s.id];topics[slug+'/'+s.id]={title:s.name,criteria:s.crit,team,inputs,tools};}
 }
 assert.equal(Object.keys(topics).length,103);
-fs.writeFileSync(path.join(root,'assets/decision-workspace-data.js'),'/* Display summaries; original cutoffs, recommendations and evidence stay in the source topic. */\nwindow.DecisionWorkspaceData='+JSON.stringify({topics},null,2)+';\n');
-console.log('Built source-guarded input/team/tool summaries for all 103 roadmap topics.');
+const navigation=JSON.parse(read('tools/protocol_navigation_labels.json')),protocolNavigation={};
+for(const p of JSON.parse(read('transplant/assets/content.json')).index){
+ assert.deepEqual(Object.keys(navigation[p.slug]),p.steps.map(s=>s.id),p.slug+' navigation order');
+ for(const s of p.steps){const label=navigation[p.slug][s.id];assert(label.length<=30);protocolNavigation[p.slug+'/'+s.id]={source:s.title,label};}
+}
+assert.equal(Object.keys(protocolNavigation).length,46);
+fs.writeFileSync(path.join(root,'assets/decision-workspace-data.js'),'/* Display summaries; original cutoffs, recommendations and evidence stay in the source topic. */\nwindow.DecisionWorkspaceData='+JSON.stringify({topics,protocolNavigation},null,2)+';\n');
+console.log('Built source-guarded display summaries for 103 roadmap topics and navigation labels for 46 transplant decisions.');
