@@ -4,7 +4,7 @@ Analysis/source review: 26 October 2026. Analyst A. Entry restricted to **2021�
 
 ## Sources and scope
 
-The quantitative analysis was reconstructed from the original December 2025 OPTN STAR liver registry (392,625 records) and exception data in the 10,000 LDLT study. The dynamic HCC project has copies of these source files, but its marker-complete modeling cohort was not used: requiring serial tumor/AFP/laboratory measurements would change the population whose access is being described.
+The analysis uses the December 2025 OPTN STAR liver registry and exception records. All eligible cohort entries are included without requiring serial tumor, AFP or laboratory measurements.
 
 Houston refers to three adult listing programs: Memorial Hermann, Houston Methodist and Baylor St. Luke’s. The existing study crosswalk is **inferred from aggregate transplant-count fingerprints**, not an official registry crosswalk. Each program matched all 58 annual donor-type count cells for 1996–2024; all six held-out donor-type cells in 2025 also matched. Those earlier records validate program identification only; the waiting-outcome cohorts include **2021–2025 entrants only**. The analysis is pooled, unadjusted and does not rank programs. It does not cover every Houston resident, every possible Houston program, or current 2026 waiting-list performance.
 

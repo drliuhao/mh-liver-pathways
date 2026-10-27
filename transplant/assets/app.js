@@ -13,6 +13,7 @@ let careId = 'treatment';
 let lastTrigger = null;
 let assistantSession = active ? DecisionAssistant.createStagedSession(active,DATA.assistants,false) : null;
 let decisionTrail=[];
+let browseOrigin=null;
 let focusedCriteria=null;
 let navigationObserver = null;
 let riskContext = {};
@@ -70,13 +71,17 @@ function pathwayShell() {
  renderView();
 }
 
+function decisionLabel(id){const step=active.steps.find(s=>s.id===id),key=active.slug+'/'+id;return ['listing','waitlist','review'].includes(id)?'Transplant waitlisted':window.DecisionWorkspaceData?.protocolNavigation?.[key]?.label||step?.title||id;}
+function laterFindingSummary(index){const groups=active.steps.slice(index+1).map(s=>{const key=active.slug+'/'+s.id;return {label:decisionLabel(s.id),count:Object.values(assistantSession.answers[key]||{}).filter(Boolean).length+Object.values(riskContext[key]||{}).filter(Boolean).length};}).filter(x=>x.count);const count=groups.reduce((n,x)=>n+x.count,0);return count?count+' later finding'+(count===1?'':'s')+' in '+[...new Set(groups.map(x=>x.label))].join(', '):'';}
+function announceAssessmentSwitch(from,cleared=''){if(!from&&!cleared)return;const note=document.createElement('p');note.className='sr-only';note.setAttribute('role','status');note.setAttribute('aria-live','polite');note.textContent=(from?'Current assessment changed to '+decisionLabel(active.steps[stepIndex].id)+'. ':'')+'Finding recorded.'+(cleared?' Cleared '+cleared+'.':'');document.querySelector('.decision')?.append(note);}
 function renderView(){
- document.querySelectorAll('[role="tab"]').forEach(t=>t.setAttribute('aria-selected',t.dataset.view===(view==='risk-reference'?'high-risk':view)?'true':'false'));
+ document.body.dataset.pathwayView=view;
+ document.querySelectorAll('.viewbar [role="tab"]').forEach(t=>t.setAttribute('aria-selected',t.dataset.view===(view==='risk-reference'?'high-risk':view)?'true':'false'));
  const out=document.getElementById('view');
  out.setAttribute('role','tabpanel');out.setAttribute('aria-labelledby','tab-'+(view==='risk-reference'?'high-risk':view));
  const content=view==='pathway'?renderStep():view==='meeting'?renderMeeting():view==='evidence'?renderEvidence():view==='high-risk'?HighRisk.overview(DATA.high_risk,active.slug):view==='risk-reference'?renderRiskReference():renderCare();
  out.innerHTML=(view==='pathway'?renderOverview():'')+renderNavigation()+content;
- if(view==='pathway')updateDecision();else if(view==='care')renderLayerStack();
+ if(view==='pathway'){updateDecision();if(browseOrigin){const origin=active.steps.find(s=>s.id===browseOrigin);const note=document.createElement('p');note.className='dw-browse-note';note.innerHTML=`Viewing: <b>${e(decisionLabel(active.steps[stepIndex].id))}</b> · Current: ${e(decisionLabel(browseOrigin))}. <span>Use finding records your choice and makes this the current assessment.${laterFindingSummary(stepIndex)?' Recording here clears '+e(laterFindingSummary(stepIndex))+'.':''}</span> <button type="button" data-step="${e(browseOrigin)}" data-dw-browse>Return to ${e(decisionLabel(browseOrigin))}</button>`;document.querySelector('.question-head')?.after(note);}}else if(view==='care')renderLayerStack();
  navigationObserver?.disconnect();
  navigationObserver=new ResizeObserver(syncNavigationHeight);
  const nav=out.querySelector('.pathway-nav');if(nav)navigationObserver.observe(nav);if(!['pathway','care'].includes(view))renderLayerStack();
@@ -101,7 +106,7 @@ function renderOverview(){
  const status=exampleStatus();
  return `<section class="journey-overview" aria-labelledby="journey-title"><div class="journey-heading"><div><p class="eyebrow">The whole pathway</p><h2 id="journey-title">From diagnosis to transplant and follow-up</h2></div><a href="#care-treatment" data-care="treatment" class="journey-alternative">Browse treatment options →</a></div>
  <div class="journey-map"><p class="journey-hint">Preview any decision without changing your findings.</p><nav class="journey-phases" aria-label="All clinical decisions">${DATA.journeys[active.slug].map(phase=>`<section class="journey-phase"><h3>${e(phase.title)}</h3><div class="journey-steps">${phase.steps.map(id=>{const n=active.steps.findIndex(s=>s.id===id),step=active.steps[n],current=n===stepIndex;return `<button type="button" data-step="${e(id)}" class="journey-step ${current?'current':''}" ${current?'aria-current="step"':''}><span class="phase-number">${n+1}</span><span>${e(step.title)}</span></button>`;}).join('')}</div></section>`).join('')}</nav></div>
- <div class="example-controls"><div aria-live="polite"><strong data-example-status>${e(status[0])}</strong><p data-example-description>${e(status[1])}</p></div><div class="example-buttons"><button data-pathway-example>Show entry example</button><button data-pathway-clear>Clear all choices</button></div></div></section>`;
+ <div class="example-controls"><div><strong data-example-status aria-live="polite">${e(status[0])}</strong><p data-example-description>${e(status[1])}</p></div><div class="example-buttons"><button data-pathway-example>Show entry example</button><button data-pathway-clear>Clear all choices</button></div></div></section>`;
 }
 
 function renderNavigation(){
@@ -130,7 +135,7 @@ function renderLayerStack(){
  if(!['pathway','care'].includes(view)){historyEl.innerHTML='';currentEl.innerHTML='<button data-view="pathway">Return to decision choices →</button>';return;}
  const coreResult=view==='pathway'?DecisionAssistant.evaluate(assistantConfig(),assistantSession.answers[assistantKey()],active.steps[stepIndex].branches):null;
  const stopEarly=coreResult?.state==='matched'&&coreResult.kind==='stop';
- const current=active.steps[stepIndex],visited=[...decisionTrail.filter(id=>id!==current.id),current.id];let chosen='',pending='',n=0;
+ const current=active.steps[stepIndex],visited=[...new Set([...decisionTrail,...(browseOrigin?[browseOrigin]:[])])].filter(id=>id!==current.id).concat(current.id).sort((a,b)=>active.steps.findIndex(s=>s.id===a)-active.steps.findIndex(s=>s.id===b));let chosen='',pending='',n=0;
  for(const id of visited){const step=active.steps.find(s=>s.id===id);if(!step)continue;const key=active.slug+'/'+id,config=DATA.assistants[key],answers=assistantSession.answers[key];
   for(const q of (id===current.id&&stopEarly?config.questions.filter(q=>answers[q.id]):DecisionAssistant.visibleQuestions(config,answers))){
    const value=answers[q.id]||'';
@@ -191,22 +196,28 @@ function renderLayerStack(){
 }
 function editLayer(stepId,id,value){
  const index=active.steps.findIndex(s=>s.id===stepId);if(index<0)return;
+ const cleared=laterFindingSummary(index);
  const changed=DecisionAssistant.changeStagedAnswer(assistantSession,active,DATA.assistants,index,id,value);if(!changed)return;
+ const priorAssessment=browseOrigin;browseOrigin=null;
+ if(priorAssessment&&active.steps.findIndex(s=>s.id===priorAssessment)<index&&!decisionTrail.includes(priorAssessment))decisionTrail.push(priorAssessment);
  const found=decisionTrail.indexOf(stepId);if(found>=0)decisionTrail=decisionTrail.slice(0,found);
  else decisionTrail=decisionTrail.filter(x=>active.steps.findIndex(s=>s.id===x)<index);
  stepIndex=index;view='pathway';focusedCriteria=null;RiskRouting.clearFrom(riskContext,active,index);
- history.replaceState(null,'','#'+stepId);renderView();
+ history.replaceState(null,'','#'+stepId);renderView();announceAssessmentSwitch(priorAssessment,cleared);
  const next=document.querySelector('#layer-current select')||document.querySelector('#current-result h4');if(next){if(next.tagName!=='SELECT')next.setAttribute('tabindex','-1');next.focus({preventScroll:true});}
 }
 function recordRiskFinding(step,id,value){
+ const priorAssessment=browseOrigin;browseOrigin=null;document.querySelector('.dw-browse-note')?.remove();
  const index=active.steps.findIndex(s=>s.id===step);if(index<0)return;
+ const cleared=laterFindingSummary(index);
+ if(priorAssessment&&active.steps.findIndex(s=>s.id===priorAssessment)<index&&!decisionTrail.includes(priorAssessment))decisionTrail.push(priorAssessment);
  if(index!==stepIndex){const found=decisionTrail.indexOf(step);decisionTrail=found>=0?decisionTrail.slice(0,found):[];stepIndex=index;view='pathway';history.replaceState(null,'','#'+step);renderView();}
  const key=assistantKey();riskContext[key]||={};
  const questions=[...document.querySelectorAll('#risk-question-panel [data-risk-question]')].map(n=>n.dataset.riskQuestion),position=questions.indexOf(id);
  questions.slice(position+1).forEach(q=>delete riskContext[key][q]);riskContext[key][id]=value;
  if(id==='ici')delete riskContext[key].ici_review;
  RiskRouting.clearFrom(riskContext,active,stepIndex+1);DecisionAssistant.clearFrom(assistantSession,active,stepIndex+1);assistantSession.origins[key]='edited';
- focusedCriteria=null;updateDecision();document.querySelector('#layer-current select')?.focus({preventScroll:true});
+ focusedCriteria=null;updateDecision();announceAssessmentSwitch(priorAssessment,cleared);document.querySelector('#layer-current select')?.focus({preventScroll:true});
 }
 function showLayerCriteria(stepId,id,riskQuestion=false){
  const index=active.steps.findIndex(s=>s.id===stepId);if(index<0)return;
@@ -264,6 +275,7 @@ function isReadinessOnlyReview(context){
  return !context.guard&&context.options.length>0&&context.options.every(o=>o.anchor==='icca-b3'&&o.mode==='readiness');
 }
 function updateDecision(){
+ document.body.dataset.currentAssessment=browseOrigin||active.steps[stepIndex].id;
  const out=document.getElementById('view');
  out.querySelectorAll('.risk-next-options').forEach(node=>node.remove());
  const result=DecisionAssistant.update(out,assistantConfig(),assistantSession.answers[assistantKey()],active.steps[stepIndex].branches,DATA.sources,assistantSession.origins[assistantKey()]);
@@ -448,13 +460,15 @@ function showSource(id, trigger){
  d.showModal();
 }
 
-function setStep(id,push=true,fromAction=false){
+function setStep(id,push=true,fromAction=false,browse=false){
  const index=active.steps.findIndex(s=>s.id===id);if(index<0)return;
  const previous=active.steps[stepIndex].id,found=decisionTrail.indexOf(id);
- if(found>=0)decisionTrail=decisionTrail.slice(0,found);
+ if(browse){browseOrigin=browseOrigin||previous;if(id===browseOrigin)browseOrigin=null;}
+ else if(found>=0)decisionTrail=decisionTrail.slice(0,found);
  else if(fromAction&&id!==previous){if(!decisionTrail.includes(previous))decisionTrail.push(previous);}
  else if(id!==previous)decisionTrail=[];
- focusedCriteria=null;stepIndex=index;view='pathway';if(push)history.pushState({decisionTrail:[...decisionTrail]},'','#'+id);renderView();
+ if(!browse)browseOrigin=null;
+ focusedCriteria=null;stepIndex=index;view='pathway';if(push)history.pushState({decisionTrail:[...decisionTrail],browseOrigin},'','#'+id);renderView();
  document.getElementById('question').focus({preventScroll:true});
  document.querySelector('.decision').scrollIntoView({block:'start',behavior:'instant'});
 }
@@ -467,6 +481,7 @@ function showHighRisk(id,push=true){
 }
 
 function hashState(){
+ browseOrigin=history.state?.browseOrigin||null;
  const h=decodeURIComponent(location.hash.slice(1));
  const idx=active.steps.findIndex(s=>s.id===h);
  if(h.startsWith('high-risk-')){showHighRisk(h.slice(10),false);return;}
@@ -521,7 +536,7 @@ document.addEventListener('click',ev=>{
  }
  if(ev.target.closest('[data-pathway-example],[data-pathway-clear]')){
   const examples=!!ev.target.closest('[data-pathway-example]');
-  assistantSession=DecisionAssistant.createStagedSession(active,DATA.assistants,examples);riskContext={};clearCareOrigins();decisionTrail=[];focusedCriteria=null;stepIndex=0;view='pathway';history.replaceState(null,'','#'+active.steps[0].id);
+  assistantSession=DecisionAssistant.createStagedSession(active,DATA.assistants,examples);riskContext={};clearCareOrigins();decisionTrail=[];browseOrigin=null;focusedCriteria=null;stepIndex=0;view='pathway';history.replaceState(null,'','#'+active.steps[0].id);
   renderView();document.querySelector(examples?'[data-pathway-example]':'[data-pathway-clear]').focus({preventScroll:true});return;
  }
  const care=ev.target.closest('[data-care]');if(care){ev.preventDefault();showCare(care);return;}
@@ -532,7 +547,7 @@ document.addEventListener('click',ev=>{
 
  const cite=ev.target.closest('[data-ref]');if(cite){showSource(cite.dataset.ref,cite);return;}
  if(ev.target.closest('.close-dialog')){document.getElementById('source-dialog').close();return;}
- const step=ev.target.closest('[data-step]');if(step&&!step.disabled){ev.preventDefault();setStep(step.dataset.step,true,!!step.closest('.next-action'));return;}
+ const step=ev.target.closest('[data-step]');if(step&&!step.disabled){ev.preventDefault();setStep(step.dataset.step,true,!!step.closest('.next-action'),step.hasAttribute('data-dw-browse'));return;}
  const tab=ev.target.closest('[data-view]');if(tab){ev.preventDefault();view=tab.dataset.view;if(view==='care')careOriginToken=null;history.pushState(null,'',view==='pathway'?'#'+active.steps[stepIndex].id:view==='care'?'#care-'+careId:'#'+view);renderView();return;}
  const issue=ev.target.closest('[data-issue]');if(issue){ev.preventDefault();history.pushState(null,'','#'+issue.dataset.issue);document.getElementById(issue.dataset.issue).scrollIntoView({block:'start'});}
 });
@@ -542,8 +557,8 @@ window.addEventListener('popstate',()=>{if(window.ContextualInfo?.handleHistory(
 window.addEventListener('hashchange',()=>active?hashState():null);
 document.addEventListener('keydown',ev=>{
  if(ev.key==='Escape'&&ev.target.matches('[data-layer-question],[data-layer-risk]')){ev.target.value=ev.target.dataset.committed;stageFinding(ev.target);return;}
- if(!ev.target.matches('[role="tab"]')||!['ArrowLeft','ArrowRight','Home','End'].includes(ev.key))return;
- ev.preventDefault();const tabs=[...document.querySelectorAll('[role="tab"]')];let n=tabs.indexOf(ev.target);
+ if(!ev.target.matches('.viewbar [role="tab"]')||!['ArrowLeft','ArrowRight','Home','End'].includes(ev.key))return;
+ ev.preventDefault();const tabs=[...document.querySelectorAll('.viewbar [role="tab"]')];let n=tabs.indexOf(ev.target);
  n=ev.key==='Home'?0:ev.key==='End'?tabs.length-1:(n+(ev.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;
  tabs[n].click();tabs[n].focus();
 });

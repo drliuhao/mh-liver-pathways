@@ -26,7 +26,7 @@ for(const p of clinical.index)for(const step of p.steps){const entry=context.win
 
 const ui=read('assets/decision-workspace.js');
 assert(ui.includes('middle.append(current,orders,result)'),'Original controls and results stay together');
-assert(ui.includes('left.append(requiredFindings(config,protocol.pathway.slug+\'/\'+id),tests)'),'Original full checklist stays in input column');
+assert(ui.includes('tests.open=true;left.append(tests)'),'Original full checklist stays in input column without a duplicate findings list');
 assert(ui.includes('toolsColumn(step.owner'),'Protocol team is source-derived');
 assert(ui.includes('JSON.stringify(actual)!==JSON.stringify(meta.criteria.map(plain))'),'Roadmap metadata fails closed when criteria change');
 assert(ui.includes('previewLayout(content)'),'Read-ahead previews share the layout');

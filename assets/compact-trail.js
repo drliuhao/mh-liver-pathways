@@ -198,15 +198,16 @@
   if(protocol){
    const first=state.editors.querySelector('select[data-layer-step]')||current.querySelector('select[data-layer-step]');
    const start=protocol.pathway.steps.findIndex(s=>s.id===first?.dataset.layerStep);state.entry.hidden=start<=0;
-   const text=start>0?'Starting here · earlier decisions are not shown in this trail.':'';if(state.entry.textContent!==text)state.entry.textContent=text;
+   const text=start>0?'View earlier decisions from the top row.':'';if(state.entry.textContent!==text)state.entry.textContent=text;
   }
   nav.querySelectorAll(':scope>.ci-reading').forEach(n=>state.items.append(n));measure(state);followWorkspace(state);
  }
  function scrollControls(state){const box=state.history,show=matchMedia('(min-width:761px)').matches&&box.scrollWidth>box.clientWidth+2;state.earlier.hidden=state.later.hidden=!show;state.earlier.disabled=box.scrollLeft<2;state.later.disabled=box.scrollLeft+box.clientWidth>=box.scrollWidth-2;}
  function measure(state){scrollControls(state);const h=Math.ceil(state.strip.getBoundingClientRect().height);document.documentElement.style.setProperty(protocol?'--pathway-nav-height':'--roadmap-trail-height',h+'px');}
  const announcement=el('p','sr-only');announcement.setAttribute('aria-live','polite');document.body.append(announcement);
- document.addEventListener('change',ev=>{if(ev.target.matches('.ct-editors select')&&ev.target.value!==ev.target.dataset.committed)requestAnimationFrame(()=>{announcement.textContent='Unapplied choice. Use Apply change to record it, or Cancel to keep the recorded finding.';});},true);
- document.addEventListener('click',ev=>{if(ev.target.closest('[data-record-finding]:not(:disabled),[data-record-risk]:not(:disabled)'))followCurrent='finding';else if(ev.target.closest('.next-action [data-step],[data-pathway-clear],[data-pathway-example]'))followCurrent='step';},true);
+ document.addEventListener('change',ev=>{if(ev.target.matches('.ct-editors select'))requestAnimationFrame(()=>{announcement.textContent=ev.target.isConnected&&ev.target.value!==ev.target.dataset.committed?'Unapplied choice. Use Apply change to record it, or Cancel to keep the recorded finding.':'';});},true);
+ document.addEventListener('click',ev=>{if(ev.target.closest('[data-record-finding],[data-record-risk],[data-cancel-finding],.ct-close,[data-dw-browse]'))announcement.textContent='';},true);
+ document.addEventListener('click',ev=>{if(ev.target.closest('[data-record-finding]:not(:disabled),[data-record-risk]:not(:disabled)'))followCurrent='finding';else if(ev.target.closest('.next-action [data-step],[data-dw-browse],[data-pathway-clear],[data-pathway-example]'))followCurrent='step';},true);
  let queued=false;const scan=()=>{queued=false;document.querySelectorAll('.layer-nav,.rf-selector').forEach(enhance);};
  new MutationObserver(()=>{if(!queued){queued=true;queueMicrotask(scan);}}).observe(document.body,{childList:true,subtree:true});
  scan();

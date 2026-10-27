@@ -30,6 +30,8 @@ assert(!/No one was administratively censored|One-year estimates also match dire
 const serialized=JSON.stringify(data);for(const k of ['PT_CODE','WL_ID_CODE','TRR_ID_CODE','/Users/','23839','02418','06510'])assert(!serialized.includes(k),'No patient data or encrypted mapping in public aggregates');
 assert(read('assets/portal-navigation.js').includes('allocation-overview.js'));
 assert(read('assets/clinical-tools.js').includes('AllocationReference.overview'));
-assert(read('assets/allocation-overview.js').includes('decision.prepend(card)'));
+assert(read('assets/allocation-overview.js').includes("const waitStep={hcc:'listing',pcca:'listing',icca:'review',crlm:'review',nelm:'review',hehe:'review',hca:'review'}"));
+assert(read('assets/allocation-overview.js').includes("p.slug==='hcc'?['waitlist']:[]"));
+assert(!/10,000 LDLT|10000 LDLT|dynamic HCC project/i.test(read('transplant/waiting/index.html')+read('transplant/waiting/methods.md')));
 assert(!/localStorage|sessionStorage|fetch\(|assistantSession|dispatchEvent/.test(read('assets/allocation-overview.js')));
-console.log('PASS: seven disease summaries, pre-follow-up placement, read-only controls, distinct clocks, score routes, aggregate bounds/intervals and public-data safeguards.');
+console.log('PASS: seven disease summaries, Transplant waitlisted placement, read-only controls, distinct clocks, score routes, aggregate bounds/intervals and public-data safeguards.');

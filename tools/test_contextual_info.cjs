@@ -45,8 +45,8 @@ for(const [key,entry]of Object.entries(copy.recommendations)){
 assert(!src.includes("if(!d.open)enhance(d)"),'Criteria must remain native inline expansions');
 const app=read('transplant/assets/app.js'),old=original('transplant/assets/app.js');
 for(const [a,b] of [['function renderActions(', 'function renderRiskReference('],['function renderStep()', 'function renderMeeting()']]){
- const slice=s=>s.slice(s.indexOf(a),s.indexOf(b,s.indexOf(a)));const metadata=' data-action-label="${e(a.label)}" data-action-condition="${e(a.detail||\'\')}"';assert.equal(slice(app).replaceAll(metadata,'').replace(' renderLayerStack();\n','').replace('config.questions.filter(q=>answers[q.id]).map(q=>q.id)',"config.questions.filter(q=>!answers[q.id]||answers[q.id]==='unknown').map(q=>q.id)"),slice(old),'Changed clinical action renderer '+a);
+ const slice=s=>s.slice(s.indexOf(a),s.indexOf(b,s.indexOf(a)));const metadata=' data-action-label="${e(a.label)}" data-action-condition="${e(a.detail||\'\')}"';assert.equal(slice(app).replaceAll(metadata,'').replace(' renderLayerStack();\n','').replace(' document.body.dataset.currentAssessment=browseOrigin||active.steps[stepIndex].id;\n','').replace('config.questions.filter(q=>answers[q.id]).map(q=>q.id)',"config.questions.filter(q=>!answers[q.id]||answers[q.id]==='unknown').map(q=>q.id)"),slice(old),'Changed clinical action renderer '+a);
 }
 const docs=Object.keys(JSON.parse(read('assets/roadmap-links.json'))).map(x=>x+'/index.html').concat(data.index.map(p=>'transplant/'+p.slug+'/index.html'));
-for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261027-hierarchy1'),doc+' missing display update');
+for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261027-two-row4'),doc+' missing display update');
 console.log(`PASS: V12 data and clinical renderers unchanged; ${docs.length} pages; 46 headings, ${reviewed} help summaries and 46 recommendation guards verified; all Avoid wording retained.`);
