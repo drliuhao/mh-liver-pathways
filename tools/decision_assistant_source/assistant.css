@@ -101,3 +101,15 @@
 
 .journey-map>summary{cursor:pointer;padding:0 18px 12px;font-size:13px;color:var(--teal);font-weight:600}
 @media(max-width:760px){.journey-heading .eyebrow{display:none}.journey-heading h2{font-size:17px}.pathway-nav{padding:6px 0}.pathway-nav .step-tab{min-height:44px;padding:5px 8px}.pathway-location{margin-bottom:4px}.pathhero{gap:14px}.pathhero h1{font-size:28px}.pathhero .lead{font-size:14px}}
+
+/* Every clinical decision is visible; overview buttons preview without choosing findings. */
+.journey-map .journey-hint{margin:0;padding:0 18px 12px;font-size:12px;color:var(--muted)}
+.journey-map .journey-phases{gap:8px}
+.journey-map .journey-phase{display:block;background:#f4f7f8;border:1px solid #dce5e9;border-radius:6px;padding:10px;min-width:0}
+.journey-phase h3{margin:0 0 8px;font:700 12px/1.4 system-ui,sans-serif;color:#3d5c69}
+.journey-steps{display:grid;gap:6px}
+button.journey-step{display:flex;align-items:center;gap:8px;width:100%;min-height:46px;text-align:left;border:1px solid #cbdadf;border-radius:5px;background:white;padding:8px;color:var(--navy);font:600 13px/1.4 system-ui,sans-serif;cursor:pointer}
+.journey-step.current{border-color:#226d65;background:#e9f4f0;box-shadow:inset 3px 0 #226d65}
+.journey-step:hover{background:#eaf2f6}.journey-step:focus-visible{outline:3px solid #246b9b;outline-offset:2px}
+.journey-step .phase-number{width:23px;height:23px;flex-shrink:0}
+@media(max-width:760px){.journey-map .journey-phase{padding:8px}.journey-map .journey-phases{grid-template-columns:1fr}.journey-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.journey-step .phase-number{width:21px;height:21px}.journey-phase:has(.journey-step:only-child) .journey-steps{grid-template-columns:1fr}}

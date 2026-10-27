@@ -13,9 +13,8 @@
   const entry=document.getElementById('entry');if(entry)entry.textContent='Select the clinical question to review. Some assessments can proceed together; urgent care and procedure-specific precautions take priority.';
   const buttons=document.getElementById('stageBtns');
   buttons.innerHTML=stages.map(s=>`<button class="rf-topic" type="button" data-roadmap-decision="${esc(s.id)}">${esc(s.name)}</button>`).join('');
-  const overview=document.createElement('details');overview.className='rf-overview';overview.innerHTML='<summary>Browse all clinical decisions</summary>';buttons.before(overview);overview.append(buttons);
-  const tree=document.getElementById('tree');
-  if(tree){const children=[...tree.children].filter(n=>n!==overview&&n.tagName!=='H2');if(children.length){const reference=document.createElement('details');reference.className='rf-background-reference';const summary=document.createElement('summary');summary.textContent='Staging overview and reference definitions';reference.append(summary,...children);tree.prepend(reference);}}
+  const overview=document.createElement('section');overview.className='rf-overview';overview.setAttribute('aria-label','All clinical decisions');buttons.before(overview);overview.append(buttons);
+  // Clinical charts and choices remain visible; only their reference definitions can fold.
   const bar=document.createElement('nav');bar.className='rf-selector';bar.setAttribute('aria-label','Current roadmap decision');
   bar.innerHTML='<div class="layer-heading"><b>Clinical topics</b><a class="rf-permalink" href="#stage">Link</a><button type="button" data-rf-overview>All decisions</button></div><div class="layer-history"></div><div class="layer-current"></div>';
   document.getElementById('answer').before(bar);
@@ -27,7 +26,7 @@
    if(ev.target.closest('[data-open-topic]')){navigate(bar.querySelector('[data-roadmap-current]').value);return;}
    if(ev.target.closest('[data-cancel-topic]')){bar.querySelector('[data-roadmap-current]').value=state.current;stageTopic();bar.querySelector('[data-roadmap-current]').focus();return;}
    const prior=ev.target.closest('[data-roadmap-trail]');if(prior){const n=Number(prior.dataset.roadmapTrail),node=state.trail[n];if(node)navigate(node.id,{layer:n,via:node.via});return;}
-   if(ev.target.closest('[data-rf-overview]')){overview.open=true;overview.scrollIntoView({block:'start',behavior:'smooth'});}
+   if(ev.target.closest('[data-rf-overview]')){overview.scrollIntoView({block:'start',behavior:'smooth'});}
    const criteria=ev.target.closest('[data-roadmap-criteria]');if(criteria){const panel=document.querySelector(criteria.dataset.roadmapCriteria==='next'?'.rf-related':'.rf-criteria');if(panel?.tagName==='DETAILS')panel.open=true;panel?.scrollIntoView({block:'start',behavior:'instant'});panel?.querySelector('summary')?.focus({preventScroll:true});}
   });
   document.addEventListener('click',e=>{

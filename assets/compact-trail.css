@@ -117,7 +117,7 @@
 .single-decision-workspace .assistant-intro,.single-decision-workspace .assistant-actions,.single-decision-workspace .orders>.section-head,.single-decision-workspace .stepfooter{display:none}
 .single-decision-workspace .decision-grid{display:block}
 .single-decision-workspace .orders{padding:0;border:0;background:none}
-.single-decision-workspace .journey-phase .phase-number,.single-decision-workspace .journey-phase small{display:none}
+.single-decision-workspace .journey-phase small{display:none}
 @media print{
  .single-decision-workspace .compact-trail{display:contents!important}
  .single-decision-workspace .ct-strip,.single-decision-workspace .ct-editors,.single-decision-workspace .layer-current,.single-decision-workspace .ct-workflow-hint{display:none!important}

@@ -164,17 +164,26 @@
    const group=document.createElement('div');paragraphs[0].before(group);group.append(...paragraphs);note(group,'Using these criteria');
   });
   compactRecommendations();
-  // Next-step criteria are native inline disclosures. Warnings are immediate;
-  // explanatory notes and citations alone use floating information panels.
+  // Treatment indications and cautions are peer disclosures, closed by default.
+  // Standalone Avoid recommendations, approvals and pathway stop results stay visible.
   document.querySelectorAll('#answer details.more:not([data-disclosure-sorted])').forEach(d=>{
    d.dataset.disclosureSorted='true';
-   const warning=d.querySelector('.optline.bad');if(warning)d.before(warning);
    const approval=d.querySelector('.callout.amber');if(approval)d.before(approval);
+   const indication=d.querySelector('.optline:not(.bad)'),warning=d.querySelector('.optline.bad');
+   if(indication||warning){
+    const pair=document.createElement('div');pair.className='ci-treatment-criteria';d.before(pair);
+    for(const [node,label,kind] of [[indication,'Indications','indications'],[warning,'Contraindications & cautions','contraindications']]){
+     if(!node)continue;
+     const disclosure=document.createElement('details');disclosure.className='more ci-criteria-disclosure ci-'+kind;disclosure.dataset.disclosureSorted='true';
+     const summary=document.createElement('summary');summary.textContent=label;
+     const body=document.createElement('div');body.className='moreinner';body.append(node);disclosure.append(summary,body);pair.append(disclosure);
+    }
+   }
    const noteText=d.querySelector('.recnote');
    if(noteText){const holder=document.createElement('div');d.after(holder);holder.append(noteText);const info=note(holder,'Explanation and evidence');const refs=d.querySelector('.refchip')?.parentElement;if(refs)info.panel.querySelector('.ci-body').append(refs);}
-   const criteria=d.querySelector('.optline,.orderrule');
-   if(criteria){d.querySelector('summary').textContent=criteria.classList.contains('orderrule')?'How to choose among these options':'Selection criteria';}
-   else if(d.querySelector('.refchip'))enhance(d);
+   const criteria=d.querySelector('.orderrule');
+   if(criteria)d.querySelector('summary').textContent='How to choose among these options';
+   else if(d.querySelector('.refchip')){d.querySelector('summary').textContent='Evidence & sources';enhance(d);}
    else d.remove();
   });
   document.querySelectorAll('.care-evidence').forEach(enhance);

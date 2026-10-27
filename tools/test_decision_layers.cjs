@@ -41,7 +41,7 @@ for(const p of D.index){
  }}
 }
 assert(!read('assets/contextual-info.js').includes("'.branch-details, #answer details.more, .care-evidence'"),'Criteria cannot become floating explanations');
-assert(read('assets/contextual-info.js').includes("d.before(warning)"),'Warnings remain immediate');
+assert(read('assets/contextual-info.js').includes("node.closest('.rf-cautions')"),'Standalone Avoid recommendations stay visible; option cautions use the requested peer disclosures');
 assert(!/localStorage|sessionStorage|indexedDB|document\.cookie/.test(now+read('transplant/assets/app.js')));
 console.log(`PASS: 7 single-entry presets; ${questions} blank successive layers; ${rollbacks} same-decision and downstream rollbacks; unchanged clinical matcher and sources; criteria stay inline.`);
 

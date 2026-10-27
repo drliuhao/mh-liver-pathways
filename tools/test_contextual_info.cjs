@@ -34,7 +34,7 @@ assert(copy.help['icca/phenotype/focality'].concise.includes('no universal dista
 assert(copy.help['pcca/diagnosis/biopsy'].concise.includes('EUS, percutaneous or operative'));
 assert(copy.help['pcca/diagnosis/biopsy'].concise.includes('without traversing the primary is a different procedure'));
 assert(src.includes('node.textContent!==entry.source'),'Stale help must fall back to original');
-assert(src.includes("node.closest('.rf-cautions')"),'Avoid wording must stay fully visible');
+assert(src.includes("node.closest('.rf-cautions')"),'Standalone Avoid recommendations must stay fully visible');
 assert.equal(Object.keys(copy.recommendations).length,46);
 for(const [key,entry]of Object.entries(copy.recommendations)){
  const [slug,id,group,index]=key.split('/');let stages;
@@ -48,5 +48,5 @@ for(const [a,b] of [['function renderActions(', 'function renderRiskReference(']
  const slice=s=>s.slice(s.indexOf(a),s.indexOf(b,s.indexOf(a)));const metadata=' data-action-label="${e(a.label)}" data-action-condition="${e(a.detail||\'\')}"';assert.equal(slice(app).replaceAll(metadata,'').replace(' renderLayerStack();\n','').replace('config.questions.filter(q=>answers[q.id]).map(q=>q.id)',"config.questions.filter(q=>!answers[q.id]||answers[q.id]==='unknown').map(q=>q.id)"),slice(old),'Changed clinical action renderer '+a);
 }
 const docs=Object.keys(JSON.parse(read('assets/roadmap-links.json'))).map(x=>x+'/index.html').concat(data.index.map(p=>'transplant/'+p.slug+'/index.html'));
-for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261026-hierarchy1'),doc+' missing display update');
+for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261026-visible1'),doc+' missing display update');
 console.log(`PASS: V12 data and clinical renderers unchanged; ${docs.length} pages; 46 headings, ${reviewed} help summaries and 46 recommendation guards verified; all Avoid wording retained.`);

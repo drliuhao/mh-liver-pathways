@@ -57,3 +57,19 @@ button.ci-close{display:flex;justify-content:center;align-items:center;flex-shri
 .contextual-explanations .gray:has(.ci-discussions)>.section-head{display:none}
 .contextual-explanations .rf-option-group .recmeta>.pill{display:none}
 @media(max-width:760px){.ci-summary>.ci-trigger{min-height:44px;padding:7px 0;align-items:center}.ci-summary .ci-icon{margin-top:0}}
+
+/* Equal-level treatment disclosures. Clinical decisions and stop results are separate. */
+.ci-treatment-criteria{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;align-items:start;margin:10px 0 4px}
+.contextual-explanations .ci-treatment-criteria>details.ci-criteria-disclosure{margin:0!important;padding:0!important;min-width:0;border:1px solid #cbdcda;border-radius:6px;background:#f5f9f8;overflow:hidden}
+.contextual-explanations .ci-treatment-criteria>details.ci-contraindications{border-color:#ddc9c4;background:#fbf6f4}
+.ci-treatment-criteria details.ci-criteria-disclosure>summary{display:flex;align-items:center;gap:6px;min-height:52px;padding:8px 10px;width:100%;border:0;border-radius:0;background:transparent;box-sizing:border-box;font:600 12px/1.35 system-ui,sans-serif;color:#175e56;cursor:pointer;list-style:none}
+.ci-criteria-disclosure>summary::-webkit-details-marker{display:none}
+.ci-criteria-disclosure>summary::before{content:'▸'!important;flex-shrink:0;font-size:13px}
+.ci-criteria-disclosure[open]>summary::before{content:'▾'!important}
+.ci-treatment-criteria details.ci-contraindications>summary{color:#873b32}
+.ci-criteria-disclosure>summary:focus-visible{outline:3px solid #246b9b;outline-offset:-3px}
+.ci-treatment-criteria .moreinner{padding:10px!important;border-top:1px solid #dce5e2}
+.ci-treatment-criteria .optline{display:block;margin:0;font-size:13px;line-height:1.55}
+.ci-treatment-criteria .optlab{display:block;margin-bottom:5px;font-size:11px}
+@media(max-width:760px){.ci-treatment-criteria{grid-template-columns:1fr;gap:6px}.ci-treatment-criteria details.ci-criteria-disclosure>summary{min-height:44px;padding:10px}.ci-treatment-criteria .optline{overflow-wrap:normal}}
+@media print{.ci-treatment-criteria{display:block}.ci-criteria-disclosure{break-inside:avoid;margin-bottom:8px!important}}

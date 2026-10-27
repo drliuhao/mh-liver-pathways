@@ -102,7 +102,6 @@
   // conditions, evidence, high-risk reviews and care-context capture stay intact.
   state.workspace=workspace;state.result=result;state.orders=decision.querySelector('.orders');document.body.classList.add('single-decision-workspace');
   const eyebrow=head.querySelector('.eyebrow');if(eyebrow?.firstChild?.nodeType===3)eyebrow.firstChild.textContent='Current assessment ';
-  const overview=document.querySelector('.journey-map');if(overview){overview.open=false;overview.querySelector('summary').textContent='Browse pathway overview';}
  }
  function followWorkspace(state){
   if(!followCurrent||!state.workspace)return;

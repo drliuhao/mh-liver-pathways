@@ -91,7 +91,7 @@ def export(source, preserve_documents=False):
         text = re.sub(r'content="0;url=/(?!mh-liver-pathways/)', 'content="0;url='+TP+'/', text)
         if '/evidence/' in text:
             raise ValueError(f'Private PDF reference survives in {file}')
-        text = text.replace('</head>', f'<link rel="stylesheet" href="{BASE}/assets/portal-navigation.css"><script src="{BASE}/assets/portal-navigation.js?v=20261026-tools1" defer></script></head>')
+        text = text.replace('</head>', f'<link rel="stylesheet" href="{BASE}/assets/portal-navigation.css"><script src="{BASE}/assets/portal-navigation.js?v=20261026-visible1" defer></script></head>')
         target = dest/file.relative_to(source); target.parent.mkdir(parents=True, exist_ok=True); target.write_text(text)
     assets = dest/'assets'; assets.mkdir(exist_ok=True)
     app = (source/'assets/app.js').read_text().replace('href="/', 'href="'+TP+'/')
@@ -136,7 +136,7 @@ def export(source, preserve_documents=False):
     for _,slug,_,_,_ in ROADMAPS:
         file=ROOT/slug/'index.html'; text=file.read_text()
         if 'portal-navigation.js' not in text:
-            text=text.replace('</head>', '<link rel="stylesheet" href="../assets/portal-navigation.css"><script src="../assets/portal-navigation.js?v=20261026-tools1" defer></script></head>')
+            text=text.replace('</head>', '<link rel="stylesheet" href="../assets/portal-navigation.css"><script src="../assets/portal-navigation.js?v=20261026-visible1" defer></script></head>')
             file.write_text(text)
     assert len(copied)==21
     # Only the seven author-created V7 protocol PDFs may be published here.

@@ -100,7 +100,7 @@ function exampleStatus(){
 function renderOverview(){
  const status=exampleStatus();
  return `<section class="journey-overview" aria-labelledby="journey-title"><div class="journey-heading"><div><p class="eyebrow">The whole pathway</p><h2 id="journey-title">From diagnosis to transplant and follow-up</h2></div><a href="#care-treatment" data-care="treatment" class="journey-alternative">Browse treatment options →</a></div>
- <details class="journey-map" ${window.matchMedia('(max-width:760px)').matches||active.steps.some(s=>'#'+s.id===location.hash)?'':'open'}><summary>View the whole pathway</summary><nav class="journey-phases" aria-label="Pathway overview">${DATA.journeys[active.slug].map((phase,n)=>{const first=active.steps.findIndex(s=>s.id===phase.steps[0])+1;const last=first+phase.steps.length-1;const current=phase.steps.includes(active.steps[stepIndex].id);return `<button data-step="${e(phase.steps[0])}" class="journey-phase ${current?'current':''}" ${current?'aria-current="true"':''}><span class="phase-number">${n+1}</span><span><b>${e(phase.title)}</b><small>Decision${first===last?'':'s'} ${first}${first===last?'':'–'+last}</small></span><span class="phase-arrow" aria-hidden="true">→</span></button>`;}).join('')}</nav></details>
+ <div class="journey-map"><p class="journey-hint">Preview any decision without changing your findings.</p><nav class="journey-phases" aria-label="All clinical decisions">${DATA.journeys[active.slug].map(phase=>`<section class="journey-phase"><h3>${e(phase.title)}</h3><div class="journey-steps">${phase.steps.map(id=>{const n=active.steps.findIndex(s=>s.id===id),step=active.steps[n],current=n===stepIndex;return `<button type="button" data-step="${e(id)}" class="journey-step ${current?'current':''}" ${current?'aria-current="step"':''}><span class="phase-number">${n+1}</span><span>${e(step.title)}</span></button>`;}).join('')}</div></section>`).join('')}</nav></div>
  <div class="example-controls"><div aria-live="polite"><strong data-example-status>${e(status[0])}</strong><p data-example-description>${e(status[1])}</p></div><div class="example-buttons"><button data-pathway-example>Show entry example</button><button data-pathway-clear>Clear all choices</button></div></div></section>`;
 }
 
@@ -516,7 +516,6 @@ document.addEventListener('click',ev=>{
  const highRisk=ev.target.closest('[data-high-risk]');if(highRisk){ev.preventDefault();showHighRisk(highRisk.dataset.highRisk);return;}
  if(ev.target.closest('[data-pathway-overview]')){
   if(view!=='pathway'){view='pathway';history.pushState(null,'','#'+active.steps[stepIndex].id);renderView();}
-  const map=document.querySelector('.journey-map');if(map)map.open=true;
   const title=document.getElementById('journey-title');title.setAttribute('tabindex','-1');title.focus({preventScroll:true});
   document.querySelector('.journey-overview').scrollIntoView({block:'start',behavior:'instant'});return;
  }

@@ -25,6 +25,15 @@ caution, grade and source remains available in its original rendering.
 On phones, the major-decision row scrolls horizontally and keeps the active
 question fully visible. Topic navigation does not record patient findings.
 
+Clinical decision overviews are never enclosed in a disclosure. This includes
+the complete HCC BCLC chart, HCC treatment-topic tabs, and every numbered
+transplant decision (read-ahead preview, without changing findings).
+Treatment-specific **Indications** and **Contraindications & cautions** are
+parallel native disclosures, both closed initially. Original wording and
+citations are retained; an absent source field does not imply that there are
+no contraindications. Standalone Avoid recommendations, local approval
+requirements and selected pathway stop/hold results remain visible.
+
 `assets/decision-workspace.js` moves existing DOM nodes and never records or
 changes findings. Clinical matching, selection, confirmation, reset, routing,
 citations and calculator logic remain in their original modules.
