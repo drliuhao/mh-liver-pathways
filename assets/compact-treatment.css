@@ -1,0 +1,121 @@
+/* Compact treatment and evidence presentation, modelled on the liver-directed therapy matrix.
+   Small peer controls on one row; panels open full width below; one line per study. */
+:root{--ct-ink:#17202a;--ct-muted:#586474;--ct-line:#d6dee5;--ct-accent:#1d4f73;--ct-ind:#175e56;--ct-ind-bg:#eef6f4;--ct-contra:#873b32;--ct-contra-bg:#fbf3f1;--ct-ev:#24609e;--ct-ev-bg:#eef4fb;--ct-pm-bg:#f4f6f8;--ct-orange:#a8470a}
+
+/* Control row */
+.ct-peers{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:8px 0 2px}
+.ct-peer{display:inline-flex;align-items:center;gap:6px;min-height:30px;padding:3px 11px 3px 9px;border:1px solid var(--ct-line);border-radius:999px;background:#fff;color:var(--ct-accent);font:600 12.5px/1.25 system-ui,-apple-system,"Segoe UI",sans-serif;cursor:pointer;white-space:normal;text-align:left;max-width:100%}
+.ct-peer::before{content:'▸';font-size:11px;line-height:1;transition:transform .12s}
+.ct-peer[aria-expanded="true"]::before{transform:rotate(90deg)}
+.ct-peer:hover{border-color:currentColor}
+.ct-peer:focus-visible{outline:3px solid #246b9b;outline-offset:2px}
+.ct-peer-count{min-width:18px;height:18px;padding:0 5px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+.ct-peer-count{background:#e3ebf3;color:var(--ct-ev)}
+/* Colour by role, as in the LRT legend: indications teal, cautions brick, evidence blue */
+.ct-peer-ind{color:var(--ct-ind)}
+.ct-peer-contra{color:var(--ct-contra)}
+.ct-peer-ev{color:var(--ct-ev)}
+.ct-peer[aria-expanded="true"]{background:var(--ct-ev-bg);border-color:currentColor}
+.ct-peer-ind[aria-expanded="true"]{background:var(--ct-ind-bg)}
+.ct-peer-contra[aria-expanded="true"]{background:var(--ct-contra-bg)}
+
+/* Roadmap option panels: the original native disclosures, opened by the control row */
+.ct-panels.ci-treatment-criteria{display:block!important;margin:0 0 4px!important;grid-template-columns:none}
+.ct-panels>details.ct-panel>summary{display:none!important}
+.ct-panels>details.ct-panel{margin:6px 0 0!important;padding:0!important;border:0!important;border-left:3px solid var(--ct-line)!important;border-radius:0 6px 6px 0!important;background:#fafbfc!important}
+.ct-panels>details.ct-panel:not([open]){display:none}
+.ct-panels>details.ci-indications{border-left-color:var(--ct-ind)!important;background:var(--ct-ind-bg)!important}
+.ct-panels>details.ci-contraindications{border-left-color:var(--ct-contra)!important;background:var(--ct-contra-bg)!important}
+.ct-panels>details.ct-evidence{border-left-color:var(--ct-ev)!important;background:#f7fafd!important;padding:8px 12px 10px!important}
+.ct-panels>details.ct-panel>.moreinner{padding:8px 12px 10px!important;border-top:0!important}
+.ct-panels .optline{font-size:13.5px;line-height:1.5}
+.ct-panels .optlab{font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ct-muted)}
+
+/* Evidence rows: study · design · PMID · result, as in the LRT matrix */
+ul.ct-ev{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.ct-ev-row{font-size:13.5px;line-height:1.38;display:grid;gap:2px;min-width:0}
+.ct-ev-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 7px}
+.ct-ev-label{font:inherit;font-weight:700;color:var(--ct-ink);background:none;border:0;padding:0;cursor:pointer;text-align:left;text-decoration:underline dotted #9aa8b5;text-underline-offset:3px}
+.ct-ev-label:hover{color:var(--ct-accent)}
+.ct-ev-design{font-size:12px;color:var(--ct-muted)}
+.ct-pm{font:500 11.5px/1.5 "IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums;border:1px solid var(--ct-line);border-radius:4px;padding:0 5px;text-decoration:none;color:var(--ct-accent);background:var(--ct-pm-bg);white-space:nowrap}
+.ct-pm:hover{border-color:var(--ct-accent)}
+.ct-pm::before{content:'PMID ';font-size:10px;color:var(--ct-muted)}
+.ct-ev-result{color:var(--ct-ink)}
+.ct-ev-tied .ct-ev-result{font-variant-numeric:tabular-nums}
+.ct-ev-caution{font-size:12.5px;color:var(--ct-muted)}
+.ct-ev-caution::before{content:'Limitation: ';font-weight:600}
+.ct-ev-row:not(.ct-ev-tied) .ct-ev-label{font-weight:600}
+.ct-evidence .ct-discussion{margin-top:9px;padding-top:8px;border-top:1px dashed var(--ct-line)}
+
+/* Transplant high-risk study summaries: result first, details on demand */
+.hr-study.ct-study{padding:12px 14px!important;margin:10px 0!important}
+.ct-study .hr-study-heading{margin-bottom:4px;justify-content:flex-start;gap:6px 10px}
+.ct-study .hr-study-heading h5{font-size:16px}
+.ct-study .hr-study-heading .hr-source-type{order:3}
+.ct-study .ct-study-result,.ct-study .ct-study-population{margin:4px 0 2px}
+.ct-study .ct-study-population h6,.ct-study .ct-study-result h6{display:inline;font-size:10.5px;margin:0 6px 0 0}
+.ct-study .ct-study-population p,.ct-study .ct-study-result p{display:inline}
+.ct-study .ct-study-population p{font-size:13.5px;color:#4b5d6b}
+.ct-study .ct-study-result p{font-size:14px;line-height:1.5}
+.ct-study .ct-peers{margin-top:6px}
+.ct-study-panels>.ct-panel{margin:6px 0 0;padding:8px 12px;border-left:3px solid #c9d3db;background:#f7f9fb;border-radius:0 6px 6px 0}
+.ct-study-panels>.ct-panel[hidden]{display:none}
+.ct-study-panels>.ct-panel>h6{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.ct-study-panels .hr-study-row{margin:0}
+.ct-study-panels .ct-study-source p{margin:0 0 6px;font-size:13px}
+.ct-study-panels .ct-study-source .hr-study-access{border-top:0;padding-top:0}
+
+/* Orange protocol cards keep their colour; the disclosures share one control row */
+.ct-protocol-peers .ct-peer{color:#8a3a08;border-color:#e7c7ad}
+.ct-protocol-peers .ct-peer[aria-expanded="true"]{background:#fff4e8;border-color:#a8470a}
+.ct-protocol-peers .ct-peer-count{background:none;color:#8a5a3c;height:auto;padding:0;font-weight:500;font-size:11.5px;border-radius:0}
+.ct-protocol-panels>details.ct-panel>summary{display:none!important}
+.ct-protocol-panels>details.ct-panel:not([open]){display:none}
+.ct-protocol-panels>details.ct-panel{margin:8px 0 0!important}
+
+@media (max-width:760px),(pointer:coarse){
+  .ct-peer{min-height:38px;padding:6px 12px 6px 10px;font-size:13px}
+  .ct-peers{gap:7px}
+}
+@media (max-width:520px){
+  .ct-ev-row{font-size:13.5px}
+  .ct-panels>details.ct-evidence{padding:8px 10px 10px!important}
+}
+@media print{
+  .ct-peers{display:none}
+  .ct-panels>details.ct-panel,.ct-protocol-panels>details.ct-panel{display:block!important}
+  .ct-study-panels>.ct-panel{display:block!important}
+}
+@media (prefers-reduced-motion:reduce){.ct-peer::before{transition:none}}
+.ct-protocol-peers .ct-peer{flex-wrap:wrap;row-gap:1px}
+.ct-protocol-peers .ct-peer-count{flex-basis:100%;padding-left:17px!important}
+.ct-protocol-peers .ct-peer-label{flex:1 1 0;min-width:0}
+
+/* Short visible labels on narrow screens; the accessible name keeps the full wording */
+.ct-short{display:none}
+@media (max-width:600px){.ct-long{display:none}.ct-short{display:inline}}
+.ct-panel-meta{margin:0 0 8px;font-size:12px;color:#8a5a3c}
+
+/* Reviewed links to the page's own treatment references (source-study evidence) */
+.ct-ref{margin:12px 0 0;padding:10px 0 0;border-top:1px dashed var(--ct-line)}
+.ct-ref-head{margin:0 0 4px;display:grid;gap:2px}
+.ct-ref-kind{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ct-muted)}
+.ct-ref-title{font-size:14px;line-height:1.3}
+.ct-ref-sub{font-size:12px;color:var(--ct-muted)}
+.ct-ref-tier{display:inline-block;font-size:11.5px;font-weight:650;color:var(--ct-ev);border:1.2px solid var(--ct-ev);border-radius:999px;padding:0 8px;margin-left:4px;background:#fff}
+.ct-ref-when{margin:2px 0 6px;font-size:13.5px;font-weight:600;line-height:1.35}
+.ct-ref-label{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ct-muted)}
+.ct-ev-trial{font-weight:700}
+.ct-ref-open{display:inline-block;margin-top:6px;font-size:12.5px;font-weight:600}
+
+/* Phone: remove redundant inner gutters around roadmap recommendations */
+@media (max-width:600px){
+  #answer.dw-roadmap .dw-grid{padding:4px}
+  #answer.dw-roadmap .dw-column.dw-criteria{padding:10px 8px}
+  #answer.dw-roadmap .rf-recommendations{padding:6px 0;border:0;background:none;box-shadow:none}
+  .ct-peers{gap:5px}
+  .ct-peer{padding:6px 9px 6px 7px;gap:5px}
+}
+.ct-ev-arms{font-size:12px;font-weight:600;color:#3d4a63;background:#eef1f6;border-radius:4px;padding:0 6px}
+.ct-ref-limits{margin:6px 0 0;font-size:12.5px;line-height:1.45;color:#5a4a2e;background:#fbf7ef;border-left:3px solid #bb9b67;padding:5px 9px;border-radius:0 5px 5px 0}

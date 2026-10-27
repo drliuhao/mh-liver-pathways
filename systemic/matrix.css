@@ -105,3 +105,133 @@
  .regimen-label .badge{max-width:50%}
  .context-disclosure,.safety-disclosure{break-inside:avoid}
 }
+
+/* ===== LRT-matrix layout (27 October 2026): setting legend, tumor tabs, ladder, cards with evidence rows ===== */
+[data-systemic-layout]{--st-surface:#fff;--st-ink:#17202a;--st-muted:#586474;--st-line:#dce2e8;--st-accent:#1d4f73;
+ --st-first-fg:#24609e;--st-first-bg:#dde9f6;--st-biomarker-fg:#5b3d99;--st-biomarker-bg:#ebe4f6;--st-later-fg:#2f6870;--st-later-bg:#dceff0;
+ --st-perioperative-fg:#0f5c38;--st-perioperative-bg:#d4ecdd;--st-combination-fg:#6d5a00;--st-combination-bg:#f3ecd0;--st-transplant-fg:#3d4a63;--st-transplant-bg:#e3e7ef}
+[data-systemic-layout] body{background:#f4f6f8;color:var(--st-ink)}
+[data-systemic-layout] .evidence-wrap{max-width:1320px;padding:24px 20px 48px}
+[data-systemic-layout] .tool-hero h1{font:700 clamp(28px,3.4vw,38px)/1.12 "Source Serif 4",Georgia,serif;letter-spacing:-.01em;margin:6px 0 8px}
+[data-systemic-layout] .tool-hero .lede{color:var(--st-muted);font-size:15px;max-width:72ch}
+.st-first{--c:var(--st-first-fg);--b:var(--st-first-bg)}.st-biomarker{--c:var(--st-biomarker-fg);--b:var(--st-biomarker-bg)}
+.st-later{--c:var(--st-later-fg);--b:var(--st-later-bg)}.st-perioperative{--c:var(--st-perioperative-fg);--b:var(--st-perioperative-bg)}
+.st-combination{--c:var(--st-combination-fg);--b:var(--st-combination-bg)}.st-transplant{--c:var(--st-transplant-fg);--b:var(--st-transplant-bg)}
+
+/* views */
+.st-views{border-bottom:1px solid var(--st-line);gap:4px}
+.st-views button{padding:10px 12px;font-size:14px;color:var(--st-muted);border-bottom:3px solid transparent}
+.st-views button[aria-selected=true]{color:var(--st-ink);background:none;border-bottom-color:var(--st-accent);border-radius:0}
+
+/* setting legend = filter */
+.st-legend{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:4px 0 6px}
+.st-legend-label{font-size:12px;color:var(--st-muted);margin-right:2px}
+.st-chip{display:inline-flex;align-items:center;background:var(--b);color:var(--c);border:1.5px solid var(--c);border-radius:999px;padding:3px 11px;font:650 12.5px/1.3 system-ui,sans-serif;white-space:nowrap}
+button.st-chip{cursor:pointer}
+button.st-chip.filtering[aria-pressed=false]{opacity:.45}
+.st-clear{font:inherit;font-size:13px;background:none;border:0;color:var(--st-accent);cursor:pointer;text-decoration:underline}
+.st-clear[aria-pressed=true]{display:none}
+.st-legend-note{font-size:12.5px;color:var(--st-muted);margin:0 0 12px}
+
+/* tumor tabs */
+.st-tumtabs{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:0 0 12px;position:static;padding:0;border:0;background:none;overflow:visible}
+.st-tumtabs button{text-align:left;display:grid;gap:1px;padding:9px 12px;border-radius:10px;background:var(--st-surface);border:1px solid var(--st-line);color:var(--st-ink);white-space:normal}
+.st-tumtabs button strong{font-size:17px;font-weight:800;letter-spacing:-.01em}
+.st-tumtabs button span{font-size:11.5px;color:var(--st-muted);font-weight:500;line-height:1.25}
+.st-tumtabs button[aria-pressed=true]{background:var(--st-ink);color:#fff;border-color:var(--st-ink)}
+.st-tumtabs button[aria-pressed=true] span{color:#fff;opacity:.8}
+[data-systemic-layout] .treatment-controls{grid-template-columns:auto minmax(160px,260px) auto minmax(180px,1fr);padding:2px 0}
+[data-systemic-layout] .treatment-controls select,[data-systemic-layout] .treatment-controls input{font-size:13px;padding:5px 8px;border:1px solid var(--st-line);border-radius:6px;background:#fff}
+
+/* ladder */
+.st-ladder{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;margin:6px 0 18px}
+.st-rung{background:var(--b);border-top:4px solid var(--c);border-radius:8px;padding:8px 10px 10px;min-width:0}
+.st-rung h3{margin:0 0 6px;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--c);font-weight:700;line-height:1.25}
+.st-pills{display:flex;flex-wrap:wrap;gap:5px}
+.st-pill{font-size:12.5px;font-weight:600;color:var(--st-ink);background:#fff;border:1px solid var(--st-line);border-radius:6px;padding:3px 7px;text-decoration:none;line-height:1.3}
+.st-pill:hover{border-color:var(--c)}
+.st-none{font-size:12.5px;color:var(--st-muted)}
+
+/* setting groups and cards */
+[data-systemic-layout] .setting-group{margin:18px 0}
+[data-systemic-layout] .setting-group>h3{margin:0 0 8px;text-transform:none;letter-spacing:0}
+.st-cards{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:12px!important}
+[data-systemic-layout] .regimen-card{background:var(--st-surface);border:1px solid var(--st-line);border-radius:12px;overflow:hidden;min-width:0;scroll-margin-top:110px;padding:0}
+[data-systemic-layout] .regimen-card.st-flash,[data-systemic-layout] li.st-flash{box-shadow:0 0 0 3px var(--st-accent)}
+.st-card-head{background:var(--b);border-bottom:1px solid var(--st-line);padding:10px 14px;display:grid;gap:5px}
+.st-row1{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.st-title,[data-systemic-layout] .regimen-card h3.st-title{margin:0;font:800 16.5px/1.25 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:-.01em;color:var(--st-ink)}
+.st-tumors{font-size:11px!important;color:var(--st-muted)!important;letter-spacing:.06em}
+.st-position{justify-self:start;font-size:12px;font-weight:650;color:var(--c);background:#fff;border:1.2px solid var(--c);border-radius:999px;padding:1px 9px;line-height:1.45}
+.st-card-body{padding:10px 14px 12px;display:grid;gap:8px}
+.st-when{margin:0;font-size:14px;font-weight:600;line-height:1.35}
+.st-when strong{display:block;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--st-muted);font-weight:700;margin-bottom:2px}
+.st-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.st-evidence{margin:0;padding:0!important;background:none!important;border:0!important}
+.st-evidence ul.ev{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.st-ev-row{font-size:13.5px;line-height:1.38;display:block}
+.st-ev-keys{display:inline-flex;gap:3px;margin-right:4px;vertical-align:1px}
+.st-evidence .pm{font:500 11.5px/1.5 "IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums;border:1px solid var(--st-line);border-radius:4px;padding:0 4px;text-decoration:none;color:var(--st-accent);background:#f4f6f8;white-space:nowrap}
+.st-evidence .pm::before{content:attr(data-pmid)}
+.st-evidence .pm-link::before{content:attr(data-label)}
+.st-evidence .pm:hover{border-color:var(--st-accent)}
+.st-ev-statement .st-ev-text{color:var(--st-muted)}
+.st-peers{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.st-peer{display:none}
+.st-js .st-peer{display:inline-flex;align-items:center;gap:6px;min-height:30px;padding:3px 11px 3px 9px;border:1px solid var(--st-line);border-radius:999px;background:#fff;color:var(--st-accent);font:600 12.5px/1.2 system-ui,sans-serif;cursor:pointer}
+.st-peer::before{content:'▸';font-size:11px}
+.st-peer[aria-expanded=true]::before{content:'▾'}
+.st-peer[aria-expanded=true]{background:#eef4fb;border-color:currentColor}
+.st-peer-limits{color:#7a4b12!important}
+.st-peer-transplant{color:#3d4a63!important}
+.st-count{min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:#e3ebf3;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+.st-panels{display:grid;gap:6px}
+.st-panel{margin:0!important;padding:8px 12px!important;border:0!important;border-left:3px solid var(--st-line)!important;border-radius:0 6px 6px 0!important;background:#fafbfc}
+.st-panel>summary{font-size:13px;font-weight:650;cursor:pointer}
+.st-js .st-panel>summary{display:none}
+.st-js .st-panel:not([open]){display:none}
+.st-panel p{margin:0;font-size:13.5px;line-height:1.5}
+.st-panel>p>strong{font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--st-muted)}
+.st-panel-limits{border-left-color:#bb9b67!important;background:#fbf7ef}
+.st-panel-transplant{border-left-color:#7d8aa3!important;background:#f3f5f9}
+.st-panel-sources{border-left-color:var(--st-accent)!important;background:#f7fafd}
+.st-panel-sources .sources li{padding:8px 0;font-size:13px}
+.st-panel-sources .sources li.st-flash{background:#fff7d6}
+
+/* matrix: tumor rows × setting columns */
+[data-systemic-layout] .matrix-scroll{border-radius:10px}
+[data-systemic-layout] .therapy-matrix{border-collapse:separate;border-spacing:5px;min-width:1000px;width:100%;table-layout:fixed;font-size:13px}
+[data-systemic-layout] .therapy-matrix th,[data-systemic-layout] .therapy-matrix td{border:0;padding:0;min-width:0}
+[data-systemic-layout] .therapy-matrix thead th{background:var(--b,#17202a);color:var(--c,#fff);border-top:4px solid var(--c,#17202a);border-radius:8px;padding:8px 10px;font-size:13px;font-weight:750;vertical-align:middle}
+[data-systemic-layout] .therapy-matrix thead th.st-corner{background:transparent;border:0;width:110px;color:var(--st-muted)}
+[data-systemic-layout] .therapy-matrix tbody th{background:var(--st-ink);color:#fff;border-radius:8px;padding:9px 10px;font-size:17px;font-weight:800;width:110px;vertical-align:top}
+[data-systemic-layout] .therapy-matrix tbody th small{display:block;font-size:11px;font-weight:500;opacity:.8;line-height:1.25;margin-top:2px}
+[data-systemic-layout] .therapy-matrix td.st-cell{background:var(--b);border-left:6px solid var(--c);border-radius:8px;padding:8px 9px;vertical-align:top}
+[data-systemic-layout] .therapy-matrix .matrix-option{margin:0 0 9px}
+[data-systemic-layout] .therapy-matrix .matrix-option:last-child{margin-bottom:0}
+[data-systemic-layout] .therapy-matrix .matrix-option a{font-weight:700;color:var(--st-ink);display:block;line-height:1.25}
+[data-systemic-layout] .therapy-matrix .matrix-option small{display:block;color:var(--c);font-weight:600;font-size:11.5px;margin-top:2px}
+[data-systemic-layout] .therapy-matrix .matrix-option small.st-keys{color:var(--st-muted);font-weight:500;font-size:11px}
+[data-systemic-layout] .therapy-matrix .empty-cell{color:var(--st-muted);font-size:12px}
+[data-systemic-layout] .therapy-matrix td.st-cell:has(.empty-cell){background:#f1f3f5;border-left-color:#c9d0d7}
+
+/* safety view as cards (contraindications view in the LRT matrix) */
+.st-cxgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.st-cxgrid .safety-disclosure{margin:0;background:#fbf0f1;border:1px solid var(--st-line);border-top:4px solid #8a2433;border-radius:10px}
+.st-cxgrid .safety-disclosure>summary{font-size:16px;font-weight:800;padding:11px 14px}
+.st-cxgrid .safety-disclosure[open]>summary{background:none;border-bottom:0}
+.st-cxgrid .context-body{padding:0 14px 12px;font-size:13.5px;line-height:1.45}
+.st-cxgrid .context-body h4{color:#8a2433;font-size:11px;letter-spacing:.05em;text-transform:uppercase}
+
+@media(max-width:1080px){.st-cards{grid-template-columns:repeat(2,minmax(0,1fr))!important}.st-ladder{grid-template-columns:repeat(3,minmax(0,1fr))}.st-cxgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){
+ .st-tumtabs{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .st-tumtabs button{padding:8px 9px}.st-tumtabs button strong{font-size:15px}.st-tumtabs button span{display:none}
+ [data-systemic-layout] .treatment-controls{grid-template-columns:1fr}
+ .st-js .st-peer{min-height:38px;padding:6px 12px}
+}
+@media(max-width:680px){.st-cards{grid-template-columns:minmax(0,1fr)!important}.st-ladder{grid-template-columns:repeat(2,minmax(0,1fr))}.st-cxgrid{grid-template-columns:minmax(0,1fr)}
+ [data-systemic-layout] .evidence-wrap{padding:16px 16px 36px}}
+@media print{.st-peers,.st-legend,.st-ladder{display:none!important}.st-panel{display:block!important}.st-panel>summary{display:block!important}}
+.st-dup{display:none}
+@media print{.st-dup{display:inline}}
