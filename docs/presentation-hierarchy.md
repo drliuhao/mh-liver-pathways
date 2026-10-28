@@ -32,3 +32,11 @@ Use the same hierarchy on every roadmap and transplant pathway. A recent revisio
 - Do not infer equivalence from nonsignificance, or rank regimens by survival from different trials. Keep study evidence separate from patient eligibility and treatment recommendations.
 - The systemic matrix uses tumor tabs, setting filters, a setting overview and compact regimen cards. Its build pipeline applies `tools/systemic_matrix_style.py` after regenerating the source page and data. Evidence row segments and reviewed de-duplication rules are in `tools/systemic_evidence_rows.json`.
 - Regenerate shared evidence with `python3 tools/build_compact_evidence.py`. Validate with `tools/test_compact_evidence.py`, `tools/test_systemic_matrix_style.py`, source-preservation checks and browser checks of both desktop and phone.
+
+## Transplant pathway workspace
+
+- Transplant pathways use the roadmap's visual language (`assets/transplant-workspace.css/.js`, presentation only). The decision strip groups the decisions under the pathway's four phases (Diagnosis and extent · Transplant suitability · Preparation and reassessment · Transplant and follow-up) and numbers them when the row fits.
+- Each decision is one card: the question, its context line, then the three columns.
+- The middle column reads in clinical order: **Record the finding** (neutral blue input panel, never a recommendation colour) → **Criteria for this decision** → the **result group** (the matched result tinted by kind: green continue, amber clarify, blue another route, brick stop; then the brick **Reasons to reassess** directly beneath it, as Avoid / cautions sits beneath recommendations; then other possible results, reference only) → outcome evidence.
+- Orange remains reserved for high-risk protocols. Nodes are moved, not rewritten; ids, handlers, routing and wording are unchanged. An exact duplicate of the criteria sentence in the finding panel is shown once, in the criteria with its source.
+- Validate with `tools/test_transplant_workspace_browser.py` (all decisions of the seven pathways, desktop and phone).

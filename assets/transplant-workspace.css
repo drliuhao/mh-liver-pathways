@@ -1,0 +1,99 @@
+/* Transplant pathways in the cancer roadmap's visual language (presentation only).
+   Same palette as the roadmap recommendation groups: green = continue / supported next step,
+   amber = clarify before continuing, blue = another route, brick = stop or reassess.
+   Orange stays reserved for high-risk protocols. */
+.tw{--tw-ink:#16222d;--tw-muted:#566676;--tw-line:#d3dce4;--tw-soft:#f7fafb;--tw-head:#214e5c;--tw-find:#2b6c8a}
+
+/* ---------- Decision strip: phases and numbered decisions ---------- */
+.tw .dw-protocol-decisions{display:flex;align-items:stretch;gap:7px}
+.tw .tw-phase{display:flex;flex-direction:column;gap:3px;min-width:0;flex:0 0 auto}
+.tw .tw-phase+.tw-phase{padding-left:7px;border-left:1px solid #d9e2e7}
+.tw .tw-phase-label{font:700 10px/1.3 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.05em;text-transform:uppercase;color:#6a7c89;white-space:nowrap;padding-left:2px}
+.tw .tw-phase-steps{display:flex;gap:5px;align-items:stretch}
+.tw .dw-protocol-topic{display:inline-flex;align-items:center;gap:6px;padding-left:9px;padding-right:10px}
+/* When the numbered row would not fit, the numbers go and the phase labels stay. */
+.tw .dw-protocol-decisions.tw-tight .tw-step-num{display:none}
+.tw .dw-protocol-decisions.tw-tight .dw-protocol-topic{padding-left:11px;padding-right:11px}
+.tw .tw-step-num{display:inline-flex;align-items:center;justify-content:center;flex:none;width:18px;height:18px;border-radius:50%;font:700 11px/1 system-ui,-apple-system,"Segoe UI",sans-serif;background:#e4ecf0;color:#3d5664}
+.tw .dw-protocol-topic[data-viewed] .tw-step-num{background:#fff;color:var(--tw-head)}
+.tw .dw-protocol-topic[aria-current="step"]:not([data-viewed]) .tw-step-num{background:var(--tw-head);color:#fff}
+@media (max-width:760px){
+  .tw .dw-protocol-decisions{gap:5px}
+  .tw .tw-phase,.tw .tw-phase-steps{display:contents}
+  .tw .tw-phase-label{display:none}
+  .tw .tw-phase+.tw-phase{padding-left:0;border-left:0}
+}
+
+/* ---------- One card per decision, as the roadmap's answer card ---------- */
+.tw .decision.tw-decision{background:#fff;border:1px solid var(--tw-line);border-radius:12px;box-shadow:0 1px 2px rgba(22,34,45,.06),0 6px 18px rgba(22,34,45,.05);overflow:clip;margin:14px 0 18px}
+.tw .decision.tw-decision>.question-head{margin:0;border-radius:0}
+.tw .decision.tw-decision>.ct-entry-note{margin:0;padding:9px 18px;border-radius:0;border-bottom:1px solid #e3e9ee}
+.tw .decision.tw-decision>.contextline{margin:0;padding:9px 18px;background:var(--tw-soft);border-bottom:1px solid #e3e9ee}
+.tw .decision.tw-decision>.dw-grid{margin:0;padding:16px 18px 18px}
+.tw .decision.tw-decision>.safety-grid{margin:0;padding:0 18px 16px}
+.tw .decision.tw-decision>.safety-grid:empty{display:none}
+.tw .decision.tw-decision>.safety-grid>.gray{padding:8px 14px;border-radius:8px;background:#fbf8f1;border-color:#eadfca}
+.tw .decision.tw-decision>.safety-grid .ci-discussions>summary{min-height:36px;font-size:13.5px}
+.tw .decision.tw-decision>.stepfooter{margin:0;padding:10px 18px 14px;border-top:1px solid #e3e9ee}
+
+/* ---------- Middle column ---------- */
+.tw .tw-kicker{margin:0 0 6px;font:700 11px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.05em;text-transform:uppercase;color:var(--tw-muted)}
+/* 1. Record the finding: an input, so neutral blue rather than a recommendation colour */
+.tw .tw-findings{margin:0 0 12px;padding:10px 12px 12px;border:1px solid #cfdde6;border-left:4px solid var(--tw-find);border-radius:8px;background:#f5f9fb}
+.tw .tw-findings>.tw-kicker{color:var(--tw-find)}
+.tw .tw-findings>.dw-recorded{margin:0 0 8px;background:#fff}
+.tw .tw-findings>.dw-recorded:last-child{margin-bottom:0}
+.tw .tw-findings .layer-current,.tw .tw-findings .layer-row{margin:0!important;padding:0!important;border:0!important;background:none!important;box-shadow:none!important}
+.tw .tw-findings .layer-choice label{font-size:15px;font-weight:700;color:var(--tw-ink)}
+.tw .tw-findings .layer-help{color:var(--tw-muted)}
+.tw .tw-findings .layer-help.tw-dup{display:none}
+.tw .tw-findings select{background:#fff}
+/* 2. Criteria: one card, as the roadmap's selection criteria */
+.tw .tw-criteria{margin:0 0 14px;padding:10px 12px 12px;border:1px solid #cedbd5;border-radius:8px;background:#f7faf8}
+.tw .tw-criteria .orders{margin:0;padding:0;border:0;background:none}
+.tw .tw-criteria .assistant-question{margin:0;padding:0;border:0}
+.tw .tw-criteria .assistant-definitions details{background:#fff;border:1px solid #dbe5e0;border-radius:6px;margin:8px 0 0}
+/* 3. Result within this decision: a panel like "Recommendations within this decision" */
+.tw .tw-outcome{margin:0 0 14px;padding:14px;border:1px solid #dce5e8;border-radius:8px;background:#f8fafb}
+.tw .tw-outcome>#decision-results{margin:0!important;padding:0!important;border:0!important}
+.tw .tw-outcome #decision-results>.section-head{margin:0 0 4px;padding:0;border:0}
+.tw .tw-outcome #decision-results>.section-head h3{font:700 15px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:#3f5864}
+.tw .tw-outcome #decision-results>.logic-note{margin:0 0 10px;font-size:12.5px;color:var(--tw-muted)}
+/* The matched result, tinted by its kind */
+.tw .tw-outcome #current-result>.branch{--k-accent:#5a6b78;--k-bg:#f4f6f8;--k-line:#d6dee5;--k-ink:#3f5160;
+  margin:0;border:1px solid var(--k-line);border-left:4px solid var(--k-accent);border-radius:8px;background:var(--k-bg);box-shadow:none;padding:12px 14px}
+.tw .tw-outcome #current-result>.branch.advance{--k-accent:#2f7d55;--k-bg:#eef7f1;--k-line:#cfe3d6;--k-ink:#1f5c3d}
+.tw .tw-outcome #current-result>.branch.hold{--k-accent:#9a6b16;--k-bg:#fbf6e9;--k-line:#ead9b4;--k-ink:#71500f}
+.tw .tw-outcome #current-result>.branch.redirect{--k-accent:#3c6fa8;--k-bg:#eef4fb;--k-line:#d3dfee;--k-ink:#2c5583}
+.tw .tw-outcome #current-result>.branch.stop{--k-accent:#9b3b2e;--k-bg:#fbefec;--k-line:#ecd0c9;--k-ink:#86301f}
+.tw .tw-outcome #current-result>.branch.pending{border-style:dashed;border-left-style:solid}
+.tw .tw-outcome #current-result>.branch .route-label{color:var(--k-ink)}
+.tw .tw-outcome #current-result>.branch h4{color:var(--tw-ink)}
+.tw .tw-outcome #current-result .next-action,.tw .tw-outcome #current-result .branch-details{background:#fff}
+/* Reasons to reassess: brick, directly under the result, as Avoid / cautions under recommendations */
+.tw .tw-outcome>.stops.tw-stops{margin:12px 0 0;padding:10px 12px 12px;border:1px solid #ecd0c9;border-left:4px solid #9b3b2e;border-radius:8px;background:#fbefec}
+.tw .tw-outcome>.stops .section-head{margin:0 0 6px;padding:0;border:0}
+.tw .tw-outcome>.stops .section-head h3{font:700 12px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.035em;text-transform:uppercase;color:#86301f}
+.tw .tw-outcome>.stops .status-icon{background:#9b3b2e;color:#fff;border-color:#9b3b2e}
+.tw .tw-outcome>.stops ul{margin:0;padding-left:20px}
+/* Other possible results: reference only, neutral */
+.tw .tw-outcome>.other-results{margin:12px 0 0;padding:8px 0 0;border-top:1px dashed #d3dce4}
+.tw .tw-outcome>.other-results>summary{font-weight:600;color:#4b6471}
+/* 4. Outcome evidence follows the result */
+.tw .tw-decision .dw-criteria>#outcome-evidence{margin:0}
+
+/* ---------- Quieter source labels in transplant checklists ---------- */
+.tw .citations .ct-chip-what,.tw .assistant-evidence .ct-chip-what{background:none;padding:0;font-weight:500;color:#5b6b78}
+
+@media (max-width:600px){
+  .tw .decision.tw-decision{border-radius:10px;margin:10px 0 14px}
+  .tw .decision.tw-decision>.dw-grid{padding:8px 6px 10px}
+  .tw .decision.tw-decision>.contextline,.tw .decision.tw-decision>.ct-entry-note{padding:8px 12px}
+  .tw .tw-findings,.tw .tw-criteria{padding:9px 9px 10px}
+  .tw .tw-outcome{padding:10px 8px}
+  .tw .tw-outcome #current-result>.branch{padding:10px 10px}
+}
+@media print{
+  .tw .decision.tw-decision{box-shadow:none}
+  .tw .tw-outcome,.tw .tw-findings,.tw .tw-criteria{background:none}
+}
