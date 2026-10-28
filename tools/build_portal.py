@@ -133,11 +133,12 @@ def export(source, preserve_documents=False):
         manifest['documentation_changes']='Seventeen current Word documents use clinical-topic headings and evidence placement, with citation field structures, source links, OPEN status and orange high-risk styling preserved. Preserve these copies during a rebuild. Native EndNote refresh is not claimed.'
     (dest/'export-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     (ROOT/'index.html').write_text(home(data))
-    for _,slug,_,_,_ in ROADMAPS:
+    for slug in [*(row[1] for row in ROADMAPS), 'lrt']:
         file=ROOT/slug/'index.html'; text=file.read_text()
         if 'portal-navigation.js' not in text:
             text=text.replace('</head>', '<link rel="stylesheet" href="../assets/portal-navigation.css"><script src="../assets/portal-navigation.js?v=20261028-phone1" defer></script></head>')
-            file.write_text(text)
+        text=re.sub(r'(src="[^"]*portal-navigation\.js)(?:\?[^"]*)?(\")', r'\1?v=20261028-phone1\2', text)
+        file.write_text(text)
     assert len(copied)==21
     # Only the seven author-created V7 protocol PDFs may be published here.
     authored=json.loads((dest/'high-risk/authored-documents.json').read_text())
