@@ -88,9 +88,10 @@ ul.ct-ev{list-style:none;margin:0;padding:0;display:grid;gap:7px}
   .ct-study-panels>.ct-panel{display:block!important}
 }
 @media (prefers-reduced-motion:reduce){.ct-peer::before{transition:none}}
-.ct-protocol-peers .ct-peer{flex-wrap:wrap;row-gap:1px}
-.ct-protocol-peers .ct-peer-count{flex-basis:100%;padding-left:17px!important}
-.ct-protocol-peers .ct-peer-label{flex:1 1 0;min-width:0}
+/* Wrap whole controls, keeping their label and count together. */
+.ct-protocol-peers .ct-peer{flex-wrap:nowrap}
+.ct-protocol-peers .ct-peer-count{flex:0 0 auto}
+.ct-protocol-peers .ct-peer-label{flex:0 1 auto;min-width:0}
 
 /* Short visible labels on narrow screens; the accessible name keeps the full wording */
 .ct-short{display:none}

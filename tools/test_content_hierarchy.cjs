@@ -19,8 +19,10 @@ for(const file of ['transplant/assets/content.json','transplant/assets/assistant
  assert.equal(read(file),cp.execFileSync('git',['show','dfda24c:'+file],{encoding:'utf8',maxBuffer:8e6}),file+' clinical matching/source changed');
 }
 const layout=read('assets/decision-workspace.js');assert(layout.includes('middle.append(criteria,recommendations,related,controls)'),'Clinical recommendations must precede subsequent routes');
-const outcomes=read('assets/decision-evidence.js');assert(outcomes.includes('const host=preferred.length?middle:right'),'Unrelated outcome evidence must stay in Tools');
-assert(outcomes.includes("middle.querySelector('.rf-related')?.after(box)"),'Roadmap evidence must follow clinical recommendations and routes');
+const presentation=read('assets/portal-navigation.js');
+assert(!/decision-evidence(?:-data)?\.(?:js|css)/.test(presentation),'Standalone outcome panels are retired from the shared interface');
+assert(presentation.includes('compact-evidence-data.js')&&presentation.includes('compact-treatment.js'),'Individual option evidence must remain available');
+assert(read('assets/allocation-overview.js').includes('data-waiting-resource'),'Waiting resources must remain independent of retired outcome panels');
 const hierarchy=read('assets/content-hierarchy.js');assert(hierarchy.includes("node.dataset.disclosureSorted='true'"),'Reference tables must not be deleted by recommendation restructuring');
 assert(hierarchy.includes('grid.dataset.hierarchyReferences'),'Reference placement must reset when the workspace grid is replaced');
 assert(!hierarchy.includes('||workspace.dataset.hierarchyReferences)return'),'A reused answer container must not suppress reference placement after switching topics');
