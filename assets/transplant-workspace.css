@@ -154,3 +154,10 @@
   .tw .tw-option{padding:9px 8px}
   .tw .tw-static-criteria{padding:9px 9px 10px}
 }
+
+/* One place for the decision tools. The pathway keeps them in its Tools column; the other views
+   (meeting record, treatment reference, high-risk protocols, evidence library, a single high-risk
+   review) do not repeat "Preview decisions", the calculators or the term buttons, and the tab bar
+   replaces the "Return to decision choices" bar. */
+body[data-pathway-view]:not([data-pathway-view="pathway"]) .clinical-tool-bar,
+body[data-pathway-view]:not([data-pathway-view="pathway"]):not([data-pathway-view="care"]) #layer-current{display:none!important}

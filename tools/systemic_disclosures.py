@@ -48,7 +48,7 @@ def enhance(path=ROOT / 'systemic/index.html', source_html=None):
         if 'matrix.js' in script.get('src', ''):
             script.set('src', f'matrix.js?v={VERSION}')
         if 'portal-navigation.js' in script.get('src', ''):
-            script.set('src', '/mh-liver-pathways/assets/portal-navigation.js?v=20261028-phone2')
+            script.set('src', '/mh-liver-pathways/assets/portal-navigation.js?v=20261028-links2')
     main = page.xpath('//main')[0]
     hero = main.find('header')
     hero.findall('p')[-1].text = 'Choose a tumor and treatment setting. Expand a regimen for its evidence, limitations, transplant implications and source links.'

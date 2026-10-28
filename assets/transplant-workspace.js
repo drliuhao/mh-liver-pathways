@@ -351,8 +351,18 @@
     tools.append(box);
   }
 
+  // On a phone the section tabs scroll sideways; keep the open section's tab in view (e.g. a link to
+  // #high-risk lands with "High-risk protocols" visible, not scrolled off to the right).
+  function revealTab() {
+    const bar = document.querySelector('.viewbar'), tab = bar?.querySelector('[aria-selected="true"]');
+    if (!tab || bar.scrollWidth <= bar.clientWidth) return;
+    const left = tab.getBoundingClientRect().left - bar.getBoundingClientRect().left + bar.scrollLeft, right = left + tab.offsetWidth;
+    if (left < bar.scrollLeft || right > bar.scrollLeft + bar.clientWidth) bar.scrollLeft = Math.max(0, left - 16);
+  }
+
   function scan() {
     queued = false;
+    revealTab();
     phases();
     document.querySelectorAll('.decision.dw-protocol').forEach(d => { regroup(d); if (d.classList.contains('dw-ready')) { staticOptions(d); modeControl(d); } });
   }

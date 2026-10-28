@@ -21,6 +21,18 @@ def document(title, data):
 <dialog id="source-dialog" aria-labelledby="source-title"></dialog><script id="protocol-data" type="application/json">{payload}</script>
 <noscript><main><h1>{e(title)}</h1><p>This interactive reference needs JavaScript. The printable alignment records and original protocols remain available.</p><ul>{''.join(f'<li><a href="/meeting-records/{p["slug"]}.html">{e(p["name"])} alignment record</a> · <a href="{p["protocol"]}">V3 protocol</a></li>' for p in PATHWAYS)}</ul></main></noscript></body></html>'''
 
+def moved(code, target, questions):
+    """Redirect an old alignment-record URL to the meeting view of the pathway page.
+
+    The alignment page read #<question id> as a meeting question; on the pathway page a question is
+    #meeting-<id>, because several question ids are also decision ids (e.g. #diagnosis)."""
+    script=(f'var q=location.hash.slice(1);location.replace({json.dumps(target)}+(q?({json.dumps(questions)}.indexOf(q)<0?"#"+q:"#meeting-"+q):"#meeting"))')
+    return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">'
+            f'<title>{e(code)} meeting record · Memorial Hermann Transplant Oncology</title><script>{script}</script>'
+            f'<noscript><meta http-equiv="refresh" content="0;url={e(target)}#meeting"></noscript></head>'
+            f'<body><main><h1>{e(code)} meeting record</h1><p>The meeting record is part of the {e(code)} transplant pathway.</p>'
+            f'<p><a href="{e(target)}#meeting">Open the meeting record →</a></p></main></body></html>')
+
 def ref_link(c):
     r=SOURCES[c['ref']]
     return f'<a href="{e(r["pdf"],quote=True)}">{e(r["short"])} · full text</a>'
@@ -44,10 +56,11 @@ def build():
     for p in PATHWAYS:
         folder=DIST/p['slug'];folder.mkdir(exist_ok=True)
         (folder/'index.html').write_text(document(p['name'],dict(base,pathway=p,mode='pathway')),encoding='utf8')
-        aligned=document(p['code']+' alignment record',dict(base,pathway=p,mode='alignment'))
-        (DIST/'alignment'/f'{p["slug"]}.html').write_text(aligned,encoding='utf8')
+        # The meeting record is a view of the pathway page (#meeting, or #meeting-<question id>). The old
+        # alignment URLs stay as small redirects instead of a second full copy of every pathway.
+        (DIST/'alignment'/f'{p["slug"]}.html').write_text(moved(p['code'],f'../{p["slug"]}/',[i['id'] for i in p['issues']]),encoding='utf8')
         (DIST/'alignment'/p['slug']).mkdir(exist_ok=True)
-        (DIST/'alignment'/p['slug']/'index.html').write_text(aligned,encoding='utf8')
+        (DIST/'alignment'/p['slug']/'index.html').write_text(moved(p['code'],f'../../{p["slug"]}/',[i['id'] for i in p['issues']]),encoding='utf8')
         (DIST/'meeting-records'/f'{p["slug"]}.html').write_text(printable(p),encoding='utf8')
         # Preserve existing inbound detailed-roadmap links, but stop duplicating treatment encyclopedias.
         target=p['roadmap'] or SOURCES['E-consensus']['pdf']

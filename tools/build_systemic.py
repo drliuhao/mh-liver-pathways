@@ -10,6 +10,11 @@ SETTINGS={'first':'Initial advanced-disease treatment','biomarker':'Molecularly 
 
 def build(src):
  spec=importlib.util.spec_from_file_location('matrix',src/'source/matrix_content.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+ direct_links=json.loads((ROOT/'tools/systemic_link_targets.json').read_text())
+ for card in m.CARDS:
+  card['links']=[[label,direct_links.get(url,url)] for label,url in card['links']]
+ for row in m.SAFETY:
+  row[3]=[[label,direct_links.get(url,url)] for label,url in row[3]]
  refs=json.loads((src/'source/references.json').read_text())
  out=ROOT/'systemic';out.mkdir(exist_ok=True)
  def links(items):return ' · '.join(f'<a href="{esc(u)}" target="_blank" rel="noopener">{esc(t)}</a>' for t,u in items)
@@ -52,7 +57,10 @@ def build(src):
  public_refs={pm:{k:r.get(k,'') for k in ['pmid','title','trial','author','journal','year','doi','pubmed','tmc','diseases','pdf_status']} for pm,r in refs.items()}
  (out/'references.json').write_text(json.dumps(public_refs,ensure_ascii=False,indent=2))
  (out/'matrix.json').write_text(json.dumps({'review_date':'2026-10-25','cards':m.CARDS,'safety':m.SAFETY,'guidelines':m.GUIDELINES},ensure_ascii=False,indent=2))
- snapshot=ROOT/'tools/systemic_source';snapshot.mkdir(exist_ok=True);shutil.copyfile(src/'source/matrix_content.py',snapshot/'matrix_content.py')
+ snapshot=ROOT/'tools/systemic_source';snapshot.mkdir(exist_ok=True)
+ matrix_source=(src/'source/matrix_content.py').read_text()
+ for old,new in direct_links.items():matrix_source=matrix_source.replace(old,new)
+ (snapshot/'matrix_content.py').write_text(matrix_source)
  (out/'publication-manifest.json').write_text(json.dumps({'review_date':'2026-10-25','tumors':list(TUMORS),'treatment_cards':len(m.CARDS),'references':len(refs),'local_pdfs':count,'missing_pdfs':len(refs)-count,'licensed_pdfs_published':0,'status':'Clinical review draft'},indent=2))
  style_spec=importlib.util.spec_from_file_location('systemic_matrix_style',ROOT/'tools/systemic_matrix_style.py')
  style=importlib.util.module_from_spec(style_spec);style_spec.loader.exec_module(style)

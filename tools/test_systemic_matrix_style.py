@@ -11,7 +11,10 @@ from lxml import html
 
 ROOT = Path(__file__).resolve().parents[1]
 BASELINE = '76dacc5'
-old = html.fromstring(subprocess.check_output(['git', 'show', f'{BASELINE}:systemic/index.html'], cwd=ROOT))
+old_text = subprocess.check_output(['git', 'show', f'{BASELINE}:systemic/index.html'], cwd=ROOT).decode()
+for old_url, new_url in json.loads((ROOT / 'tools/systemic_link_targets.json').read_text()).items():
+    old_text = old_text.replace(old_url, new_url)
+old = html.fromstring(old_text)
 page = html.fromstring((ROOT / 'systemic/index.html').read_text())
 matrix = json.loads((ROOT / 'systemic/matrix.json').read_text())
 refs = json.loads((ROOT / 'systemic/references.json').read_text())

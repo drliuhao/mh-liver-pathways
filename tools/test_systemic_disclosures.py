@@ -8,15 +8,19 @@ from lxml import html
 
 ROOT = Path(__file__).resolve().parents[1]
 BASELINE = '33746b0'
-old = html.fromstring(subprocess.check_output(['git', 'show', f'{BASELINE}:systemic/index.html'], cwd=ROOT))
+direct_links = json.loads((ROOT / 'tools/systemic_link_targets.json').read_text())
+def canonical_links(text):
+    for old_url, new_url in direct_links.items(): text = text.replace(old_url, new_url)
+    return text
+old = html.fromstring(canonical_links(subprocess.check_output(['git', 'show', f'{BASELINE}:systemic/index.html'], cwd=ROOT).decode()))
 new = html.fromstring((ROOT / 'systemic/index.html').read_text())
 matrix = json.loads((ROOT / 'systemic/matrix.json').read_text())
 refs = json.loads((ROOT / 'systemic/references.json').read_text())
 norm = lambda s: ' '.join(s.replace('Full-text update: ', '').split())
 
 for file in ['matrix.json', 'references.json', 'publication-manifest.json']:
-    assert (ROOT / 'systemic' / file).read_text() == subprocess.check_output(
-        ['git', 'show', f'{BASELINE}:systemic/{file}'], cwd=ROOT).decode().replace('Full-text update: ', ''), file
+    assert (ROOT / 'systemic' / file).read_text() == canonical_links(subprocess.check_output(
+        ['git', 'show', f'{BASELINE}:systemic/{file}'], cwd=ROOT).decode().replace('Full-text update: ', '')), file
 assert new.get('data-systemic-ui') == 'disclosures'
 assert len(new.xpath('//article[@class="regimen-card"]')) == 49
 assert len(new.xpath('//article[@class="library-entry"]')) == 96

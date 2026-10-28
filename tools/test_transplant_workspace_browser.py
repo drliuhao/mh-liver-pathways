@@ -8,7 +8,12 @@ roadmap option (grouped by kind), with its title and action verbatim from the pa
 criteria and its sources (one matrix-style line per source, studies with their result); reasons to
 reassess and the high-risk reviews that cover the decision are listed; the step-by-step panels are
 hidden. A next-step link in an option moves to that decision. The optional "Record findings step by
-step" mode still records a finding and shows its result. Phone: no horizontal overflow. No page errors.
+step" mode still records a finding and shows its result. The other views of the page (meeting record,
+treatment reference, high-risk protocols, evidence library, one high-risk review) do not repeat the decision
+tools ("Preview decisions", calculators, term buttons) or the "Return to decision choices" bar; the tab bar
+is shown. A discussion link opens the meeting record on the same page at that question, and the retired
+alignment and high-risk URLs land on the same page. Phone: no horizontal overflow; the open section's tab
+is in view. No page errors.
 """
 import asyncio, json, sys
 from playwright.async_api import async_playwright
@@ -32,6 +37,10 @@ VIEW = """()=>{const d=document.querySelector('.decision.dw-protocol');if(!d)ret
   risk:m.querySelectorAll('.tw-options .tw-option.tw-k-risk').length,wantRisk:reviews,
   order:[...m.children].filter(vis).map(c=>c.id||c.className.split(' ')[0])}}"""
 
+SECONDARY = """()=>{const v=n=>!!n&&n.getClientRects().length>0;return {view:document.body.dataset.pathwayView,
+ toolbar:v(document.querySelector('.clinical-tool-bar')),layer:v(document.getElementById('layer-current')),
+ tabs:[...document.querySelectorAll('.viewbar [role=tab]')].filter(v).length}}"""
+
 def check(where, r, failures):
     if r.get('missing'):
         failures.append(f'{where}: no decision'); return
@@ -53,7 +62,7 @@ def check(where, r, failures):
         failures.append(f'{where}: middle column order {r["order"]}')
 
 async def main():
-    failures, views, moves = [], 0, 0
+    failures, views, moves, secondary, redirects = [], 0, 0, 0, 0
     async with async_playwright() as p:
         browser = await p.chromium.launch()
         page = await browser.new_page(viewport={'width': 1280, 'height': 900})
@@ -90,6 +99,39 @@ async def main():
               return {visible,shown,back:!document.documentElement.classList.contains('tw-interactive')}}""")
             if not (r['visible'] and r['shown'] and r['back']):
                 failures.append(f'{slug}: step-by-step mode {r}')
+            # Other views of the page: no decision toolbar, no "Return to decision choices" bar, tabs shown.
+            hashes = await page.evaluate("""()=>{const j=JSON.parse(document.getElementById('protocol-data').textContent),s=j.pathway.slug;
+              const r=(j.high_risk?.pathways?.[s]?.reviews||[])[0];return ['meeting','high-risk','evidence','care-'+j.care[s][0].id].concat(r?['high-risk-'+r.anchor]:[])}""")
+            for h in hashes:
+                await page.evaluate(f"()=>{{location.hash='#{h}'}}")
+                await page.wait_for_timeout(350)
+                r = await page.evaluate(SECONDARY)
+                if r['toolbar'] or (r['layer'] and r['view'] != 'care') or r['tabs'] < 5 or r['view'] == 'pathway':
+                    failures.append(f'{slug}#{h}: {r}')
+                else:
+                    secondary += 1
+            # A discussion link opens the meeting record on this page, at that question.
+            await page.goto(BASE + f'transplant/{slug}/', wait_until='networkidle')
+            await page.wait_for_timeout(400)
+            r = await page.evaluate("""async()=>{const j=JSON.parse(document.getElementById('protocol-data').textContent);
+              const step=j.pathway.steps.find(s=>s.issues.length);location.hash='#'+step.id;await new Promise(r=>setTimeout(r,450));
+              const links=[...document.querySelectorAll('a.issue-link')];const a=links.find(x=>x.getClientRects().length);if(!a)return {missing:true};
+              const id=a.getAttribute('href').slice(9);a.click();await new Promise(r=>setTimeout(r,600));const t=document.getElementById(id),top=t?t.getBoundingClientRect().top:null;
+              return {sameDoc:links.every(x=>x.getAttribute('href').startsWith('#meeting-')),view:document.body.dataset.pathwayView,path:location.pathname,found:!!t,inView:top!==null&&top>=0&&top<innerHeight}}""")
+            if r.get('missing') or not (r['sameDoc'] and r['view'] == 'meeting' and r['path'].endswith(f'/transplant/{slug}/') and r['found'] and r['inView']):
+                failures.append(f'{slug}: discussion link {r}')
+            # Retired URLs land on this page.
+            issue = await page.evaluate("()=>JSON.parse(document.getElementById('protocol-data').textContent).pathway.issues[0].id")
+            for old_url, want_hash, want_view in [(f'transplant/alignment/{slug}.html', '#meeting', 'meeting'),
+                                                  (f'transplant/alignment/{slug}/#{issue}', '#meeting-' + issue, 'meeting'),
+                                                  (f'transplant/high-risk/{slug}/', '#high-risk', 'high-risk')]:
+                await page.goto(BASE + old_url, wait_until='networkidle')
+                await page.wait_for_timeout(400)
+                r = await page.evaluate("()=>[location.pathname,location.hash,document.body.dataset.pathwayView]")
+                if r != [f'/mh-liver-pathways/transplant/{slug}/', want_hash, want_view]:
+                    failures.append(f'{old_url} landed on {r}')
+                else:
+                    redirects += 1
         phone = await browser.new_page(viewport={'width': 390, 'height': 844})
         phone.on('pageerror', lambda e: errors.append(str(e)))
         for slug in SLUGS:
@@ -100,11 +142,19 @@ async def main():
             overflow = await phone.evaluate('()=>document.documentElement.scrollWidth-innerWidth')
             if overflow > 0:
                 failures.append(f'phone {slug}: horizontal overflow {overflow}px')
+            await phone.goto(BASE + f'transplant/{slug}/#high-risk', wait_until='networkidle')
+            await phone.wait_for_timeout(500)
+            r = await phone.evaluate("""()=>{const bar=document.querySelector('.viewbar'),t=bar.querySelector('[aria-selected="true"]').getBoundingClientRect(),b=bar.getBoundingClientRect();
+              return {toolbar:!!document.querySelector('.clinical-tool-bar')?.getClientRects().length,tabInView:t.left>=b.left-1&&t.right<=b.right+1,overflow:document.documentElement.scrollWidth-innerWidth}}""")
+            if r['toolbar'] or not r['tabInView'] or r['overflow'] > 0:
+                failures.append(f'phone {slug}#high-risk: {r}')
         await browser.close()
     failures += [f'page error: {e}' for e in errors]
     assert not failures, '\n'.join(failures[:30])
     print(f'PASS: {views} transplant decisions show every possible result as roadmap-style options matching the protocol data '
           f'(titles, actions, kinds, sources, reasons to reassess, high-risk reviews); {moves} next-step links moved correctly; '
-          f'step-by-step mode works on all 7 pathways; no phone overflow or page errors.')
+          f'step-by-step mode works on all 7 pathways; {secondary} other views show the tab bar without the decision toolbar; '
+          f'discussion links open the meeting record on the same page; {redirects} retired URLs land on the pathway page; '
+          f'no phone overflow or page errors.')
 
 asyncio.run(main())
