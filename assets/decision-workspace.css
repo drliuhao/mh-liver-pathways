@@ -75,6 +75,8 @@ body:has(.dw-ready .dw-grid) .clinical-tool-bar>.ci-unit{display:none}
 .compact-trail .ct-strip.dw-two-row{display:flex;flex-direction:column;align-items:stretch;gap:0;padding:0;border:1px solid #9fbac3;border-radius:7px;background:#f4f8f9}
 /* Reference views use the page toolbar; do not pin a duplicate MELD-only row. */
 .dw-two-row>.clinical-strip-tools{display:none}
+/* Printed meeting-record lines must also fit a phone's reading width. */
+@media(max-width:760px){.issue-record{overflow-wrap:anywhere}}
 .dw-two-row .dw-major-decisions{padding:0;border:0;flex:auto;width:100%}.dw-two-row .dw-major-heading{display:none}
 .dw-two-row .dw-major-decisions :is(#stageBtns,.dw-protocol-decisions){display:flex;flex-wrap:nowrap;gap:5px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scroll-snap-type:x proximity;margin:0;padding:5px}
 .dw-two-row .dw-major-decisions :is(.rf-topic,.dw-protocol-topic){flex:0 0 auto;max-width:none;min-height:44px;padding:7px 12px;white-space:nowrap;font:650 12px/1.3 var(--sans,system-ui);scroll-snap-align:start;border:1px solid #b7cbd2;background:#fff;color:#234958}
