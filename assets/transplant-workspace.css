@@ -97,3 +97,60 @@
   .tw .decision.tw-decision{box-shadow:none}
   .tw .tw-outcome,.tw .tw-findings,.tw .tw-criteria{background:none}
 }
+
+/* ---------- Possible results, listed as roadmap options (default view) ---------- */
+.tw:not(.tw-interactive) .tw-decision :is(.tw-findings,.tw-criteria,.tw-outcome,.dw-recorded,.dw-session-controls){display:none!important}
+.tw:not(.tw-interactive) .ct-entry-note,.tw:not(.tw-interactive) .ct-workflow-hint{display:none!important}
+.tw.tw-interactive .tw-decision :is(.tw-options,.tw-static-criteria){display:none!important}
+/* What this decision assesses: one criteria card */
+.tw .tw-static-criteria{margin:0 0 14px;padding:10px 12px 12px;border:1px solid #cedbd5;border-radius:8px;background:#f7faf8}
+.tw .tw-assess{margin:0;padding-left:18px;display:grid;gap:6px}
+.tw .tw-assess>li{font-size:14px;line-height:1.45}
+.tw .tw-assess b{display:block;color:var(--tw-ink)}
+.tw .tw-assess-help{display:inline;font-size:13px;color:var(--tw-muted)}
+.tw .tw-definition{margin:8px 0 0;background:#fff;border:1px solid #dbe5e0;border-radius:6px;padding:0 10px}
+.tw .tw-definition>summary{cursor:pointer;padding:7px 0;font-weight:600;font-size:13.5px;color:#25485a}
+.tw .tw-definition ul{margin:0 0 6px;padding-left:20px;font-size:13.5px;line-height:1.5}
+.tw .tw-def-sources{margin:0 0 8px;font-size:12px}
+/* The results panel, as "Recommendations within this decision" */
+.tw .tw-options{margin:0 0 14px;padding:14px;border:1px solid #dce5e8;border-radius:8px;background:#f8fafb}
+.tw .tw-options-title{margin:0 0 10px;font:700 15px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:#3f5864}
+.tw .tw-group{--g-accent:#5a6b78;--g-bg:#f4f6f8;--g-line:#dbe2e7;--g-ink:#3f5160;margin:12px 0 0;padding:10px 8px 10px;border:1px solid var(--g-line);border-left:4px solid var(--g-accent);border-radius:8px;background:var(--g-bg)}
+.tw .tw-options>.tw-options-title+.tw-group{margin-top:0}
+.tw .tw-group.tw-k-advance{--g-accent:#2f7d55;--g-bg:#eef7f1;--g-line:#cfe3d6;--g-ink:#1f5c3d}
+.tw .tw-group.tw-k-hold{--g-accent:#9a6b16;--g-bg:#fbf6e9;--g-line:#ead9b4;--g-ink:#71500f}
+.tw .tw-group.tw-k-redirect{--g-accent:#3c6fa8;--g-bg:#eef4fb;--g-line:#d3dfee;--g-ink:#2c5583}
+.tw .tw-group.tw-k-stop,.tw .tw-group.tw-k-reassess{--g-accent:#9b3b2e;--g-bg:#fbefec;--g-line:#ecd0c9;--g-ink:#86301f}
+.tw .tw-group.tw-k-risk{--g-accent:#a8470a;--g-bg:#fff4e8;--g-line:#f0d2b8;--g-ink:#a8470a}
+.tw .tw-group>h4{display:flex;align-items:center;gap:8px;margin:0 0 8px;font:700 12px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.035em;text-transform:uppercase;color:var(--g-ink)}
+.tw .tw-group>h4::before{content:'';flex:none;width:9px;height:9px;border-radius:2px;background:var(--g-accent)}
+.tw .tw-group.tw-k-reassess>h4::before,.tw .tw-group.tw-k-stop>h4::before{content:'⊘';width:auto;height:auto;background:none;color:var(--g-accent);font-size:15px;line-height:1}
+.tw .tw-option{background:#fff;border:1px solid var(--g-line);border-radius:6px;padding:10px 11px}
+.tw .tw-option+.tw-option{margin-top:8px}
+.tw .tw-option-title{margin:0 0 3px;font:700 15px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--tw-ink)}
+.tw .tw-option-status{margin:0 0 4px;font:700 11px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#a8470a}
+.tw .tw-option-action{margin:0;font-size:14px;line-height:1.5;color:#2c3b47}
+.tw .tw-next .next-actions{display:flex;flex-direction:column;gap:4px;margin:6px 0 0}
+.tw .tw-next .next-action{border:0;padding:0;background:none}
+.tw .tw-next .next-action p{margin:0 0 2px;font-size:12.5px;color:var(--tw-muted)}
+.tw .tw-next .route-button{display:inline-block;margin:0;padding:3px 0;background:none;color:#0b5d72;font:700 13.5px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:left}
+.tw .tw-next .route-button:hover{text-decoration:underline}
+.tw .tw-next .high-risk-route{color:#a8470a;border:0!important;box-shadow:none!important;background:none!important;padding:3px 0!important}
+.tw .tw-static-criteria>.ct-peers{margin-top:10px}
+.tw .tw-option .ct-peers{margin-top:8px}
+.tw .tw-option-panels .tw-crit{margin:0;padding-left:20px;font-size:13.5px;line-height:1.5}
+.tw .tw-option-panels .tw-crit .tw-crit{margin-top:3px}
+.tw .tw-reassess{margin:0;padding-left:20px;font-size:13.5px;line-height:1.5;color:#3d2a25}
+.tw .tw-reassess>li+li{margin-top:5px}
+.tw .tw-ev-locator{font-size:11.5px;color:var(--tw-muted)}
+/* Optional step-by-step entry in Tools */
+.tw .tw-mode{margin-top:14px;padding-top:12px;border-top:1px solid #dbe4e8}
+.tw .tw-mode>h4{margin:0 0 6px;font:700 13px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--tw-ink)}
+.tw .tw-mode-button{width:100%}
+.tw .tw-mode-note{margin:6px 0 0;font-size:12px;color:var(--tw-muted)}
+@media (max-width:600px){
+  .tw .tw-options{padding:10px 6px}
+  .tw .tw-group{padding:8px 5px 8px;border-left-width:3px}
+  .tw .tw-option{padding:9px 8px}
+  .tw .tw-static-criteria{padding:9px 9px 10px}
+}
