@@ -7,7 +7,8 @@ function stagesFromHCC(s){const a=s.indexOf('const STAGES = ['),b=s.indexOf('/* 
 function rec(s){const a=s.indexOf('function recHTML('),b=s.indexOf('\nfunction render',a);return s.slice(a,b);}
 // Only the explicitly requested library category / editorial heading changes.
 function libraryPresentation(raw){
- const d=JSON.parse(raw);
+ // Approved copy correction only: the old baseline corrupted stratification.
+ const d=JSON.parse(raw.replaceAll('stlocal approval','stratification'));
  for(const [key,ref] of [...Object.entries(d.refs),...Object.entries(d.nonpm)]){
   if(!['HAI evidence · October 2026','HAI library access','HAI randomized conference results'].includes(ref[1]))continue;
   const id=key.replace(/^tmc/,'');ref[1]=id==='37210451'?'Transplant':id==='39962001'?'Guidelines & policy':'Liver-directed';

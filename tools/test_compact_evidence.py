@@ -1,9 +1,10 @@
 """Guard the concise evidence lines used by the compact treatment layer.
 
-Every number in a concise line (label, n, result, caution) must occur in that PMID's
-verified source text already on the site: roadmap critique bottom lines and sample
-descriptions, liver-directed matrix rows, systemic matrix evidence, high-risk study
-summaries or outcome cards. The generated asset must match its source.
+Every number in a study line (label, arms, result, caution) must occur in a quoted passage for that
+PMID, and each passage must be verbatim in the site's verified text (roadmap critique bottom lines and
+sample descriptions, liver-directed matrix rows, systemic matrix evidence, high-risk study summaries or
+outcome cards) or in the team's V15 evidence-summary decks (tools/compact_evidence_ppt_quotes.json, checked
+against the decks by tools/check_compact_evidence_ppt.py). The generated asset must match its source.
 """
 from pathlib import Path
 import glob, json, re
@@ -49,6 +50,23 @@ for s in studies():
     pmid = hr['sources'].get(s['key'], {}).get('pmid')
     if pmid:
         add(pmid, s['design_population'], s['results'])
+# Transplant pathway source records (title, locator, note) and the site's bibliographic citations.
+for f in glob.glob(str(ROOT / 'transplant/*/index.html')):
+    m = re.search(r'<script[^>]*id="protocol-data"[^>]*>(.*?)</script>', Path(f).read_text(), re.S)
+    for v in (json.loads(m.group(1)).get('sources', {}).values() if m else []):
+        if v.get('pmid'):
+            add(v['pmid'], v.get('title'), v.get('locator'), v.get('note'))
+for f in glob.glob(str(ROOT / '*/data/pathway.json')):
+    for key, ref in json.loads(Path(f).read_text()).get('refs', {}).items():
+        if len(ref) > 2:
+            add(key, ref[2])
+_hcc = (ROOT / 'hcc/index.html').read_text()
+_blk = _hcc[_hcc.index('const REF = {') + 12:]
+for key, ref in json.loads(_blk[:_blk.index('};') + 1]).items():
+    if len(ref) > 2:
+        add(key, ref[2])
+for pmid, r in json.loads((ROOT / 'systemic/references.json').read_text()).items():
+    add(pmid, r.get('title'))
 prog = json.loads((ROOT / 'tools/prognosis_cards.json').read_text())
 for card in prog['cards'].values():
     pmid = prog['sources'].get(card.get('source'), {}).get('pmid')
@@ -61,32 +79,64 @@ for f in glob.glob(str(ROOT / '*/data/pathway.json')):
         labels.setdefault(key, []).append(ref[0])
 for key, label in re.findall(r'"(\d{6,9})":\["([^"]*)"', (ROOT / 'hcc/index.html').read_text()):
     labels.setdefault(key, []).append(label)
+for f in glob.glob(str(ROOT / 'transplant/*/index.html')):
+    m = re.search(r'<script[^>]*id="protocol-data"[^>]*>(.*?)</script>', Path(f).read_text(), re.S)
+    for v in (json.loads(m.group(1)).get('sources', {}).values() if m else []):
+        if v.get('pmid'):
+            labels.setdefault(str(v['pmid']), []).append(v['short'])
+for pmid, r in json.loads((ROOT / 'systemic/references.json').read_text()).items():
+    labels.setdefault(pmid, []).append(r.get('trial') or '')
 
 src = json.loads((ROOT / 'tools/compact_evidence_source.json').read_text())
-errors, numeric = [], 0
+deck = json.loads((ROOT / 'tools/compact_evidence_ppt_quotes.json').read_text())['quotes']
+errors, site_q, deck_q = [], 0, 0
 for pmid, s in src['studies'].items():
     assert re.fullmatch(r'\d{6,9}', pmid), pmid
-    available = nums(' '.join(text.get(pmid, [])))
-    for field in ['label', 'n', 'result', 'caution']:
-        allowed = available | (nums(' '.join(labels.get(pmid, []))) if field == 'label' else set())
+    # PREMIERE-format line: every number in arms, result and caution comes from a quoted passage, and every quoted
+    # passage is verbatim in the site's verified text for that PMID or in the team's V15 deck text (checked separately).
+    site = '\n'.join(text.get(pmid, []))
+    from_deck = {q['quote'] for q in deck.get(pmid, [])}
+    pool = set()
+    for q in s.get('quotes') or []:
+        if q in site:
+            site_q += 1
+        elif q in from_deck:
+            deck_q += 1
+        else:
+            errors.append(f'{pmid}: quote without provenance: {q[:70]}')
+        pool |= nums(q)
+    for field in ['label', 'arms', 'result', 'caution']:
+        allowed = pool | (nums(' '.join(labels.get(pmid, []))) if field == 'label' else set())
         bad = sorted(nums(s.get(field)) - allowed)
         if bad:
             errors.append(f'{pmid} {field}: {bad}')
     if s.get('design') and s['design'] not in DESIGNS:
         errors.append(f"{pmid} design {s['design']}")
-    if s.get('result') and len(s['result']) > 170:
-        errors.append(f'{pmid} result too long')
-    if s.get('numeric'):
-        numeric += 1
-        assert nums(s.get('result')), (pmid, 'numeric line without a number')
-    if s.get('result') and not text.get(pmid):
-        errors.append(f'{pmid}: concise line without verified source text')
+    if not s.get('arms') or not s.get('result'):
+        errors.append(f'{pmid}: arms and result are required')
+    for field, limit in [('label', 32), ('arms', 70), ('result', 160), ('caution', 110)]:
+        if len(s.get(field) or '') > limit:
+            errors.append(f'{pmid} {field} longer than {limit}')
 assert not errors, '\n'.join(errors[:40])
 asset = (ROOT / 'assets/compact-evidence-data.js').read_text()
 payload = json.loads(asset[asset.index('=') + 1:].rstrip().rstrip(';'))
 assert payload['version'] == src['version'] and set(payload['studies']) == set(src['studies'])
 for pmid, s in src['studies'].items():
-    assert 'r' not in payload['studies'][pmid], 'Study-level results are not published'
+    pub = payload['studies'][pmid]
+    assert (pub.get('a'), pub.get('r'), pub.get('c')) == (s.get('arms'), s.get('result'), s.get('caution') or None), pmid
+# Non-PMID sources: category and the opening of the page's own citation text, unchanged.
+nonpm_src = {}
+for f in glob.glob(str(ROOT / '*/data/pathway.json')):
+    nonpm_src[Path(f).parent.parent.name] = json.loads(Path(f).read_text()).get('nonpm', {})
+hcc_page = (ROOT / 'hcc/index.html').read_text()
+block = hcc_page[hcc_page.index('const NONPM =') + 13:]
+nonpm_src['hcc'] = json.loads(block[:block.index('};') + 1])
+assert set(payload['nonpm']) == {k for k, v in nonpm_src.items() if v}
+for slug, entries in nonpm_src.items():
+    for key, (label, cat, cite, *rest) in entries.items():
+        pub = payload['nonpm'][slug][key]
+        assert pub['l'] == label and pub['c'] == cat and pub['x'].rstrip('…') in cite, (slug, key)
+nonpm_n = sum(map(len, payload['nonpm'].values()))
 
 # Option-tied rows: each number must occur in that roadmap's own clinical text, and the study must be cited there.
 road_text = {}
@@ -140,6 +190,7 @@ for key, ids in src['reference_links'].items():
     for g in payload['references'][key]:
         if g['k'] == 'systemic':
             assert g['l'] == cards[g['card']]['limits'], key
-print(f"PASS: {len(src['studies'])} cited studies ({numeric} curated numeric lines traced to verified site text, not published); "
+print(f"PASS: {len(src['studies'])} PREMIERE-format study lines, every number in a quoted passage ({site_q} quotes on the site, {deck_q} from V15 decks); "
+      f"{nonpm_n} non-PMID sources; "
       f"{rows} option-tied results across {len(published)} options, every number present in that roadmap's clinical text; "
       f"{groups} reviewed source-study groups (numbers traced) on {len(payload['references'])} HCC options; asset in sync.")

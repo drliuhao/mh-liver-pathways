@@ -29,7 +29,7 @@ for (const slug of slugs) {
     refs = ctx.refs; nonpm = ctx.nonpm;
   } else {
     const cur = JSON.parse(read(slug + '/data/pathway.json'));
-    const prev = JSON.parse(old(slug + '/data/pathway.json'));
+    const prev = JSON.parse(old(slug + '/data/pathway.json').replaceAll('stlocal approval','stratification'));
     for (const key of ['gates','honest','ops','lead','matrix','provenance']) assert.deepStrictEqual(cur[key],prev[key],slug + ' clinical ' + key);
     for (const key of ['refs','nonpm']) {
       assert.deepStrictEqual(Object.keys(cur[key]),Object.keys(prev[key]),slug + ' source IDs');
