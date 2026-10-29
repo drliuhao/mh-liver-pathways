@@ -7,4 +7,4 @@ Each JSON file here is one approved change to protected clinical content: new so
 
 | File | Summary |
 |---|---|
-| `2026-10-29-extrahepatic-disease.json` | A dedicated position on previously treated extrahepatic disease per tumor. New reviews: CRLM-B5, HCC-B5, iCCA-B4, NET-B4. Expanded: pCCA-B1, HEHE-B2. CRLM-B3, NET-B2, HCC-B1/B2 and iCCA-B1 now point to these. 16 verified sources. Proposed; not activated. |
+| `2026-10-29-extrahepatic-disease.json` | A dedicated position on previously treated extrahepatic disease per tumor. New reviews: CRLM-B5, HCC-B5, iCCA-B4, NET-B4. Expanded: pCCA-B1, HEHE-B2. CRLM-B3, NET-B2, HCC-B1/B2 and iCCA-B1 now point to these. 27 sources (11 added after full-text reading); numbers re-checked against the sources by an independent check. Proposed; not activated. |

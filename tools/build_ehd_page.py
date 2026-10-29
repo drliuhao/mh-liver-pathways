@@ -156,7 +156,7 @@ for n in data['not_applicable']:
     out.append(f'<div class="ehd-na" id="na-{e(n["id"])}"><b>{e(n["tumor"])}.</b> {e(n["position"])}' + (f'<small class="citation">{refs}</small>' if refs else '') + '</div>')
 
 out.append(f'<footer class="evidence-footer">Prepared {e(data["prepared"])} (Claude.ai) for Hao Liu. No institutional approval or external-analyst consensus is implied. '
-           'PMIDs and abstract quotations were re-checked against PubMed. TMC library links need a Texas Medical Center library sign-in; '
+           'PMIDs and abstract quotations were re-checked against PubMed, and every study line was re-checked against its full text or abstract by an independent check. TMC library links need a Texas Medical Center library sign-in; '
            'licensed PDFs stay in the private depot.</footer></main></body></html>')
 dest = ROOT / 'extrahepatic-disease/index.html'
 dest.parent.mkdir(exist_ok=True)
