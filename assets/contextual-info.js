@@ -145,7 +145,8 @@
   document.querySelectorAll('.assistant-footnote').forEach(n=>note(n,'How to use these choices'));
   document.querySelectorAll('.example-controls [data-example-description]').forEach(n=>note(n,'How choices work'));
   document.querySelectorAll('.stopnote').forEach(n=>note(n,'How to read these cautions'));
-  document.querySelectorAll('.rf-evidence-controls > span').forEach(n=>note(n,'Using related decisions'));
+  // One explanation for the related-decision links: the controls' note joins "How these decisions connect".
+  document.querySelectorAll('.rf-evidence-controls > span').forEach(n=>{const p=document.querySelector('.rf-related > p');if(!p)return;p.append(' '+n.textContent.trim());n.remove();});
   document.querySelectorAll('.rf-related > p').forEach(n=>note(n,'How these decisions connect'));
   const slug=location.pathname.split('/').filter(Boolean).pop(),step=document.querySelector('.permalink')?.getAttribute('href')?.slice(1);
   compactHeading(document.querySelector('.question-head h2'),copy.headings[slug+'/'+step]);

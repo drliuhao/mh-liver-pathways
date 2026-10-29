@@ -33,7 +33,8 @@ LAYER = """()=>{const vis=n=>n.getClientRects().length>0;const a=document.queryS
  const raw=recs.filter(r=>[...r.querySelectorAll(':scope>.ci-unit')].some(u=>vis(u)&&/evidence|sources|explanation/i.test(u.querySelector('.ci-label')?.textContent||'')&&!/^\\s*full explanation/i.test(u.querySelector('.ci-label')?.textContent||''))).length;
  const groups=[...a.querySelectorAll('.rf-recommendations .rf-option-group')].map(g=>[g.className.split(' ').pop(),getComputedStyle(g).backgroundColor]);
  const rows=[...document.querySelectorAll('.ct-ev-row')].filter(li=>li.querySelector('.ct-pm')&&!li.classList.contains('ct-ev-ref'));
- const chips=[...document.querySelectorAll('.refchip[data-ref]')].filter(c=>vis(c)&&!(c.nextElementSibling&&c.nextElementSibling.matches('.ct-chip-meta')));
+ // A guideline or policy chip that names its source carries no grey type label (it would repeat the name).
+ const chips=[...document.querySelectorAll('.refchip[data-ref]')].filter(c=>vis(c)&&!(c.nextElementSibling&&c.nextElementSibling.matches('.ct-chip-meta'))&&!(!/^\\d{6,9}$/.test(c.dataset.ref)&&CompactTreatment.namesItself(c.textContent)));
  return {raw,groups,rows:rows.length,noResult:rows.filter(li=>!li.querySelector('.ct-ev-result')).map(li=>li.querySelector('.ct-pm').textContent),
   chipsNoMeta:chips.map(c=>c.dataset.ref+':'+c.textContent).slice(0,5),studies:Object.keys(CompactEvidenceData.studies).length,
   missing:[...new Set([...document.querySelectorAll('.refchip[data-ref]')].map(c=>c.dataset.ref).filter(k=>/^\\d{6,9}$/.test(k)&&!CompactEvidenceData.studies[k]))],
@@ -105,9 +106,14 @@ async def main():
         for slug in SLUGS:
             await page.goto(BASE + f'transplant/{slug}/', wait_until='networkidle')
             await page.wait_for_timeout(400)
-            r = await page.evaluate("()=>({cites:document.querySelectorAll('.cite[data-ref]').length,meta:document.querySelectorAll('.cite[data-ref]+.ct-chip-meta').length})")
-            if r['cites'] != r['meta']:
-                failures.append(f'transplant/{slug}: citations without type/PMID {r}')
+            # Every citation has its type and PMID beside it, except a guideline or policy whose name says what it is.
+            r = await page.evaluate("""()=>{const s=JSON.parse(document.getElementById('protocol-data').textContent).sources;
+              const cites=[...document.querySelectorAll('.cite[data-ref]')];
+              const bad=cites.filter(c=>{const m=c.nextElementSibling?.matches('.ct-chip-meta');const src=s[c.dataset.ref]||{};const pm=/^\\d{6,9}$/.test(String(src.pmid||''));
+                return pm?!(m&&c.nextElementSibling.querySelector('.ct-pm')):(!m&&!CompactTreatment.namesItself(c.textContent))||(m&&CompactTreatment.namesItself(c.textContent)&&c.nextElementSibling.querySelector('.ct-chip-what'));});
+              return {cites:cites.length,bad:bad.slice(0,4).map(c=>c.dataset.ref+':'+c.textContent)}}""")
+            if r['bad']:
+                failures.append(f'transplant/{slug}: citation labels {r}')
         for slug in SLUGS:
             await page.goto(BASE + f'transplant/high-risk/{slug}/', wait_until='networkidle')
             await page.wait_for_timeout(400)

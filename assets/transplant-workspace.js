@@ -117,7 +117,9 @@
   function peer(label, panel, cls, count) {
     const b = make('button', 'ct-peer ' + cls);
     b.type = 'button';
-    b.append(make('span', 'ct-peer-label', label));
+    const short = {'Evidence & sources': 'Evidence'}[label];
+    b.append(make('span', 'ct-peer-label', short || label));
+    if (short) b.setAttribute('aria-label', label + (count ? ', ' + count : ''));
     if (count) b.append(make('span', 'ct-peer-count', String(count)));
     if (!panel.id) panel.id = 'tw-panel-' + (++peerId);
     b.setAttribute('aria-controls', panel.id);
@@ -278,17 +280,19 @@
     }
     // The papers and guidance behind these questions and definitions, as matrix-style lines.
     const refs = [...(config?.questions || []).flatMap(q => q.refs || []), ...[...definitions.values()].flatMap(c => c.refs || [])];
+    // They sit folded at the bottom of the decision (Hao, 28 October), with the treatment matrices.
     const ev = evidencePanel(refs);
+    let fold = null;
     if (ev) {
-      const row = make('div', 'ct-peers');
-      row.setAttribute('role', 'group');
-      row.setAttribute('aria-label', 'Sources for this decision');
-      row.append(peer('Evidence & sources', ev.panel, 'ct-peer-ev', ev.count));
-      const panels = make('div', 'ct-panels tw-option-panels');
-      panels.append(ev.panel);
-      box.append(row, panels);
+      fold = ev.panel;
+      fold.className = 'tc-fold tw-evidence-fold ct-evidence';
+      const s = fold.querySelector(':scope>summary');
+      s.replaceChildren(make('span', 'tc-fold-name', 'Evidence & sources for this decision'), make('span', 'tc-kind', ev.count + (ev.count === 1 ? ' source' : ' sources')));
+      const body = make('div', 'tc-fold-body');
+      body.append(...[...fold.childNodes].filter(n => n !== s));
+      fold.append(body);
     }
-    return list.childElementCount || definitions.size ? box : null;
+    return [list.childElementCount || definitions.size ? box : null, fold];
   }
   function staticOptions(decision) {
     const id = decision.querySelector('.permalink')?.getAttribute('href')?.slice(1);
@@ -296,9 +300,9 @@
     const middle = decision.querySelector('.dw-criteria');
     if (!step || !middle) return;
     if (decision.dataset.twOptions === id && middle.querySelector(':scope>.tw-options')) return;
-    middle.querySelectorAll(':scope>.tw-options,:scope>.tw-static-criteria').forEach(n => n.remove());
+    middle.querySelectorAll(':scope>.tw-options,:scope>.tw-static-criteria,:scope>.tw-more').forEach(n => n.remove());
     decision.dataset.twOptions = id;
-    const crit = criteriaCard(step);
+    const [crit, evidence] = criteriaCard(step);
     const box = make('section', 'tw-options');
     box.setAttribute('aria-label', 'Possible results within this decision');
     box.append(make('h4', 'tw-options-title', 'Possible results within this decision'));
@@ -323,6 +327,11 @@
     // Place after the title (and the wait-time sub-navigation), before the step-by-step panels.
     const anchor = middle.querySelector(':scope>.dw-wait-parts') || middle.querySelector(':scope>.dw-column-title');
     anchor.after(...[crit, box].filter(Boolean));
+    // Folded at the bottom: this decision's evidence, then (tools-column.js) the treatment matrices.
+    const more = make('section', 'tw-more');
+    more.setAttribute('aria-label', 'Evidence and treatment matrices');
+    if (evidence) more.append(evidence);
+    middle.append(more);
   }
   /* Mode: possible results (default) or step-by-step finding entry. */
   const MODE_KEY = 'tw.mode.' + slug;

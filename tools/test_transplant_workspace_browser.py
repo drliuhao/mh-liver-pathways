@@ -13,7 +13,9 @@ treatment reference, high-risk protocols, evidence library, one high-risk review
 tools ("Preview decisions", calculators, term buttons) or the "Return to decision choices" bar; the tab bar
 is shown. A discussion link opens the meeting record on the same page at that question, and the retired
 alignment and high-risk URLs land on the same page. Phone: no horizontal overflow; the open section's tab
-is in view. No page errors.
+is in view. Tools column: Scores & classifications · Treatment resources · Decision references · Evidence &
+documents in that order, both matrix links on every decision of a tumor that has them; treatment decisions end
+with the matrices folded beside the decision's evidence, and an opened fold loads its rows. No page errors.
 """
 import asyncio, json, sys
 from playwright.async_api import async_playwright
@@ -41,6 +43,15 @@ SECONDARY = """()=>{const v=n=>!!n&&n.getClientRects().length>0;return {view:doc
  toolbar:v(document.querySelector('.clinical-tool-bar')),layer:v(document.getElementById('layer-current')),
  tabs:[...document.querySelectorAll('.viewbar [role=tab]')].filter(v).length}}"""
 
+TOOLS = """()=>{const t=document.querySelector('.decision .dw-tools');const more=document.querySelector('.decision .tw-more');
+ return {heads:[...t.querySelectorAll('.tc-section:not([hidden])>h4')].map(h=>h.textContent),matrixLinks:t.querySelectorAll('.tc-mx-links>a').length,
+  stray:[...t.querySelectorAll('.dw-tool-list>:not(.tc-section)')].length,
+  folds:more?more.querySelectorAll(':scope>.tc-fold:not(.tw-evidence-fold)').length:0,openFolds:more?more.querySelectorAll(':scope>details[open]').length:0}}"""
+SECTION_ORDER = ['Scores & classifications', 'Treatment resources', 'Decision references', 'Evidence & documents']
+MATRIX_TUMORS = {'hcc', 'pcca', 'icca', 'crlm', 'nelm'}
+TREATMENT_STEPS = {'hcc': ['curative-route', 'treatment', 'waitlist'], 'pcca': ['neoadjuvant'], 'icca': ['therapy', 'stability'],
+                   'crlm': ['unresectability', 'control'], 'nelm': ['options', 'exposure']}
+
 def check(where, r, failures):
     if r.get('missing'):
         failures.append(f'{where}: no decision'); return
@@ -62,7 +73,7 @@ def check(where, r, failures):
         failures.append(f'{where}: middle column order {r["order"]}')
 
 async def main():
-    failures, views, moves, secondary, redirects = [], 0, 0, 0, 0
+    failures, views, moves, secondary, redirects, tools_checked, folds_loaded = [], 0, 0, 0, 0, 0, {}
     async with async_playwright() as p:
         browser = await p.chromium.launch()
         page = await browser.new_page(viewport={'width': 1280, 'height': 900})
@@ -77,6 +88,27 @@ async def main():
                 await page.wait_for_timeout(450)
                 check(f'{slug}/{step}', await page.evaluate(VIEW), failures)
                 views += 1
+            # Tools column: one hierarchy; both matrices wherever the tumor has them. Treatment decisions carry
+            # the matrices folded at the bottom, beside the decision's evidence; a fold loads its rows when opened.
+            for step in steps:
+                await page.evaluate(f"()=>{{location.hash='#{step}'}}")
+                await page.wait_for_timeout(350)
+                t = await page.evaluate(TOOLS)
+                heads = [h for h in t['heads'] if h in SECTION_ORDER]
+                if heads != sorted(heads, key=SECTION_ORDER.index) or 'Evidence & documents' not in heads:
+                    failures.append(f'{slug}/{step}: tools sections {t["heads"]}')
+                if t['matrixLinks'] != (2 if slug in MATRIX_TUMORS else 0) or t['stray']:
+                    failures.append(f'{slug}/{step}: matrix links {t["matrixLinks"]}, stray {t["stray"]}')
+                if t['folds'] != (2 if step in TREATMENT_STEPS.get(slug, []) else 0) or t['openFolds']:
+                    failures.append(f'{slug}/{step}: bottom folds {t["folds"]} open {t["openFolds"]}')
+                tools_checked += 1
+                if t['folds'] and not folds_loaded.get(slug):
+                    rows = await page.evaluate("""async()=>{const f=[...document.querySelectorAll('.decision .tw-more>.tc-fold:not(.tw-evidence-fold)')];
+                      f.forEach(d=>d.open=true);for(let i=0;i<40&&f.some(d=>d.dataset.loaded!=='true');i++)await new Promise(r=>setTimeout(r,100));
+                      const n=f.map(d=>d.querySelectorAll('.tc-mx-list li').length);f.forEach(d=>d.open=false);return n}""")
+                    if not all(rows):
+                        failures.append(f'{slug}/{step}: matrix folds empty {rows}')
+                    folds_loaded[slug] = True
             # A next-step link inside an option still moves to its decision.
             await page.goto(BASE + f'transplant/{slug}/', wait_until='networkidle')
             await page.wait_for_timeout(500)
@@ -153,7 +185,8 @@ async def main():
     assert not failures, '\n'.join(failures[:30])
     print(f'PASS: {views} transplant decisions show every possible result as roadmap-style options matching the protocol data '
           f'(titles, actions, kinds, sources, reasons to reassess, high-risk reviews); {moves} next-step links moved correctly; '
-          f'step-by-step mode works on all 7 pathways; {secondary} other views show the tab bar without the decision toolbar; '
+          f'step-by-step mode works on all 7 pathways; {tools_checked} tools columns in one order with both matrices where the tumor has them, '
+          f'treatment decisions with folded matrices that load; {secondary} other views show the tab bar without the decision toolbar; '
           f'discussion links open the meeting record on the same page; {redirects} retired URLs land on the pathway page; '
           f'no phone overflow or page errors.')
 

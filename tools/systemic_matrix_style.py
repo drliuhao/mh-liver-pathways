@@ -14,7 +14,7 @@ import json
 from lxml import html, etree
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '20261028-links2'
+VERSION = '20261029-tools1'
 TUMORS = {'hcc': ('HCC', 'Hepatocellular carcinoma'), 'pcca': ('pCCA', 'Perihilar cholangiocarcinoma'),
           'icca': ('iCCA', 'Intrahepatic cholangiocarcinoma'), 'crlm': ('CRLM', 'Colorectal liver metastases'),
           'pdac': ('PDAC', 'Pancreatic adenocarcinoma'), 'pnet': ('pNET', 'Pancreatic neuroendocrine tumor'),

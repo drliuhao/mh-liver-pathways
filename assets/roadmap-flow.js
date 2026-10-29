@@ -86,7 +86,7 @@
    if(r.decision&&!target)return '';
    const label=r.label||(target?title(target):'Review related care');
    const href=r.decision?'#decision-'+encodeURIComponent(r.decision):r.topic?new URL('hcc/?topic='+encodeURIComponent(r.topic)+'#topics',root).href:new URL(r.url,root).href;
-   return `<a class="rf-related-link" href="${esc(href)}" ${r.decision?`data-roadmap-decision="${esc(r.decision)}" data-related-index="${index}"`:''}><span><b class="flow-if">When</b> ${esc(r.when)}</span><strong>${esc(label)} →</strong></a>`;
+   return `<a class="rf-related-link" href="${esc(href)}" ${r.decision?`data-roadmap-decision="${esc(r.decision)}" data-related-index="${index}"`:''}><span>${esc(r.when)}</span><strong>${esc(label)} →</strong></a>`;
   }).join('');
   panel.innerHTML=`<h4 class="flow-section-heading"><span>3</span> Next assessment or care</h4><p>Open the assessment when the stated situation applies. Several may be needed together. Supportive care can accompany treatment or be the main care plan.</p><div class="rf-related-grid">${items}</div>`;
  }

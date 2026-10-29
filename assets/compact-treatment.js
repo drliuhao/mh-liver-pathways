@@ -19,14 +19,14 @@
   const NONPM = (DATA.nonpm || {})[slug] || {};
 
   /* A small peer toggle that opens a full-width panel below the control row. */
-  const SHORT = {'Contraindications & cautions': 'Cautions', 'Evidence & sources': 'Evidence'};
+  // Short labels everywhere (Hao, 28 October: "more concise"); the full name stays the accessible name.
+  const SHORT = {'Contraindications & cautions': 'Cautions', 'Additional cautions': 'Cautions', 'Evidence & sources': 'Evidence'};
   function peerButton(label, panel, extra, options = {}) {
     const b = make('button', 'ct-peer');
     b.type = 'button';
-    const visible = options.visible || label;
     const short = options.short || SHORT[label];
-    b.append(make('span', 'ct-peer-label' + (short ? ' ct-long' : ''), visible));
-    if (short) b.append(make('span', 'ct-peer-label ct-short', short));
+    const visible = options.visible || short || label;
+    b.append(make('span', 'ct-peer-label', visible));
     if (extra) b.append(make('span', 'ct-peer-count', extra));
     if (short || options.visible || extra) b.setAttribute('aria-label', [options.full || label, extra && !options.full ? extra : ''].filter(Boolean).join(', '));
     if (!panel.id) panel.id = nextId('ct-panel');
@@ -283,6 +283,9 @@
   }
 
   /* ---------- Source chips elsewhere: a PMID and a short description next to every name ---------- */
+  // A guideline, policy or consensus chip already names its source ("NLRB · CRLM", "NCCN colon"); a grey
+  // type label after it repeats that (Hao, 28 October). The type stays in the chip's tooltip and dialog.
+  const namesItself = label => /\b[A-Z]{3,}\b/.test(label || '') || /guideline|guidance|policy|consensus|protocol|criteria|classification/i.test(label || '');
   function chipMeta(chip, withArms) {
     if (chip.dataset.ctMeta) return;
     chip.dataset.ctMeta = 'true';
@@ -295,7 +298,7 @@
       if (what) meta.append(make('span', 'ct-chip-what', what));
       if (s.r) chip.title = [s.a, s.r, s.c && 'Limitation: ' + s.c].filter(Boolean).join(' — ');
     } else if (NONPM[key]) {
-      meta.append(make('span', 'ct-chip-what', NONPM[key].c));
+      if (!namesItself(plain(chip.textContent))) meta.append(make('span', 'ct-chip-what', NONPM[key].c));
       chip.title = NONPM[key].x;
     }
     if (meta.childElementCount) chip.after(meta);
@@ -326,8 +329,9 @@
     if (!s) return;
     cite.dataset.ctMeta = 'true';
     const meta = make('span', 'ct-chip-meta');
-    if (s.kind) meta.append(make('span', 'ct-chip-what', s.kind));
-    if (isPm(String(s.pmid || ''))) meta.append(pmChip(String(s.pmid)));
+    const pmid = isPm(String(s.pmid || ''));
+    if (s.kind && (pmid || !namesItself(plain(cite.textContent)))) meta.append(make('span', 'ct-chip-what', s.kind));
+    if (pmid) meta.append(pmChip(String(s.pmid)));
     const study = DATA.studies[String(s.pmid || '')];
     cite.title = study?.r ? [study.a, study.r].filter(Boolean).join(' — ') : (s.note || s.title || '');
     if (meta.childElementCount) cite.after(meta);
@@ -360,9 +364,10 @@
     const s = link && byUrl.get(link.getAttribute('href'));
     if (!s) return;
     const meta = make('span', 'ct-chip-meta');
-    if (s.kind) meta.append(make('span', 'ct-chip-what', s.kind));
-    if (isPm(String(s.pmid || ''))) meta.append(pmChip(String(s.pmid)));
-    link.after(meta);
+    const pmid = isPm(String(s.pmid || ''));
+    if (s.kind && (pmid || !namesItself(plain(link.textContent)))) meta.append(make('span', 'ct-chip-what', s.kind));
+    if (pmid) meta.append(pmChip(String(s.pmid)));
+    if (meta.childElementCount) link.after(meta);
   }
 
   /* ---------- Revision history out of the clinical text ----------
@@ -546,5 +551,5 @@
   new MutationObserver(records => { if (records.some(r => r.type === 'childList' && r.addedNodes.length)) schedule(); })
     .observe(document.documentElement, {childList: true, subtree: true});
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', scan); else scan();
-  window.CompactTreatment = {scan, optionText: tc => optionScope(tc.parentElement, tc), optionLead: tc => optionLead(tc.parentElement, tc)};
+  window.CompactTreatment = {scan, namesItself, optionText: tc => optionScope(tc.parentElement, tc), optionLead: tc => optionLead(tc.parentElement, tc)};
 })();

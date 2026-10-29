@@ -1,0 +1,94 @@
+/* Tools & resources column and folded matrices (tools-column.js). One row style for every disclosure,
+   one link style for every link, one rule per section. */
+.dw-tools.tc-ready .dw-tool-list{display:block;gap:0}
+.dw-tools.tc-ready .tc-section{margin:0;padding:12px 0 6px;border-top:1px solid #c9dade}
+.dw-tools.tc-ready .tc-section[hidden]{display:none}
+.dw-tools.tc-ready .tc-heading{margin:0 0 4px;font:700 11px/1.4 var(--sans,system-ui);letter-spacing:.06em;text-transform:uppercase;color:#4d6670}
+.dw-tools.tc-ready .dw-team-heading{margin:0 0 6px;font:700 11px/1.4 var(--sans,system-ui);letter-spacing:.06em;text-transform:uppercase;color:#4d6670}
+.dw-tools.tc-ready .dw-team-list{margin-bottom:12px;font-size:12.5px}
+
+/* Rows: a disclosure with its name and a kind tag. */
+.tc-row{margin:0;border:0;border-bottom:1px solid #dbe6e9;background:none;min-width:0;color:#29454e}
+.tc-row:last-child{border-bottom:0}
+.tc-row>summary,.tc-fold>summary{display:flex;align-items:center;gap:8px;min-height:40px;box-sizing:border-box;padding:8px 2px;cursor:pointer;list-style:none;font:600 12.5px/1.4 var(--sans,system-ui);color:#245866}
+.tc-row>summary::-webkit-details-marker,.tc-fold>summary::-webkit-details-marker{display:none}
+.tc-row>summary::before,.tc-fold>summary::before{content:'';flex:0 0 auto;width:0;height:0;border-left:5px solid currentColor;border-top:4px solid transparent;border-bottom:4px solid transparent;transition:transform .12s}
+.tc-row[open]>summary::before,.tc-fold[open]>summary::before{transform:rotate(90deg)}
+.tc-row>summary:focus-visible,.tc-fold>summary:focus-visible,.tc-link:focus-visible{outline:3px solid #3a759c;outline-offset:2px}
+.tc-name,.tc-fold-name{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+.tc-kind{flex:0 0 auto;font:600 10px/1.3 var(--sans,system-ui);letter-spacing:.03em;color:#5b7179;background:#e6eef1;border-radius:9px;padding:2px 7px;white-space:nowrap}
+.tc-row .tc-body,.tc-row>.moreinner{padding:4px 2px 12px 15px;font:400 12px/1.55 var(--sans,system-ui);color:#29454e;max-width:100%;overflow-x:auto;position:static;box-shadow:none;border:0;width:auto}
+.tc-row .tc-body p,.tc-row .tc-body li{font-size:12px;line-height:1.55}
+.tc-row .tc-body table{font-size:11.5px}
+.tc-row .tc-body .clinical-button{margin-top:4px}
+.tc-row>.ch-reference-sources,.tc-row>.tc-calc{margin-left:15px}
+.tc-src{color:#4d6670;font-size:11px!important}
+.tc-src a{color:#245970}
+
+/* Links: name, optional tag, arrow. */
+.dw-tools.tc-ready a.tc-link,.dw-tools.tc-ready button.tc-link{display:flex;align-items:center;gap:8px;width:100%;box-sizing:border-box;min-height:40px;margin:0;padding:8px 2px;border:0;border-bottom:1px solid #dbe6e9;border-radius:0;background:none;text-align:left;font:600 12.5px/1.4 var(--sans,system-ui);color:#245866;text-decoration:none;cursor:pointer}
+.dw-tools.tc-ready a.tc-link::after,.dw-tools.tc-ready button.tc-link::after{content:'→';margin-left:auto;padding-left:6px;color:#5b7f8a;font-weight:600}
+.dw-tools.tc-ready a.tc-link:hover .tc-name,.dw-tools.tc-ready a.tc-link:hover,.tc-row>summary:hover .tc-name,.tc-fold>summary:hover .tc-fold-name{text-decoration:underline;text-underline-offset:3px}
+.dw-tools.tc-ready .tc-section>*:last-child{border-bottom:0}
+.tc-mx-links .tc-link .tc-kind{margin-left:auto}
+.tc-mx-links .tc-link::after{margin-left:0!important}
+
+/* Calculators */
+.tc-calc{margin:10px 0 2px;padding:10px;border:1px solid #c9dade;border-radius:6px;background:#fff}
+.tc-calc-title{margin:0 0 8px!important;font:700 11px/1.3 var(--sans,system-ui)!important;letter-spacing:.06em;text-transform:uppercase;color:#4d6670}
+.tc-fields{display:grid;grid-template-columns:1fr;gap:8px}
+.tc-field{display:grid;gap:3px;min-width:0}
+.tc-field label{font:600 11.5px/1.35 var(--sans,system-ui);color:#35525b}
+.tc-field input[type=number],.tc-field select{width:100%;box-sizing:border-box;min-height:36px;padding:6px 8px;border:1px solid #b9ccd3;border-radius:5px;font:400 14px/1.3 var(--sans,system-ui);background:#fff;color:#1f3a42}
+.tc-field.tc-check{grid-template-columns:auto 1fr;align-items:start;gap:8px}
+.tc-field.tc-check input{width:18px;height:18px;margin:1px 0 0}
+.tc-field.tc-check label{font-weight:500}
+.tc-result{display:grid;gap:3px;margin-top:10px;padding:8px 10px;border-left:3px solid #9fb5bd;background:#f3f7f9;font:400 12px/1.5 var(--sans,system-ui);color:#35525b}
+.tc-result.has-result{border-left-color:#2f6f7a;background:#eef6f6}
+.tc-result strong{font:700 13.5px/1.4 var(--sans,system-ui);color:#1f4f59}
+.tc-calc-note{margin:7px 0 0!important;font-size:11px!important;color:#5b7179}
+
+/* Folded matrices and evidence: transplant decisions and roadmaps */
+.tw-more{margin:18px 0 0;border-top:1px solid #c9dade}
+.tw-more:empty{display:none}
+.tc-fold{margin:0;border:0;border-bottom:1px solid #c9dade;background:none}
+.tc-fold>summary{min-height:44px;font-size:13.5px;color:#23505c}
+.tc-fold-body{padding:2px 2px 14px 15px;font:400 13px/1.55 var(--sans,system-ui)}
+.tc-fold.ct-evidence{border-left:0!important;padding:0!important;background:none!important}
+.tc-fold.ct-evidence>.tc-fold-body .ct-ev{margin-top:0}
+.tc-mx-group{margin:12px 0 4px;font:700 11px/1.4 var(--sans,system-ui);letter-spacing:.05em;text-transform:uppercase;color:#4d6670}
+.tc-mx-list{list-style:none;margin:0;padding:0}
+.tc-mx-list li{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px;padding:7px 0;border-bottom:1px solid #e3ebee}
+.tc-mx-list li:last-child{border-bottom:0}
+.tc-mx-name{font-weight:650;color:#245866;text-decoration:none}
+.tc-mx-name:hover{text-decoration:underline}
+.tc-mx-what{flex:1 1 260px;color:#3f5962;font-size:12.5px}
+.tc-tier{font:650 10.5px/1.3 var(--sans,system-ui);border-radius:9px;padding:2px 7px;background:#e6eef1;color:#35525b;white-space:nowrap}
+.tc-tier.tc-t1{background:#dcefe4;color:#1f5c3c}.tc-tier.tc-t2{background:#e6f1d9;color:#3d5b1c}.tc-tier.tc-t3{background:#dde9f6;color:#24507e}.tc-tier.tc-t4{background:#fbecd6;color:#7a4b0b}.tc-tier.tc-t5{background:#ececec;color:#4a4a4a}
+.tc-fold-body .tc-link{display:inline-block;margin-top:10px;font-weight:650;color:#245866}
+.tc-fold-body .tc-link::after{content:' →'}
+.tc-note{color:#5b7179;font-size:12px}
+.tc-roadmap-host>.tc-mx-title,.tc-roadmap-matrices>.tc-mx-title{margin:0 0 8px;font:700 13px/1.4 var(--sans,system-ui);letter-spacing:.06em;text-transform:uppercase;color:#4d6670}
+.tc-roadmap-host .tc-fold:first-of-type{border-top:1px solid #c9dade}
+.tc-roadmap-matrices{margin:0}
+.tc-roadmap-lrt>.tc-fold-body{padding-left:0}
+
+@media(max-width:760px){
+  .tc-fold-body{padding-left:4px}
+  .tc-row .tc-body,.tc-row>.moreinner{padding-left:4px}
+  .tc-row>.ch-reference-sources,.tc-row>.tc-calc{margin-left:4px}
+}
+@media print{.tc-calc{display:none}.tc-row>*,.tc-fold>*{display:block!important}}
+
+/* Single separators: a row or link group never adds a second rule against its section. */
+.dw-tools.tc-ready .tc-row{border-top:0!important;border-left:0!important;border-right:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important;margin:0!important;background:none!important}
+.dw-tools.tc-ready .tc-section>.tc-mx-links:last-child>a:last-child{border-bottom:0}
+.dw-tools.tc-ready .tc-section>.tc-row:last-child,.dw-tools.tc-ready .tc-section>a:last-child{border-bottom:0}
+/* Narrow column: a page's two-column reference table reads as label above value. */
+.dw-tools.tc-ready .tc-row .minitab,.dw-tools.tc-ready .tc-row .minitab tbody,.dw-tools.tc-ready .tc-row .minitab tr,.dw-tools.tc-ready .tc-row .minitab td{display:block;width:auto!important}
+.dw-tools.tc-ready .tc-row .minitab tr{padding:6px 0;border-bottom:1px solid #e3ebee}
+.dw-tools.tc-ready .tc-row .minitab td{padding:0!important}
+.dw-tools.tc-ready .tc-row .minitab td:first-child{font-weight:650;color:#29454e}
+/* Compact calculator grid when the column is wide enough. */
+.tc-fields{grid-template-columns:repeat(auto-fill,minmax(112px,1fr))}
+.tc-field.tc-check,.tc-field:has(select){grid-column:1/-1}

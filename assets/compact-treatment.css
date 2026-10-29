@@ -173,3 +173,7 @@ ul.ct-ev>.ct-ev-row+.ct-ev-row{padding-top:7px;border-top:1px solid #e3e9ee}
 /* Systemic matrix: the study line under each citation */
 .ct-src-line{display:grid;gap:2px;margin:5px 0 2px;padding:5px 0 0 9px;border-left:2px solid #c9d8e8;font-size:13px;line-height:1.4}
 .ct-src-line .ct-ev-result{color:#26323d}
+/* One rule per panel: a caution or indication line inside a peer panel takes the panel's line, not its own. */
+.roadmap-streamlined .ct-panels .optline.bad,.ct-panels .optline.bad,.ct-panels .optline{border-left:0;background:none;padding:0;margin:0}
+.ct-panels .optline.bad{color:#6b2f22}
+.ct-panels .optline+.optline{margin-top:8px}
