@@ -16,8 +16,10 @@ function neutralPresentation(raw){
  for(const plans of Object.values(d.care))for(const p of plans)p.actions=p.actions.filter(a=>a.label!=='V12 full-text appraisals');
  return d;
 }
-for(const file of ['transplant/assets/content.json','tools/v12_content_snapshot.json'])assert.deepEqual(JSON.parse(read(file)),neutralPresentation(original(file)),file+' changed clinical content beyond approved labels and release-index navigation');
-for(const file of ['transplant/assets/risk-routing.js','transplant/assets/high-risk.js','assets/roadmap-links.json'])assert.equal(read(file),original(file),file+' changed clinical content');
+// Approved clinical revisions are recorded in tools/clinical_revisions/ and applied to the pinned original; nothing else may change.
+const Revisions=require('./apply_clinical_revisions.cjs');
+for(const file of ['transplant/assets/content.json','tools/v12_content_snapshot.json'])assert.deepEqual(JSON.parse(read(file)),Revisions.applyContent(neutralPresentation(original(file))),file+' changed clinical content beyond approved labels, release-index navigation and recorded clinical revisions');
+for(const file of ['transplant/assets/risk-routing.js','transplant/assets/high-risk.js','assets/roadmap-links.json'])assert.equal(read(file),Revisions.applyText(file,original(file)),file+' changed clinical content');
 const src=read('assets/contextual-info.js'),context={window:{}};vm.runInNewContext(read('assets/contextual-copy.js'),context);const copy=context.window.ContextualCopy;
 const data=JSON.parse(read('transplant/assets/content.json'));let reviewed=0;
 for(const [key,entry] of Object.entries(copy.help)){
@@ -48,5 +50,5 @@ for(const [a,b] of [['function renderActions(', 'function renderRiskReference(']
  const slice=s=>s.slice(s.indexOf(a),s.indexOf(b,s.indexOf(a)));const metadata=' data-action-label="${e(a.label)}" data-action-condition="${e(a.detail||\'\')}"';assert.equal(slice(app).replaceAll(metadata,'').replace(' renderLayerStack();\n','').replace(' document.body.dataset.currentAssessment=browseOrigin||active.steps[stepIndex].id;\n','').replace('config.questions.filter(q=>answers[q.id]).map(q=>q.id)',"config.questions.filter(q=>!answers[q.id]||answers[q.id]==='unknown').map(q=>q.id)").replace('href="#meeting-${i.id}"','href="/mh-liver-pathways/transplant/alignment/${active.slug}/#${i.id}"'),slice(old),'Changed clinical action renderer '+a);
 }
 const docs=Object.keys(JSON.parse(read('assets/roadmap-links.json'))).map(x=>x+'/index.html').concat(data.index.map(p=>'transplant/'+p.slug+'/index.html'));
-for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261029-tools3'),doc+' missing display update');
+for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261029-ehd2'),doc+' missing display update');
 console.log(`PASS: V12 data and clinical renderers unchanged; ${docs.length} pages; 46 headings, ${reviewed} help summaries and 46 recommendation guards verified; all Avoid wording retained.`);

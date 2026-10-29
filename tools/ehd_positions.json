@@ -1,0 +1,2728 @@
+{
+ "id": "2026-10-29-ehd-v16",
+ "prepared": "29 October 2026, Analyst B",
+ "status": "Proposed positions for multidisciplinary review; not activated.",
+ "sources": {
+  "nlrb": {
+   "key": "nlrb",
+   "pmid": "",
+   "short": "NLRB transplant-oncology guidance (Feb 2025)",
+   "read": "policy",
+   "links": {}
+  },
+  "ilts": {
+   "key": "ilts",
+   "pmid": "42312290",
+   "short": "ILTS–ILCA 2024 consensus (Kodali 2026)",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42312290/",
+    "doi": "https://doi.org/10.1159/000550600",
+    "tmc": "https://libkey.io/libraries/480/10.1159/000550600",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13271748/"
+   }
+  },
+  "aasld": {
+   "key": "aasld",
+   "pmid": "37199193",
+   "short": "AASLD 2023 HCC practice guidance",
+   "read": "full",
+   "scope": "relevant complete sections",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/37199193/",
+    "doi": "https://doi.org/10.1097/HEP.0000000000000466",
+    "tmc": "https://libkey.io/libraries/480/10.1097/HEP.0000000000000466",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10663390/"
+   }
+  },
+  "xxl": {
+   "key": "xxl",
+   "pmid": "",
+   "short": "XXL randomized trial (Mazzaferro 2020)",
+   "read": "existing",
+   "links": {}
+  },
+  "hcc_mergental2012": {
+   "key": "hcc_mergental2012",
+   "pmid": "22521348",
+   "short": "Mergental 2012 · ELTR non-cirrhotic HCC",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/22521348/",
+    "doi": "https://doi.org/10.1016/j.jhep.2012.03.022",
+    "tmc": "https://libkey.io/libraries/480/10.1016/j.jhep.2012.03.022"
+   }
+  },
+  "hcc_pirozzi2025": {
+   "key": "hcc_pirozzi2025",
+   "pmid": "40672077",
+   "short": "Pirozzi 2025 · case report",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/40672077/",
+    "doi": "https://doi.org/10.21037/jgo-24-764",
+    "tmc": "https://libkey.io/libraries/480/10.21037/jgo-24-764",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12261024/"
+   }
+  },
+  "hcc_sotiropoulos2007": {
+   "key": "hcc_sotiropoulos2007",
+   "pmid": "17239022",
+   "short": "Sotiropoulos 2007 · hilar nodes at LT, meta-analysis",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/17239022/",
+    "doi": "https://doi.org/10.1111/j.1432-2277.2006.00412.x",
+    "tmc": "https://libkey.io/libraries/480/10.1111/j.1432-2277.2006.00412.x"
+   }
+  },
+  "hcc_shao2026": {
+   "key": "hcc_shao2026",
+   "pmid": "41755988",
+   "short": "Shao 2026 · complete responders to ICI",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/41755988/",
+    "doi": "https://doi.org/10.3389/fonc.2025.1687449",
+    "tmc": "https://libkey.io/libraries/480/10.3389/fonc.2025.1687449",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12932236/"
+   }
+  },
+  "hcc_ong2026": {
+   "key": "hcc_ong2026",
+   "pmid": "42821267",
+   "short": "Ong 2026 · ICI before LT, matched cohort",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42821267/",
+    "doi": "https://doi.org/10.1001/jamaoncol.2026.3901",
+    "tmc": "https://libkey.io/libraries/480/10.1001/jamaoncol.2026.3901"
+   }
+  },
+  "hcc_choi2025": {
+   "key": "hcc_choi2025",
+   "pmid": "41063730",
+   "short": "Choi 2025 · NCDB curative treatment after ICI",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/41063730/",
+    "doi": "https://doi.org/10.1159/000547230",
+    "tmc": "https://libkey.io/libraries/480/10.1159/000547230",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12503716/"
+   }
+  },
+  "hcc_zhang2024": {
+   "key": "hcc_zhang2024",
+   "pmid": "38679630",
+   "short": "Zhang 2024 · surgery after response with EHD",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/38679630/",
+    "doi": "https://doi.org/10.1038/s41598-024-60379-x",
+    "tmc": "https://libkey.io/libraries/480/10.1038/s41598-024-60379-x",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11056363/"
+   }
+  },
+  "hcc_jlca2023": {
+   "key": "hcc_jlca2023",
+   "pmid": "39524972",
+   "short": "JLCA/JSHBPS 2023 resectability consensus (Akahoshi 2024)",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39524972/",
+    "doi": "https://doi.org/10.1159/000538627",
+    "tmc": "https://libkey.io/libraries/480/10.1159/000538627",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11547340/"
+   }
+  },
+  "hcc_hasegawa2014": {
+   "key": "hcc_hasegawa2014",
+   "pmid": "23532111",
+   "short": "Hasegawa 2014 · node-positive HCC, Japanese survey",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/23532111/",
+    "doi": "https://doi.org/10.1097/SLA.0b013e31828d4960",
+    "tmc": "https://libkey.io/libraries/480/10.1097/SLA.0b013e31828d4960"
+   }
+  },
+  "hcc_midorikawa2020": {
+   "key": "hcc_midorikawa2020",
+   "pmid": "32573905",
+   "short": "Midorikawa 2020 · resection of extrahepatic recurrence",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/32573905/",
+    "doi": "https://doi.org/10.1111/hepr.13526",
+    "tmc": "https://libkey.io/libraries/480/10.1111/hepr.13526"
+   }
+  },
+  "hcc_choi2024": {
+   "key": "hcc_choi2024",
+   "pmid": "38467379",
+   "short": "Choi 2024 · SABR for oligometastatic HCC, phase II",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/38467379/",
+    "doi": "https://doi.org/10.1016/j.jhep.2024.03.003",
+    "tmc": "https://libkey.io/libraries/480/10.1016/j.jhep.2024.03.003"
+   }
+  },
+  "hcc_shin2024": {
+   "key": "hcc_shin2024",
+   "pmid": "39299553",
+   "short": "Shin 2024 · lung metastasectomy vs SBRT",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39299553/",
+    "doi": "https://doi.org/10.1016/j.ijrobp.2024.09.022",
+    "tmc": "https://libkey.io/libraries/480/10.1016/j.ijrobp.2024.09.022"
+   }
+  },
+  "hcc_shindoh2025": {
+   "key": "hcc_shindoh2025",
+   "pmid": "40105312",
+   "short": "Shindoh 2025 · borderline-resectable HCC",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/40105312/",
+    "doi": "https://doi.org/10.1002/jhbp.12138",
+    "tmc": "https://libkey.io/libraries/480/10.1002/jhbp.12138"
+   }
+  },
+  "chcca_dageforde2020": {
+   "key": "chcca_dageforde2020",
+   "pmid": "33316425",
+   "short": "Dageforde 2020 · cHCC-CCA LT vs resection",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/33316425/",
+    "doi": "https://doi.org/10.1016/j.jamcollsurg.2020.11.017",
+    "tmc": "https://libkey.io/libraries/480/10.1016/j.jamcollsurg.2020.11.017",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8450541/"
+   }
+  },
+  "chcca_kim2023": {
+   "key": "chcca_kim2023",
+   "pmid": "37555110",
+   "short": "Kim 2023 · cHCC-CC LT, Korea",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/37555110/",
+    "doi": "https://doi.org/10.4240/wjgs.v15.i7.1340",
+    "tmc": "https://libkey.io/libraries/480/10.4240/wjgs.v15.i7.1340",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10405106/"
+   }
+  },
+  "chcca_sierra2026": {
+   "key": "chcca_sierra2026",
+   "pmid": "42049568",
+   "short": "Sierra 2026 · cHCC-CCA LT, UNOS",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42049568/",
+    "doi": "https://doi.org/10.1016/j.hpb.2026.03.010",
+    "tmc": "https://libkey.io/libraries/480/10.1016/j.hpb.2026.03.010"
+   }
+  },
+  "chcca_jiang2020": {
+   "key": "chcca_jiang2020",
+   "pmid": "32280473",
+   "short": "Jiang 2020 · resected cHCC-CC",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/32280473/",
+    "doi": "https://doi.org/10.1093/gastro/goaa003",
+    "tmc": "https://libkey.io/libraries/480/10.1093/gastro/goaa003",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7136721/"
+   }
+  },
+  "transmet": {
+   "key": "transmet",
+   "pmid": "39306468",
+   "short": "TransMet 2024",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39306468/",
+    "doi": "https://doi.org/10.1016/S0140-6736(24)01595-2",
+    "tmc": "https://libkey.io/libraries/480/10.1016/S0140-6736(24)01595-2"
+   }
+  },
+  "ihpba": {
+   "key": "ihpba",
+   "pmid": "34506756",
+   "short": "IHPBA 2021 consensus",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/34506756/",
+    "doi": "https://doi.org/10.1016/S2468-1253(21)00219-3",
+    "tmc": "https://libkey.io/libraries/480/10.1016/S2468-1253(21)00219-3"
+   }
+  },
+  "armd": {
+   "key": "armd",
+   "pmid": "32333527",
+   "short": "SECA-II arm D (Smedman 2020)",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/32333527/",
+    "doi": "https://doi.org/10.1002/bjs5.50278",
+    "tmc": "https://libkey.io/libraries/480/10.1002/bjs5.50278",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7260412/"
+   }
+  },
+  "crlm_dueland2023": {
+   "key": "crlm_dueland2023",
+   "pmid": "37494056",
+   "short": "Dueland 2023 · Oslo long-term",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/37494056/",
+    "doi": "https://doi.org/10.1001/jamasurg.2023.2932",
+    "tmc": "https://libkey.io/libraries/480/10.1001/jamasurg.2023.2932",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10372758/"
+   }
+  },
+  "crlm_hernandez2022": {
+   "key": "crlm_hernandez2022",
+   "pmid": "35353121",
+   "short": "Hernandez-Alejandro 2022 · North American LDLT",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/35353121/",
+    "doi": "https://doi.org/10.1001/jamasurg.2022.0300",
+    "tmc": "https://libkey.io/libraries/480/10.1001/jamasurg.2022.0300",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8968681/"
+   }
+  },
+  "crlm_hagness_recur": {
+   "key": "crlm_hagness_recur",
+   "pmid": "24370906",
+   "short": "Hagness 2014 · SECA-I recurrence",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/24370906/",
+    "doi": "https://doi.org/10.1245/s10434-013-3449-9",
+    "tmc": "https://libkey.io/libraries/480/10.1245/s10434-013-3449-9",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3942624/"
+   }
+  },
+  "crlm_dueland_lung": {
+   "key": "crlm_dueland_lung",
+   "pmid": "36291826",
+   "short": "Dueland 2022 · lung resection after LT",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/36291826/",
+    "doi": "https://doi.org/10.3390/cancers14205042",
+    "tmc": "https://libkey.io/libraries/480/10.3390/cancers14205042",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9599638/"
+   }
+  },
+  "crlm_fukumitsu": {
+   "key": "crlm_fukumitsu",
+   "pmid": "39566949",
+   "short": "Fukumitsu 2024 · Japanese LDLT protocol",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39566949/",
+    "doi": "https://doi.org/10.1136/bmjopen-2024-088188",
+    "tmc": "https://libkey.io/libraries/480/10.1136/bmjopen-2024-088188",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11580313/"
+   }
+  },
+  "crlm_seca3": {
+   "key": "crlm_seca3",
+   "pmid": "",
+   "short": "SECA-III registration (NCT03494946)",
+   "read": "registry",
+   "links": {
+    "registry": "https://clinicaltrials.gov/study/NCT03494946"
+   }
+  },
+  "pulmicc": {
+   "key": "pulmicc",
+   "pmid": "32388895",
+   "short": "PulMiCC 2020",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/32388895/",
+    "doi": "https://doi.org/10.1111/codi.15113",
+    "tmc": "https://libkey.io/libraries/480/10.1111/codi.15113",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7611567/"
+   }
+  },
+  "crlm_grut2018": {
+   "key": "crlm_grut2018",
+   "pmid": "29168565",
+   "short": "Grut 2018 · lung metastasis growth after LT",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/29168565/",
+    "doi": "https://doi.org/10.1002/bjs.10651",
+    "tmc": "https://libkey.io/libraries/480/10.1002/bjs.10651"
+   }
+  },
+  "crlm_salah2014": {
+   "key": "crlm_salah2014",
+   "pmid": "25326396",
+   "short": "Salah 2014 · lung metastasectomy after liver resection",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/25326396/",
+    "doi": "https://doi.org/10.1245/s10434-014-4173-9",
+    "tmc": "https://libkey.io/libraries/480/10.1245/s10434-014-4173-9"
+   }
+  },
+  "crlm_hwang": {
+   "key": "crlm_hwang",
+   "pmid": "24767470",
+   "short": "Hwang 2014 · resection with extrahepatic disease",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/24767470/",
+    "doi": "https://doi.org/10.1016/j.ejca.2014.03.277",
+    "tmc": "https://libkey.io/libraries/480/10.1016/j.ejca.2014.03.277"
+   }
+  },
+  "crlm_hadden2016": {
+   "key": "crlm_hadden2016",
+   "pmid": "27017160",
+   "short": "Hadden 2016 · meta-analysis, resection with EHD",
+   "read": "full",
+   "note": "read through the PMC page (journal text not returned by the PubMed tool)",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/27017160/",
+    "doi": "https://doi.org/10.1016/j.hpb.2015.12.004",
+    "tmc": "https://libkey.io/libraries/480/10.1016/j.hpb.2015.12.004",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4814625/"
+   }
+  },
+  "crlm_leung2017": {
+   "key": "crlm_leung2017",
+   "pmid": "28009741",
+   "short": "Leung 2017 · MSKCC hepatectomy with EHD",
+   "read": "full",
+   "note": "tables not returned",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/28009741/",
+    "doi": "https://doi.org/10.1097/SLA.0000000000001624",
+    "tmc": "https://libkey.io/libraries/480/10.1097/SLA.0000000000001624",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4942404/"
+   }
+  },
+  "crlm_cco2013": {
+   "key": "crlm_cco2013",
+   "pmid": "23737695",
+   "short": "Cancer Care Ontario guideline (Gallinger 2013; archived 2020)",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/23737695/",
+    "doi": "https://doi.org/10.3747/co.20.1341",
+    "tmc": "https://libkey.io/libraries/480/10.3747/co.20.1341",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3671032/"
+   }
+  },
+  "crlm_andres2015": {
+   "key": "crlm_andres2015",
+   "pmid": "25789941",
+   "short": "Andres 2015 · LiverMetSurvey liver + lung",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/25789941/",
+    "doi": "https://doi.org/10.1002/bjs.9783",
+    "tmc": "https://libkey.io/libraries/480/10.1002/bjs.9783"
+   }
+  },
+  "crlm_adam2008": {
+   "key": "crlm_adam2008",
+   "pmid": "18669451",
+   "short": "Adam 2008 · hepatectomy with nodal metastases",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/18669451/",
+    "doi": "https://doi.org/10.1200/JCO.2007.15.7297",
+    "tmc": "https://libkey.io/libraries/480/10.1200/JCO.2007.15.7297"
+   }
+  },
+  "crlm_taqi2025": {
+   "key": "crlm_taqi2025",
+   "pmid": "40372590",
+   "short": "Taqi 2025 · CRS/HIPEC + liver, meta-analysis",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/40372590/",
+    "doi": "https://doi.org/10.1245/s10434-025-17321-w",
+    "tmc": "https://libkey.io/libraries/480/10.1245/s10434-025-17321-w"
+   }
+  },
+  "crlm_zou2020": {
+   "key": "crlm_zou2020",
+   "pmid": "32787474",
+   "short": "Zou 2020 · peritoneal + liver, meta-analysis",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/32787474/",
+    "doi": "https://doi.org/10.1080/02656736.2020.1803424",
+    "tmc": "https://libkey.io/libraries/480/10.1080/02656736.2020.1803424"
+   }
+  },
+  "crlm_valagni2026": {
+   "key": "crlm_valagni2026",
+   "pmid": "42881061",
+   "short": "Valagni 2026 · LT meta-analysis",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42881061/",
+    "doi": "https://doi.org/10.1016/j.clcc.2026.09.002",
+    "tmc": "https://libkey.io/libraries/480/10.1016/j.clcc.2026.09.002"
+   }
+  },
+  "milan": {
+   "key": "milan",
+   "pmid": "27134017",
+   "short": "Mazzaferro 2016 · Milan-NET",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/27134017/",
+    "doi": "https://doi.org/10.1111/ajt.13831",
+    "tmc": "https://libkey.io/libraries/480/10.1111/ajt.13831"
+   }
+  },
+  "eltr213": {
+   "key": "eltr213",
+   "pmid": "23532105",
+   "short": "Le Treut 2013 · ELTR NET",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/23532105/",
+    "doi": "https://doi.org/10.1097/SLA.0b013e31828ee17c",
+    "tmc": "https://libkey.io/libraries/480/10.1097/SLA.0b013e31828ee17c"
+   }
+  },
+  "net_maspero2022": {
+   "key": "net_maspero2022",
+   "pmid": "35869798",
+   "short": "Maspero 2022 · LT vs resection, Milan",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/35869798/",
+    "doi": "https://doi.org/10.1111/ajt.17156",
+    "tmc": "https://libkey.io/libraries/480/10.1111/ajt.17156",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9805141/"
+   }
+  },
+  "enets": {
+   "key": "enets",
+   "pmid": "42816382",
+   "short": "ENETS 2026 position statement",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42816382/",
+    "doi": "https://doi.org/10.1111/jne.70250",
+    "tmc": "https://libkey.io/libraries/480/10.1111/jne.70250",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13626967/"
+   }
+  },
+  "net_sher2015": {
+   "key": "net_sher2015",
+   "pmid": "26171686",
+   "short": "Sher 2015 · US multicentre NET LT",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/26171686/",
+    "doi": "https://doi.org/10.1002/jso.23973",
+    "tmc": "https://libkey.io/libraries/480/10.1002/jso.23973",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7492100/"
+   }
+  },
+  "net_frilling2010": {
+   "key": "net_frilling2010",
+   "pmid": "21037441",
+   "short": "Frilling 2010 · 68Ga-DOTATOC PET before LT",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/21037441/",
+    "doi": "https://doi.org/10.1097/SLA.0b013e3181fd37e8",
+    "tmc": "https://libkey.io/libraries/480/10.1097/SLA.0b013e3181fd37e8"
+   }
+  },
+  "net_nanets2017": {
+   "key": "net_nanets2017",
+   "pmid": "28609357",
+   "short": "NANETS 2017 · small-bowel NET surgery",
+   "read": "full",
+   "scope": "relevant complete sections",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/28609357/",
+    "doi": "https://doi.org/10.1097/MPA.0000000000000846",
+    "tmc": "https://libkey.io/libraries/480/10.1097/MPA.0000000000000846",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5502737/"
+   }
+  },
+  "net_nanets2020": {
+   "key": "net_nanets2020",
+   "pmid": "31856076",
+   "short": "NANETS 2020 · pancreatic NET surgery",
+   "read": "full",
+   "scope": "relevant complete sections",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/31856076/",
+    "doi": "https://doi.org/10.1097/MPA.0000000000001454",
+    "tmc": "https://libkey.io/libraries/480/10.1097/MPA.0000000000001454",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7029300/"
+   }
+  },
+  "net_wedin2025": {
+   "key": "net_wedin2025",
+   "pmid": "40778558",
+   "short": "Wedin 2025 · bone metastases in SI-NET",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/40778558/",
+    "doi": "https://doi.org/10.1111/jne.70073",
+    "tmc": "https://libkey.io/libraries/480/10.1111/jne.70073",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12488365/"
+   }
+  },
+  "net_mahuron2024": {
+   "key": "net_mahuron2024",
+   "pmid": "39274193",
+   "short": "Mahuron 2024 · NET liver metastases with EHD",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39274193/",
+    "doi": "https://doi.org/10.3390/jcm13174983",
+    "tmc": "https://libkey.io/libraries/480/10.3390/jcm13174983",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11395682/"
+   }
+  },
+  "net_gudmundsdottir2023": {
+   "key": "net_gudmundsdottir2023",
+   "pmid": "37208566",
+   "short": "Gudmundsdottir 2023 · cytoreductive hepatectomy",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/37208566/",
+    "doi": "https://doi.org/10.1245/s10434-023-13372-z",
+    "tmc": "https://libkey.io/libraries/480/10.1245/s10434-023-13372-z",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10319657/"
+   }
+  },
+  "net_xiang2018": {
+   "key": "net_xiang2018",
+   "pmid": "30218247",
+   "short": "Xiang 2018 · NF-NELM resection",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/30218247/",
+    "doi": "https://doi.org/10.1245/s10434-018-6751-8",
+    "tmc": "https://libkey.io/libraries/480/10.1245/s10434-018-6751-8"
+   }
+  },
+  "net_spolverato2017": {
+   "key": "net_spolverato2017",
+   "pmid": "28513896",
+   "short": "Spolverato 2017 · recurrence after NELM surgery",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/28513896/",
+    "doi": "https://doi.org/10.1002/jso.24670",
+    "tmc": "https://libkey.io/libraries/480/10.1002/jso.24670"
+   }
+  },
+  "net_chan2018": {
+   "key": "net_chan2018",
+   "pmid": "29560571",
+   "short": "Chan 2018 · cytoreduction with EHD",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/29560571/",
+    "doi": "https://doi.org/10.1245/s10434-018-6433-6",
+    "tmc": "https://libkey.io/libraries/480/10.1245/s10434-018-6433-6"
+   }
+  },
+  "pnet_partelli2017": {
+   "key": "pnet_partelli2017",
+   "pmid": "29196022",
+   "short": "Partelli 2017 · primary resection meta-analysis",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/29196022/",
+    "doi": "https://doi.org/10.1016/j.hpb.2017.10.014",
+    "tmc": "https://libkey.io/libraries/480/10.1016/j.hpb.2017.10.014"
+   }
+  },
+  "pnet_podrascanin2025": {
+   "key": "pnet_podrascanin2025",
+   "pmid": "41366165",
+   "short": "Podrascanin 2025 · pNET with liver metastases",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/41366165/",
+    "doi": "https://doi.org/10.1245/s10434-025-18835-z",
+    "tmc": "https://libkey.io/libraries/480/10.1245/s10434-025-18835-z"
+   }
+  },
+  "ehe_lai": {
+   "key": "ehe_lai",
+   "pmid": "28212256",
+   "short": "Lai 2017 · ELTR HEHE-LT",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/28212256/",
+    "doi": "https://doi.org/10.1097/TP.0000000000001603",
+    "tmc": "https://libkey.io/libraries/480/10.1097/TP.0000000000001603"
+   }
+  },
+  "ehe_consensus": {
+   "key": "ehe_consensus",
+   "pmid": "34090171",
+   "short": "EHE global consensus 2021",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/34090171/",
+    "doi": "https://doi.org/10.1016/j.esmoop.2021.100170",
+    "tmc": "https://libkey.io/libraries/480/10.1016/j.esmoop.2021.100170",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8182432/"
+   }
+  },
+  "ehe_liu228": {
+   "key": "ehe_liu228",
+   "pmid": "39415114",
+   "short": "Liu 2024 · 228 HEHE",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39415114/",
+    "doi": "https://doi.org/10.1186/s12885-024-13053-4",
+    "tmc": "https://libkey.io/libraries/480/10.1186/s12885-024-13053-4",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11481724/"
+   }
+  },
+  "ehe_rosenbaum2019": {
+   "key": "ehe_rosenbaum2019",
+   "pmid": "31537895",
+   "short": "Rosenbaum 2019 · EHE molecular subsets",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/31537895/",
+    "doi": "https://doi.org/10.1038/s41379-019-0368-8",
+    "tmc": "https://libkey.io/libraries/480/10.1038/s41379-019-0368-8",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7228463/"
+   }
+  },
+  "ehe_lerut2007": {
+   "key": "ehe_lerut2007",
+   "pmid": "18043096",
+   "short": "Lerut 2007 · ELTR HEHE",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/18043096/",
+    "doi": "https://doi.org/10.1097/SLA.0b013e31815c2a70",
+    "tmc": "https://libkey.io/libraries/480/10.1097/SLA.0b013e31815c2a70"
+   }
+  },
+  "ehe_sawma2024": {
+   "key": "ehe_sawma2024",
+   "pmid": "39318157",
+   "short": "Sawma 2024 · Mayo HEHE",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39318157/",
+    "doi": "https://doi.org/10.1002/jso.27807",
+    "tmc": "https://libkey.io/libraries/480/10.1002/jso.27807"
+   }
+  },
+  "ehe_mehrabi2006": {
+   "key": "ehe_mehrabi2006",
+   "pmid": "17019735",
+   "short": "Mehrabi 2006 · HEHE literature review",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/17019735/",
+    "doi": "https://doi.org/10.1002/cncr.22225",
+    "tmc": "https://libkey.io/libraries/480/10.1002/cncr.22225"
+   }
+  },
+  "hca_stoot2010": {
+   "key": "hca_stoot2010",
+   "pmid": "20887318",
+   "short": "Stoot 2010 · HCA malignant transformation",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/20887318/",
+    "doi": "https://doi.org/10.1111/j.1477-2574.2010.00222.x",
+    "tmc": "https://libkey.io/libraries/480/10.1111/j.1477-2574.2010.00222.x",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2997656/"
+   }
+  },
+  "hca_chiche2016": {
+   "key": "hca_chiche2016",
+   "pmid": "26919265",
+   "short": "Chiche 2016 · LT for adenomatosis, ELTR",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/26919265/",
+    "doi": "https://doi.org/10.1002/lt.24417",
+    "tmc": "https://libkey.io/libraries/480/10.1002/lt.24417"
+   }
+  },
+  "lunsford": {
+   "key": "lunsford",
+   "pmid": "29548617",
+   "short": "Lunsford 2018 · Houston iCCA protocol",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/29548617/",
+    "doi": "https://doi.org/10.1016/S2468-1253(18)30045-1",
+    "tmc": "https://libkey.io/libraries/480/10.1016/S2468-1253(18)30045-1"
+   }
+  },
+  "mcmillan": {
+   "key": "mcmillan",
+   "pmid": "34856069",
+   "short": "McMillan 2021 · Houston iCCA LT",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/34856069/",
+    "doi": "https://doi.org/10.1111/ajt.16906",
+    "tmc": "https://libkey.io/libraries/480/10.1111/ajt.16906"
+   }
+  },
+  "icca_maspero2024": {
+   "key": "icca_maspero2024",
+   "pmid": "39544321",
+   "short": "Maspero 2024 · Milan SYS-TARE",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39544321/",
+    "doi": "https://doi.org/10.3389/ti.2024.13641",
+    "tmc": "https://libkey.io/libraries/480/10.3389/ti.2024.13641",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11560448/"
+   }
+  },
+  "icca_ldlt": {
+   "key": "icca_ldlt",
+   "pmid": "42810588",
+   "short": "Sethi 2026 · UPMC LDLT for iCCA",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42810588/",
+    "doi": "https://doi.org/10.1016/j.ajt.2026.09.039",
+    "tmc": "https://libkey.io/libraries/480/10.1016/j.ajt.2026.09.039"
+   }
+  },
+  "cca_campbell2026": {
+   "key": "cca_campbell2026",
+   "pmid": "42323458",
+   "short": "Campbell 2026 · biliary cancer LT, single centre",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42323458/",
+    "doi": "https://doi.org/10.1245/s10434-026-19975-6",
+    "tmc": "https://libkey.io/libraries/480/10.1245/s10434-026-19975-6",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13452877/"
+   }
+  },
+  "icca_icola": {
+   "key": "icca_icola",
+   "pmid": "",
+   "short": "iCOLA trial registration (NCT06862934)",
+   "read": "registry",
+   "links": {
+    "registry": "https://clinicaltrials.gov/study/NCT06862934"
+   }
+  },
+  "icca_hu2011": {
+   "key": "icca_hu2011",
+   "pmid": "21937390",
+   "short": "Hu 2011 · LT for iCCA",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/21937390/",
+    "doi": "https://doi.org/10.5754/hge10704",
+    "tmc": "https://libkey.io/libraries/480/10.5754/hge10704"
+   }
+  },
+  "icca_zhou2025": {
+   "key": "icca_zhou2025",
+   "pmid": "39918658",
+   "short": "Zhou 2025 · conversion surgery meta-analysis",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39918658/",
+    "doi": "https://doi.org/10.1007/s00423-025-03630-x",
+    "tmc": "https://libkey.io/libraries/480/10.1007/s00423-025-03630-x",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11805778/"
+   }
+  },
+  "icca_murakami2025": {
+   "key": "icca_murakami2025",
+   "pmid": "40075720",
+   "short": "Murakami 2025 · conversion surgery for BTC",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/40075720/",
+    "doi": "https://doi.org/10.3390/cancers17050873",
+    "tmc": "https://libkey.io/libraries/480/10.3390/cancers17050873",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11898483/"
+   }
+  },
+  "icca_yang2026": {
+   "key": "icca_yang2026",
+   "pmid": "42169873",
+   "short": "Yang 2026 · SEER M1 iCCA surgery",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42169873/",
+    "doi": "https://doi.org/10.21037/jgo-2025-aw-859",
+    "tmc": "https://libkey.io/libraries/480/10.21037/jgo-2025-aw-859",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13187992/"
+   }
+  },
+  "icca_leroy2017": {
+   "key": "icca_leroy2017",
+   "pmid": "28858392",
+   "short": "Le Roy 2017 · secondary resection of iCCA",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/28858392/",
+    "doi": "https://doi.org/10.1002/bjs.10641",
+    "tmc": "https://libkey.io/libraries/480/10.1002/bjs.10641"
+   }
+  },
+  "icca_kurimoto2025": {
+   "key": "icca_kurimoto2025",
+   "pmid": "40317676",
+   "short": "Kurimoto 2025 · iCCA nodal metastasis areas",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/40317676/",
+    "doi": "https://doi.org/10.1111/hepr.14196",
+    "tmc": "https://libkey.io/libraries/480/10.1111/hepr.14196"
+   }
+  },
+  "icca_yabushita2024": {
+   "key": "icca_yabushita2024",
+   "pmid": "38822227",
+   "short": "Yabushita 2024 · conversion surgery morbidity",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/38822227/",
+    "doi": "https://doi.org/10.1002/jhbp.1437",
+    "tmc": "https://libkey.io/libraries/480/10.1002/jhbp.1437"
+   }
+  },
+  "icca_rimini2026": {
+   "key": "icca_rimini2026",
+   "pmid": "42524843",
+   "short": "Rimini 2026 · locally advanced BTC",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42524843/",
+    "doi": "https://doi.org/10.1002/ijc.70641",
+    "tmc": "https://libkey.io/libraries/480/10.1002/ijc.70641"
+   }
+  },
+  "murad": {
+   "key": "murad",
+   "pmid": "22504095",
+   "short": "Darwish Murad 2012 · 12-centre pCCA LT",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/22504095/",
+    "doi": "https://doi.org/10.1053/j.gastro.2012.04.008",
+    "tmc": "https://libkey.io/libraries/480/10.1053/j.gastro.2012.04.008",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3846443/"
+   }
+  },
+  "pcca_sio2016": {
+   "key": "pcca_sio2016",
+   "pmid": "24921218",
+   "short": "Sio 2016 · Mayo protocol fall-out",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/24921218/",
+    "doi": "https://doi.org/10.1097/COC.0000000000000056",
+    "tmc": "https://libkey.io/libraries/480/10.1097/COC.0000000000000056",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4309741/"
+   }
+  },
+  "pcca_vugts": {
+   "key": "pcca_vugts",
+   "pmid": "32901308",
+   "short": "Vugts 2020 · eligibility for pCCA LT",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/32901308/",
+    "doi": "https://doi.org/10.1245/s10434-020-09001-8",
+    "tmc": "https://libkey.io/libraries/480/10.1245/s10434-020-09001-8",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7892510/"
+   }
+  },
+  "pcca_ahpba2015": {
+   "key": "pcca_ahpba2015",
+   "pmid": "26172136",
+   "short": "AHPBA 2015 hilar CCA consensus",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/26172136/",
+    "doi": "https://doi.org/10.1111/hpb.12450",
+    "tmc": "https://libkey.io/libraries/480/10.1111/hpb.12450",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4527854/"
+   }
+  },
+  "pcca_kuriyama2026": {
+   "key": "pcca_kuriyama2026",
+   "pmid": "42882932",
+   "short": "Kuriyama 2026 · NAC by nodal status",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42882932/",
+    "doi": "https://doi.org/10.3390/cancers18193238",
+    "tmc": "https://libkey.io/libraries/480/10.3390/cancers18193238",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13664265/"
+   }
+  },
+  "pcca_dejong2023": {
+   "key": "pcca_dejong2023",
+   "pmid": "37890597",
+   "short": "de Jong 2023 · EUS nodal sampling before LT",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/37890597/",
+    "doi": "https://doi.org/10.1016/j.gie.2023.10.047",
+    "tmc": "https://libkey.io/libraries/480/10.1016/j.gie.2023.10.047"
+   }
+  },
+  "pcca_takenouchi2026": {
+   "key": "pcca_takenouchi2026",
+   "pmid": "42804100",
+   "short": "Takenouchi 2026 · para-aortic nodes",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42804100/",
+    "doi": "https://doi.org/10.1245/s10434-026-20612-5",
+    "tmc": "https://libkey.io/libraries/480/10.1245/s10434-026-20612-5"
+   }
+  },
+  "pcca_nitta2020": {
+   "key": "pcca_nitta2020",
+   "pmid": "33079246",
+   "short": "Nitta 2020 · para-aortic nodes, extrahepatic CCA",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/33079246/",
+    "doi": "https://doi.org/10.1007/s00268-020-05834-2",
+    "tmc": "https://libkey.io/libraries/480/10.1007/s00268-020-05834-2"
+   }
+  },
+  "cca_wong2019": {
+   "key": "cca_wong2019",
+   "pmid": "31059945",
+   "short": "Wong 2019 · downstaging pilot",
+   "read": "existing",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/31059945/",
+    "doi": "https://doi.org/10.1016/j.jss.2019.04.023",
+    "tmc": "https://libkey.io/libraries/480/10.1016/j.jss.2019.04.023"
+   }
+  },
+  "cca_malikowski2020": {
+   "key": "cca_malikowski2020",
+   "pmid": "31860935",
+   "short": "Malikowski 2020 · EUS nodal staging",
+   "read": "existing",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/31860935/",
+    "doi": "https://doi.org/10.1002/hep.31077",
+    "tmc": "https://libkey.io/libraries/480/10.1002/hep.31077"
+   }
+  },
+  "pdac_oligopanc2026": {
+   "key": "pdac_oligopanc2026",
+   "pmid": "41785904",
+   "short": "OligoPanc consensus (Leonhardt 2026)",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/41785904/",
+    "doi": "https://doi.org/10.1016/S1470-2045(25)00714-4",
+    "tmc": "https://libkey.io/libraries/480/10.1016/S1470-2045(25)00714-4"
+   }
+  },
+  "pdac_metapanc2025": {
+   "key": "pdac_metapanc2025",
+   "pmid": "39915735",
+   "short": "METAPANC protocol (Ghadimi 2025)",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39915735/",
+    "doi": "https://doi.org/10.1186/s12885-025-13573-7",
+    "tmc": "https://libkey.io/libraries/480/10.1186/s12885-025-13573-7",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11800597/"
+   }
+  },
+  "pdac_cspac2019": {
+   "key": "pdac_cspac2019",
+   "pmid": "31818843",
+   "short": "CSPAC-1 protocol (Wei 2019)",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/31818843/",
+    "doi": "https://doi.org/10.1136/bmjopen-2019-033452",
+    "tmc": "https://libkey.io/libraries/480/10.1136/bmjopen-2019-033452",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6924808/"
+   }
+  },
+  "pdac_hank2022": {
+   "key": "pdac_hank2022",
+   "pmid": "35758505",
+   "short": "Hank 2022 · Heidelberg resection after chemotherapy",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/35758505/",
+    "doi": "https://doi.org/10.1097/SLA.0000000000005481",
+    "tmc": "https://libkey.io/libraries/480/10.1097/SLA.0000000000005481",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10082047/"
+   }
+  },
+  "pdac_dambra2025": {
+   "key": "pdac_dambra2025",
+   "pmid": "39837137",
+   "short": "D'Ambra 2025 · meta-analysis, synchronous liver metastases",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39837137/",
+    "doi": "https://doi.org/10.1016/j.ejso.2025.109598",
+    "tmc": "https://libkey.io/libraries/480/10.1016/j.ejso.2025.109598"
+   }
+  },
+  "pdac_fiorillo2025": {
+   "key": "pdac_fiorillo2025",
+   "pmid": "40101129",
+   "short": "Fiorillo 2025 · meta-analysis, liver oligometastases",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/40101129/",
+    "doi": "https://doi.org/10.1097/JS9.0000000000002338",
+    "tmc": "https://libkey.io/libraries/480/10.1097/JS9.0000000000002338",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12165493/"
+   }
+  },
+  "pdac_panode2026": {
+   "key": "pdac_panode2026",
+   "pmid": "42905970",
+   "short": "PANODE 2026 · station 16b1 and 9",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42905970/",
+    "doi": "https://doi.org/10.1093/bjsopen/zrag157",
+    "tmc": "https://libkey.io/libraries/480/10.1093/bjsopen/zrag157",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13686085/"
+   }
+  },
+  "pdac_kruger2022": {
+   "key": "pdac_kruger2022",
+   "pmid": "35121522",
+   "short": "Kruger 2022 · lung metastases",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/35121522/",
+    "doi": "https://doi.org/10.1016/j.esmoop.2022.100388",
+    "tmc": "https://libkey.io/libraries/480/10.1016/j.esmoop.2022.100388",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8818907/"
+   }
+  },
+  "pdac_zhao2025": {
+   "key": "pdac_zhao2025",
+   "pmid": "40084343",
+   "short": "Zhao 2025 · pulmonary metastasectomy meta-analysis",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/40084343/",
+    "doi": "https://doi.org/10.3389/fsurg.2025.1535212",
+    "tmc": "https://libkey.io/libraries/480/10.3389/fsurg.2025.1535212",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11903735/"
+   }
+  },
+  "pdac_frigerio2017": {
+   "key": "pdac_frigerio2017",
+   "pmid": "28516291",
+   "short": "Frigerio 2017 · downstaged metastatic PDAC",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/28516291/",
+    "doi": "https://doi.org/10.1245/s10434-017-5885-4",
+    "tmc": "https://libkey.io/libraries/480/10.1245/s10434-017-5885-4"
+   }
+  },
+  "pdac_crippa2016": {
+   "key": "pdac_crippa2016",
+   "pmid": "27423449",
+   "short": "Crippa 2016 · liver metastases after chemotherapy",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/27423449/",
+    "doi": "https://doi.org/10.1016/j.ejso.2016.06.398",
+    "tmc": "https://libkey.io/libraries/480/10.1016/j.ejso.2016.06.398"
+   }
+  },
+  "pdac_hashimoto2026": {
+   "key": "pdac_hashimoto2026",
+   "pmid": "42081099",
+   "short": "Hashimoto 2026 · Japan Pancreas Society conversion",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42081099/",
+    "doi": "https://doi.org/10.1007/s00535-026-02432-2",
+    "tmc": "https://libkey.io/libraries/480/10.1007/s00535-026-02432-2"
+   }
+  },
+  "pdac_hackert2016": {
+   "key": "pdac_hackert2016",
+   "pmid": "27856064",
+   "short": "Hackert 2016 · M1 resection",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/27856064/",
+    "doi": "https://doi.org/10.1016/j.ejso.2016.10.023",
+    "tmc": "https://libkey.io/libraries/480/10.1016/j.ejso.2016.10.023"
+   }
+  },
+  "pdac_gleisner2007": {
+   "key": "pdac_gleisner2007",
+   "pmid": "17941009",
+   "short": "Gleisner 2007 · synchronous liver metastases",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/17941009/",
+    "doi": "https://doi.org/10.1002/cncr.23074",
+    "tmc": "https://libkey.io/libraries/480/10.1002/cncr.23074"
+   }
+  },
+  "pdac_groot2019": {
+   "key": "pdac_groot2019",
+   "pmid": "30777697",
+   "short": "Groot 2019 · lung recurrence",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/30777697/",
+    "doi": "https://doi.org/10.1016/j.hpb.2018.12.002",
+    "tmc": "https://libkey.io/libraries/480/10.1016/j.hpb.2018.12.002"
+   }
+  },
+  "pdac_kaiho2026": {
+   "key": "pdac_kaiho2026",
+   "pmid": "42474769",
+   "short": "Kaiho 2026 · lung metastasectomy, Japan",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42474769/",
+    "doi": "https://doi.org/10.1007/s00595-026-03389-8",
+    "tmc": "https://libkey.io/libraries/480/10.1007/s00595-026-03389-8"
+   }
+  },
+  "pdac_shibamoto2024": {
+   "key": "pdac_shibamoto2024",
+   "pmid": "39627914",
+   "short": "Shibamoto 2024 · para-aortic nodes",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39627914/",
+    "doi": "https://doi.org/10.1016/j.surg.2024.10.016",
+    "tmc": "https://libkey.io/libraries/480/10.1016/j.surg.2024.10.016"
+   }
+  },
+  "pdac_iapjps2023": {
+   "key": "pdac_iapjps2023",
+   "pmid": "37507301",
+   "short": "IAP/JPS 2022 Kyoto position paper (Hashimoto 2023)",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/37507301/",
+    "doi": "https://doi.org/10.1016/j.pan.2023.07.005",
+    "tmc": "https://libkey.io/libraries/480/10.1016/j.pan.2023.07.005"
+   }
+  },
+  "amp_wang2018": {
+   "key": "amp_wang2018",
+   "pmid": "30636895",
+   "short": "Wang 2018 · SEER metastatic ampullary",
+   "read": "full",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/30636895/",
+    "doi": "https://doi.org/10.2147/CMAR.S182312",
+    "tmc": "https://libkey.io/libraries/480/10.2147/CMAR.S182312",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6307684/"
+   }
+  },
+  "amp_saedon2018": {
+   "key": "amp_saedon2018",
+   "pmid": "30610789",
+   "short": "Saedon 2018 · metastasectomy review",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/30610789/",
+    "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,Metastasectomy%20of%20pancreatic%20and%20periampullary%20adenocarcinoma%20to%20solid%20organ%3A%20The%20current%20evidence.&lang=en"
+   }
+  },
+  "amp_nccn2023": {
+   "key": "amp_nccn2023",
+   "pmid": "37433437",
+   "short": "NCCN Ampullary 1.2023",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/37433437/",
+    "doi": "https://doi.org/10.6004/jnccn.2023.0034",
+    "tmc": "https://libkey.io/libraries/480/10.6004/jnccn.2023.0034"
+   }
+  },
+  "amp_vo2026": {
+   "key": "amp_vo2026",
+   "pmid": "42874215",
+   "short": "Vo-Quang 2026 · FFCD-AC cohort",
+   "read": "abstract",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42874215/",
+    "doi": "https://doi.org/10.1016/j.ejca.2026.117775",
+    "tmc": "https://libkey.io/libraries/480/10.1016/j.ejca.2026.117775"
+   }
+  }
+ },
+ "questions": [
+  {
+   "id": "HCC-B5",
+   "tumor": "HCC",
+   "setting": "transplant",
+   "title": "Previously treated extrahepatic disease",
+   "question": "May a patient whose extrahepatic HCC (including proven lymph-node metastasis) was treated and has responded completely ever enter a transplant route, or does this history close transplantation?",
+   "status": "Closed; registry only",
+   "position": "Keep closed. A history of extrahepatic metastasis or proven nodal metastasis excludes the standard OPTN route and every HCC high-risk cohort, even after resection, ablation, radiotherapy or a complete response to immunotherapy. Record durable complete responders in a prospective registry; this edition offers no transplant route.",
+   "rules": [
+    "“No extrahepatic disease” in HCC-B1 and HCC-B2 means no current or previous extrahepatic metastasis. Resection, ablation, radiotherapy or a complete radiological response does not clear this history.",
+    "Count proven lymph-node metastasis, including hilar or hepatoduodenal nodes, as extrahepatic disease. Enlarged hilar nodes without proof are HOLD for characterization. A lesion later proven benign is not prior extrahepatic disease; record how it was resolved.",
+    "Registry, not listing: enter durable complete responders with dated imaging, AFP and treatment history. Starting points for any future study (not active): ≥12 months without evidence of disease off systemic therapy; PET or tissue confirmation that every extrahepatic site is cleared; current whole-body staging including bone; an immunotherapy washout of ≥90 days and the HCC-B3 safety review.",
+    "Do not combine with the expanded-burden (HCC-B1) or portal-vein invasion (HCC-B2) cohorts."
+   ],
+   "why": "The guidelines describe current extrahepatic disease only. Excluding previously treated disease is this program’s inference, stated as such: no series reports transplantation after treated extrahepatic HCC, nodal disease at transplantation strongly predicts recurrence, and a complete response to immunotherapy is not cure.",
+   "evidence": [
+    {
+     "key": "ilts",
+     "design_population": "2024 ILTS–ILCA consensus, 54 statements.",
+     "selection": "Every extrahepatic-disease statement is in the present tense (downstaging, immunotherapy for downstaging, LDLT with vascular invasion). Lymph nodes are not mentioned.",
+     "results": "No recommendation on how long to observe after a response to immunotherapy; the only long interval specified is ≥12 months after downstaging of Vp1–2 invasion.",
+     "limits": "Consensus; silent on previously treated extrahepatic disease and on nodes.",
+     "locator": "Liver Cancer 2026; Table 1, Working Groups B–C.",
+     "read": "full"
+    },
+    {
+     "key": "aasld",
+     "design_population": "AASLD 2023 practice guidance.",
+     "selection": "Table 4 lists “lymph node involvement by tumor or extrahepatic spread of tumor” as downstaging failure and exclusion from transplantation.",
+     "results": "Recommends stopping immune checkpoint inhibitors at least 3 months before transplantation.",
+     "limits": "No section addresses transplantation or resection after treated extrahepatic disease.",
+     "locator": "Hepatology 2023; Table 4 and transplant section (relevant sections read).",
+     "read": "full"
+    },
+    {
+     "key": "hcc_pirozzi2025",
+     "design_population": "Single case: nodal, lung, mediastinal and bone metastases treated with nivolumab.",
+     "selection": "Only reported transplant after distant HCC.",
+     "results": "Best response was partial (RECIST 1.1); bone lesions did not clearly regress; liver disease recurred off nivolumab and was ablated; transplanted about 15 months after the last dose; cancer-free 1 year later.",
+     "limits": "Extrahepatic clearance never confirmed by biopsy or PET; no nodes examined in the explant; one case with 1-year follow-up.",
+     "locator": "J Gastrointest Oncol 2025; case presentation.",
+     "read": "full"
+    },
+    {
+     "key": "hcc_shao2026",
+     "design_population": "Four-centre cohort of 160 complete responders to immunotherapy-based therapy.",
+     "selection": "58 (36%) had extrahepatic metastases when immunotherapy started.",
+     "results": "Prior extrahepatic metastasis doubled recurrence risk after complete response (adjusted HR 2.00, 95% CI 1.43–6.38); 5-year recurrence-free survival 18%.",
+     "limits": "Retrospective; conversion subgroup of 11 not split by extrahepatic status; internal numeric inconsistencies.",
+     "locator": "Front Oncol 2026; Table 3.",
+     "read": "full"
+    },
+    {
+     "key": "hcc_ong2026",
+     "design_population": "Eight-centre matched cohort, 416 recipients beyond Milan.",
+     "selection": "Extrahepatic metastasis was an exclusion (9 transplanted patients left out).",
+     "results": "Immunotherapy-based downstaging associated with better survival (HR 0.63); acute rejection 16.3% vs 8.2%, clustered with washout ≤90 days.",
+     "limits": "Not evidence for treated extrahepatic disease; transplanted-only cohort.",
+     "locator": "JAMA Oncol 2026; Figure 1 and Results.",
+     "read": "full"
+    },
+    {
+     "key": "hcc_sotiropoulos2007",
+     "design_population": "Meta-analysis of five transplant series.",
+     "selection": "Hilar nodes examined at transplantation.",
+     "results": "Tumor-positive nodes associated with recurrence (common odds ratio 10.44, 95% CI 3.43–38.59).",
+     "limits": "Small, older series; nodes mostly found at transplantation.",
+     "locator": "Transpl Int 2007 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "hcc_mergental2012",
+     "design_population": "European registry, 105 transplants for HCC in non-cirrhotic liver.",
+     "selection": "Nodal status recorded.",
+     "results": "Lymph-node involvement associated with death (HR 2.60, 95% CI 1.28–5.28).",
+     "limits": "Non-cirrhotic HCC only; timing of nodal disease not stated.",
+     "locator": "J Hepatol 2012 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "hcc_choi2025",
+     "design_population": "US national cancer database, 4,329 patients on first-line immunotherapy.",
+     "selection": "Only 15 patients with distant and 10 with nodal metastasis received any curative treatment afterwards; modality not reported.",
+     "results": "Curative treatment after immunotherapy associated with longer survival (propensity-matched HR 0.22 in the main text).",
+     "limits": "Immortal-time and indication bias; no response or recurrence data; cannot inform transplantation after treated extrahepatic disease.",
+     "locator": "Liver Cancer 2025; Tables 1–3.",
+     "read": "full"
+    }
+   ],
+   "counter": "Durable complete responses to immunotherapy now occur, and the single case shows transplantation is feasible. ILTS–ILCA states there is not enough evidence on whether complete responders still need transplantation or how long to observe them, so a permanent bar is a policy choice rather than a proven boundary.",
+   "certainty": "Very low for transplantation after treated or completely responded extrahepatic HCC (one case). Moderate that current nodal or extrahepatic disease predicts poor post-transplant outcome.",
+   "change": "A prospective series with ≥3-year post-transplant recurrence-free survival in patients whose extrahepatic disease was cleared and confirmed by PET or pathology, or an explicit ILTS/OPTN statement on previously treated disease.",
+   "sources": [
+    "aasld",
+    "hcc_choi2025",
+    "hcc_mergental2012",
+    "hcc_ong2026",
+    "hcc_pirozzi2025",
+    "hcc_shao2026",
+    "hcc_sotiropoulos2007",
+    "ilts"
+   ],
+   "read_full": 6,
+   "read_abstract": 2
+  },
+  {
+   "id": "HCC-R1",
+   "tumor": "HCC",
+   "setting": "roadmap",
+   "title": "Liver treatment after extrahepatic disease responds",
+   "question": "After extrahepatic HCC responds to systemic therapy or is treated locally, when should resection or ablation of the liver tumor be offered?",
+   "status": "Proposed; MDT selection",
+   "position": "Offer curative-intent liver resection or ablation, with treatment of every residual extrahepatic site, only to selected patients after MDT review, and present it as life-prolonging multimodal therapy, not cure. Use the JLCA definition of localized extrahepatic spread; all other extrahepatic disease stays systemic-therapy-led. This roadmap position does not open transplantation (HCC-B5).",
+   "rules": [
+    "Localized extrahepatic spread (JLCA 2023, BR1): a solitary node at station 3, 8 or 12; localized peritoneal disease (P1); a unilateral adrenal metastasis; or a few lung metastases. All other extrahepatic disease is BR2: benefit of surgery uncertain.",
+    "Before surgery: response or stable disease of every extrahepatic site on serial imaging, no new lesions, current whole-body staging, every intrahepatic and extrahepatic site treatable (resection, ablation or stereotactic radiotherapy), adequate liver reserve, ECOG 0–1. No guideline sets the interval; the MDT records the interval it uses.",
+    "AASLD 2023 does not support systemic therapy before resection outside trials. Record the decision as an MDT exception or enroll in a study or registry; plan continued systemic therapy and surveillance.",
+    "Counsel that recurrence is the rule: after stereotactic radiotherapy to oligometastases, 2-year progression-free survival was 0%; after borderline-resectable surgery, 3-year recurrence-free survival was 19.7%."
+   ],
+   "why": "National and multicentre cohorts associate surgery after response with longer survival, but every comparison is biased toward the operated patients. JLCA gives the only explicit definition of the limited extrahepatic disease for which surgery may help.",
+   "evidence": [
+    {
+     "key": "hcc_jlca2023",
+     "design_population": "Japanese expert consensus on oncological resectability (17 panelists).",
+     "selection": "Statement 9 (15/17): extrahepatic spread is basically BR2; localized spread could be BR1 (solitary node at station 3, 8 or 12; P1 peritoneum; unilateral adrenal; few lung metastases).",
+     "results": "Cites 5-year survival of 29.5% after resection of node-positive HCC and 27–66% after lung metastasectomy.",
+     "limits": "Surgeon-only panel; a classification, not a treatment recommendation; permissive (“could be”); no response or interval criteria.",
+     "locator": "Liver Cancer 2024; Statement 9 and summary.",
+     "read": "full"
+    },
+    {
+     "key": "hcc_zhang2024",
+     "design_population": "15-centre cohort, 150 patients with extrahepatic metastases and partial or complete response.",
+     "selection": "Only 8 of 26 operated patients had their metastases removed; 85% had partial (not complete) response of extrahepatic disease.",
+     "results": "Median survival 16.5 vs 11.3 months from response (surgery vs none); progression-free survival not different.",
+     "limits": "Immortal-time bias; operated patients more often oligometastatic; counts inconsistent.",
+     "locator": "Sci Rep 2024; Results.",
+     "read": "full"
+    },
+    {
+     "key": "hcc_choi2025",
+     "design_population": "US national cancer database, 4,329 patients on first-line immunotherapy.",
+     "selection": "138 (3.2%) had curative treatment afterwards, including 15 with distant and 10 with nodal metastasis.",
+     "results": "Propensity-matched HR 0.22 (0.14–0.33) for death with curative treatment.",
+     "limits": "Immortal-time bias; curative intent uncertain; modality not separated.",
+     "locator": "Liver Cancer 2025; Tables 1–3.",
+     "read": "full"
+    },
+    {
+     "key": "hcc_hasegawa2014",
+     "design_population": "Japanese national survey, 14,872 resections.",
+     "selection": "112 with pathologically proven nodal metastasis.",
+     "results": "3-year survival 38.9% (nodal) vs 27.2% (distant stage IVB).",
+     "limits": "Pre-immunotherapy era; surgeon-selected patients.",
+     "locator": "Ann Surg 2014 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "hcc_midorikawa2020",
+     "design_population": "Single-centre comparison, 64 patients with extrahepatic recurrence and controlled liver disease.",
+     "selection": "Nodes, adrenal, peritoneum, lung or brain; resectable.",
+     "results": "5-year survival 60.5% with resection vs 9.1% without.",
+     "limits": "Small, strongly selected, pre-immunotherapy.",
+     "locator": "Hepatol Res 2020 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "hcc_choi2024",
+     "design_population": "Phase II trial, 40 patients with controlled HCC and 1–5 metastases.",
+     "selection": "Stereotactic ablative radiotherapy to all metastases.",
+     "results": "2-year survival 80%; 2-year progression-free survival 0%.",
+     "limits": "Single arm, short follow-up.",
+     "locator": "J Hepatol 2024 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "hcc_shin2024",
+     "design_population": "Weighted comparison, 209 patients with lung oligometastases.",
+     "selection": "Metastasectomy vs stereotactic radiotherapy.",
+     "results": "2-year local control 98.2% vs 97.0%; 2-year progression-free survival 23.0% vs 24.7%.",
+     "limits": "No systemic-only comparator.",
+     "locator": "Int J Radiat Oncol Biol Phys 2024 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "hcc_shindoh2025",
+     "design_population": "Nationwide Japanese study, 1,509 borderline-resectable HCC.",
+     "selection": "Includes localized extrahepatic spread within BR1.",
+     "results": "5-year disease-specific survival 40.8%; 3-year recurrence-free survival 19.7%.",
+     "limits": "No extrahepatic subgroup in the abstract.",
+     "locator": "J Hepatobiliary Pancreat Sci 2025 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "aasld",
+     "design_population": "AASLD 2023 practice guidance.",
+     "selection": "No section on surgery after treated extrahepatic disease.",
+     "results": "Does not recommend systemic therapy before resection outside trials.",
+     "limits": "Pre-dates most conversion data.",
+     "locator": "Hepatology 2023 (relevant sections read).",
+     "read": "full"
+    }
+   ],
+   "counter": "All cohorts select fit patients with few lesions; benefit may reflect biology rather than surgery. AASLD does not support preoperative systemic therapy outside trials.",
+   "certainty": "Low for longer survival after resection of limited, responded extrahepatic disease; very low for cure.",
+   "change": "Prospective or randomized data on surgery after response in oligometastatic HCC.",
+   "sources": [
+    "aasld",
+    "hcc_choi2024",
+    "hcc_choi2025",
+    "hcc_hasegawa2014",
+    "hcc_jlca2023",
+    "hcc_midorikawa2020",
+    "hcc_shin2024",
+    "hcc_shindoh2025",
+    "hcc_zhang2024"
+   ],
+   "read_full": 4,
+   "read_abstract": 5
+  },
+  {
+   "id": "cHCC-CCA-R1",
+   "tumor": "cHCC–CCA",
+   "setting": "roadmap",
+   "title": "Surgery or transplantation after nodal or extrahepatic disease",
+   "question": "When combined HCC–cholangiocarcinoma has nodal or extrahepatic disease that responds, is resection or transplantation reasonable?",
+   "status": "Proposed; transplantation closed",
+   "position": "Resection with regional lymphadenectomy remains the curative option for organ-confined disease. After a response of regional nodal disease, decide case by case using the iCCA rules (iCCA-R1); distant extrahepatic disease stays systemic-therapy-led. Transplantation is closed after any nodal or extrahepatic disease, as in iCCA-B4.",
+   "rules": [
+    "Regional nodal disease that responds: MDT case-by-case resection with lymphadenectomy; confirm response by restaging and tissue where feasible.",
+    "Distant extrahepatic disease: systemic therapy; no conversion pathway (no published data).",
+    "Transplantation: the OPTN/NLRB mixed-tumor route requires no extrahepatic disease; previous nodal or extrahepatic disease is excluded (iCCA-B4)."
+   ],
+   "why": "In resected cHCC–CCA, nodal metastasis and local extrahepatic invasion carry large hazard ratios, and no study reports surgery after extrahepatic response. After transplantation, recurrence is frequent and mostly extrahepatic.",
+   "evidence": [
+    {
+     "key": "chcca_jiang2020",
+     "design_population": "Single-centre cohort, 55 resections; distant metastasis excluded.",
+     "selection": "Nodal metastasis in 11 (20%).",
+     "results": "Nodal metastasis: survival HR 6.95 (2.15–22.44); local extrahepatic invasion HR 4.91; 5-year survival 16.4% overall.",
+     "limits": "Small; survival by nodal status not reported.",
+     "locator": "Gastroenterol Rep 2020; Tables 2–3.",
+     "read": "full"
+    },
+    {
+     "key": "chcca_kim2023",
+     "design_population": "Nine-centre cohort, 111 transplant recipients with cHCC–CC.",
+     "selection": "Diagnosis on explant; nodal metastasis in 3.",
+     "results": "Recurrence 44.1% vs 19.1% in HCC; first recurrence extrahepatic-only in 37 of 49.",
+     "limits": "Nodal signal rests on 3 patients.",
+     "locator": "World J Gastrointest Surg 2023; Results, Table 4.",
+     "read": "full"
+    },
+    {
+     "key": "chcca_dageforde2020",
+     "design_population": "12-centre US cohort, 208 cHCC–CCA.",
+     "selection": "Nodal and extrahepatic status not reported.",
+     "results": "Beyond UCSF, 5-year survival 15.8%; within Milan, transplant survival similar to HCC.",
+     "limits": "Mostly incidental, explant-defined disease.",
+     "locator": "J Am Coll Surg 2021; Results.",
+     "read": "full"
+    },
+    {
+     "key": "chcca_sierra2026",
+     "design_population": "UNOS cohort, 309 candidates.",
+     "selection": "No tumor-level variables.",
+     "results": "Lowest 15-year survival among primary liver cancers (graft-loss HR 1.79; death HR 1.67).",
+     "limits": "Registry coding; no nodal data.",
+     "locator": "HPB 2026; Results.",
+     "read": "full"
+    }
+   ],
+   "counter": "No direct study; regional nodal disease does not by itself prove futility, but no survival data by nodal status exist.",
+   "certainty": "Very low.",
+   "change": "Any series of resection after response of nodal disease in cHCC–CCA.",
+   "sources": [
+    "chcca_dageforde2020",
+    "chcca_jiang2020",
+    "chcca_kim2023",
+    "chcca_sierra2026"
+   ],
+   "read_full": 4,
+   "read_abstract": 0
+  },
+  {
+   "id": "iCCA-B4",
+   "tumor": "iCCA",
+   "setting": "transplant",
+   "title": "Previously treated nodal or extrahepatic disease",
+   "question": "Should a patient whose iCCA nodal or extrahepatic disease has responded or been resected ever be considered for transplantation?",
+   "status": "Closed",
+   "position": "Keep closed. Proven nodal metastasis or extrahepatic disease, current or previously treated (including resected), excludes the small-cirrhotic route and the advanced-iCCA study. Confirm node-negative status with tissue before listing, and characterize every indeterminate extrahepatic lesion. Applies also to mixed HCC–iCCA.",
+   "rules": [
+    "Previously proven malignant nodes, even after radiological or pathological response, and any previous distant metastasis (peritoneum, lung, bone, distant nodes) are outside the initial iCCA routes. Resection of an extrahepatic site does not clear this history.",
+    "Suspicious or indeterminate nodes are HOLD until resolved with tissue; an imaging response is not nodal clearance.",
+    "Advanced-iCCA study: before listing, sample stations 8 and 12 surgically, plus any suspicious node (EUS-FNA or surgical). For living donation, complete this before listing, not only at the combined donor–recipient laparotomy. A positive result ends the route.",
+    "Indeterminate extrahepatic lesions (subcentimetre lung nodules, bone lesions) need biopsy or interval imaging; “stable on chemotherapy” is not clearance.",
+    "Previously node-positive disease that has cleared is a separate future research question; do not combine it with multifocal, G3 or living-donor expansions."
+   ],
+   "why": "Every iCCA transplant protocol excludes nodal and extrahepatic disease, and the Milan protocol excludes even resected extrahepatic spread. In the published series, early recurrences came from nodal disease missed by imaging or from indeterminate lesions accepted as stable.",
+   "evidence": [
+    {
+     "key": "lunsford",
+     "design_population": "Houston prospective protocol; 6 transplanted.",
+     "selection": "Excluded extrahepatic metastases and lymph-node involvement; suspicious regional nodes biopsied by EUS.",
+     "results": "One recipient with unbiopsied, PET-negative periportal nodes that regressed recurred in the peritoneum at 9.7 months; in 2 of 6, “stable” extrahepatic lesions proved metastatic after transplant.",
+     "limits": "Six recipients.",
+     "locator": "Lancet Gastroenterol Hepatol 2018; Methods, Table 2.",
+     "read": "full"
+    },
+    {
+     "key": "mcmillan",
+     "design_population": "Houston extended series; 32 listed, 18 transplanted.",
+     "selection": "Nodal or distant metastasis defined as extrahepatic disease and excluded; delisted on extrahepatic progression.",
+     "results": "Survival from listing 100/71/57% at 1/3/5 years (all listed: 90/61/49%); one explant had metastatic carcinoma in 4 of 7 hilar nodes; two early recurrences arose from indeterminate pre-transplant lesions.",
+     "limits": "Single centre.",
+     "locator": "Am J Transplant 2021; Sections 2.1, 3.4.",
+     "read": "full"
+    },
+    {
+     "key": "icca_maspero2024",
+     "design_population": "Milan SYS-TARE protocol; 13 enrolled, 4 transplanted.",
+     "selection": "Excludes “prior resected extrahepatic tumor spread”; surgical sampling of stations 8 and 12 before listing.",
+     "results": "Positive nodes in 2 of 6 explored, missed by imaging and PET; all 4 transplanted patients disease-free at 8–73 months.",
+     "limits": "Small; abstract and Results drop-out counts differ.",
+     "locator": "Transpl Int 2024; Methods, Results.",
+     "read": "full"
+    },
+    {
+     "key": "icca_ldlt",
+     "design_population": "UPMC living-donor series, 7 recipients (co-authored by Hao Liu).",
+     "selection": "Liver-confined disease; nodes biopsied at the combined laparotomy.",
+     "results": "2 of 6 explants with viable tumor were node-positive despite same-day sampling; one died at about 7 months; a sub-PET-threshold lung nodule became a metastasis.",
+     "limits": "Seven patients.",
+     "locator": "Am J Transplant 2026; Results, Table 2.",
+     "read": "full"
+    },
+    {
+     "key": "cca_campbell2026",
+     "design_population": "Single-centre series, 98 biliary-cancer transplants.",
+     "selection": "Explant nodal status.",
+     "results": "Node positivity predicted recurrence (HR 3.27, 1.32–8.10) but not overall survival (p=0.14).",
+     "limits": "Mixed subtypes; nodes found on explant, not before.",
+     "locator": "Ann Surg Oncol 2026; Results.",
+     "read": "full"
+    },
+    {
+     "key": "ilts",
+     "design_population": "2024 ILTS–ILCA consensus.",
+     "selection": "Transplant for iCCA only without extrahepatic metastasis (cirrhotic ≤3 cm) or for liver-confined disease within protocols.",
+     "results": "No outcome data.",
+     "limits": "Silent on previously treated disease.",
+     "locator": "Liver Cancer 2026; Working Group statements.",
+     "read": "full"
+    },
+    {
+     "key": "icca_hu2011",
+     "design_population": "Single-centre series, 20 transplants.",
+     "selection": "Nodal invasion recorded.",
+     "results": "Nodal invasion an independent predictor of death.",
+     "limits": "Small, older series.",
+     "locator": "Hepatogastroenterology 2011 (abstract; full text pending).",
+     "read": "abstract"
+    }
+   ],
+   "counter": "One pilot admitted regional lymphadenopathy in mixed hilar and intrahepatic tumors (5 of 18 transplanted, one nodal recurrence) without proving the nodes malignant; it cannot establish a cleared-node pathway.",
+   "certainty": "Low that liver-confined disease after sustained response selects better recipients; very low for transplantation after previously malignant nodes; none for previously treated distant disease.",
+   "change": "A protocol series with tissue-proven nodal clearance before listing and ≥3-year outcomes.",
+   "sources": [
+    "cca_campbell2026",
+    "icca_hu2011",
+    "icca_ldlt",
+    "icca_maspero2024",
+    "ilts",
+    "lunsford",
+    "mcmillan"
+   ],
+   "read_full": 6,
+   "read_abstract": 1
+  },
+  {
+   "id": "iCCA-R1",
+   "tumor": "iCCA",
+   "setting": "roadmap",
+   "title": "Surgery after nodal or extrahepatic disease responds",
+   "question": "When regional nodes or distant metastases of iCCA respond to chemotherapy, is conversion resection reasonable?",
+   "status": "Proposed; distant disease exceptional",
+   "position": "Regional nodal disease (hepatoduodenal and common hepatic artery area) that responds may proceed to conversion resection with lymphadenectomy after MDT review. Nodes beyond the regional basin and distant metastases stay systemic-therapy-led; conversion surgery only exceptionally, on very low-certainty evidence, inside a registry or study.",
+   "rules": [
+    "Regional nodes: restage after response; sample suspicious residual nodes where feasible, because residual nodal disease in the specimen is strongly adverse.",
+    "Distant disease (non-regional nodes, liver-only oligometastases, limited peritoneal or lung): only after durable response on serial imaging, negative whole-body restaging, staging laparoscopy with nodal sampling, and complete resectability of every site.",
+    "Counsel: recurrence about 70% after conversion; major complications about 61% and mortality about 9% in conversion series; survival benefit not proven.",
+    "Conversion does not open transplantation (iCCA-B4)."
+   ],
+   "why": "The conversion evidence comes mostly from locally advanced disease. For metastatic iCCA it rests on very small, selected series, and unselected metastatic resection gives poor survival.",
+   "evidence": [
+    {
+     "key": "icca_zhou2025",
+     "design_population": "Meta-analysis and pooled patient data, 466 patients (49.6% iCCA).",
+     "selection": "Of 55 iCCA, 19 had metastatic disease before conversion, mostly nodal; most series are locally advanced only.",
+     "results": "Conversion associated with longer survival than non-surgical care (HR 0.39); metastatic presentation worse on univariable analysis; residual nodal metastasis in the specimen HR 14.7 (2.3–93.9).",
+     "limits": "Case-report-based pooled data; strong selection.",
+     "locator": "Langenbecks Arch Surg 2025; Tables 1–3.",
+     "read": "full"
+    },
+    {
+     "key": "icca_murakami2025",
+     "design_population": "Single centre, 101 unresectable biliary cancers; 20 converted.",
+     "selection": "14 converted had distant disease (liver 6, para-aortic nodes 5, peritoneal 3).",
+     "results": "5-year survival 55.0% with conversion vs 8.6% without, from the start of chemotherapy; recurrence 14 of 20.",
+     "limits": "Mixed biliary subsites; immortal-time bias; not iCCA-specific.",
+     "locator": "Cancers 2025; Results 3.3.",
+     "read": "full"
+    },
+    {
+     "key": "icca_yang2026",
+     "design_population": "SEER, 256 metastatic iCCA; matched 68 pairs.",
+     "selection": "No response or metastatic-site data.",
+     "results": "3-year survival 13.8% with surgery vs 3% without.",
+     "limits": "Registry; reporting errors.",
+     "locator": "J Gastrointest Oncol 2026; Results.",
+     "read": "full"
+    },
+    {
+     "key": "icca_leroy2017",
+     "design_population": "Single centre, 74 locally advanced iCCA.",
+     "selection": "Locally advanced, not metastatic.",
+     "results": "39 (53%) resected after chemotherapy, median survival 24.1 months (similar to upfront resection).",
+     "limits": "Locally advanced only.",
+     "locator": "Br J Surg 2017 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "icca_kurimoto2025",
+     "design_population": "Three centres, 84 node-positive resections.",
+     "selection": "Upfront resection.",
+     "results": "Nodes beyond the hepatoduodenal/common hepatic area: median survival 13.3 vs 24.3 months.",
+     "limits": "No response data.",
+     "locator": "Hepatol Res 2025 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "icca_yabushita2024",
+     "design_population": "Japan–Korea multicentre, 56 conversion operations (biliary).",
+     "selection": "Locally advanced.",
+     "results": "Clavien–Dindo ≥III 60.7%; postoperative mortality 8.9%; 5-year survival 39.1%.",
+     "limits": "No non-operated denominator.",
+     "locator": "J Hepatobiliary Pancreat Sci 2024 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "icca_rimini2026",
+     "design_population": "55-centre cohort, 219 locally advanced biliary cancers.",
+     "selection": "No distant disease.",
+     "results": "24 (10.9%) resected after systemic therapy; median survival 22.5 vs 19.9 months.",
+     "limits": "Short follow-up.",
+     "locator": "Int J Cancer 2026 (abstract; full text pending).",
+     "read": "abstract"
+    }
+   ],
+   "counter": "Guidelines are characterized as discouraging surgery for metastatic iCCA; benefit in metastatic disease is unproven.",
+   "certainty": "Low for regional nodal disease after response; very low for distant disease.",
+   "change": "Prospective data on conversion surgery for metastatic iCCA.",
+   "sources": [
+    "icca_kurimoto2025",
+    "icca_leroy2017",
+    "icca_murakami2025",
+    "icca_rimini2026",
+    "icca_yabushita2024",
+    "icca_yang2026",
+    "icca_zhou2025"
+   ],
+   "read_full": 3,
+   "read_abstract": 4
+  },
+  {
+   "id": "pCCA-B1",
+   "tumor": "pCCA",
+   "setting": "transplant",
+   "title": "Previously malignant nodes, peritoneal or distant disease",
+   "question": "Should regional nodal disease that has responded, or any treated peritoneal or distant disease, ever allow transplantation for perihilar cholangiocarcinoma?",
+   "status": "Closed (part of pCCA-B1)",
+   "position": "Keep closed. Nodal, peritoneal or distant disease found at any time, including at operative staging and after response to chemoradiation or chemotherapy, ends the transplant route; there is no re-entry after nodal response. The data on transplantation after nodal disease are absent rather than negative, and that is recorded.",
+   "rules": [
+    "Before neoadjuvant chemoradiation: EUS-FNA of any suspicious regional node (not through the primary). A positive node ends the route.",
+    "Operative staging before transplantation with biopsy of hepatic artery and pericholedochal nodes and of any suspicious lesion.",
+    "Previously proven malignant nodes stay excluded even after radiographic or pathological clearance; distant or peritoneal disease at any time ends the route."
+   ],
+   "why": "Nodal disease is the commonest finding that removes patients at staging, and survival after removal is short. One US centre accepted regional N1 disease and four patients were transplanted with metastases, without separable outcomes, so there are no usable data either way.",
+   "evidence": [
+    {
+     "key": "pcca_sio2016",
+     "design_population": "Mayo protocol, 215 started; 63 fell out.",
+     "selection": "Staging findings overlap: positive nodes 19, peritoneal 14, local extension 11.",
+     "results": "Median survival after the staging operation 6.0 months; EUS-FNA before chemoradiation lowered the positive-staging rate to 15%; two node-positive patients lived 3.7 and 8.7 years without transplant.",
+     "limits": "Survival not reported by finding.",
+     "locator": "Am J Clin Oncol 2016; Results.",
+     "read": "full"
+    },
+    {
+     "key": "murad",
+     "design_population": "12-centre US cohort, 287 patients.",
+     "selection": "Positive staging biopsies excluded patients in most centres; one centre accepted N0–N1 within the hepatoduodenal ligament.",
+     "results": "Staging found metastases in 17%; 4 transplanted with metastatic disease, pooled in a 48-patient outside-criteria group (recurrence HR 2.98); explant nodal invasion 14% with recurrence vs 4% without.",
+     "limits": "Centre-dependent handling; no separate estimate for nodal disease.",
+     "locator": "Gastroenterology 2012; Supplementary Table 1, Results.",
+     "read": "full"
+    },
+    {
+     "key": "pcca_vugts",
+     "design_population": "Two-centre cohort, 732 pCCA.",
+     "selection": "Imaging suspicion pooled with tissue proof.",
+     "results": "Of 498 fit unresected patients, 156 had nodal and 179 distant metastases; only 34 (5%) potentially eligible.",
+     "limits": "No survival by nodal status.",
+     "locator": "Ann Surg Oncol 2020; Table 3.",
+     "read": "full"
+    },
+    {
+     "key": "pcca_ahpba2015",
+     "design_population": "AHPBA 2015 expert consensus.",
+     "selection": "EUS or laparoscopic FNA of suspicious regional nodes; patients with metastases excluded; operative biopsy of hepatic artery and pericholedochal nodes.",
+     "results": "No outcome data.",
+     "limits": "2014 consensus.",
+     "locator": "HPB 2015; transplant section.",
+     "read": "full"
+    },
+    {
+     "key": "cca_campbell2026",
+     "design_population": "Single-centre biliary transplant series.",
+     "selection": "Explant nodes.",
+     "results": "Node positivity predicted recurrence (HR 3.27), not survival.",
+     "limits": "Mixed subtypes.",
+     "locator": "Ann Surg Oncol 2026.",
+     "read": "full"
+    },
+    {
+     "key": "pcca_dejong2023",
+     "design_population": "Dutch nationwide screening cohort, 75 patients.",
+     "selection": "Any malignant node precludes further screening.",
+     "results": "EUS sampling found malignant nodes in 3 of 75; surgical staging found non-regional malignant nodes in 6 of 43.",
+     "limits": "Small.",
+     "locator": "Gastrointest Endosc 2023 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "cca_wong2019",
+     "design_population": "Prospective pilot, 18 hilar and intrahepatic tumors.",
+     "selection": "Admitted regional lymphadenopathy without proof of malignancy.",
+     "results": "5 transplanted; one isolated portacaval nodal recurrence at 12 months.",
+     "limits": "Cannot establish a cleared-node stratum.",
+     "locator": "J Surg Res 2019.",
+     "read": "existing"
+    }
+   ],
+   "counter": "Absence of usable data is not proof of futility; a small regional-node subset may do well.",
+   "certainty": "Moderate that conventional selection gives better outcomes; very low or none for a cleared-node pathway.",
+   "change": "A prospective series transplanting tissue-proven regional N1 disease after response, with intention-to-treat survival.",
+   "sources": [
+    "cca_campbell2026",
+    "cca_wong2019",
+    "murad",
+    "pcca_ahpba2015",
+    "pcca_dejong2023",
+    "pcca_sio2016",
+    "pcca_vugts"
+   ],
+   "read_full": 5,
+   "read_abstract": 1
+  },
+  {
+   "id": "pCCA-R1",
+   "tumor": "pCCA",
+   "setting": "roadmap",
+   "title": "Resection after nodal or distant disease responds",
+   "question": "When perihilar cholangiocarcinoma has regional, para-aortic or distant disease that responds, when is resection reasonable?",
+   "status": "Proposed",
+   "position": "Regional nodal disease goes to neoadjuvant chemotherapy and then resection in responders, recognizing that a survival benefit is not established. Para-aortic or other non-regional nodes are not resected upfront; after durable response with negative re-sampling, MDT case-by-case only. Distant metastasis stays systemic-therapy-led; conversion only exceptionally. Any nodal disease still excludes transplantation (pCCA-B1).",
+   "rules": [
+    "Regional nodes: FDG-PET-positive or tissue-proven regional nodes → neoadjuvant chemotherapy, restaging, resection if no distant disease.",
+    "Para-aortic nodes: upfront data conflict; do not resect when known. After response, consider only with negative intraoperative sampling.",
+    "Distant metastasis: systemic therapy (gemcitabine–cisplatin-based); conversion only within a registry."
+   ],
+   "why": "Upfront series disagree on para-aortic nodes, and no post-response series exists. Japanese conversion data are mixed biliary cancers.",
+   "evidence": [
+    {
+     "key": "pcca_kuriyama2026",
+     "design_population": "Single centre, 110 pCCA; 72 received neoadjuvant gemcitabine–S-1.",
+     "selection": "Regional nodes defined by FDG-PET uptake only; distant disease excluded.",
+     "results": "Curative resection 85.1%, 65.8% and 24.0% in resectable, borderline and locally advanced groups.",
+     "limits": "No survival for node-positive patients; benefit not established.",
+     "locator": "Cancers 2026; Methods 2.3, Results.",
+     "read": "full"
+    },
+    {
+     "key": "icca_murakami2025",
+     "design_population": "Single centre, 20 conversions of biliary cancer.",
+     "selection": "5 with para-aortic nodes; 3 of 5 disappeared and were negative at resection.",
+     "results": "One pCCA patient (para-aortic nodes cleared) had axial nodal recurrence 11 months after conversion.",
+     "limits": "Mixed subsites.",
+     "locator": "Cancers 2025; Results 3.3.",
+     "read": "full"
+    },
+    {
+     "key": "pcca_takenouchi2026",
+     "design_population": "Single centre, 143 with intraoperative para-aortic sampling.",
+     "selection": "Upfront surgery.",
+     "results": "Para-aortic metastasis in 17 (11.9%); PET identified only 17.6%; with para-aortic metastasis, survival did not differ with or without resection (15.6 vs 18.0 months, p=0.790).",
+     "limits": "Not post-response.",
+     "locator": "Ann Surg Oncol 2026 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "pcca_nitta2020",
+     "design_population": "Single centre, 410 resected extrahepatic CCA.",
+     "selection": "16 with para-aortic metastasis resected.",
+     "results": "Median survival 33.7 vs 16.7 months (resected vs unresected); not worse than regional node-positive.",
+     "limits": "Very small; perihilar and distal mixed.",
+     "locator": "World J Surg 2020 (abstract; full text pending).",
+     "read": "abstract"
+    }
+   ],
+   "counter": "Para-aortic data conflict; post-response evidence is absent.",
+   "certainty": "Low for regional nodes after response; very low for non-regional or distant disease.",
+   "change": "A post-response series of resection with para-aortic or distant disease.",
+   "sources": [
+    "icca_murakami2025",
+    "pcca_kuriyama2026",
+    "pcca_nitta2020",
+    "pcca_takenouchi2026"
+   ],
+   "read_full": 2,
+   "read_abstract": 2
+  },
+  {
+   "id": "CRLM-B5",
+   "tumor": "CRLM",
+   "setting": "transplant",
+   "title": "Previously treated extrahepatic disease",
+   "question": "Should a lung-only study stratum be opened for completely treated pulmonary metastases, and if so with which interval and biology limits? All other previously treated extrahepatic sites stay closed.",
+   "status": "Closed; lung-only study stratum proposed",
+   "position": "Keep previously treated extrahepatic disease closed in the CRLM transplant pathway. IHPBA Statement 9 excludes patients who initially present with or later develop extrahepatic metastases, and TransMet excluded previous or concomitant extrahepatic disease. Propose one narrow study stratum (not active) for limited, completely treated lung-only metastases; every other site stays closed.",
+   "rules": [
+    "Default: extrahepatic metastasis after primary resection (including nodes outside the primary field), metastasis removed with the primary, and local relapse are outside the pathway, even after resection, ablation, radiotherapy or complete response. Response to systemic therapy alone never counts as clearance.",
+    "Proposed lung-only study stratum (needs its own protocol, IRB and a living-donor or individually reviewed allocation route): at most three lung metastases, each completely treated with curative intent, no thoracic nodal involvement, and no recurrence for ≥12 months after the last lung treatment (SECA-III uses 1 year since lung resection; the Japanese protocol uses >6 months recurrence-free). The meeting must choose the interval.",
+    "The stratum adds no other relaxation: every CRLM-B3 limit applies, and favorable biology is required (low Oslo or Fong score; low liver metabolic tumor volume). Chest CT and PET-CT within one month.",
+    "Hilar nodes: frozen section of hilar nodes before implantation, and before donor hepatectomy in living donation. A positive node ends the transplant.",
+    "Closed with no stratum: nodal disease outside the primary field; peritoneal, ovarian, adrenal, bone, brain or other non-lung sites; local relapse; more than three lung lesions; thoracic nodes; recurrence after lung treatment."
+   ],
+   "why": "Lung-limited disease is the most indolent extrahepatic pattern, and post-transplant lung recurrence is often resectable, but no outcome data exist for transplantation after treated extrahepatic disease. Occult nodal disease at laparotomy is the commonest extrahepatic failure in transplant series.",
+   "evidence": [
+    {
+     "key": "transmet",
+     "design_population": "Randomized trial, 94 patients.",
+     "selection": "Excluded “previous or concomitant extrahepatic metastases or local recurrence” (Methods); every transplant preceded by exploration with frozen section of suspicious nodes.",
+     "results": "5-year survival 56.6% vs 12.6% (HR 0.37); recurrence mainly in the lung, with curative-intent salvage in 12 of 26.",
+     "limits": "Benefit cannot be transferred to previously treated extrahepatic disease.",
+     "locator": "Lancet 2024; Methods (Participants), Results.",
+     "read": "full"
+    },
+    {
+     "key": "ihpba",
+     "design_population": "2021 international Delphi consensus.",
+     "selection": "Statement 9: no evidence supports transplantation for patients who initially present with or subsequently develop extrahepatic metastases; node-positive patients excluded; no lung exception or nodule-size rule.",
+     "results": "Statement 41: resect isolated pulmonary recurrence after transplantation.",
+     "limits": "Expert consensus.",
+     "locator": "Lancet Gastroenterol Hepatol 2021; Statements 9–12, 41.",
+     "read": "full"
+    },
+    {
+     "key": "armd",
+     "design_population": "SECA-II arm D, 10 recipients.",
+     "selection": "Protocol allowed resectable lung lesions <15 mm and prior nodal or local relapse treated >1 year earlier.",
+     "results": "Only 1 recipient had a previously resected lung metastasis (8 years earlier) and was recurrence-free; the arm’s median survival of 18 months reflects other high-risk features.",
+     "limits": "Protocol precedent only, not outcome evidence about lung disease.",
+     "locator": "BJS Open 2020; Table 1–2, Results.",
+     "read": "full"
+    },
+    {
+     "key": "crlm_dueland2023",
+     "design_population": "Oslo pooled cohort, 72 listed, 61 transplanted.",
+     "selection": "PET-CT before transplant; prior extrahepatic disease not analysed.",
+     "results": "10 of 72 not transplanted for extrahepatic disease, 7 with hilar node metastasis on frozen section at laparotomy; intention-to-treat 5-year survival 42.6%.",
+     "limits": "No control group.",
+     "locator": "JAMA Surg 2023; Results.",
+     "read": "full"
+    },
+    {
+     "key": "crlm_hernandez2022",
+     "design_population": "North American living-donor series, 10 transplanted.",
+     "selection": "Liver-confined disease.",
+     "results": "1 of 10 had PET-negative portal nodal metastasis and recurred in the peritoneum at 121 days.",
+     "limits": "Ten patients; eTable unavailable.",
+     "locator": "JAMA Surg 2022; Table 4, Results.",
+     "read": "full"
+    },
+    {
+     "key": "crlm_hagness_recur",
+     "design_population": "SECA-I, 21 recipients.",
+     "selection": "Liver-only disease required.",
+     "results": "On retrospective review, 7 had untreated lung metastases already present at transplant; no statistical test reported.",
+     "limits": "Not evidence that treated lung disease is safe.",
+     "locator": "Ann Surg Oncol 2014; Results.",
+     "read": "full"
+    },
+    {
+     "key": "crlm_dueland_lung",
+     "design_population": "Oslo, 14 recipients with resected lung relapse after transplant.",
+     "selection": "Post-transplant setting.",
+     "results": "10-year survival 64.5% from first lung resection; 85.7% with liver metabolic tumor volume <70 cm³ vs 25.0% above.",
+     "limits": "Selected patients; does not address pre-transplant disease.",
+     "locator": "Cancers 2022; Results 3.1.",
+     "read": "full"
+    },
+    {
+     "key": "crlm_fukumitsu",
+     "design_population": "Japanese living-donor protocol.",
+     "selection": "Admits ≤3 lung metastases without recurrence for >6 months after treatment; no size limit.",
+     "results": "Protocol only.",
+     "limits": "No outcomes.",
+     "locator": "BMJ Open 2024; eligibility.",
+     "read": "full"
+    },
+    {
+     "key": "crlm_seca3",
+     "design_population": "SECA-III randomized trial registration.",
+     "selection": "Resectable lung lesions <15 mm allowed; recent resection of lung or hilar nodes excluded.",
+     "results": "Recruiting.",
+     "limits": "No results.",
+     "locator": "ClinicalTrials.gov NCT03494946.",
+     "read": "registry"
+    },
+    {
+     "key": "pulmicc",
+     "design_population": "Randomized trial of lung metastasectomy, 93 patients (29% after liver resection).",
+     "selection": "No other sites than treated liver metastases.",
+     "results": "Adjusted HR 0.87 (0.51–1.48); 5-year survival 29.6% without metastasectomy vs 36.4% with.",
+     "limits": "Closed at 31% of target; inconclusive.",
+     "locator": "Colorectal Dis 2020; Results.",
+     "read": "full"
+    },
+    {
+     "key": "crlm_grut2018",
+     "design_population": "Imaging case-control, 11 recipients.",
+     "selection": "Lung metastases after transplant.",
+     "results": "Median doubling time 125 vs 130 days (transplant vs controls).",
+     "limits": "Very small.",
+     "locator": "Br J Surg 2018 (abstract; full text pending).",
+     "read": "abstract"
+    }
+   ],
+   "counter": "The lung-only signal comes from post-transplant relapse and protocol precedent, not from transplantation after treated lung disease. PulMiCC shows lung metastasectomy may select favorable biology rather than cure it.",
+   "certainty": "Very low for transplantation after previously treated extrahepatic disease; low for the indirect inference that lung-limited disease behaves indolently after transplant.",
+   "change": "SECA-III or Japanese protocol results in recipients with treated lung metastases.",
+   "sources": [
+    "armd",
+    "crlm_dueland2023",
+    "crlm_dueland_lung",
+    "crlm_fukumitsu",
+    "crlm_grut2018",
+    "crlm_hagness_recur",
+    "crlm_hernandez2022",
+    "crlm_seca3",
+    "ihpba",
+    "pulmicc",
+    "transmet"
+   ],
+   "read_full": 9,
+   "read_abstract": 1
+  },
+  {
+   "id": "CRLM-R1",
+   "tumor": "CRLM",
+   "setting": "roadmap",
+   "title": "Liver resection when extrahepatic disease is treated or treatable",
+   "question": "When colorectal cancer has extrahepatic disease that is treated or completely treatable, when should liver resection be offered?",
+   "status": "Proposed",
+   "position": "Treated or completely treatable extrahepatic disease is not an absolute contraindication to curative-intent liver resection, but complete clearance of every site is mandatory and benefit depends on the site. Lung disease has the best outcome; nodal disease does poorly wherever it sits; limited peritoneal disease belongs to expert CRS/HIPEC centres. Any extrahepatic disease ends transplant intent (CRLM-B5).",
+   "rules": [
+    "Lung: combined or staged liver and lung metastasectomy after joint HPB–thoracic review when every lesion can be removed; a prior lung resection does not exclude liver resection.",
+    "Portal (hepatoduodenal) nodes: resect only with complete lymphadenectomy after response to chemotherapy, with explicit counselling; coeliac, para-aortic and retroperitoneal nodes generally not. Portal and retroperitoneal nodes did equally poorly in the largest series.",
+    "Peritoneum: limited peritoneal disease with liver metastases only in a peritoneal-surface-malignancy centre (CRS/HIPEC plus limited liver resection).",
+    "Counsel: recurrence about 90%; 10-year disease-free survival about 3% after resection with extrahepatic disease."
+   ],
+   "why": "Pooled and registry data show useful survival after complete resection of lung disease and poorer survival with nodal or peritoneal disease; the only randomized trial of lung metastasectomy was inconclusive.",
+   "evidence": [
+    {
+     "key": "crlm_hadden2016",
+     "design_population": "Meta-analysis, 52 studies, 15,144 patients (2,308 with extrahepatic disease).",
+     "selection": "Synchronous or previous extrahepatic disease resected with the liver.",
+     "results": "5-year survival: lung 26% (15–39%), peritoneum 17%, nodes 15%; R0 at both sites lowered the risk of death (RR 0.73).",
+     "limits": "Nodal locations pooled; selected series.",
+     "locator": "HPB 2016; Results.",
+     "read": "full"
+    },
+    {
+     "key": "crlm_leung2017",
+     "design_population": "MSKCC, 219 hepatectomies with resected extrahepatic disease.",
+     "selection": "Synchronous disease, resected within 6 months.",
+     "results": "Portal vs retroperitoneal nodes: no survival difference (p=0.768); incomplete extrahepatic resection: no survivors beyond 3.5 years; disease-free at 10 years 3.2%.",
+     "limits": "Selected; tables not available.",
+     "locator": "Ann Surg 2017; Results.",
+     "read": "full"
+    },
+    {
+     "key": "pulmicc",
+     "design_population": "Randomized trial, 93 patients.",
+     "selection": "Lung metastases after colorectal resection.",
+     "results": "Adjusted HR 0.87 (0.51–1.48); inconclusive.",
+     "limits": "Underpowered.",
+     "locator": "Colorectal Dis 2020.",
+     "read": "full"
+    },
+    {
+     "key": "crlm_cco2013",
+     "design_population": "Cancer Care Ontario guideline (archived December 2020; evidence to January 2010).",
+     "selection": "Liver and lung metastases.",
+     "results": "Combined or staged metastasectomy recommended when all lung metastases can be removed; liver resection may follow a prior lung resection; routine liver resection not recommended with portal nodal disease.",
+     "limits": "Archived; non-comparative series.",
+     "locator": "Curr Oncol 2013; Recommendation 1.",
+     "read": "full"
+    },
+    {
+     "key": "crlm_andres2015",
+     "design_population": "LiverMetSurvey registry.",
+     "selection": "149 liver plus lung resections vs 9,185 liver-only.",
+     "results": "Adjusted 5-year survival 44.5% vs 51.5%; 14.3% when lung disease was not resected.",
+     "limits": "Registry; selected minority.",
+     "locator": "Br J Surg 2015 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "crlm_adam2008",
+     "design_population": "Single centre, 47 hepatectomies with lymphadenectomy.",
+     "selection": "Nodes after chemotherapy.",
+     "results": "5-year survival 25% pedicular vs 0% coeliac or para-aortic.",
+     "limits": "Small, older series.",
+     "locator": "J Clin Oncol 2008 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "crlm_taqi2025",
+     "design_population": "Meta-analysis, 17 studies, 988 patients.",
+     "selection": "Synchronous peritoneal and liver metastases.",
+     "results": "CRS/HIPEC with liver treatment: 5-year survival 37%.",
+     "limits": "Retrospective, selected.",
+     "locator": "Ann Surg Oncol 2025 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "crlm_zou2020",
+     "design_population": "Meta-analysis, 9 studies, 746 patients.",
+     "selection": "Peritoneal disease with vs without liver metastases.",
+     "results": "Overall survival HR 1.68 with liver metastases.",
+     "limits": "Observational.",
+     "locator": "Int J Hyperthermia 2020 (abstract; full text pending).",
+     "read": "abstract"
+    }
+   ],
+   "counter": "Benefit is not proven by randomization; lung metastasectomy itself was inconclusive in PulMiCC.",
+   "certainty": "Low.",
+   "change": "Randomized data on metastasectomy in combined liver and lung disease.",
+   "sources": [
+    "crlm_adam2008",
+    "crlm_andres2015",
+    "crlm_cco2013",
+    "crlm_hadden2016",
+    "crlm_leung2017",
+    "crlm_taqi2025",
+    "crlm_zou2020",
+    "pulmicc"
+   ],
+   "read_full": 4,
+   "read_abstract": 4
+  },
+  {
+   "id": "NET-B4",
+   "tumor": "NELM",
+   "setting": "transplant",
+   "title": "Previously treated extrahepatic disease",
+   "question": "Which previously treated extrahepatic NET sites may enter the transplant route: resected regional nodes only, or also distant nodes and a solitary treated bone lesion as ENETS 2026 suggests?",
+   "status": "Resected regional nodes only, after clearance",
+   "position": "Previously resected regional nodal disease is already within Milan-NET when the primary and all extrahepatic deposits were removed in a separate curative operation and restaging at least 6 months later shows no disease. Previously resected distant nodes need individual review. Previous lung, bone or other solid-organ metastasis stays closed, including after complete treatment; ENETS 2026 would accept a solitary locally treated bone lesion as expert opinion, recorded as a disagreement.",
+   "rules": [
+    "Regional (mesenteric, peripancreatic) nodes resected with the primary in a separate operation: eligible after ≥6 months without recurrence and negative SSTR-PET with CT/MRI within 3 months of transplant consideration.",
+    "Distant nodes previously resected, or nodal disease cleared only by PRRT, ablation or radiotherapy: individual review only, with SSTR-PET-negative status for ≥6 months.",
+    "Lung, bone (including a solitary treated lesion), peritoneal or other organ metastasis: closed. Spinal or brain metastases and unresectable mesenteric root disease: closed in every framework.",
+    "Stage the primary and any major organ resection before transplantation, not at it. Plan hilar lymphadenectomy; counsel that nodal involvement on final pathology is associated with worse survival."
+   ],
+   "why": "Milan-NET itself requires all extrahepatic deposits removed before transplant consideration, and 81% of the Milan recipients had resected node-positive primaries. No series reports transplantation after treated distant disease. Bone metastases are independently adverse and rarely cleared.",
+   "evidence": [
+    {
+     "key": "milan",
+     "design_population": "Milan prospective cohort, 88 eligible (42 transplanted).",
+     "selection": "Milan-NET: primary removed “with all extrahepatic deposits in a separate curative resection prior to transplant consideration”; restaging 6 months after removal.",
+     "results": "81% of recipients had node-positive primaries and 57% hilar node-positive; 5- and 10-year survival 97.2% and 88.8%.",
+     "limits": "Non-randomized; no outcome split by nodal status.",
+     "locator": "Am J Transplant 2016; Table 1–2.",
+     "read": "full"
+    },
+    {
+     "key": "net_maspero2022",
+     "design_population": "Milan, 48 transplants vs 56 resections.",
+     "selection": "Exclusion of extrahepatic disease; hilar lymphadenectomy at transplant.",
+     "results": "Nodal involvement on final pathology: survival HR 5.7 (1.3–24), univariate; first recurrences mostly distant nodes (64%) and bone (36%).",
+     "limits": "Univariate only.",
+     "locator": "Am J Transplant 2022; Tables 2–3.",
+     "read": "full"
+    },
+    {
+     "key": "enets",
+     "design_population": "ENETS 2026 position statement.",
+     "selection": "Replace “no extrahepatic disease” with “no macroscopic, non-targetable” disease; examples: isolated resectable nodes or a solitary bone lesion amenable to local treatment.",
+     "results": "Excludes unresectable mesenteric nodes, spinal and brain metastases; sets no interval after extrahepatic treatment.",
+     "limits": "Expert opinion; not outcome-validated.",
+     "locator": "J Neuroendocrinol 2026; Sections 4 and 7.",
+     "read": "full"
+    },
+    {
+     "key": "net_wedin2025",
+     "design_population": "Two Swedish centres, 138 with bone metastases.",
+     "selection": "Bone metastases on SSTR-PET; rarely biopsied; never curatively treated.",
+     "results": "Any bone metastasis HR 1.94; 21% with ≤5 lesions progressed to >5.",
+     "limits": "Small-intestine NET only.",
+     "locator": "J Neuroendocrinol 2025; Results, Table 5.",
+     "read": "full"
+    },
+    {
+     "key": "eltr213",
+     "design_population": "European registry, 213 transplants.",
+     "selection": "Concurrent surgery at transplant mostly removed the primary or organs.",
+     "results": "Major concurrent resection HR 3.1 (all eras); after 2000, any concurrent resection HR 1.9 (p=0.058).",
+     "limits": "Pre-transplant extrahepatic status not recorded.",
+     "locator": "Ann Surg 2013; Tables 4–6.",
+     "read": "full"
+    },
+    {
+     "key": "net_sher2015",
+     "design_population": "28 US centres, 85 transplants.",
+     "selection": "“Extent of resection” = concurrent primary or multivisceral surgery, not metastasis clearance.",
+     "results": "Extensive concurrent surgery associated with worse survival (p=0.015).",
+     "limits": "No extrahepatic-disease variable.",
+     "locator": "J Surg Oncol 2015; Methods.",
+     "read": "full"
+    },
+    {
+     "key": "net_frilling2010",
+     "design_population": "68Ga-DOTATOC PET before transplantation.",
+     "selection": "Transplant candidates.",
+     "results": "PET removed 7 of 15 candidates.",
+     "limits": "Small.",
+     "locator": "Ann Surg 2010 (abstract; full text pending).",
+     "read": "abstract"
+    }
+   ],
+   "counter": "ENETS 2026 and some series suggest limited bone disease may not worsen survival; the bone exclusion is a conservative local choice.",
+   "certainty": "Low for resected regional nodes after a recurrence-free interval; very low for distant nodes, PRRT-only clearance and solid-organ metastases.",
+   "change": "Transplant outcomes in recipients with previously treated distant or bone disease.",
+   "sources": [
+    "eltr213",
+    "enets",
+    "milan",
+    "net_frilling2010",
+    "net_maspero2022",
+    "net_sher2015",
+    "net_wedin2025"
+   ],
+   "read_full": 6,
+   "read_abstract": 1
+  },
+  {
+   "id": "NELM-R1",
+   "tumor": "NELM",
+   "setting": "roadmap",
+   "title": "Liver surgery when extrahepatic disease is present or treated",
+   "question": "Does present or previously treated extrahepatic disease preclude liver cytoreduction or resection for well-differentiated NET liver metastases?",
+   "status": "Proposed",
+   "position": "Extrahepatic disease does not by itself preclude hepatic cytoreduction or resection of the primary for well-differentiated G1–G2 disease when at least 70% of liver disease can be removed or treated and accessible extrahepatic disease can be resected at the same time. Frame it as life-prolonging debulking; extrahepatic disease is consistently associated with shorter survival.",
+   "rules": [
+    "Proceed when ≥70% debulking is achievable and accessible extrahepatic disease (mesenteric nodes, limited peritoneal deposits) can be removed; resect distant nodes only when this renders the patient free of visible disease.",
+    "Bone metastases are an adverse modifier, not an automatic exclusion; diffuse skeletal, brain or unresectable mesenteric-root disease argue against surgery.",
+    "No observation period is required before cytoreduction.",
+    "Transplant questions go to NET-B4."
+   ],
+   "why": "NANETS consensus accepts extrahepatic disease for cytoreduction; cohorts show it shortens survival.",
+   "evidence": [
+    {
+     "key": "net_nanets2017",
+     "design_population": "NANETS small-bowel NET consensus.",
+     "selection": "Recommendation 5d: extrahepatic disease is not an absolute contraindication to cytoreduction; 5c: debulking may extend to extrahepatic disease when ≥70% is achievable.",
+     "results": "Distant nodes resected only in select cases aimed at no evidence of disease.",
+     "limits": "Expert consensus.",
+     "locator": "Pancreas 2017; Recommendations 3c, 5c, 5d.",
+     "read": "full"
+    },
+    {
+     "key": "net_gudmundsdottir2023",
+     "design_population": "Mayo, 546 cytoreductive hepatectomies.",
+     "selection": "Extrahepatic distant metastases in 16% (peritoneum, bone).",
+     "results": "Associated with worse overall survival, not progression-free survival; median survival 122 months overall.",
+     "limits": "Tables unavailable.",
+     "locator": "Ann Surg Oncol 2023; Results.",
+     "read": "full"
+    },
+    {
+     "key": "net_mahuron2024",
+     "design_population": "California registry, 327 with extrahepatic disease.",
+     "selection": "Nodes not counted as extrahepatic.",
+     "results": "Liver resection (n=23): 5-year survival 78%; embolization alone no better than no liver therapy.",
+     "limits": "Univariate; billing codes.",
+     "locator": "J Clin Med 2024; Results.",
+     "read": "full"
+    },
+    {
+     "key": "net_wedin2025",
+     "design_population": "Bone metastases in SI-NET.",
+     "selection": "On SSTR-PET.",
+     "results": "Any bone metastasis HR 1.94; >5 lesions median survival 18 vs 75 months.",
+     "limits": "No curative bone treatment.",
+     "locator": "J Neuroendocrinol 2025.",
+     "read": "full"
+    },
+    {
+     "key": "net_xiang2018",
+     "design_population": "Multi-institutional, 332 NF-NELM.",
+     "selection": "Resection.",
+     "results": "Extrahepatic metastasis HR 3.9 for death.",
+     "limits": "Not split by treated vs untreated.",
+     "locator": "Ann Surg Oncol 2018 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "net_spolverato2017",
+     "design_population": "International, 322 NELM operations.",
+     "selection": "Recurrence sites.",
+     "results": "10-year survival 0% with extrahepatic-only recurrence.",
+     "limits": "Small subgroup.",
+     "locator": "J Surg Oncol 2017 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "net_chan2018",
+     "design_population": "Single centre, 55 cytoreductions with extrahepatic disease.",
+     "selection": "87% combined intra- and extrahepatic.",
+     "results": "Major morbidity 18%, mortality 3.6%.",
+     "limits": "No comparator.",
+     "locator": "Ann Surg Oncol 2018 (abstract; full text pending).",
+     "read": "abstract"
+    }
+   ],
+   "counter": "All evidence is observational and selected.",
+   "certainty": "Low.",
+   "change": "Comparative data by extrahepatic site.",
+   "sources": [
+    "net_chan2018",
+    "net_gudmundsdottir2023",
+    "net_mahuron2024",
+    "net_nanets2017",
+    "net_spolverato2017",
+    "net_wedin2025",
+    "net_xiang2018"
+   ],
+   "read_full": 4,
+   "read_abstract": 3
+  },
+  {
+   "id": "pNET-R1",
+   "tumor": "pNET",
+   "setting": "roadmap",
+   "title": "Primary resection or cytoreduction with extrahepatic disease",
+   "question": "With pancreatic NET metastases outside the liver, should the primary be removed or the liver cytoreduced?",
+   "status": "Proposed; individualized",
+   "position": "Extrahepatic disease should not by itself contraindicate primary resection or hepatic cytoreduction (NANETS 2020), but the decision rests on local complications, symptoms and response to other therapy, and extrahepatic disease tempers the expected durability. Surgery here is palliative debulking, not curative-intent resection.",
+   "rules": [
+    "Favor surgery for symptomatic or functional tumors, body–tail primaries and G1–G2 disease when debulking is substantial.",
+    "Transplantation for pancreatic NET metastases follows NET-B4 (portal-drained primary resected first)."
+   ],
+   "why": "Primary resection is associated with lower mortality in pooled observational data that are strongly confounded; a recent series found no survival benefit.",
+   "evidence": [
+    {
+     "key": "net_nanets2020",
+     "design_population": "NANETS 2020 pancreatic NET consensus.",
+     "selection": "Extrahepatic disease “should not necessarily” contraindicate primary removal or cytoreduction; data limited and conflicting.",
+     "results": "No transplant recommendation.",
+     "limits": "Expert consensus.",
+     "locator": "Pancreas 2020; pp18–19.",
+     "read": "full"
+    },
+    {
+     "key": "pnet_partelli2017",
+     "design_population": "Meta-analysis, 885 patients.",
+     "selection": "Primary resection with unresectable liver metastases.",
+     "results": "Lower risk of death (OR 0.38, 0.23–0.65).",
+     "limits": "Confounded observational data.",
+     "locator": "HPB 2017 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "pnet_podrascanin2025",
+     "design_population": "Single centre, 118 with synchronous liver metastases.",
+     "selection": "Asymptomatic pNET.",
+     "results": "Primary resection did not change survival (median 10 years); extrahepatic disease predicted progression.",
+     "limits": "Univariate.",
+     "locator": "Ann Surg Oncol 2025 (abstract; full text pending).",
+     "read": "abstract"
+    }
+   ],
+   "counter": "Selection bias dominates.",
+   "certainty": "Low.",
+   "change": "Randomized or well-adjusted data.",
+   "sources": [
+    "net_nanets2020",
+    "pnet_partelli2017",
+    "pnet_podrascanin2025"
+   ],
+   "read_full": 1,
+   "read_abstract": 2
+  },
+  {
+   "id": "HEHE-B2",
+   "tumor": "HEHE",
+   "setting": "transplant",
+   "title": "Extrahepatic disease (EHD component)",
+   "question": "Should a lung-only extrahepatic stratum be activated for hepatic EHE, given the conflict between the 2021 consensus (no transplantation with extrahepatic disease) and the registry data?",
+   "status": "Defined, not activated",
+   "position": "Start with liver-only disease and no macrovascular invasion. Keep the lung-only stratum defined but not activated: limited lung disease that is stable through an observation period or completely resected. Nodal (beyond hilar), pleural or other serosal, bone, peritoneal, progressive or symptomatic disease stays closed. The explant-based HEHE-LT score is for post-transplant surveillance, not selection.",
+   "rules": [
+    "Lung-only stratum (not active): asymptomatic, no pleural involvement, stable on serial imaging for ≥6 months or completely resected or ablated with no recurrence for ≥6 months; independent expert review and a written comparison with observation or systemic therapy.",
+    "A waiting time longer than 120 days is a usable pre-transplant test of time; shorter waits were associated with recurrence.",
+    "Hilar nodal involvement is a recurrence risk factor, not an extrahepatic exclusion; plan hilar lymphadenectomy. Nodes beyond the hilum are extrahepatic disease and are closed.",
+    "Record the guideline–registry disagreement in every case."
+   ],
+   "why": "The registry finding that extrahepatic disease was not adverse is an absence of evidence: it was mostly untreated lung disease and the hazard ratio was 1.5 with a wide interval. The consensus exclusion is expert opinion.",
+   "evidence": [
+    {
+     "key": "ehe_lai",
+     "design_population": "European registry, 149 recipients.",
+     "selection": "Pre-transplant extrahepatic disease on imaging in 40 (lung 23, nodes 8); only 5 had lung surgery beforehand.",
+     "results": "Extrahepatic disease HR 1.5 (0.8–3.0), not retained; hilar nodes HR 2.2; waiting ≤120 days HR 2.5; the HEHE-LT score uses explant pathology.",
+     "limits": "Absence of evidence, not equivalence; registry without dropouts.",
+     "locator": "Transplantation 2017; Tables 3, 5–6.",
+     "read": "full"
+    },
+    {
+     "key": "ehe_consensus",
+     "design_population": "2021 global EHE consensus.",
+     "selection": "Transplantation “should not be proposed” with extrahepatic disease [V, A].",
+     "results": "Level V evidence (expert opinion) with grade A strength.",
+     "limits": "No treated-vs-untreated distinction.",
+     "locator": "ESMO Open 2021; liver section.",
+     "read": "full"
+    },
+    {
+     "key": "ehe_rosenbaum2019",
+     "design_population": "MSKCC, 93 EHE (all sites).",
+     "selection": "Nodal and pleural disease recorded.",
+     "results": "Nodal involvement HR 2.7; 5-year survival 30% with nodal and 22% with pleural disease.",
+     "limits": "Mixed sites; one transplant.",
+     "locator": "Mod Pathol 2019; Results.",
+     "read": "full"
+    },
+    {
+     "key": "ehe_liu228",
+     "design_population": "Single centre, 228 HEHE.",
+     "selection": "Extrahepatic disease on imaging in 49%, mostly lung, untreated.",
+     "results": "Extrahepatic disease not prognostic under non-transplant management (HR 1.32, NS); 8 transplants, confounded.",
+     "limits": "Few transplants.",
+     "locator": "BMC Cancer 2024; Table 4.",
+     "read": "full"
+    },
+    {
+     "key": "ehe_lerut2007",
+     "design_population": "European registry, 59 recipients.",
+     "selection": "10 had extrahepatic disease before or at transplant.",
+     "results": "1-, 5- and 10-year survival 90%, 80% and 80% with vs 94%, 83% and 70% without.",
+     "limits": "Small subgroup.",
+     "locator": "Ann Surg 2007 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "ehe_sawma2024",
+     "design_population": "Mayo, 80 HEHE.",
+     "selection": "Extrahepatic metastases in 26 at diagnosis.",
+     "results": "Bone metastasis HR 6.3; lung not adverse (HR 0.8).",
+     "limits": "All treatments, not transplant-specific.",
+     "locator": "J Surg Oncol 2024 (abstract; full text pending).",
+     "read": "abstract"
+    }
+   ],
+   "counter": "Registry survival with limited lung disease is good, so a blanket bar may be too strict.",
+   "certainty": "Low for prognostic association; very low for benefit of transplantation with extrahepatic disease.",
+   "change": "Prospective outcomes of transplantation with limited lung disease after observation.",
+   "sources": [
+    "ehe_consensus",
+    "ehe_lai",
+    "ehe_lerut2007",
+    "ehe_liu228",
+    "ehe_rosenbaum2019",
+    "ehe_sawma2024"
+   ],
+   "read_full": 4,
+   "read_abstract": 2
+  },
+  {
+   "id": "PDAC-R1",
+   "tumor": "PDAC",
+   "setting": "roadmap",
+   "title": "Surgery after oligometastatic disease responds",
+   "question": "When synchronous oligometastatic PDAC responds to chemotherapy, or isolated lung metastases appear late, should surgery be offered outside a trial?",
+   "status": "Proposed; trial or registry first",
+   "position": "Distant metastasis stays systemic-therapy-led. Response-selected conversion surgery for limited liver metastases is offered preferably within a trial (METAPANC, CSPAC-1) or a registry after MDT review. Metachronous isolated lung metastases after a long disease-free interval may be resected. There is no PDAC transplant pathway.",
+   "rules": [
+    "Synchronous liver oligometastases: ≤3 liver metastases (OligoPanc working definition, relative-majority only; METAPANC ≤3 liver-only), no peritoneal or other extrahepatic disease, induction chemotherapy without progression (METAPANC: 8 cycles of mFOLFIRINOX; Heidelberg: usually ≥6 cycles with RECIST response of metastases and a marker fall), CA19-9 fall >50% to <500 U/mL (CSPAC-1), resectable primary and metastases.",
+    "Counsel: in Heidelberg, 46% were unresectable at exploration and only about 1 in 4 explored was ypM0; median survival 25.5 months (ypM0) vs 10.7 (ypM1) vs 8.1 (exploration only). Surgery ≥9 months after diagnosis did worse.",
+    "Metachronous isolated lung metastases: ≤3 (ideally solitary), unilateral, disease-free interval of about 2 years (17–28 months cited), after systemic therapy and MDT review.",
+    "Para-aortic (16b1) nodes known before surgery are systemic disease and outside the OligoPanc definition; when found at operation, do not abort resection on 16b1 alone."
+   ],
+   "why": "Survival after resection is concentrated in complete responders, and unselected resection of metastases does not help. Trial rules give the clearest selection thresholds.",
+   "evidence": [
+    {
+     "key": "pdac_hank2022",
+     "design_population": "Heidelberg, 173 explored after chemotherapy for metastatic PDAC.",
+     "selection": "RECIST PR/CR of metastases plus CA19-9 or CEA fall, usually ≥6 cycles.",
+     "results": "93 resected (45 ypM0); median survival 25.5 vs 10.7 vs 8.1 months; CA19-9 ≥400 HR 2.31; surgery ≥9 months after diagnosis HR 1.82.",
+     "limits": "Single referral centre; no intention-to-treat denominator.",
+     "locator": "Ann Surg 2022; Methods, Table 3.",
+     "read": "full"
+    },
+    {
+     "key": "pdac_oligopanc2026",
+     "design_population": "International Delphi consensus.",
+     "selection": "≤3 lesions in one organ (liver or lung) reached only relative majority (58% and 42%); systemic therapy before local treatment in synchronous disease (82%).",
+     "results": "No induction duration or response thresholds defined.",
+     "limits": "Expert opinion.",
+     "locator": "Lancet Oncol 2026; Results.",
+     "read": "full"
+    },
+    {
+     "key": "pdac_metapanc2025",
+     "design_population": "METAPANC randomized trial protocol.",
+     "selection": "≤3 liver metastases, no extrahepatic disease; 8 cycles mFOLFIRINOX; CR, PR or stable disease randomized.",
+     "results": "No results yet.",
+     "limits": "Protocol.",
+     "locator": "BMC Cancer 2025; inclusion criteria.",
+     "read": "full"
+    },
+    {
+     "key": "pdac_cspac2019",
+     "design_population": "CSPAC-1 randomized trial protocol.",
+     "selection": "≤3 liver foci; randomization requires SD/PR and CA19-9 fall >50% to <500 U/mL.",
+     "results": "No results located.",
+     "limits": "Protocol; status unknown.",
+     "locator": "BMJ Open 2019; Box 1.",
+     "read": "full"
+    },
+    {
+     "key": "pdac_dambra2025",
+     "design_population": "Meta-analysis, 6 studies, synchronous liver metastases.",
+     "selection": "Only 42% had chemotherapy before surgery; response never measured.",
+     "results": "Surgery associated with longer survival (HR 0.41); the HR 0.18 figure is a model scenario, not an observed effect.",
+     "limits": "Retrospective; misattributed coefficient in the abstract.",
+     "locator": "Eur J Surg Oncol 2025.",
+     "read": "full"
+    },
+    {
+     "key": "pdac_zhao2025",
+     "design_population": "Meta-analysis, 9 studies, 467 patients with lung metastases.",
+     "selection": "Mostly metachronous after pancreatectomy; chemotherapy before lung resection uncommon.",
+     "results": "Pooled HR 0.637 (0.531–0.764); significant publication bias; survival from pancreatectomy.",
+     "limits": "Guarantee-time bias.",
+     "locator": "Front Surg 2025.",
+     "read": "full"
+    },
+    {
+     "key": "pdac_kruger2022",
+     "design_population": "Seven German centres, 115 lung-only metastases.",
+     "selection": "Lung metastases.",
+     "results": "Metastasectomy 33.0 vs 19.0 months (n=24, unadjusted).",
+     "limits": "Retrospective.",
+     "locator": "ESMO Open 2022.",
+     "read": "full"
+    },
+    {
+     "key": "pdac_panode2026",
+     "design_population": "PANODE prospective cohort, 1,218 resections.",
+     "selection": "Station 16b1 sampled at upfront surgery.",
+     "results": "PDAC 16b1-positive median survival 10 vs 24 months (aHR 2.33); authors advise against aborting resection on 16b1 alone.",
+     "limits": "Mostly upfront surgery.",
+     "locator": "BJS Open 2026.",
+     "read": "full"
+    },
+    {
+     "key": "pdac_hackert2016",
+     "design_population": "Heidelberg, 128 M1 resections.",
+     "selection": "Not response-selected.",
+     "results": "5-year survival 8.1% (liver) and 10.1% (interaortocaval nodes).",
+     "limits": "Older era.",
+     "locator": "Eur J Surg Oncol 2016 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "pdac_gleisner2007",
+     "design_population": "Johns Hopkins, 22 synchronous hepatic resections.",
+     "selection": "Upfront.",
+     "results": "Median survival 5.9 vs 5.6 months with bypass alone.",
+     "limits": "Pre-modern chemotherapy.",
+     "locator": "Cancer 2007 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "pdac_frigerio2017",
+     "design_population": "Verona, 24 of 535 metastatic PDAC.",
+     "selection": "Disappearance of liver metastases and CA19-9 fall.",
+     "results": "R0 88%; complete pathological response 17%.",
+     "limits": "Extreme selection (4.5%).",
+     "locator": "Ann Surg Oncol 2017 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "pdac_hashimoto2026",
+     "design_population": "Japan Pancreas Society, 90 conversion operations.",
+     "selection": "Median 10.4 months of chemotherapy.",
+     "results": "Survival after conversion 39.7 months.",
+     "limits": "No non-operated denominator.",
+     "locator": "J Gastroenterol 2026 (abstract; full text pending).",
+     "read": "abstract"
+    }
+   ],
+   "counter": "Guidelines do not primarily recommend surgery for hepatic oligometastases; randomized results are pending.",
+   "certainty": "Low for response-selected liver oligometastases; low for late isolated lung metastases; very low for distant nodes.",
+   "change": "METAPANC or CSPAC-1 results.",
+   "sources": [
+    "pdac_cspac2019",
+    "pdac_dambra2025",
+    "pdac_frigerio2017",
+    "pdac_gleisner2007",
+    "pdac_hackert2016",
+    "pdac_hank2022",
+    "pdac_hashimoto2026",
+    "pdac_kruger2022",
+    "pdac_metapanc2025",
+    "pdac_oligopanc2026",
+    "pdac_panode2026",
+    "pdac_zhao2025"
+   ],
+   "read_full": 8,
+   "read_abstract": 4
+  },
+  {
+   "id": "AMP-R1",
+   "tumor": "Ampullary",
+   "setting": "roadmap",
+   "title": "Local treatment after metastatic disease responds",
+   "question": "When metastatic ampullary adenocarcinoma responds to systemic therapy, should limited liver or lung metastases be treated locally?",
+   "status": "Proposed; case by case",
+   "position": "Systemic therapy is the default for metastatic ampullary adenocarcinoma. Local therapy or surgery for limited liver or lung metastases that respond durably is a case-by-case MDT decision, extrapolated from PDAC and biliary data; there is no ampullary-specific evidence after response.",
+   "rules": [
+    "Apply the PDAC-R1 selection rules by analogy (limited sites, no progression, marker fall, complete resectability).",
+    "Isolated late lung recurrence has a better prognosis than synchronous or liver metastases.",
+    "Station 16b1 involvement found at upfront surgery is prognostically poor but is not by itself a reason to abort resection."
+   ],
+   "why": "The only registry analysis measured resection of the primary, not metastasectomy after response.",
+   "evidence": [
+    {
+     "key": "amp_wang2018",
+     "design_population": "SEER, 346 metastatic ampullary cancers.",
+     "selection": "Primary-tumor resection; no metastatic-site or response data.",
+     "results": "Matched median survival 16 vs 8 months; association strongest without chemotherapy (selection).",
+     "limits": "Cannot support metastasectomy after response.",
+     "locator": "Cancer Manag Res 2018.",
+     "read": "full"
+    },
+    {
+     "key": "pdac_panode2026",
+     "design_population": "PANODE, 212 ampullary resections.",
+     "selection": "Upfront surgery; adjuvant therapy in 4%.",
+     "results": "16b1-positive (n=7): median survival 9 vs 62 months (aHR 4.35).",
+     "limits": "Very small subgroup.",
+     "locator": "BJS Open 2026.",
+     "read": "full"
+    },
+    {
+     "key": "amp_saedon2018",
+     "design_population": "Systematic review, 16 studies.",
+     "selection": "Metastasectomy of pancreatic and periampullary cancer.",
+     "results": "Ampullary primaries and isolated pulmonary recurrence had better prognosis.",
+     "limits": "Low-quality inputs.",
+     "locator": "J BUON 2018 (abstract; full text pending).",
+     "read": "abstract"
+    },
+    {
+     "key": "amp_nccn2023",
+     "design_population": "NCCN ampullary guideline.",
+     "selection": "Systemic therapy in all stages.",
+     "results": "“Select tumors may be treated surgically.”",
+     "limits": "Guideline summary.",
+     "locator": "JNCCN 2023 (abstract; full text pending).",
+     "read": "abstract"
+    }
+   ],
+   "counter": "Evidence cannot distinguish surgery from systemic therapy alone.",
+   "certainty": "Very low.",
+   "change": "Any ampullary series of surgery after response.",
+   "sources": [
+    "amp_nccn2023",
+    "amp_saedon2018",
+    "amp_wang2018",
+    "pdac_panode2026"
+   ],
+   "read_full": 2,
+   "read_abstract": 2
+  }
+ ],
+ "not_applicable": [
+  {
+   "id": "HCA",
+   "tumor": "Hepatocellular adenoma",
+   "position": "Not applicable. HCA is benign; extrahepatic disease arises only after malignant transformation (about 3–4% in pooled series, 3.1% series-only), when the HCC route and HCC-B5 apply. The HCA pathway already requires no extrahepatic metastasis and no macrovascular invasion where transformation is confirmed.",
+   "evidence": [
+    "hca_stoot2010",
+    "hca_chiche2016"
+   ]
+  },
+  {
+   "id": "Pancreatic cysts",
+   "tumor": "Pancreatic cystic lesions",
+   "position": "Not applicable. Cystic lesions are premalignant; an invasive carcinoma with metastases is managed on the PDAC roadmap (PDAC-R1).",
+   "evidence": []
+  },
+  {
+   "id": "Incidental liver lesions",
+   "tumor": "Incidental liver lesions",
+   "position": "Different question. A previously treated extrahepatic cancer is already a risk factor in this roadmap: an indeterminate liver lesion in such a patient is worked up with MRI as a possible metastasis and routed to the matching tumor pathway.",
+   "evidence": []
+  }
+ ]
+}

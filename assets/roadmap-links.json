@@ -26,6 +26,11 @@
       {
         "when": "If progression or fitness changes the treatment goal",
         "decision": "5"
+      },
+      {
+        "when": "If extrahepatic disease is treated or completely treatable",
+        "url": "extrahepatic-disease/#CRLM-R1",
+        "label": "Previously treated extrahepatic disease (proposed)"
       }
     ],
     "3": [
@@ -135,6 +140,11 @@
       {
         "when": "If distant disease is identified",
         "decision": "6"
+      },
+      {
+        "when": "If regional nodal disease has responded and resection is considered",
+        "url": "extrahepatic-disease/#iCCA-R1",
+        "label": "Previously treated extrahepatic disease (proposed)"
       }
     ],
     "5": [
@@ -164,6 +174,11 @@
         "when": "For symptom care alongside or without cancer treatment",
         "url": "systemic/?tumor=icca#supportive",
         "label": "Best supportive care"
+      },
+      {
+        "when": "If distant disease has responded durably and surgery is raised",
+        "url": "extrahepatic-disease/#iCCA-R1",
+        "label": "Previously treated extrahepatic disease (proposed)"
       }
     ],
     "7": [
@@ -277,6 +292,11 @@
       {
         "when": "If neither curative route can be pursued",
         "decision": "5"
+      },
+      {
+        "when": "If regional, para-aortic or distant disease has responded and resection is considered",
+        "url": "extrahepatic-disease/#pCCA-R1",
+        "label": "Previously treated extrahepatic disease (proposed)"
       }
     ],
     "4": [
@@ -389,6 +409,11 @@
       {
         "when": "If liver-only unresectable disease prompts transplant assessment",
         "decision": "9"
+      },
+      {
+        "when": "If extrahepatic disease is present or has been treated",
+        "url": "extrahepatic-disease/#NELM-R1",
+        "label": "Previously treated extrahepatic disease (proposed)"
       }
     ],
     "6": [
@@ -498,6 +523,11 @@
       {
         "when": "If resection is unsuitable",
         "decision": "7"
+      },
+      {
+        "when": "If nodal or extrahepatic disease has responded and resection is considered",
+        "url": "extrahepatic-disease/#cHCC-CCA-R1",
+        "label": "Previously treated extrahepatic disease (proposed)"
       }
     ],
     "4": [
@@ -965,6 +995,11 @@
       {
         "when": "If new findings require restaging",
         "decision": "0"
+      },
+      {
+        "when": "If limited metastases respond to chemotherapy, or isolated lung metastases appear late",
+        "url": "extrahepatic-disease/#PDAC-R1",
+        "label": "Previously treated extrahepatic disease (proposed)"
       }
     ]
   },
@@ -996,6 +1031,11 @@
         "when": "If neuroendocrine liver metastases are present",
         "url": "nelm/",
         "label": "Open NELM roadmap"
+      },
+      {
+        "when": "If metastases outside the liver are present or have been treated",
+        "url": "extrahepatic-disease/#pNET-R1",
+        "label": "Previously treated extrahepatic disease (proposed)"
       }
     ],
     "3": [
@@ -1318,6 +1358,11 @@
       {
         "when": "If new findings require reassessment of extent",
         "decision": "0"
+      },
+      {
+        "when": "If limited liver or lung metastases respond durably to systemic therapy",
+        "url": "extrahepatic-disease/#AMP-R1",
+        "label": "Previously treated extrahepatic disease (proposed)"
       }
     ],
     "9": [
@@ -1398,6 +1443,11 @@
         "when": "For symptom care alongside or without cancer treatment",
         "url": "systemic/?tumor=hcc#supportive",
         "label": "Best supportive care"
+      },
+      {
+        "when": "If extrahepatic disease has responded or been treated and liver resection or ablation is considered",
+        "url": "extrahepatic-disease/#HCC-R1",
+        "label": "Previously treated extrahepatic disease (proposed)"
       }
     ],
     "D": [

@@ -33,13 +33,22 @@ const HighRisk = (() => {
   'hehe-b1':['review','Review timing and need for transplant'],
   'hehe-b2':['mixed','Initial selection and expansion limits'],
   'hca-b1':['review','Review allocation separately'],
-  'hca-b2':['review','Review the clinical indication']
+  'hca-b2':['review','Review the clinical indication'],
+  'hcc-b5':['closed','Closed · registry only'],
+  'icca-b4':['closed','Closed'],
+  'crlm-b5':['mixed','Closed · lung-only study proposed'],
+  'net-b4':['mixed','Resected nodes only, after clearance']
  };
  const ruleLabels={
   'hcc-b1':['Entry criteria','Response and reassessment','History and exclusions'],
   'hcc-b2':['Invasion level','Response and observation','Review and exclusions'],
   'hcc-b3':['Interval after immunotherapy','Immune toxicity','Exceptional review','Consent and evidence limits'],
-  'pcca-b1':['Radial tumor size','Primary-tumor biopsy','Previously malignant nodes']
+  'pcca-b1':['Radial tumor size','Primary-tumor biopsy','Previously malignant nodes','Distant or peritoneal disease'],
+  'hcc-b5':['Meaning of “no extrahepatic disease”','Nodes and resolved findings','Registry','No combination'],
+  'icca-b4':['Previous nodes or distant disease','Indeterminate nodes','Nodal staging before listing','Future research'],
+  'crlm-b5':['Default','Proposed lung-only stratum','No other relaxation','Closed sites'],
+  'net-b4':['Resected nodes','Non-surgical clearance','Solid-organ metastases','Progression and surgery'],
+  'hehe-b2':['Opening boundary','Suspicious lesions and scores','Proposed extrahepatic stratum','Closed extrahepatic sites']
  };
  const cautions={
   'hcc-b1':'Transplant benefit in selected responders does not validate the proposed combination of expanded-entry limits and observation time.',
@@ -63,12 +72,16 @@ const HighRisk = (() => {
   'hehe-b2':'Prognostic associations do not establish benefit from transplanting extrahepatic disease; explant findings cannot be assumed before transplantation.',
   'hca-b1':'Meeting an NLRB recommendation does not itself establish a clinical indication or comparative benefit from transplantation.',
   'hca-b2':'Favorable outcomes in selected recipients do not prove benefit over feasible nontransplant treatment.',
+  'hcc-b5':'One case report cannot establish safety or benefit after metastatic HCC, even with a complete response to immunotherapy.',
+  'icca-b4':'No study has tested transplantation after previously malignant nodes or treated distant disease in iCCA.',
+  'crlm-b5':'Indolent lung recurrence after transplantation does not show benefit from transplanting after treated lung metastases; direct evidence is one patient.',
+  'net-b4':'Accepting resected nodes rests on selected Milan practice; previous nodal disease still carries recurrence risk, and the solid-organ exclusion rests on guidance rather than outcome data.',
   'alloc-b1':'Clinical suitability, allocation access, donor clearance and research authorization answer separate questions.',
   'alloc-b2':'Acceptable recipient survival does not establish incremental benefit or account for the opportunity cost of graft use.',
   'alloc-b3':'Population donor-risk estimates do not predict an individual donor’s outcome or replace independent donor review.',
   'alloc-b4':'Small pilot survival estimates cannot establish efficacy or justify automatic expansion; the proposed stopping rules require independent review.'
  };
- const sourceKinds={consort_pilot:'Reporting guideline',optn:'OPTN policy',nlrb:'NLRB guidance',hhs_irb:'Research regulation',optn_ethics:'Ethics guidance',aasld:'Clinical guidance',acg_fll2024:'Clinical guideline',candidate2026:'Clinical guideline',dgvs_lt2024:'Clinical guideline',easl_benign:'Clinical guideline',ehe_consensus:'Consensus statement',enets:'Position statement',hcc_design:'Consensus statement',ihpba:'Consensus guideline',ilts:'Consensus recommendations',cirse:'Technical guidance'};
+ const sourceKinds={consort_pilot:'Reporting guideline',optn:'OPTN policy',nlrb:'NLRB guidance',hhs_irb:'Research regulation',optn_ethics:'Ethics guidance',aasld:'Clinical guidance',acg_fll2024:'Clinical guideline',candidate2026:'Clinical guideline',dgvs_lt2024:'Clinical guideline',easl_benign:'Clinical guideline',ehe_consensus:'Consensus statement',enets:'Position statement',hcc_design:'Consensus statement',ihpba:'Consensus guideline',ilts:'Consensus recommendations',cirse:'Technical guidance',crlm_seca3:'Trial registration',crlm_fukumitsu:'Study protocol'};
  const sourceKind=r=>sourceKinds[r.key]||'Published research';
  const statusLabel=anchor=>states[anchor]?.[1]||'Local review · approval pending';
  const isResearch=r=>sourceKind(r)==='Published research';
@@ -99,7 +112,7 @@ const HighRisk = (() => {
   if(r.anchor==='icca-b3')return 'Complete the proposed study, recipient-benefit and independent donor reviews before seeking activation. This proposal does not yet permit transplantation; continue appropriate nontransplant treatment and reassessment.';
   if(r.anchor==='pcca-b3')return 'Use the established center neoadjuvant protocol when clinically appropriate. Alternative regimens remain unactivated and require separate review; do not substitute them automatically.';
   if(slug==='hca')return 'Review the remaining nontransplant options with the liver team. If a clear transplant benefit is not established, agree treatment or surveillance through the standard adenoma pathway.';
-  if(['pcca-b1','crlm-b2'].includes(r.anchor))return 'These findings do not open a transplant route under this proposal. Clarify any uncertain finding, then choose another treatment or surveillance plan when transplantation remains unsuitable.';
+  if(['pcca-b1','crlm-b2','hcc-b5','icca-b4'].includes(r.anchor))return 'These findings do not open a transplant route under this proposal. Clarify any uncertain finding, then choose another treatment or surveillance plan when transplantation remains unsuitable.';
   return 'Review the findings with the transplant multidisciplinary team. A proposed expanded route requires the relevant clinical, allocation, donor and study approvals before use. Continue appropriate treatment and reassess while that decision is pending.';
  }
  function card(data,slug,r,shared=false){

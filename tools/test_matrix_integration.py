@@ -19,6 +19,12 @@ for old,new in zip(base['index'],data['index']):
   assert {k:v for k,v in a.items() if k!='issues'}=={k:v for k,v in b.items() if k!='issues'},'Standard clinical criteria changed'
   assert b['issues'][:len(a['issues'])]==a['issues']
   assert set(b['issues'][len(a['issues']):]).issubset({x['id'] for x in additions})
+# Recorded clinical revisions (tools/clinical_revisions/) may relabel an assistant option; nothing else in matching may change.
+for rev in sorted((ROOT/'tools/clinical_revisions').glob('*.json')):
+ for e in json.loads(rev.read_text())['edits']:
+  if e['op']=='replace_option':
+   o=next(o for q in base['assistants'][e['key']]['questions'] if q['id']==e['question'] for o in q['options'] if o['value']==e['value'])
+   assert o['label'].count(e['old'])==1;o['label']=o['label'].replace(e['old'],e['new'])
 assert data['assistants']==base['assistants'], 'Standard matching rules changed'
 assert all(data['sources'][k]==v for k,v in base['sources'].items()), 'An inherited source changed'
 new_sources=set(data['sources'])-set(base['sources'])

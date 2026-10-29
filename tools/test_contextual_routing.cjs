@@ -95,7 +95,18 @@ has(fixture('crlm/review'),'crlm-b4','checklist');
 absent(fixture('crlm/transplant',{plan:'no'}),'crlm-b4');
 // NET benefit, grade uncertainty, cleared versus excluded sites, age and burden.
 has(fixture('nelm/options',{}, {benefit:'symptoms'}),'net-b1','checklist');
-has(fixture('nelm/distribution',{spread:'cleared'}),'net-b2','checklist');
+has(fixture('nelm/distribution',{spread:'cleared'}),'net-b4','checklist');
+has(fixture('nelm/distribution',{spread:'solid'}),'net-b4','closed');
+absent(fixture('nelm/distribution',{spread:'solid'}),'net-b2');
+has(fixture('nelm/observation',{clearance:'recurrence'}),'net-b4','closed');
+// Previously treated extrahepatic disease has one dedicated review per tumor (29 Oct revision).
+has(fixture('crlm/map-disease',{spread:'present'}),'crlm-b5','closed');
+absent(fixture('crlm/map-disease',{spread:'present'}),'crlm-b3');
+has(fixture('hcc/curative-route',{spread:'prior'},{history:'ehd'}),'hcc-b5','closed');
+absent(fixture('hcc/curative-route',{spread:'prior'},{history:'ehd'}),'hcc-b2');
+has(fixture('hcc/curative-route',{spread:'prior'},{history:'vp12'}),'hcc-b2','review');
+has(fixture('icca/phenotype',{spread:'yes'},{ehd_history:'prior'}),'icca-b4','closed');
+absent(fixture('icca/phenotype',{spread:'yes'},{ehd_history:'none'}),'icca-b4');
 has(fixture('nelm/biology',{grade:'outside'},{grade_detail:'g3'}),'net-b2','closed');
 const discordant=fixture('nelm/biology',{grade:'outside'},{grade_detail:'discordant'});noAction(discordant);assert(discordant.result.clarify.length);assert(!discordant.result.options.some(o=>o.mode==='closed'));
 has(fixture('nelm/observation',{clearance:'short'}),'net-b2','checklist');

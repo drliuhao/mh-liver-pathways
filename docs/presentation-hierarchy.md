@@ -19,6 +19,7 @@ Use the same hierarchy on every roadmap and transplant pathway. A recent revisio
 - Default to the existing shared structure. Avoid disease-specific global cards when the content applies to one assessment.
 - Regenerate `assets/content-hierarchy-data.js` with `node tools/build_content_hierarchy.cjs`; run `node tools/test_content_hierarchy.cjs` plus the existing presentation and clinical-routing checks.
 - Check every changed decision on desktop and phone. Confirm all original reference content remains accessible and unchanged after topic switches.
+- **Cross-tumor proposed positions** (29 October 2026: previously treated extrahepatic disease) live on one page, `extrahepatic-disease/`, built by `python3 tools/build_ehd_page.py` from `tools/ehd_positions.json` and checked by `python3 tools/test_ehd_positions.py`. They are reached only from the decisions they concern: a conditional "If …" link at each roadmap decision (`assets/roadmap-links.json`, label ending "(proposed)") and the transplant high-risk review (`#high-risk-<review>`). Roadmap options and recommendations are not edited; the transplant reviews are changed only through `tools/clinical_revisions/`. No top-level menu entry.
 
 ## Compact treatment evidence
 

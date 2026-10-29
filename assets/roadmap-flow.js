@@ -3,7 +3,7 @@
  'use strict';
  const root=new URL('../',document.currentScript.src),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  let state=null,links=null,configLoaded=false;
- const configPromise=fetch(new URL('assets/roadmap-links.json?v=20261025',root)).then(r=>{if(!r.ok)throw Error('Navigation unavailable');return r.json();}).catch(()=>null);
+ const configPromise=fetch(new URL('assets/roadmap-links.json?v=20261029-ehd2',root)).then(r=>{if(!r.ok)throw Error('Navigation unavailable');return r.json();}).catch(()=>null);
  const title=s=>s.name.replace(/^\d+\s*·\s*/, '');
  function initial(stages,fallback){let id;try{id=decodeURIComponent(location.hash.replace(/^#decision-/,''));}catch{return fallback;}return location.hash.startsWith('#decision-')&&stages.some(s=>s.id===id)?id:(stages.some(s=>s.id==='A')?'A':stages[0].id);}
  function setup({slug,stages,select,topic}){
