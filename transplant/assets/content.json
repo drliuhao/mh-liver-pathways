@@ -5333,7 +5333,7 @@
             },
             {
               "value": "prior",
-              "label": "Previously treated rupture or vascular invasion",
+              "label": "Previously treated rupture, vascular invasion or extrahepatic metastasis",
               "details": []
             },
             {
@@ -10742,7 +10742,7 @@
             "context": "Consider this review when the original tumor burden exceeded UNOS downstaging entry criteria.",
             "stance": "Open a bounded prospective beyond-UNOS downstaging cohort, not an unrestricted all-comers pathway.",
             "rules": [
-              "Proposed entry ceiling: original pretreatment tumor count plus largest tumor diameter in cm ≤12; AFP <100 ng/mL; Child-Pugh A; no macrovascular invasion, extrahepatic disease or unmeasurable infiltrative tumor. These restrictions apply to the expanded arm, not to otherwise standard-eligible HCC.",
+              "Proposed entry ceiling: original pretreatment tumor count plus largest tumor diameter in cm ≤12; AFP <100 ng/mL; Child-Pugh A; no macrovascular invasion, current or previous extrahepatic disease (HCC-B5) or unmeasurable infiltrative tumor. These restrictions apply to the expanded arm, not to otherwise standard-eligible HCC.",
               "Before LT: viable tumor burden within Milan, or complete nonviability, with at least six months of documented stability from the first assessment meeting that target. Repeat liver CT/MRI and AFP at least every three months; confirmed progression holds the route and resets the study control clock after new successful downstaging.",
               "Preserve baseline measurements and AFP. A prior AFP ≥100 or Child-Pugh B/C at expanded-arm entry belongs to a separately approved stratum; do not erase that history after response. Do not combine this expansion with the portal-vein tumor invasion study."
             ],
@@ -10940,7 +10940,7 @@
             "stance": "Develop an initial Vp1–2-only transplanting study; keep Vp3 registry-first and Vp4/hepatic-vein expansion closed.",
             "rules": [
               "Proposed anatomy: original Vp1 or Vp2 only, centrally confirmed. Exclude Vp3, Vp4/main or contralateral branch, hepatic-vein tumor invasion, previous tumor rupture and combined expanded-burden risk from the initial pilot. These are study boundaries, not universal declarations of futility.",
-              "Require complete absence of enhancing viable vascular tumor, remaining viable parenchymal disease within Milan or completely nonviable, no extrahepatic disease, and ≥12 continuous months meeting these conditions. Scan approximately every three months; count from the first qualifying scan.",
+              "Require complete absence of enhancing viable vascular tumor, remaining viable parenchymal disease within Milan or completely nonviable, no current or previous extrahepatic disease (HCC-B5), and ≥12 continuous months meeting these conditions. Scan approximately every three months; count from the first qualifying scan.",
               "Any recurrent vascular enhancement or new metastasis stops progression to LT. Indeterminate thrombus or imaging discordance is a hold, not automatic clearance."
             ],
             "tests": "Original vessel-by-vessel map with Vp grade; expert serial contrast CT/MRI; chest staging; AFP; separate vascular and parenchymal response; resection options. Crosswalk the original study/anatomic vascular definition to current Vp grade. Record vascular response separately from overall mRECIST response; neither excludes microscopic viable PVTT.",
@@ -11206,6 +11206,82 @@
                 }
               ]
             }
+          },
+          {
+            "id": "HCC-B5",
+            "anchor": "hcc-b5",
+            "title": "Previously treated extrahepatic disease",
+            "status": "Closed; registry only",
+            "steps": [
+              "curative-route",
+              "allocation"
+            ],
+            "context": "Use when HCC has involved any site outside the liver (regional or distant lymph nodes, lung, adrenal, bone or peritoneum), including disease later resected, ablated, irradiated or in complete response to systemic therapy.",
+            "stance": "Keep closed. Previous extrahepatic metastasis is outside the standard pathway and every HCC high-risk cohort, even after local treatment or a complete response to immunotherapy. Record durable complete responders in a registry; this edition offers no transplant route.",
+            "rules": [
+              "“No extrahepatic disease” in HCC-B1 and HCC-B2 means no current or previous extrahepatic metastasis. Resection, ablation, radiotherapy or a complete radiological response does not clear this history.",
+              "Count proven lymph-node metastasis, including hilar or hepatoduodenal nodes, as extrahepatic disease. Enlarged hilar nodes without proof (XXL treated a short axis >2 cm as extrahepatic spread) are HOLD for characterization. A lesion later proven benign is not prior extrahepatic disease; record how it was resolved.",
+              "Enter patients with a durable complete response of extrahepatic disease in a prospective registry with dated imaging, AFP and treatment history. Proposed starting points for any future study: at least 12 months without evidence of disease off systemic therapy, current whole-body staging including bone, and the immunotherapy safety review in HCC-B3. These are not active criteria.",
+              "Do not combine with the expanded-burden (HCC-B1) or portal-vein invasion (HCC-B2) cohorts."
+            ],
+            "tests": "Complete extrahepatic history (site, pathology, dates, treatment, response); chest CT and bone imaging; AFP series; immunotherapy agents, response and last dose; how any indeterminate extrahepatic finding was resolved.",
+            "allocation": "NLRB guidance lists extrahepatic metastatic disease as a contraindication to an HCC exception score, and OPTN Policy 9.5 requires a chest CT to rule out metastatic disease and CT or MRI to rule out other extrahepatic spread. Neither addresses disease that has been cleared; any future request would be an individual narrative request with no assured outcome.",
+            "references": [
+              "ilts",
+              "nlrb",
+              "optn",
+              "xxl",
+              "hcc_mergental2012",
+              "hcc_pirozzi2025"
+            ],
+            "evidence": {
+              "synthesis": "Every HCC transplant framework reviewed requires absence of extrahepatic disease. ILTS–ILCA recommends downstaging, and immunotherapy for downstaging, only in patients without extrahepatic disease, and the XXL trial excluded extrahepatic spread, including hepatic-hilum nodes with a short axis >2 cm. Lymph-node involvement was strongly adverse after transplantation for HCC in noncirrhotic livers (HR 2.60 for death). The only published transplant after metastatic HCC is a single case report: nodal, lung and bone disease responded to nivolumab, a new liver lesion was ablated, and the recipient was free of cancer one year after transplantation.",
+              "counterevidence": "Durable complete responses to checkpoint inhibitors are now seen in advanced HCC, and the case report shows transplantation is feasible after such a response. ILTS–ILCA notes there is not yet enough evidence to say whether patients with a complete radiological response to immunotherapy still need transplantation or how long to observe them, so a permanent bar is a policy choice rather than a proven boundary. Immunosuppression could accelerate residual microscopic extrahepatic disease, which favours a registry with long observation over case-by-case transplantation.",
+              "certainty": "Very low for transplantation after previously treated or completely responded extrahepatic HCC (one case report). Moderate that current nodal or extrahepatic disease predicts poor post-transplant outcome.",
+              "threshold_basis": "The 12-month starting point mirrors the minimum 12 months of stability NLRB describes for selected candidates after ruptured HCC or primary portal-vein branch invasion, and the ILTS–ILCA 12-month observation after downstaging of Vp1–2 invasion. It is not derived from extrahepatic-disease data.",
+              "studies": [
+                {
+                  "key": "ilts",
+                  "design_population": "2024 ILTS–ILCA Delphi consensus with external review.",
+                  "selection": "Downstaging is recommended for patients beyond local criteria without extrahepatic disease and without portal-vein macrovascular invasion; immunotherapy might be used for downstaging in patients without extrahepatic disease, within trials. For Vp1–2 invasion, a minimum 12-month observation after downstaging may allow assessment of tumour biology.",
+                  "results": "No statement supports transplantation after extrahepatic disease. The text notes insufficient evidence on whether complete radiological responders to immunotherapy still need transplantation or how long to observe them.",
+                  "limits": "Expert consensus; the immunotherapy statements carry weak grades.",
+                  "locator": "Liver Transpl 2025 and Liver Cancer 2026 (PMC13271748); HCC working-group statements."
+                },
+                {
+                  "key": "nlrb",
+                  "design_population": "Official OPTN/NLRB guidance: Adult MELD Exceptions for Transplant Oncology.",
+                  "selection": "Contraindications to an HCC exception score: macrovascular invasion of the main portal or hepatic vein, extrahepatic metastatic disease, ruptured HCC and T1 HCC. Some candidates stable for a minimum of 12 months may be considered despite rupture or primary portal-vein branch invasion.",
+                  "results": "Allocation guidance; no outcome data.",
+                  "limits": "Silent on previously cleared extrahepatic disease.",
+                  "locator": "Official PDF, HCC section."
+                },
+                {
+                  "key": "xxl",
+                  "design_population": "Randomized trial of transplantation after successful downstaging of HCC beyond Milan criteria.",
+                  "selection": "Main tumour-related exclusions: extrahepatic spread on CT or MRI, hepatic-hilum lymph nodes with short axis >2 cm, and portal-vein tumour thrombosis or invasion.",
+                  "results": "Five-year overall survival 77.5% with transplantation versus 31.2% without, from randomization.",
+                  "limits": "Excluded the population of interest; its benefit cannot be extrapolated to previous extrahepatic disease.",
+                  "locator": "Lancet Oncol 2020; Methods (exclusion criteria) and protocol appendix."
+                },
+                {
+                  "key": "hcc_mergental2012",
+                  "design_population": "European Liver Transplant Registry: 105 recipients with unresectable HCC in noncirrhotic livers.",
+                  "selection": "Transplantation as primary treatment (62) or for intrahepatic recurrence after resection (43).",
+                  "results": "Lymph-node involvement (HR 2.60) and macrovascular invasion (HR 2.55) were independently associated with death; five-year survival 59% without either.",
+                  "limits": "Noncirrhotic population; nodal status as recorded by centres, not previously treated nodal disease.",
+                  "locator": "J Hepatol 2012; abstract."
+                },
+                {
+                  "key": "hcc_pirozzi2025",
+                  "design_population": "Single case report.",
+                  "selection": "Advanced HCC with abdominal and mediastinal nodes, lung and bone metastases in alcohol-related cirrhosis; nivolumab for about 17 months with partial response; a new liver lesion ablated with complete response; transplantation 10 months later.",
+                  "results": "Free of cancer one year after transplantation.",
+                  "limits": "One patient with short follow-up; the authors caution that immunosuppression may facilitate progression of extrahepatic disease.",
+                  "locator": "J Gastrointest Oncol 2025; case presentation."
+                }
+              ]
+            }
           }
         ],
         "documents": [
@@ -11229,14 +11305,15 @@
               "phenotype",
               "staging"
             ],
-            "context": "Review exact radial size, the route of any primary-tumor biopsy, and the full nodal history. These proposed expansions remain closed.",
-            "stance": "Keep size expansion, primary transperitoneal-biopsy exposure and cleared malignant nodes as three separate closed transplant strata.",
+            "context": "Review exact radial size, the route of any primary-tumor biopsy, and the full nodal history. These proposed expansions remain closed. Distant or peritoneal disease at any time ends the route.",
+            "stance": "Keep size expansion, primary transperitoneal-biopsy exposure and cleared malignant nodes as three separate closed transplant strata. Distant or peritoneal metastasis, even after response, ends the transplant route.",
             "rules": [
               "For the conventional standardized-exception mass criterion, retain a single mass <3.0 cm in radial diameter. Exactly 3.0 cm is not rounded down; obtain central measurement review. Do not activate a 3–5 cm expansion.",
               "Exclude any prior transperitoneal primary-tumor biopsy exposure from the initial transplanting study. Record trajectory and whether pathology was positive, negative or nondiagnostic; this is a conservative selection rule, not proof of dissemination in every exposed patient.",
-              "Exclude previously proven malignant nodes from the initial transplant cohort even after radiographic/pathologic clearance. Nodal EUS sampling that does not traverse the primary is distinct from primary-tumor biopsy. Do not combine these excluded categories in one expansion cohort."
+              "Exclude previously proven malignant nodes from the initial transplant cohort even after radiographic/pathologic clearance. Nodal EUS sampling that does not traverse the primary is distinct from primary-tumor biopsy. Do not combine these excluded categories in one expansion cohort.",
+              "Distant or peritoneal metastasis, or nodal disease beyond the regional field, found at any time (including at operative staging) ends the transplant route for this protocol, even after response to chemoradiation or chemotherapy. There is no proposed stratum."
             ],
-            "tests": "Original MRI/MRCP or CT with perpendicular radial measurement; full biopsy reports/needle trajectory; node station and original pathology; operative staging plan; resection assessment. Record whether EUS sampled a regional node or traversed the primary mass, the route, pathology result and date. These are not equivalent exposures.",
+            "tests": "Original MRI/MRCP or CT with perpendicular radial measurement; full biopsy reports/needle trajectory; node station and original pathology; operative staging plan; resection assessment. Record whether EUS sampled a regional node or traversed the primary mass, the route, pathology result and date. These are not equivalent exposures. Record any distant or peritoneal finding at staging with its pathology.",
             "allocation": "Clinical review, standardized exception eligibility and research expansion are separate. A favorable response or living donor does not erase the original size/biopsy/node history.",
             "references": [
               "optn",
@@ -11245,11 +11322,12 @@
               "pcca_murad_predictors",
               "pcca_aveson",
               "soliman",
-              "pcca_dong"
+              "pcca_dong",
+              "cca_wong2019"
             ],
             "evidence": {
-              "synthesis": "Size, biopsy exposure and nodal biology must remain separate. Larger-mass LT has directly unfavorable recurrence data. Biopsy evidence is conflicting across settings, so the mechanism is plausible and current policy is restrictive, but an inevitable-seeding claim is unjustified. No reviewed study validates a cleared-node rescue stratum. Imaging-negative nodes do not equal pathological clearance.",
-              "counterevidence": "Aveson challenges a universal causal inference from Heimbach. Absence of PM in nine negative TP-FNA cases does not establish safety. Soliman's occult-node recipients do not validate deliberate nodal expansion. The exact 3.0-cm boundary is a current policy boundary, not a biological discontinuity proven by these studies.",
+              "synthesis": "Size, biopsy exposure and nodal biology must remain separate. Larger-mass LT has directly unfavorable recurrence data. Biopsy evidence is conflicting across settings, so the mechanism is plausible and current policy is restrictive, but an inevitable-seeding claim is unjustified. No reviewed study validates a cleared-node rescue stratum. Imaging-negative nodes do not equal pathological clearance. Operative staging is where most of this disease is found: in the Mayo series, 36 of 199 patients left the protocol with metastases found at staging (regional nodes 14, intrahepatic 6, extrahepatic 16).",
+              "counterevidence": "Aveson challenges a universal causal inference from Heimbach. Absence of PM in nine negative TP-FNA cases does not establish safety. Soliman's occult-node recipients do not validate deliberate nodal expansion. One prospective pilot admitted regional lymphadenopathy in locally advanced hilar and intrahepatic cholangiocarcinoma; five of 18 reached transplantation and one had an isolated portacaval nodal recurrence at 12 months. It did not require nodes to be proven malignant and cannot validate a cleared-node stratum. The exact 3.0-cm boundary is a current policy boundary, not a biological discontinuity proven by these studies.",
               "certainty": "Moderate confidence that conventional selection yields better observed outcomes; low certainty for causal effects of size and biopsy; very low/no direct evidence for a previously positive-node clearance pathway.",
               "threshold_basis": "POLICY: OPTN 9.5. A specifies radial mass < 3 cm, unresectability, NAT and staging; primary TP-biopsy must be avoided. STUDY: >3 cm associated with lower RFS; positive TP-FNA associated with PM in a very small LT cohort. LOCAL: closing all prior-biopsy and cleared-node strata is a conservative first-study choice, not proof of universal futility.",
               "studies": [
@@ -11265,7 +11343,7 @@
                   "key": "pcca_murad_predictors",
                   "design_population": "Mayo 1993–2010; 199 protocol entrants, 62 dropouts, 131 local LT and six elsewhere.",
                   "selection": "Localized unresectable disease; historical size definitions were not identical to current policy.",
-                  "results": "Dropout predictors included >3-cm mass (adjusted HR 2.14, 95% CI 1.08–4.24), CA19-9≥ 500 (HR 2.29), positive/suspicious intraluminal sampling (HR 3.63) and MELD ≥ 20 (HR 3.48). Local recipients had 26 recurrences; 5-year OS 71%, RFS 68% from LT.",
+                  "results": "Dropout predictors included >3-cm mass (adjusted HR 2.14, 95% CI 1.08–4.24), CA19-9≥ 500 (HR 2.29), positive/suspicious intraluminal sampling (HR 3.63) and MELD ≥ 20 (HR 3.48). Of 62 dropouts, 36 had metastases found at operative staging (regional nodes 14, intrahepatic 6, extrahepatic 16). Local recipients had 26 recurrences; 5-year OS 71%, RFS 68% from LT.",
                   "limits": "Strong overlap with Murad multicenter and Heimbach cohorts; not independent replication. These are prognostic associations, not validated universal exclusion thresholds.",
                   "locator": "Hepatology 2012; 56: 972–981; Tables 2–3 and Transplantation/Recurrence sections."
                 },
@@ -11300,6 +11378,14 @@
                   "results": "Dropouts included 15 with regional nodal metastases and 34 with distant metastases; three medical deterioration.",
                   "limits": "Provides the consequence of detecting nodes, not outcomes of clearing them and transplanting. Overlaps historical Mayo cohorts.",
                   "locator": "Hepatology 2026; institutional protocol, patient-flow Figure 1 and Results; local full PDF."
+                },
+                {
+                  "key": "cca_wong2019",
+                  "design_population": "Prospective pilot of neoadjuvant therapy before transplantation for locally advanced hilar and intrahepatic cholangiocarcinoma; 18 started treatment.",
+                  "selection": "Hilar ≤3.5 cm or intrahepatic ≤8 cm; regional lymphadenopathy allowed, distant metastasis excluded.",
+                  "results": "Eleven of 18 dropped out; five transplanted, three recurrence-free at 14.5–29.2 months, one isolated portacaval nodal recurrence at 12 months.",
+                  "limits": "Mixed tumour types and tiny numbers; lymphadenopathy not necessarily proven malignant.",
+                  "locator": "J Surg Res 2019; abstract."
                 }
               ]
             }
@@ -11486,7 +11572,7 @@
             "stance": "Keep the small-cirrhotic pathway separate; define the initial advanced study by pure, favorable-grade, localized morphology rather than an invented size cap.",
             "rules": [
               "Proposed advanced entry phenotype: pure iCCA, G1–2, one mass-forming focus with or without adjacent peritumoral satellites; no separate multifocal deposits across distinct segments. No universal 8 cm/three-lesion rule is adopted.",
-              "Exclude known G3/poor differentiation, mixed HCC-iCCA, macroscopic tumor thrombus, proven malignant nodes, peritoneal or other extrahepatic disease from the initial advanced pilot. Negative core sampling cannot guarantee the whole tumor grade; record this limitation.",
+              "Exclude known G3/poor differentiation, mixed HCC-iCCA, macroscopic tumor thrombus, proven malignant nodes, peritoneal or other extrahepatic disease, current or previously treated (iCCA-B4), from the initial advanced pilot. Negative core sampling cannot guarantee the whole tumor grade; record this limitation.",
               "Intrahepatic vascular encasement without tumor thrombus may be considered if complete explant/reconstruction is technically feasible. Larger size needs individualized technical/biological review, not an automatic permission.",
               "Do not apply the advanced-study mixed-histology exclusion to the separate NLRB small-cirrhotic route. Preserve ≤3 cm guidance wording and flag the exactly-3.0 cm clinical discrepancy with <3 cm candidate-evaluation prose."
             ],
@@ -11751,6 +11837,99 @@
                 }
               ]
             }
+          },
+          {
+            "id": "iCCA-B4",
+            "anchor": "icca-b4",
+            "title": "Previously treated nodal or extrahepatic disease",
+            "status": "Closed",
+            "steps": [
+              "phenotype",
+              "stability"
+            ],
+            "context": "Use when iCCA has involved regional lymph nodes or any site outside the liver, including disease that later responded to chemotherapy or was resected or irradiated.",
+            "stance": "Keep closed. Proven malignant nodes or extrahepatic disease, current or previously treated, exclude the small-cirrhotic route and the advanced-iCCA study. Confirm node-negative status pathologically before listing.",
+            "rules": [
+              "Previously proven malignant regional nodes, even after radiological or pathological response, and any previous distant metastasis (peritoneum, lung, bone, distant nodes) are outside the initial iCCA routes. Resection of an extrahepatic site does not clear this history.",
+              "Suspicious or indeterminate nodes are HOLD until resolved pathologically; an imaging response is not nodal clearance.",
+              "Proposed for the advanced-iCCA study: before listing, sample any suspicious node (EUS-FNA or surgical) and sample the common hepatic artery (station 8) and hepatoduodenal ligament (station 12) nodes surgically; a positive result ends the transplant route. Perform regional lymphadenectomy at transplantation.",
+              "Previously node-positive disease that has cleared is a separate future research question; do not combine it with multifocal, G3 or living-donor expansions."
+            ],
+            "tests": "Original and current nodal imaging with a station map; nodal pathology (EUS-FNA, operative sampling) with dates; chest CT and PET or whole-body staging; CA19-9 series; pre-listing operative staging report.",
+            "allocation": "NLRB small-cirrhotic iCCA guidance requires no extrahepatic disease before the initial request and before each extension. Advanced iCCA has no standardized exception; any route would be an approved study, often with a living donor, and previous nodal or extrahepatic disease is not proposed for either.",
+            "references": [
+              "ilts",
+              "mcmillan",
+              "icca_maspero2024",
+              "icca_giguet",
+              "cca_malikowski2020",
+              "cca_wong2019",
+              "nlrb"
+            ],
+            "evidence": {
+              "synthesis": "Published transplant programs for iCCA require liver-limited disease. ILTS–ILCA limits transplantation to cirrhotic tumours ≤3 cm without extrahepatic metastasis, or to unresectable, liver-confined disease within investigational protocols in non-cirrhotic livers; the Houston program delisted patients for extrahepatic progression. The Milan protocol explicitly excludes previously resected extrahepatic tumour spread. Programs that stage nodes surgically before listing remove node-positive patients: in Milan, 2 of 13 were node-positive at pre-listing exploration and 4 developed extrahepatic disease, while all four transplanted patients were disease-free at 8–73 months; Rennes sampled stations 8 and 12 laparoscopically before listing. Malignant regional nodes found by EUS were associated with death (HR 4.1) across cholangiocarcinoma subtypes.",
+              "counterevidence": "One prospective pilot admitted regional lymphadenopathy in locally advanced hilar and intrahepatic cholangiocarcinoma: 5 of 18 reached transplantation, three were recurrence-free at 14.5–29.2 months and one had an isolated portacaval nodal recurrence at 12 months. It combined tumour types and did not require nodes to be proven malignant, so it cannot establish a cleared-node pathway, but it shows that a small subset can reach transplantation.",
+              "certainty": "Low that liver-confined disease after sustained response selects better recipients; very low for transplantation after previously malignant nodes; no evidence for previously treated distant disease.",
+              "threshold_basis": "Surgical sampling of stations 8 and 12 before listing follows the Milan and Rennes protocols; it is a proposed local requirement for the advanced study, not national guidance. Excluding previously resected extrahepatic spread follows Milan; NLRB requires no extrahepatic disease at the initial request and extension.",
+              "studies": [
+                {
+                  "key": "ilts",
+                  "design_population": "2024 ILTS–ILCA Delphi consensus with external review.",
+                  "selection": "Cirrhotic, unresectable iCCA ≤3 cm: transplantation may be considered after a period of stability and without extrahepatic metastasis. Non-cirrhotic: only within investigational protocols for unresectable, liver-confined disease after at least six months of stability.",
+                  "results": "No statement addresses previously treated nodal or extrahepatic disease.",
+                  "limits": "Expert consensus.",
+                  "locator": "Liver Transpl 2025 and Liver Cancer 2026 (PMC13271748); iCCA statements."
+                },
+                {
+                  "key": "mcmillan",
+                  "design_population": "Houston prospective neoadjuvant program for locally advanced unresectable iCCA; 32 listed, 18 transplanted.",
+                  "selection": "Six-month gemcitabine-based induction with stability and no extrahepatic disease; extrahepatic progression prompted delisting.",
+                  "results": "Five-year overall survival 57% from listing in the recipient subgroup; seven of 18 recurred.",
+                  "limits": "Single program; previous nodal or extrahepatic disease was not studied.",
+                  "locator": "Am J Transplant 2022; Methods and Results."
+                },
+                {
+                  "key": "icca_maspero2024",
+                  "design_population": "Prospective intention-to-treat protocol (Milan): 13 patients with unresectable iCCA treated with chemotherapy and radioembolization.",
+                  "selection": "Inclusion: no lymphatic or extrahepatic spread. Exclusion: prior resected extrahepatic tumour spread. Surgical sampling of stations 8 and 12 before listing; extrahepatic progression or positive nodal sampling ended the protocol.",
+                  "results": "Nine of 13 dropped out (3 progression, 4 extrahepatic disease, 2 positive nodes at pre-listing exploration); all four transplanted patients were alive and disease-free at 8–73 months.",
+                  "limits": "Small single-centre series.",
+                  "locator": "Transpl Int 2024; Methods (criteria) and Results."
+                },
+                {
+                  "key": "icca_giguet",
+                  "design_population": "Retrospective Rennes series after neoadjuvant chemotherapy and SIRT; six transplanted.",
+                  "selection": "Laparoscopic sampling of station 8 (common hepatic artery) and station 12 (hepatoduodenal ligament) nodes before listing; diffuse multifocal disease, macrovascular invasion and extrahepatic disease excluded.",
+                  "results": "Five-year overall survival 100% and progression-free survival 44.4% after transplantation; three of six recurred.",
+                  "limits": "Six recipients; retrospective.",
+                  "locator": "JHEP Rep 2026; Methods."
+                },
+                {
+                  "key": "cca_malikowski2020",
+                  "design_population": "Single-centre EUS staging cohort: 157 cholangiocarcinoma patients (24 intrahepatic).",
+                  "selection": "Consecutive EUS staging; malignant regional nodes preclude resection or transplantation at this centre.",
+                  "results": "EUS identified regional nodes more often than cross-sectional imaging (iCCA 83% versus 50%); malignant nodes in 4 of 24 with iCCA; a malignant node was associated with death (HR 4.1).",
+                  "limits": "Single centre; mostly perihilar disease.",
+                  "locator": "Hepatology 2020; abstract."
+                },
+                {
+                  "key": "cca_wong2019",
+                  "design_population": "Prospective pilot of neoadjuvant therapy before transplantation for locally advanced hilar and intrahepatic cholangiocarcinoma; 18 started treatment.",
+                  "selection": "Hilar ≤3.5 cm or intrahepatic ≤8 cm; regional lymphadenopathy allowed, distant metastasis excluded.",
+                  "results": "Eleven of 18 dropped out; five transplanted, three recurrence-free at 14.5–29.2 months, one isolated portacaval nodal recurrence at 12 months; all dropouts died (median 14.4 months from diagnosis).",
+                  "limits": "Mixed tumour types and tiny numbers; lymphadenopathy not necessarily proven malignant.",
+                  "locator": "J Surg Res 2019; abstract."
+                },
+                {
+                  "key": "nlrb",
+                  "design_population": "Official OPTN/NLRB guidance: Adult MELD Exceptions for Transplant Oncology.",
+                  "selection": "Small-cirrhotic iCCA: six months of stability with no new lesions or extrahepatic disease before applying; no extrahepatic disease before extending the exception.",
+                  "results": "Allocation guidance; no outcome data.",
+                  "limits": "Applies to the small-cirrhotic route only.",
+                  "locator": "Official PDF, iCCA section."
+                }
+              ]
+            }
           }
         ],
         "documents": [
@@ -11924,16 +12103,16 @@
           {
             "id": "CRLM-B3",
             "anchor": "crlm-b3",
-            "title": "Molecular findings and previous extrahepatic disease",
+            "title": "Molecular findings and other initial limits",
             "status": "Initial expansion limits",
             "steps": [
               "biology",
               "clocks"
             ],
-            "context": "Review molecular markers, CEA, primary-tumor clearance, and any previous disease outside the liver.",
-            "stance": "Do not open molecular/extrahepatic expansions initially; permit KRAS-mutant disease when all other selected criteria are met.",
+            "context": "Review molecular markers, CEA, primary-tumor margins and treatment timing. Previous extrahepatic disease has its own review (CRLM-B5).",
+            "stance": "Do not open molecular expansions initially; permit KRAS-mutant disease when all other selected criteria are met. Previous extrahepatic disease follows CRLM-B5.",
             "rules": [
-              "Initial proposed exclusions: BRAF-mutant disease, MSI-H/dMMR disease, R1 primary margins, prior post-primary extrahepatic metastases, pretreatment liver lesion >10 cm, or progression despite treatment. Preserve these as separate research questions; do not combine several relaxations.",
+              "Initial proposed exclusions: BRAF-mutant disease, MSI-H/dMMR disease, R1 primary margins, pretreatment liver lesion >10 cm, or progression despite treatment. Previous extrahepatic disease is addressed separately in CRLM-B5. Preserve these as separate research questions; do not combine several relaxations.",
               "Proposed CEA requirement: strictly <80 ng/mL, including initial activation. Repeat a borderline/unexpected result and review the trajectory; a falling value still ≥80 does not clear this local rule.",
               "Require ≥6 months of documented control and the applicable ≥12-month CRLM-diagnosis interval. Report ordinary RECIST separately from the NLRB >10% wording; new lesions or concerning growth are HOLD pending central measurement review.",
               "Confirmed progression resets the proposed six-month control clock after subsequent effective treatment; one improved scan is insufficient. Use the actual application imaging/CEA windows. Do not delay indicated primary surgery to manufacture eligibility."
@@ -12104,6 +12283,144 @@
                 }
               ]
             }
+          },
+          {
+            "id": "CRLM-B5",
+            "anchor": "crlm-b5",
+            "title": "Previously treated extrahepatic disease",
+            "status": "Closed; lung-only study stratum proposed",
+            "steps": [
+              "map-disease",
+              "restaging"
+            ],
+            "context": "Use when colorectal cancer has involved any site outside the liver (after primary resection, removed together with the primary, or as local relapse), including disease later resected, ablated, irradiated or in response to treatment.",
+            "stance": "Keep previously treated extrahepatic disease closed in the initial CRLM pathway. Propose one narrow study stratum for limited, completely treated lung-only metastases; every other site stays closed.",
+            "rules": [
+              "Default: extrahepatic metastasis after primary resection (including nodes outside the primary resection field), extrahepatic metastasis removed with the primary, and local relapse are outside the initial pathway, even after resection, ablation, radiotherapy or complete response. Response to systemic therapy alone never counts as clearance.",
+              "Proposed lung-only study stratum (not active; needs its own protocol, institutional and IRB approval, and a living-donor or individually reviewed allocation route): pulmonary metastases only, at most three lesions in total, each completely treated with curative intent (R0 resection preferred; stereotactic radiotherapy or ablation only with documented local control), no thoracic nodal involvement on pathology or PET-CT, and no recurrence outside the liver for ≥12 months after the last lung treatment.",
+              "The stratum adds no other relaxation: every CRLM-B3 limit still applies (BRAF wild type, MSS/pMMR, R0 primary, CEA <80 ng/mL, no pretreatment liver lesion >10 cm, documented disease control), and chest CT and PET-CT within one month show no disease outside the liver. Do not combine it with another expansion.",
+              "Closed, with no proposed stratum: nodal disease outside the primary resection field; peritoneal, ovarian, adrenal, bone, brain or other non-lung sites; local relapse; more than three lung lesions; thoracic nodal involvement; or recurrence after lung treatment. A new or indeterminate extrahepatic lesion during evaluation or on the waiting list is HOLD for characterization and restaging; it does not enter the stratum."
+            ],
+            "tests": "Dated history of every extrahepatic site: imaging, operative and pathology reports, radiotherapy or ablation records and margins; thoracic nodal status; number and size of lung lesions; interval from primary resection to lung disease and from the last lung treatment to evaluation; chest CT and PET-CT within one month; dated CEA series.",
+            "allocation": "NLRB guidance excludes extrahepatic disease after primary tumor resection (including lymphadenopathy outside the primary lymph-node resection) and local relapse from an initial CRLM MELD exception, and requires no development of extrahepatic disease for extension. A standardized deceased-donor exception is therefore not available. The lung-only stratum would need living-donor transplantation within an approved study or an individual NLRB request that states the deviation; this proposal implies neither.",
+            "references": [
+              "nlrb",
+              "ihpba",
+              "transmet",
+              "armd",
+              "crlm_hagness_recur",
+              "crlm_grut2018",
+              "crlm_dueland_lung",
+              "crlm_seca3",
+              "crlm_fukumitsu",
+              "pulmicc",
+              "crlm_salah2014",
+              "crlm_hwang"
+            ],
+            "evidence": {
+              "synthesis": "Lung-limited colorectal metastasis is the most indolent extrahepatic pattern, and the transplant experience points the same way. On review of pre-transplant chest CT in SECA-I, 7 of 21 recipients already had pulmonary nodules, without an effect on survival. Lung metastases after transplantation grew no faster than in non-transplanted controls (median doubling time 125 versus 130 days), and the 14 Oslo recipients whose lung recurrence was resected had 64.5% ten-year survival from lung resection. IHPBA recommends resection of isolated pulmonary recurrence after transplantation. Newer protocols admit limited, treated lung disease: SECA-III excludes only recent resection of non-hepatic metastases, and a Japanese living-donor study accepts up to three treated lung metastases without recurrence for more than six months. This supports studying a lung-only stratum, not opening it.",
+              "counterevidence": "Direct evidence is one patient. In SECA-II arm D, the recipient whose lung metastasis had been resected eight years earlier was recurrence-free at 23 months, but the arm overall did poorly (median DFS 4 months, OS 18 months) because several adverse features were combined. IHPBA states there is no evidence to support transplantation in patients who present with or subsequently develop extrahepatic metastases; TransMet excluded prior or current extrahepatic disease and local recurrence; and NLRB excludes post-resection extrahepatic disease. In PulMiCC, lung metastasectomy did not clearly improve survival (HR 0.93, 95% CI 0.56–1.56), so successful lung treatment may select favourable biology rather than cure it. After liver resection, nodal and peritoneal extrahepatic disease had markedly shorter survival than lung disease (median 26 and 29 versus 45 months).",
+              "certainty": "Very low for transplantation after previously treated extrahepatic disease (one reported recipient); low for the indirect inference that lung-limited disease behaves indolently after transplantation; no transplant evidence for previous nodal, peritoneal or other sites.",
+              "threshold_basis": "At most three lung lesions follows the Japanese living-donor protocol. Twelve months without recurrence after lung treatment sits between that protocol (more than six months) and SECA-III, which excludes resection of non-hepatic metastases within the last two years and of pulmonary or liver-hilum lymph-node metastases within the last year. Excluding thoracic nodal involvement reflects its strong adverse effect after lung metastasectomy in patients with previously resected liver metastases (HR 4.86). None of these limits has been tested in transplant recipients.",
+              "studies": [
+                {
+                  "key": "transmet",
+                  "design_population": "Multicentre randomized trial of liver transplantation plus chemotherapy versus chemotherapy alone; 94 randomized.",
+                  "selection": "Required no extrahepatic disease and excluded prior or current extrahepatic disease and local recurrence.",
+                  "results": "Five-year overall survival 56.6% versus 12.6% by intention to treat (HR 0.37).",
+                  "limits": "Provides no data on patients with previous extrahepatic disease; its benefit cannot be extrapolated to them.",
+                  "locator": "Lancet 2024; eligibility criteria in Methods."
+                },
+                {
+                  "key": "ihpba",
+                  "design_population": "2021 international Delphi consensus on transplantation for non-resectable colorectal liver metastases.",
+                  "selection": "Statement 9: there is no evidence to support transplantation in patients who initially present with or subsequently develop extrahepatic or extracolonic metastases. Statements 10–12: high-resolution chest CT and FDG PET-CT to rule out extrahepatic disease; nodal sampling when suspicion is high and PET is inconclusive.",
+                  "results": "Statement 41: isolated pulmonary recurrence after transplantation should be considered for resection. The text notes that many lung recurrences were retrospectively visible at transplantation and do not grow faster under immunosuppression.",
+                  "limits": "Expert consensus. It treats extrahepatic disease as a sign of disseminated disease and does not separately address completely treated lung-only disease.",
+                  "locator": "Lancet Gastroenterol Hepatol 2021;6:933–946; statements 9–12 and 41, recurrence discussion."
+                },
+                {
+                  "key": "armd",
+                  "design_population": "Prospective SECA-II arm D expanded-criteria cohort; ten recipients.",
+                  "selection": "Unlike SECA-I and SECA-II, patients with resectable pulmonary metastases or previous resection of pulmonary metastases were eligible. One recipient had a pulmonary metastasis resected eight years before transplantation (node-negative sigmoid primary, at most two liver metastases).",
+                  "results": "Only two of ten were recurrence-free (23 and 26 months); one was the recipient with the previously resected lung metastasis. Overall median DFS 4 months and OS 18 months; the lung was the first relapse site in six.",
+                  "limits": "One relevant patient within a cohort that combined several adverse biological, anatomical and donor features; it cannot estimate the effect of prior lung disease.",
+                  "locator": "BJS Open 2020;4:467–477; Methods, Table 2 (patient 1) and Discussion."
+                },
+                {
+                  "key": "crlm_hagness_recur",
+                  "design_population": "Prospective SECA-I cohort, 21 recipients; recurrence-pattern analysis with re-review of pre-transplant chest CT.",
+                  "selection": "Liver-only disease was required at inclusion.",
+                  "results": "Thirteen of 16 single-site first recurrences were pulmonary; they appeared early, grew slowly and several were resectable. Seven recipients had pulmonary nodules on pre-transplant CT, without an effect on survival.",
+                  "limits": "Small single-centre cohort; nodules were found retrospectively, not treated before transplantation.",
+                  "locator": "Ann Surg Oncol; abstract and Results."
+                },
+                {
+                  "key": "crlm_grut2018",
+                  "design_population": "Case–control imaging study: 11 SECA recipients with 18 resected lung metastases versus 12 non-transplanted rectal cancer controls.",
+                  "selection": "Lung metastases arising after transplantation.",
+                  "results": "Median tumour-volume doubling time 125 versus 130 days by diameter; five-year overall survival after first pulmonary resection 51% in the transplant group.",
+                  "limits": "Small selected groups; addresses growth after transplantation, not eligibility after previous lung disease.",
+                  "locator": "Br J Surg; abstract."
+                },
+                {
+                  "key": "crlm_dueland_lung",
+                  "design_population": "Oslo cohort: 14 of 55 recipients whose first relapse was pulmonary and treated by resection.",
+                  "selection": "Pre-transplant liver PET metabolic tumour volume (MTV) used for stratification.",
+                  "results": "Ten-year overall survival from lung resection 64.5%; 85.7% with MTV <70 cm³ versus 25.0% above. Eight had no evidence of disease 7–131 months after lung resection.",
+                  "limits": "Post-transplant recurrence in a small selected group; does not test transplantation after treated lung disease.",
+                  "locator": "Cancers 2022;14:5042; Results."
+                },
+                {
+                  "key": "crlm_seca3",
+                  "design_population": "Oslo randomized trial of transplantation versus chemotherapy or other treatment after progression on, or intolerance of, first-line chemotherapy; target 30.",
+                  "selection": "Allows resectable lung lesions, all <15 mm. Excludes previous resection of local relapse or non-hepatic metastasis within the last 2 years or resection of pulmonary or liver hilus lymph node metastases in the last year, and previously diagnosed bone, CNS or thoracic/abdominal nodal metastases.",
+                  "results": "Recruiting; no results posted.",
+                  "limits": "Registry wording for a different population (progression on first-line therapy); eligibility may change.",
+                  "locator": "ClinicalTrials.gov NCT03494946, eligibility criteria (current version)."
+                },
+                {
+                  "key": "crlm_fukumitsu",
+                  "design_population": "Japanese multicentre single-arm living-donor transplantation protocol (11 university hospitals; target 23).",
+                  "selection": "No distant metastasis except the liver, but patients with no more than three lung metastases and no recurrence for more than six months after treatment are eligible; RAS and BRAF mutations are not exclusions; central eligibility review.",
+                  "results": "Protocol only; outcomes not yet reported.",
+                  "limits": "The authors describe the criteria as relatively broad; no control arm.",
+                  "locator": "BMJ Open 2024; eligibility criteria and strengths/limitations."
+                },
+                {
+                  "key": "pulmicc",
+                  "design_population": "Randomized trial of pulmonary metastasectomy versus no metastasectomy; 93 randomized at 14 hospitals.",
+                  "selection": "One to six resectable lung metastases at a median 2.7 years after colorectal resection; 29% had prior liver metastasectomy.",
+                  "results": "Median survival 3.5 years with metastasectomy versus 3.8 years without; hazard ratio for death within five years 0.93 (95% CI 0.56–1.56).",
+                  "limits": "Small and underpowered; not a transplant population.",
+                  "locator": "Colorectal Dis 2020; abstract."
+                },
+                {
+                  "key": "crlm_salah2014",
+                  "design_population": "Pooled individual-patient analysis of 146 patients undergoing pulmonary metastasectomy after previous curative liver resection (five studies).",
+                  "selection": "Lung metastases detected a median 23 months after liver resection.",
+                  "results": "Five-year overall survival 54.4% and recurrence-free survival 29.3% from lung resection; thoracic lymph-node involvement was the only independent adverse factor (HR 4.86, 95% CI 1.56–15.14).",
+                  "limits": "Retrospective selected surgical series; not transplant recipients.",
+                  "locator": "Ann Surg Oncol; abstract."
+                },
+                {
+                  "key": "crlm_hwang",
+                  "design_population": "Systematic review of liver resection for CRLM with extrahepatic disease: 50 studies, 3481 patients.",
+                  "selection": "Hepatic resection in the presence of extrahepatic disease; heterogeneous timing and treatment.",
+                  "results": "Median survival by extrahepatic site: lung 45 months, portal or para-aortic nodes 26 months, peritoneum 29 months.",
+                  "limits": "Non-transplant, heterogeneous observational studies.",
+                  "locator": "Eur J Cancer 2014; abstract."
+                },
+                {
+                  "key": "nlrb",
+                  "design_population": "Official OPTN/NLRB guidance: Adult MELD Exceptions for Transplant Oncology.",
+                  "selection": "CRLM exclusions for an initial exception: extrahepatic disease after primary tumor resection (including lymphadenopathy outside the primary lymph-node resection) and local relapse. Extension requires no development of extrahepatic disease. Staging: CT/MRI of chest, abdomen and pelvis and PET within one month of the initial request.",
+                  "results": "Allocation guidance; no outcome data.",
+                  "limits": "Governs MELD-exception review, not clinical suitability or living-donor eligibility.",
+                  "locator": "Official PDF, CRLM section."
+                }
+              ]
+            }
           }
         ],
         "documents": [
@@ -12220,18 +12537,18 @@
           {
             "id": "NET-B2",
             "anchor": "net-b2",
-            "title": "Primary site, grade, spread and disease control",
+            "title": "Primary site, grade and disease control",
             "status": "Initial selection limits",
             "steps": [
               "biology",
               "distribution",
               "observation"
             ],
-            "context": "Confirm differentiation, primary site, prior spread and the duration of disease control.",
+            "context": "Confirm differentiation, primary site and the duration of disease control. Previous extrahepatic disease has its own review (NET-B4).",
             "stance": "Activate only well-differentiated G1/G2 disease from a known portal-drained GEP primary; retain a six-month biology test.",
             "rules": [
               "Require expert pathology with Ki-67 <20% and the applicable mitotic criterion; use the highest reliable representative grade. Exactly 20%, rounding uncertainty or discordance is HOLD for adjudication, not rounding down. Do not impose an unsupported Ki-67 <10 rule or blanket G2 ban.",
-              "G3, NEC, unknown/nonportal primary and active extrahepatic disease have no active cohort in this edition. Previously resected nodes may qualify after complete clearance and the required disease-free interval; document stations and dates. Prior lung/bone/other solid-organ metastases remain outside the current opening pathway.",
+              "G3, NEC and unknown/nonportal primary have no active cohort in this edition. Extrahepatic disease, active or previously treated, follows NET-B4: resected nodes may qualify after clearance; previous solid-organ metastases do not.",
               "Require ≥6 months of stable/responding hepatic disease and ≥6 months without recurrence after primary/extrahepatic clearance. Proposed documentation: at least three comparable assessments spanning baseline, about three months and six months. A suspicious new site is HOLD; confirmed progression restarts observation."
             ],
             "tests": "Expert grade/Ki-67/mitoses and primary origin; SSTR staging and cross-sectional imaging; complete primary/node/EHD clearance history; three-assessment timeline.",
@@ -12409,6 +12726,90 @@
                 }
               ]
             }
+          },
+          {
+            "id": "NET-B4",
+            "anchor": "net-b4",
+            "title": "Previously treated extrahepatic disease",
+            "status": "Resected nodes only, after clearance",
+            "steps": [
+              "distribution",
+              "observation"
+            ],
+            "context": "Use when the neuroendocrine tumor has involved sites outside the liver other than the primary (regional or distant nodes, mesentery, lung, bone or other organs), including disease later resected or treated with PRRT, ablation or radiotherapy.",
+            "stance": "Allow previously resected nodal disease after complete clearance and ≥6 months without recurrence. Keep previous lung, bone or other solid-organ metastases closed. Nodal disease cleared only by non-surgical treatment needs individual review.",
+            "rules": [
+              "Previously resected regional or mesenteric nodal disease may qualify after complete clearance: no recurrence for ≥6 months after the last extrahepatic resection, and negative SSTR PET with CT/MRI repeated within 3 months of transplant consideration. Document stations, pathology and dates.",
+              "Nodal disease that resolved only after PRRT, ablation or radiotherapy is not equivalent to resection: individual review only, with SSTR-PET-negative status for ≥6 months. Persistent SSTR-avid or morphologically visible disease is active disease.",
+              "Previous lung, bone or other solid-organ metastasis remains closed, including after complete treatment. The ENETS 2026 position (no macroscopic, non-targetable extrahepatic disease) is recorded as a dissent, not adopted.",
+              "Extrahepatic progression during observation or on the waiting list removes the patient from the route; re-entry needs renewed clearance and a new ≥6-month recurrence-free interval. Plan hilar lymphadenectomy at transplantation, and clear extrahepatic disease in a staged operation rather than combining major extrahepatic resection with transplantation."
+            ],
+            "tests": "Operative and pathology reports for each extrahepatic resection, with node stations; SSTR PET (68Ga- or 64Cu-labelled) and CT/MRI within 3 months; date of the last extrahepatic treatment; PRRT cycles and response; serial imaging timeline.",
+            "allocation": "NLRB NET guidance requires resection of the primary and extrahepatic disease with no recurrence for at least six months, a negative metastatic workup including functional imaging, de-listing on extrahepatic progression, re-consideration only after extrahepatic disease has been zeroed for at least six months, and permanent exclusion for extrahepatic solid-organ metastases such as lung or bone.",
+            "references": [
+              "nlrb",
+              "milan",
+              "net_maspero2022",
+              "enets",
+              "net_frilling2010",
+              "eltr213"
+            ],
+            "evidence": {
+              "synthesis": "Milan practice accepted previously node-positive primaries once resected: 19 of 24 transplanted patients with known nodal status had node-positive primaries, and the Milan-NET criteria require extrahepatic disease to be removed with at least six months of stability before transplantation. NLRB guidance encodes the same approach, de-lists on extrahepatic progression and allows re-consideration only after extrahepatic disease has been zeroed for six months. Functional imaging changes candidacy: 68Ga-DOTATOC PET removed 7 of 15 transplant candidates because of deposits not seen on CT or MRI.",
+              "counterevidence": "Nodal involvement on final pathology was associated with worse survival after transplantation in the Milan cohort (HR 5.7), and recurrences after transplantation were often in distant nodes or bone, so a cleared nodal history is not risk-free. Major extrahepatic resection performed together with transplantation was adverse in the European registry, which argues for staged clearance well before transplantation. ENETS 2026 proposes replacing “no extrahepatic disease” with “no macroscopic, non-targetable extrahepatic disease” and notes that limited bone metastases in small-intestinal NET may not independently worsen survival in all series; the authors present this as expert opinion, not outcome-validated.",
+              "certainty": "Low for accepting resected nodal disease after a recurrence-free interval; very low for PRRT-only clearance and for previous solid-organ metastases.",
+              "threshold_basis": "The six-month recurrence-free interval, functional imaging, de-listing on progression and the solid-organ exclusion are NLRB wording. Repeat SSTR imaging within three months of transplant consideration follows ENETS 2026. Treating PRRT-only clearance as individual review is a conservative local choice.",
+              "studies": [
+                {
+                  "key": "net_maspero2022",
+                  "design_population": "Milan retrospective comparison: 48 transplant and 56 resection patients with NET liver metastases.",
+                  "selection": "Portal-drained G1/G2 primary previously resected, no extrahepatic disease, <50% liver involvement and at least six months of stable disease for transplantation.",
+                  "results": "Node-positive primary in 19 of 24 transplanted patients with known nodal status (8 of 44 resected). Among recipients, nodal involvement on final pathology was associated with worse overall survival (HR 5.7, 95% CI 1.3–24). Recurrence after transplantation involved distant nodes in 16 of 25 and bone in 9 of 25.",
+                  "limits": "Retrospective single centre; groups selected for different indications.",
+                  "locator": "Am J Transplant 2022; Tables 1 and 3, univariate analysis."
+                },
+                {
+                  "key": "milan",
+                  "design_population": "Milan prospective transplant versus non-transplant comparison (Milan-NET criteria).",
+                  "selection": "Primary and extrahepatic disease removed before transplantation; at least six months of stable disease.",
+                  "results": "Five- and ten-year overall survival 97.2% and 88.8% with transplantation versus 50.9% and 22.4% without.",
+                  "limits": "Benefit shown only within Milan-NET selection; previous solid-organ metastases were not included.",
+                  "locator": "Am J Transplant 2016."
+                },
+                {
+                  "key": "nlrb",
+                  "design_population": "Official OPTN/NLRB guidance: Adult MELD Exceptions for Transplant Oncology.",
+                  "selection": "Resection of the primary and extrahepatic disease without recurrence for at least six months; negative metastatic workup including functional imaging; de-list on extrahepatic progression such as Ga-68-positive nodes; re-consider after extrahepatic disease is zeroed for at least six months; extrahepatic solid-organ metastases (lungs, bones) are a permanent exclusion.",
+                  "results": "Allocation guidance; no outcome data.",
+                  "limits": "Exception guidance, not an outcome-derived clinical rule.",
+                  "locator": "Official PDF, NET section."
+                },
+                {
+                  "key": "enets",
+                  "design_population": "2026 ENETS position statement on transplantation for advanced small-intestinal and pancreatic NET.",
+                  "selection": "Replace “no EHD” with “no macroscopic, non-targetable EHD”; limited, completely resectable or otherwise controllable extrahepatic disease may not be an absolute contraindication; unresectable mesenteric nodal disease, certain bone metastases and brain metastases remain high-risk.",
+                  "results": "No original outcome data; imaging should ideally be repeated within three months of transplant consideration.",
+                  "limits": "Expert opinion, explicitly not outcome-validated; conflicts with the NLRB solid-organ exclusion.",
+                  "locator": "J Neuroendocrinol 2026; updated selection principles."
+                },
+                {
+                  "key": "net_frilling2010",
+                  "design_population": "Single-centre imaging study: 52 NET patients comparing 68Ga-DOTATOC PET/CT with CT and/or MRI.",
+                  "selection": "Fifteen were evaluated for transplantation.",
+                  "results": "PET/CT found additional hepatic or extrahepatic metastases in 22 of 33 with liver metastases and removed 7 of 15 transplant candidates (46.6%) from further screening.",
+                  "limits": "Small; older tracer and era.",
+                  "locator": "Ann Surg 2010; abstract."
+                },
+                {
+                  "key": "eltr213",
+                  "design_population": "European Liver Transplant Registry: 213 transplants for NET.",
+                  "selection": "Twenty-four had major and 30 minor additional resections at transplantation.",
+                  "results": "Concurrent major resection, poor differentiation and hepatomegaly were adverse; five-year overall survival 52% from transplantation.",
+                  "limits": "Historical era; heterogeneous pathology.",
+                  "locator": "Ann Surg 2013."
+                }
+              ]
+            }
           }
         ],
         "documents": [
@@ -12524,13 +12925,14 @@
               "stage"
             ],
             "context": "Assess vascular invasion and any extrahepatic disease separately from the usual liver-only pathway.",
-            "stance": "Start with liver-only disease and no macrovascular invasion; do not automatically broaden access using stable extrahepatic disease or an explant score.",
+            "stance": "Start with liver-only disease and no macrovascular invasion. Define a separate extrahepatic stratum, not yet activated: lung-only disease that is stable for ≥6 months or completely resected or ablated. Bone, serosal and progressive extrahepatic disease stay closed. Do not select using an explant score.",
             "rules": [
-              "Proposed opening boundary: unresectable liver-only EHE with no macrovascular invasion. Extrahepatic disease is a separate unactivated stratum requiring case-specific discussion, not a national absolute prohibition.",
+              "Proposed opening boundary: unresectable liver-only EHE with no macrovascular invasion. Extrahepatic disease is not a national absolute prohibition, but it is outside the opening cohort.",
               "Resolve suspicious nodes/extrahepatic lesions before proceeding. Do not use an explant-derived score as if it were a validated pretransplant eligibility test.",
-              "Record the guideline disagreement explicitly. A future EHD proposal must specify site, control duration, symptoms, comparator and independent review; “stable EHD” alone is insufficient."
+              "Proposed extrahepatic stratum (defined, not activated): lung-only disease without pleural involvement, asymptomatic, and either stable on serial imaging for ≥6 months or completely resected or ablated with no recurrence for ≥6 months. Each case needs independent expert review and a written comparison with observation or systemic treatment.",
+              "Closed: bone metastasis; pleural, peritoneal or other serosal disease; extrahepatic disease outside the lung; and progressive or symptomatic extrahepatic disease. Record the guideline disagreement in every case. Hilar nodal involvement is a recurrence risk factor rather than an extrahepatic exclusion; plan hilar lymphadenectomy."
             ],
-            "tests": "Complete staging; expert pathology; vascular assessment; targeted evaluation of suspicious extrahepatic sites; technical resectability and alternative-treatment review.",
+            "tests": "Complete staging; expert pathology; vascular assessment; targeted evaluation of suspicious extrahepatic sites; technical resectability and alternative-treatment review. Record each extrahepatic site, its size and serial imaging dates, and any resection or ablation record.",
             "allocation": "Clinical selection and exception-review eligibility answer different questions. The proposed liver-only choice is local, not a rewrite of national guidance.",
             "references": [
               "nlrb",
@@ -12538,16 +12940,19 @@
               "acg_fll2024",
               "ehe_lai",
               "ehe_liu228",
-              "dgvs_lt2024"
+              "dgvs_lt2024",
+              "ehe_lerut2007",
+              "ehe_sawma2024"
             ],
             "evidence": {
-              "synthesis": "The disagreement is genuine: ACG/NLRB are permissive about selected EHD, whereas the disease-specific consensus is restrictive. The best registry suggests macrovascular invasion and hilar nodes are adverse; selected EHD was not independently adverse, but the study was too small to establish equivalence. Histology-derived risk scoring cannot be substituted for preoperative staging.",
-              "counterevidence": "A blanket statement that any EHD absolutely forbids LT is inaccurate. Conversely, favorable survival in selected EHD recipients does not establish benefit over observation or systemic options for all sites/burdens.",
-              "certainty": "Low certainty for prognostic association; very low for causal EHD benefit or pre-LT score-driven selection.",
+              "synthesis": "The disagreement is genuine: ACG/NLRB are permissive about selected EHD, whereas the disease-specific consensus is restrictive. The best registry suggests macrovascular invasion and hilar nodes are adverse; selected EHD was not independently adverse, but the study was too small to establish equivalence. Histology-derived risk scoring cannot be substituted for preoperative staging. In the first European registry report, 10 of 59 recipients had extrahepatic disease before or at transplantation, with 1-, 5- and 10-year survival of 90%, 80% and 80% versus 94%, 83% and 70% without it. In a Mayo cohort of 80 patients, bone metastasis was independently associated with mortality (HR 6.3) whereas lung metastasis was not (HR 0.8).",
+              "counterevidence": "A blanket statement that any EHD absolutely forbids LT is inaccurate. Conversely, favorable survival in selected EHD recipients does not establish benefit over observation or systemic options for all sites/burdens. The 2021 consensus advises that transplantation should not be proposed with extrahepatic disease (level V, grade A). Registry subgroups are small, extrahepatic sites and their treatment are poorly described, and the Mayo site analysis covers all treatments, not transplant recipients alone.",
+              "certainty": "Low certainty for prognostic association; very low for causal EHD benefit, for the proposed lung-only stratum, or for pre-LT score-driven selection.",
               "threshold_basis": [
                 "No macrovascular invasion: aligns with current favorable NLRB consideration and adverse ELTR prognosis.",
                 "Liver-only opening cohort: conservative local choice despite permissive ACG/NLRB wording; cannot be called universally guideline-mandated.",
-                "EHE-LT score cutoffs: post-LT risk stratification, not a validated pre-LT exclusion test."
+                "EHE-LT score cutoffs: post-LT risk stratification, not a validated pre-LT exclusion test.",
+                "Lung-only stratum with ≥6 months of stability or completed treatment: lung metastasis was not adverse in the Mayo site analysis whereas bone was; six months follows the DGVS stable-disease recommendation and the registry finding that a short wait (≤120 days) predicted recurrence. Excluding pleural and other serosal disease is a conservative local choice not tested in transplant series."
               ],
               "studies": [
                 {
@@ -12597,6 +13002,22 @@
                   "results": "Recommends at least six months of largely stable disease before LT. Macrovascular invasion or hilar nodes are not absolute barriers to evaluation, which is not equivalent to recommending transplantation.",
                   "limits": "Expert consensus, not a randomized timing comparison or US allocation rule. It supplies a competing six-month option, not proof of superiority to four months.",
                   "locator": "Official society HEHE chapter, recommendations 3.85–3.86."
+                },
+                {
+                  "key": "ehe_lerut2007",
+                  "design_population": "European Liver Transplant Registry: 59 recipients transplanted for HEHE.",
+                  "selection": "Ten (16.9%) had extrahepatic disease before or at transplantation; three had extrahepatic surgery before transplantation.",
+                  "results": "One-, five- and ten-year survival 90%, 80% and 80% with extrahepatic disease versus 94%, 83% and 70% without; lymph-node invasion also did not significantly change survival, whereas vascular invasion did.",
+                  "limits": "Ten patients with extrahepatic disease; sites and treatment not separated.",
+                  "locator": "Ann Surg 2007; abstract."
+                },
+                {
+                  "key": "ehe_sawma2024",
+                  "design_population": "Mayo cohort of 80 patients with HEHE (24 transplanted, 26 resected, 30 managed medically).",
+                  "selection": "Twenty-six had extrahepatic metastases at diagnosis, four of them in the transplant group.",
+                  "results": "Bone metastasis was independently associated with long-term mortality (HR 6.3); lung metastasis was not (HR 0.8).",
+                  "limits": "The site analysis covers all treatments; only four recipients had extrahepatic disease.",
+                  "locator": "J Surg Oncol 2024; abstract."
                 }
               ]
             }
@@ -15306,6 +15727,230 @@
         "tmc": "https://libkey.io/libraries/480/10.1111/cas.13656",
         "pdf_links": [],
         "review_depth": "All 9 main-PDF pages read; external supplements not separately reviewed. PDF saved in private Synology depot."
+      },
+      "crlm_seca3": {
+        "key": "crlm_seca3",
+        "short": "SECA-III registration",
+        "title": "A randomized clinical trial comparing overall survival in selected patients with colorectal carcinoma treated by liver transplantation or chemotherapy (SECA-III)",
+        "author": "Oslo University Hospital",
+        "journal": "ClinicalTrials.gov NCT03494946",
+        "year": 2016,
+        "pmid": "",
+        "doi": "",
+        "url": "https://clinicaltrials.gov/study/NCT03494946",
+        "pdf_links": [],
+        "tmc": "",
+        "review_depth": "ClinicalTrials.gov record (current version) reviewed for eligibility wording; recruiting, no results posted."
+      },
+      "crlm_fukumitsu": {
+        "key": "crlm_fukumitsu",
+        "short": "Fukumitsu 2024 · Japanese LDLT protocol",
+        "title": "Living-donor liver transplantation for non-resectable colorectal liver metastases: protocol for a multicentric, single-arm study",
+        "author": "Fukumitsu",
+        "journal": "BMJ open",
+        "year": 2024,
+        "pmid": "39566949",
+        "doi": "10.1136/bmjopen-2024-088188",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11580313/",
+        "pdf_links": [],
+        "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1136%2Fbmjopen-2024-088188&lang=en",
+        "review_depth": "PMC full text reviewed for eligibility wording (study protocol; no outcomes yet)."
+      },
+      "crlm_hagness_recur": {
+        "key": "crlm_hagness_recur",
+        "short": "Hagness · SECA-I recurrence",
+        "title": "Patterns of recurrence after liver transplantation for nonresectable liver metastases from colorectal cancer",
+        "author": "Hagness",
+        "journal": "Annals of surgical oncology",
+        "year": 2013,
+        "pmid": "24370906",
+        "doi": "10.1245/s10434-013-3449-9",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3942624/",
+        "pdf_links": [],
+        "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1245%2Fs10434-013-3449-9&lang=en",
+        "review_depth": "PubMed abstract reviewed; full text not reviewed."
+      },
+      "crlm_grut2018": {
+        "key": "crlm_grut2018",
+        "short": "Grut · lung metastasis growth",
+        "title": "Growth rates of pulmonary metastases after liver transplantation for unresectable colorectal liver metastases",
+        "author": "Grut",
+        "journal": "The British journal of surgery",
+        "year": 2017,
+        "pmid": "29168565",
+        "doi": "10.1002/bjs.10651",
+        "url": "https://doi.org/10.1002/bjs.10651",
+        "pdf_links": [],
+        "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1002%2Fbjs.10651&lang=en",
+        "review_depth": "PubMed abstract reviewed; full text not reviewed."
+      },
+      "crlm_dueland_lung": {
+        "key": "crlm_dueland_lung",
+        "short": "Dueland 2022 · lung resection after LT",
+        "title": "PET-uptake in liver metastases as method to predict tumor biological behavior in patients transplanted for colorectal liver metastases developing lung recurrence",
+        "author": "Dueland",
+        "journal": "Cancers",
+        "year": 2022,
+        "pmid": "36291826",
+        "doi": "10.3390/cancers14205042",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9599638/",
+        "pdf_links": [],
+        "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.3390%2Fcancers14205042&lang=en",
+        "review_depth": "PMC full text reviewed for eligibility wording, results and limitations."
+      },
+      "pulmicc": {
+        "key": "pulmicc",
+        "short": "PulMiCC 2020",
+        "title": "Pulmonary metastasectomy in colorectal cancer: updated analysis of 93 randomized patients - control survival is much better than previously assumed",
+        "author": "Milosevic",
+        "journal": "Colorectal disease",
+        "year": 2020,
+        "pmid": "32388895",
+        "doi": "10.1111/codi.15113",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7611567/",
+        "pdf_links": [],
+        "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1111%2Fcodi.15113&lang=en",
+        "review_depth": "PubMed abstract reviewed; full text not reviewed."
+      },
+      "crlm_salah2014": {
+        "key": "crlm_salah2014",
+        "short": "Salah 2014 · lung metastasectomy after liver resection",
+        "title": "Pulmonary metastasectomy in colorectal cancer patients with previously resected liver metastasis: pooled analysis",
+        "author": "Salah",
+        "journal": "Annals of surgical oncology",
+        "year": 2014,
+        "pmid": "25326396",
+        "doi": "10.1245/s10434-014-4173-9",
+        "url": "https://doi.org/10.1245/s10434-014-4173-9",
+        "pdf_links": [],
+        "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1245%2Fs10434-014-4173-9&lang=en",
+        "review_depth": "PubMed abstract reviewed; full text not reviewed."
+      },
+      "crlm_hwang": {
+        "key": "crlm_hwang",
+        "short": "Hwang 2014 · resection with extrahepatic disease",
+        "title": "Systematic review of outcomes of patients undergoing resection for colorectal liver metastases in the setting of extra hepatic disease",
+        "author": "Hwang",
+        "journal": "European journal of cancer",
+        "year": 2014,
+        "pmid": "24767470",
+        "doi": "10.1016/j.ejca.2014.03.277",
+        "url": "https://doi.org/10.1016/j.ejca.2014.03.277",
+        "pdf_links": [],
+        "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1016%2Fj.ejca.2014.03.277&lang=en",
+        "review_depth": "PubMed abstract reviewed; full text not reviewed."
+      },
+      "hcc_pirozzi2025": {
+        "key": "hcc_pirozzi2025",
+        "short": "Pirozzi 2025 · case report",
+        "title": "Liver transplantation in a patient with metastatic hepatocellular carcinoma after downstaging with single-agent immunotherapy: the first case report",
+        "author": "Pirozzi",
+        "journal": "Journal of gastrointestinal oncology",
+        "year": 2025,
+        "pmid": "40672077",
+        "doi": "10.21037/jgo-24-764",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12261024/",
+        "pdf_links": [],
+        "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.21037%2Fjgo-24-764&lang=en",
+        "review_depth": "PubMed abstract reviewed; full text not reviewed."
+      },
+      "hcc_mergental2012": {
+        "key": "hcc_mergental2012",
+        "short": "Mergental 2012 · ELTR noncirrhotic HCC",
+        "title": "Liver transplantation for unresectable hepatocellular carcinoma in normal livers",
+        "author": "Mergental",
+        "journal": "Journal of hepatology",
+        "year": 2012,
+        "pmid": "22521348",
+        "doi": "10.1016/j.jhep.2012.03.022",
+        "url": "https://doi.org/10.1016/j.jhep.2012.03.022",
+        "pdf_links": [],
+        "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1016%2Fj.jhep.2012.03.022&lang=en",
+        "review_depth": "PubMed abstract reviewed; full text not reviewed."
+      },
+      "icca_maspero2024": {
+        "key": "icca_maspero2024",
+        "short": "Maspero 2024 · Milan SYS-TARE",
+        "title": "Liver transplantation for intrahepatic cholangiocarcinoma after chemotherapy and radioembolization: an intention-to-treat study",
+        "author": "Maspero",
+        "journal": "Transplant international",
+        "year": 2024,
+        "pmid": "39544321",
+        "doi": "10.3389/ti.2024.13641",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11560448/",
+        "pdf_links": [],
+        "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.3389%2Fti.2024.13641&lang=en",
+        "review_depth": "PMC full text reviewed for eligibility wording, results and limitations."
+      },
+      "cca_wong2019": {
+        "key": "cca_wong2019",
+        "short": "Wong 2019 · downstaging pilot",
+        "title": "Downstaging locally advanced cholangiocarcinoma pre-liver transplantation: a prospective pilot study",
+        "author": "Wong",
+        "journal": "The Journal of surgical research",
+        "year": 2019,
+        "pmid": "31059945",
+        "doi": "10.1016/j.jss.2019.04.023",
+        "url": "https://doi.org/10.1016/j.jss.2019.04.023",
+        "pdf_links": [],
+        "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1016%2Fj.jss.2019.04.023&lang=en",
+        "review_depth": "PubMed abstract reviewed; full text not reviewed."
+      },
+      "cca_malikowski2020": {
+        "key": "cca_malikowski2020",
+        "short": "Malikowski 2020 · EUS nodal staging",
+        "title": "Endoscopic ultrasound/fine needle aspiration is effective for lymph node staging in patients with cholangiocarcinoma",
+        "author": "Malikowski",
+        "journal": "Hepatology",
+        "year": 2020,
+        "pmid": "31860935",
+        "doi": "10.1002/hep.31077",
+        "url": "https://doi.org/10.1002/hep.31077",
+        "pdf_links": [],
+        "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1002%2Fhep.31077&lang=en",
+        "review_depth": "PubMed abstract reviewed; full text not reviewed."
+      },
+      "net_frilling2010": {
+        "key": "net_frilling2010",
+        "short": "Frilling 2010 · 68Ga-DOTATOC PET",
+        "title": "The impact of 68Ga-DOTATOC positron emission tomography/computed tomography on the multimodal management of patients with neuroendocrine tumors",
+        "author": "Frilling",
+        "journal": "Annals of surgery",
+        "year": 2010,
+        "pmid": "21037441",
+        "doi": "10.1097/SLA.0b013e3181fd37e8",
+        "url": "https://doi.org/10.1097/SLA.0b013e3181fd37e8",
+        "pdf_links": [],
+        "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1097%2FSLA.0b013e3181fd37e8&lang=en",
+        "review_depth": "PubMed abstract reviewed; full text not reviewed."
+      },
+      "ehe_lerut2007": {
+        "key": "ehe_lerut2007",
+        "short": "Lerut 2007 · ELTR",
+        "title": "The place of liver transplantation in the treatment of hepatic epitheloid hemangioendothelioma: report of the European liver transplant registry",
+        "author": "Lerut",
+        "journal": "Annals of surgery",
+        "year": 2007,
+        "pmid": "18043096",
+        "doi": "10.1097/SLA.0b013e31815c2a70",
+        "url": "https://doi.org/10.1097/SLA.0b013e31815c2a70",
+        "pdf_links": [],
+        "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1097%2FSLA.0b013e31815c2a70&lang=en",
+        "review_depth": "PubMed abstract reviewed; full text not reviewed."
+      },
+      "ehe_sawma2024": {
+        "key": "ehe_sawma2024",
+        "short": "Sawma 2024 · Mayo",
+        "title": "Management and long-term outcomes of patients with hepatic epithelioid hemangioendothelioma",
+        "author": "Sawma",
+        "journal": "Journal of surgical oncology",
+        "year": 2024,
+        "pmid": "39318157",
+        "doi": "10.1002/jso.27807",
+        "url": "https://doi.org/10.1002/jso.27807",
+        "pdf_links": [],
+        "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1002%2Fjso.27807&lang=en",
+        "review_depth": "PubMed abstract reviewed; full text not reviewed."
       }
     },
     "status": "Proposed high-risk protocols; not activated. Standard selection and allocation rules are unchanged."

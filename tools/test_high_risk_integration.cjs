@@ -58,7 +58,7 @@ for(const p of data.index){
  const ids=[...full.matchAll(/ id="([^"]+)"/g)].map(x=>x[1]);
  assert.equal(new Set(ids).size,ids.length,p.slug+' duplicate IDs');
 }
-assert.equal(count,22);assert.equal(h.readiness.length,4);assert.equal(Object.keys(h.sources).length,119);
+assert.equal(count,26);assert.equal(h.readiness.length,4);assert.equal(Object.keys(h.sources).length,135);
 for(const r of h.readiness)checkEvidenceCard('hcc',r);
 for(const r of Object.values(h.sources)){
  if(r.doi){assert(r.author&&r.journal&&r.year&&r.pmid,r.key);assert(decodeURIComponent(r.tmc).includes(r.doi),r.key);}
@@ -74,5 +74,5 @@ for(const c of Object.values(data.continuations))for(const kind of ['branches','
  const dest=HR.destination(a.url);if(dest){onward++;assert(h.pathways[dest.slug]);if(dest.id)assert(h.pathways[dest.slug].reviews.some(x=>x.anchor===dest.id));}
 }
 assert.equal(onward,0,"Unconditional high-risk links on broad branches must be removed");
-console.log(`PASS: ${count} reviews in ${placements} reference-catalog placements; ${h.readiness.length} shared readiness reviews; 119 attached sources; ${pdfCount} direct PDF sources; four current V12 DOCX protocols plus three V7 protocol packages with preserved content; broad branch links removed in favor of separately tested contextual routing.`);
+console.log(`PASS: ${count} reviews in ${placements} reference-catalog placements; ${h.readiness.length} shared readiness reviews; 135 attached sources; ${pdfCount} direct PDF sources; four current V12 DOCX protocols plus three V7 protocol packages with preserved content; broad branch links removed in favor of separately tested contextual routing.`);
 console.log(`PASS: ${studySummaries} study summaries and ${sourceSlots} unique-per-review source records preserve every criterion, synthesis, result, limitation and review-depth statement; no nested study disclosures.`);

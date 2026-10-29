@@ -15,8 +15,11 @@ assert.equal(count,49);assert.equal(Object.keys(manifest.references).length,12);
 const bilcap=manifest.references.icca.find(r=>r.source==='BILCAP, as published');assert.equal(bilcap.kind,'evidence');assert.deepEqual(bilcap.decisions,['8']);
 const crisis=manifest.references.nelm.find(r=>r.source==='Carcinoid crisis precautions');assert.deepEqual(crisis.decisions,['5','6','7','8']);
 assert.equal(crisis.visibleCaution.text,JSON.parse(read('nelm/data/pathway.json')).quickref[3].rows[0][1],'Visible procedural caution must retain its exact source wording');
+// Recorded clinical revisions (tools/clinical_revisions/) are the only permitted change to these sources.
+const Revisions=require('./apply_clinical_revisions.cjs');
+const pinned=file=>{const text=cp.execFileSync('git',['show','dfda24c:'+file],{encoding:'utf8',maxBuffer:8e6});return file.endsWith('content.json')?JSON.stringify(Revisions.applyContent(JSON.parse(text)),null,2):Revisions.applyText(file,text);};
 for(const file of ['transplant/assets/content.json','transplant/assets/assistant.js','transplant/assets/risk-routing.js','assets/roadmap-links.json']){
- assert.equal(read(file),cp.execFileSync('git',['show','dfda24c:'+file],{encoding:'utf8',maxBuffer:8e6}),file+' clinical matching/source changed');
+ assert.equal(read(file),pinned(file),file+' clinical matching/source changed');
 }
 const layout=read('assets/decision-workspace.js');assert(layout.includes('middle.append(criteria,recommendations,related,controls)'),'Clinical recommendations must precede subsequent routes');
 const presentation=read('assets/portal-navigation.js');

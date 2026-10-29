@@ -7,11 +7,11 @@ const post=new Set(['hcc/after-transplant','pcca/follow-up']);
 const referenceOnly=['hcc-b4'];
 const coverage={
  'hcc-b1-1':['allocation','treatment','listing','waitlist'],
- 'hcc-b1':['allocation','treatment','listing','waitlist'], 'hcc-b2':['curative-route','allocation','treatment','listing','waitlist'], 'hcc-b3':['treatment','listing','waitlist'], 'hcc-b4':[],
+ 'hcc-b1':['allocation','treatment','listing','waitlist'], 'hcc-b2':['curative-route','allocation','treatment','listing','waitlist'], 'hcc-b3':['treatment','listing','waitlist'], 'hcc-b4':[], 'hcc-b5':['curative-route','allocation','treatment','listing','waitlist'],
  'pcca-b1':['diagnosis','phenotype','neoadjuvant','staging','listing'], 'pcca-b2':['phenotype'], 'pcca-b3':['neoadjuvant','staging','listing'],
- 'icca-b1':['phenotype','therapy','stability','review'], 'icca-b2':['therapy','stability','review'], 'icca-b3':['review'],
- 'crlm-b1':['unresectability','control','restaging','review'], 'crlm-b2':['unresectability','control','restaging','review'], 'crlm-b3':['map-disease','biology','control','clocks','restaging','review'], 'crlm-b4':['review'],
- 'net-b1':['options','review'], 'net-b2':['biology','distribution','observation','review'], 'net-b3':['options','review'],
+ 'icca-b1':['phenotype','therapy','stability','review'], 'icca-b2':['therapy','stability','review'], 'icca-b3':['review'], 'icca-b4':['phenotype','therapy','stability','review'],
+ 'crlm-b1':['unresectability','control','restaging','review'], 'crlm-b2':['unresectability','control','restaging','review'], 'crlm-b3':['map-disease','biology','control','clocks','restaging','review'], 'crlm-b4':['review'], 'crlm-b5':['map-disease','restaging','review'],
+ 'net-b1':['options','review'], 'net-b2':['biology','distribution','observation','review'], 'net-b3':['options','review'], 'net-b4':['distribution','observation','review'],
  'hehe-b1':['risk','review'], 'hehe-b2':['stage','risk','review'], 'hca-b1':['exception-route','review'], 'hca-b2':['standard-care','exception-route','review']
 };
 // These final decisions include pre-transplant acceptance as well as follow-up.
@@ -22,7 +22,7 @@ for(const [anchor,steps] of Object.entries(coverage)){
 function questions(slug,step,a,prior={}){
  const q=[];const add=(id,label,options,help='')=>q.push({id,label,options:[...options,['unknown','Uncertain / not yet assessed']],help});
  if(slug==='hcc'){
-  if(step==='curative-route'&&a.spread==='prior')add('history','Which previously treated finding is present?',[['vp12','Portal-vein invasion: Vp1–2'],['vp3','Portal-vein invasion: Vp3'],['vp4','Main/contralateral portal vein or hepatic-vein invasion'],['rupture','Tumor rupture'],['both','Rupture and vascular invasion']], 'The local invasion proposal has different limits from individual allocation review.');
+  if(step==='curative-route'&&a.spread==='prior')add('history','Which previously treated finding is present?',[['vp12','Portal-vein invasion: Vp1–2'],['vp3','Portal-vein invasion: Vp3'],['vp4','Main/contralateral portal vein or hepatic-vein invasion'],['rupture','Tumor rupture'],['both','Rupture and vascular invasion'],['ehd','Extrahepatic metastasis (nodes, lung, bone or other sites)']], 'The local invasion proposal has different limits from individual allocation review.');
   if(['treatment','listing','waitlist'].includes(step))add('ici','Immune checkpoint inhibitor exposure or plan',[['none','No exposure and none planned'],['planned','Being considered or planned'],['current','Currently receiving treatment'],['prior','Previously received']], 'Select the actual exposure or plan to display the transplant-safety review. No washout interval guarantees safety.');
   if(['treatment','listing','waitlist'].includes(step)&&prior.ici)add('ici_review','Has the transplant team completed the safety and sequencing review?',[['pending','Review or treatment plan remains pending'],['complete','Review completed and a case-specific plan agreed']], 'This selection does not approve transplantation or establish a safe washout interval. Reassess after changes in exposure or planned timing; document the team conclusion in the clinical record.');
   if(step==='treatment'&&a.response!=='spread'&&!prior.knownBurden)add('burden_history','Original tumor burden before treatment',[['standard','Within standard T2 / UNOS downstaging limits'],['beyond','Beyond UNOS downstaging limits']], 'Current tumor shrinkage does not erase the pretreatment burden. If recorded at decision 3, revise it there.');
@@ -38,6 +38,7 @@ function questions(slug,step,a,prior={}){
   if(step==='phenotype'&&a.profile==='outside')add('outside','Which finding is outside the small-cirrhotic pathway?',[['larger','>3 cm, and no safe complete resection'],['noncirrhotic','Noncirrhotic liver, and no safe complete resection'],['both','>3 cm and noncirrhotic, with no safe complete resection'],['resectable','Safe complete resection is feasible']], 'Resectable disease should return to surgical treatment review.');
   if(step==='phenotype'&&a.focality==='multiple')add('focality','How are the additional malignant nodules distributed?',[['satellites','One dominant focus with adjacent peritumoral satellites'],['separate','Separate multifocal deposits across distinct segments']], 'This describes distribution. Satellites may represent intrahepatic spread; the label alone does not establish study eligibility or resectability.');
   if(step==='phenotype'&&(a.profile==='outside'||a.focality==='multiple')&&prior.extra?.outside!=='resectable')add('grade','Confirmed histology and grade for advanced-disease review',[['g12','Pure iCCA, G1–2'],['g3','Pure iCCA, G3 / poorly differentiated'],['mixed','Mixed HCC–iCCA']], 'The advanced proposal excludes mixed histology; this does not remove the separate small-cirrhotic guidance route.');
+  if(step==='phenotype'&&a.spread==='yes')add('ehd_history','Any previous nodal or extrahepatic disease, even if treated or responded?',[['none','None known'],['prior','Previously proven malignant nodes or extrahepatic disease']], 'Response, resection or radiotherapy does not clear previously proven nodal or extrahepatic disease.');
   if((step==='therapy'&&a.control==='progression')||(step==='stability'&&a.disease==='progression')){
    if(!prior.advanced)add('study_context','Which treatment pathway is being reassessed?',[['standard','Small-cirrhotic / NLRB guidance pathway'],['advanced','Advanced-iCCA study proposal']], 'The advanced-study salvage proposal does not replace the small-cirrhotic pathway or its observation requirements.');
    add('progression','What changed on reassessment?',[['first-liver','First confirmed liver-only progression'],['repeat-liver','Further progression after a salvage strategy'],['spread','Proven malignant nodes / extrahepatic spread'],['unclear','Finding remains indeterminate']], 'Only the defined advanced-study liver-only salvage scenario has a proposed re-entry review; no immediate transplant clearance follows.');
@@ -71,8 +72,9 @@ function local(slug,step,a,x,history={}){
    else if(a.spread!=='yes')clarify.push({label:'Confirm the absence of macrovascular invasion and extrahepatic disease before a beyond-UNOS study review.'});
    else add('hcc-b1',a.afp==='not-met'?'Original burden exceeds UNOS limits and the AFP requirement is not met. Continue treatment and reassessment; this is not clearance for the expanded cohort.':'Original pretreatment tumor burden exceeds UNOS downstaging limits.',a.afp==='not-met'?'notice':'review',true);
   }
-  if(step==='curative-route'&&a.spread==='prior'&&!ask('history','Clarify prior portal-vein invasion versus rupture and the original invasion level.')){
-   const excluded=x.history!=='vp12';add('hcc-b2',excluded?'The selected history is outside the initial Vp1–2 pilot; individual allocation review is a separate question.':'Previously treated Vp1–2 invasion needs the specific response, observation and selection review.',excluded?'closed':'review',true,excluded);
+  if(step==='curative-route'&&a.spread==='prior'&&!ask('history','Clarify prior portal-vein invasion, rupture or extrahepatic metastasis and the original invasion level.')){
+   if(x.history==='ehd')add('hcc-b5','Previously treated extrahepatic metastasis is outside every HCC transplant cohort in this edition, even after a complete response. Record durable complete responders in the registry.','closed',true,true);
+   else{const excluded=x.history!=='vp12';add('hcc-b2',excluded?'The selected history is outside the initial Vp1–2 pilot; individual allocation review is a separate question.':'Previously treated Vp1–2 invasion needs the specific response, observation and selection review.',excluded?'closed':'review',true,excluded);}
   }
   if(['treatment','listing','waitlist'].includes(step)&&is(x.ici,'planned','current','prior'))add('hcc-b3',x.ici==='planned'?'Immunotherapy is planned: coordinate treatment sequence and possible transplantation before exposure.':'Checkpoint immunotherapy exposure requires a transplant-safety assessment.','safety',true);
   if(['treatment','listing','waitlist'].includes(step)&&x.ici==='unknown')clarify.push({label:'Confirm checkpoint-inhibitor exposure before concluding that transplant-safety review is complete.'});
@@ -111,6 +113,7 @@ function local(slug,step,a,x,history={}){
     else if(history.advanced||x.study_context==='advanced')add('icca-b2',x.progression==='first-liver'?'First liver-only progression in the advanced-study proposal: review salvage and renewed observation requirements. Transplantation cannot proceed during progression.':'Repeat progression or nodal/extrahepatic spread is outside the initial salvage re-entry proposal.',x.progression==='first-liver'?'notice':'closed',true,x.progression!=='first-liver');
    }
   }
+  if(step==='phenotype'&&x.ehd_history==='prior')add('icca-b4','Previously proven malignant nodes or extrahepatic disease are outside the iCCA transplant routes in this edition, even after response or resection.','closed',true,true);
   if(step==='stability'&&a.duration==='short'&&a.disease==='stable'&&history.advanced)add('icca-b2','The advanced-study observation interval is incomplete or its starting point is unresolved. This does not shorten the small-cirrhotic / NLRB pathway interval.','checklist');
   if(step==='review'&&x.donor==='yes')add('icca-b3','Living-donor study development was selected. This is a readiness review; donor availability does not permit protocol-directed transplantation.','readiness',true);
  }
@@ -122,7 +125,7 @@ function local(slug,step,a,x,history={}){
    if(is(a.cea,'high','boundary'))add('crlm-b3','CEA is at or above the local proposed <80 boundary; repeat and review the trend. Local selection and NLRB guidance must be assessed separately.','notice',true);
    if(a.size==='no')add('crlm-b3','The pretreatment lesion-size criterion is not met; the initial proposal does not activate that expansion.','closed',true,true);
   }
-  if(step==='map-disease'&&a.spread==='present')add('crlm-b3','Extrahepatic disease after primary resection or local relapse was selected. This does not open an expanded transplant route.','closed',true,true);
+  if(step==='map-disease'&&a.spread==='present')add('crlm-b5','Extrahepatic disease after primary resection or local relapse was selected. This does not open an expanded transplant route.','closed',true,true);
   if(step==='unresectability'&&a.clearance==='uncertain'&&!known(x.visible))clarify.push({label:'Clarify residual disease, no visible disease, or indeterminate treatment changes before a transplant review.'});
   if(['unresectability','control','restaging'].includes(step)&&known(x.visible)){
    if(x.visible==='residual'&&step==='unresectability')add('crlm-b1','Residual disease is suspected but complete nontransplant clearance remains disputed. Obtain the independent resectability review.','checklist');
@@ -143,11 +146,11 @@ function local(slug,step,a,x,history={}){
    if(a.primary==='no')add('net-b2','The stated primary-site criterion is not met. Clarify the exact site before further transplant consideration.','notice',true);
   }
   if(step==='distribution'){
-   if(is(a.spread,'active','solid'))add('net-b2','Active extrahepatic disease or prior lung/bone metastases is outside the current opening pathway.','closed',true,true);
-   if(a.spread==='cleared')add('net-b2','Previously cleared extrahepatic disease requires review of the site, proof of clearance and disease-free interval.','checklist',true);
+   if(is(a.spread,'active','solid'))add('net-b4','Active extrahepatic disease or prior lung/bone metastases is outside the current opening pathway.','closed',true,true);
+   if(a.spread==='cleared')add('net-b4','Previously cleared extrahepatic disease requires review of the site, proof of clearance and disease-free interval.','checklist',true);
   }
   if(step==='observation'){
-   if(a.clearance==='recurrence')add('net-b2','Extrahepatic recurrence or excluded lung/bone history does not open a transplant expansion.','closed',true,true);
+   if(a.clearance==='recurrence')add('net-b4','Extrahepatic recurrence or excluded lung/bone history does not open a transplant expansion.','closed',true,true);
    else if(a.clearance==='short'||a.control==='no')add('net-b2','Clearance or stable hepatic control has not met the required observation conditions.','checklist');
   }
   if(step==='options'){

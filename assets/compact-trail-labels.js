@@ -415,7 +415,11 @@ window.CompactTrailLabels = {
   "riskById": {
     "history": {
       "source": "Which previously treated finding is present?",
-      "label": "Prior invasion / rupture"
+      "label": "Prior invasion, rupture or spread"
+    },
+    "ehd_history": {
+      "source": "Any previous nodal or extrahepatic disease, even if treated or responded?",
+      "label": "Prior nodal / extrahepatic disease"
     },
     "ici": {
       "source": "Immune checkpoint inhibitor exposure or plan",

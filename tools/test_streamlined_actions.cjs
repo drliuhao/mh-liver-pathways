@@ -25,7 +25,7 @@ const reviewEnd=source.indexOf('\nfunction updateDecision()',reviewBegin);
 assert(reviewBegin>=0&&reviewEnd>reviewBegin);
 vm.runInContext(source.slice(reviewBegin,reviewEnd)+';this.canContinueIndividualReview=canContinueIndividualReview;this.isReadinessOnlyReview=isReadinessOnlyReview;',ctx);
 const mayContinue=(options,guard=null)=>ctx.canContinueIndividualReview({options,guard});
-for(const anchor of ['hcc-b1','hcc-b2','pcca-b1','pcca-b3','icca-b1','icca-b2','icca-b3','crlm-b2','crlm-b3','net-b2','hehe-b2','future-closed'])assert(!mayContinue([{anchor,mode:'closed'}]),anchor);
+for(const anchor of ['hcc-b1','hcc-b2','pcca-b1','pcca-b3','icca-b1','icca-b2','icca-b3','crlm-b2','crlm-b3','crlm-b5','hcc-b5','icca-b4','net-b2','net-b4','hehe-b2','future-closed'])assert(!mayContinue([{anchor,mode:'closed'}]),anchor);
 for(const anchor of ['pcca-b1','pcca-b3','icca-b1','icca-b2','icca-b3'])for(const mode of ['review','readiness','checklist'])assert(!mayContinue([{anchor,mode}]),anchor+mode);
 assert(mayContinue([{anchor:'hcc-b1',mode:'review'}]));
 assert(mayContinue([{anchor:'crlm-b3',mode:'notice'}]));
