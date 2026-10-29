@@ -3,10 +3,10 @@
 usage: python3 tools/build_consensus_docs.py <template.docx> <v16-folder> <package-out> [--web]
 
 For each tumor (documents/<tumor>/questions.json):
-  1 Cancer roadmap            full-content document (V16 roadmap, with a companion-files note)
-  2 Cancer roadmap questions  every question needing a consensus answer, fully detailed
-  3 Standard transplant protocol / 4 its questions
-  5 High-risk transplant protocol / 6 its questions
+  1 Roadmap                   full-content document (V16 roadmap, with a companion-files note)
+  2 Roadmap questions         every question needing a consensus answer, fully detailed
+  3 Standard pathway / 4 its questions
+  5 High-risk pathway / 6 its questions
   7 Decision discussion       all settings for the tumor: source positions, our proposed selection, decision fields
 Private copies (local PDF links kept) go to <package-out>/<NN>_<Tumor>/ with a _v17 suffix. With --web, public copies
 (local file links replaced by PubMed or DOI links, no licensed PDFs) go to documents/<tumor>/ in this repository.
@@ -32,7 +32,7 @@ ORDER = ['hcc', 'pcca', 'icca', 'crlm', 'nelm', 'hehe', 'hca', 'chcca', 'pdac', 
 V16_ROADMAP = {'hcc': 'HCC', 'pcca': 'HilarCCA', 'icca': 'iCCA', 'crlm': 'CRLM', 'nelm': 'NELM', 'hca': 'Adenoma', 'chcca': 'MixedTumour',
                'pdac': 'PDAC', 'pnet': 'PNET', 'ampullary': 'Ampullary', 'pcyst': 'PancreaticCyst', 'incidental': 'IncidentalMass'}
 V16_TRANSPLANT = {'hcc': '01_HCC', 'pcca': '02_PCCA', 'icca': '03_ICCA', 'crlm': '04_CRLM', 'nelm': '05_NELM', 'hehe': '06_HEHE', 'hca': '07_HCA'}
-SET_NAME = {'roadmap': 'Cancer roadmap', 'standard': 'Standard transplant pathway', 'highrisk': 'High-risk transplant protocol'}
+SET_NAME = {'roadmap': 'Roadmap', 'standard': 'Standard pathway', 'highrisk': 'High-risk pathway'}
 
 
 # ---------------------------------------------------------------- low-level writing
@@ -277,7 +277,7 @@ def questions_doc(data, setname, path):
               [[[(r['id'], 'b')], r['specialty'], r['question'], [r.get('proposal', ''), (r.get('proposal_locator', ''), 's')], ''] for r in s['ratify']],
               [1000, 1500, 2900, 3280, 1400])
     if s.get('shared'):
-        heading(d, 'Shared approval requirements (all transplant pathways)', 1)
+        heading(d, 'Shared approval requirements (all pathways)', 1)
         para(d, 'Recipient selection, allocation, donor protection and institutional study approval are separate decisions. These apply to every high-risk proposal.')
         for q in s['shared']:
             question(d, b, q)
@@ -312,7 +312,7 @@ def decision_doc(data, path):
                   [[[(r['id'], 'b')], r['specialty'], r['question'], [r.get('proposal', ''), (r.get('proposal_locator', ''), 's')], ''] for r in s['ratify']],
                   [1000, 1500, 2900, 3280, 1400])
         if s.get('shared'):
-            heading(d, 'Shared approval requirements (all transplant pathways)', 2)
+            heading(d, 'Shared approval requirements (all pathways)', 2)
             for q in s['shared']:
                 question(d, b, q, level=3)
     for x in data.get('not_applicable', []):

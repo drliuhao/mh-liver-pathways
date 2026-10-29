@@ -1,0 +1,64 @@
+{
+ "slug": "hca",
+ "limited": [
+  {
+   "t": "Biopsy is reserved for atypical imaging, suspected malignant transformation, or when molecular subtype will change management, and targets the dominant or most suspicious lesion.",
+   "why": "Guideline-consistent, with limited data for lesion choice. ACG notes that MRI cannot reliably identify β-catenin activation or separate HCA from well-differentiated HCC. Sampling the dominant lesion rests on one molecular cohort (Nault 2017): subtype differed between tumors in 21 of 73 patients with several sampled lesions, and the exon 3 mutation was in the largest tumor in 8 of 9 relevant cases. Track subtype by lesion sampled and biopsy-explant concordance.",
+   "refs": [
+    "A-easl",
+    "acg_fll2024",
+    "A-molecular"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §3 Diagnostic and multidisciplinary confirmation; step 'characterize'",
+   "related": "subtype"
+  },
+  {
+   "t": "With Abernethy malformation, shunt closure or another vascular intervention is assessed before transplantation.",
+   "why": "Expert opinion. The protocol cites no source for this sequence and no data comparing shunt closure with transplantation. In the cited European series (Chiche 2016), seven of 49 recipients had vascular abnormalities, which added technical complexity. Track shunt-closure attempts, adenoma response and later need for transplantation.",
+   "refs": [
+    "hca_chiche"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §4 Risk modification and non-transplant treatment prerequisites",
+   "related": "alternatives"
+  },
+  {
+   "t": "While listed, multiphasic MRI or CT is repeated every 3 months, aligned with the 90-day exception-extension cycle, and sooner for growth, hemorrhage or suspected transformation.",
+   "why": "Local convention. The interval follows the administrative 90-day extension cycle rather than adenoma natural-history data, and the protocol cites no study of waiting-list imaging intervals. In the cited UNOS analysis, 18 of 199 listed patients died or became too sick for transplant, a crude figure without lesion detail. Track waiting-list hemorrhage, rupture, malignant transformation and dropout.",
+   "refs": [
+    "hca_ziogas"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §6 Pretransplant evaluation and waitlist surveillance; step 'follow-up'",
+   "related": "ownership"
+  },
+  {
+   "t": "After transplant, no routine tumor imaging if the explant shows no malignancy; with occult or known malignant transformation, chest and abdominal imaging every 3–6 months for 2 years, then every 6 months to year 5.",
+   "why": "Clinical reasoning and extrapolation from HCC follow-up. The protocol cites no source for either schedule. In the cited European series (Chiche 2016), three HCC recurrences occurred among 49 recipients, all fatal, so explant pathology decides which schedule applies. Track explant malignancy, adherence to the assigned schedule and recurrence.",
+   "refs": [
+    "hca_chiche"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §8 Transplant and pathology management and §9 Post-transplant follow-up; step 'follow-up'"
+  }
+ ],
+ "team": "Review by transplant hepatology, transplant and hepatobiliary surgery, diagnostic and interventional radiology, and expert liver pathology; include metabolic genetics for glycogen storage disease and vascular expertise for Abernethy malformation.",
+ "team_locator": "Standard protocol §3 Diagnostic and multidisciplinary confirmation (first bullet)",
+ "quality": [
+  {
+   "text": "Require transplant selection and multidisciplinary benign-liver-tumor review before activation and before every exception submission or extension.",
+   "setting": "standard"
+  },
+  {
+   "text": "Track NLRB decisions, waitlist events, donor source, pathology concordance, perioperative morbidity and mortality, graft and patient survival, and malignant transformation.",
+   "setting": "standard"
+  },
+  {
+   "text": "Recheck the live OPTN policy and guidance immediately before committee adoption, exception submission, or extension.",
+   "setting": "standard"
+  }
+ ],
+ "quality_locator": "Standard protocol §10 Governance and quality review",
+ "notes": "There is no dedicated team section; team text is the first bullet of standard §3. Quality is §10 without its first bullet, a draft-status disclaimer ('This is a clinical-operational draft, not patient-specific medical advice or final institutional policy.'); restore it if the page should carry it. The boundary addendum contains only the open reviews HCA-B1 and HCA-B2, so all items come from the standard protocol, which is largely guidance-bound. Excluded as open or covered by reviews: the four-route reading and the >10 count (HCA-B1, 'criteria'), the local added restrictions on the adenomatosis and molecular routes (marked OPEN; 'benefit'), the six-month risk-factor reassessment, ≥5 cm trigger and benefit gate (HCA-B2), adequacy of alternatives ('alternatives') and malignant-transformation routing ('transformation'). Protocol inconsistency: the V16 revision note says '0 cited study lines rest on full-text reading', while the evidence table marks each study as full-text reviewed."
+}

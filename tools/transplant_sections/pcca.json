@@ -1,0 +1,109 @@
+{
+ "slug": "pcca",
+ "limited": [
+  {
+   "t": "Prior biliary resection or attempted resection, and chemotherapy or radiation for this cancer given outside the protocol, exclude the patient; systemic therapy outside the approved neoadjuvant plan needs formal review.",
+   "why": "Institutional rule. The protocol calls the restriction on outside systemic therapy an institutional rule, not an NCCN-defined universal exclusion. The exclusions cite the AASLD/AST candidate-evaluation guideline, whose prior-treatment background list the protocol warns must not be stretched to protocol-directed neoadjuvant therapy. No outcome data for previously resected or pretreated candidates are cited. Track referrals declined on these grounds and the prior treatment involved.",
+   "refs": [
+    "candidate2026",
+    "NCCN-pcca"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §1 Patient Selection Criteria (Exclusion Criteria) and §2 Pre-Treatment Workup"
+  },
+  {
+   "t": "Candidates must have an ECOG performance status of 0–1.",
+   "why": "Local convention. The protocol cites no source for this limit, and it is not among the OPTN Policy 9.5.A requirements the protocol lists. No data comparing pathway or transplant outcomes by performance status are cited. Track candidates excluded on performance status alone and changes in performance status during neoadjuvant therapy.",
+   "refs": [],
+   "setting": "standard",
+   "locator": "Standard protocol §1 Patient Selection Criteria (Inclusion Criteria)"
+  },
+  {
+   "t": "While listed, cross-sectional imaging and CA 19-9 are repeated every 3 months; tumor progression, new lesions, extrahepatic disease or nodal metastases lead to delisting.",
+   "why": "Guideline-based interval. The 3-month imaging interval cites the AASLD/AST candidate-evaluation guideline and the CA 19-9 interval is uncited; the protocol cites no study comparing surveillance intervals. OPTN separately requires imaging within 30 days before each extension request. Track metastases first found at operative staging or on the explant despite negative interval imaging, and CA 19-9 rises that led to action.",
+   "refs": [
+    "candidate2026",
+    "P-policy"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §5 MELD Exception and Waitlist Management; step 'listing'",
+   "related": "staging-timing"
+  },
+  {
+   "t": "Piggyback caval reconstruction is the institutional default where anatomy permits; the need for caval or portal resection and reconstruction is decided intraoperatively.",
+   "why": "Local convention. The protocol cites no comparative evidence for the default and states that no single technique is protocol-mandated. Neoadjuvant chemoradiation can cause retrohepatic caval and portal changes that require caval replacement or other vascular reconstruction, and living-donor recipients often need portal reconstruction. Track the technique used, vascular reconstructions and caval or portal complications.",
+   "refs": [],
+   "setting": "standard",
+   "locator": "Standard protocol §6 Liver Transplantation"
+  },
+  {
+   "t": "Before transplant, transplant surgery and radiation oncology review the actual radiation dose map; after transplant, Doppler ultrasound surveillance is used because of radiation-related vascular risk.",
+   "why": "Expert opinion. Both rules cite a Mayo expert narrative review (Tan 2020) that reports late arterial and portal complications but has no randomized comparison of reconstruction, anticoagulation or surveillance schedules; the protocol sets no Doppler interval. The high-risk protocol (§3.1) adds a 49-recipient observational comparison: major vascular complications 11/27 after chemoradiotherapy versus 3/22 without. Track hepatic artery and portal events, graft loss and retransplantation.",
+   "refs": [
+    "pcca_dong",
+    "hoogwater"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §6 Liver Transplantation and §9 Post-Transplant Surveillance"
+  },
+  {
+   "t": "Induction is a steroid bolus in the anhepatic phase; each patient has one documented maintenance strategy: tacrolimus with stepwise minimization, or mTOR-inhibitor conversion with reduced-dose tacrolimus.",
+   "why": "Extrapolated and observational. The induction citation is a Houston prospective case series in intrahepatic CCA (Lunsford 2018), not pCCA. The protocol states that no pCCA-specific maintenance regimen has proved to reduce recurrence; in the cited Houston cohort (Semaan 2025) the mTOR survival association was not confirmed when exposure was modeled as time-dependent. Everolimus is not started before day 30 (US label). Track strategy, rejection, renal function and recurrence.",
+   "refs": [
+    "lunsford"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §7 Post-Transplant Immunosuppression"
+  },
+  {
+   "t": "No routine adjuvant chemotherapy after a complete pathologic response; with residual tumor on the explant, capecitabine or gemcitabine-based therapy is considered only case by case or within a protocol.",
+   "why": "Extrapolated. The protocol states that the evidence comes from resection studies and that post-transplant benefit and tolerability are unproven; the cited source is a Houston intrahepatic CCA case series. Residual viable tumor is associated with recurrence but does not predict an individual outcome and does not by itself establish benefit from adjuvant therapy. Track adjuvant use by explant category, tolerance and recurrence.",
+   "refs": [
+    "lunsford",
+    "pcca_murad_predictors"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §8 Post-Transplant Adjuvant Therapy and §10 Expected Outcomes; step 'follow-up'"
+  },
+  {
+   "t": "After transplant: abdominal/pelvic CT or MRI every 6 months for 3 years, then yearly to year 5; chest imaging every 6 months for 2 years, then yearly; CA 19-9 every 3 months for 2 years, then every 6 months.",
+   "why": "Proposed local schedule. The imaging interval is the one observed in a small incidental biliary-cancer series (Heinrich 2026), not a comparative trial; NCCN describes post-resection surveillance and does not validate this transplant calendar; the CA 19-9 interval is uncited. The high-risk protocol instead proposes imaging with CA 19-9 every 3 months for 2 years. Record the adopted schedule in the decision log; track how recurrences are detected.",
+   "refs": [
+    "NCCN-pcca"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §9 Post-Transplant Surveillance; step 'follow-up'",
+   "related": "ownership"
+  }
+ ],
+ "team": "Multidisciplinary tumor board evaluation (transplant surgery, hepatology, medical oncology, radiation oncology, interventional radiology, pathology)",
+ "team_locator": "Standard protocol §2 Pre-Treatment Workup (first bullet)",
+ "quality": [
+  {
+   "text": "Report local cumulative dropout from protocol entry and time-specific dropout with the clock explicitly defined; do not equate cumulative attrition with a three-month rate.",
+   "setting": "standard"
+  },
+  {
+   "text": "Register every referred or screened candidate in the institutionally approved system, not only recipients. Record acceptance or rejection, treatment entry, response, listing, exception decision, conversion to resection or ablation, progression, toxicity, decompensation, death, patient withdrawal and access-related loss.",
+   "setting": "highrisk"
+  },
+  {
+   "text": "Report overall survival from the prespecified entry point and separately from listing and transplantation. Keep recurrence-free survival, recurrence incidence, graft survival and survival after recurrence distinct, with definitions, confidence intervals, numbers at risk and follow-up completeness. Do not call recipient-only survival an intention-to-treat outcome.",
+   "setting": "highrisk"
+  },
+  {
+   "text": "Capture 90-day recipient morbidity and mortality, biopsy-defined rejection, infection, arterial and biliary complications, graft loss, retransplantation and total grafts used. Record recurrence site, salvage treatment, time off systemic therapy, functional recovery and quality of life, not survival alone.",
+   "setting": "highrisk"
+  },
+  {
+   "text": "Before a transplanting study opens, biostatistics and the independent safety board must approve indication-specific monitoring, evaluable denominators, pause authority and reopening criteria. ALLOC-B4 now proposes explicit initial-cohort review triggers for ratification; they are not validated efficacy/futility boundaries. No universal cross-cancer five-year survival cutoff is adopted.",
+   "setting": "highrisk"
+  },
+  {
+   "text": "Use a contemporary comparator with the same eligibility and time zero. Account for the interval needed to survive to transplantation, crossover, competing risks and overlapping study cohorts. A nonsignificant difference is not proof of equivalence.",
+   "setting": "highrisk"
+  }
+ ],
+ "quality_locator": "Standard protocol §10 Expected Outcomes (closing sentence of the dropout bullet); High-risk protocol §7 Outcomes and safety oversight (the standard protocol has no quality-measure section)",
+ "notes": "Team: the standard protocol has no dedicated multidisciplinary-team section; team text is the first bullet of §2 with its citation tag [V16-3] removed. High-risk §8 separately names transplant surgery, hepatology, advanced GI, HPB surgery, oncology, radiation oncology, pathology and allocation as signers of their determinations. Quality: the standard protocol has no quality or outcomes section. Only the first bullet (closing sentence of the §10 dropout bullet) is from the standard protocol; the other five are verbatim from High-risk protocol §7, which belongs to a proposed, not-activated protocol, and the fourth refers to the OPEN ALLOC-B4 proposal. Drop them if quality monitoring should reflect the standard pathway only. Excluded from section 1 as open questions or high-risk reviews: exactly-3.0-cm handling, primary-tumor and nodal sampling rules, neoadjuvant regimen, operative-staging timing, previously malignant nodes (pCCA-B1), FLR/PVE resection assessment (pCCA-B2) and alternative regimens (pCCA-B3); plain OPTN 9.5.A requirements were not listed. Two items touch open questions: waitlist imaging ('staging-timing') and post-transplant surveillance ('ownership'). The two protocols disagree on surveillance: standard §9 images every 6 months for 3 years, high-risk §6 proposes every 3 months for 2 years. Standard §5 states the 90-day/30-day exception-imaging rule twice in adjacent bullets. Cited sources with no key in content.json, so not in refs: Tan 2020, Semaan 2025, Heinrich 2026, Ramanan 2017, Zortress label, Te 2025."
+}

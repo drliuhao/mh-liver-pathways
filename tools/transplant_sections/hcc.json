@@ -1,0 +1,122 @@
+{
+ "slug": "hcc",
+ "limited": [
+  {
+   "t": "Every patient is reviewed at multidisciplinary conference before listing, before bridging or downstaging starts, and at each restaging interval.",
+   "why": "Guideline consensus, extended locally. NCCN supports multidisciplinary transplant-center assessment; reviewing before every treatment start and at each restaging (about 3-monthly while waiting) is the protocol's own frequency, and it cites no study of how often review is needed or what it changes. Track the interval from restaging to conference decision and how often review changes the plan.",
+   "refs": [
+    "NCCN-hcc"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §2 Multidisciplinary Team (restaging interval in §4.3 Restaging While on Waitlist)"
+  },
+  {
+   "t": "After successful downstaging no institutional stability period is added; timing follows the allocation rules (imaging ≥4 weeks after the last treatment and the 6-month wait from the first exception request).",
+   "why": "Local choice resting on allocation rules, not outcome data. The 2012 international consensus noted that at least 3 months of observation after downstaging was often recommended, but that was never a randomized optimization of observation time; waiting longer may expose aggressive biology but also adds dropout and decompensation risk. Track recurrence and dropout by time from successful downstaging to transplant.",
+   "refs": [
+    "N-hcc",
+    "H-policy"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §7.4 Observation Period"
+  },
+  {
+   "t": "Before elective LDLT an observation interval with sustained tumor control is documented; a proposed 3-month local default applies and any departure needs explicit MDT rationale.",
+   "why": "Consensus-informed local default. The protocol labels 3 months a conservative proposal, not a validated threshold. Its source, the 2012 international consensus, describes considering an observation period such as 3 months to judge tumor behavior but does not make it mandatory, and no comparison of intervals is cited; longer observation can also add dropout risk. Track recurrence and pre-transplant dropout by observation interval among LDLT recipients.",
+   "refs": [],
+   "setting": "standard",
+   "locator": "Standard protocol §8 Living Donor Liver Transplantation (LDLT)"
+  },
+  {
+   "t": "Bevacizumab is stopped at least 28 days before elective surgery and not restarted for at least 28 days after major surgery and wound healing; transplant timing may need a longer individual interval.",
+   "why": "Extrapolated from the drug label. The 28-day minimum comes from the US prescribing information for elective surgery; the protocol states it is not a proven safe interval for liver transplantation and cites no transplant-specific study. Track wound, bleeding and vascular complications in recipients with recent anti-VEGF exposure.",
+   "refs": [],
+   "setting": "standard",
+   "locator": "Standard protocol §6 Bridging and treatment-to-transplant interface (Systemic exposure and operative safety); same text in high-risk protocol §4.1"
+  },
+  {
+   "t": "After transplant: contrast abdominal CT/MRI and chest CT every 3–6 months for 2 years, then 6-monthly to year 5, with AFP; the explant RETREAT score guides surveillance intensity.",
+   "why": "Extrapolated from a general HCC schedule and a prognostic score. The schedule follows NCCN post-treatment follow-up, which the protocol notes is not proof of an optimal transplant-specific or RETREAT-specific schedule; its review sources call risk-adapted surveillance promising but without prospective proof of the best frequency or duration. Track stage at detection of recurrence, salvage treatment and survival by RETREAT stratum.",
+   "refs": [
+    "NCCN-hcc",
+    "H-aasld"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §9.2 Explant-Based Risk Stratification and §11.1 HCC Recurrence Surveillance; step 'after-transplant'",
+   "related": "ownership"
+  },
+  {
+   "t": "mTOR-containing CNI minimization may be considered individually for renal or oncologic-risk reasons (everolimus not before day 30); it is not offered as proven prevention of recurrence.",
+   "why": "Conditional (weak, level 3) guideline suggestion; the randomized trial missed its primary endpoint. In SiLVER (525 randomized recipients) recurrence-free survival did not differ significantly; benefit appeared only over the first 3–5 years and in exploratory, unpowered subgroups. The AASLD/AST suggestion is confined to HCC within Milan. Track recurrence, renal function and mTOR toxicity by regimen.",
+   "refs": [],
+   "setting": "standard",
+   "locator": "Standard protocol §10.2 mTOR Inhibitor Consideration"
+  },
+  {
+   "t": "For recurrence after transplant, multikinase inhibitors (sorafenib, lenvatinib) are the usual first systemic choice; checkpoint inhibitors are exceptional salvage after transplant-oncology review.",
+   "why": "Local convention. The protocol cites no source or comparative post-transplant trial for the first-choice statement. Avoiding checkpoint inhibitors rests on one retrospective series of 52 recipients (32 with HCC) in which seven had rejection and five died of it; pre-transplant safety estimates do not transfer to this setting. Track response, rejection, graft loss and survival for every systemic regimen used after transplant.",
+   "refs": [],
+   "setting": "standard",
+   "locator": "Standard protocol §11.3 Management of Recurrence"
+  },
+  {
+   "t": "For selected oligorecurrence after transplant, complete resection is considered; intrahepatic recurrence is treated with ablation, radiation or intra-arterial therapy chosen case by case.",
+   "why": "Selected retrospective series. The protocol states that the observational survival advantage of resection is strongly selection-confounded and that the local modalities are not supported as equivalent by transplant-specific comparative trials; part of the radiation evidence comes from non-transplant cohorts. Track morbidity, graft function and survival after each salvage treatment.",
+   "refs": [],
+   "setting": "standard",
+   "locator": "Standard protocol §11.3 Management of Recurrence"
+  },
+  {
+   "t": "Program audit targets: five-year post-transplant overall survival above 70% and five-year cumulative HCC recurrence below 15%, both provisional and pending committee approval.",
+   "why": "Local benchmarks, not validated thresholds. The cited systematic review describes five-year survival above 70% in selected Milan cohorts with recurrence commonly 10–20%, but calculates no pooled estimate or quality trigger, and its reported recurrence range is not consistently below 15%. A result outside target prompts case-mix and process review, not an automatic finding of preventable failure.",
+   "refs": [
+    "candidate2026"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §13 Quality Metrics and Outcomes Tracking"
+  },
+  {
+   "t": "After prior checkpoint-inhibitor exposure the standard institutional regimen is used: ATG, tacrolimus 12–15 ng/mL, rapid steroid withdrawal and protocol biopsies are not mandated; rejection watch continues past month 1.",
+   "why": "Absence of evidence. The intensified options are author proposals from small heterogeneous reports, and no immune assay, ATG regimen or high tacrolimus target is validated. Prior immune toxicity marks higher rejection risk in retrospective cohorts but does not show that intensification prevents it, and rejection has occurred after the first month. Track biopsy-proven rejection, its timing, graft loss and infection by prior-ICI and immune-toxicity status.",
+   "refs": [
+    "candidate2026",
+    "fang",
+    "ipd",
+    "aceituno"
+   ],
+   "setting": "highrisk",
+   "locator": "High-risk protocol §6 Post transplant immunosuppression and graft monitoring",
+   "related": "HCC-B3"
+  }
+ ],
+ "team": "All patients with HCC must be evaluated by a multidisciplinary team (MDT) including hepatologists, transplant surgeons, medical oncologists, diagnostic and interventional radiologists, radiation oncologists, and pathologists with HCC expertise. MDT conference review is required prior to listing, initiation of bridging/downstaging therapy, and at each restaging interval.",
+ "team_locator": "Standard protocol §2 Multidisciplinary Team",
+ "quality": [
+  {
+   "text": "90-day and 1-year post-transplant survival",
+   "setting": "standard"
+  },
+  {
+   "text": "Provisional local quality benchmark: five-year post-LT overall survival >70%, pending committee approval; report Kaplan–Meier estimate, 95% CI, cohort dates and numbers at risk. This is an audit target, not an automatic individual eligibility rule.",
+   "setting": "standard"
+  },
+  {
+   "text": "Provisional local benchmark: five-year cumulative HCC recurrence incidence <15%, pending committee approval. Estimate cumulative incidence from LT with death without recurrence as a competing event; report 95% CI, numbers at risk, follow-up and cohort entry dates. An estimate above target prompts case-mix and process review, not automatic attribution of preventable failure.",
+   "setting": "standard"
+  },
+  {
+   "text": "Waitlist dropout rate",
+   "setting": "standard"
+  },
+  {
+   "text": "Bridging/downstaging success rate",
+   "setting": "standard"
+  },
+  {
+   "text": "RETREAT score distribution on explant",
+   "setting": "standard"
+  }
+ ],
+ "quality_locator": "Standard protocol §13 Quality Metrics and Outcomes Tracking",
+ "notes": "Citation markers such as [V16-3] were removed from the verbatim team and quality strings; no other wording was changed. Several sources the protocol cites for these items have no key in sources or high_risk.sources, so refs omit them: Clavien 2012 international consensus (V16-21; downstaging-observation and LDLT-interval items), Budiman 2026 systematic review (V16-29; audit targets), Avastin US label (V16-17), Te 2025 AASLD/AST graft-complication guideline (V16-23), Zortress label (V16-24), SiLVER/Geissler 2016 (V16-25), De Martin 2026 post-LT ICI series (V16-28), Au 2018 and Sposito 2022 recurrence reviews (V16-26/27), and Kulkarni 2025 (high-risk V16-41). Add keys if these should appear in the evidence library. Team and quality are taken from the standard protocol (§2, §13). The high-risk protocol has its own team list (§2: adds HPB surgery, transplant pharmacy, nutrition and psychosocial services; for a study, research coordinator, biostatistician and independent safety board) and a §9 'Data collection and safety oversight' list (all-screened registration, survival from entry/listing/LT, 90-day morbidity, rejection, graft use); neither is copied here. The everolimus day-30 paragraph that follows §13 is not a quality bullet and is excluded. The high-risk post-LT surveillance item is labelled 'proposed local schedule for approval' in the protocol; keep it only if provisional high-risk body text counts as a settled boundary. Left out because they are open meeting questions or high-risk reviews: AFP repeat interval, AFP ≥500 and rising-AFP holds and release rule (B1.1 / afp-b1-1a–f), LR-4 handling (lesion-counting), beyond-UNOS burden (B1), treated PVTT and the 12-month control period (B2), ICI washout and toxicity gate (B3), benefit score (B4), previously treated extrahepatic disease (B5), and the ALLOC-B1–B4 activation, organ-use, donor and data rules."
+}

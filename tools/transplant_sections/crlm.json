@@ -1,0 +1,152 @@
+{
+ "slug": "crlm",
+ "limited": [
+  {
+   "t": "Candidates must be 18–65 years old with ECOG performance status 0–1.",
+   "why": "Trial-derived convention. SECA-II and the pooled Oslo PET cohort enrolled ECOG 0–1 patients; the protocol cites no source for the 65-year upper limit, and the high-risk protocol states that age and performance limits used in a particular trial are not universal national rules. Neither limit has been tested as a threshold for transplant benefit. Track referrals declined on age or performance status alone.",
+   "refs": [
+    "seca2",
+    "grut"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §2.1 General Requirements"
+  },
+  {
+   "t": "Candidates must have received no more than three lines of prior systemic chemotherapy.",
+   "why": "Trial eligibility rule. The limit is cited to TransMet, which admitted stable or partially responding disease on no more than three chemotherapy lines. It is a trial entry criterion, not a tested threshold: the protocol presents no data comparing outcomes by number of prior lines. Track lines received before listing and how often this rule alone excludes a referral.",
+   "refs": [
+    "C-transmet"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §2.2 Oncologic Requirements"
+  },
+  {
+   "t": "Undifferentiated adenocarcinoma and signet-ring cell carcinoma histology are excluded.",
+   "why": "Narrative-review criterion. The exclusion is cited only to a 2024 narrative review with no new patient cohort, and it is not among the guidance exclusions the high-risk protocol lists (R1 margin, extrahepatic disease, BRAF-mutant or MSI-H disease, progression, unmet timing). The protocol presents no transplant outcome data for these histologies. Track how often this rule alone excludes a referral.",
+   "refs": [],
+   "setting": "standard",
+   "locator": "Standard protocol §2.3 Molecular and Histologic Requirements; §3 Patient Selection — Exclusion Criteria"
+  },
+  {
+   "t": "A largest liver lesion ≤5.5 cm is preferred; a lesion >5.5 cm is a relative contraindication.",
+   "why": "Prognostic association. Lesion size >5.5 cm is a component of the Oslo prognostic score, and the cited review describes it as a prognostic association. The protocol notes that such markers forecast recipient prognosis but have not been shown to change the incremental benefit of LT. The guidance limit is no lesion >10 cm before treatment. Track largest lesion size at listing against recurrence and survival.",
+   "refs": [
+    "N-crlm"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §2.4 Imaging and Biomarker Requirements"
+  },
+  {
+   "t": "Every candidate is reviewed and approved by a tumour board of transplant hepatology, transplant and HPB surgery, GI oncology, diagnostic and interventional radiology, and pathology.",
+   "why": "Guideline recommendation and consensus. AASLD/AST candidate-evaluation guidance recommends multidisciplinary assessment of expected benefit and feasibility, and TransMet used independent adjudication of unresectability. The protocol cites no study comparing outcomes by board composition or approval process; the high-risk protocol proposes a stricter two-surgeon certification. Track board decisions, reasons for rejection and time to decision.",
+   "refs": [
+    "candidate2026",
+    "C-transmet"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §4.1 Multidisciplinary Tumor Board Review; step 'transplant' (final MDT handoff)",
+   "related": "CRLM-B1"
+  },
+  {
+   "t": "While listed, patients are restaged every 8–12 weeks with chest/abdomen/pelvis CT and CEA, plus PET-CT every 3–6 months.",
+   "why": "Local convention. NLRB extension requires CT/MRI and CEA every 3 months; the 8–12-week interval and the PET schedule are local choices with no cited source. PET metabolic measures are prognostic only in small, overlapping Oslo and US recipient cohorts, and the Grut 2022 timing subgroup does not establish an optimal interval. Track progression detected while listed and PET findings that changed management.",
+   "refs": [
+    "N-crlm",
+    "grut",
+    "petcrlm"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §5 Waitlist Management; step 'review' (3-monthly extension evidence)",
+   "related": "restaging"
+  },
+  {
+   "t": "Bridging therapy continues while listed under an individualised plan, with agent-specific washout, toxicity recovery and repeat staging approved by oncology, transplant surgery and pharmacy.",
+   "why": "Trial practice and expert opinion. TransMet aimed to transplant within 2 months of the last chemotherapy cycle, but the protocol states that this trial implementation interval is not a validated threshold, and no cited study defines an optimal washout before LT. Track the interval from last cycle to transplant, waitlist progression and perioperative complications.",
+   "refs": [
+    "C-transmet"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §5 Waitlist Management"
+  },
+  {
+   "t": "At transplant the abdomen is explored with frozen section of suspicious nodes or deposits; metastatic nodal or extrahepatic disease aborts the transplant.",
+   "why": "Trial practice and consensus. TransMet preceded every transplant with exploration and frozen section of suspicious nodes, and IHPBA consensus excludes node-positive patients; in Oslo, hilar node metastasis on frozen section was the commonest extrahepatic reason for not transplanting (7 of 10). A review cited in the protocol notes no dedicated lymph-node sampling study; the extent of lymphadenectomy is left to a separate surgical protocol. Track aborted transplants and explant node findings.",
+   "refs": [
+    "C-transmet",
+    "C-consensus",
+    "crlm_dueland2023"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §6 Surgical Procedure"
+  },
+  {
+   "t": "Immunosuppression follows the signed institutional LT order set; mTOR-based calcineurin-inhibitor minimisation is optional for renal or tolerability reasons, not to prevent CRLM recurrence.",
+   "why": "Extrapolated from general LT guidance. AASLD/AST guidance supports individualised tacrolimus-based therapy, and its conditional mTOR recommendation applies to HCC within Milan only. TransMet's regimen is descriptive; no CRLM-specific regimen or everolimus recurrence benefit has been shown, and the day-30 everolimus start is a label safety floor. Track rejection, renal function and recurrence by regimen.",
+   "refs": [
+    "C-transmet"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §7 Post-Transplant Immunosuppression; §10 everolimus safety note"
+  },
+  {
+   "t": "Routine post-transplant chemotherapy is not given; it is considered only case by case or in a prospective protocol, after graft recovery and joint oncology, surgery, hepatology and pharmacy review.",
+   "why": "Expert consensus. IHPBA LT-CoMet 21 does not recommend routine adjuvant chemotherapy because overall-survival benefit is unproven and chemotoxicity is a risk under immunosuppression. Post-transplant adjuvant treatment remains a research question and its duration is not evidence-defined. Track adjuvant use, timing, toxicity and recurrence.",
+   "refs": [
+    "C-consensus"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §8 Post-Transplant Adjuvant Chemotherapy; step 'transplant'"
+  },
+  {
+   "t": "After transplant: CT and CEA every 3 months in years 1–2 and every 6 months in years 3–5; PET-CT at 6, 12 and 24 months, then yearly to year 5; colonoscopy at 1 year.",
+   "why": "Trial-derived schedule. The calendar is cited to TransMet follow-up; no cited study shows that this frequency, or routine PET, improves survival after LT. The high-risk protocol instead proposes PET only for an unresolved clinical or imaging question. Recurrence is common and mainly pulmonary, which motivates surveillance but not a specific interval. Track how recurrences are detected, salvage-treatment rate and imaging burden.",
+   "refs": [
+    "C-transmet"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §9 Post-Transplant Surveillance; step 'transplant'",
+   "related": "ownership"
+  },
+  {
+   "t": "Small, slow-growing post-transplant lung metastases may be observed until resectable, and solitary or oligometastatic recurrence may be treated by metastasectomy or ablation after MDT review.",
+   "why": "Expert consensus from observational series. The protocol states this is consensus opinion, not a strong recommendation: no controlled data show a survival benefit from local therapy of post-transplant recurrence. Oslo reported long survival after lung resection in selected recipients, and PulMiCC, a non-transplant lung-metastasectomy trial, was inconclusive. Track salvage procedures, complications and survival after recurrence.",
+   "refs": [
+    "C-consensus",
+    "crlm_dueland_lung",
+    "pulmicc"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §10 Management of Recurrence"
+  }
+ ],
+ "team": "All candidates must be reviewed and approved by a multidisciplinary tumor board including: Transplant hepatology; Transplant surgery; Hepatobiliary surgery; Medical oncology (GI); Diagnostic radiology; Interventional radiology; Pathology",
+ "team_locator": "Standard protocol §4.1 Multidisciplinary Tumor Board Review",
+ "quality": [
+  {
+   "text": "Every removal and every reactivation is recorded with its category and the supporting evidence.",
+   "setting": "standard"
+  },
+  {
+   "text": "Register every referred or screened candidate in the institutionally approved system, not only recipients. Record acceptance or rejection, treatment entry, response, listing, exception decision, conversion to resection or ablation, progression, toxicity, decompensation, death, patient withdrawal and access-related loss.",
+   "setting": "highrisk"
+  },
+  {
+   "text": "Report overall survival from the prespecified entry point and separately from listing and transplantation. Keep recurrence-free survival, recurrence incidence, graft survival and survival after recurrence distinct, with definitions, confidence intervals, numbers at risk and follow-up completeness. Do not call recipient-only survival an intention-to-treat outcome.",
+   "setting": "highrisk"
+  },
+  {
+   "text": "Capture 90-day recipient morbidity and mortality, biopsy-defined rejection, infection, arterial and biliary complications, graft loss, retransplantation and total grafts used. Record recurrence site, salvage treatment, time off systemic therapy, functional recovery and quality of life, not survival alone.",
+   "setting": "highrisk"
+  },
+  {
+   "text": "Before a transplanting study opens, biostatistics and the independent safety board must approve indication-specific monitoring, evaluable denominators, pause authority and reopening criteria. ALLOC-B4 now proposes explicit initial-cohort review triggers for ratification; they are not validated efficacy/futility boundaries. No universal cross-cancer five-year survival cutoff is adopted.",
+   "setting": "highrisk"
+  },
+  {
+   "text": "Use a contemporary comparator with the same eligibility and time zero. Account for the interval needed to survive to transplantation, crossover, competing risks and overlapping study cohorts. A nonsignificant difference is not proof of equivalence.",
+   "setting": "highrisk"
+  }
+ ],
+ "quality_locator": "Standard protocol §5 Waitlist Management (last bullet); High-risk protocol §9 Data collection and outcomes (the standard protocol has no quality-measure section)",
+ "notes": "Quality: the standard protocol has no quality or outcomes section. Only the first bullet (removal/reactivation record) is from the standard protocol; the other five are verbatim from High-risk protocol §9, which belongs to a proposed, not-activated protocol, and the fourth refers to the OPEN ALLOC-B4 proposal. Drop them if quality monitoring should reflect the standard pathway only. Team: the seven tumour-board members are a bulleted list in §4.1, joined here with semicolons. §2.1 separately names HPB surgery, transplant surgery, medical oncology, IR and diagnostic radiology for the unresectability determination. Excluded because they are open questions or high-risk reviews: how to certify persistent unresectability (unresectability, CRLM-B1), disappearing/treated lesions and radiographic NED (treated-lesions, CRLM-B2), BRAF/MSI and CEA rules including the local strict CEA <80 proposal and the progression wording (molecular-gates, cea-progression, CRLM-B3), observation and primary-tumour clocks (control-clock, primary-clocks), ctDNA and PET timing (restaging), and previously treated extrahepatic disease (CRLM-B5). The high-risk protocol's local intervals (8-week restaging, 30-day recertification, post-LT schedule) are labelled OPEN proposals and are not listed. Several sources the protocol cites for these rules have no key in content.json sources: Gorji 2024 (histology exclusion), Ueberroth 2025 (5.5 cm), TransMet interim safety analysis (Adam, eClinicalMedicine 2024; exploration and 2-month interval), AASLD/AST graft-complications guideline (Te 2025), Nashan 2018 and the Zortress label (immunosuppression). Their refs are therefore partial or empty. Inconsistencies to resolve: standard §9 schedules routine PET-CT at 6, 12 and 24 months and then yearly, while high-risk §7 limits PET to unresolved questions; standard §2.4/§4.2 ask for FDG PET-CT within 4 weeks of listing, while step 'restaging' uses the NLRB wording (PET within 1 month of the initial request, after ≥4 weeks off chemotherapy). The content.json protocol link still points to the v12 document."
+}

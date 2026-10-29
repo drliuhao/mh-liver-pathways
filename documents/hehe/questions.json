@@ -4,15 +4,15 @@
  "name": "Hepatic epithelioid hemangioendothelioma",
  "generated": "29 October 2026",
  "files": {
-  "standard_info": "HEHE_3_Standard_Transplant_Protocol.docx",
-  "standard_questions": "HEHE_4_Standard_Transplant_Questions.docx",
-  "highrisk_info": "HEHE_5_High_Risk_Transplant_Protocol.docx",
-  "highrisk_questions": "HEHE_6_High_Risk_Transplant_Questions.docx",
+  "standard_info": "HEHE_3_Standard_Pathway.docx",
+  "standard_questions": "HEHE_4_Standard_Pathway_Questions.docx",
+  "highrisk_info": "HEHE_5_High_Risk_Pathway.docx",
+  "highrisk_questions": "HEHE_6_High_Risk_Pathway_Questions.docx",
   "decision": "HEHE_7_Decision_Discussion.docx"
  },
  "sets": {
   "standard": {
-   "label": "Standard transplant pathway",
+   "label": "Standard pathway",
    "page": "transplant/hehe/",
    "web": "transplant/hehe/#meeting",
    "questions": [
@@ -216,7 +216,7 @@
    ]
   },
   "highrisk": {
-   "label": "High-risk boundary protocol",
+   "label": "High-risk pathway (boundary addendum)",
    "page": "transplant/hehe/#high-risk",
    "web": "transplant/hehe/#high-risk",
    "questions": [

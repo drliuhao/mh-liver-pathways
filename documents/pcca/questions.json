@@ -4,17 +4,17 @@
  "name": "Perihilar cholangiocarcinoma",
  "generated": "29 October 2026",
  "files": {
-  "roadmap_info": "pCCA_1_Cancer_Roadmap.docx",
-  "roadmap_questions": "pCCA_2_Cancer_Roadmap_Questions.docx",
-  "standard_info": "pCCA_3_Standard_Transplant_Protocol.docx",
-  "standard_questions": "pCCA_4_Standard_Transplant_Questions.docx",
-  "highrisk_info": "pCCA_5_High_Risk_Transplant_Protocol.docx",
-  "highrisk_questions": "pCCA_6_High_Risk_Transplant_Questions.docx",
+  "roadmap_info": "pCCA_1_Roadmap.docx",
+  "roadmap_questions": "pCCA_2_Roadmap_Questions.docx",
+  "standard_info": "pCCA_3_Standard_Pathway.docx",
+  "standard_questions": "pCCA_4_Standard_Pathway_Questions.docx",
+  "highrisk_info": "pCCA_5_High_Risk_Pathway.docx",
+  "highrisk_questions": "pCCA_6_High_Risk_Pathway_Questions.docx",
   "decision": "pCCA_7_Decision_Discussion.docx"
  },
  "sets": {
   "roadmap": {
-   "label": "Cancer roadmap",
+   "label": "Roadmap",
    "page": "hilar/",
    "web": "hilar/#questions",
    "questions": [
@@ -722,7 +722,7 @@
    "ratify": []
   },
   "standard": {
-   "label": "Standard transplant pathway",
+   "label": "Standard pathway",
    "page": "transplant/pcca/",
    "web": "transplant/pcca/#meeting",
    "questions": [
@@ -955,7 +955,7 @@
    ]
   },
   "highrisk": {
-   "label": "High-risk transplant protocol",
+   "label": "High-risk pathway",
    "page": "transplant/pcca/#high-risk",
    "web": "transplant/pcca/#high-risk",
    "questions": [

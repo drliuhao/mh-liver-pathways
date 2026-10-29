@@ -4,17 +4,17 @@
  "name": "Hepatocellular adenoma",
  "generated": "29 October 2026",
  "files": {
-  "roadmap_info": "HCA_1_Cancer_Roadmap.docx",
-  "roadmap_questions": "HCA_2_Cancer_Roadmap_Questions.docx",
-  "standard_info": "HCA_3_Standard_Transplant_Protocol.docx",
-  "standard_questions": "HCA_4_Standard_Transplant_Questions.docx",
-  "highrisk_info": "HCA_5_High_Risk_Transplant_Protocol.docx",
-  "highrisk_questions": "HCA_6_High_Risk_Transplant_Questions.docx",
+  "roadmap_info": "HCA_1_Roadmap.docx",
+  "roadmap_questions": "HCA_2_Roadmap_Questions.docx",
+  "standard_info": "HCA_3_Standard_Pathway.docx",
+  "standard_questions": "HCA_4_Standard_Pathway_Questions.docx",
+  "highrisk_info": "HCA_5_High_Risk_Pathway.docx",
+  "highrisk_questions": "HCA_6_High_Risk_Pathway_Questions.docx",
   "decision": "HCA_7_Decision_Discussion.docx"
  },
  "sets": {
   "roadmap": {
-   "label": "Cancer roadmap",
+   "label": "Roadmap",
    "page": "adenoma/",
    "web": "adenoma/#questions",
    "questions": [
@@ -808,7 +808,7 @@
    "ratify": []
   },
   "standard": {
-   "label": "Standard transplant pathway",
+   "label": "Standard pathway",
    "page": "transplant/hca/",
    "web": "transplant/hca/#meeting",
    "questions": [
@@ -1030,7 +1030,7 @@
    ]
   },
   "highrisk": {
-   "label": "High-risk boundary protocol",
+   "label": "High-risk pathway (boundary addendum)",
    "page": "transplant/hca/#high-risk",
    "web": "transplant/hca/#high-risk",
    "questions": [

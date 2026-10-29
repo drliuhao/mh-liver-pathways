@@ -1,0 +1,151 @@
+{
+ "slug": "nelm",
+ "limited": [
+  {
+   "t": "The pathway offers transplantation for selected NET liver metastases although NCCN v1.2026 still classes it as investigational; each case records the expected benefit over non-transplant therapy.",
+   "why": "Non-randomised evidence; guidelines disagree. NLRB guidance allows selected exception review, but NCCN retains the investigational designation. Support comes from the non-randomised Milan-NET comparison and a retrospective matched transplant-versus-resection series; neither measures benefit against contemporary PRRT, targeted or liver-directed therapy, and a Swedish eligible non-transplant cohort had substantial long-term survival. Track documented expected benefit, alternatives offered and outcomes from referral.",
+   "refs": [
+    "NCCN-net",
+    "N-net",
+    "NET-milan",
+    "net_matched",
+    "net_kjaer2023"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §1 Purpose and Scope; step 'options'",
+   "related": "NET-B1"
+  },
+  {
+   "t": "Waitlist activation requires at least 6 months of documented stable disease or response, with abdominal/pelvic CT or MRI every 3 months during the observation period.",
+   "why": "Selection tradition. The high-risk protocol states that 6-month stability derives from selection traditions such as the Milan criteria, not a randomised timing trial, and screens biology without proving added benefit. It is separate from the NLRB requirement of 6 months without recurrence after primary and extrahepatic resection. The 3-month scan interval is local; no cited study compares observation lengths. Track progression found during observation and time from referral to activation.",
+   "refs": [
+    "net_maspero2022",
+    "NET-milan",
+    "N-net"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §2C Disease Burden and Stability; §4 Observation Period and Waitlist Management; step 'observation'",
+   "related": "NET-B2"
+  },
+  {
+   "t": "FDG-PET/CT and repeat SSTR-PET/CT are ordered for a stated indication (higher grade, rapid growth, discordance, new concern), not as a blanket test or on a fixed calendar while waiting.",
+   "why": "Guideline expert opinion. NCCN reserves FDG-PET for G2 or higher-grade or concerning biology, and the protocol states there is no evidence-based universal 6- or 12-month PET schedule; a blanket FDG-PET would be a local requirement only. No cited transplant study tests whether routine or selective PET changes selection or outcome. Track PET use by indication and findings that changed management.",
+   "refs": [
+    "NCCN-net"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §3A Oncologic Evaluation; §4 Observation Period and Waitlist Management; steps 'distribution' and 'observation'",
+   "related": "observation"
+  },
+  {
+   "t": "Somatostatin analogue therapy continues during the waitlist period for functional tumours and may continue for antiproliferative effect in non-functional tumours.",
+   "why": "Extrapolated from non-transplant trials. CLARINET showed longer progression-free survival with lanreotide in low-grade (Ki-67 <10%), mostly treatment-naive SSTR-positive NET, without a demonstrated overall-survival or quality-of-life difference, and did not study transplant candidates. No cited study tests SSA bridging before transplantation. Track waitlist progression and SSA adverse effects.",
+   "refs": [
+    "clarinet",
+    "NCCN-net"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §4 Observation Period and Waitlist Management"
+  },
+  {
+   "t": "Liver-directed therapy (TAE, TACE, TARE or ablation) may be used as bridging therapy during the waitlist period.",
+   "why": "Extrapolated from non-transplant NET care. The rule is cited to NCCN non-transplant NET guidance; no cited study compares bridging with none. The ELTR registry recorded nine transplants after severe TACE complications (four liver failure, five ischaemic cholangitis); the protocol notes that this rescue experience does not justify deliberate treatment injury. Track treatments given while listed, complications and liver reserve.",
+   "refs": [
+    "NCCN-net",
+    "eltr213"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §4 Observation Period and Waitlist Management; step 'exposure'",
+   "related": "sequencing"
+  },
+  {
+   "t": "All candidates have echocardiography with cardiology review; severe uncontrolled carcinoid heart disease is a HOLD, but mild disease does not mandate valve replacement or routine right-heart catheterisation.",
+   "why": "Expert consensus. The cited 2014 London consensus, based on low-quality observational evidence, lists severe carcinoid heart disease, not every echocardiographic abnormality, as a contraindication; NCCN ties valve replacement to significant or symptomatic disease. No cited transplant study defines a safe severity threshold. Track carcinoid heart disease grade, cardiac interventions before transplant and perioperative cardiac events.",
+   "refs": [
+    "NCCN-net"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §2D Patient Factors; §3B Transplant Evaluation"
+  },
+  {
+   "t": "Deceased-donor whole-liver transplantation is the default; living donation may be considered for selected candidates after independent donor evaluation and donor-advocate review.",
+   "why": "Observational data only. The protocol states that LDLT evidence for NET is limited to observational reports and that conference abstracts are insufficient for donor-source choice; the cited Japanese registry (16 NET recipients, none after 2012) cannot show current LDLT safety. Donor-risk estimates come from general living-donor cohorts. Track graft type, donor complications and recipient outcomes by donor source.",
+   "refs": [
+    "donor_a2all",
+    "donor_xiao"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §5 Surgical Procedure"
+  },
+  {
+   "t": "An intraoperative octreotide infusion is kept available for carcinoid crisis; prophylactic octreotide is not relied on and must not delay vasopressors or fluids.",
+   "why": "Guideline statement on limited data. NCCN 2026 states that prophylactic octreotide is probably ineffective at preventing intraoperative crisis, yet still allows selective prophylactic use while questioning routine use; no transplant-specific study is cited. Track intraoperative crisis events, octreotide use and haemodynamic management.",
+   "refs": [
+    "NCCN-net"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §5 Surgical Procedure"
+  },
+  {
+   "t": "Immunosuppression follows the institutional LT protocol (intraoperative methylprednisolone, tacrolimus-based maintenance); everolimus is optional, not before day 30, and not given as cancer prophylaxis.",
+   "why": "Extrapolated from general LT practice. AASLD/AST guidance supports individualised tacrolimus-based therapy, and its mTOR recommendation is limited to HCC within Milan; the SiLVER HCC trial's primary endpoint was negative. No NET-specific regimen has been shown to reduce recurrence, and the day-30 everolimus limit is a label safety floor. Track rejection, renal function and recurrence by regimen.",
+   "refs": [],
+   "setting": "standard",
+   "locator": "Standard protocol §6 Post-Transplant Immunosuppression; §8 everolimus safety note"
+  },
+  {
+   "t": "Post-transplant oncologic surveillance is every 3 months to month 24 and every 6 months in years 3–5, with SSTR-PET only when indicated and individualised follow-up with no fixed stopping point.",
+   "why": "Local schedule. NCCN surveillance schedules are for non-transplant patients, and the protocol states that no validated post-transplant calendar exists and that any intensified local calendar is institutional consensus. Recurrence has been documented up to 204 months after transplant in the Milan series, which supports long follow-up but not a specific interval. Track how recurrences are detected, time to recurrence and salvage eligibility.",
+   "refs": [
+    "NCCN-net",
+    "net_maspero2022"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §7 Post-Transplant Surveillance; step 'follow-up'",
+   "related": "ownership"
+  },
+  {
+   "t": "Every post-transplant recurrence goes to tumour board, and complete salvage resection is considered for technically resectable, biologically favourable recurrence.",
+   "why": "Single-centre series. In the 32-patient Milan recurrence cohort, surgery versus other treatment was associated with 5-year post-recurrence survival of 90.9% versus 64.5% (P=.062), an unadjusted, non-significant comparison confounded by selection and resectability. Recurrence within 24 months is a risk marker, not a validated bar to salvage. Track salvage procedures, complications and survival after recurrence.",
+   "refs": [],
+   "setting": "standard",
+   "locator": "Standard protocol §8 Management of Post-Transplant Recurrence"
+  },
+  {
+   "t": "Post-transplant PRRT is investigational: considered case by case only for SSTR-positive recurrence, after joint transplant-oncology, nuclear-medicine, hepatology and pharmacy review, preferably in a protocol.",
+   "why": "Case series only. The cited post-transplant experience is a seven-patient single-centre series with no controlled efficacy estimate; one patient had persistent platelets <10×10^9/L after one cycle. NETTER-1 shows PRRT activity outside transplantation (final overall-survival difference not established) but says nothing about graft safety, and no trough target for concurrent immunosuppression exists. Track marrow, renal and graft toxicity and response.",
+   "refs": [
+    "prrtlt",
+    "netter1_final"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §8 Management of Post-Transplant Recurrence"
+  }
+ ],
+ "team": null,
+ "team_locator": null,
+ "quality": [
+  {
+   "text": "Register every referred or screened candidate in the institutionally approved system, not only recipients. Record acceptance or rejection, treatment entry, response, listing, exception decision, conversion to resection or ablation, progression, toxicity, decompensation, death, patient withdrawal and access-related loss.",
+   "setting": "highrisk"
+  },
+  {
+   "text": "Report overall survival from the prespecified entry point and separately from listing and transplantation. Keep recurrence-free survival, recurrence incidence, graft survival and survival after recurrence distinct, with definitions, confidence intervals, numbers at risk and follow-up completeness. Do not call recipient-only survival an intention-to-treat outcome.",
+   "setting": "highrisk"
+  },
+  {
+   "text": "Capture 90-day recipient morbidity and mortality, biopsy-defined rejection, infection, arterial and biliary complications, graft loss, retransplantation and total grafts used. Record recurrence site, salvage treatment, time off systemic therapy, functional recovery and quality of life, not survival alone.",
+   "setting": "highrisk"
+  },
+  {
+   "text": "Before a transplanting study opens, biostatistics and the independent safety board must approve indication-specific monitoring, evaluable denominators, pause authority and reopening criteria. ALLOC-B4 now proposes explicit initial-cohort review triggers for ratification; they are not validated efficacy/futility boundaries. No universal cross-cancer five-year survival cutoff is adopted.",
+   "setting": "highrisk"
+  },
+  {
+   "text": "Use a contemporary comparator with the same eligibility and time zero. Account for the interval needed to survive to transplantation, crossover, competing risks and overlapping study cohorts. A nonsignificant difference is not proof of equivalence.",
+   "setting": "highrisk"
+  }
+ ],
+ "quality_locator": "High-risk protocol §9 Outcomes and safety oversight (the standard protocol has no quality-measure section)",
+ "notes": "Team: neither NELM protocol has a multidisciplinary-team description. The standard protocol requires 'Multidisciplinary tumor board review for all recurrences' (§8) and names joint reviews for specific decisions (for example post-transplant PRRT), but lists no team membership, so team is null. Quality: the standard protocol has no quality or outcomes section. The bullets are verbatim from High-risk protocol §9, which belongs to a proposed, not-activated protocol, and the fourth refers to the OPEN ALLOC-B4 proposal. Drop them if quality monitoring should reflect the standard pathway only. Excluded because they are open questions or high-risk reviews: the <50% liver-burden 'proposed local initial-cohort reference' and the age ≥60 review trigger (selection, NET-B3), grade/Ki-67 boundaries and discordant pathology (biology, NET-B2), nodal and previously treated extrahepatic disease (extrahepatic, NET-B4), PRRT/Y90 sequencing rules (sequencing), the 'at least 3 months prior' imaging wording (observation), and the benefit trigger (NET-B1). Several sources the protocol cites have no key in content.json sources: Gorji 2024 and Kasai 2024 (selection and observation, LDLT), Frilling 2014 (carcinoid heart disease), Te 2025 and Nashan 2018 and the Zortress label (immunosuppression), and Sposito 2021 (salvage resection, post-recurrence survival). Their refs are therefore partial or empty. Inconsistencies to resolve: standard §7 sets 3-monthly surveillance to month 24 and 6-monthly to year 5, while high-risk §7 proposes 3–6-monthly to year 2 and 6–12-monthly to year 5; the methylprednisolone 500 mg intraoperative dose (§6) has no cited source. The content.json protocol link points to nelm_v3_protocol.docx, not V16."
+}

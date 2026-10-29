@@ -1,0 +1,83 @@
+{
+ "slug": "hehe",
+ "limited": [
+  {
+   "t": "In the lower-risk cohort, more than 120 days before transplant is preferred only to observe disease behavior when safe; no wait is imposed with progression, failing liver function or symptoms.",
+   "why": "Single-registry association, confounded by indication. In the ELTR registry a wait of 120 days or less was linked to recurrence, but rapid transplantation selects aggressive or symptomatic disease, so the protocol states there is no evidence that deliberate delay reduces recurrence; the registry also measured waiting from listing, not diagnosis or staging. It is a center safeguard, not an OPTN rule. Track recurrence and dropout by observation interval.",
+   "refs": [
+    "E-score"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §5.1 Guidance-aligned lower-risk institutional cohort; step 'risk'",
+   "related": "HEHE-B1"
+  },
+  {
+   "t": "Treated hilar nodes, prior progression, systemic therapy needed for control, uncertain rupture or ≤120 days' observation place a patient in the high-risk cohort, needing separate oncology and allocation-ethics approval.",
+   "why": "Local construct built on one registry. Among 149 ELTR recipients, hilar-node invasion and a wait of 120 days or less were associated with recurrence, but the registry excludes patients who dropped out and its score relies on explant pathology. The protocol cites no outcome data for rupture history or prior systemic therapy as risk markers. Track outcomes by cohort and how often a pre-transplant risk feature is confirmed at explant.",
+   "refs": [
+    "E-score"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §5 Risk-stratified cohorts (§5.1–§5.2)",
+   "related": "HEHE-B2"
+  },
+  {
+   "t": "Macrovascular invasion excludes transplantation in both cohorts; the pathway permits no macrovascular-invasion cohort.",
+   "why": "NLRB guidance and registry prognosis, made absolute locally. NLRB lists absence of macrovascular invasion as a condition for favorable exception review; the protocol turns it into a clinical exclusion. In the ELTR registry it carried the highest recurrence risk, but the registry holds only selected recipients, and the German S2k guidance treats it as not an absolute barrier to evaluation. Track referrals declined on this criterion and their outcomes.",
+   "refs": [
+    "N-hehe",
+    "E-score",
+    "dgvs_lt2024"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §2 Mandatory guidance criteria and §6 Exclusion and deferral criteria; step 'stage'",
+   "related": "HEHE-B2"
+  },
+  {
+   "t": "No neoadjuvant or bridging regimen is required; the sarcoma–transplant MDT chooses observation, ablation, embolization, radiation or systemic therapy case by case.",
+   "why": "Expert consensus. The international EHE consensus supports active surveillance for stable disease and individual treatment choice. The only comparison cited is a 50-patient single-center series in which five-year survival from diagnosis did not differ by initial strategy; the groups were small and clinically selected, so this is not equivalence, and 14 of 25 patients first observed progressed. Track progression and dropout by pre-transplant strategy.",
+   "refs": [
+    "E-consensus",
+    "ehe_thomas"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §7 Pretransplant treatment and stability",
+   "related": "HEHE-B1"
+  },
+  {
+   "t": "Recipients receive the standard institutional immunosuppression; no tumor-specific or mTOR-based regimen is mandated, and oncologically unnecessary immunosuppression is minimized when feasible.",
+   "why": "Expert opinion. The protocol states that evidence is insufficient to mandate a tumor-specific or mTOR-based regimen, and it cites no HEHE study of immunosuppressive regimens or minimization. Track rejection, recurrence and renal function by regimen.",
+   "refs": [],
+   "setting": "standard",
+   "locator": "Standard protocol §9 Transplant and post-transplant management"
+  },
+  {
+   "t": "After transplant: CT chest/abdomen/pelvis and liver MRI every 6 months for 5 years then yearly (lower risk), or every 3–4 months for 2 years, 6-monthly to year 5, then yearly (high risk).",
+   "why": "Institutional extrapolation. The protocol calls the intervals risk-based extrapolations, and the international consensus notes that no HEHE-specific interval has been validated; late recurrence is possible and there is no validated serum marker. Track time to recurrence, site and mode of detection by cohort.",
+   "refs": [
+    "E-consensus"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §10 Post-transplant surveillance; step 'follow-up'",
+   "related": "surveillance"
+  }
+ ],
+ "team": "Formal transplant-oncology conference review including transplant hepatology, transplant and hepatobiliary surgery, medical oncology/sarcoma, radiology, and pathology.",
+ "team_locator": "Standard protocol §4 Staging and resectability workup (final bullet); no separate multidisciplinary-team section",
+ "quality": [
+  {
+   "text": "Require current review by the transplant selection committee and transplant-oncology conference before activation and at every major change in disease status.",
+   "setting": "standard"
+  },
+  {
+   "text": "Track waitlist dropout, NLRB decisions, donor source, perioperative mortality, rejection, recurrence site and timing, graft survival, patient survival, and quality of life.",
+   "setting": "standard"
+  },
+  {
+   "text": "Recheck the live OPTN policy and guidance immediately before committee adoption, exception submission, or extension.",
+   "setting": "standard"
+  }
+ ],
+ "quality_locator": "Standard protocol §11 Governance and quality review",
+ "notes": "The standard protocol has no separate multidisciplinary-team section; 'team' is the conference-review bullet in §4. The first §11 bullet is a draft-status disclaimer rather than a quality measure; it is removed because it is a bullet of that section, but it may not belong on a public page. The boundary addendum contains only the open HEHE-B1 and HEHE-B2 reviews, so there are no high-risk items. Inconsistency for the team to resolve (not edited): standard §5.2 and the opening routing note place limited, stable or locally controlled extrahepatic HEHE in the high-risk individualized cohort, whereas HEHE-B2 (V16, both files) calls the extrahepatic stratum 'defined, not activated' with a liver-only opening cohort. No item was written on extrahepatic routing because it is an open question (HEHE-B2, issue 'extrahepatic'). The registry hazard ratio for waiting ≤120 days is given as 2.6 in standard §5.1 and 2.5 (Table 5) in the addendum; the items avoid the number. The HEHE-B2 proposed rule calling a wait over 120 days 'a usable pre-transplant test of time' sits uneasily with §5.1's statement that the association gives no evidence that delay reduces recurrence. Also left out as open questions: expert pathology requirements (issue 'diagnosis'), pre-LT use of the HEHE-LT score (issue 'risk-score'), the six-month observation default (HEHE-B1). Restaging every 3 months while listed was not listed separately: it follows the OPTN 90-day extension cycle."
+}

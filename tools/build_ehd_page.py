@@ -27,10 +27,10 @@ for q in data['questions']:
     t = manifest[key]
     if q['setting'] == 'roadmap':
         url = f'{BASE}{t["roadmap"]}/#question-{q["id"]}'
-        place = 'Cancer roadmap · Questions for consensus'
+        place = 'Roadmap · Questions for consensus'
     else:
         url = f'{BASE}transplant/{t["transplant"]}/#high-risk-{ANCHOR[q["id"]]}'
-        place = 'Transplant pathway · high-risk view'
+        place = 'Pathway · high-risk view'
     rows.setdefault(key, []).append(f'<li><a href="{url}"><b>{e(q["id"])}</b> {e(q["title"])}</a><small>{e(place)} · {e(q["status"])}</small></li>')
 for n in data['not_applicable']:
     key = NA[n['tumor']]
@@ -46,7 +46,7 @@ out = ['<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="v
        f'<link rel="stylesheet" href="{BASE}assets/portal-navigation.css"><script src="{BASE}assets/portal-navigation.js?v={KEY}" defer></script>'
        f'<style>{css}</style></head><body><main class="evidence-wrap" id="ehd-positions">',
        '<header class="tool-hero"><p class="eyebrow">Index · proposed positions</p><h1>Previously treated extrahepatic disease</h1>'
-       '<p>Each tumor\'s question is discussed once, in its own setting: the cancer roadmap\'s Questions for consensus, or the transplant pathway\'s '
+       '<p>Each tumor\'s question is discussed once, in its own setting: the roadmap\'s Questions for consensus, or the pathway\'s '
        'high-risk view. The tumor\'s Word files (Documents, top right on those pages) carry the same questions with every source.</p></header>',
        '<div class="review-notice"><strong>Proposed for multidisciplinary review. Nothing is activated.</strong>'
        'These positions open no eligibility rule, allocation route, MELD exception request or study.</div>']

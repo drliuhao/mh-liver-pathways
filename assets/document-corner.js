@@ -1,9 +1,9 @@
 /* Standardized documents (29 October 2026, Analyst B): a Documents menu in the top-right corner of every tumor page,
-   and the cancer roadmaps' "Questions for consensus" section. Presentation only: nothing is stored, nothing changes a
+   and the roadmaps' "Questions for consensus" section. Presentation only: nothing is stored, nothing changes a
    recommendation, and every word shown comes from documents/<tumor>/questions.json, which is built from the roadmap,
    the transplant protocol data and the recorded reviews (tools/build_consensus.py).
 
-   Each tumor has up to three sets (cancer roadmap, standard transplant pathway, high-risk transplant protocol), each with
+   Each tumor has up to three sets (roadmap, standard pathway, high-risk pathway), each with
    a full-content Word file and a questions-for-consensus Word file, plus one decision-discussion file for all settings.
    The corner offers the set that belongs to the page in view, so every file has exactly one place to download it. */
 (() => {
@@ -22,11 +22,11 @@
   const ready = fn => document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', fn, {once: true}) : fn();
   const setInView = () => !transplant ? 'roadmap' : /^#high-risk/.test(location.hash) ? 'highrisk' : 'standard';
   const LABELS = {
-    roadmap: [['roadmap_info', 'Cancer roadmap', 'Full content'], ['roadmap_questions', 'Roadmap questions for consensus', 'Positions, proposed selection, decision fields'],
+    roadmap: [['roadmap_info', 'Roadmap', 'Full content'], ['roadmap_questions', 'Roadmap questions for consensus', 'Positions, proposed selection, decision fields'],
       ['decision', 'Decision discussion', 'All settings for this tumor']],
-    standard: [['standard_info', 'Standard transplant protocol', 'Full content'], ['standard_questions', 'Standard pathway questions for consensus', 'Positions, proposed selection, decision fields'],
+    standard: [['standard_info', 'Standard pathway', 'Full content'], ['standard_questions', 'Standard pathway questions for consensus', 'Positions, proposed selection, decision fields'],
       ['decision', 'Decision discussion', 'All settings for this tumor']],
-    highrisk: [['highrisk_info', 'High-risk transplant protocol', 'Full content'], ['highrisk_questions', 'High-risk questions for consensus', 'Positions, proposed selection, decision fields'],
+    highrisk: [['highrisk_info', 'High-risk pathway', 'Full content'], ['highrisk_questions', 'High-risk pathway questions for consensus', 'Positions, proposed selection, decision fields'],
       ['decision', 'Decision discussion', 'All settings for this tumor']]
   };
 
@@ -37,7 +37,7 @@
     box.append(summary, list);
     const fill = () => {
       const set = setInView();
-      list.innerHTML = `<p class="doc-corner-head">${esc(t.code)} · ${esc({roadmap: 'Cancer roadmap', standard: 'Standard transplant pathway', highrisk: 'High-risk transplant protocol'}[set])}</p>` +
+      list.innerHTML = `<p class="doc-corner-head">${esc(t.code)} · ${esc({roadmap: 'Roadmap', standard: 'Standard pathway', highrisk: 'High-risk pathway'}[set])}</p>` +
         LABELS[set].filter(([k]) => t.files[k]).map(([k, label, note]) =>
           `<a href="${esc(new URL(`documents/${key}/${t.files[k]}`, root).href)}" download data-doc="${esc(k)}"><b>${esc(label)}</b><small>${esc(note)} · Word</small></a>`).join('');
       box.dataset.set = set;
@@ -86,11 +86,11 @@
     fetch(new URL(`documents/${key}/questions.json?v=${KEY}`, root)).then(r => r.ok ? r.json() : null).then(data => {
       const set = data && data.sets.roadmap;
       if (!set) return;
-      const sec = make('section', 'consensus-questions'); sec.id = 'questions';
+      const sec = make('section', 'consensus-questions'); sec.id = 'questions'; sec.dataset.hierarchyRole = 'background';
       const ratify = set.ratify && set.ratify.length ? `<details class="cq-fold cq-ratify"><summary>Specialty ratification items <span>${set.ratify.length}</span></summary>${rows(set.ratify,
         [['Item', x => `<b>${esc(x.id)}</b><small>${esc(x.specialty)}</small>`], ['To ratify', x => esc(x.question)], ["Roadmap's stated position", x => `${esc(x.proposal)}<small>${esc(x.proposal_locator)}</small>`]])}</details>` : '';
       const na = (data.not_applicable || []).map(n => `<p class="cq-na"><b>Previously treated extrahepatic disease.</b> ${esc(n.text)}</p>`).join('');
-      sec.innerHTML = `<div class="sechead"><h2>Questions for consensus</h2><p>Every decision this roadmap still needs the programme to make: what guidelines, trials and papers say, the proposed selection, and the group decision. The same questions are in the Word files under <b>Documents</b> (top right).</p><button class="xpand" type="button" aria-expanded="false">Show</button></div>
+      sec.innerHTML = `<div class="sechead"><h3 class="ch-background-title">Questions for consensus</h3><p>Every decision this roadmap still needs the programme to make: what guidelines, trials and papers say, the proposed selection, and the group decision. The same questions are in the Word files under <b>Documents</b> (top right).</p><button class="xpand" type="button" aria-expanded="false">Show</button></div>
         <div class="cq-body" hidden><nav class="cq-index" aria-label="Questions for consensus">${set.questions.map(q => `<a href="#question-${esc(q.id)}">${esc(q.id)}</a>`).join('')}</nav>
         ${set.questions.map(q => card(data, q, slug)).join('')}${ratify}${na}</div>`;
       anchor.before(sec);

@@ -1,0 +1,145 @@
+{
+ "slug": "icca",
+ "limited": [
+  {
+   "t": "A solitary iCCA ≤3 cm meets the NLRB size limit; patients with 2–3 cm tumors are told, in consent and in the NLRB narrative, that they are above the size range with the best published outcomes.",
+   "why": "Guidance threshold beyond the best data. The 3-cm limit follows NLRB guidance; the strongest outcome data are for single tumors ≤2 cm in a retrospective international series (Sapisochin 2016: 5-year recurrence 18% and survival 65%, n = 15). AASLD/AST statement 11 on small iCCA is a weak recommendation on level 4 evidence. Track recurrence and survival separately for tumors ≤2 cm and 2–3 cm.",
+   "refs": [
+    "N-icca",
+    "I-cohort",
+    "candidate2026"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §2.1 Inclusion Criteria; step 'phenotype'"
+  },
+  {
+   "t": "Documented cirrhosis is required; a candidate without cirrhosis is not submitted under this pathway and needs a separately justified nonstandard request reviewed by the selection committee.",
+   "why": "Guidance population. Cirrhosis is part of the NLRB category and appears in the explanatory text of AASLD/AST statement 11 (weak recommendation, level 4 evidence). The cited small-tumor transplant cohorts are incidental tumors in cirrhotic explants (for example De Martin 2020); no transplant outcome data for noncirrhotic small iCCA are cited. Track noncirrhotic referrals and how they were handled.",
+   "refs": [
+    "N-icca",
+    "candidate2026",
+    "icca_demartin"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §2.1 Inclusion Criteria; step 'phenotype'"
+  },
+  {
+   "t": "Candidates need ECOG 0–1; there is no upper age limit, but those over 70 need enhanced physiologic assessment and explicit selection-committee sign-off.",
+   "why": "Local rules. The protocol cites no source for ECOG 0–1. OPTN sets no age limit; the 70-year trigger and the assessment bundle (frailty, sarcopenia, cardiopulmonary, geriatric or anesthesia review) are institutional, and age alone may not be grounds to decline. The age rule cites a non-transplant eligibility cohort (Schleimer 2026); no transplant outcomes by age or performance status are cited. Track committee decisions and outcomes for these candidates.",
+   "refs": [
+    "icca_comparator"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §2.1 Inclusion Criteria"
+  },
+  {
+   "t": "Poorly differentiated histology is a relative contraindication.",
+   "why": "Guideline-based (AASLD PSC/CCA guidance). The supporting cohort data are small and retrospective: in De Martin 2020, incidental tumors in cirrhosis, tumor grade carried a hazard ratio of 3.74. A core biopsy cannot guarantee the grade of the whole tumor, and the protocol does not define how the relative contraindication is weighed. Track biopsy versus explant grade and recurrence by grade.",
+   "refs": [
+    "C-aasld",
+    "icca_demartin"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §2.2 Exclusion Criteria",
+   "related": "iCCA-B1"
+  },
+  {
+   "t": "Macrovascular invasion excludes the candidate.",
+   "why": "Local exclusion. It is not among the NLRB criteria the protocol lists, and the cited source (Schleimer 2026) is a non-transplant eligibility cohort; the Houston advanced-iCCA series also excluded major vascular encasement. No transplant outcome comparison by vascular invasion is cited. The open high-risk review would allow encasement without tumor thrombus in the advanced study. Track vascular findings on the explant.",
+   "refs": [
+    "icca_comparator",
+    "mcmillan"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §2.2 Exclusion Criteria",
+   "related": "iCCA-B1"
+  },
+  {
+   "t": "Prior liver resection does not by itself exclude a candidate; recurrent or other outside-guidance presentations need explicit multidisciplinary and individual allocation review.",
+   "why": "Clinical reasoning. NLRB guidance does not list prior resection as an exclusion. The only transplant experience after resection that the protocol cites is a single-center advanced-iCCA series in which four previously resected patients were listed and three transplanted (McMillan 2022); that research cohort does not establish eligibility for the standard route. Track previously resected candidates, selection decisions and recurrence.",
+   "refs": [
+    "N-icca",
+    "mcmillan"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §2.2 Exclusion Criteria"
+  },
+  {
+   "t": "If checkpoint-inhibitor therapy is used, a washout of at least 90 days precedes transplant; afterwards, liver tests are checked twice weekly for 4 weeks, then weekly to week 12, with biopsy for unexplained rises.",
+   "why": "Protocol convention. The protocol calls the 90-day washout a convention, not a validated threshold: no interval has been shown to eliminate rejection, and rejection has been reported after longer intervals. Evidence is retrospective and largely HCC-derived (Moeckli 2025, VITALITY). The monitoring schedule is a local operational rule; pooled retrospective data (8 studies, n = 229) show 19% rejection with no reliable onset time. Track washout, rejection and graft loss.",
+   "refs": [
+    "H-aasld",
+    "moeckli",
+    "vitality"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §4.1 Systemic Therapy and §7.2 Maintenance; step 'therapy'",
+   "related": "therapy"
+  },
+  {
+   "t": "For living donation, recipient staging and technical clearance are completed before irreversible donor surgery, with an explicit abort plan for occult nodes, peritoneal disease or unresectability.",
+   "why": "Operational safety proposal. The protocol labels this a safety workflow, not proof that negative staging prevents recurrence. The cited UPMC series (Sethi 2026) staged recipients before donor surgery and aborted 7 of 31 explorations, but it included only seven iCCA recipients. Track aborted donor and recipient operations and occult disease found at staging.",
+   "refs": [
+    "icca_ldlt"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §6.1 Staging Laparotomy",
+   "related": "iCCA-B3"
+  },
+  {
+   "t": "At transplant, perihepatic lymph nodes are sampled for frozen section; extrahepatic or extrabiliary spread on frozen section aborts the transplant and the organ is reallocated.",
+   "why": "Single-center protocol. The rule follows the Houston prospective case series (Lunsford 2018), in which six patients were transplanted. The protocol gives no data on frozen-section accuracy, and it notes that negative EUS sampling does not exclude all nodal disease. Track agreement between frozen-section and final pathology, and aborted transplants.",
+   "refs": [
+    "lunsford"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §6.1 Staging Laparotomy"
+  },
+  {
+   "t": "No routine adjuvant therapy after a complete pathologic response; with residual viable tumor, chemotherapy is considered only case by case or within a prospective protocol.",
+   "why": "Extrapolated. The protocol states that no post-transplant adjuvant standard exists and that benefit and tolerability in immunosuppressed recipients are unproven; the cited source is a single-center case series (Lunsford 2018). Track adjuvant use, tolerance and recurrence by explant response.",
+   "refs": [
+    "lunsford"
+   ],
+   "setting": "standard",
+   "locator": "Standard protocol §8 Adjuvant Therapy Post-Transplant; step 'follow-up'"
+  },
+  {
+   "t": "After transplant, chest CT plus abdominal/pelvic CT or MRI every 3 months in years 1–2 and every 6 months in years 3–5, with CA 19-9 and CEA at each visit, then annual follow-up as indicated.",
+   "why": "Institutional proposal. The protocol states this is not the schedule of the cited incidental biliary-cancer series (Heinrich 2026), which imaged every 6 months for 3 years and then annually; selected transplant data do not define an optimal interval. The group is to approve modality, interval, contrast adaptations and escalation triggers and record the rationale. Track how recurrences are detected.",
+   "refs": [],
+   "setting": "standard",
+   "locator": "Standard protocol §9.1 Oncologic Surveillance; step 'follow-up'",
+   "related": "surveillance"
+  },
+  {
+   "t": "After confirmed recurrence, transplant hepatology, surgery and oncology discuss individualized immunosuppression minimization.",
+   "why": "Single-center retrospective association. In the cited cohort (Gül-Klein 2022: 67 recipients with mixed CCA subtypes, 1988–2022), restrictive immunosuppression was associated with longer survival after recurrence, but selection and confounding limit causal inference, and mTOR use showed no independent association. The protocol supports consideration, not automatic withdrawal or routine mTOR substitution. Track rejection and survival after minimization.",
+   "refs": [],
+   "setting": "standard",
+   "locator": "Standard protocol §10 Recurrence Management"
+  }
+ ],
+ "team": "All cases must be reviewed by the UTHealth Houston Hepatobiliary Multidisciplinary Tumor Board, including: Transplant surgery; Surgical oncology; Medical oncology; Hepatology; Radiation oncology; Interventional radiology; Pathology; Radiology",
+ "team_locator": "Standard protocol §11 Multidisciplinary Team",
+ "quality": [
+  {
+   "text": "Track intent-to-treat survival, post-transplant survival, recurrence-free survival",
+   "setting": "standard"
+  },
+  {
+   "text": "Document dropout rates and reasons",
+   "setting": "standard"
+  },
+  {
+   "text": "Explant pathology correlation with pre-transplant imaging",
+   "setting": "standard"
+  },
+  {
+   "text": "Report outcomes to UNOS/OPTN as required",
+   "setting": "standard"
+  }
+ ],
+ "quality_locator": "Standard protocol §12 Quality Metrics and Data Collection",
+ "notes": "Team and quality come from standard §11 and §12; the §11 bullet list is joined with semicolons, wording unchanged. High-risk protocol §13 (outcomes and safety monitoring) and §14 (multidisciplinary responsibility) concern the proposed advanced-iCCA study and were not used. Items touching open questions: checkpoint-inhibitor washout and monitoring ('therapy'), post-transplant surveillance ('surveillance'), poor differentiation and macrovascular invasion (iCCA-B1), living-donor staging (iCCA-B3); check they do not duplicate section 2. Excluded: exactly 3.0 cm (marked OPEN in the protocol), the six-month stability clock ('stability-clock'), acceptance of mixed histology ('histology'), previously treated nodal or extrahepatic disease (iCCA-B4). Cited sources with no key in content.json, so not in refs: Heinrich 2026, Gül-Klein 2022, and the pooled checkpoint-inhibitor rejection meta-analysis (cited only as PMID 41234720, with no reference number)."
+}

@@ -4,17 +4,17 @@
  "name": "Neuroendocrine liver metastases",
  "generated": "29 October 2026",
  "files": {
-  "roadmap_info": "NELM_1_Cancer_Roadmap.docx",
-  "roadmap_questions": "NELM_2_Cancer_Roadmap_Questions.docx",
-  "standard_info": "NELM_3_Standard_Transplant_Protocol.docx",
-  "standard_questions": "NELM_4_Standard_Transplant_Questions.docx",
-  "highrisk_info": "NELM_5_High_Risk_Transplant_Protocol.docx",
-  "highrisk_questions": "NELM_6_High_Risk_Transplant_Questions.docx",
+  "roadmap_info": "NELM_1_Roadmap.docx",
+  "roadmap_questions": "NELM_2_Roadmap_Questions.docx",
+  "standard_info": "NELM_3_Standard_Pathway.docx",
+  "standard_questions": "NELM_4_Standard_Pathway_Questions.docx",
+  "highrisk_info": "NELM_5_High_Risk_Pathway.docx",
+  "highrisk_questions": "NELM_6_High_Risk_Pathway_Questions.docx",
   "decision": "NELM_7_Decision_Discussion.docx"
  },
  "sets": {
   "roadmap": {
-   "label": "Cancer roadmap",
+   "label": "Roadmap",
    "page": "nelm/",
    "web": "nelm/#questions",
    "questions": [
@@ -740,7 +740,7 @@
    "ratify": []
   },
   "standard": {
-   "label": "Standard transplant pathway",
+   "label": "Standard pathway",
    "page": "transplant/nelm/",
    "web": "transplant/nelm/#meeting",
    "questions": [
@@ -977,7 +977,7 @@
    ]
   },
   "highrisk": {
-   "label": "High-risk transplant protocol",
+   "label": "High-risk pathway",
    "page": "transplant/nelm/#high-risk",
    "web": "transplant/nelm/#high-risk",
    "questions": [

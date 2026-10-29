@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <meta name="description" content="Incidental liver mass — Memorial Hermann system roadmap v0.2, draft under development.">
-<title>Memorial Hermann Incidental Liver Mass Pathway</title>
+<title>Memorial Hermann Incidental Liver Mass Roadmap</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
 <link rel="stylesheet" href="../assets/portal-navigation.css"><script src="../assets/portal-navigation.js?v=20261029-docs1" defer></script><link rel="stylesheet" href="/mh-liver-pathways/assets/roadmap-evidence.css?v=20261026-library1"><script src="/mh-liver-pathways/assets/roadmap-evidence.js?v=20261026-library1"></script></head>
 <body>
@@ -320,7 +320,7 @@ footer p + p{margin-top:8px}
 <header class="top">
   <div class="devbar">Clinical review draft · Not approved institutional policy · Not an automated eligibility tool.</div>
   <div class="topin">
-    <div class="brand" id="brand">Memorial Hermann pathway<span>Loading…</span></div>
+    <div class="brand" id="brand">Memorial Hermann roadmap<span>Loading…</span></div>
     <nav class="sec" id="nav">
       <a href="#tree">Pathway</a><a href="#lrt" id="navLrt" hidden>Liver-directed</a><a href="#honest">Limits</a><a href="#ops">Operations</a><a href="#evidence">Evidence</a>
     </nav>
@@ -397,7 +397,7 @@ footer p + p{margin-top:8px}
 <section id="evidence">
   <div class="sechead">
     <h2>Evidence library</h2>
-    <p>Every source behind the pathway, with a link straight into the TMC library resolver. This is a decision-focused evidence synthesis, not a systematic review; single-arm response data are never used here to infer superiority.</p>
+    <p>Every source behind the roadmap, with a link straight into the TMC library resolver. This is a decision-focused evidence synthesis, not a systematic review; single-arm response data are never used here to infer superiority.</p>
     <button class="xpand" type="button" data-fold="evBody">Show</button>
   </div>
   <div id="evBody" hidden>
@@ -628,9 +628,9 @@ document.getElementById("mcards").addEventListener("click", e=>{
 /* ---------- build the page from the data ---------- */
 function build(){
   KEY = P.key; REF = P.refs || {}; NONPM = P.nonpm || {};
-  document.title = "Memorial Hermann " + P.short + " Pathway";
+  document.title = "Memorial Hermann " + P.short + " Roadmap";
   document.getElementById("brand").innerHTML =
-    `Memorial Hermann ${esc(P.short)} pathway<span>${esc(P.name)} · draft ${esc(P.version)} · ${esc(P.batch || "Batch 07, 5 October 2026")}</span>`;
+    `Memorial Hermann ${esc(P.short)} roadmap<span>${esc(P.name)} · draft ${esc(P.version)} · ${esc(P.batch || "Batch 07, 5 October 2026")}</span>`;
   document.getElementById("lead").textContent = P.lead;
   document.getElementById("gatelabel").textContent = P.gatelabel;
   document.getElementById("gateintro").innerHTML =

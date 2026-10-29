@@ -4,17 +4,17 @@
  "name": "Hepatocellular carcinoma",
  "generated": "29 October 2026",
  "files": {
-  "roadmap_info": "HCC_1_Cancer_Roadmap.docx",
-  "roadmap_questions": "HCC_2_Cancer_Roadmap_Questions.docx",
-  "standard_info": "HCC_3_Standard_Transplant_Protocol.docx",
-  "standard_questions": "HCC_4_Standard_Transplant_Questions.docx",
-  "highrisk_info": "HCC_5_High_Risk_Transplant_Protocol.docx",
-  "highrisk_questions": "HCC_6_High_Risk_Transplant_Questions.docx",
+  "roadmap_info": "HCC_1_Roadmap.docx",
+  "roadmap_questions": "HCC_2_Roadmap_Questions.docx",
+  "standard_info": "HCC_3_Standard_Pathway.docx",
+  "standard_questions": "HCC_4_Standard_Pathway_Questions.docx",
+  "highrisk_info": "HCC_5_High_Risk_Pathway.docx",
+  "highrisk_questions": "HCC_6_High_Risk_Pathway_Questions.docx",
   "decision": "HCC_7_Decision_Discussion.docx"
  },
  "sets": {
   "roadmap": {
-   "label": "Cancer roadmap",
+   "label": "Roadmap",
    "page": "hcc/",
    "web": "hcc/#questions",
    "questions": [
@@ -1469,7 +1469,7 @@
    ]
   },
   "standard": {
-   "label": "Standard transplant pathway",
+   "label": "Standard pathway",
    "page": "transplant/hcc/",
    "web": "transplant/hcc/#meeting",
    "questions": [
@@ -2048,7 +2048,7 @@
    ]
   },
   "highrisk": {
-   "label": "High-risk transplant protocol",
+   "label": "High-risk pathway",
    "page": "transplant/hcc/#high-risk",
    "web": "transplant/hcc/#high-risk",
    "questions": [

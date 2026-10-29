@@ -1,0 +1,3573 @@
+{
+ "about": "Closing sections of the transplant pathway pages; built by tools/build_pathway_sections.py.",
+ "pathways": {
+  "hcc": {
+   "code": "HCC",
+   "name": "Hepatocellular carcinoma",
+   "limited": [
+    {
+     "t": "Every patient is reviewed at multidisciplinary conference before listing, before bridging or downstaging starts, and at each restaging interval.",
+     "why": "Guideline consensus, extended locally. NCCN supports multidisciplinary transplant-center assessment; reviewing before every treatment start and at each restaging (about 3-monthly while waiting) is the protocol's own frequency, and it cites no study of how often review is needed or what it changes. Track the interval from restaging to conference decision and how often review changes the plan.",
+     "setting": "standard",
+     "locator": "Standard pathway document §2 Multidisciplinary Team (restaging interval in §4.3 Restaging While on Waitlist)",
+     "refs": [
+      {
+       "key": "NCCN-hcc",
+       "label": "NCCN · HCC v2.2026",
+       "dialog": true
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "After successful downstaging no institutional stability period is added; timing follows the allocation rules (imaging ≥4 weeks after the last treatment and the 6-month wait from the first exception request).",
+     "why": "Local choice resting on allocation rules, not outcome data. The 2012 international consensus noted that at least 3 months of observation after downstaging was often recommended, but that was never a randomized optimization of observation time; waiting longer may expose aggressive biology but also adds dropout and decompensation risk. Track recurrence and dropout by time from successful downstaging to transplant.",
+     "setting": "standard",
+     "locator": "Standard pathway document §7.4 Observation Period",
+     "refs": [
+      {
+       "key": "N-hcc",
+       "label": "NLRB · HCC",
+       "dialog": true
+      },
+      {
+       "key": "H-policy",
+       "label": "OPTN 9.5.I",
+       "dialog": true
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "Before elective LDLT an observation interval with sustained tumor control is documented; a proposed 3-month local default applies and any departure needs explicit MDT rationale.",
+     "why": "Consensus-informed local default. The protocol labels 3 months a conservative proposal, not a validated threshold. Its source, the 2012 international consensus, describes considering an observation period such as 3 months to judge tumor behavior but does not make it mandatory, and no comparison of intervals is cited; longer observation can also add dropout risk. Track recurrence and pre-transplant dropout by observation interval among LDLT recipients.",
+     "setting": "standard",
+     "locator": "Standard pathway document §8 Living Donor Liver Transplantation (LDLT)",
+     "refs": [],
+     "related": null
+    },
+    {
+     "t": "Bevacizumab is stopped at least 28 days before elective surgery and not restarted for at least 28 days after major surgery and wound healing; transplant timing may need a longer individual interval.",
+     "why": "Extrapolated from the drug label. The 28-day minimum comes from the US prescribing information for elective surgery; the protocol states it is not a proven safe interval for liver transplantation and cites no transplant-specific study. Track wound, bleeding and vascular complications in recipients with recent anti-VEGF exposure.",
+     "setting": "standard",
+     "locator": "Standard pathway document §6 Bridging and treatment-to-transplant interface (Systemic exposure and operative safety); same text in high-risk pathway document §4.1",
+     "refs": [],
+     "related": null
+    },
+    {
+     "t": "After transplant: contrast abdominal CT/MRI and chest CT every 3–6 months for 2 years, then 6-monthly to year 5, with AFP; the explant RETREAT score guides surveillance intensity.",
+     "why": "Extrapolated from a general HCC schedule and a prognostic score. The schedule follows NCCN post-treatment follow-up, which the protocol notes is not proof of an optimal transplant-specific or RETREAT-specific schedule; its review sources call risk-adapted surveillance promising but without prospective proof of the best frequency or duration. Track stage at detection of recurrence, salvage treatment and survival by RETREAT stratum.",
+     "setting": "standard",
+     "locator": "Standard pathway document §9.2 Explant-Based Risk Stratification and §11.1 HCC Recurrence Surveillance; decision 'Post-transplant follow-up'",
+     "refs": [
+      {
+       "key": "NCCN-hcc",
+       "label": "NCCN · HCC v2.2026",
+       "dialog": true
+      },
+      {
+       "key": "H-aasld",
+       "label": "AASLD · HCC",
+       "dialog": true
+      }
+     ],
+     "related": {
+      "label": "Who confirms fitness for transplantation, verifies the MELD-exception request and arranges surveillance?",
+      "href": "#meeting-ownership"
+     }
+    },
+    {
+     "t": "mTOR-containing CNI minimization may be considered individually for renal or oncologic-risk reasons (everolimus not before day 30); it is not offered as proven prevention of recurrence.",
+     "why": "Conditional (weak, level 3) guideline suggestion; the randomized trial missed its primary endpoint. In SiLVER (525 randomized recipients) recurrence-free survival did not differ significantly; benefit appeared only over the first 3–5 years and in exploratory, unpowered subgroups. The AASLD/AST suggestion is confined to HCC within Milan. Track recurrence, renal function and mTOR toxicity by regimen.",
+     "setting": "standard",
+     "locator": "Standard pathway document §10.2 mTOR Inhibitor Consideration",
+     "refs": [],
+     "related": null
+    },
+    {
+     "t": "For recurrence after transplant, multikinase inhibitors (sorafenib, lenvatinib) are the usual first systemic choice; checkpoint inhibitors are exceptional salvage after transplant-oncology review.",
+     "why": "Local convention. The protocol cites no source or comparative post-transplant trial for the first-choice statement. Avoiding checkpoint inhibitors rests on one retrospective series of 52 recipients (32 with HCC) in which seven had rejection and five died of it; pre-transplant safety estimates do not transfer to this setting. Track response, rejection, graft loss and survival for every systemic regimen used after transplant.",
+     "setting": "standard",
+     "locator": "Standard pathway document §11.3 Management of Recurrence",
+     "refs": [],
+     "related": null
+    },
+    {
+     "t": "For selected oligorecurrence after transplant, complete resection is considered; intrahepatic recurrence is treated with ablation, radiation or intra-arterial therapy chosen case by case.",
+     "why": "Selected retrospective series. The protocol states that the observational survival advantage of resection is strongly selection-confounded and that the local modalities are not supported as equivalent by transplant-specific comparative trials; part of the radiation evidence comes from non-transplant cohorts. Track morbidity, graft function and survival after each salvage treatment.",
+     "setting": "standard",
+     "locator": "Standard pathway document §11.3 Management of Recurrence",
+     "refs": [],
+     "related": null
+    },
+    {
+     "t": "Program audit targets: five-year post-transplant overall survival above 70% and five-year cumulative HCC recurrence below 15%, both provisional and pending committee approval.",
+     "why": "Local benchmarks, not validated thresholds. The cited systematic review describes five-year survival above 70% in selected Milan cohorts with recurrence commonly 10–20%, but calculates no pooled estimate or quality trigger, and its reported recurrence range is not consistently below 15%. A result outside target prompts case-mix and process review, not an automatic finding of preventable failure.",
+     "setting": "standard",
+     "locator": "Standard pathway document §13 Quality Metrics and Outcomes Tracking",
+     "refs": [
+      {
+       "key": "candidate2026",
+       "label": "AASLD/AST candidate evaluation",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41405234/"
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "After prior checkpoint-inhibitor exposure the standard institutional regimen is used: ATG, tacrolimus 12–15 ng/mL, rapid steroid withdrawal and protocol biopsies are not mandated; rejection watch continues past month 1.",
+     "why": "Absence of evidence. The intensified options are author proposals from small heterogeneous reports, and no immune assay, ATG regimen or high tacrolimus target is validated. Prior immune toxicity marks higher rejection risk in retrospective cohorts but does not show that intensification prevents it, and rejection has occurred after the first month. Track biopsy-proven rejection, its timing, graft loss and infection by prior-ICI and immune-toxicity status.",
+     "setting": "highrisk",
+     "locator": "High-risk pathway document §6 Post transplant immunosuppression and graft monitoring",
+     "refs": [
+      {
+       "key": "candidate2026",
+       "label": "AASLD/AST candidate evaluation",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41405234/"
+      },
+      {
+       "key": "fang",
+       "label": "Fang · irAEs",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41193174/"
+      },
+      {
+       "key": "ipd",
+       "label": "Rezaee-Zavareh · IPD",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/38996924/"
+      },
+      {
+       "key": "aceituno",
+       "label": "Aceituno 2026",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41640254/"
+      }
+     ],
+     "related": {
+      "label": "HCC-B3 · Previous checkpoint immunotherapy",
+      "href": "#high-risk-hcc-b3"
+     }
+    }
+   ],
+   "owners": [
+    {
+     "id": "diagnosis",
+     "title": "Confirm HCC",
+     "owner": "Hepatology · transplant radiology",
+     "timing": "Before treatment or counting lesions for an HCC MELD-exception request"
+    },
+    {
+     "id": "curative-route",
+     "title": "Choose treatment with curative intent",
+     "owner": "HPB surgery · hepatology · transplant surgery",
+     "timing": "After diagnosis; before treatment intended to control HCC while awaiting transplant"
+    },
+    {
+     "id": "allocation",
+     "title": "Check MELD-exception criteria",
+     "owner": "Transplant radiology · coordinator · hepatology",
+     "timing": "Use pretreatment CT/MRI, not only the post-treatment scan"
+    },
+    {
+     "id": "treatment",
+     "title": "Plan bridging or downstaging treatment",
+     "owner": "IR · radiation oncology · hepatology · oncology",
+     "timing": "Before LRT; reassess after treatment"
+    },
+    {
+     "id": "listing",
+     "title": "Review listing and MELD-exception request",
+     "owner": "Named transplant physician · coordinator · pharmacy",
+     "timing": "Before submitting the MELD-exception request and before activating the patient on the transplant waiting list"
+    },
+    {
+     "id": "waitlist",
+     "title": "Reassess while awaiting transplant",
+     "owner": "Transplant MDT · coordinator",
+     "timing": "At each extension, new finding and organ-offer review"
+    },
+    {
+     "id": "after-transplant",
+     "title": "Post-transplant follow-up",
+     "owner": "Transplant surgery · pathology · hepatology",
+     "timing": "At explant and long-term follow-up"
+    }
+   ],
+   "team": {
+    "text": "All patients with HCC must be evaluated by a multidisciplinary team (MDT) including hepatologists, transplant surgeons, medical oncologists, diagnostic and interventional radiologists, radiation oncologists, and pathologists with HCC expertise. MDT conference review is required prior to listing, initiation of bridging/downstaging therapy, and at each restaging interval.",
+    "locator": "Standard pathway document §2 Multidisciplinary Team"
+   },
+   "quality": {
+    "standard": [
+     "90-day and 1-year post-transplant survival",
+     "Provisional local quality benchmark: five-year post-LT overall survival >70%, pending committee approval; report Kaplan–Meier estimate, 95% CI, cohort dates and numbers at risk. This is an audit target, not an automatic individual eligibility rule.",
+     "Provisional local benchmark: five-year cumulative HCC recurrence incidence <15%, pending committee approval. Estimate cumulative incidence from LT with death without recurrence as a competing event; report 95% CI, numbers at risk, follow-up and cohort entry dates. An estimate above target prompts case-mix and process review, not automatic attribution of preventable failure.",
+     "Waitlist dropout rate",
+     "Bridging/downstaging success rate",
+     "RETREAT score distribution on explant"
+    ],
+    "highrisk": [],
+    "locator": "Standard pathway document §13 Quality Metrics and Outcomes Tracking"
+   },
+   "questions": {
+    "standard": [
+     {
+      "id": "lesion-counting",
+      "question": "Which observations count, and when should LR-4 be biopsied?",
+      "href": "#meeting-lesion-counting"
+     },
+     {
+      "id": "curative-route",
+      "question": "When should uncertain portal hypertension change resection versus transplant?",
+      "href": "#meeting-curative-route"
+     },
+     {
+      "id": "beyond-downstaging",
+      "question": "What requires nonstandard review: burden, prior rupture or portal-branch invasion?",
+      "href": "#meeting-beyond-downstaging"
+     },
+     {
+      "id": "bridging",
+      "question": "How should modality and an equivocal response guide the next treatment?",
+      "href": "#meeting-bridging"
+     },
+     {
+      "id": "checkpoint",
+      "question": "What transplant-safety approach applies after checkpoint inhibitors?",
+      "href": "#meeting-checkpoint"
+     },
+     {
+      "id": "ownership",
+      "question": "Who confirms fitness for transplantation, verifies the MELD-exception request and arranges surveillance?",
+      "href": "#meeting-ownership"
+     },
+     {
+      "id": "response-uncertainty",
+      "question": "How should equivocal post-treatment enhancement or borderline AFP be handled?",
+      "href": "#meeting-response-uncertainty"
+     },
+     {
+      "id": "afp-b1-1a",
+      "question": "Should AFP-only failure have a distinct high-risk review entry even when tumor burden is within Milan?",
+      "href": "#meeting-afp-b1-1a"
+     },
+     {
+      "id": "afp-b1-1b",
+      "question": "Should confirmed AFP at least 500 trigger a clinical hold even without a prior AFP above 1000?",
+      "href": "#meeting-afp-b1-1b"
+     },
+     {
+      "id": "afp-b1-1c",
+      "question": "How should rising AFP below 500 with controlled imaging be handled?",
+      "href": "#meeting-afp-b1-1c"
+     },
+     {
+      "id": "afp-b1-1d",
+      "question": "What permits release from a biochemical hold?",
+      "href": "#meeting-afp-b1-1d"
+     },
+     {
+      "id": "afp-b1-1e",
+      "question": "Can persistent AFP failure ever proceed to LT or LDLT?",
+      "href": "#meeting-afp-b1-1e"
+     },
+     {
+      "id": "afp-b1-1f",
+      "question": "What must be audited?",
+      "href": "#meeting-afp-b1-1f"
+     }
+    ],
+    "highrisk": [
+     {
+      "id": "HCC-B1",
+      "title": "Tumor burden beyond UNOS downstaging criteria",
+      "status": "Proposed study cohort",
+      "href": "#high-risk-hcc-b1"
+     },
+     {
+      "id": "HCC-B1.1",
+      "title": "AFP-only failure or discordance with imaging",
+      "status": "OPEN clinical proposal — not active",
+      "href": "#high-risk-hcc-b1-1"
+     },
+     {
+      "id": "HCC-B2",
+      "title": "Previously treated portal-vein tumor invasion",
+      "status": "Proposed study cohort",
+      "href": "#high-risk-hcc-b2"
+     },
+     {
+      "id": "HCC-B3",
+      "title": "Previous checkpoint immunotherapy",
+      "status": "Proposed safety approach",
+      "href": "#high-risk-hcc-b3"
+     },
+     {
+      "id": "HCC-B4",
+      "title": "Survival-benefit prediction: research use only",
+      "status": "Research use only",
+      "href": "#high-risk-hcc-b4"
+     },
+     {
+      "id": "HCC-B5",
+      "title": "Previously treated extrahepatic disease",
+      "status": "Closed; registry only",
+      "href": "#high-risk-hcc-b5"
+     }
+    ]
+   },
+   "sources": [
+    {
+     "key": "H-policy",
+     "short": "OPTN 9.5.I",
+     "title": "OPTN Policies — HCC standardized exception",
+     "kind": "Allocation policy",
+     "dialog": true
+    },
+    {
+     "key": "H-aasld",
+     "short": "AASLD · HCC",
+     "title": "AASLD Practice Guidance: prevention, diagnosis, and treatment of HCC",
+     "kind": "Clinical guidance",
+     "dialog": true
+    },
+    {
+     "key": "N-hcc",
+     "short": "NLRB · HCC",
+     "title": "Adult MELD exception review guidance — HCC",
+     "kind": "NLRB guidance",
+     "dialog": true
+    },
+    {
+     "key": "V12-AFP_500",
+     "short": "Goldman 2022: final AFP ≥500",
+     "title": "Lower Alpha-Fetoprotein Threshold of 500 ng/mL for Liver Transplantation May Improve Posttransplant Outcomes in Patients With Hepatocellular Carcinoma.",
+     "kind": "Retrospective cohort",
+     "dialog": true
+    },
+    {
+     "key": "V12-AFP_SLOPE",
+     "short": "Giard 2018: AFP slope",
+     "title": "Alpha-Fetoprotein Slope >7.5 ng/mL per Month Predicts Microvascular Invasion and Tumor Recurrence After Liver Transplantation for Hepatocellular Carcinoma.",
+     "kind": "Retrospective cohort",
+     "dialog": true
+    },
+    {
+     "key": "NCCN-hcc",
+     "short": "NCCN · HCC v2.2026",
+     "title": "NCCN Hepatocellular Carcinoma — treatment and response reassessment",
+     "kind": "Clinical guidance",
+     "dialog": true
+    },
+    {
+     "key": "V12-AFP_RESPONSE",
+     "short": "Mehta 2019: AFP response",
+     "title": "Alpha-Fetoprotein Decrease from > 1,000 to < 500 ng/mL in Patients with Hepatocellular Carcinoma Leads to Improved Posttransplant Outcomes.",
+     "kind": "Retrospective cohort",
+     "dialog": true
+    },
+    {
+     "key": "V12-AFP_NYCA",
+     "short": "Halazun 2021: dynamic AFP/NYCA",
+     "title": "Dynamic α-Fetoprotein Response and Outcomes After Liver Transplant for Hepatocellular Carcinoma.",
+     "kind": "Retrospective validation cohort",
+     "dialog": true
+    },
+    {
+     "key": "V12-AFP_OCCULT",
+     "short": "Moriyama 2026: markers before imaging recurrence",
+     "title": "Management and Prognosis of HCC Patients With Elevated Tumor Markers but no Imaging Recurrence After Radiofrequency Ablation.",
+     "kind": "Retrospective cohort",
+     "dialog": true
+    },
+    {
+     "key": "V12-SHARP",
+     "short": "SHARP: sorafenib",
+     "title": "Sorafenib in Advanced Hepatocellular Carcinoma",
+     "kind": "Randomized phase III trial",
+     "dialog": true
+    },
+    {
+     "key": "NCI-support",
+     "short": "NCI · supportive and palliative care",
+     "title": "Palliative Care in Cancer",
+     "kind": "Supportive-care reference",
+     "dialog": true
+    },
+    {
+     "key": "H-milan",
+     "short": "Mazzaferro · NEJM 1996",
+     "title": "Liver transplantation for the treatment of small hepatocellular carcinomas in patients with cirrhosis",
+     "kind": "Cohort evidence",
+     "dialog": true
+    },
+    {
+     "key": "H-merits",
+     "short": "Mehta · Gastroenterology 2021 · MERITS-LT",
+     "title": "Downstaging Outcomes for Hepatocellular Carcinoma: Results From the MERITS-LT Consortium",
+     "kind": "Prospective cohort evidence",
+     "dialog": true
+    },
+    {
+     "key": "H-yao",
+     "short": "Yao · Hepatology 2015",
+     "title": "Downstaging of hepatocellular cancer before liver transplant: long-term outcome compared to tumors within Milan criteria",
+     "kind": "Cohort evidence",
+     "dialog": true
+    },
+    {
+     "key": "xu",
+     "short": "Xu 2025 · all-comers",
+     "title": "Downstaging of hepatocellular carcinoma before liver transplantation: Results from a national multicenter prospective cohort study",
+     "kind": "Xu · Hepatology (Baltimore, Md.) · 2025",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39808828/",
+     "pmid": "39808828"
+    },
+    {
+     "key": "aasld",
+     "short": "AASLD HCC 2023",
+     "title": "AASLD Practice Guidance on prevention, diagnosis, and treatment of hepatocellular carcinoma",
+     "kind": "Singal · Hepatology (Baltimore, Md.) · 2023",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/37199193/",
+     "pmid": "37199193"
+    },
+    {
+     "key": "xxl",
+     "short": "XXL 2020",
+     "title": "Liver transplantation in hepatocellular carcinoma after tumour downstaging (XXL): a randomised, controlled, phase 2b/3 trial",
+     "kind": "Mazzaferro · The Lancet Oncology · 2020",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32615109/",
+     "pmid": "32615109"
+    },
+    {
+     "key": "hcc_design",
+     "short": "EASL–AASLD–ILCA 2026",
+     "title": "Trial design and end points in hepatocellular carcinoma: an EASL-AASLD-ILCA consensus statement",
+     "kind": "Llovet · Nature reviews. Clinical oncology · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42270817/",
+     "pmid": "42270817"
+    },
+    {
+     "key": "hcc_yao2015",
+     "short": "Yao 2015",
+     "title": "Downstaging of hepatocellular cancer before liver transplant: Long‐term outcome compared to tumors within Milan criteria",
+     "kind": "Yao · Hepatology · 2015",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25689978/",
+     "pmid": "25689978"
+    },
+    {
+     "key": "hcc_merits2021",
+     "short": "Mehta 2021",
+     "title": "Downstaging Outcomes for Hepatocellular Carcinoma: Results From the Multicenter Evaluation of Reduction in Tumor Size before Liver Transplantation (MERITS-LT) Consortium",
+     "kind": "Mehta · Gastroenterology · 2021",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34331914/",
+     "pmid": "34331914"
+    },
+    {
+     "key": "hcc_sinha2019",
+     "short": "Sinha 2019",
+     "title": "Are There Upper Limits in Tumor Burden for Down‐Staging of Hepatocellular Carcinoma to Liver Transplant? Analysis of the All‐Comers Protocol",
+     "kind": "Sinha · Hepatology · 2019",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30779440/",
+     "pmid": "30779440"
+    },
+    {
+     "key": "hcc_merits_ac2023",
+     "short": "Natarajan 2023",
+     "title": "Downstaging hepatocellular carcinoma before liver transplantation: A multicenter analysis of the “all-comers” protocol in the Multicenter Evaluation of Reduction in Tumor Size before Liver Transplantation (MERITS-LT) consortium",
+     "kind": "Natarajan · American Journal of Transplantation · 2023",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/37532179/",
+     "pmid": "37532179"
+    },
+    {
+     "key": "hcc_huang2023",
+     "short": "Huang 2023",
+     "title": "National Experience on Waitlist Outcomes for Down-Staging of Hepatocellular Carcinoma: High Dropout Rate in All-Comers",
+     "kind": "Huang · Clinical Gastroenterology and Hepatology · 2023",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/36038129/",
+     "pmid": "36038129"
+    },
+    {
+     "key": "hcc_tabrizian2022",
+     "short": "Tabrizian 2022",
+     "title": "Ten-Year Outcomes of Liver Transplant and Downstaging for Hepatocellular Carcinoma",
+     "kind": "Tabrizian · JAMA Surgery · 2022",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35857294/",
+     "pmid": "35857294"
+    },
+    {
+     "key": "AFP_RESPONSE",
+     "short": "Mehta 2019: AFP response",
+     "title": "Alpha-Fetoprotein Decrease from > 1,000 to < 500 ng/mL in Patients with Hepatocellular Carcinoma Leads to Improved Posttransplant Outcomes.",
+     "kind": "Mehta N · Hepatology (Baltimore, Md.) · 2019",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30548884/",
+     "pmid": "30548884"
+    },
+    {
+     "key": "AFP_500",
+     "short": "Goldman 2022: final AFP ≥500",
+     "title": "Lower Alpha-Fetoprotein Threshold of 500 ng/mL for Liver Transplantation May Improve Posttransplant Outcomes in Patients With Hepatocellular Carcinoma.",
+     "kind": "Goldman ML · Liver transplantation : official publication of the American Association for the Study of Liver Diseases and the International Liver Transplantation Society · 2022",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34927344/",
+     "pmid": "34927344"
+    },
+    {
+     "key": "AFP_SLOPE",
+     "short": "Giard 2018: AFP slope",
+     "title": "Alpha-Fetoprotein Slope >7.5 ng/mL per Month Predicts Microvascular Invasion and Tumor Recurrence After Liver Transplantation for Hepatocellular Carcinoma.",
+     "kind": "Giard JM · Transplantation · 2018",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/29505494/",
+     "pmid": "29505494"
+    },
+    {
+     "key": "AFP_NYCA",
+     "short": "Halazun 2021: dynamic AFP/NYCA",
+     "title": "Dynamic α-Fetoprotein Response and Outcomes After Liver Transplant for Hepatocellular Carcinoma.",
+     "kind": "Halazun KJ · JAMA surgery · 2021",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/33950167/",
+     "pmid": "33950167"
+    },
+    {
+     "key": "AFP_OCCULT",
+     "short": "Moriyama 2026: markers before imaging recurrence",
+     "title": "Management and Prognosis of HCC Patients With Elevated Tumor Markers but no Imaging Recurrence After Radiofrequency Ablation.",
+     "kind": "Moriyama M · Cancer medicine · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42010805/",
+     "pmid": "42010805"
+    },
+    {
+     "key": "optn",
+     "short": "OPTN policy",
+     "title": "OPTN Policies: liver allocation and living donation",
+     "kind": "Organ Procurement and Transplantation Network · HRSA/OPTN · 2026",
+     "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf",
+     "pmid": ""
+    },
+    {
+     "key": "nlrb",
+     "short": "NLRB oncology guidance",
+     "title": "Adult MELD Exceptions for Transplant Oncology",
+     "kind": "Organ Procurement and Transplantation Network · HRSA/OPTN · 2025",
+     "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/adult-meld-exception-transplant-oncology-review-guidance.pdf",
+     "pmid": ""
+    },
+    {
+     "key": "round2_yoon",
+     "short": "Yoon 2026",
+     "title": "Living-donor liver transplantation in hepatocellular carcinoma with portal-vein tumor thrombosis",
+     "kind": "Yoon · International Journal of Surgery · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41706698/",
+     "pmid": "41706698"
+    },
+    {
+     "key": "pvtt_ye",
+     "short": "Ye 2024",
+     "title": "The clinical outcomes of patients with vascular invasion after deceased donor liver transplantation",
+     "kind": "Ye · Journal of Gastrointestinal Oncology · 2024",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39279926/",
+     "pmid": "39279926"
+    },
+    {
+     "key": "pvtt_choi",
+     "short": "Choi 2017",
+     "title": "The clinical outcomes of patients with portal vein tumor thrombi after living donor liver transplantation",
+     "kind": "Choi · Liver Transplantation · 2017",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28480517/",
+     "pmid": "28480517"
+    },
+    {
+     "key": "pvtt_yang",
+     "short": "Yang 2020",
+     "title": "Alpha-fetoprotein and 18F-FDG standard uptake value predict tumor recurrence after liver transplantation for hepatocellular carcinoma with portal vein tumor thrombosis: Preliminary experience",
+     "kind": "Yang · Hepatobiliary & Pancreatic Diseases International · 2020",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32303439/",
+     "pmid": "32303439"
+    },
+    {
+     "key": "pvtt_soin",
+     "short": "Soin 2020",
+     "title": "Experience With LDLT in Patients With Hepatocellular Carcinoma and Portal Vein Tumor Thrombosis Postdownstaging",
+     "kind": "Soin · Transplantation · 2020",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32032291/",
+     "pmid": "32032291"
+    },
+    {
+     "key": "assalino",
+     "short": "Assalino 2020 · vascular invasion",
+     "title": "Liver transplantation for hepatocellular carcinoma after successful treatment of macrovascular invasion – a multi‐center retrospective cohort study",
+     "kind": "Assalino · Transplant International · 2020",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31994238/",
+     "pmid": "31994238"
+    },
+    {
+     "key": "hcc_sposito2026",
+     "short": "Sposito 2026",
+     "title": "Outcomes of Y90-radioembolization as downstaging to liver transplantation in patients with hepatocellular carcinoma and tumoral portal vein thrombosis",
+     "kind": "Sposito · Hepatology · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42228945/",
+     "pmid": "42228945"
+    },
+    {
+     "key": "ipd",
+     "short": "Rezaee-Zavareh · IPD",
+     "title": "Impact of pre-transplant immune checkpoint inhibitor use on post-transplant outcomes in HCC: A systematic review and individual patient data meta-analysis",
+     "kind": "Rezaee-Zavareh · Journal of Hepatology · 2025",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38996924/",
+     "pmid": "38996924"
+    },
+    {
+     "key": "fang",
+     "short": "Fang · irAEs",
+     "title": "Immune-related adverse events are a potent predictor of post-transplant rejection in HCC: a multicentre retrospective cohort study",
+     "kind": "Fang · Gut · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41193174/",
+     "pmid": "41193174"
+    },
+    {
+     "key": "moeckli",
+     "short": "Moeckli 2025",
+     "title": "Determining safe washout period for immune checkpoint inhibitors prior to liver transplantation: An international retrospective cohort study",
+     "kind": "Moeckli · Hepatology · 2025",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40042053/",
+     "pmid": "40042053"
+    },
+    {
+     "key": "vitality",
+     "short": "VITALITY · Tabrizian",
+     "title": "Intention-to-treat outcomes of patients with hepatocellular carcinoma receiving immunotherapy before liver transplant: The multicenter VITALITY study",
+     "kind": "Tabrizian · Journal of Hepatology · 2025",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39255928/",
+     "pmid": "39255928"
+    },
+    {
+     "key": "immunoxxl",
+     "short": "ImmunoXXL 2026",
+     "title": "Efficacy of liver transplantation after response to atezolizumab-bevacizumab downstaging of intermediate and advanced hepatocellular carcinoma (ImmunoXXL)",
+     "kind": "Bhoori · Journal of Hepatology · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41763363/",
+     "pmid": "41763363"
+    },
+    {
+     "key": "aceituno",
+     "short": "Aceituno 2026",
+     "title": "Safety of Immune Checkpoint Inhibitors Prior to Liver Transplantation in Hepatocellular Carcinoma",
+     "kind": "Aceituno · Alimentary Pharmacology & Therapeutics · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41640254/",
+     "pmid": "41640254"
+    },
+    {
+     "key": "litchi",
+     "short": "LITCHI 2026",
+     "title": "Liver Transplantation After Immune Checkpoint Inhibition in Hepatocellular Carcinoma-Data From the Multinational LITCHI Registry",
+     "kind": "Bauer · Liver international : official journal of the International Association for the Study of the Liver · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42156355/",
+     "pmid": "42156355"
+    },
+    {
+     "key": "hccjama",
+     "short": "HCC ICI cohort · JAMA 2026",
+     "title": "Immune Checkpoint Inhibitor–Based Downstaging Therapy for Hepatocellular Carcinoma",
+     "kind": "Ong · JAMA Oncology · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42821267/",
+     "pmid": "42821267"
+    },
+    {
+     "key": "round2_liu",
+     "short": "Liu 2026",
+     "title": "Optimizing Liver Transplant Allocation for Hepatocellular Carcinoma: Development and Validation of a Survival Benefit‐Based Model",
+     "kind": "Liu · Clinical Transplantation · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41738362/",
+     "pmid": "41738362"
+    },
+    {
+     "key": "hcc_liu2025",
+     "short": "Liu 2025",
+     "title": "Survival benefit associated with liver transplantation for hepatocellular carcinoma based on tumor burden scores at listing",
+     "kind": "Liu · Hepatology Communications · 2025",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39774957/",
+     "pmid": "39774957"
+    },
+    {
+     "key": "hcc_lai2017",
+     "short": "Lai 2017",
+     "title": "Intention-to-Treat Survival Benefit of Liver Transplantation in Patients With Hepatocellular Cancer",
+     "kind": "Lai · Hepatology · 2017",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28653750/",
+     "pmid": "28653750"
+    },
+    {
+     "key": "hcc_goudsmit2023",
+     "short": "Goudsmit 2023",
+     "title": "Survival benefit from liver transplantation for patients with and without hepatocellular carcinoma",
+     "kind": "Goudsmit · JHEP Reports · 2023",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38034881/",
+     "pmid": "38034881"
+    },
+    {
+     "key": "hcc_allen2024",
+     "short": "Allen 2024",
+     "title": "Transplant benefit-based offering of deceased donor livers in the United Kingdom",
+     "kind": "Allen · Journal of Hepatology · 2024",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38521169/",
+     "pmid": "38521169"
+    },
+    {
+     "key": "hcc_prosepe2026",
+     "short": "Prosepe 2026",
+     "title": "Estimating conditional survival benefit for the allocation of scarce resources",
+     "kind": "Prosepe · Statistical Methods in Medical Research · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41700702/",
+     "pmid": "41700702"
+    },
+    {
+     "key": "ilts",
+     "short": "ILTS–ILCA consensus",
+     "title": "The 2024 ILTS-ILCA consensus recommendations for liver transplantation for HCC and intrahepatic cholangiocarcinoma",
+     "kind": "Kodali · Liver transplantation : official publication of the American Association for the Study of Liver Diseases and the International Liver Transplantation Society · 2025",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40014003/",
+     "pmid": "40014003"
+    },
+    {
+     "key": "hcc_mergental2012",
+     "short": "Mergental 2012 · ELTR noncirrhotic HCC",
+     "title": "Liver transplantation for unresectable hepatocellular carcinoma in normal livers",
+     "kind": "Mergental · Journal of hepatology · 2012",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/22521348/",
+     "pmid": "22521348"
+    },
+    {
+     "key": "hcc_pirozzi2025",
+     "short": "Pirozzi 2025 · case report",
+     "title": "Liver transplantation in a patient with metastatic hepatocellular carcinoma after downstaging with single-agent immunotherapy: the first case report",
+     "kind": "Pirozzi · Journal of gastrointestinal oncology · 2025",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40672077/",
+     "pmid": "40672077"
+    },
+    {
+     "key": "hcc_shao2026",
+     "short": "Shao 2026 · complete responders to ICI",
+     "title": "Imaging-defined complete response to immune checkpoint inhibitors predicts durable survival in advanced hepatocellular carcinoma",
+     "kind": "Shao · Frontiers in oncology · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41755988/",
+     "pmid": "41755988"
+    },
+    {
+     "key": "hcc_ong2026",
+     "short": "Ong 2026 · ICI before LT, matched cohort",
+     "title": "Immune Checkpoint Inhibitor–Based Downstaging Therapy for Hepatocellular Carcinoma",
+     "kind": "Ong · JAMA Oncology · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42821267/",
+     "pmid": "42821267"
+    },
+    {
+     "key": "hcc_sotiropoulos2007",
+     "short": "Sotiropoulos 2007 · hilar nodes at LT, meta-analysis",
+     "title": "Hilar lymph nodes sampling at the time of liver transplantation for hepatocellular carcinoma: to do or not to do? Meta-analysis to determine the impact of hilar lymph nodes metastases on tumor recurrence and survival in patients with hepatocellular carcinoma undergoing liver transplantation",
+     "kind": "Sotiropoulos · Transplant international : official journal of the European Society for Organ Transplantation · 2007",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/17239022/",
+     "pmid": "17239022"
+    },
+    {
+     "key": "candidate2026",
+     "short": "AASLD/AST candidate evaluation",
+     "title": "AASLD AST Practice Guideline on adult liver transplantation: Candidate evaluation",
+     "kind": "Dove · Hepatology · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41405234/",
+     "pmid": "41405234"
+    }
+   ]
+  },
+  "pcca": {
+   "code": "pCCA",
+   "name": "Perihilar cholangiocarcinoma",
+   "limited": [
+    {
+     "t": "Prior biliary resection or attempted resection, and chemotherapy or radiation for this cancer given outside the protocol, exclude the patient; systemic therapy outside the approved neoadjuvant plan needs formal review.",
+     "why": "Institutional rule. The protocol calls the restriction on outside systemic therapy an institutional rule, not an NCCN-defined universal exclusion. The exclusions cite the AASLD/AST candidate-evaluation guideline, whose prior-treatment background list the protocol warns must not be stretched to protocol-directed neoadjuvant therapy. No outcome data for previously resected or pretreated candidates are cited. Track referrals declined on these grounds and the prior treatment involved.",
+     "setting": "standard",
+     "locator": "Standard pathway document §1 Patient Selection Criteria (Exclusion Criteria) and §2 Pre-Treatment Workup",
+     "refs": [
+      {
+       "key": "candidate2026",
+       "label": "AASLD/AST candidate evaluation",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41405234/"
+      },
+      {
+       "key": "NCCN-pcca",
+       "label": "NCCN · Biliary v1.2026 · extrahepatic CCA",
+       "dialog": true
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "Candidates must have an ECOG performance status of 0–1.",
+     "why": "Local convention. The protocol cites no source for this limit, and it is not among the OPTN Policy 9.5.A requirements the protocol lists. No data comparing pathway or transplant outcomes by performance status are cited. Track candidates excluded on performance status alone and changes in performance status during neoadjuvant therapy.",
+     "setting": "standard",
+     "locator": "Standard pathway document §1 Patient Selection Criteria (Inclusion Criteria)",
+     "refs": [],
+     "related": null
+    },
+    {
+     "t": "While listed, cross-sectional imaging and CA 19-9 are repeated every 3 months; tumor progression, new lesions, extrahepatic disease or nodal metastases lead to delisting.",
+     "why": "Guideline-based interval. The 3-month imaging interval cites the AASLD/AST candidate-evaluation guideline and the CA 19-9 interval is uncited; the protocol cites no study comparing surveillance intervals. OPTN separately requires imaging within 30 days before each extension request. Track metastases first found at operative staging or on the explant despite negative interval imaging, and CA 19-9 rises that led to action.",
+     "setting": "standard",
+     "locator": "Standard pathway document §5 MELD Exception and Waitlist Management; decision 'List and maintain readiness'",
+     "refs": [
+      {
+       "key": "candidate2026",
+       "label": "AASLD/AST candidate evaluation",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41405234/"
+      },
+      {
+       "key": "P-policy",
+       "label": "OPTN 9.5.A",
+       "dialog": true
+      }
+     ],
+     "related": {
+      "label": "When is operative staging performed, and when does imaging expire?",
+      "href": "#meeting-staging-timing"
+     }
+    },
+    {
+     "t": "Piggyback caval reconstruction is the institutional default where anatomy permits; the need for caval or portal resection and reconstruction is decided intraoperatively.",
+     "why": "Local convention. The protocol cites no comparative evidence for the default and states that no single technique is protocol-mandated. Neoadjuvant chemoradiation can cause retrohepatic caval and portal changes that require caval replacement or other vascular reconstruction, and living-donor recipients often need portal reconstruction. Track the technique used, vascular reconstructions and caval or portal complications.",
+     "setting": "standard",
+     "locator": "Standard pathway document §6 Liver Transplantation",
+     "refs": [],
+     "related": null
+    },
+    {
+     "t": "Before transplant, transplant surgery and radiation oncology review the actual radiation dose map; after transplant, Doppler ultrasound surveillance is used because of radiation-related vascular risk.",
+     "why": "Expert opinion. Both rules cite a Mayo expert narrative review (Tan 2020) that reports late arterial and portal complications but has no randomized comparison of reconstruction, anticoagulation or surveillance schedules; the protocol sets no Doppler interval. The high-risk protocol (§3.1) adds a 49-recipient observational comparison: major vascular complications 11/27 after chemoradiotherapy versus 3/22 without. Track hepatic artery and portal events, graft loss and retransplantation.",
+     "setting": "standard",
+     "locator": "Standard pathway document §6 Liver Transplantation and §9 Post-Transplant Surveillance",
+     "refs": [
+      {
+       "key": "pcca_dong",
+       "label": "Dong 2026 · resection versus LT",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/40622853/"
+      },
+      {
+       "key": "hoogwater",
+       "label": "Hoogwater 2023 · radiation",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/37032423/"
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "Induction is a steroid bolus in the anhepatic phase; each patient has one documented maintenance strategy: tacrolimus with stepwise minimization, or mTOR-inhibitor conversion with reduced-dose tacrolimus.",
+     "why": "Extrapolated and observational. The induction citation is a Houston prospective case series in intrahepatic CCA (Lunsford 2018), not pCCA. The protocol states that no pCCA-specific maintenance regimen has proved to reduce recurrence; in the cited Houston cohort (Semaan 2025) the mTOR survival association was not confirmed when exposure was modeled as time-dependent. Everolimus is not started before day 30 (US label). Track strategy, rejection, renal function and recurrence.",
+     "setting": "standard",
+     "locator": "Standard pathway document §7 Post-Transplant Immunosuppression",
+     "refs": [
+      {
+       "key": "lunsford",
+       "label": "Lunsford 2018 · Houston",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/29548617/"
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "No routine adjuvant chemotherapy after a complete pathologic response; with residual tumor on the explant, capecitabine or gemcitabine-based therapy is considered only case by case or within a protocol.",
+     "why": "Extrapolated. The protocol states that the evidence comes from resection studies and that post-transplant benefit and tolerability are unproven; the cited source is a Houston intrahepatic CCA case series. Residual viable tumor is associated with recurrence but does not predict an individual outcome and does not by itself establish benefit from adjuvant therapy. Track adjuvant use by explant category, tolerance and recurrence.",
+     "setting": "standard",
+     "locator": "Standard pathway document §8 Post-Transplant Adjuvant Therapy and §10 Expected Outcomes; decision 'Surveil after transplant'",
+     "refs": [
+      {
+       "key": "lunsford",
+       "label": "Lunsford 2018 · Houston",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/29548617/"
+      },
+      {
+       "key": "pcca_murad_predictors",
+       "label": "Darwish Murad 2012",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/22290335/"
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "After transplant: abdominal/pelvic CT or MRI every 6 months for 3 years, then yearly to year 5; chest imaging every 6 months for 2 years, then yearly; CA 19-9 every 3 months for 2 years, then every 6 months.",
+     "why": "Proposed local schedule. The imaging interval is the one observed in a small incidental biliary-cancer series (Heinrich 2026), not a comparative trial; NCCN describes post-resection surveillance and does not validate this transplant calendar; the CA 19-9 interval is uncited. The high-risk protocol instead proposes imaging with CA 19-9 every 3 months for 2 years. Record the adopted schedule in the decision log; track how recurrences are detected.",
+     "setting": "standard",
+     "locator": "Standard pathway document §9 Post-Transplant Surveillance; decision 'Surveil after transplant'",
+     "refs": [
+      {
+       "key": "NCCN-pcca",
+       "label": "NCCN · Biliary v1.2026 · extrahepatic CCA",
+       "dialog": true
+      }
+     ],
+     "related": {
+      "label": "Who approves the program and its surveillance plan?",
+      "href": "#meeting-ownership"
+     }
+    }
+   ],
+   "owners": [
+    {
+     "id": "localize",
+     "title": "Localize the lesion",
+     "owner": "Advanced GI · HPB/transplant surgery · radiology",
+     "timing": "Before choosing the biopsy approach"
+    },
+    {
+     "id": "diagnosis",
+     "title": "Plan diagnostic sampling",
+     "owner": "Advanced GI · transplant/HPB surgery",
+     "timing": "Before EUS-guided or percutaneous sampling"
+    },
+    {
+     "id": "phenotype",
+     "title": "Check protocol criteria",
+     "owner": "Transplant radiology · HPB surgery · coordinator",
+     "timing": "Before enrollment / initial exception"
+    },
+    {
+     "id": "neoadjuvant",
+     "title": "Deliver approved neoadjuvant therapy",
+     "owner": "Medical/radiation oncology · advanced GI · transplant team",
+     "timing": "Before and throughout neoadjuvant therapy"
+    },
+    {
+     "id": "staging",
+     "title": "Perform operative staging",
+     "owner": "Transplant/HPB surgery · pathology",
+     "timing": "After neoadjuvant therapy and before transplantation"
+    },
+    {
+     "id": "listing",
+     "title": "List and maintain readiness",
+     "owner": "Coordinator · transplant physician",
+     "timing": "Initial request, extensions and final organ-offer review"
+    },
+    {
+     "id": "follow-up",
+     "title": "Surveil after transplant",
+     "owner": "Transplant team · oncology · pathology",
+     "timing": "Explant review and longitudinal follow-up"
+    }
+   ],
+   "team": {
+    "text": "Multidisciplinary tumor board evaluation (transplant surgery, hepatology, medical oncology, radiation oncology, interventional radiology, pathology)",
+    "locator": "Standard pathway document §2 Pre-Treatment Workup (first bullet)"
+   },
+   "quality": {
+    "standard": [
+     "Report local cumulative dropout from protocol entry and time-specific dropout with the clock explicitly defined; do not equate cumulative attrition with a three-month rate."
+    ],
+    "highrisk": [
+     "Register every referred or screened candidate in the institutionally approved system, not only recipients. Record acceptance or rejection, treatment entry, response, listing, exception decision, conversion to resection or ablation, progression, toxicity, decompensation, death, patient withdrawal and access-related loss.",
+     "Report overall survival from the prespecified entry point and separately from listing and transplantation. Keep recurrence-free survival, recurrence incidence, graft survival and survival after recurrence distinct, with definitions, confidence intervals, numbers at risk and follow-up completeness. Do not call recipient-only survival an intention-to-treat outcome.",
+     "Capture 90-day recipient morbidity and mortality, biopsy-defined rejection, infection, arterial and biliary complications, graft loss, retransplantation and total grafts used. Record recurrence site, salvage treatment, time off systemic therapy, functional recovery and quality of life, not survival alone.",
+     "Before a transplanting study opens, biostatistics and the independent safety board must approve indication-specific monitoring, evaluable denominators, pause authority and reopening criteria. ALLOC-B4 now proposes explicit initial-cohort review triggers for ratification; they are not validated efficacy/futility boundaries. No universal cross-cancer five-year survival cutoff is adopted.",
+     "Use a contemporary comparator with the same eligibility and time zero. Account for the interval needed to survive to transplantation, crossover, competing risks and overlapping study cohorts. A nonsignificant difference is not proof of equivalence."
+    ],
+    "locator": "Standard pathway document §10 Expected Outcomes (closing sentence of the dropout bullet); High-risk pathway document §7 Outcomes and safety oversight (the standard pathway document has no quality-measure section)"
+   },
+   "questions": {
+    "standard": [
+     {
+      "id": "anatomy",
+      "question": "Which proximal strictures require transplant-team review before diagnostic sampling?",
+      "href": "#meeting-anatomy"
+     },
+     {
+      "id": "sampling",
+      "question": "Primary-tumor sampling versus nodal sampling: what is acceptable?",
+      "href": "#meeting-sampling"
+     },
+     {
+      "id": "threshold",
+      "question": "How do we handle exactly 3 cm or conflicting radial measurements?",
+      "href": "#meeting-threshold"
+     },
+     {
+      "id": "regimen",
+      "question": "Which neoadjuvant regimen and modifications will our center approve?",
+      "href": "#meeting-regimen"
+     },
+     {
+      "id": "staging-timing",
+      "question": "When is operative staging performed, and when does imaging expire?",
+      "href": "#meeting-staging-timing"
+     },
+     {
+      "id": "ownership",
+      "question": "Who approves the program and its surveillance plan?",
+      "href": "#meeting-ownership"
+     }
+    ],
+    "highrisk": [
+     {
+      "id": "pCCA-B1",
+      "title": "Tumor size, biopsy history or previously malignant nodes",
+      "status": "Expansion remains closed",
+      "href": "#high-risk-pcca-b1"
+     },
+     {
+      "id": "pCCA-B2",
+      "title": "Resection remains a potentially curative option",
+      "status": "Resection assessment",
+      "href": "#high-risk-pcca-b2"
+     },
+     {
+      "id": "pCCA-B3",
+      "title": "Alternative treatment before transplantation",
+      "status": "Separate proposals; not activated",
+      "href": "#high-risk-pcca-b3"
+     }
+    ]
+   },
+   "sources": [
+    {
+     "key": "C-aasld",
+     "short": "AASLD · CCA",
+     "title": "AASLD Practice Guidance on PSC and cholangiocarcinoma",
+     "kind": "Clinical guidance",
+     "dialog": true
+    },
+    {
+     "key": "P-policy",
+     "short": "OPTN 9.5.A",
+     "title": "OPTN Policies — hilar CCA standardized exception",
+     "kind": "Allocation policy",
+     "dialog": true
+    },
+    {
+     "key": "P-cohort",
+     "short": "pCCA · multicenter",
+     "title": "Neoadjuvant chemoradiation followed by LT for perihilar CCA: 12-center experience",
+     "kind": "Cohort evidence",
+     "dialog": true
+    },
+    {
+     "key": "NCCN-pcca",
+     "short": "NCCN · Biliary v1.2026 · extrahepatic CCA",
+     "title": "NCCN Biliary Tract Cancers — unresectable or metastatic extrahepatic CCA",
+     "kind": "Clinical guidance",
+     "dialog": true
+    },
+    {
+     "key": "V12-ASCO_BTC",
+     "short": "ASCO BTC living guideline 2026.1.0",
+     "title": "Treatment of Advanced Biliary Tract Cancer: ASCO Living Guideline, Version 2026.1.0.",
+     "kind": "Clinical guidance",
+     "dialog": true
+    },
+    {
+     "key": "V12-NALIRICC",
+     "short": "NALIRICC: negative BTC randomized trial",
+     "title": "Nanoliposomal irinotecan and fluorouracil plus leucovorin versus fluorouracil plus leucovorin in patients with cholangiocarcinoma and gallbladder carcinoma previously treated with gemcitabine-based therapies (AIO NALIRICC): a multicentre, open-label, randomised, phase 2 trial",
+     "kind": "Randomized phase II trial",
+     "dialog": true
+    },
+    {
+     "key": "NCI-support",
+     "short": "NCI · supportive and palliative care",
+     "title": "Palliative Care in Cancer",
+     "kind": "Supportive-care reference",
+     "dialog": true
+    },
+    {
+     "key": "optn",
+     "short": "OPTN policy",
+     "title": "OPTN Policies: liver allocation and living donation",
+     "kind": "Organ Procurement and Transplantation Network · HRSA/OPTN · 2026",
+     "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf",
+     "pmid": ""
+    },
+    {
+     "key": "heimbach",
+     "short": "Heimbach 2011 · biopsy",
+     "title": "Trans-peritoneal fine needle aspiration biopsy of hilar cholangiocarcinoma is associated with disease dissemination",
+     "kind": "Heimbach · HPB : the official journal of the International Hepato Pancreato Biliary Association · 2011",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/21492336/",
+     "pmid": "21492336"
+    },
+    {
+     "key": "murad",
+     "short": "Darwish Murad 2012",
+     "title": "Efficacy of Neoadjuvant Chemoradiation, Followed by Liver Transplantation, for Perihilar Cholangiocarcinoma at 12 US Centers",
+     "kind": "Darwish Murad · Gastroenterology · 2012",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/22504095/",
+     "pmid": "22504095"
+    },
+    {
+     "key": "pcca_murad_predictors",
+     "short": "Darwish Murad 2012",
+     "title": "Predictors of pretransplant dropout and posttransplant recurrence in patients with perihilar cholangiocarcinoma",
+     "kind": "Darwish Murad · Hepatology · 2012",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/22290335/",
+     "pmid": "22290335"
+    },
+    {
+     "key": "pcca_aveson",
+     "short": "Aveson 2022",
+     "title": "Association between biopsy method and development of peritoneal metastases in perihilar cholangiocarcinoma",
+     "kind": "Aveson · HPB (Oxford) · 2022",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34844860/",
+     "pmid": "34844860"
+    },
+    {
+     "key": "soliman",
+     "short": "Soliman 2025 · GemCis",
+     "title": "Neoadjuvant Multiagent Systemic Therapy Approach to Liver Transplantation for Perihilar Cholangiocarcinoma",
+     "kind": "Soliman · Transplantation direct · 2025",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39936132/",
+     "pmid": "39936132"
+    },
+    {
+     "key": "pcca_dong",
+     "short": "Dong 2026 · resection versus LT",
+     "title": "Liver resection with and without vascular resection versus transplantation for de novo perihilar cholangiocarcinoma",
+     "kind": "Dong · Hepatology · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40622853/",
+     "pmid": "40622853"
+    },
+    {
+     "key": "cca_wong2019",
+     "short": "Wong 2019 · downstaging pilot",
+     "title": "Downstaging locally advanced cholangiocarcinoma pre-liver transplantation: a prospective pilot study",
+     "kind": "Wong · The Journal of surgical research · 2019",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31059945/",
+     "pmid": "31059945"
+    },
+    {
+     "key": "pcca_sio2016",
+     "short": "Sio 2016 · Mayo protocol fall-out",
+     "title": "Outcome of Transplant-fallout Patients With Unresectable Cholangiocarcinoma",
+     "kind": "Sio · American journal of clinical oncology · 2016",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/24921218/",
+     "pmid": "24921218"
+    },
+    {
+     "key": "pcca_ahpba2015",
+     "short": "AHPBA 2015 hilar CCA consensus",
+     "title": "Hilar cholangiocarcinoma: expert consensus statement",
+     "kind": "Mansour · HPB : the official journal of the International Hepato Pancreato Biliary Association · 2015",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/26172136/",
+     "pmid": "26172136"
+    },
+    {
+     "key": "cca_campbell2026",
+     "short": "Campbell 2026 · biliary cancer LT, single centre",
+     "title": "Liver Transplantation for Unresectable Biliary Tract Cancers: Largest Single-Center Analysis of Subtype-Specific Survival and Recurrence (2007-2025)",
+     "kind": "Campbell · Annals of surgical oncology · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42323458/",
+     "pmid": "42323458"
+    },
+    {
+     "key": "cirse",
+     "short": "Bilhim 2024",
+     "title": "CIRSE Standards of Practice on Portal Vein Embolization and Double Vein Embolization/Liver Venous Deprivation",
+     "kind": "Bilhim · CardioVascular and Interventional Radiology · 2024",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38884781/",
+     "pmid": "38884781"
+    },
+    {
+     "key": "pcca_ethun",
+     "short": "Ethun 2018",
+     "title": "Transplantation Versus Resection for Hilar Cholangiocarcinoma: An Argument for Shifting Treatment Paradigms for Resectable Disease",
+     "kind": "Ethun · Annals of Surgery · 2018",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/29064885/",
+     "pmid": "29064885"
+    },
+    {
+     "key": "pcca_vugts",
+     "short": "Vugts 2021",
+     "title": "Eligibility for Liver Transplantation in Patients with Perihilar Cholangiocarcinoma",
+     "kind": "Vugts · Annals of Surgical Oncology · 2021",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32901308/",
+     "pmid": "32901308"
+    },
+    {
+     "key": "pcca_olthof_pve",
+     "short": "Olthof 2020",
+     "title": "Portal Vein Embolization is Associated with Reduced Liver Failure and Mortality in High-Risk Resections for Perihilar Cholangiocarcinoma",
+     "kind": "Olthof · Annals of Surgical Oncology · 2020",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32103419/",
+     "pmid": "32103419"
+    },
+    {
+     "key": "welling",
+     "short": "Welling 2014 · SBRT",
+     "title": "Neoadjuvant stereotactic body radiation therapy, capecitabine, and liver transplantation for unresectable hilar cholangiocarcinoma",
+     "kind": "Welling · Liver Transplantation · 2014",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/24115315/",
+     "pmid": "24115315"
+    },
+    {
+     "key": "hoogwater",
+     "short": "Hoogwater 2023 · radiation",
+     "title": "Role of neoadjuvant chemoradiotherapy in liver transplantation for unresectable perihilar cholangiocarcinoma: multicentre, retrospective cohort study",
+     "kind": "Hoogwater · BJS open · 2023",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/37032423/",
+     "pmid": "37032423"
+    },
+    {
+     "key": "ito",
+     "short": "Ito 2025 · LDLT",
+     "title": "Safety and efficacy of living donor liver transplantation for unresectable perihilar cholangiocarcinoma: A single center prospective study",
+     "kind": "Ito · Journal of Hepato-Biliary-Pancreatic Sciences · 2025",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39996522/",
+     "pmid": "39996522"
+    },
+    {
+     "key": "candidate2026",
+     "short": "AASLD/AST candidate evaluation",
+     "title": "AASLD AST Practice Guideline on adult liver transplantation: Candidate evaluation",
+     "kind": "Dove · Hepatology · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41405234/",
+     "pmid": "41405234"
+    },
+    {
+     "key": "lunsford",
+     "short": "Lunsford 2018 · Houston",
+     "title": "Liver transplantation for locally advanced intrahepatic cholangiocarcinoma treated with neoadjuvant therapy: a prospective case-series",
+     "kind": "Lunsford · The lancet. Gastroenterology & hepatology · 2018",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/29548617/",
+     "pmid": "29548617"
+    }
+   ]
+  },
+  "icca": {
+   "code": "iCCA",
+   "name": "Intrahepatic cholangiocarcinoma",
+   "limited": [
+    {
+     "t": "A solitary iCCA ≤3 cm meets the NLRB size limit; patients with 2–3 cm tumors are told, in consent and in the NLRB narrative, that they are above the size range with the best published outcomes.",
+     "why": "Guidance threshold beyond the best data. The 3-cm limit follows NLRB guidance; the strongest outcome data are for single tumors ≤2 cm in a retrospective international series (Sapisochin 2016: 5-year recurrence 18% and survival 65%, n = 15). AASLD/AST statement 11 on small iCCA is a weak recommendation on level 4 evidence. Track recurrence and survival separately for tumors ≤2 cm and 2–3 cm.",
+     "setting": "standard",
+     "locator": "Standard pathway document §2.1 Inclusion Criteria; decision 'Check clinical selection criteria'",
+     "refs": [
+      {
+       "key": "N-icca",
+       "label": "NLRB · iCCA",
+       "dialog": true
+      },
+      {
+       "key": "I-cohort",
+       "label": "Very-early iCCA",
+       "dialog": true
+      },
+      {
+       "key": "candidate2026",
+       "label": "AASLD/AST candidate evaluation",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41405234/"
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "Documented cirrhosis is required; a candidate without cirrhosis is not submitted under this pathway and needs a separately justified nonstandard request reviewed by the selection committee.",
+     "why": "Guidance population. Cirrhosis is part of the NLRB category and appears in the explanatory text of AASLD/AST statement 11 (weak recommendation, level 4 evidence). The cited small-tumor transplant cohorts are incidental tumors in cirrhotic explants (for example De Martin 2020); no transplant outcome data for noncirrhotic small iCCA are cited. Track noncirrhotic referrals and how they were handled.",
+     "setting": "standard",
+     "locator": "Standard pathway document §2.1 Inclusion Criteria; decision 'Check clinical selection criteria'",
+     "refs": [
+      {
+       "key": "N-icca",
+       "label": "NLRB · iCCA",
+       "dialog": true
+      },
+      {
+       "key": "candidate2026",
+       "label": "AASLD/AST candidate evaluation",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41405234/"
+      },
+      {
+       "key": "icca_demartin",
+       "label": "De Martin 2020",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/32090444/"
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "Candidates need ECOG 0–1; there is no upper age limit, but those over 70 need enhanced physiologic assessment and explicit selection-committee sign-off.",
+     "why": "Local rules. The protocol cites no source for ECOG 0–1. OPTN sets no age limit; the 70-year trigger and the assessment bundle (frailty, sarcopenia, cardiopulmonary, geriatric or anesthesia review) are institutional, and age alone may not be grounds to decline. The age rule cites a non-transplant eligibility cohort (Schleimer 2026); no transplant outcomes by age or performance status are cited. Track committee decisions and outcomes for these candidates.",
+     "setting": "standard",
+     "locator": "Standard pathway document §2.1 Inclusion Criteria",
+     "refs": [
+      {
+       "key": "icca_comparator",
+       "label": "Schleimer 2026 · non-LT comparator",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41991890/"
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "Poorly differentiated histology is a relative contraindication.",
+     "why": "Guideline-based (AASLD PSC/CCA guidance). The supporting cohort data are small and retrospective: in De Martin 2020, incidental tumors in cirrhosis, tumor grade carried a hazard ratio of 3.74. A core biopsy cannot guarantee the grade of the whole tumor, and the protocol does not define how the relative contraindication is weighed. Track biopsy versus explant grade and recurrence by grade.",
+     "setting": "standard",
+     "locator": "Standard pathway document §2.2 Exclusion Criteria",
+     "refs": [
+      {
+       "key": "C-aasld",
+       "label": "AASLD · CCA",
+       "dialog": true
+      },
+      {
+       "key": "icca_demartin",
+       "label": "De Martin 2020",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/32090444/"
+      }
+     ],
+     "related": {
+      "label": "iCCA-B1 · Advanced disease: tumor distribution and grade",
+      "href": "#high-risk-icca-b1"
+     }
+    },
+    {
+     "t": "Macrovascular invasion excludes the candidate.",
+     "why": "Local exclusion. It is not among the NLRB criteria the protocol lists, and the cited source (Schleimer 2026) is a non-transplant eligibility cohort; the Houston advanced-iCCA series also excluded major vascular encasement. No transplant outcome comparison by vascular invasion is cited. The open high-risk review would allow encasement without tumor thrombus in the advanced study. Track vascular findings on the explant.",
+     "setting": "standard",
+     "locator": "Standard pathway document §2.2 Exclusion Criteria",
+     "refs": [
+      {
+       "key": "icca_comparator",
+       "label": "Schleimer 2026 · non-LT comparator",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41991890/"
+      },
+      {
+       "key": "mcmillan",
+       "label": "McMillan 2022 · Houston update",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/34856069/"
+      }
+     ],
+     "related": {
+      "label": "iCCA-B1 · Advanced disease: tumor distribution and grade",
+      "href": "#high-risk-icca-b1"
+     }
+    },
+    {
+     "t": "Prior liver resection does not by itself exclude a candidate; recurrent or other outside-guidance presentations need explicit multidisciplinary and individual allocation review.",
+     "why": "Clinical reasoning. NLRB guidance does not list prior resection as an exclusion. The only transplant experience after resection that the protocol cites is a single-center advanced-iCCA series in which four previously resected patients were listed and three transplanted (McMillan 2022); that research cohort does not establish eligibility for the standard route. Track previously resected candidates, selection decisions and recurrence.",
+     "setting": "standard",
+     "locator": "Standard pathway document §2.2 Exclusion Criteria",
+     "refs": [
+      {
+       "key": "N-icca",
+       "label": "NLRB · iCCA",
+       "dialog": true
+      },
+      {
+       "key": "mcmillan",
+       "label": "McMillan 2022 · Houston update",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/34856069/"
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "If checkpoint-inhibitor therapy is used, a washout of at least 90 days precedes transplant; afterwards, liver tests are checked twice weekly for 4 weeks, then weekly to week 12, with biopsy for unexplained rises.",
+     "why": "Protocol convention. The protocol calls the 90-day washout a convention, not a validated threshold: no interval has been shown to eliminate rejection, and rejection has been reported after longer intervals. Evidence is retrospective and largely HCC-derived (Moeckli 2025, VITALITY). The monitoring schedule is a local operational rule; pooled retrospective data (8 studies, n = 229) show 19% rejection with no reliable onset time. Track washout, rejection and graft loss.",
+     "setting": "standard",
+     "locator": "Standard pathway document §4.1 Systemic Therapy and §7.2 Maintenance; decision 'Plan pretransplant treatment'",
+     "refs": [
+      {
+       "key": "H-aasld",
+       "label": "AASLD · HCC",
+       "dialog": true
+      },
+      {
+       "key": "moeckli",
+       "label": "Moeckli 2025",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/40042053/"
+      },
+      {
+       "key": "vitality",
+       "label": "VITALITY · Tabrizian",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/39255928/"
+      }
+     ],
+     "related": {
+      "label": "Which control strategy and ICI safety rules will be used?",
+      "href": "#meeting-therapy"
+     }
+    },
+    {
+     "t": "For living donation, recipient staging and technical clearance are completed before irreversible donor surgery, with an explicit abort plan for occult nodes, peritoneal disease or unresectability.",
+     "why": "Operational safety proposal. The protocol labels this a safety workflow, not proof that negative staging prevents recurrence. The cited UPMC series (Sethi 2026) staged recipients before donor surgery and aborted 7 of 31 explorations, but it included only seven iCCA recipients. Track aborted donor and recipient operations and occult disease found at staging.",
+     "setting": "standard",
+     "locator": "Standard pathway document §6.1 Staging Laparotomy",
+     "refs": [
+      {
+       "key": "icca_ldlt",
+       "label": "Sethi 2026 · iCCA LDLT",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/42810588/"
+      }
+     ],
+     "related": {
+      "label": "iCCA-B3 · Living-donor transplantation: study readiness",
+      "href": "#high-risk-icca-b3"
+     }
+    },
+    {
+     "t": "At transplant, perihepatic lymph nodes are sampled for frozen section; extrahepatic or extrabiliary spread on frozen section aborts the transplant and the organ is reallocated.",
+     "why": "Single-center protocol. The rule follows the Houston prospective case series (Lunsford 2018), in which six patients were transplanted. The protocol gives no data on frozen-section accuracy, and it notes that negative EUS sampling does not exclude all nodal disease. Track agreement between frozen-section and final pathology, and aborted transplants.",
+     "setting": "standard",
+     "locator": "Standard pathway document §6.1 Staging Laparotomy",
+     "refs": [
+      {
+       "key": "lunsford",
+       "label": "Lunsford 2018 · Houston",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/29548617/"
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "No routine adjuvant therapy after a complete pathologic response; with residual viable tumor, chemotherapy is considered only case by case or within a prospective protocol.",
+     "why": "Extrapolated. The protocol states that no post-transplant adjuvant standard exists and that benefit and tolerability in immunosuppressed recipients are unproven; the cited source is a single-center case series (Lunsford 2018). Track adjuvant use, tolerance and recurrence by explant response.",
+     "setting": "standard",
+     "locator": "Standard pathway document §8 Adjuvant Therapy Post-Transplant; decision 'Transplant and follow-up'",
+     "refs": [
+      {
+       "key": "lunsford",
+       "label": "Lunsford 2018 · Houston",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/29548617/"
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "After transplant, chest CT plus abdominal/pelvic CT or MRI every 3 months in years 1–2 and every 6 months in years 3–5, with CA 19-9 and CEA at each visit, then annual follow-up as indicated.",
+     "why": "Institutional proposal. The protocol states this is not the schedule of the cited incidental biliary-cancer series (Heinrich 2026), which imaged every 6 months for 3 years and then annually; selected transplant data do not define an optimal interval. The group is to approve modality, interval, contrast adaptations and escalation triggers and record the rationale. Track how recurrences are detected.",
+     "setting": "standard",
+     "locator": "Standard pathway document §9.1 Oncologic Surveillance; decision 'Transplant and follow-up'",
+     "refs": [],
+     "related": {
+      "label": "What post-transplant recurrence surveillance will the program adopt?",
+      "href": "#meeting-surveillance"
+     }
+    },
+    {
+     "t": "After confirmed recurrence, transplant hepatology, surgery and oncology discuss individualized immunosuppression minimization.",
+     "why": "Single-center retrospective association. In the cited cohort (Gül-Klein 2022: 67 recipients with mixed CCA subtypes, 1988–2022), restrictive immunosuppression was associated with longer survival after recurrence, but selection and confounding limit causal inference, and mTOR use showed no independent association. The protocol supports consideration, not automatic withdrawal or routine mTOR substitution. Track rejection and survival after minimization.",
+     "setting": "standard",
+     "locator": "Standard pathway document §10 Recurrence Management",
+     "refs": [],
+     "related": null
+    }
+   ],
+   "owners": [
+    {
+     "id": "diagnosis",
+     "title": "Establish histology",
+     "owner": "Pathology · HPB surgery · oncology",
+     "timing": "Before assessing eligibility for the iCCA transplant protocol"
+    },
+    {
+     "id": "phenotype",
+     "title": "Check clinical selection criteria",
+     "owner": "HPB surgery · transplant governance",
+     "timing": "Before declaring a transplant-directed treatment plan"
+    },
+    {
+     "id": "therapy",
+     "title": "Plan pretransplant treatment",
+     "owner": "Oncology · IR · radiation oncology · transplant team",
+     "timing": "Before treatment; reassess after each course"
+    },
+    {
+     "id": "stability",
+     "title": "Demonstrate stability",
+     "owner": "Radiology · coordinator · oncology",
+     "timing": "Before the nonstandard request"
+    },
+    {
+     "id": "review",
+     "title": "Request an individual iCCA MELD exception",
+     "owner": "Transplant physician · coordinator · program governance",
+     "timing": "At request and every renewal"
+    },
+    {
+     "id": "follow-up",
+     "title": "Transplant and follow-up",
+     "owner": "Transplant team · oncology",
+     "timing": "Before transplant; explant review and follow-up"
+    }
+   ],
+   "team": {
+    "text": "All cases must be reviewed by the UTHealth Houston Hepatobiliary Multidisciplinary Tumor Board, including: Transplant surgery; Surgical oncology; Medical oncology; Hepatology; Radiation oncology; Interventional radiology; Pathology; Radiology",
+    "locator": "Standard pathway document §11 Multidisciplinary Team"
+   },
+   "quality": {
+    "standard": [
+     "Track intent-to-treat survival, post-transplant survival, recurrence-free survival",
+     "Document dropout rates and reasons",
+     "Explant pathology correlation with pre-transplant imaging",
+     "Report outcomes to UNOS/OPTN as required"
+    ],
+    "highrisk": [],
+    "locator": "Standard pathway document §12 Quality Metrics and Data Collection"
+   },
+   "questions": {
+    "standard": [
+     {
+      "id": "histology",
+      "question": "Will the local protocol include mixed HCC-iCCA?",
+      "href": "#meeting-histology"
+     },
+     {
+      "id": "phenotype",
+      "question": "Is NLRB alignment sufficient, or do we require a prospective program?",
+      "href": "#meeting-phenotype"
+     },
+     {
+      "id": "therapy",
+      "question": "Which control strategy and ICI safety rules will be used?",
+      "href": "#meeting-therapy"
+     },
+     {
+      "id": "stability-clock",
+      "question": "Which event starts or restarts the six-month stability interval?",
+      "href": "#meeting-stability-clock"
+     },
+     {
+      "id": "review-ownership",
+      "question": "Who verifies nonstandard submission and three-month imaging?",
+      "href": "#meeting-review-ownership"
+     },
+     {
+      "id": "surveillance",
+      "question": "What post-transplant recurrence surveillance will the program adopt?",
+      "href": "#meeting-surveillance"
+     }
+    ],
+    "highrisk": [
+     {
+      "id": "iCCA-B1",
+      "title": "Advanced disease: tumor distribution and grade",
+      "status": "Proposed study cohort",
+      "href": "#high-risk-icca-b1"
+     },
+     {
+      "id": "iCCA-B2",
+      "title": "Response, progression and the observation period",
+      "status": "Proposed response requirements",
+      "href": "#high-risk-icca-b2"
+     },
+     {
+      "id": "iCCA-B3",
+      "title": "Living-donor transplantation: study readiness",
+      "status": "Study development only",
+      "href": "#high-risk-icca-b3"
+     },
+     {
+      "id": "iCCA-B4",
+      "title": "Previously treated nodal or extrahepatic disease",
+      "status": "Closed",
+      "href": "#high-risk-icca-b4"
+     }
+    ]
+   },
+   "sources": [
+    {
+     "key": "N-icca",
+     "short": "NLRB · iCCA",
+     "title": "Adult MELD exception review guidance — iCCA / mixed HCC-iCCA",
+     "kind": "NLRB guidance",
+     "dialog": true
+    },
+    {
+     "key": "C-aasld",
+     "short": "AASLD · CCA",
+     "title": "AASLD Practice Guidance on PSC and cholangiocarcinoma",
+     "kind": "Clinical guidance",
+     "dialog": true
+    },
+    {
+     "key": "I-focality",
+     "short": "CAP · tumor focality",
+     "title": "Intrahepatic bile ducts resection protocol v4.3.0.0",
+     "kind": "Pathology reporting standard",
+     "dialog": true
+    },
+    {
+     "key": "I-satellites",
+     "short": "RCPA · tumor focality",
+     "title": "Structured pathology reporting: liver cancer, tumor focality",
+     "kind": "Pathology reporting standard",
+     "dialog": true
+    },
+    {
+     "key": "I-cohort",
+     "short": "Very-early iCCA",
+     "title": "Liver transplantation for very early iCCA: international retrospective study",
+     "kind": "Cohort evidence",
+     "dialog": true
+    },
+    {
+     "key": "NCCN-icca",
+     "short": "NCCN · Biliary v1.2026 · iCCA",
+     "title": "NCCN Biliary Tract Cancers — unresectable or metastatic iCCA",
+     "kind": "Clinical guidance",
+     "dialog": true
+    },
+    {
+     "key": "V12-ASCO_BTC",
+     "short": "ASCO BTC living guideline 2026.1.0",
+     "title": "Treatment of Advanced Biliary Tract Cancer: ASCO Living Guideline, Version 2026.1.0.",
+     "kind": "Clinical guidance",
+     "dialog": true
+    },
+    {
+     "key": "V12-NALIRICC",
+     "short": "NALIRICC: negative BTC randomized trial",
+     "title": "Nanoliposomal irinotecan and fluorouracil plus leucovorin versus fluorouracil plus leucovorin in patients with cholangiocarcinoma and gallbladder carcinoma previously treated with gemcitabine-based therapies (AIO NALIRICC): a multicentre, open-label, randomised, phase 2 trial",
+     "kind": "Randomized phase II trial",
+     "dialog": true
+    },
+    {
+     "key": "V12-MIXED_PRIMARY",
+     "short": "Kobayashi 2018: combined HCC-CCA",
+     "title": "Multicenter retrospective analysis of systemic chemotherapy for unresectable combined hepatocellular and cholangiocarcinoma.",
+     "kind": "Retrospective cohort",
+     "dialog": true
+    },
+    {
+     "key": "NCI-support",
+     "short": "NCI · supportive and palliative care",
+     "title": "Palliative Care in Cancer",
+     "kind": "Supportive-care reference",
+     "dialog": true
+    },
+    {
+     "key": "systare",
+     "short": "SYS-TARE 2024",
+     "title": "Liver Transplantation for Intrahepatic Cholangiocarcinoma After Chemotherapy and Radioembolization: An Intention-To-Treat Study",
+     "kind": "Maspero · Transplant international : official journal of the European Society for Organ Transplantation · 2024",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39544321/",
+     "pmid": "39544321"
+    },
+    {
+     "key": "ilts",
+     "short": "ILTS–ILCA consensus",
+     "title": "The 2024 ILTS-ILCA consensus recommendations for liver transplantation for HCC and intrahepatic cholangiocarcinoma",
+     "kind": "Kodali · Liver transplantation : official publication of the American Association for the Study of Liver Diseases and the International Liver Transplantation Society · 2025",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40014003/",
+     "pmid": "40014003"
+    },
+    {
+     "key": "candidate2026",
+     "short": "AASLD/AST candidate evaluation",
+     "title": "AASLD AST Practice Guideline on adult liver transplantation: Candidate evaluation",
+     "kind": "Dove · Hepatology · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41405234/",
+     "pmid": "41405234"
+    },
+    {
+     "key": "nlrb",
+     "short": "NLRB oncology guidance",
+     "title": "Adult MELD Exceptions for Transplant Oncology",
+     "kind": "Organ Procurement and Transplantation Network · HRSA/OPTN · 2025",
+     "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/adult-meld-exception-transplant-oncology-review-guidance.pdf",
+     "pmid": ""
+    },
+    {
+     "key": "sapisochin",
+     "short": "Sapisochin 2016 · very early iCCA",
+     "title": "Liver transplantation for \"very early\" intrahepatic cholangiocarcinoma: International retrospective study supporting a prospective assessment",
+     "kind": "Sapisochin · Hepatology (Baltimore, Md.) · 2016",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/27481548/",
+     "pmid": "27481548"
+    },
+    {
+     "key": "icca_demartin",
+     "short": "De Martin 2020",
+     "title": "Analysis of Liver Resection Versus Liver Transplantation on Outcome of Small Intrahepatic Cholangiocarcinoma and Combined Hepatocellular-Cholangiocarcinoma in the Setting of Cirrhosis",
+     "kind": "De Martin · Liver Transplantation · 2020",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32090444/",
+     "pmid": "32090444"
+    },
+    {
+     "key": "icca_dageforde",
+     "short": "Dageforde 2021",
+     "title": "Multi-Center Analysis of Liver Transplantation for Combined Hepatocellular Carcinoma-Cholangiocarcinoma Liver Tumors",
+     "kind": "Dageforde · Journal of the American College of Surgeons · 2021",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/33316425/",
+     "pmid": "33316425"
+    },
+    {
+     "key": "mcmillan",
+     "short": "McMillan 2022 · Houston update",
+     "title": "Survival following liver transplantation for locally advanced, unresectable intrahepatic cholangiocarcinoma",
+     "kind": "McMillan · American journal of transplantation : official journal of the American Society of Transplantation and the American Society of Transplant Surgeons · 2022",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34856069/",
+     "pmid": "34856069"
+    },
+    {
+     "key": "icca_tesla",
+     "short": "Yaqub 2025",
+     "title": "Liver transplantation for locally advanced non-resectable intrahepatic cholangiocarcinoma treated with neoadjuvant therapy: early results from the TESLA trial",
+     "kind": "Yaqub · British Journal of Surgery · 2025",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40099404/",
+     "pmid": "40099404"
+    },
+    {
+     "key": "icca_giguet",
+     "short": "Giguet 2026",
+     "title": "Liver transplantation in unresectable intrahepatic cholangiocarcinoma following neoadjuvant chemotherapy and SIRT",
+     "kind": "Giguet · JHEP Reports · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41861992/",
+     "pmid": "41861992"
+    },
+    {
+     "key": "lunsford",
+     "short": "Lunsford 2018 · Houston",
+     "title": "Liver transplantation for locally advanced intrahepatic cholangiocarcinoma treated with neoadjuvant therapy: a prospective case-series",
+     "kind": "Lunsford · The lancet. Gastroenterology & hepatology · 2018",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/29548617/",
+     "pmid": "29548617"
+    },
+    {
+     "key": "icca_comparator",
+     "short": "Schleimer 2026 · non-LT comparator",
+     "title": "Eligibility for Liver Transplantation in Patients with Intrahepatic Cholangiocarcinoma",
+     "kind": "Schleimer · Annals of surgical oncology · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41991890/",
+     "pmid": "41991890"
+    },
+    {
+     "key": "pump2",
+     "short": "PUMP-2",
+     "title": "Hepatic Arterial Infusion Pump Chemotherapy in Patients With Unresectable Intrahepatic Cholangiocarcinoma-PUMP-2 Trial",
+     "kind": "Franssen · Journal of clinical oncology : official journal of the American Society of Clinical Oncology · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41082695/",
+     "pmid": "41082695"
+    },
+    {
+     "key": "icca_ldlt",
+     "short": "Sethi 2026 · iCCA LDLT",
+     "title": "Outcomes after living donor liver transplant for intrahepatic cholangiocarcinoma",
+     "kind": "Sethi · American Journal of Transplantation · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42810588/",
+     "pmid": "42810588"
+    },
+    {
+     "key": "topaz3",
+     "short": "Oh 2025",
+     "title": "Durvalumab plus chemotherapy in advanced biliary tract cancer: 3-year overall survival update from the phase III TOPAZ-1 study",
+     "kind": "Oh · Journal of Hepatology · 2025",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40381735/",
+     "pmid": "40381735"
+    },
+    {
+     "key": "round2_kelly",
+     "short": "Kelly 2026",
+     "title": "Three Decades of Living Liver Donor Outcomes: A National Cohort Analysis of Patterns in Mortality and Recovery",
+     "kind": "Kelly · Journal of Transplantation · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42835360/",
+     "pmid": "42835360"
+    },
+    {
+     "key": "icca_maspero2024",
+     "short": "Maspero 2024 · Milan SYS-TARE",
+     "title": "Liver transplantation for intrahepatic cholangiocarcinoma after chemotherapy and radioembolization: an intention-to-treat study",
+     "kind": "Maspero · Transplant international · 2024",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39544321/",
+     "pmid": "39544321"
+    },
+    {
+     "key": "cca_malikowski2020",
+     "short": "Malikowski 2020 · EUS nodal staging",
+     "title": "Endoscopic ultrasound/fine needle aspiration is effective for lymph node staging in patients with cholangiocarcinoma",
+     "kind": "Malikowski · Hepatology · 2020",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31860935/",
+     "pmid": "31860935"
+    },
+    {
+     "key": "cca_wong2019",
+     "short": "Wong 2019 · downstaging pilot",
+     "title": "Downstaging locally advanced cholangiocarcinoma pre-liver transplantation: a prospective pilot study",
+     "kind": "Wong · The Journal of surgical research · 2019",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31059945/",
+     "pmid": "31059945"
+    },
+    {
+     "key": "cca_campbell2026",
+     "short": "Campbell 2026 · biliary cancer LT, single centre",
+     "title": "Liver Transplantation for Unresectable Biliary Tract Cancers: Largest Single-Center Analysis of Subtype-Specific Survival and Recurrence (2007-2025)",
+     "kind": "Campbell · Annals of surgical oncology · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42323458/",
+     "pmid": "42323458"
+    },
+    {
+     "key": "H-aasld",
+     "short": "AASLD · HCC",
+     "title": "AASLD Practice Guidance: prevention, diagnosis, and treatment of HCC",
+     "kind": "Clinical guidance",
+     "dialog": true
+    },
+    {
+     "key": "moeckli",
+     "short": "Moeckli 2025",
+     "title": "Determining safe washout period for immune checkpoint inhibitors prior to liver transplantation: An international retrospective cohort study",
+     "kind": "Moeckli · Hepatology · 2025",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40042053/",
+     "pmid": "40042053"
+    },
+    {
+     "key": "vitality",
+     "short": "VITALITY · Tabrizian",
+     "title": "Intention-to-treat outcomes of patients with hepatocellular carcinoma receiving immunotherapy before liver transplant: The multicenter VITALITY study",
+     "kind": "Tabrizian · Journal of Hepatology · 2025",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39255928/",
+     "pmid": "39255928"
+    }
+   ]
+  },
+  "crlm": {
+   "code": "CRLM",
+   "name": "Colorectal liver metastases",
+   "limited": [
+    {
+     "t": "Candidates must be 18–65 years old with ECOG performance status 0–1.",
+     "why": "Trial-derived convention. SECA-II and the pooled Oslo PET cohort enrolled ECOG 0–1 patients; the protocol cites no source for the 65-year upper limit, and the high-risk protocol states that age and performance limits used in a particular trial are not universal national rules. Neither limit has been tested as a threshold for transplant benefit. Track referrals declined on age or performance status alone.",
+     "setting": "standard",
+     "locator": "Standard pathway document §2.1 General Requirements",
+     "refs": [
+      {
+       "key": "seca2",
+       "label": "Dueland 2020 · SECA-II",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/31188200/"
+      },
+      {
+       "key": "grut",
+       "label": "Grut 2022 · MTV",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/36241941/"
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "Candidates must have received no more than three lines of prior systemic chemotherapy.",
+     "why": "Trial eligibility rule. The limit is cited to TransMet, which admitted stable or partially responding disease on no more than three chemotherapy lines. It is a trial entry criterion, not a tested threshold: the protocol presents no data comparing outcomes by number of prior lines. Track lines received before listing and how often this rule alone excludes a referral.",
+     "setting": "standard",
+     "locator": "Standard pathway document §2.2 Oncologic Requirements",
+     "refs": [
+      {
+       "key": "C-transmet",
+       "label": "TransMet · RCT",
+       "dialog": true
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "Undifferentiated adenocarcinoma and signet-ring cell carcinoma histology are excluded.",
+     "why": "Narrative-review criterion. The exclusion is cited only to a 2024 narrative review with no new patient cohort, and it is not among the guidance exclusions the high-risk protocol lists (R1 margin, extrahepatic disease, BRAF-mutant or MSI-H disease, progression, unmet timing). The protocol presents no transplant outcome data for these histologies. Track how often this rule alone excludes a referral.",
+     "setting": "standard",
+     "locator": "Standard pathway document §2.3 Molecular and Histologic Requirements; §3 Patient Selection — Exclusion Criteria",
+     "refs": [],
+     "related": null
+    },
+    {
+     "t": "A largest liver lesion ≤5.5 cm is preferred; a lesion >5.5 cm is a relative contraindication.",
+     "why": "Prognostic association. Lesion size >5.5 cm is a component of the Oslo prognostic score, and the cited review describes it as a prognostic association. The protocol notes that such markers forecast recipient prognosis but have not been shown to change the incremental benefit of LT. The guidance limit is no lesion >10 cm before treatment. Track largest lesion size at listing against recurrence and survival.",
+     "setting": "standard",
+     "locator": "Standard pathway document §2.4 Imaging and Biomarker Requirements",
+     "refs": [
+      {
+       "key": "N-crlm",
+       "label": "NLRB · CRLM",
+       "dialog": true
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "Every candidate is reviewed and approved by a tumour board of transplant hepatology, transplant and HPB surgery, GI oncology, diagnostic and interventional radiology, and pathology.",
+     "why": "Guideline recommendation and consensus. AASLD/AST candidate-evaluation guidance recommends multidisciplinary assessment of expected benefit and feasibility, and TransMet used independent adjudication of unresectability. The protocol cites no study comparing outcomes by board composition or approval process; the high-risk protocol proposes a stricter two-surgeon certification. Track board decisions, reasons for rejection and time to decision.",
+     "setting": "standard",
+     "locator": "Standard pathway document §4.1 Multidisciplinary Tumor Board Review; decision 'Transplant and follow-up' (final MDT handoff)",
+     "refs": [
+      {
+       "key": "candidate2026",
+       "label": "AASLD/AST candidate evaluation",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41405234/"
+      },
+      {
+       "key": "C-transmet",
+       "label": "TransMet · RCT",
+       "dialog": true
+      }
+     ],
+     "related": {
+      "label": "CRLM-B1 · Confirm that complete resection is not feasible",
+      "href": "#high-risk-crlm-b1"
+     }
+    },
+    {
+     "t": "While listed, patients are restaged every 8–12 weeks with chest/abdomen/pelvis CT and CEA, plus PET-CT every 3–6 months.",
+     "why": "Local convention. NLRB extension requires CT/MRI and CEA every 3 months; the 8–12-week interval and the PET schedule are local choices with no cited source. PET metabolic measures are prognostic only in small, overlapping Oslo and US recipient cohorts, and the Grut 2022 timing subgroup does not establish an optimal interval. Track progression detected while listed and PET findings that changed management.",
+     "setting": "standard",
+     "locator": "Standard pathway document §5 Waitlist Management; decision 'Request and renew the MELD exception' (3-monthly extension evidence)",
+     "refs": [
+      {
+       "key": "N-crlm",
+       "label": "NLRB · CRLM",
+       "dialog": true
+      },
+      {
+       "key": "grut",
+       "label": "Grut 2022 · MTV",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/36241941/"
+      },
+      {
+       "key": "petcrlm",
+       "label": "Wehrle 2025 · PET",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/39526884/"
+      }
+     ],
+     "related": {
+      "label": "Can ctDNA or altered PET timing substitute for required imaging?",
+      "href": "#meeting-restaging"
+     }
+    },
+    {
+     "t": "Bridging therapy continues while listed under an individualised plan, with agent-specific washout, toxicity recovery and repeat staging approved by oncology, transplant surgery and pharmacy.",
+     "why": "Trial practice and expert opinion. TransMet aimed to transplant within 2 months of the last chemotherapy cycle, but the protocol states that this trial implementation interval is not a validated threshold, and no cited study defines an optimal washout before LT. Track the interval from last cycle to transplant, waitlist progression and perioperative complications.",
+     "setting": "standard",
+     "locator": "Standard pathway document §5 Waitlist Management",
+     "refs": [
+      {
+       "key": "C-transmet",
+       "label": "TransMet · RCT",
+       "dialog": true
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "At transplant the abdomen is explored with frozen section of suspicious nodes or deposits; metastatic nodal or extrahepatic disease aborts the transplant.",
+     "why": "Trial practice and consensus. TransMet preceded every transplant with exploration and frozen section of suspicious nodes, and IHPBA consensus excludes node-positive patients; in Oslo, hilar node metastasis on frozen section was the commonest extrahepatic reason for not transplanting (7 of 10). A review cited in the protocol notes no dedicated lymph-node sampling study; the extent of lymphadenectomy is left to a separate surgical protocol. Track aborted transplants and explant node findings.",
+     "setting": "standard",
+     "locator": "Standard pathway document §6 Surgical Procedure",
+     "refs": [
+      {
+       "key": "C-transmet",
+       "label": "TransMet · RCT",
+       "dialog": true
+      },
+      {
+       "key": "C-consensus",
+       "label": "IHPBA · CRLM",
+       "dialog": true
+      },
+      {
+       "key": "crlm_dueland2023",
+       "label": "Dueland 2023 · Oslo long-term",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/37494056/"
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "Immunosuppression follows the signed institutional LT order set; mTOR-based calcineurin-inhibitor minimisation is optional for renal or tolerability reasons, not to prevent CRLM recurrence.",
+     "why": "Extrapolated from general LT guidance. AASLD/AST guidance supports individualised tacrolimus-based therapy, and its conditional mTOR recommendation applies to HCC within Milan only. TransMet's regimen is descriptive; no CRLM-specific regimen or everolimus recurrence benefit has been shown, and the day-30 everolimus start is a label safety floor. Track rejection, renal function and recurrence by regimen.",
+     "setting": "standard",
+     "locator": "Standard pathway document §7 Post-Transplant Immunosuppression; §10 everolimus safety note",
+     "refs": [
+      {
+       "key": "C-transmet",
+       "label": "TransMet · RCT",
+       "dialog": true
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "Routine post-transplant chemotherapy is not given; it is considered only case by case or in a prospective protocol, after graft recovery and joint oncology, surgery, hepatology and pharmacy review.",
+     "why": "Expert consensus. IHPBA LT-CoMet 21 does not recommend routine adjuvant chemotherapy because overall-survival benefit is unproven and chemotoxicity is a risk under immunosuppression. Post-transplant adjuvant treatment remains a research question and its duration is not evidence-defined. Track adjuvant use, timing, toxicity and recurrence.",
+     "setting": "standard",
+     "locator": "Standard pathway document §8 Post-Transplant Adjuvant Chemotherapy; decision 'Transplant and follow-up'",
+     "refs": [
+      {
+       "key": "C-consensus",
+       "label": "IHPBA · CRLM",
+       "dialog": true
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "After transplant: CT and CEA every 3 months in years 1–2 and every 6 months in years 3–5; PET-CT at 6, 12 and 24 months, then yearly to year 5; colonoscopy at 1 year.",
+     "why": "Trial-derived schedule. The calendar is cited to TransMet follow-up; no cited study shows that this frequency, or routine PET, improves survival after LT. The high-risk protocol instead proposes PET only for an unresolved clinical or imaging question. Recurrence is common and mainly pulmonary, which motivates surveillance but not a specific interval. Track how recurrences are detected, salvage-treatment rate and imaging burden.",
+     "setting": "standard",
+     "locator": "Standard pathway document §9 Post-Transplant Surveillance; decision 'Transplant and follow-up'",
+     "refs": [
+      {
+       "key": "C-transmet",
+       "label": "TransMet · RCT",
+       "dialog": true
+      }
+     ],
+     "related": {
+      "label": "Who renews the MELD exception, confirms readiness for transplantation and plans recurrence surveillance?",
+      "href": "#meeting-ownership"
+     }
+    },
+    {
+     "t": "Small, slow-growing post-transplant lung metastases may be observed until resectable, and solitary or oligometastatic recurrence may be treated by metastasectomy or ablation after MDT review.",
+     "why": "Expert consensus from observational series. The protocol states this is consensus opinion, not a strong recommendation: no controlled data show a survival benefit from local therapy of post-transplant recurrence. Oslo reported long survival after lung resection in selected recipients, and PulMiCC, a non-transplant lung-metastasectomy trial, was inconclusive. Track salvage procedures, complications and survival after recurrence.",
+     "setting": "standard",
+     "locator": "Standard pathway document §10 Management of Recurrence",
+     "refs": [
+      {
+       "key": "C-consensus",
+       "label": "IHPBA · CRLM",
+       "dialog": true
+      },
+      {
+       "key": "crlm_dueland_lung",
+       "label": "Dueland 2022 · lung resection after LT",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/36291826/"
+      },
+      {
+       "key": "pulmicc",
+       "label": "PulMiCC 2020",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/32388895/"
+      }
+     ],
+     "related": null
+    }
+   ],
+   "owners": [
+    {
+     "id": "map-disease",
+     "title": "Stage the disease",
+     "owner": "Colorectal oncology · radiology · HPB surgery",
+     "timing": "At referral; preserve pretreatment imaging"
+    },
+    {
+     "id": "biology",
+     "title": "Review molecular markers and CEA",
+     "owner": "Oncology · molecular pathology",
+     "timing": "Before transplant-directed selection"
+    },
+    {
+     "id": "unresectability",
+     "title": "Confirm unresectability",
+     "owner": "HPB liver surgeon · transplant surgeon · radiology · IR",
+     "timing": "At baseline and again after response"
+    },
+    {
+     "id": "control",
+     "title": "Treat and observe",
+     "owner": "Oncology · HPB surgery · radiology",
+     "timing": "During systemic/LRT treatment and each restaging"
+    },
+    {
+     "id": "clocks",
+     "title": "Confirm primary treatment and timing",
+     "owner": "Colorectal surgery · coordinator · oncology",
+     "timing": "Before restaging for the initial CRLM MELD-exception request"
+    },
+    {
+     "id": "restaging",
+     "title": "Restage for transplant",
+     "owner": "Radiology · nuclear medicine · oncology · coordinator",
+     "timing": "Within the initial-request imaging window"
+    },
+    {
+     "id": "review",
+     "title": "Request and renew the MELD exception",
+     "owner": "Transplant physician · coordinator · oncology",
+     "timing": "At request and every 3-month extension"
+    },
+    {
+     "id": "transplant",
+     "title": "Transplant and follow-up",
+     "owner": "Transplant team · colorectal oncology",
+     "timing": "Before transplant and longitudinally afterward"
+    }
+   ],
+   "team": {
+    "text": "All candidates must be reviewed and approved by a multidisciplinary tumor board including: Transplant hepatology; Transplant surgery; Hepatobiliary surgery; Medical oncology (GI); Diagnostic radiology; Interventional radiology; Pathology",
+    "locator": "Standard pathway document §4.1 Multidisciplinary Tumor Board Review"
+   },
+   "quality": {
+    "standard": [
+     "Every removal and every reactivation is recorded with its category and the supporting evidence."
+    ],
+    "highrisk": [
+     "Register every referred or screened candidate in the institutionally approved system, not only recipients. Record acceptance or rejection, treatment entry, response, listing, exception decision, conversion to resection or ablation, progression, toxicity, decompensation, death, patient withdrawal and access-related loss.",
+     "Report overall survival from the prespecified entry point and separately from listing and transplantation. Keep recurrence-free survival, recurrence incidence, graft survival and survival after recurrence distinct, with definitions, confidence intervals, numbers at risk and follow-up completeness. Do not call recipient-only survival an intention-to-treat outcome.",
+     "Capture 90-day recipient morbidity and mortality, biopsy-defined rejection, infection, arterial and biliary complications, graft loss, retransplantation and total grafts used. Record recurrence site, salvage treatment, time off systemic therapy, functional recovery and quality of life, not survival alone.",
+     "Before a transplanting study opens, biostatistics and the independent safety board must approve indication-specific monitoring, evaluable denominators, pause authority and reopening criteria. ALLOC-B4 now proposes explicit initial-cohort review triggers for ratification; they are not validated efficacy/futility boundaries. No universal cross-cancer five-year survival cutoff is adopted.",
+     "Use a contemporary comparator with the same eligibility and time zero. Account for the interval needed to survive to transplantation, crossover, competing risks and overlapping study cohorts. A nonsignificant difference is not proof of equivalence."
+    ],
+    "locator": "Standard pathway document §5 Waitlist Management (last bullet); High-risk pathway document §9 Data collection and outcomes (the standard pathway document has no quality-measure section)"
+   },
+   "questions": {
+    "standard": [
+     {
+      "id": "unresectability",
+      "question": "What evidence establishes persistent unresectability?",
+      "href": "#meeting-unresectability"
+     },
+     {
+      "id": "treated-lesions",
+      "question": "Does a nonviable-appearing or disappearing liver lesion count as persistent disease?",
+      "href": "#meeting-treated-lesions"
+     },
+     {
+      "id": "molecular-gates",
+      "question": "Which biomarkers affect CRLM MELD-exception eligibility, and which help estimate prognosis?",
+      "href": "#meeting-molecular-gates"
+     },
+     {
+      "id": "control-clock",
+      "question": "Which observation window governs: trial, consensus or NLRB?",
+      "href": "#meeting-control-clock"
+     },
+     {
+      "id": "primary-clocks",
+      "question": "What if the timing of primary-tumor treatment does not meet the guidance?",
+      "href": "#meeting-primary-clocks"
+     },
+     {
+      "id": "cea-progression",
+      "question": "How should CEA exactly 80 and the progression footnote be interpreted?",
+      "href": "#meeting-cea-progression"
+     },
+     {
+      "id": "restaging",
+      "question": "Can ctDNA or altered PET timing substitute for required imaging?",
+      "href": "#meeting-restaging"
+     },
+     {
+      "id": "ownership",
+      "question": "Who renews the MELD exception, confirms readiness for transplantation and plans recurrence surveillance?",
+      "href": "#meeting-ownership"
+     }
+    ],
+    "highrisk": [
+     {
+      "id": "CRLM-B1",
+      "title": "Confirm that complete resection is not feasible",
+      "status": "Confirm the treatment options",
+      "href": "#high-risk-crlm-b1"
+     },
+     {
+      "id": "CRLM-B2",
+      "title": "No tumor is visible after treatment",
+      "status": "No transplant for presumed microscopic disease",
+      "href": "#high-risk-crlm-b2"
+     },
+     {
+      "id": "CRLM-B3",
+      "title": "Molecular findings and other initial limits",
+      "status": "Initial expansion limits",
+      "href": "#high-risk-crlm-b3"
+     },
+     {
+      "id": "CRLM-B4",
+      "title": "Expected benefit, recurrence and graft use",
+      "status": "Benefit and graft-use review",
+      "href": "#high-risk-crlm-b4"
+     },
+     {
+      "id": "CRLM-B5",
+      "title": "Previously treated extrahepatic disease",
+      "status": "Closed; lung-only study stratum proposed",
+      "href": "#high-risk-crlm-b5"
+     }
+    ]
+   },
+   "sources": [
+    {
+     "key": "N-crlm",
+     "short": "NLRB · CRLM",
+     "title": "Adult MELD exception review guidance — CRLM",
+     "kind": "NLRB guidance",
+     "dialog": true
+    },
+    {
+     "key": "C-consensus",
+     "short": "IHPBA · CRLM",
+     "title": "Liver transplantation for non-resectable CRLM: IHPBA consensus guidelines",
+     "kind": "Expert consensus",
+     "dialog": true
+    },
+    {
+     "key": "C-transmet",
+     "short": "TransMet · RCT",
+     "title": "Liver transplantation plus chemotherapy versus chemotherapy alone: TransMet",
+     "kind": "Randomized trial",
+     "dialog": true
+    },
+    {
+     "key": "NCCN-crlm",
+     "short": "NCCN · Colon v2.2026",
+     "title": "NCCN Colon Cancer — advanced or metastatic disease",
+     "kind": "Clinical guidance",
+     "dialog": true
+    },
+    {
+     "key": "V12-MOUNTAINEER",
+     "short": "MOUNTAINEER final: HER2-positive CRC",
+     "title": "Tucatinib plus trastuzumab for chemotherapy-refractory, HER2 + , RAS wild-type metastatic colorectal cancer (MOUNTAINEER): final analysis.",
+     "kind": "Noncomparative phase II study",
+     "dialog": true
+    },
+    {
+     "key": "V12-SUNLIGHT",
+     "short": "SUNLIGHT: FTD/TPI plus bevacizumab",
+     "title": "Trifluridine-Tipiracil and Bevacizumab in Refractory Metastatic Colorectal Cancer.",
+     "kind": "Randomized phase III trial",
+     "dialog": true
+    },
+    {
+     "key": "V12-FRESCO2",
+     "short": "FRESCO-2: fruquintinib",
+     "title": "Fruquintinib versus placebo in patients with refractory metastatic colorectal cancer (FRESCO-2): an international, multicentre, randomised, double-blind, phase 3 study.",
+     "kind": "Randomized phase III trial",
+     "dialog": true
+    },
+    {
+     "key": "NCI-support",
+     "short": "NCI · supportive and palliative care",
+     "title": "Palliative Care in Cancer",
+     "kind": "Supportive-care reference",
+     "dialog": true
+    },
+    {
+     "key": "transmet",
+     "short": "TransMet 2024",
+     "title": "Liver transplantation plus chemotherapy versus chemotherapy alone in patients with permanently unresectable colorectal liver metastases (TransMet): results from a multicentre, open-label, prospective, randomised controlled trial",
+     "kind": "Adam · Lancet (London, England) · 2024",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39306468/",
+     "pmid": "39306468"
+    },
+    {
+     "key": "cirse",
+     "short": "Bilhim 2024",
+     "title": "CIRSE Standards of Practice on Portal Vein Embolization and Double Vein Embolization/Liver Venous Deprivation",
+     "kind": "Bilhim · CardioVascular and Interventional Radiology · 2024",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38884781/",
+     "pmid": "38884781"
+    },
+    {
+     "key": "crlm_haip",
+     "short": "Chandra 2026 · HAIP comparator",
+     "title": "Transplant-Eligible Colorectal Liver Metastasis Patients Treated with Hepatic Artery Infusion Pump – A Retrospective Cohort Study",
+     "kind": "Chandra · Annals of Surgery · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41630086/",
+     "pmid": "41630086"
+    },
+    {
+     "key": "seca2",
+     "short": "Dueland 2020 · SECA-II",
+     "title": "Survival Following Liver Transplantation for Patients With Nonresectable Liver-only Colorectal Metastases",
+     "kind": "Dueland · Annals of Surgery · 2020",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31188200/",
+     "pmid": "31188200"
+    },
+    {
+     "key": "seca2_10year",
+     "short": "Dueland 2026 · SECA-II ten-year",
+     "title": "Liver Transplantation for Nonresectable Colorectal Liver Metastases: Ten-year Follow-up and Assessment of Curative Rate in the SECA-II Study",
+     "kind": "Dueland · Annals of Surgery · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42572136/",
+     "pmid": "42572136"
+    },
+    {
+     "key": "ihpba",
+     "short": "IHPBA 2021",
+     "title": "Liver transplantation for non-resectable colorectal liver metastases: the International Hepato-Pancreato-Biliary Association consensus guidelines",
+     "kind": "Bonney · The lancet. Gastroenterology & hepatology · 2021",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34506756/",
+     "pmid": "34506756"
+    },
+    {
+     "key": "crlm_occult",
+     "short": "Chávez-Villa 2023 · occult disease",
+     "title": "The High Incidence of Occult Carcinoma in Total Hepatectomy Specimens of Patients Treated for Unresectable Colorectal Liver Metastases With Liver Transplant",
+     "kind": "Chávez-Villa · Annals of Surgery · 2023",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/36692112/",
+     "pmid": "36692112"
+    },
+    {
+     "key": "dream",
+     "short": "Kataoka 2025 · DREAM",
+     "title": "Diagnostic Accuracy of Imaging in Assessing Nonviability of Disappearing Colorectal Liver Metastasis",
+     "kind": "Kataoka · JAMA Surgery · 2025",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40960802/",
+     "pmid": "40960802"
+    },
+    {
+     "key": "oba2018",
+     "short": "Oba 2018 · disappearing lesions",
+     "title": "Clinical implications of disappearing colorectal liver metastases have changed in the era of hepatocyte-specific MRI and contrast-enhanced intraoperative ultrasonography",
+     "kind": "Oba · HPB · 2018",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/29534862/",
+     "pmid": "29534862"
+    },
+    {
+     "key": "wehrle",
+     "short": "Wehrle 2024 · intensive LRT",
+     "title": "Intensive locoregional therapy before liver transplantation for colorectal cancer liver metastasis: A novel pretransplant protocol",
+     "kind": "Wehrle · Liver transplantation : official publication of the American Association for the Study of Liver Diseases and the International Liver Transplantation Society · 2024",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38833301/",
+     "pmid": "38833301"
+    },
+    {
+     "key": "nlrb",
+     "short": "NLRB oncology guidance",
+     "title": "Adult MELD Exceptions for Transplant Oncology",
+     "kind": "Organ Procurement and Transplantation Network · HRSA/OPTN · 2025",
+     "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/adult-meld-exception-transplant-oncology-review-guidance.pdf",
+     "pmid": ""
+    },
+    {
+     "key": "armd",
+     "short": "SECA-II arm D",
+     "title": "Liver transplantation for unresectable colorectal liver metastases in patients and donors with extended criteria (SECA-II arm D study)",
+     "kind": "Smedman · BJS open · 2020",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32333527/",
+     "pmid": "32333527"
+    },
+    {
+     "key": "grut",
+     "short": "Grut 2022 · MTV",
+     "title": "Metabolic tumor volume predicts long-term survival after transplantation for unresectable colorectal liver metastases: 15 years of experience from the SECA study",
+     "kind": "Grut · Annals of nuclear medicine · 2022",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/36241941/",
+     "pmid": "36241941"
+    },
+    {
+     "key": "petcrlm",
+     "short": "Wehrle 2025 · PET",
+     "title": "Pretransplant metabolic tumor volume predicts recurrence following liver transplantation for colorectal metastasis: A multicenter study",
+     "kind": "Wehrle · Liver transplantation : official publication of the American Association for the Study of Liver Diseases and the International Liver Transplantation Society · 2025",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39526884/",
+     "pmid": "39526884"
+    },
+    {
+     "key": "ctdna",
+     "short": "Wehrle 2023 · ctDNA",
+     "title": "Circulating Tumor DNA in Colorectal Cancer Liver Metastasis: Analysis of Patients Receiving Liver Resection and Transplant",
+     "kind": "Wehrle · JCO clinical cancer informatics · 2023",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/37820293/",
+     "pmid": "37820293"
+    },
+    {
+     "key": "crlm_hagness_recur",
+     "short": "Hagness · SECA-I recurrence",
+     "title": "Patterns of recurrence after liver transplantation for nonresectable liver metastases from colorectal cancer",
+     "kind": "Hagness · Annals of surgical oncology · 2013",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/24370906/",
+     "pmid": "24370906"
+    },
+    {
+     "key": "crlm_grut2018",
+     "short": "Grut · lung metastasis growth",
+     "title": "Growth rates of pulmonary metastases after liver transplantation for unresectable colorectal liver metastases",
+     "kind": "Grut · The British journal of surgery · 2017",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/29168565/",
+     "pmid": "29168565"
+    },
+    {
+     "key": "crlm_dueland_lung",
+     "short": "Dueland 2022 · lung resection after LT",
+     "title": "PET-uptake in liver metastases as method to predict tumor biological behavior in patients transplanted for colorectal liver metastases developing lung recurrence",
+     "kind": "Dueland · Cancers · 2022",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/36291826/",
+     "pmid": "36291826"
+    },
+    {
+     "key": "crlm_seca3",
+     "short": "SECA-III registration",
+     "title": "A randomized clinical trial comparing overall survival in selected patients with colorectal carcinoma treated by liver transplantation or chemotherapy (SECA-III)",
+     "kind": "Oslo University Hospital · ClinicalTrials.gov NCT03494946 · 2016",
+     "url": "https://clinicaltrials.gov/study/NCT03494946",
+     "pmid": ""
+    },
+    {
+     "key": "crlm_fukumitsu",
+     "short": "Fukumitsu 2024 · Japanese LDLT protocol",
+     "title": "Living-donor liver transplantation for non-resectable colorectal liver metastases: protocol for a multicentric, single-arm study",
+     "kind": "Fukumitsu · BMJ open · 2024",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39566949/",
+     "pmid": "39566949"
+    },
+    {
+     "key": "pulmicc",
+     "short": "PulMiCC 2020",
+     "title": "Pulmonary metastasectomy in colorectal cancer: updated analysis of 93 randomized patients - control survival is much better than previously assumed",
+     "kind": "Milosevic · Colorectal disease · 2020",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/32388895/",
+     "pmid": "32388895"
+    },
+    {
+     "key": "crlm_salah2014",
+     "short": "Salah 2014 · lung metastasectomy after liver resection",
+     "title": "Pulmonary metastasectomy in colorectal cancer patients with previously resected liver metastasis: pooled analysis",
+     "kind": "Salah · Annals of surgical oncology · 2014",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25326396/",
+     "pmid": "25326396"
+    },
+    {
+     "key": "crlm_hwang",
+     "short": "Hwang 2014 · resection with extrahepatic disease",
+     "title": "Systematic review of outcomes of patients undergoing resection for colorectal liver metastases in the setting of extra hepatic disease",
+     "kind": "Hwang · European journal of cancer · 2014",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/24767470/",
+     "pmid": "24767470"
+    },
+    {
+     "key": "crlm_dueland2023",
+     "short": "Dueland 2023 · Oslo long-term",
+     "title": "Long-Term Survival, Prognostic Factors, and Selection of Patients With Colorectal Cancer for Liver Transplant: A Nonrandomized Controlled Trial",
+     "kind": "Dueland · JAMA surgery · 2023",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/37494056/",
+     "pmid": "37494056"
+    },
+    {
+     "key": "crlm_hernandez2022",
+     "short": "Hernandez-Alejandro 2022 · North American LDLT",
+     "title": "Recipient and Donor Outcomes After Living-Donor Liver Transplant for Unresectable Colorectal Liver Metastases",
+     "kind": "Hernandez-Alejandro · JAMA surgery · 2022",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35353121/",
+     "pmid": "35353121"
+    },
+    {
+     "key": "candidate2026",
+     "short": "AASLD/AST candidate evaluation",
+     "title": "AASLD AST Practice Guideline on adult liver transplantation: Candidate evaluation",
+     "kind": "Dove · Hepatology · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41405234/",
+     "pmid": "41405234"
+    }
+   ]
+  },
+  "nelm": {
+   "code": "NELM",
+   "name": "Neuroendocrine liver metastases",
+   "limited": [
+    {
+     "t": "The pathway offers transplantation for selected NET liver metastases although NCCN v1.2026 still classes it as investigational; each case records the expected benefit over non-transplant therapy.",
+     "why": "Non-randomised evidence; guidelines disagree. NLRB guidance allows selected exception review, but NCCN retains the investigational designation. Support comes from the non-randomised Milan-NET comparison and a retrospective matched transplant-versus-resection series; neither measures benefit against contemporary PRRT, targeted or liver-directed therapy, and a Swedish eligible non-transplant cohort had substantial long-term survival. Track documented expected benefit, alternatives offered and outcomes from referral.",
+     "setting": "standard",
+     "locator": "Standard pathway document §1 Purpose and Scope; decision 'Compare treatment options'",
+     "refs": [
+      {
+       "key": "NCCN-net",
+       "label": "NCCN · NET v1.2026",
+       "dialog": true
+      },
+      {
+       "key": "N-net",
+       "label": "NLRB · NET",
+       "dialog": true
+      },
+      {
+       "key": "NET-milan",
+       "label": "Milan-NET · cohort",
+       "dialog": true
+      },
+      {
+       "key": "net_matched",
+       "label": "Eshmuminov 2023 · LT versus resection",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/35975918/"
+      },
+      {
+       "key": "net_kjaer2023",
+       "label": "Kjaer 2023 · eligible non-LT panNET",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/36175647/"
+      }
+     ],
+     "related": {
+      "label": "NET-B1 · Does transplantation offer enough additional benefit?",
+      "href": "#high-risk-net-b1"
+     }
+    },
+    {
+     "t": "Waitlist activation requires at least 6 months of documented stable disease or response, with abdominal/pelvic CT or MRI every 3 months during the observation period.",
+     "why": "Selection tradition. The high-risk protocol states that 6-month stability derives from selection traditions such as the Milan criteria, not a randomised timing trial, and screens biology without proving added benefit. It is separate from the NLRB requirement of 6 months without recurrence after primary and extrahepatic resection. The 3-month scan interval is local; no cited study compares observation lengths. Track progression found during observation and time from referral to activation.",
+     "setting": "standard",
+     "locator": "Standard pathway document §2C Disease Burden and Stability; §4 Observation Period and Waitlist Management; decision 'Verify disease control'",
+     "refs": [
+      {
+       "key": "net_maspero2022",
+       "label": "Maspero 2022 · Milan long-term",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/35869798/"
+      },
+      {
+       "key": "NET-milan",
+       "label": "Milan-NET · cohort",
+       "dialog": true
+      },
+      {
+       "key": "N-net",
+       "label": "NLRB · NET",
+       "dialog": true
+      }
+     ],
+     "related": {
+      "label": "NET-B2 · Primary site, grade and disease control",
+      "href": "#high-risk-net-b2"
+     }
+    },
+    {
+     "t": "FDG-PET/CT and repeat SSTR-PET/CT are ordered for a stated indication (higher grade, rapid growth, discordance, new concern), not as a blanket test or on a fixed calendar while waiting.",
+     "why": "Guideline expert opinion. NCCN reserves FDG-PET for G2 or higher-grade or concerning biology, and the protocol states there is no evidence-based universal 6- or 12-month PET schedule; a blanket FDG-PET would be a local requirement only. No cited transplant study tests whether routine or selective PET changes selection or outcome. Track PET use by indication and findings that changed management.",
+     "setting": "standard",
+     "locator": "Standard pathway document §3A Oncologic Evaluation; §4 Observation Period and Waitlist Management; steps 'distribution' and 'observation'",
+     "refs": [
+      {
+       "key": "NCCN-net",
+       "label": "NCCN · NET v1.2026",
+       "dialog": true
+      }
+     ],
+     "related": {
+      "label": "How do we interpret the “at least 3 months prior” imaging wording?",
+      "href": "#meeting-observation"
+     }
+    },
+    {
+     "t": "Somatostatin analogue therapy continues during the waitlist period for functional tumours and may continue for antiproliferative effect in non-functional tumours.",
+     "why": "Extrapolated from non-transplant trials. CLARINET showed longer progression-free survival with lanreotide in low-grade (Ki-67 <10%), mostly treatment-naive SSTR-positive NET, without a demonstrated overall-survival or quality-of-life difference, and did not study transplant candidates. No cited study tests SSA bridging before transplantation. Track waitlist progression and SSA adverse effects.",
+     "setting": "standard",
+     "locator": "Standard pathway document §4 Observation Period and Waitlist Management",
+     "refs": [
+      {
+       "key": "clarinet",
+       "label": "Caplin 2014 · CLARINET",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/25014687/"
+      },
+      {
+       "key": "NCCN-net",
+       "label": "NCCN · NET v1.2026",
+       "dialog": true
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "Liver-directed therapy (TAE, TACE, TARE or ablation) may be used as bridging therapy during the waitlist period.",
+     "why": "Extrapolated from non-transplant NET care. The rule is cited to NCCN non-transplant NET guidance; no cited study compares bridging with none. The ELTR registry recorded nine transplants after severe TACE complications (four liver failure, five ischaemic cholangitis); the protocol notes that this rescue experience does not justify deliberate treatment injury. Track treatments given while listed, complications and liver reserve.",
+     "setting": "standard",
+     "locator": "Standard pathway document §4 Observation Period and Waitlist Management; decision 'Review treatment exposure'",
+     "refs": [
+      {
+       "key": "NCCN-net",
+       "label": "NCCN · NET v1.2026",
+       "dialog": true
+      },
+      {
+       "key": "eltr213",
+       "label": "Le Treut 2013 · ELTR",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/23532105/"
+      }
+     ],
+     "related": {
+      "label": "How should PRRT and hepatic radiation/embolization be sequenced?",
+      "href": "#meeting-sequencing"
+     }
+    },
+    {
+     "t": "All candidates have echocardiography with cardiology review; severe uncontrolled carcinoid heart disease is a HOLD, but mild disease does not mandate valve replacement or routine right-heart catheterisation.",
+     "why": "Expert consensus. The cited 2014 London consensus, based on low-quality observational evidence, lists severe carcinoid heart disease, not every echocardiographic abnormality, as a contraindication; NCCN ties valve replacement to significant or symptomatic disease. No cited transplant study defines a safe severity threshold. Track carcinoid heart disease grade, cardiac interventions before transplant and perioperative cardiac events.",
+     "setting": "standard",
+     "locator": "Standard pathway document §2D Patient Factors; §3B Transplant Evaluation",
+     "refs": [
+      {
+       "key": "NCCN-net",
+       "label": "NCCN · NET v1.2026",
+       "dialog": true
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "Deceased-donor whole-liver transplantation is the default; living donation may be considered for selected candidates after independent donor evaluation and donor-advocate review.",
+     "why": "Observational data only. The protocol states that LDLT evidence for NET is limited to observational reports and that conference abstracts are insufficient for donor-source choice; the cited Japanese registry (16 NET recipients, none after 2012) cannot show current LDLT safety. Donor-risk estimates come from general living-donor cohorts. Track graft type, donor complications and recipient outcomes by donor source.",
+     "setting": "standard",
+     "locator": "Standard pathway document §5 Surgical Procedure",
+     "refs": [
+      {
+       "key": "donor_a2all",
+       "label": "Abecassis 2012",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/22335782/"
+      },
+      {
+       "key": "donor_xiao",
+       "label": "Xiao 2024",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/38015449/"
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "An intraoperative octreotide infusion is kept available for carcinoid crisis; prophylactic octreotide is not relied on and must not delay vasopressors or fluids.",
+     "why": "Guideline statement on limited data. NCCN 2026 states that prophylactic octreotide is probably ineffective at preventing intraoperative crisis, yet still allows selective prophylactic use while questioning routine use; no transplant-specific study is cited. Track intraoperative crisis events, octreotide use and haemodynamic management.",
+     "setting": "standard",
+     "locator": "Standard pathway document §5 Surgical Procedure",
+     "refs": [
+      {
+       "key": "NCCN-net",
+       "label": "NCCN · NET v1.2026",
+       "dialog": true
+      }
+     ],
+     "related": null
+    },
+    {
+     "t": "Immunosuppression follows the institutional LT protocol (intraoperative methylprednisolone, tacrolimus-based maintenance); everolimus is optional, not before day 30, and not given as cancer prophylaxis.",
+     "why": "Extrapolated from general LT practice. AASLD/AST guidance supports individualised tacrolimus-based therapy, and its mTOR recommendation is limited to HCC within Milan; the SiLVER HCC trial's primary endpoint was negative. No NET-specific regimen has been shown to reduce recurrence, and the day-30 everolimus limit is a label safety floor. Track rejection, renal function and recurrence by regimen.",
+     "setting": "standard",
+     "locator": "Standard pathway document §6 Post-Transplant Immunosuppression; §8 everolimus safety note",
+     "refs": [],
+     "related": null
+    },
+    {
+     "t": "Post-transplant oncologic surveillance is every 3 months to month 24 and every 6 months in years 3–5, with SSTR-PET only when indicated and individualised follow-up with no fixed stopping point.",
+     "why": "Local schedule. NCCN surveillance schedules are for non-transplant patients, and the protocol states that no validated post-transplant calendar exists and that any intensified local calendar is institutional consensus. Recurrence has been documented up to 204 months after transplant in the Milan series, which supports long follow-up but not a specific interval. Track how recurrences are detected, time to recurrence and salvage eligibility.",
+     "setting": "standard",
+     "locator": "Standard pathway document §7 Post-Transplant Surveillance; decision 'Transplant and follow-up'",
+     "refs": [
+      {
+       "key": "NCCN-net",
+       "label": "NCCN · NET v1.2026",
+       "dialog": true
+      },
+      {
+       "key": "net_maspero2022",
+       "label": "Maspero 2022 · Milan long-term",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/35869798/"
+      }
+     ],
+     "related": {
+      "label": "Who is responsible for functional restaging and long-term recurrence surveillance?",
+      "href": "#meeting-ownership"
+     }
+    },
+    {
+     "t": "Every post-transplant recurrence goes to tumour board, and complete salvage resection is considered for technically resectable, biologically favourable recurrence.",
+     "why": "Single-centre series. In the 32-patient Milan recurrence cohort, surgery versus other treatment was associated with 5-year post-recurrence survival of 90.9% versus 64.5% (P=.062), an unadjusted, non-significant comparison confounded by selection and resectability. Recurrence within 24 months is a risk marker, not a validated bar to salvage. Track salvage procedures, complications and survival after recurrence.",
+     "setting": "standard",
+     "locator": "Standard pathway document §8 Management of Post-Transplant Recurrence",
+     "refs": [],
+     "related": null
+    },
+    {
+     "t": "Post-transplant PRRT is investigational: considered case by case only for SSTR-positive recurrence, after joint transplant-oncology, nuclear-medicine, hepatology and pharmacy review, preferably in a protocol.",
+     "why": "Case series only. The cited post-transplant experience is a seven-patient single-centre series with no controlled efficacy estimate; one patient had persistent platelets <10×10^9/L after one cycle. NETTER-1 shows PRRT activity outside transplantation (final overall-survival difference not established) but says nothing about graft safety, and no trough target for concurrent immunosuppression exists. Track marrow, renal and graft toxicity and response.",
+     "setting": "standard",
+     "locator": "Standard pathway document §8 Management of Post-Transplant Recurrence",
+     "refs": [
+      {
+       "key": "prrtlt",
+       "label": "Chen 2026 · PRRT after LT",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/41760506/"
+      },
+      {
+       "key": "netter1_final",
+       "label": "Strosberg 2021 · NETTER-1 final OS",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/34793718/"
+      }
+     ],
+     "related": null
+    }
+   ],
+   "owners": [
+    {
+     "id": "biology",
+     "title": "Confirm differentiation and grade",
+     "owner": "NET oncology · expert pathology",
+     "timing": "At referral; review the most relevant current tissue"
+    },
+    {
+     "id": "distribution",
+     "title": "Stage disease and confirm primary treatment",
+     "owner": "NET surgery · radiology · nuclear medicine",
+     "timing": "Before transplant selection and with any new finding"
+    },
+    {
+     "id": "options",
+     "title": "Compare treatment options",
+     "owner": "NET MDT · HPB surgery · oncology · IR",
+     "timing": "Before a transplant-directed strategy"
+    },
+    {
+     "id": "exposure",
+     "title": "Review treatment exposure",
+     "owner": "Nuclear medicine · IR · oncology · transplant team",
+     "timing": "Before further treatment or activation on the transplant waiting list"
+    },
+    {
+     "id": "observation",
+     "title": "Verify disease control",
+     "owner": "NET oncology · coordinator · radiology",
+     "timing": "Before initial request and each renewal"
+    },
+    {
+     "id": "review",
+     "title": "Request and renew the MELD exception",
+     "owner": "Transplant selection · NET oncology · coordinator",
+     "timing": "At submission and updated selection review"
+    },
+    {
+     "id": "follow-up",
+     "title": "Transplant and follow-up",
+     "owner": "Transplant team · NET oncology",
+     "timing": "Explant review and long-term follow-up"
+    }
+   ],
+   "team": null,
+   "quality": {
+    "standard": [],
+    "highrisk": [
+     "Register every referred or screened candidate in the institutionally approved system, not only recipients. Record acceptance or rejection, treatment entry, response, listing, exception decision, conversion to resection or ablation, progression, toxicity, decompensation, death, patient withdrawal and access-related loss.",
+     "Report overall survival from the prespecified entry point and separately from listing and transplantation. Keep recurrence-free survival, recurrence incidence, graft survival and survival after recurrence distinct, with definitions, confidence intervals, numbers at risk and follow-up completeness. Do not call recipient-only survival an intention-to-treat outcome.",
+     "Capture 90-day recipient morbidity and mortality, biopsy-defined rejection, infection, arterial and biliary complications, graft loss, retransplantation and total grafts used. Record recurrence site, salvage treatment, time off systemic therapy, functional recovery and quality of life, not survival alone.",
+     "Before a transplanting study opens, biostatistics and the independent safety board must approve indication-specific monitoring, evaluable denominators, pause authority and reopening criteria. ALLOC-B4 now proposes explicit initial-cohort review triggers for ratification; they are not validated efficacy/futility boundaries. No universal cross-cancer five-year survival cutoff is adopted.",
+     "Use a contemporary comparator with the same eligibility and time zero. Account for the interval needed to survive to transplantation, crossover, competing risks and overlapping study cohorts. A nonsignificant difference is not proof of equivalence."
+    ],
+    "locator": "High-risk pathway document §9 Outcomes and safety oversight (the standard pathway document has no quality-measure section)"
+   },
+   "questions": {
+    "standard": [
+     {
+      "id": "biology",
+      "question": "How should discordant grade, Ki-67 or an unusual primary be handled?",
+      "href": "#meeting-biology"
+     },
+     {
+      "id": "extrahepatic",
+      "question": "Can prior nodal disease be distinguished from active or solid-organ metastasis?",
+      "href": "#meeting-extrahepatic"
+     },
+     {
+      "id": "selection",
+      "question": "Will our local program use Milan-NET age and liver-volume restrictions?",
+      "href": "#meeting-selection"
+     },
+     {
+      "id": "sequencing",
+      "question": "How should PRRT and hepatic radiation/embolization be sequenced?",
+      "href": "#meeting-sequencing"
+     },
+     {
+      "id": "observation",
+      "question": "How do we interpret the “at least 3 months prior” imaging wording?",
+      "href": "#meeting-observation"
+     },
+     {
+      "id": "ownership",
+      "question": "Who is responsible for functional restaging and long-term recurrence surveillance?",
+      "href": "#meeting-ownership"
+     }
+    ],
+    "highrisk": [
+     {
+      "id": "NET-B1",
+      "title": "Does transplantation offer enough additional benefit?",
+      "status": "Benefit review",
+      "href": "#high-risk-net-b1"
+     },
+     {
+      "id": "NET-B2",
+      "title": "Primary site, grade and disease control",
+      "status": "Initial selection limits",
+      "href": "#high-risk-net-b2"
+     },
+     {
+      "id": "NET-B3",
+      "title": "Age and liver tumor burden",
+      "status": "Individual review; expansion not activated",
+      "href": "#high-risk-net-b3"
+     },
+     {
+      "id": "NET-B4",
+      "title": "Previously treated extrahepatic disease",
+      "status": "Resected nodes only, after clearance",
+      "href": "#high-risk-net-b4"
+     }
+    ]
+   },
+   "sources": [
+    {
+     "key": "N-net",
+     "short": "NLRB · NET",
+     "title": "Adult MELD exception review guidance — NET",
+     "kind": "NLRB guidance",
+     "dialog": true
+    },
+    {
+     "key": "NET-milan",
+     "short": "Milan-NET · cohort",
+     "title": "The long-term benefit of liver transplantation for hepatic metastases from NETs",
+     "kind": "Cohort evidence",
+     "dialog": true
+    },
+    {
+     "key": "NCCN-net",
+     "short": "NCCN · NET v1.2026",
+     "title": "NCCN Neuroendocrine and Adrenal Tumors — progression and symptom management",
+     "kind": "Clinical guidance",
+     "dialog": true
+    },
+    {
+     "key": "NCI-support",
+     "short": "NCI · supportive and palliative care",
+     "title": "Palliative Care in Cancer",
+     "kind": "Supportive-care reference",
+     "dialog": true
+    },
+    {
+     "key": "enets",
+     "short": "ENETS 2026",
+     "title": "Controversies in NEN: An ENETS position statement on the role of liver transplantation (LT) in patients with advanced small-intestinal and pancreatic NETs",
+     "kind": "Stålberg · Journal of neuroendocrinology · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/42816382/",
+     "pmid": "42816382"
+    },
+    {
+     "key": "milan",
+     "short": "Mazzaferro 2016 · Milan-NET",
+     "title": "The Long-Term Benefit of Liver Transplantation for Hepatic Metastases From Neuroendocrine Tumors",
+     "kind": "Mazzaferro · American journal of transplantation : official journal of the American Society of Transplantation and the American Society of Transplant Surgeons · 2016",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/27134017/",
+     "pmid": "27134017"
+    },
+    {
+     "key": "net_matched",
+     "short": "Eshmuminov 2023 · LT versus resection",
+     "title": "Controversy Over Liver Transplantation or Resection for Neuroendocrine Liver Metastasis: Tumor Biology Cuts the Deal",
+     "kind": "Eshmuminov · Annals of Surgery · 2023",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35975918/",
+     "pmid": "35975918"
+    },
+    {
+     "key": "net_maspero2022",
+     "short": "Maspero 2022 · Milan long-term",
+     "title": "Long-term outcomes of resection versus transplantation for neuroendocrine liver metastases meeting the Milan criteria",
+     "kind": "Maspero · American Journal of Transplantation · 2022",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35869798/",
+     "pmid": "35869798"
+    },
+    {
+     "key": "net_kjaer2023",
+     "short": "Kjaer 2023 · eligible non-LT panNET",
+     "title": "Overall Survival in Patients with Stage IV Pan-NET Eligible for Liver Transplantation",
+     "kind": "Kjaer · World Journal of Surgery · 2023",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/36175647/",
+     "pmid": "36175647"
+    },
+    {
+     "key": "cabinet",
+     "short": "Chan 2025 · CABINET",
+     "title": "Phase 3 Trial of Cabozantinib to Treat Advanced Neuroendocrine Tumors",
+     "kind": "Chan · New England Journal of Medicine · 2025",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39282913/",
+     "pmid": "39282913"
+    },
+    {
+     "key": "clarinet",
+     "short": "Caplin 2014 · CLARINET",
+     "title": "Lanreotide in Metastatic Enteropancreatic Neuroendocrine Tumors",
+     "kind": "Caplin · New England Journal of Medicine · 2014",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/25014687/",
+     "pmid": "25014687"
+    },
+    {
+     "key": "netter1_final",
+     "short": "Strosberg 2021 · NETTER-1 final OS",
+     "title": "177Lu-Dotatate plus long-acting octreotide versus high‑dose long-acting octreotide in patients with midgut neuroendocrine tumours (NETTER-1): final overall survival and long-term safety results from an open-label, randomised, controlled, phase 3 trial",
+     "kind": "Strosberg · The Lancet Oncology · 2021",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34793718/",
+     "pmid": "34793718"
+    },
+    {
+     "key": "nlrb",
+     "short": "NLRB oncology guidance",
+     "title": "Adult MELD Exceptions for Transplant Oncology",
+     "kind": "Organ Procurement and Transplantation Network · HRSA/OPTN · 2025",
+     "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/adult-meld-exception-transplant-oncology-review-guidance.pdf",
+     "pmid": ""
+    },
+    {
+     "key": "spainnet",
+     "short": "Boscà 2026 · Spain",
+     "title": "Should We Continue Liver Transplantation in Spain for Hepatic Metastases from Neuroendocrine Tumors?",
+     "kind": "Boscà · Journal of clinical medicine · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41682619/",
+     "pmid": "41682619"
+    },
+    {
+     "key": "eltr213",
+     "short": "Le Treut 2013 · ELTR",
+     "title": "Liver Transplantation for Neuroendocrine Tumors in Europe—Results and Trends in Patient Selection",
+     "kind": "Le Treut · Annals of Surgery · 2013",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/23532105/",
+     "pmid": "23532105"
+    },
+    {
+     "key": "netter2",
+     "short": "NETTER-2",
+     "title": "[177Lu]Lu-DOTA-TATE plus long-acting octreotide versus high‑dose long-acting octreotide for the treatment of newly diagnosed, advanced grade 2–3, well-differentiated, gastroenteropancreatic neuroendocrine tumours (NETTER-2): an open-label, randomised, phase 3 study",
+     "kind": "Singh · The Lancet · 2024",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38851203/",
+     "pmid": "38851203"
+    },
+    {
+     "key": "prrtlt",
+     "short": "Chen 2026 · PRRT after LT",
+     "title": "Peptide Receptor Radionuclide Therapy for Recurrent Neuroendocrine Tumor Liver Metastases After Liver transplantation: A Case Series",
+     "kind": "Chen · Transplantation proceedings · 2026",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/41760506/",
+     "pmid": "41760506"
+    },
+    {
+     "key": "net_frilling2010",
+     "short": "Frilling 2010 · 68Ga-DOTATOC PET",
+     "title": "The impact of 68Ga-DOTATOC positron emission tomography/computed tomography on the multimodal management of patients with neuroendocrine tumors",
+     "kind": "Frilling · Annals of surgery · 2010",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/21037441/",
+     "pmid": "21037441"
+    },
+    {
+     "key": "net_wedin2025",
+     "short": "Wedin 2025 · bone metastases in SI-NET",
+     "title": "Impact on symptoms and survival of bone metastases in patients with small-intestinal neuroendocrine tumours",
+     "kind": "Wedin · Journal of neuroendocrinology · 2025",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/40778558/",
+     "pmid": "40778558"
+    },
+    {
+     "key": "net_sher2015",
+     "short": "Sher 2015 · US multicentre NET LT",
+     "title": "Liver transplantation for metastatic neuroendocrine tumors: Outcomes and prognostic variables",
+     "kind": "Sher · Journal of surgical oncology · 2015",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/26171686/",
+     "pmid": "26171686"
+    },
+    {
+     "key": "donor_a2all",
+     "short": "Abecassis 2012",
+     "title": "Complications of Living Donor Hepatic Lobectomy—A Comprehensive Report",
+     "kind": "Abecassis · American Journal of Transplantation · 2012",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/22335782/",
+     "pmid": "22335782"
+    },
+    {
+     "key": "donor_xiao",
+     "short": "Xiao 2024",
+     "title": "The incidence of adverse outcome in donors after living donor liver transplantation: A meta-analysis of 60,829 donors",
+     "kind": "Xiao · Liver Transplantation · 2024",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38015449/",
+     "pmid": "38015449"
+    }
+   ]
+  },
+  "hehe": {
+   "code": "HEHE",
+   "name": "Hepatic epithelioid hemangioendothelioma",
+   "limited": [
+    {
+     "t": "In the lower-risk cohort, more than 120 days before transplant is preferred only to observe disease behavior when safe; no wait is imposed with progression, failing liver function or symptoms.",
+     "why": "Single-registry association, confounded by indication. In the ELTR registry a wait of 120 days or less was linked to recurrence, but rapid transplantation selects aggressive or symptomatic disease, so the protocol states there is no evidence that deliberate delay reduces recurrence; the registry also measured waiting from listing, not diagnosis or staging. It is a center safeguard, not an OPTN rule. Track recurrence and dropout by observation interval.",
+     "setting": "standard",
+     "locator": "Standard pathway document §5.1 Guidance-aligned lower-risk institutional cohort; decision 'Assess benefit and risk'",
+     "refs": [
+      {
+       "key": "E-score",
+       "label": "HEHE-LT · cohort",
+       "dialog": true
+      }
+     ],
+     "related": {
+      "label": "HEHE-B1 · Observation and the need for transplantation",
+      "href": "#high-risk-hehe-b1"
+     }
+    },
+    {
+     "t": "Treated hilar nodes, prior progression, systemic therapy needed for control, uncertain rupture or ≤120 days' observation place a patient in the high-risk cohort, needing separate oncology and allocation-ethics approval.",
+     "why": "Local construct built on one registry. Among 149 ELTR recipients, hilar-node invasion and a wait of 120 days or less were associated with recurrence, but the registry excludes patients who dropped out and its score relies on explant pathology. The protocol cites no outcome data for rupture history or prior systemic therapy as risk markers. Track outcomes by cohort and how often a pre-transplant risk feature is confirmed at explant.",
+     "setting": "standard",
+     "locator": "Standard pathway document §5 Risk-stratified cohorts (§5.1–§5.2)",
+     "refs": [
+      {
+       "key": "E-score",
+       "label": "HEHE-LT · cohort",
+       "dialog": true
+      }
+     ],
+     "related": {
+      "label": "HEHE-B2 · Extrahepatic disease and vascular invasion",
+      "href": "#high-risk-hehe-b2"
+     }
+    },
+    {
+     "t": "Macrovascular invasion excludes transplantation in both cohorts; the pathway permits no macrovascular-invasion cohort.",
+     "why": "NLRB guidance and registry prognosis, made absolute locally. NLRB lists absence of macrovascular invasion as a condition for favorable exception review; the protocol turns it into a clinical exclusion. In the ELTR registry it carried the highest recurrence risk, but the registry holds only selected recipients, and the German S2k guidance treats it as not an absolute barrier to evaluation. Track referrals declined on this criterion and their outcomes.",
+     "setting": "standard",
+     "locator": "Standard pathway document §2 Mandatory guidance criteria and §6 Exclusion and deferral criteria; decision 'Stage and compare options'",
+     "refs": [
+      {
+       "key": "N-hehe",
+       "label": "NLRB · HEHE",
+       "dialog": true
+      },
+      {
+       "key": "E-score",
+       "label": "HEHE-LT · cohort",
+       "dialog": true
+      },
+      {
+       "key": "dgvs_lt2024",
+       "label": "DGVS S2k LT guidance",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/39250961/"
+      }
+     ],
+     "related": {
+      "label": "HEHE-B2 · Extrahepatic disease and vascular invasion",
+      "href": "#high-risk-hehe-b2"
+     }
+    },
+    {
+     "t": "No neoadjuvant or bridging regimen is required; the sarcoma–transplant MDT chooses observation, ablation, embolization, radiation or systemic therapy case by case.",
+     "why": "Expert consensus. The international EHE consensus supports active surveillance for stable disease and individual treatment choice. The only comparison cited is a 50-patient single-center series in which five-year survival from diagnosis did not differ by initial strategy; the groups were small and clinically selected, so this is not equivalence, and 14 of 25 patients first observed progressed. Track progression and dropout by pre-transplant strategy.",
+     "setting": "standard",
+     "locator": "Standard pathway document §7 Pretransplant treatment and stability",
+     "refs": [
+      {
+       "key": "E-consensus",
+       "label": "EHE · consensus",
+       "dialog": true
+      },
+      {
+       "key": "ehe_thomas",
+       "label": "Thomas 2014",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/24308564/"
+      }
+     ],
+     "related": {
+      "label": "HEHE-B1 · Observation and the need for transplantation",
+      "href": "#high-risk-hehe-b1"
+     }
+    },
+    {
+     "t": "Recipients receive the standard institutional immunosuppression; no tumor-specific or mTOR-based regimen is mandated, and oncologically unnecessary immunosuppression is minimized when feasible.",
+     "why": "Expert opinion. The protocol states that evidence is insufficient to mandate a tumor-specific or mTOR-based regimen, and it cites no HEHE study of immunosuppressive regimens or minimization. Track rejection, recurrence and renal function by regimen.",
+     "setting": "standard",
+     "locator": "Standard pathway document §9 Transplant and post-transplant management",
+     "refs": [],
+     "related": null
+    },
+    {
+     "t": "After transplant: CT chest/abdomen/pelvis and liver MRI every 6 months for 5 years then yearly (lower risk), or every 3–4 months for 2 years, 6-monthly to year 5, then yearly (high risk).",
+     "why": "Institutional extrapolation. The protocol calls the intervals risk-based extrapolations, and the international consensus notes that no HEHE-specific interval has been validated; late recurrence is possible and there is no validated serum marker. Track time to recurrence, site and mode of detection by cohort.",
+     "setting": "standard",
+     "locator": "Standard pathway document §10 Post-transplant surveillance; decision 'Transplant and follow-up'",
+     "refs": [
+      {
+       "key": "E-consensus",
+       "label": "EHE · consensus",
+       "dialog": true
+      }
+     ],
+     "related": {
+      "label": "What risk-adapted post-transplant follow-up will be adopted?",
+      "href": "#meeting-surveillance"
+     }
+    }
+   ],
+   "owners": [
+    {
+     "id": "diagnosis",
+     "title": "Verify diagnosis",
+     "owner": "Expert soft-tissue/liver pathology · oncology",
+     "timing": "Before allocation discussion"
+    },
+    {
+     "id": "stage",
+     "title": "Stage and compare options",
+     "owner": "HPB/transplant surgery · sarcoma oncology · radiology",
+     "timing": "Before treatment selection; repeat for changing disease"
+    },
+    {
+     "id": "risk",
+     "title": "Assess benefit and risk",
+     "owner": "Transplant selection · sarcoma oncology",
+     "timing": "Before listing recommendation"
+    },
+    {
+     "id": "review",
+     "title": "Submit and reassess",
+     "owner": "Coordinator · transplant physician",
+     "timing": "Request, renewal and final pretransplant assessment"
+    },
+    {
+     "id": "follow-up",
+     "title": "Transplant and follow-up",
+     "owner": "Transplant team · sarcoma oncology · pathology",
+     "timing": "At explant and long-term follow-up"
+    }
+   ],
+   "team": {
+    "text": "Formal transplant-oncology conference review including transplant hepatology, transplant and hepatobiliary surgery, medical oncology/sarcoma, radiology, and pathology.",
+    "locator": "Standard pathway document §4 Staging and resectability workup (final bullet); no separate multidisciplinary-team section"
+   },
+   "quality": {
+    "standard": [
+     "Require current review by the transplant selection committee and transplant-oncology conference before activation and at every major change in disease status.",
+     "Track waitlist dropout, NLRB decisions, donor source, perioperative mortality, rejection, recurrence site and timing, graft survival, patient survival, and quality of life.",
+     "Recheck the live OPTN policy and guidance immediately before committee adoption, exception submission, or extension."
+    ],
+    "highrisk": [],
+    "locator": "Standard pathway document §11 Governance and quality review"
+   },
+   "questions": {
+    "standard": [
+     {
+      "id": "diagnosis",
+      "question": "What level of expert pathology confirmation is required?",
+      "href": "#meeting-diagnosis"
+     },
+     {
+      "id": "extrahepatic",
+      "question": "Which extrahepatic disease patterns are acceptable locally?",
+      "href": "#meeting-extrahepatic"
+     },
+     {
+      "id": "risk-score",
+      "question": "Can HEHE-LT risk estimates be used before transplant?",
+      "href": "#meeting-risk-score"
+     },
+     {
+      "id": "governance",
+      "question": "When does transplant offer enough benefit over observation or other therapy?",
+      "href": "#meeting-governance"
+     },
+     {
+      "id": "submission",
+      "question": "Who verifies each component of the nonstandard request?",
+      "href": "#meeting-submission"
+     },
+     {
+      "id": "surveillance",
+      "question": "What risk-adapted post-transplant follow-up will be adopted?",
+      "href": "#meeting-surveillance"
+     }
+    ],
+    "highrisk": [
+     {
+      "id": "HEHE-B1",
+      "title": "Observation and the need for transplantation",
+      "status": "Clinical boundary review",
+      "href": "#high-risk-hehe-b1"
+     },
+     {
+      "id": "HEHE-B2",
+      "title": "Extrahepatic disease and vascular invasion",
+      "status": "Clinical boundary review",
+      "href": "#high-risk-hehe-b2"
+     }
+    ]
+   },
+   "sources": [
+    {
+     "key": "N-hehe",
+     "short": "NLRB · HEHE",
+     "title": "Adult MELD exception review guidance — HEHE",
+     "kind": "NLRB guidance",
+     "dialog": true
+    },
+    {
+     "key": "E-consensus",
+     "short": "EHE · consensus",
+     "title": "Epithelioid hemangioendothelioma: international consensus",
+     "kind": "Expert consensus",
+     "dialog": true
+    },
+    {
+     "key": "E-score",
+     "short": "HEHE-LT · cohort",
+     "title": "HEHE and adult LT: a prognostic score based on the ELTR-ELITA registry",
+     "kind": "Cohort evidence",
+     "dialog": true
+    },
+    {
+     "key": "NCI-support",
+     "short": "NCI · supportive and palliative care",
+     "title": "Palliative Care in Cancer",
+     "kind": "Supportive-care reference",
+     "dialog": true
+    },
+    {
+     "key": "ehe_lai",
+     "short": "Lai 2017",
+     "title": "Hepatic Epithelioid Hemangioendothelioma and Adult Liver Transplantation: Proposal for a Prognostic Score Based on the Analysis of the ELTR-ELITA Registry",
+     "kind": "Lai · Transplantation · 2017",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/28212256/",
+     "pmid": "28212256"
+    },
+    {
+     "key": "dgvs_lt2024",
+     "short": "DGVS S2k LT guidance",
+     "title": "S2k-Leitlinie Lebertransplantation: HEHE recommendations 3.83–3.86",
+     "kind": "Berg · Zeitschrift für Gastroenterologie · 2024",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39250961/",
+     "pmid": "39250961"
+    },
+    {
+     "key": "ehe_brahmbhatt",
+     "short": "Brahmbhatt 2020",
+     "title": "Liver Transplantation for Hepatic Epithelioid Hemangioendothelioma Is Facilitated by Exception Points With Acceptable Long-term Outcomes",
+     "kind": "Brahmbhatt · Transplantation · 2020",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31577674/",
+     "pmid": "31577674"
+    },
+    {
+     "key": "ehe_thomas",
+     "short": "Thomas 2014",
+     "title": "Treatment sequencing strategy for hepatic epithelioid haemangioendothelioma",
+     "kind": "Thomas · HPB · 2014",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/24308564/",
+     "pmid": "24308564"
+    },
+    {
+     "key": "ehe_liu228",
+     "short": "Liu 2024",
+     "title": "Long-term prognosis and treatment modalities of hepatic epithelioid hemangioendothelioma: a retrospective study of 228 patients",
+     "kind": "Liu · BMC Cancer · 2024",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39415114/",
+     "pmid": "39415114"
+    },
+    {
+     "key": "ehe_consensus",
+     "short": "Stacchiotti 2021",
+     "title": "Epithelioid hemangioendothelioma, an ultra-rare cancer: a consensus paper from the community of experts",
+     "kind": "Stacchiotti · ESMO Open · 2021",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/34090171/",
+     "pmid": "34090171"
+    },
+    {
+     "key": "nlrb",
+     "short": "NLRB oncology guidance",
+     "title": "Adult MELD Exceptions for Transplant Oncology",
+     "kind": "Organ Procurement and Transplantation Network · HRSA/OPTN · 2025",
+     "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/adult-meld-exception-transplant-oncology-review-guidance.pdf",
+     "pmid": ""
+    },
+    {
+     "key": "acg_fll2024",
+     "short": "ACG 2024",
+     "title": "ACG Clinical Guideline: Focal Liver Lesions",
+     "kind": "Frenette · American Journal of Gastroenterology · 2024",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38958301/",
+     "pmid": "38958301"
+    },
+    {
+     "key": "ehe_lerut2007",
+     "short": "Lerut 2007 · ELTR",
+     "title": "The place of liver transplantation in the treatment of hepatic epitheloid hemangioendothelioma: report of the European liver transplant registry",
+     "kind": "Lerut · Annals of surgery · 2007",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/18043096/",
+     "pmid": "18043096"
+    },
+    {
+     "key": "ehe_sawma2024",
+     "short": "Sawma 2024 · Mayo",
+     "title": "Management and long-term outcomes of patients with hepatic epithelioid hemangioendothelioma",
+     "kind": "Sawma · Journal of surgical oncology · 2024",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/39318157/",
+     "pmid": "39318157"
+    },
+    {
+     "key": "ehe_rosenbaum2019",
+     "short": "Rosenbaum 2019 · EHE molecular subsets",
+     "title": "Prognostic stratification of clinical and molecular epithelioid hemangioendothelioma subsets",
+     "kind": "Rosenbaum · Modern pathology : an official journal of the United States and Canadian Academy of Pathology, Inc · 2019",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31537895/",
+     "pmid": "31537895"
+    }
+   ]
+  },
+  "hca": {
+   "code": "HCA",
+   "name": "Hepatic adenoma",
+   "limited": [
+    {
+     "t": "Biopsy is reserved for atypical imaging, suspected malignant transformation, or when molecular subtype will change management, and targets the dominant or most suspicious lesion.",
+     "why": "Guideline-consistent, with limited data for lesion choice. ACG notes that MRI cannot reliably identify β-catenin activation or separate HCA from well-differentiated HCC. Sampling the dominant lesion rests on one molecular cohort (Nault 2017): subtype differed between tumors in 21 of 73 patients with several sampled lesions, and the exon 3 mutation was in the largest tumor in 8 of 9 relevant cases. Track subtype by lesion sampled and biopsy-explant concordance.",
+     "setting": "standard",
+     "locator": "Standard pathway document §3 Diagnostic and multidisciplinary confirmation; decision 'Characterize risk'",
+     "refs": [
+      {
+       "key": "A-easl",
+       "label": "EASL · benign tumors",
+       "dialog": true
+      },
+      {
+       "key": "acg_fll2024",
+       "label": "ACG 2024",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/38958301/"
+      },
+      {
+       "key": "A-molecular",
+       "label": "HCA · molecular",
+       "dialog": true
+      }
+     ],
+     "related": {
+      "label": "What evidence is sufficient to call an adenoma β-catenin activated?",
+      "href": "#meeting-subtype"
+     }
+    },
+    {
+     "t": "With Abernethy malformation, shunt closure or another vascular intervention is assessed before transplantation.",
+     "why": "Expert opinion. The protocol cites no source for this sequence and no data comparing shunt closure with transplantation. In the cited European series (Chiche 2016), seven of 49 recipients had vascular abnormalities, which added technical complexity. Track shunt-closure attempts, adenoma response and later need for transplantation.",
+     "setting": "standard",
+     "locator": "Standard pathway document §4 Risk modification and non-transplant treatment prerequisites",
+     "refs": [
+      {
+       "key": "hca_chiche",
+       "label": "Chiche 2016",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/26919265/"
+      }
+     ],
+     "related": {
+      "label": "When have conventional management options been adequately assessed?",
+      "href": "#meeting-alternatives"
+     }
+    },
+    {
+     "t": "While listed, multiphasic MRI or CT is repeated every 3 months, aligned with the 90-day exception-extension cycle, and sooner for growth, hemorrhage or suspected transformation.",
+     "why": "Local convention. The interval follows the administrative 90-day extension cycle rather than adenoma natural-history data, and the protocol cites no study of waiting-list imaging intervals. In the cited UNOS analysis, 18 of 199 listed patients died or became too sick for transplant, a crude figure without lesion detail. Track waiting-list hemorrhage, rupture, malignant transformation and dropout.",
+     "setting": "standard",
+     "locator": "Standard pathway document §6 Pretransplant evaluation and waitlist surveillance; decision 'Reassess and follow up'",
+     "refs": [
+      {
+       "key": "hca_ziogas",
+       "label": "Ziogas 2022",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/35018302/"
+      }
+     ],
+     "related": {
+      "label": "Who is responsible for waiting-list complication management and long-term follow-up?",
+      "href": "#meeting-ownership"
+     }
+    },
+    {
+     "t": "After transplant, no routine tumor imaging if the explant shows no malignancy; with occult or known malignant transformation, chest and abdominal imaging every 3–6 months for 2 years, then every 6 months to year 5.",
+     "why": "Clinical reasoning and extrapolation from HCC follow-up. The protocol cites no source for either schedule. In the cited European series (Chiche 2016), three HCC recurrences occurred among 49 recipients, all fatal, so explant pathology decides which schedule applies. Track explant malignancy, adherence to the assigned schedule and recurrence.",
+     "setting": "standard",
+     "locator": "Standard pathway document §8 Transplant and pathology management and §9 Post-transplant follow-up; decision 'Reassess and follow up'",
+     "refs": [
+      {
+       "key": "hca_chiche",
+       "label": "Chiche 2016",
+       "url": "https://pubmed.ncbi.nlm.nih.gov/26919265/"
+      }
+     ],
+     "related": null
+    }
+   ],
+   "owners": [
+    {
+     "id": "characterize",
+     "title": "Characterize risk",
+     "owner": "Benign liver tumor MDT · radiology · pathology",
+     "timing": "At referral; before definitive treatment"
+    },
+    {
+     "id": "standard-care",
+     "title": "Use standard options first",
+     "owner": "HPB surgery · IR · hepatology",
+     "timing": "Before escalation to transplant review"
+    },
+    {
+     "id": "exception-route",
+     "title": "Check HCA MELD-exception criteria",
+     "owner": "Transplant hepatology · HPB surgery · coordinator",
+     "timing": "Before submitting a nonstandard request"
+    },
+    {
+     "id": "transformation",
+     "title": "Assess possible malignant transformation",
+     "owner": "Pathology · radiology · hepatology · HPB surgery",
+     "timing": "Whenever malignancy is suspected"
+    },
+    {
+     "id": "review",
+     "title": "Review benefit and submit",
+     "owner": "Transplant selection · benign liver MDT · coordinator",
+     "timing": "Before listing recommendation / submission"
+    },
+    {
+     "id": "follow-up",
+     "title": "Reassess and follow up",
+     "owner": "Transplant team · hepatology · relevant metabolic service",
+     "timing": "While awaiting transplant and after explant review"
+    }
+   ],
+   "team": {
+    "text": "Review by transplant hepatology, transplant and hepatobiliary surgery, diagnostic and interventional radiology, and expert liver pathology; include metabolic genetics for glycogen storage disease and vascular expertise for Abernethy malformation.",
+    "locator": "Standard pathway document §3 Diagnostic and multidisciplinary confirmation (first bullet)"
+   },
+   "quality": {
+    "standard": [
+     "Require transplant selection and multidisciplinary benign-liver-tumor review before activation and before every exception submission or extension.",
+     "Track NLRB decisions, waitlist events, donor source, pathology concordance, perioperative morbidity and mortality, graft and patient survival, and malignant transformation.",
+     "Recheck the live OPTN policy and guidance immediately before committee adoption, exception submission, or extension."
+    ],
+    "highrisk": [],
+    "locator": "Standard pathway document §10 Governance and quality review"
+   },
+   "questions": {
+    "standard": [
+     {
+      "id": "subtype",
+      "question": "What evidence is sufficient to call an adenoma β-catenin activated?",
+      "href": "#meeting-subtype"
+     },
+     {
+      "id": "alternatives",
+      "question": "When have conventional management options been adequately assessed?",
+      "href": "#meeting-alternatives"
+     },
+     {
+      "id": "criteria",
+      "question": "Are these alternative indications, or does every patient need complications?",
+      "href": "#meeting-criteria"
+     },
+     {
+      "id": "transformation",
+      "question": "When should suspected transformation move to a malignant-tumor pathway?",
+      "href": "#meeting-transformation"
+     },
+     {
+      "id": "benefit",
+      "question": "Will the local program impose an exon-specific molecular restriction?",
+      "href": "#meeting-benefit"
+     },
+     {
+      "id": "ownership",
+      "question": "Who is responsible for waiting-list complication management and long-term follow-up?",
+      "href": "#meeting-ownership"
+     }
+    ],
+    "highrisk": [
+     {
+      "id": "HCA-B1",
+      "title": "Which NLRB recommendation applies?",
+      "status": "Allocation and clinical review",
+      "href": "#high-risk-hca-b1"
+     },
+     {
+      "id": "HCA-B2",
+      "title": "Is transplantation clinically justified?",
+      "status": "Clinical benefit review",
+      "href": "#high-risk-hca-b2"
+     }
+    ]
+   },
+   "sources": [
+    {
+     "key": "A-easl",
+     "short": "EASL · benign tumors",
+     "title": "EASL Clinical Practice Guidelines on benign liver tumours",
+     "kind": "Clinical guidance",
+     "dialog": true
+    },
+    {
+     "key": "N-hca",
+     "short": "NLRB · HCA",
+     "title": "Adult MELD exception review guidance — hepatic adenoma",
+     "kind": "NLRB guidance",
+     "dialog": true
+    },
+    {
+     "key": "A-molecular",
+     "short": "HCA · molecular",
+     "title": "Molecular classification of HCA associates with bleeding and malignant transformation",
+     "kind": "Cohort evidence",
+     "dialog": true
+    },
+    {
+     "key": "H-policy",
+     "short": "OPTN 9.5.I",
+     "title": "OPTN Policies — HCC standardized exception",
+     "kind": "Allocation policy",
+     "dialog": true
+    },
+    {
+     "key": "nlrb",
+     "short": "NLRB oncology guidance",
+     "title": "Adult MELD Exceptions for Transplant Oncology",
+     "kind": "Organ Procurement and Transplantation Network · HRSA/OPTN · 2025",
+     "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/adult-meld-exception-transplant-oncology-review-guidance.pdf",
+     "pmid": ""
+    },
+    {
+     "key": "acg_fll2024",
+     "short": "ACG 2024",
+     "title": "ACG Clinical Guideline: Focal Liver Lesions",
+     "kind": "Frenette · American Journal of Gastroenterology · 2024",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/38958301/",
+     "pmid": "38958301"
+    },
+    {
+     "key": "easl_benign",
+     "short": "European Association for the Study of the Liver 2016",
+     "title": "EASL Clinical Practice Guidelines on the management of benign liver tumours",
+     "kind": "European Association for the Study of the Liver · Journal of Hepatology · 2016",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/27085809/",
+     "pmid": "27085809"
+    },
+    {
+     "key": "hca_nault",
+     "short": "Nault 2017",
+     "title": "Molecular Classification of Hepatocellular Adenoma Associates With Risk Factors, Bleeding, and Malignant Transformation",
+     "kind": "Nault · Gastroenterology · 2017",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/27939373/",
+     "pmid": "27939373"
+    },
+    {
+     "key": "hca_ziogas",
+     "short": "Ziogas 2022",
+     "title": "Liver Transplantation for Hepatic Adenoma: A UNOS Database Analysis and Systematic Review of the Literature",
+     "kind": "Ziogas · Transplantation Direct · 2022",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/35018302/",
+     "pmid": "35018302"
+    },
+    {
+     "key": "hca_chiche",
+     "short": "Chiche 2016",
+     "title": "Liver transplantation for adenomatosis: European experience",
+     "kind": "Chiche · Liver Transplantation · 2016",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/26919265/",
+     "pmid": "26919265"
+    },
+    {
+     "key": "hca_haring",
+     "short": "Haring 2019",
+     "title": "The effect of oral contraceptive pill cessation on hepatocellular adenoma diameter: A retrospective cohort study",
+     "kind": "Haring · Liver International · 2019",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/30773766/",
+     "pmid": "30773766"
+    },
+    {
+     "key": "hca_tae",
+     "short": "van Rosmalen 2019",
+     "title": "Safety and efficacy of transarterial embolization of hepatocellular adenomas",
+     "kind": "van Rosmalen · British Journal of Surgery · 2019",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31313827/",
+     "pmid": "31313827"
+    }
+   ]
+  }
+ }
+}

@@ -4,11 +4,11 @@ usage: python3 tools/build_consensus.py
 
 Writes documents/<tumor>/questions.json and assets/documents.json (the download manifest used by the
 Documents corner). Three sets per tumor, where the setting exists:
-  roadmap   the cancer roadmap's "Decisions this programme still has to make" (tools/consensus_source/
+  roadmap   the roadmap's "Decisions this programme still has to make" (tools/consensus_source/
             roadmap_<slug>.json: positions extracted from the roadmap's own cited content) plus its
             extrahepatic-disease question (tools/ehd_positions.json); PDAC also carries PDAC-B1/B2.
-  standard  the transplant pathway's meeting questions (content.json index[].issues).
-  highrisk  the transplant pathway's high-risk reviews (content.json high_risk), with the source wording
+  standard  the pathway's meeting questions (content.json index[].issues).
+  highrisk  the pathway's high-risk reviews (content.json high_risk), with the source wording
             recorded for each B question (tools/consensus_source/high_risk_questions.json), and the shared
             approval requirements that every high-risk view also shows.
 Nothing here changes clinical content: every field is copied from those sources.
@@ -44,7 +44,7 @@ TUMORS = [
     dict(key='pcyst', code='PCYST', name='Pancreatic cysts', roadmap='pcyst', transplant=None),
     dict(key='incidental', code='INC', name='Incidental liver lesions', roadmap='incidental', transplant=None),
 ]
-HR_LABEL = {'hehe': 'High-risk boundary protocol', 'hca': 'High-risk boundary protocol'}
+HR_LABEL = {'hehe': 'High-risk pathway (boundary addendum)', 'hca': 'High-risk pathway (boundary addendum)'}
 # Extrahepatic-disease questions and not-applicable notes, by tumor key.
 EHD_TUMOR = {'HCC': 'hcc', 'cHCC–CCA': 'chcca', 'iCCA': 'icca', 'pCCA': 'pcca', 'CRLM': 'crlm', 'NELM': 'nelm', 'pNET': 'pnet',
              'HEHE': 'hehe', 'PDAC': 'pdac', 'Ampullary': 'ampullary'}
@@ -56,13 +56,13 @@ def files(t):
     c = t['code'].replace('-', '')
     f = {}
     if t['roadmap']:
-        f['roadmap_info'] = f'{c}_1_Cancer_Roadmap.docx'
-        f['roadmap_questions'] = f'{c}_2_Cancer_Roadmap_Questions.docx'
+        f['roadmap_info'] = f'{c}_1_Roadmap.docx'
+        f['roadmap_questions'] = f'{c}_2_Roadmap_Questions.docx'
     if t['transplant']:
-        f['standard_info'] = f'{c}_3_Standard_Transplant_Protocol.docx'
-        f['standard_questions'] = f'{c}_4_Standard_Transplant_Questions.docx'
-        f['highrisk_info'] = f'{c}_5_High_Risk_Transplant_Protocol.docx'
-        f['highrisk_questions'] = f'{c}_6_High_Risk_Transplant_Questions.docx'
+        f['standard_info'] = f'{c}_3_Standard_Pathway.docx'
+        f['standard_questions'] = f'{c}_4_Standard_Pathway_Questions.docx'
+        f['highrisk_info'] = f'{c}_5_High_Risk_Pathway.docx'
+        f['highrisk_questions'] = f'{c}_6_High_Risk_Pathway_Questions.docx'
     f['decision'] = f'{c}_7_Decision_Discussion.docx'
     return f
 
@@ -234,12 +234,12 @@ for t in TUMORS:
     sets = {}
     if t['roadmap']:
         qs, ratify = roadmap_set(t, S)
-        sets['roadmap'] = dict(label='Cancer roadmap', page=t['roadmap'] + '/', web=t['roadmap'] + '/#questions', questions=qs, ratify=ratify)
+        sets['roadmap'] = dict(label='Roadmap', page=t['roadmap'] + '/', web=t['roadmap'] + '/#questions', questions=qs, ratify=ratify)
     if t['transplant']:
-        sets['standard'] = dict(label='Standard transplant pathway', page=f'transplant/{t["transplant"]}/', web=f'transplant/{t["transplant"]}/#meeting',
+        sets['standard'] = dict(label='Standard pathway', page=f'transplant/{t["transplant"]}/', web=f'transplant/{t["transplant"]}/#meeting',
                                 questions=standard_set(t, S))
         qs, shared = highrisk_set(t, S)
-        sets['highrisk'] = dict(label=HR_LABEL.get(t['key'], 'High-risk transplant protocol'), page=f'transplant/{t["transplant"]}/#high-risk',
+        sets['highrisk'] = dict(label=HR_LABEL.get(t['key'], 'High-risk pathway'), page=f'transplant/{t["transplant"]}/#high-risk',
                                 web=f'transplant/{t["transplant"]}/#high-risk', questions=qs, shared=shared)
     na = [dict(id='EHD-' + t['code'], text=n['position']) for n in EHD['not_applicable'] if EHD_NA.get(n['tumor']) == t['key']]
     doc = dict(key=t['key'], code=t['code'], name=t['name'], generated=DATE, files=files(t), sets=sets, not_applicable=na, sources=S.s)

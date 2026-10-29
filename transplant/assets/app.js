@@ -34,9 +34,9 @@ const allRefs = p => {
 
 function header() {
  return `<div class="draftbar">Clinical review draft <span>Not approved institutional policy · Not an automated eligibility tool.</span></div>
- <header class="top"><a class="brand" href="/mh-liver-pathways/transplant/">Memorial Hermann<span>Transplant oncology pathways</span></a>
+ <header class="top"><a class="brand" href="/mh-liver-pathways/transplant/">Memorial Hermann<span>Pathways</span></a>
  <nav aria-label="Tumor pathways">${DATA.index.map(p=>`<a href="/mh-liver-pathways/transplant/${p.slug}/" ${active?.slug===p.slug?'aria-current="page"':''}>${e(p.code)}</a>`).join('')}</nav>
- <a class="cancer-link" href="https://drliuhao.github.io/mh-liver-pathways/" target="_blank" rel="noopener">Cancer roadmaps ↗</a></header>`;
+ <a class="cancer-link" href="https://drliuhao.github.io/mh-liver-pathways/" target="_blank" rel="noopener">Roadmaps ↗</a></header>`;
 }
 
 function footer() {
@@ -65,7 +65,7 @@ function home() {
 }
 
 function pathwayShell() {
- app.innerHTML=header()+`<main class="wrap"><div class="pathhero"><div><a class="back" href="/mh-liver-pathways/transplant/">← All pathways</a><p class="eyebrow">${e(active.route)}</p><h1>${e(active.name)}</h1><p class="lead">${e(active.entry)}</p></div><div class="herolinks">${active.roadmap?external(active.roadmap,`${active.code} treatment roadmap`,'btn secondary'):external(DATA.sources['E-consensus'].pdf,'HEHE treatment consensus','btn secondary')}</div></div>
+ app.innerHTML=header()+`<main class="wrap"><div class="pathhero"><div><a class="back" href="/mh-liver-pathways/transplant/">← All pathways</a><p class="eyebrow">${e(active.route)}</p><h1>${e(active.name)}</h1><p class="lead">${e(active.entry)}</p></div><div class="herolinks">${active.roadmap?external(active.roadmap,`${active.code} roadmap`,'btn secondary'):external(DATA.sources['E-consensus'].pdf,'HEHE treatment consensus','btn secondary')}</div></div>
  <div class="viewbar" role="tablist" aria-label="Pathway sections"><button role="tab" id="tab-pathway" data-view="pathway">Decision pathway</button><button role="tab" id="tab-meeting" data-view="meeting">Meeting record <span>${active.issues.length}</span></button><button role="tab" id="tab-care" data-view="care">Treatment reference</button><button role="tab" id="tab-high-risk" class="high-risk-tab" data-view="high-risk">High-risk protocols <span>${HighRisk.reviews(DATA.high_risk,active.slug).length}</span></button><button role="tab" id="tab-evidence" data-view="evidence">Evidence library</button><span class="viewnote">Compare choices · nothing is saved</span></div>
  <div id="view"></div></main>`+footer();
  renderView();
