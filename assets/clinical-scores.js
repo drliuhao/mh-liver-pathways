@@ -194,78 +194,8 @@
     return {ok: true, sum: round(sum, 1), limit, within: limit !== null && sum <= limit, sharedBoundary: afp === 400};
   }
 
-  // Calendar intervals between two dates (yyyy-mm-dd). `today` is supplied by the form so the function stays pure.
-  function parseDate(s) {
-    if (!s || !/^\d{4}-\d{2}-\d{2}$/.test(String(s))) return null;
-    const [y, m, d] = String(s).split('-').map(Number), t = Date.UTC(y, m - 1, d), dt = new Date(t);
-    return dt.getUTCFullYear() === y && dt.getUTCMonth() === m - 1 && dt.getUTCDate() === d ? {y, m, d, t} : null;
-  }
-  const iso = t => new Date(t).toISOString().slice(0, 10);
-  function addMonths(a, k) {
-    const total = a.m - 1 + k, y = a.y + Math.floor(total / 12), m = ((total % 12) + 12) % 12;
-    const last = new Date(Date.UTC(y, m + 1, 0)).getUTCDate();
-    return Date.UTC(y, m, Math.min(a.d, last));
-  }
-  function interval(v) {
-    const a = parseDate(v.start);
-    if (!a) return fail('Enter the start date.');
-    const b = String(v.end || '').trim() ? parseDate(v.end) : parseDate(v.today);
-    if (!b) return fail('Enter a valid end date, or leave it blank to use today.');
-    if (b.t < a.t) return fail('The end date is before the start date.');
-    const days = Math.round((b.t - a.t) / 86400000);
-    let months = (b.y - a.y) * 12 + (b.m - a.m);
-    if (b.d < a.d) months--;
-    const need = num(v.required);
-    let reached = null;
-    if (need) { const t = addMonths(a, need); reached = {months: need, date: iso(t), met: b.t >= t}; }
-    return {ok: true, days, weeks: round(days / 7, 1), months, end: iso(b.t), endIsToday: !String(v.end || '').trim(), reached};
-  }
-
-  // Tumor-marker trend: change from first to last value, change per month and the log-linear doubling or halving time.
-  function markerTrend(v) {
-    const pts = [];
-    for (const p of v.points || []) {
-      const hasD = p.date && String(p.date).trim(), hasV = p.value != null && String(p.value).trim() !== '';
-      if (!hasD && !hasV) continue;
-      if (!hasD || !hasV) return fail('Each row needs both a date and a value.');
-      const d = parseDate(p.date), x = num(p.value);
-      if (!d) return fail('Enter valid dates.');
-      if (x === null || x < 0) return fail('Values must be zero or positive numbers.');
-      pts.push({t: d.t, date: iso(d.t), x});
-    }
-    if (pts.length < 2) return fail('Enter at least two dated values.');
-    pts.sort((a, b) => a.t - b.t);
-    if (new Set(pts.map(p => p.t)).size !== pts.length) return fail('Two values share a date; keep one value per date.');
-    const first = pts[0], last = pts[pts.length - 1], days = (last.t - first.t) / 86400000;
-    let doublingDays = null;
-    if (pts.every(p => p.x > 0)) {
-      const xs = pts.map(p => (p.t - first.t) / 86400000), ys = pts.map(p => Math.log(p.x));
-      const mx = xs.reduce((a, b) => a + b, 0) / xs.length, my = ys.reduce((a, b) => a + b, 0) / ys.length;
-      const k = xs.reduce((s, x, i) => s + (x - mx) * (ys[i] - my), 0) / xs.reduce((s, x) => s + (x - mx) ** 2, 0);
-      if (Math.abs(k) > 1e-9) doublingDays = Math.round(Math.LN2 / k);
-    }
-    return {ok: true, n: pts.length, first, last, days: Math.round(days),
-      change: first.x > 0 ? round((last.x - first.x) / first.x * 100, 1) : null,
-      perMonth: round((last.x - first.x) / (days / 30.4375), 2), doublingDays, pts};
-  }
-
-  // Liver involvement and the treatable share of tumor, from volumes (mL).
-  function liverInvolvement(v) {
-    const total = num(v.total), tumor = num(v.tumor), treat = num(v.treatable);
-    if (total === null || total <= 0) return fail('Enter the total liver volume including tumor (mL).');
-    if (tumor === null || tumor < 0) return fail('Enter the total tumor volume (mL).');
-    if (tumor > total) return fail('Tumor volume cannot exceed the total liver volume.');
-    const rawT = v.treatable != null && String(v.treatable).trim() !== '';
-    if (rawT && (treat === null || treat < 0 || treat > tumor)) return fail('Removable or treatable tumor volume must lie between 0 and the total tumor volume.');
-    return {ok: true, involvement: round(tumor / total * 100, 1), treatable: rawT && tumor > 0 ? round(treat / tumor * 100, 1) : null};
-  }
-
   /* ---------- Calculator forms: fields and how a result reads ---------- */
   const yes = (id, label) => ({id, label, type: 'select', options: [['', 'Choose'], ['no', 'No'], ['yes', 'Yes']]});
-  const MARKER_NOTE = {
-    afp: 'AFP can also rise with hepatitis activity or liver regeneration; read the trend with imaging.',
-    cea: 'CEA can also rise with smoking and some benign conditions; read the trend with imaging.',
-    ca199: 'Biliary obstruction or cholangitis can raise CA19-9: recheck after drainage. Lewis antigen-negative patients do not produce CA19-9.'};
   const RESPONSE = {CR: 'complete response', PR: 'partial response', SD: 'stable disease', PD: 'progressive disease'};
   function responseForm(criteria) {
     const m = criteria === 'mrecist';
@@ -282,15 +212,6 @@
       .concat(r.reappeared ? ['A target lesion reappeared after complete disappearance: progression.'] : [])
       .concat(r.overall === 'PD' && r.target !== 'PD' ? ['Progression is set by the new lesion or non-target finding, whatever the sums show.'] : [])
       .concat([m ? 'mRECIST measures viable (arterially enhancing) tumor; progression is a 20% increase from the smallest sum.' : 'Progression needs at least a 20% and 5 mm increase from the smallest sum; partial response a 30% decrease from baseline.'])};
-  }
-  function localToday() { const d = new Date(); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; }
-  // A small inline chart of a marker series: dates on x, values on y from zero. Built from numbers only.
-  function sparkline(r) {
-    const W = 260, H = 96, P = 10, t0 = r.pts[0].t, t1 = r.pts[r.pts.length - 1].t, ymax = Math.max(...r.pts.map(p => p.x)) || 1;
-    const X = t => P + (t1 === t0 ? 0 : (t - t0) / (t1 - t0)) * (W - 2 * P), Y = x => H - P - x / ymax * (H - 2 * P);
-    const line = r.pts.map(p => `${X(p.t).toFixed(1)},${Y(p.x).toFixed(1)}`).join(' ');
-    const dots = r.pts.map(p => `<circle cx="${X(p.t).toFixed(1)}" cy="${Y(p.x).toFixed(1)}" r="3"><title>${p.date}: ${p.x}</title></circle>`).join('');
-    return `<svg class="tc-spark" viewBox="0 0 ${W} ${H}" role="img" aria-label="Marker values from ${r.first.date} to ${r.last.date}"><line x1="${P}" y1="${H - P}" x2="${W - P}" y2="${H - P}" class="tc-spark-axis"/><polyline points="${line}" class="tc-spark-line"/>${dots}<text x="${W - P}" y="${P}" text-anchor="end" class="tc-spark-label">highest ${ymax}</text></svg>`;
   }
   const FORMS = {
     child: {fields: [
@@ -349,30 +270,6 @@
     ], run: metroticket, read: r => [r.limit === null ? 'AFP above 1000 ng/mL: outside the Metroticket 2.0 criteria' : `${r.within ? 'Within' : 'Outside'} the AFP-adjusted limit: ${r.sum} ${r.within ? '≤' : '>'} ${r.limit}`,
       'Sum = number of viable tumors + largest viable diameter (cm), on the last imaging before transplant; a complete response counts as 0.',
       'Criteria for an estimated 70% 5-year HCC-specific survival after transplant. Prognostic, not an allocation rule.'].concat(r.sharedBoundary ? ['The published AFP ranges share 400 ng/mL; this value is given the stricter limit.'] : [])},
-    interval: {fields: [
-      {id: 'purpose', label: 'Interval since', type: 'select', options: [['', 'Choose (optional)'], ['treatment', 'Last treatment'], ['control', 'Start of documented disease control'], ['progression', 'Last confirmed progression'], ['ici', 'Last checkpoint-inhibitor dose'], ['clearance', 'Clearance of extrahepatic disease'], ['other', 'Other']]},
-      {id: 'start', label: 'Start date', type: 'date'},
-      {id: 'end', label: 'End date (blank = today)', type: 'date'},
-      {id: 'required', label: 'Interval to check', type: 'select', options: [['', 'None'], ['3', '3 months'], ['6', '6 months'], ['12', '12 months'], ['24', '24 months']]}
-    ], collect: v => ({...v, today: localToday()}), run: interval,
-    read: r => [`${r.days} days · ${r.weeks} weeks · ${r.months} complete month${r.months === 1 ? '' : 's'}`, `Counted to ${r.end}${r.endIsToday ? ' (today)' : ''}.`]
-      .concat(r.reached ? [`${r.reached.months} months ${r.reached.met ? 'reached on' : 'will be reached on'} ${r.reached.date}.`] : [])},
-    markers: {fields: [
-      {id: 'marker', label: 'Marker', type: 'select', options: [['', 'Choose'], ['afp', 'AFP (ng/mL)'], ['cea', 'CEA (ng/mL)'], ['ca199', 'CA19-9 (U/mL)']]},
-      ...[1, 2, 3, 4, 5].flatMap(i => [{id: 'date' + i, label: 'Date ' + i, type: 'date'}, {id: 'value' + i, label: 'Value ' + i, type: 'number', step: 'any'}])
-    ], collect: v => ({marker: v.marker, points: [1, 2, 3, 4, 5].map(i => ({date: v['date' + i], value: v['value' + i]}))}),
-    run: v => ['afp', 'cea', 'ca199'].includes(v.marker) ? Object.assign(markerTrend(v), {marker: v.marker}) : fail('Choose the marker.'),
-    read: r => [`${r.first.x} → ${r.last.x} over ${r.days} days${r.change === null ? '' : ` (${r.change > 0 ? '+' : ''}${r.change}%)`}`,
-      `Change per month: ${r.perMonth > 0 ? '+' : ''}${r.perMonth}`].concat(r.doublingDays ? [`${r.doublingDays > 0 ? 'Doubling' : 'Halving'} time about ${Math.abs(r.doublingDays)} days (log-linear fit of ${r.n} values)`] : [])
-      .concat([MARKER_NOTE[r.marker]]),
-    chart: sparkline},
-    cytored: {fields: [
-      {id: 'total', label: 'Total liver volume, including tumor', unit: 'mL', type: 'number', step: '1'},
-      {id: 'tumor', label: 'Total tumor volume', unit: 'mL', type: 'number', step: '1'},
-      {id: 'treatable', label: 'Tumor volume removable or treatable', unit: 'mL', type: 'number', step: '1'}
-    ], run: liverInvolvement, read: r => [`Liver involvement ${r.involvement}%`,
-      r.treatable === null ? 'Add the removable or treatable volume to see the cytoreduction share.' : `Removable or treatable: ${r.treatable}% of tumor volume`,
-      'Record the volumetry method (CT or MRI). The thresholds and their evidence follow below.']},
     netgrade: {fields: [
       {id: 'diff', label: 'Differentiation', type: 'select', options: [['', 'Choose'], ['well', 'Well differentiated (NET)'], ['poor', 'Poorly differentiated (NEC)']]},
       {id: 'ki67', label: 'Ki-67', unit: '%', type: 'number', step: '0.1'},
@@ -440,12 +337,6 @@
       html: () => `<p><b>Largest diameter</b>: 3 cm or less = 0, over 3 to 6 cm = 1, over 6 cm = 4. <b>Number of tumors</b>: 1–3 = 0, 4 or more = 2. <b>AFP</b> (ng/mL): 100 or less = 0, over 100 to 1000 = 2, over 1000 = 3. A score above 2 identified higher recurrence risk (validation cohort 5-year recurrence 50.6% against 8.8%).</p><p>A selection model used in France; separate from OPTN exception rules.</p>${src(pm('22750200', 'Duvoux 2012'))}`},
     {id: 'metroticket', name: 'Metroticket 2.0', kind: 'Prognostic score', pages: ['hcc', 'T:hcc'], match: /Metroticket|[Uu]p-to-7/,
       html: () => `<p>Sum of the number of viable tumors and the largest viable diameter (cm), on the last imaging before transplant, within an AFP-adjusted limit: <b>7 or less</b> with AFP under 200 ng/mL; <b>5 or less</b> with AFP 200–400; <b>4 or less</b> with AFP 400–1000. Inside these limits the model estimated at least 70% 5-year HCC-specific survival after transplant. A complete response counts as zero tumors.</p><p>Prognostic, from Italian training and Chinese validation cohorts; it is not an allocation rule.</p>${extLink('https://www.hcc-olt-metroticket.org/', 'Open the Metroticket 2.0 online calculator')}${src(pm('28989060', 'Mazzaferro 2018'))}`},
-    {id: 'interval', name: 'Interval calculator', kind: 'Date calculator', match: NEVER,
-      html: () => `<p>Days, weeks and complete calendar months between two dates, and the date a required interval is reached: for example 6 months of documented control, time since the last confirmed progression, or time since a checkpoint-inhibitor dose. Whether an interval satisfies a protocol, and what resets it, is stated in the decision itself. An interval alone does not establish transplant safety after immunotherapy.</p>`},
-    {id: 'markers', name: 'Tumor-marker trend', kind: 'Calculator', match: NEVER,
-      html: () => `<p>Up to five dated values of AFP, CEA or CA19-9: change from first to last, change per month, and the doubling or halving time from a log-linear fit when every value is above zero. Protocol thresholds stay in the decision itself (for example CEA under 80 ng/mL for CRLM, or AFP 500 and 1000 ng/mL for the HCC exception).</p>`},
-    {id: 'cytored', name: 'Liver involvement and cytoreduction', kind: 'Calculator', pages: ['nelm', 'T:nelm'], match: NEVER, shared: ['nelm', 'Cytoreduction thresholds, and what supports them'],
-      html: () => `<p>Percentage of the liver replaced by tumor, and the share of tumor volume that can be removed or treated, from volumetry.</p>`},
     {id: 'netpet', name: 'NETPET grade (SSTR and FDG PET)', kind: 'Classification', pages: ['nelm', 'pnet', 'T:nelm'], match: /\bNETPET\b|\bFDG\b/,
       html: () => `<p>Dual SSTR and FDG PET read on the lesion most FDG-avid relative to its SSTR uptake. <b>P0</b> no disease on either scan; <b>P1</b> SSTR-avid disease with no FDG uptake; <b>P2–P4</b> lesions avid on both, graded by relative FDG uptake and extent; <b>P5</b> significant FDG-positive, SSTR-negative disease.</p><p>In 62 patients, median survival was 11 months at P5 and not reached at P1 or P2–P4. The authors suggest P4b–P5 disease may not be controlled by PRRT alone, a hypothesis to test. Retrospective and single-center.</p>${src(pm('28435454', 'Chan 2017'))}`},
     {id: 'meldexc', name: 'MELD exception score by diagnosis', kind: 'Allocation', match: NEVER,
@@ -484,34 +375,34 @@
   };
   const QUICKREF_KIND = {milannet: 'Criteria', bismuth: 'Classification', ajcc: 'Staging', kyoto: 'Criteria', hcasub: 'Classification', acr: 'Algorithm', multifocal: 'Classification', whodx: 'Classification', lirads: 'Classification', netgrade: 'Calculator', ecog: 'Scale'};
   const ORDER = ['meld', 'child', 'albi', 'ecog', 'lfi', 'csph', 'lirads', 'lipop', 'hccburden', 'afpexc', 'meldexc', 'afpmodel', 'metroticket', 'retreat', 'bclc', 'vp',
-    'tbs', 'fong', 'oslo', 'crlmres', 'crlmmol', 'hehelt', 'netgrade', 'netpet', 'krenning', 'milannet', 'cytored', 'crisis', 'spigelman',
+    'tbs', 'fong', 'oslo', 'crlmres', 'crlmmol', 'hehelt', 'netgrade', 'netpet', 'krenning', 'milannet', 'crisis', 'spigelman',
     'bismuth', 'pccadx', 'drainage', 'multifocal', 'iccares', 'ccamol', 'ajcc', 'whodx', 'hcasub', 'hca5', 'hcasurv', 'kyoto', 'acr',
-    'mrecist', 'recist', 'markers', 'interval', 'lrtfeas', 'flr', 'nsqip', 'phlf', 'isgls', 'clavien', 'mmat'];
+    'mrecist', 'recist', 'lrtfeas', 'flr', 'nsqip', 'phlf', 'isgls', 'clavien', 'mmat'];
 
   // Items central to a decision that its text does not name (page → decision → items).
   const SURGERY = ['flr', 'nsqip', 'isgls'];
   const EXTRA = {
-    hcc: {0: ['csph', ...SURGERY], A: ['csph', ...SURGERY, 'lfi', 'afpexc', 'afpmodel', 'metroticket'], B: ['afpexc', 'metroticket', 'mrecist', 'markers', 'lrtfeas'], C: ['mrecist', 'markers', 'lrtfeas']},
-    crlm: {1: ['tbs', 'markers'], 2: SURGERY, 3: ['flr', 'recist', 'markers'], 4: ['oslo', 'lfi', 'interval', 'meldexc'], 5: ['recist', 'markers', 'lrtfeas']},
-    icca: {1: ['markers'], 3: SURGERY, 4: ['flr', 'recist', 'markers'], 5: ['recist', 'interval'], 7: ['lrtfeas'], 9: ['recist', 'markers'], 10: ['lfi', 'interval', 'meldexc']},
-    hilar: {0: ['markers'], 2: ['markers'], 3: SURGERY, 4: ['lfi', 'meldexc'], 5: ['ccamol', 'recist']},
-    nelm: {1: ['netpet'], 2: ['interval', 'recist'], 3: ['recist', 'netpet'], 4: ['netpet'], 5: ['cytored', ...SURGERY], 6: ['recist', 'netpet'], 7: ['lrtfeas', 'cytored'], 9: ['cytored', 'lfi', 'meldexc']},
-    chcca: {2: ['markers'], 3: SURGERY, 5: ['lfi'], 7: ['recist'], 9: ['markers', 'interval']},
-    adenoma: {2: ['interval'], 4: ['nsqip', 'interval'], 6: ['interval'], 10: ['lfi', 'meldexc']},
-    pdac: {3: ['nsqip'], 4: ['recist', 'markers'], 6: ['markers', 'interval'], 7: ['recist', 'markers'], 8: ['recist', 'markers']},
-    pnet: {1: ['netpet'], 2: ['netpet'], 4: ['interval'], 5: ['nsqip'], 8: ['netpet'], 9: ['interval']},
-    pcyst: {6: ['nsqip'], 8: ['interval'], 10: ['interval']},
-    ampullary: {4: ['nsqip'], 5: ['nsqip'], 8: ['recist'], 9: ['interval']},
-    'T:hcc': {diagnosis: ['lipop'], 'curative-route': ['albi', 'csph', ...SURGERY, 'lrtfeas'], allocation: ['afpexc', 'meldexc', 'afpmodel', 'metroticket', 'markers'],
-      treatment: ['mrecist', 'markers', 'interval', 'lrtfeas'], listing: ['meldexc', 'afpexc', 'lfi', 'interval'], waitlist: ['mrecist', 'markers', 'interval', 'lfi'], 'after-transplant': ['retreat']},
-    'T:pcca': {localize: ['bismuth', 'drainage'], diagnosis: ['pccadx', 'markers'], phenotype: ['bismuth', 'meldexc'], neoadjuvant: ['interval'], listing: ['lfi', 'meldexc']},
-    'T:icca': {diagnosis: ['ccamol'], phenotype: ['multifocal', 'iccares'], therapy: ['recist', 'markers', 'ccamol', 'lrtfeas'], stability: ['interval', 'recist', 'markers'], review: ['meldexc', 'lfi']},
-    'T:crlm': {'map-disease': ['tbs', 'fong', 'markers'], biology: ['fong', 'oslo', 'markers', 'crlmmol'], unresectability: ['flr', 'fong', 'crlmres'], control: ['recist', 'markers', 'interval', 'lrtfeas'],
-      clocks: ['interval'], restaging: ['recist', 'oslo', 'markers'], review: ['oslo', 'meldexc', 'lfi']},
-    'T:nelm': {biology: ['netpet'], distribution: ['netpet', 'krenning'], options: ['netgrade', 'krenning', 'cytored', 'crisis', 'lrtfeas'], exposure: ['krenning', 'crisis'], observation: ['recist', 'interval'],
+    hcc: {0: ['csph', ...SURGERY], A: ['csph', ...SURGERY, 'lfi', 'afpexc', 'afpmodel', 'metroticket'], B: ['afpexc', 'metroticket', 'mrecist', 'lrtfeas'], C: ['mrecist', 'lrtfeas']},
+    crlm: {1: ['tbs'], 2: SURGERY, 3: ['flr', 'recist'], 4: ['oslo', 'lfi', 'meldexc'], 5: ['recist', 'lrtfeas']},
+    icca: {3: SURGERY, 4: ['flr', 'recist'], 5: ['recist'], 7: ['lrtfeas'], 9: ['recist'], 10: ['lfi', 'meldexc']},
+    hilar: {3: SURGERY, 4: ['lfi', 'meldexc'], 5: ['ccamol', 'recist']},
+    nelm: {1: ['netpet'], 2: ['recist'], 3: ['recist', 'netpet'], 4: ['netpet'], 5: SURGERY, 6: ['recist', 'netpet'], 7: ['lrtfeas'], 9: ['lfi', 'meldexc']},
+    chcca: {3: SURGERY, 5: ['lfi'], 7: ['recist']},
+    adenoma: {4: ['nsqip'], 10: ['lfi', 'meldexc']},
+    pdac: {3: ['nsqip'], 4: ['recist'], 7: ['recist'], 8: ['recist']},
+    pnet: {1: ['netpet'], 2: ['netpet'], 5: ['nsqip'], 8: ['netpet']},
+    pcyst: {6: ['nsqip']},
+    ampullary: {4: ['nsqip'], 5: ['nsqip'], 8: ['recist']},
+    'T:hcc': {diagnosis: ['lipop'], 'curative-route': ['albi', 'csph', ...SURGERY, 'lrtfeas'], allocation: ['afpexc', 'meldexc', 'afpmodel', 'metroticket'],
+      treatment: ['mrecist', 'lrtfeas'], listing: ['meldexc', 'afpexc', 'lfi'], waitlist: ['mrecist', 'lfi'], 'after-transplant': ['retreat']},
+    'T:pcca': {localize: ['bismuth', 'drainage'], diagnosis: ['pccadx'], phenotype: ['bismuth', 'meldexc'], listing: ['lfi', 'meldexc']},
+    'T:icca': {diagnosis: ['ccamol'], phenotype: ['multifocal', 'iccares'], therapy: ['recist', 'ccamol', 'lrtfeas'], stability: ['recist'], review: ['meldexc', 'lfi']},
+    'T:crlm': {'map-disease': ['tbs', 'fong'], biology: ['fong', 'oslo', 'crlmmol'], unresectability: ['flr', 'fong', 'crlmres'], control: ['recist', 'lrtfeas'],
+      restaging: ['recist', 'oslo'], review: ['oslo', 'meldexc', 'lfi']},
+    'T:nelm': {biology: ['netpet'], distribution: ['netpet', 'krenning'], options: ['netgrade', 'krenning', 'crisis', 'lrtfeas'], exposure: ['krenning', 'crisis'], observation: ['recist'],
       review: ['milannet', 'meldexc', 'lfi']},
-    'T:hehe': {risk: ['interval'], review: ['meldexc', 'lfi']},
-    'T:hca': {characterize: ['hcasub'], 'standard-care': ['hca5', 'hcasurv', 'interval', 'nsqip'], 'exception-route': ['meldexc'], review: ['lfi']}
+    'T:hehe': {review: ['meldexc', 'lfi']},
+    'T:hca': {characterize: ['hcasub'], 'standard-care': ['hca5', 'hcasurv', 'nsqip'], 'exception-route': ['meldexc'], review: ['lfi']}
   };
   // Items a decision's own text names. `page` is a roadmap slug ('crlm') or 'T:' + transplant slug.
   function detect(text, page) {
@@ -542,6 +433,6 @@
   }
   const API = {items: byId, forms: FORMS, detect, extra: EXTRA, quickref: QUICKREF, quickrefKind: QUICKREF_KIND, order: ORDER, esc,
     setRoot(url) { rootUrl = url; }, setPage(slug) { pageSlug = slug || ''; }, renderQuickref, renderLrtContra,
-    calculators: {childPugh, albi, hccBurden, tumorBurden, fong, oslo, futureRemnant, netGrade, spigelman, response, retreat, afpModel, metroticket, interval, markerTrend, liverInvolvement}};
+    calculators: {childPugh, albi, hccBurden, tumorBurden, fong, oslo, futureRemnant, netGrade, spigelman, response, retreat, afpModel, metroticket}};
   if (typeof module === 'object' && module.exports) module.exports = API; else root.ClinicalScores = API;
 })(typeof window === 'undefined' ? {} : window);

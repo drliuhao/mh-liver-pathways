@@ -1,0 +1,227 @@
+{
+ "generated": "29 October 2026",
+ "base": "documents/",
+ "tumors": {
+  "hcc": {
+   "code": "HCC",
+   "name": "Hepatocellular carcinoma",
+   "roadmap": "hcc",
+   "transplant": "hcc",
+   "files": {
+    "roadmap_info": "HCC_1_Cancer_Roadmap.docx",
+    "roadmap_questions": "HCC_2_Cancer_Roadmap_Questions.docx",
+    "standard_info": "HCC_3_Standard_Transplant_Protocol.docx",
+    "standard_questions": "HCC_4_Standard_Transplant_Questions.docx",
+    "highrisk_info": "HCC_5_High_Risk_Transplant_Protocol.docx",
+    "highrisk_questions": "HCC_6_High_Risk_Transplant_Questions.docx",
+    "decision": "HCC_7_Decision_Discussion.docx"
+   },
+   "counts": {
+    "roadmap": 21,
+    "standard": 13,
+    "highrisk": 6
+   }
+  },
+  "pcca": {
+   "code": "pCCA",
+   "name": "Perihilar cholangiocarcinoma",
+   "roadmap": "hilar",
+   "transplant": "pcca",
+   "files": {
+    "roadmap_info": "pCCA_1_Cancer_Roadmap.docx",
+    "roadmap_questions": "pCCA_2_Cancer_Roadmap_Questions.docx",
+    "standard_info": "pCCA_3_Standard_Transplant_Protocol.docx",
+    "standard_questions": "pCCA_4_Standard_Transplant_Questions.docx",
+    "highrisk_info": "pCCA_5_High_Risk_Transplant_Protocol.docx",
+    "highrisk_questions": "pCCA_6_High_Risk_Transplant_Questions.docx",
+    "decision": "pCCA_7_Decision_Discussion.docx"
+   },
+   "counts": {
+    "roadmap": 17,
+    "standard": 6,
+    "highrisk": 3
+   }
+  },
+  "icca": {
+   "code": "iCCA",
+   "name": "Intrahepatic cholangiocarcinoma",
+   "roadmap": "icca",
+   "transplant": "icca",
+   "files": {
+    "roadmap_info": "iCCA_1_Cancer_Roadmap.docx",
+    "roadmap_questions": "iCCA_2_Cancer_Roadmap_Questions.docx",
+    "standard_info": "iCCA_3_Standard_Transplant_Protocol.docx",
+    "standard_questions": "iCCA_4_Standard_Transplant_Questions.docx",
+    "highrisk_info": "iCCA_5_High_Risk_Transplant_Protocol.docx",
+    "highrisk_questions": "iCCA_6_High_Risk_Transplant_Questions.docx",
+    "decision": "iCCA_7_Decision_Discussion.docx"
+   },
+   "counts": {
+    "roadmap": 16,
+    "standard": 6,
+    "highrisk": 4
+   }
+  },
+  "crlm": {
+   "code": "CRLM",
+   "name": "Colorectal liver metastases",
+   "roadmap": "crlm",
+   "transplant": "crlm",
+   "files": {
+    "roadmap_info": "CRLM_1_Cancer_Roadmap.docx",
+    "roadmap_questions": "CRLM_2_Cancer_Roadmap_Questions.docx",
+    "standard_info": "CRLM_3_Standard_Transplant_Protocol.docx",
+    "standard_questions": "CRLM_4_Standard_Transplant_Questions.docx",
+    "highrisk_info": "CRLM_5_High_Risk_Transplant_Protocol.docx",
+    "highrisk_questions": "CRLM_6_High_Risk_Transplant_Questions.docx",
+    "decision": "CRLM_7_Decision_Discussion.docx"
+   },
+   "counts": {
+    "roadmap": 20,
+    "standard": 8,
+    "highrisk": 5
+   }
+  },
+  "nelm": {
+   "code": "NELM",
+   "name": "Neuroendocrine liver metastases",
+   "roadmap": "nelm",
+   "transplant": "nelm",
+   "files": {
+    "roadmap_info": "NELM_1_Cancer_Roadmap.docx",
+    "roadmap_questions": "NELM_2_Cancer_Roadmap_Questions.docx",
+    "standard_info": "NELM_3_Standard_Transplant_Protocol.docx",
+    "standard_questions": "NELM_4_Standard_Transplant_Questions.docx",
+    "highrisk_info": "NELM_5_High_Risk_Transplant_Protocol.docx",
+    "highrisk_questions": "NELM_6_High_Risk_Transplant_Questions.docx",
+    "decision": "NELM_7_Decision_Discussion.docx"
+   },
+   "counts": {
+    "roadmap": 15,
+    "standard": 6,
+    "highrisk": 4
+   }
+  },
+  "hehe": {
+   "code": "HEHE",
+   "name": "Hepatic epithelioid hemangioendothelioma",
+   "roadmap": null,
+   "transplant": "hehe",
+   "files": {
+    "standard_info": "HEHE_3_Standard_Transplant_Protocol.docx",
+    "standard_questions": "HEHE_4_Standard_Transplant_Questions.docx",
+    "highrisk_info": "HEHE_5_High_Risk_Transplant_Protocol.docx",
+    "highrisk_questions": "HEHE_6_High_Risk_Transplant_Questions.docx",
+    "decision": "HEHE_7_Decision_Discussion.docx"
+   },
+   "counts": {
+    "standard": 6,
+    "highrisk": 2
+   }
+  },
+  "hca": {
+   "code": "HCA",
+   "name": "Hepatocellular adenoma",
+   "roadmap": "adenoma",
+   "transplant": "hca",
+   "files": {
+    "roadmap_info": "HCA_1_Cancer_Roadmap.docx",
+    "roadmap_questions": "HCA_2_Cancer_Roadmap_Questions.docx",
+    "standard_info": "HCA_3_Standard_Transplant_Protocol.docx",
+    "standard_questions": "HCA_4_Standard_Transplant_Questions.docx",
+    "highrisk_info": "HCA_5_High_Risk_Transplant_Protocol.docx",
+    "highrisk_questions": "HCA_6_High_Risk_Transplant_Questions.docx",
+    "decision": "HCA_7_Decision_Discussion.docx"
+   },
+   "counts": {
+    "roadmap": 17,
+    "standard": 6,
+    "highrisk": 2
+   }
+  },
+  "chcca": {
+   "code": "cHCC-CCA",
+   "name": "Combined hepatocellular–cholangiocarcinoma",
+   "roadmap": "chcca",
+   "transplant": null,
+   "files": {
+    "roadmap_info": "cHCCCCA_1_Cancer_Roadmap.docx",
+    "roadmap_questions": "cHCCCCA_2_Cancer_Roadmap_Questions.docx",
+    "decision": "cHCCCCA_7_Decision_Discussion.docx"
+   },
+   "counts": {
+    "roadmap": 15
+   }
+  },
+  "pdac": {
+   "code": "PDAC",
+   "name": "Pancreatic ductal adenocarcinoma",
+   "roadmap": "pdac",
+   "transplant": null,
+   "files": {
+    "roadmap_info": "PDAC_1_Cancer_Roadmap.docx",
+    "roadmap_questions": "PDAC_2_Cancer_Roadmap_Questions.docx",
+    "decision": "PDAC_7_Decision_Discussion.docx"
+   },
+   "counts": {
+    "roadmap": 16
+   }
+  },
+  "pnet": {
+   "code": "pNET",
+   "name": "Pancreatic neuroendocrine tumor",
+   "roadmap": "pnet",
+   "transplant": null,
+   "files": {
+    "roadmap_info": "pNET_1_Cancer_Roadmap.docx",
+    "roadmap_questions": "pNET_2_Cancer_Roadmap_Questions.docx",
+    "decision": "pNET_7_Decision_Discussion.docx"
+   },
+   "counts": {
+    "roadmap": 16
+   }
+  },
+  "ampullary": {
+   "code": "AMP",
+   "name": "Ampullary tumors",
+   "roadmap": "ampullary",
+   "transplant": null,
+   "files": {
+    "roadmap_info": "AMP_1_Cancer_Roadmap.docx",
+    "roadmap_questions": "AMP_2_Cancer_Roadmap_Questions.docx",
+    "decision": "AMP_7_Decision_Discussion.docx"
+   },
+   "counts": {
+    "roadmap": 16
+   }
+  },
+  "pcyst": {
+   "code": "PCYST",
+   "name": "Pancreatic cysts",
+   "roadmap": "pcyst",
+   "transplant": null,
+   "files": {
+    "roadmap_info": "PCYST_1_Cancer_Roadmap.docx",
+    "roadmap_questions": "PCYST_2_Cancer_Roadmap_Questions.docx",
+    "decision": "PCYST_7_Decision_Discussion.docx"
+   },
+   "counts": {
+    "roadmap": 19
+   }
+  },
+  "incidental": {
+   "code": "INC",
+   "name": "Incidental liver lesions",
+   "roadmap": "incidental",
+   "transplant": null,
+   "files": {
+    "roadmap_info": "INC_1_Cancer_Roadmap.docx",
+    "roadmap_questions": "INC_2_Cancer_Roadmap_Questions.docx",
+    "decision": "INC_7_Decision_Discussion.docx"
+   },
+   "counts": {
+    "roadmap": 16
+   }
+  }
+ }
+}

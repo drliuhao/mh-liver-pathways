@@ -1,0 +1,539 @@
+{
+ "slug": "nelm",
+ "prefix": "NELM",
+ "questions": [
+  {
+   "id": "NELM-D1",
+   "n": 1,
+   "question": "Which embolisation technique is the programme's default?",
+   "kind": "clinical",
+   "decisions": [
+    "7",
+    "3"
+   ],
+   "positions": [
+    {
+     "source": "NCCN NE v1.2026",
+     "ref": "nccn",
+     "position": "No completed randomised study compares bland embolisation with conventional TACE, so both are acceptable; drug-eluting embolics are advised against for increased hepatobiliary toxicity in NET.",
+     "locator": "Gate 7 · Reasonable option 'Bland embolisation or conventional TACE' · when; Gate 3 · Reasonable 'Add a liver-directed procedure…' · note"
+    },
+    {
+     "source": "ENETS 2024 small intestine",
+     "ref": "38977327",
+     "position": "Generally prefers bland embolisation in small-intestine NET.",
+     "locator": "Gate 7 · Reasonable option 'Bland embolisation or conventional TACE' · caveat; What we are not sure about #14"
+    },
+    {
+     "source": "ENETS 2023 functioning panNET",
+     "ref": "37578384",
+     "position": "Calls chemoembolisation possibly more effective in functioning pancreatic NET, the opposite lean to ENETS 2024.",
+     "locator": "Gate 7 · Reasonable option 'Bland embolisation or conventional TACE' · caveat; Gate 3 · Reasonable 'Add a liver-directed procedure…' · note"
+    },
+    {
+     "source": "Gupta embolisation",
+     "ref": "16134179",
+     "position": "Retrospective 123-patient series: bland embolisation outperformed chemoembolisation on response in carcinoid (81.0% vs 44.4%) without survival difference; islet-cell results trended the other way. Roadmap critique: the referring physician chose technique, so effects are confounded.",
+     "locator": "Gate 3 · Reasonable 'Add a liver-directed procedure…' · pref and note; Gate 7 · Reasonable option 'Bland embolisation or conventional TACE' · pref; What we are not sure about #14"
+    },
+    {
+     "source": "RETNET protocol",
+     "ref": "30016989",
+     "position": "Protocol of the only prospective three-way comparison, still enrolling; it reports no outcome data. Its drug-eluting-bead arm later closed for severe complications, reported in ENETS 2024 rather than the protocol.",
+     "locator": "What we are not sure about #15; Gate 7 · Avoid 'Avoid drug-eluting embolics in NET.' · note"
+    }
+   ],
+   "divergence": "NCCN accepts both techniques while ENETS 2024 leans to bland embolisation in small-intestine NET and ENETS 2023 to chemoembolisation in functioning pancreatic NET, and the comparative data are either underpowered or confounded by referral.",
+   "proposal": "No default is set. Bland embolisation and conventional TACE are both Reasonable (grade C), chosen by burden, symptoms, liver reserve and biliary-infection risk and not treated as interchangeable; drug-eluting embolics are avoided. The roadmap calls the default an expertise-and-availability decision, with technique, goal, hepatic progression-free survival and toxicity recorded for every procedure.",
+   "proposal_locator": "Gate 7 · Reasonable option 'Bland embolisation or conventional TACE'; Gate 7 · Avoid 'Avoid drug-eluting embolics in NET.' · pref; Gate 7 · flag note; What we are not sure about #14",
+   "rationale": "The only prospective three-way comparison is still enrolling and its drug-eluting-bead arm closed for severe complications. One small randomised TAE versus TACE trial (Maire 2012, 26 patients, cited from ENETS rather than read in full) found no significant 2-year progression-free survival difference but was underpowered. The best non-randomised comparison favours bland embolisation on response in carcinoid disease (81.0% versus 44.4%, odds ratio 6.41) with no survival difference, but treatment was chosen by the referring physician; ENETS 2024 prefers bland in small-intestine NET while ENETS 2023 calls chemoembolisation possibly more effective in functioning pancreatic NET. Any choice is expertise and availability.",
+   "audit": "Registry: technique, goal, hepatic progression-free survival, toxicity."
+  },
+  {
+   "id": "NELM-D2",
+   "n": 2,
+   "question": "Is first-line PRRT offered for receptor-positive grade 2–3 disease, and to whom?",
+   "kind": "clinical",
+   "decisions": [
+    "4",
+    "6"
+   ],
+   "positions": [
+    {
+     "source": "NETTER-2",
+     "ref": "38851203",
+     "position": "Open-label trial in newly diagnosed SSTR-positive GEP-NET with Ki-67 10–55%: progression-free survival 22.8 vs 8.5 months; overall survival immature with 48% crossover. Roadmap grades it B, not A.",
+     "locator": "Gate 4 · Standard option '177Lu-DOTATATE, well-differentiated G3, receptor-positive' · when; What we are not sure about #7"
+    },
+    {
+     "source": "Itanet 2024 RLT",
+     "ref": "39395114",
+     "position": "Grades the NETTER-2-based first-line recommendation 1b-A, stronger than the roadmap’s B, and prefers PRRT over targeted agents (2b-B) and chemotherapy (3b-A) on cross-trial comparison.",
+     "locator": "Gate 4 · Standard option '177Lu-DOTATATE, well-differentiated G3, receptor-positive' · note (pathway data; not in the Word export); Gate 6 · flag note"
+    },
+    {
+     "source": "EANM Focus 3",
+     "ref": "33588146",
+     "position": "Backed first-line PRRT only for a minority of carefully selected patients (17 of 22 panellists, 77.3%).",
+     "locator": "Gate 4 · Standard option '177Lu-DOTATATE, well-differentiated G3, receptor-positive' · note; What we are not sure about #7"
+    },
+    {
+     "source": "NCCN NE v1.2026",
+     "ref": "nccn",
+     "position": "First-line PRRT can be considered in receptor-positive GEP-NET with Ki-67 10–55%.",
+     "locator": "Quick reference 'Ki-67 thresholds that change the pathway' · row 'Ki-67 10–55%'"
+    }
+   ],
+   "divergence": "Itanet and NCCN support or permit first-line PRRT while EANM confines it to highly selected patients, and the roadmap downgrades to B because NETTER-2 is open-label with immature survival and narrow entry criteria.",
+   "proposal": "Standard, grade B, for the phenotype NETTER-2 tested: uptake above normal liver in target disease, Ki-67 10–55%, documented renal, marrow and hepatic reserve, and clinically significant burden (a local criterion). Ki-67 above 55%, receptor-negative or FDG-avid disease and prior liver-directed therapy fall outside the evidence; the B downgrade and who qualifies remain open decisions.",
+   "proposal_locator": "Gate 4 · Standard option '177Lu-DOTATATE, well-differentiated G3, receptor-positive' · pref and caveat; Gate 6 · flag note",
+   "rationale": "One open-label randomised trial with a progression-free survival endpoint; overall survival immature. Depends on radiopharmaceutical availability and payer authorisation.",
+   "audit": "Registry: every PRRT course, progression-free survival, hepatic and renal function."
+  },
+  {
+   "id": "NELM-D3",
+   "n": 3,
+   "question": "Hepatic burden threshold above which cytoreduction is not attempted.",
+   "kind": "clinical",
+   "decisions": [
+    "5"
+   ],
+   "positions": [
+    {
+     "source": "NCCN NE v1.2026",
+     "ref": "nccn",
+     "position": "Still prints debulking of more than 90% of metastatic disease for symptom relief and progression-free survival; the roadmap notes the 90% figure began as a symptom-relief observation never validated oncologically.",
+     "locator": "Quick reference 'Cytoreduction thresholds, and what supports them' · row 'More than 90% of metastatic disease — NCCN'"
+    },
+    {
+     "source": "NANETS 2017 surgical",
+     "ref": "28609357",
+     "position": "Small-bowel NET: at least 70% of visible liver disease, near consensus with one dissent, resting on two retrospective single-institution series from the centres that championed the lower threshold.",
+     "locator": "Quick reference 'Cytoreduction thresholds…' · row 'At least 70% of visible liver disease — NANETS 2017, small bowel'; What we are not sure about #1"
+    },
+    {
+     "source": "NANETS 2020 surgical",
+     "ref": "31856076",
+     "position": "Pancreatic NET: no consensus; over half favoured an individualised target above 70%, some held only complete clearance helps, and a minority doubted any benefit of cytoreduction is established.",
+     "locator": "Quick reference 'Cytoreduction thresholds…' · row 'More than 70%, individualised — NANETS 2020'"
+    },
+    {
+     "source": "ENETS 2023 functioning panNET",
+     "ref": "37578384",
+     "position": "70–90% or more of visible disease with adequate liver function (2b, grade B), with no guidance on which end of the range applies to whom.",
+     "locator": "Quick reference 'Cytoreduction thresholds…' · row '70–90% or more — ENETS 2023'; Gate 5 · Reasonable 'Operate for meaningful reduction…' · note"
+    },
+    {
+     "source": "Graff-Baker debulking",
+     "ref": "25456912",
+     "position": "The 52-patient series cited for 70% excluded patients in whom 70% looked unachievable, so has no sub-70% arm; extent of debulking did not correlate with liver progression-free or disease-specific survival.",
+     "locator": "Gate 5 · Reasonable 'Operate for meaningful reduction…' · note"
+    }
+   ],
+   "divergence": "Targets run from more than 90% (NCCN) through 70% (NANETS 2017) and 70–90% (ENETS 2023) to none at all (ENETS 2024, ESMO), and no comparative study supports any of them.",
+   "proposal": "No percentage is adopted as evidence. Operate only when a named target can be cleared, with the expected residual stated beforehand, in a patient fit for a long operation with enough functional parenchyma; avoid diffuse-miliary disease and liver replacement above roughly 50–70%. The open NELM-R1 proposal uses at least 70% achievable debulking when extrahepatic disease is present.",
+   "proposal_locator": "What we are not sure about #1; Gate 5 · Reasonable 'Operate for meaningful reduction…' · caveat; Gate 5 · Avoid 'Do not call debulking complete eradication…'; NELM-R1 · proposed position",
+   "rationale": "Debulking series are single-arm and selection-driven and no threshold is evidence-derived. The 90% figure was an observation about symptom relief, never validated oncologically; the 70% figure was set by consensus on two retrospective series from the championing centres, and the cohort most cited for it excluded by design every patient in whom 70% was unachievable, so it has no sub-70% arm. NANETS 2020 reached no consensus for pancreatic primaries.",
+   "audit": "Registry: burden before and after, residual, liver progression-free survival."
+  },
+  {
+   "id": "NELM-D4",
+   "n": 4,
+   "question": "Does the programme offer radioembolisation in this disease at all, and at what point?",
+   "kind": "clinical",
+   "decisions": [
+    "7",
+    "2"
+   ],
+   "positions": [
+    {
+     "source": "NCCN NE v1.2026",
+     "ref": "nccn",
+     "position": "Permits radioembolisation, especially for lobar or segmental distribution or after Whipple or biliary instrumentation; a mandatory exhaustion-of-all-options rule before Y90 is a local restriction, not NCCN.",
+     "locator": "Gate 7 · Reasonable option 'Radioembolisation — Y-90 or holmium-166' · when; Gate 7 · flag note; What we are not sure about #31"
+    },
+    {
+     "source": "NANETS 2017 medical",
+     "ref": "28609356",
+     "position": "Found no agreement on which embolisation modality to prefer; considered radioembolisation evidence too thin for second line but supported it in later lines for liver-dominant disease.",
+     "locator": "What we are not sure about #31"
+    },
+    {
+     "source": "Kennedy Y-90",
+     "ref": "18525307",
+     "position": "Ten-centre retrospective series of 148 patients reporting 70-month median survival; the roadmap calls this immature, unstandardised for response and not a treatment effect.",
+     "locator": "Gate 7 · Reasonable option 'Radioembolisation — Y-90 or holmium-166' · pref; What we are not sure about #17"
+    },
+    {
+     "source": "Y-90 late toxicity",
+     "ref": "29724520",
+     "position": "Cirrhosis-like morphology or portal-hypertension signs in 15 of 52 (29%) followed beyond a year, more after bilobar treatment; median survival 28.0 months in 93 patients; no radioembolisation-induced liver failure.",
+     "locator": "Gate 2 · Avoid 'Do not offer Y90 radioembolisation without a phenotype-specific rationale.' · caveat; Gate 7 · Reasonable option 'Radioembolisation — Y-90 or holmium-166' · caveat; What we are not sure about #17 and #18"
+    },
+    {
+     "source": "HEPAR PLuS",
+     "ref": "40302310",
+     "position": "Adding holmium SIRT to PRRT gave 2-year hepatic progression-free survival 82% vs 50% in 24 matched pairs, without survival benefit; manufacturer-funded; sequencing safety remains unknown either way.",
+     "locator": "Gate 7 · Reasonable option 'Radioembolisation — Y-90 or holmium-166' · pref; What we are not sure about #19"
+    }
+   ],
+   "divergence": "NCCN allows earlier radioembolisation for specific anatomy and NANETS reached no modality consensus, while the supporting series are retrospective or historically controlled and the late hepatic-injury risk is real but unquantified.",
+   "proposal": "Radioembolisation (Y-90 or holmium-166) is Reasonable, grade C and expertise-dependent for selected lobar or segmental liver-dominant disease with a stated rationale, not restricted to last resort; it is avoided in low-burden disease with a long horizon, where cumulative hepatic radiation raises the threshold. Whether the programme offers it at all is unresolved.",
+   "proposal_locator": "Gate 7 · Reasonable option 'Radioembolisation — Y-90 or holmium-166'; Gate 2 · Avoid 'Do not offer Y90 radioembolisation without a phenotype-specific rationale.'; Gate 7 · flag note",
+   "rationale": "Evidence is minimal and the long treatment horizon makes cumulative hepatic radiation injury the dominant consideration.",
+   "audit": "Registry required if offered; long-term hepatic follow-up."
+  },
+  {
+   "id": "NELM-D5",
+   "n": 5,
+   "question": "Does the programme open a NELM transplant protocol?",
+   "kind": "clinical",
+   "decisions": [
+    "9"
+   ],
+   "positions": [
+    {
+     "source": "Milan-NET transplant",
+     "ref": "27134017",
+     "position": "5- and 10-year survival 97.2% and 88.8% with transplant vs 50.9% and 22.4% without. Roadmap critique: non-randomised, younger recipients, self-selected controls; adjusted benefit 6.82 months at 5 years.",
+     "locator": "Gate 9 · Reasonable 'Offer transplantation only within a trial or prospective registry…' · pref and note"
+    },
+    {
+     "source": "Resection vs transplant",
+     "ref": "35869798",
+     "position": "Same unit: 10-year survival 93% after transplant vs 75% after resection, univariate only, with recipients selected by a test of time; nodal status, absent from Milan criteria, predicted post-transplant survival.",
+     "locator": "Gate 9 · Reasonable 'Offer transplantation only…' · pref and note; Gate 9 · Avoid 'Do not take the published series' criteria…' · caveat"
+    },
+    {
+     "source": "NCCN NE v1.2026",
+     "ref": "nccn",
+     "position": "Deems liver transplantation investigational, acknowledging considerable associated risks.",
+     "locator": "Gate 9 · Reasonable 'Offer transplantation only…' · caveat"
+    },
+    {
+     "source": "ENETS 2024 small intestine",
+     "ref": "38977327",
+     "position": "Reduces transplantation to a rare consideration in selected individuals after primary resection leaves liver-only disease.",
+     "locator": "Gate 9 · Reasonable 'Where disease is limited enough to clear, compare resection…' · pref"
+    },
+    {
+     "source": "OPTN NLRB guidance 2025",
+     "ref": "optn-nlrb",
+     "position": "NELM is a nonstandard, not standardised, MELD exception; the guidance requires G1/G2 histology with Ki-67 under 20%, a portal-drained GEP primary and six months without recurrence, but states no age limit or hepatic burden cutoff.",
+     "locator": "Quick reference 'Milan-NET transplant criteria' · OPTN column; What we are not sure about #23 and #24"
+    }
+   ],
+   "divergence": "The Milan series reports large survival gains that the roadmap judges largely selection-driven, NCCN calls transplantation investigational and ENETS 2024 a rare consideration, so opening a protocol is an institutional judgement on graft stewardship.",
+   "proposal": "Transplantation only within a trial or prospective registry under restrictive criteria (Reasonable, grade C), via the nonstandard review-board route at MMaT-3, after comparing resection or cytoreduction at the same board; never for G3 or carcinoma, extrahepatic disease, an unresected primary, no observation period or no registry entry. Whether to open the protocol remains undecided.",
+   "proposal_locator": "Gate 9 · Reasonable 'Offer transplantation only within a trial or prospective registry…'; Gate 9 · Reasonable 'Where disease is limited enough to clear…'; Gate 9 · Avoid 'Do not list G3 disease…' · note",
+   "rationale": "Non-randomised series: 42 transplanted patients at one centre over 15 years, with recipients 15 years younger, a self-selected comparison arm, a pre-targeted-therapy comparator and 88% marginal grafts; adjustment for measured factors narrowed the benefit to 6.82 months at 5 years and unmeasured selection remains, and 6 of the 9 deaths after transplantation were from transplant sequelae. NCCN still calls transplantation investigational and NELM is a nonstandard exception, not a standardised one. Graft stewardship is an institutional judgement.",
+   "audit": "Registry required if opened."
+  },
+  {
+   "id": "NELM-D6",
+   "n": 6,
+   "question": "Who owns carcinoid-crisis prophylaxis, and how is it verified before each procedure?",
+   "kind": "governance",
+   "decisions": [
+    "8"
+   ],
+   "positions": [
+    {
+     "source": "NCCN NE v1.2026",
+     "ref": "nccn",
+     "position": "Prophylactic octreotide is likely ineffective at preventing intraoperative carcinoid crisis, yet NCCN preserves short-acting octreotide before embolisation for hormonal syndromes.",
+     "locator": "Gate 8 · Avoid 'Do not rely on prophylactic octreotide…' · caveat; Gate 8 · Standard 'Give short-acting octreotide before embolisation…' · note"
+    },
+    {
+     "source": "NANETS 2017 surgical",
+     "ref": "28609357",
+     "position": "Says crisis prevention has not been established while sanctioning an intraoperative octreotide infusion; the roadmap calls this internally conflicted.",
+     "locator": "Gate 8 · Avoid 'Do not rely on prophylactic octreotide…' · caveat and note"
+    },
+    {
+     "source": "NANETS 2020 surgical",
+     "ref": "31856076",
+     "position": "Calls the role of analogues in preventing crisis in pancreatic NET undefined.",
+     "locator": "Gate 8 · Avoid 'Do not rely on prophylactic octreotide…' · caveat"
+    },
+    {
+     "source": "Carcinoid crisis in PRRT",
+     "ref": "39266864",
+     "position": "Narrative review putting crisis at 1–2% after 177Lu-dotatate and warning that octreotide near a dose can block uptake; its own 127 administrations produced no crisis, and it gives no rule for the trade-off.",
+     "locator": "Gate 8 · Standard 'Give short-acting octreotide…' · caveat; Gate 8 · Avoid 'Do not rely on prophylactic octreotide…' · note"
+    }
+   ],
+   "divergence": "Sources agree prophylaxis is unproven but differ on intraoperative octreotide and on incidence (1–2% after PRRT versus 24–30% intraoperative events in surgical series), so the roadmap makes preparedness, not prophylaxis, the safeguard.",
+   "proposal": "Every functional patient has a written, procedure-specific crisis plan with a named owner, rescue octreotide in the room and immediate haemodynamic treatment (Standard, grade D). The board names the prophylaxis owner separately, prophylaxis is documented before every procedure and audited for adherence, and octreotide near PRRT is decided explicitly with nuclear medicine.",
+   "proposal_locator": "Gate 8 · Standard 'Write a procedure-specific crisis plan…'; Operations · board meeting · Output; Operations · dashboard · Functional disease; Gate 8 · Standard 'Give short-acting octreotide…' · caveat",
+   "rationale": "Not an evidence question. It is a named safety process that fails when it lives in individual memory.",
+   "audit": "Audit: prophylaxis documented before every procedure in functional patients."
+  },
+  {
+   "id": "NELM-D7",
+   "n": 7,
+   "question": "Re-biopsy policy for suspected grade progression or transformation.",
+   "kind": "clinical",
+   "decisions": [
+    "1",
+    "4"
+   ],
+   "positions": [
+    {
+     "source": "Itanet 2024 RLT",
+     "ref": "39395114",
+     "position": "Grades re-evaluation before radioligand therapy when behaviour changes 3a-A, stronger than the roadmap’s ‘consider’.",
+     "locator": "Gate 1 · Reasonable 'Consider re-biopsy on unexpected behavioural change or discordant FDG avidity.' · note"
+    }
+   ],
+   "divergence": "Itanet supports re-evaluation before radioligand therapy on behavioural change, but no study defines the trigger or interval, which is why the roadmap holds re-biopsy at grade C.",
+   "proposal": "Consider re-biopsy (Reasonable, grade C) on unexpected behavioural change or discordant FDG avidity, particularly where the original grading is years old or the disease has changed pace, but not as a scheduled ritual; grade is reassessed on any metachronously sampled specimen. Whether re-biopsy becomes a required step before PRRT remains open for local ratification.",
+   "proposal_locator": "Gate 1 · Reasonable 'Consider re-biopsy on unexpected behavioural change…' · pref, caveat and note; Gate 1 · Standard 'Get a biopsy with the Ki-67 index…' · pref",
+   "rationale": "No evidence defines the trigger or interval; behaviour-driven in practice.",
+   "audit": "Audit: re-biopsy rate, change in pathway when performed."
+  },
+  {
+   "id": "NELM-D8",
+   "n": 8,
+   "question": "Who owns subsequent NCCN and OPTN update checks, and on what cycle?",
+   "kind": "governance",
+   "decisions": [],
+   "positions": [],
+   "divergence": "No source positions; programme decision.",
+   "proposal": "Source reconciliation is complete in this version (NCCN v1.2026; OPTN Policy 9 checked 1 October 2026). A named owner should verify each later NCCN edition and current OPTN allocation requirements on an agreed cycle, tracked on the dashboard, and ratify the documented institutional positions; the owner and cycle are not yet named.",
+   "proposal_locator": "Decisions table #8 · why; Operations · dashboard · Source recency; Provenance",
+   "rationale": "Source reconciliation is complete in this version. An owner is assigned to verify subsequent editions and current allocation requirements, ratify the documented institutional positions, and maintain the update cycle.",
+   "audit": "Named owner plus edition and date plus update cycle."
+  },
+  {
+   "id": "NELM-D9",
+   "n": 9,
+   "question": "Is hepatic debulking offered in well-differentiated G3 disease, and under what conditions?",
+   "kind": "clinical",
+   "decisions": [
+    "4",
+    "5"
+   ],
+   "positions": [
+    {
+     "source": "NANETS 2017 surgical",
+     "ref": "28609357",
+     "position": "Refers grade 3 liver metastases for systemic therapy rather than cytoreduction.",
+     "locator": "Gate 4 · flag note; What we are not sure about #34"
+    },
+    {
+     "source": "NANETS 2020 surgical",
+     "ref": "31856076",
+     "position": "Carcinoma should not be resected; localised well-differentiated G3 may be resected within multimodal therapy, with liver cytoreduction often not indicated, while conceding its well-differentiated G3 recommendations are unsupported.",
+     "locator": "Gate 4 · flag note; What we are not sure about #34"
+    },
+    {
+     "source": "ENETS 2023 NEC",
+     "ref": "36924180",
+     "position": "Excludes well-differentiated G3 NET from scope by design; advises against metastasectomy in metastatic digestive carcinoma only at grade 5D.",
+     "locator": "What we are not sure about #34; Gate 4 · Standard 'Poorly differentiated neuroendocrine carcinoma: platinum–etoposide…' · caveat"
+    },
+    {
+     "source": "ASCO 2023 systemic",
+     "ref": "37774329",
+     "position": "Allows the whole G1–G2 menu in G3 disease on informal consensus rated very low quality, and supports no Ki-67 cutoff.",
+     "locator": "What we are not sure about #34"
+    },
+    {
+     "source": "NETTER-2",
+     "ref": "38851203",
+     "position": "Gives this phenotype the strongest randomised systemic evidence on the page, which is why the surgical question will reach the board; it does not address surgery.",
+     "locator": "Decisions table #9 · why; What we are not sure about #34"
+    }
+   ],
+   "divergence": "Both NANETS papers lean against G3 liver cytoreduction but NANETS 2020 calls its own G3 advice unsupported, ENETS 2023 is silent by scope and ASCO permits the G1–G2 menu on very low-quality consensus.",
+   "proposal": "The roadmap states no position on G3 hepatic debulking. It keeps eligibility for a G3 systemic option distinct from eligibility for cytoreduction or transplantation, and alignment area 15 asks whether G3 debulking should join the Avoid column except for selected limited disease within multimodal therapy.",
+   "proposal_locator": "Gate 4 · flag note; Gate 4 · Avoid 'Do not apply a universal platinum regimen to all G3 NET…'; What we are not sure about #34",
+   "rationale": "The roadmap is silent and the guidelines conflict. Both NANETS surgical papers advise against cytoreducing G3 liver metastases, NANETS 2020 conceding that its well-differentiated G3 recommendations are unsupported; ENETS 2023 excludes well-differentiated G3 by scope; ASCO permits the G1–G2 menu on very low quality informal consensus. NETTER-2 meanwhile gives this phenotype the strongest randomised systemic evidence on the page, so the surgical question will be asked at board. Alignment area 15.",
+   "audit": "Registry: every G3 hepatic operation with differentiation, Ki-67, residual disease and liver progression-free survival."
+  },
+  {
+   "id": "NELM-D10",
+   "n": 10,
+   "question": "Is first-line PRRT offered to a patient who has already had liver-directed therapy?",
+   "kind": "clinical",
+   "decisions": [
+    "6",
+    "7"
+   ],
+   "positions": [
+    {
+     "source": "NETTER-2",
+     "ref": "38851203",
+     "position": "Excluded any previous hepatic artery embolisation or radiofrequency ablation and required uptake score 3–4 in every target lesion, so its first-line evidence does not describe this patient.",
+     "locator": "Gate 6 · Standard 'Document somatostatin-receptor uptake…' · note; Gate 4 · Standard option '177Lu-DOTATATE…' · caveat"
+    },
+    {
+     "source": "NANETS 2017 medical",
+     "ref": "28609356",
+     "position": "States that cumulative hepatic radiation from radioembolisation followed by PRRT is unstudied.",
+     "locator": "What we are not sure about #12; Gate 6 · Standard 'Document somatostatin-receptor uptake…' · note"
+    },
+    {
+     "source": "NANETS/SNMMI PRRT",
+     "ref": "32015164",
+     "position": "Prior liver-directed therapy raises concern for PRRT hepatotoxicity.",
+     "locator": "What we are not sure about #12; Decisions table #10 · why"
+    },
+    {
+     "source": "HEPAR PLuS",
+     "ref": "40302310",
+     "position": "Combined PRRT with holmium SIRT in 24 matched pairs; per the roadmap, whether sequencing radioembolisation and PRRT is safe remains unknown in either direction.",
+     "locator": "What we are not sure about #19; Gate 6 · Standard 'Document somatostatin-receptor uptake…' · note"
+    }
+   ],
+   "divergence": "No source has tested first-line PRRT after liver-directed therapy: NETTER-2 excluded such patients and NANETS and NANETS/SNMMI flag cumulative hepatotoxicity as unstudied or concerning.",
+   "proposal": "No explicit answer. Before every PRRT course the roadmap requires uptake above normal liver in target disease and documented renal, marrow and hepatic reserve, and reviews cumulative hepatic-directed exposure before either PRRT or radioembolisation, recording it in the registry; it notes the first-line evidence does not describe previously treated patients.",
+   "proposal_locator": "Gate 6 · Standard 'Document somatostatin-receptor uptake greater than normal liver…' and note; Operations · dashboard · Radioembolisation; What we are not sure about #12",
+   "rationale": "NETTER-2 excluded any previous hepatic artery embolisation or radiofrequency ablation, and required uptake score 3 or 4 in every target lesion, so the first-line evidence does not describe this patient at all. NANETS states cumulative hepatic radiation from radioembolisation followed by PRRT is unstudied, and NANETS/SNMMI that prior liver-directed therapy raises concern for PRRT hepatotoxicity.",
+   "audit": "Registry: cumulative hepatic-directed exposure before each PRRT course, with hepatic and renal function."
+  },
+  {
+   "id": "NELM-D11",
+   "n": 11,
+   "question": "Does the programme reproduce or restate the NCCN position against drug-eluting embolics, and on what basis?",
+   "kind": "governance",
+   "decisions": [
+    "7"
+   ],
+   "positions": [
+    {
+     "source": "NCCN NE v1.2026",
+     "ref": "nccn",
+     "position": "Advises against drug-eluting embolics in NET because they carry increased hepatobiliary toxicity in this population.",
+     "locator": "Gate 7 · Avoid 'Avoid drug-eluting embolics in NET.' · caveat"
+    },
+    {
+     "source": "DEB-TACE phase 2",
+     "ref": "22722717",
+     "position": "Stopped on its safety endpoint: biloma in 7 of 13 (54%), two deaths. Roadmap critique: interrupted interim analysis, invisible beads with a tactile endpoint, injury in lowest-burden patients, rate out of line with other series.",
+     "locator": "Gate 7 · Avoid 'Avoid drug-eluting embolics in NET.' · caveat and note"
+    },
+    {
+     "source": "ENETS 2024 small intestine",
+     "ref": "38977327",
+     "position": "Reports that RETNET’s drug-eluting-bead arm closed for increased severe complications.",
+     "locator": "Gate 7 · Avoid 'Avoid drug-eluting embolics in NET.' · note"
+    },
+    {
+     "source": "RETNET protocol",
+     "ref": "30016989",
+     "position": "Protocol paper only, with no outcome data; its power calculation assumed drug-eluting and lipiodol chemoembolisation equally safe, which the later arm closure contradicted.",
+     "locator": "What we are not sure about #15"
+    }
+   ],
+   "divergence": "All sources point to avoidance, but the roadmap judges the basis thin, one 13-patient interim analysis plus an arm closure reported only in a guideline, so the position is precautionary rather than a demonstrated class effect.",
+   "proposal": "Keep the avoidance (Avoid, downgraded to grade C) and state its basis: a precautionary institutional choice, justified because the biliary harm is irreversible and two patients died, not a demonstrated class effect; use bland embolisation or conventional TACE instead. Any drug-eluting embolic use in NET is recorded as an exception with named approval.",
+   "proposal_locator": "Gate 7 · Avoid 'Avoid drug-eluting embolics in NET.' · pref and note; What we are not sure about #16; Decisions table #11 · audit",
+   "rationale": "The position is kept but it is a precautionary institutional choice, not a demonstrated class effect: a 13-patient interrupted interim analysis in which bilomas fell on the lowest-burden patients, with invisible beads and a tactile endpoint, and a biliary injury rate far out of line with other drug-eluting series. The confirmatory signal is an arm closure in an ongoing trial reported in a guideline. Stating the basis matters because the harm is irreversible and two patients died.",
+   "audit": "Audit: any drug-eluting embolic use in NET recorded as an exception with named approval."
+  },
+  {
+   "id": "NELM-D12",
+   "n": 12,
+   "question": "Who corrects the shared liver-directed-therapy matrix entry that attributes outcome figures to RETNET?",
+   "kind": "governance",
+   "decisions": [
+    "7"
+   ],
+   "positions": [
+    {
+     "source": "RETNET protocol",
+     "ref": "30016989",
+     "position": "The depot paper is the published study protocol and reports no response, progression-free survival or survival data, so any outcome figure attributed to it is unsourced.",
+     "locator": "What we are not sure about #15; Gate 7 · flag note"
+    },
+    {
+     "source": "ENETS 2024 small intestine",
+     "ref": "38977327",
+     "position": "Is where the closure of RETNET’s drug-eluting-bead arm is reported, the trial’s only practice-changing result so far.",
+     "locator": "What we are not sure about #15; Gate 7 · Avoid 'Avoid drug-eluting embolics in NET.' · note"
+    }
+   ],
+   "divergence": "No source disagreement: the shared matrix cites outcome figures the RETNET paper does not contain, and who corrects it is a programme decision.",
+   "proposal": "No efficacy figure on the NELM page is attributed to RETNET. The shared matrix entry should be corrected at its source and the other pathways checked for the same entry, with a named owner reconciling matrix entries against the depot abstracts each cycle; the owner is not yet named.",
+   "proposal_locator": "Gate 7 · flag note; What we are not sure about #15; Decisions table #12 · why and audit",
+   "rationale": "The RETNET paper is a published protocol with no outcome data of any kind, so any response, progression-free survival or survival figure attributed to it is unsourced. The matrix is shared across pathways, so the correction has to be made at its source and the other pathways checked for the same entry.",
+   "audit": "Source-recency check: matrix entries reconciled against the depot abstracts by a named owner each cycle."
+  },
+  {
+   "id": "NELM-D13",
+   "n": 13,
+   "question": "Which surveillance interval does the programme adopt for observed low-burden disease, and is observation documented as an equal alternative to an immediate analogue?",
+   "kind": "clinical",
+   "decisions": [
+    "2"
+   ],
+   "positions": [
+    {
+     "source": "NCCN NE v1.2026",
+     "ref": "nccn",
+     "position": "Observation with serial imaging is an option at low tumour burden, with imaging every 12 weeks to 12 months.",
+     "locator": "Gate 2 · Reasonable option 'Observation with scheduled imaging' · when and caveat"
+    },
+    {
+     "source": "ASCO 2023 systemic",
+     "ref": "37774329",
+     "position": "Suggests imaging every 3 to 6 months and places the observation evidence strongest at Ki-67 under 10%.",
+     "locator": "Gate 2 · Reasonable option 'Observation with scheduled imaging' · when; What we are not sure about #30"
+    },
+    {
+     "source": "NANETS 2017 medical",
+     "ref": "28609356",
+     "position": "Suggests 3 to 4 months if observing; the midgut panel split about evenly between analogue and observation and accepted either, which the roadmap reads as absent consensus rather than endorsement.",
+     "locator": "What we are not sure about #30; Decisions table #13 · why"
+    },
+    {
+     "source": "ENETS 2024 small intestine",
+     "ref": "38977327",
+     "position": "Limits watch and wait to selected small-intestine NET that are G1, asymptomatic, low-burden and/or stable (B-2b).",
+     "locator": "Gate 2 · Reasonable option 'Observation with scheduled imaging' · when"
+    },
+    {
+     "source": "ESMO 2020 GEP-NEN",
+     "ref": "32272208",
+     "position": "Restricts watch and wait to Ki-67 under 2% with low burden and stable disease [IV, A].",
+     "locator": "Gate 2 · Reasonable option 'Observation with scheduled imaging' · when"
+    }
+   ],
+   "divergence": "No trial compares intervals, and the published intervals (12 weeks–12 months, 3–6 months, 3–4 months) and eligibility limits (selected G1, Ki-67 under 2% or under 10%) disagree, with none derived.",
+   "proposal": "Observation is a Reasonable alternative (grade B) for asymptomatic, low-volume, radiologically stable disease: imaging every 3 to 4 months at first, about every 6 months once stable, treating on progression or symptoms. The interval is a local choice within the NCCN range; whether observation is a documented equal alternative and grade B fits is alignment area 3.",
+   "proposal_locator": "Gate 2 · Reasonable option 'Observation with scheduled imaging' · pref, caveat and flag note; What we are not sure about #30",
+   "rationale": "No trial compares intervals. NCCN allows every 12 weeks to 12 months, ASCO suggests 3 to 6 months, NANETS suggests 3 to 4 months while splitting evenly on whether to observe at all, ENETS restricts watch and wait to selected G1 and ESMO to Ki-67 under 2%. The roadmap's 3-to-4-month choice is local, and alignment area 3 asks whether observation is a documented alternative and whether grade B fits it.",
+   "audit": "Audit: documented interval and the alternative considered on every observed patient; progression at first scan after a missed interval."
+  },
+  {
+   "id": "NELM-D14",
+   "n": 14,
+   "question": "Who confirms the OPTN imaging-timing wording with the review board before the first NELM filing?",
+   "kind": "governance",
+   "decisions": [
+    "9"
+   ],
+   "positions": [
+    {
+     "source": "OPTN NLRB guidance 2025",
+     "ref": "optn-nlrb",
+     "position": "Requires extrahepatic workup, including receptor scintigraphy or Ga-68 imaging or PET, at least 3 months before the initial or extension request; read literally, a floor on the imaging’s age.",
+     "locator": "Gate 9 · Standard 'Hold the allocation record and the renewal ownership from the start…' · caveat; What we are not sure about #25"
+    },
+    {
+     "source": "Milan-NET transplant",
+     "ref": "27134017",
+     "position": "Requires restaging at six months, by total-body CT or MRI with octreoscan or Ga-68 PET, to show no extrahepatic spread.",
+     "locator": "Quick reference 'Milan-NET transplant criteria' · row 'No extrahepatic spread at six-month restaging…'"
+    }
+   ],
+   "divergence": "Read literally, the OPTN wording sets a minimum age for the imaging, whereas clinicians assume a recency requirement, and the intended meaning has not been confirmed with the review board.",
+   "proposal": "The page reproduces the OPTN wording unchanged rather than rewriting it as within three months, keeps current clinical staging, and confirms the intended timing with the review process before filing. The allocation record logs imaging and submit dates with named coordinator and physician sign-off; who confirms the wording is not yet named.",
+   "proposal_locator": "Gate 9 · Standard 'Hold the allocation record and the renewal ownership from the start…' · pref and caveat; What we are not sure about #25; Decisions table #14 · audit",
+   "rationale": "The guidance requires extrahepatic workup 'at least 3 months prior to initial or extension request (submit date)', which read literally sets a minimum age for the imaging rather than the recency requirement a clinician assumes. The page reproduces the wording unchanged rather than correcting it; somebody has to resolve the intent before a listing depends on it.",
+   "audit": "Allocation record: imaging dates against submit dates for every request and extension, with the named coordinator's sign-off."
+  }
+ ]
+}

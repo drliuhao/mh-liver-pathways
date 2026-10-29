@@ -163,8 +163,8 @@ window.ContentHierarchyData = {
       },
       {
         "source": "Hepatic arterial infusion: selection, evidence and delivery",
-        "label": "HAI selection and delivery",
-        "kind": "guide",
+        "label": "Hepatic arterial infusion: selection and evidence",
+        "kind": "evidence",
         "decisions": [
           "2",
           "3",
@@ -258,8 +258,8 @@ window.ContentHierarchyData = {
       },
       {
         "source": "Hepatic arterial infusion: selection, evidence and delivery",
-        "label": "HAI selection and delivery",
-        "kind": "guide",
+        "label": "Hepatic arterial infusion: selection and evidence",
+        "kind": "evidence",
         "decisions": [
           "4",
           "5",

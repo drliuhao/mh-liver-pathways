@@ -1,0 +1,520 @@
+{
+ "slug": "pnet",
+ "prefix": "pNET",
+ "questions": [
+  {
+   "id": "pNET-D1",
+   "n": 1,
+   "question": "For an incidental nonfunctional tumour of 1 to 2 cm, does the programme default to observation or to individualised decision?",
+   "kind": "clinical",
+   "decisions": [
+    "4"
+   ],
+   "positions": [
+    {
+     "source": "NCCN Neuroendocrine and Adrenal Tumors",
+     "ref": "nccn",
+     "position": "Algorithm allows observation or pancreatectomy at 1–2 cm; the surgical principles call observation the recommended course for G1 under 2 cm and suggest considering resection for G2.",
+     "locator": "Quick reference 'The 2 cm threshold — who says what' · rows 'NCCN — algorithm' and 'NCCN — surgical principles'; Decisions table #1 · why"
+    },
+    {
+     "source": "NANETS 2020 surgical",
+     "ref": "31856076",
+     "position": "Individualise the 1–2 cm decision on age, comorbidity, growth, symptoms, imaging, grade, extent of resection, patient wishes and follow-up access; the Delphi consensus it cites reached no agreement in this band.",
+     "locator": "Quick reference 'The 2 cm threshold…' · rows 'NANETS 2020' and 'Delphi consensus'"
+    },
+    {
+     "source": "ENETS 2023 NF-PanNET",
+     "ref": "37877341",
+     "position": "Read in full: active surveillance at 1 cm or less without duct dilation; above 1 cm to 2 cm personalised to the resection required and comorbidity with no rule; surgery strongly recommended above 2 cm (level 3, grade B).",
+     "locator": "Gate 4 · Standard 'Observation is the default…' · caveat; What we are not sure about #6"
+    },
+    {
+     "source": "ASPEN interim",
+     "ref": "35986682",
+     "position": "Authors favour surveillance to 2 cm while individualising above 1 cm, in younger patients and when lesions grow. Roadmap critique: no comparison of strategies was made and the 20% aggressive-histology figure comes only from resected patients.",
+     "locator": "Quick reference 'The 2 cm threshold…' · row 'ASPEN authors' own conclusion'; What we are not sure about #3"
+    },
+    {
+     "source": "MEN1 2025 guideline",
+     "ref": "40523372",
+     "position": "Its systematic review of 37 studies (1,814 patients) showed surgery and surveillance for lesions up to 2 cm did not differ in metastasis or mortality, with low to very low certainty; MEN1-specific, so not directly transferable.",
+     "locator": "Gate 4 · Standard 'State the actual evidence for the threshold…' · note"
+    }
+   ],
+   "divergence": "The guidelines agree at 1 cm but every source hands the 1–2 cm band back to the clinician, and the only systematic comparison found no difference at low certainty, so any default is a judgement rather than a finding.",
+   "proposal": "Observation is the default only at 1 cm or less. In the 1–2 cm band the roadmap sets no default: 2 cm marks where the conversation changes, and the board decides on grade, growth rate, duct calibre, calcification, location, age and comorbidity, telling the patient what the evidence actually is.",
+   "proposal_locator": "Gate 4 · Standard 'Observation is the default for an incidental, low-grade, non-functional tumour of 1 cm or less…'; Gate 4 · Avoid 'Do not treat 2 cm as a biological boundary.' · pref; Gate 4 · Standard 'State the actual evidence for the threshold when you offer observation…'; What we are not sure about #1 and #6",
+   "rationale": "NCCN's surgical principles say a G1 tumour under 2 cm can be safely observed and that this is the recommended course; NANETS says individualise everything between 1 and 2 cm; the Delphi consensus NANETS cites reached no agreement in that band at all; ENETS 2023, read in full, observes 1 cm or less and personalises above 1 cm to the resection required and the patient's comorbidities, with no rule offered; and the ASPEN investigators, whose data NCCN cites in support of observation, conclude that management should be personalised above 1 cm. Every source hands the 1-2 cm band back to the clinician, which means the decision is made by whoever is in the room unless a default is chosen. The full-text read adds one thing: the only systematic comparison of the two strategies at this size found no difference in metastasis or mortality, at low to very low certainty, so a default either way is a judgement and not a finding.",
+   "audit": "Registry: size, grade, duct calibre, calcification, management chosen, growth, crossover to surgery with reason, resection pathology."
+  },
+  {
+   "id": "pNET-D2",
+   "n": 2,
+   "question": "Is a dilated main pancreatic duct an absolute indication to resect a small nonfunctional tumour?",
+   "kind": "clinical",
+   "decisions": [
+    "4",
+    "2"
+   ],
+   "positions": [
+    {
+     "source": "ASPEN interim",
+     "ref": "35986682",
+     "position": "Authors state surgery is always mandatory with a dilated main duct; a duct over 3 mm independently predicted the decision to operate (OR 3.4), an association with surgery rather than with outcome.",
+     "locator": "What we are not sure about #7; Decisions table #2 · why"
+    },
+    {
+     "source": "ENETS 2023 NF-PanNET",
+     "ref": "37877341",
+     "position": "Strongly recommends surgery for any nonfunctioning tumour with main pancreatic duct dilation (level 3, grade B).",
+     "locator": "Gate 4 · Standard 'Observation is the default…' · caveat; Quick reference 'The 2 cm threshold…' · row 'ENETS 2023'"
+    },
+    {
+     "source": "NCCN Neuroendocrine and Adrenal Tumors",
+     "ref": "nccn",
+     "position": "Does not list duct dilatation as a resection trigger anywhere in its algorithm.",
+     "locator": "What we are not sure about #7"
+    }
+   ],
+   "divergence": "ASPEN’s authors and ENETS treat a dilated duct as a resection indication while NCCN does not; in ASPEN it flagged the two aggressive sub-centimetre tumours, yet only 5 of 19 aggressive tumours had it.",
+   "proposal": "The roadmap follows ASPEN and ENETS in treating a dilated duct as a strong reason to resect a small nonfunctional tumour, and a non-dilated duct is a criterion for observation, but it grades this D as a rule, warns against turning it into a threshold, and leaves absolute-indication status to local approval.",
+   "proposal_locator": "What we are not sure about #7; Gate 4 · criteria; Gate 2 · Standard 'Record the main pancreatic duct calibre…' · caveat",
+   "rationale": "ASPEN's authors state that surgery is always mandatory with a dilated main pancreatic duct and ENETS 2023 strongly recommends it; NCCN does not list duct dilatation as a resection trigger anywhere. The supporting evidence is association rather than outcome - a duct above 3 mm independently predicted the decision to operate (OR 3.4, p<0.001) - and the threshold used is the study's own. The full-text read sharpens the histological argument in both directions: duct dilatation identified the only two aggressive sub-centimetre tumours in ASPEN, and yet only 5 of the 19 tumours with an aggressive feature had a radiological duct over 3 mm at all.",
+   "audit": "Audit: duct calibre at diagnosis against resection pathology and against growth under observation."
+  },
+  {
+   "id": "pNET-D3",
+   "n": 3,
+   "question": "Does the size threshold for resection differ by race?",
+   "kind": "clinical",
+   "decisions": [
+    "4",
+    "6"
+   ],
+   "positions": [
+    {
+     "source": "Zheng-Pywell 2022",
+     "ref": "35380181",
+     "position": "Nodal metastasis under 2 cm: 23% and 21% in Black vs 5% and 12% in white patients in two datasets. Roadmap critique: overlapping resected-only cohorts, sub-1 cm finding not replicated, no grade or access measures.",
+     "locator": "Gate 6 · Standard 'Where a parenchyma-sparing operation is planned…' · note; What we are not sure about #8"
+    },
+    {
+     "source": "NCCN Neuroendocrine and Adrenal Tumors",
+     "ref": "nccn",
+     "position": "Reproduces the finding without altering the algorithm.",
+     "locator": "Decisions table #3 · why"
+    }
+   ],
+   "divergence": "The signal recurs in two overlapping resected datasets, but NCCN leaves its algorithm unchanged and the roadmap judges the evidence too thin to set a race-specific threshold.",
+   "proposal": "No race-specific threshold is stated. The roadmap judges the signal strong enough to require a stated local position and an annual audit of nodal positivity by size band and race, but not strong enough for the page to set one.",
+   "proposal_locator": "What we are not sure about #8; Decisions table #3 · audit",
+   "rationale": "Nodal metastasis below 2 cm was 23% and 21% in Black patients against 5% and 12% in white patients in two independent datasets (p<0.01 in both). NCCN reproduces the finding without altering the algorithm. The programme needs a stated position, and a stated reason for it, rather than silence.",
+   "audit": "Audit: nodal positivity by size band and by race in the programme's own resected patients, reported annually."
+  },
+  {
+   "id": "pNET-D4",
+   "n": 4,
+   "question": "What is the non-localised sporadic gastrinoma pathway, and where is it done?",
+   "kind": "clinical",
+   "decisions": [
+    "3"
+   ],
+   "positions": [
+    {
+     "source": "NCCN Neuroendocrine and Adrenal Tumors",
+     "ref": "nccn",
+     "position": "Offers observation or exploration with duodenotomy, intraoperative ultrasound and periduodenal node dissection.",
+     "locator": "What we are not sure about #16; Decisions table #4 · why"
+    },
+    {
+     "source": "NANETS 2020 surgical",
+     "ref": "31856076",
+     "position": "Recommends against routine exploration and asks for referral to a centre with expertise, arguing the surgical data predate modern imaging and that tumours found at exploration were the prognostically best.",
+     "locator": "What we are not sure about #16"
+    },
+    {
+     "source": "Norton 2006",
+     "ref": "16926567",
+     "position": "160 explored vs 35 unoperated: liver metastases 5% vs 29%, 15-year disease-related survival 98% vs 74%. Roadmap critique: non-random controls, unblinded cause-of-death adjudication, unequal imaging, mostly duodenal or nodal primaries.",
+     "locator": "Gate 3 · Standard 'A localised, biochemically confirmed functional tumour is resected…' · note; What we are not sure about #16"
+    }
+   ],
+   "divergence": "NCCN keeps exploration as an option while NANETS 2020 advises against routine exploration, and the strongest datum for operating is a non-randomised comparison whose counter-argument the roadmap calls unrefuted.",
+   "proposal": "No proposal stated in the roadmap; the programme decides. The page deliberately leaves non-localised sporadic gastrinoma unsettled, setting the two guideline positions side by side, and asks for a named local position and a named referral centre rather than case-by-case improvisation.",
+   "proposal_locator": "What we are not sure about #16; Decisions table #4 · why",
+   "rationale": "NCCN offers observation or exploration with duodenotomy; NANETS 2020 recommends against routine exploration and asks for referral to a centre with expertise. Both cannot be the local position, and a patient who arrives with Zollinger-Ellison syndrome and no target on imaging needs the answer to already exist.",
+   "audit": "Registry: localisation route, operation or observation, biochemical cure at 6 months and 5 years, referral destination where used."
+  },
+  {
+   "id": "pNET-D5",
+   "n": 5,
+   "question": "Minimum annual volume for enucleation and for central pancreatectomy at this centre.",
+   "kind": "governance",
+   "decisions": [
+    "5"
+   ],
+   "positions": [
+    {
+     "source": "Hüttner 2015",
+     "ref": "26041666",
+     "position": "Meta-analysis of 22 observational studies: fistula after enucleation 25.5% vs 19.7% (OR 2.09), the excess losing significance only in studies doing over 20 in total and at least 4 a year, a threshold the reviewers defined themselves.",
+     "locator": "Gate 5 · Reasonable 'Enucleation and central pancreatectomy are legitimate…' · caveat and note; What we are not sure about #12"
+    },
+    {
+     "source": "ENETS 2023 NF-PanNET",
+     "ref": "37877341",
+     "position": "Puts pancreatic resection morbidity as high as 50% and mortality as high as 3%, even at high-volume centres.",
+     "locator": "Gate 5 · Reasonable 'Enucleation and central pancreatectomy are legitimate…' · pref"
+    }
+   ],
+   "divergence": "The only volume signal is a threshold the meta-analysis authors defined post hoc, and the roadmap cites no volume threshold for central pancreatectomy, so the number is a governance choice.",
+   "proposal": "Enucleation and central pancreatectomy are Reasonable (grade C, EXPERTISE) only at a centre doing enough of them, with the nodal question settled before the incision. The roadmap sets no number and calls the threshold a governance choice, to be audited per surgeon per year with fistula grade and new endocrine and exocrine insufficiency.",
+   "proposal_locator": "Gate 5 · Reasonable 'Enucleation and central pancreatectomy are legitimate…'; What we are not sure about #12; Decisions table #5 · audit",
+   "rationale": "The fistula excess after enucleation disappeared in pooled studies only in centres performing more than 20 in total and more than 4 a year. Central pancreatectomy carries a 35% pooled fistula rate and single-centre morbidity of 58% to 72%. These are volume-conditional operations and the threshold is a governance choice. [EXPERTISE]",
+   "audit": "Audit: enucleations and central pancreatectomies per surgeon per year, fistula grade, new endocrine and exocrine insufficiency."
+  },
+  {
+   "id": "pNET-D6",
+   "n": 6,
+   "question": "Does the group accept NCCN's 55% Ki-67 split for well-differentiated grade 3 tumours?",
+   "kind": "clinical",
+   "decisions": [
+    "8",
+    "1"
+   ],
+   "positions": [
+    {
+     "source": "NCCN Neuroendocrine and Adrenal Tumors",
+     "ref": "nccn",
+     "position": "Offers neoadjuvant systemic therapy case by case for localised G3 disease at Ki-67 55% or above, while flagging the data as limited and Ki-67 as heterogeneous within tumours and across biopsies.",
+     "locator": "Gate 8 · Standard 'A localised well-differentiated G3 tumour is evaluated for resection…' · pref; Decisions table #6 · why"
+    },
+    {
+     "source": "NORDIC NEC",
+     "ref": "22967994",
+     "position": "305 advanced GI carcinomas: platinum response 15% below vs 42% at or above 55%. Roadmap critique: cut point derived in 42 patients, unvalidated, survival longer below it, and Ki-67 dropped from both multivariable models.",
+     "locator": "Gate 8 · Reasonable 'Treat the Ki-67 55% split as a prompt for discussion…' · pref and caveat; What we are not sure about #19"
+    },
+    {
+     "source": "Tang 2016",
+     "ref": "26482044",
+     "position": "Well-differentiated tumours with a high-grade component differ from carcinoma in genotype and survival, and matched at stage IV did not differ from G1–G2; the roadmap concludes differentiation, not Ki-67, decides operability.",
+     "locator": "Gate 8 · Avoid 'Do not route a high-grade tumour to a pathway on the Ki-67 alone.' · note; What we are not sure about #20"
+    }
+   ],
+   "divergence": "NCCN uses 55% to trigger case-by-case neoadjuvant therapy, but its derivation study shows the cut point is not independently prognostic, and the roadmap reads Tang as making differentiation the deciding variable.",
+   "proposal": "Treat the Ki-67 55% split as a prompt for discussion, not a decision rule (Reasonable, grade D), and do not use it to decide an operation; route high-grade tumours on differentiation first, then grade. Whether the group formally accepts NCCN’s split is the open decision.",
+   "proposal_locator": "Gate 8 · Reasonable 'Treat the Ki-67 55% split as a prompt…'; Gate 8 · Avoid 'Do not route a high-grade tumour to a pathway on the Ki-67 alone.'; What we are not sure about #19",
+   "rationale": "The cutoff was derived by receiver-operating-characteristic analysis in 42 randomly selected patients within a 305-patient retrospective cohort of advanced gastrointestinal neuroendocrine carcinoma and then applied to the rest of that same cohort with no external validation. Read in full, the study shows that median survival was longer below the cutoff than above it (14 against 10 months, p<0.001) and that Ki-67 dropped out of both the full and the final multivariable models because of its association with primary site - so the marker is not independently prognostic in its own derivation study. NCCN itself flags the data as limited and Ki-67 as heterogeneous within a tumour and across serial biopsies, and the one surgical series to test the line found no survival difference either side of it.",
+   "audit": "Registry: Ki-67 at each biopsy, receptor and FDG status, differentiation call, treatment given, survival."
+  },
+  {
+   "id": "pNET-D7",
+   "n": 7,
+   "question": "Who owns an observed tumour's next scan, and what happens when it is missed?",
+   "kind": "governance",
+   "decisions": [
+    "4",
+    "9"
+   ],
+   "positions": [
+    {
+     "source": "NCCN Neuroendocrine and Adrenal Tumors",
+     "ref": "nccn",
+     "position": "Applies the same surveillance schedule to patients in whom observation was chosen as to resected patients.",
+     "locator": "Gate 9 · Avoid 'Do not surveil an observed primary less carefully than a resected one.' · pref"
+    },
+    {
+     "source": "ASPEN interim",
+     "ref": "35986682",
+     "position": "Patient and centre preference accounted for 84% of stated surgical indications and anxiety independently predicted operating, while growth drove surgery in only 4 of 406 surveillance patients.",
+     "locator": "Gate 4 · Avoid 'Do not let an observation decision be made without naming who owns the next scan…' · caveat; Gate 9 · Avoid 'Do not surveil an observed primary less carefully than a resected one.' · pref"
+    },
+    {
+     "source": "PANDORA",
+     "ref": "33783475",
+     "position": "Adherence was poor: 22% had the scheduled 3-month EUS and 28% and 15% had no imaging at 6 and 12 months; three of six operations had no protocol indication.",
+     "locator": "Gate 4 · Standard 'State the actual evidence for the threshold…' · caveat; Gate 4 · Avoid 'Do not let an observation decision be made…' · caveat"
+    }
+   ],
+   "divergence": "No source assigns ownership; the cohorts show that unowned or poorly kept surveillance drifts into operations driven by preference and anxiety rather than growth.",
+   "proposal": "Every observation decision names one owner, one date and one imaging modality in the board output, plus contrast agent, interval and the finding that triggers resection; observed patients return to the referring clinician with a written schedule and are surveilled no less carefully than resected ones. The response to a missed scan is not specified.",
+   "proposal_locator": "Gate 4 · Avoid 'Do not let an observation decision be made without naming who owns the next scan…'; Operations · board meeting · Output and Referring relationships; Gate 9 · Avoid 'Do not surveil an observed primary less carefully…'",
+   "rationale": "Not an evidence question. The entire safety case for observation rests on detecting growth, and in ASPEN patient preference and centre preference together accounted for 84% of the stated indications for surgery, with anxiety independently associated with operating. Unowned surveillance converts into an unplanned operation.",
+   "audit": "Audit: surveillance adherence for observed primaries, and the stated indication for every crossover to surgery."
+  },
+  {
+   "id": "pNET-D8",
+   "n": 8,
+   "question": "What is the standing genetic referral rule, and must the result be back before elective surgery?",
+   "kind": "clinical",
+   "decisions": [
+    "7"
+   ],
+   "positions": [
+    {
+     "source": "NCCN Neuroendocrine and Adrenal Tumors",
+     "ref": "nccn",
+     "position": "Recommends genetic evaluation for gastrinoma, multifocal tumours, parathyroid disease before 30 or multigland disease, suspected MEN1, or a germline-relevant tumour mutation; consider testing for any duodenal or pancreatic NET at any age.",
+     "locator": "Gate 7 · Standard 'Send for genetic evaluation rather than assuming a solitary tumour is sporadic.' · pref"
+    }
+   ],
+   "divergence": "No source disagreement is reported; NCCN supplies a list of criteria, and what is missing is an automatic local trigger and a rule on waiting for the result.",
+   "proposal": "Referral follows a standing rule, not case-by-case judgement: all gastrinomas, all multifocal tumours, all patients under 40, and anyone with another MEN1-associated lesion. The genetic result should be back before elective surgery is booked, since MEN1 alters the threshold, extent and timing of the operation.",
+   "proposal_locator": "Operations · board meeting · Genetics; Gate 7 · Standard 'Send for genetic evaluation…' · caveat",
+   "rationale": "Germline variants are reported in 16% to 21% of unselected patients, and in MEN1 or VHL the threshold, the extent and the timing of the operation all change. NCCN's criteria are a list; the programme needs a trigger that fires automatically and a rule about waiting.",
+   "audit": "Audit: referral completion against the rule, time from diagnosis to result, and operations performed before the result was available."
+  },
+  {
+   "id": "pNET-D9",
+   "n": 9,
+   "question": "How is the handoff to the NELM pathway documented, and who makes the joint decision about the primary?",
+   "kind": "governance",
+   "decisions": [
+    "2",
+    "9"
+   ],
+   "positions": [
+    {
+     "source": "NANETS 2020 surgical",
+     "ref": "31856076",
+     "position": "No consensus on resecting a pancreatic primary with liver metastases, the majority holding it may help only in selected circumstances; extrahepatic disease should not necessarily contraindicate primary removal or cytoreduction.",
+     "locator": "Gate 2 · Standard 'If staging shows hepatic metastases…' · pref; pNET-R1 · evidence"
+    },
+    {
+     "source": "NCCN Neuroendocrine and Adrenal Tumors",
+     "ref": "nccn",
+     "position": "Pancreatoduodenectomy in metastatic disease is usually not curative and affects later liver-directed therapy, which then carries increased cholangitis and liver abscess risk.",
+     "locator": "Gate 2 · Standard 'If staging shows hepatic metastases…' · caveat; Gate 5 · Avoid 'Do not book a pancreatoduodenectomy…' · caveat"
+    },
+    {
+     "source": "Partelli 2017 meta-analysis",
+     "ref": "V16-2",
+     "position": "885 patients: primary resection with unresectable liver metastases associated with lower risk of death (OR 0.38); abstract only, confounded observational data.",
+     "locator": "pNET-R1 · evidence"
+    },
+    {
+     "source": "Podrascanin 2025",
+     "ref": "V16-3",
+     "position": "118 asymptomatic patients with synchronous liver metastases: primary resection did not change survival; abstract only, univariate.",
+     "locator": "pNET-R1 · evidence"
+    }
+   ],
+   "divergence": "NANETS reached no consensus and the observational data conflict, pooled lower mortality against no benefit in a recent series, while NCCN warns that a Whipple compromises later liver-directed therapy.",
+   "proposal": "Hand off to the NELM pathway by name as soon as liver deposits are seen; the primary-resection decision in metastatic disease is taken jointly with NELM, not on this page, with pancreatoduodenectomy and cholecystectomy status travelling with the patient. The open pNET-R1 proposal individualises primary surgery with extrahepatic disease on complications, symptoms and response.",
+   "proposal_locator": "Gate 2 · Standard 'If staging shows hepatic metastases, the hepatic disease is the NELM pathway…'; Gate 9 · Standard 'When hepatic metastases appear…'; pNET-R1 · proposed position",
+   "rationale": "NANETS reached no consensus on resecting a pancreatic primary when liver metastases are present. Two irreversible facts from this page constrain the NELM page — whether a pancreatoduodenectomy has been done, because liver-directed therapy afterwards carries increased cholangitis and abscess risk, and whether the gallbladder is out — so the two pathways have to decide together rather than in sequence.",
+   "audit": "Registry: hepatic recurrence with pancreatoduodenectomy and cholecystectomy status recorded; documented joint decision for every primary-resection decision made in metastatic disease."
+  },
+  {
+   "id": "pNET-D10",
+   "n": 10,
+   "question": "Who owns the NCCN, ENETS and NANETS version checks, and on what cycle?",
+   "kind": "governance",
+   "decisions": [],
+   "positions": [],
+   "divergence": "No source positions; programme decision.",
+   "proposal": "No owner is named yet. The roadmap asks for a named owner who records each guideline’s edition and date on an agreed cycle, obtains the full texts of the AACE MEN1 statement and the 2021 MEN1 pancreas consensus, traces each NANETS-quoted figure to its primary source, and confirms every NCCN figure against the current PDF before local approval.",
+   "proposal_locator": "Decisions table #10 · audit; What we are not sure about #22 and #23",
+   "rationale": "The NCCN version behind this draft could not be established from the extracted text, and the MEN1 recommendations were revised twice in 2025. The ENETS nonfunctioning paper has now been read in full and its position on the 1-2 cm band corrected on this page, but the AACE MEN1 consensus statement and the 2021 international consensus statement on the pancreas in MEN1 remain abstract-only citations, and a list of figures quoted from the NANETS text with no primary paper in this page's depot is recorded in the limited-evidence section. Source reconciliation is incomplete and the page says so.",
+   "audit": "Named owner plus edition and date for each guideline, with an agreed update cycle; full texts obtained for the AACE MEN1 statement and the 2021 MEN1 pancreas consensus; and each NANETS-quoted figure traced to its primary source before local approval."
+  },
+  {
+   "id": "pNET-D11",
+   "n": 11,
+   "question": "Do we obtain tissue before choosing surveillance for a sub-2 cm nonfunctional lesion, or not?",
+   "kind": "clinical",
+   "decisions": [
+    "1",
+    "4"
+   ],
+   "positions": [
+    {
+     "source": "NANETS 2020 surgical",
+     "ref": "31856076",
+     "position": "Biopsy is not routinely necessary before observing an asymptomatic sub-centimetre lesion with a characteristic imaging phenotype.",
+     "locator": "Gate 1 · Reasonable 'Biopsy is not obligatory to decide to observe…' · pref"
+    },
+    {
+     "source": "ENETS 2023 NF-PanNET",
+     "ref": "37877341",
+     "position": "Asks for histological or cytological confirmation, where possible, of a suspected nonfunctioning tumour under 2 cm that is receptor-imaging positive (level 3, grade B); flags DAXX/ATRX loss as adverse in small tumours.",
+     "locator": "Gate 1 · Reasonable 'Biopsy is not obligatory…' · caveat; What we are not sure about #14"
+    },
+    {
+     "source": "MEN1 2025 guideline",
+     "ref": "40523372",
+     "position": "Finds no role for routine EUS-guided biopsy in MEN1.",
+     "locator": "Gate 1 · Reasonable 'Biopsy is not obligatory…' · caveat"
+    },
+    {
+     "source": "Weynand 2014",
+     "ref": "24750272",
+     "position": "EUS-FNA cytology under-graded: 10 of 14 histological G2 tumours called G1, kappa 0.21 against resection grade; the roadmap notes only resected tumours could be analysed.",
+     "locator": "Gate 1 · Standard 'Treat a grade obtained from a needle biopsy as a floor…' · pref and note"
+    },
+    {
+     "source": "ASPEN interim",
+     "ref": "35986682",
+     "position": "Required an aspirate or receptor PET for entry, yet 34% never had an aspirate and grade was not evaluable in 23.9% of those who did.",
+     "locator": "Gate 1 · Reasonable 'Biopsy is not obligatory…' · note"
+    }
+   ],
+   "divergence": "NANETS and the MEN1 recommendations do not require tissue while ENETS 2023 asks for it under 2 cm, no outcome evidence separates them, and cytology under-grades while observation without tissue leaves grade unknown.",
+   "proposal": "Biopsy is not obligatory to observe a sub-centimetre lesion with a characteristic phenotype when surveillance is planned whatever the grade (Reasonable, grade D); obtain tissue when the diagnosis is in doubt, grade would change the plan, or a 1–2 cm observe-or-resect decision is live, treating needle grade as a floor. One programme answer is pending.",
+   "proposal_locator": "Gate 1 · Reasonable 'Biopsy is not obligatory…' · pref and caveat; Gate 1 · Standard 'Treat a grade obtained from a needle biopsy as a floor…'; What we are not sure about #14",
+   "rationale": "NANETS says biopsy is not routinely necessary before deciding to observe a sub-centimetre lesion with a characteristic imaging phenotype. ENETS 2023, read in full, says a suspected nonfunctioning tumour under 2 cm with positive receptor imaging should be confirmed histologically or cytologically where possible (level 3, grade B). The 2025 MEN1 recommendations find no role for routine EUS-guided biopsy in that syndrome. There is no outcome evidence separating the three, and both options carry a real cost: EUS-FNA cytology called 71% of histological G2 tumours G1, while two thirds of ASPEN's surveillance arm had no evaluable histology at all. The programme needs one answer, and a stated reason.",
+   "audit": "Registry: for every observed lesion, whether tissue was obtained, by what route, the cytological grade where available, and the resection grade in every patient who later crossed over."
+  },
+  {
+   "id": "pNET-D12",
+   "n": 12,
+   "question": "What growth threshold triggers resection under surveillance, measured how, by whom, on what protocol?",
+   "kind": "clinical",
+   "decisions": [
+    "4"
+   ],
+   "positions": [
+    {
+     "source": "PANDORA",
+     "ref": "33783475",
+     "position": "Used growth over 0.5 cm per year as its resection trigger; 8 of 76 met it but 6 refused surgery, and those 8 still averaged 1.2 cm, suggesting measurement variation as much as growth.",
+     "locator": "Gate 4 · Reasonable 'Define in advance what counts as growth…' · pref and caveat; What we are not sure about #4"
+    },
+    {
+     "source": "MEN1 2025 guideline",
+     "ref": "40523372",
+     "position": "Uses growth under 1 mm per year as the point to lengthen imaging to every 1–2 years (92% agreement); the roadmap notes this lies below serial-imaging measurement reproducibility.",
+     "locator": "Gate 4 · Reasonable 'Define in advance what counts as growth…' · pref and caveat"
+    },
+    {
+     "source": "ASPEN interim",
+     "ref": "35986682",
+     "position": "Growth was the stated surgical indication in only 4 of 406 surveillance patients, against patient or centre preference in 79 of 94 operations.",
+     "locator": "Gate 4 · Reasonable 'Define in advance what counts as growth…' · pref; What we are not sure about #11"
+    },
+    {
+     "source": "ENETS 2023 NF-PanNET",
+     "ref": "37877341",
+     "position": "Keep the same imaging modality, contrast type and timing, and tracer throughout follow-up.",
+     "locator": "Gate 4 · Standard 'Set the surveillance programme in writing…' · pref"
+    }
+   ],
+   "divergence": "PANDORA and the MEN1 recommendations differ fivefold and neither threshold has a cited derivation, while ASPEN shows growth rarely drives the operation in practice.",
+   "proposal": "Define growth in advance, record a rate rather than a size, measure in millimetres on the same modality, contrast agent and phase with the sequence named, and state plainly that no threshold in use is derived (Reasonable, grade D). The board is to pick one threshold and write it down; the roadmap does not choose between them.",
+   "proposal_locator": "Gate 4 · Reasonable 'Define in advance what counts as growth, record a rate rather than a size…' · pref and note; What we are not sure about #11",
+   "rationale": "PANDORA used more than 0.5 cm per year and the 2025 MEN1 recommendations use under 1 mm per year, a fivefold disagreement in which neither number has a cited derivation and 1 mm a year sits below the measurement reproducibility of serial imaging of a small pancreatic lesion. Growth was the stated indication for surgery in only 4 of 406 ASPEN surveillance patients, against patient and centre preference in 79 of 94 operations - so in practice the growth threshold is not what drives the operation. A threshold with a fixed modality, contrast agent, phase and measurement convention is the only version of this that can be audited.",
+   "audit": "Audit: for every observed lesion, the measurement at each interval in millimetres with modality, phase and reader recorded, the computed rate, and the stated indication for every crossover."
+  },
+  {
+   "id": "pNET-D13",
+   "n": 13,
+   "question": "Which post-resection follow-up schedule does the programme adopt, and is any patient discharged from follow-up?",
+   "kind": "clinical",
+   "decisions": [
+    "9",
+    "4"
+   ],
+   "positions": [
+    {
+     "source": "NCCN Neuroendocrine and Adrenal Tumors",
+     "ref": "nccn",
+     "position": "First imaging between 12 weeks and 12 months, then 6–12-monthly up to 10 years, for observed as well as resected patients; no routine receptor or FDG PET in surveillance.",
+     "locator": "Gate 9 · Standard 'Follow the schedule…' · note and caveat; Gate 4 · Standard 'Set the surveillance programme in writing…' · pref"
+    },
+    {
+     "source": "ENETS 2023 NF-PanNET",
+     "ref": "37877341",
+     "position": "Imaging at 3–6 months with receptor PET, then 6–12-monthly to 5 years, 12–24-monthly to 10, then every 5 years (level 5, grade B); patients should expect at least 20 years, possibly lifelong.",
+     "locator": "Gate 9 · Standard 'Follow the schedule…' · note"
+    },
+    {
+     "source": "Singh 2018 follow-up",
+     "ref": "30054622",
+     "position": "RAND/UCLA panel: yearly imaging for 3 years, then every 1–2 years to 10 and beyond; no follow-up for grade 1, node-negative pancreatic tumours under 2 cm, an exemption the roadmap does not adopt.",
+     "locator": "Gate 9 · Standard 'Follow the schedule…' · note; Gate 4 · Standard 'Set the surveillance programme in writing…' · note"
+    }
+   ],
+   "divergence": "The three consensus sources disagree on start, intensity and duration, and only RAND/UCLA discharges anyone, on a 75% agreement threshold over data lacking grade, stage or margins.",
+   "proposal": "Use NCCN’s schedule for resected and observed patients alike (Standard, grade D): first scan within 12 weeks to 12 months, then 6–12-monthly to 10 years, then as clinically indicated, with shorter intervals for high grade; follow-up does not stop at 5 years in G2 or node-positive disease. The RAND/UCLA discharge exemption is not adopted.",
+   "proposal_locator": "Gate 9 · Standard 'Follow the schedule: imaging at 12 weeks to 12 months…' · pref, caveat and note; Gate 4 · Standard 'Set the surveillance programme in writing…'",
+   "rationale": "The three consensus sources disagree. NCCN starts at 12 weeks to 12 months and runs to 10 years; ENETS 2023 starts at 3 to 6 months with a receptor PET and tells patients to expect at least 20 years and possibly lifelong; the RAND/UCLA recommendations de-intensify the first three years to yearly imaging, extend past ten and exempt a grade 1, node-negative pancreatic tumour under 2 cm from follow-up altogether - an exemption produced at a 75% agreement threshold over a dataset with no grade, stage or margin data and a 48.5% cumulative recurrence rate at 10 years. This page borrows NCCN's intervals and applies them to observed patients too. The group should choose deliberately rather than by inheritance, and decide explicitly whether anyone is discharged.",
+   "audit": "Registry: schedule assigned at discharge from surgical care, adherence against it, time from resection to recurrence, and the grade and nodal status of every patient who recurred after being assigned the least intensive schedule."
+  },
+  {
+   "id": "pNET-D14",
+   "n": 14,
+   "question": "What exactly is a patient told about the evidence for observation, and who writes it down?",
+   "kind": "governance",
+   "decisions": [
+    "4"
+   ],
+   "positions": [
+    {
+     "source": "MEN1 2025 guideline",
+     "ref": "40523372",
+     "position": "Its systematic review showed no metastasis or mortality difference between operating on and watching lesions up to 2 cm, with low to very low certainty.",
+     "locator": "Gate 4 · Standard 'State the actual evidence for the threshold…' · note"
+    },
+    {
+     "source": "Sadot 2016",
+     "ref": "26597365",
+     "position": "51% of observed tumours grew while the median size stayed at 1.2 cm, a quarter crossed over to resection, and no observed patient developed metastases; never-operated patients were followed a median 33 months.",
+     "locator": "Gate 4 · Standard 'State the actual evidence for the threshold…' · pref and caveat; What we are not sure about #2"
+    },
+    {
+     "source": "ASPEN interim",
+     "ref": "35986682",
+     "position": "Anxiety independently predicted operating (OR 2.0), and severe complications occurred in 13% of resected patients.",
+     "locator": "Gate 4 · Avoid 'Do not let an observation decision be made…' · caveat; What we are not sure about #24"
+    },
+    {
+     "source": "PANDORA",
+     "ref": "33783475",
+     "position": "At entry to surveillance, quality of life was worse than the reference population on several scales; the authors call the finding too premature to interpret.",
+     "locator": "Gate 4 · Avoid 'Do not let an observation decision be made…' · caveat"
+    }
+   ],
+   "divergence": "Sources agree no study randomises the strategies; the harms of resection are well measured while its benefit at this size is not, and anxiety influences who is operated on.",
+   "proposal": "Give every patient the same written statement and file it: no randomised comparison exists, the only systematic comparison found no difference at low certainty, resection harms are well measured but benefit at this size is not, half of observed tumours grow, and the programme controls the reliability of the next measurement. Filing is audited; the author is not named.",
+   "proposal_locator": "Decisions table #14 · why; Gate 4 · Standard 'State the actual evidence for the threshold…'; What we are not sure about #24; Operations · dashboard · written patient statement",
+   "rationale": "Not an evidence question, but the read makes it a governance one. The honest statement is that no study randomises the two strategies, that the only systematic comparison found no difference at low certainty, that the harms of resection are well measured and its benefit at this size is not, that half of observed tumours grow without that meaning anything yet, and that the one thing within the programme's control is the reliability of the next measurement. A patient who is told only that small tumours can be watched safely has not been given that, and anxiety independently predicted operating in ASPEN. A written statement, the same for every patient, is cheaper than the alternative.",
+   "audit": "Audit: proportion of observation decisions with the written patient statement filed, and the stated indication for every crossover to surgery recorded against it."
+  },
+  {
+   "id": "pNET-D15",
+   "n": 15,
+   "question": "Does the programme obtain a paired receptor and FDG-PET in a localised G2 or higher primary, and what does a discordant result change?",
+   "kind": "clinical",
+   "decisions": [
+    "2"
+   ],
+   "positions": [
+    {
+     "source": "SNMMI/EANM SSTR PET",
+     "ref": "36725249",
+     "position": "FDG positivity is not rare in G1–G2 and predicts progression and prognosis more strongly than grade; combining scans can direct biopsy to the worst lesion, but the standard goes no further.",
+     "locator": "Gate 2 · Reasonable 'Where a G2 or higher tumour has had both a receptor PET and an FDG-PET…' · note; What we are not sure about #15"
+    },
+    {
+     "source": "NETPET derivation",
+     "ref": "28435454",
+     "position": "62 patients: median survival not reached for receptor-positive, FDG-negative disease vs 11 months for FDG-positive, receptor-negative disease; metastatic or unresectable cohort.",
+     "locator": "Gate 2 · Reasonable 'Where a G2 or higher tumour has had both…' · pref and caveat"
+    },
+    {
+     "source": "NETPET validation",
+     "ref": "36434154",
+     "position": "319 patients: score independently predicted survival alongside grade. Roadmap critique: metastatic or unresectable disease, about a third pancreatic, partly the derivation centres, treatment not modelled, no treatment threshold.",
+     "locator": "Gate 2 · Reasonable 'Where a G2 or higher tumour has had both…' · pref and caveat; What we are not sure about #15"
+    }
+   ],
+   "divergence": "The standard and the NETPET cohorts support prognostic value, but all evidence comes from metastatic or unresectable disease and no source says what a discordant result should change in a localised primary.",
+   "proposal": "Gate 2 staging already lists FDG-PET for G2 or higher tumours and receptor PET where it would change the plan. Report the pair together (Reasonable, grade D) but never use the combined score to decide an operation on a localised primary; acting on a discordant result goes beyond published evidence and must be stated and recorded.",
+   "proposal_locator": "Gate 2 · criteria; Gate 2 · Reasonable 'Where a G2 or higher tumour has had both a receptor PET and an FDG-PET…' · caveat; What we are not sure about #15; Decisions table #15 · why",
+   "rationale": "FDG positivity is not rare in G1 and G2 disease and predicts progression and prognosis more strongly than grade on the SNMMI/EANM standard's own reading, and the combined score independently predicted survival in a 319-patient cohort. But both score cohorts were metastatic or unresectable, only about a third of patients had pancreatic primaries, treatment was not modelled, and the score carries no treatment threshold. If the pair is obtained and nothing is done differently, it is a cost; if something is done differently, the programme is acting beyond any published evidence and should say so and record it.",
+   "audit": "Registry: receptor and FDG status at diagnosis for every localised tumour of G2 or higher, the decision taken, and the resection pathology against both."
+  }
+ ]
+}

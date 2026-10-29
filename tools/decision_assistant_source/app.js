@@ -65,7 +65,7 @@ function home() {
 }
 
 function pathwayShell() {
- app.innerHTML=header()+`<main class="wrap"><div class="pathhero"><div><a class="back" href="/">← All pathways</a><p class="eyebrow">${e(active.route)}</p><h1>${e(active.name)}</h1><p class="lead">${e(active.entry)}</p></div><div class="herolinks">${active.roadmap?external(active.roadmap,`${active.code} treatment roadmap`,'btn secondary'):external(DATA.sources['E-consensus'].pdf,'HEHE treatment consensus','btn secondary')}<a href="#meeting" class="plain-link" data-view="meeting">Protocol & meeting documents ↓</a></div></div>
+ app.innerHTML=header()+`<main class="wrap"><div class="pathhero"><div><a class="back" href="/">← All pathways</a><p class="eyebrow">${e(active.route)}</p><h1>${e(active.name)}</h1><p class="lead">${e(active.entry)}</p></div><div class="herolinks">${active.roadmap?external(active.roadmap,`${active.code} treatment roadmap`,'btn secondary'):external(DATA.sources['E-consensus'].pdf,'HEHE treatment consensus','btn secondary')}</div></div>
  <div class="viewbar" role="tablist" aria-label="Pathway sections"><button role="tab" id="tab-pathway" data-view="pathway">Decision pathway</button><button role="tab" id="tab-meeting" data-view="meeting">Meeting record <span>${active.issues.length}</span></button><button role="tab" id="tab-care" data-view="care">Treatment reference</button><button role="tab" id="tab-high-risk" class="high-risk-tab" data-view="high-risk">High-risk protocols <span>${HighRisk.reviews(DATA.high_risk,active.slug).length}</span></button><button role="tab" id="tab-evidence" data-view="evidence">Evidence library</button><span class="viewnote">Compare choices · nothing is saved</span></div>
  <div id="view"></div></main>`+footer();
  renderView();
@@ -435,8 +435,8 @@ function renderStep(){
 }
 
 function renderMeeting(){
- return `<section class="meetingintro"><div><p class="eyebrow">Source comparison + local decision record</p><h2>Questions to resolve together</h2><p>Each question is linked from its pathway decision. Source wording and proposed local interpretation are separate. <b>No local proposal is marked approved.</b></p></div><div class="docbox"><b>Protocol & meeting documents</b><a href="${active.protocol}" download>Clinical protocol · Word ↓</a>${active.docs.map(d=>`<a href="${d.url}" download>${e(d.label)} · Word ↓</a>`).join('')}<a href="/meeting-records/${active.slug}.html" target="_blank" rel="noopener">Web alignment record · print / save ↓</a><small>Each document retains its source-review dates. Record the group decision, responsible owner and approval before clinical activation.</small></div></section>
- <aside class="high-risk-doc-note">${HighRisk.badge()}<p>Individual reviews appear with the relevant findings and next-step choices.</p><a href="#high-risk" data-view="high-risk">High-risk protocols and evidence →</a>${HighRisk.downloads(DATA.high_risk,active.slug)}</aside><nav class="issue-index" aria-label="Meeting questions">${active.issues.map((i,n)=>`<a href="#meeting-${i.id}" data-issue="${i.id}">${n+1}. ${e(i.question)}</a>`).join('')}</nav>
+ return `<section class="meetingintro"><div><p class="eyebrow">Source comparison + local decision record</p><h2>Questions to resolve together</h2><p>Each question is linked from its pathway decision. Source wording and proposed local interpretation are separate. <b>No local proposal is marked approved.</b></p></div></section>
+ <aside class="high-risk-doc-note">${HighRisk.badge()}<p>Individual reviews appear with the relevant findings and next-step choices.</p><a href="#high-risk" data-view="high-risk">High-risk protocols and evidence →</a></aside><nav class="issue-index" aria-label="Meeting questions">${active.issues.map((i,n)=>`<a href="#meeting-${i.id}" data-issue="${i.id}">${n+1}. ${e(i.question)}</a>`).join('')}</nav>
  <div class="issue-records">${active.issues.map((i,n)=>renderIssue(i,n)).join('')}</div>`;
 }
 

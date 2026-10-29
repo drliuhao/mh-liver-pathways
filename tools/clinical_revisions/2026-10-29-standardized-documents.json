@@ -1,0 +1,74 @@
+{
+  "id": "2026-10-29-standardized-documents",
+  "requested_by": "Hao Liu, 29 October 2026: standardize documentation — per tumor a full-content and a questions-for-consensus Word file for each setting plus one decision-discussion file, downloadable from one corner, linked without redundancy.",
+  "status": "Presentation and linking only. No criterion, rule, threshold, recommendation or routing outcome changes.",
+  "sources": [],
+  "edits": [],
+  "files": [
+    {
+      "file": "transplant/assets/high-risk.js",
+      "old": "${rs.map(r=>card(data,slug,r)).join('')}${downloads(data,slug)}</section>`;",
+      "new": "${rs.map(r=>card(data,slug,r)).join('')}</section>`;"
+    },
+    {
+      "file": "transplant/assets/high-risk.js",
+      "old": "</p></div></div>${downloads(data,slug)}<nav class=\"hr-index\"",
+      "new": "</p></div></div><nav class=\"hr-index\""
+    },
+    {
+      "file": "transplant/assets/high-risk.js",
+      "old": "the high-risk protocols →</a></div>${downloads(data,slug)}${[['Policy, guidance and consensus'",
+      "new": "the high-risk protocols →</a></div>${[['Policy, guidance and consensus'"
+    },
+    {
+      "file": "assets/roadmap-links.json",
+      "old": "\"when\": \"If extrahepatic disease is treated or completely treatable\",\n        \"url\": \"extrahepatic-disease/#CRLM-R1\"",
+      "new": "\"when\": \"If extrahepatic disease is treated or completely treatable\",\n        \"url\": \"crlm/#question-CRLM-R1\""
+    },
+    {
+      "file": "assets/roadmap-links.json",
+      "old": "\"when\": \"If regional nodal disease has responded and resection is considered\",\n        \"url\": \"extrahepatic-disease/#iCCA-R1\"",
+      "new": "\"when\": \"If regional nodal disease has responded and resection is considered\",\n        \"url\": \"icca/#question-iCCA-R1\""
+    },
+    {
+      "file": "assets/roadmap-links.json",
+      "old": "\"when\": \"If distant disease has responded durably and surgery is raised\",\n        \"url\": \"extrahepatic-disease/#iCCA-R1\"",
+      "new": "\"when\": \"If distant disease has responded durably and surgery is raised\",\n        \"url\": \"icca/#question-iCCA-R1\""
+    },
+    {
+      "file": "assets/roadmap-links.json",
+      "old": "\"when\": \"If regional, para-aortic or distant disease has responded and resection is considered\",\n        \"url\": \"extrahepatic-disease/#pCCA-R1\"",
+      "new": "\"when\": \"If regional, para-aortic or distant disease has responded and resection is considered\",\n        \"url\": \"hilar/#question-pCCA-R1\""
+    },
+    {
+      "file": "assets/roadmap-links.json",
+      "old": "\"when\": \"If extrahepatic disease is present or has been treated\",\n        \"url\": \"extrahepatic-disease/#NELM-R1\"",
+      "new": "\"when\": \"If extrahepatic disease is present or has been treated\",\n        \"url\": \"nelm/#question-NELM-R1\""
+    },
+    {
+      "file": "assets/roadmap-links.json",
+      "old": "\"when\": \"If nodal or extrahepatic disease has responded and resection is considered\",\n        \"url\": \"extrahepatic-disease/#cHCC-CCA-R1\"",
+      "new": "\"when\": \"If nodal or extrahepatic disease has responded and resection is considered\",\n        \"url\": \"chcca/#question-cHCC-CCA-R1\""
+    },
+    {
+      "file": "assets/roadmap-links.json",
+      "old": "\"when\": \"If limited metastases respond to chemotherapy, or isolated lung metastases appear late\",\n        \"url\": \"extrahepatic-disease/#PDAC-R1\"",
+      "new": "\"when\": \"If limited metastases respond to chemotherapy, or isolated lung metastases appear late\",\n        \"url\": \"pdac/#question-PDAC-R1\""
+    },
+    {
+      "file": "assets/roadmap-links.json",
+      "old": "\"when\": \"If metastases outside the liver are present or have been treated\",\n        \"url\": \"extrahepatic-disease/#pNET-R1\"",
+      "new": "\"when\": \"If metastases outside the liver are present or have been treated\",\n        \"url\": \"pnet/#question-pNET-R1\""
+    },
+    {
+      "file": "assets/roadmap-links.json",
+      "old": "\"when\": \"If limited liver or lung metastases respond durably to systemic therapy\",\n        \"url\": \"extrahepatic-disease/#AMP-R1\"",
+      "new": "\"when\": \"If limited liver or lung metastases respond durably to systemic therapy\",\n        \"url\": \"ampullary/#question-AMP-R1\""
+    },
+    {
+      "file": "assets/roadmap-links.json",
+      "old": "\"when\": \"If extrahepatic disease has responded or been treated and liver resection or ablation is considered\",\n        \"url\": \"extrahepatic-disease/#HCC-R1\"",
+      "new": "\"when\": \"If extrahepatic disease has responded or been treated and liver resection or ablation is considered\",\n        \"url\": \"hcc/#question-HCC-R1\""
+    }
+  ]
+}

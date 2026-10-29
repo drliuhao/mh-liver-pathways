@@ -1,0 +1,1188 @@
+{
+ "slug": "hcc",
+ "prefix": "HCC",
+ "questions": [
+  {
+   "id": "HCC-D1",
+   "n": 1,
+   "question": "Name the accountable system HCC pathway owner and the neutral tumour-board chair.",
+   "kind": "governance",
+   "decisions": [],
+   "positions": [],
+   "divergence": "No source positions; programme decision.",
+   "proposal": "The roadmap names no individuals. It specifies a neutral clinical chair who, after radiology-first presentation and explicit comparison of options, synthesises one recommendation and names any genuine uncertainty with its review trigger; programme leadership owns required attendance, and every case leaves with one owner, due date and reassessment plan.",
+   "proposal_locator": "Operations · Tumour board table (Conference and Attendance rows); Decisions table #1 (why)",
+   "rationale": "The conference is required to produce one recommendation, one accountable owner, one due date and one reassessment plan; without a named pathway owner and a chair with no stake in the modality chosen, the synthesis step has nobody to perform it.",
+   "audit": ""
+  },
+  {
+   "id": "HCC-D2",
+   "n": 2,
+   "question": "Approve the Epic submission form, the MDT note template, the registry minimum dataset and the urgent-case rule.",
+   "kind": "operational",
+   "decisions": [],
+   "positions": [],
+   "divergence": "No source positions; programme decision.",
+   "proposal": "The Epic submission form records diagnosis, clinical question, BCLC stage, AFP, liver scores, imaging availability, prior treatment, transplant status, referring clinician and urgency. The Epic note, due within one business day, records recommendation, alternatives, owner, due date and reassessment plan. Urgent lane: same or next business day with chair approval and a named owner. The registry tracks closure.",
+   "proposal_locator": "Operations · Tumour board table (Submission, Urgent lane, Documentation, Closure rows); Decisions table #2 (why)",
+   "rationale": "BCLC stage, the liver scores, AFP and the curative-assessment fields are what the whole pathway is built on, so they have to be captured at submission rather than reconstructed afterwards. Programme operations owns the registry dataset and who is accountable for entry.",
+   "audit": ""
+  },
+  {
+   "id": "HCC-D3",
+   "n": 3,
+   "question": "Approve modality-specific liver-function and dosimetry thresholds rather than relying on a single universal bilirubin cut-off.",
+   "kind": "clinical",
+   "decisions": [
+    "0",
+    "A",
+    "B",
+    "C"
+   ],
+   "positions": [
+    {
+     "source": "NCCN v2.2026",
+     "ref": "NCCN",
+     "position": "For radiation segmentectomy in Child-Pugh A, NCCN specifies more than 400 Gy to no more than 25% of the liver; the roadmap adds that the dose compartment and microsphere model must be documented.",
+     "locator": "Locoregional tab · selector row 'Radiation segmentectomy'"
+    },
+    {
+     "source": "DOSISPHERE-01",
+     "ref": "33166497",
+     "position": "Personalised dosimetry (at least 205 Gy to the index lesion) improved response and survival against standard 120 Gy; roadmap critique: 60-patient phase 2, stopped early on an unmasked single-lesion endpoint, survival secondary and confounded by later resection.",
+     "locator": "Appendix · DOSISPHERE-01 (bottom line); What we are not sure about #20"
+    },
+    {
+     "source": "SARAH",
+     "ref": "29107679",
+     "position": "Activity was prescribed by body surface area; the trial's own later dose-response analysis found median survival of 14.1 versus 6.1 months above and below a 100 Gy tumour absorbed dose.",
+     "locator": "What we are not sure about #21; Appendix · SARAH (bottom line)"
+    }
+   ],
+   "divergence": "No source in the roadmap sets per-modality Child-Pugh, ALBI or MELD bars, and the dose evidence rests on a stopped-early phase 2 trial and a later dose-response analysis of a negative trial.",
+   "proposal": "Thresholds are not yet set: hepatology is to fix Child-Pugh, ALBI and MELD bars per modality, and interventional radiology the dosimetry limits. Current page markers: TACE avoided with decompensation or ALBI grade 3, bilirubin above 3 mg/dL a relative concern; for radioembolisation bilirubin above 2 mg/dL raises radiation-injury risk; EBRT safety data are mostly Child-Pugh A or selected B7.",
+   "proposal_locator": "Decisions table #3 (why); Stage B Standard (caveat); Liver-directed treatment matrix, arterial embolization, radioembolization and external beam rows (v16 text)",
+   "rationale": "Each locoregional modality fails the liver in a different way, so hepatology must set the Child-Pugh, ALBI and MELD thresholds that bar each one, and interventional radiology the dosimetry limits. A single bilirubin number cannot carry that work.",
+   "audit": ""
+  },
+  {
+   "id": "HCC-D4",
+   "n": 4,
+   "question": "Ratify the locoregional selector and the stop/switch rules jointly with hepatobiliary and transplant surgery, hepatology, interventional radiology, radiation oncology, diagnostic radiology and medical oncology.",
+   "kind": "governance",
+   "decisions": [
+    "0",
+    "A",
+    "B",
+    "C"
+   ],
+   "positions": [
+    {
+     "source": "EASL 2025",
+     "ref": "39690085",
+     "position": "After one or two consecutive TACEs without response other therapies should be considered (level of evidence 3); the roadmap notes published refractoriness definitions differ and no study compares fixed-count switching with per-session reassessment.",
+     "locator": "What we are not sure about #32"
+    },
+    {
+     "source": "LI-RADS (ACR v2024 treatment response)",
+     "ref": "LIRADS",
+     "position": "Separate nonradiation and radiation treatment-response algorithms; after SBRT or Y-90 the nonprogressing category means persistent enhancement alone is not failure. The roadmap notes these algorithms have no outcome validation.",
+     "locator": "Locoregional tab · Stop and switch rules; Quick reference · LI-RADS table (v16 text); What we are not sure about #2"
+    }
+   ],
+   "divergence": "Within the roadmap, the stop/switch card keeps persistent viability after two well-executed sessions as a switch trigger, while stage B and the limited-evidence table record that v0.8 withdrew the fixed two-session rule for per-session reassessment.",
+   "proposal": "Ratify a non-ranked selector chosen by goal, anatomy and reserve, with no universal ablation-to-histotripsy sequence; device availability and specialty preference are not indications. Stop/switch: reassess after every treatment; move away from repeated TACE for decompensation, worsening ALBI or Child-Pugh, lost selective access, or out-of-territory, vascular or extrahepatic progression; allow delayed response after radiation.",
+   "proposal_locator": "Locoregional tab · Decision sequence, selector table and Stop and switch rules; Decisions table #4 (why)",
+   "rationale": "The selector is the page's operative content and it crosses six specialties; a concept everyone agrees with and a table nobody has signed is not a ratified pathway. Hepatobiliary and transplant surgery, hepatology, interventional radiology, radiation oncology, diagnostic radiology and medical oncology each own part of it.",
+   "audit": ""
+  },
+  {
+   "id": "HCC-D5",
+   "n": 5,
+   "question": "Adopt one reading of resection in clinically significant portal hypertension and state it on the page, rather than leaving the BCLC position and the Yuan randomised result side by side for each board to choose between.",
+   "kind": "clinical",
+   "decisions": [
+    "0",
+    "A"
+   ],
+   "positions": [
+    {
+     "source": "BCLC 2026",
+     "ref": "41151697",
+     "position": "With CSPH, resection carries significant risk and transplantation offers better survival; HVPG remains the gold standard. Roadmap critique: the update gives no HVPG cut-off for resection with portal hypertension.",
+     "locator": "Curative tab · 'Does CSPH bar resection?'; Appendix · BCLC 2026 (bottom line)"
+    },
+    {
+     "source": "Yuan 2024 RCT",
+     "ref": "39322951",
+     "position": "In 160 hepatitis B patients within Milan with CSPH, resection versus ablation with or without TACE showed no significant survival difference (5-year 69.5% vs 64.9%); authors call resection safe. Roadmap: too small for equivalence, HVPG never measured.",
+     "locator": "Curative tab · 'Does CSPH bar resection?'; What we are not sure about #4"
+    },
+    {
+     "source": "Berzigotti meta-analysis",
+     "ref": "25212123",
+     "position": "CSPH raised 3-year post-resection mortality (OR 2.09) and early decompensation (OR 3.04); roadmap critique: crude, unadjusted estimates from 11 mostly retrospective single-centre studies.",
+     "locator": "Curative tab · 'Does CSPH bar resection?'; What we are not sure about #3"
+    },
+    {
+     "source": "Bruix 1996",
+     "ref": "8831597",
+     "position": "Index study: HVPG of 10 mmHg or more separated unresolved decompensation (11 of 15 vs 0 of 14) in 29 patients; the roadmap calls the separation too clean to reproduce and notes no survival outcome.",
+     "locator": "What we are not sure about #3; Appendix · Bruix 1996 (bottom line)"
+    }
+   ],
+   "divergence": "BCLC, on observational data, favours transplant over resection in CSPH, while the only randomised trial found no significant survival difference but was small, hepatitis B only and never measured HVPG.",
+   "proposal": "The roadmap currently adopts neither reading by default: CSPH raises operative risk and should prompt transplant assessment within Milan, but is not an automatic bar where the remnant is adequate, the resection minor or laparoscopic, and the hepatologist concurs; the board records which reading it applied. This approval item asks the programme to fix one reading.",
+   "proposal_locator": "Curative tab · 'Does CSPH bar resection?' (teal callout); Stage 0 · Resection (caveat)",
+   "rationale": "BCLC holds that with CSPH resection carries significant risk and transplantation offers better survival; the only randomised test, in 160 hepatitis B patients within Milan, found no significant difference and its authors call resection safe. Leaving both readings side by side lets each board choose its own, which is not a pathway.",
+   "audit": ""
+  },
+  {
+   "id": "HCC-D6",
+   "n": 6,
+   "question": "Decide whether a non-invasive Baveno VIII rule-in or rule-out may stand in for HVPG when the resection decision turns on portal pressure, and make recording the criterion used, its value and its date a condition of proposing resection.",
+   "kind": "clinical",
+   "decisions": [
+    "0",
+    "A"
+   ],
+   "positions": [
+    {
+     "source": "Baveno VIII",
+     "ref": "42624290",
+     "position": "Rule-in: liver stiffness ≥25 kPa (not obese MASLD), spleen stiffness >55 kPa, ANTICIPATE ≥75%; rule-out: ≤15 kPa with platelets ≥150. Its HCC statements are new, LoE 3 and weak, and inapplicable with macrovascular invasion.",
+     "locator": "Curative tab · Baveno criteria table; What we are not sure about #5"
+    },
+    {
+     "source": "BCLC 2026",
+     "ref": "41151697",
+     "position": "Accepts surrogate markers, citing Baveno VII for them, and keeps HVPG as the gold standard while allowing non-invasive tools to rule CSPH in or out.",
+     "locator": "Curative tab · Establishing CSPH"
+    },
+    {
+     "source": "Baveno VII",
+     "ref": "35120736",
+     "position": "Defines CSPH as HVPG of 10 mmHg or more, with non-invasive thresholds validated only in viral, alcohol-related and non-obese NASH disease; the roadmap reads it as describing risk, not deciding operability.",
+     "locator": "Appendix · Baveno VII (bottom line)"
+    }
+   ],
+   "divergence": "BCLC keeps HVPG as gold standard while allowing non-invasive rule-in or rule-out, and the Baveno VIII HCC statements are weak, device-specific and unvalidated in obese MASLD.",
+   "proposal": "Measure HVPG when the resection decision turns on portal pressure; non-invasive rule-in is useful where HVPG is unavailable or declined, and in BCLC 0-A an ANTICIPATE score of 75% or more is only highly suggestive. Every resection proposal records the criterion used, its value and its date; an unsupported 'no portal hypertension' entry is not acceptable.",
+   "proposal_locator": "Curative tab · Establishing CSPH (Baveno criteria table, 'What to record'); Quick reference · CSPH table (v16 text)",
+   "rationale": "The Baveno VIII HCC statements are new, graded level of evidence 3 with weak strength, and the thresholds are device- and technique-specific and unvalidated in obese MASLD. Recording the criterion used, its value and its date must be a condition of proposing resection, because “no portal hypertension” without a stated basis is the most common way this decision is made on incomplete information.",
+   "audit": ""
+  },
+  {
+   "id": "HCC-D7",
+   "n": 7,
+   "question": "Rule on whether a large spontaneous portosystemic shunt can lower measured HVPG enough to make a sub-10 mmHg value unreliable; this roadmap has not verified that concern against a primary source.",
+   "kind": "clinical",
+   "decisions": [
+    "0",
+    "A"
+   ],
+   "positions": [
+    {
+     "source": "Baveno VIII",
+     "ref": "42624290",
+     "position": "Varices or portosystemic collaterals are generally signs of CSPH, but may persist after the aetiology is cured or controlled, so in that setting a shunt alone does not establish current CSPH.",
+     "locator": "Curative tab · 'Three situations where a portosystemic shunt does not settle the question'"
+    },
+    {
+     "source": "Baveno VII",
+     "ref": "35120736",
+     "position": "When signs of portal hypertension coexist with an HVPG below 10 mmHg, portosinusoidal vascular disorder must be ruled out.",
+     "locator": "Curative tab · 'Three situations where a portosystemic shunt does not settle the question'"
+    },
+    {
+     "source": "BCLC 2026",
+     "ref": "41151697",
+     "position": "HVPG reliability may be suboptimal in steatotic liver disease; the roadmap adds that a sub-threshold measurement there should not override a specific sign.",
+     "locator": "Curative tab · 'Three situations where a portosystemic shunt does not settle the question'"
+    }
+   ],
+   "divergence": "No source cited in the roadmap addresses whether a large shunt lowers measured HVPG; the roadmap states the concern is unverified against a primary source.",
+   "proposal": "Unresolved: hepatology is to rule before a sub-10 mmHg HVPG is treated as reassuring. Meanwhile a shunt on staging CT is treated as a staging finding, and in three settings (cured aetiology, portosinusoidal disorder, steatotic disease) neither a shunt nor a sub-threshold HVPG settles the question alone.",
+   "proposal_locator": "Curative tab · 'Unresolved locally' callout and shunt situations; Quick reference · CSPH table footnote (v16 text)",
+   "rationale": "This is a physiological concern raised in practice that the roadmap has not verified against a primary source, and it decides whether a reassuring HVPG can be trusted in a patient with a shunt on staging CT. Hepatology has to rule on it before a sub-10 value is treated as reassuring.",
+   "audit": ""
+  },
+  {
+   "id": "HCC-D8",
+   "n": 8,
+   "question": "Decide whether radiation segmentectomy may be offered as a definitive curative-intent option on single-arm evidence, above what tumour size it may not, and whether personalised dosimetry is required before it is described that way.",
+   "kind": "clinical",
+   "decisions": [
+    "0",
+    "A"
+   ],
+   "positions": [
+    {
+     "source": "RASER",
+     "ref": "35617978",
+     "position": "29 patients with a solitary tumour of 3 cm or less: sustained complete response 90%; roadmap: single-arm imaging endpoint, one unblinded in-house reader, and 3 of 8 explanted livers held additional untreated HCC.",
+     "locator": "What we are not sure about #18; Appendix · RASER (bottom line)"
+    },
+    {
+     "source": "LEGACY",
+     "ref": "33739462",
+     "position": "Retrospective, 162 patients: 88.3% response by localised mRECIST falls to 46.3% by RECIST 1.1, and 28% went on to transplant or resection, so 3-year survival cannot be attributed to the radiation.",
+     "locator": "What we are not sure about #18; Appendix · LEGACY (bottom line)"
+    },
+    {
+     "source": "NCCN v2.2026",
+     "ref": "NCCN",
+     "position": "Cited as a source for segmentectomy, specifying more than 400 Gy to no more than 25% of the liver in Child-Pugh A.",
+     "locator": "Stage A Reasonable · Radiation segmentectomy (sources); Locoregional selector row 'Radiation segmentectomy'"
+    },
+    {
+     "source": "BCLC 2022",
+     "ref": "34801630",
+     "position": "Brought radioembolisation in for single nodules up to 8 cm; the roadmap states that 8 cm is not a universal curative cut-off.",
+     "locator": "Appendix · BCLC 2022 (bottom line); Stage A · Radiation segmentectomy (caveat)"
+    }
+   ],
+   "divergence": "Guidelines bring radioembolisation into early disease up to 8 cm, but the roadmap reads RASER and LEGACY as single-arm imaging evidence strongest at 3 cm or less; within the roadmap, stage 0 grades SBRT or Y-90 segmentectomy B while stage A and the selector grade segmentectomy C.",
+   "proposal": "Reasonable, grade C (Preferred in the selector for its phenotype): a selected definitive curative-intent option for solitary localized HCC when ablation is unsuitable, with full arterial coverage and ablative dosimetry. Strongest evidence is 3 cm or less; 8 cm is not a universal cut-off; unavailable personalised dosimetry is a caution; curative claims do not transfer to lobar Y-90.",
+   "proposal_locator": "Stage A Reasonable · Radiation segmentectomy; Locoregional selector row; Ratification list · Interventional radiology",
+   "rationale": "The evidence is single-arm with imaging endpoints: RASER treated 29 patients and LEGACY is retrospective with 28% going on to transplant or resection, so its survival cannot be attributed to the radiation. The page grades it C rather than B, and what that implies for consent has to be settled before the word curative is used.",
+   "audit": ""
+  },
+  {
+   "id": "HCC-D9",
+   "n": 9,
+   "question": "Decide whether this roadmap adopts the BCLC 2026 preference for microwave over radiofrequency up to 3 to 4 cm, given that no randomised trial has shown a difference, and whether the preference is stated as operational rather than outcome-based.",
+   "kind": "clinical",
+   "decisions": [
+    "0",
+    "A"
+   ],
+   "positions": [
+    {
+     "source": "BCLC 2026",
+     "ref": "41151697",
+     "position": "Prefers microwave over radiofrequency ablation up to 3-4 cm; the roadmap calls this a change of guideline position, not a trial result.",
+     "locator": "Stage A · Thermal ablation; What we are not sure about #7"
+    },
+    {
+     "source": "MWA vs RFA RCT (Vietti Violi)",
+     "ref": "29503247",
+     "position": "Superiority trial that did not show superiority: 2-year local progression 6% vs 12% (RR 1.62, 95% CI 0.66-3.94); mean lesion 18 mm, only 11 lesions of 3-4 cm, manufacturer funded.",
+     "locator": "What we are not sure about #7; Appendix · MWA vs RFA (bottom line)"
+    },
+    {
+     "source": "EASL 2025",
+     "ref": "39690085",
+     "position": "Treats radiofrequency and microwave ablation as equivalent.",
+     "locator": "Appendix · EASL 2025 (bottom line)"
+    }
+   ],
+   "divergence": "BCLC 2026 prefers microwave up to 3-4 cm while EASL 2025 treats the techniques as equivalent, and the one randomised trial neither showed superiority nor tested non-inferiority.",
+   "proposal": "Microwave or radiofrequency. The roadmap records the BCLC 2026 preference but states no randomised trial has shown a difference, so below that size the choice is operational (a workflow preference, not outcome-based); the v16 matrix states no universal preference between the two.",
+   "proposal_locator": "Stage A · Thermal ablation; Curative tab · Thermal ablation; Liver-directed treatment matrix, thermal ablation row (v16 text)",
+   "rationale": "The one randomised comparison was a superiority trial that did not show superiority and did not test non-inferiority, at a mean lesion size of 18 mm with only 11 lesions in the 3 to 4 cm range the preference is argued for. Calling it operational is accurate; calling it outcome-based is not.",
+   "audit": ""
+  },
+  {
+   "id": "HCC-D10",
+   "n": 10,
+   "question": "Decide whether this roadmap adopts the BCLC 2026 placement of external beam radiotherapy as an ablative alternative in BCLC 0 and A, given the supporting survival figures come from a retrospective multinational cohort of selected centres with no comparator arm.",
+   "kind": "clinical",
+   "decisions": [
+    "0",
+    "A"
+   ],
+   "positions": [
+    {
+     "source": "BCLC 2026",
+     "ref": "41151697",
+     "position": "Brings external beam radiotherapy into early-stage disease; the roadmap notes the survival figures it cites come from an uncontrolled multinational cohort.",
+     "locator": "What we are not sure about #23; Appendix · BCLC 2026 (bottom line)"
+    },
+    {
+     "source": "EBRT cohort (Moon 2026)",
+     "ref": "42139645",
+     "position": "4,913 patients from 30 of 96 centres chosen for favourable published outcomes; median survival 6.8 years in BCLC-0 and 4.6 in BCLC-A, but no comparator arm and proportional hazards violated in all four Cox models.",
+     "locator": "What we are not sure about #23; Appendix · EBRT cohort (bottom line)"
+    },
+    {
+     "source": "ASTRO EBRT",
+     "ref": "34688956",
+     "position": "Its strong recommendation of EBRT as a possible first-line single therapy is built on single-arm and retrospective series; its task force says no randomised trial compared EBRT with ablation or catheter therapy, and surgical oncologists published a dissent.",
+     "locator": "What we are not sure about #23; Appendix · ASTRO EBRT (bottom line)"
+    },
+    {
+     "source": "SBRT vs RFA RCT",
+     "ref": "39693584",
+     "position": "In 166 patients with recurrent HCC of 5 cm or less, SBRT improved local progression-free survival (HR 0.45) without a progression-free or overall survival difference, significant only at 2 cm or less; not proof of superiority for new HCC.",
+     "locator": "Locoregional selector row 'SBRT or external beam radiotherapy'; What we are not sure about #22"
+    }
+   ],
+   "divergence": "BCLC 2026 and ASTRO place EBRT among early-stage options, while the roadmap finds the survival data uncontrolled and the only randomised trial, in recurrent HCC, shows a local-control benefit without a survival difference.",
+   "proposal": "SBRT is Reasonable, grade B: a selected definitive alternative when the target is unsuitable for ablation and surgery (difficult access, vessel-adjacent) with adequate uninvolved liver; prior catheter-therapy failure is not required. The ratification list frames it as a reasonable consideration, not a standard alternative to ablation, and radiation oncology must agree the grade the evidence supports.",
+   "proposal_locator": "Stage 0 and Stage A Reasonable · SBRT; Locoregional selector SBRT row; Ratification list · Radiation oncology; Decisions table #10 (why)",
+   "rationale": "The supporting survival figures come from a retrospective multinational individual-patient cohort of 30 of 96 eligible centres, selected because they had published favourable outcomes, with no resection, ablation or TACE arm and a formally violated proportional hazards assumption. Radiation oncology must agree what grade that supports.",
+   "audit": ""
+  },
+  {
+   "id": "HCC-D11",
+   "n": 11,
+   "question": "Agree the AFP rule that actually binds listing here, since OPTN and AASLD allow listing once an AFP of 1,000 ng/mL or more falls below 500 while EASL treats an AFP above 1,000 as an absolute contraindication requiring three months at or below 1,000.",
+   "kind": "clinical",
+   "decisions": [
+    "0",
+    "A",
+    "B"
+   ],
+   "positions": [
+    {
+     "source": "OPTN Policy 9",
+     "ref": "OPTN9",
+     "position": "An AFP of 1,000 ng/mL or more blocks the standard exception until it falls below 500 after locoregional therapy; a later rise to 500 or more requires review-board referral, not automatic continuation.",
+     "locator": "Transplant tab · Eligibility pathways (AFP rule); Quick reference · Transplant table (v16 text)"
+    },
+    {
+     "source": "AASLD 2023",
+     "ref": "37199193",
+     "position": "Like OPTN, allows listing once an AFP of 1,000 or more falls below 500 ng/mL.",
+     "locator": "What we are not sure about #12"
+    },
+    {
+     "source": "EASL 2025",
+     "ref": "39690085",
+     "position": "An AFP above 1,000 ng/mL is an absolute contraindication whatever the tumour burden, and 1,000 or less must be sustained for three months before listing.",
+     "locator": "What we are not sure about #12; Appendix · EASL 2025 (bottom line)"
+    },
+    {
+     "source": "BCLC 2026",
+     "ref": "41151697",
+     "position": "An AFP above 1,000 signals unacceptably high post-transplant recurrence risk, but the update names no AFP decline that qualifies a downstaged patient.",
+     "locator": "Stage 0 · Transplant (caveat); What we are not sure about #12"
+    },
+    {
+     "source": "MERITS-LT",
+     "ref": "34331914",
+     "position": "The only independent predictor of downstaging dropout was a pre-treatment AFP-L3 of 10% or more (sub-HR 3.7), measured in only 83 of 209 patients.",
+     "locator": "What we are not sure about #12"
+    }
+   ],
+   "divergence": "OPTN and AASLD versus EASL set incompatible AFP listing rules, and the roadmap notes that neither threshold was derived from a trial.",
+   "proposal": "The page applies the OPTN rule (to be verified against current Policy 9 text), with the stricter of OPTN and local policy governing, and every AFP recorded with its date and intervening treatment. HCC B1.1 AFP proposals, such as a conservative hold at confirmed AFP of 500 or more, are OPEN, not automatic delisting rules. No monitor is named.",
+   "proposal_locator": "Transplant tab · Four kinds of statement and Eligibility pathways (AFP rule); AFP-only discordance and HCC B1.1 OPEN proposals (v16 text)",
+   "rationale": "OPTN and AASLD allow listing once an AFP of 1,000 ng/mL or more falls below 500, while EASL treats an AFP above 1,000 as an absolute contraindication requiring three months at or below 1,000. Two incompatible rules cannot both govern the same listing decision, and transplant surgery must also name who monitors it.",
+   "audit": ""
+  },
+  {
+   "id": "HCC-D12",
+   "n": 12,
+   "question": "Decide whether histotripsy begins as trial-only or registry-only, with credentialing, target criteria, consent language and an outcome review cadence, and require the prespecified rather than the post hoc local-control read in the registry.",
+   "kind": "governance",
+   "decisions": [
+    "B"
+   ],
+   "positions": [
+    {
+     "source": "#HOPE4LIVER",
+     "ref": "39225612",
+     "position": "Met technical-success (95%) and major-complication (7%) endpoints, neither a measure of tumour control; only 18 of 44 had HCC and none had segment VII or VIII tumours; one-year local control 63.4% prespecified versus 90% post hoc.",
+     "locator": "What we are not sure about #26; Appendix · #HOPE4LIVER (bottom line)"
+    },
+    {
+     "source": "FDA device clearance",
+     "ref": "",
+     "position": "As the roadmap reports it, a safety and performance determination for tumour destruction that does not establish survival benefit or equivalence to established ablation.",
+     "locator": "Locoregional selector row 'Histotripsy'"
+    }
+   ],
+   "divergence": "Regulatory clearance and technical endpoints were met, but the roadmap finds no tumour-specific curative evidence and a wide gap between the prespecified and post hoc local-control reads.",
+   "proposal": "Trial only, grade C: confined to a prospective trial or institutional registry, with consent explicit about oncologic uncertainty, a reliably visible target, adequate acoustic access, size and depth within device range, a credentialed operator and independent review of standard options; never displacing established treatment; each case registered with the prespecified local-control read. Start route and review cadence are undecided.",
+   "proposal_locator": "Stage B Trial only · Histotripsy; Locoregional selector row 'Histotripsy'; Operations · Quality dashboard (Innovation)",
+   "rationale": "The pivotal trial met a technical endpoint in a population no tumour board would send for ablation: only 18 of 44 participants had HCC, none of the tumours were in segments VII or VIII, and the one-year local control is 63.4% on the prespecified core-laboratory read against 90% post hoc. The registry must record the prespecified read, not the post hoc one.",
+   "audit": ""
+  },
+  {
+   "id": "HCC-D13",
+   "n": 13,
+   "question": "Adopt an explicit institutional position that TACE combined with checkpoint inhibitors is protocol-only until an overall-survival benefit is demonstrated, and record the toxicity rates the trials reported as part of the consent conversation.",
+   "kind": "governance",
+   "decisions": [
+    "B"
+   ],
+   "positions": [
+    {
+     "source": "EMERALD-1",
+     "ref": "39798579",
+     "position": "Progression-free survival 15.0 vs 8.2 months; durvalumab plus TACE alone was no better (HR 0.94), so the benefit appears to come from bevacizumab; the registry-reported final overall-survival analysis showed no benefit.",
+     "locator": "What we are not sure about #29; Appendix · EMERALD-1 (bottom line); Sources not abstracted in full (EMERALD-1 registry)"
+    },
+    {
+     "source": "LEAP-012",
+     "ref": "39798578",
+     "position": "Progression-free survival 14.6 vs 10.0 months; interim overall-survival HR 0.80 missed its boundary and the registry-posted final HR was 0.98; grade 3 or worse treatment-related events 71% vs 32%.",
+     "locator": "What we are not sure about #29; Systemic therapy tab · 'TACE combined with systemic therapy is not a standard of care'"
+    },
+    {
+     "source": "EMERALD-3",
+     "ref": "42636832",
+     "position": "Progression-free survival 13.0 vs 9.8 months; overall survival HR 0.84, not significant at 40% maturity; grade 3-4 treatment-related events 63% vs 19%, with seven treatment-related deaths.",
+     "locator": "What we are not sure about #29; Appendix · EMERALD-3 (bottom line)"
+    },
+    {
+     "source": "NCCN v2.2026",
+     "ref": "NCCN",
+     "position": "Quotes the LEAP-012 progression-free benefit and the interim overall-survival HR of 0.80; the roadmap says protocol-only use should not be portrayed as an NCCN prohibition.",
+     "locator": "Systemic therapy tab · 'TACE combined with systemic therapy is not a standard of care' (NCCN note)"
+    },
+    {
+     "source": "LEAP-012 / EMERALD-1 commentary",
+     "ref": "41503570",
+     "position": "Progression-free gains do not yet justify routine adoption without survival or quality-of-life data; over 40% of each trial lay outside intermediate stage and neither had a systemic-only arm.",
+     "locator": "Appendix · LEAP-012 / EMERALD-1 commentary (bottom line)"
+    }
+   ],
+   "divergence": "All three phase 3 trials met progression-free survival without an overall-survival benefit; the roadmap rests its stance on absent benefit rather than demonstrated harm, and notes NCCN does not prohibit the combination.",
+   "proposal": "Avoid outside a clinical trial or an approved institutional protocol, to be reviewed again should a positive overall-survival analysis appear or a labelled indication be granted. The v16 systemic matrix frames TACE-plus-systemic regimens as selected use under a defined oncology, IR or institutional pathway, not routine transplant bridging.",
+   "proposal_locator": "Stage B Avoid; Systemic therapy tab · 'TACE combined with systemic therapy is not a standard of care'; Systemic treatment matrix, TACE combination rows (v16 text)",
+   "rationale": "All three phase 3 trials met a progression-free survival endpoint and none has shown an overall-survival benefit, while grade 3 or worse treatment-related events ran at 71% against 32% and 63% against 19%, with immune-mediated events in 48% and treatment-related deaths in both trials. The position is defensible on absent benefit, not on demonstrated harm, so the trigger to re-review has to be named too.",
+   "audit": ""
+  },
+  {
+   "id": "HCC-D14",
+   "n": 14,
+   "question": "Decide whether any adjuvant locoregional therapy, TACE or hepatic arterial infusion, is offered after high-risk resection, noting that the AASLD statement against adjuvant therapy concerns atezolizumab plus bevacizumab and that the two randomised adjuvant locoregional trials are single-country hepatitis B populations.",
+   "kind": "clinical",
+   "decisions": [
+    "0",
+    "A"
+   ],
+   "positions": [
+    {
+     "source": "AASLD critical update",
+     "ref": "39992051",
+     "position": "Advises against adjuvant and neoadjuvant systemic therapy after resection or ablation because IMbrave050's benefit did not hold; roadmap: it concerns atezolizumab-bevacizumab, rests on an interim analysis, and extends to neoadjuvant therapy without a cited trial.",
+     "locator": "Appendix · AASLD critical update (bottom line); Decisions table #14 (why)"
+    },
+    {
+     "source": "IMbrave050 update",
+     "ref": "41580093",
+     "position": "The updated recurrence-free survival HR of 0.90 (95% CI 0.72-1.12) lost the interim signal, with overall survival numerically unfavourable (HR 1.26).",
+     "locator": "Curative tab · Resection (callout); Appendix · IMbrave050 update (bottom line)"
+    },
+    {
+     "source": "NCCN v2.2026",
+     "ref": "NCCN",
+     "position": "The panel dropped adjuvant atezolizumab plus bevacizumab and states there is currently no adjuvant strategy.",
+     "locator": "Systemic therapy tab · Adjuvant therapy after resection or ablation"
+    },
+    {
+     "source": "Adjuvant TACE RCT (high-risk HBV resection; not named in the roadmap)",
+     "ref": "",
+     "position": "One reduced-dose TACE cycle improved 3-year recurrence-free (HR 0.68) and overall survival (HR 0.59); single centre, 280 of 1,393 resections, unblinded surveillance control.",
+     "locator": "What we are not sure about #30"
+    },
+    {
+     "source": "Adjuvant FOLFOX HAI RCT (microvascular invasion; not named in the roadmap)",
+     "ref": "",
+     "position": "Median disease-free survival 20.3 vs 10.0 months (HR 0.59) with overall survival not significant; microvascular invasion was neither graded nor used for stratification.",
+     "locator": "What we are not sure about #30"
+    }
+   ],
+   "divergence": "The AASLD and NCCN statements concern adjuvant atezolizumab-bevacizumab, while two single-country hepatitis B randomised trials report benefit from adjuvant TACE or HAI that the page does not yet address.",
+   "proposal": "The roadmap states only that adjuvant atezolizumab-bevacizumab is not recommended (Avoid) and that resected patients get multiphase liver and chest imaging every 3-6 months with long-term surveillance; it takes no position on adjuvant TACE or HAI, and lists HAI as Trial only, not a routine locoregional line.",
+   "proposal_locator": "Curative tab · Resection; Systemic therapy tab · Adjuvant therapy; What we are not sure about #30; Locoregional selector row 'Hepatic arterial infusion'",
+   "rationale": "The AASLD statement against adjuvant therapy concerns atezolizumab plus bevacizumab, whose recurrence-free survival signal was lost on updated analysis; it is not a statement about every adjuvant strategy. The two randomised adjuvant locoregional trials that do report benefit are single-country hepatitis B populations with unblinded controls, so whether they apply here is a local judgement.",
+   "audit": ""
+  },
+  {
+   "id": "HCC-D15",
+   "n": 15,
+   "question": "Define the pre-transplant checkpoint-inhibitor washout requirement and the approval route, and confirm that local transplant policy is at least as strict as OPTN policy.",
+   "kind": "governance",
+   "decisions": [
+    "C"
+   ],
+   "positions": [
+    {
+     "source": "Pre-LT cohorts (Moeckli cohort, VITALITY)",
+     "ref": "",
+     "position": "Provide observational timing evidence on pre-transplant checkpoint exposure, subject to selection bias; they inform proposed intervals but do not establish a universally safe washout.",
+     "locator": "What we are not sure about #14 (v16 text); Stage C Reasonable · pre-transplant checkpoint inhibitor (v16 text)"
+    },
+    {
+     "source": "ICI after transplant (pooled review)",
+     "ref": "36102312",
+     "position": "Pooled 52 patients given checkpoint inhibitors after liver transplant: rejection 28.8%, about half of it fatal; per v16 it concerns post-transplant use and cannot define a pre-transplant washout.",
+     "locator": "What we are not sure about #14 (v16 text); Stage C Avoid · post-transplant checkpoint blockade"
+    }
+   ],
+   "divergence": "No pre-transplant washout interval is prospectively validated; the earlier pooled review addresses post-transplant use, and the pre-transplant cohorts are observational.",
+   "proposal": "Pre-transplant checkpoint inhibitors only through transplant-specific review (Reasonable C, TX-TIMING), with washout, immunosuppression plan and alternative agreed before the first dose; the record covers the last dose, the proposed interval, urgency, alternatives and transplant-governance sign-off. The OPEN decision in the transplant protocol controls, and the stricter of OPTN and local policy governs.",
+   "proposal_locator": "Stage C Reasonable · pre-transplant checkpoint inhibitor (v16 text); Decisions table #15 (why); Transplant tab · Four kinds of statement",
+   "rationale": "The earlier 52-patient review concerns ICI AFTER LT and cannot define a pre-LT washout. Pre-LT cohorts provide observational timing evidence, not a universally safe cutoff. Agree the plan before the first dose and record last exposure, proposed interval, urgency, alternatives and transplant-governance approval. The transplant protocol’s OPEN decision remains controlling.",
+   "audit": ""
+  },
+  {
+   "id": "HCC-D16",
+   "n": 16,
+   "question": "Decide whether SBRT may be used as a transplant bridge, given explant complete necrosis of 13% after SBRT against 49% after radiofrequency ablation in the only comparative series, and name who adjudicates bridging modality choice.",
+   "kind": "clinical",
+   "decisions": [
+    "A",
+    "B"
+   ],
+   "positions": [
+    {
+     "source": "Bridging comparative series (single-centre; not named in the roadmap)",
+     "ref": "",
+     "position": "Explant complete necrosis 13.3% after SBRT, 24.3% after TACE and 49.2% after RFA; liver-function decline 38.9% vs 19.4% vs 13.0%; similar dropout; SBRT reserved by design for patients unsuited to the others.",
+     "locator": "What we are not sure about #33; Decisions table #16 (why)"
+    },
+    {
+     "source": "MERITS-LT",
+     "ref": "34331914",
+     "position": "In downstaging, no detectable difference between chemoembolisation and Y-90, but the roadmap calls that comparison unadjusted and confounded.",
+     "locator": "Appendix · MERITS-LT (bottom line)"
+    }
+   ],
+   "divergence": "The only comparative bridging series favours RFA on explant necrosis but its arms were not comparable, and the roadmap notes no trial has compared bridging with no bridging.",
+   "proposal": "The roadmap lists thermal ablation, TACE, radiation segmentectomy and SBRT among bridge uses, states that no technique is a universal best bridge, requires bridge use of SBRT to be named separately, and holds that technical feasibility does not confer transplant eligibility. No adjudicator of bridging modality is named.",
+   "proposal_locator": "Locoregional selector (thermal ablation, segmentectomy, TACE and SBRT rows); Liver-directed treatment matrix, arterial embolization and external beam rows (v16 text)",
+   "rationale": "In the only comparative series explant complete necrosis was 13.3% after SBRT against 24.3% after TACE and 49.2% after radiofrequency ablation, with liver function deteriorating in 38.9% against 19.4% and 13.0% — but SBRT was reserved by design for patients who could not have the other two, so the arms are not comparable. Someone has to own the choice rather than let availability decide it.",
+   "audit": ""
+  },
+  {
+   "id": "HCC-D17",
+   "n": 17,
+   "question": "Name who owns the response-assessment call, including which LI-RADS treatment-response algorithm applies after radiation-based therapy, and how a discordant read is resolved.",
+   "kind": "governance",
+   "decisions": [
+    "0",
+    "A",
+    "B",
+    "C"
+   ],
+   "positions": [
+    {
+     "source": "LI-RADS (ACR v2024 treatment response)",
+     "ref": "LIRADS",
+     "position": "Nonradiation algorithm after ablation or TACE; radiation algorithm after SBRT or Y-90, with a nonprogressing category and no equivocal category. The roadmap notes the response algorithms have no outcome validation.",
+     "locator": "Quick reference · LI-RADS table (v16 text); What we are not sure about #2"
+    }
+   ],
+   "divergence": "The response framework is expert consensus graded C to D, and the treatment-response algorithms lack outcome validation.",
+   "proposal": "Use the algorithm that matches the treatment: nonradiation at about 4-6 weeks after ablation or TACE; radiation at about 8-12 weeks, then serially, after Y-90 or SBRT, without retreating on enhancement alone in nonprogressing lesions. A discordant interpretation returns the case to MDT. No owner or tie-break rule is named.",
+   "proposal_locator": "Response assessment tab; Quick reference · LI-RADS and response loop (v16 text); Locoregional tab · Stop and switch rules",
+   "rationale": "Applying the nonradiation algorithm after radioembolisation or SBRT turns expected delayed necrosis into a false call of residual tumour, and it is a recurring and consequential error in this pathway. The treatment-response algorithms have no outcome validation at all, so the owner and the tie-break rule are the only controls available.",
+   "audit": ""
+  },
+  {
+   "id": "HCC-D18",
+   "n": 18,
+   "question": "Agree that the 90% and 95% quality thresholds, the one-business-day urgent triage standard and the three-procedure investigation trigger are operational judgements set for the pilot and revisable, not evidence-derived targets.",
+   "kind": "operational",
+   "decisions": [],
+   "positions": [],
+   "divergence": "No source positions; programme decision.",
+   "proposal": "Quality dashboard: data completeness 90% or more by month 3; decision reliability and curative-first discipline 95% or more; imaging 90% or more; urgent cases triaged within one business day; investigate any patient with three or more procedures before transplant referral. The roadmap already states these numbers were chosen, not derived, and that operating requirements are grade D by construction.",
+   "proposal_locator": "Operations · Quality dashboard; What we are not sure about #34; Team responsibilities section introduction",
+   "rationale": "None of these numbers is derived from comparative outcome evidence; they were chosen, and the curative-first discipline measure is new and was previously unmeasured. Agreeing that openly is what keeps them auditable for adherence rather than quoted as effectiveness targets.",
+   "audit": ""
+  },
+  {
+   "id": "HCC-D19",
+   "n": 19,
+   "question": "Assign an owner and a calendar date for re-verifying OPTN Policy 9 criteria, drug labelling and device authorisations against this document.",
+   "kind": "governance",
+   "decisions": [],
+   "positions": [
+    {
+     "source": "OPTN Policy 9",
+     "ref": "OPTN9",
+     "position": "Binding policy that can change without notice to the roadmap, so each numeric criterion is to be rechecked against the current Policy 9 text before it is applied to listing; criteria were checked on 1 October 2026.",
+     "locator": "Transplant tab · Four kinds of statement; Provenance"
+    },
+    {
+     "source": "Adult MELD Exceptions for Transplant Oncology (OPTN guidance)",
+     "ref": "",
+     "position": "Review-board guidance rather than policy or a standard of care; it informs but does not compel the review board.",
+     "locator": "Transplant tab · Listing and allocation (Authority); Provenance"
+    }
+   ],
+   "divergence": "No source disagreement; the risk is staleness, because binding OPTN policy changes without notice to the document.",
+   "proposal": "Every criterion drawn from OPTN policy, drug labelling or device authorisation is to be re-verified at implementation and at each scheduled review; OPTN criteria were last checked on 1 October 2026 and NCCN positions are quoted from v2.2026. No owner or calendar date is named.",
+   "proposal_locator": "Provenance; Status banner; Ratification list · Programme operations",
+   "rationale": "OPTN policy is binding and changes without notice to this document, and every numeric criterion must be re-verified against the current Policy 9 text before it is applied to a listing decision. Without a named owner and a date, the page silently goes stale.",
+   "audit": ""
+  },
+  {
+   "id": "HCC-D20",
+   "n": 20,
+   "question": "Pilot for 90 days, audit 20 consecutive cases, then revise before formal approval as a clinical practice guideline.",
+   "kind": "governance",
+   "decisions": [],
+   "positions": [],
+   "divergence": "No source positions; programme decision.",
+   "proposal": "The roadmap is a draft for multidisciplinary and institutional governance review, not active clinical policy. It proposes the 90-day pilot with a 20-case audit, sets access targets after the pilot baseline, and audits operating requirements for adherence rather than effectiveness until the registry can support an effectiveness question.",
+   "proposal_locator": "Status banner; Decisions table #20; Operations · Quality dashboard (Access row); Team responsibilities section introduction",
+   "rationale": "The page is a draft for multidisciplinary and institutional governance review, not active clinical policy, and the operating requirements are evidence grade D by construction. A pilot with a fixed audit is what converts a stakeholder-derived document into something that can be approved.",
+   "audit": ""
+  }
+ ],
+ "ratify": [
+  {
+   "id": "HCC-RT-1",
+   "specialty": "Hepatology",
+   "question": "Surveillance grade B (not A) and the stop-surveillance rule.",
+   "kind": "clinical",
+   "proposal": "Ultrasound plus AFP every six months is Standard at grade B, not the A of v0.2. Do not start or continue surveillance where no HCC treatment, including transplant, would be offered, and record that decision.",
+   "proposal_locator": "Diagnosis & staging tab · Surveillance and recall; What we are not sure about #1",
+   "positions": [
+    {
+     "source": "Surveillance RCT (Zhang 2004)",
+     "ref": "15042359",
+     "position": "The single randomised trial showing an HCC-mortality benefit, in Chinese hepatitis B carriers; the roadmap notes cluster allocation analysed individually, 58.2% compliance and no all-cause mortality.",
+     "locator": "What we are not sure about #1"
+    },
+    {
+     "source": "AASLD 2023",
+     "ref": "37199193",
+     "position": "Rates semiannual ultrasound plus AFP surveillance Level 2, Strong Recommendation.",
+     "locator": "Diagnosis & staging tab · Surveillance and recall (grade challenge)"
+    }
+   ]
+  },
+  {
+   "id": "HCC-RT-2",
+   "specialty": "Hepatology",
+   "question": "Child-Pugh, ALBI and MELD thresholds used to bar each locoregional modality.",
+   "kind": "clinical",
+   "proposal": "Not yet set; hepatology is to define modality-specific thresholds instead of one bilirubin cut-off. Current cautions include decompensation and ALBI grade 3 for TACE, hyperbilirubinaemia for lobar Y-90, and decompensation for SBRT.",
+   "proposal_locator": "Decisions table #3 (why); Stage B Standard and Reasonable (caveats); Stage A · SBRT (caveat)",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-3",
+   "specialty": "Hepatology",
+   "question": "Whether the §5.1.1 criteria are adopted as the institutional definition of clinically significant portal hypertension, whether HVPG is required before resection or non-invasive rule-in suffices, and which reading of the Yuan randomised trial governs when CSPH is present.",
+   "kind": "clinical",
+   "proposal": "CSPH is an HVPG of 10 mmHg or more, alongside Baveno VIII specific signs and non-invasive rule-in criteria; measure HVPG when resection turns on it and record criterion, value and date. Neither CSPH reading is adopted by default.",
+   "proposal_locator": "Curative tab · Establishing CSPH and 'Does CSPH bar resection?'",
+   "positions": [
+    {
+     "source": "BCLC 2026",
+     "ref": "41151697",
+     "position": "With CSPH, resection carries significant risk and transplantation offers better survival; HVPG remains the gold standard.",
+     "locator": "Curative tab · Establishing CSPH and 'Does CSPH bar resection?'"
+    },
+    {
+     "source": "Yuan 2024 RCT",
+     "ref": "39322951",
+     "position": "No significant survival difference between resection and ablation-based treatment in 160 hepatitis B patients with CSPH; authors call resection safe. Roadmap: small, no HVPG measured.",
+     "locator": "Curative tab · 'Does CSPH bar resection?'; What we are not sure about #4"
+    },
+    {
+     "source": "Baveno VIII",
+     "ref": "42624290",
+     "position": "Provides non-invasive rule-in and rule-out criteria; its HCC statements are new, LoE 3 and weak.",
+     "locator": "Curative tab · Baveno criteria table; What we are not sure about #5"
+    }
+   ]
+  },
+  {
+   "id": "HCC-RT-4",
+   "specialty": "Hepatology",
+   "question": "Hepatitis B antiviral requirement before embolic, radiation and systemic therapy.",
+   "kind": "clinical",
+   "proposal": "Before systemic treatment the roadmap requires documenting hepatitis status and the antiviral plan; it states no specific antiviral requirement before embolic or radiation therapy.",
+   "proposal_locator": "Systemic treatment matrix · pre-treatment checks (v16 text)",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-5",
+   "specialty": "Hepatology",
+   "question": "Child-Pugh B systemic-therapy position.",
+   "kind": "clinical",
+   "proposal": "Reasonable, grade C: individualise with an experienced hepatology and oncology team, or do not treat; suited to B7-B8 where cancer symptoms rather than liver failure drive the picture; B9 and above rarely appropriate outside a trial.",
+   "proposal_locator": "Stage C Reasonable · Child-Pugh B (v16 text); Systemic therapy tab · Child-Pugh B row",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-6",
+   "specialty": "Transplant and hepatobiliary surgery",
+   "question": "Milan/T2 and downstaging-pool wording, including the ‘at least one lesion >3 cm’ correction.",
+   "kind": "clinical",
+   "proposal": "Milan/OPTN T2 covers a single 2-5 cm lesion or two to three lesions of 1-3 cm, without vascular invasion or spread. The UNOS-DS 2-3 lesion group needs one lesion above 3 cm, correcting v0.2, which misrouted T2 disease.",
+   "proposal_locator": "Transplant tab · Eligibility pathways; Quick reference · Transplant table (v16 text)",
+   "positions": [
+    {
+     "source": "Milan criteria",
+     "ref": "8594428",
+     "position": "Set upper limits only (one tumour of 5 cm or less, or up to three of 3 cm or less) and excluded vascular or nodal invasion; the roadmap notes the limits were derived on explant pathology.",
+     "locator": "Transplant tab · Eligibility pathways; What we are not sure about #9"
+    },
+    {
+     "source": "OPTN Policy 9",
+     "ref": "OPTN9",
+     "position": "Adds the lower limits (2 cm; 1 cm), class 5 imaging and the downstaging pool; a solitary lesion under 2 cm is T1 and attracts no exception points.",
+     "locator": "Transplant tab · Eligibility pathways"
+    }
+   ]
+  },
+  {
+   "id": "HCC-RT-7",
+   "specialty": "Transplant and hepatobiliary surgery",
+   "question": "AFP-rule operational handling and who monitors it.",
+   "kind": "governance",
+   "proposal": "Record every AFP with its date and intervening treatment; 1,000 ng/mL or more blocks the standard exception until below 500 after locoregional therapy, and a later rise to 500 or more goes to review-board referral. No monitor is named.",
+   "proposal_locator": "Transplant tab · Eligibility pathways (AFP rule); AFP-only discordance (v16 text); Decisions table #11 (why)",
+   "positions": [
+    {
+     "source": "OPTN Policy 9 and AASLD 2023",
+     "ref": "OPTN9",
+     "position": "Allow listing once an AFP of 1,000 or more falls below 500 ng/mL; a later rise to 500 or more needs review-board referral.",
+     "locator": "Transplant tab · AFP rule; What we are not sure about #12"
+    },
+    {
+     "source": "EASL 2025",
+     "ref": "39690085",
+     "position": "An AFP above 1,000 ng/mL is an absolute contraindication, with 1,000 or less required for three months before listing.",
+     "locator": "What we are not sure about #12"
+    }
+   ]
+  },
+  {
+   "id": "HCC-RT-8",
+   "specialty": "Transplant and hepatobiliary surgery",
+   "question": "Beyond-downstaging position: governance route, registry requirement, no automatic exception.",
+   "kind": "governance",
+   "proposal": "Not an automatic exception route or recognised standard: selected patients only, through transplant governance and the national liver review board or within a protocol, judged on sustained response and biology, with prospective outcome tracking.",
+   "proposal_locator": "Transplant tab · Eligibility pathways ('Beyond the downstaging pool'); Operations · Quality dashboard (Innovation)",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-9",
+   "specialty": "Transplant and hepatobiliary surgery",
+   "question": "Pre-transplant checkpoint-inhibitor washout requirement and approval route.",
+   "kind": "governance",
+   "proposal": "Only through transplant-specific review, with washout, immunosuppression plan and alternative agreed before the first dose; record last exposure, proposed interval, urgency, alternatives and governance approval; the transplant protocol's OPEN decision controls.",
+   "proposal_locator": "Stage C Reasonable · pre-transplant checkpoint inhibitor (v16 text); Decisions table #15 (why)",
+   "positions": [
+    {
+     "source": "Pre-LT cohorts (Moeckli cohort, VITALITY)",
+     "ref": "",
+     "position": "Observational timing evidence before transplant, subject to selection bias; no universally safe interval.",
+     "locator": "What we are not sure about #14 (v16 text)"
+    },
+    {
+     "source": "ICI after transplant (pooled review)",
+     "ref": "36102312",
+     "position": "Rejection in 28.8% of 52 patients treated after transplant; per v16 it cannot define a pre-transplant washout.",
+     "locator": "What we are not sure about #14 (v16 text)"
+    }
+   ]
+  },
+  {
+   "id": "HCC-RT-10",
+   "specialty": "Transplant and hepatobiliary surgery",
+   "question": "Resection criteria including portal-hypertension risk and future-remnant thresholds.",
+   "kind": "clinical",
+   "proposal": "Solitary tumour, adequate future liver remnant, preserved function and acceptable portal-hypertension risk; resectability of larger or multifocal disease by expert hepatobiliary review. CSPH prompts transplant assessment but is not an absolute bar. No numeric remnant threshold is stated.",
+   "proposal_locator": "Stage 0 and Stage A · Resection; Curative tab · Resection and 'Does CSPH bar resection?'",
+   "positions": [
+    {
+     "source": "BCLC 2026",
+     "ref": "41151697",
+     "position": "With CSPH, resection carries significant risk and transplantation offers better survival.",
+     "locator": "Curative tab · 'Does CSPH bar resection?'"
+    },
+    {
+     "source": "Yuan 2024 RCT",
+     "ref": "39322951",
+     "position": "Found no significant survival difference for resection in CSPH and called it safe; the roadmap notes its small hepatitis B population and no HVPG measurement.",
+     "locator": "What we are not sure about #4"
+    }
+   ]
+  },
+  {
+   "id": "HCC-RT-11",
+   "specialty": "Transplant and hepatobiliary surgery",
+   "question": "The rule that transplant referral is not delayed by accumulating locoregional procedures.",
+   "kind": "clinical",
+   "proposal": "Refer early within Milan, when the downstaging pool may apply, or with recurrent HCC and severe liver disease; serial locoregional therapy that delays referral is Avoid; the dashboard investigates any patient with three or more procedures before referral.",
+   "proposal_locator": "Transplant tab · Refer early; Stage A Avoid; Operations · Quality dashboard (Transplant pathway)",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-12",
+   "specialty": "Diagnostic radiology",
+   "question": "LR-TIV handling — narrowing v0.2's universal biopsy requirement.",
+   "kind": "clinical",
+   "proposal": "Tumour in vein contiguous with an LR-5 mass in an at-risk patient may be managed as HCC with macrovascular invasion (grade B); biopsy when the vein finding is isolated, the mass is not LR-5, or bland thrombus cannot be excluded.",
+   "proposal_locator": "Diagnosis & staging tab · Diagnostic categories (LR-TIV row)",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-13",
+   "specialty": "Diagnostic radiology",
+   "question": "Visualisation score C as an escalation trigger distinct from the US category.",
+   "kind": "clinical",
+   "proposal": "US-3, a rising or elevated AFP, or visualisation score C each trigger diagnostic multiphase MRI or CT; the visualisation score is recorded separately from the US category because it is the trigger most often missed.",
+   "proposal_locator": "Diagnosis & staging tab · Surveillance and recall",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-14",
+   "specialty": "Diagnostic radiology",
+   "question": "Mandatory use of the correct LI-RADS treatment-response algorithm, radiation versus nonradiation.",
+   "kind": "clinical",
+   "proposal": "Mandatory: the nonradiation algorithm after ablation or TACE and the radiation algorithm after radioembolisation or SBRT; the roadmap calls the reverse a recurring, consequential error. The response framework is graded C to D.",
+   "proposal_locator": "Response assessment tab; Quick reference · LI-RADS table (v16 text); Operations · Quality dashboard (Imaging)",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-15",
+   "specialty": "Diagnostic radiology",
+   "question": "Reporting minimum dataset and turnaround for MDT imaging review.",
+   "kind": "operational",
+   "proposal": "Tumour fields before a decision: number, largest viable diameter, segments, enhancement and washout, LI-RADS category, infiltrative pattern, macrovascular invasion, extrahepatic disease, prior treatment map and response. No imaging turnaround is stated.",
+   "proposal_locator": "Diagnosis & staging tab · Required before a treatment decision (Tumour)",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-16",
+   "specialty": "Diagnostic radiology",
+   "question": "Alternative surveillance with abbreviated MRI: indications and capacity.",
+   "kind": "clinical",
+   "proposal": "No proposal stated in the roadmap; the programme decides.",
+   "proposal_locator": "Not found in the roadmap text or page data beyond this ratification item",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-17",
+   "specialty": "Interventional radiology",
+   "question": "The locoregional selector table: phenotypes, cautions and evidence grades as written.",
+   "kind": "governance",
+   "proposal": "A non-ranked selector: thermal ablation Standard A; radiation segmentectomy Preferred C; TACE Standard A; lobar Y-90 Reasonable B; SBRT or EBRT Reasonable B; hepatic arterial infusion and histotripsy Trial only C, each with phenotype and caution columns.",
+   "proposal_locator": "Locoregional tab · selector table",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-18",
+   "specialty": "Interventional radiology",
+   "question": "Radiation segmentectomy graded C rather than B, and what that implies for consent.",
+   "kind": "clinical",
+   "proposal": "Graded C as a selected definitive curative-intent option when ablation is unsuitable; strongest evidence is solitary 3 cm or less and 8 cm is not a universal cut-off. What grade C means for consent is not yet settled.",
+   "proposal_locator": "Stage A Reasonable · Radiation segmentectomy; Decisions table #8 (why)",
+   "positions": [
+    {
+     "source": "BCLC 2022",
+     "ref": "34801630",
+     "position": "Brought radioembolisation in for single nodules up to 8 cm.",
+     "locator": "Appendix · BCLC 2022 (bottom line)"
+    },
+    {
+     "source": "RASER",
+     "ref": "35617978",
+     "position": "Single-arm, 29 patients of 3 cm or less: 90% sustained complete response on imaging read by one unblinded reader.",
+     "locator": "What we are not sure about #18"
+    },
+    {
+     "source": "LEGACY",
+     "ref": "33739462",
+     "position": "Retrospective; 28% went on to transplant or resection, so survival cannot be attributed to radiation.",
+     "locator": "What we are not sure about #18"
+    }
+   ]
+  },
+  {
+   "id": "HCC-RT-19",
+   "specialty": "Interventional radiology",
+   "question": "Personalised dosimetry as a precondition for radioembolisation, and who performs it.",
+   "kind": "clinical",
+   "proposal": "Radioembolisation requires mapping, lung and nontarget assessment, and individualized dosimetry; for segmentectomy, unavailable personalised dosimetry is a caution. Who performs dosimetry is not named.",
+   "proposal_locator": "Liver-directed treatment matrix, radioembolization row (v16 text); Stage A · Radiation segmentectomy (caveat)",
+   "positions": [
+    {
+     "source": "DOSISPHERE-01",
+     "ref": "33166497",
+     "position": "Personalised dosimetry improved response and survival over standard dosing; the roadmap notes a small, stopped-early phase 2 trial with survival confounded by later resection.",
+     "locator": "What we are not sure about #20"
+    },
+    {
+     "source": "SARAH",
+     "ref": "29107679",
+     "position": "Used body-surface-area dosing and was negative; its later dose-response analysis linked a tumour dose of 100 Gy or more to longer survival.",
+     "locator": "What we are not sure about #21"
+    }
+   ]
+  },
+  {
+   "id": "HCC-RT-20",
+   "specialty": "Interventional radiology",
+   "question": "The two-session TACE stop rule and what counts as ‘well executed’.",
+   "kind": "clinical",
+   "proposal": "v0.8 withdrew the fixed two-session rule for reassessment after each session in MDT context, yet the stop/switch card still lists persistent viability after two well-executed sessions as a switch trigger; 'well executed' is undefined.",
+   "proposal_locator": "Stage B Avoid (note); Locoregional tab · Stop and switch rules; What we are not sure about #32",
+   "positions": [
+    {
+     "source": "EASL 2025",
+     "ref": "39690085",
+     "position": "Consider other therapies after one or two consecutive TACEs without response (level of evidence 3); the roadmap notes refractoriness definitions differ.",
+     "locator": "What we are not sure about #32"
+    }
+   ]
+  },
+  {
+   "id": "HCC-RT-21",
+   "specialty": "Interventional radiology",
+   "question": "Histotripsy as trial or registry only, with credentialing and target criteria.",
+   "kind": "governance",
+   "proposal": "Trial only, grade C, in a prospective trial or institutional registry: visible target, adequate acoustic window, device-compliant size and depth, credentialed operator, independent standard-treatment review and explicit consent about oncologic uncertainty.",
+   "proposal_locator": "Stage B Trial only · Histotripsy; Locoregional selector row 'Histotripsy'",
+   "positions": [
+    {
+     "source": "#HOPE4LIVER",
+     "ref": "39225612",
+     "position": "Met technical and safety endpoints in a mostly non-HCC population; one-year local control 63.4% prespecified versus 90% post hoc.",
+     "locator": "What we are not sure about #26"
+    },
+    {
+     "source": "FDA device clearance",
+     "ref": "",
+     "position": "A safety and performance determination that does not establish survival benefit or equivalence to ablation.",
+     "locator": "Locoregional selector row 'Histotripsy'"
+    }
+   ]
+  },
+  {
+   "id": "HCC-RT-22",
+   "specialty": "Radiation oncology",
+   "question": "SBRT graded B as a reasonable consideration, not a standard alternative to ablation.",
+   "kind": "clinical",
+   "proposal": "Reasonable, grade B: a selected definitive alternative when ablation and surgery are unsuitable, with adequate uninvolved liver; prior catheter failure is not required; superiority over ablation for newly diagnosed HCC is not established.",
+   "proposal_locator": "Stage A Reasonable · SBRT; Locoregional selector row 'SBRT or external beam radiotherapy'",
+   "positions": [
+    {
+     "source": "ASTRO EBRT",
+     "ref": "34688956",
+     "position": "Makes conditional recommendations across indications and a strong first-line EBRT recommendation on single-arm and retrospective series, with no randomised comparison against ablation.",
+     "locator": "Locoregional selector SBRT row; What we are not sure about #23"
+    },
+    {
+     "source": "SBRT vs RFA RCT",
+     "ref": "39693584",
+     "position": "In recurrent HCC of 5 cm or less, better local progression-free survival with SBRT but no progression-free or overall survival difference.",
+     "locator": "Locoregional selector SBRT row; What we are not sure about #22"
+    }
+   ]
+  },
+  {
+   "id": "HCC-RT-23",
+   "specialty": "Radiation oncology",
+   "question": "The accurate statement of RTOG 1112 (primary endpoint not met) in consent and MDT discussion.",
+   "kind": "clinical",
+   "proposal": "RTOG 1112 missed its primary survival endpoint (one-sided P=0.06), reached significance only on adjustment, closed early and used a sorafenib comparator; 15% of the SBRT arm never started sorafenib.",
+   "proposal_locator": "Stage C Reasonable (radiation alongside systemic therapy); Locoregional selector SBRT row; What we are not sure about #24",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-24",
+   "specialty": "Radiation oncology",
+   "question": "Dose-constraint and prior-dose-overlap rules; who maintains the cumulative dose record.",
+   "kind": "clinical",
+   "proposal": "Plans respect dose constraints for normal liver, bowel, stomach and bile ducts, with motion management and prior-dose review; overlapping prior dose is a caution; cumulative dose and treated volumes are recorded before decisions. No record keeper is named.",
+   "proposal_locator": "Liver-directed treatment matrix, external beam row (v16 text); Diagnosis & staging tab · Required before a treatment decision (Prior burden)",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-25",
+   "specialty": "Radiation oncology",
+   "question": "Delayed-response interpretation rules after radiation-based therapy.",
+   "kind": "clinical",
+   "proposal": "Apply the radiation algorithm, assess first at about 8-12 weeks then serially, expect delayed necrosis, and do not call failure from persistent enhancement in nonprogressing lesions; nonprogressing is not proof of complete necrosis.",
+   "proposal_locator": "Response assessment tab; Locoregional tab · Stop and switch rules; Quick reference · LI-RADS table (v16 text)",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-26",
+   "specialty": "Radiation oncology",
+   "question": "Position on radiotherapy for portal-vein tumour thrombus alongside systemic therapy.",
+   "kind": "clinical",
+   "proposal": "Systemic therapy is the backbone (A); adding radioembolisation or EBRT is Reasonable B when liver-confined, reserve preserved and dosimetry feasible, with a stated goal; document why, and never delay the systemic start.",
+   "proposal_locator": "Locoregional tab · Portal-vein tumour thrombus; Stage C Reasonable",
+   "positions": [
+    {
+     "source": "RTOG 1112",
+     "ref": "39699905",
+     "position": "Missed its primary survival endpoint against a sorafenib comparator.",
+     "locator": "Locoregional tab · Portal-vein tumour thrombus; What we are not sure about #24"
+    },
+    {
+     "source": "TACE + EBRT (Asan trial)",
+     "ref": "29543938",
+     "position": "Small single-centre trial against sorafenib; survival benefit was secondary, with 90.7% crossover.",
+     "locator": "Locoregional tab · Portal-vein tumour thrombus; What we are not sure about #24"
+    },
+    {
+     "source": "ASTRO EBRT",
+     "ref": "34688956",
+     "position": "Cites a neoadjuvant radiotherapy trial for portal-vein thrombus that counted only tumour-related deaths and came almost entirely from one hospital.",
+     "locator": "What we are not sure about #24"
+    }
+   ]
+  },
+  {
+   "id": "HCC-RT-27",
+   "specialty": "Medical oncology",
+   "question": "Removal of any implied ranking among the three first-line immunotherapy regimens.",
+   "kind": "clinical",
+   "proposal": "All three first-line combinations are Standard A and unranked; v0.2's implied order is removed, and row order or cross-trial medians do not rank efficacy. Choose by eligibility, safety and patient preference.",
+   "proposal_locator": "Stage C Standard (v16 text); Systemic therapy tab · first-line row; Systemic treatment matrix introduction (v16 text)",
+   "positions": [
+    {
+     "source": "IMbrave150 update",
+     "ref": "34902530",
+     "position": "Overall survival 19.2 vs 13.4 months against sorafenib; per v16 the exploratory non-viral subgroup does not establish futility.",
+     "locator": "Stage C · Atezolizumab plus bevacizumab (v16 text); What we are not sure about #27"
+    },
+    {
+     "source": "HIMALAYA / STRIDE",
+     "ref": "38319892",
+     "position": "16.43 vs 13.77 months against sorafenib, no progression-free benefit, curves separating only after nine months.",
+     "locator": "What we are not sure about #27"
+    },
+    {
+     "source": "CheckMate 9DW",
+     "ref": "40349714",
+     "position": "23.7 vs 20.6 months against lenvatinib or sorafenib, with crossing hazards early.",
+     "locator": "What we are not sure about #27"
+    }
+   ]
+  },
+  {
+   "id": "HCC-RT-28",
+   "specialty": "Medical oncology",
+   "question": "Mandatory variceal assessment before atezolizumab–bevacizumab.",
+   "kind": "clinical",
+   "proposal": "Document variceal assessment and manage high-risk varices before the first atezolizumab-bevacizumab dose; bleeding risk is not limited to varices, and baseline endoscopy should be current.",
+   "proposal_locator": "Stage C Standard (caveat, v16 text); Systemic treatment matrix · pre-treatment checks (v16 text)",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-29",
+   "specialty": "Medical oncology",
+   "question": "Explicit statement that post-immunotherapy sequencing is not evidence based.",
+   "kind": "clinical",
+   "proposal": "No randomised evidence defines a sequence after a modern ICI combination; later-line trials followed sorafenib, so choices are documented extrapolation (Reasonable C): trial first, otherwise an appropriate TKI, or ramucirumab if AFP is 400 ng/mL or more.",
+   "proposal_locator": "Stage C Reasonable · after a first-line ICI combination (v16 text); Systemic therapy tab; What we are not sure about #28",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-30",
+   "specialty": "Medical oncology",
+   "question": "TACE plus checkpoint inhibitor as protocol-only, and the trigger to re-review.",
+   "kind": "governance",
+   "proposal": "Avoid outside a trial or approved institutional protocol; reviewed again should a positive overall-survival analysis appear or a labelled indication be granted.",
+   "proposal_locator": "Systemic therapy tab · 'TACE combined with systemic therapy is not a standard of care'; Stage B Avoid",
+   "positions": [
+    {
+     "source": "NCCN v2.2026",
+     "ref": "NCCN",
+     "position": "Quotes LEAP-012 progression-free benefit and interim overall-survival HR 0.80; the roadmap says protocol-only should not be presented as an NCCN prohibition.",
+     "locator": "Systemic therapy tab · TACE combined with systemic therapy (NCCN note)"
+    },
+    {
+     "source": "LEAP-012 / EMERALD-1 commentary",
+     "ref": "41503570",
+     "position": "Progression-free gains do not yet justify routine adoption without survival or quality-of-life data.",
+     "locator": "Appendix · LEAP-012 / EMERALD-1 commentary (bottom line)"
+    }
+   ]
+  },
+  {
+   "id": "HCC-RT-31",
+   "specialty": "Medical oncology",
+   "question": "Early-mortality counselling for dual checkpoint therapy in patients with a short expected survival.",
+   "kind": "clinical",
+   "proposal": "With dual checkpoint therapy, weigh immune toxicity and the CheckMate 9DW early-mortality signal; crossing curves set no minimum expected-survival cut-off and do not rank regimens, and neither early pattern is a class effect.",
+   "proposal_locator": "Stage C Standard (caveat, v16 text); What we are not sure about #27 (v16 text)",
+   "positions": [
+    {
+     "source": "CheckMate 9DW",
+     "ref": "40349714",
+     "position": "Excess mortality in the first six months (piecewise HR 1.65), with 9 fatal hepatic events, despite longer overall survival.",
+     "locator": "Stage C · Nivolumab plus ipilimumab (caveat)"
+    },
+    {
+     "source": "HIMALAYA / STRIDE",
+     "ref": "38319892",
+     "position": "No early excess mortality, but curves separate only after nine months.",
+     "locator": "Stage C Standard (caveat, web page); What we are not sure about #27"
+    }
+   ]
+  },
+  {
+   "id": "HCC-RT-32",
+   "specialty": "Pathology",
+   "question": "Pre-alert trigger list and the turnaround commitment for MDT cases.",
+   "kind": "operational",
+   "proposal": "Triage flags cases that need tissue review so that slides, stains and molecular results are ready for the discussion; pathology attends when pre-identified. No trigger list or turnaround commitment is stated.",
+   "proposal_locator": "Operations · Tumour board table (Pathology pre-alert and Attendance rows)",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-33",
+   "specialty": "Pathology",
+   "question": "Tissue-handling protocol for LR-M and tumour-in-vein biopsies, including molecular adequacy.",
+   "kind": "clinical",
+   "proposal": "Biopsy LR-M when feasible, coordinating tissue with pathology and molecular needs at the first pass; biopsy tumour in vein in defined situations; discuss potential transplant candidates with the transplant team before any biopsy.",
+   "proposal_locator": "Diagnosis & staging tab · Diagnostic categories (LR-M, LR-TIV) and pre-biopsy note",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-34",
+   "specialty": "Pathology",
+   "question": "Explant reporting dataset needed to close the downstaging and bridging registry loop.",
+   "kind": "operational",
+   "proposal": "Explant pathology is submitted within 60 days under Policy 9.5.I; tracking compares explant with last pre-transplant imaging stage and records explant necrosis by bridging modality. The dataset itself is not defined.",
+   "proposal_locator": "Transplant tab · Listing and allocation (After transplant); What we are not sure about #9 and #33",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-35",
+   "specialty": "Programme operations",
+   "question": "All section 9 operating requirements as written — 24-hour agenda, 10–12 case cap, urgent referrals, required attendance, one recommendation, one owner, Epic documentation within one business day, registry closure, referring-clinician protection.",
+   "kind": "operational",
+   "proposal": "Agenda stable 24 hours ahead with 10-12 decision cases, chair-approved urgent exceptions, six required specialties, one synthesised recommendation, Epic note within one business day, registry closure, and no absorbing of care without the referring clinician's agreement; all grade D.",
+   "proposal_locator": "Operations · Tumour board table; Team responsibilities section introduction",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-36",
+   "specialty": "Programme operations",
+   "question": "The new curative-first discipline measure and the transplant-pathway measures in section 10.",
+   "kind": "operational",
+   "proposal": "Curative-first: 95% or more of non-curative decisions record why transplant, resection and ablation were each unsuitable (new measure). Transplant pathway: referral time, procedures before referral, dropout and AFP-rule compliance, reviewed quarterly.",
+   "proposal_locator": "Operations · Quality dashboard (Curative-first discipline, Transplant pathway)",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-37",
+   "specialty": "Programme operations",
+   "question": "The registry minimum dataset and who is accountable for entry.",
+   "kind": "operational",
+   "proposal": "The registry tracks completion, outside communication, scheduling barriers, results and re-presentation; all histotripsy, TACE-plus-systemic and beyond-criteria transplant cases are registered. Programme operations owns the dataset and entry accountability.",
+   "proposal_locator": "Operations · Tumour board table (Closure) and Quality dashboard (Innovation); Decisions table #2 (why)",
+   "positions": []
+  },
+  {
+   "id": "HCC-RT-38",
+   "specialty": "Programme operations",
+   "question": "The named owner and calendar date for re-verifying OPTN policy, labelling and device authorisations.",
+   "kind": "governance",
+   "proposal": "OPTN, labelling and device criteria are re-verified at implementation and at each scheduled review; OPTN criteria were last checked on 1 October 2026. No owner or calendar date is named.",
+   "proposal_locator": "Provenance; Decisions table #19",
+   "positions": []
+  }
+ ]
+}

@@ -1,0 +1,472 @@
+{
+ "slug": "pdac",
+ "prefix": "PDAC",
+ "questions": [
+  {
+   "id": "PDAC-D1",
+   "n": 1,
+   "question": "For an anatomically resectable tumour with no high-risk features, is the local default upfront resection with adjuvant mFOLFIRINOX, or a neoadjuvant route — and if neoadjuvant, which regimen?",
+   "kind": "clinical",
+   "decisions": [
+    "3"
+   ],
+   "positions": [
+    {
+     "source": "NCCN Pancreatic Adenocarcinoma (extracted text, 22 Apr 2026)",
+     "ref": "nccn",
+     "position": "Upfront surgery then postoperative therapy has been the standard; neoadjuvant therapy is permitted in resectable disease, especially with high-risk features, but evidence for specific regimens off-trial is limited. Either PREOPANC-2 regimen may be considered.",
+     "locator": "Gate 3 · Standard group · options 'Upfront resection, then adjuvant mFOLFIRINOX' and 'Neoadjuvant FOLFIRINOX, then surgery' (when); Reasonable 'Neoadjuvant chemotherapy for a resectable tumour that has high-risk features…'"
+    },
+    {
+     "source": "ESMO 2023 pancreatic guideline",
+     "ref": "37678671",
+     "position": "Recommends against neoadjuvant therapy for resectable disease outside clinical trials, citing limited phase III evidence [II, E]. The roadmap notes it predates PREOPANC-2, NORPACT-1 and the 2025 meta-analyses and describes no search strategy.",
+     "locator": "Gate 3 · Standard group · option 'Upfront resection, then adjuvant mFOLFIRINOX' (when); What we are not sure about · 'ESMO's 2023 guideline recommends against neoadjuvant therapy…'"
+    },
+    {
+     "source": "NORPACT-1",
+     "ref": "38237621",
+     "position": "The only randomised trial restricted to resectable head cancer; its primary endpoint favoured upfront surgery (18-month survival 73% vs 60%). The roadmap reads it as no benefit shown: phase 2 at alpha 0.15, non-significant per protocol, 21% untreated.",
+     "locator": "Gate 3 · Standard group · option 'Neoadjuvant FOLFIRINOX, then surgery' (avoid, note)"
+    },
+    {
+     "source": "PREOPANC long-term",
+     "ref": "35084987",
+     "position": "Neoadjuvant gemcitabine chemoradiotherapy improved long-term survival (HR 0.73) in mixed resectable and borderline disease after a negative primary analysis; resectable subgroup non-significant (HR 0.79), and half the control arm received no chemotherapy.",
+     "locator": "Gate 3 · Standard group · option 'Neoadjuvant gemcitabine-based chemoradiotherapy, then surgery, then adjuvant gemcitabine' (when, avoid, note)"
+    },
+    {
+     "source": "PREOPANC-2",
+     "ref": "40945523",
+     "position": "Neoadjuvant FOLFIRINOX without adjuvant therapy and the PREOPANC chemoradiotherapy regimen gave similar survival (21.9 vs 21.3 months, HR 0.88), with no upfront-surgery arm; the roadmap calls it a failed superiority trial that justifies FOLFIRINOX if neoadjuvant.",
+     "locator": "Gate 3 · Standard group · option 'Neoadjuvant FOLFIRINOX, then surgery' (when, pref)"
+    }
+   ],
+   "divergence": "NCCN permits and ESMO advises against neoadjuvant therapy in resectable disease; NORPACT-1 pointed to upfront surgery and PREOPANC to neoadjuvant treatment in a mixed population, the pooled resectable subgroup shows no benefit (HR 0.90), and no trial has tested the comparator with adjuvant mFOLFIRINOX.",
+   "proposal": "The roadmap lists upfront resection then adjuvant mFOLFIRINOX first for fit patients without high-risk features, as what randomised evidence supports, while saying it does not resolve the question. Neoadjuvant chemotherapy is reasonable only with named high-risk features and tissue first (FOLFIRINOX, or PREOPANC chemoradiotherapy if FOLFIRINOX is not tolerable); offer A021806 or another trial.",
+   "proposal_locator": "Gate 3 · Standard group (order note, flagnote and options); Reasonable 'Neoadjuvant chemotherapy for a resectable tumour that has high-risk features…'; Avoid 'Do not start neoadjuvant therapy without a tissue diagnosis.'",
+   "rationale": "The trials disagree and the page does not resolve them, and the full-text read made the disagreement worse rather than better. No neoadjuvant trial gave its control arm modern adjuvant therapy except NORPACT-1, and there only 19 of 44 resected control patients (43%) received adjuvant mFOLFIRINOX; PREOPANC's control arm received adjuvant gemcitabine and only 51% of it received any chemotherapy; PREOPANC-2 has no upfront-surgery arm; S1505 and A021501 had no randomised control at all. Pooled across nine randomised trials the resectable subgroup shows no benefit (HR 0.90, 0.63–1.28) and the borderline resectable subgroup does (HR 0.60, 0.38–0.96), but the between-subgroup test is not significant (p=0.081) and the pooled estimate depends on post hoc removal of NORPACT-1. NORPACT-1's primary endpoint favoured upfront surgery at a two-sided alpha of 0.15, was non-significant per protocol, and had 21% of its neoadjuvant arm go straight to resection without the drug. ESMO recommends against neoadjuvant therapy in resectable disease at [II, E]. The pooled data also show no gain in adjuvant initiation (57.7% versus 55.6%, p=0.353), which removes the main mechanistic argument. A021806 has not reported. This has to be a local decision because there is no guideline answer to copy and no trial of the comparison that matters.",
+   "audit": "Registry: resectability category, sequence chosen, resection rate, R0 rate, time from diagnosis to first treatment, and proportion of resected patients who never start adjuvant therapy."
+  },
+  {
+   "id": "PDAC-D2",
+   "n": 2,
+   "question": "Does this programme offer arterial resection, or arterial divestment, for PDAC — and if so at what minimum volume, by which surgeons, and under what consent document?",
+   "kind": "governance",
+   "decisions": [
+    "4",
+    "7"
+   ],
+   "positions": [
+    {
+     "source": "NCCN Pancreatic Adenocarcinoma (extracted text, 22 Apr 2026)",
+     "ref": "nccn",
+     "position": "Restricts arterial resection to centres with proven vascular-reconstruction experience and highly selected patients with objective response after extensive neoadjuvant therapy, with counselling that long-term benefit is unknown; it names no volume threshold anywhere.",
+     "locator": "Gate 4 · Reasonable group · option 'Arterial resection (hepatic artery, celiac axis, SMA)' (when, pref); Gate 5 · Reasonable 'A written minimum annual volume for pancreatoduodenectomy…' (pref, note)"
+    },
+    {
+     "source": "PRODIGE 24 five-year",
+     "ref": "36048453",
+     "position": "A post hoc model linked centres enrolling 10 or more patients to better survival (HR 0.77); the roadmap calls it stepwise-selected, uncorrected for multiplicity and confounded, not a derived volume threshold.",
+     "locator": "Gate 5 · Reasonable 'A written minimum annual volume for pancreatoduodenectomy…' (note); What we are not sure about · 'Whether to offer arterial resection or arterial divestment…'"
+    }
+   ],
+   "divergence": "No source sets a volume, surgeon or consent standard; NCCN restricts the operation only qualitatively and the one volume signal is a confounded post hoc association.",
+   "proposal": "Undecided. The roadmap treats arterial resection as a highly selected salvage ('almost nobody'), considered only after a significant response and never for a minimal one, with NCCN's counselling that the chance of cure is unknown. It proposes a written minimum annual pancreatoduodenectomy volume with outcome audit but states no number.",
+   "proposal_locator": "Gate 4 · Reasonable group · option 'Arterial resection…' and Avoid 'Do not operate for a minimal response when the operation required is an arterial resection.'; Gate 5 · Reasonable 'A written minimum annual volume…'; What we are not sure about · 'Whether to offer arterial resection or arterial divestment…'",
+   "rationale": "NCCN restricts it to centres with proven experience in pancreatectomy with vascular resection and reconstruction, in highly selected patients after extensive neoadjuvant therapy with objective response, and requires patients to be told that the long-term benefit is currently unknown. It names no threshold. This is a governance decision taken once, not a decision taken in the room.",
+   "audit": "Audit: volume, 90-day mortality and R0 rate by vascular resection type; consent document on file."
+  },
+  {
+   "id": "PDAC-D3",
+   "n": 3,
+   "question": "What counts locally as a significant response after neoadjuvant therapy, and who decides?",
+   "kind": "clinical",
+   "decisions": [
+    "4",
+    "7"
+   ],
+   "positions": [
+    {
+     "source": "NCCN Pancreatic Adenocarcinoma (extracted text, 22 Apr 2026)",
+     "ref": "nccn",
+     "position": "Leaves the degree of significance to the local team, offering examples: CA 19-9 normalisation, near-normalisation or at least 50% fall, and complete or near-complete PET response; judge on two of three metrics, riskier operations needing bigger responses.",
+     "locator": "Gate 4 · Standard 'Restage … and judge response on two of three metrics' (pref, note); Gate 4 · Reasonable group (avoid of option 'Arterial resection…')"
+    },
+    {
+     "source": "ESMO 2023 pancreatic guideline",
+     "ref": "37678671",
+     "position": "Cites a pooled analysis (17 studies, 2,242 patients) linking a CA 19-9 fall over 50% or normalisation to better survival; warns imaging performs worse after chemotherapy and persistent perivascular soft tissue is not necessarily residual tumour.",
+     "locator": "Gate 4 · Standard 'Restage … and judge response on two of three metrics' (pref, avoid, note)"
+    },
+    {
+     "source": "NORPACT-1",
+     "ref": "38237621",
+     "position": "Neoadjuvant FOLFIRINOX improved R0 (56% vs 39%) and N0 (29% vs 14%) while survival went the other way; the roadmap uses this, with PREOPANC-2 and ESPAC5, to argue pathologic surrogates do not track survival.",
+     "locator": "What we are not sure about · 'What counts as a significant response after neoadjuvant therapy…'"
+    }
+   ],
+   "divergence": "NCCN supplies examples but delegates the threshold, ESMO supports CA 19-9 as the best-evidenced metric, and trial data show pathologic response moving without survival, so no source defines significance.",
+   "proposal": "No definition proposed; the roadmap makes it a local approval item. Interim rule: judge response on at least two of three metrics (radiologic, CA 19-9 or CEA, PET), add a third and discuss at the board when they conflict, still explore without shrinkage if there is no extrapancreatic progression, and require a significant response before arterial resection.",
+   "proposal_locator": "Gate 4 · Standard 'Restage … and judge response on two of three metrics' (pref, note); Gate 1 · Avoid 'Do not re-stage off a post-neoadjuvant scan alone…'; Gate 4 · Avoid 'Do not operate for a minimal response when the operation required is an arterial resection.'",
+   "rationale": "NCCN hands the definition to the local treatment team and offers only examples — CA 19-9 normalisation, near-normalisation or at least a 50% decrease, and a complete or near-complete metabolic response on PET. Since the response category determines whether a vascular resection is offered, an unwritten definition is applied inconsistently.",
+   "audit": "Audit: response category recorded for every neoadjuvant patient, resection attempted, R0 rate."
+  },
+  {
+   "id": "PDAC-D4",
+   "n": 4,
+   "question": "Is mFOLFIRINOX the adjuvant default for every recovered good-performance-status patient, and what threshold moves a patient to gemcitabine with capecitabine?",
+   "kind": "clinical",
+   "decisions": [
+    "6"
+   ],
+   "positions": [
+    {
+     "source": "NCCN Pancreatic Adenocarcinoma (extracted text, 22 Apr 2026)",
+     "ref": "nccn",
+     "position": "Lists mFOLFIRINOX and gemcitabine with capecitabine as preferred adjuvant options for patients who had no neoadjuvant therapy, and gemcitabine alone as an other recommended option.",
+     "locator": "Gate 6 · Standard group · options 'mFOLFIRINOX for 24 weeks', 'Gemcitabine with capecitabine' and 'Gemcitabine alone' (when)"
+    },
+    {
+     "source": "ESMO 2023 pancreatic guideline",
+     "ref": "37678671",
+     "position": "mFOLFIRINOX for fit patients [I, A]; gemcitabine with capecitabine as the alternative for patients over 75, ECOG 2 or with a contraindication to mFOLFIRINOX [I, B]; complete 6 months of adjuvant chemotherapy [I, A].",
+     "locator": "Gate 6 · Standard group · options 'mFOLFIRINOX for 24 weeks' and 'Gemcitabine with capecitabine' (when)"
+    },
+    {
+     "source": "PRODIGE 24 five-year",
+     "ref": "36048453",
+     "position": "mFOLFIRINOX beat gemcitabine (median OS 53.5 vs 35.5 months) with grade 3–4 events in 75.9% vs 52.9%, in recovered patients under 80 with PS 0–1; effect attenuated, no significant benefit at 70 or older, quality of life never collected.",
+     "locator": "Gate 6 · Standard group · option 'mFOLFIRINOX for 24 weeks' (pref, avoid, note)"
+    },
+    {
+     "source": "ESPAC-4",
+     "ref": "28129987",
+     "position": "Gemcitabine with capecitabine beat gemcitabine by 2.5 months median (HR 0.82) in the least selected adjuvant population, with negative relapse-free survival and benefit concentrated in R0; never compared directly with mFOLFIRINOX.",
+     "locator": "Gate 6 · Standard group · option 'Gemcitabine with capecitabine' (when, pref, avoid, note)"
+    }
+   ],
+   "divergence": "Both guidelines rank mFOLFIRINOX first for fit patients and only ESMO names criteria for the doublet; PRODIGE 24's restricted eligibility leaves the unrecovered or older patient undefined, and the two regimens were never compared.",
+   "proposal": "mFOLFIRINOX for 24 weeks is listed first for a recovered patient with good performance status; gemcitabine with capecitabine for a patient who cannot take a triplet (poorer performance status, neuropathy, slow recovery or preference); gemcitabine alone for the frail. No numeric switch threshold is stated; restage before the first cycle and prioritise completing the course.",
+   "proposal_locator": "Gate 6 · Standard group · options (pref); Standard 'Restage before the first cycle…'; Standard 'Prioritise completing the course over starting it quickly.'",
+   "rationale": "On mature 5-year data PRODIGE 24 gives median overall survival 53.5 versus 35.5 months and 5-year survival 43.2% versus 31.4%, at the cost of grade 3–4 adverse events in 75.9% versus 52.9%, in a trial restricted to age under 80, no coronary disease, WHO performance status 0–1, full surgical recovery and postoperative CA 19-9 below 180 U/mL. The effect attenuated from the 3-year report (DFS HR 0.58 to 0.66, OS 0.64 to 0.68), 5-year disease-free survival differs by only 7.1 points, only 33.6% of patients achieved a relative dose intensity of 0.80 or more, post-relapse survival was numerically worse in the mFOLFIRINOX arm (13.1 versus 15.0 months) with fewer of its relapsing patients receiving any chemotherapy (66.9% versus 83.0%), and in the 101 patients aged 70 or older the benefit did not reach significance (HR 0.86, 0.53–1.39). Nothing in it describes the patient who has not recovered from a pancreatoduodenectomy, which is a substantial fraction of the real population, and quality of life was never collected.",
+   "audit": "Registry: adjuvant regimen, cycles completed, dose intensity, grade 3–4 toxicity, time from surgery to first cycle."
+  },
+  {
+   "id": "PDAC-D5",
+   "n": 5,
+   "question": "What is the local rule for adjuvant therapy after neoadjuvant therapy — total duration, same regimen or switch, and what to do after a complete pathologic response?",
+   "kind": "clinical",
+   "decisions": [
+    "6"
+   ],
+   "positions": [
+    {
+     "source": "NCCN Pancreatic Adenocarcinoma (extracted text, 22 Apr 2026)",
+     "ref": "nccn",
+     "position": "Says only that adjuvant options after neoadjuvant therapy depend on the response to it and other clinical factors.",
+     "locator": "Gate 6 · Standard group (flagnote); What we are not sure about · 'Adjuvant therapy after neoadjuvant therapy is improvised…'"
+    },
+    {
+     "source": "ESMO 2023 pancreatic guideline",
+     "ref": "37678671",
+     "position": "States that the benefit of adjuvant chemotherapy after neoadjuvant therapy and pancreatectomy remains to be established, with randomised data lacking.",
+     "locator": "Gate 6 · Standard group (flagnote); What we are not sure about · 'Adjuvant therapy after neoadjuvant therapy is improvised…'"
+    },
+    {
+     "source": "PREOPANC-2",
+     "ref": "40945523",
+     "position": "Its FOLFIRINOX arm received eight neoadjuvant cycles and no adjuvant treatment, while its chemoradiotherapy arm received four adjuvant gemcitabine cycles.",
+     "locator": "Gate 3 · Standard group · option 'Neoadjuvant FOLFIRINOX, then surgery' (when); What we are not sure about · 'Adjuvant therapy after neoadjuvant therapy is improvised…'"
+    },
+    {
+     "source": "SWOG S1505",
+     "ref": "33475684",
+     "position": "Continued the same regimen after resection; only 55% to 56% of eligible patients started postoperative chemotherapy, and 22% of operated patients could not start it at all.",
+     "locator": "Gate 3 · Reasonable 'Perioperative chemotherapy as studied in SWOG S1505…' (avoid)"
+    },
+    {
+     "source": "Alliance A021501",
+     "ref": "35834226",
+     "position": "Gave four cycles of postoperative FOLFOX6 after neoadjuvant mFOLFIRINOX, reaching only 24% to 34% of patients.",
+     "locator": "What we are not sure about · 'Adjuvant therapy after neoadjuvant therapy is improvised…'; Quick reference · neoadjuvant trials table, A021501 row"
+    }
+   ],
+   "divergence": "Neither guideline gives a rule and the trials used incompatible sequences (no adjuvant therapy, the same regimen, or a different regimen), so duration, regimen continuity and management after complete pathologic response are undefined.",
+   "proposal": "The roadmap says there is no defensible default and leaves this to approval. Its systemic matrix only advises planning about six months of adjuvant mFOLFIRINOX adjusted for prior neoadjuvant exposure and recovery, and Gate 6 requires the neoadjuvant response to be known before adjuvant therapy starts.",
+   "proposal_locator": "What we are not sure about · 'Adjuvant therapy after neoadjuvant therapy is improvised…'; Systemic treatment matrix (v16 extract) row 'Modified FOLFIRINOX · Adjuvant'; Gate 6 criteria",
+   "rationale": "NCCN says only that the options depend on response and other clinical factors, and no trial defines any of it. PREOPANC-2's FOLFIRINOX arm gave no adjuvant treatment at all while its chemoradiotherapy arm gave four cycles of gemcitabine, so even the trials do not agree on the shape of the sequence.",
+   "audit": "Registry: total perioperative cycles delivered, regimen before and after surgery, pathologic response, recurrence."
+  },
+  {
+   "id": "PDAC-D6",
+   "n": 6,
+   "question": "Is consolidative chemoradiotherapy after induction therapy in locally advanced disease offered routinely, only where conversion to resection is the stated objective, or not at all?",
+   "kind": "clinical",
+   "decisions": [
+    "7"
+   ],
+   "positions": [
+    {
+     "source": "LAP07",
+     "ref": "27139057",
+     "position": "After gemcitabine-based induction, adding chemoradiotherapy did not improve survival (HR 1.03; stopped for futility, underpowered) but reduced locoregional progression (32% vs 46%); 18% of radiotherapy plans had major deviations.",
+     "locator": "Gate 7 · Reasonable group · option 'Continue chemotherapy alone after induction' (when, avoid, note)"
+    },
+    {
+     "source": "CONKO-007",
+     "ref": "40802908",
+     "position": "After mostly FOLFIRINOX induction, chemoradiotherapy did not improve survival (HR 0.937) and missed its R0 endpoint (25% vs 18%), which was rewritten mid-trial; R0 gain only among operated patients; locoregional recurrence HR 0.33.",
+     "locator": "Gate 7 · Reasonable group · option 'Chemoradiotherapy after induction, for local control or to raise the chance of R0' (when, pref, avoid, note)"
+    },
+    {
+     "source": "FOLFIRINOX in LAPC meta-analysis",
+     "ref": "27160474",
+     "position": "In single-arm cohorts a pooled 63.5% received radiotherapy, yet survival did not correlate with radiotherapy use (p=0.12); the authors say it remains unestablished who benefits from radiotherapy afterwards.",
+     "locator": "Gate 7 · Standard 'Multiagent induction chemotherapy…' (avoid, note)"
+    }
+   ],
+   "divergence": "Both randomised trials are null for survival and both show better local control; neither tested radiotherapy after FOLFIRINOX with modern surgery and adjuvant therapy, so the choice turns on the objective rather than on evidence.",
+   "proposal": "Continue chemotherapy alone after induction as the default where the objective is survival; offer chemoradiotherapy only where the board's stated objective is local control or a clear margin in a responder heading to surgery, recording which; never present radiotherapy as survival-prolonging. Upfront radiotherapy without induction is reserved for a narrow group.",
+   "proposal_locator": "Gate 7 · Reasonable group (order note and options); Gate 7 · Avoid 'Do not offer radiotherapy as a survival-prolonging treatment in locally advanced disease.'",
+   "rationale": "LAP07 (HR 1.03, P=.83, stopped at interim for futility with that analysis declared final, 18% major radiotherapy protocol deviations, survival measured from the first of two randomisations) and CONKO-007 (HR 0.937, P=.57, primary endpoint not met at 25% versus 18% R0) are both null for overall survival. CONKO-007's primary endpoint was changed mid-trial from overall survival to R0 rate with the new effect size calculated from its own unblinded interim data on 180 already-enrolled patients, its radiotherapy was never centrally reviewed for stated financial reasons, and its significant R0 advantage (69.4% versus 50.0%) is confined to patients who reached theatre, which was not randomised. What both trials do show is better local control (CONKO-007 locoregional recurrence HR 0.33, 0.206–0.530, P<.001; LAP07 32% versus 46%, P=.03). Neither tested radiotherapy after a FOLFIRINOX backbone followed by modern surgery and modern adjuvant therapy, so the local position has to be a judgement about objectives rather than a reading of evidence.",
+   "audit": "Registry: induction regimen, radiation given or not, proportion reaching exploration, R0 rate, local progression, overall survival from the start of induction."
+  },
+  {
+   "id": "PDAC-D7",
+   "n": 7,
+   "question": "Which triplet is the local first-line standard in metastatic disease — (m)FOLFIRINOX or NALIRIFOX — and what counts locally as good biliary drainage and adequate nutritional intake?",
+   "kind": "clinical",
+   "decisions": [
+    "7",
+    "8"
+   ],
+   "positions": [
+    {
+     "source": "PRODIGE 4 / ACCORD 11",
+     "ref": "21561347",
+     "position": "FOLFIRINOX improved median survival over gemcitabine (11.1 vs 6.8 months, HR 0.57) in ECOG 0–1 patients under 76 with bilirubin up to 1.5 times normal; the only first-line triplet with quality-of-life data.",
+     "locator": "Gate 8 · Standard group · option 'FOLFIRINOX or mFOLFIRINOX' (when, pref, avoid)"
+    },
+    {
+     "source": "NAPOLI 3",
+     "ref": "37708904",
+     "position": "NALIRIFOX beat nab-paclitaxel with gemcitabine (11.1 vs 9.2 months, HR 0.83) narrowly against its design threshold, with grade 3+ events 87% vs 86%, hierarchical testing broken at response rate, and no quality-of-life or cost data.",
+     "locator": "Gate 8 · Standard group · option 'NALIRIFOX' (when, avoid, note)"
+    },
+    {
+     "source": "NCCN Pancreatic Adenocarcinoma (extracted text, 22 Apr 2026)",
+     "ref": "nccn",
+     "position": "States NALIRIFOX does not appear to have clear advantages over FOLFIRINOX or mFOLFIRINOX; defines eligibility for intensive therapy as ECOG 0–1 with good biliary drainage and adequate nutritional intake.",
+     "locator": "Gate 8 · Standard group · option 'NALIRIFOX' (avoid) and group flagnote"
+    }
+   ],
+   "divergence": "There is no randomised comparison of the two triplets, which share an 11.1-month median against different comparators in differently selected populations, and NCCN's drainage and nutrition terms are neither defined nor recorded locally.",
+   "proposal": "The roadmap lists (m)FOLFIRINOX first and NALIRIFOX as an alternative for the same population when its schedule is preferred on toxicity or logistics, without naming a local standard. It adopts NCCN's eligibility wording, and its matrix asks for controlled biliary obstruction and adequate hepatic function, but drainage and nutrition are not defined.",
+   "proposal_locator": "Gate 8 · Standard group (order note; options 'FOLFIRINOX or mFOLFIRINOX' and 'NALIRIFOX'); Systemic treatment matrix (v16 extract) row 'FOLFIRINOX or NALIRIFOX · Metastatic first line'",
+   "rationale": "The two triplets sit at the same median overall survival (11.1 months) against different comparators in different eras, there is no randomised comparison between them, and NCCN states NALIRIFOX does not appear to have clear advantages over FOLFIRINOX or mFOLFIRINOX. The second half matters as much: NCCN's eligibility definition for intensive therapy is ECOG 0–1 with good biliary drainage and adequate nutritional intake, and the latter two are not currently recorded in a way that can be audited. [PAYER]",
+   "audit": "Registry: first-line regimen, performance status, drainage and nutritional status at start, dose intensity, reason for discontinuation."
+  },
+  {
+   "id": "PDAC-D8",
+   "n": 8,
+   "question": "Who owns chasing the molecular report, and where does daraxonrasib sit in the local second-line sequence?",
+   "kind": "clinical",
+   "decisions": [
+    "8"
+   ],
+   "positions": [
+    {
+     "source": "RASolute 302",
+     "ref": "42223072",
+     "position": "In previously treated RAS G12 disease daraxonrasib doubled median survival (13.2 vs 6.6 months, HR 0.40); non-G12 HR 1.38 (0.60–3.17); 15.1% of the chemotherapy arm never received it, which the roadmap says inflates the effect.",
+     "locator": "Gate 8 · Reasonable group · option 'Daraxonrasib, for RAS-mutated disease after prior therapy' (when, pref, avoid, note)"
+    },
+    {
+     "source": "US FDA daraxonrasib approval (2026)",
+     "ref": "V16-12",
+     "position": "Per the roadmap's matrix, approved August 2026 after at least one prior systemic treatment or when multiagent therapy is unsuitable, not restricted to RAS mutation; the trial does not establish effect in treatment-naive frail patients.",
+     "locator": "Systemic treatment matrix (v16 extract) row 'Daraxonrasib · Current US option'; References"
+    },
+    {
+     "source": "NAPOLI-1",
+     "ref": "V16-10",
+     "position": "Liposomal irinotecan with fluorouracil after gemcitabine improved survival (6.1 vs 4.2 months, HR 0.67); the roadmap notes no validated immediate reuse after FOLFIRINOX or NALIRIFOX.",
+     "locator": "Supporting study appraisals (v16 extract) · 'NAPOLI-1: nal-IRI after gemcitabine'; Systemic treatment matrix row 'Liposomal irinotecan … Subsequent treatment'"
+    },
+    {
+     "source": "NCCN Pancreatic Adenocarcinoma (extracted text, 22 Apr 2026)",
+     "ref": "nccn",
+     "position": "Asks for comprehensive genomic profiling, germline testing and HER2 testing in every metastatic patient with tissue banked at biopsy, but treatment should not wait for the BRCA result.",
+     "locator": "Gate 8 · Standard 'Order comprehensive genomic profiling and germline testing at the first visit…' (pref, avoid)"
+    }
+   ],
+   "divergence": "RASolute 302 supports benefit only in previously treated RAS G12 disease while the US label is broader, and the roadmap leaves daraxonrasib's place against other second-line options to availability, regulatory status and cost.",
+   "proposal": "Order profiling at the first visit, bank extra passes at biopsy, and have medical oncology name the person who chases the result. Daraxonrasib is listed first among later-line options for a previously treated patient with a documented RAS G12 mutation, after checking availability, regulatory status and coverage; its place relative to other second-line regimens is not set.",
+   "proposal_locator": "Operations · board meeting 'Molecular' step; Gate 8 · Avoid 'Do not let the molecular report arrive after it can be used.'; Gate 8 · Reasonable group · option 'Daraxonrasib…' (pref, avoid) and flagnote",
+   "rationale": "The commonest failure in metastatic PDAC is a genomic report that arrives after the patient is too unwell to act on it, which is an operational problem with a named-owner solution. The sequencing question is separate: RASolute 302 is a phase 3 result with dual primary endpoints met in the RAS G12 population (median overall survival 13.2 versus 6.6 months, HR 0.40; progression-free survival 7.3 versus 3.5 months, HR 0.45), but the benefit is not established outside G12 (non-G12 HR 1.38, 0.60–3.17), 38 of 252 patients (15.1%) allocated to the comparator never received it against 7 of 248 (2.8%) on daraxonrasib, and the comparator was unconstrained investigator's choice with a 6.6-month median at the low end of published second-line outcomes. The local position depends on availability, regulatory status and cost, and should state which RAS alterations it covers. [PAYER]",
+   "audit": "Registry: proportion with completed germline and genomic results before second line, time from biopsy to report, proportion of actionable results acted on, second-line agent."
+  },
+  {
+   "id": "PDAC-D11",
+   "n": 11,
+   "question": "What is the surveillance schedule after resection, and who owns the NCCN update check?",
+   "kind": "clinical",
+   "decisions": [
+    "6"
+   ],
+   "positions": [
+    {
+     "source": "NCCN Pancreatic Adenocarcinoma (extracted text, 22 Apr 2026)",
+     "ref": "nccn",
+     "position": "Offers post-resection surveillance (history, CA 19-9, contrast CT) on consensus that earlier detection may allow trial entry; CA 19-9 is category 2B, and rising markers or serial ctDNA have no outcome evidence. The interval footnote was lost in extraction.",
+     "locator": "Gate 6 · Reasonable 'Surveillance after resection…' (pref, avoid, note); References · nonpm 'NCCN pancreatic adenocarcinoma'"
+    },
+    {
+     "source": "SEER-Medicare analysis (cited via NCCN)",
+     "ref": "nccn",
+     "position": "Regular surveillance CT showed no significant survival benefit.",
+     "locator": "Gate 6 · Reasonable 'Surveillance after resection…' (avoid)"
+    }
+   ],
+   "divergence": "NCCN offers surveillance on consensus grounds while the only outcome data quoted are negative, and its interval could not be read from the extraction.",
+   "proposal": "The roadmap offers surveillance (history and examination, CA 19-9, contrast CT of abdomen and pelvis) with an explicit statement of what it is for, quotes no interval, and asks that the interval be confirmed against the current published guideline with the version recorded. No owner for guideline update checks is named.",
+   "proposal_locator": "Gate 6 · Reasonable 'Surveillance after resection…' (t, note); What we are not sure about · 'The surveillance schedule after resection is not stated…'; Operations · dashboard 'Source currency…'",
+   "rationale": "The guideline footnote defining the surveillance interval did not survive the machine extraction supplied to this page, so no interval is quoted here. What is known is that regular surveillance CT showed no significant survival benefit in a SEER-Medicare analysis, CA 19-9 is category 2B, and serial ctDNA monitoring has no evidence of benefit — so the interval is a local choice about what surveillance is for. Separately, every numeric criterion on this page needs an owner for re-verification against the next guideline edition.",
+   "audit": "Named owner plus edition and date, with an agreed update cycle; surveillance interval recorded and adherence audited once set."
+  },
+  {
+   "id": "PDAC-D12",
+   "n": 12,
+   "question": "Who adjudicates the resectability category before it is used to route a patient, given that roughly a third of patients called resectable by their own centres do not meet the criteria?",
+   "kind": "governance",
+   "decisions": [
+    "1"
+   ],
+   "positions": [
+    {
+     "source": "NCCN Pancreatic Adenocarcinoma (extracted text, 22 Apr 2026)",
+     "ref": "nccn",
+     "position": "Resectability status should be decided by consensus at multidisciplinary meetings; the resectable criteria deliberately favour specificity over sensitivity so that no potentially resectable patient is denied an operation.",
+     "locator": "Gate 1 · Standard 'Place the patient in exactly one of resectable, borderline resectable…' (pref, avoid); Quick reference · 'Resectability criteria at diagnosis' (foot)"
+    },
+    {
+     "source": "ESMO 2023 pancreatic guideline",
+     "ref": "37678671",
+     "position": "Read the NCCN anatomical criteria alongside the International Association of Pancreatology biological and conditional features [III, B], with board discussion in an expert centre [III, A].",
+     "locator": "Gate 1 · Standard 'Place the patient in exactly one of…' (pref)"
+    },
+    {
+     "source": "SWOG S1505",
+     "ref": "33475684",
+     "position": "Despite protocol scans and surgical consultation at experienced centres, central review found 29% (43 of 146) of patients called resectable did not meet the criteria; a site radiologist checklist lowered this only from 33% to 26%.",
+     "locator": "Gate 1 · Standard 'Place the patient in exactly one of…' (note); What we are not sure about · 'Roughly a third of patients called resectable are not…'"
+    },
+    {
+     "source": "SAR/APA template",
+     "ref": "24354378",
+     "position": "Adopted rather than derived the 180-degree threshold, with no inter-reader reproducibility data for measuring circumferential contact and no validation that using the template changes decisions.",
+     "locator": "Gate 1 · Standard 'Place the patient in exactly one of…' (avoid); What we are not sure about · 'The resectability thresholds are a shared language…'"
+    }
+   ],
+   "divergence": "Guidelines require multidisciplinary consensus but specify no independent read, while S1505 shows substantial misclassification despite checklists and the thresholds lack reproducibility data.",
+   "proposal": "A named reader checks the degrees of arterial and venous contact against the images at triage before listing; the category is then assigned by consensus in the meeting and recorded with degrees, date and the names of those agreeing, owned by the chair. Whether a second independent read, radiology-lead sign-off or external review is required is left open.",
+   "proposal_locator": "Operations · board meeting 'Triage' and 'Resectability call' steps; Gate 1 · Avoid 'Do not close the case on one radiologist's word unresectable.'",
+   "rationale": "In SWOG S1505, at experienced US trial centres with a mandatory pancreas-protocol scan within 28 days and formal surgical consultation within 21 days, central radiology review found 43 of 146 patients (29%) did not meet the resectability criteria — 51% with arterial interface, 35% with venous interface of 180 degrees or more, 65% with suspicion of distant disease — and all had already started protocol therapy. A site radiologist checklist moved the rate only from 33% to 26%. The category decides which assessment on this page a patient enters, so the group must decide whether a second independent read, a radiology lead sign-off or an external review is required, and for which categories.",
+   "audit": "Registry: proportion of cases where the board's category differed from the referring report, by referring source; proportion of operations abandoned at exploration for disease more advanced than imaging suggested."
+  },
+  {
+   "id": "PDAC-D13",
+   "n": 13,
+   "question": "What is the local rule for biliary drainage in a patient going on to neoadjuvant therapy — stent type, expected duration, who re-images and who owns the jaundice if it does not settle?",
+   "kind": "clinical",
+   "decisions": [
+    "2"
+   ],
+   "positions": [
+    {
+     "source": "Preoperative drainage RCT",
+     "ref": "20071702",
+     "position": "Routine plastic-stent drainage before early surgery raised serious complications (74% vs 39%) without changing surgical complications; it excluded neoadjuvant chemotherapy, capped bilirubin at 250 µmol/L and required surgery within a week.",
+     "locator": "Gate 2 · Standard 'Biliary drainage is not routinely recommended before an operation…' (avoid, note); What we are not sure about · 'The DROP trial does not say…'"
+    },
+    {
+     "source": "NCCN Pancreatic Adenocarcinoma (extracted text, 22 Apr 2026)",
+     "ref": "nccn",
+     "position": "Decompression is necessary before neoadjuvant therapy and is best done with an endoscopic stent; it calls stents an evolving technology, notes covered stents may migrate, and sees no obvious differences between covered and uncovered stents.",
+     "locator": "Gate 2 · Standard 'Biliary drainage is not routinely recommended…' (pref); Standard 'Choose the stent for the diagnostic state…' (note)"
+    },
+    {
+     "source": "ESMO 2023 pancreatic guideline",
+     "ref": "37678671",
+     "position": "Recommends endoscopic drainage when bilirubin exceeds 250 µmol/L with cholangitis, planned neoadjuvant treatment, or surgery delayed beyond 2 weeks [I, B].",
+     "locator": "Gate 2 · Standard 'Biliary drainage is not routinely recommended…' (pref)"
+    },
+    {
+     "source": "NORPACT-1",
+     "ref": "38237621",
+     "position": "Stented 57% of its neoadjuvant arm versus 16% of the surgery arm; of 16 patients who never received FOLFIRINOX, two were lost to persistent jaundice after stenting and two to biliary infection.",
+     "locator": "Decisions this programme still has to make · item 13 (why)"
+    }
+   ],
+   "divergence": "The only randomised trial excluded neoadjuvant therapy and tested plastic stents, the preference for metal stents rests on practice rather than comparison, and no source addresses bridging a patient through months of preoperative treatment.",
+   "proposal": "Drain before neoadjuvant therapy with an endoscopic self-expanding metal stent placed in the same anaesthetic as the EUS biopsy: fully covered while the diagnosis is uncertain, partially covered or bare once confirmed, as short as feasible; plastic only for palliation under 3 months. Expected duration, re-imaging responsibility and ownership of unresolved jaundice are not stated.",
+   "proposal_locator": "Gate 2 · Standard 'Where the patient is jaundiced and needs tissue…'; Standard 'Biliary drainage is not routinely recommended…'; Standard 'Choose the stent for the diagnostic state…'",
+   "rationale": "The only randomised trial of preoperative drainage used plastic stents for 4 to 6 weeks, capped bilirubin at 250 micromol/L, excluded neoadjuvant chemotherapy by protocol, and required an operation within one week in its control arm, guaranteed by dedicated theatre capacity at all 13 hospitals. It showed that the drainage strategy caused more complications overall (74% versus 39%) while surgical complications did not differ (37% versus 47%, RR 0.79, 0.57–1.11), so it says nothing about bridging a patient through months of preoperative treatment. That situation is where drainage is now most often needed and where it most often derails treatment: NORPACT-1 stented 57% of its neoadjuvant arm against 16% of the surgery arm, and two of the 16 patients who never received neoadjuvant FOLFIRINOX were lost to persistent jaundice after stenting and two to biliary infection; PREOPANC had 10 patients whose treatment was delayed by persistent jaundice.",
+   "audit": "Registry: stent type by diagnostic certainty, time from stent to first cycle, cholangitis and re-intervention rate, and treatment delays or non-receipt attributable to jaundice."
+  },
+  {
+   "id": "PDAC-D14",
+   "n": 14,
+   "question": "Does this programme offer conversion surgery after induction therapy in locally advanced disease, and what operative mortality is quoted in the consent conversation?",
+   "kind": "clinical",
+   "decisions": [
+    "7"
+   ],
+   "positions": [
+    {
+     "source": "CONKO-007",
+     "ref": "40802908",
+     "position": "Of 336 patients randomised after induction without progression, 36–37% reached theatre and 22% achieved R0; 30-day postoperative mortality was 8% in both arms, and the survival advantage of surgery is a non-randomised comparison.",
+     "locator": "Gate 7 · Standard 'Offer conversion surgery only where R0 is achievable…' (note); Avoid 'Do not promise an operation at the start of induction therapy.'"
+    },
+    {
+     "source": "LAP07",
+     "ref": "27139057",
+     "position": "Gemcitabine-based induction led to curative-intent resection in only 18 of 442 patients (4%).",
+     "locator": "Gate 7 · Reasonable group · option 'Continue chemotherapy alone after induction' (note)"
+    },
+    {
+     "source": "FOLFIRINOX in LAPC meta-analysis",
+     "ref": "27160474",
+     "position": "Single-arm cohorts report pooled resection in 25.9% and R0 in 78.4% of those resected (19% of the cohort), with survival measured from the start of FOLFIRINOX and no control group.",
+     "locator": "Gate 7 · Standard 'Multiagent induction chemotherapy…' (pref, avoid)"
+    },
+    {
+     "source": "NCCN Pancreatic Adenocarcinoma (extracted text, 22 Apr 2026)",
+     "ref": "nccn",
+     "position": "Use locally advanced only at diagnosis; base resection after neoadjuvant therapy on biological response; refer responders for a second opinion at a vascular-resection centre; restrict arterial resection, with counselling that the benefit is unknown.",
+     "locator": "Gate 7 · Standard 'Re-ask the resectability question on biological response…' (pref); Standard 'Offer conversion surgery only where R0 is achievable…' (avoid)"
+    }
+   ],
+   "divergence": "Conversion ranges from 4% after gemcitabine induction to roughly a quarter to a third after FOLFIRINOX-based induction, the only randomised mortality figure is 8%, and the survival benefit of surgery rests on non-randomised comparison.",
+   "proposal": "Offer conversion surgery only after an objective response and only where R0 is achievable, with a second opinion for responders; do not promise an operation at the start of induction; quote CONKO-007's 8% 30-day mortality, one death in twelve, in the consent conversation. Whether the programme offers it at all is left to the group.",
+   "proposal_locator": "Gate 7 · Standard 'Offer conversion surgery only where R0 is achievable, and only after an objective response.' (note); Avoid 'Do not promise an operation at the start of induction therapy.'; Standard 'Re-ask the resectability question…'",
+   "rationale": "CONKO-007 is the only randomised trial that reports it: of 336 patients randomised after three months of induction without progression, 122 (36% to 37%) reached theatre, 73 of 336 (22%) achieved R0, and 30-day postoperative mortality was 8% in both arms (5 of 60 and 5 of 62). The survival advantage of surgery within that trial (HR 0.525, 0.408–0.676) is a non-randomised comparison of operated with non-operated patients. LAP07, from gemcitabine-based induction, reached resection in 18 of 442 patients (4%). The 159 of 495 patients (32.1%) who progressed during induction had a median survival of 9 months with no 5-year survivors. The group must decide whether it offers this at all, to whom, and with what number on the consent form.",
+   "audit": "Registry: proportion reaching exploration and resection, R0 rate with millimetre clearance, 30- and 90-day mortality, and overall survival from the start of induction including patients who progressed before any surgical assessment."
+  },
+  {
+   "id": "PDAC-D16",
+   "n": 16,
+   "question": "Who owns retrieving the remaining full texts and verifying guideline-only figures?",
+   "kind": "governance",
+   "decisions": [],
+   "positions": [],
+   "divergence": "No source positions; programme decision.",
+   "proposal": "No owner is proposed. The roadmap lists what still needs primary reports (the full ISGPS consensus; PAXG, RTOG 0848, ESPAC-3 completion, CONKO-004 and maintenance rucaparib; EUS staging, re-imaging and margin-clearance figures), asks that PAXG be read before the regimen is used, and tracks source currency on the dashboard.",
+   "proposal_locator": "What we are not sure about · 'One reference remains cited from abstract only…'; Gate 3 · Reasonable 'PAXG…' (note); Operations · dashboard 'Source currency…'",
+   "rationale": "Retrieve the full ISGPS lymphadenectomy consensus (PMID 25061003) and the primary reports behind guideline-only figures, including PAXG, RTOG 0848, ESPAC-3 completion, CONKO-004 and maintenance rucaparib.",
+   "audit": "Named owner per reference, with retrieval date and a note of any figure that changed on reading; the page's grades revisited where a D was assigned for provenance rather than for design."
+  }
+ ]
+}

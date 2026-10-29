@@ -1,0 +1,666 @@
+{
+ "slug": "adenoma",
+ "prefix": "HCA",
+ "questions": [
+  {
+   "id": "HCA-D1",
+   "n": 1,
+   "question": "Is MRI with a hepatobiliary contrast agent mandatory before any adenoma is managed as an adenoma, and who may waive it?",
+   "kind": "clinical",
+   "decisions": [
+    "1",
+    "6"
+   ],
+   "positions": [
+    {
+     "source": "EASL 2016",
+     "ref": "27085809",
+     "position": "MRI is superior to all other modalities and can subtype up to 80% of adenomas (II-2, grade 1); contrast ultrasound separates adenoma from FNH but cannot subtype.",
+     "locator": "Gate 1 · Standard 'Make the diagnosis on contrast-enhanced MRI…' (preferred-for and note)"
+    },
+    {
+     "source": "AFEF 2021 (French multisociety)",
+     "ref": "34333196",
+     "position": "Adds that a hepatobiliary agent has particular value for identifying focal nodular hyperplasia.",
+     "locator": "Gate 1 · Standard 'Make the diagnosis on contrast-enhanced MRI…'"
+    },
+    {
+     "source": "Gaspersz 2019 pregnancy cohort",
+     "ref": "31550458",
+     "position": "Prospective multicentre cohort: 18 of 66 women (27%) referred with a suspected sub-5 cm adenoma had FNH on hepatobiliary-contrast MRI; the authors held that this misdiagnosis rate alone justifies the scan.",
+     "locator": "Gate 6 · Standard 'Confirm the diagnosis on MRI with a hepatobiliary contrast agent…'"
+    },
+    {
+     "source": "Haring 2022 resection audit",
+     "ref": "36324268",
+     "position": "Of 222 Dutch resections for presumed adenoma, 43% had a changed final diagnosis; absence of hepatobiliary MRI independently predicted change (aOR 1.8), an effect the roadmap says is confounded by era and centre.",
+     "locator": "Gate 1 · Standard 'Make the diagnosis on contrast-enhanced MRI…' (caveat and note)"
+    }
+   ],
+   "divergence": "Sources agree that hepatobiliary-contrast MRI sharpens the adenoma-versus-FNH distinction, but none makes it mandatory or addresses who may waive it, access or cost, and the audit's effect size is confounded.",
+   "proposal": "Contrast-enhanced MRI for every patient, with a hepatobiliary agent whenever the question is adenoma versus FNH and always before pregnancy counselling; board triage returns an uncharacterised lesion for imaging rather than discussing it. The roadmap names no one who may waive the requirement.",
+   "proposal_locator": "Gate 1 · Standard 'Make the diagnosis on contrast-enhanced MRI…'; Gate 6 · Standard 'Confirm the diagnosis on MRI with a hepatobiliary contrast agent…'; The board meeting · Triage",
+   "rationale": "27% of referred sub-5 cm lesions proved to be focal nodular hyperplasia on hepatobiliary-contrast MRI in the prospective cohort — a lesion needing no follow-up at all. This is an access and cost question as much as a clinical one, so it needs a written answer rather than a preference.",
+   "audit": "Audit: proportion characterised before first board discussion, and proportion whose diagnosis changed."
+  },
+  {
+   "id": "HCA-D2",
+   "n": 2,
+   "question": "Does the programme adopt routine subtyping — a standing four-antibody panel on every specimen and biopsy, with CTNNB1 exon and codon sequencing where activation is suspected, and prostaglandin D synthase for the sonic hedgehog subgroup?",
+   "kind": "clinical",
+   "decisions": [
+    "1",
+    "3",
+    "10"
+   ],
+   "positions": [
+    {
+     "source": "EASL 2016",
+     "ref": "27085809",
+     "position": "No justification for recommending histopathology or molecular subtyping as routine practice; biopsy may be considered within a benign-tumour MDT to exclude malignancy; imaging-based subtyping needs prospective validation first.",
+     "locator": "Gate 1 · Reasonable 'Biopsy when the imaging is atypical…' (caveat); Gate 2 · Reasonable 'Where the subtype is known and low risk…' (caveat)"
+    },
+    {
+     "source": "AISF 2022 (Italian multisociety)",
+     "ref": "36089523",
+     "position": "Recommends biopsy wherever imaging cannot classify the subtype, specifically to find beta-catenin exon 3 and sonic hedgehog adenomas, but grades this very low quality (D), conditional.",
+     "locator": "Gate 1 · Reasonable 'Biopsy when the imaging is atypical…'"
+    },
+    {
+     "source": "ACG 2024",
+     "ref": "38958301",
+     "position": "Reserves biopsy for cases where imaging is inconclusive (strong recommendation, low-quality evidence).",
+     "locator": "Gate 1 · Reasonable 'Biopsy when the imaging is atypical…'"
+    },
+    {
+     "source": "Rebouissou 2016",
+     "ref": "27177928",
+     "position": "Only 27% of 33 beta-catenin-mutated adenomas showed the strong homogeneous glutamine synthetase pattern and S45 lesions are hard to recognise; the authors call for revised immunohistochemical criteria or mutation screening.",
+     "locator": "Gate 1 · Reasonable 'Where tissue exists, ask for the four-antibody panel…' (caveat)"
+    },
+    {
+     "source": "WHO 6th ed., as reviewed (2026)",
+     "ref": "42678415",
+     "position": "Every inflammatory adenoma should be stained for glutamine synthetase; no reliable routine marker exists for sonic hedgehog adenoma and molecular profiling remains the reference. The roadmap notes it recommends a strategy whose prerequisite it calls unavailable.",
+     "locator": "Gate 1 · Standard subtype option 'Sonic hedgehog (shHCA)'; What we are not sure about #9"
+    }
+   ],
+   "divergence": "EASL rejects routine subtyping while the Italian guideline, the molecular literature and the local transplant protocol's molecular route presuppose it, and the two subtypes that matter most can be identified reliably only by sequencing.",
+   "proposal": "Biopsy is reserved for atypical imaging, suspected transformation or a subtype that would change management. On tissue that exists, the board model makes the four-antibody panel standard and requests CTNNB1 exon and codon where activation is suspected, a transplant route may apply, or the patient is male. Whether to subtype routinely is left to the group.",
+   "proposal_locator": "Gate 1 · Reasonable 'Biopsy when the imaging is atypical…' and 'Where tissue exists, ask for the four-antibody panel…'; Gate 3 · Standard 'Send every male adenoma for expert liver pathology review…'; The board meeting · Pathology; What we are not sure about #8",
+   "rationale": "EASL 2016 states there is no justification for recommending routine subtyping. The molecular data since, and the local transplant protocol's own molecular route, both assume it is available. Those two positions cannot both be acted on. [PAYER]",
+   "audit": "Registry: subtype assigned, method, concordance with the resection specimen."
+  },
+  {
+   "id": "HCA-D3",
+   "n": 3,
+   "question": "How long may risk-factor modification run before a persistent lesion over 5 cm is treated — EASL's 6 months, or 12, or longer in a lesion that is still falling?",
+   "kind": "clinical",
+   "decisions": [
+    "2",
+    "4"
+   ],
+   "positions": [
+    {
+     "source": "EASL 2016",
+     "ref": "27085809",
+     "position": "Reassess every presumed adenoma with contrast MRI at 6 months; in women, resection is indicated for a nodule still 5 cm or more (II-3, grade 2). EASL also says no robust data define the timeline of stable disease.",
+     "locator": "Gate 2 · Standard 'Reimage with contrast-enhanced MRI at 6 months…'; Gate 2 · Reasonable 'Extend observation past 12 months…' (note)"
+    },
+    {
+     "source": "ACG 2024",
+     "ref": "38958301",
+     "position": "Uses a looser 6- to 12-month imaging interval not tied to a size trigger (conditional, low quality), and holds that lesions of 5 cm or more warrant intervention.",
+     "locator": "Gate 2 · Standard 'Reimage with contrast-enhanced MRI at 6 months…'; Gate 4 · Standard 'Treat a lesion that is persistently larger than 5 cm…'"
+    },
+    {
+     "source": "AISF 2022 (Italian multisociety)",
+     "ref": "36089523",
+     "position": "MRI 6 months after stopping contraception, repeat at 1 year, then annual ultrasound; every step, including the 6-month decision point, is graded very low quality (D), conditional.",
+     "locator": "Gate 2 · Standard 'Reimage with contrast-enhanced MRI at 6 months…'; Gate 4 · Standard (caveat)"
+    },
+    {
+     "source": "Klompenhouwer 2017",
+     "ref": "28857134",
+     "position": "Of 194 patients with adenomas over 5 cm, 8.5-15.3% had regressed below 5 cm at 26 weeks against 58.5% eventually (median 104 weeks), without complications; authors propose 12 months for typical non-beta-catenin adenomas. 47 of 241 excluded for short follow-up.",
+     "locator": "Gate 2 · Standard 'Reimage with contrast-enhanced MRI at 6 months…' (caveat and note); Gate 2 · Reasonable 'Extend observation past 12 months…'"
+    },
+    {
+     "source": "European practice survey",
+     "ref": "36781070",
+     "position": "48 of 61 responding experts (79%) advise against routine resection above 5 cm after lifestyle change; the roadmap notes a 21% response rate and stated rather than observed practice.",
+     "locator": "Gate 2 · Avoid 'Do not operate on a large adenoma at 6 months…'"
+    }
+   ],
+   "divergence": "EASL and ACG anchor the decision at 6 months, whereas the regression cohort, its authors and most surveyed experts favour waiting longer; the authors' 12-month proposal ignores baseline diameter even though time to regression was strongly size-dependent.",
+   "proposal": "Reimage with contrast MRI at 6 months and read it as a trajectory; do not call risk-factor modification a failure before 12 months (grade C, a deliberate deviation from EASL). Observation beyond 12 months is Reasonable in a woman with a typical, non-beta-catenin adenoma that is shrinking. No diameter-specific interval is proposed.",
+   "proposal_locator": "What we are not sure about #4; Gate 2 · Standard 'Reimage with contrast-enhanced MRI at 6 months…'; Gate 2 · Reasonable 'Extend observation past 12 months…'",
+   "rationale": "EASL and ACG indicate resection at 6 months. At that point only 8.5-15.3% of adenomas over 5 cm have fallen below 5 cm, against 23.7-27.1% at 52 weeks and 58.5% eventually at a median 104 weeks, with no complication during the whole of that follow-up and time to regression strongly size-dependent (median 63 weeks under 7 cm, 208 weeks over 10 cm). The six-month trigger therefore captures roughly one in six to one in ten of the lesions that will eventually regress below 5 cm. The cohort's authors proposed 12 months for typical non-beta-catenin adenomas in women; 79% of responding European experts already decline the rule; and the only GRADE-appraised guideline grades the 6-month decision point very low quality, conditional. Decide the number, and decide whether it differs by baseline diameter.",
+   "audit": "Audit: time to fall below 5 cm or to intervention, for every adenoma over 5 cm under surveillance."
+  },
+  {
+   "id": "HCA-D4",
+   "n": 4,
+   "question": "Does the programme resect every male adenoma irrespective of size, and is expert liver pathology review with sequencing mandatory in every male case?",
+   "kind": "clinical",
+   "decisions": [
+    "3"
+   ],
+   "positions": [
+    {
+     "source": "EASL 2016",
+     "ref": "27085809",
+     "position": "Resection or curative treatment for every adenoma in a man, irrespective of size, because of a higher incidence of malignant transformation (II-3, grade 2).",
+     "locator": "Gate 3 · Standard 'Resect, irrespective of size…'"
+    },
+    {
+     "source": "AISF 2022 (Italian multisociety)",
+     "ref": "36089523",
+     "position": "Also recommends resection in men, as does ACG 2024, but grades it very low quality of evidence (D), conditional.",
+     "locator": "Gate 3 · Standard 'Resect, irrespective of size…'; Gate 3 · Reasonable option 'Resection'"
+    },
+    {
+     "source": "Farges 2011",
+     "ref": "21148580",
+     "position": "Tertiary series of 218 patients: transformation in 47% of men against 4% of women; transformed lesions had a median 10 cm diameter. The roadmap reads 47% as a near-maximum referral figure, not a population risk.",
+     "locator": "Gate 3 · Standard 'Resect, irrespective of size…' (caveat and note)"
+    },
+    {
+     "source": "Dutch male series",
+     "ref": "34155783",
+     "position": "Expert revision plus sequencing changed the diagnosis in 33 of 66 men (50%) and found 4 beta-catenin mutations missed by immunohistochemistry and re-review; the roadmap notes no comparator and mismatched mortality denominators.",
+     "locator": "Gate 3 · Standard 'Send every male adenoma for expert liver pathology review…'"
+    },
+    {
+     "source": "Haring 2022 resection audit",
+     "ref": "36324268",
+     "position": "78% of men resected for a presumed adenoma had a changed final diagnosis, and male sex independently predicted a change (aOR 3.7).",
+     "locator": "Gate 3 · Standard 'Send every male adenoma for expert liver pathology review…'"
+    }
+   ],
+   "divergence": "The guidelines concur on resecting all men, but the transformation figures come from selected surgical series in which sex and size cannot be separated, and the male diagnosis is itself unreliable, so the rule may rest on risk or on diagnostic doubt.",
+   "proposal": "Resect every male adenoma irrespective of size (grade C), treating it as possibly already malignant, and send every male case, including outside diagnoses, for expert liver pathology review with sequencing before accepting the diagnosis (grade D). Observing a sequenced, confidently low-risk lesion in a prohibitive operative candidate is a documented exception requiring a board decision.",
+   "proposal_locator": "Gate 3 · Standard 'Resect, irrespective of size…' and 'Send every male adenoma for expert liver pathology review…'; Gate 3 · Reasonable option 'Observation with a sequenced, confidently low-risk subtype'; What we are not sure about #12-13",
+   "rationale": "EASL, ACG and the Italian guideline all say resect, the last of them at very low quality of evidence, conditional. The male evidence is a 47% versus 4% transformation prevalence in one tertiary surgical series whose transformed lesions had a median diameter of 10 cm, an approximately ten-fold male excess in a second, and male sex as an independent predictor at an odds ratio of 18.9 (8.5-44.2). Against that, the diagnostic label is unreliable in exactly this group: 50% of presumed male adenomas are reclassified on expert review with 4 beta-catenin mutations found only by sequencing, and 78% of male resections in a national audit had their diagnosis changed. The full-text read also withdrew the 23.8% occult-carcinoma figure this page previously used — the supported figure is 4 transformations in 27 male adenomas — and found no cohort supporting observation of any male adenoma. So the question is whether the rule is retained because men are at higher risk or because the diagnosis cannot be trusted in men; the answer changes what the pathology requirement is for.",
+   "audit": "Registry: sex, size, subtype, sequencing result, decision, specimen finding."
+  },
+  {
+   "id": "HCA-D5",
+   "n": 5,
+   "question": "Is elective transarterial embolisation accepted as a first-line alternative to resection in a good surgical candidate who prefers it?",
+   "kind": "clinical",
+   "decisions": [
+    "4",
+    "7"
+   ],
+   "positions": [
+    {
+     "source": "EASL 2016",
+     "ref": "27085809",
+     "position": "Embolisation is an alternative to resection for larger lesions but the treatment of choice only in poor surgical candidates; residual viable lesion afterwards is an indication for resection.",
+     "locator": "Gate 4 · Standard option group, 'Transarterial embolisation'; Gate 7 · Reasonable 'Transarterial embolisation of the dominant lesions…' (caveat)"
+    },
+    {
+     "source": "TAE systematic review",
+     "ref": "28518415",
+     "position": "Elective embolisation avoided surgery in 41 of 49 patients (84%); the roadmap notes small mixed series, a process endpoint, a 31-month pooled follow-up and no separate elective complication rate.",
+     "locator": "Gate 4 · Standard option group, 'Transarterial embolisation'; What we are not sure about #16"
+    },
+    {
+     "source": "TAE multicentre",
+     "ref": "31313827",
+     "position": "In 59 patients median diameter fell from 76 to 48 mm, but grade D complications occurred in 10%, one patient died three months later, 34% still needed surgery and symptoms did not improve (P=0.134).",
+     "locator": "Gate 4 · Standard option group, 'Transarterial embolisation' (caveat); What we are not sure about #16"
+    }
+   ],
+   "divergence": "EASL confines embolisation to poor surgical candidates; later series report frequent surgery avoidance and shrinkage, but with a reported death, a third still operated, no symptom benefit and no histology.",
+   "proposal": "Embolisation stays on the page (grade C) for a large, central or bilobar lesion where resection would be major, or a patient who wants to avoid an operation and accepts imaging follow-up, with harms disclosed in consent; in multiple adenomas its use is recorded as a departure from EASL. The roadmap does not itself endorse or decline first-line elective use.",
+   "proposal_locator": "Gate 4 · Standard option group, 'Transarterial embolisation'; Gate 7 · Reasonable 'Transarterial embolisation of the dominant lesions…'; What we are not sure about #16",
+   "rationale": "EASL reserves embolisation for poor surgical candidates. The data since show 84% surgery avoidance after elective embolisation, on 49 patients from multiple small series, and a fall in median diameter from 76 to 48 mm. Against that: 10% grade D complications, one reported death three months after the procedure, 34% of patients still requiring surgery, no symptom improvement at 3 months (P=0.134), viable tissue and no histology left behind in a disease where 20-40% of presumed adenomas prove to be something else, and a pooled follow-up of 31 months too short to detect transformation. That is a shared decision the programme should endorse or decline explicitly, with the harms disclosed, rather than leave to individual preference.",
+   "audit": "Registry: modality, diameter change, complication grade, subsequent intervention."
+  },
+  {
+   "id": "HCA-D6",
+   "n": 6,
+   "question": "What is the acute haemorrhage pathway, and who owns it out of hours?",
+   "kind": "governance",
+   "decisions": [
+    "5"
+   ],
+   "positions": [
+    {
+     "source": "EASL 2016",
+     "ref": "27085809",
+     "position": "Embolise the haemodynamically unstable bleeding adenoma (evidence level III, grade 2); resuscitate and transfer to a centre that can embolise; admit for observation and contrast CT when haemorrhage is clinically evident.",
+     "locator": "Gate 5 · Standard 'Resuscitate with blood products…' and 'Admit and observe the stable patient…'"
+    },
+    {
+     "source": "EASL 2016 (pregnancy)",
+     "ref": "27085809",
+     "position": "Before 24 weeks, surgery may be preferred to embolisation for smaller peripheral resections because of fetal radiation and contrast exposure; in an exsanguinating patient the fastest route wins, per the roadmap.",
+     "locator": "Gate 5 · Avoid 'Do not embolise a pregnant patient before 24 weeks…'"
+    },
+    {
+     "source": "Huurman 2010",
+     "ref": "20357452",
+     "position": "Review proposing the acute algorithm: practice has shifted from resection to initial conservative management with selective embolisation. The roadmap cites it from abstract only and calls this gate weakly sourced.",
+     "locator": "Gate 5 · Standard 'Resuscitate with blood products…' (caveat); Provenance"
+    },
+    {
+     "source": "TAE systematic review",
+     "ref": "28518415",
+     "position": "Surgery was avoided in 68 of 151 embolised patients (45%), a figure mixing elective and acute indications; the roadmap says who needs a second procedure is identified by re-imaging.",
+     "locator": "Gate 5 · Standard 'Re-image once stable…'"
+    }
+   ],
+   "divergence": "Sources agree on embolisation first in the unstable patient, but only at evidence level III with no comparative series, and none defines the re-imaging interval, the transfer route or out-of-hours ownership.",
+   "proposal": "Resuscitate, obtain contrast CT and transfer to an embolisation-capable centre; admit and observe contained bleeding without acute surgery; re-image once stable (MRI at 6-12 weeks, a convention) and resect residual viable lesion. Limited resection is reasonable for a small peripheral exophytic lesion where no embolisation exists. A same-day board route exists; no out-of-hours owner is named.",
+   "proposal_locator": "Gate 5 · Standards 'Resuscitate with blood products…', 'Admit and observe the stable patient…', 'Re-image once stable…' and Reasonable 'Where the bleeding lesion is exophytic, peripheral and small…'; The board meeting · Urgent referral route",
+   "rationale": "Not an evidence question. EASL's recommendation to embolise the unstable patient is evidence level III, and the practical failure mode is a young woman arriving at a hospital that cannot embolise, with no named transfer route. The interval to the post-embolisation re-imaging that decides whether she needs a resection is also undefined by any study.",
+   "audit": "Audit: haemorrhage events with size, position, management route, time to definitive control, and whether residual viable lesion was resected."
+  },
+  {
+   "id": "HCA-D7",
+   "n": 7,
+   "question": "Does the programme adopt a composite operative trigger — 5 cm, or 20% growth, or exophytic position, or visible lesional arteries, or a segment II-III location — in place of diameter alone, and who will verify the figures behind it?",
+   "kind": "clinical",
+   "decisions": [
+    "4",
+    "5"
+   ],
+   "positions": [
+    {
+     "source": "EASL 2016",
+     "ref": "27085809",
+     "position": "Names exophytic protrusion but builds no rule around it; its triggers are persistent size over 5 cm or growth of 20% or more of diameter, irrespective of subtype.",
+     "locator": "What we are not sure about #11; Gate 4 · Standard 'Treat a lesion that is persistently larger than 5 cm…'"
+    },
+    {
+     "source": "Bieze 2014",
+     "ref": "24760723",
+     "position": "The only cohort fitting a bleeding cut-point found 35 mm (5.4% below, 53% above), but was retrospective, used a 5 cm resection protocol and found no beta-catenin adenoma; its positional figures could not be confirmed and were withdrawn.",
+     "locator": "Gate 4 · Reasonable 'Where a woman's adenoma sits between 4 and 5 cm…' (caveat and note); What we are not sure about #11"
+    },
+    {
+     "source": "Deneve 2009",
+     "ref": "19130136",
+     "position": "The 124-patient series fitted its size dichotomy at 7 cm, yet its authors recommended resecting above 4 cm; no guideline adopted that.",
+     "locator": "Gate 4 · Standard 'State where the 5 cm number comes from…' (and note)"
+    },
+    {
+     "source": "WHO 6th ed., as reviewed (2026)",
+     "ref": "42678415",
+     "position": "Exon 3 adenomas are resected or ablated whatever their size and sonic hedgehog adenomas bleed even below 5 cm; the roadmap calls both expert assertion without a cited cohort.",
+     "locator": "Gate 4 · Reasonable 'Where a woman's adenoma sits between 4 and 5 cm…'"
+    }
+   ],
+   "divergence": "No guideline endorses a composite trigger or operating below 5 cm on position alone, the positional effect sizes once offered in support have been withdrawn as unverified, and the only fitted cut-point cannot exclude subtype as the real driver.",
+   "proposal": "Undecided by design: the roadmap says this cannot be decided until someone reads the 35 mm cohort's positional analysis directly. Meanwhile, record position and vascularity alongside diameter and treat a 4-5 cm lesion as a board judgement on subtype, position and trajectory; the composite trigger stands only as a grade D proposal.",
+   "proposal_locator": "Decisions this programme still has to make #7; What we are not sure about #11; Gate 4 · Standard 'State where the 5 cm number comes from…' and Reasonable 'Where a woman's adenoma sits between 4 and 5 cm…'",
+   "rationale": "This item cannot be decided yet, and that is now the honest answer. The positional and vascular effect sizes this page previously quoted in support could not be confirmed in the full-text read and have been withdrawn; what the supporting paper does establish is a fitted cut-point at 35 mm with bleeding in 5.4% below against 53% above, in a retrospective cohort whose own protocol used 5 cm to decide which lesions were resected, with grades I to III pooled, no beta-catenin adenoma identified in 195 lesions and 48% unclassifiable. Adopting a composite trigger would mean operating on some lesions below 5 cm, which no guideline endorses. Before deciding, someone should read that paper's positional analysis directly and report the numbers.",
+   "audit": "Registry: for every haemorrhage, which trigger features were present and whether they had been recorded prospectively."
+  },
+  {
+   "id": "HCA-D8",
+   "n": 8,
+   "question": "Does the transplant protocol's S45 and exon 7/8 restriction stand as written?",
+   "kind": "governance",
+   "decisions": [
+    "10"
+   ],
+   "positions": [
+    {
+     "source": "UTHealth HCA transplant protocol V3",
+     "ref": "uthprotocol",
+     "position": "Molecular route: exon 3 non-S45 alterations qualify directly; S45 exon 3 and exon 7/8 need a documented additional risk feature and justification. The protocol describes this as an institutional restriction.",
+     "locator": "Gate 10 · Standard 'Name the qualifying route in the narrative…'"
+    },
+    {
+     "source": "OPTN NLRB transplant-oncology guidance",
+     "ref": "optnnlrb",
+     "position": "Supports considering specified high-risk, unresectable or syndromic adenoma at a recommended MMaT-3 and does not itself distinguish CTNNB1 exon categories.",
+     "locator": "Gate 10 · Standard 'Name the qualifying route in the narrative…' (caveat); Reference library"
+    },
+    {
+     "source": "Rebouissou 2016",
+     "ref": "27177928",
+     "position": "S45 is a weak activator in benign tumours yet appears at similar frequency in mutated adenomas and carcinomas, usually duplicated to high activity in carcinoma; the authors urge identifying it, which needs sequencing.",
+     "locator": "Gate 10 · Standard 'Name the qualifying route in the narrative…' (caveat); What we are not sure about #15"
+    },
+    {
+     "source": "Nault 2017",
+     "ref": "27939373",
+     "position": "Exon 3 mutation carries an odds ratio of 9.3 for transformation, whereas exon 7/8 alterations are not associated with increased malignant risk.",
+     "locator": "Gate 10 · Reasonable option 'Molecular route'; Gate 1 · Reasonable 'Where tissue exists, ask for the four-antibody panel…'"
+    }
+   ],
+   "divergence": "The protocol and the molecular data agree that exon 7/8 carries no added malignant risk but part company on S45, which the genotype-phenotype series treats as a special case rather than a low-risk one.",
+   "proposal": "The roadmap judges the restriction defensible as organ stewardship but not as a claim about S45 biology, proposes treating S45 exon 3 as uncertain rather than low risk, and asks any NLRB narrative to say which basis applies; exon and codon must be recorded, and an immunohistochemical surrogate named as such.",
+   "proposal_locator": "What we are not sure about #15; Gate 10 · Standard 'Name the qualifying route in the narrative…' (and note)",
+   "rationale": "The protocol places S45 exon 3 with the exon 7/8 alterations as not qualifying the molecular route alone. The genotype-phenotype data make S45 a special case rather than a low-risk one — a weak activator in benign tumours, found at similar frequency in mutated adenomas and carcinomas, and duplicated to high activity in most carcinomas. The restriction is defensible as organ stewardship but not as a statement about risk, and the NLRB narrative should say which of the two it is.",
+   "audit": "Registry: CTNNB1 exon and codon for every sequenced adenoma, the route decision taken on it, and the explant or specimen finding."
+  },
+  {
+   "id": "HCA-D9",
+   "n": 9,
+   "question": "What is the programme's position on a 5 to 7 cm adenoma in a woman who wants to conceive now, and who counsels her?",
+   "kind": "clinical",
+   "decisions": [
+    "6"
+   ],
+   "positions": [
+    {
+     "source": "EASL 2016",
+     "ref": "27085809",
+     "position": "In women with large tumours, or whose adenoma complicated an earlier pregnancy, resection may be recommended; before 24 weeks surgery may be preferred to embolisation.",
+     "locator": "Gate 6 · Reasonable options 'Resect before conception' and 'Embolise before conception, or during pregnancy if it grows'"
+    },
+    {
+     "source": "ACG 2024",
+     "ref": "38958301",
+     "position": "Pregnancy is not generally contraindicated under 5 cm (conditional, low quality), and 6.5 cm is adopted as a treatment trigger in pregnancy, which the roadmap calls a publication-limited minimum rather than a threshold.",
+     "locator": "Gate 6 · Standard 'An adenoma under 5 cm is not a reason to discourage pregnancy…'; What we are not sure about #20"
+    },
+    {
+     "source": "Gaspersz 2019 pregnancy cohort",
+     "ref": "31550458",
+     "position": "48 women, 51 pregnancies, all lesions under 5 cm: no rupture or haemorrhage, growth in 25.5%; the cohort cannot speak to lesions of 5 cm or more.",
+     "locator": "Gate 6 · Standard 'An adenoma under 5 cm is not a reason to discourage pregnancy…' (caveat)"
+    },
+    {
+     "source": "Haring 2021 pregnancy review",
+     "ref": "33985906",
+     "position": "Pooled cohort and case literature: 31.5% of 73 untreated pregnancies showed growth and all 15 haemorrhages occurred at 6.5 cm or more, with 5 maternal deaths, a case fatality the roadmap attributes to publication bias.",
+     "locator": "Gate 6 · Reasonable option 'Proceed with close surveillance'; Gate 6 · Standard 'Monitor with ultrasound every 6 to 12 weeks…' (caveat)"
+    },
+    {
+     "source": "Barbier 2019",
+     "ref": "31419515",
+     "position": "In the 40-patient adenomatosis cohort, one of six haemorrhages was fatal and occurred during pregnancy.",
+     "locator": "Gate 6 · Reasonable option 'Proceed with close surveillance' (caveat)"
+    }
+   ],
+   "divergence": "EASL favours treating a large lesion before pregnancy and ACG uses 6.5 cm as a trigger, but the prospective data stop at 5 cm and the 6.5 cm figure reflects what was published, so the 5-7 cm band has no evidence-based answer.",
+   "proposal": "The roadmap offers three Reasonable options rather than one answer: resect before conception (lesion comfortably over 5 cm, exophytic or after a complicated pregnancy, non-major resection, with a named date); embolise; or proceed with 6-weekly ultrasound for a 5-6 cm non-exophytic, non-beta-catenin lesion. Obstetrics attends every pregnancy case, with a same-week slot for a growing lesion.",
+   "proposal_locator": "Gate 6 · Reasonable option group ('Resect before conception', 'Embolise before conception, or during pregnancy if it grows', 'Proceed with close surveillance'); The board meeting · Attendance and Urgent referral route",
+   "rationale": "EASL recommends treating a large lesion before pregnancy; the prospective data stop at 5 cm; every reported pregnancy-associated haemorrhage occurred at 6.5 cm or above, and a fatal one is reported. A European survey identified this as one of the two areas of greatest practice variation. The counselling needs hepatology, hepatobiliary surgery, interventional radiology and obstetrics in the room together.",
+   "audit": "Registry: diameter, subtype, intervention or none, growth during pregnancy, mode of delivery, haemorrhage, maternal and fetal outcome."
+  },
+  {
+   "id": "HCA-D10",
+   "n": 10,
+   "question": "Does the programme open an adenoma transplant route at all, and under whose governance?",
+   "kind": "governance",
+   "decisions": [
+    "10"
+   ],
+   "positions": [
+    {
+     "source": "EASL 2016",
+     "ref": "27085809",
+     "position": "Transplantation is not recommended in multiple adenoma but might be considered where there is underlying liver disease (evidence level III, grade 2).",
+     "locator": "Gate 10 · Standard 'Hepatocellular adenoma is not a standardised MELD exception…' (note); Gate 7 · Avoid 'Do not list a patient for transplantation on lesion number.'"
+    },
+    {
+     "source": "OPTN NLRB transplant-oncology guidance",
+     "ref": "optnnlrb",
+     "position": "Supports considering specified high-risk, unresectable or syndromic adenoma at a recommended MMaT-3, without moving adenoma into the standardised exception list; review-board guidance, not policy.",
+     "locator": "Gate 10 · Standard 'Hepatocellular adenoma is not a standardised MELD exception…'; Reference library"
+    },
+    {
+     "source": "UTHealth HCA transplant protocol V3",
+     "ref": "uthprotocol",
+     "position": "A non-standard review-board request through four named routes, requiring multidisciplinary confirmation that resection, embolisation, ablation and observation are unsafe, infeasible or inadequate.",
+     "locator": "Gate 10 · Standard 'Hepatocellular adenoma is not a standardised MELD exception…'; Gate 10 · Reasonable option group (routes)"
+    },
+    {
+     "source": "Ziogas 2022 UNOS",
+     "ref": "35018302",
+     "position": "142 US transplants at median age 34.5 and MELD 8: 18.3% died over a median 62.9 months; the registry records no lesion number or size, and 61.3% received exception points.",
+     "locator": "What we are not sure about #22"
+    },
+    {
+     "source": "Chiche 2016 ELTR",
+     "ref": "26919265",
+     "position": "Of 49 adenomatosis transplants, true transformation was found in only 17 explants, with three operative deaths, five retransplantations and three fatal recurrences; 15 of 64 registry-coded cases were not adenomatosis.",
+     "locator": "What we are not sure about #22-23; Gate 10 · Reasonable option 'Adenomatosis route' (caveat)"
+    }
+   ],
+   "divergence": "OPTN guidance permits non-standard requests and the local protocol defines routes, but EASL does not recommend transplantation for multiple adenoma and both registries lack comparison groups and reliable lesion data.",
+   "proposal": "The roadmap leaves opening the route as an institutional graft-stewardship judgement, to be made with the registry outcomes before the committee. If opened, the assessment defers entirely to the local protocol V3 (named route, multidisciplinary confirmation, non-standard review-board request), and a registry is required.",
+   "proposal_locator": "Gate 10 · Standard 'Hepatocellular adenoma is not a standardised MELD exception…' and the gate's ratification note; Decisions this programme still has to make #10 (rationale and audit)",
+   "rationale": "Hepatocellular adenoma is not a standardised exception. The whole indication rests on 142 US transplants over 33 years with 18.3% mortality over a median 62.9 months and 9.0% waitlist mortality in patients of median age 34.5 and median MELD 8 — so almost all of that mortality is treatment-attributable — plus 49 European adenomatosis transplants with three operative deaths, five retransplantations, three fatal recurrences and true transformation in only 17 of 49 explants. The US registry records neither the number nor the size of the adenomas; the European one miscoded a quarter of its cases; neither has a comparison group managed without transplantation; and 61.3% of US recipients received exception points while about a tenth met the stated criteria. Graft stewardship for a benign disease is an institutional judgement, and it should be made with those numbers in front of the committee.",
+   "audit": "Registry required if opened: route named, lesion dataset, review-board decision, waitlist events, donor source, explant concordance, graft and patient survival."
+  },
+  {
+   "id": "HCA-D11",
+   "n": 11,
+   "question": "Who verifies the live OPTN Policy 9.4 and 9.5 text and the current transplant-oncology guidance before each submission, and on what cycle?",
+   "kind": "governance",
+   "decisions": [
+    "9",
+    "10"
+   ],
+   "positions": [
+    {
+     "source": "UTHealth HCA transplant protocol V3",
+     "ref": "uthprotocol",
+     "position": "Marks the standardised-versus-non-standard classification, Class 5 criteria and submission routes, and the extension cycle and governing subsection VERIFY, requiring a recheck immediately before committee adoption, submission or extension.",
+     "locator": "Gate 10 · Standard 'Hepatocellular adenoma is not a standardised MELD exception…' (caveat); What we are not sure about #26"
+    },
+    {
+     "source": "OPTN Policy 9",
+     "ref": "optn",
+     "position": "Adenoma is not among the standardised exception diagnoses in Policy 9.5.A to 9.5.I; the roadmap has not independently verified the current text.",
+     "locator": "Reference library (OPTN Policy 9)"
+    },
+    {
+     "source": "OPTN NLRB transplant-oncology guidance",
+     "ref": "optnnlrb",
+     "position": "Review-board guidance rather than OPTN policy, effective 1 July 2025, and not a clinical standard of care.",
+     "locator": "Reference library (OPTN NLRB transplant-oncology guidance)"
+    }
+   ],
+   "divergence": "No source conflict: the local protocol itself demands a pre-submission recheck that the roadmap states has not been performed.",
+   "proposal": "No verifier or cycle is named. The roadmap states that the protocol's VERIFY items remain unchecked, treats its allocation routing as the protocol's reasoning rather than confirmed policy, and says the page must not be used for a listing decision; the audit asks for a named owner, policy version and date, and a recheck record per submission.",
+   "proposal_locator": "What we are not sure about #26; Gate 9 · Standard 'Where transformation is confirmed, re-stage completely…' (note); Decisions this programme still has to make #11 (audit)",
+   "rationale": "The local protocol marks the standardised-versus-non-standard classification, the Class 5 imaging criteria and submission routes, and the extension cycle and governing subsection as VERIFY, and requires a recheck immediately before committee adoption, submission or extension. None of those has been verified for this page.",
+   "audit": "Named owner plus policy version and date, with an agreed recheck cycle and a record of the check against each submission."
+  },
+  {
+   "id": "HCA-D12",
+   "n": 12,
+   "question": "Who owns the next revision of this page, and what triggers it?",
+   "kind": "governance",
+   "decisions": [],
+   "positions": [
+    {
+     "source": "EASL 2016",
+     "ref": "27085809",
+     "position": "Remains the last full guideline for this disease, predating a decade of subtype, male-adenoma, diagnostic-accuracy and surveillance data.",
+     "locator": "Decisions this programme still has to make #12; Provenance"
+    },
+    {
+     "source": "ACG 2024",
+     "ref": "38958301",
+     "position": "Restates the 2016 rules without engaging the newer evidence, in the roadmap's reading.",
+     "locator": "Decisions this programme still has to make #12"
+    }
+   ],
+   "divergence": "No source disagreement; the question is ownership of a page whose guideline base is ageing faster than its evidence.",
+   "proposal": "No owner or trigger is named. The roadmap asks that both be named now rather than letting the page age, with a review date and a standing watch for any new benign-liver-tumour guideline from EASL or AASLD.",
+   "proposal_locator": "Decisions this programme still has to make #12 (rationale and audit)",
+   "rationale": "EASL 2016 is the last full guideline and a decade of subtype, male-adenoma, diagnostic-accuracy and surveillance data has accumulated behind it — including, since 2021, a direct test of the threshold hypothesis that returned a negative, a demonstration that the six-month decision point is mistimed, contemporary surveillance rates one to two orders of magnitude below the historical figures, and a WHO classification that recommends resecting one subtype irrespective of size. ACG 2024 restates the 2016 rules without engaging any of it. A Delphi or consensus update has been formally proposed in the literature. The page should name an owner and a trigger now rather than silently age.",
+   "audit": "Named owner, review date, and a standing check for a new EASL or AASLD benign liver tumour guideline."
+  },
+  {
+   "id": "HCA-D13",
+   "n": 13,
+   "question": "How is the 5 cm number described to a patient, and in the operative consent — as a threshold, or as a convention?",
+   "kind": "governance",
+   "decisions": [
+    "4"
+   ],
+   "positions": [
+    {
+     "source": "EASL 2016",
+     "ref": "27085809",
+     "position": "Calls 5 cm the accepted clinically relevant size cut-off, supports its premise with one citation, and grades the recommendation II-3 with its weaker strength 2.",
+     "locator": "Gate 4 · Standard 'Treat a lesion that is persistently larger than 5 cm…' (caveat); What we are not sure about #2"
+    },
+    {
+     "source": "AISF 2022 (Italian multisociety)",
+     "ref": "36089523",
+     "position": "The only GRADE-built adenoma guideline grades every size-based recommendation very low quality (D), conditional.",
+     "locator": "Gate 4 · Standard 'Treat a lesion that is persistently larger than 5 cm…' (caveat)"
+    },
+    {
+     "source": "Julien 2021",
+     "ref": "34334644",
+     "position": "In 261 fully subtyped patients, diameter acted continuously at an odds ratio of 1.02 per mm and the authors identified no threshold size.",
+     "locator": "Gate 4 · Standard 'Treat a lesion that is persistently larger than 5 cm…' (caveat); What we are not sure about #2"
+    },
+    {
+     "source": "European practice survey",
+     "ref": "36781070",
+     "position": "79% of responding European experts decline routine resection above 5 cm after lifestyle change.",
+     "locator": "Gate 2 · Avoid 'Do not operate on a large adenoma at 6 months…'"
+    },
+    {
+     "source": "Haring 2022 resection audit",
+     "ref": "36324268",
+     "position": "A fifth of Dutch resections for presumed adenoma were on lesions under 50 mm, 70% of which had a changed diagnosis; the roadmap says this belongs in consent for an operation at 5 cm.",
+     "locator": "What we are not sure about #5"
+    }
+   ],
+   "divergence": "EASL presents 5 cm as an accepted cut-off at its weaker grade, while the GRADE-based guideline, the direct test of the threshold and most surveyed experts do not support calling it a risk threshold.",
+   "proposal": "Describe 5 cm to the patient and in the note as a convention, not a derived risk threshold, while keeping the resection recommendation at grade D; the measured cost of size-driven resection belongs in the consent conversation. The exact consent-template and report-footer wording is left to the group.",
+   "proposal_locator": "Gate 4 · Standard 'Treat a lesion that is persistently larger than 5 cm…'; What we are not sure about #2 and #5",
+   "rationale": "Not a clinical question but a consent question, and the full-text read makes it unavoidable. EASL calls 5 cm the accepted clinically relevant size cut off and grades the recommendation II-3 with conditional strength; the only GRADE-appraised guideline grades every size-based recommendation very low quality, conditional; the study that tested the threshold hypothesis most directly found size acting continuously at an odds ratio of 1.02 per millimetre and stated that no threshold size was identified; and 79% of responding European experts decline the rule. A patient told that her 5.5 cm adenoma has crossed a risk threshold has been told something the evidence does not support. Agree a form of words, put it in the consent template, and put it in the radiology report footer.",
+   "audit": "Audit: a sample of consent forms and clinic letters for adenoma resections, checked for whether the described basis for the operation matches the agreed wording."
+  },
+  {
+   "id": "HCA-D14",
+   "n": 14,
+   "question": "When size and subtype conflict — a 4 cm beta-catenin exon 3 lesion, or a 7 cm HNF1A-inactivated one that is shrinking — which takes precedence, and who decides?",
+   "kind": "clinical",
+   "decisions": [
+    "2",
+    "4",
+    "9"
+   ],
+   "positions": [
+    {
+     "source": "EASL 2016",
+     "ref": "27085809",
+     "position": "Above the threshold, resection applies irrespective of subtype; separately, resect any proven beta-catenin mutation irrespective of size. Whether beta-catenin risk is independent of sex, size and growth is unknown.",
+     "locator": "Gate 4 · Avoid 'Do not use a reassuring subtype to withhold curative treatment…'; Gate 9 · Avoid 'Do not use imaging follow-up alone…'; Gate 2 · Reasonable 'Where the subtype is known and low risk…' (caveat)"
+    },
+    {
+     "source": "AISF 2022 (Italian multisociety)",
+     "ref": "36089523",
+     "position": "Recommends biopsy to identify exon 3 and sonic hedgehog adenomas (PICO 9) while keeping 5 cm as the resection trigger (PICO 11), without saying which governs.",
+     "locator": "Decisions this programme still has to make #14"
+    },
+    {
+     "source": "WHO 6th ed., as reviewed (2026)",
+     "ref": "42678415",
+     "position": "Exon 3 adenomas are resected or ablated whatever their size; the roadmap calls this expert assertion without a cited cohort.",
+     "locator": "What we are not sure about #9; Gate 9 · Avoid 'Do not use imaging follow-up alone…'"
+    },
+    {
+     "source": "Nault 2017",
+     "ref": "27939373",
+     "position": "In women with adenomas under 5 cm, an at-risk molecular profile transformed in 2 of 14 against 1 of 101 without, and no HNF1A-inactivated lesion transformed (0 of 47); the roadmap calls this hypothesis-generating.",
+     "locator": "Gate 9 · Avoid 'Do not use imaging follow-up alone…'; Gate 2 · Reasonable 'Where the subtype is known and low risk…'"
+    },
+    {
+     "source": "Julien 2021",
+     "ref": "34334644",
+     "position": "For bleeding, sonic hedgehog subtype (OR 21.02) and exon 7/8 (OR 6.47) outweigh diameter (1.02 per mm), with very wide intervals on few events.",
+     "locator": "Gate 4 · Avoid 'Do not use a reassuring subtype to withhold curative treatment…' (caveat)"
+    }
+   ],
+   "divergence": "Sources point both ways: EASL is size-first above 5 cm yet subtype-first for a proven beta-catenin mutation, the WHO review is subtype-first, and the Italian guideline is silent on precedence, all on molecular data resting on few events.",
+   "proposal": "Interim local convention (grade D): a reassuring subtype may lengthen surveillance but must not withhold curative treatment from a lesion persistently over 5 cm or growing, and an unreassuring subtype alone does not add an operation beyond size, growth and sex; a 4-5 cm lesion is a board judgement. A proven beta-catenin adenoma is still routed to resection assessment.",
+   "proposal_locator": "What we are not sure about #10; Gate 4 · Avoid 'Do not use a reassuring subtype to withhold curative treatment…' and Reasonable 'Where a woman's adenoma sits between 4 and 5 cm…'; Gate 2 · Avoid 'Do not accept lifestyle advice as the whole plan…'",
+   "rationale": "This is the commonest real decision and no document answers it. The Italian guideline recommends biopsy specifically to identify exon 3 and sonic hedgehog adenomas (its PICO 9) and simultaneously keeps 5 cm as the resection trigger (its PICO 11), without specifying which governs when they disagree. The review of the WHO 6th-edition classification states that exon 3 adenomas are resected whatever their size, but cites no cohort. EASL's rule is explicitly size-first and subtype-blind above the threshold. The molecular data support subtype in both directions — 2 of 14 women with an at-risk profile under 5 cm transformed against 1 of 101 without — but on two events. Write the precedence rule down, with the proviso that it will be applied to a subtype assignment that is often made without sequencing.",
+   "audit": "Registry: for every case where size and subtype pointed different ways, the decision taken, who took it, and the specimen or follow-up outcome."
+  },
+  {
+   "id": "HCA-D15",
+   "n": 15,
+   "question": "Does the registry record outcomes per patient as well as per lesion, with the denominator stated?",
+   "kind": "operational",
+   "decisions": [],
+   "positions": [],
+   "divergence": "No source positions; programme decision.",
+   "proposal": "The dashboard already asks for malignant transformation and occult carcinoma reported per patient and per lesion; the audit specifies that every registry rate carry its numerator, its denominator and whether it is per patient or per lesion.",
+   "proposal_locator": "The dashboard · transformation and occult carcinoma item; Decisions this programme still has to make #15 (audit); What we are not sure about #3",
+   "rationale": "The single biggest statistical problem in the literature supporting the 5 cm rule is per-lesion versus per-patient conflation: the pooled systematic review reports haemorrhage in 27.2% of patients but 15.8% of lesions, a near-twofold difference, and the series with the strongest-looking size gradient counted 365 adenomas in 122 patients, which drives the small-lesion rates down arithmetically. A programme that does not fix its own denominator convention will reproduce the same artefact in its own audit and will not be able to compare its numbers with anyone else's.",
+   "audit": "Registry specification: every rate reported with its numerator, denominator and whether it is per patient or per lesion."
+  },
+  {
+   "id": "HCA-D16",
+   "n": 16,
+   "question": "Does the programme accept extended observation of a lesion over 5 cm as a board-sanctioned option rather than a deviation, and what stops it?",
+   "kind": "clinical",
+   "decisions": [
+    "2",
+    "4"
+   ],
+   "positions": [
+    {
+     "source": "EASL 2016",
+     "ref": "27085809",
+     "position": "A lesion persistently over 5 cm should be considered for resection or curative treatment; continued observation is not EASL's position.",
+     "locator": "Gate 4 · Standard option group, 'Continued surveillance'"
+    },
+    {
+     "source": "European practice survey",
+     "ref": "36781070",
+     "position": "Four fifths of responding experts decline routine resection above 5 cm after lifestyle change; respondents were self-selected referral-centre specialists reporting stated advice.",
+     "locator": "Gate 2 · Avoid 'Do not operate on a large adenoma at 6 months…'"
+    },
+    {
+     "source": "Shen 2026 meta-analysis",
+     "ref": "41364225",
+     "position": "699 surveilled patients: 88.5% stable or regressed, symptomatic bleeding 0.5%, transformation 0.8%; the roadmap notes lesions were removed from surveillance when they grew in five of seven studies.",
+     "locator": "Gate 2 · Reasonable 'Extend observation past 12 months…'; What we are not sure about #6"
+    },
+    {
+     "source": "Florou 2026",
+     "ref": "42214026",
+     "position": "164 patients, 76.2% managed by surveillance: rupture 1.8% and no transformation among those watched, which the roadmap calls the expected result of successful selection.",
+     "locator": "Gate 2 · Reasonable 'Extend observation past 12 months…' (caveat)"
+    },
+    {
+     "source": "Klompenhouwer 2017",
+     "ref": "28857134",
+     "position": "58.5% of adenomas over 5 cm eventually fell below 5 cm at a median 104 weeks, with no complication during follow-up.",
+     "locator": "Gate 4 · Standard option group, 'Continued surveillance'"
+    }
+   ],
+   "divergence": "EASL treats persistent size over 5 cm as an indication, while contemporary surveillance data and most surveyed experts support watching selected lesions, data that describe only lesions already judged safe to watch.",
+   "proposal": "Yes, in a selected woman: continued surveillance is listed (grade C) for a typical, non-beta-catenin, hepatobiliary-MRI-confirmed adenoma that is falling where the operation would be major, excluding men, beta-catenin or unclassified, exophytic, arterialised or growing lesions and imminent pregnancy. The board output must state interval, modality, growth trigger and the plan's expiry date.",
+   "proposal_locator": "Gate 4 · Standard option group, 'Continued surveillance'; Gate 2 · Reasonable 'Extend observation past 12 months…'; The board meeting · Agenda and Output",
+   "rationale": "Four fifths of responding European experts already decline routine resection above 5 cm, the contemporary surveillance figures are 88.5% stable or regressed with 0.5% symptomatic bleeding and 0.8% transformation, a surveillance-dominant 164-patient cohort reports 1.8% rupture and no transformation among those watched, and 58.5% of lesions over 5 cm fall below it eventually with no complications recorded during observation. Against that, every one of those datasets describes lesions already selected as safe to watch, and in five of seven pooled studies lesions were removed from surveillance as soon as they grew. If extended observation is to be offered it needs named stopping rules — growth, a change of subtype information, pregnancy intention, symptoms, loss to follow-up — and a date at which the plan itself expires.",
+   "audit": "Registry: every lesion over 5 cm under observation, with the stopping rules recorded at the outset and the reason recorded whenever one fires."
+  },
+  {
+   "id": "HCA-D17",
+   "n": 17,
+   "question": "Does the programme audit its own concordance between preoperative and final diagnosis, and publish it internally?",
+   "kind": "operational",
+   "decisions": [
+    "9"
+   ],
+   "positions": [],
+   "divergence": "No source positions; programme decision.",
+   "proposal": "Every case is closed in the registry with the concordance between preoperative and final diagnosis, every resection and explant is mapped, and the dashboard reports concordance annually with denominators, separately for men and for lesions under 50 mm.",
+   "proposal_locator": "The board meeting · Registry; Gate 9 · Reasonable 'Perform comprehensive specimen or explant mapping…'; The dashboard · concordance item",
+   "rationale": "The full-text read makes this the most informative number the programme can generate. Nationally, 43% of resections for presumed adenoma had a different postoperative diagnosis, rising to 70% below 50 mm and 78% in men, with focal nodular hyperplasia in 21% of resected sub-50 mm lesions; 50% of presumed male adenomas are reclassified on expert review; and 27% of referred sub-5 cm lesions in a prospective cohort were focal nodular hyperplasia. A local concordance rate is the only way to know whether this programme's preoperative assessment is better or worse than that, and it is the field that makes every other registry field interpretable.",
+   "audit": "Registry: preoperative working diagnosis and subtype against final pathology for every resection and explant, reported annually with denominators."
+  }
+ ]
+}

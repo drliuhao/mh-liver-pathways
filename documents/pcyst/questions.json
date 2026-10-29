@@ -1,0 +1,1100 @@
+{
+ "key": "pcyst",
+ "code": "PCYST",
+ "name": "Pancreatic cysts",
+ "generated": "29 October 2026",
+ "files": {
+  "roadmap_info": "PCYST_1_Cancer_Roadmap.docx",
+  "roadmap_questions": "PCYST_2_Cancer_Roadmap_Questions.docx",
+  "decision": "PCYST_7_Decision_Discussion.docx"
+ },
+ "sets": {
+  "roadmap": {
+   "label": "Cancer roadmap",
+   "page": "pcyst/",
+   "web": "pcyst/#questions",
+   "questions": [
+    {
+     "id": "PCYST-D1",
+     "set": "roadmap",
+     "title": "Which guideline is this programme's spine — Kyoto 2024, ACG 2018, the European 2018 guideline, or AGA 2015?",
+     "question": "Which guideline is this programme's spine — Kyoto 2024, ACG 2018, the European 2018 guideline, or AGA 2015?",
+     "kind": "governance",
+     "status": "OPEN — not yet decided",
+     "where": [],
+     "positions": [
+      {
+       "source": "NCCN Pancreatic Adenocarcinoma v1.2026",
+       "key": "np-pcyst-nccn",
+       "says": "Offers no cyst algorithm of its own; summarises the international and European groups, names Kyoto 2024 the international standard, cites the superseded 2013 European statement, and tells readers to use the most recent available guideline.",
+       "locator": "Quick reference 'Resection thresholds compared, and the non-IPMN cysts' · row 'NCCN v1.2026'; Provenance"
+      },
+      {
+       "source": "Kyoto 2024",
+       "key": "pm38182527",
+       "says": "The most recent guideline and the only one built on systematic reviews commissioned question by question; its own authors concede most IPMN studies lack high-level evidence, and it covers IPMN only, with no intervals for other cysts.",
+       "locator": "Practice choices with limited evidence · item 1; Gate 8 · Standard option 'Kyoto 2024 schedule'"
+      },
+      {
+       "source": "ACG 2018",
+       "key": "pm29485131",
+       "says": "The size-stratified schedule most US radiologists recognise, with MRCP preferred; graded conditional on very low quality evidence by ACG itself, which also says there are very few data on extending intervals and none on stopping by age.",
+       "locator": "Gate 8 · Standard option 'ACG 2018 schedule'"
+      },
+      {
+       "source": "European 2018",
+       "key": "pm29574408",
+       "says": "The simplest schedule to run and audit, since it does not branch on size, and the only one that also covers non-IPMN cysts; but the most imaging-intensive for a small stable cyst, with no demonstrated outcome advantage.",
+       "locator": "Gate 8 · Standard option 'European 2018 schedule'"
+      },
+      {
+       "source": "AGA 2015",
+       "key": "pm25805375",
+       "says": "The least intensive schedule and the only one with an explicit endpoint, but every recommendation is conditional on very low quality evidence and the AGA says its own surveillance interval has no evidence behind it.",
+       "locator": "Gate 8 · Standard option 'AGA 2015 schedule'; Practice choices with limited evidence · item 28"
+      }
+     ],
+     "divergence": "The four guidelines disagree on intervals, resection thresholds and stopping, NCCN declines to choose among them, and no study compares management under any of them on any outcome.",
+     "proposal": "The roadmap uses Kyoto 2024 as its provisional spine (most recent, built on commissioned systematic reviews, cited by NCCN) while stating this is a choice, not demonstrated superiority. It takes non-IPMN management from the European guideline and ACG, and shows what the other three guidelines would do instead.",
+     "proposal_locator": "Practice choices with limited evidence · item 1; Gate 5 · Reasonable 'Where the entity cannot be settled on imaging…' note; Provenance",
+     "rationale": "NCCN takes no position and tells the reader to use the most recent available cyst guideline. The four differ on intervals, on resection thresholds and on stopping, and no study compares them. Until one is named, the same patient is managed differently depending on who sees them.",
+     "audit": "Guideline and version recorded on every board output; proportion of cases managed off the named schedule.",
+     "web": "pcyst/#question-PCYST-D1"
+    },
+    {
+     "id": "PCYST-D2",
+     "set": "roadmap",
+     "title": "Which surveillance interval schedule, stated by size band, and which modality?",
+     "question": "Which surveillance interval schedule, stated by size band, and which modality?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "8 · Surveillance without resection",
+       "url": "pcyst/#decision-8"
+      }
+     ],
+     "positions": [
+      {
+       "source": "Kyoto 2024",
+       "key": "pm38182527",
+       "says": "Under 20 mm: 6 months, then 18-monthly if stable; 20 to under 30 mm: 6 months twice, then yearly; 30 mm or more: 6-monthly; CT or MRI. Alone in having progression data under its bands, but IPMN only.",
+       "locator": "Gate 8 · Standard option 'Kyoto 2024 schedule'"
+      },
+      {
+       "source": "ACG 2018",
+       "key": "pm29485131",
+       "says": "Escalates with size, from MRI every 2 years under 1 cm to MRI alternating with EUS 6-monthly over 3 cm, with lengthening once stability is shown; MRCP preferred. Conditional recommendation on very low quality evidence.",
+       "locator": "Gate 8 · Standard option 'ACG 2018 schedule'; Gate 8 · Standard 'Use MRI with MRCP…'"
+      },
+      {
+       "source": "European 2018",
+       "key": "pm29574408",
+       "says": "MRI preferred; 6-monthly in the first year, then yearly for life while fit for surgery, regardless of size and for MCN under 40 mm alike; 6-monthly for relative indications, elderly and comorbid patients. Most imaging-intensive for small stable cysts.",
+       "locator": "Gate 8 · Standard option 'European 2018 schedule'"
+      },
+      {
+       "source": "AGA 2015",
+       "key": "pm25805375",
+       "says": "For cysts under 3 cm without a solid component or dilated duct: MRI at 1 year, then every 2 years, stopping at 5 years. The AGA says the interval is not based on evidence.",
+       "locator": "Gate 8 · Standard option 'AGA 2015 schedule'"
+      }
+     ],
+     "divergence": "The schedules differ threefold or more in imaging per patient-decade for the same cyst, have never been compared on any outcome, and three of the four concede their intervals lack an evidence base.",
+     "proposal": "Choose one schedule, adopt it whole without mixing intervals and stopping rules from different guidelines, and record its name and version. The page's spine is the Kyoto 2024 schedule, with non-IPMN intervals still to be borrowed. Image with MRI and MRCP wherever available, CT only where MRI is unsuitable, keeping one modality throughout.",
+     "proposal_locator": "Gate 8 · Standard options local approval note and option 'Kyoto 2024 schedule'; Gate 8 · Standard 'Use MRI with MRCP…'; Gate 8 · Avoid 'Do not mix the four schedules…'; Gate 1 · Reasonable 'Pancreas-protocol CT is an acceptable substitute…'",
+     "rationale": "The four schedules differ by a factor of three or more in imaging per patient-decade for the same cyst, and three of the four state in their own texts that their intervals are not evidence-based. A schedule assembled case by case cannot be audited and cannot generate a growth rate. The ACG 2 to 3 cm band is now resolved from the full text — MRI or EUS every 6 to 12 months for 3 years, then yearly for 4 — so the remaining question is which guideline, not which reading of a figure.",
+     "audit": "Schedule assigned at enrolment; adherence to interval; proportion of scans on the assigned modality.",
+     "web": "pcyst/#question-PCYST-D2"
+    },
+    {
+     "id": "PCYST-D3",
+     "set": "roadmap",
+     "title": "The stopping rule: continue while fit, stop at 5 years of stability, or stop by age and size?",
+     "question": "The stopping rule: continue while fit, stop at 5 years of stability, or stop by age and size?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "9 · Consider stopping surveillance",
+       "url": "pcyst/#decision-9"
+      }
+     ],
+     "positions": [
+      {
+       "source": "European 2018",
+       "key": "pm29574408",
+       "says": "Follows patients without a surgical indication until they are no longer fit for surgery (GRADE 1B), reasoning that the risk of IPMN progression rises over time.",
+       "locator": "Gate 9 · Standard option 'Continue while the patient remains fit — European 2018 and ACG 2018'"
+      },
+      {
+       "source": "ACG 2018",
+       "key": "pm29485131",
+       "says": "Stops only on loss of surgical candidacy, reassesses utility over 75 and individualises at 76 to 85 (age limits it admits are borrowed and unsupported), and rejects the AGA 5-year rule, citing a 15 to 20-year dwell time.",
+       "locator": "Gate 9 · Standard option 'Continue while the patient remains fit…'; Gate 9 · Standard 'Stop when the patient is no longer a candidate…'"
+      },
+      {
+       "source": "AGA 2015",
+       "key": "pm25805375",
+       "says": "Stop after 5 years without significant change (conditional, very low quality); not restricted by size, and resting on a population-level transformation estimate with no data comparing stable and changing cysts, which the guideline admits.",
+       "locator": "Gate 9 · Standard option 'Stop at 5 years if stable — AGA 2015, and one of Kyoto 2024's two options'"
+      },
+      {
+       "source": "Kyoto 2024",
+       "key": "pm38182527",
+       "says": "Offers two options for a small unchanged branch-duct IPMN at 5 years: stop if under 20 mm without worrisome features, weighing life expectancy, or continue for concomitant adenocarcinoma; not for younger or familial-risk patients.",
+       "locator": "Gate 9 · Standard option 'Stop at 5 years if stable…'"
+      },
+      {
+       "source": "Marchegiani 2023",
+       "key": "pm37406887",
+       "says": "After 5 years of stability, standardised incidence ratios of 1.12 at age 75 or over and 0.95 at 65 or over with cysts of 15 mm or less support stopping; the roadmap notes these rest on 3 and 2 cancers.",
+       "locator": "Gate 9 · Standard option 'Stop by age and size — the standardised-incidence-ratio argument'; Practice choices with limited evidence · item 16"
+      }
+     ],
+     "divergence": "The three cohorts behind these positions reach opposite conclusions, which the roadmap attributes to differences in baseline selection, conditioning on 5-year survival, counting high-grade dysplasia as an event and length of follow-up, and no study has randomised stopping.",
+     "proposal": "No winner is picked. The roadmap applies only the shared rule (stop when the patient is no longer a surgical candidate, judged on fitness not age and reassessed each visit) and holds that competing risk, not incidence ratios, is the sound argument for stopping. Any stop is a recorded decision explained to the patient, never a lapsed recall.",
+     "proposal_locator": "Gate 9 · Standard 'Stop when the patient is no longer a candidate…'; Gate 9 · Standard options order note; Practice choices with limited evidence · item 15; Gate 9 · Avoid 'Do not call stopping a discharge…' and 'Do not let surveillance stop by default…'",
+     "rationale": "Each has a different failure mode. Continuing indefinitely commits imaging to patients who will die of something else; stopping at 5 years accepts a documented 4.4% rate of invasive cancer after that point in one referral cohort; the age-and-size rule rests on two and three cancers with confidence intervals compatible with a threefold excess, in a retrospective cohort no guideline has endorsed. The three supporting cohorts differ in baseline selection, in conditioning on survival to 5 years, in whether high-grade dysplasia counts as an event against an invasive-cancer comparator, and in how long they watched past the mark — and those four differences account for their opposite conclusions. Choosing a rule means choosing one of those designs.",
+     "audit": "Stopping decisions by rule applied, and any pancreatic cancer diagnosed after surveillance stopped, reported as a named event.",
+     "web": "pcyst/#question-PCYST-D3"
+    },
+    {
+     "id": "PCYST-D4",
+     "set": "roadmap",
+     "title": "Does a cyst of 30 mm, or 40 mm, trigger resection on size alone in a fit patient?",
+     "question": "Does a cyst of 30 mm, or 40 mm, trigger resection on size alone in a fit patient?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "2 · Assess high-risk features",
+       "url": "pcyst/#decision-2"
+      },
+      {
+       "label": "3 · Assess worrisome features",
+       "url": "pcyst/#decision-3"
+      }
+     ],
+     "positions": [
+      {
+       "source": "Sendai 2006",
+       "key": "pm16327281",
+       "says": "Made a branch-duct cyst over 30 mm a resection trigger, on multivariate analyses in two series of 15 and 32 patients, while saying more pathological data were needed before resecting all such lesions.",
+       "locator": "Gate 2 · Avoid 'Do not treat a cyst of 30 mm or more as a high-risk stigma…'"
+      },
+      {
+       "source": "Fukuoka 2017",
+       "key": "pm28735806",
+       "says": "Holds that size by itself, being a poor predictor, should not indicate surgery, but retains 3 cm as a worrisome feature and lets 2 cm count in patients younger than 65.",
+       "locator": "Gate 2 · Avoid 'Do not treat a cyst of 30 mm or more as a high-risk stigma…'"
+      },
+      {
+       "source": "Kyoto 2024",
+       "key": "pm38182527",
+       "says": "Keeps a cyst of 30 mm or more as a worrisome feature rather than a high-risk stigma, and treats multiple worrisome features as additive.",
+       "locator": "Gate 2 · Avoid 'Do not treat a cyst of 30 mm or more…'; Gate 3 · Standard 'Count the worrisome features…'"
+      },
+      {
+       "source": "European 2018",
+       "key": "pm29574408",
+       "says": "Makes a cyst of 40 mm or more a relative indication for surgery, without a head-to-head comparison, while its own text gives a 27 to 33% positive predictive value for a 30 mm cyst lacking other risk factors.",
+       "locator": "Gate 2 · Avoid 'Do not treat a cyst of 30 mm or more…' note"
+      },
+      {
+       "source": "Revised Kyoto validation",
+       "key": "pm38880125",
+       "says": "A single worrisome feature carried a non-significant hazard of later cancer (SHR 1.43, 0.93 to 2.19), and risk was stratified at 20 mm but not at 30 mm.",
+       "locator": "Gate 2 · Avoid 'Do not treat a cyst of 30 mm or more…' note; Gate 3 · Avoid 'Do not read one worrisome feature as an indication to operate'"
+      }
+     ],
+     "divergence": "Sendai and the European guideline treat size as grounds to operate (30 and 40 mm), the IAP guidelines since 2012 do not, and the only large validation found that 30 mm did not stratify risk.",
+     "proposal": "Not on size alone. The roadmap counts a cyst of 30 mm or more as one worrisome feature, lets the count, trajectory and fitness drive the next step, and advises against operating on a single worrisome feature, while acknowledging that the European 40 mm relative indication remains a live position held by serious people.",
+     "proposal_locator": "Gate 2 · Avoid 'Do not treat a cyst of 30 mm or more as a high-risk stigma…'; Gate 3 · Avoid 'Do not read one worrisome feature as an indication to operate'; Decisions table · item 4 · why",
+     "rationale": "Sendai 2006 made more than 30 mm a resection trigger from multivariate analyses in two series of 15 and 32 patients; Fukuoka 2012 demoted size on the ground that it is a weaker indicator than nodules or cytology; Fukuoka 2017 said size alone is not an appropriate parameter to indicate surgery while keeping 3 cm as a worrisome feature and 2 cm as a consideration under 65; Kyoto 2024 keeps it as a worrisome feature; the European guideline makes 40 mm a relative indication. A single worrisome feature carried a non-significant hazard ratio in the validation cohort, and that same cohort found risk stratified at 20 mm but not at 30 mm. The evidence does not support size alone — but the European position is live and is held by serious people.",
+     "audit": "Resections by largest cyst dimension and by number of worrisome features, with final histology.",
+     "web": "pcyst/#question-PCYST-D4"
+    },
+    {
+     "id": "PCYST-D5",
+     "set": "roadmap",
+     "title": "Mucinous cystic neoplasm: resect all in fit patients, or surveil those under 40 mm without risk features?",
+     "question": "Mucinous cystic neoplasm: resect all in fit patients, or surveil those under 40 mm without risk features?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "5 · Manage cysts other than IPMN",
+       "url": "pcyst/#decision-5"
+      }
+     ],
+     "positions": [
+      {
+       "source": "NCCN Pancreatic Adenocarcinoma v1.2026",
+       "key": "np-pcyst-nccn",
+       "says": "Summarising the international group, recommends resecting all MCNs in patients who can undergo surgery, and puts the malignant risk below 15%.",
+       "locator": "Gate 5 · Standard option 'Mucinous cystic neoplasm — resect, but where is the threshold?'"
+      },
+      {
+       "source": "European 2018",
+       "key": "pm29574408",
+       "says": "Resect an MCN of 40 mm or more (GRADE 1B), or any symptomatic or nodule-bearing lesion; following a presumed MCN under 40 mm without risk features is safe (GRADE 2C).",
+       "locator": "Gate 5 · Standard option 'Mucinous cystic neoplasm — resect, but where is the threshold?'"
+      },
+      {
+       "source": "Sendai 2006",
+       "key": "pm16327281",
+       "says": "Originated 'resect all' on 6 to 36% malignancy rates from series that mostly did not require ovarian-type stroma, which its own text concedes inflates them, and on an asserted low risk of distal pancreatectomy.",
+       "locator": "Gate 5 · Standard option 'Mucinous cystic neoplasm…' caveat"
+      },
+      {
+       "source": "Fukuoka 2012",
+       "key": "pm22687371",
+       "says": "Reported under 15% invasive carcinoma in series requiring ovarian-type stroma, and no malignancy below 4 cm without mural nodules; its resect-all position stayed in force unexamined after Fukuoka 2017 dropped MCN from scope.",
+       "locator": "Gate 5 · Standard option 'Mucinous cystic neoplasm…'; Gate 5 · Standard options local approval note"
+      },
+      {
+       "source": "ACG 2018",
+       "key": "pm29485131",
+       "says": "Found high-grade dysplasia or cancer in 10% of 90 resected MCNs, with none under 3 cm that had a normal CA 19-9 and no concerning features.",
+       "locator": "Gate 5 · Standard option 'Mucinous cystic neoplasm…'"
+      }
+     ],
+     "divergence": "NCCN's summary of the international group says resect all while the European guideline says surveil under 40 mm without risk features; Kyoto 2024 does not adjudicate, and the roadmap calls this the sharpest disagreement on the page.",
+     "proposal": "The roadmap does not choose, but reports that its full-text read moves the balance toward the European position (surveil presumed MCN under 40 mm without risk features; resect at 40 mm, or with symptoms or a nodule), conceding that 'resect all' is held by serious people because invasion is hard to detect preoperatively. Age-dependent thresholds remain open.",
+     "proposal_locator": "Gate 5 · Standard options local approval note; Gate 5 · Standard option 'Mucinous cystic neoplasm — resect, but where is the threshold?'",
+     "rationale": "NCCN, summarising the international group, says resect all; the European evidence-based guideline says it is safe to follow those under 40 mm. The malignant risk is under 15%, and the two positions differ by a substantial number of distal pancreatectomies a year.",
+     "audit": "Mucinous cystic neoplasms by size, management chosen, and final histology in every resected case.",
+     "web": "pcyst/#question-PCYST-D5"
+    },
+    {
+     "id": "PCYST-D6",
+     "set": "roadmap",
+     "title": "Cyst fluid panel: does glucose replace CEA as first-line, is cytology mandatory on every aspirate, and is molecular testing offered and funded?",
+     "question": "Cyst fluid panel: does glucose replace CEA as first-line, is cytology mandatory on every aspirate, and is molecular testing offered and funded?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "4 · Select cyst-fluid testing",
+       "url": "pcyst/#decision-4"
+      }
+     ],
+     "positions": [
+      {
+       "source": "Glucose meta-analysis",
+       "key": "pm33964311",
+       "says": "Head to head, glucose sensitivity was 91% against CEA's 56% and accuracy 94% against 85%; adding CEA did not improve on glucose. The roadmap notes both glucose meta-analyses pool largely the same seven studies.",
+       "locator": "Gate 4 · Standard options 'Cyst fluid glucose' and 'Cyst fluid CEA'; Gate 4 · Standard options local approval note"
+      },
+      {
+       "source": "Kyoto 2024",
+       "key": "pm38182527",
+       "says": "Quotes glucose under 50 mg/dL (93% sensitivity, 89% specificity) without recommending it, makes suspicious cytology a high-risk stigma, and gives its molecular recommendations its highest evidence level (1+, grade B).",
+       "locator": "Gate 4 · Standard options 'Cyst fluid glucose', 'Cytology' and 'Targeted next-generation sequencing of cyst fluid'; Gate 4 local approval note"
+      },
+      {
+       "source": "ACG 2018",
+       "key": "pm29485131",
+       "says": "Says cytology should be sent to assess for high-grade dysplasia, does not name glucose, and judges molecular markers early in development with insufficient evidence for routine use.",
+       "locator": "Gate 4 · Standard options 'Cytology' and 'Targeted next-generation sequencing of cyst fluid'; Gate 4 local approval note"
+      },
+      {
+       "source": "European 2018",
+       "key": "pm29574408",
+       "says": "Does not name glucose; KRAS and GNAS testing may be considered (GRADE 2C) only when the diagnosis is unclear and the result would change management.",
+       "locator": "Gate 4 · Standard option 'Targeted next-generation sequencing of cyst fluid'; Gate 4 local approval note"
+      },
+      {
+       "source": "PancreaSeq prospective",
+       "key": "pm36209796",
+       "says": "Across 31 institutions, MAPK or GNAS alterations gave 90% sensitivity and 100% specificity for a mucinous cyst; the roadmap notes one laboratory ran every assay, surgical pathology existed for 14%, and sensitivity for MCN was 47%.",
+       "locator": "Gate 4 · Standard option 'Targeted next-generation sequencing of cyst fluid'; Practice choices with limited evidence · item 12"
+      }
+     ],
+     "divergence": "Pooled data favour glucose over CEA yet no guideline adopts it, and molecular testing has strong single-laboratory prospective data that no guideline requires and that Kyoto's own pooled grade-marker figures do not match.",
+     "proposal": "Allocate fluid before the procedure. Send cytology on every aspirate as the only grade test; glucose first-line for mucinous-or-not, with CEA alongside where volume allows; a molecular panel only where it would change management and funding is confirmed in writing. A negative result never lengthens an interval. Glucose replacing CEA, and molecular funding, remain open.",
+     "proposal_locator": "Gate 4 · entry criteria; Gate 4 · Standard options 'Cyst fluid glucose', 'Cytology', 'Targeted next-generation sequencing of cyst fluid'; Gate 4 · Avoid 'Do not treat a negative fluid result…'; Gate 4 local approval note",
+     "rationale": "Glucose outperformed CEA head to head on pooled data, but neither ACG nor the European guideline names it, Kyoto quotes it without recommending it, and the two meta-analyses behind it pool largely the same seven primary studies so are not independent confirmation of each other. The molecular panel has good prospective multi-institutional data, is required by no guideline, is a single laboratory's assay analysed in a single laboratory, has a coverage question, and has a sensitivity of 47% rather than 90% for mucinous cystic neoplasm specifically. [PAYER]",
+     "audit": "Tests sent per aspirate, non-diagnostic rate, and whether each result changed the recorded plan.",
+     "web": "pcyst/#question-PCYST-D6"
+    },
+    {
+     "id": "PCYST-D7",
+     "set": "roadmap",
+     "title": "Is endoscopic ultrasound required before every cyst resection, or selectively?",
+     "question": "Is endoscopic ultrasound required before every cyst resection, or selectively?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "2 · Assess high-risk features",
+       "url": "pcyst/#decision-2"
+      },
+      {
+       "label": "3 · Assess worrisome features",
+       "url": "pcyst/#decision-3"
+      }
+     ],
+     "positions": [
+      {
+       "source": "Kyoto 2024",
+       "key": "pm38182527",
+       "says": "Aspiration should be skipped when a high-risk stigma is obvious on CT or MRI and surgery will follow anyway; recommends EUS, including contrast and FNA, where high-grade dysplasia or carcinoma is suspected and the service exists.",
+       "locator": "Gate 2 · Reasonable options 'Straight to resection without aspiration' and 'EUS with aspiration first'"
+      },
+      {
+       "source": "European 2018",
+       "key": "pm29574408",
+       "says": "Agrees at GRADE 2C: do not aspirate when the diagnosis is established or the surgical indication is clear, and use EUS-FNA only when the result is expected to change management.",
+       "locator": "Gate 2 · Reasonable option 'Straight to resection without aspiration'; Gate 1 · Reasonable 'Add endoscopic ultrasound…'"
+      },
+      {
+       "source": "ACG 2018",
+       "key": "pm29485131",
+       "says": "Restricts EUS with or without FNA to triggers: high-risk features, a cyst of 3 cm or more, jaundice, cyst-related pancreatitis, a markedly raised CA 19-9, or a main duct over 5 mm.",
+       "locator": "Gate 3 · Standard 'Do endoscopic ultrasound…'"
+      },
+      {
+       "source": "Three-guideline comparison",
+       "key": "pm27693645",
+       "says": "In 115 resections the preoperative diagnosis proved wrong in 32 (28%); before surgery, serous and neuroendocrine lesions were identified correctly in only a third of cases.",
+       "locator": "Gate 2 · Reasonable option 'Straight to resection without aspiration' caveat"
+      }
+     ],
+     "divergence": "Kyoto, the European guideline and ACG all make EUS conditional on the clinical question, but no source addresses a mandatory pre-resection EUS, which the roadmap weighs against roughly one wrong preoperative diagnosis in four.",
+     "proposal": "The draft treats EUS as selective: following Kyoto's order, an unambiguous high-risk stigma in a fit patient at a high-volume centre may go straight to resection; EUS with aspiration comes first where the entity is in doubt, cytology would change the extent, or a frail patient's choice depends on certainty. A mandatory policy remains the programme's call.",
+     "proposal_locator": "Gate 2 · Reasonable options 'Straight to resection without aspiration' and 'EUS with aspiration first', with local approval note; Gate 3 · Standard 'Do endoscopic ultrasound…'",
+     "rationale": "Kyoto 2024 says aspiration should not be done when a high-risk stigma is obvious and surgery will follow regardless; ACG makes EUS conditional on specific triggers. A standing EUS costs a procedure in every case; a selective policy accepts that some resections are decided on cross-sectional imaging alone, in a disease where one diagnosis in four turns out to be wrong.",
+     "audit": "Proportion of cyst resections with preoperative EUS, and the final histology in each.",
+     "web": "pcyst/#question-PCYST-D7"
+    },
+    {
+     "id": "PCYST-D8",
+     "set": "roadmap",
+     "title": "How is growth defined — and is duct growth recorded as well as cyst growth?",
+     "question": "How is growth defined — and is duct growth recorded as well as cyst growth?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "3 · Assess worrisome features",
+       "url": "pcyst/#decision-3"
+      },
+      {
+       "label": "8 · Surveillance without resection",
+       "url": "pcyst/#decision-8"
+      }
+     ],
+     "positions": [
+      {
+       "source": "Kyoto 2024",
+       "key": "pm38182527",
+       "says": "Growth of 2.5 mm a year or more is a worrisome feature, adopted as the most frequently reported value among candidates of 0.96 to 3.5; it considered main-duct growth as a feature and rejected it for lack of evidence.",
+       "locator": "Gate 3 · Standard 'Define growth rate before using it…'"
+      },
+      {
+       "source": "ACG 2018",
+       "key": "pm29485131",
+       "says": "Growth over 3 mm a year is a high-risk characteristic prompting a short-interval study, stated without operating characteristics.",
+       "locator": "Gate 3 · Standard 'Define growth rate before using it…'"
+      },
+      {
+       "source": "Fukuoka 2017",
+       "key": "pm28735806",
+       "says": "Used an increase of 5 mm or more over 2 years, entered on two citations.",
+       "locator": "Gate 3 · Standard 'Define growth rate before using it…'"
+      },
+      {
+       "source": "European 2018",
+       "key": "pm29574408",
+       "says": "Growth of 5 mm a year or more is a relative indication for surgery.",
+       "locator": "Gate 3 · Standard 'Define growth rate before using it…'"
+      },
+      {
+       "source": "Oyama 2020",
+       "key": "pm31473224",
+       "says": "Among 804 Tokyo patients followed beyond 5 years, the increase in main-duct diameter predicted later carcinoma (SHR 1.71 per mm) while the increase in cyst size did not (1.46, 0.96 to 2.20).",
+       "locator": "Gate 3 · Standard 'Define growth rate before using it…' note; Practice choices with limited evidence · item 5; Gate 9 · Standard option 'Continue while the patient remains fit…' (804 of 1,404 Tokyo patients)"
+      }
+     ],
+     "divergence": "Four growth definitions coexist, none derived from performance or tested for reproducibility, and the one cohort that measured both found duct growth predicted cancer where cyst growth did not.",
+     "proposal": "Define growth before using it and compute it only against a recorded baseline on the same modality. The draft uses Kyoto's 2.5 mm a year as the spine's worrisome feature while labelling it a frequency-chosen consensus value, and argues that duct diameter growth should be recorded under a consistent protocol; adoption is left to the programme.",
+     "proposal_locator": "Gate 3 · Standard 'Define growth rate before using it…'; Gate 1 · Avoid 'Do not enter a cyst into surveillance without a baseline…'; Gate 8 · Standard 'Use MRI with MRCP…'; Practice choices with limited evidence · item 5",
+     "rationale": "There are four definitions, not three: Kyoto 2.5 mm per year, ACG more than 3 mm per year, Fukuoka 2017 5 mm over 2 years, the European guideline 5 mm per year. Kyoto adopted 2.5 because it was the value most frequently reported among candidates spanning 0.96 to 3.5 mm per year, which is a choice by vote frequency rather than performance. None has published measurement reproducibility and 2.5 mm is inside the range over which two readers can disagree. Separately, in the one cohort that measured both, the increase in main pancreatic duct diameter over 5 years predicted later carcinoma (SHR 1.71 per mm, 1.44 to 2.03) and the increase in cyst size did not (1.46, 0.96 to 2.20) — and no guideline records duct growth, Kyoto having considered and rejected it for lack of evidence.",
+     "audit": "Report completeness for size and duct diameter; proportion of progression events declared on a same-modality comparison.",
+     "web": "pcyst/#question-PCYST-D8"
+    },
+    {
+     "id": "PCYST-D9",
+     "set": "roadmap",
+     "title": "What happens to high-grade dysplasia at the duct margin when clearing it requires a total pancreatectomy?",
+     "question": "What happens to high-grade dysplasia at the duct margin when clearing it requires a total pancreatectomy?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "7 · Plan the extent of resection",
+       "url": "pcyst/#decision-7"
+      }
+     ],
+     "positions": [
+      {
+       "source": "Kyoto 2024",
+       "key": "pm38182527",
+       "says": "Recommends further resection for high-grade dysplasia at the frozen-section margin, yet permits leaving it to avoid total pancreatectomy in older or frail patients, where invasive cancer is present, or in colloid-type disease.",
+       "locator": "Gate 7 · Standard 'Take an intraoperative frozen section…'; Gate 7 · Reasonable option 'Total pancreatectomy' and local approval note"
+      },
+      {
+       "source": "European 2018",
+       "key": "pm29574408",
+       "says": "Keeps total pancreatectomy for a distal mural nodule or familial pancreatic cancer, and counsels against it when an invasive head carcinoma will set the prognosis.",
+       "locator": "Gate 7 · Reasonable option 'Total pancreatectomy'"
+      },
+      {
+       "source": "PROPAN",
+       "key": "pm32703081",
+       "says": "Across 52 studies and 3,570 patients, total pancreatectomy carried 25% major morbidity and 6% 30-day mortality (95% CI 4 to 8%), pooled across indications; its patient decision tables quote 2 to 5%.",
+       "locator": "Gate 7 · Reasonable option 'Total pancreatectomy' caveat; Practice choices with limited evidence · item 21"
+      },
+      {
+       "source": "Recurrence after resection",
+       "key": "pm25793719",
+       "says": "High-grade dysplasia at the margin predicted recurrence of non-invasive IPMN (hazard ratio 20.9), but from 10 margin-positive patients without a confidence interval; IPMN at the margin gave 25% recurrence against 14%.",
+       "locator": "Gate 7 · Standard 'Take an intraoperative frozen section…' note"
+      }
+     ],
+     "divergence": "Kyoto's two statements point in opposite directions for high-grade dysplasia at the margin without invasion in a fit patient, and the margin and total-pancreatectomy data are small or pooled across indications.",
+     "proposal": "No rule is set; the roadmap asks the programme to decide in advance, with the total-pancreatectomy numbers in hand, not in theatre. Meanwhile: act on frozen-section margin grade, never accept a denuded margin as clear, and discuss total pancreatectomy with every patient before any operation in which it could arise.",
+     "proposal_locator": "Gate 7 · Reasonable options local approval note; Practice choices with limited evidence · item 20; Gate 7 · Standard 'Take an intraoperative frozen section…'; Gate 7 · Avoid 'Do not accept a denuded duct margin as clear' and 'Do not commit to an extent of resection…'",
+     "rationale": "Kyoto 2024 recommends additional resection for high-grade dysplasia at the frozen-section margin and, separately, permits leaving it. The full text conditions the permission on the patient being older or frail, on invasive cancer already being present so that prognosis is set by the invasive component, and on colloid-type disease. The unresolved case is high-grade dysplasia at the margin with no invasive component in a fit patient, where clearing it may mean a total pancreatectomy at 25% major morbidity and 6% 30-day mortality (95% CI 4 to 8%). This should not be settled for the first time in theatre. [EXPERTISE]",
+     "audit": "Margin grade, extent taken, 90-day morbidity and mortality, and remnant recurrence.",
+     "web": "pcyst/#question-PCYST-D9"
+    },
+    {
+     "id": "PCYST-D10",
+     "set": "roadmap",
+     "title": "Post-resection surveillance: which schedule, and is a resected non-invasive branch-duct IPMN with a clear margin followed at all?",
+     "question": "Post-resection surveillance: which schedule, and is a resected non-invasive branch-duct IPMN with a clear margin followed at all?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "10 · Surveillance after resection",
+       "url": "pcyst/#decision-10"
+      }
+     ],
+     "positions": [
+      {
+       "source": "Kyoto 2024",
+       "key": "pm38182527",
+       "says": "Yearly imaging, or 6-monthly with a family history of pancreatic cancer or high-grade dysplasia in the specimen, while the patient is fit for further intervention; may stop 5 years after total pancreatectomy for non-invasive disease.",
+       "locator": "Gate 10 · Standard option 'Kyoto 2024 — interval by risk factor'"
+      },
+      {
+       "source": "ACG 2018",
+       "key": "pm29485131",
+       "says": "Surveil every resected IPMN: MRI every 24 months after low- or intermediate-grade dysplasia, MRI or EUS 6-monthly after high-grade dysplasia or cancer; no follow-up for a resected MCN without cancer.",
+       "locator": "Gate 10 · Standard option 'ACG 2018 — interval by grade'"
+      },
+      {
+       "source": "European 2018",
+       "key": "pm29574408",
+       "says": "Lifelong surveillance after IPMN resection while the patient is fit and willing to have surgery; 6-monthly for 2 years, then yearly, after high-grade dysplasia or main-duct disease; silent on resected MCN.",
+       "locator": "Gate 10 · Standard option 'European 2018 — lifelong, intensified for high-grade or main-duct disease'; Gate 10 local approval note"
+      },
+      {
+       "source": "AGA 2015",
+       "key": "pm25805375",
+       "says": "Recommends against routine surveillance after resection without high-grade dysplasia or malignancy, while conceding that no case series report outcomes in that group.",
+       "locator": "Gate 10 · Standard option 'AGA 2015 — no routine surveillance without high-grade dysplasia or cancer'"
+      },
+      {
+       "source": "Recurrence after resection",
+       "key": "pm25793719",
+       "says": "Recurrence was 9% after non-invasive IPMN and 1 of 197 non-invasive branch-duct lesions recurred as cancer; the authors suggest surveillance could be avoided in selected cases.",
+       "locator": "Gate 10 · Standard 'Base the schedule on the recurrence pattern…'"
+      }
+     ],
+     "divergence": "Three guidelines surveil every resected IPMN and AGA does not, and the best recurrence series and the series Fukuoka 2017 cites (62% risk of a new IPMN at 10 years) point in opposite directions.",
+     "proposal": "The page's spine is Kyoto 2024: yearly remnant imaging, 6-monthly with family history or high-grade dysplasia, assigned at discharge. It records rather than resolves the non-invasive branch-duct question; adopting the AGA position must be a written, audited departure. A resected MCN without cancer remains open; a resected serous cystadenoma or drained pseudocyst is not surveilled.",
+     "proposal_locator": "Gate 10 · Standard option 'Kyoto 2024 — interval by risk factor'; Gate 10 · entry criteria; Gate 10 · Standard 'Base the schedule on the recurrence pattern…' note; Gate 10 · Avoid 'Do not discharge a patient after resection of a non-invasive IPMN on the AGA rule…' and 'Do not surveil a resected serous cystadenoma…'; Gate 10 local approval note",
+     "rationale": "Kyoto, ACG and the European guideline surveil every resected IPMN; AGA 2015 recommends against surveillance of resected cysts without high-grade dysplasia or malignancy and concedes that no case series report outcomes in that group. The best recurrence series found 9% recurrence after non-invasive IPMN, with 1 of 197 non-invasive branch-duct lesions (0.5%) recurring as cancer, and suggested surveillance could be avoided in selected cases — while the series Fukuoka 2017 cites found the 10-year risk of a new IPMN after resection of non-invasive disease to be 62%, with invasive IPMN in 38%. Decide also whether a resected mucinous cystic neoplasm without cancer is followed, where ACG says no on an absence of events in a 90-patient series and the European guideline is silent.",
+     "audit": "Post-resection schedule assigned by histology, remnant recurrence, and reoperation.",
+     "web": "pcyst/#question-PCYST-D10"
+    },
+    {
+     "id": "PCYST-D11",
+     "set": "roadmap",
+     "title": "Is there an age or fitness threshold for entering surveillance at all?",
+     "question": "Is there an age or fitness threshold for entering surveillance at all?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "6 · Assess surgical fitness and expected benefit",
+       "url": "pcyst/#decision-6"
+      }
+     ],
+     "positions": [
+      {
+       "source": "AGA 2015",
+       "key": "pm25805375",
+       "says": "Comes closest to an entry rule, calling surveillance inappropriate from the outset where life expectancy is limited, and names loss of surgical candidacy as a stopping condition.",
+       "locator": "Gate 6 · Standard 'Stop the surveillance conversation entirely…'; Gate 6 local approval note"
+      },
+      {
+       "source": "Kyoto 2024",
+       "key": "pm38182527",
+       "says": "Requires life expectancy to be weighed and says surveillance should be discontinued below a 10-year life expectancy, but states no entry rule.",
+       "locator": "Gate 6 · Standard 'Weigh the cyst's risk against the patient's competing risk…' note"
+      },
+      {
+       "source": "ACG 2018",
+       "key": "pm29485131",
+       "says": "Suggests assessing the utility of surveillance over 75 and individualising at 76 to 85, conceding these age limits come from colorectal screening and lack supporting evidence.",
+       "locator": "Gate 9 · Standard 'Stop when the patient is no longer a candidate…'"
+      },
+      {
+       "source": "Marchegiani 2023",
+       "key": "pm37406887",
+       "says": "After 5 years of stability, the standardised incidence ratio at 75 or over was 1.12 (0.23 to 3.39) from 3 cancers, while all-cause mortality ran about sixteen times disease-specific mortality.",
+       "locator": "Gate 6 local approval note; Gate 6 · Standard 'Weigh the cyst's risk…'; Practice choices with limited evidence · item 15"
+      }
+     ],
+     "divergence": "No guideline states an entry rule, and the only quantitative support is a stopping-cohort ratio from three cancers that falls with age because the comparator's incidence rises.",
+     "proposal": "No entry rule is proposed; the roadmap calls this a governance choice without comparative evidence. Its stance: any rule should rest on competing risk rather than standardised incidence ratios, and a patient who would not be operated on whatever the imaging showed should not be under surveillance.",
+     "proposal_locator": "Gate 6 · Reasonable options local approval note; Gate 6 · Standard 'Stop the surveillance conversation entirely…'; Practice choices with limited evidence · item 15; Decisions table · item 11 · why",
+     "rationale": "All four guidelines agree surveillance stops when a patient is no longer a surgical candidate, and AGA 2015 comes closest to an entry rule by calling surveillance inappropriate where life expectancy is limited, but none states one. Standardised incidence ratios suggest a stable small cyst adds nothing to background risk in patients over 75 — from 3 cancers, with an interval of 0.23 to 3.39 — and all-cause mortality in that group is about sixteen times disease-specific mortality. The ratio also falls with age because the comparator population's incidence rises, so the competing-risk argument is the sound one and the standardised-incidence-ratio argument is not. Setting an entry rule is a governance decision with no comparative evidence either way.",
+     "audit": "New surveillance enrolments by age and cyst size, with the reason for enrolment recorded.",
+     "web": "pcyst/#question-PCYST-D11"
+    },
+    {
+     "id": "PCYST-D12",
+     "set": "roadmap",
+     "title": "Who owns the cyst registry, the recall report and the annual review of this page against current guideline versions?",
+     "question": "Who owns the cyst registry, the recall report and the annual review of this page against current guideline versions?",
+     "kind": "governance",
+     "status": "OPEN — not yet decided",
+     "where": [],
+     "positions": [],
+     "divergence": "No source positions; programme decision.",
+     "proposal": "Partly stated: the board design makes the coordinator owner of the registry, with every cyst entered at first presentation and closed only on resection, a recorded stop or death; each patient has a named recall owner, and the dashboard lists overdue patients by name monthly. No owner is named for the annual review against guideline versions.",
+     "proposal_locator": "Operations · board meeting items 8–10 ('Output', 'Documentation', 'Registry'); Operations · dashboard item 2; Gate 8 · Avoid 'Do not run surveillance without a named owner…'",
+     "rationale": "Every schedule here assumes the next scan happens, and the default failure mode of a surveillance programme is silence. Kyoto 2024, ACG 2018, the European 2018 guideline and NCCN all revise on different cycles, and this page is a first draft with no ratified roadmap behind it.",
+     "audit": "Named owner, with the guideline edition and date recorded, an agreed update cycle, and a monthly overdue-by-name report.",
+     "web": "pcyst/#question-PCYST-D12"
+    },
+    {
+     "id": "PCYST-D13",
+     "set": "roadmap",
+     "title": "The mural nodule threshold: 5 mm, as Kyoto retains it, or 10 mm, which its own commissioned review found discriminates far better?",
+     "question": "The mural nodule threshold: 5 mm, as Kyoto retains it, or 10 mm, which its own commissioned review found discriminates far better?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "2 · Assess high-risk features",
+       "url": "pcyst/#decision-2"
+      },
+      {
+       "label": "3 · Assess worrisome features",
+       "url": "pcyst/#decision-3"
+      }
+     ],
+     "positions": [
+      {
+       "source": "Kyoto 2024",
+       "key": "pm38182527",
+       "says": "Keeps the enhancing 5 mm nodule as a high-risk stigma, rejecting 10 mm for want of strong evidence despite reporting odds ratio 7.90 (67% advanced neoplasia) for a 10 mm nodule against 2.93 (under 19%) at 5 to 10 mm.",
+       "locator": "Gate 2 · Standard 'Resect, in a patient fit for pancreatectomy…' note; Practice choices with limited evidence · item 3"
+      },
+      {
+       "source": "Fukuoka 2017",
+       "key": "pm28735806",
+       "says": "Found that nodule heights of 5, 7 and 10 mm predicted high-grade dysplasia or carcinoma similarly, and settled on 5 mm by expert agreement.",
+       "locator": "Gate 2 · Standard 'Resect, in a patient fit for pancreatectomy…' note"
+      },
+      {
+       "source": "European 2018",
+       "key": "pm29574408",
+       "says": "An enhancing mural nodule of 5 mm or more is an absolute indication for surgery and one under 5 mm a relative indication; recommends contrast-harmonic EUS for nodules.",
+       "locator": "Quick reference 'Resection thresholds compared, and the non-IPMN cysts' · rows 'European 2018 — absolute indications' and '— relative indications'; Gate 1 · Reasonable 'Add endoscopic ultrasound…'"
+      },
+      {
+       "source": "Revised Kyoto validation",
+       "key": "pm38880125",
+       "says": "A nodule of 5 mm or more carried an odds ratio of 20.7 (10.9 to 39.4) for carcinoma found within 6 months, a prevalence in which the stigma itself prompted the work-up.",
+       "locator": "Gate 2 · Standard 'Resect, in a patient fit for pancreatectomy…'"
+      }
+     ],
+     "divergence": "Kyoto and the European guideline both hold 5 mm, but Kyoto's own commissioned evidence shows 10 mm discriminates far better and 5 mm was an expert-agreement pick among similarly performing heights.",
+     "proposal": "The draft applies Kyoto's 5 mm enhancing-nodule threshold, measured on EUS or contrast-enhanced imaging so that a non-enhancing mucin globule is not counted, while calling it the page's most consequential unexamined number. A programme keeping 5 mm should do so knowingly, and EUS reports should state nodule height in millimetres.",
+     "proposal_locator": "Gate 2 · Standard 'Resect, in a patient fit for pancreatectomy…' and note; Practice choices with limited evidence · item 3; Decisions table · item 13 · why and audit",
+     "rationale": "Kyoto 2024 reports that a mural nodule alone carries an odds ratio of 1.19 to 3.16 in recent multivariable models, and that one EUS analysis gave a 10 mm nodule an odds ratio of 7.90 with a 67% probability of high-grade dysplasia or invasive carcinoma against 2.93 and under 19% for a nodule of 5 to 10 mm. It discussed moving to 10 mm and kept 5 mm for lack of evidence strongly supporting the change. The 5 mm line was itself chosen by expert agreement in 2017 after three candidate heights performed similarly. This threshold separates an operation from an interval scan and it is the single most consequential unexamined number on the page. A programme that keeps 5 mm should do so knowingly.",
+     "audit": "Resections by nodule height and enhancement, with final histology; proportion of EUS reports stating nodule height in millimetres.",
+     "web": "pcyst/#question-PCYST-D13"
+    },
+    {
+     "id": "PCYST-D14",
+     "set": "roadmap",
+     "title": "Is the Kyoto 30 mm size band retained for the 6-monthly interval, given that its only large validation found no stratification at 30 mm?",
+     "question": "Is the Kyoto 30 mm size band retained for the 6-monthly interval, given that its only large validation found no stratification at 30 mm?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "8 · Surveillance without resection",
+       "url": "pcyst/#decision-8"
+      }
+     ],
+     "positions": [
+      {
+       "source": "Kyoto 2024",
+       "key": "pm38182527",
+       "says": "Images a cyst of 30 mm or more every 6 months, its shortest interval, against 12 months at 20 to 29 mm and 18 months under 20 mm once stable.",
+       "locator": "Gate 8 · Standard option 'Kyoto 2024 schedule'"
+      },
+      {
+       "source": "Revised Kyoto validation",
+       "key": "pm38880125",
+       "says": "In 3,336 patients, later-cancer risk separated at 20 mm but not at 30 mm (SHR 2.07 at 20 to 29 mm, 1.75 at 30 mm or more); the authors blame an unvalidated cut-off.",
+       "locator": "Gate 8 · Standard option 'Kyoto 2024 schedule' caveat; Gate 2 · Avoid 'Do not treat a cyst of 30 mm or more…' note; Practice choices with limited evidence · item 9"
+      },
+      {
+       "source": "ACG 2018",
+       "key": "pm29485131",
+       "says": "Over 3 cm: MRI alternating with EUS every 6 months for 3 years, then yearly for 4, with multidisciplinary referral.",
+       "locator": "Gate 8 · Standard option 'ACG 2018 schedule'"
+      },
+      {
+       "source": "European 2018",
+       "key": "pm29574408",
+       "says": "Does not branch on size: yearly after the first year, 6-monthly only for relative indications (which include a cyst of 40 mm or more), the elderly and the comorbid.",
+       "locator": "Gate 8 · Standard option 'European 2018 schedule'; Quick reference 'Resection thresholds compared, and the non-IPMN cysts' · row 'European 2018 — relative indications'"
+      },
+      {
+       "source": "Marchegiani 2023",
+       "key": "pm37406887",
+       "says": "Cysts above 30 mm that stayed stable for 5 years still carried a standardised incidence ratio of 10.29 (4.12 to 21.21).",
+       "locator": "Gate 9 · Standard option 'Stop by age and size…'"
+      }
+     ],
+     "divergence": "Kyoto and ACG intensify above 30 mm while the European guideline does not, and the evidence is split: the validation cohort found no separation at 30 mm, whereas the stopping cohort found excess risk in stable cysts above 30 mm.",
+     "proposal": "No decision. The roadmap's view is that keeping the band is defensible on prudence but unsupported by the validation, and that a programme adopting Kyoto's three-tier size schedule should know its top tier is the one that did not separate risk.",
+     "proposal_locator": "Decisions table · item 14 · why; Practice choices with limited evidence · item 9; Gate 8 · Standard option 'Kyoto 2024 schedule' caveat",
+     "rationale": "In the 3,336-patient cohort that validated the rest of the revised criteria, the subdistribution hazard ratio for later pancreatic cancer was 2.07 (1.38 to 3.10) at 20 to 29 mm and 1.75 (1.00 to 3.08) at 30 mm or more. The band that triggers the most imaging is the band that did not separate, and 9.2% of that cohort had cysts of 30 mm or more, all of them already carrying a worrisome feature or high-risk stigma. Keeping the band is defensible on prudence; it is not supported by the validation.",
+     "audit": "Surveillance studies per patient-year by size band, and progression events by size band.",
+     "web": "pcyst/#question-PCYST-D14"
+    },
+    {
+     "id": "PCYST-D15",
+     "set": "roadmap",
+     "title": "Is a local 'suspicious' cytology treated as an absolute surgical indication here, and who reads it?",
+     "question": "Is a local 'suspicious' cytology treated as an absolute surgical indication here, and who reads it?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "2 · Assess high-risk features",
+       "url": "pcyst/#decision-2"
+      },
+      {
+       "label": "4 · Select cyst-fluid testing",
+       "url": "pcyst/#decision-4"
+      }
+     ],
+     "positions": [
+      {
+       "source": "Kyoto 2024",
+       "key": "pm38182527",
+       "says": "Makes suspicious or positive cytology a high-risk stigma, with absolute risk of high-grade dysplasia or carcinoma of 91 to 100% and 100%, while putting pooled cyst-fluid cytology sensitivity at 28.7% (4.8 to 61.5%).",
+       "locator": "Gate 4 · Standard option 'Cytology'; Practice choices with limited evidence · item 10"
+      },
+      {
+       "source": "European 2018",
+       "key": "pm29574408",
+       "says": "Positive cytology for malignancy or high-grade dysplasia is an absolute indication for surgery; quotes overall cytology sensitivity of 27 to 48% with specificity of 83 to 100%.",
+       "locator": "Gate 4 · Standard option 'Cytology'; Quick reference 'Resection thresholds compared, and the non-IPMN cysts' · row 'European 2018 — absolute indications'"
+      },
+      {
+       "source": "ACG 2018",
+       "key": "pm29485131",
+       "says": "Cytology should be sent to assess for high-grade dysplasia, and dysplasia or cancer on cytology prompts EUS or multidisciplinary referral; pooled sensitivity 54 to 63%, specificity 88 to 93%.",
+       "locator": "Gate 4 · Standard option 'Cytology'; Quick reference 'Resection thresholds compared, and the non-IPMN cysts' · row 'ACG 2018 — EUS or multidisciplinary referral'"
+      },
+      {
+       "source": "Revised Kyoto validation",
+       "key": "pm38880125",
+       "says": "Suspicious or positive cytology carried a multivariable odds ratio of 69.0 (17.0 to 280) for carcinoma diagnosed within 6 months.",
+       "locator": "Gate 2 · Standard 'Resect, in a patient fit for pancreatectomy…'"
+      }
+     ],
+     "divergence": "Kyoto and the European guideline treat a positive or suspicious reading as decisive, but sensitivity is low and specimens are often inadequate, an asymmetry the roadmap notes Kyoto never states.",
+     "proposal": "Cytology goes on every aspirate; a positive or suspicious reading is treated as close to decisive and a negative one as excluding nothing, so a negative aspirate never reverses a decision made on a high-risk stigma. Whether a local 'suspicious' alone mandates surgery, and the named cytopathology arrangement and vocabulary, are left to the programme.",
+     "proposal_locator": "Gate 4 · Standard option 'Cytology'; Gate 2 · Reasonable option 'EUS with aspiration first'; Gate 2 local approval note; Practice choices with limited evidence · item 10; Operations · board meeting item 7 'Pathology'",
+     "rationale": "Kyoto 2024 makes suspicious or positive cytology a high-risk stigma and puts the absolute risk of high-grade dysplasia or invasive carcinoma at 91 to 100% and 100% for those two readings. The same document puts the overall sensitivity of cyst fluid cytology at 28.7% (4.8 to 61.5%), and 59 to 60% of specimens were less than optimal or unsatisfactory for cytology in the two large molecular series. The result is decisive one way and nearly uninformative the other, and it now sits inside the risk classification, so the programme needs a named cytopathology arrangement and an agreed vocabulary before it acts on the word 'suspicious'.",
+     "audit": "Cytology category reported per aspirate, specimen adequacy, decision taken, and final histology where an operation followed.",
+     "web": "pcyst/#question-PCYST-D15"
+    },
+    {
+     "id": "PCYST-D16",
+     "set": "roadmap",
+     "title": "Will this programme record and publish its own 90-day mortality and major morbidity for cyst resection?",
+     "question": "Will this programme record and publish its own 90-day mortality and major morbidity for cyst resection?",
+     "kind": "governance",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "6 · Assess surgical fitness and expected benefit",
+       "url": "pcyst/#decision-6"
+      }
+     ],
+     "positions": [
+      {
+       "source": "Kyoto 2024",
+       "key": "pm38182527",
+       "says": "Like Sendai 2006, both Fukuoka editions and the European guideline, gives no figures for surgical mortality or morbidity, though it requires condition and life expectancy to be weighed in every operative decision.",
+       "locator": "Gate 2 · Avoid 'Do not let a high-risk stigma override…'; Practice choices with limited evidence · item 7"
+      },
+      {
+       "source": "ACG 2018",
+       "key": "pm29485131",
+       "says": "Cites 2.1% mortality and 30% morbidity for cyst resection.",
+       "locator": "Gate 6 · Standard 'Quote the operation's own numbers…'"
+      },
+      {
+       "source": "AGA 2015",
+       "key": "pm25805375",
+       "says": "Puts postoperative mortality at 2%, with 30% major morbidity, in centres of excellence, compared with 6.6% for all US pancreatic surgery in SEER.",
+       "locator": "Gate 6 · Standard 'Quote the operation's own numbers…'"
+      },
+      {
+       "source": "PROPAN",
+       "key": "pm32703081",
+       "says": "Its decision tables tell patients that 2 to 5 in 100 die of operative complications at very high-volume centres, while its own pooled total-pancreatectomy mortality across 3,570 patients was 6%.",
+       "locator": "Gate 6 · Standard 'Quote the operation's own numbers…' caveat"
+      }
+     ],
+     "divergence": "The guidelines that set the resection thresholds give no operative risk, and the published comparators differ by setting and, per the roadmap, tend to understate risk, so only a local figure fits the consent conversation.",
+     "proposal": "Yes, in the roadmap's view: record 90-day mortality and major morbidity by operation, report them at least annually on the dashboard, and quote this programme's own figures at consent rather than another centre's benchmark. It also proposes auditing the share of resections justified by final histology against the published 45% benchmark.",
+     "proposal_locator": "Gate 6 · Standard 'Quote the operation's own numbers…' caveat; Gate 6 · Avoid 'Do not count the proportion of cyst resections that turned out to be justified…'; Operations · dashboard item 6; Decisions table · item 16 · audit",
+     "rationale": "Sendai 2006, Fukuoka 2012, Fukuoka 2017, Kyoto 2024 and the European 2018 guideline quantify surgical mortality and morbidity nowhere in their texts, so every threshold in the spine of this page is stated with the risk of not operating in numbers and the risk of operating not stated at all. The published comparators are 2.1% mortality with 30% morbidity for cyst resection (ACG), 2% with 30% in centres of excellence against 6.6% across US pancreatic surgery in SEER (AGA), 30-day mortality 2.4% with 17.1% major morbidity in 164 resections generated by a surveillance cohort, and 6% with 25% for total pancreatectomy. Without a local figure the consent conversation uses somebody else's.",
+     "audit": "Resections for cystic neoplasm by operation, with 90-day mortality and major morbidity, reported at least annually.",
+     "web": "pcyst/#question-PCYST-D16"
+    },
+    {
+     "id": "PCYST-D17",
+     "set": "roadmap",
+     "title": "Is the cost of this programme tracked, and by whom?",
+     "question": "Is the cost of this programme tracked, and by whom?",
+     "kind": "governance",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "8 · Surveillance without resection",
+       "url": "pcyst/#decision-8"
+      }
+     ],
+     "positions": [
+      {
+       "source": "Gardner 2024 review",
+       "key": "pm38442782",
+       "says": "Reports up to $3.6 million spent per cancer detected in US cyst surveillance, with no appreciable fall in cyst-related adenocarcinoma mortality, and prints two cost-effectiveness models ($171,143 and $20,096 per QALY) without reconciling them.",
+       "locator": "Gate 8 · Standard 'Use MRI with MRCP…' note; Practice choices with limited evidence · item 24; Provenance"
+      },
+      {
+       "source": "ACG 2018",
+       "key": "pm29485131",
+       "says": "States that no cost-effectiveness analysis of cyst surveillance exists, including for surveillance of elderly patients.",
+       "locator": "Practice choices with limited evidence · item 7; Gate 9 · Standard 'Stop when the patient is no longer a candidate…' note"
+      },
+      {
+       "source": "AGA 2015",
+       "key": "pm25805375",
+       "says": "Likewise states that no cost-effectiveness analysis of cyst surveillance exists.",
+       "locator": "Practice choices with limited evidence · item 7; Gate 8 · Standard 'Use MRI with MRCP…' note"
+      },
+      {
+       "source": "Kyoto 2024",
+       "key": "pm38182527",
+       "says": "Attempts no cost analysis, yet invokes health economics as a reason to consider stopping surveillance.",
+       "locator": "Practice choices with limited evidence · item 7"
+      }
+     ],
+     "divergence": "No guideline costs its own schedule, and the only two published models give widely different costs per QALY for different cysts, guidelines and eras.",
+     "proposal": "No owner is named. The roadmap's stance is that the programme should know what its chosen schedule commits it to before choosing it, without under-imaging anyone, and its dashboard proposes counting surveillance studies a year by schedule and size band against cancers and high-grade dysplasia detected.",
+     "proposal_locator": "Decisions table · item 17 · why; Operations · dashboard item 13; Gate 8 · Standard 'Use MRI with MRCP…' note; Practice choices with limited evidence · item 24",
+     "rationale": "Up to $3.6 million is spent per cancer detected in US cyst surveillance, with no appreciable change in cyst-related pancreatic adenocarcinoma mortality over two decades of rising expenditure, and the two published cost-effectiveness models give $171,143 and $20,096 per quality-adjusted life-year for different cysts, guidelines and eras. No guideline in the IAP line and neither the European guideline nor ACG attempts a cost analysis, and ACG and AGA both state that none exists. This is not a reason to under-image anyone; it is a reason to know what the schedule chosen at item 2 commits the service to before it is chosen.",
+     "audit": "Surveillance studies performed per year, by schedule and size band, with cancers and high-grade dysplasia detected.",
+     "web": "pcyst/#question-PCYST-D17"
+    },
+    {
+     "id": "PCYST-D18",
+     "set": "roadmap",
+     "title": "Which cysts are formally released, and in writing — serous cystadenoma, pseudocyst, resected mucinous cystic neoplasm without cancer?",
+     "question": "Which cysts are formally released, and in writing — serous cystadenoma, pseudocyst, resected mucinous cystic neoplasm without cancer?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "5 · Manage cysts other than IPMN",
+       "url": "pcyst/#decision-5"
+      },
+      {
+       "label": "10 · Surveillance after resection",
+       "url": "pcyst/#decision-10"
+      }
+     ],
+     "positions": [
+      {
+       "source": "ACG 2018",
+       "key": "pm29485131",
+       "says": "Strongly recommends no follow-up after resecting a serous cystadenoma, pseudocyst or MCN without cancer, but yearly follow-up for at least 5 years after resecting a solid pseudopapillary neoplasm (4.4% recurrence).",
+       "locator": "Gate 10 · Standard option 'ACG 2018 — interval by grade'; Gate 5 · Standard option 'Solid pseudopapillary neoplasm — resect'"
+      },
+      {
+       "source": "European 2018",
+       "key": "pm29574408",
+       "says": "Follows a radiologically diagnosed serous cystadenoma for 1 year, then on symptoms only; silent on surveillance after a resected MCN.",
+       "locator": "Gate 5 · Standard option 'Serous cystadenoma — do not resect for size'; Gate 10 local approval note"
+      },
+      {
+       "source": "International SCN series",
+       "key": "pm26045140",
+       "says": "Among 2,622 patients there were 3 serous cystadenocarcinomas (0.1%), and one disease-related death among the 1,032 never operated.",
+       "locator": "Gate 5 · Standard option 'Serous cystadenoma — do not resect for size'; Gate 10 · Avoid 'Do not surveil a resected serous cystadenoma…'"
+      }
+     ],
+     "divergence": "ACG and the European guideline agree on releasing serous cystadenoma, but only ACG releases a resected MCN, on an absence of events in modest series, and ACG keeps resected solid pseudopapillary neoplasm under yearly follow-up.",
+     "proposal": "Release in writing: no surveillance after a resected serous cystadenoma or drained pseudocyst, with the episode closed in the letter; a confidently diagnosed unresected serous cystadenoma moves to symptom-based follow-up after 1 year; a resected solid pseudopapillary neoplasm is followed yearly for at least 5 years. Releasing a resected MCN without cancer stays open.",
+     "proposal_locator": "Gate 10 · Avoid 'Do not surveil a resected serous cystadenoma or a drained pseudocyst'; Gate 5 · Standard options 'Serous cystadenoma — do not resect for size', 'Solid pseudopapillary neoplasm — resect', 'Pseudocyst or walled-off collection…'; Gate 10 local approval note",
+     "rationale": "ACG makes three strong recommendations for discharge: no follow-up after resection of a serous cystadenoma, pseudocyst or other benign cyst, none after a resected mucinous cystic neoplasm without cancer, and the European guideline releases a radiologically confident serous cystadenoma after one year to symptom-based follow-up only. The strong recommendation for mucinous cystic neoplasm rests on an absence of events in a 90-patient series and a 344-case review. Against that, ACG asks for yearly follow-up for at least 5 years after resection of a solid pseudopapillary neoplasm, on a 4.4% recurrence rate at a median of 50.5 months, which this page previously omitted. Leaving benign lesions on a surveillance list is the clearest avoidable waste in the pathway; discharging the wrong one is not recoverable.",
+     "audit": "Patients formally discharged by entity and reason, and any later presentation of a discharged lesion reported as a named event.",
+     "web": "pcyst/#question-PCYST-D18"
+    },
+    {
+     "id": "PCYST-D19",
+     "set": "roadmap",
+     "title": "Which non-guideline adjuncts are offered — and is the page's own evidence summary reviewed when they are proposed?",
+     "question": "Which non-guideline adjuncts are offered — and is the page's own evidence summary reviewed when they are proposed?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "3 · Assess worrisome features",
+       "url": "pcyst/#decision-3"
+      }
+     ],
+     "positions": [
+      {
+       "source": "Microforceps meta-analysis",
+       "key": "pm33015329",
+       "says": "Pooled diagnostic yield 79.6% and accuracy 82.8% across 11 studies; its superiority odds ratio of 8.69 (1.12 to 67.12) rests on two retrospective comparisons, and its results text reports no significant accuracy difference.",
+       "locator": "Gate 3 · Reasonable option 'Through-the-needle microforceps biopsy'"
+      },
+      {
+       "source": "ACG 2018",
+       "key": "pm29485131",
+       "says": "Reports no published data on microforceps for this indication, and finds insufficient evidence for routine molecular markers, cyst ablation or needle microforceps.",
+       "locator": "Gate 3 · Reasonable option 'Through-the-needle microforceps biopsy'; Appendix · ACG 2018 · limitations the authors state"
+      },
+      {
+       "source": "European 2018",
+       "key": "pm29574408",
+       "says": "Recommends against needle-based confocal laser endomicroscopy for differential diagnosis at GRADE 1C, citing adverse event rates of 7 to 9%.",
+       "locator": "Gate 3 · Reasonable option 'Needle-based confocal laser endomicroscopy'"
+      },
+      {
+       "source": "nCLE training study",
+       "key": "pm37473969",
+       "says": "Trained early-career readers reached 89% accuracy for mucinous versus non-mucinous, but only 57% sensitivity for MCN and 65% for serous cystadenoma, with kappa 0.32 and 0.44.",
+       "locator": "Gate 3 · Reasonable option 'Needle-based confocal laser endomicroscopy'"
+      },
+      {
+       "source": "Kyoto 2024",
+       "key": "pm38182527",
+       "says": "Endoscopic ablation should only be performed within a clinical trial; the roadmap adds that it resolves 33 to 79% of cysts, with about 12% adverse events, and does not end surveillance.",
+       "locator": "Decisions table · item 19 · why"
+      }
+     ],
+     "divergence": "None of the four guidelines endorses these adjuncts (the European guideline recommends against confocal endomicroscopy and Kyoto confines ablation to trials), and the supporting studies are small, retrospective or internally inconsistent.",
+     "proposal": "None is endorsed. If offered: microforceps biopsy only where expertise exists, with registry capture, for a cyst whose type stays unresolved after fluid analysis; confocal endomicroscopy only within a trial or approved protocol with trained operators. Any adjunct, ablation included, needs an indication, a consent form and a registry, with the page's evidence summary reviewed.",
+     "proposal_locator": "Gate 3 · Reasonable options 'Through-the-needle microforceps biopsy' (EXPERTISE, REGISTRY) and 'Needle-based confocal laser endomicroscopy' (EXPERTISE, PROTOCOL), with local approval note; Decisions table · item 19 · why",
+     "rationale": "Through-the-needle microforceps biopsy is in none of the four guidelines, its superiority claim over aspiration rests on two retrospective within-patient comparisons with an odds ratio spanning 1.12 to 67.12, and the meta-analysis's own results text states there was no significant difference in accuracy — contradicting its abstract. Needle-based confocal laser endomicroscopy is recommended against by the European guideline at GRADE 1C, and in the best training study trained readers reached only 57% sensitivity for mucinous cystic neoplasm and 65% for serous cystadenoma with interobserver agreement of kappa 0.32 and 0.44, which undercuts the economic case for it. Endoscopic ablation resolves cysts in 33 to 79% with adverse events in about 12%, has produced an adenocarcinoma after treatment, does not remove the need for surveillance, and Kyoto 2024 says it should only be performed in a clinical trial. If any of these is offered here it needs an indication, a consent form and a registry.",
+     "audit": "Use of each adjunct by indication, adverse events, whether the result changed the plan, and final histology where an operation followed.",
+     "web": "pcyst/#question-PCYST-D19"
+    }
+   ],
+   "ratify": []
+  }
+ },
+ "not_applicable": [
+  {
+   "id": "EHD-PCYST",
+   "text": "Not applicable. Cystic lesions are premalignant; an invasive carcinoma with metastases is managed on the PDAC roadmap (PDAC-R1)."
+  }
+ ],
+ "sources": {
+  "np-pcyst-nccn": {
+   "short": "NCCN Pancreatic Adenocarcinoma v1.2026",
+   "title": "National Comprehensive Cancer Network. Pancreatic Adenocarcinoma. NCCN Clinical Practice Guidelines in Oncology. Version 1.2026; Discussion text last updated 6 August 2026, from the extracted guideline text supplied to the programme. Premalignant Tumors of the Pancreas section. NCCN has no pancreatic cyst algorithm of its own: it summarises the international group (citing the Kyoto 2024 guidelines, PMID 38182527) and a European group (citing the superseded 2013 consensus statement, PMID 23415799, rather than the 2018 evidence-based guideline), and directs the reader to the most recent available guideline recommendations. It quotes a main-duct IPMN malignancy risk of about 62% and an MCN risk below 15%, recommends resection for main-duct IPMN of 10 mm or more and for all MCNs in operable patients, and includes IPMN and MCN with high-grade dysplasia as Tis in the AJCC 8th edition staging table.",
+   "kind": "Guidelines & policy",
+   "links": {
+    "url": "https://www.nccn.org/guidelines/category_1"
+   }
+  },
+  "pm38182527": {
+   "short": "Kyoto 2024",
+   "title": "Ohtsuka T, Fernandez-Del Castillo C, Furukawa T, et al. International evidence-based Kyoto guidelines for the management of intraductal papillary mucinous neoplasm of the pancreas. Pancreatology. 2024;24(2):255-270. doi:10.1016/j.pan.2023.12.009. PMID:38182527.",
+   "kind": "Guidelines & policy",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/38182527/"
+   }
+  },
+  "pm29485131": {
+   "short": "ACG 2018",
+   "title": "Elta GH, Enestvedt BK, Sauer BG, Lennon AM. ACG Clinical Guideline: Diagnosis and Management of Pancreatic Cysts. Am J Gastroenterol. 2018;113(4):464-479. doi:10.1038/ajg.2018.14. PMID:29485131.",
+   "kind": "Guidelines & policy",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/29485131/"
+   }
+  },
+  "pm29574408": {
+   "short": "European 2018",
+   "title": "European Study Group on Cystic Tumours of the Pancreas. European evidence-based guidelines on pancreatic cystic neoplasms. Gut. 2018;67(5):789-804. doi:10.1136/gutjnl-2018-316027. PMID:29574408.",
+   "kind": "Guidelines & policy",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/29574408/"
+   }
+  },
+  "pm25805375": {
+   "short": "AGA 2015",
+   "title": "Vege SS, Ziring B, Jain R, Moayyedi P; Clinical Guidelines Committee; American Gastroenterology Association. American Gastroenterological Association institute guideline on the diagnosis and management of asymptomatic neoplastic pancreatic cysts. Gastroenterology. 2015;148(4):819-22; quiz e12-3. doi:10.1053/j.gastro.2015.01.015. PMID:25805375.",
+   "kind": "Guidelines & policy",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/25805375/"
+   }
+  },
+  "pm37406887": {
+   "short": "Marchegiani 2023",
+   "title": "Marchegiani G, Pollini T, Burelli A, et al. Surveillance for Presumed BD-IPMN of the Pancreas: Stability, Size, and Age Identify Targets for Discontinuation. Gastroenterology. 2023;165(4):1016-1024.e5. doi:10.1053/j.gastro.2023.06.022. PMID:37406887.",
+   "kind": "Surveillance",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/37406887/"
+   }
+  },
+  "pm16327281": {
+   "short": "Sendai 2006",
+   "title": "Tanaka M, Chari S, Adsay V, et al. International consensus guidelines for management of intraductal papillary mucinous neoplasms and mucinous cystic neoplasms of the pancreas. Pancreatology. 2006;6(1-2):17-32. doi:10.1159/000090023. PMID:16327281.",
+   "kind": "Guidelines & policy",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/16327281/"
+   }
+  },
+  "pm28735806": {
+   "short": "Fukuoka 2017",
+   "title": "Tanaka M, Fernández-Del Castillo C, Kamisawa T, et al. Revisions of international consensus Fukuoka guidelines for the management of IPMN of the pancreas. Pancreatology. 2017;17(5):738-753. doi:10.1016/j.pan.2017.07.007. PMID:28735806.",
+   "kind": "Guidelines & policy",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/28735806/"
+   }
+  },
+  "pm38880125": {
+   "short": "Revised Kyoto validation",
+   "title": "Hamada T, Oyama H, Tange S, et al. The Revised Kyoto Criteria and Risk of Malignancy Among Patients With Intraductal Papillary Mucinous Neoplasms. Clin Gastroenterol Hepatol. 2024;22(12):2413-2423.e18. doi:10.1016/j.cgh.2024.05.043. PMID:38880125.",
+   "kind": "Surveillance",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/38880125/"
+   }
+  },
+  "pm22687371": {
+   "short": "Fukuoka 2012",
+   "title": "Tanaka M, Fernández-del Castillo C, Adsay V, et al. International consensus guidelines 2012 for the management of IPMN and MCN of the pancreas. Pancreatology. 2012;12(3):183-197. doi:10.1016/j.pan.2012.04.004. PMID:22687371.",
+   "kind": "Guidelines & policy",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/22687371/"
+   }
+  },
+  "pm33964311": {
+   "short": "Glucose meta-analysis",
+   "title": "McCarty TR, Garg R, Rustagi T. Pancreatic cyst fluid glucose in differentiating mucinous from nonmucinous pancreatic cysts: a systematic review and meta-analysis. Gastrointest Endosc. 2021;94(4):698-712.e6. doi:10.1016/j.gie.2021.04.025. PMID:33964311.",
+   "kind": "Cyst fluid & molecular",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/33964311/"
+   }
+  },
+  "pm36209796": {
+   "short": "PancreaSeq prospective",
+   "title": "Paniccia A, Polanco PM, Boone BA, et al. Prospective, Multi-Institutional, Real-Time Next-Generation Sequencing of Pancreatic Cyst Fluid Reveals Diverse Genomic Alterations That Improve the Clinical Management of Pancreatic Cysts. Gastroenterology. 2023;164(1):117-133.e7. doi:10.1053/j.gastro.2022.09.028. PMID:36209796.",
+   "kind": "Cyst fluid & molecular",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/36209796/"
+   }
+  },
+  "pm27693645": {
+   "short": "Three-guideline comparison",
+   "title": "Lekkerkerker SJ, Besselink MG, Busch OR, et al. Comparing 3 guidelines on the management of surgically removed pancreatic cysts with regard to pathological outcome. Gastrointest Endosc. 2017;85(5):1025-1031. doi:10.1016/j.gie.2016.09.027. PMID:27693645.",
+   "kind": "Guidelines & policy",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/27693645/"
+   }
+  },
+  "pm31473224": {
+   "short": "Oyama 2020",
+   "title": "Oyama H, Tada M, Takagi K, et al. Long-term Risk of Malignancy in Branch-Duct Intraductal Papillary Mucinous Neoplasms. Gastroenterology. 2020;158(1):226-237.e5. doi:10.1053/j.gastro.2019.08.032. PMID:31473224.",
+   "kind": "Surveillance",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/31473224/"
+   }
+  },
+  "pm32703081": {
+   "short": "PROPAN",
+   "title": "Scholten L, Latenstein AEJ, Aalfs CM, et al. Prophylactic total pancreatectomy in individuals at high risk of pancreatic ductal adenocarcinoma (PROPAN): systematic review and shared decision-making programme using decision tables. United European Gastroenterol J. 2020;8(8):865-877. doi:10.1177/2050640620945534. PMID:32703081.",
+   "kind": "Surgery",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/32703081/"
+   }
+  },
+  "pm25793719": {
+   "short": "Recurrence after resection",
+   "title": "Marchegiani G, Mino-Kenudson M, Ferrone CR, et al. Patterns of Recurrence After Resection of IPMN: Who, When, and How? Ann Surg. 2015;262(6):1108-1114. doi:10.1097/SLA.0000000000001008. PMID:25793719.",
+   "kind": "Surgery",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/25793719/"
+   }
+  },
+  "pm38442782": {
+   "short": "Gardner 2024 review",
+   "title": "Gardner TB, Park WG, Allen PJ. Diagnosis and Management of Pancreatic Cysts. Gastroenterology. 2024;167(3):454-468. doi:10.1053/j.gastro.2024.02.041. PMID:38442782.",
+   "kind": "Guidelines & policy",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/38442782/"
+   }
+  },
+  "pm26045140": {
+   "short": "International SCN series",
+   "title": "Jais B, Rebours V, Malleo G, et al. Serous cystic neoplasm of the pancreas: a multinational study of 2622 patients under the auspices of the International Association of Pancreatology and European Pancreatic Club. Gut. 2016;65(2):305-312. doi:10.1136/gutjnl-2015-309638. PMID:26045140.",
+   "kind": "Imaging & diagnosis",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/26045140/"
+   }
+  },
+  "pm33015329": {
+   "short": "Microforceps meta-analysis",
+   "title": "McCarty T, Rustagi T. Endoscopic ultrasound-guided through-the-needle microforceps biopsy improves diagnostic yield for pancreatic cystic lesions: a systematic review and meta-analysis. Endosc Int Open. 2020;8(10):E1280-E1290. doi:10.1055/a-1194-4085. PMID:33015329.",
+   "kind": "Imaging & diagnosis",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/33015329/"
+   }
+  },
+  "pm37473969": {
+   "short": "nCLE training study",
+   "title": "Machicado JD, Napoleon B, Akshintala V, et al. Structured training program on confocal laser endomicroscopy for pancreatic cystic lesions: a multicenter prospective study among early-career endosonographers. Gastrointest Endosc. 2023;98(6):953-964. doi:10.1016/j.gie.2023.07.019. PMID:37473969.",
+   "kind": "Imaging & diagnosis",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/37473969/"
+   }
+  }
+ }
+}

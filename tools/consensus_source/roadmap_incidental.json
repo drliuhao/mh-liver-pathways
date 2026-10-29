@@ -1,0 +1,616 @@
+{
+ "slug": "incidental",
+ "prefix": "INC",
+ "questions": [
+  {
+   "id": "INC-D1",
+   "n": 1,
+   "question": "Which incidental liver lesions may be discharged by the radiologist at the index report without any clinical referral, and which must be referred?",
+   "kind": "clinical",
+   "decisions": [
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "positions": [
+    {
+     "source": "ACR liver white paper 2017",
+     "ref": "28927870",
+     "position": "Forgo workup of lesions under 1 cm in low-risk patients and of lesions with distinctly benign features at any risk; the committee itself says this is guidance, not standard of care, meeting no formal national standard.",
+     "locator": "Clinical decision 2 · Avoid 'Do not give a simple cyst a surveillance interval.'; What we are not sure about #15"
+    },
+    {
+     "source": "EASL benign tumours 2016",
+     "ref": "27085809",
+     "position": "A typical haemangioma and a typical FNH need no imaging follow-up, FNH unless there is underlying vascular liver disease; the ultrasound-only haemangioma diagnosis does not extend to oncology or liver-disease patients.",
+     "locator": "Clinical decision 4 · Standard 'In a normal liver, a hyperechoic lesion under 3 cm…' and 'Focal nodular hyperplasia can be diagnosed with nearly 100% specificity…'"
+    },
+    {
+     "source": "ACR abdominal CT white paper 2010",
+     "ref": "20889105",
+     "position": "The predecessor set the small-lesion stratum at 0.5 cm and the interval at 6 months; the roadmap notes these thresholds changed by 2017 with no new evidence cited.",
+     "locator": "Clinical decision 6 · Standard 'A new sub-centimetre lesion in a patient with cancer…' (caveat); What we are not sure about #15"
+    }
+   ],
+   "divergence": "The radiology consensus defines which lesions need no workup but not who owns the discharge, and its thresholds are conventions that changed between editions without new evidence.",
+   "proposal": "Discharge rules cover the simple cyst, biliary hamartomas, typical haemangioma, typical FNH outside vascular liver disease, characteristic focal fat or perfusion change, and a sub-centimetre lesion in a low-risk patient, each on an adequate index study with a written discharge naming the entity. Triage assumes many are resolved by the radiologist; who owns the discharge is not stated.",
+   "proposal_locator": "Clinical decisions 2, 4 and 5 (Standard discharge rules); Clinical decision 6 · Standard 'A new sub-centimetre lesion…'; Clinical decision 8 · Avoid 'Do not discharge a patient from this page without telling them, in writing…'; The board meeting · Triage",
+   "rationale": "The ACR algorithm is explicit that lesions under 1 cm in low-risk patients and lesions with distinctly benign features in any patient need no workup, but it is a radiology consensus document and it does not say who owns the discharge. Without a local rule, either every finding generates a referral or none does.",
+   "audit": "Proportion discharged at the index report; follow-up intervals recommended for lesions meeting benign-feature criteria."
+  },
+  {
+   "id": "INC-D2",
+   "n": 2,
+   "question": "How is the at-risk question answered and recorded when cirrhosis is suspected but not established?",
+   "kind": "clinical",
+   "decisions": [
+    "0"
+   ],
+   "positions": [
+    {
+     "source": "LI-RADS v2018",
+     "ref": "30251931",
+     "position": "Defines the at-risk population as cirrhosis, chronic hepatitis B, or current or prior HCC (adult transplant candidates included); cirrhosis from vascular disorders and congenital hepatic fibrosis are excluded.",
+     "locator": "Clinical decision 0 · Standard 'Answer the at-risk question first…'; Quick reference · 'Who the at-risk algorithms apply to'"
+    },
+    {
+     "source": "EASL HCC 2025",
+     "ref": "39690085",
+     "position": "Non-invasive criteria apply only with cirrhosis, chronic HBV or prior HCC; others need biopsy to diagnose HCC (LoE 1, strong), because pre-test probability outside those groups is not precisely established.",
+     "locator": "Clinical decision 0 · Standard 'In a liver that is not at risk, accept that no imaging criterion set exists…'"
+    },
+    {
+     "source": "AASLD HCC 2023",
+     "ref": "37199193",
+     "position": "Builds its diagnostic algorithm on the same at-risk population and uses the LI-RADS lexicon.",
+     "locator": "Clinical decision 0 · Standard 'Answer the at-risk question first…'"
+    }
+   ],
+   "divergence": "The guidelines agree on who is at risk, but none defines what to do with the intermediate patient whose cirrhosis is suspected but not established.",
+   "proposal": "When cirrhosis is suspected but unproven, state that uncertainty explicitly and treat the pathway as undetermined rather than defaulting to the at-risk arm; obtain a hepatology opinion and decide the pathway once (Reasonable, grade D). Record the aetiology and how cirrhosis was or was not established.",
+   "proposal_locator": "Clinical decision 0 · Reasonable 'Where cirrhosis is suspected but not established…'; Clinical decision 0 · Standard 'Answer the at-risk question first…' (note); What we are not sure about #2",
+   "rationale": "The whole algorithm forks here, and neither LI-RADS nor EASL 2025 defines the intermediate patient. EASL states only that pre-test probability in non-cirrhotic populations has not been precisely established.",
+   "audit": "Cases in which the at-risk determination was changed after the index report, and the reason."
+  },
+  {
+   "id": "INC-D3",
+   "n": 3,
+   "question": "Which MRI contrast agent is the default when the question has not been narrowed?",
+   "kind": "clinical",
+   "decisions": [
+    "3",
+    "4"
+   ],
+   "positions": [
+    {
+     "source": "EASL HCC 2025",
+     "ref": "39690085",
+     "position": "Favour extracellular agents over gadoxetic acid for non-invasive HCC diagnosis (LoE 1, strong); hepatobiliary-phase hypointensity is only an ancillary finding, and the agent risks arterial-phase motion artefact.",
+     "locator": "Clinical decision 3 · Reasonable options 'MRI with an extracellular gadolinium agent' and 'MRI with gadoxetate disodium'"
+    },
+    {
+     "source": "ACR liver white paper 2017",
+     "ref": "28927870",
+     "position": "Recommends gadoxetate specifically to separate FNH from adenoma, especially above 3 cm and subcapsular (4 cm in 2010, unexplained), while generally preferring gadolinium blood-pool agents.",
+     "locator": "Clinical decision 3 · Reasonable options 'MRI with an extracellular gadolinium agent' and 'MRI with gadoxetate disodium'"
+    },
+    {
+     "source": "HBP adenoma subtypes meta-analysis",
+     "ref": "35920706",
+     "position": "Hepatobiliary-phase uptake occurs in 59% of beta-catenin-activated adenomas; specificity against all adenomas is 89%, the 65% figure applying only to the residual population; few lesions, case-control designs.",
+     "locator": "Clinical decision 3 · Reasonable option 'MRI with gadoxetate disodium'; What we are not sure about #6"
+    },
+    {
+     "source": "LI-RADS features IPD meta-analysis",
+     "ref": "34783596",
+     "position": "Only one contributing study compared extracellular and hepatobiliary agents within the same observations, so no comparative estimate exists.",
+     "locator": "Clinical decision 3 · Reasonable option 'MRI with an extracellular gadolinium agent' (note)"
+    },
+    {
+     "source": "CRLM imaging meta-analysis",
+     "ref": "20829538",
+     "position": "Liver-specific contrast gave no measurable benefit for detecting colorectal metastases.",
+     "locator": "Clinical decision 1 · Standard 'Characterise with MRI, including diffusion-weighted imaging…' (caveat)"
+    }
+   ],
+   "divergence": "EASL and the ACR white paper ask for different agents for different questions, which one acquisition cannot satisfy, and no source compares the agents head to head.",
+   "proposal": "No single default: the request must state the question and the agent follows it, extracellular gadolinium for an at-risk liver and for haemangioma or FNH features, gadoxetate for FNH versus adenoma in a young woman's normal liver, read for what it cannot exclude. The agent must not be left to the scheduler.",
+   "proposal_locator": "Clinical decision 3 · Standard 'A multiphase contrast study is the characterising test…' (caveat); Clinical decision 3 · Reasonable option group (agents); Clinical decision 4 · Reasonable 'Where the hepatocellular lesion cannot be separated from adenoma…'",
+   "rationale": "EASL 2025 favours extracellular agents over gadoxetic acid for the HCC question (LoE 1, strong), while the ACR white paper recommends gadoxetate specifically for focal nodular hyperplasia versus adenoma. The two cannot be satisfied in one acquisition, and the 65% specificity figure against β-catenin-activated and unclassified adenoma weakens the second recommendation substantially since 2017.",
+   "audit": "Agent used, question stated on the request, and whether a repeat study with the other agent was subsequently needed."
+  },
+  {
+   "id": "INC-D4",
+   "n": 4,
+   "question": "May FDG PET-CT be ordered for liver lesion characterisation from the radiology report alone?",
+   "kind": "clinical",
+   "decisions": [
+    "1",
+    "3"
+   ],
+   "positions": [
+    {
+     "source": "ACR AC liver lesion 2020",
+     "ref": "33153555",
+     "position": "FDG PET-CT is usually appropriate in one of eight variants, an over-1 cm indeterminate lesion on non-contrast or single-phase imaging with known extrahepatic malignancy, and usually not appropriate in a normal liver for lack of literature.",
+     "locator": "Clinical decision 1 · Reasonable option 'FDG PET-CT'; Clinical decision 3 · Avoid 'Do not use FDG PET to characterise a liver lesion.'"
+    },
+    {
+     "source": "ACR liver white paper 2017",
+     "ref": "28927870",
+     "position": "Makes only the modest claim that PET may spare some patients with lesions over 1 cm a biopsy.",
+     "locator": "Clinical decision 3 · Avoid 'Do not use FDG PET to characterise a liver lesion.'"
+    },
+    {
+     "source": "CRLM imaging meta-analysis",
+     "ref": "20829538",
+     "position": "Per-lesion sensitivity of 81.4% was indistinguishable from MRI's 80.3% and rested on one dataset; per-patient sensitivity of 94.1% exceeded CT.",
+     "locator": "Clinical decision 1 · Reasonable option 'FDG PET-CT'; Clinical decision 3 · Avoid 'Do not use FDG PET…'"
+    }
+   ],
+   "divergence": "Sources agree PET has a narrow staging role in known extrahepatic cancer and no characterising role; none addresses ordering it from a radiology report alone.",
+   "proposal": "Do not use FDG PET to characterise a liver lesion; reserve it for a distribution question in a patient with a known extrahepatic primary and a lesion over 1 cm found on non-contrast or single-phase imaging. The roadmap does not say who may order it or whether a report alone suffices.",
+   "proposal_locator": "Clinical decision 3 · Avoid 'Do not use FDG PET to characterise a liver lesion.'; Clinical decision 1 · Reasonable option 'FDG PET-CT'",
+   "rationale": "The ACR Appropriateness Criteria rate it usually appropriate in one of eight variants only. It is not an answer for a sub-centimetre lesion, and per-lesion sensitivity for colorectal liver metastases, 81.4%, is no better than MRI at 80.3%.",
+   "audit": "PET-CT ordered for liver characterisation, by lesion size and risk category."
+  },
+  {
+   "id": "INC-D5",
+   "n": 5,
+   "question": "What is the standing rule on biopsying a lesion that is going to be resected, and does it apply identically across diseases?",
+   "kind": "clinical",
+   "decisions": [
+    "1",
+    "7"
+   ],
+   "positions": [
+    {
+     "source": "Jones 2005 CRLM biopsy",
+     "ref": "15997444",
+     "position": "Of 90 patients biopsied before referral, 19% had needle-track deposits and 4-year survival was 32.5% against 46.7%; the roadmap notes a 61% versus 26% synchronous-disease imbalance with no multivariable model.",
+     "locator": "Clinical decision 1 · Avoid 'Do not biopsy a liver lesion in a patient whose colorectal liver metastases are resectable.'"
+    },
+    {
+     "source": "HCC seeding meta-analysis",
+     "ref": "18669577",
+     "position": "Seeding of 2.7% per patient (0.9% per year) across 8 observational studies, none clearly affecting survival; the only prospective study found zero events in 239 patients.",
+     "locator": "Clinical decision 7 · Standard 'Do not biopsy a lesion you are going to resect anyway.' (caveat)"
+    },
+    {
+     "source": "Heimbach 2011",
+     "ref": "21492336",
+     "position": "5 of 6 patients with a positive transperitoneal aspirate had peritoneal metastases against 8% unbiopsied; six patients, reverse causation not excluded, and read from abstract only.",
+     "locator": "Clinical decision 7 · Standard 'Do not perform a transperitoneal or primary-tumour needle biopsy…' (caveat); What we are not sure about #26"
+    },
+    {
+     "source": "AASLD liver biopsy",
+     "ref": "19243014",
+     "position": "Gives tumour seeding as 0.13% from a single study, twenty-fold below the pooled HCC figure.",
+     "locator": "Clinical decision 7 · Standard 'Do not biopsy a lesion you are going to resect anyway.' (note)"
+    },
+    {
+     "source": "Cillo 2019",
+     "ref": "30843343",
+     "position": "Narrative surgical review: biopsy is avoided for seeding risk and low yield and contraindicated in a transplant candidate, with the seeding risk asserted without a rate or denominator.",
+     "locator": "Clinical decision 7 · Standard 'Do not perform a transperitoneal or primary-tumour needle biopsy…' (caveat and note)"
+    }
+   ],
+   "divergence": "Seeding and harm estimates differ by an order of magnitude between colorectal metastases, HCC and perihilar disease, and each rests on weak or confounded data.",
+   "proposal": "One rule: do not biopsy a lesion you will resect anyway (Standard, grade C), with the perihilar transplant-review prohibition kept as the local CPG's separate safety rule and resectable colorectal metastases not biopsied. The roadmap calls the single rule a deliberate simplification, warns against quoting one seeding number for both diseases, and leaves keeping it to the group.",
+   "proposal_locator": "Clinical decision 7 · Standard 'Do not biopsy a lesion you are going to resect anyway.' and 'Do not perform a transperitoneal or primary-tumour needle biopsy…'; Clinical decision 1 · Avoid 'Do not biopsy a liver lesion…'; What we are not sure about #5",
+   "rationale": "This page presents one rule, but the evidence ranges from a 19% needle-track rate in 90 patients biopsied before referral — with a 61%-against-26% imbalance in synchronous disease and no valid adjustment — to a 2.7% (1.8-4.0) pooled seeding rate in hepatocellular carcinoma whose largest prospective contributing study found zero events, to a six-patient series in perihilar disease. Whether to keep one rule or three is a genuine decision.",
+   "audit": "Biopsies performed on subsequently resected lesions; biopsies in patients with resectable colorectal liver metastases; needle-track recurrences."
+  },
+  {
+   "id": "INC-D6",
+   "n": 6,
+   "question": "What surveillance interval, if any, applies to regenerative and focal-nodular-hyperplasia-like nodules in a liver with a vascular disorder?",
+   "kind": "clinical",
+   "decisions": [
+    "0",
+    "4",
+    "5"
+   ],
+   "positions": [
+    {
+     "source": "LI-RADS v2018",
+     "ref": "30251931",
+     "position": "Excludes cirrhosis caused by vascular disorders, and congenital hepatic fibrosis, from its population.",
+     "locator": "Clinical decision 0 · Reasonable 'In a liver with a vascular disorder…'"
+    },
+    {
+     "source": "EASL benign tumours 2016",
+     "ref": "27085809",
+     "position": "A typical FNH needs no follow-up unless there is underlying vascular liver disease (III, grade 2), but no interval is given for that case.",
+     "locator": "Clinical decision 4 · Reasonable 'Where focal nodular hyperplasia is multiple…' (note)"
+    },
+    {
+     "source": "EASL vascular liver 2015",
+     "ref": "26516032",
+     "position": "Budd-Chiari nodules (60-80% of patients) cannot be characterised with cirrhosis HCC criteria; the only formal recommendation is multidisciplinary surveillance. The edition is superseded by a 2026 one not obtained.",
+     "locator": "Clinical decision 0 · Reasonable 'In a liver with a vascular disorder…' (caveat and note)"
+    },
+    {
+     "source": "PSVD/NCPF consensus 2026",
+     "ref": "42191146",
+     "position": "Makes nodular regenerative hyperplasia a major criterion of porto-sinusoidal vascular disorder and biopsy mandatory for diagnosis, but gives no guidance on incidentally detected nodularity.",
+     "locator": "Clinical decision 5 · Reasonable 'In a liver with a vascular disorder, treat regenerative…' (caveat and note)"
+    }
+   ],
+   "divergence": "No guideline supplies an interval: LI-RADS excludes these livers, EASL withdraws its no-follow-up rule without replacing it, and the vascular guidance relied on is superseded.",
+   "proposal": "No interval is stated. These nodules go to benign-liver-tumour multidisciplinary review and are managed under the vascular-liver guidance, with any interval set by that team and recorded as a local decision rather than copied from LI-RADS (grade D). The vascular guidance cited is provisional pending the 2026 EASL edition.",
+   "proposal_locator": "Clinical decision 5 · Reasonable 'In a liver with a vascular disorder, treat regenerative…'; Clinical decision 0 · Reasonable 'In a liver with a vascular disorder…'; What we are not sure about #3 and #22",
+   "rationale": "LI-RADS excludes these livers and EASL's benign-tumour guideline withdraws its no-follow-up rule for this setting without supplying an interval. There is no guideline answer and the page should not invent one silently.",
+   "audit": "Interval set, adherence, and the proportion of these nodules that changed category or required tissue."
+  },
+  {
+   "id": "INC-D7",
+   "n": 7,
+   "question": "What constitutes the completed search for an occult cancer after a cryptogenic pyogenic liver abscess, and does it include colonoscopy in every case?",
+   "kind": "clinical",
+   "decisions": [
+    "2"
+   ],
+   "positions": [
+    {
+     "source": "Abscess cancer risk cohort",
+     "ref": "22779737",
+     "position": "Claims cohort of 1,257: standardised incidence ratios 3.83 all cancers, 34.58 biliary, 5.27 colorectal, highest within 90 days, so mostly prevalent disease; no yield, modality or stratification reported.",
+     "locator": "Clinical decision 2 · Reasonable 'After a pyogenic liver abscess with no obvious source…'"
+    },
+    {
+     "source": "ACR liver white paper 2017",
+     "ref": "28927870",
+     "position": "The incidental-findings algorithm explicitly does not cover hepatic infection.",
+     "locator": "Clinical decision 2 · Standard 'A rim-enhancing collection in a febrile patient is an abscess…' (note)"
+    }
+   ],
+   "divergence": "The only cohort signals cancer present at presentation but does not define the search, and no guideline on the page covers it.",
+   "proposal": "Investigate every cryptogenic pyogenic abscess, particularly in a diabetic patient, for an occult cancer, and complete the search during the index admission rather than enrolling the patient in long-term surveillance. What the search includes, routine colonoscopy among it, is left as a local decision.",
+   "proposal_locator": "Clinical decision 2 · Reasonable 'After a pyogenic liver abscess with no obvious source…' (and note); The dashboard · cryptogenic abscess item",
+   "rationale": "The national cohort found standardised incidence ratios of 34.58 for biliary tract cancer and 5.27 for colorectal cancer, but the highest ratios all fell within the first 90 days, which means most of the signal is prevalent disease found during the index admission rather than incident disease. That supports completing a search now; it does not define the search.",
+   "audit": "Searches completed during the index admission; cancers found, and when."
+  },
+  {
+   "id": "INC-D8",
+   "n": 8,
+   "question": "Who owns a follow-up interval recommended in a radiology report, and how is the loop closed?",
+   "kind": "governance",
+   "decisions": [
+    "6"
+   ],
+   "positions": [
+    {
+     "source": "UTHealth/MH Master Workup and Staging CPG",
+     "ref": "masterworkup",
+     "position": "Requires an assigned owner and due date for any conditional or incomplete disposition, and that such a case not be presented as approved.",
+     "locator": "Clinical decision 6 · Reasonable 'Where an interval is chosen, name the owner…'"
+    },
+    {
+     "source": "ACR abdominal CT white paper 2010",
+     "ref": "20889105",
+     "position": "The founding committee paper attributes incidental-finding cascades to unwillingness to accept uncertainty and names the injurious, expensive cascade of tests as the harm.",
+     "locator": "Clinical decision 6 · Standard 'Decide before you set an interval what a stable repeat scan will change…'"
+    }
+   ],
+   "divergence": "No source conflict; the local CPG requires an owner but does not say which role holds it.",
+   "proposal": "Every interval carries a named owner, a due date and a modality in the record, not only in the report impression, and the loop is closed in the registry; the board's interval disposition requires the same. The roadmap does not say which role, radiologist, referrer or programme, owns it.",
+   "proposal_locator": "Clinical decision 6 · Reasonable 'Where an interval is chosen, name the owner…'; The board meeting · Output; The dashboard · interval adherence",
+   "rationale": "Not an evidence question. An interval with no owner is the pathway's commonest failure, and the local CPG already requires an owner and due date for any conditional disposition.",
+   "audit": "Named owner recorded at the time the interval was set; interval adherence."
+  },
+  {
+   "id": "INC-D9",
+   "n": 9,
+   "question": "What constitutes an adequate index study for the purpose of discharging a lesion?",
+   "kind": "clinical",
+   "decisions": [
+    "1",
+    "3",
+    "6"
+   ],
+   "positions": [
+    {
+     "source": "ACR liver white paper 2017",
+     "ref": "28927870",
+     "position": "Its feature lists assume adequate phases and dose; it warns that dose reduction impairs small-lesion assessment and that sub-1 cm attenuation may be unmeasurable, but defines no adequacy standard.",
+     "locator": "Clinical decision 1 · Avoid 'Do not characterise a liver lesion on a scan that was not acquired to characterise it.'; What we are not sure about #10"
+    },
+    {
+     "source": "ACR AC liver lesion 2020",
+     "ref": "33153555",
+     "position": "Sets a technical minimum of at least two dynamic phases, late arterial and portal venous, on CT, MRI or CEUS.",
+     "locator": "Clinical decision 3 · Standard 'A multiphase contrast study is the characterising test…'"
+    },
+    {
+     "source": "UTHealth/MH Master Workup and Staging CPG",
+     "ref": "masterworkup",
+     "position": "Requires the team to document whether repeat imaging is needed when quality or protocol is inadequate, without saying what inadequate means.",
+     "locator": "Clinical decision 3 · Avoid 'Do not repeat the same inadequate study…'; Decisions this programme still has to make #9"
+    }
+   ],
+   "divergence": "Sources set a phase minimum and warn about dose reduction, but none defines an adequate study for the purpose of discharging a lesion.",
+   "proposal": "No adequacy standard is defined. A lesion is not characterised or discharged on a study not acquired to characterise it: the deficiency (missing arterial or delayed phase, aggressive dose reduction, no contrast) is named and the study that fixes it ordered, with two dynamic phases cited as the minimum.",
+   "proposal_locator": "Clinical decision 1 · Avoid 'Do not characterise a liver lesion on a scan…'; Clinical decision 3 · Avoid 'Do not repeat the same inadequate study…' and Standard 'A multiphase contrast study…'; What we are not sure about #10",
+   "rationale": "Every benign-feature rule on this page assumes adequate phases and adequate dose. The ACR white paper warns that dose-reduced studies make small lesions hard to assess but does not define adequacy, and the local CPG requires the team to document inadequacy without saying what it is.",
+   "audit": "Cases in which a discharge decision was reversed on a subsequent adequate study."
+  },
+  {
+   "id": "INC-D10",
+   "n": 10,
+   "question": "Who owns the update check on the ACR incidental liver white paper, the LI-RADS versions, and the EASL and AASLD guidance, and on what cycle?",
+   "kind": "governance",
+   "decisions": [],
+   "positions": [
+    {
+     "source": "ACR Incidental Findings programme",
+     "ref": "acrif",
+     "position": "No revision of the 2017 liver white paper had been published when checked on 6 October 2026.",
+     "locator": "Reference library (ACR Incidental Findings programme)"
+    },
+    {
+     "source": "ACR CT/MRI LI-RADS v2018 Core",
+     "ref": "lirads2018",
+     "position": "Still the current CT/MRI diagnostic version when checked; the 2024 updates cover treatment response and ultrasound surveillance only.",
+     "locator": "Reference library (ACR CT/MRI LI-RADS v2018 Core)"
+    },
+    {
+     "source": "ACR CEUS LI-RADS v2017",
+     "ref": "ceuslirads",
+     "position": "The current CEUS diagnostic version, one version behind CT/MRI LI-RADS, with categories not interchangeable with them.",
+     "locator": "Reference library (ACR CEUS LI-RADS v2017)"
+    },
+    {
+     "source": "ACR AC Liver Lesion-Initial Characterization",
+     "ref": "acrac",
+     "position": "A 2020 topic whose evidence base closed before the CEUS LI-RADS validation work and the 2022 individual-patient-data meta-analysis.",
+     "locator": "Decisions this programme still has to make #10; Reference library"
+    },
+    {
+     "source": "EASL benign tumours 2016",
+     "ref": "27085809",
+     "position": "Predates the molecular adenoma classification now in use.",
+     "locator": "Decisions this programme still has to make #10"
+    }
+   ],
+   "divergence": "The sources revise on different, unstated schedules, and several are already behind the evidence the page uses.",
+   "proposal": "No owner or cycle is named. The roadmap records each source's edition and checked status as of 6 October 2026, and the audit asks for a named owner, edition and date for each source with an agreed review cycle.",
+   "proposal_locator": "Reference library (non-PubMed sources); Decisions this programme still has to make #10 (audit)",
+   "rationale": "The liver white paper is from 2017 with no revision published since and no update interval stated, CT/MRI LI-RADS has been at v2018 since August 2018 with only treatment-response and ultrasound-surveillance modules updated to v2024, CEUS LI-RADS remains at v2017, the ACR Appropriateness Criteria liver topic dates from 2020 and closed its evidence base before both the CEUS LI-RADS validation work and the 2022 individual-patient-data meta-analysis, and the EASL benign-tumour guideline of 2016 predates the molecular adenoma classification now in use. A page built on sources that are not being revised on a predictable schedule needs a named owner watching for the next one.",
+   "audit": "Named owner plus edition and date for each source, with an agreed review cycle."
+  },
+  {
+   "id": "INC-D11",
+   "n": 11,
+   "question": "Which prevalence figure, if any, may be quoted to a patient or written into a report as the probability that an incidental liver lesion is benign?",
+   "kind": "governance",
+   "decisions": [],
+   "positions": [
+    {
+     "source": "Karhunen 1986",
+     "ref": "3950039",
+     "position": "52% is a targeted-autopsy rate in 95 Finnish men, about half of it bile-duct microhamartomas averaging 1.3 mm, invisible on any scanner.",
+     "locator": "Quick reference · 'The four prevalence figures, and what each one counted'; What we are not sure about #13"
+    },
+    {
+     "source": "Jones 1992",
+     "ref": "1738990",
+     "position": "17% is a per-examination rate in 1,454 outpatient contrast CTs, 82% of lesion-bearing patients having known cancer.",
+     "locator": "Quick reference · 'The four prevalence figures, and what each one counted'"
+    },
+    {
+     "source": "Schwartz 1999",
+     "ref": "9885589",
+     "position": "12.7% is a report-mention rate in cancer patients required to have a second CT, conditioning the cohort on survival.",
+     "locator": "Quick reference · 'The four prevalence figures, and what each one counted'; What we are not sure about #13"
+    },
+    {
+     "source": "Kaltenbach 2016",
+     "ref": "26830608",
+     "position": "15.1% counts five pre-specified benign sonographic findings, four fifths fatty sparing and cysts, and never counted a malignancy.",
+     "locator": "Quick reference · 'The four prevalence figures, and what each one counted'"
+    },
+    {
+     "source": "ACR liver white paper 2017",
+     "ref": "28927870",
+     "position": "Its 'up to 30% over 40' rests on a block citation of nineteen references with no pooled estimate.",
+     "locator": "What we are not sure about #14"
+    }
+   ],
+   "divergence": "The figures measure different things in different populations, so none is a prior probability for an incidental lesion and they cannot be compared.",
+   "proposal": "Quote no single figure as the probability that an incidental lesion is benign. If a figure is used, use the one whose denominator matches the patient and name that population with it; the ACR's 30% has no study behind it.",
+   "proposal_locator": "What we are not sure about #13-14; Quick reference · 'The four prevalence figures, and what each one counted'",
+   "rationale": "The four figures in circulation are not comparable and none of them answers the question. Karhunen's 52% is a targeted-autopsy rate in 95 Finnish men, half of it lesions of 1.3 mm; Jones's 17% is a per-examination rate in cancer-surveillance CT; Schwartz's 12.7% is a report-mention rate conditioned on surviving to a second scan; Kaltenbach's 15.1% counts five benign findings and never counted a malignancy. The ACR's 'up to 30% over 40' has nineteen references and no pooled estimate behind it. The group has to decide whether the programme quotes a number at all, and if so which population it names alongside it.",
+   "audit": "Reports and patient letters quoting a single prevalence figure without its denominator."
+  },
+  {
+   "id": "INC-D12",
+   "n": 12,
+   "question": "May a LI-RADS category assigned on one modality be acted on, or carried forward, when the comparison study was a different modality?",
+   "kind": "clinical",
+   "decisions": [
+    "0",
+    "3",
+    "6"
+   ],
+   "positions": [
+    {
+     "source": "LI-RADS v2018",
+     "ref": "30251931",
+     "position": "Category agreement is kappa 0.30-0.39 for CEUS, 0.35-0.61 for MRI and 0.79 for CT; between modalities 0.33-0.39 (CT-MRI) and 0.22 (MRI-CEUS). The report states this without resolving it.",
+     "locator": "Clinical decision 0 · Standard 'In an at-risk liver, categorise the observation…' (note); What we are not sure about #16"
+    },
+    {
+     "source": "ACR CEUS LI-RADS v2017",
+     "ref": "ceuslirads",
+     "position": "Its categories are not interchangeable with the CT/MRI categories.",
+     "locator": "Clinical decision 3 · Standard 'In an at-risk liver, read the CEUS against CEUS LI-RADS v2017 criteria…'; Reference library"
+    },
+    {
+     "source": "CEUS versus CT/MRI LI-RADS",
+     "ref": "35425706",
+     "position": "CEUS LR-3 was 21% HCC against 35% for CT/MRI LR-3, and LR-M also differed; the roadmap calls these between-population comparisons from a group whose two meta-analyses are not independent.",
+     "locator": "Clinical decision 3 · Standard 'In an at-risk liver, read the CEUS…' (caveat); What we are not sure about #18"
+    }
+   ],
+   "divergence": "Sources agree a category is not stable across modalities or readers, but none says whether a category may be acted on or carried forward across modalities.",
+   "proposal": "CEUS and CT/MRI categories are treated as not interchangeable: CEUS is read against CEUS LI-RADS v2017, and LR-3 and LR-4 observations go to the board rather than an algorithm, because a category is not a stable property of the lesion. No cross-modality carry-forward rule is stated.",
+   "proposal_locator": "What we are not sure about #16; Clinical decision 3 · Standard 'In an at-risk liver, read the CEUS…'; Clinical decision 6 · Reasonable 'Where the lesion is LR-3 or LR-4…'",
+   "rationale": "Intermodality agreement is kappa 0.33-0.39 between CT and MRI and 0.22 between MRI and CEUS, with CT tending to undercategorise, and category agreement between two readers on the same CEUS study is only kappa 0.30-0.39. If the category determines management then management depends in part on which scanner the patient entered and who read it. The LI-RADS authors state this and do not resolve it.",
+   "audit": "Cases in which the category changed between modalities or between readers, and whether management changed with it."
+  },
+  {
+   "id": "INC-D13",
+   "n": 13,
+   "question": "In which patients may contrast-enhanced ultrasound be used as the resolving test for a CT- or MRI-indeterminate observation, rather than as a first-line characterising test?",
+   "kind": "clinical",
+   "decisions": [
+    "3",
+    "6"
+   ],
+   "positions": [
+    {
+     "source": "Kono 2024 CEUS validation",
+     "ref": "38860996",
+     "position": "In 75 indeterminate observations, 97.1% cirrhotic, CEUS re-categorised 33.3% (correct in 24 of 25) and avoided follow-up in 28%, yet left 74.1% of LR-3 indeterminate; manufacturer part-funded.",
+     "locator": "Clinical decision 6 · Reasonable 'Where the lesion is LR-3 or LR-4…'; What we are not sure about #19"
+    },
+    {
+     "source": "WFUMB CEUS 2020",
+     "ref": "32707595",
+     "position": "Its only level-1 strong recommendation is CEUS first-line for an incidental indeterminate lesion in a non-cirrhotic liver without suspected malignancy, on a block citation with no pooled estimate.",
+     "locator": "Clinical decision 3 · Standard 'Contrast-enhanced ultrasound characterises a solid lesion in real time…'"
+    },
+    {
+     "source": "EASL HCC 2025",
+     "ref": "39690085",
+     "position": "In at-risk patients, CT or MRI is preferred to CEUS as the initial test, on grounds of sensitivity (LoE 3, strong).",
+     "locator": "Clinical decision 3 · Standard 'A multiphase contrast study is the characterising test…'"
+    },
+    {
+     "source": "DEGUM CEUS trial",
+     "ref": "19241506",
+     "position": "1,349 patients: sensitivity 95.8% and specificity 83.1% for malignancy against mostly histological reference; the roadmap read it from abstract only.",
+     "locator": "Clinical decision 3 · Standard 'Contrast-enhanced ultrasound characterises a solid lesion…'; What we are not sure about #9 and #26"
+    },
+    {
+     "source": "ACR AC liver lesion 2020",
+     "ref": "33153555",
+     "position": "Rates CEUS, multiphase CT and contrast MRI as equivalent, usually appropriate options for an indeterminate lesion over 1 cm, without head-to-head data.",
+     "locator": "Clinical decision 3 · Standard 'A multiphase contrast study…' (caveat); What we are not sure about #20"
+    }
+   ],
+   "divergence": "The prospective resolving-test evidence comes from cirrhotic livers while WFUMB's strongest recommendation targets non-cirrhotic livers, and EASL prefers CT or MRI first in at-risk patients.",
+   "proposal": "Use CEUS as the resolving test only in an at-risk, essentially cirrhotic liver, as a Reasonable step before an LR-3 or LR-4 interval is set; the prospective evidence licenses nothing in a liver not at risk. Separately, CEUS remains a first-line characterising test when the question is vascular pattern.",
+   "proposal_locator": "Clinical decision 6 · Reasonable 'Where the lesion is LR-3 or LR-4…'; Clinical decision 3 · Standard 'Contrast-enhanced ultrasound characterises a solid lesion…' and 'In an at-risk liver, read the CEUS…' (note); What we are not sure about #19",
+   "rationale": "The only prospective evidence is a sub-analysis of 75 observations in 68 patients who were 97.1% cirrhotic, with readers who could see the prior CT or MRI, a reference standard that was follow-up CT or MRI in 72% of cases, predictive values resting on 7, 7, 6 and 1 observations, and 74% of LR-3 observations still indeterminate afterwards. The WFUMB guideline separately makes its only level-1 strong recommendation for CEUS first-line in a non-cirrhotic liver without suspected malignancy — the opposite population — on a block citation with no pooled estimate. The two positions need reconciling locally, and the agent's manufacturer part-funded the first.",
+   "audit": "CEUS performed after an indeterminate CT or MRI, by risk category, and whether it changed the disposition."
+  },
+  {
+   "id": "INC-D14",
+   "n": 14,
+   "question": "Which route is used when tissue is needed from a liver lesion — percutaneous core, endoscopic ultrasound-guided fine-needle biopsy, or transjugular — and who decides?",
+   "kind": "clinical",
+   "decisions": [
+    "7"
+   ],
+   "positions": [
+    {
+     "source": "ACR liver white paper 2017",
+     "ref": "28927870",
+     "position": "Percutaneous morbidity about 0.5% and mortality about 0.05%; prefers core biopsy over fine-needle aspiration.",
+     "locator": "Clinical decision 7 · Standard 'Do not biopsy a lesion you are going to resect anyway.' (note)"
+    },
+    {
+     "source": "ACR abdominal CT white paper 2010",
+     "ref": "20889105",
+     "position": "The same committee earlier gave morbidity of 2.0-4.8%, with no explanation for the later revision.",
+     "locator": "Clinical decision 7 · Standard 'Do not biopsy a lesion you are going to resect anyway.' (note); What we are not sure about #21"
+    },
+    {
+     "source": "AASLD liver biopsy",
+     "ref": "19243014",
+     "position": "Severe bleeding 1 in 2,500 to 1 in 10,000 and death about 1 in 10,000, but for intercostal percutaneous biopsy in diffuse disease; risk may be higher for a malignant lesion.",
+     "locator": "Clinical decision 7 · Standard 'Do not biopsy a lesion you are going to resect anyway.' (note); What we are not sure about #21"
+    },
+    {
+     "source": "EUS-FNB adverse events meta-analysis",
+     "ref": "39789825",
+     "position": "Overall adverse events 1.8%, but 14.0% (7.7-24.0) in the liver subgroup of 133 patients, including a suspected death the paper's conclusion denies.",
+     "locator": "Clinical decision 7 · Standard 'Do not biopsy a lesion you are going to resect anyway.' (note); What we are not sure about #21"
+    }
+   ],
+   "divergence": "Harm figures differ by an order of magnitude between sources, and none compares routes or describes focal-lesion biopsy by the route a patient would actually have.",
+   "proposal": "Core biopsy rather than fine-needle aspiration, with route and specimen priorities agreed before the procedure; access choice, platelets, coagulation and ascites are governed by the AASLD position paper and local interventional radiology policy, and consent quotes a range and names the route. No preferred route or decision-maker is stated.",
+   "proposal_locator": "Clinical decision 7 · entry criteria and Standard 'Biopsy is the right move when imaging criteria cannot be applied…' (note); What we are not sure about #21; The board meeting · Output",
+   "rationale": "No source this page uses reports comparable harm figures for the three routes. Percutaneous morbidity is quoted as 0.5% by the 2017 ACR paper and 2.0-4.8% by the same committee in 2010; AASLD gives severe bleeding at 1 in 2,500 to 1 in 10,000 for diffuse non-focal disease and notes the risk may be higher for a malignant lesion; the pooled liver adverse-event rate for endoscopic ultrasound-guided fine-needle biopsy is 14.0% (7.7-24.0) on 133 patients, with a death in the numerator that the paper's conclusion denies. Cirrhosis and a hypervascular tumour are named as risk factors in the same review that concedes it could not analyse either.",
+   "audit": "Route recorded for every liver biopsy, with complications by route and by platelet count, coagulation and ascites status."
+  },
+  {
+   "id": "INC-D15",
+   "n": 15,
+   "question": "Which edition of the EASL vascular-liver guidance governs this pathway, and who obtains and reads the 2026 edition?",
+   "kind": "governance",
+   "decisions": [
+    "0",
+    "5"
+   ],
+   "positions": [
+    {
+     "source": "EASL vascular liver 2015",
+     "ref": "26516032",
+     "position": "Derived from a single 2012 conference agenda, a PubMed-only search and committee opinion in place of evidence; superseded by a 2026 edition this page has not read.",
+     "locator": "What we are not sure about #22; Clinical decision 0 · Reasonable 'In a liver with a vascular disorder…' (note)"
+    },
+    {
+     "source": "PSVD/NCPF consensus 2026",
+     "ref": "42191146",
+     "position": "Redefines idiopathic non-cirrhotic portal hypertension as porto-sinusoidal vascular disorder or non-cirrhotic portal fibrosis, with nodular regenerative hyperplasia a major histological criterion.",
+     "locator": "Clinical decision 0 · Reasonable 'In a liver with a vascular disorder…' (note)"
+    }
+   ],
+   "divergence": "The page relies on a superseded edition, and the 2026 consensus has since redefined the entities that edition describes.",
+   "proposal": "Until the 2026 EASL edition is obtained and read, everything sourced to the 2015 edition, including clinical decision 0's vascular arm and decision 5's alternative, is provisional and must be rechecked before clinical use. No one is yet named to obtain it.",
+   "proposal_locator": "What we are not sure about #22 and #26; Clinical decision 0 · Reasonable 'In a liver with a vascular disorder…' (note)",
+   "rationale": "Everything on this page about nodules in a vascular liver is sourced to the 2015 guideline, which was built on one 2012 conference agenda with a PubMed-only search and committee opinion where evidence was absent, and which has been superseded. The 2026 edition was not obtained for this revision, so the vascular arm of clinical decision 0 and the alternative column of clinical decision 5 are provisional.",
+   "audit": "Named owner, edition and date on file; cases managed under the superseded edition after the new one became available."
+  },
+  {
+   "id": "INC-D16",
+   "n": 16,
+   "question": "Does an incidentally discovered nodular non-cirrhotic liver, or incidentally reported nodular regenerative hyperplasia, trigger a porto-sinusoidal vascular disorder workup — and does that include a biopsy?",
+   "kind": "clinical",
+   "decisions": [
+    "0",
+    "5"
+   ],
+   "positions": [
+    {
+     "source": "PSVD/NCPF consensus 2026",
+     "ref": "42191146",
+     "position": "NRH is a major criterion and biopsy is mandatory (15 mm, one 10 mm fragment), but criteria came from 88 patients all with portal hypertension, the score was fitted to scenario votes, and incidental nodularity is not addressed.",
+     "locator": "Clinical decision 5 · Reasonable 'In a liver with a vascular disorder, treat regenerative…' (caveat and note); What we are not sure about #23"
+    },
+    {
+     "source": "EASL benign tumours 2016",
+     "ref": "27085809",
+     "position": "Places nodular regenerative hyperplasia outside its own scope.",
+     "locator": "Clinical decision 5 · Reasonable 'In a liver with a vascular disorder, treat regenerative…' (caveat)"
+    },
+    {
+     "source": "EASL vascular liver 2015",
+     "ref": "26516032",
+     "position": "Describes the earlier entity, idiopathic non-cirrhotic portal hypertension, since redefined by the 2026 consensus; the 2015 edition is itself superseded.",
+     "locator": "Clinical decision 0 · Reasonable 'In a liver with a vascular disorder…' (note)"
+    }
+   ],
+   "divergence": "The consensus mandates biopsy for the diagnosis but offers no guidance or risk-benefit analysis for incidental nodularity in a patient without portal hypertension.",
+   "proposal": "Reported nodular regenerative hyperplasia is treated as a marker of a possible vascular disorder, not a benign nodule to reassure about, and such livers go to multidisciplinary review under the vascular-liver guidance. The roadmap does not adopt the consensus's mandatory biopsy or score for incidental findings; that is left to the group.",
+   "proposal_locator": "Clinical decision 5 · Reasonable 'In a liver with a vascular disorder, treat regenerative…'; What we are not sure about #23; Decisions this programme still has to make #16",
+   "rationale": "The 2026 multisociety consensus makes nodular regenerative hyperplasia a major histological criterion for the disorder and makes liver biopsy mandatory for the diagnosis, with adequacy set at 15 mm including one 10 mm fragment. But its criteria were derived in 88 European patients who all had portal hypertension while the definition permits diagnosis without it, a major criterion needs only 10% sensitivity, its diagnostic score was fitted to expert votes on 36 hypothetical scenarios and reproduced them by construction, and it offers no guidance at all on incidentally detected nodularity and no risk-benefit analysis for biopsying an asymptomatic patient. Whether the programme adopts an unvalidated score and a mandatory biopsy for an incidental finding is a decision, not a reading of the guideline.",
+   "audit": "Patients with incidental nodularity or reported nodular regenerative hyperplasia, the workup performed, biopsies done and diagnoses reached."
+  }
+ ]
+}

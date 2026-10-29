@@ -1,0 +1,661 @@
+{
+ "slug": "crlm",
+ "prefix": "CRLM",
+ "questions": [
+  {
+   "id": "CRLM-D1",
+   "n": 1,
+   "question": "Name the accountable CRLM pathway owner and the neutral tumour-board chair.",
+   "kind": "governance",
+   "decisions": [],
+   "positions": [],
+   "divergence": "No source positions; programme decision.",
+   "proposal": "The roadmap defines the roles but names no one: a neutral clinical chair synthesises one recommendation per case and names uncertainty instead of forcing consensus, programme leadership owns attendance, and this operating standard is shared with the HCC roadmap so one board runs one standard (grade D by construction).",
+   "proposal_locator": "Operations · The board meeting ('Conference', 'Attendance' and closing note on shared HCC operating requirements)",
+   "rationale": "The pathway produces one recommendation, one accountable owner, one due date and one reassessment plan; without a named owner and a neutral chair the synthesis step has nobody to perform it.",
+   "audit": "Named individuals recorded in the programme charter, with the chair's name on every conference record."
+  },
+  {
+   "id": "CRLM-D2",
+   "n": 2,
+   "question": "Approve the Epic submission form with an explicit phase field and a clearance-assessment field.",
+   "kind": "operational",
+   "decisions": [],
+   "positions": [],
+   "divergence": "No source positions; programme decision.",
+   "proposal": "The Epic submission form should capture the clinical question, phase, disease extent, biology, prior treatment, transplant status, referring clinician and urgency; the clearance-discipline dashboard measure, the pathway's central claim, targets 95% or more of non-clearance decisions recording why each clearance route was unsuitable.",
+   "proposal_locator": "Operations · The board meeting ('Submission'); The dashboard ('Clearance discipline')",
+   "rationale": "Phase assignment and the explicit clearance question are the two things this pathway is built on, so they have to be captured at submission rather than reconstructed later.",
+   "audit": "Completeness of the phase and clearance fields at triage; the clearance-discipline dashboard measure depends on them."
+  },
+  {
+   "id": "CRLM-D3",
+   "n": 3,
+   "question": "Decide whether Memorial Hermann will run a hepatic arterial infusion programme, and if so the credentialing standard, case volume floor and toxicity review cadence.",
+   "kind": "governance",
+   "decisions": [
+    "3",
+    "5"
+   ],
+   "positions": [
+    {
+     "source": "NCCN Colon v2.2026",
+     "ref": "nccn",
+     "position": "Restricts HAI to patients with at least one prior systemic line and operative fitness, forbids concurrent bevacizumab or other VEGF inhibitors, and excludes prior liver radiation from HAI selection; early referral does not waive these eligibility rules.",
+     "locator": "Gate 3 · Standard option 'Hepatic arterial infusion plus systemic therapy…' (pref, avoid); Gate 3 · Reasonable 'Selected Y90 radiation lobectomy…' (avoid)"
+    },
+    {
+     "source": "Kemeny HAI conversion (phase I) and D’Angelica phase II",
+     "ref": "19470932",
+     "position": "Each enrolled 49 patients with 47% conversion. Roadmap critique: single-arm and centre-concentrated, resectability judged by the operating surgeons, WHO-type response scoring, median disease-free survival after R0 only 7.6 months; neither is a randomised conversion comparison.",
+     "locator": "What we are not sure about · 'Hepatic arterial infusion converts unresectable disease'; Gate 3 · HAI option (note)"
+    },
+    {
+     "source": "Duke expanding-programme cohort",
+     "ref": "39565488",
+     "position": "In 102 mostly pretreated patients at a newer programme: 20% conversion, 23% HAI-specific complications and 6% biliary sclerosis; the roadmap says these selected-cohort results are not institutional performance targets.",
+     "locator": "Gate 3 · HAI option (note); HAI evidence and pathway revision · 'Salvage evidence and external delivery'"
+    },
+    {
+     "source": "Minimum requirements for new HAI programmes (international expert perspective)",
+     "ref": "39962001",
+     "position": "Credentialing must cover the whole service, not pump implantation alone: named surgeon and backup, oncologist, infusion nursing and pharmacy, perfusion assessment, IR rescue, refill coverage, toxicity escalation and an outcomes registry.",
+     "locator": "HAI evidence and pathway revision · 'Programme readiness'"
+    },
+    {
+     "source": "ESMO 2026",
+     "ref": "41990853",
+     "position": "Groups HAI with chemo- and radioembolisation as [III, C] intensification or salvage in liver-dominant disease; the roadmap criticises this for lumping HAI with modalities that failed in randomised trials and leaving no adjuvant route.",
+     "locator": "Appendix: what is wrong with each paper · ESMO 2026"
+    }
+   ],
+   "divergence": "NCCN and the expert-programme paper treat HAI as a credentialed-centre therapy with defined eligibility while ESMO files it as low-grade salvage, and all conversion data are single-arm and centre-concentrated, so results at a new programme are uncertain.",
+   "proposal": "The roadmap supports HAI plus systemic therapy (Standard, grade C, expertise-dependent) for selected unresectable liver-only CRLM at a credentialed pump centre, planned during first-line treatment rather than kept as terminal salvage, with the full service team, monitoring, toxicity escalation and an outcomes registry named before activation, and conversion recorded separately from pump response.",
+   "proposal_locator": "Gate 3 · Standard option 'Hepatic arterial infusion plus systemic therapy…'; HAI evidence and pathway revision · 'Earlier HAI review with a clearance endpoint', 'Programme readiness'",
+   "rationale": "HAI conversion evidence is single-arm and concentrated in experienced centres, and biliary toxicity and pump complications are not occasional-case risks; the modality is only defensible with a credentialed programme behind it.",
+   "audit": "Credentialing records, case volume against the floor, and the 6-month grade 3 or worse toxicity and biliary toxicity review."
+  },
+  {
+   "id": "CRLM-D4",
+   "n": 4,
+   "question": "Ratify the written liver transplant protocol for CRLM: eligibility, review-board route, graft strategy including living donation, registry dataset and recurrence plan.",
+   "kind": "governance",
+   "decisions": [
+    "4"
+   ],
+   "positions": [
+    {
+     "source": "OPTN transplant-oncology guidance (Dec 2025) and OPTN Policy 9",
+     "ref": "optn-guidance",
+     "position": "CRLM is not a standardised exception: listing needs nonstandard Adult Transplant Oncology Review Board review with the CRLM form and a narrative requesting MMaT-20, floored at 15 under Policy 9.4.E. The document is review-board guidance, not Policy.",
+     "locator": "Gate 4 · Standard option 'Deceased-donor transplantation under the nonstandard review route' (when); Quick reference · transplant decision points"
+    },
+    {
+     "source": "TransMet",
+     "ref": "39306468",
+     "position": "Intention-to-treat 5-year survival 56.6% versus 12.6% with chemotherapy. Roadmap critique: 19% never received a graft, 74% recurred, the gain rests on treating recurrence, and grafts came quickly only through negotiated national prioritisation.",
+     "locator": "Gate 4 · Standard option 'Deceased-donor transplantation…' (when, note)"
+    },
+    {
+     "source": "IHPBA 2021",
+     "ref": "34506756",
+     "position": "Permits extended-criteria grafts, machine perfusion and deceased- or living-donor RAPID; living donation only at centres meeting international benchmarks, preferably within a trial; no retransplantation for recurrent metastases.",
+     "locator": "Gate 4 · Standard option 'Living-donor or RAPID graft strategy' (when)"
+    },
+    {
+     "source": "North American LDLT series",
+     "ref": "35353121",
+     "position": "Ten of 91 evaluated patients transplanted at three centres, 1.5-year survival 100% and recurrence-free survival 62%. Roadmap critique: tiny, single-arm and short, non-transplanted patients unreported; the commentary calls it a technical demonstration.",
+     "locator": "Gate 4 · option 'Living-donor or RAPID graft strategy' (pref, note); What we are not sure about · 'Living-donor transplantation is an established route…'"
+    }
+   ],
+   "divergence": "The OPTN guidance supplies an allocation route but no graft or recurrence rules, IHPBA confines living donation to benchmark centres preferably in trials, and the living-donor evidence is short single-arm data, so the graft strategy rests on institutional judgement.",
+   "proposal": "List first through the deceased-donor review-board route, where the randomised evidence and allocation pathway sit; treat living donation as a graft-supply answer at a benchmark programme with prospective entry, never a way around exception criteria; require a written protocol, transplant-oncology MDT, prospective registry and a recurrence plan agreed at selection; no ad hoc listing.",
+   "proposal_locator": "Gate 4 · Standard options (order) and 'Living-donor or RAPID graft strategy'; Gate 4 · Standard 'Keep the candidate inside protocol while waiting…'; Gate 4 · Avoid 'Ad hoc listing without auditable criteria…'",
+   "rationale": "CRLM is not a standardised OPTN exception, so the institutional protocol is the operative constraint and the programme domain of the selection table requires it in writing.",
+   "audit": "Protocol conformance and registry entry for every listed patient, reviewed quarterly."
+  },
+  {
+   "id": "CRLM-D5",
+   "n": 5,
+   "question": "Set the institutional position on transplanting outside TransMet criteria — permitted under protocol with registry entry, or not at all.",
+   "kind": "governance",
+   "decisions": [
+    "4"
+   ],
+   "positions": [
+    {
+     "source": "TransMet",
+     "ref": "39306468",
+     "position": "The only randomised evidence; it recruited 94 patients over 5.5 years at 20 centres after an independent panel rejected 40% of patients local boards had judged eligible, so nothing randomised exists outside that population.",
+     "locator": "What we are not sure about · 'Transplantation should be offered beyond TransMet criteria'"
+    },
+    {
+     "source": "Oslo cohort and SECA-II 10-year report",
+     "ref": "37494056",
+     "position": "Oslo score, CEA, largest lesion and metabolic tumour volume stratify survival strongly. Roadmap critique: one centre's thresholds, derived and tested in the same small cohorts, with no multivariable model; useful for counselling, not for relaxing eligibility.",
+     "locator": "Gate 4 · Reasonable 'Use the Oslo score, the largest lesion diameter and PET metabolic tumour volume…' (pref, avoid, note)"
+    },
+    {
+     "source": "ESMO 2026",
+     "ref": "41990853",
+     "position": "A looser filter: three or more months of stabilisation up to third line, with no MSI or PET-volume exclusion, so it would admit patients that IHPBA and the OPTN route bar.",
+     "locator": "Gate 4 · Deceased-donor option (flagnote); What we are not sure about · 'There is one set of criteria…'"
+    },
+    {
+     "source": "IHPBA 2021",
+     "ref": "34506756",
+     "position": "A stricter filter: adds metabolic-volume and lesion-glycolysis exclusions, bars MSI-high and dMMR patients, and requires six months of response; the roadmap notes none of these thresholds was validated in a large cohort.",
+     "locator": "Gate 4 · Deceased-donor option (flagnote); What we are not sure about · 'There is one set of criteria…'"
+    }
+   ],
+   "divergence": "No randomised evidence exists outside the TransMet population, ESMO's looser filter would admit patients IHPBA and the OPTN route exclude, and the prognostic scores that might justify extension are unvalidated single-centre work.",
+   "proposal": "The roadmap leaves the either/or open but constrains it: a favourable prognostic score must not justify listing outside the protocol, any pathway beyond the guidance criteria needs its own approved protocol and may not be presented as exception-eligible, the stricter criteria govern, and a mandatory registry records whether criteria were met or exceeded.",
+   "proposal_locator": "Gate 4 · Reasonable 'Use the Oslo score…' (avoid); Gate 4 · Avoid 'Ad hoc listing…'; Gate 4 · Deceased-donor option (flagnote); What we are not sure about · 'Transplantation should be offered beyond TransMet criteria'",
+   "rationale": "There is no randomised evidence outside the TransMet population, and the roadmap lists this among the statements that are locally reasonable but not evidence based.",
+   "audit": "Mandatory registry recording whether criteria were met or exceeded, recurrence site and post-recurrence survival."
+  },
+  {
+   "id": "CRLM-D6",
+   "n": 6,
+   "question": "Define the pre-transplant checkpoint-inhibitor policy for MSI-high candidates, including washout and the approval route, before any such patient is listed.",
+   "kind": "governance",
+   "decisions": [
+    "1",
+    "4"
+   ],
+   "positions": [
+    {
+     "source": "OPTN transplant-oncology guidance",
+     "ref": "optn-guidance",
+     "position": "The described exception route requires microsatellite stability, so an MSI-high or dMMR patient does not qualify for it.",
+     "locator": "Gate 4 · Avoid 'Listing an MSI-high or mismatch-repair deficient patient…' (avoid)"
+    },
+    {
+     "source": "IHPBA 2021",
+     "ref": "34506756",
+     "position": "States MSI-high and dMMR patients should not currently be considered. Roadmap critique: the exclusion rests on rejection risk if post-transplant immunotherapy were needed, not on outcome data, and its reviewers expect it to be overtaken.",
+     "locator": "Gate 4 · Avoid 'Listing an MSI-high…' (note); What we are not sure about · 'MSI-high and mismatch-repair-deficient patients are excluded…'"
+    },
+    {
+     "source": "ESMO 2026",
+     "ref": "41990853",
+     "position": "Sets no MSI or mismatch-repair exclusion from transplantation at all.",
+     "locator": "Gate 4 · Avoid 'Listing an MSI-high…' (note); Gate 4 · Deceased-donor option (flagnote)"
+    },
+    {
+     "source": "CheckMate 8HW (with KEYNOTE-177)",
+     "ref": "39874977",
+     "position": "Nivolumab plus ipilimumab improved progression-free survival, but overall survival remains masked and grade 3–4 toxicity roughly doubled; in KEYNOTE-177, 29.4% progressed as best response. No trial reports liver-limited dMMR disease taken to clearance.",
+     "locator": "Gate 1 · option 'Nivolumab plus ipilimumab' (when, note); What we are not sure about · 'MSI-high and mismatch-repair-deficient patients are excluded…'"
+    }
+   ],
+   "divergence": "The OPTN route and IHPBA exclude MSI-high and dMMR patients while ESMO does not, the IHPBA exclusion rests on mechanism rather than outcome data, and no trial addresses liver-limited dMMR disease taken to clearance.",
+   "proposal": "Do not list MSI-high or dMMR patients on this exception route, even after a checkpoint response; any consideration needs a separate approved protocol with a written pre-transplant checkpoint-inhibitor policy, including washout and approval route, agreed before listing, and checkpoint exposure and rejection risk addressed before the first dose. The roadmap states no washout interval.",
+   "proposal_locator": "Gate 4 · Avoid 'Listing an MSI-high or mismatch-repair deficient patient on this exception route…'; Gate 1 · option 'Nivolumab plus ipilimumab' (avoid)",
+   "rationale": "The exception route requires microsatellite stability and IHPBA excludes these patients, while pre-transplant checkpoint exposure and post-transplant rejection risk must be addressed before the first dose.",
+   "audit": "Written policy in place before listing; every exposed candidate has a documented graft-safety assessment."
+  },
+  {
+   "id": "CRLM-D7",
+   "n": 7,
+   "question": "Approve remnant-volume thresholds and the augmentation strategy hierarchy (PVE, LVD, two-stage, ALPPS), including who decides between them.",
+   "kind": "clinical",
+   "decisions": [
+    "3"
+   ],
+   "positions": [
+    {
+     "source": "LIGRO",
+     "ref": "28902669",
+     "position": "With a standardised remnant under 30%, ALPPS achieved resection in 92% versus 57% with two-stage hepatectomy. Roadmap critique: endpoint was resectability not survival, grade 3a+ complications 43% in both arms, 90-day mortality 8.3% versus 6.1%, volumetry left to local practice.",
+     "locator": "Gate 3 · Reasonable option 'ALPPS' (when, avoid)"
+    },
+    {
+     "source": "LIGRO (rescue and two-stage arms)",
+     "ref": "28902669",
+     "position": "Rescue ALPPS after failed portal occlusion narrowed the gap (82% versus 92%, not significant), so embolisation-first with ALPPS in reserve is not excluded; two-stage completion of 57% fell below published 60–75% under the strict 30% threshold.",
+     "locator": "Gate 3 · Reasonable options 'Portal vein embolisation or liver venous deprivation' and 'Two-stage hepatectomy'"
+    },
+    {
+     "source": "ESMO 2026",
+     "ref": "41990853",
+     "position": "Mandates resectability assessment at baseline and every two to three months but defines neither resectability nor an adequate future liver remnant.",
+     "locator": "Appendix: what is wrong with each paper · ESMO 2026"
+    },
+    {
+     "source": "ASCO 2023",
+     "ref": "36252154",
+     "position": "Declares resectability, future liver remnant and staged hepatectomy out of scope, so it offers no threshold or augmentation guidance.",
+     "locator": "Appendix: what is wrong with each paper · ASCO 2023"
+    }
+   ],
+   "divergence": "Only LIGRO compares augmentation routes, on resectability rather than survival, and neither ESMO nor ASCO defines an adequate remnant, so the thresholds and the hierarchy are local policy.",
+   "proposal": "Least invasive first: portal vein embolisation or liver venous deprivation, then staged hepatectomy, with ALPPS in reserve for a fit patient whose remnant will not reach threshold in time, at a centre doing it regularly. The order reflects morbidity and the LIGRO rescue finding, not survival; thresholds, hierarchy, decider and embolisation-to-surgery interval need hepatobiliary and IR approval (grade D).",
+   "proposal_locator": "Gate 3 · Reasonable remnant-augmentation options (order and flagnote)",
+   "rationale": "Modality-specific remnant thresholds are local policy without comparative outcome evidence, and the augmentation options differ in morbidity rather than in proven survival.",
+   "audit": "Perioperative safety measure by procedure type, including augmentation and staged strategies, plus resection rate and dropout between stages."
+  },
+  {
+   "id": "CRLM-D8",
+   "n": 8,
+   "question": "Set the minimum ablative margin that counts toward clearance, and require it to be documented.",
+   "kind": "clinical",
+   "decisions": [
+    "2"
+   ],
+   "positions": [
+    {
+     "source": "Shady ablation-margin series (MSKCC)",
+     "ref": "26267832",
+     "position": "Local recurrence fell with margin width (90% at 0 mm, 60% at 1–5 mm, 15% over 5–10 mm, 5% over 10 mm) and 5 mm or less carried HR 9.9. Critique: margin unmeasurable in 25%, never histologically confirmed.",
+     "locator": "Gate 2 · Standard 'Thermal ablation alone or with resection…' (avoid); What we are not sure about · 'A confirmed ablative margin is the same clearance as a pathologic margin'"
+    },
+    {
+     "source": "COLLISION",
+     "ref": "39848272",
+     "position": "Ablation for small lesions halved adverse events versus resection, but survival non-inferiority was not formally shown (HR 1.05, CI to 1.58); an imaging margin under 5 mm was rare (5%) yet 47% of those progressed.",
+     "locator": "Gate 2 · Standard 'Thermal ablation alone or with resection…' (pref, note); What we are not sure about · 'A confirmed ablative margin…'"
+    },
+    {
+     "source": "NCCN Colon v2.2026",
+     "ref": "nccn",
+     "position": "Prioritises feasible thermal ablation for selected lesions of 3 cm or less.",
+     "locator": "Gate 2 · Standard 'Thermal ablation alone or with resection…' (pref)"
+    },
+    {
+     "source": "ESMO 2026",
+     "ref": "41990853",
+     "position": "Recommends ablation over resection for metastases under 3 cm [II, B]; the roadmap criticises it for not qualifying this by lesion position or achievable margin.",
+     "locator": "Gate 2 · Standard 'Thermal ablation…' (pref); What we are not sure about · 'Ablation and resection are equivalent for small lesions'; Appendix · ESMO 2026"
+    }
+   ],
+   "divergence": "The guidelines endorse ablation for small lesions without fixing a margin, while the series that supplies the 5 mm threshold is single-centre with a quarter of margins unmeasurable and no histological confirmation.",
+   "proposal": "Ablation counts as clearance only when every original site is treated and a circumferential margin is confirmed; offer it where a margin beyond 5 mm is achievable and avoid it where only under 5 mm is possible; re-read margins at 4–8 weeks; dashboard target: margin documented in 95% or more of ablations, with local progression tracked by margin band.",
+   "proposal_locator": "Gate 2 · Standard 'Thermal ablation alone or with resection…'; Gate 2 · Standard 'After clearance, run the longitudinal loop…'; The dashboard · 'Ablation quality'",
+   "rationale": "Ablation counts as clearance only when a circumferential margin is confirmed, and local progression risk rises steeply below 5 mm.",
+   "audit": "Margin documented in 95% or more of ablations, with local progression reported by achieved margin band at 12 and 24 months."
+  },
+  {
+   "id": "CRLM-D9",
+   "n": 9,
+   "question": "Name the referral route and the specialist team for peritoneal metastases, which are assessed outside this liver pathway.",
+   "kind": "governance",
+   "decisions": [
+    "2",
+    "4"
+   ],
+   "positions": [
+    {
+     "source": "ESMO 2026",
+     "ref": "41990853",
+     "position": "Recommends cytoreductive surgery for peritoneal-only disease [II, A] and does not recommend HIPEC outside trials [II, D].",
+     "locator": "Gate 2 · Reasonable 'Cytoreductive surgery with systemic chemotherapy…' (pref); Gate 2 · Avoid 'Oxaliplatin-based HIPEC…'"
+    },
+    {
+     "source": "ASCO 2023",
+     "ref": "36252154",
+     "position": "Its cytoreduction recommendation requires no extraperitoneal metastases, so combined liver and peritoneal disease falls outside it and becomes a systemic-therapy-first, case-by-case decision.",
+     "locator": "Gate 2 · Reasonable 'Cytoreductive surgery…' (note)"
+    },
+    {
+     "source": "IHPBA 2021",
+     "ref": "34506756",
+     "position": "Found no evidence supporting transplantation with extrahepatic disease; the roadmap treats any peritoneal disease as ending transplant intent, an absence-of-evidence boundary rather than a measured harm.",
+     "locator": "Gate 4 · Avoid 'Transplanting with any extrahepatic, nodal or peritoneal disease…'"
+    }
+   ],
+   "divergence": "ESMO supports cytoreduction for peritoneal-only disease while ASCO's recommendation excludes extraperitoneal metastases, leaving combined liver and peritoneal disease without guideline support.",
+   "proposal": "Peritoneal disease goes to a peritoneal surface malignancy team in a specialised centre, not managed as an extension of hepatic clearance; cytoreduction only where complete cytoreduction is feasible, no routine oxaliplatin HIPEC, and any peritoneal disease ends transplant intent. The open CRLM-R1 proposal likewise sends limited peritoneal plus liver disease to such a centre. No team or route is named.",
+   "proposal_locator": "Gate 2 · Reasonable 'Cytoreductive surgery with systemic chemotherapy for peritoneal metastases…'; Gate 2 · Avoid 'Oxaliplatin-based HIPEC…'; Previously treated extrahepatic disease · CRLM-R1 proposed rules (OPEN)",
+   "rationale": "Peritoneal disease is assessed by a peritoneal surface malignancy team rather than routed automatically through the liver pathway, and any peritoneal disease ends transplant intent.",
+   "audit": "Referral route documented; cases with peritoneal disease tracked out of the liver pathway rather than treated as an extension of it."
+  },
+  {
+   "id": "CRLM-D10",
+   "n": 10,
+   "question": "Decide which transplant criteria set governs locally, and record the resolution of each named disagreement between the OPTN guidance route, IHPBA 2021 and ESMO 2026 — MSI-high and dMMR status, BRAF V600E versus any BRAF mutation, the metabolic tumour volume and total lesion glycolysis bars, the months of stability required and the line of therapy by which transplantation may be considered.",
+   "kind": "clinical",
+   "decisions": [
+    "4"
+   ],
+   "positions": [
+    {
+     "source": "OPTN transplant-oncology guidance",
+     "ref": "optn-guidance",
+     "position": "Demands BRAF wild type and microsatellite stability, a 12-month interval since CRLM diagnosis, at least six months stable or regressing, CEA no higher than 80 µg/L and no pretreatment lesion over 10 cm; its BRAF wording also excludes non-V600 mutants.",
+     "locator": "Gate 4 · Deceased-donor option (pref, flagnote); Quick reference · 'Transplant: the Oslo score and the eligibility decision points'"
+    },
+    {
+     "source": "IHPBA 2021",
+     "ref": "34506756",
+     "position": "Requires six months of response and one year from diagnosis of unresectable disease; excludes BRAF V600E only, MSI-high/dMMR outright, metabolic volume above 70 cm³ with glycolysis above 260 g, and undifferentiated or signet-ring histology.",
+     "locator": "Gate 4 · Deceased-donor option (flagnote); Quick reference · transplant decision points"
+    },
+    {
+     "source": "ESMO 2026",
+     "ref": "41990853",
+     "position": "Recommends transplantation [II, A] after three or more months of stabilisation no later than third line, BRAF wild type, CEA under 80 ng/mL, resected primary, age 18–65, with no MSI or PET-volume exclusion.",
+     "locator": "Gate 4 · Deceased-donor option (flagnote); Quick reference · transplant decision points"
+    },
+    {
+     "source": "TransMet",
+     "ref": "39306468",
+     "position": "Its own entry criteria form a further filter; the roadmap notes no study compares these criteria sets against each other.",
+     "locator": "What we are not sure about · 'There is one set of criteria for transplanting colorectal liver metastases'"
+    },
+    {
+     "source": "Grut metabolic tumour volume study",
+     "ref": "36241941",
+     "position": "The 70 cm³ cut-off was set by ROC analysis in the same 40-patient cohort where it is tested, and the signal held only for scans within 90 days of transplant.",
+     "locator": "Gate 4 · Reasonable 'Use the Oslo score…' (note); What we are not sure about · 'The Oslo score, the 70 cm³ metabolic tumour volume cut-off…'"
+    }
+   ],
+   "divergence": "A dMMR patient with four months of stability and a 90 cm³ metabolic tumour volume qualifies under ESMO but not under IHPBA or the OPTN route, while a non-V600E BRAF mutant passes IHPBA but fails the OPTN wording.",
+   "proposal": "Where the randomised evidence (TransMet), the consensus (IHPBA 2021) and the institutional protocol conflict, the stricter governs. The roadmap calls this a defensible choice rather than a finding and leaves open whether MSI-high/dMMR is excluded outright and whether the BRAF exclusion covers V600E only or any BRAF mutation.",
+   "proposal_locator": "Gate 4 · Standard option 'Deceased-donor transplantation…' (flagnote); Quick reference · transplant decision points (foot); What we are not sure about · 'There is one set of criteria…'",
+   "rationale": "The documents a review board will be handed disagree on decision points that decide individual patients, and the rule that the stricter governs does not by itself say which document supplies the stricter value for each criterion.",
+   "audit": "A single written criteria table in the protocol, with the source of every assessment named and every conflict shown as resolved; conformance checked for each listed patient."
+  },
+  {
+   "id": "CRLM-D11",
+   "n": 11,
+   "question": "Resolve the two numeric boundaries in the OPTN transplant-oncology guidance before the first filing: a CEA of exactly 80 µg/L, and the definition of progression as a 10% increase in diameter while being labelled RECIST 1.1.",
+   "kind": "governance",
+   "decisions": [
+    "4"
+   ],
+   "positions": [
+    {
+     "source": "OPTN transplant-oncology guidance",
+     "ref": "optn-guidance",
+     "position": "Its initial exclusion is CEA above 80 µg/L while the renewal wording requires below 80, and footnotes 20–21 define progression as a 10% diameter increase or new lesions while labelling this RECIST 1.1.",
+     "locator": "Gate 4 · Standard 'Keep the candidate inside protocol while waiting…' (note)"
+    },
+    {
+     "source": "ESMO 2026",
+     "ref": "41990853",
+     "position": "Uses CEA under 80 ng/mL as its transplant criterion.",
+     "locator": "Gate 4 · Deceased-donor option (flagnote); Quick reference · transplant decision points"
+    }
+   ],
+   "divergence": "The OPTN guidance is internally inconsistent at a CEA of exactly 80 and its 10% progression figure differs from the usual target-lesion threshold, so eligibility can turn on which wording is read.",
+   "proposal": "Treat an exact CEA of 80 as needing explicit review rather than an assumed pass; keep the guidance's 10% progression wording and flag it rather than silently substituting 20%; resolve both in writing before any exception request is filed.",
+   "proposal_locator": "Gate 4 · Standard 'Keep the candidate inside protocol while waiting…' (note); Quick reference · transplant decision points (foot)",
+   "rationale": "The initial exclusion is stated as CEA above 80 and the renewal wording as below 80, so an exact value of 80 has no stated answer; and the 10% figure differs from the usual target-lesion threshold, so a candidate can be progressing under one reading and stable under the other.",
+   "audit": "Both boundaries addressed in writing, with the source wording preserved rather than silently substituted, before any exception request is submitted."
+  },
+  {
+   "id": "CRLM-D12",
+   "n": 12,
+   "question": "Decide whether anti-EGFR therapy is used with conversion intent in left-sided RAS and BRAF wild-type disease, or only as the first-line survival choice.",
+   "kind": "clinical",
+   "decisions": [
+    "1",
+    "3"
+   ],
+   "positions": [
+    {
+     "source": "ASCO 2023",
+     "ref": "36252154",
+     "position": "Strongly recommends anti-EGFR plus doublet first line for left-sided RAS wild-type disease and not right-sided (survival HR 0.71 versus 1.35); the roadmap notes this synthesises retrospectively defined subgroups.",
+     "locator": "Gate 1 · option 'Doublet plus anti-EGFR' (when); What we are not sure about · 'Anti-EGFR therapy is the clear first-line choice…'"
+    },
+    {
+     "source": "CAIRO5",
+     "ref": "37329889",
+     "position": "In left-sided RAS/BRAF wild-type disease panitumumab raised response from 53% to 80% and depth of response, yet complete local treatment was 58% in both arms and those groups closed early for futility.",
+     "locator": "Gate 1 · option 'Doublet plus anti-EGFR' (avoid); What we are not sure about · 'A deeper radiological response produces more clearance'"
+    },
+    {
+     "source": "FIRE-3",
+     "ref": "27575024",
+     "position": "Centrally reviewed response 72.0% versus 56.1% with cetuximab, but post hoc; the investigator-assessed primary endpoint was negative and no sidedness or resection analysis was reported.",
+     "locator": "Gate 1 · option 'Doublet plus anti-EGFR' (pref, note)"
+    },
+    {
+     "source": "CALGB/SWOG 80405",
+     "ref": "28632865",
+     "position": "Survival 30.0 versus 29.0 months with cetuximab versus bevacizumab (HR 0.88, p=0.08); sidedness collected post hoc and chemotherapy backbone not randomised.",
+     "locator": "Gate 1 · option 'Doublet plus anti-EGFR' (avoid, note)"
+    },
+    {
+     "source": "MH CRLM alignment worksheet",
+     "ref": "mh-align",
+     "position": "Asks whether the left-sided RAS wild-type default should be restated as anti-EGFR plus doublet on survival grounds, with bevacizumab an acceptable alternative.",
+     "locator": "Gate 1 · Standard molecular options (flagnote)"
+    }
+   ],
+   "divergence": "ASCO's strong survival-based recommendation stands, but the one randomised trial that measured clearance found deeper response without more complete local treatment, so a conversion rationale is unsupported.",
+   "proposal": "Use anti-EGFR plus doublet first line for left-sided, RAS and BRAF wild-type, mismatch-repair proficient disease when maximal shrinkage is the goal (grade B for this use), but do not read shrinkage as a survival or conversion advantage: the first-line recommendation is kept while the claim that it converts more livers is rejected.",
+   "proposal_locator": "Gate 1 · Standard molecular options · 'Doublet plus anti-EGFR' (pref, avoid, note) and flagnote",
+   "rationale": "In the one randomised comparison that measured clearance, panitumumab raised objective response from 53% to 80% and deepened response without changing complete local treatment (58% in both arms), and those groups were closed early for futility; the conversion rationale and the first-line rationale are not the same claim.",
+   "audit": "Conversion-intent regimen recorded against the stated indication, with the complete-local-treatment rate reported by regimen."
+  },
+  {
+   "id": "CRLM-D13",
+   "n": 13,
+   "question": "Set the institutional position on transarterial therapy in refractory disease: whether second-line Y90 and DEBIRI are offered at all, and the requirement that every transarterial treatment be recorded as regional control with a named reassessment date.",
+   "kind": "clinical",
+   "decisions": [
+    "5"
+   ],
+   "positions": [
+    {
+     "source": "EPOCH",
+     "ref": "34541864",
+     "position": "Second-line Y90 met both progression-free endpoints but survival was 14.0 versus 14.4 months, grade 3+ events 68.4% versus 49.3% with three possibly related deaths; manufacturer-sponsored, with a non-contemporary control arm.",
+     "locator": "Gate 5 · Reasonable option 'Y90 radioembolisation, second line'"
+    },
+    {
+     "source": "ASCO 2023",
+     "ref": "36252154",
+     "position": "Does not recommend SIRT routinely, judging harms to outweigh benefits on low-quality evidence.",
+     "locator": "Gate 5 · option 'Y90 radioembolisation, second line' (note)"
+    },
+    {
+     "source": "Hendlisz Y90 trial",
+     "ref": "20567019",
+     "position": "In 46 refractory patients, time to liver progression was 5.5 versus 2.1 months with no survival difference, which the authors attribute to crossover.",
+     "locator": "Gate 5 · option 'Y90 radioembolisation, second line' (note)"
+    },
+    {
+     "source": "DEBIRI trial",
+     "ref": "22493375",
+     "position": "Reported survival 22 versus 15 months against FOLFIRI in 74 patients; the roadmap grades it D because the comparator was obsolete, treatment intensity differed between arms and the report is internally inconsistent.",
+     "locator": "Gate 5 · Reasonable option 'TACE or DEBIRI'; What we are not sure about · 'DEBIRI prolongs survival…'"
+    },
+    {
+     "source": "NCCN Colon v2.2026",
+     "ref": "nccn",
+     "position": "Excludes prior liver radiation from HAI selection, so HAI eligibility must be checked before any hepatic irradiation such as Y90.",
+     "locator": "Gate 5 · option 'Y90 radioembolisation, second line' (avoid); HAI evidence and pathway revision · 'Radiation sequencing'"
+    }
+   ],
+   "divergence": "EPOCH met surrogate endpoints without a survival gain and ASCO advises against routine SIRT, while the DEBIRI survival signal comes from one small trial against an obsolete comparator.",
+   "proposal": "Keep second-line Y90 (Reasonable, grade B) and TACE or DEBIRI (grade D) as hepatic-control options for selected liver-dominant refractory disease, never offered for survival, with no set priority among them; record intent as control with a reassessment date, restage before repeating, check HAI eligibility before liver radiation; IR to ratify the regional-control label and not-first-line use.",
+   "proposal_locator": "Gate 5 · Standard 'Record the intent as control…'; Gate 5 · Reasonable options (order, flagnote)",
+   "rationale": "Neither improved overall survival — EPOCH gave 14.0 versus 14.4 months with grade 3 or worse events in 68% and three treatment-related deaths, and the DEBIRI survival figure comes from 74 patients against an obsolete comparator — and ASCO does not recommend SIRT routinely at all.",
+   "audit": "Every transarterial case recorded with intent, reassessment date and hepatic reserve before and after; cumulative radiation record maintained and HAI eligibility checked before liver irradiation."
+  },
+  {
+   "id": "CRLM-D14",
+   "n": 14,
+   "question": "Decide whether perioperative chemotherapy is offered outside the population in which it was tested — one to four metastases, no extrahepatic disease — and require the indication to be recorded each time it is given.",
+   "kind": "clinical",
+   "decisions": [
+    "2"
+   ],
+   "positions": [
+    {
+     "source": "EORTC 40983 (with long-term report)",
+     "ref": "18358928",
+     "position": "Missed its primary endpoint as randomised (3-year PFS HR 0.79, p=0.058), showed no survival difference at 8.5 years, did not raise resection and increased complications (25% versus 16%), in 1–4 metastases, 52% solitary.",
+     "locator": "Gate 2 · Standard 'Perioperative chemotherapy for clearly resectable disease is optional…' (avoid, note)"
+    },
+    {
+     "source": "ASCO 2023",
+     "ref": "36252154",
+     "position": "Recommends six months of total perioperative therapy, a duration taken from EORTC 40983; its other cited adjuvant trial, JCOG0603, improved disease-free but not overall survival.",
+     "locator": "Gate 2 · Standard 'Perioperative chemotherapy…' (pref, note)"
+    },
+    {
+     "source": "New EPOC",
+     "ref": "24717919",
+     "position": "Adding cetuximab to perioperative chemotherapy shortened survival (81.0 versus 55.4 months, HR 1.45), with harm concentrated in good-prognosis patients.",
+     "locator": "Gate 2 · Avoid 'Adding cetuximab to perioperative chemotherapy…'"
+    }
+   ],
+   "divergence": "ASCO's six-month recommendation rests on a trial that missed its primary endpoint in the most favourable population, so offering it for higher-burden disease is extrapolation the roadmap labels as judgement.",
+   "proposal": "Perioperative chemotherapy for clearly resectable disease is optional, not automatic; where used (more or larger metastases, clinical risk score above 2, or to observe biology) state the six-month total framework. Graded C because extending it beyond the trial population is judgement; perioperative cetuximab is avoided.",
+   "proposal_locator": "Gate 2 · Standard 'Perioperative chemotherapy for clearly resectable disease is optional, not mandatory…'; Gate 2 · Avoid 'Adding cetuximab…'",
+   "rationale": "EORTC 40983 missed its primary endpoint, showed no survival difference at 8.5 years, did not raise the resection rate and raised postoperative complications; extending it to higher-burden disease and a risk score above 2 is a local judgement that should be visible as one.",
+   "audit": "Indication recorded for every perioperative course, with 90-day complications and resection rate reported against the recorded indication."
+  },
+  {
+   "id": "CRLM-D15",
+   "n": 15,
+   "question": "Decide how an ablation margin that cannot be measured is recorded and managed, and who reads the confirmatory study.",
+   "kind": "clinical",
+   "decisions": [
+    "2"
+   ],
+   "positions": [
+    {
+     "source": "Shady ablation-margin series (MSKCC)",
+     "ref": "26267832",
+     "position": "The margin was inferred from landmark distances on pre- and post-ablation CT, could not be measured in a quarter of tumours, was never confirmed histologically, and improved alongside a change in imaging technique.",
+     "locator": "What we are not sure about · 'A confirmed ablative margin is the same clearance as a pathologic margin'"
+    },
+    {
+     "source": "COLLISION",
+     "ref": "39848272",
+     "position": "An imaging margin under 5 mm was seen in 5% of ablated tumours with 47% progressing, while pathologic R1 was found in 12% of resected tumours with 36% progressing, so the two measures disagree on clearance failure.",
+     "locator": "What we are not sure about · 'A confirmed ablative margin…'"
+    }
+   ],
+   "divergence": "Imaging and pathologic margins are different observations that disagree on how often clearance failed, and the roadmap gives no specific rule for a margin that cannot be read.",
+   "proposal": "The roadmap treats an ablated site as incompletely treated unless a circumferential margin is confirmed and re-reads ablation margins at 4–8 weeks; it does not say who reads the confirmatory study or how an unmeasurable margin is otherwise managed.",
+   "proposal_locator": "Gate 2 · Standard 'After clearance, run the longitudinal loop…' (pref, note); Gate 2 · Standard 'Thermal ablation alone or with resection…'",
+   "rationale": "In the series the 5 mm threshold comes from, the margin was unmeasurable in a quarter of tumours and never confirmed histologically, and in COLLISION the imaging and pathologic margin categories did not agree on how often clearance failed; an unreadable margin is a decision, not a gap in the record.",
+   "audit": "Proportion of ablations with an unmeasurable margin, what was done next, and local progression in that group at 12 and 24 months."
+  },
+  {
+   "id": "CRLM-D16",
+   "n": 16,
+   "question": "Commit the surveillance and salvage capacity the published survival figures depend on — thoracic surveillance, pulmonary metastasectomy, repeat hepatic clearance — and name the owner of each.",
+   "kind": "governance",
+   "decisions": [
+    "2",
+    "4"
+   ],
+   "positions": [
+    {
+     "source": "TransMet",
+     "ref": "39306468",
+     "position": "74% recurred after transplantation, mostly in the lung; 54% of isolated recurrences were lung-only and 46% of those were treated with curative intent, so the survival gain depends on treating recurrence.",
+     "locator": "Gate 4 · Deceased-donor option (note); What we are not sure about · 'The survival figures on this page describe what the first operation achieves'"
+    },
+    {
+     "source": "SECA-II 10-year report",
+     "ref": "42572136",
+     "position": "Relapse in 48% with median relapse-free survival 24.3 months; the authors state relapse-free survival is not a valid efficacy measure in this setting.",
+     "locator": "Gate 4 · Reasonable 'Use the Oslo score…' (note); What we are not sure about · 'The survival figures on this page…'"
+    },
+    {
+     "source": "Shady ablation-margin series (MSKCC)",
+     "ref": "26267832",
+     "position": "Median survival was 65 months without liver progression, 51 months when progression was re-ablated and 22 months once re-treatment was no longer possible.",
+     "locator": "What we are not sure about · 'The survival figures on this page…'"
+    },
+    {
+     "source": "Chinese 2024 consensus",
+     "ref": "40640089",
+     "position": "Would fix post-clearance follow-up at 3-monthly CEA and cross-sectional imaging including liver MRI for two years (Grade I); the worksheet asks whether to adopt it in place of the roadmap's interval.",
+     "locator": "Gate 2 · Standard 'After clearance, run the longitudinal loop…' (note)"
+    }
+   ],
+   "divergence": "The published survival depends on salvage of recurrence, yet no comparative evidence supports any surveillance schedule, and the Chinese consensus prescribes a tighter interval than the roadmap.",
+   "proposal": "Keep a post-clearance follow-up loop (CEA and imaging every 3–6 months, then by risk; ablation sites re-read at 4–8 weeks; colonoscopy within two- and five-year frameworks) and agree the transplant surveillance and recurrence plan at selection, tracking recurrence site and management. The roadmap names no owners.",
+   "proposal_locator": "Gate 2 · Standard 'After clearance, run the longitudinal loop…'; Gate 4 · Standard 'Keep the candidate inside protocol while waiting…'; The dashboard · 'Transplant pathway'",
+   "rationale": "After transplantation three-quarters of TransMet patients and half of SECA-II patients recurred, mostly in the lung, and the survival gain came from treating those recurrences with curative intent; the ablation series shows the same pattern, with median survival falling from 51 to 22 months once a patient is no longer a candidate for re-treatment.",
+   "audit": "Recurrence site, time to detection, treatment given and post-recurrence survival for every cleared and transplanted patient, reviewed quarterly."
+  },
+  {
+   "id": "CRLM-D17",
+   "n": 17,
+   "question": "Agree the registry dataset for every conversion-intent course: who judged resectability at each reassessment, what they judged, and whether the operation happened.",
+   "kind": "operational",
+   "decisions": [
+    "3"
+   ],
+   "positions": [],
+   "divergence": "No source positions; programme decision.",
+   "proposal": "Reassess resectability with a surgeon present every 8 weeks during conversion-intent therapy (dashboard target 85% or more), and track the conversion rate and time from first response to operation; the roadmap notes its written unresectability record documents a judgement, not a measurement.",
+   "proposal_locator": "Gate 3 · Standard 'Give conversion therapy against a defined surgical endpoint…'; The dashboard · 'Reassessment cadence'; What we are not sure about · 'Surgical reassessment every 8 weeks…' and 'Permanent unresectability is a determination…'",
+   "rationale": "Resectability judgements are the least reproducible step in this pathway — unanimous in only 66% of baseline and 42% of follow-up panel assessments in CAIRO5, and locally determined with no central review in the other conversion series — so conversion rates are uninterpretable without recording who decided.",
+   "audit": "Named assessor and judgement at each reassessment; conversion rate and time from first response to operation reported from that record."
+  },
+  {
+   "id": "CRLM-D18",
+   "n": 18,
+   "question": "Pilot for 90 days, audit 20 consecutive cases, then revise before approval as a clinical practice guideline.",
+   "kind": "governance",
+   "decisions": [],
+   "positions": [],
+   "divergence": "No source positions; programme decision.",
+   "proposal": "The roadmap describes itself as a draft pending multidisciplinary and institutional governance review, not active clinical policy; its operating requirements are grade D by construction and are to be audited for adherence rather than effectiveness, against the dashboard measures.",
+   "proposal_locator": "Provenance; Operations · The board meeting (closing note); The dashboard",
+   "rationale": "This is a draft for multidisciplinary and institutional governance review, not active clinical policy, and the operating measures are grade D by construction.",
+   "audit": "The 20-case audit against the dashboard measures, with revisions recorded before approval."
+  },
+  {
+   "id": "CRLM-D19",
+   "n": 19,
+   "question": "Ratify early HAI review, disease-specific selection and programme safeguards.",
+   "kind": "governance",
+   "decisions": [
+    "3",
+    "4",
+    "5"
+   ],
+   "positions": [
+    {
+     "source": "NCCN Colon v2.2026",
+     "ref": "nccn",
+     "position": "HAI needs a prior systemic line and operative fitness, no concurrent VEGF inhibitors, and no prior liver radiation (PDF p. 39); the roadmap keeps the radiation restriction unless a specialist makes an explicit exception decision.",
+     "locator": "Gate 3 · HAI option (pref, avoid); HAI evidence and pathway revision · 'Radiation sequencing'"
+    },
+    {
+     "source": "Floxuridine–bevacizumab biliary toxicity study",
+     "ref": "24154839",
+     "position": "Concurrent systemic bevacizumab increases floxuridine HAI biliary toxicity, so the two are not given together.",
+     "locator": "HAI evidence and pathway revision · 'Feasibility and medication safeguards'"
+    },
+    {
+     "source": "Minimum requirements for new HAI programmes",
+     "ref": "39962001",
+     "position": "Readiness means named surgeon and backup, oncologist, infusion nursing and pharmacy, perfusion assessment, IR rescue, refill coverage, dose-hold rules, biliary escalation and a registry; credentialing covers the whole service.",
+     "locator": "HAI evidence and pathway revision · 'Programme readiness'"
+    },
+    {
+     "source": "Hill, liver transplantation after HAI",
+     "ref": "37210451",
+     "position": "Of seven patients transplanted after HAI, five were for biliary complications and two for residual tumour, and dissection and arterial reconstruction were difficult; this supports early technical planning, not a validated HAI-to-transplant schedule.",
+     "locator": "What we are not sure about · 'HAI referral and transplant evaluation should proceed in parallel'; HAI evidence and pathway revision · 'Parallel transplant assessment'"
+    },
+    {
+     "source": "Dutch adjuvant PUMP (ASCO 2026)",
+     "ref": "pump2026",
+     "position": "In low-risk resected disease, adjuvant HAI alone did not significantly improve progression-free survival (HR 0.88); survival immature; untested with modern systemic therapy or in conversion.",
+     "locator": "Gate 3 · Reasonable 'Adjuvant hepatic arterial infusion after resection…' (note); HAI evidence and pathway revision · 'Adjuvant HAI: updated evidence'"
+    }
+   ],
+   "divergence": "NCCN, the expert-programme paper and the bevacizumab data agree on restrictive safeguards, but adjuvant evidence is negative or dated and the HAI-to-transplant evidence is seven cases, so the parallel-pathway timing is unvalidated.",
+   "proposal": "Review HAI early, during first-line planning, reassess after systemic therapy and before hepatic radiation; record conversion, regional-control and adjuvant intent separately, adjuvant use only selectively; run transplant review in parallel without requiring HAI exhaustion; name the whole service team before activation; avoid bevacizumab with floxuridine and keep NCCN's VEGF restriction.",
+   "proposal_locator": "HAI evidence and pathway revision (15 October 2026) · all subsections; Gate 3 · HAI option and Reasonable 'Adjuvant hepatic arterial infusion…'; Gate 4 · Deceased-donor option (avoid)",
+   "rationale": "Before activation, name the HPB pump surgeon and backup, medical oncology lead, nursing/pharmacy team, nuclear-medicine perfusion service and IR rescue service; define refill/maintenance coverage, laboratory monitoring and dose holds, biliary-toxicity escalation, and an outcomes registry. Minimum programme requirements: PMID 39962001; surgical toolkit: PMID 36346892. Avoid concurrent bevacizumab with FUDR (PMID 24154839); retain the NCCN CRLM restriction on concurrent VEGF inhibitors. Separate conversion, regional-control and selective adjuvant intent; transplant review proceeds in parallel.",
+   "audit": "Record intent, referral timing, systemic plan, perfusion verification, dose intensity, biliary complications, reassessment and complete resection/ablation outcomes."
+  }
+ ]
+}

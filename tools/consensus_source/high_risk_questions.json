@@ -1,0 +1,568 @@
+{
+ "HCC-B1": {
+  "question": "How far beyond UNOS-DS should the program attempt downstaging?",
+  "group": "HCC",
+  "source_positions": [
+   {
+    "key": "xu",
+    "quote": "sum of tumor number and largest tumor diameter ≤12",
+    "locator": "Author-manuscript PDF p11, conclusion",
+    "meaning": "Observationally proposed upper burden boundary, not an externally validated treatment-benefit rule."
+   },
+   {
+    "key": "xu",
+    "quote": "exclusion criteria of AFP ≥100 and Child Pugh B/C",
+    "locator": "Author-manuscript PDF p11, conclusion",
+    "meaning": "Supports a narrower initial cohort; does not establish that all excluded patients cannot benefit."
+   },
+   {
+    "key": "aasld",
+    "quote": "3-to-6-month period of observation",
+    "locator": "Author-manuscript PDF p56, guidance statement 36",
+    "meaning": "Six months selects the conservative end of this guidance range; it is not a guarantee of favorable biology."
+   }
+  ]
+ },
+ "HCC-B2": {
+  "question": "Which PVTT anatomy could enter a transplanting study?",
+  "group": "HCC",
+  "source_positions": [
+   {
+    "key": "round2_yoon",
+    "quote": "Those with CR or PR were defined as DS responders",
+    "locator": "Published PDF p2 / journal p7260, response assessment",
+    "meaning": "Yoon did not require the complete vascular clearance proposed here; 65/83 responders still had viable PVTT on explant."
+   },
+   {
+    "key": "round2_yoon",
+    "quote": "our study did not identify it as an independent predictor of survival.",
+    "locator": "Published PDF p10 / journal p7268, discussion of PVTT grade",
+    "meaning": "The selected cohort did not establish a sharp anatomical survival cutoff. Vp4 five-year OS was 50.0%; small numbers and non-intention-to-treat selection prevent an equivalence claim."
+   },
+   {
+    "key": "pvtt_ye",
+    "quote": "lobar PVTT: tumor thrombi involving left and right branches or main portal vein",
+    "locator": "Complete early-online PDF p3, Diagnosis of PVTT",
+    "meaning": "This poor-outcome group combines first-order and main-portal involvement. Its recurrence cannot be attributed to Vp3 alone; perioperative deaths were excluded."
+   },
+   {
+    "key": "nlrb",
+    "quote": "minimum of 12 months",
+    "locator": "December 2025 guidance p3, treated primary-branch invasion/rupture discussion",
+    "meaning": "Applies to specified case-by-case exception considerations; applying this duration to every Vp1–2 study candidate is local conservatism."
+   }
+  ]
+ },
+ "HCC-B3": {
+  "question": "How should prior ICI alter activation and consent?",
+  "group": "HCC",
+  "source_positions": [
+   {
+    "key": "ipd",
+    "quote": "a 3-month washout may reduce it",
+    "locator": "Accepted PDF p10 / manuscript p7, abstract conclusion",
+    "meaning": "A risk-reduction suggestion from largely retrospective data, not a safe minimum."
+   },
+   {
+    "key": "fang",
+    "quote": "irAEs (any grade vs non)",
+    "locator": "Published PDF p6, Table 4",
+    "meaning": "Prior irAEs were associated with rejection; the study did not validate the specific grade-based activation rule proposed here."
+   }
+  ]
+ },
+ "HCC-B4": {
+  "question": "Can a survival-benefit score influence organ priority?",
+  "group": "HCC",
+  "source_positions": [
+   {
+    "key": "round2_liu",
+    "quote": "developed and internally validated",
+    "locator": "Published PDF p2, introduction",
+    "meaning": "A split-sample internal assessment is not independent external validation."
+   },
+   {
+    "key": "round2_liu",
+    "quote": "Recipients of living donor liver transplantation (LDLT) were excluded",
+    "locator": "Published PDF p2, section 1.3",
+    "meaning": "LDLT decisions are outside this model’s evaluated population."
+   }
+  ]
+ },
+ "pCCA-B1": {
+  "question": "Size, prior biopsy and prior nodes: one exclusion or separate research strata?",
+  "group": "pCCA",
+  "source_positions": [
+   {
+    "key": "optn",
+    "quote": "single and less than three cm in radial (perpendicular to the duct) diameter.",
+    "locator": "Policy 9.5.A, printed p191; effective 1 October 2026",
+    "meaning": "Binding standardized-exception mass wording; historical ≤3 cm study definitions are not identical."
+   },
+   {
+    "key": "heimbach",
+    "quote": "5/6 (83%) had peritoneal metastases at operative staging.",
+    "locator": "Published PDF p1 / journal p356, abstract Results",
+    "meaning": "This was the diagnostic-positive primary-FNA subgroup, not all biopsy-exposed patients."
+   }
+  ]
+ },
+ "pCCA-B2": {
+  "question": "When is resection a genuine competing curative option?",
+  "group": "pCCA",
+  "source_positions": [
+   {
+    "key": "pcca_dong",
+    "quote": "If the future liver remnant was insufficient, preoperative portal vein embolization was conducted to enhance hepatic reserve.",
+    "locator": "Published PDF p3 / journal p1130, institutional protocols",
+    "meaning": "Resection optimization is part of the comparator, not a failure of transplant selection."
+   },
+   {
+    "key": "cirse",
+    "quote": ">40% for cirrhotic or cholestatic livers",
+    "locator": "CIRSE 2024, Table 2; spacing normalized",
+    "meaning": "Specialist practice guidance supporting a planning target, not a guaranteed safety threshold."
+   }
+  ]
+ },
+ "pCCA-B3": {
+  "question": "May a non-Mayo neoadjuvant regimen replace the conventional program?",
+  "group": "pCCA",
+  "source_positions": [
+   {
+    "key": "welling",
+    "quote": "treated with SBRT (50–60 Gy, 3–5 fractions over two weeks)",
+    "locator": "Published PDF p1 abstract; protocol details p3",
+    "meaning": "Small pilot experience supports study development, not noninferiority or interchangeability."
+   },
+   {
+    "key": "hoogwater",
+    "quote": "associated with a higher rate of early hepatic vascular complications",
+    "locator": "Published PDF p1, abstract Conclusion",
+    "meaning": "The recurrence signal must be weighed against vascular/graft harm; observational comparison is confounded."
+   }
+  ]
+ },
+ "iCCA-B1": {
+  "question": "Do we preserve separate small-cirrhotic and advanced-disease pathways?",
+  "group": "iCCA",
+  "source_positions": [
+   {
+    "key": "systare",
+    "quote": "a single measurable lesion with or without associated peritumoral satellites",
+    "locator": "Published PDF pp2–3, Patients and Methods",
+    "meaning": "A narrower studied morphology; it does not prove a safe upper diameter."
+   },
+   {
+    "key": "ilts",
+    "quote": "no agreement was reached regarding LT in this population.",
+    "locator": "Consensus manuscript PDF p14, iCCA discussion",
+    "meaning": "Refers to large/locally advanced or noncirrhotic iCCA; consensus did not endorse universal expansion."
+   },
+   {
+    "key": "candidate2026",
+    "quote": "a maximum diameter < 3 cm",
+    "locator": "AASLD/AST candidate-evaluation manuscript PDF p8, statement 11",
+    "meaning": "The clinical recommendation uses a strict inequality. Its rationale discusses solitary disease in cirrhosis; this is not the advanced-study population."
+   },
+   {
+    "key": "nlrb",
+    "quote": "less than or equal to 3 cm",
+    "locator": "December 2025 oncology guidance p8, iCCA initial/extension criteria",
+    "meaning": "Allocation guidance includes equality. Exactly 3.0 cm requires clinical adjudication; preserve the exact allocation wording instead of silently harmonizing it."
+   }
+  ]
+ },
+ "iCCA-B2": {
+  "question": "What does sustained control have to prove before transplant activation?",
+  "group": "iCCA",
+  "source_positions": [
+   {
+    "key": "lunsford",
+    "quote": "disease must have been controlled for 6 months on that regimen.",
+    "locator": "Published PDF p3, Methods—Study design and participants",
+    "meaning": "Six months on an effective strategy has direct study precedent, including second-line treatment."
+   },
+   {
+    "key": "mcmillan",
+    "quote": "Patients who developed extrahepatic disease were delisted.",
+    "locator": "Full text, section 2.2",
+    "meaning": "Liver-only progression was deferred and could be reconsidered; it was not treated identically to extrahepatic spread."
+   }
+  ]
+ },
+ "iCCA-B3": {
+  "question": "Does access to LDLT change the evidentiary threshold?",
+  "group": "iCCA",
+  "source_positions": [
+   {
+    "key": "icca_ldlt",
+    "quote": "This retrospective, single-center study investigated outcomes for seven patients",
+    "locator": "Complete 11-page AJT 2026 main-paper proof; Methods, referral flow, Tables 1–2 and recipient/donor outcomes",
+    "meaning": "The complete main paper was reviewed. Seven selected recipients, wide confidence intervals and donor reoperation/drainage support prospective study development, not routine LDLT access. Separate supplementary details and individual ICI intervals remain unverified."
+   },
+   {
+    "key": "icca_comparator",
+    "quote": "Their median survival from diagnosis was 39 months",
+    "locator": "Published PDF p1 / journal p6099, abstract Results",
+    "meaning": "Selected contemporary non-LT survival is a relevant comparator; this is not a randomized LT-benefit estimate."
+   }
+  ]
+ },
+ "HEHE-B1": {
+  "question": "When is observation more informative than immediate listing?",
+  "group": "HEHE",
+  "source_positions": [
+   {
+    "key": "ehe_lai",
+    "quote": "pre-LT waiting time of 120 days or less",
+    "locator": "Published PDF p1, abstract Results",
+    "meaning": "Associated with recurrence in a selected transplant registry; the association does not prove that delaying LT improves outcomes."
+   }
+  ]
+ },
+ "HEHE-B2": {
+  "question": "Can extrahepatic disease or an explant score broaden access?",
+  "group": "HEHE",
+  "source_positions": [
+   {
+    "key": "nlrb",
+    "quote": "The presence of extrahepatic disease is not an absolute contraindication.",
+    "locator": "December 2025 oncology guidance p11, HEHE",
+    "meaning": "Allocation guidance permits consideration; it does not establish clinical benefit in every EHD phenotype."
+   },
+   {
+    "key": "nlrb",
+    "quote": "Absence of macrovascular invasion on biopsy or imaging.",
+    "locator": "December 2025 oncology guidance p11, HEHE",
+    "meaning": "A separate favorable-guidance criterion; do not omit it when discussing EHD."
+   },
+   {
+    "key": "ehe_consensus",
+    "quote": "LT should not be proposed to patients with liver EHE and extrahepatic disease",
+    "locator": "ESMO Open 2021 consensus PDF p8; recommendation graded V, A",
+    "meaning": "Clinical consensus is more restrictive than NLRB review guidance. The disagreement remains visible."
+   }
+  ]
+ },
+ "HCA-B1": {
+  "question": "Which of the four guidance routes is actually being invoked?",
+  "group": "HCA",
+  "source_positions": [
+   {
+    "key": "nlrb",
+    "quote": "Candidates may qualify for an exception, if they meet one of the following criteria:",
+    "locator": "December 2025 oncology guidance p11, hepatic adenoma",
+    "meaning": "The routes are alternatives; route four has three conjunctive elements."
+   }
+  ]
+ },
+ "HCA-B2": {
+  "question": "Has the benefit of LT been distinguished from concern about malignancy?",
+  "group": "HCA",
+  "source_positions": [
+   {
+    "key": "easl_benign",
+    "quote": "6 months observation after lifestyle change",
+    "locator": "EASL 2016 guideline PDF p9, HCA recommendations",
+    "meaning": "Applies to women in the relevant clinical setting, not a mandatory delay for every adenoma."
+   },
+   {
+    "key": "easl_benign",
+    "quote": "more than 10 lesions and underlying liver disease",
+    "locator": "EASL 2016 guideline PDF p10, multiple HCA discussion",
+    "meaning": "A narrower clinical LT framing than the NLRB alternative exception routes."
+   },
+   {
+    "key": "hca_chiche",
+    "quote": "LT should remain an extremely rare treatment for adenomatosis.",
+    "locator": "Published PDF p2, abstract conclusion",
+    "meaning": "The 49-patient series also recorded three operative deaths and five retransplantations; transplantation is not risk-free prophylaxis."
+   }
+  ]
+ },
+ "ALLOC-B1": {
+  "question": "What are we approving?",
+  "group": "ALLOC",
+  "source_positions": [
+   {
+    "key": "nlrb",
+    "quote": "This resource is not OPTN Policy",
+    "locator": "December 2025 oncology guidance p2, disclaimer",
+    "meaning": "Guidance informs case review and is not itself binding policy or a clinical standard."
+   },
+   {
+    "key": "optn",
+    "quote": "Function independently from the transplant candidate’s team.",
+    "locator": "Policy 14.2.A, PDF p285, living donor advocate requirements",
+    "meaning": "Donor advocacy is independent of recipient-team enthusiasm."
+   }
+  ]
+ },
+ "ALLOC-B2": {
+  "question": "What is the relevant organ opportunity cost?",
+  "group": "ALLOC",
+  "source_positions": [
+   {
+    "key": "transmet",
+    "quote": "intention-to-treat population",
+    "locator": "Published TransMet report, primary analysis description",
+    "meaning": "The randomized pathway-level comparison is more informative than recipient survival alone; its selection and access conditions still matter."
+   },
+   {
+    "key": "round2_kelly",
+    "quote": "risks to donors remain incompletely characterized",
+    "locator": "2026 published report, abstract background",
+    "meaning": "LDLT transfers some risk to a healthy donor; it does not eliminate the need to establish recipient benefit."
+   }
+  ]
+ },
+ "ALLOC-B3": {
+  "question": "What must donor consent and follow-up include?",
+  "group": "ALLOC",
+  "source_positions": [
+   {
+    "key": "optn",
+    "quote": "Has been informed that he or she may decline to donate at any time",
+    "locator": "Policy 14.3, PDF p286, living donor informed consent",
+    "meaning": "Withdrawal must remain meaningful and independent of recipient pressure."
+   },
+   {
+    "key": "round2_kelly",
+    "quote": "Availability of secondary-outcome data declined over follow-up",
+    "locator": "2026 full report, section 3.1",
+    "meaning": "Incomplete recovery follow-up limits reassurance from low mortality alone."
+   }
+  ]
+ },
+ "ALLOC-B4": {
+  "question": "What data are required before expansion?",
+  "group": "ALLOC",
+  "source_positions": [
+   {
+    "key": "hcc_design",
+    "quote": "5-year OS of at least 60%",
+    "locator": "EASL–AASLD–ILCA 2026 manuscript p20; ITT discussion pp21–22",
+    "meaning": "The HCC trial-design source discusses a ≥60% five-year intention-to-treat benchmark. It is not a validated universal cross-cancer allocation rule and does not establish the proposed 5/10-patient monitoring counts."
+   }
+  ]
+ },
+ "CRLM-B1": {
+  "question": "What exactly proves persistent unresectability?",
+  "group": "CRLM",
+  "source_positions": [
+   {
+    "key": "transmet",
+    "quote": "at least two expert liver surgeons",
+    "locator": "Published PDF p3 / journal p1109, Procedures",
+    "meaning": "Independent expert unresectability assessment was part of the trial, not inferred from tumor count."
+   },
+   {
+    "key": "cirse",
+    "quote": "does not estimate the function and regenerative capacity of FLR",
+    "locator": "CIRSE 2024, Indications and Contra-Indications; thresholds in Table 2",
+    "meaning": "CT volume alone does not establish function. Table 2 gives >20%, >30% and >40% suggested resection thresholds for normal, chemotherapy-exposed and cirrhotic/cholestatic liver respectively."
+   }
+  ]
+ },
+ "CRLM-B2": {
+  "question": "How do we handle PET-negative/disappearing lesions or radiographic NED?",
+  "group": "CRLM",
+  "source_positions": [
+   {
+    "key": "crlm_occult",
+    "quote": "4 (57.1%) of the 7 patients who demonstrated complete radiographic response harbored viable carcinoma on explant pathology.",
+    "locator": "Published PDF p1 / journal pe1026, abstract Results",
+    "meaning": "Imaging can miss viable tumor; this selected series does not prove comparative benefit from transplanting all NED patients."
+   }
+  ]
+ },
+ "CRLM-B3": {
+  "question": "Which molecular or extrahepatic expansions should be studied?",
+  "group": "CRLM",
+  "source_positions": [
+   {
+    "key": "nlrb",
+    "quote": "BRAF wild type, microsatellite stable",
+    "locator": "December 2025 oncology guidance p9, initial CRLM exception criteria",
+    "meaning": "Molecular guidance is more specific than simply “favorable biology”; KRAS is not stated as a blanket exclusion."
+   },
+   {
+    "key": "armd",
+    "quote": "Median disease-free and overall survival was 4 and 18 months respectively.",
+    "locator": "Published PDF p1 / journal p467, abstract Results",
+    "meaning": "Poor outcomes after multiple simultaneous relaxations caution against broad expansion; the study does not isolate any one criterion’s causal effect."
+   }
+  ]
+ },
+ "CRLM-B4": {
+  "question": "How much recurrence/graft use is acceptable for the observed survival benefit?",
+  "group": "CRLM",
+  "source_positions": [
+   {
+    "key": "transmet",
+    "quote": "three (8%) of 36 patients who received a transplant were retransplanted",
+    "locator": "Published PDF p9 / journal p1115, Results",
+    "meaning": "Additional graft use is real. The 36 per-protocol recipients differ from the 40-recipient safety population."
+   }
+  ]
+ },
+ "NET-B1": {
+  "question": "Which patients gain enough over modern non-LT treatment?",
+  "group": "NET",
+  "source_positions": [
+   {
+    "key": "enets",
+    "quote": "expert-driven and hypothesis-generating framework (not outcome-validated)",
+    "locator": "2026 full-text PDF p3, transplant-benefit discussion",
+    "meaning": "Illustrative survival figures are discussion aids, not calibrated individual eligibility thresholds."
+   }
+  ]
+ },
+ "NET-B2": {
+  "question": "What is guideline-aligned versus an expanded-risk proposal?",
+  "group": "NET",
+  "source_positions": [
+   {
+    "key": "nlrb",
+    "quote": "mitotic rate less than 20 per 10 HPF and index less than 20%.",
+    "locator": "December 2025 oncology guidance p8, NET criterion 3",
+    "meaning": "Retain the exact published guidance threshold and clarify pathology sampling/measurement uncertainty."
+   },
+   {
+    "key": "milan",
+    "quote": "Stable disease/response to therapies for at least 6 months prior to transplant consideration",
+    "locator": "Milan-NET, Table 1, PDF p2 / journal p2893",
+    "meaning": "A biological selection interval; the proposed three-scan workflow is not itself a validated benefit predictor."
+   },
+   {
+    "key": "enets",
+    "quote": "solitary bone lesions amenable to local treatment",
+    "locator": "2026 full-text PDF p3, section 4, proposed candidate profile",
+    "meaning": "ENETS discusses selected controllable extrahepatic sites, including this example. Current NLRB solid-organ-metastasis exclusion is stricter. I favor no initial expansion despite this emerging clinical-consensus proposal."
+   }
+  ]
+ },
+ "NET-B3": {
+  "question": "Should age or burden remain local selection factors without being called national rules?",
+  "group": "NET",
+  "source_positions": [
+   {
+    "key": "milan",
+    "quote": "Metastatic diffusion to <50% of the total liver volume",
+    "locator": "Milan-NET, Table 1, PDF p2 / journal p2893",
+    "meaning": "A selection criterion in the Milan framework, not a national allocation ceiling."
+   },
+   {
+    "key": "enets",
+    "quote": "Age <60 years may be considered a relative, not absolute, factor.",
+    "locator": "2026 full-text PDF p5, Table 2",
+    "meaning": "Supports individualized benefit/fitness assessment rather than an automatic age exclusion."
+   }
+  ]
+ },
+ "PDAC-B1": {
+  "question": "Is there evidence sufficient to expose a graft and a living donor now?",
+  "group": "PDAC",
+  "source_positions": [
+   {
+    "key": "sonar",
+    "quote": "First-line chemotherapy is considered the standard of care",
+    "locator": "SONAR protocol PDF p1, abstract Background",
+    "meaning": "The protocol studies selected resection after treatment, not transplantation."
+   }
+  ],
+  "stance": "No PDAC-directed transplantation now: retain a non-enrolling evidence-development concept and approved observational registry only.",
+  "rules": [
+   "Proposed current cutoff: zero protocol-directed PDAC LT enrollments, zero living-donor workups solely for this indication and no transplant-specific invasive staging.",
+   "Do not alter effective systemic treatment to satisfy an LT concept, offer simultaneous pancreatectomy/LT, or borrow CRLM biomarker/lesion gates.",
+   "Continue evidence-based pancreatic oncology care and appropriate non-LT trials. This is a present evidence/governance decision, not proof that future benefit is impossible."
+  ],
+  "tests": "Confirmed PDAC pathology/stage; contemporary pancreatic oncology assessment; available standard therapy/trial options; research registry consent where applicable.",
+  "rationale": "Historical cluster procedures and modern systemic/metastasectomy studies do not establish contemporary PDAC LT benefit under immunosuppression. I would not expose a graft or healthy donor on that extrapolation.",
+  "allocation": "No PDAC-specific favorable exception pathway is asserted. Discretionary review mechanisms are not evidence of clinical benefit or authorization to open a study.",
+  "roadmap": "Continue the PDAC roadmap. New RAS-inhibitor efficacy changes oncology options but does not establish LT efficacy.",
+  "owner": "Pancreatic oncology; HPB/transplant surgery; ethics; allocation; research leadership",
+  "supporting_refs": [
+   "cluster",
+   "oligopanc"
+  ]
+ },
+ "PDAC-B2": {
+  "question": "What would change the answer?",
+  "group": "PDAC",
+  "source_positions": [
+   {
+    "key": "kaslow",
+    "quote": "survived beyond 12 months (landmark time) from diagnosis.",
+    "locator": "Published PDF p1 / journal pe798, abstract Methods",
+    "meaning": "Response/landmark-selected survival cannot be compared with unselected survival from diagnosis."
+   },
+   {
+    "key": "metapanc",
+    "quote": "Patients with progressive disease (PD) will be excluded from the trial.",
+    "locator": "METAPANC protocol PDF p4, treatment/randomization design",
+    "meaning": "Selection in a resection study is not evidence for transplantation; denominators and clocks must match."
+   }
+  ],
+  "stance": "Do not lead an enrolling PDAC-LT pilot yet; require direct prospective transplant evidence before reconsidering.",
+  "rules": [
+   "Reconsider only after a peer-reviewed prospective PDAC-specific LT feasibility/outcome report plus independent replication or a multicenter dataset, with complete screened/entered/transplanted denominators. Conference abstracts or recipient-only survival are insufficient.",
+   "Proposed review milestone: median follow-up ≥24 months from a common eligibility/enrollment landmark, reporting donor harm, early death, graft loss, recurrence and continuing therapy. This is a threshold for reconsideration, not proof of benefit.",
+   "Also require a contemporary comparator or credible comparative design, immunosuppression/drug-safety evaluation, and independent transplant, pancreatic oncology, methods, ethics, donor and allocation approval with funded oversight.",
+   "A positive metastasectomy trial or new systemic response does not satisfy the direct-LT evidence requirement. Do not replace it with a fictitious survival percentage, lesion limit or biomarker decline."
+  ],
+  "tests": "Complete direct-LT reports and methods; matched time-zero comparator; immunosuppression safety; independent approvals and funded monitoring plan.",
+  "rationale": "The institution can study the question without being the first to expose donors under an unsupported clinical pathway. I propose a concrete 24-month evidence-review milestone plus direct prospective and replicated/multicenter LT experience; no single favorable systemic trial changes that stance.",
+  "allocation": "Any future clinical study would still require separate recipient, organ-route, donor and research determinations. No future priority is promised.",
+  "roadmap": "Update the pancreatic oncology roadmap as evidence changes while keeping the transplant concept non-enrolling.",
+  "owner": "Pancreatic oncology; transplant/HPB surgery; biostatistics; ethics; donor team; IRB",
+  "supporting_refs": [
+   "cluster",
+   "kaslow",
+   "legacy_ramia",
+   "ras302",
+   "metapanc",
+   "sonar",
+   "oligopanc"
+  ]
+ },
+ "_pdac_sources": {
+  "sonar": {
+   "short": "SONAR protocol",
+   "title": "Conversion surgery vs. standard of care in pancreatic cancer oligometastatic to the liver (SONAR): a randomized controlled trial",
+   "pmid": "41526867",
+   "doi": "10.1186/s12885-025-15183-9",
+   "year": 2026
+  },
+  "metapanc": {
+   "short": "METAPANC protocol",
+   "title": "Study protocol of the METAPANC trial: multimodal surgical treatment versus chemotherapy alone in oligometastatic pancreatic cancer",
+   "pmid": "39915735",
+   "doi": "10.1186/s12885-025-13573-7",
+   "year": 2025
+  },
+  "cluster": {
+   "short": "Alessiani 1995 · historical",
+   "title": "Assessment of five-year experience with abdominal organ cluster transplantation",
+   "pmid": "",
+   "doi": "",
+   "year": 1995,
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2728058/"
+  },
+  "oligopanc": {
+   "short": "OligoPanc 2026",
+   "title": "The OligoPanc project: an interdisciplinary expert consensus statement on oligometastatic pancreatic cancer",
+   "pmid": "41785904",
+   "doi": "10.1016/S1470-2045(25)00714-4",
+   "year": 2026
+  },
+  "kaslow": {
+   "short": "Kaslow 2023",
+   "title": "Natural history of stage IV pancreatic cancer: survival benchmarks for curative-intent resection with synchronous liver-only metastases",
+   "pmid": "36353987",
+   "doi": "10.1097/SLA.0000000000005753",
+   "year": 2023
+  }
+ }
+}

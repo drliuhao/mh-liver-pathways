@@ -39,11 +39,11 @@
     crlm: ['unresectability', 'control'], nelm: ['options', 'exposure']};
 
   let systemicData = null, lrtData = null;
-  const loadSystemic = () => systemicData || (systemicData = fetch(new URL('systemic/matrix.json?v=20261029-ehd2', root)).then(r => { if (!r.ok) throw new Error('Matrix unavailable'); return r.json(); }));
+  const loadSystemic = () => systemicData || (systemicData = fetch(new URL('systemic/matrix.json?v=20261029-docs1', root)).then(r => { if (!r.ok) throw new Error('Matrix unavailable'); return r.json(); }));
   // All roadmap and pathway views use the same reviewed matrix data.
-  const loadLrt = () => lrtData || (lrtData = fetch(new URL('lrt/matrix.json?v=20261029-ehd2', root)).then(r => { if (!r.ok) throw new Error('Matrix unavailable'); return r.json(); }));
+  const loadLrt = () => lrtData || (lrtData = fetch(new URL('lrt/matrix.json?v=20261029-docs1', root)).then(r => { if (!r.ok) throw new Error('Matrix unavailable'); return r.json(); }));
   const roadmapData = {};
-  const loadRoadmap = s => roadmapData[s] || (roadmapData[s] = fetch(new URL(s + '/data/pathway.json?v=20261029-ehd2', root)).then(r => { if (!r.ok) throw new Error('Roadmap unavailable'); return r.json(); }));
+  const loadRoadmap = s => roadmapData[s] || (roadmapData[s] = fetch(new URL(s + '/data/pathway.json?v=20261029-docs1', root)).then(r => { if (!r.ok) throw new Error('Roadmap unavailable'); return r.json(); }));
   const SETTINGS = [['first', 'Initial advanced disease'], ['later', 'Subsequent'], ['biomarker', 'Molecularly selected'],
     ['perioperative', 'Around curative local treatment'], ['combination', 'Combination / sequencing'], ['transplant', 'Transplant strategy']];
 

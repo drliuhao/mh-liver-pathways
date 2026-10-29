@@ -1,0 +1,1040 @@
+{
+ "key": "ampullary",
+ "code": "AMP",
+ "name": "Ampullary tumors",
+ "generated": "29 October 2026",
+ "files": {
+  "roadmap_info": "AMP_1_Cancer_Roadmap.docx",
+  "roadmap_questions": "AMP_2_Cancer_Roadmap_Questions.docx",
+  "decision": "AMP_7_Decision_Discussion.docx"
+ },
+ "sets": {
+  "roadmap": {
+   "label": "Cancer roadmap",
+   "page": "ampullary/",
+   "web": "ampullary/#questions",
+   "questions": [
+    {
+     "id": "AMP-R1",
+     "set": "roadmap",
+     "title": "Local treatment after metastatic disease responds",
+     "question": "When metastatic ampullary adenocarcinoma responds to systemic therapy, should limited liver or lung metastases be treated locally?",
+     "kind": "clinical",
+     "status": "Proposed; case by case · OPEN proposal",
+     "where": [],
+     "proposal": "Systemic therapy is the default for metastatic ampullary adenocarcinoma. Local therapy or surgery for limited liver or lung metastases that respond durably is a case-by-case MDT decision, extrapolated from PDAC and biliary data; there is no ampullary-specific evidence after response.",
+     "rules": [
+      "Apply the PDAC-R1 selection rules by analogy (limited sites, no progression, marker fall, complete resectability).",
+      "Isolated late lung recurrence has a better prognosis than synchronous or liver metastases.",
+      "Station 16b1 involvement found at upfront surgery is prognostically poor but is not by itself a reason to abort resection."
+     ],
+     "rationale": "The only registry analysis measured resection of the primary, not metastasectomy after response.",
+     "studies": [
+      {
+       "source": "Wang 2018 · SEER metastatic ampullary",
+       "key": "ehd-amp_wang2018",
+       "population": "SEER, 346 metastatic ampullary cancers. Primary-tumor resection; no metastatic-site or response data.",
+       "results": "Matched median survival 16 vs 8 months; association strongest without chemotherapy (selection).",
+       "limits": "Cannot support metastasectomy after response.",
+       "locator": "Cancer Manag Res 2018.",
+       "read": "Full text read"
+      },
+      {
+       "source": "PANODE 2026 · station 16b1 and 9",
+       "key": "ehd-pdac_panode2026",
+       "population": "PANODE, 212 ampullary resections. Upfront surgery; adjuvant therapy in 4%.",
+       "results": "16b1-positive (n=7): median survival 9 vs 62 months (aHR 4.35).",
+       "limits": "Very small subgroup.",
+       "locator": "BJS Open 2026.",
+       "read": "Full text read"
+      },
+      {
+       "source": "Saedon 2018 · metastasectomy review",
+       "key": "ehd-amp_saedon2018",
+       "population": "Systematic review, 16 studies. Metastasectomy of pancreatic and periampullary cancer.",
+       "results": "Ampullary primaries and isolated pulmonary recurrence had better prognosis.",
+       "limits": "Low-quality inputs.",
+       "locator": "J BUON 2018 (abstract; full text pending).",
+       "read": "Abstract only; full text pending"
+      },
+      {
+       "source": "NCCN Ampullary 1.2023",
+       "key": "ehd-amp_nccn2023",
+       "population": "NCCN ampullary guideline. Systemic therapy in all stages.",
+       "results": "“Select tumors may be treated surgically.”",
+       "limits": "Guideline summary.",
+       "locator": "JNCCN 2023 (abstract; full text pending).",
+       "read": "Abstract only; full text pending"
+      }
+     ],
+     "counter": "Evidence cannot distinguish surgery from systemic therapy alone.",
+     "certainty": "Very low.",
+     "change": "Any ampullary series of surgery after response.",
+     "web": "ampullary/#question-AMP-R1"
+    },
+    {
+     "id": "AMP-D1",
+     "set": "roadmap",
+     "title": "What malignancy risk, on a stated score, moves a biopsy-proven ampullary adenoma from papillectomy to pancreatoduodenectomy?",
+     "question": "What malignancy risk, on a stated score, moves a biopsy-proven ampullary adenoma from papillectomy to pancreatoduodenectomy?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "1 · Assess the limitations of an adenoma biopsy",
+       "url": "ampullary/#decision-1"
+      },
+      {
+       "label": "2 · Assess endoscopic papillectomy",
+       "url": "ampullary/#decision-2"
+      },
+      {
+       "label": "4 · Select local surgical excision or pancreaticoduodenectomy",
+       "url": "ampullary/#decision-4"
+      }
+     ],
+     "positions": [
+      {
+       "source": "Malignancy risk score (Mavani 2025)",
+       "key": "pm39831703",
+       "says": "A 0–6 score (age, duct size, symptoms, high-grade dysplasia) stratifies malignancy at 10.3%, 44.1% and 88.2% but assigns no operation; derived and tested in the same 127 resected patients, strata reported three ways.",
+       "locator": "Gate 1 · Standard 'Score the malignancy risk explicitly…' (pref, avoid, note); Quick reference · 'How likely is carcinoma under an ampullary \"adenoma\"'"
+      },
+      {
+       "source": "Kim 2013",
+       "key": "pm23442830",
+       "says": "In 91 biopsy-proven adenomas, 26.4% were malignant after resection, with high-grade dysplasia and ductal dilatation as independent predictors; cited from abstract only.",
+       "locator": "Gate 1 · Standard 'Score the malignancy risk explicitly…' (pref)"
+      },
+      {
+       "source": "NCCN Ampullary Adenocarcinoma (extracted text)",
+       "key": "np-ampullary-nccnamp",
+       "says": "Biopsy false-negative rate about 20–40%; adenomas without suspected carcinoma, including high-grade dysplasia, may be removed endoscopically at a high-volume centre, with pancreatoduodenectomy when endoscopic removal is not possible.",
+       "locator": "Gate 1 · Standard 'Treat a biopsy that reads adenoma…' (pref); Gate 2 · Standard 'Endoscopic papillectomy by direct snare resection…' (pref); Gate 4 · Standard group · option 'Pancreatoduodenectomy for a benign or premalignant lesion' (when)"
+      },
+      {
+       "source": "PERIPAN 2025",
+       "key": "pm40729532",
+       "says": "Puts the false-negative rate at 20–30%, attributed to sampling bias, and asks for at least three targeted biopsies of viable abnormal tissue.",
+       "locator": "Gate 1 · Standard 'Treat a biopsy that reads adenoma…' (pref, note)"
+      }
+     ],
+     "divergence": "No guideline or study links a malignancy risk level to an operation; the only score is unvalidated and internally inconsistent, and the guidelines differ on the biopsy false-negative range (20–40% versus 20–30%).",
+     "proposal": "None, deliberately: the roadmap says a cut-off would be convention dressed as evidence. It asks that malignancy risk be scored and stated aloud at the board for every biopsy-proven adenoma, as a structured conversation rather than a calibrated probability; a high score favours pancreatoduodenectomy, which is not the default for a low-risk adenoma.",
+     "proposal_locator": "What we are not sure about · 'No numeric threshold is given here…'; Gate 1 · Standard 'Score the malignancy risk explicitly…'; Gate 4 · Standard group · option 'Pancreatoduodenectomy for a benign or premalignant lesion' (pref, avoid); Operations · board meeting 'The benign-end rule'",
+     "rationale": "The published score stratifies malignancy risk at 10.3%, 44.1% and 88.2% but assigns no operation to any stratum, publishes three mutually inconsistent sets of those proportions, was derived and tested in the same 127 patients with no validation statistic of any kind, and was built entirely in patients already judged to need a pancreatoduodenectomy. In the same series the lowest-risk patients had the most major complications. There is no threshold in the literature to adopt, and the programme should decide whether it uses the score as a structured conversation or as a number.",
+     "audit": "Score recorded at the board against final histology and against major complications, by operation chosen.",
+     "web": "ampullary/#question-AMP-D1"
+    },
+    {
+     "id": "AMP-D2",
+     "set": "roadmap",
+     "title": "Does the programme offer transduodenal surgical ampullectomy, and under what written criteria?",
+     "question": "Does the programme offer transduodenal surgical ampullectomy, and under what written criteria?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "3 · Review the papillectomy pathology",
+       "url": "ampullary/#decision-3"
+      },
+      {
+       "label": "4 · Select local surgical excision or pancreaticoduodenectomy",
+       "url": "ampullary/#decision-4"
+      }
+     ],
+     "positions": [
+      {
+       "source": "NCCN Ampullary Adenocarcinoma (extracted text)",
+       "key": "np-ampullary-nccnamp",
+       "says": "Lists surgical ampullectomy for adenoma with positive margins after endoscopic removal, at centres with expertise, and not for invasive carcinoma; sets no standard indications and says comparisons with pancreatoduodenectomy contain too few ampullectomies to conclude.",
+       "locator": "Gate 4 · Standard group (order note) and option 'Transduodenal surgical ampullectomy' (when); Gate 3 · Reasonable 'Surgical ampullectomy as the intermediate step…' (pref)"
+      },
+      {
+       "source": "Pancreas2000 EP vs TSA (Hollenbach)",
+       "key": "pm39642968",
+       "says": "In 62 matched pairs, R0 (90.3% vs 72.6%) and recurrence (3.2% vs 8.0%) favoured surgery, but the roadmap finds the design favours surgery; procedure time 227.5 vs 30 minutes and stay 14 vs 3 days.",
+       "locator": "Gate 4 · Standard group · option 'Transduodenal surgical ampullectomy' (pref, avoid) and flagnote"
+      },
+      {
+       "source": "ESGE ampullary 2021",
+       "key": "pm33728632",
+       "says": "Suggests surgery when endoscopic resection is not feasible: a diverticulum, size over 4 cm, or intraductal involvement over 20 mm, with surveillance still mandatory afterwards.",
+       "locator": "Gate 2 · Standard 'Endoscopic papillectomy by direct snare resection…' (avoid); Gate 2 · Avoid 'Do not perform a papillectomy when intraductal extension exceeds 20 mm…'"
+      },
+      {
+       "source": "Ampullary NET operation (Baptiste)",
+       "key": "pm27457864",
+       "says": "In 14 ampullary neuroendocrine tumours the transduodenal approach was judged possibly oncologically inadequate and liable to understage; cited from abstract only.",
+       "locator": "Gate 4 · Standard group · option 'Transduodenal surgical ampullectomy' (avoid)"
+      }
+     ],
+     "divergence": "NCCN conditions the operation on expertise without indications, and the only comparison favours it on R0 and recurrence through a design that structurally favours surgery; only the burden difference is clear.",
+     "proposal": "Whether to offer it is left open, but the roadmap frames candidates: a demonstrably benign adenoma endoscopy cannot clear (size, diverticulum, intraductal extension over 20 mm, repeated positive margins), a risk score that is not high, a fit patient at a performing centre, where pancreatoduodenectomy would be disproportionate. Never for invasive carcinoma or an ampullary neuroendocrine tumour.",
+     "proposal_locator": "Gate 4 · criteria and Standard group · option 'Transduodenal surgical ampullectomy' (pref, avoid) and flagnote; Gate 3 · Reasonable 'Surgical ampullectomy as the intermediate step…'",
+     "rationale": "NCCN makes it conditional on local expertise and lists no indications; the indication criteria remain undetermined in the literature. The comparative data favour it over papillectomy on R0 (90.3% against 72.6%) and recurrence but come from 62 propensity-matched pairs in which the surgical arm is 98.4% of its eligible population and the endoscopic arm a 1-in-9 selection, follow-up was 37.5 against 15.5 months, and only the endoscopic patients were systematically re-scoped with scar biopsies. 36.6% of the surgical specimens held advanced cancer. The reliable difference is burden: 227.5 against 30 minutes and 14 against 3 days. [EXPERTISE]",
+     "audit": "Indication, final histology, R status, recurrence and reintervention for every case.",
+     "web": "ampullary/#question-AMP-D2"
+    },
+    {
+     "id": "AMP-D3",
+     "set": "roadmap",
+     "title": "An invasive carcinoma found incidentally in a margin-negative papillectomy specimen in a fit patient — complete to pancreatoduodenectomy, or surveil? And what happens when T1a and T1b cannot be distinguished?",
+     "question": "An invasive carcinoma found incidentally in a margin-negative papillectomy specimen in a fit patient — complete to pancreatoduodenectomy, or surveil? And what happens when T1a and T1b cannot be distinguished?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "2 · Assess endoscopic papillectomy",
+       "url": "ampullary/#decision-2"
+      },
+      {
+       "label": "3 · Review the papillectomy pathology",
+       "url": "ampullary/#decision-3"
+      },
+      {
+       "label": "5 · Pancreaticoduodenectomy for invasive carcinoma",
+       "url": "ampullary/#decision-5"
+      }
+     ],
+     "positions": [
+      {
+       "source": "NCCN Ampullary Adenocarcinoma (extracted text)",
+       "key": "np-ampullary-nccnamp",
+       "says": "Routes adenocarcinoma found after endoscopic removal to pancreatoduodenectomy. Series it tabulates show nodal metastasis rising with T stage, from 11–28% at T1, which a papillectomy specimen cannot stage.",
+       "locator": "Gate 3 · Standard group · option 'Invasive adenocarcinoma in the specimen — pancreatoduodenectomy' (when, avoid); Gate 5 · Standard 'Harvest and count the nodes…' (note)"
+      },
+      {
+       "source": "Yoon 2022",
+       "key": "pm36587061",
+       "says": "After papillectomy showing high-grade dysplasia or carcinoma, matched 5-year survival was similar (89.2% vs 82.3%) but recurrence-free survival worse without surgery (66.1% vs 86.7%, P=0.052); 55 matched patients, T stage never reported, immortal time unaddressed.",
+       "locator": "Gate 2 · Reasonable 'Papillectomy with close surveillance for high-grade dysplasia or an early carcinoma…' (pref, avoid, note)"
+      },
+      {
+       "source": "Pancreas2000 EP vs TSA (Hollenbach)",
+       "key": "pm39642968",
+       "says": "Endoscopic treatment of T1 cancers achieved R0 in 34.1%; endotherapy alone succeeded in 45.3% of T1a and 38.5% of T1b cancers.",
+       "locator": "Gate 4 · Avoid 'Do not perform a transduodenal ampullectomy for invasive carcinoma…'; What we are not sure about · 'The papillectomy R0 rate of 80% is closer to 66%…'"
+      }
+     ],
+     "divergence": "NCCN routes these patients to resection, while the only comparative cohort found similar overall survival but worse recurrence-free survival without surgery and cannot address T1a versus T1b.",
+     "proposal": "Lean to NCCN's pancreatoduodenectomy, especially with a positive deep margin, lymphovascular or perineural invasion, or poor differentiation; surveillance is a defensible but not equivalent option in a margin-negative specimen, chiefly when operative risk is substantial. No position is stated for when T1a and T1b cannot be distinguished.",
+     "proposal_locator": "Gate 3 · Standard group (order note; option 'Invasive adenocarcinoma in the specimen — pancreatoduodenectomy') and flagnote; Gate 2 · Reasonable 'Papillectomy with close surveillance…'",
+     "rationale": "NCCN routes it to resection on low-quality evidence. The propensity-matched cohort used to argue for surveillance found equivalent overall survival but recurrence-free survival differences of 66.1% against 86.7% (P=0.052) and, in adenocarcinoma only, 61.4% against 82.6% (P=0.066) on 55 matched patients — two near misses in the same direction. That cohort never reports T stage, so it cannot inform the T1a-versus-T1b split on which nodal risk turns; nodal status is unknown in its papillectomy arm by definition; and the immortal time the surgical arm had to survive is unaddressed. Without a standing position this will be decided by whoever is in the room.",
+     "audit": "Specimen findings including T substage and which margins were assessed, decision taken, recurrence, and nodal status at any later resection.",
+     "web": "ampullary/#question-AMP-D3"
+    },
+    {
+     "id": "AMP-D4",
+     "set": "roadmap",
+     "title": "Is adjuvant chemotherapy offered to all resected stage II and III patients, or preferentially by histologic subtype?",
+     "question": "Is adjuvant chemotherapy offered to all resected stage II and III patients, or preferentially by histologic subtype?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "7 · Adjuvant treatment after resection",
+       "url": "ampullary/#decision-7"
+      }
+     ],
+     "positions": [
+      {
+       "source": "ESPAC-3 periampullary",
+       "key": "pm22782416",
+       "says": "The only randomised trial: primary analysis negative (HR 0.86, P=0.25), significant only after adjustment (HR 0.75) that partly corrects baseline imbalance; never powered for, or tested in, its ampullary subgroup.",
+       "locator": "Gate 7 · Standard 'Offer adjuvant chemotherapy for stage II and III disease…' (avoid, note)"
+      },
+      {
+       "source": "NCCN Ampullary Adenocarcinoma (extracted text)",
+       "key": "np-ampullary-nccnamp",
+       "says": "Its algorithm is staged: systemic therapy or observation for stage I, systemic therapy with or without chemoradiation for stages II–III; it reports registry benefit (4,190 cases, 47.2 vs 35.5 months), while its regimen lists are subtyped.",
+       "locator": "Gate 7 · Reasonable group · option 'Adjuvant therapy directed by stage, nodes and margin, ignoring subtype' (when, pref)"
+      },
+      {
+       "source": "Bolm 2020",
+       "key": "pm31987649",
+       "says": "Across 214 resections, adjuvant therapy was associated with longer survival in pancreatobiliary or mixed tumours (85 vs 65 months) but not intestinal; allocation was unadjusted and the whole-cohort result ran the other way (HR 1.124).",
+       "locator": "Gate 7 · Reasonable group · option 'Adjuvant therapy directed by subtype' (pref, avoid)"
+      },
+      {
+       "source": "Ecker 2019",
+       "key": "pm31141112",
+       "says": "Propensity-matched on the drivers of treatment, with immortal time handled, adjuvant therapy showed no benefit overall (HR 0.90) or in either subtype; intervals do not exclude a 25–35% relative reduction.",
+       "locator": "Gate 7 · Reasonable group · option 'Adjuvant therapy directed by stage, nodes and margin, ignoring subtype' (pref, avoid); Gate 6 · Avoid 'Do not let the subtype alone decide…'"
+      },
+      {
+       "source": "475-patient retrospective series cited by NCCN",
+       "key": "np-ampullary-nccnamp",
+       "says": "Found adjuvant benefit confined to the intestinal subtype (5-year overall survival 83.7% vs 33.2%).",
+       "locator": "Gate 6 · Avoid 'Do not let the subtype alone decide whether to give adjuvant therapy.' (avoid)"
+      }
+     ],
+     "divergence": "NCCN's algorithm and registry data support treating by stage, one unadjusted cohort favours pancreatobiliary or mixed tumours, another favours intestinal tumours, and the best-adjusted cohort finds no subtype-specific benefit.",
+     "proposal": "Offer adjuvant chemotherapy to fit stage II–III patients within 12 weeks, about 6 months in total, as a reasonable choice rather than a proven benefit, giving both halves of ESPAC-3. Decide on stage, nodal burden, margin and fitness, with subtype as one input; the roadmap does not pick a side on subtype-preferential treatment.",
+     "proposal_locator": "Gate 7 · Standard 'Offer adjuvant chemotherapy for stage II and III disease…'; Gate 6 · Avoid 'Do not let the subtype alone decide…'; What we are not sure about · 'Whether adjuvant therapy should be offered preferentially…'",
+     "rationale": "ESPAC-3's primary analysis was negative (hazard ratio 0.86, 95% CI 0.66–1.11, P=0.25), it was never powered for its ampullary subgroup, and no hypothesis test for ampullary-only survival is reported anywhere in the paper. The two subtype-stratified cohorts do not carry equal weight: the positive one allocated adjuvant therapy at tumour board by stage, nodes and CA 19-9 with no adjustment of any kind and reports a whole-cohort result running the other way (hazard ratio 1.124, P=0.608), while the negative one propensity-matched on those same selection drivers and handled immortal time bias — though its intervals do not exclude a 25% to 35% relative risk reduction. A third cohort found benefit confined to the intestinal subtype. NCCN's algorithm is staged while its regimen lists are subtyped.",
+     "audit": "Registry: subtype as reported, adjuvant regimen, completion, recurrence site, overall survival.",
+     "web": "ampullary/#question-AMP-D4"
+    },
+    {
+     "id": "AMP-D5",
+     "set": "roadmap",
+     "title": "Is a subtype call with interobserver κ 0.39 accepted as a basis for choosing the adjuvant regimen?",
+     "question": "Is a subtype call with interobserver κ 0.39 accepted as a basis for choosing the adjuvant regimen?",
+     "kind": "governance",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "6 · Histologic subtype and molecular testing",
+       "url": "ampullary/#decision-6"
+      },
+      {
+       "label": "7 · Adjuvant treatment after resection",
+       "url": "ampullary/#decision-7"
+      }
+     ],
+     "positions": [
+      {
+       "source": "Reid 2016 subtype reproducibility",
+       "key": "pm27586202",
+       "says": "Five blinded observers reached κ 0.39, agreeing fully in 23%; 40% of tumours were mixed and 6% pure intestinal; survival differed only after forced assignment and not independently (P=0.39); caution advised for biopsies.",
+       "locator": "Gate 6 · Standard 'State the reproducibility of the subtype call…'; Quick reference · 'Histologic subtype — reproducibility and what it predicts'"
+      },
+      {
+       "source": "NCCN Ampullary Adenocarcinoma (extracted text)",
+       "key": "np-ampullary-nccnamp",
+       "says": "Organises regimen lists by subtype but says immunohistochemistry is not required, panels may be unreliable, and data on subtype's independent prognostic and predictive value are conflicting.",
+       "locator": "Gate 6 · Standard 'Report the subtype…' (avoid) and 'State the reproducibility…' (avoid); Gate 7 · Standard 'Choose the regimen by subtype…' (pref)"
+      },
+      {
+       "source": "PERIPAN 2025",
+       "key": "pm40729532",
+       "says": "Subtype on the invasive component, mixed only when the lesser component is at least 30%, otherwise tubular-NOS; says subtype's prognostic and predictive role remains unclear, and reports no interobserver study of its definitions.",
+       "locator": "Gate 6 · Standard 'Report the subtype…' (pref); Quick reference · 'Histologic subtype — reproducibility and what it predicts' (foot)"
+      }
+     ],
+     "divergence": "Guidelines organise regimen lists by subtype while calling its predictive value conflicting or unclear, and the reproducibility study shows only fair agreement with no independent survival effect.",
+     "proposal": "As the page stands: report subtype on the invasive component, use NCCN's subtype-specific lists to choose the drug, state the κ 0.39 reproducibility alongside the call, and record whether subtype changed the recommendation; subtype alone does not decide whether to treat. Whether the regimen follows subtype or stage is left to the group.",
+     "proposal_locator": "Gate 6 · Standard 'Report the subtype…' and 'State the reproducibility of the subtype call…'; Gate 7 · Standard 'Choose the regimen by subtype…'; Operations · board meeting 'Subtype discussion'",
+     "rationale": "Not an evidence question but a governance one. The guidelines organise their regimen lists around the subtype; the reproducibility data say five blinded observers agree in 23% of cases, 40% of tumours are mixed, pure intestinal morphology is present in only 6%, the survival difference appears only after the mixed cases are force-assigned, and even then the subtype fails multivariable analysis at P=0.39. PERIPAN's own conclusion is that the prognostic and predictive role of subtype remains unclear. The group should decide whether the regimen follows the subtype or the stage.",
+     "audit": "Proportion of resections subtyped on the invasive component; proportion mixed or tubular-NOS; whether the subtype changed the recommendation.",
+     "web": "ampullary/#question-AMP-D5"
+    },
+    {
+     "id": "AMP-D6",
+     "set": "roadmap",
+     "title": "Is mismatch-repair testing a reflex on every ampullary carcinoma, or ordered by indication?",
+     "question": "Is mismatch-repair testing a reflex on every ampullary carcinoma, or ordered by indication?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "6 · Histologic subtype and molecular testing",
+       "url": "ampullary/#decision-6"
+      },
+      {
+       "label": "8 · Locally advanced or metastatic disease",
+       "url": "ampullary/#decision-8"
+      }
+     ],
+     "positions": [
+      {
+       "source": "PERIPAN 2025",
+       "key": "pm40729532",
+       "says": "Recommends reflex mismatch-repair testing of every case regardless of subtype, graded low evidence, asserting deficiency rates comparable to colorectal cancer; the result should accompany the final pathology report.",
+       "locator": "Gate 6 · Standard 'Test every ampullary carcinoma for mismatch-repair deficiency as a reflex…' (pref)"
+      },
+      {
+       "source": "ESGE ampullary 2021",
+       "key": "pm33728632",
+       "says": "Recommended against routine immunohistochemistry, PCR and microsatellite instability testing of ampullary biopsies, a position PERIPAN has since reversed.",
+       "locator": "Gate 6 · Standard 'Test every ampullary carcinoma for mismatch-repair deficiency…' (note)"
+      },
+      {
+       "source": "NCCN Ampullary Adenocarcinoma (extracted text)",
+       "key": "np-ampullary-nccnamp",
+       "says": "Recommends somatic profiling, including microsatellite instability and mismatch repair, for metastatic patients who are candidates for therapy, and germline testing for every confirmed ampullary adenocarcinoma.",
+       "locator": "Gate 6 · Standard 'Test every ampullary carcinoma…' (note); Gate 0 · Reasonable 'Germline testing at the point of diagnosis, not after the operation.' (pref)"
+      },
+      {
+       "source": "Medullary ampullary carcinoma (Xue)",
+       "key": "pm36502926",
+       "says": "Deficiency in 18 of 119 tested non-medullary carcinomas (15%), a convenience subset of 348, and in 7 of 11 medullary carcinomas.",
+       "locator": "Gate 6 · Standard 'Test every ampullary carcinoma…' (avoid); Reasonable 'Report the rare non-tubular subtypes separately…' (avoid)"
+      },
+      {
+       "source": "Kryklyva 2021",
+       "key": "pm34873870",
+       "says": "Deficiency in 1 of 23 early-onset ampullary carcinomas (4.3%) against 11 of 23 duodenal; the Lynch attribution in ampullary cancer rests on one patient.",
+       "locator": "Gate 6 · Standard 'Test every ampullary carcinoma…' (avoid); Gate 0 · Reasonable 'Germline testing at the point of diagnosis…' (pref, avoid)"
+      }
+     ],
+     "divergence": "PERIPAN recommends reflex testing for all, ESGE 2021 advised against routine testing of biopsies, and NCCN limits profiling to metastatic candidates; prevalence estimates range from 4.3% to 15%.",
+     "proposal": "Reflex mismatch-repair testing on every ampullary carcinoma at diagnosis, regardless of age, subtype or stage, ordered by pathology without a request and reported with the final pathology; measure the local deficiency rate rather than assuming one in six. The roadmap notes this PERIPAN position is the live local choice.",
+     "proposal_locator": "Gate 6 · Standard 'Test every ampullary carcinoma for mismatch-repair deficiency as a reflex…' (pref, avoid, note); Operations · board meeting 'Reflex tests'",
+     "rationale": "PERIPAN recommends reflex testing on every case regardless of subtype, graded low evidence, on an assertion that the deficiency rate is comparable to colorectal cancer; the 2021 ESGE ampullary guideline recommended against routine molecular and immunohistochemical testing of ampullary biopsies, and NCCN recommends somatic profiling only for metastatic patients who are candidates for therapy. The published prevalence runs from 4.3% (1 of 23 early-onset cases) to 15% (18 of 119 tested cases), so one in six is the upper end of a range rather than an established figure. The result is both a treatment test and a germline trigger, which is the argument for reflex testing independent of the prevalence estimate. [PAYER]",
+     "audit": "Testing completion rate on resected carcinoma, the local deficiency rate measured rather than assumed, and germline referrals generated.",
+     "web": "ampullary/#question-AMP-D6"
+    },
+    {
+     "id": "AMP-D7",
+     "set": "roadmap",
+     "title": "What minimum number of examined lymph nodes does this programme hold itself to at pancreatoduodenectomy for ampullary cancer?",
+     "question": "What minimum number of examined lymph nodes does this programme hold itself to at pancreatoduodenectomy for ampullary cancer?",
+     "kind": "governance",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "5 · Pancreaticoduodenectomy for invasive carcinoma",
+       "url": "ampullary/#decision-5"
+      }
+     ],
+     "positions": [
+      {
+       "source": "Node yield, NCDB (Resende)",
+       "key": "pm38353072",
+       "says": "In 8,127 resections the survival-hazard inflection was at 20 examined nodes, proposed as the minimum; cited from abstract only, so the derivation could not be checked.",
+       "locator": "Gate 5 · Standard 'Harvest and count the nodes…' (pref)"
+      },
+      {
+       "source": "PERIPAN 2025",
+       "key": "pm40729532",
+       "says": "Finding no ampullary-specific evidence, adopts the pancreatic minimum lymph node yield and asks that a short count prompt re-examination of the specimen.",
+       "locator": "Gate 5 · Standard 'Harvest and count the nodes…' (pref)"
+      },
+      {
+       "source": "NCCN Pancreatic Adenocarcinoma (extracted text)",
+       "key": "np-ampullary-nccnpanc",
+       "says": "Supplies the pancreatic minimum-node-yield proposals of 11 to 17 that PERIPAN's default points to.",
+       "locator": "Gate 5 · Standard 'Harvest and count the nodes…' (pref); References · nonpm 'NCCN Pancreatic Adenocarcinoma'"
+      },
+      {
+       "source": "Balci 2015 nodal substaging",
+       "key": "pm25783680",
+       "says": "Median 11 nodes examined, only 48% reaching 12; with 12 or more examined, N0 and N1 survival curves converge, suggesting adequate sampling changes what the N category means.",
+       "locator": "Gate 5 · Standard 'Harvest and count the nodes…' (avoid, note)"
+      }
+     ],
+     "divergence": "A registry abstract proposes 20 nodes while PERIPAN defers to pancreatic proposals of 11 to 17, and the largest pathology series reached 12 nodes in under half its specimens.",
+     "proposal": "No number is proposed. Harvest and count the nodes, report the number involved, re-examine the specimen when the count falls short, and audit every specimen against the programme's stated minimum once it is set.",
+     "proposal_locator": "Gate 5 · Standard 'Harvest and count the nodes, and report the number involved…'; Operations · dashboard 'Pancreatoduodenectomy: … number of lymph nodes examined per specimen against the programme's stated minimum'",
+     "rationale": "A National Cancer Database analysis of 8,127 resections places the inflection point at 20, but it is cited here from its abstract only and the derivation of the threshold could not be checked; PERIPAN defers to the pancreatic minimum, where proposals run from 11 to 17; the largest pathology series had a median of 11 with only 48% of specimens reaching 12. That series also showed the N0 and N1 survival curves converging once 12 or more nodes were examined, which is an argument that adequate sampling changes the meaning of the N category rather than only its precision. A number that is not written down is not audited.",
+     "audit": "Nodes examined per specimen against the stated minimum, and the proportion of short counts triggering re-examination of the specimen.",
+     "web": "ampullary/#question-AMP-D7"
+    },
+    {
+     "id": "AMP-D8",
+     "set": "roadmap",
+     "title": "Who owns post-papillectomy surveillance, and when does it stop?",
+     "question": "Who owns post-papillectomy surveillance, and when does it stop?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "2 · Assess endoscopic papillectomy",
+       "url": "ampullary/#decision-2"
+      },
+      {
+       "label": "9 · Surveillance and hereditary disease",
+       "url": "ampullary/#decision-9"
+      }
+     ],
+     "positions": [
+      {
+       "source": "ESGE ampullary 2021",
+       "key": "pm33728632",
+       "says": "Duodenoscopy with scar biopsies within 3 months, at 6 and 12 months, then yearly for at least 5 years (strong, low quality); sets no endpoint, and the schedule has no stated derivation.",
+       "locator": "Gate 9 · Standard 'After endoscopic papillectomy or surgical ampullectomy, perform duodenoscopy…' (pref, avoid)"
+      },
+      {
+       "source": "Japanese 22-centre papillectomy (Iwasaki)",
+       "key": "pm41192607",
+       "says": "After R0, cumulative recurrence was 4.9%, 11% and 13% at 1, 3 and 5 years among 416 patients.",
+       "locator": "Gate 9 · Standard 'After endoscopic papillectomy or surgical ampullectomy…' (avoid)"
+      },
+      {
+       "source": "Han 2023 recurrence timing",
+       "key": "pm38015261",
+       "says": "Recurrence came at a mean 3.2 years, up to 9.75, with 45% after year 2; mean follow-up (2.8 years) was shorter than time to recurrence, and the ten-year argument rests on one patient.",
+       "locator": "Gate 9 · Standard 'After endoscopic papillectomy or surgical ampullectomy…' (pref, note); Gate 2 · Avoid 'Do not discharge a patient after a papillectomy.'"
+      },
+      {
+       "source": "NCCN Ampullary Adenocarcinoma (extracted text)",
+       "key": "np-ampullary-nccnamp",
+       "says": "All patients after endoscopic removal or surgical ampullectomy need endoscopic surveillance; only pancreatoduodenectomy for adenoma removes the need.",
+       "locator": "Gate 3 · Standard group · option 'Negative margins, adenoma only — endoscopic surveillance' (avoid); Gate 9 · Standard 'After resection of ampullary adenocarcinoma…'"
+      }
+     ],
+     "divergence": "ESGE sets at least 5 years with no endpoint; recurrence after R0 is still rising at 5 years, the case for ten years rests on one late event, and no stopping-rule data exist.",
+     "proposal": "Enrol every patient in ESGE's schedule (by 3 months, at 6 and 12 months, then yearly) before the procedure and never discharge after papillectomy; 5 years is a minimum, and extension beyond 5 years is unresolved. The board names the surveillance schedule before the patient leaves; no programme owner is named.",
+     "proposal_locator": "Gate 9 · Standard 'After endoscopic papillectomy or surgical ampullectomy…' (note); Gate 2 · Avoid 'Do not discharge a patient after a papillectomy.'; Operations · board meeting 'Output'",
+     "rationale": "ESGE says at least 5 years and sets no endpoint, and its 3-, 6- and 12-month schedule has no stated derivation. Recurrence after a histological R0 was still 13% at 5 years in 798 patients, which is the honest reason to continue. The ten-year argument rests on one patient recurring at 9.75 years in a cohort whose mean follow-up was shorter than its own mean time to recurrence. There are no stopping-rule data and no competing-risk analysis in this population.",
+     "audit": "Named owner; interval adherence at 3, 6 and 12 months and annually; recurrences detected after year 5.",
+     "web": "ampullary/#question-AMP-D8"
+    },
+    {
+     "id": "AMP-D9",
+     "set": "roadmap",
+     "title": "In polyposis, does the programme adopt the ESGE and BSG ampullary-appearance intervals alongside the Spigelman stage, and which guideline column does it follow for the Spigelman intervals themselves?",
+     "question": "In polyposis, does the programme adopt the ESGE and BSG ampullary-appearance intervals alongside the Spigelman stage, and which guideline column does it follow for the Spigelman intervals themselves?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "9 · Surveillance and hereditary disease",
+       "url": "ampullary/#decision-9"
+      }
+     ],
+     "positions": [
+      {
+       "source": "ESGE polyposis 2019",
+       "key": "pm31342472",
+       "says": "First to add ampullary-appearance intervals (5, 3, 1 years) alongside Spigelman intervals of 5 years (0–I), 3 (II), 1 (III) and 6 months (IV); the ampullary intervals are uncited, described as proposed intervals that seem safe.",
+       "locator": "Gate 9 · Standard 'In polyposis, set the surveillance interval…' (pref, note); Quick reference · 'Surveillance intervals — after papillectomy, and in polyposis'"
+      },
+      {
+       "source": "BSG 2020 (as tabulated in Soons 2021)",
+       "key": "pm34529357",
+       "says": "Adopted the ESGE ampullary intervals; Spigelman stage III 1 year with endoscopic therapy considered, stage IV 6–12 months with endoscopic or surgical therapy considered.",
+       "locator": "Quick reference · 'Surveillance intervals — after papillectomy, and in polyposis' (Stage III and IV rows, ampulla row)"
+      },
+      {
+       "source": "ACG (as tabulated in Soons 2021)",
+       "key": "pm34529357",
+       "says": "No ampullary interval; stage 0 4 years, I 2–3 years, II 1–3 years, III 6–12 months, IV 3–6 months with surgical evaluation and surgery if the papilla is involved.",
+       "locator": "Quick reference · 'Surveillance intervals — after papillectomy, and in polyposis' (Stage rows)"
+      },
+      {
+       "source": "ASGE (as tabulated in Soons 2021)",
+       "key": "pm34529357",
+       "says": "No ampullary interval; stages 0–I 5 years, II 3 years, III 6–12 months, IV 3–6 months plus surgical evaluation.",
+       "locator": "Quick reference · 'Surveillance intervals — after papillectomy, and in polyposis' (Stage rows)"
+      },
+      {
+       "source": "Spigelman 1989",
+       "key": "pm2571019",
+       "says": "Built by expert judgement from one screening round of 102 patients and never validated; it carries no ampullary information, though the papilla was adenomatous more often than the peripapillary area (81% vs 41%).",
+       "locator": "Gate 9 · Standard 'In polyposis, set the surveillance interval…' (avoid, note); What we are not sure about · 'The Spigelman score has never been validated…'"
+      }
+     ],
+     "divergence": "ACG, ASGE, BSG and ESGE differ at every Spigelman stage, most at III and IV, only ESGE and BSG add ampullary intervals, and neither the score nor those intervals have been validated.",
+     "proposal": "Set the polyposis interval on both the Spigelman stage and the ampullary appearance (ESGE/BSG 5, 3 and 1 years), taking the shorter, with a named polyposis lead holding recall. No guideline column is chosen for the Spigelman intervals; the roadmap asks that current editions be verified before adopting one.",
+     "proposal_locator": "Gate 9 · Standard 'In polyposis, set the surveillance interval…'; Quick reference · 'Surveillance intervals' (foot); Operations · board meeting 'Polyposis lane'",
+     "rationale": "ACG, ASGE, BSG and ESGE differ at every Spigelman stage, most sharply at stages III and IV, and only ESGE and BSG set an interval on the ampulla. About 50% of duodenal cancers in these patients are periampullary and the Spigelman stage does not predict them. Both halves are weak: the score has never been formally validated and two of its four components require histology that the same guidelines discourage obtaining, while the ampullary intervals of 5, 3 and 1 year appear in the guideline text as proposed intervals that seem safe, with no citation and no modelling. [EXPERTISE]",
+     "audit": "Ampullary appearance documented at each surveillance endoscopy; interval set against interval achieved; non-attendance.",
+     "web": "ampullary/#question-AMP-D9"
+    },
+    {
+     "id": "AMP-D10",
+     "set": "roadmap",
+     "title": "Who owns the NCCN, ESGE and PERIPAN update checks, on what cycle, and who resolves the ESPAC-3 discrepancy in the extracted NCCN text before this page goes live?",
+     "question": "Who owns the NCCN, ESGE and PERIPAN update checks, on what cycle, and who resolves the ESPAC-3 discrepancy in the extracted NCCN text before this page goes live?",
+     "kind": "governance",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "7 · Adjuvant treatment after resection",
+       "url": "ampullary/#decision-7"
+      }
+     ],
+     "positions": [
+      {
+       "source": "NCCN Ampullary, extracted systemic-therapy page",
+       "key": "np-ampullary-nccnamp",
+       "says": "States ESPAC-3 showed significant disease-free and overall survival gains with adjuvant gemcitabine or fluorouracil in resectable ampullary adenocarcinoma, quoting 23.0- and 23.6-month medians that match the pancreatic cohort; no version string.",
+       "locator": "References · nonpm 'NCCN Ampullary Adenocarcinoma' (known defect); Gate 7 · Avoid 'Do not tell a patient that adjuvant chemotherapy has been shown…' (avoid)"
+      },
+      {
+       "source": "NCCN Ampullary, Discussion section",
+       "key": "np-ampullary-nccnamp",
+       "says": "States the ESPAC-3 position correctly, according to the roadmap.",
+       "locator": "References · nonpm 'NCCN Ampullary Adenocarcinoma'; What we are not sure about · 'The extracted NCCN systemic-therapy page overstates ESPAC-3…'"
+      },
+      {
+       "source": "ESPAC-3 periampullary",
+       "key": "pm22782416",
+       "says": "Primary analysis negative; the ampullary subgroup was never powered or tested, its medians (40.6, 57.8 and 70.8 months for observation, fluorouracil and gemcitabine) reported without P values.",
+       "locator": "What we are not sure about · 'ESPAC-3 was never powered for its ampullary subgroup…'; Gate 7 · Standard 'Offer adjuvant chemotherapy…' (note)"
+      }
+     ],
+     "divergence": "The extracted NCCN systemic-therapy page contradicts both the guideline's own Discussion and the published trial, and the extraction carries no version string.",
+     "proposal": "No owner or update cycle is proposed. The roadmap requires the ESPAC-3 wording to be checked against the published NCCN PDF and the edition confirmed before any version is published or ratified, and meanwhile does not cite ESPAC-3 as establishing ampullary benefit.",
+     "proposal_locator": "What we are not sure about · 'The extracted NCCN systemic-therapy page overstates ESPAC-3…' and 'ESPAC-3 was never powered…'; References · nonpm 'NCCN Ampullary Adenocarcinoma'",
+     "rationale": "This page was built from a machine-converted guideline extraction that carries no version string and that misstates ESPAC-3 on one page while stating it correctly on another. The full-text read of ESPAC-3 confirms the discrepancy from the trial side: there is no significant ampullary disease-free or overall survival result in that trial to report, because the subgroup was never tested. No version of this page should be published without that reconciled against the published guideline.",
+     "audit": "Named owner, guideline edition and date recorded, agreed update cycle, and a signed-off note on the ESPAC-3 wording.",
+     "web": "ampullary/#question-AMP-D10"
+    },
+    {
+     "id": "AMP-D11",
+     "set": "roadmap",
+     "title": "Does the programme count argon plasma coagulation or radiofrequency ablation at the index papillectomy as part of an R0 resection, or as evidence of residual disease?",
+     "question": "Does the programme count argon plasma coagulation or radiofrequency ablation at the index papillectomy as part of an R0 resection, or as evidence of residual disease?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "2 · Assess endoscopic papillectomy",
+       "url": "ampullary/#decision-2"
+      },
+      {
+       "label": "3 · Review the papillectomy pathology",
+       "url": "ampullary/#decision-3"
+      }
+     ],
+     "positions": [
+      {
+       "source": "Pancreas2000 EP vs TSA (Hollenbach)",
+       "key": "pm39642968",
+       "says": "Adenoma R0 after papillectomy was 80.2%, or 65.9% if the 14.4% with index-session argon plasma coagulation or radiofrequency ablation count as probable R2; no preferred estimate is given and the reclassification is a retrospective assumption.",
+       "locator": "Gate 2 · Reasonable 'Piecemeal resection with ablation of visible residual tissue…' (avoid, note); What we are not sure about · 'The papillectomy R0 rate of 80% is closer to 66%…'"
+      }
+     ],
+     "divergence": "The only source reports both conventions (80.2% versus 65.9% R0) without preferring either, and the R2 reclassification is the authors' retrospective assumption.",
+     "proposal": "The roadmap's text treats index-session ablation as a sign of visible residual tissue, a probable R2 resection rather than R0, and asks the dashboard to record ablation separately from R status; a formal programme convention has not been adopted.",
+     "proposal_locator": "Gate 2 · Reasonable 'Piecemeal resection with ablation of visible residual tissue…' (avoid); Operations · dashboard first item ('For every papillectomy…')",
+     "rationale": "The largest European series reports both answers: R0 for adenoma after papillectomy was 80.2%, and 65.9% once the 14.4% of cases that had index-session ablation are counted as probable R2 resections. Which convention the programme adopts determines its own reported R0 rate, its surveillance intensity for those patients, and whether its figures can be compared with anyone else's.",
+     "audit": "Ablation at the index session recorded separately from R status for every papillectomy, with recurrence by both conventions.",
+     "web": "ampullary/#question-AMP-D11"
+    },
+    {
+     "id": "AMP-D12",
+     "set": "roadmap",
+     "title": "What does the programme do with an indeterminate (Rx) resection margin after papillectomy?",
+     "question": "What does the programme do with an indeterminate (Rx) resection margin after papillectomy?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "3 · Review the papillectomy pathology",
+       "url": "ampullary/#decision-3"
+      }
+     ],
+     "positions": [
+      {
+       "source": "Japanese 22-centre papillectomy (Iwasaki)",
+       "key": "pm41192607",
+       "says": "Rx margins were 25.8% of 798 specimens, carried a recurrence HR of 2.38 (2.30 in the abstract) against R0, and matched R1 at 34% five-year recurrence; margins were assessed locally without central review.",
+       "locator": "Gate 3 · Standard 'Agree the orientation and the margins with the pathologist…' (note); What we are not sure about · 'An indeterminate resection margin…'"
+      },
+      {
+       "source": "ESGE ampullary 2021",
+       "key": "pm33728632",
+       "says": "Offers no recommendation for an indeterminate margin.",
+       "locator": "Gate 3 · Standard 'Agree the orientation and the margins…' (note); What we are not sure about · 'An indeterminate resection margin…'"
+      },
+      {
+       "source": "NCCN Ampullary Adenocarcinoma (extracted text)",
+       "key": "np-ampullary-nccnamp",
+       "says": "Requires direct communication with the pathologist or a documented method marking the deep and duodenal mucosal margins; positive margins after endoscopic removal can be re-excised or go to surgical ampullectomy or pancreatoduodenectomy.",
+       "locator": "Gate 3 · Standard 'Agree the orientation and the margins…' (pref); Standard group · option 'Positive margins, adenoma only — endoscopic re-excision' (when)"
+      },
+      {
+       "source": "Choi 2022",
+       "key": "pm35633905",
+       "says": "A positive or uncertain margin predicted early recurrence (odds ratio 4.023), from 11 to 13 events with intervals spanning an order of magnitude.",
+       "locator": "Gate 2 · Standard 'Tell the patient before the procedure that about one in five will recur…' (note)"
+      }
+     ],
+     "divergence": "No guideline addresses an indeterminate margin; cohort data suggest it behaves like a positive margin, but on locally assessed, centrally unreviewed pathology.",
+     "proposal": "Treat Rx as positive for surveillance purposes, stated as a convention rather than evidence, and prevent it at specimen handling: orientation and margins agreed in writing with the pathologist beforehand, the specimen delivered fresh and fixed within about 30 minutes, and the local cause recorded for every Rx.",
+     "proposal_locator": "What we are not sure about · 'An indeterminate resection margin…'; Gate 3 · Standard 'Agree the orientation and the margins…'; Operations · dashboard first item ('For every papillectomy…')",
+     "rationale": "An Rx margin accounted for 206 of 798 specimens (25.8%) in the Japanese national cohort, carried a hazard ratio of 2.38 for recurrence against R0, and by 5 years had the same cumulative recurrence as a frankly positive margin (34% each). It is the commonest ambiguous result in this pathway and ESGE offers no recommendation for it. Treating it as positive for surveillance purposes is this page's convention, not evidence.",
+     "audit": "Proportion of papillectomy specimens reported Rx, the stated local cause for each, and recurrence by R0, R1 and Rx.",
+     "web": "ampullary/#question-AMP-D12"
+    },
+    {
+     "id": "AMP-D13",
+     "set": "roadmap",
+     "title": "Which definition of recurrence does the programme's papillectomy dashboard use — counting residual disease found at the first surveillance endoscopy, or only events after a documented negative examination?",
+     "question": "Which definition of recurrence does the programme's papillectomy dashboard use — counting residual disease found at the first surveillance endoscopy, or only events after a documented negative examination?",
+     "kind": "operational",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "2 · Assess endoscopic papillectomy",
+       "url": "ampullary/#decision-2"
+      },
+      {
+       "label": "9 · Surveillance and hereditary disease",
+       "url": "ampullary/#decision-9"
+      }
+     ],
+     "positions": [],
+     "divergence": "The two large cohorts define recurrence differently (any neoplastic tissue versus only after a negative endoscopy), so their rates of 18.3% and 16.1% are not comparable.",
+     "proposal": "Report recurrence both ways, counting and excluding disease found at the first surveillance endoscopy, by margin status including Rx, with time to recurrence, out to at least 5 years and not truncated at 2.",
+     "proposal_locator": "Operations · dashboard 'Recurrence after papillectomy by margin status including Rx…'; What we are not sure about · 'The recurrence rates quoted after papillectomy are not measuring the same thing…'",
+     "rationale": "The two large cohorts in the literature differ on exactly this, which is why their recurrence rates (18.3% and 16.1%) are not comparable, and the choice determines whether the programme's own figure measures initial resection quality or genuine recurrence. One cohort's internal data show the consequence: more recurrence after en bloc than piecemeal resection, because piecemeal patients had their residual disease reclassified.",
+     "audit": "Recurrence reported both ways, with time to event, out to at least 5 years and not truncated at 2.",
+     "web": "ampullary/#question-AMP-D13"
+    },
+    {
+     "id": "AMP-D14",
+     "set": "roadmap",
+     "title": "Does the programme use the ESPAC-4 and PRODIGE-24 regimens in ampullary cancer at all, and if so what is said at consent?",
+     "question": "Does the programme use the ESPAC-4 and PRODIGE-24 regimens in ampullary cancer at all, and if so what is said at consent?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "5 · Pancreaticoduodenectomy for invasive carcinoma",
+       "url": "ampullary/#decision-5"
+      },
+      {
+       "label": "7 · Adjuvant treatment after resection",
+       "url": "ampullary/#decision-7"
+      },
+      {
+       "label": "8 · Locally advanced or metastatic disease",
+       "url": "ampullary/#decision-8"
+      }
+     ],
+     "positions": [
+      {
+       "source": "NCCN Ampullary Adenocarcinoma (extracted text)",
+       "key": "np-ampullary-nccnamp",
+       "says": "Lists modified FOLFIRINOX and capecitabine–gemcitabine for pancreatobiliary and mixed type; the panel added the latter on clinical expertise without randomised phase III support, and calls ampullary systemic data very limited and extrapolated.",
+       "locator": "Gate 7 · Standard 'Choose the regimen by subtype…' (pref, note); Gate 8 · Standard 'Choose first-line systemic therapy…' (avoid)"
+      },
+      {
+       "source": "PRODIGE-24",
+       "key": "pm30575490",
+       "says": "Resected pancreatic ductal adenocarcinoma only, nonductal tumours excluded; restricted to PS 0–1, age under 80, CA 19-9 under 180; grade 3–4 toxicity 75.9%; no disease-free benefit at 70 or older.",
+       "locator": "Gate 7 · Standard 'Choose the regimen by subtype…' (avoid); What we are not sure about · 'ESPAC-4 and PRODIGE-24 sit in this depot as borrowed evidence…'"
+      },
+      {
+       "source": "ESPAC-4",
+       "key": "pm28129987",
+       "says": "Resected pancreatic ductal adenocarcinoma only, nonductal tumours excluded; 2.5-month median survival gain (HR 0.82), reported early, with the benefit concentrated in R0 patients.",
+       "locator": "Gate 7 · Standard 'Choose the regimen by subtype…' (avoid); What we are not sure about · 'ESPAC-4 and PRODIGE-24 sit in this depot as borrowed evidence…'"
+      },
+      {
+       "source": "ESPAC-3 periampullary",
+       "key": "pm22782416",
+       "says": "The only randomised adjuvant data in ampullary patients used fluorouracil–folinic acid or gemcitabine and were negative on the primary endpoint.",
+       "locator": "Gate 7 · Standard 'Choose the regimen by subtype…' (pref); Standard 'Offer adjuvant chemotherapy for stage II and III disease…' (avoid)"
+      }
+     ],
+     "divergence": "NCCN lists both regimens on panel expertise, while both source trials excluded nonductal tumours and the only randomised ampullary trial, using other agents, was negative on its primary endpoint.",
+     "proposal": "NCCN's lists, including modified FOLFIRINOX and capecitabine–gemcitabine, stay on the page, but consent must name each regimen's source trial, say both trials excluded this disease, and present use as a risk-tolerance decision; the evidence source is recorded in the registry. Whether to use them at all is left to the programme.",
+     "proposal_locator": "Gate 7 · Standard 'Choose the regimen by subtype…' (avoid, note); What we are not sure about · 'ESPAC-4 and PRODIGE-24 sit in this depot as borrowed evidence…'; Operations · dashboard 'Adjuvant therapy: … regimen and its documented evidence source…'",
+     "rationale": "Both trials excluded nonductal tumours by protocol and neither reports a single ampullary patient. PRODIGE-24 produced grade 3 or 4 toxicity in 75.9% of a population restricted to performance status 0–1 and age under 80, with no disease-free survival benefit in those aged 70 or over; ESPAC-4 gained 2.5 months of median survival, reported early, with the benefit confined to R0 patients. Ampullary carcinoma has roughly double the resected median survival of pancreatic cancer and no randomised evidence that any adjuvant chemotherapy helps. Offering these regimens is a defensible choice about risk tolerance; it should be made once, in writing, rather than case by case.",
+     "audit": "Regimen given, subtype and stage, documented statement of the evidence source at consent, toxicity, completion and recurrence.",
+     "web": "ampullary/#question-AMP-D14"
+    },
+    {
+     "id": "AMP-D15",
+     "set": "roadmap",
+     "title": "Does the programme measure its own preoperative biopsy false-negative rate for invasive carcinoma, and at what rate does it change the clinical decision 1 threshold?",
+     "question": "Does the programme measure its own preoperative biopsy false-negative rate for invasive carcinoma, and at what rate does it change the clinical decision 1 threshold?",
+     "kind": "governance",
+     "status": "OPEN — not yet decided",
+     "where": [
+      {
+       "label": "1 · Assess the limitations of an adenoma biopsy",
+       "url": "ampullary/#decision-1"
+      }
+     ],
+     "positions": [
+      {
+       "source": "NCCN Ampullary Adenocarcinoma (extracted text)",
+       "key": "np-ampullary-nccnamp",
+       "says": "Endoscopic biopsies of ampullary adenocarcinoma have high false-negative rates of about 20–40%.",
+       "locator": "Gate 1 · Standard 'Treat a biopsy that reads adenoma as the least severe possible diagnosis…' (pref)"
+      },
+      {
+       "source": "PERIPAN 2025",
+       "key": "pm40729532",
+       "says": "Puts the rate at 20–30%, from sampling rather than interpretation; biopsy site matters more than number, with at least three targeted biopsies.",
+       "locator": "Gate 1 · Standard 'Treat a biopsy that reads adenoma…' (pref, note)"
+      },
+      {
+       "source": "Gamble 2023",
+       "key": "pm37595391",
+       "says": "Major discrepancy (benign biopsy, malignant resection) in 8 of 90 patients with follow-up pathology (8.9%), a lower bound because only 36% had follow-up.",
+       "locator": "Gate 1 · Standard 'Treat a biopsy that reads adenoma…' (avoid, note)"
+      },
+      {
+       "source": "Attila 2018",
+       "key": "pm29755017",
+       "says": "Occult adenocarcinoma in 14 of 44 papillectomies (32%) for lesions judged benign, after 44.3% had already been excluded for a malignant biopsy or suspicious appearance.",
+       "locator": "Gate 1 · Standard 'Treat a biopsy that reads adenoma…' (avoid, note)"
+      },
+      {
+       "source": "Pancreas2000 EP vs TSA (Hollenbach)",
+       "key": "pm39642968",
+       "says": "Roughly a third of papillectomies and surgical ampullectomies were done for the wrong indication: no neoplasm (24.2%, 14.8%) or advanced cancer (10.9%, 36.6%).",
+       "locator": "Gate 1 · Avoid 'Do not perform a papillectomy to obtain a diagnosis when adenoma has not been proven.'; What we are not sure about · 'Roughly a third of both papillectomies and surgical ampullectomies…'"
+      }
+     ],
+     "divergence": "NCCN and PERIPAN give different false-negative ranges and every supporting estimate is shifted by selection, so no external figure can be applied locally.",
+     "proposal": "Measure it: the dashboard compares final histology with preoperative biopsy for every resected ampullary lesion. Meanwhile treat an adenoma biopsy as the least severe possible diagnosis, with at least three targeted biopsies; no rate at which the clinical decision 1 threshold would change is proposed.",
+     "proposal_locator": "Operations · dashboard 'Final histology against preoperative biopsy for every resected ampullary lesion…'; Gate 1 · Standard 'Treat a biopsy that reads adenoma…' (note)",
+     "rationale": "The published range is 20% to 40% and every supporting figure is shifted by selection — the 8.9% major-discrepancy rate was computed on the 36% of patients who had follow-up pathology, and the 32% occult-carcinoma rate came after 44.3% of papillectomies had been excluded for a malignant biopsy or suspicious appearance. A local rate is the only one that can be acted on, and the roughly one-in-three wrong-indication rate in the European series suggests that most programmes do not know theirs.",
+     "audit": "Final histology against preoperative biopsy for every resected ampullary lesion, by number and site of biopsies, reported annually.",
+     "web": "ampullary/#question-AMP-D15"
+    }
+   ],
+   "ratify": []
+  }
+ },
+ "not_applicable": [],
+ "sources": {
+  "ehd-amp_wang2018": {
+   "short": "Wang 2018 · SEER metastatic ampullary",
+   "title": "",
+   "kind": "Study, guidance or policy",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/30636895/",
+    "doi": "https://doi.org/10.2147/CMAR.S182312",
+    "tmc": "https://libkey.io/libraries/480/10.2147/CMAR.S182312",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6307684/"
+   }
+  },
+  "ehd-pdac_panode2026": {
+   "short": "PANODE 2026 · station 16b1 and 9",
+   "title": "",
+   "kind": "Study, guidance or policy",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42905970/",
+    "doi": "https://doi.org/10.1093/bjsopen/zrag157",
+    "tmc": "https://libkey.io/libraries/480/10.1093/bjsopen/zrag157",
+    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13686085/"
+   }
+  },
+  "ehd-amp_saedon2018": {
+   "short": "Saedon 2018 · metastasectomy review",
+   "title": "",
+   "kind": "Study, guidance or policy",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/30610789/",
+    "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,Metastasectomy%20of%20pancreatic%20and%20periampullary%20adenocarcinoma%20to%20solid%20organ%3A%20The%20current%20evidence.&lang=en"
+   }
+  },
+  "ehd-amp_nccn2023": {
+   "short": "NCCN Ampullary 1.2023",
+   "title": "",
+   "kind": "Study, guidance or policy",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/37433437/",
+    "doi": "https://doi.org/10.6004/jnccn.2023.0034",
+    "tmc": "https://libkey.io/libraries/480/10.6004/jnccn.2023.0034"
+   }
+  },
+  "pm39831703": {
+   "short": "Malignancy risk score",
+   "title": "Mavani PT, Sok C, Eng N, et al. Multi-institutional analysis of pancreaticoduodenectomy for nonfamilial periampullary adenoma: a novel risk score to guide shared decision-making. J Am Coll Surg. 2025;240(4):392-402. doi:10.1097/XCS.0000000000001289. PMID:39831703.",
+   "kind": "Staging & risk",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39831703/"
+   }
+  },
+  "pm23442830": {
+   "short": "Kim 2013",
+   "title": "Kim HN, Kim KM, Shin JU, et al. Prediction of carcinoma after resection in subjects with ampullary adenomas on endoscopic biopsy. J Clin Gastroenterol. 2013;47(4):346-51. doi:10.1097/MCG.0b013e318272f2ef. PMID:23442830.",
+   "kind": "Staging & risk",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/23442830/"
+   }
+  },
+  "np-ampullary-nccnamp": {
+   "short": "NCCN Ampullary Adenocarcinoma",
+   "title": "National Comprehensive Cancer Network. Ampullary Adenocarcinoma. NCCN Clinical Practice Guidelines in Oncology. Programme-supplied machine-converted extraction, consulted 6 October 2026; the extraction carries no version string on any page, so the edition in force must be confirmed before this page is published. Pages used: clinical presentation, workup and treatment algorithms for ampullary adenoma and adenocarcinoma; postoperative adjuvant treatment and surveillance; Principles of Stent Management; Principles of Surgical Technique; Pathologic Analysis including Histologic Subtyping; Principles of Systemic Therapy (neoadjuvant, adjuvant, metastatic); Principles of Radiation Therapy; AJCC tables; and the Discussion. <b>Known defect:</b> the Principles of Systemic Therapy adjuvant page states that ESPAC-3 demonstrated significant improvements in disease-free and overall survival with adjuvant gemcitabine or fluorouracil versus observation in resectable ampullary adenocarcinoma, and quotes median survivals of 23.0 and 23.6 months for fluorouracil-leucovorin and gemcitabine — neither claim matches the published periampullary trial (PMID 22782416), and those medians correspond to the ESPAC-3 pancreatic cohort. The guideline's own Discussion states the position correctly. Confirm against the published PDF before quoting. The full-text read of ESPAC-3 on 7 October 2026 confirms the discrepancy from the trial side: the published periampullary trial reports no significant disease-free or overall survival result for ampullary adenocarcinoma, adjusted or otherwise, because the ampullary subgroup was never powered and no hypothesis test for it was performed.",
+   "kind": "Guidelines & policy",
+   "links": {
+    "url": "https://www.nccn.org/guidelines/category_1"
+   }
+  },
+  "pm40729532": {
+   "short": "PERIPAN 2025",
+   "title": "Abu Hilal M, Uijterwijk BA, Lemmers DHL, et al. The Brescia international multidisciplinary consensus guidelines on the optimal pathology assessment and multidisciplinary pathways of non-pancreatic neoplasms in and around the ampulla of Vater (PERIPAN). United European Gastroenterol J. 2025;13(7):1048-1068. doi:10.1002/ueg2.70074. PMID:40729532.",
+   "kind": "Guidelines & policy",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/40729532/"
+   }
+  },
+  "pm39642968": {
+   "short": "Pancreas2000 EP vs TSA",
+   "title": "Hollenbach M, Heise C, Abou-Ali E, et al. Endoscopic papillectomy versus surgical ampullectomy for adenomas and early cancers of the papilla: a retrospective Pancreas2000/European Pancreatic Club analysis. Gut. 2025;74(3):397-409. doi:10.1136/gutjnl-2022-327996. PMID:39642968.",
+   "kind": "Surgery",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39642968/"
+   }
+  },
+  "pm33728632": {
+   "short": "ESGE ampullary 2021",
+   "title": "Vanbiervliet G, Strijker M, Arvanitakis M, et al. Endoscopic management of ampullary tumors: European Society of Gastrointestinal Endoscopy (ESGE) Guideline. Endoscopy. 2021;53(4):429-448. doi:10.1055/a-1397-3198. PMID:33728632.",
+   "kind": "Guidelines & policy",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/33728632/"
+   }
+  },
+  "pm27457864": {
+   "short": "Ampullary NET operation",
+   "title": "Baptiste GG, Postlewait LM, Ethun CG, et al. Is there an optimal surgical approach to neuroendocrine tumors of the ampulla? A single institution experience over 15 years. Am Surg. 2016;82(7):637-43. PMID:27457864.",
+   "kind": "Surgery",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/27457864/"
+   }
+  },
+  "pm36587061": {
+   "short": "Yoon 2022",
+   "title": "Yoon SB, Jung MK, Lee YS, et al. Long-term outcomes of endoscopic papillectomy for ampullary adenoma with high-grade dysplasia or adenocarcinoma: a propensity score-matched analysis. Surg Endosc. 2023;37(5):3522-3530. doi:10.1007/s00464-022-09856-w. PMID:36587061.",
+   "kind": "Endoscopic resection",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/36587061/"
+   }
+  },
+  "pm22782416": {
+   "short": "ESPAC-3 periampullary",
+   "title": "Neoptolemos JP, Moore MJ, Cox TF, et al. Effect of adjuvant chemotherapy with fluorouracil plus folinic acid or gemcitabine vs observation on survival in patients with resected periampullary adenocarcinoma: the ESPAC-3 periampullary cancer randomized trial. JAMA. 2012;308(2):147-56. doi:10.1001/jama.2012.7352. Correction in JAMA. 2012;308:1861. PMID:22782416.",
+   "kind": "Systemic therapy",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/22782416/"
+   }
+  },
+  "pm31987649": {
+   "short": "Bolm 2020",
+   "title": "Bolm L, Ohrner K, Nappo G, et al. Adjuvant therapy is associated with improved overall survival in patients with pancreatobiliary or mixed subtype ampullary cancer after pancreatoduodenectomy - a multicenter cohort study. Pancreatology. 2020;20(3):433-441. doi:10.1016/j.pan.2020.01.009. PMID:31987649.",
+   "kind": "Systemic therapy",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/31987649/"
+   }
+  },
+  "pm31141112": {
+   "short": "Ecker 2019",
+   "title": "Ecker BL, Vollmer CM, Behrman SW, et al. Role of adjuvant multimodality therapy after curative-intent resection of ampullary carcinoma. JAMA Surg. 2019;154(8):706-714. doi:10.1001/jamasurg.2019.1170. PMID:31141112.",
+   "kind": "Systemic therapy",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/31141112/"
+   }
+  },
+  "pm27586202": {
+   "short": "Reid 2016 subtype reproducibility",
+   "title": "Reid MD, Balci S, Ohike N, et al. Ampullary carcinoma is often of mixed or hybrid histologic type: an analysis of reproducibility and clinical relevance of classification as pancreatobiliary versus intestinal in 232 cases. Mod Pathol. 2016;29(12):1575-1585. doi:10.1038/modpathol.2016.124. PMID:27586202.",
+   "kind": "Pathology",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/27586202/"
+   }
+  },
+  "pm36502926": {
+   "short": "Medullary ampullary carcinoma",
+   "title": "Xue Y, Balci S, Pehlivanoglu B, et al. Medullary carcinoma of the ampulla has distinct clinicopathologic characteristics including common association with microsatellite instability and PD-L1 expression. Hum Pathol. 2023;131:38-46. doi:10.1016/j.humpath.2022.12.004. PMID:36502926.",
+   "kind": "Pathology",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/36502926/"
+   }
+  },
+  "pm34873870": {
+   "short": "Kryklyva 2021",
+   "title": "Kryklyva V, Brosens LAA, Marijnissen-van Zanten MAJ, Ligtenberg MJL, Nagtegaal ID. Mismatch repair deficiency in early-onset duodenal, ampullary, and pancreatic carcinomas is a strong indicator for a hereditary defect. J Pathol Clin Res. 2022;8(2):181-190. doi:10.1002/cjp2.252. PMID:34873870.",
+   "kind": "Pathology",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/34873870/"
+   }
+  },
+  "pm38353072": {
+   "short": "Node yield, NCDB",
+   "title": "Resende V, Endo Y, Munir MM, et al. Prognostic value of nodal staging classification and number of examined lymph nodes among patients with ampullary cancer. J Gastrointest Surg. 2024;28(1):33-39. doi:10.1016/j.gassur.2023.11.008. PMID:38353072.",
+   "kind": "Surgery",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/38353072/"
+   }
+  },
+  "np-ampullary-nccnpanc": {
+   "short": "NCCN Pancreatic Adenocarcinoma",
+   "title": "National Comprehensive Cancer Network. Pancreatic Adenocarcinoma. NCCN Clinical Practice Guidelines in Oncology. Programme-supplied machine-converted extraction, consulted 6 October 2026; no version string in the extraction. Used for the operative and specimen questions ampullary disease shares with pancreatic cancer: the 1 mm margin convention and its acknowledged extrapolation from rectal cancer data, the SMA (retroperitoneal, uncinate) margin and specimen inking, the randomised and meta-analytic evidence against extended lymphadenectomy, and the minimum-lymph-node-yield proposals of 11 to 17.",
+   "kind": "Guidelines & policy",
+   "links": {
+    "url": "https://www.nccn.org/guidelines/category_1"
+   }
+  },
+  "pm25783680": {
+   "short": "Balci 2015 nodal substaging",
+   "title": "Balci S, Basturk O, Saka B, et al. Substaging nodal status in ampullary carcinomas has significant prognostic value: proposed revised staging based on an analysis of 313 well-characterized cases. Ann Surg Oncol. 2015;22(13):4392-401. doi:10.1245/s10434-015-4499-y. PMID:25783680.",
+   "kind": "Pathology",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/25783680/"
+   }
+  },
+  "pm41192607": {
+   "short": "Japanese 22-centre papillectomy",
+   "title": "Iwasaki E, Kawashima H, Takada Y, et al. Clinical outcomes of endoscopic papillectomy for ampullary adenoma and adenocarcinoma: a multicenter retrospective study in Japan. Gastrointest Endosc. 2025;103(5):1016-1027.e5. doi:10.1016/j.gie.2025.10.037. PMID:41192607.",
+   "kind": "Endoscopic resection",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/41192607/"
+   }
+  },
+  "pm38015261": {
+   "short": "Han 2023 recurrence timing",
+   "title": "Han S, Turkeltaub JA, Jonas D, et al. The timing of recurrence after endoscopic papillectomy. Surg Endosc. 2024;38(2):688-696. doi:10.1007/s00464-023-10567-z. PMID:38015261.",
+   "kind": "Surveillance",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/38015261/"
+   }
+  },
+  "pm31342472": {
+   "short": "ESGE polyposis 2019",
+   "title": "van Leerdam ME, Roos VH, van Hooft JE, et al. Endoscopic management of polyposis syndromes: European Society of Gastrointestinal Endoscopy (ESGE) Guideline. Endoscopy. 2019;51(9):877-895. doi:10.1055/a-0965-0605. PMID:31342472.",
+   "kind": "Guidelines & policy",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/31342472/"
+   }
+  },
+  "pm34529357": {
+   "short": "Soons 2021 FAP duodenum",
+   "title": "Soons E, Bisseling TM, van Kouwen MCA, Möslein G, Siersema PD. Endoscopic management of duodenal adenomatosis in familial adenomatous polyposis - a case-based review. United European Gastroenterol J. 2021;9(4):461-468. doi:10.1002/ueg2.12071. PMID:34529357.",
+   "kind": "Surveillance",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/34529357/"
+   }
+  },
+  "pm2571019": {
+   "short": "Spigelman 1989",
+   "title": "Spigelman AD, Williams CB, Talbot IC, Domizio P, Phillips RK. Upper gastrointestinal cancer in patients with familial adenomatous polyposis. Lancet. 1989;2(8666):783-5. doi:10.1016/s0140-6736(89)90840-4. PMID:2571019.",
+   "kind": "Surveillance",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/2571019/"
+   }
+  },
+  "pm35633905": {
+   "short": "Choi 2022",
+   "title": "Choi SJ, Lee HS, Kim J, et al. Clinical outcomes of endoscopic papillectomy of ampullary adenoma: a multi-center study. World J Gastroenterol. 2022;28(17):1845-1859. doi:10.3748/wjg.v28.i17.1845. PMID:35633905.",
+   "kind": "Endoscopic resection",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/35633905/"
+   }
+  },
+  "pm30575490": {
+   "short": "PRODIGE-24",
+   "title": "Conroy T, Hammel P, Hebbar M, et al. FOLFIRINOX or gemcitabine as adjuvant therapy for pancreatic cancer. N Engl J Med. 2018;379(25):2395-2406. doi:10.1056/NEJMoa1809775. PMID:30575490.",
+   "kind": "Systemic therapy",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/30575490/"
+   }
+  },
+  "pm28129987": {
+   "short": "ESPAC-4",
+   "title": "Neoptolemos JP, Palmer DH, Ghaneh P, et al. Comparison of adjuvant gemcitabine and capecitabine with gemcitabine monotherapy in patients with resected pancreatic cancer (ESPAC-4): a multicentre, open-label, randomised, phase 3 trial. Lancet. 2017;389(10073):1011-1024. doi:10.1016/S0140-6736(16)32409-6. PMID:28129987.",
+   "kind": "Systemic therapy",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/28129987/"
+   }
+  },
+  "pm37595391": {
+   "short": "Gamble 2023",
+   "title": "Gamble D, Frankel WL, Yearsley MM, Chen W. Ampulla of Vater biopsies: a retrospective 10-year, single-institution study. Ann Diagn Pathol. 2023;67:152189. doi:10.1016/j.anndiagpath.2023.152189. PMID:37595391.",
+   "kind": "Pathology",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/37595391/"
+   }
+  },
+  "pm29755017": {
+   "short": "Attila 2018",
+   "title": "Attila T, Parlak E, Alper E, Dişibeyaz S, Çiçek B, Ödemiş B. Endoscopic papillectomy of benign ampullary lesions: outcomes from a multicenter study. Turk J Gastroenterol. 2018;29(3):325-334. doi:10.5152/tjg.2018.17378. PMID:29755017.",
+   "kind": "Endoscopic resection",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/29755017/"
+   }
+  }
+ }
+}

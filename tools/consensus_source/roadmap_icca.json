@@ -1,0 +1,575 @@
+{
+ "slug": "icca",
+ "prefix": "iCCA",
+ "questions": [
+  {
+   "id": "iCCA-D1",
+   "n": 1,
+   "question": "Does the programme run a hepatic arterial infusion service for intrahepatic cholangiocarcinoma?",
+   "kind": "governance",
+   "decisions": [
+    "4",
+    "5",
+    "7"
+   ],
+   "positions": [
+    {
+     "source": "NCCN BTC v1.2026",
+     "ref": "nccn",
+     "position": "Permits HAI in trials or experienced centres for carefully selected patients.",
+     "locator": "Gate 7 · Standard selector option 'Hepatic arterial infusion' (when)"
+    },
+    {
+     "source": "Cercek HAI phase 2",
+     "ref": "31670750",
+     "position": "Single-institution, 38 treated of 84 screened: partial response 58%, 6-month PFS 84.1%, median OS 25.0 months, four resected. Critique: grade 4 withdrawal 11%, full-dose delivery fell from 71% to 47% of patients, historical comparator; the editorial calls the case unsettled.",
+     "locator": "Gate 4 · Reasonable option 'Hepatic arterial infusion plus systemic chemotherapy' (when, note); What we are not sure about · 'Hepatic arterial infusion as the strongest regional option'"
+    },
+    {
+     "source": "Konstantinidis HAI cohort",
+     "ref": "26695839",
+     "position": "Retrospective median OS 30.8 versus 18.4 months against systemic therapy alone in liver-confined disease, but stage migration favours HAI, the comparator was 26 patients, and only 8 of 236 converted to curative resection.",
+     "locator": "Gate 4 · HAI option (note); What we are not sure about · 'Hepatic arterial infusion as the strongest regional option'"
+    },
+    {
+     "source": "PUMP-2",
+     "ref": "41082695",
+     "position": "Three-centre nonrandomised phase II: 50 pumps placed, partial response 44%, six-month disease control 84%, 10% resected, median OS 22.3 months; the historical comparator does not show superiority over contemporary chemo-immunotherapy.",
+     "locator": "Gate 4 · HAI option (note); HAI evidence and pathway revision · 'Multicentre phase II evidence'"
+    },
+    {
+     "source": "Pooled analysis of four phase II HAI trials",
+     "ref": "42331230",
+     "position": "142 treated patients, median OS 26 months, five-year OS 15% (14% intention to treat), 9% resected; it reuses constituent trial patients, so it is not independent replication or randomised evidence.",
+     "locator": "Gate 5 · Reasonable option 'Hepatic arterial infusion' (note); HAI evidence and pathway revision · 'Mature pooled outcomes'"
+    }
+   ],
+   "divergence": "NCCN confines HAI to trials or experienced centres, and the supporting cohorts are nonrandomised, overlapping and lack a modern chemo-immunotherapy comparator, so the decision turns on programme capability more than on evidence.",
+   "proposal": "The roadmap does not answer yes or no; it keeps HAI as a Reasonable, grade C, expertise-dependent option for unresectable liver-confined disease with favourable arterial anatomy, generally with systemic therapy and considered early, only within an approved pump programme whose full service team, monitoring, toxicity escalation and registry are named before activation.",
+   "proposal_locator": "Gate 4 · Reasonable 'Hepatic arterial infusion plus systemic chemotherapy'; Gate 7 · selector 'Hepatic arterial infusion'; HAI evidence and pathway revision · 'Treatment position', 'Programme readiness'",
+   "rationale": "PUMP-2 (PMID 41082695), a three-centre nonrandomized phase II study: 50 pumps placed, 48 patients started HAI, partial response 44%, six-month disease control 84%, resection 5/50 (10%), median OS 22.3 months and three-year OS 31.5%. The 2026 pooled analysis of four phase II trials (PMID 42331230) reports 142 treated patients, median OS 26 months, five-year OS 15% (ITT 14%), and 13/142 resections (9%). The pooled cohorts overlap the constituent trials; these are not independent replications or randomized comparisons with modern chemo-immunotherapy. Before activation, name the HPB pump surgeon and backup, medical oncology lead, nursing/pharmacy team, nuclear-medicine perfusion service and IR rescue service; define refill/maintenance coverage, laboratory monitoring and dose holds, biliary-toxicity escalation, and an outcomes registry. Minimum programme requirements: PMID 39962001; surgical toolkit: PMID 36346892. Avoid concurrent bevacizumab with FUDR (PMID 24154839); retain the NCCN CRLM restriction on concurrent VEGF inhibitors.",
+   "audit": "Registry: every HAI case, toxicity, hepatic progression-free survival."
+  },
+  {
+   "id": "iCCA-D2",
+   "n": 2,
+   "question": "Which liver-directed modality is first choice for unresectable liver-confined disease?",
+   "kind": "clinical",
+   "decisions": [
+    "5",
+    "7"
+   ],
+   "positions": [
+    {
+     "source": "Cercek HAI phase 2",
+     "ref": "31670750",
+     "position": "HAI floxuridine with systemic gemcitabine–oxaliplatin: partial response 58%, 6-month PFS 84.1%, median OS 25.0 months in 38 selected patients; single-arm with a historical comparison.",
+     "locator": "Gate 5 · Reasonable option 'Hepatic arterial infusion' (when); Gate 4 · HAI option (when, note)"
+    },
+    {
+     "source": "MISPHEC",
+     "ref": "31670746",
+     "position": "Y90 with gemcitabine–cisplatin in 41 patients: response about 40%, 22% downstaged, median OS 22 months; hepatic failure in 75% of cirrhotic patients, and the regimen depends on dosimetry that does not transfer as written.",
+     "locator": "Gate 4 · Reasonable option 'Y90 radioembolisation with first-line chemotherapy'; Gate 5 · option 'Radioembolisation or chemoembolisation'"
+    },
+    {
+     "source": "Tao dose-response series",
+     "ref": "26503201",
+     "position": "Retrospective, 79 patients: 3-year local control 78% and OS 73% above a biologic equivalent dose of 80.5 Gy, but only 19 received the high dose and dose is confounded with target volume and era.",
+     "locator": "Gate 5 · Reasonable option 'SBRT or proton therapy'; What we are not sure about · 'Ablative radiotherapy doses, and the 80.5 Gy figure'"
+    },
+    {
+     "source": "Kiefer two-centre chemoembolisation cohort",
+     "ref": "21425151",
+     "position": "Median OS 20 months from diagnosis in 62 patients, major complications after 3% of procedures; heterogeneous, nonrandomised, 40% unknown-primary adenocarcinoma, and a regimen predating current options.",
+     "locator": "Gate 5 · Reasonable option 'Radioembolisation or chemoembolisation' (when, note)"
+    },
+    {
+     "source": "AASLD 2023",
+     "ref": "36083140",
+     "position": "Judges the data insufficient to support liver-directed therapy as a standard treatment for locally advanced unresectable iCCA.",
+     "locator": "Gate 5 · Avoid 'Do not substitute liver-directed therapy for systemic therapy'"
+    }
+   ],
+   "divergence": "No randomised trial compares any two modalities or tests any against modern chemo-immunotherapy, so the datasets differ in size and design rather than establishing a hierarchy.",
+   "proposal": "No first choice: the roadmap states no established head-to-head hierarchy among HAI, Y90, chemoembolisation and ablative radiotherapy; selection follows treatment goal, target geometry, liver reserve, the systemic plan and what the institution can deliver, with liver-directed therapy added to, not substituted for, the systemic backbone, and the listing order carrying no evidence claim.",
+   "proposal_locator": "Gate 5 · Reasonable liver-directed options (order, flagnote); Gate 4 · Reasonable options (order); Gate 7 · selector (order); Gate 5 · Avoid 'Do not substitute liver-directed therapy…'",
+   "rationale": "No head-to-head comparison exists between HAI, radioembolisation, SBRT and proton therapy.",
+   "audit": "Registry: modality, goal, hepatic progression-free survival, liver function change."
+  },
+  {
+   "id": "iCCA-D3",
+   "n": 3,
+   "question": "Adjuvant capecitabine — offered routinely, or case by case?",
+   "kind": "clinical",
+   "decisions": [
+    "8"
+   ],
+   "positions": [
+    {
+     "source": "BILCAP",
+     "ref": "30922733",
+     "position": "Intention-to-treat survival 51.1 versus 36.4 months, HR 0.81 (0.63–1.04), p=0.097, not significant; positive only in adjusted sensitivity and per-protocol analyses. Only 19% had intrahepatic disease; 44% of those treated had grade 3+ events.",
+     "locator": "Gate 8 · Standard 'Have the adjuvant conversation with the numbers in front of you…'; Quick reference · 'BILCAP, as published'"
+    },
+    {
+     "source": "NCCN BTC v1.2026",
+     "ref": "nccn",
+     "position": "Designates capecitabine preferred, category 1, while acknowledging the nonsignificant intention-to-treat analysis.",
+     "locator": "Gate 8 · Standard 'Have the adjuvant conversation…' (note)"
+    },
+    {
+     "source": "BSG 2023",
+     "ref": "37770126",
+     "position": "Recommends considering 24 weeks of capecitabine (strong recommendation, moderate-quality evidence); AASLD 2023 similarly says it should be considered for all patients.",
+     "locator": "Gate 8 · Reasonable 'Offer adjuvant capecitabine for 6 months…' (pref)"
+    },
+    {
+     "source": "LCSGJ 2022",
+     "ref": "35978598",
+     "position": "Makes only a weak recommendation and reports no significant benefit in the intrahepatic subgroup; EASL-ILCA reads the same unpowered subgroup as HR 0.65, the best of the subtypes.",
+     "locator": "Gate 8 · Standard 'Have the adjuvant conversation…' (avoid, note); Gate 8 · Reasonable 'Offer adjuvant capecitabine…' (note)"
+    },
+    {
+     "source": "ASCOT",
+     "ref": "36681415",
+     "position": "S-1 improved 3-year survival (77.1% versus 67.6%), but relapse-free survival was not significant, the trial was Japan-only with 13% intrahepatic disease, and S-1 is unavailable in the United States.",
+     "locator": "Gate 8 · Avoid 'Do not offer S-1 as the adjuvant option here…'"
+    }
+   ],
+   "divergence": "NCCN, AASLD, BSG and EASL-ILCA treat adjuvant capecitabine as standard or strongly recommended, while LCSGJ is weak and the trial they rest on missed its intention-to-treat endpoint with few intrahepatic patients.",
+   "proposal": "Case by case for now: offer 6 months of capecitabine as a Reasonable consideration, grade C, not an obligation, to the fit patient after R0 or R1 resection, especially node-positive or R1, after explaining that BILCAP's primary analysis was not significant. Whether it becomes Standard is open; adjuvant gemcitabine–oxaliplatin and S-1 are avoided.",
+   "proposal_locator": "Gate 8 · Reasonable 'Offer adjuvant capecitabine for 6 months as a reasonable consideration…'; Gate 8 · Standard 'Have the adjuvant conversation…'; Gate 8 · Avoid options",
+   "rationale": "BILCAP's primary analysis was not significant; ASCOT's positive result used an agent unavailable here.",
+   "audit": "Registry: uptake, completion, recurrence pattern."
+  },
+  {
+   "id": "iCCA-D4",
+   "n": 4,
+   "question": "Is molecular profiling funded and ordered at diagnosis in practice?",
+   "kind": "operational",
+   "decisions": [
+    "2"
+   ],
+   "positions": [],
+   "divergence": "No source positions; programme decision.",
+   "proposal": "Order broad molecular profiling at the diagnosis of unresectable or metastatic disease, not at second-line progression (Standard, grade B), using circulating tumour DNA when tissue is inadequate or a biopsy would delay treatment, and audit the proportion profiled before the second-line decision.",
+   "proposal_locator": "Gate 2 · Standard 'Order broad molecular profiling at the diagnosis…'; Gate 2 · Reasonable 'Use circulating tumour DNA…'; Gate 2 · Avoid 'Do not defer profiling…'; The dashboard",
+   "rationale": "The clinical argument is not in doubt; the obstacle is payer authorisation and ordering discipline.",
+   "audit": "Audit: proportion profiled before the second-line decision."
+  },
+  {
+   "id": "iCCA-D5",
+   "n": 5,
+   "question": "Does the programme open an intrahepatic cholangiocarcinoma transplant protocol?",
+   "kind": "governance",
+   "decisions": [
+    "10"
+   ],
+   "positions": [
+    {
+     "source": "OPTN transplant-oncology guidance (Dec 2025)",
+     "ref": "optnguid",
+     "position": "Describes a nonstandard MMaT-3 review-board route for biopsy-proven, unresectable, solitary iCCA or mixed HCC-iCCA of 3 cm or less in cirrhosis, after treatment and six months of stability; it is guidance, not Policy.",
+     "locator": "Gate 10 · Standard 'Where a protocol exists, the allocation route is a nonstandard MMaT-3 exception…'; Quick reference · 'Transplant eligibility — the nonstandard MMaT-3 route'"
+    },
+    {
+     "source": "ILTS-ILCA 2024 consensus",
+     "ref": "42312290",
+     "position": "Supports transplant consideration for cirrhotic tumours of 3 cm or less (moderate evidence and strength) and confines non-cirrhotic disease to investigational protocols; reports 5-year survival spanning 25–73%, too wide for a selection rule.",
+     "locator": "Gate 10 · Standard 'Treat transplantation for known intrahepatic cholangiocarcinoma as trial or prospective registry only…' (pref, note)"
+    },
+    {
+     "source": "AASLD 2023",
+     "ref": "36083140",
+     "position": "Confines transplantation for iCCA to research protocols.",
+     "locator": "Gate 10 · Standard 'Treat transplantation … as trial or prospective registry only' (pref)"
+    },
+    {
+     "source": "BSG 2023",
+     "ref": "37770126",
+     "position": "Supports transplantation only within a prospective national protocol.",
+     "locator": "Gate 10 · Standard 'Treat transplantation … as trial or prospective registry only' (pref)"
+    },
+    {
+     "source": "LCSGJ 2022",
+     "ref": "35978598",
+     "position": "Regards iCCA as generally not an indication for transplantation.",
+     "locator": "Gate 10 · Standard 'Treat transplantation … as trial or prospective registry only' (avoid)"
+    }
+   ],
+   "divergence": "OPTN 2025 and ILTS-ILCA 2024 support consideration for small cirrhotic tumours after stability, AASLD and BSG confine transplantation to research or national protocols, and LCSGJ 2022 considers iCCA generally not an indication.",
+   "proposal": "Current position: transplantation for known iCCA only within a formally approved trial or prospective registry protocol, with review-board approval and registry entry, an institutional graft-stewardship restriction stricter than OPTN and ILTS-ILCA. The roadmap states the cost (an OPTN-eligible patient has no route here) and offers a registry-tracked OPTN/ILTS-ILCA pathway as the alternative to decide.",
+   "proposal_locator": "Gate 10 · Standard 'Treat transplantation for known intrahepatic cholangiocarcinoma as trial or prospective registry only…'; Gate 10 · Reasonable options (order, flagnote)",
+   "rationale": "Evidence is retrospective and confined to small tumours first diagnosed on explant pathology, most seen before transplant as presumed hepatocellular carcinoma. Graft stewardship is an institutional judgement, not an evidence question.",
+   "audit": "Registry required if opened."
+  },
+  {
+   "id": "iCCA-D6",
+   "n": 6,
+   "question": "What are the thresholds barring each liver-directed modality by liver function?",
+   "kind": "clinical",
+   "decisions": [
+    "3",
+    "5",
+    "7"
+   ],
+   "positions": [
+    {
+     "source": "MISPHEC",
+     "ref": "31670746",
+     "position": "The one data-based hard stop: with Y90 plus chemotherapy, hepatic failure occurred in 9 of 12 cirrhotic patients (5 irreversible, all after whole-liver treatment) versus 5 of 29 without cirrhosis, all reversible.",
+     "locator": "What we are not sure about · 'Thresholds barring each liver-directed modality by liver function…'; Gate 4 · Y90 option (avoid)"
+    },
+    {
+     "source": "AASLD 2023",
+     "ref": "36083140",
+     "position": "Names decompensated cirrhosis and portal hypertension as contraindications to resection, a point on which the roadmap is silent.",
+     "locator": "Gate 3 · Standard options (flagnote); What we are not sure about · 'Two resectability criteria this page states but does not define…'"
+    },
+    {
+     "source": "LCSGJ 2022",
+     "ref": "35978598",
+     "position": "Builds its whole treatment algorithm on Child-Pugh class and sends Child-Pugh C to palliative care.",
+     "locator": "What we are not sure about · 'Two resectability criteria this page states but does not define…'"
+    }
+   ],
+   "divergence": "Apart from cirrhosis before radioembolisation with chemotherapy, no comparative data define liver-function cut-offs for any modality, and the guidelines frame reserve differently (AASLD by portal hypertension, LCSGJ by Child-Pugh class).",
+   "proposal": "The roadmap proposes no numeric thresholds: it treats the cut-offs as safety conventions, keeps cirrhosis as the hard stop for radioembolisation with chemotherapy, leaves numeric reserve rules to specialty-approved local implementation, and audits decompensation after liver-directed therapy.",
+   "proposal_locator": "What we are not sure about · 'Thresholds barring each liver-directed modality by liver function…'; Gate 5 · Reasonable options (flagnote); Gate 3 · Standard options (flagnote)",
+   "rationale": "No comparative data define the cut-offs; they are safety conventions.",
+   "audit": "Audit: decompensation after liver-directed therapy."
+  },
+  {
+   "id": "iCCA-D7",
+   "n": 7,
+   "question": "Ablation for intrahepatic cholangiocarcinoma — acceptable, and in whom?",
+   "kind": "clinical",
+   "decisions": [
+    "3",
+    "5",
+    "7"
+   ],
+   "positions": [
+    {
+     "source": "NCCN BTC v1.2026",
+     "ref": "nccn",
+     "position": "Accepts thermal ablation for single primary or recurrent iCCA below 3 cm, especially when surgical risk is high.",
+     "locator": "Gate 3 · Standard option 'Definitive thermal ablation' (when)"
+    },
+    {
+     "source": "EASL-ILCA 2023",
+     "ref": "37084797",
+     "position": "Narrower: single lesions under 2 cm that are unresectable or inoperable, on low-level evidence.",
+     "locator": "Gate 3 · Standard option 'Definitive thermal ablation' (when)"
+    },
+    {
+     "source": "MALRIC primary cohort",
+     "ref": "38261915",
+     "position": "Ten-centre propensity match: 5-year OS 44.8% after microwave ablation versus 40.4% after resection, but disease-free survival favoured resection (HR 0.63); entry allowed tumours up to 5 cm and the parity split was post hoc and underpowered.",
+     "locator": "Gate 3 · option 'Definitive thermal ablation' (pref, note); What we are not sure about · 'Thermal ablation as an alternative to resection…'"
+    },
+    {
+     "source": "Ablation meta-analysis",
+     "ref": "34347159",
+     "position": "Twenty retrospective studies, 917 patients: 5-year OS 28.5%; tumours over 3 cm (HR 2.12) and multiple tumours (HR 1.67) did worse; high heterogeneity and publication bias.",
+     "locator": "Gate 5 · Reasonable option 'Thermal ablation' (when, avoid, note)"
+    },
+    {
+     "source": "MALRIC recurrent cohort",
+     "ref": "41528222",
+     "position": "At first intrahepatic recurrence, ablation gave median OS 29.8 versus 34.0 months after repeat resection (HR 0.89, not significant) with far fewer major complications; the authors cannot exclude a real difference.",
+     "locator": "Gate 7 · selector option 'Thermal ablation' (pref, note)"
+    }
+   ],
+   "divergence": "NCCN and EASL-ILCA set different size limits (under 3 cm versus under 2 cm), and the cohort reporting survival parity with resection enrolled tumours up to 5 cm and showed worse disease-free survival after ablation.",
+   "proposal": "Acceptable in a narrow group (grade C): solitary tumour under 3 cm, resection unsuitable, every lesion treatable with a 5 mm or greater margin, no uncontrolled nodal or distant disease, plus selected first intrahepatic recurrences; document why the patient fits; not for large or multifocal iCCA. The 3 cm versus 2 cm boundary awaits local approval.",
+   "proposal_locator": "Gate 3 · Standard option 'Definitive thermal ablation'; Gate 5 · Reasonable 'Thermal ablation'; Gate 7 · selector 'Thermal ablation'",
+   "rationale": "Evidence is substantially weaker than in hepatocellular carcinoma and is retrospective.",
+   "audit": "Registry: every ablation, margin, local progression."
+  },
+  {
+   "id": "iCCA-D8",
+   "n": 8,
+   "question": "Who owns subsequent NCCN and OPTN update checks, and on what cycle?",
+   "kind": "governance",
+   "decisions": [],
+   "positions": [],
+   "divergence": "No source positions; programme decision.",
+   "proposal": "The roadmap names no owner or cycle; it records source reconciliation as complete in this version, lists a dashboard measure of named owner, source edition and date, and update cycle, and requires current OPTN policy text and every numeric criterion to be verified before use.",
+   "proposal_locator": "The dashboard (final item); Provenance; What we are not sure about · 'The MMaT-3 exception route, and what it is not'",
+   "rationale": "Source reconciliation is complete in this version. An owner must be assigned to verify subsequent editions and current allocation requirements, ratify the documented institutional positions, and maintain the update cycle.",
+   "audit": "Named owner plus edition and date plus update cycle."
+  },
+  {
+   "id": "iCCA-D9",
+   "n": 9,
+   "question": "Is a core biopsy required before resection of a high-suspicion, clearly resectable mass, or is destination-specific confirmation enough?",
+   "kind": "clinical",
+   "decisions": [
+    "1"
+   ],
+   "positions": [
+    {
+     "source": "AASLD 2023",
+     "ref": "36083140",
+     "position": "Requires histological confirmation for a definitive iCCA diagnosis; BSG 2023 takes the same position.",
+     "locator": "What we are not sure about · 'A core biopsy before resection of a high-suspicion, clearly resectable mass'; Gate 1 · Standard 'There is no imaging-only diagnosis…' (note)"
+    },
+    {
+     "source": "EASL-ILCA 2023",
+     "ref": "37084797",
+     "position": "Recommends biopsy on level 4 evidence with 96% consensus.",
+     "locator": "What we are not sure about · 'A core biopsy before resection…'"
+    },
+    {
+     "source": "LCSGJ 2022",
+     "ref": "35978598",
+     "position": "Considers biopsy largely unnecessary for a typical resectable mass, recommending it only when the tumour is unresectable.",
+     "locator": "What we are not sure about · 'A core biopsy before resection…'; Gate 1 · Standard 'There is no imaging-only diagnosis…' (note)"
+    },
+    {
+     "source": "NCCN BTC v1.2026",
+     "ref": "nccn",
+     "position": "A suspicious mass on imaging in the proper clinical setting should be treated as malignant.",
+     "locator": "Gate 1 · Standard 'There is no imaging-only diagnosis…' (avoid)"
+    },
+    {
+     "source": "ILTS-ILCA 2024 consensus",
+     "ref": "42312290",
+     "position": "Makes biopsy mandatory where transplantation is contemplated, to grade differentiation and exclude a mixed tumour.",
+     "locator": "What we are not sure about · 'A core biopsy before resection…'"
+    }
+   ],
+   "divergence": "AASLD, BSG and EASL-ILCA require or recommend histology while LCSGJ regards it as unnecessary for a typical resectable mass and NCCN permits treating a suspicious mass as malignant, and no outcome study compares the two policies.",
+   "proposal": "Destination-specific confirmation rather than a universal core: histology is required before systemic therapy, trial entry or tissue-defined transplant assessment (where it also grades differentiation and excludes a mixed tumour), while a high-suspicion, clearly resectable mass may proceed directly to surgery after multidisciplinary HPB review (Standard, grade B).",
+   "proposal_locator": "Gate 1 · Standard 'There is no imaging-only diagnosis of intrahepatic cholangiocarcinoma…'",
+   "rationale": "AASLD 2023, BSG 2023 and EASL-ILCA require histological confirmation; LCSGJ 2022 regards biopsy as basically unnecessary for a typical resectable mass; NCCN permits treating a suspicious mass in the proper clinical setting as malignant. No outcome study compares the two policies. Alignment worksheet, area 1.",
+   "audit": "Audit: proportion of resections performed without pre-operative histology, and the final pathology in each."
+  },
+  {
+   "id": "iCCA-D10",
+   "n": 10,
+   "question": "Is regional lymphadenectomy mandatory at every iCCA resection, and what minimum node yield is recorded?",
+   "kind": "clinical",
+   "decisions": [
+    "3",
+    "8"
+   ],
+   "positions": [
+    {
+     "source": "LCSGJ 2022",
+     "ref": "35978598",
+     "position": "Makes no recommendation on node dissection and warns that prophylactic dissection in cirrhosis increases complications.",
+     "locator": "Gate 3 · option 'Resection with regional lymphadenectomy' (note); What we are not sure about · 'Routine regional lymphadenectomy at every iCCA resection'"
+    },
+    {
+     "source": "ESMO 2023",
+     "ref": "36372281",
+     "position": "Recommends routine hepatoduodenal-ligament dissection, on level IV evidence.",
+     "locator": "Gate 3 · option 'Resection with regional lymphadenectomy' (note)"
+    },
+    {
+     "source": "BSG 2023",
+     "ref": "37770126",
+     "position": "States neither extent nor node yield, a gap its critics note because its adjuvant recommendation turns on nodal status.",
+     "locator": "What we are not sure about · 'Routine regional lymphadenectomy at every iCCA resection'"
+    },
+    {
+     "source": "AASLD 2023",
+     "ref": "36083140",
+     "position": "Makes no statement on lymphadenectomy extent or yield.",
+     "locator": "Gate 3 · option 'Resection with regional lymphadenectomy' (note); What we are not sure about · 'Routine regional lymphadenectomy…'"
+    },
+    {
+     "source": "BILCAP",
+     "ref": "30922733",
+     "position": "Did not mandate lymphadenectomy for intrahepatic patients, yet nodal status is one of the covariates that makes its sensitivity analysis positive.",
+     "locator": "Gate 8 · Standard 'Have the adjuvant conversation…' (note)"
+    }
+   ],
+   "divergence": "ESMO 2023 recommends routine dissection on level IV evidence, LCSGJ 2022 makes no recommendation and warns of harm in cirrhosis, and BSG and AASLD are silent, so no guideline supports it on survival grounds.",
+   "proposal": "Keep regional lymphadenectomy of the porta hepatis in every resection as a staging decision, so the adjuvant conversation and the registry have a nodal denominator, not as a survival claim; audit node yield rather than outcome. The roadmap sets no minimum node yield.",
+   "proposal_locator": "Gate 3 · Standard option 'Resection with regional lymphadenectomy' (when, note) and flagnote; What we are not sure about · 'Routine regional lymphadenectomy at every iCCA resection'",
+   "rationale": "LCSGJ 2022 makes no recommendation and warns that prophylactic dissection in cirrhosis increases complications; ESMO 2023 recommends routine hepatoduodenal-ligament dissection on level IV evidence; BSG 2023 and AASLD 2023 state neither extent nor yield. The clinical decision 8 adjuvant conversation and the registry both need a nodal denominator. Alignment worksheet, area 5.",
+   "audit": "Registry: lymphadenectomy performed, node count, node positivity, and complications attributable to the dissection."
+  },
+  {
+   "id": "iCCA-D11",
+   "n": 11,
+   "question": "What counts as 'a period of stability' before a transplant referral — what duration, on what therapy, and at what imaging interval?",
+   "kind": "clinical",
+   "decisions": [
+    "10"
+   ],
+   "positions": [
+    {
+     "source": "OPTN transplant-oncology guidance",
+     "ref": "optnguid",
+     "position": "Requires six months from diagnosis or last treatment with documented stability: still 3 cm or less, no new lesions, no extrahepatic disease; extensions need imaging every three months.",
+     "locator": "Quick reference · 'Transplant eligibility — the nonstandard MMaT-3 route' ('Stability period', 'Extensions')"
+    },
+    {
+     "source": "ILTS-ILCA 2024 consensus",
+     "ref": "42312290",
+     "position": "Attaches no duration to the cirrhotic 3 cm recommendation, only an observed period of stability; its six-month requirement belongs to the weakly graded non-cirrhotic investigational route.",
+     "locator": "What we are not sure about · 'Six months from diagnosis or last treatment with tumour stability…'; Gate 10 · Reasonable 'Open a defined, registry-tracked pathway…'"
+    },
+    {
+     "source": "Lunsford (Houston Methodist–MD Anderson) protocol",
+     "ref": "29548617",
+     "position": "Required 6 months of radiographic stability on gemcitabine-based therapy; 6 transplanted, 5-year survival 83.3% but recurrence-free 50%. The authors concede selecting for stability may select indolent biology.",
+     "locator": "Gate 10 · Reasonable 'Locally advanced disease selected on sustained stability, under protocol'"
+    },
+    {
+     "source": "Sapisochin explant series",
+     "ref": "27481548",
+     "position": "Required no stability period and could not have, because the cancer was diagnosed on the explant.",
+     "locator": "Gate 10 · Standard 'Read the supporting evidence for what it is…' (note); What we are not sure about · 'Six months from diagnosis…'"
+    }
+   ],
+   "divergence": "The OPTN route requires six months while ILTS-ILCA sets no duration for the cirrhotic phenotype, the six-month figure comes from a six-patient protocol in locally advanced disease, and the explant series behind the size data required no stability at all.",
+   "proposal": "Keep six months from diagnosis or last treatment with serial-scan stability (still 3 cm or less, no new lesions, no extrahepatic disease), recording both dates; one responding scan is insufficient. The roadmap defends six months as a biology test, calls the right length unknown, and sets no therapy or scan interval for that period.",
+   "proposal_locator": "Gate 10 criteria; Quick reference · 'Transplant eligibility — the nonstandard MMaT-3 route' ('Stability period'); What we are not sure about · 'Six months from diagnosis or last treatment…'",
+   "rationale": "ILTS-ILCA 2024 attaches no duration to the cirrhotic ≤3 cm recommendation; the six-month figure in our criteria comes from its separate weakly graded non-cirrhotic route and from the Houston Methodist–MD Anderson protocol, whose own authors concede that selecting for stability may be selecting indolent biology. The explant series that supplies our size data required no stability at all.",
+   "audit": "Registry: stability interval achieved, regimen, imaging interval, and waitlist dropout for progression."
+  },
+  {
+   "id": "iCCA-D12",
+   "n": 12,
+   "question": "Does the page name trastuzumab deruxtecan, entrectinib, larotrectinib and selpercatinib, as ESMO 2024 does, or only require that the alterations be captured?",
+   "kind": "clinical",
+   "decisions": [
+    "2",
+    "6",
+    "9"
+   ],
+   "positions": [
+    {
+     "source": "ESMO BTC 2024 interim update",
+     "ref": "39864891",
+     "position": "Recommends trastuzumab deruxtecan for HER2, NTRK inhibitors and selpercatinib for RET fusions at level III grade A, while conceding there are no standardised HER2 assessment criteria in biliary tract cancer.",
+     "locator": "Gate 2 · options 'HER2 amplification or overexpression' (note) and 'NTRK fusion, RET fusion…' (avoid); What we are not sure about · 'The matched targeted agents…'"
+    },
+    {
+     "source": "HERIZON-BTC-01",
+     "ref": "41264278",
+     "position": "Zanidatamab single-arm response 41% concentrated in IHC 3+ disease (a post hoc split), reported for biliary tract cancer as a whole without an intrahepatic breakdown.",
+     "locator": "Gate 2 · option 'HER2 amplification or overexpression'"
+    }
+   ],
+   "divergence": "ESMO 2024 names the agents on single-arm or basket evidence while admitting HER2 assessment is unstandardised, and the HER2 trial reports biliary tract cancer without an intrahepatic breakdown.",
+   "proposal": "Current table only requires HER2, NTRK and RET findings to be captured on the same broad panel, not the agents named; capture is not a licence to prescribe; match treatment to the alteration class, with molecular-oncology review for other alterations. Whether to name the agents is a local approval item (alignment worksheet, area 14).",
+   "proposal_locator": "Gate 2 · Standard molecular options ('HER2…', 'NTRK fusion, RET fusion…', flagnote)",
+   "rationale": "The ESMO recommendations are level III grade A — single-arm or basket-trial evidence — several agents are FDA- but not EMA-approved, and ESMO itself concedes there are no standardised criteria for HER2 assessment in biliary tract cancer. Alignment worksheet, area 14.",
+   "audit": "Audit: matched agents prescribed, alteration class, assay used and line of therapy."
+  },
+  {
+   "id": "iCCA-D13",
+   "n": 13,
+   "question": "Is there a default first-line checkpoint combination, or does the choice stay with the treating oncologist?",
+   "kind": "clinical",
+   "decisions": [
+    "6",
+    "9"
+   ],
+   "positions": [
+    {
+     "source": "TOPAZ-1",
+     "ref": "38319896",
+     "position": "Durvalumab added an OS HR of 0.80 (median gain 1.3 months), benefit accruing mostly after 6 months, with gemcitabine capped at eight cycles; interim analysis with non-proportional hazards.",
+     "locator": "Gate 6 · Standard option 'Gemcitabine and cisplatin plus durvalumab (TOPAZ-1)'"
+    },
+    {
+     "source": "KEYNOTE-966",
+     "ref": "37075781",
+     "position": "Pembrolizumab added an OS HR of 0.83 (gain 1.8 months), intrahepatic HR 0.76, gemcitabine to progression; secondary endpoints missed their boundaries and treatment-related deaths were higher.",
+     "locator": "Gate 6 · Standard option 'Gemcitabine and cisplatin plus pembrolizumab (KEYNOTE-966)'"
+    },
+    {
+     "source": "ESMO BTC 2024 interim update",
+     "ref": "39864891",
+     "position": "Recommends both [I, A] and states no biomarker or efficacy or toxicity difference favours either; the roadmap notes this interchangeability rests on an indirect cross-trial comparison.",
+     "locator": "Gate 6 · Standard options (order); Gate 9 · Standard 'Cisplatin–gemcitabine with a checkpoint inhibitor…' (pref, note)"
+    },
+    {
+     "source": "BSG 2023",
+     "ref": "37770126",
+     "position": "Regards oxaliplatin substitution in renal impairment and gemcitabine alone in poor performance status as reasonable modifications.",
+     "locator": "Gate 6 · Standard options (flagnote); Gate 9 · Standard 'Performance status, renal and hepatic function…' (avoid)"
+    }
+   ],
+   "divergence": "No randomised comparison exists, so ESMO's interchangeability rests on cross-trial comparison, and BSG names modification defaults the roadmap leaves unnamed.",
+   "proposal": "No default: the roadmap does not rank durvalumab and pembrolizumab, accepts either with cisplatin–gemcitabine, and leaves the choice and any modification to the treating oncologist on toxicity profile, schedule and access, with the reason recorded; whether to name the BSG defaults is a local approval item (alignment worksheet, area 13).",
+   "proposal_locator": "Gate 6 · Standard options (order, flagnote); Gate 9 · Standard 'Cisplatin–gemcitabine with a checkpoint inhibitor…' and 'Performance status, renal and hepatic function…'",
+   "rationale": "No randomised comparison exists between durvalumab and pembrolizumab; ESMO's statement that they are interchangeable is an indirect comparison across trials differing in chemotherapy duration, geography and size. The practical differences are the gemcitabine cycle cap, schedule and access, not efficacy. BSG 2023 also treats oxaliplatin substitution in renal impairment and gemcitabine alone in poor performance status as reasonable, which our page leaves unnamed. Alignment worksheet, area 13.",
+   "audit": "Audit: regimen chosen, cycles delivered, any modification and the reason recorded."
+  },
+  {
+   "id": "iCCA-D14",
+   "n": 14,
+   "question": "Post-resection surveillance — 3-monthly or 6-monthly imaging for the first two years?",
+   "kind": "clinical",
+   "decisions": [
+    "3",
+    "8"
+   ],
+   "positions": [
+    {
+     "source": "NCCN BTC v1.2026",
+     "ref": "nccn",
+     "position": "States there are no data to support a specific surveillance schedule.",
+     "locator": "What we are not sure about · 'Reassessment intervals…'"
+    }
+   ],
+   "divergence": "NCCN finds no data for any schedule, and the roadmap's 3–6-month range leaves the choice between 3-monthly and 6-monthly imaging to a local approval item.",
+   "proposal": "After resection, imaging every 3–6 months for two years, then less often, graded C to D as expert consensus; fixing the interval at 3-monthly or 6-monthly is left open (alignment worksheet, area 16).",
+   "proposal_locator": "What we are not sure about · 'Reassessment intervals: systemic therapy every 8–12 weeks…'",
+   "rationale": "NCCN states there are no data supporting a specific surveillance schedule. The argument for 3-monthly is that most recurrences are intrahepatic and some are re-resectable or ablatable; the argument for 6-monthly is that most UK centres practise it and no study shows the shorter interval changes outcome. Alignment worksheet, area 16.",
+   "audit": "Audit: interval actually achieved, recurrence pattern, and proportion of recurrences treated with curative intent."
+  },
+  {
+   "id": "iCCA-D15",
+   "n": 15,
+   "question": "Ratify early HAI review, disease-specific selection and programme safeguards.",
+   "kind": "governance",
+   "decisions": [
+    "4",
+    "5",
+    "7",
+    "10"
+   ],
+   "positions": [
+    {
+     "source": "NCCN BTC v1.2026",
+     "ref": "nccn",
+     "position": "Permits HAI in trials or experienced centres for carefully selected patients.",
+     "locator": "Gate 7 · selector option 'Hepatic arterial infusion' (when)"
+    },
+    {
+     "source": "Pooled analysis of four phase II HAI trials (with PUMP-2)",
+     "ref": "42331230",
+     "position": "Prospective HAI evidence admitted selected resectable regional nodal disease; the roadmap separates this from distant spread and from transplant eligibility, and notes the pooled cohorts overlap rather than replicate.",
+     "locator": "HAI evidence and pathway revision · 'Regional nodes and transplant separation', 'Mature pooled outcomes'"
+    },
+    {
+     "source": "Minimum requirements for new HAI programmes",
+     "ref": "39962001",
+     "position": "Credentialing must cover the whole service, from named surgeon and backup to infusion nursing, pharmacy, perfusion assessment, IR rescue, refill coverage, dose-hold rules, biliary escalation and a registry.",
+     "locator": "HAI evidence and pathway revision · 'Programme readiness'"
+    },
+    {
+     "source": "Floxuridine–bevacizumab biliary toxicity study",
+     "ref": "24154839",
+     "position": "Concurrent systemic bevacizumab increases floxuridine HAI biliary toxicity.",
+     "locator": "HAI evidence and pathway revision · 'Feasibility and medication safeguards'"
+    }
+   ],
+   "divergence": "Sources agree on credentialed whole-service programmes and avoiding bevacizumab with floxuridine, but the prospective HAI evidence is nonrandomised and admits regional nodes that the transplant route does not.",
+   "proposal": "Discuss HAI early for selected unresectable liver-confined iCCA at an experienced programme, with a systemic plan and defined resection reassessment; treat it as control or conversion, not standalone cure, with no ranking against Y90 or ablative radiotherapy; distinguish resectable regional nodes from distant spread, without extending that to transplant; name the whole service first; avoid bevacizumab with floxuridine.",
+   "proposal_locator": "HAI evidence and pathway revision (15 October 2026) · 'Treatment position', 'Regional nodes and transplant separation', 'Programme readiness', 'Feasibility and medication safeguards'",
+   "rationale": "Before activation, name the HPB pump surgeon and backup, medical oncology lead, nursing/pharmacy team, nuclear-medicine perfusion service and IR rescue service; define refill/maintenance coverage, laboratory monitoring and dose holds, biliary-toxicity escalation, and an outcomes registry. Minimum programme requirements: PMID 39962001; surgical toolkit: PMID 36346892. Avoid concurrent bevacizumab with FUDR (PMID 24154839); retain the NCCN CRLM restriction on concurrent VEGF inhibitors. Selected resectable regional nodes in HAI evidence do not confer transplant eligibility. No established head-to-head modality hierarchy.",
+   "audit": "Record intent, referral timing, systemic plan, perfusion verification, dose intensity, biliary complications, reassessment and complete resection/ablation outcomes."
+  }
+ ]
+}
