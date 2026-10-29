@@ -19,6 +19,7 @@
   const transplant = parts[0] === 'transplant';
   const slug = transplant ? parts[1] : parts[0];
   const page = transplant ? 'T:' + slug : slug;
+  S.setPage(transplant ? slug : ({hilar: 'pcca', adenoma: 'hca'}[slug] || slug));
   const make = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text !== undefined) n.textContent = text; return n; };
   const plain = s => String(s || '').replace(/\s+/g, ' ').trim();
   let queued = false, uid = 0;
@@ -38,9 +39,11 @@
     crlm: ['unresectability', 'control'], nelm: ['options', 'exposure']};
 
   let systemicData = null, lrtData = null;
-  const loadSystemic = () => systemicData || (systemicData = fetch(new URL('systemic/matrix.json?v=20261029-tools2', root)).then(r => { if (!r.ok) throw new Error('Matrix unavailable'); return r.json(); }));
+  const loadSystemic = () => systemicData || (systemicData = fetch(new URL('systemic/matrix.json?v=20261029-tools3', root)).then(r => { if (!r.ok) throw new Error('Matrix unavailable'); return r.json(); }));
   // All roadmap and pathway views use the same reviewed matrix data.
-  const loadLrt = () => lrtData || (lrtData = fetch(new URL('lrt/matrix.json?v=20261029-tools2', root)).then(r => { if (!r.ok) throw new Error('Matrix unavailable'); return r.json(); }));
+  const loadLrt = () => lrtData || (lrtData = fetch(new URL('lrt/matrix.json?v=20261029-tools3', root)).then(r => { if (!r.ok) throw new Error('Matrix unavailable'); return r.json(); }));
+  const roadmapData = {};
+  const loadRoadmap = s => roadmapData[s] || (roadmapData[s] = fetch(new URL(s + '/data/pathway.json?v=20261029-tools3', root)).then(r => { if (!r.ok) throw new Error('Roadmap unavailable'); return r.json(); }));
   const SETTINGS = [['first', 'Initial advanced disease'], ['later', 'Subsequent'], ['biomarker', 'Molecularly selected'],
     ['perioperative', 'Around curative local treatment'], ['combination', 'Combination / sequencing'], ['transplant', 'Transplant strategy']];
 
@@ -117,20 +120,21 @@
     if (!spec) return null;
     const n = ++uid;
     const form = make('form', 'tc-calc');
+    form.dataset.form = id;
     form.noValidate = true;
     form.addEventListener('submit', ev => ev.preventDefault());
     form.append(make('p', 'tc-calc-title', 'Calculate'));
     const grid = make('div', 'tc-fields');
     for (const f of spec.fields) {
       const fid = `tc-${id}-${f.id}-${n}`;
-      const wrap = make('div', 'tc-field' + (f.type === 'check' ? ' tc-check' : ''));
+      const wrap = make('div', 'tc-field' + (f.type === 'check' ? ' tc-check' : f.type === 'date' ? ' tc-date' : ''));
       let input;
       if (f.type === 'select') {
         input = make('select');
         for (const [value, label] of f.options) { const o = make('option', '', label); o.value = value; input.append(o); }
       } else {
         input = make('input');
-        input.type = f.type === 'check' ? 'checkbox' : 'number';
+        input.type = f.type === 'check' ? 'checkbox' : f.type === 'date' ? 'date' : 'number';
         if (f.type === 'number') { input.inputMode = 'decimal'; input.step = f.step || 'any'; input.min = '0'; }
       }
       input.id = fid; input.name = f.id;
@@ -153,6 +157,7 @@
       const lines = [].concat(spec.read(r));
       out.append(make('strong', '', lines[0]));
       for (const line of lines.slice(1)) out.append(make('span', '', line));
+      if (spec.chart) { const c = make('div', 'tc-chart'); c.innerHTML = spec.chart(r); out.append(c); }
     };
     form.addEventListener('input', update);
     form.addEventListener('change', update);
@@ -176,9 +181,32 @@
     body.innerHTML = item.html();
     const calc = calculator(id);
     if (calc) body.append(calc);
+    if (item.shared || item.lrt) lazyTable(d, body, item);
     d.append(body);
     return d;
   }
+  // A roadmap's quick reference or the liver-directed matrix, loaded when the row is first opened.
+  function lazyTable(d, body, item) {
+    const box = make('div', 'tc-shared');
+    box.append(make('p', 'tc-note', 'Opens the current table.'));
+    body.append(box);
+    d.addEventListener('toggle', () => {
+      if (!d.open || box.dataset.loaded) return;
+      box.dataset.loaded = 'loading';
+      box.replaceChildren(make('p', 'tc-note', 'Loading…'));
+      const job = item.lrt ? loadLrt().then(data => S.renderLrtContra(data, tumor))
+        : loadRoadmap(item.shared[0]).then(data => S.renderQuickref((data.quickref || []).find(q => q.title === item.shared[1]), item.shared[0]));
+      job.then(html => { box.innerHTML = html; box.dataset.loaded = 'true'; }).catch(() => {
+        box.dataset.loaded = '';
+        box.replaceChildren(make('p', 'tc-note', 'The table could not be loaded here. '));
+        const a = make('a', 'tc-link', 'Open the source page'); a.href = item.lrt ? new URL('lrt/#' + tumor, root).href : new URL(item.shared[0] + '/', root).href; box.lastChild.append(a);
+      });
+    });
+  }
+  // A page's criteria and tool references sit with the scores, tagged by what they are.
+  const REF_KIND = {'Surveillance intervals': 'Schedule', 'Surveillance intervals by guideline': 'Schedule', 'Molecularly selected treatment': 'Table',
+    'AJCC staging': 'Staging', 'Cyst-fluid test interpretation': 'Table', 'Transplant criteria by source': 'Criteria', 'Population for liver imaging algorithms': 'Criteria'};
+  const isScoreRef = n => ['criteria', 'tool'].includes(n.dataset.referenceKind);
   // A page's own quick reference becomes a row; a calculator is added when the page has none.
   function adoptReference(node, id, kind) {
     const label = node.dataset.tcLabel || plain(node.querySelector(':scope>summary')?.textContent);
@@ -246,7 +274,7 @@
     for (const node of [...list.querySelectorAll(':scope>section>*:not(h4)')]) {
       if (node.matches('details.ch-reference.tc-row')) {
         const id = node.dataset.tc;
-        const target = id ? scores : node.dataset.referenceKind === 'guide' ? treatments : references;
+        const target = id || isScoreRef(node) ? scores : node.dataset.referenceKind === 'guide' ? treatments : references;
         if (node.parentElement !== target) target.append(node);
         if (id) { list.querySelectorAll(`.tc-row:not(.ch-reference)[data-tc="${id}"]`).forEach(n => n.remove()); present.add(id); }
         continue;
@@ -270,6 +298,7 @@
           adoptReference(node, id, S.quickrefKind[id] || S.items[id]?.kind || 'Reference');
           scores.append(node); present.add(id);
         } else if (node.dataset.referenceKind === 'guide') { adoptReference(node, null, 'Guide'); treatments.append(node); }
+        else if (isScoreRef(node)) { adoptReference(node, null, REF_KIND[label] || 'Criteria'); scores.append(node); }
         else { adoptReference(node, null, 'Reference'); references.append(node); }
         continue;
       }

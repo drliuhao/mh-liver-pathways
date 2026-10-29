@@ -85,15 +85,77 @@ eq(c.netGrade({ki67: 2, mitoses: 2.5, diff: 'well'}).grade, 'G2');
 eq(sp('0','0','0','0'), '0');
 eq(c.spigelman({number: '0', size: '1', histology: '1', dysplasia: '1'}).ok, false);
 
-// Every item: a name, a kind, a definition with a source, and a place in the display order.
+// RECIST 1.1 / mRECIST overall response (Eisenhauer 2009; Lencioni 2010).
+const resp = (o) => c.response({criteria: 'recist', baseline: 100, nadir: '', current: 100, gone: 'no', nontarget: 'non', newLesion: 'no', ...o});
+eq(resp({current: 70}).overall, 'PR');                                   // −30% from baseline
+eq(resp({current: 71}).overall, 'SD');
+eq(resp({baseline: 30, nadir: 20, current: 24}).target, 'SD');           // +20% from the smallest sum but only 4 mm
+eq(resp({nadir: 20, current: 24}).target, 'PR');                         // still 76% below baseline and not progression
+eq(resp({baseline: 30, nadir: 20, current: 25}).target, 'PD');           // +25% and 5 mm
+eq(resp({criteria: 'mrecist', baseline: 30, nadir: 20, current: 24}).target, 'PD'); // mRECIST: 20% without the 5 mm rule
+eq(resp({nadir: 0, current: 5}).target, 'PD');                           // reappearance after complete response
+eq(resp({current: 0, gone: 'yes', nontarget: 'absent'}).overall, 'CR');
+eq(resp({current: 0, gone: 'yes', nontarget: 'non'}).overall, 'PR');      // RECIST table: target CR, non-target persisting
+eq(resp({current: 50, newLesion: 'yes'}).overall, 'PD');                  // a new lesion overrides the sums
+eq(resp({current: 50, nontarget: 'pd'}).overall, 'PD');
+eq(resp({criteria: 'mrecist', current: 3, gone: 'yes', nontarget: 'absent'}).ok, false); // mRECIST CR leaves no viable tumor
+eq(resp({nadir: 120}).ok, false); eq(resp({gone: ''}).ok, false); eq(resp({nontarget: ''}).ok, false); eq(resp({newLesion: ''}).ok, false);
+
+// RETREAT (Mehta 2017, Table 3).
+eq(c.retreat({afp: 20, mvi: 'no', count: 0, largest: ''}).score, 0);
+eq(c.retreat({afp: 21, mvi: 'no', count: 0}).pAfp, 1);
+eq(c.retreat({afp: 999, mvi: 'no', count: 0}).pAfp, 2);
+eq(c.retreat({afp: 1000, mvi: 'yes', count: 3, largest: 7}), {ok: true, score: 8, pAfp: 3, pMvi: 2, pSum: 3, sum: 10});
+eq(c.retreat({afp: 5, mvi: 'no', count: 1, largest: 3.9}).pSum, 1);       // 4.9
+eq(c.retreat({afp: 5, mvi: 'no', count: 2, largest: 3}).pSum, 2);         // 5.0
+eq(c.retreat({afp: 5, mvi: '', count: 1, largest: 2}).ok, false);
+eq(c.retreat({afp: 5, mvi: 'no', count: 0, largest: 2}).ok, false);
+
+// French AFP model (Duvoux 2012) and Metroticket 2.0 (Mazzaferro 2018).
+eq(c.afpModel({largest: 3, number: 3, afp: 100}).score, 0);
+eq(c.afpModel({largest: 6, number: 4, afp: 1000}).score, 5);
+eq(c.afpModel({largest: 6.1, number: 1, afp: 1001}), {ok: true, score: 7, pd: 4, pn: 0, pa: 3, high: true});
+eq(c.afpModel({largest: 2, number: 0, afp: 5}).ok, false);
+eq([c.metroticket({afp: 199, number: 2, largest: 5}).within, c.metroticket({afp: 199, number: 2, largest: 5.1}).within], [true, false]);
+eq([c.metroticket({afp: 200, number: 2, largest: 3}).limit, c.metroticket({afp: 400, number: 1, largest: 3}).limit, c.metroticket({afp: 1000, number: 1, largest: 3}).limit], [5, 4, 4]);
+eq(c.metroticket({afp: 1001, number: 1, largest: 1}).within, false);
+eq(c.metroticket({afp: 50, number: 0, largest: ''}).sum, 0);
+
+// Intervals: complete calendar months, end-of-month targets, no negative intervals.
+eq(c.interval({start: '2026-04-30', end: '2026-10-29', required: '6'}).months, 5);
+eq(c.interval({start: '2026-04-30', end: '2026-10-30', required: '6'}).reached, {months: 6, date: '2026-10-30', met: true});
+eq(c.interval({start: '2026-08-31', end: '2027-02-28', required: '6'}).reached.date, '2027-02-28');
+eq(c.interval({start: '2026-01-01', end: '', today: '2026-01-15'}).days, 14);
+eq(c.interval({start: '2026-02-30', end: '2026-03-01'}).ok, false);
+eq(c.interval({start: '2026-05-01', end: '2026-04-01'}).ok, false);
+
+// Marker trend: first-to-last change, doubling time by log-linear fit, incomplete rows rejected.
+const mt = c.markerTrend({points: [{date: '2026-01-01', value: '10'}, {date: '2026-01-31', value: '20'}, {date: '2026-03-02', value: '40'}]});
+eq([mt.change, mt.doublingDays, mt.days], [300, 30, 60]);
+eq(c.markerTrend({points: [{date: '2026-01-01', value: '40'}, {date: '2026-01-31', value: '20'}]}).doublingDays, -30);
+eq(c.markerTrend({points: [{date: '2026-01-01', value: '4'}, {date: '', value: '5'}]}).ok, false);
+eq(c.markerTrend({points: [{date: '2026-01-01', value: '4'}, {date: '2026-01-01', value: '5'}]}).ok, false);
+
+// Liver involvement and treatable share.
+eq(c.liverInvolvement({total: 2000, tumor: 500, treatable: 450}), {ok: true, involvement: 25, treatable: 90});
+eq(c.liverInvolvement({total: 2000, tumor: 500, treatable: ''}).treatable, null);
+eq(c.liverInvolvement({total: 2000, tumor: 2500}).ok, false);
+eq(c.liverInvolvement({total: 2000, tumor: 500, treatable: 600}).ok, false);
+
+// Every item: a name, a kind, a definition with a source (or the roadmap table it shows), and a place in the display order.
+const FORM_KINDS = ['Calculator', 'Response criteria', 'Prognostic score', 'Date calculator'];
 for (const [id, item] of Object.entries(S.items)) {
   const html = item.html();
-  assert(item.name && item.kind && html.length > 80, id + ' definition');
-  assert(/PMID \d{6,9}|OPTN|hcc\/|acr\.org/.test(html), id + ' cites a source');
+  assert(item.name && item.kind && (item.shared || html.length > 80), id + ' definition');
+  assert(item.shared || item.lrt || ['interval', 'markers'].includes(id) || /PMID \d{6,9}|OPTN|hcc\/|acr\.org|livervolume\.com|facs\.org/.test(html), id + ' cites a source');
   assert(S.order.includes(id), id + ' ordered');
-  if (S.forms[id]) assert(item.kind === 'Calculator' || id === 'netgrade', id + ' kind');
+  if (S.forms[id]) assert(FORM_KINDS.includes(item.kind) || id === 'netgrade', id + ' kind');
   n++;
 }
+assert(!S.forms.flr, 'LiverVolume.com replaces the local FLR calculator');
+for (const [page, map] of Object.entries(S.extra)) for (const ids of Object.values(map)) for (const id of ids) assert(S.items[id], page + ' places unknown item ' + id);
+const shared = S.renderQuickref({title: 't', intro: 'i', rows: [['a', 'b <c>']], foot: 'PMID 12345678'}, 'hilar');
+assert(shared.includes('b &lt;c&gt;') && shared.includes('PMID 12345678') && shared.includes('hilar/'), 'shared tables escape text and keep PMIDs and the roadmap link');
 for (const id of Object.values(S.quickref)) assert(S.order.includes(id), id + ' ordered');
 
 // Detection: named items only, and page restrictions hold.
@@ -103,4 +165,4 @@ eq(S.detect('mRECIST and RECIST 1.1', 'hcc'), ['mrecist', 'recist']);
 eq(S.detect('Oslo score and Fong', 'icca'), []);
 eq(S.detect('HEHE-LT registry risk', 'T:hehe'), ['hehelt']);
 
-console.log(`PASS: ${n} checks — Child-Pugh, ALBI, Milan/T2/UNOS-downstaging/UCSF, tumor burden, Fong, Oslo, FLR, NET grade and Spigelman calculators; ${Object.keys(S.items).length} sourced definitions; detection and page limits.`);
+console.log(`PASS: ${n} checks — Child-Pugh, ALBI, Milan/T2/UNOS-downstaging/UCSF, tumor burden, Fong, Oslo, FLR, NET grade, Spigelman, RECIST/mRECIST response, RETREAT, AFP model, Metroticket 2.0, interval, marker-trend and liver-involvement calculators; ${Object.keys(S.items).length} sourced definitions; detection and page limits.`);
