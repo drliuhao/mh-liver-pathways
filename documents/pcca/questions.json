@@ -226,11 +226,11 @@
       {
        "source": "Milan consensus",
        "key": "pm40478744",
-       "says": "Cited by the roadmap for volume–outcome relationships in this operation being observational but consistent; it also confines arterial resection to expert centres and does not recommend routine vascular resection.",
+       "says": "Cited at Gate 3 for preferring left-sided hemihepatectomy, not recommending routine vascular resection and confining arterial resection to expert centres; the roadmap's statement that volume–outcome relationships are observational but consistent names no source.",
        "locator": "What we are not sure about · item 11; Gate 3 · Standard 'Extended hepatectomy with en bloc extrahepatic bile duct resection…' (avoid)"
       }
      ],
-     "divergence": "Only the Milan consensus is cited, and only for the direction of the volume–outcome relationship; no source supplies a numeric minimum, so the threshold is a governance choice.",
+     "divergence": "No source on the page supplies a numeric minimum, and the roadmap's volume–outcome statement names no source, so the threshold is a governance choice.",
      "proposal": "No minimum has been set. The roadmap treats the threshold as a governance choice, flags extended hepatectomy with biliary reconstruction as expertise-dependent, and requires the operation at a centre with appropriate surgical expertise; annual volume, 90-day mortality and R0 rate are to be audited.",
      "proposal_locator": "What we are not sure about · item 11; Gate 3 · criteria and Standard 'Extended hepatectomy…' [EXPERTISE]; Operations · dashboard",
      "rationale": "Volume-outcome relationships are observational but consistent. The threshold is a governance choice. [EXPERTISE]",
@@ -322,7 +322,7 @@
       {
        "source": "ESGE 2025",
        "key": "pm39689874",
-       "says": "Suggests EUS tissue acquisition for perihilar strictures only when ERCP sampling is insufficient and curative resection is not feasible (conditional, low quality); it makes no recommendation for transplant candidates.",
+       "says": "Suggests EUS tissue acquisition for perihilar strictures only when ERCP sampling is insufficient, and provided curative resection is not feasible and/or imaging shows accessible extraluminal disease (conditional, low quality); it makes no recommendation for transplant candidates.",
        "locator": "Gate 2 · Reasonable option 'EUS-guided aspiration of the primary'"
       },
       {
@@ -450,7 +450,7 @@
        "source": "NCCN Biliary Tract Cancers v1.2026",
        "key": "np-hilar-nccn",
        "says": "Lists postoperative chemoradiation for R1 or node-positive disease, and as a non-preferred option for R0 node-negative disease; systemic therapy and clinical trial are preferred.",
-       "locator": "Liver directed therapy evidence update · 'NCCN radiation options and source-specific thresholds'; Gate 3 · Reasonable 'After an R1 resection…' (note)"
+       "locator": "Liver directed therapy evidence update, v16 Word roadmap only (not on the web page) · 'NCCN radiation options and source-specific thresholds'; Gate 3 · Reasonable 'After an R1 resection…' (avoid, note)"
       },
       {
        "source": "BSG 2023",
@@ -461,7 +461,7 @@
       {
        "source": "SWOG S0809",
        "key": "np-hilar-swog0809",
-       "says": "Single-arm phase II of adjuvant chemotherapy then chemoradiation: 2-year survival 67% after R0 and 60% after R1; held only as quoted by BSG, not as a primary paper.",
+       "says": "Single-arm phase II of adjuvant chemotherapy then chemoradiation: 2-year overall survival 67% after R0 and 60% after R1 in 79 patients, without a control arm (primary report PMID 25964250).",
        "locator": "Gate 3 · Reasonable 'After an R1 resection…' (avoid)"
       },
       {
@@ -471,7 +471,7 @@
        "locator": "Gate 3 · Reasonable 'After an R1 resection…' (avoid)"
       }
      ],
-     "divergence": "NCCN and the Milan consensus treat nodal involvement alongside margin status as a reason to consider chemoradiation, whereas BSG restricts it to R1, and the node-positive benefit rests on retrospective meta-analysis.",
+     "divergence": "NCCN places nodal involvement alongside margin status as a trigger for considering chemoradiation, and the Milan consensus, while calling adjuvant radiotherapy unproven, sees any suggested benefit mainly in R1 and N1 disease, whereas BSG restricts it to R1, and the node-positive benefit rests on retrospective meta-analysis.",
      "proposal": "For R1 resection the roadmap makes chemoradiation in addition to systemic therapy a Reasonable shared decision (grade C) after radiation oncology review; it is not mandatory. For node-positive R0 disease it states the question is open, and the October 2026 update adds that nodal disease warrants individualized review.",
      "proposal_locator": "Gate 3 · Reasonable 'After an R1 resection, discuss adjuvant chemoradiation…' (note); Liver directed therapy evidence update · 'Adjuvant and biliary treatments'",
      "rationale": "NCCN places nodal involvement alongside margin status as a trigger for discussing chemoradiation; BSG 2023 limits its recommendation to R1 resection, and the node-positive benefit rests on retrospective meta-analysis.",
@@ -562,7 +562,7 @@
       },
       {
        "source": "ASCO BTC living guideline 2026.1.0",
-       "key": null,
+       "key": "pm42874012",
        "says": "For eligible MSS/pMMR advanced biliary cancer, rates cisplatin–gemcitabine with durvalumab or pembrolizumab high-quality, strong; it is an advanced biliary-tract guideline, not a perihilar transplant or neoadjuvant one.",
        "locator": "Systemic treatment matrix · Supporting study appraisals 'ASCO BTC living guideline 2026.1.0' (extract)"
       }
@@ -1817,7 +1817,7 @@
   },
   "np-hilar-swog0809": {
    "short": "SWOG S0809",
-   "title": "Single-arm phase II trial of adjuvant capecitabine and gemcitabine followed by chemoradiation in extrahepatic cholangiocarcinoma and gallbladder cancer; 2-year survival 67% after R0 and 60% after R1 resection, as cited by BSG 2023 in support of its R1 chemoradiation recommendation.",
+   "title": "Ben-Josef E, et al. J Clin Oncol 2015 (PMID 25964250). Single-arm phase II trial of adjuvant capecitabine and gemcitabine followed by chemoradiation in extrahepatic cholangiocarcinoma and gallbladder cancer (n=79); 2-year overall survival 67% after R0 and 60% after R1 resection, cited by BSG 2023 in support of its R1 chemoradiation recommendation.",
    "kind": "Resection",
    "links": {}
   },
@@ -1851,6 +1851,14 @@
    "kind": "Guidelines & policy",
    "links": {
     "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39864891/"
+   }
+  },
+  "pm42874012": {
+   "short": "ASCO BTC living guideline 2026.1.0",
+   "title": "",
+   "kind": "",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42874012/"
    }
   },
   "pm24360654": {

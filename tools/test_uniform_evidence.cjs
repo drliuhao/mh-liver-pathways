@@ -4,7 +4,8 @@ const root = require('path').resolve(__dirname, '..');
 const slugs = ['hcc','hilar','icca','crlm','nelm','chcca','pdac','pnet','ampullary','pcyst','adenoma','incidental'];
 const baseline = '0773285';
 const read = p => fs.readFileSync(root + '/' + p, 'utf8');
-const old = p => cp.execFileSync('git',['show',baseline + ':' + p],{cwd:root,encoding:'utf8'});
+// Recorded clinical revisions (tools/clinical_revisions/) are replayed on the baseline: the only permitted change.
+const old = p => require('./apply_clinical_revisions.cjs').applyText(p,cp.execFileSync('git',['show',baseline + ':' + p],{cwd:root,encoding:'utf8',maxBuffer:8e6}));
 const htmlText = s => s.replace(/<[^>]*>/g,'').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&#13;/g,'\r').replace(/\s+/g,' ').trim();
 let appraisals = 0, aliases = 0;
 for (const slug of slugs) {

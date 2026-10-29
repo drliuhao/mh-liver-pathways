@@ -10,8 +10,9 @@ from pathlib import Path
 import glob, json, re
 
 ROOT = Path(__file__).resolve().parents[1]
-NUM = re.compile(r'(?<![A-Za-z0-9.])\d+(?:[.,·]\d+)*')
-norm = lambda s: s.replace(',', '').replace('·', '.')
+# Decimal points as printed: '.', Lancet '·' (U+00B7) and BJS '⋅' (U+22C5).
+NUM = re.compile(r'(?<![A-Za-z0-9.])\d+(?:[.,·⋅]\d+)*')
+norm = lambda s: s.replace(',', '').replace('·', '.').replace('⋅', '.')
 nums = lambda s: {norm(m) for m in NUM.findall(s or '')}
 DESIGNS = {'RCT', 'Phase 3 RCT', 'Phase 2 RCT', 'Randomized phase 2', 'Single-arm trial', 'Single-arm phase 2', 'Phase 1/2',
            'Prospective cohort', 'Retrospective cohort', 'Registry cohort', 'Cohort', 'Case series', 'Case-control',
@@ -89,19 +90,28 @@ for pmid, r in json.loads((ROOT / 'systemic/references.json').read_text()).items
 
 src = json.loads((ROOT / 'tools/compact_evidence_source.json').read_text())
 deck = json.loads((ROOT / 'tools/compact_evidence_ppt_quotes.json').read_text())['quotes']
-errors, site_q, deck_q = [], 0, 0
+# Short verbatim passages from papers read in full after V15 (each under 15 words; checked against the PDFs by
+# tools/check_compact_evidence_fulltext.py).
+fulltext = json.loads((ROOT / 'tools/compact_evidence_fulltext_quotes.json').read_text())['quotes']
+for pmid, quotes in fulltext.items():
+    for q in quotes:
+        assert len(q['quote'].split()) < 15 and re.fullmatch(r'[0-9a-f]{64}', q['sha256']), (pmid, q['quote'][:60])
+errors, site_q, deck_q, full_q = [], 0, 0, 0
 for pmid, s in src['studies'].items():
     assert re.fullmatch(r'\d{6,9}', pmid), pmid
     # PREMIERE-format line: every number in arms, result and caution comes from a quoted passage, and every quoted
     # passage is verbatim in the site's verified text for that PMID or in the team's V15 deck text (checked separately).
     site = '\n'.join(text.get(pmid, []))
     from_deck = {q['quote'] for q in deck.get(pmid, [])}
+    from_full = {q['quote'] for q in fulltext.get(pmid, [])}
     pool = set()
     for q in s.get('quotes') or []:
         if q in site:
             site_q += 1
         elif q in from_deck:
             deck_q += 1
+        elif q in from_full:
+            full_q += 1
         else:
             errors.append(f'{pmid}: quote without provenance: {q[:70]}')
         pool |= nums(q)
@@ -190,7 +200,7 @@ for key, ids in src['reference_links'].items():
     for g in payload['references'][key]:
         if g['k'] == 'systemic':
             assert g['l'] == cards[g['card']]['limits'], key
-print(f"PASS: {len(src['studies'])} PREMIERE-format study lines, every number in a quoted passage ({site_q} quotes on the site, {deck_q} from V15 decks); "
+print(f"PASS: {len(src['studies'])} PREMIERE-format study lines, every number in a quoted passage ({site_q} quotes on the site, {deck_q} from V15 decks, {full_q} from full texts); "
       f"{nonpm_n} non-PMID sources; "
       f"{rows} option-tied results across {len(published)} options, every number present in that roadmap's clinical text; "
       f"{groups} reviewed source-study groups (numbers traced) on {len(payload['references'])} HCC options; asset in sync.")

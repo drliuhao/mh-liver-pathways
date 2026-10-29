@@ -91,7 +91,7 @@
     }
    ],
    "divergence": "Within the roadmap, the stop/switch card keeps persistent viability after two well-executed sessions as a switch trigger, while stage B and the limited-evidence table record that v0.8 withdrew the fixed two-session rule for per-session reassessment.",
-   "proposal": "Ratify a non-ranked selector chosen by goal, anatomy and reserve, with no universal ablation-to-histotripsy sequence; device availability and specialty preference are not indications. Stop/switch: reassess after every treatment; move away from repeated TACE for decompensation, worsening ALBI or Child-Pugh, lost selective access, or out-of-territory, vascular or extrahepatic progression; allow delayed response after radiation.",
+   "proposal": "Ratify a non-ranked selector chosen by goal, anatomy and reserve, with no universal ablation-to-histotripsy sequence; device availability and specialty preference are not indications. Stop/switch: reassess after every treatment; move away from repeated TACE for decompensation, worsening ALBI or Child-Pugh, lost selective access, or out-of-territory, vascular or extrahepatic progression, or persistent viable disease after two well-executed sessions unless a curative or downstaging rationale is recorded (a trigger the stage B note says v0.8 withdrew); allow delayed response after radiation.",
    "proposal_locator": "Locoregional tab · Decision sequence, selector table and Stop and switch rules; Decisions table #4 (why)",
    "rationale": "The selector is the page's operative content and it crosses six specialties; a concept everyone agrees with and a table nobody has signed is not a ratified pathway. Hepatobiliary and transplant surgery, hepatology, interventional radiology, radiation oncology, diagnostic radiology and medical oncology each own part of it.",
    "audit": ""
@@ -150,7 +150,7 @@
     {
      "source": "Baveno VIII",
      "ref": "42624290",
-     "position": "Rule-in: liver stiffness ≥25 kPa (not obese MASLD), spleen stiffness >55 kPa, ANTICIPATE ≥75%; rule-out: ≤15 kPa with platelets ≥150. Its HCC statements are new, LoE 3 and weak, and inapplicable with macrovascular invasion.",
+     "position": "Rule-in: liver stiffness ≥25 kPa (not obese MASLD), spleen stiffness >55 kPa, ANTICIPATE ≥75%; rule-out: ≤15 kPa with platelets ≥150. Its HCC statements are new, LoE 3 and weak, and non-invasive tests may not be applicable at all with macrovascular invasion.",
      "locator": "Curative tab · Baveno criteria table; What we are not sure about #5"
     },
     {
@@ -167,7 +167,7 @@
     }
    ],
    "divergence": "BCLC keeps HVPG as gold standard while allowing non-invasive rule-in or rule-out, and the Baveno VIII HCC statements are weak, device-specific and unvalidated in obese MASLD.",
-   "proposal": "Measure HVPG when the resection decision turns on portal pressure; non-invasive rule-in is useful where HVPG is unavailable or declined, and in BCLC 0-A an ANTICIPATE score of 75% or more is only highly suggestive. Every resection proposal records the criterion used, its value and its date; an unsupported 'no portal hypertension' entry is not acceptable.",
+   "proposal": "Measure HVPG when the resection decision turns on portal pressure; non-invasive rule-in is useful where HVPG is unavailable or declined, and in BCLC 0–A HCC without a >5 cm right-lobe nodule an ANTICIPATE score of 75% or more is only highly suggestive. Every resection proposal records the criterion used, its value and its date; an unsupported 'no portal hypertension' entry is not acceptable.",
    "proposal_locator": "Curative tab · Establishing CSPH (Baveno criteria table, 'What to record'); Quick reference · CSPH table (v16 text)",
    "rationale": "The Baveno VIII HCC statements are new, graded level of evidence 3 with weak strength, and the thresholds are device- and technique-specific and unvalidated in obese MASLD. Recording the criterion used, its value and its date must be a condition of proposing resection, because “no portal hypertension” without a stated basis is the most common way this decision is made on incomplete information.",
    "audit": ""
@@ -278,7 +278,7 @@
     }
    ],
    "divergence": "BCLC 2026 prefers microwave up to 3-4 cm while EASL 2025 treats the techniques as equivalent, and the one randomised trial neither showed superiority nor tested non-inferiority.",
-   "proposal": "Microwave or radiofrequency. The roadmap records the BCLC 2026 preference but states no randomised trial has shown a difference, so below that size the choice is operational (a workflow preference, not outcome-based); the v16 matrix states no universal preference between the two.",
+   "proposal": "Microwave or radiofrequency. The roadmap records the BCLC 2026 preference but states no randomised trial has shown a difference, so the preference is operational (a workflow preference, not outcome-based); the v16 matrix states no universal preference between the two.",
    "proposal_locator": "Stage A · Thermal ablation; Curative tab · Thermal ablation; Liver-directed treatment matrix, thermal ablation row (v16 text)",
    "rationale": "The one randomised comparison was a superiority trial that did not show superiority and did not test non-inferiority, at a mean lesion size of 18 mm with only 11 lesions in the 3 to 4 cm range the preference is argued for. Calling it operational is accurate; calling it outcome-based is not.",
    "audit": ""

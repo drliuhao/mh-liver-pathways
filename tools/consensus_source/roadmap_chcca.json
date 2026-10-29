@@ -26,7 +26,7 @@
     {
      "source": "Lunsford 2018 propensity-matched series",
      "ref": "29573187",
-     "position": "Concluded that low-grade tumours should not be excluded; not obtained in full, and its second-hand figures show worse recurrence-free survival (28% versus 61%) when matched on pre-transplant characteristics.",
+     "position": "Concluded that low-grade tumours should not be excluded; read in full, it shows non-significantly worse 5-year recurrence-free survival when matched on pre-transplant characteristics (42% versus 61%, p=0.17, in its results; 28% in its abstract).",
      "locator": "Gate 5 · Reasonable 'Differentiation grade and the explant pathological variables…' (note); What we are not sure about · items 7–8"
     },
     {
@@ -42,10 +42,10 @@
      "locator": "Gate 5 · Reasonable 'Transplantation for cHCC-CCA within Milan criteria…' (note)"
     }
    ],
-   "divergence": "Multicentre and pooled data suggest acceptable within-Milan results, but they describe tumours found on the explant, while the better-matched single-centre cohort and the UNOS long-term data show clearly worse post-transplant outcomes than HCC.",
+   "divergence": "Multicentre and pooled data suggest acceptable within-Milan results, while the double-matched single-centre cohort and the UNOS long-term data show clearly worse post-transplant outcomes than HCC; almost every patient in every series was taken for HCC before transplant, so none describes a deliberately listed cHCC-CCA.",
    "proposal": "The roadmap keeps transplantation within Milan as Reasonable at grade D, only under a written protocol with prospective registry entry and judged against the OPTN review-board criteria, and lists transplanting outside such a protocol as Avoid. Whether to transplant at all is left to the programme as a graft-stewardship judgement.",
    "proposal_locator": "Gate 5 · Reasonable 'Transplantation for cHCC-CCA within Milan criteria…'; Standard 'Use the OPTN National Liver Review Board transplant-oncology criteria…'; Avoid 'Do not transplant for cHCC-CCA outside a written protocol…' (note)",
-   "rationale": "The evidence is entirely retrospective and the two most relevant single-centre series from this institutional lineage point in opposite directions — a 2018 propensity-matched analysis of 12 recipients argued that low-grade tumours should not be excluded, and a 2026 matched cohort of 19 incidentally diagnosed recipients found mortality hazard ratios of 6.47 (95% CI 2.87–14.55) against controls matched on pre-transplant variables and 4.67 (95% CI 2.07–10.53) against controls matched on explant pathology. The multicentre licence is thinner than it looks: in the 12-centre analysis only 2 of 99 transplant recipients were knowingly transplanted with the diagnosis, the within-Milan equivalence is a p value of 0.806 in 67 patients, and recurrence in that same subgroup was double (23.1% against 11.5%, p<0.001). UNOS data show the lowest waitlist mortality and dropout of the three diagnoses compared and the lowest 15-year graft and patient survival, so dropout does not explain the favourable per-protocol figures. Graft stewardship at 27.3% 15-year patient survival is an institutional judgement, not an evidence question.",
+   "rationale": "The evidence is entirely retrospective and the two most relevant single-centre series linked to this programme (the 2018 cohort was transplanted at UCLA) point in opposite directions — a 2018 propensity-matched analysis of 12 recipients argued that low-grade tumours should not be excluded, and a 2026 matched cohort of 19 incidentally diagnosed recipients found mortality hazard ratios of 6.47 (95% CI 2.87–14.55) against controls matched on pre-transplant variables and 4.67 (95% CI 2.07–10.53) against controls matched on explant pathology. The multicentre licence is thinner than it looks: in the 12-centre analysis only 2 of 99 transplant recipients were knowingly transplanted with the diagnosis, the within-Milan equivalence is a p value of 0.806 in 67 patients, and recurrence in that same subgroup was double (23.1% against 11.5%, p<0.001). UNOS data show the lowest waitlist mortality and dropout of the three diagnoses compared and the lowest 15-year graft and patient survival, so dropout does not explain the favourable per-protocol figures. Graft stewardship at 27.3% 15-year patient survival is an institutional judgement, not an evidence question.",
    "audit": "Registry mandatory if the pathway stays open: every recipient including explant-diagnosed cases, with recurrence, graft and patient survival, reported against the programme's own matched HCC recipients."
   },
   {
@@ -82,7 +82,7 @@
     {
      "source": "NCCN Hepatocellular Carcinoma and Biliary Tract Cancers",
      "ref": "nccnhcc",
-     "position": "For advanced mixed tumours, names cisplatin–gemcitabine with durvalumab or pembrolizumab as an appropriate first line and advises considering multigene panel testing in all; neither appears in the CPG.",
+     "position": "For advanced mixed tumours, names cisplatin–gemcitabine with durvalumab or pembrolizumab as an appropriate first line and advises considering multigene panel testing in all; the CPG's induction list predates those combinations, and it sequences only the explant, too late to inform induction.",
      "locator": "Gate 5 · Reasonable 'Where the local protocol is used…' (avoid); Gate 1 · Standard 'Send multigene panel testing on the diagnostic specimen…'"
     }
    ],
@@ -203,7 +203,7 @@
     {
      "source": "NCCN Hepatocellular Carcinoma",
      "ref": "nccnhcc",
-     "position": "Sets no size limit; it refers patients for transplant-centre evaluation when tumour size falls within that centre's own criteria.",
+     "position": "Sets no size limit; patients whose tumour is limited in size by centre-specific criteria should be considered for evaluation at a transplant centre.",
      "locator": "Gate 5 · Standard 'Use the OPTN National Liver Review Board…' (note); Quick reference · 'Transplant criteria — four documents, four thresholds'"
     },
     {
@@ -266,12 +266,12 @@
     },
     {
      "source": "Kobayashi 2018 (systemic matrix appraisal)",
-     "ref": "V16-1",
+     "ref": "29856900",
      "position": "In 36 Japanese patients, platinum regimens had longer observed survival than sorafenib with very wide intervals; the systemic matrix citing it says adding a checkpoint inhibitor, or choosing an HCC regimen, needs explicit extrapolation rationale.",
      "locator": "Systemic treatment matrix · row 'Combined HCC CCA / Advanced disease' and Supporting study appraisals 'Kobayashi 2018' (extract)"
     }
    ],
-   "divergence": "NCCN names one biliary chemo-immunotherapy default for everyone, but no study compares HCC and biliary backbones in this disease, the one component-stratified cohort found proportion non-predictive, and the roadmap's own systemic matrix is more cautious about adding a checkpoint inhibitor.",
+   "divergence": "NCCN names cisplatin–gemcitabine with a checkpoint inhibitor as an appropriate first-line choice in histologically proven advanced mixed tumours, but no study compares HCC and biliary backbones in this disease, the one component-stratified cohort found proportion non-predictive, and the roadmap's own systemic matrix is more cautious about adding a checkpoint inhibitor.",
    "proposal": "Cisplatin–gemcitabine plus durvalumab or pembrolizumab is the first Standard option (grade C) for most patients, especially CCA-predominant or biliary-pattern disease; an HCC backbone is reasonable for HCC-predominant, AFP-led or platinum-unfit cirrhotic patients; targeted therapy where an alteration exists. Choosing by component is called reasoning, not evidence, and a trial is preferred.",
    "proposal_locator": "Gate 7 · Standard options (order, flagnote); What we are not sure about · item 16; Systemic treatment matrix · 'Combined HCC CCA / Advanced disease' (extract)",
    "rationale": "There is now one direct comparison and it is an underpowered null: 21 patients given first-line durvalumab with gemcitabine–cisplatin had median overall survival of 13.8 months (95% CI 2.1–25.6) against 13.3 months in 154 patients with pure cholangiocarcinoma, 13.8 against 14.5 after matching, with histology not an independent predictor (HR 0.83, 95% CI 0.42–1.66) — and no patient in it received an HCC regimen. The older retrospective support is weaker than the page previously implied: the European cohort's 15.5 against 5.3 months was p=0.052 and non-significant on multivariable analysis against a mostly sorafenib comparator, and the series that established gemcitabine–platinum did so on disease control while its survival comparison was null (11.5 against 11.7 months, p=0.9686). The genomic data no longer point cleanly the other way either: CTNNB1 is under 7% against over 34% in HCC, while IDH1 and FGFR2 are present at 8.0% and 7.3% and absent from HCC. The one cohort that compared HCC-dominant with iCCA-dominant tumours treated identically found no difference at any threshold from 20% to 80%. Component proportion is prognostic, not predictive.",
@@ -318,7 +318,7 @@
     }
    ],
    "divergence": "The two chemotherapy datasets point in opposite directions and neither is informative, adjuvant TACE helps only early recurrence in HCC-dominant tumours, and the local post-transplant tiers rest on no data.",
-   "proposal": "No single answer. Reasonable options: adjuvant systemic chemotherapy for high-risk explant features as a shared decision; adjuvant TACE for resected HCC-dominant tumours (not after transplant, not with perineural invasion, not CCA-dominant); observation with scheduled intensive surveillance for low-risk explants. Do not cite BILCAP as evidence; offer the open adjuvant trial.",
+   "proposal": "No single answer. Reasonable options: adjuvant systemic chemotherapy for high-risk explant features as a shared decision; adjuvant TACE for resected, hepatitis-B-associated, HCC-dominant tumours at a centre that does it routinely (not after transplant, not with perineural invasion, not CCA-dominant); observation with scheduled intensive surveillance for low-risk explants. Do not cite BILCAP as evidence; offer the open adjuvant trial.",
    "proposal_locator": "Gate 6 · Reasonable adjuvant options (order, flagnote); Gate 6 · Avoid 'Do not start adjuvant capecitabine on BILCAP's authority…'",
    "rationale": "The two retrospective datasets on adjuvant chemotherapy are a 19-patient positive and an uninformative null: benefit after propensity matching in 75 patients at one centre, confined to a nomogram-defined high-risk subgroup of 13 treated patients from a model with an AUC of 0.694; and in 197 SEER patients a numerically worse median survival with chemotherapy that was not significant before matching (HR 1.290, 95% CI 0.850–1.956) or after it (HR 1.063, 95% CI 0.646–1.749), in a treated arm with more T3–T4 disease and four times the node positivity. Post-operative TACE has the most consistent signal but only for early recurrence and only in HCC-dominant tumours (53.3% against 32.3% at two years, p=0.028, on 30 patients), and the Taiwan registry's TACE hazard ratio reverses between strata. The first prospective adjuvant study in this histology is now open (NCT07243951, single-arm, 75 patients). The local protocol's post-transplant tiers are unevidenced and leave a 3-to-6 cm gap in their own definitions.",
    "audit": "Adjuvant modality, risk tier assigned, completion rate, recurrence at two years by tier."
@@ -554,7 +554,7 @@
     {
      "source": "Lunsford 2018 propensity-matched series",
      "ref": "29573187",
-     "position": "Concluded that low-grade tumours should not be excluded from transplantation; cited only from secondary reports.",
+     "position": "Concluded that low-grade tumours should not be excluded from transplantation; read in full, none of its 5 well or moderately differentiated tumours recurred and all 6 recurrences were poorly differentiated.",
      "locator": "What we are not sure about · items 7–8"
     },
     {

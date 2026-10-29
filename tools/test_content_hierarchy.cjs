@@ -9,7 +9,7 @@ for(const [slug,refs] of Object.entries(manifest.references)){
  assert.deepEqual(refs.map(r=>r.source),source,slug+' must account for every reference exactly once');
  assert.equal(new Set(refs.map(r=>r.source)).size,refs.length);
  for(const r of refs){assert(['tool','criteria','guide','evidence'].includes(r.kind));assert(r.label&&r.decisions.length);assert(r.decisions.every(id=>navigation[slug][id]),slug+': invalid owning decision');count++;}
- if(slug!=='hcc')assert.equal(read(slug+'/data/pathway.json'),cp.execFileSync('git',['show','dfda24c:'+slug+'/data/pathway.json'],{encoding:'utf8',maxBuffer:4e6}).replaceAll('stlocal approval','stratification'),'Clinical source content changed');
+ if(slug!=='hcc')assert.equal(read(slug+'/data/pathway.json'),require('./apply_clinical_revisions.cjs').applyText(slug+'/data/pathway.json',cp.execFileSync('git',['show','dfda24c:'+slug+'/data/pathway.json'],{encoding:'utf8',maxBuffer:4e6}).replaceAll('stlocal approval','stratification')),'Clinical source content changed beyond recorded revisions');
 }
 assert.equal(count,49);assert.equal(Object.keys(manifest.references).length,12);
 const bilcap=manifest.references.icca.find(r=>r.source==='BILCAP, as published');assert.equal(bilcap.kind,'evidence');assert.deepEqual(bilcap.decisions,['8']);

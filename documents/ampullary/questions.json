@@ -103,7 +103,7 @@
       {
        "source": "Kim 2013",
        "key": "pm23442830",
-       "says": "In 91 biopsy-proven adenomas, 26.4% were malignant after resection, with high-grade dysplasia and ductal dilatation as independent predictors; cited from abstract only.",
+       "says": "In 91 biopsy-proven adenomas, 26.4% were malignant after resection, with high-grade dysplasia and ductal dilatation as independent predictors; single-centre retrospective series, and 4 of the 24 malignancies were carcinoma in situ.",
        "locator": "Gate 1 · Standard 'Score the malignancy risk explicitly…' (pref)"
       },
       {
@@ -147,13 +147,13 @@
       {
        "source": "NCCN Ampullary Adenocarcinoma (extracted text)",
        "key": "np-ampullary-nccnamp",
-       "says": "Lists surgical ampullectomy for adenoma with positive margins after endoscopic removal, at centres with expertise, and not for invasive carcinoma; sets no standard indications and says comparisons with pancreatoduodenectomy contain too few ampullectomies to conclude.",
+       "says": "Lists surgical ampullectomy for adenoma with positive margins after endoscopic removal, at centres with expertise, and does not list it for invasive carcinoma; sets no standard indications and says comparisons with pancreatoduodenectomy contain too few ampullectomies to conclude.",
        "locator": "Gate 4 · Standard group (order note) and option 'Transduodenal surgical ampullectomy' (when); Gate 3 · Reasonable 'Surgical ampullectomy as the intermediate step…' (pref)"
       },
       {
        "source": "Pancreas2000 EP vs TSA (Hollenbach)",
        "key": "pm39642968",
-       "says": "In 62 matched pairs, R0 (90.3% vs 72.6%) and recurrence (3.2% vs 8.0%) favoured surgery, but the roadmap finds the design favours surgery; procedure time 227.5 vs 30 minutes and stay 14 vs 3 days.",
+       "says": "In 62 matched pairs, R0 favoured surgery (90.3% vs 72.6%, P=0.02) and recurrence was lower but not significantly so (3.2% vs 8.0%, P=0.07). The roadmap finds the design favours surgery. Procedure time was 227.5 vs 30 minutes and stay 14 vs 3 days.",
        "locator": "Gate 4 · Standard group · option 'Transduodenal surgical ampullectomy' (pref, avoid) and flagnote"
       },
       {
@@ -165,7 +165,7 @@
       {
        "source": "Ampullary NET operation (Baptiste)",
        "key": "pm27457864",
-       "says": "In 14 ampullary neuroendocrine tumours the transduodenal approach was judged possibly oncologically inadequate and liable to understage; cited from abstract only.",
+       "says": "In 14 ampullary neuroendocrine tumours the transduodenal approach was judged possibly oncologically inadequate and liable to understage; nodes were examined in only 1 of the 6 transduodenal resections.",
        "locator": "Gate 4 · Standard group · option 'Transduodenal surgical ampullectomy' (avoid)"
       }
      ],
@@ -247,7 +247,7 @@
       {
        "source": "NCCN Ampullary Adenocarcinoma (extracted text)",
        "key": "np-ampullary-nccnamp",
-       "says": "Its algorithm is staged: systemic therapy or observation for stage I, systemic therapy with or without chemoradiation for stages II–III; it reports registry benefit (4,190 cases, 47.2 vs 35.5 months), while its regimen lists are subtyped.",
+       "says": "Its algorithm is staged: systemic therapy or observation for stage I; systemic therapy with or without subsequent chemoradiation, or observation, for stage II; systemic therapy with or without chemoradiation for stage III. It reports a registry benefit (4,190 cases, 47.2 vs 35.5 months), while its regimen lists are subtyped.",
        "locator": "Gate 7 · Reasonable group · option 'Adjuvant therapy directed by stage, nodes and margin, ignoring subtype' (when, pref)"
       },
       {
@@ -269,7 +269,7 @@
        "locator": "Gate 6 · Avoid 'Do not let the subtype alone decide whether to give adjuvant therapy.' (avoid)"
       }
      ],
-     "divergence": "NCCN's algorithm and registry data support treating by stage, one unadjusted cohort favours pancreatobiliary or mixed tumours, another favours intestinal tumours, and the best-adjusted cohort finds no subtype-specific benefit.",
+     "divergence": "NCCN's algorithm and registry data support treating by stage. One cohort, with no propensity, weighting or landmark adjustment for treatment selection, favours pancreatobiliary or mixed tumours; another favours intestinal tumours; and the best-adjusted cohort finds no subtype-specific benefit.",
      "proposal": "Offer adjuvant chemotherapy to fit stage II–III patients within 12 weeks, about 6 months in total, as a reasonable choice rather than a proven benefit, giving both halves of ESPAC-3. Decide on stage, nodal burden, margin and fitness, with subtype as one input; the roadmap does not pick a side on subtype-preferential treatment.",
      "proposal_locator": "Gate 7 · Standard 'Offer adjuvant chemotherapy for stage II and III disease…'; Gate 6 · Avoid 'Do not let the subtype alone decide…'; What we are not sure about · 'Whether adjuvant therapy should be offered preferentially…'",
      "rationale": "ESPAC-3's primary analysis was negative (hazard ratio 0.86, 95% CI 0.66–1.11, P=0.25), it was never powered for its ampullary subgroup, and no hypothesis test for ampullary-only survival is reported anywhere in the paper. The two subtype-stratified cohorts do not carry equal weight: the positive one allocated adjuvant therapy at tumour board by stage, nodes and CA 19-9 with no adjustment of any kind and reports a whole-cohort result running the other way (hazard ratio 1.124, P=0.608), while the negative one propensity-matched on those same selection drivers and handled immortal time bias — though its intervals do not exclude a 25% to 35% relative risk reduction. A third cohort found benefit confined to the intestinal subtype. NCCN's algorithm is staged while its regimen lists are subtyped.",
@@ -309,7 +309,7 @@
       {
        "source": "PERIPAN 2025",
        "key": "pm40729532",
-       "says": "Subtype on the invasive component, mixed only when the lesser component is at least 30%, otherwise tubular-NOS; says subtype's prognostic and predictive role remains unclear, and reports no interobserver study of its definitions.",
+       "says": "Subtype on the invasive component; mixed only with unequivocal intestinal and pancreatobiliary areas and a lesser component of at least 30%; tubular-NOS (replacing 'hybrid') where no confident call can be made. Says subtype's prognostic and predictive role remains unclear, and reports no interobserver study of its definitions.",
        "locator": "Gate 6 · Standard 'Report the subtype…' (pref); Quick reference · 'Histologic subtype — reproducibility and what it predicts' (foot)"
       }
      ],
@@ -659,7 +659,20 @@
        "url": "ampullary/#decision-9"
       }
      ],
-     "positions": [],
+     "positions": [
+      {
+       "source": "Japanese 22-centre papillectomy (Iwasaki)",
+       "key": "pm41192607",
+       "says": "Counted any histologically confirmed neoplastic tissue with no prior negative endoscopy required; median time to recurrence 6 months, so much of its 18.3% is residual disease.",
+       "locator": "What we are not sure about · 'The recurrence rates quoted after papillectomy are not measuring the same thing…'"
+      },
+      {
+       "source": "Han 2023 recurrence timing",
+       "key": "pm38015261",
+       "says": "Required one negative surveillance endoscopy before counting recurrence (16.1%); recurrence was higher after en bloc than piecemeal resection (19.4% vs 7.0%).",
+       "locator": "What we are not sure about · 'The recurrence rates quoted after papillectomy are not measuring the same thing…'"
+      }
+     ],
      "divergence": "The two large cohorts define recurrence differently (any neoplastic tissue versus only after a negative endoscopy), so their rates of 18.3% and 16.1% are not comparable.",
      "proposal": "Report recurrence both ways, counting and excluding disease found at the first surveillance endoscopy, by margin status including Rx, with time to recurrence, out to at least 5 years and not truncated at 2.",
      "proposal_locator": "Operations · dashboard 'Recurrence after papillectomy by margin status including Rx…'; What we are not sure about · 'The recurrence rates quoted after papillectomy are not measuring the same thing…'",
@@ -714,7 +727,7 @@
        "locator": "Gate 7 · Standard 'Choose the regimen by subtype…' (pref); Standard 'Offer adjuvant chemotherapy for stage II and III disease…' (avoid)"
       }
      ],
-     "divergence": "NCCN lists both regimens on panel expertise, while both source trials excluded nonductal tumours and the only randomised ampullary trial, using other agents, was negative on its primary endpoint.",
+     "divergence": "NCCN lists both regimens without randomised phase III support, adding capecitabine–gemcitabine on panel expertise. Both source trials excluded nonductal tumours, and the only randomised ampullary trial, using other agents, was negative on its primary endpoint.",
      "proposal": "NCCN's lists, including modified FOLFIRINOX and capecitabine–gemcitabine, stay on the page, but consent must name each regimen's source trial, say both trials excluded this disease, and present use as a risk-tolerance decision; the evidence source is recorded in the registry. Whether to use them at all is left to the programme.",
      "proposal_locator": "Gate 7 · Standard 'Choose the regimen by subtype…' (avoid, note); What we are not sure about · 'ESPAC-4 and PRODIGE-24 sit in this depot as borrowed evidence…'; Operations · dashboard 'Adjuvant therapy: … regimen and its documented evidence source…'",
      "rationale": "Both trials excluded nonductal tumours by protocol and neither reports a single ampullary patient. PRODIGE-24 produced grade 3 or 4 toxicity in 75.9% of a population restricted to performance status 0–1 and age under 80, with no disease-free survival benefit in those aged 70 or over; ESPAC-4 gained 2.5 months of median survival, reported early, with the benefit confined to R0 patients. Ampullary carcinoma has roughly double the resected median survival of pancreatic cancer and no randomised evidence that any adjuvant chemotherapy helps. Offering these regimens is a defensible choice about risk tolerance; it should be made once, in writing, rather than case by case.",

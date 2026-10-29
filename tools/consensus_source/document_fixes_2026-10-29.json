@@ -1,0 +1,250 @@
+{
+ "about": "Corrections from the 29 October 2026 full-text batch to the V16 Word documents, applied by tools/build_consensus_docs.py when it makes the V17 full-content documents (V16 stays as the dated record). Each old text must occur exactly once in its document and may not touch a citation field.",
+ "fixes": [
+  {
+   "document": "Memorial_Hermann_NELM_System_Roadmap_v16.docx",
+   "pmid": "40344544",
+   "old": "ASCO 2025 symptom management — ASCO guideline: symptom management for well-differentiated gastroenteropancreatic neuroendocrine tumours, 2025.",
+   "new": "ASCO 2025 symptom management — Perez K, Del Rivero J, Kennedy EB, et al. Symptom management for well-differentiated gastroenteropancreatic neuroendocrine tumors: ASCO guideline. JCO Oncol Pract. 2026;22(1):19-35. Published online 9 May 2025.",
+   "id": "FT02"
+  },
+  {
+   "document": "Memorial_Hermann_NELM_System_Roadmap_v16.docx",
+   "pmid": "40344544",
+   "old": "ASCO guideline: symptom management for well-differentiated gastroenteropancreatic neuroendocrine tumours, 2025.",
+   "new": "Perez K, Del Rivero J, Kennedy EB, et al. Symptom management for well-differentiated gastroenteropancreatic neuroendocrine tumors: ASCO guideline. JCO Oncol Pract. 2026;22(1):19-35. Published online 9 May 2025.",
+   "id": "FT01"
+  },
+  {
+   "document": "Memorial_Hermann_NELM_System_Roadmap_v16.docx",
+   "pmid": "40344544",
+   "old": "the HOPE4LIVER update, the ASCO 2025 symptom-management guideline, the Memorial Hermann roadmap and its alignment worksheet are not PubMed-indexed depot papers and were read as documents",
+   "new": "the HOPE4LIVER update, the Memorial Hermann roadmap and its alignment worksheet are not PubMed-indexed depot papers and were read as documents; the ASCO 2025 symptom-management guideline is PubMed-indexed (PMID 40344544) but was outside the depot and was read as a document",
+   "id": "FT03"
+  },
+  {
+   "document": "Memorial_Hermann_HilarCCA_System_Roadmap_v16.docx",
+   "pmid": "42744077",
+   "old": "STRONG II benchmark QA describes planning variability, not patient outcomes (van Loosbroek, Radiother Oncol 2026, PMID 42744077, DOI 10.1016/j.radonc.2026.111781).",
+   "new": "STRONG II benchmark QA describes contouring and planning variability on one benchmark case across six centres, not patient outcomes (van Loosbroek, Radiother Oncol 2026, PMID 42744077, DOI 10.1016/j.radonc.2026.111781).",
+   "id": "FT04"
+  },
+  {
+   "document": "Memorial_Hermann_HilarCCA_System_Roadmap_v16.docx",
+   "pmid": "41512568",
+   "old": "ABC-07 RTQA found deviations in 19/41 plans, often reflecting bowel constraints (Eaton, Clin Oncol 2026, PMID 41512568, DOI 10.1016/j.clon.2025.103993).",
+   "new": "ABC-07 RTQA found deviations from protocol objectives in 19/41 plans, mostly reduced target coverage to respect duodenal or gastric constraints (Eaton, Clin Oncol 2026, PMID 41512568, DOI 10.1016/j.clon.2025.103993).",
+   "id": "FT05"
+  },
+  {
+   "document": "Memorial_Hermann_HilarCCA_System_Roadmap_v16.docx",
+   "pmid": "25964250",
+   "old": "plus the single-arm SWOG S0809 phase II trial (2-year survival 67% after R0 and 60% after R1), which this depot carries only as quoted by BSG and not as a primary paper.",
+   "new": "plus the single-arm SWOG S0809 phase II trial (79 patients, 68% bile duct and 32% gallbladder; 2-year overall survival 67% after R0 and 60% after R1, with no control arm).",
+   "id": "FT06"
+  },
+  {
+   "document": "Memorial_Hermann_HilarCCA_System_Roadmap_v16.docx",
+   "pmid": "25964250",
+   "old": "Third, SWOG S0809 is cited only as quoted by BSG 2023; the primary report is not in this depot, and",
+   "new": "Third, SWOG S0809 was first cited as quoted by BSG 2023; its primary report (Ben-Josef, J Clin Oncol 2015, PMID 25964250) was read in full on 29 October 2026, and",
+   "id": "FT07"
+  },
+  {
+   "document": "Memorial_Hermann_HilarCCA_System_Roadmap_v16.docx",
+   "pmid": "25964250",
+   "old": "Single-arm phase II trial of adjuvant capecitabine and gemcitabine followed by chemoradiation in extrahepatic cholangiocarcinoma and gallbladder cancer; 2-year survival 67% after R0 and 60% after R1 resection, as cited by BSG 2023 in support of its R1 chemoradiation recommendation.",
+   "new": "Ben-Josef E, et al. J Clin Oncol 2015 (PMID 25964250). Single-arm phase II trial of adjuvant capecitabine and gemcitabine followed by chemoradiation in extrahepatic cholangiocarcinoma and gallbladder cancer (n=79); 2-year overall survival 67% after R0 and 60% after R1 resection, cited by BSG 2023 in support of its R1 chemoradiation recommendation.",
+   "id": "FT08"
+  },
+  {
+   "document": "Memorial_Hermann_HCC_System_Roadmap_v16.docx",
+   "pmid": "25964250",
+   "old": "The adjuvant recommendation for resected intrahepatic cholangiocarcinoma is extrapolated from SWOG S0809, a single-arm phase 2 study of postoperative chemoradiation in extrahepatic cholangiocarcinoma that explicitly excluded intrahepatic disease.",
+   "new": "The adjuvant recommendation for resected intrahepatic cholangiocarcinoma is extrapolated from SWOG S0809, a single-arm phase 2 study of adjuvant chemotherapy then chemoradiation that enrolled only extrahepatic cholangiocarcinoma and gallbladder carcinoma and states its results do not apply to intrahepatic disease.",
+   "id": "FT09"
+  },
+  {
+   "document": "Memorial_Hermann_HCC_System_Roadmap_v16.docx",
+   "pmid": "29091283",
+   "old": "and Ng 2017, cited here for 10-year follow-up, is the one paper in this matrix with no PDF in the depot.",
+   "new": "and Ng 2017, cited here for 10-year follow-up, was designed to show ablation superior and did not (10-year overall survival 47.6% versus 41.8%, P = 0.53).",
+   "id": "FT10"
+  },
+  {
+   "document": "Memorial_Hermann_HCC_System_Roadmap_v16.docx",
+   "pmid": "29091283",
+   "old": "One is still outstanding: Ng 2017 (",
+   "new": "The last, Ng 2017 (",
+   "id": "FT11"
+  },
+  {
+   "document": "Memorial_Hermann_HCC_System_Roadmap_v16.docx",
+   "pmid": "29091283",
+   "old": "), which is also the one paper this page cites without holding its full text.",
+   "new": "), was obtained and read in full on 29 October 2026.",
+   "id": "FT12"
+  },
+  {
+   "document": "Memorial_Hermann_Ampullary_System_Roadmap_v16.docx",
+   "pmid": "23442830",
+   "old": "In a separate 91-patient cohort, cited here from its abstract only because the full text was not obtained, the malignancy rate after resection of a biopsy-proven adenoma was 26.4%, with high-grade dysplasia (odds ratio 6.86, 95% CI 1.58–29.79) and ductal dilatation (11.12, 2.27–54.37) independent predictors.",
+   "new": "In a separate single-centre retrospective cohort of 91 patients, 24 (26.4%) biopsy-proven adenomas were upgraded after resection — 4 to carcinoma in situ and 20 to adenocarcinoma — with high-grade dysplasia on biopsy (odds ratio 6.66, 95% CI 1.52–29.08) and ductal dilatation over 7 mm (10.96, 2.25–53.42) independent predictors in the paper's Table 4; its abstract reports 6.86 (1.58–29.79) and 11.12 (2.27–54.37), a discrepancy the paper does not explain.",
+   "id": "FT13"
+  },
+  {
+   "document": "Memorial_Hermann_Ampullary_System_Roadmap_v16.docx",
+   "pmid": "23442830",
+   "old": "Corroborating figures: malignancy in 26.4% of 91 biopsy-proven adenomas after resection, with high-grade dysplasia (odds ratio 6.86, 95% CI 1.58–29.79) and ductal dilatation (11.12, 2.27–54.37) independent, from a paper cited by abstract only;",
+   "new": "Corroborating figures: malignancy (carcinoma in situ or carcinoma) in 26.4% of 91 biopsy-proven adenomas after resection in a single-centre retrospective series, with high-grade dysplasia (odds ratio 6.66, 95% CI 1.52–29.08) and ductal dilatation (10.96, 2.25–53.42) independent in its Table 4 — its abstract gives 6.86 and 11.12;",
+   "id": "FT14"
+  },
+  {
+   "document": "Memorial_Hermann_Ampullary_System_Roadmap_v16.docx",
+   "pmid": "23442830",
+   "old": "Five papers cited on this page were not obtained",
+   "new": "Two papers cited on this page were not obtained",
+   "id": "FT15"
+  },
+  {
+   "document": "Memorial_Hermann_Ampullary_System_Roadmap_v16.docx",
+   "pmid": "23442830",
+   "old": "; the intraductal ultrasound and transpapillary biopsy series (22319960), which supplies the 68.7% forceps sensitivity and the 97% combined figure; the 91-patient malignancy prediction cohort (23442830), which supplies the 26.4% malignancy rate and its odds ratios; the EUS preoperative evaluation series (30834717), which supplies the 120-patient T- and N-stage accuracy figures; and the 14-patient ampullary neuroendocrine tumour series (27457864), which supplies the R0 and nodal figures behind the warning against transduodenal resection of those tumours. Their selection, blinding, reference standards and stated limitations could not be checked, so every string that uses them says so.",
+   "new": ", and the intraductal ultrasound and transpapillary biopsy series (22319960), which supplies the 68.7% forceps sensitivity and the 97% combined figure. Their selection, blinding, reference standards and stated limitations could not be checked, so every string that uses them says so. Three papers previously listed here — the 91-patient malignancy prediction cohort (23442830), the EUS preoperative evaluation series (30834717) and the 14-patient ampullary neuroendocrine tumour series (27457864) — have since been obtained and read in full.",
+   "id": "FT16"
+  },
+  {
+   "document": "Memorial_Hermann_Ampullary_System_Roadmap_v16.docx",
+   "pmid": "23442830",
+   "old": "Five papers were sought and not obtained, and every string that uses them says so: the National Cancer Database node-yield analysis (PMID 38353072), the intraductal ultrasound and transpapillary biopsy series (22319960), the 91-patient malignancy prediction cohort (23442830), the EUS preoperative evaluation series (30834717) and the 14-patient ampullary neuroendocrine tumour series (27457864).",
+   "new": "Five papers were sought and not obtained for this revision. Three of them — the 91-patient malignancy prediction cohort (23442830), the EUS preoperative evaluation series (30834717) and the 14-patient ampullary neuroendocrine tumour series (27457864) — have since been read in full; the other two, the National Cancer Database node-yield analysis (PMID 38353072) and the intraductal ultrasound and transpapillary biopsy series (22319960), are still cited from abstract only, and every string that uses them says so.",
+   "id": "FT17"
+  },
+  {
+   "document": "Memorial_Hermann_Ampullary_System_Roadmap_v16.docx",
+   "pmid": "30834717",
+   "old": "A separate 120-patient series reporting overall T-stage accuracy of 81.7% with 93.9% sensitivity and 45.5% specificity for the adenoma/T1 category, 50.0% sensitivity for T2 and nodal accuracy 75.0% with N1 sensitivity 62.5% is cited here from its abstract only — the full text was not obtained.",
+   "new": "A separate single-centre retrospective series of 120 biopsy-proven adenomas reported overall T-stage accuracy of 81.7% with 93.9% sensitivity and 45.5% specificity for the adenoma/T1 category and 50.0% sensitivity for T2, but there EUS erred mostly towards overstaging (20 overstaged, 2 understaged), and its nodal accuracy of 75.0% with N1 sensitivity 62.5% rests on only 16 operated adenocarcinomas, 3 of the 8 node-positive patients having been called N0.",
+   "id": "FT18"
+  },
+  {
+   "document": "Memorial_Hermann_Ampullary_System_Roadmap_v16.docx",
+   "pmid": "27457864",
+   "old": "On neuroendocrine tumours, a 14-patient single-institution series — cited here from its abstract only, since the full text was not obtained — reported R0 in all 8 pancreatoduodenectomy patients against 75% of 6 transduodenal cases with nodal involvement reaching 88% in the resection group, and concluded that the transduodenal approach may provide an inadequate oncological resection and can understage these tumours.",
+   "new": "On neuroendocrine tumours, a 14-patient single-institution retrospective series reported R0 in all 8 pancreatoduodenectomy patients against 3 of the 4 transduodenal cases with a reported margin (75%), and nodal involvement in 7 of 8 (88%) after pancreatoduodenectomy against 1 of 6 after transduodenal resection, where nodes were examined in only 1 of the 6, and concluded that the transduodenal approach may provide an inadequate oncological resection and can understage these tumours.",
+   "id": "FT19"
+  },
+  {
+   "document": "Memorial_Hermann_MixedTumour_System_Roadmap_v16.docx",
+   "pmid": "29573187",
+   "old": "The 2018 propensity-matched series of 12 recipients, on which the local protocol rests, was not obtained for this revision and is not cited here as read. Its figures are taken from the 2026 transplant overview's secondary report of it: 5-year recurrence-free survival 42% against 44% when matched on explant pathology (p=0.45), but 28% against 61% when matched on pre-transplant characteristics (p=0.12). The direction of that asymmetry is the whole argument — matched on what you know before transplant, the cHCC-CCA patients did worse — and",
+   "new": "The 2018 propensity-matched series of 12 recipients, on which the local protocol rests, has now been read in full. Matched 1:3 on explant pathology, its 12 explant-diagnosed recipients had 5-year recurrence-free survival of 42% against 44% (p=0.44; 0.45 in the abstract); matched on pre-transplant characteristics, 42% against 61% (p=0.17) in the results text, although the abstract — and the 2026 overview that quotes it — gives 28% against 61% (p=0.12) for the same 12 patients. The direction of that asymmetry is the whole argument — matched on what you know before transplant, the cHCC-CCA patients trended worse (5-year recurrence 50% against 22%, p=0.07), though no recurrence or survival comparison with matched HCC reached significance — and",
+   "id": "FT20"
+  },
+  {
+   "document": "Memorial_Hermann_MixedTumour_System_Roadmap_v16.docx",
+   "pmid": "29573187",
+   "old": "Both studies are small, single-centre, retrospective and from the same institutional lineage, and they disagree.",
+   "new": "Both studies are small, single-centre and retrospective, and they disagree; the 2018 paper's first author drafted the local protocol, but its 12 recipients were transplanted at UCLA.",
+   "id": "FT21"
+  },
+  {
+   "document": "Memorial_Hermann_MixedTumour_System_Roadmap_v16.docx",
+   "pmid": "29573187",
+   "old": "The 2018 propensity-matched series on which the local protocol rests was not obtained for this revision, and the page no longer cites it as read.",
+   "new": "The 2018 propensity-matched series on which the local protocol rests has now been read in full, and its abstract and results disagree on the figure most often quoted from it.",
+   "id": "FT22"
+  },
+  {
+   "document": "Memorial_Hermann_MixedTumour_System_Roadmap_v16.docx",
+   "pmid": "29573187",
+   "old": "Its figures here come from the 2026 transplant overview's secondary report of it and from a 2026 comparison table: 5-year recurrence-free survival 42% against 44% when matched on explant pathology (p=0.45), but 28% against 61% when matched on pre-transplant characteristics (p=0.12), in 12 patients with 1-, 3- and 5-year overall survival of 75%, 54% and 42%. The direction of that asymmetry is the argument — matched on what is knowable before transplant, the mixed-tumour patients did worse — and it runs with the 2026 double-matched cohort, not against it. A previous version of this page quoted a within-series breakdown of recurrences by differentiation grade from that paper; it could not be verified from any source obtained and has been removed.",
+   "new": "Matched 1:3 on explant pathology, 5-year recurrence-free survival was 42% against 44% (p=0.44; 0.45 in the abstract). Matched on pre-transplant characteristics, the results text and survival curves give 42% against 61% (p=0.17), while the abstract — and the 2026 overview that quotes it — give 28% against 61% (p=0.12); the mixed-tumour arm is the same 12 patients in both comparisons, with 1-, 3- and 5-year overall survival of 75%, 54% and 42%. Both mixed-tumour recurrence-free survival curves step from 42% to about 28% at the 60-month mark, so the paper is internally inconsistent rather than its abstract simply wrong. The direction of that asymmetry is the argument — matched on what is knowable before transplant, the mixed-tumour patients trended worse (5-year recurrence 50% against 22%, p=0.07), though no recurrence or survival comparison with matched HCC reached significance in 12 patients (within the series, differentiation separated recurrence-free survival, P = 0.001) — and it runs with the 2026 double-matched cohort, not against it. The within-series breakdown by differentiation that an earlier version quoted is confirmed by the full text: all 6 recurrences were in poorly differentiated tumours (6 of 7 recurred) and none of the 5 well or moderately differentiated tumours recurred — but differentiation was read on the explant, and pre-transplant biopsy under-graded 2 of the 4 mixed tumours biopsied.",
+   "id": "FT23"
+  },
+  {
+   "document": "Memorial_Hermann_MixedTumour_System_Roadmap_v16.docx",
+   "pmid": "29573187",
+   "old": "the two most relevant single-centre series from this institutional lineage point in opposite directions",
+   "new": "the two most relevant single-centre series linked to this programme (the 2018 cohort was transplanted at UCLA) point in opposite directions",
+   "id": "FT24"
+  },
+  {
+   "document": "Memorial_Hermann_MixedTumour_System_Roadmap_v16.docx",
+   "pmid": "29573187",
+   "old": "Two papers could not be obtained at all: the 2018 propensity-matched transplant series (29573187), whose figures appear here only as reported by Lee 2026 and by the comparison table of Kodali 2026 and which is not cited as read, and Campani 2026 (41865801), which is not cited on this page.",
+   "new": "Two papers could not be obtained for this revision: the 2018 propensity-matched transplant series (29573187), which has since been read in full and whose figures on this page are now taken from it, and Campani 2026 (41865801), which is not cited on this page.",
+   "id": "FT25"
+  },
+  {
+   "document": "Memorial_Hermann_MixedTumour_System_Roadmap_v16.docx",
+   "pmid": "29573187",
+   "old": "Not obtained for the 7 October 2026 revision and not read in any form. The figures attributed to it on this page are as reported in Lee 2026 (PMID 41781153) and in the comparison table of Kodali 2026 (PMID 41685088), and are presented as secondary reports rather than as a reading of this paper.",
+   "new": "Read in full after the 7 October 2026 revision. Its abstract gives a pre-transplant-matched 5-year recurrence-free survival of 28% against 61% (p=0.12), whereas its results text and survival curves give 42% against 61% (p=0.17); Lee 2026 (PMID 41781153) reproduces the abstract figure.",
+   "id": "FT26"
+  },
+  {
+   "document": "Memorial_Hermann_MixedTumour_System_Roadmap_v16.docx",
+   "pmid": "29573187",
+   "old": "it preserves the Lunsford pretransplant-versus-explant matching asymmetry (28% vs 61% against 42% vs 44%).",
+   "new": "it preserves the Lunsford pretransplant-versus-explant matching asymmetry (28% vs 61%, Lunsford's abstract figure — 42% vs 61% in its results — against 42% vs 44%).",
+   "id": "FT27"
+  },
+  {
+   "document": "Memorial_Hermann_MixedTumour_System_Roadmap_v16.docx",
+   "pmid": "29573187",
+   "old": "The Lunsford result quoted here is the key asymmetry and Lunsford is not itself present in this depot: matching on explant pathology gives near-equivalence (42% versus 44%) while matching on pretransplant characteristics gives 28% versus 61%.",
+   "new": "The Lunsford result quoted here is the key asymmetry; read in full, Lunsford gives near-equivalence when matched on explant pathology (42% versus 44%) and, matched on pretransplant characteristics, 28% versus 61% in its abstract but 42% versus 61% (p=0.17) in its results — the review quotes the abstract figure.",
+   "id": "FT28"
+  },
+  {
+   "document": "Memorial_Hermann_PancreaticCyst_System_Roadmap_v16.docx",
+   "pmid": "23415799",
+   "old": "Its positions differ — it used a main duct of over 6 mm and recommended resection for all MCN and main-duct IPMN — so a reader following NCCN's European citation reaches a superseded threshold.",
+   "new": "Its positions differ — it used a main duct of over 6 mm as an absolute indication to resect a branch-duct IPMN and recommended resection of every MCN and every main-duct or mixed-type IPMN in a patient fit for surgery — so a reader following NCCN's European citation reaches a superseded threshold.",
+   "id": "FT29"
+  },
+  {
+   "document": "Memorial_Hermann_PancreaticCyst_System_Roadmap_v16.docx",
+   "pmid": "23415799",
+   "old": "the 2013 European consensus statement itself (PMID 23415799), cited from its PubMed record only and listed because it is the document NCCN reaches for;",
+   "new": "the 2013 European consensus statement itself (PMID 23415799), listed because it is the document NCCN reaches for — outside the depot at this revision, it has since been read in full;",
+   "id": "FT30"
+  },
+  {
+   "document": "Memorial_Hermann_Adenoma_System_Roadmap_v16.docx",
+   "pmid": "33478819",
+   "old": "the Italian multisociety guideline grades laparoscopic over open resection at low quality of evidence (C), conditional, on the strength of a Dutch nationwide comparison of 415 resections for benign tumours (59% of them adenoma) in which laparoscopy gave a shorter stay and lower morbidity after propensity matching.",
+   "new": "the Italian multisociety guideline grades laparoscopic over open resection at low quality of evidence (C), conditional, on the strength of a Dutch nationwide comparison of 415 resections for benign tumours (59% of them adenoma) in which, after propensity matching, laparoscopy gave a shorter stay (median 4 against 6 days) and lower 30-day overall morbidity (12.0% against 22.4%) but no significant difference in major morbidity (4.8% against 6.4%, p = 0.78).",
+   "id": "FT31"
+  },
+  {
+   "document": "Memorial_Hermann_Adenoma_System_Roadmap_v16.docx",
+   "pmid": "33478819",
+   "old": "Two papers named in the gap scan were not obtained and are not cited anywhere: McDermott 2021 (PMID 34687281) and Elfrink 2021 (PMID 33478819).",
+   "new": "One paper named in the gap scan was not obtained and is not cited anywhere: McDermott 2021 (PMID 34687281). Elfrink 2021 (PMID 33478819), the Dutch nationwide comparison of 415 laparoscopic and open resections that clinical decision 4 describes through the Italian guideline, has since been read in full.",
+   "id": "FT32"
+  },
+  {
+   "document": "03_ICCA_Standard_Guidance_Aligned_Protocol_v16.docx",
+   "pmid": "41234720",
+   "old": "rejection risk is elevated — pooled allograft rejection 19% (95% CI 12-30%) across 8 retrospective studies (n = 229), with complete recovery in 78% of rejection episodes,",
+   "new": "allograft rejection is a recognised risk — in an HCC-only meta-analysis of 8 studies (1 RCT and 7 retrospective; n = 229), pooled post-transplant rejection was 19% (95% CI 12-30%), with complete recovery in 78% of patients with rejection,",
+   "id": "FT33"
+  },
+  {
+   "document": "03_ICCA_Standard_Guidance_Aligned_Protocol_v16.docx",
+   "pmid": "41234720",
+   "old": "and rejection-related mortality in 2% ( PMID 41234720).",
+   "new": "and rejection-related mortality in 2% ( PMID 41234720). There was no ICI-naive comparator, about half of rejections were not biopsy-confirmed, and the authors did not find rejection clearly higher than the 10-30% reported without ICI.",
+   "id": "FT34"
+  },
+  {
+   "document": "03_ICCA_Standard_Guidance_Aligned_Protocol_v16.docx",
+   "pmid": "41234720",
+   "old": "Reported events cluster in the early post-transplant weeks; no reliable median time to onset has been established and none should be quoted.",
+   "new": "Reported rejection onset ranged from 4 to 150 days after transplant; no pooled median time to onset was reported and none should be quoted.",
+   "id": "FT35"
+  }
+ ]
+}

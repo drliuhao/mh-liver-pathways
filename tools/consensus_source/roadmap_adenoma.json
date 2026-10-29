@@ -27,7 +27,7 @@
     {
      "source": "Gaspersz 2019 pregnancy cohort",
      "ref": "31550458",
-     "position": "Prospective multicentre cohort: 18 of 66 women (27%) referred with a suspected sub-5 cm adenoma had FNH on hepatobiliary-contrast MRI; the authors held that this misdiagnosis rate alone justifies the scan.",
+     "position": "Prospective multicentre cohort: 18 of 66 women (27%) referred with a suspected sub-5 cm adenoma had FNH on hepatobiliary-contrast MRI; the authors held that this misdiagnosis rate justifies the scan, if only to prevent unnecessary anxiety.",
      "locator": "Gate 6 · Standard 'Confirm the diagnosis on MRI with a hepatobiliary contrast agent…'"
     },
     {
@@ -82,7 +82,7 @@
      "source": "WHO 6th ed., as reviewed (2026)",
      "ref": "42678415",
      "position": "Every inflammatory adenoma should be stained for glutamine synthetase; no reliable routine marker exists for sonic hedgehog adenoma and molecular profiling remains the reference. The roadmap notes it recommends a strategy whose prerequisite it calls unavailable.",
-     "locator": "Gate 1 · Standard subtype option 'Sonic hedgehog (shHCA)'; What we are not sure about #9"
+     "locator": "Gate 1 · Standard subtype option 'Sonic hedgehog (shHCA)'; Gate 1 · Reasonable 'Where tissue exists, ask for the four-antibody panel…' (pref); What we are not sure about #9"
     }
    ],
    "divergence": "EASL rejects routine subtyping while the Italian guideline, the molecular literature and the local transplant protocol's molecular route presuppose it, and the two subtypes that matter most can be identified reliably only by sequencing.",
@@ -116,13 +116,13 @@
     {
      "source": "AISF 2022 (Italian multisociety)",
      "ref": "36089523",
-     "position": "MRI 6 months after stopping contraception, repeat at 1 year, then annual ultrasound; every step, including the 6-month decision point, is graded very low quality (D), conditional.",
+     "position": "MRI 6 months after stopping contraception, repeated at 1 year if unchanged or reduced below 5 cm, then annual ultrasound after the first 18 months; every step, including the 6-month decision point, is graded very low quality (D), conditional.",
      "locator": "Gate 2 · Standard 'Reimage with contrast-enhanced MRI at 6 months…'; Gate 4 · Standard (caveat)"
     },
     {
      "source": "Klompenhouwer 2017",
      "ref": "28857134",
-     "position": "Of 194 patients with adenomas over 5 cm, 8.5-15.3% had regressed below 5 cm at 26 weeks against 58.5% eventually (median 104 weeks), without complications; authors propose 12 months for typical non-beta-catenin adenomas. 47 of 241 excluded for short follow-up.",
+     "position": "Of 194 patients with adenomas over 5 cm, 8.5-15.3% had regressed below 5 cm at 26 weeks against 58.5% eventually (median 104 weeks), without complications. The authors propose 12 months for typical non-beta-catenin adenomas in women. 47 of 241 were excluded for short follow-up.",
      "locator": "Gate 2 · Standard 'Reimage with contrast-enhanced MRI at 6 months…' (caveat and note); Gate 2 · Reasonable 'Extend observation past 12 months…'"
     },
     {
@@ -132,7 +132,7 @@
      "locator": "Gate 2 · Avoid 'Do not operate on a large adenoma at 6 months…'"
     }
    ],
-   "divergence": "EASL and ACG anchor the decision at 6 months, whereas the regression cohort, its authors and most surveyed experts favour waiting longer; the authors' 12-month proposal ignores baseline diameter even though time to regression was strongly size-dependent.",
+   "divergence": "EASL anchors the decision at 6 months, while ACG uses a looser 6- to 12-month interval. The regression cohort, its authors and most surveyed experts favour waiting longer. The authors' 12-month proposal ignores baseline diameter even though time to regression was strongly size-dependent.",
    "proposal": "Reimage with contrast MRI at 6 months and read it as a trajectory; do not call risk-factor modification a failure before 12 months (grade C, a deliberate deviation from EASL). Observation beyond 12 months is Reasonable in a woman with a typical, non-beta-catenin adenoma that is shrinking. No diameter-specific interval is proposed.",
    "proposal_locator": "What we are not sure about #4; Gate 2 · Standard 'Reimage with contrast-enhanced MRI at 6 months…'; Gate 2 · Reasonable 'Extend observation past 12 months…'",
    "rationale": "EASL and ACG indicate resection at 6 months. At that point only 8.5-15.3% of adenomas over 5 cm have fallen below 5 cm, against 23.7-27.1% at 52 weeks and 58.5% eventually at a median 104 weeks, with no complication during the whole of that follow-up and time to regression strongly size-dependent (median 63 weeks under 7 cm, 208 weeks over 10 cm). The six-month trigger therefore captures roughly one in six to one in ten of the lesions that will eventually regress below 5 cm. The cohort's authors proposed 12 months for typical non-beta-catenin adenomas in women; 79% of responding European experts already decline the rule; and the only GRADE-appraised guideline grades the 6-month decision point very low quality, conditional. Decide the number, and decide whether it differs by baseline diameter.",
@@ -582,7 +582,7 @@
     }
    ],
    "divergence": "Sources point both ways: EASL is size-first above 5 cm yet subtype-first for a proven beta-catenin mutation, the WHO review is subtype-first, and the Italian guideline is silent on precedence, all on molecular data resting on few events.",
-   "proposal": "Interim local convention (grade D): a reassuring subtype may lengthen surveillance but must not withhold curative treatment from a lesion persistently over 5 cm or growing, and an unreassuring subtype alone does not add an operation beyond size, growth and sex; a 4-5 cm lesion is a board judgement. A proven beta-catenin adenoma is still routed to resection assessment.",
+   "proposal": "Interim local convention (grade D): a reassuring subtype may lengthen surveillance but must not withhold curative treatment from a lesion persistently over 5 cm or growing, and an unreassuring subtype alone does not add an operation beyond size, growth and sex; a 4-5 cm lesion is a board judgement. A proven beta-catenin adenoma is still routed to resection assessment. The roadmap's two rules conflict for a sub-5 cm proven beta-catenin lesion, and it does not say which governs.",
    "proposal_locator": "What we are not sure about #10; Gate 4 · Avoid 'Do not use a reassuring subtype to withhold curative treatment…' and Reasonable 'Where a woman's adenoma sits between 4 and 5 cm…'; Gate 2 · Avoid 'Do not accept lifestyle advice as the whole plan…'",
    "rationale": "This is the commonest real decision and no document answers it. The Italian guideline recommends biopsy specifically to identify exon 3 and sonic hedgehog adenomas (its PICO 9) and simultaneously keeps 5 cm as the resection trigger (its PICO 11), without specifying which governs when they disagree. The review of the WHO 6th-edition classification states that exon 3 adenomas are resected whatever their size, but cites no cohort. EASL's rule is explicitly size-first and subtype-blind above the threshold. The molecular data support subtype in both directions — 2 of 14 women with an at-risk profile under 5 cm transformed against 1 of 101 without — but on two events. Write the precedence rule down, with the proviso that it will be applied to a subtype assignment that is often made without sequencing.",
    "audit": "Registry: for every case where size and subtype pointed different ways, the decision taken, who took it, and the specimen or follow-up outcome."

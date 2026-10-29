@@ -20,7 +20,7 @@ function libraryPresentation(raw){
  return d;
 }
 for(const slug of Object.keys(map)){
- const rel=`${slug}/index.html`,s=fs.readFileSync(path.join(root,rel),'utf8'),old=cp.execFileSync('git',['show',`f77348e:${rel}`],{cwd:root,encoding:'utf8',maxBuffer:4e6});
+ const rel=`${slug}/index.html`,s=fs.readFileSync(path.join(root,rel),'utf8'),old=require('./apply_clinical_revisions.cjs').applyText(rel,cp.execFileSync('git',['show',`f77348e:${rel}`],{cwd:root,encoding:'utf8',maxBuffer:4e6}));
  assert(s.includes('RoadmapFlow.setup(')&&s.includes('RoadmapFlow.render('));
  assert.equal(rec(s),rec(old),slug+' option/evidence renderer changed');
  let stages;
@@ -28,7 +28,7 @@ for(const slug of Object.keys(map)){
    stages=JSON.parse(JSON.stringify(stagesFromHCC(s)));assert.deepEqual(JSON.parse(JSON.stringify(stages)),JSON.parse(JSON.stringify(stagesFromHCC(old))));
    for(const marker of ['const REF =','const NONPM =','const TOPICS =','const LOCO =','const SYSTEMIC =','const HONEST ='])assert(s.includes(old.slice(old.indexOf(marker),old.indexOf('\n];',old.indexOf(marker))+3))||marker==='const REF ='||marker==='const NONPM =');
  }else{
-   const rel=`${slug}/data/pathway.json`;const data=fs.readFileSync(path.join(root,rel),'utf8');assert.deepEqual(JSON.parse(data),libraryPresentation(cp.execFileSync('git',['show',`f77348e:${rel}`],{cwd:root,encoding:'utf8',maxBuffer:4e6})));stages=JSON.parse(data).gates;
+   const rel=`${slug}/data/pathway.json`;const data=fs.readFileSync(path.join(root,rel),'utf8');assert.deepEqual(JSON.parse(data),libraryPresentation(require('./apply_clinical_revisions.cjs').applyText(rel,cp.execFileSync('git',['show',`f77348e:${rel}`],{cwd:root,encoding:'utf8',maxBuffer:4e6}))));stages=JSON.parse(data).gates;
  }
  expected[slug]=[];assert.deepEqual(Object.keys(map[slug]).sort(),stages.map(s=>s.id).sort(),slug+' coverage');
  for(const s of stages){

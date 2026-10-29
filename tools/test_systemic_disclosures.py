@@ -12,15 +12,18 @@ direct_links = json.loads((ROOT / 'tools/systemic_link_targets.json').read_text(
 def canonical_links(text):
     for old_url, new_url in direct_links.items(): text = text.replace(old_url, new_url)
     return text
-old = html.fromstring(canonical_links(subprocess.check_output(['git', 'show', f'{BASELINE}:systemic/index.html'], cwd=ROOT).decode()))
+from revision_text import apply_text, systemic_pdf_status, mark_library
+base = lambda file: canonical_links(subprocess.check_output(['git', 'show', f'{BASELINE}:systemic/{file}'], cwd=ROOT).decode().replace('Full-text update: ', ''))
+# Recorded clinical revisions (tools/clinical_revisions/) are the only permitted change: replayed on the baseline.
+pdf_now = systemic_pdf_status(json.loads(base('references.json')), json.loads((ROOT / 'systemic/references.json').read_text()))
+old = html.fromstring(mark_library(canonical_links(subprocess.check_output(['git', 'show', f'{BASELINE}:systemic/index.html'], cwd=ROOT).decode()), pdf_now))
 new = html.fromstring((ROOT / 'systemic/index.html').read_text())
 matrix = json.loads((ROOT / 'systemic/matrix.json').read_text())
 refs = json.loads((ROOT / 'systemic/references.json').read_text())
 norm = lambda s: ' '.join(s.replace('Full-text update: ', '').split())
 
 for file in ['matrix.json', 'references.json', 'publication-manifest.json']:
-    assert (ROOT / 'systemic' / file).read_text() == canonical_links(subprocess.check_output(
-        ['git', 'show', f'{BASELINE}:systemic/{file}'], cwd=ROOT).decode().replace('Full-text update: ', '')), file
+    assert (ROOT / 'systemic' / file).read_text() == apply_text(f'systemic/{file}', base(file)), file
 assert new.get('data-systemic-ui') == 'disclosures'
 assert len(new.xpath('//article[@class="regimen-card"]')) == 49
 assert len(new.xpath('//article[@class="library-entry"]')) == 96

@@ -174,7 +174,7 @@
       {
        "source": "NORPACT-1",
        "key": "pm38237621",
-       "says": "The only randomised trial restricted to resectable head cancer; its primary endpoint favoured upfront surgery (18-month survival 73% vs 60%). The roadmap reads it as no benefit shown: phase 2 at alpha 0.15, non-significant per protocol, 21% untreated.",
+       "says": "The only randomised trial of neoadjuvant FOLFIRINOX against upfront surgery restricted to resectable head cancer; its primary endpoint favoured upfront surgery (18-month survival 73% vs 60%). The roadmap reads it as no benefit shown: phase 2 at alpha 0.15, non-significant per protocol, and 21% of the neoadjuvant arm never received FOLFIRINOX and went straight to resection.",
        "locator": "Gate 3 · Standard group · option 'Neoadjuvant FOLFIRINOX, then surgery' (avoid, note)"
       },
       {
@@ -191,7 +191,7 @@
       }
      ],
      "divergence": "NCCN permits and ESMO advises against neoadjuvant therapy in resectable disease; NORPACT-1 pointed to upfront surgery and PREOPANC to neoadjuvant treatment in a mixed population, the pooled resectable subgroup shows no benefit (HR 0.90), and no trial has tested the comparator with adjuvant mFOLFIRINOX.",
-     "proposal": "The roadmap lists upfront resection then adjuvant mFOLFIRINOX first for fit patients without high-risk features, as what randomised evidence supports, while saying it does not resolve the question. Neoadjuvant chemotherapy is reasonable only with named high-risk features and tissue first (FOLFIRINOX, or PREOPANC chemoradiotherapy if FOLFIRINOX is not tolerable); offer A021806 or another trial.",
+     "proposal": "The roadmap lists upfront resection then adjuvant mFOLFIRINOX first for fit patients without high-risk features, as what randomised evidence supports, while saying it does not resolve the question. If a neoadjuvant route is chosen - for named high-risk features, or where the board judges selecting out occult metastatic disease worth the resection-rate cost - tissue comes first and the regimen is FOLFIRINOX, or PREOPANC chemoradiotherapy if FOLFIRINOX is not tolerable; offer a randomised trial where one is recruiting (A021806 is active but not recruiting).",
      "proposal_locator": "Gate 3 · Standard group (order note, flagnote and options); Reasonable 'Neoadjuvant chemotherapy for a resectable tumour that has high-risk features…'; Avoid 'Do not start neoadjuvant therapy without a tissue diagnosis.'",
      "rationale": "The trials disagree and the page does not resolve them, and the full-text read made the disagreement worse rather than better. No neoadjuvant trial gave its control arm modern adjuvant therapy except NORPACT-1, and there only 19 of 44 resected control patients (43%) received adjuvant mFOLFIRINOX; PREOPANC's control arm received adjuvant gemcitabine and only 51% of it received any chemotherapy; PREOPANC-2 has no upfront-surgery arm; S1505 and A021501 had no randomised control at all. Pooled across nine randomised trials the resectable subgroup shows no benefit (HR 0.90, 0.63–1.28) and the borderline resectable subgroup does (HR 0.60, 0.38–0.96), but the between-subgroup test is not significant (p=0.081) and the pooled estimate depends on post hoc removal of NORPACT-1. NORPACT-1's primary endpoint favoured upfront surgery at a two-sided alpha of 0.15, was non-significant per protocol, and had 21% of its neoadjuvant arm go straight to resection without the drug. ESMO recommends against neoadjuvant therapy in resectable disease at [II, E]. The pooled data also show no gain in adjuvant initiation (57.7% versus 55.6%, p=0.353), which removes the main mechanistic argument. A021806 has not reported. This has to be a local decision because there is no guideline answer to copy and no trial of the comparison that matters.",
      "audit": "Registry: resectability category, sequence chosen, resection rate, R0 rate, time from diagnosis to first treatment, and proportion of resected patients who never start adjuvant therapy.",
@@ -318,7 +318,7 @@
        "locator": "Gate 6 · Standard group · option 'Gemcitabine with capecitabine' (when, pref, avoid, note)"
       }
      ],
-     "divergence": "Both guidelines rank mFOLFIRINOX first for fit patients and only ESMO names criteria for the doublet; PRODIGE 24's restricted eligibility leaves the unrecovered or older patient undefined, and the two regimens were never compared.",
+     "divergence": "ESMO ranks mFOLFIRINOX first for fit patients and names criteria for the doublet, whereas NCCN lists both as preferred without ranking them; PRODIGE 24's restricted eligibility leaves the unrecovered or older patient undefined, and the two regimens were never compared.",
      "proposal": "mFOLFIRINOX for 24 weeks is listed first for a recovered patient with good performance status; gemcitabine with capecitabine for a patient who cannot take a triplet (poorer performance status, neuropathy, slow recovery or preference); gemcitabine alone for the frail. No numeric switch threshold is stated; restage before the first cycle and prioritise completing the course.",
      "proposal_locator": "Gate 6 · Standard group · options (pref); Standard 'Restage before the first cycle…'; Standard 'Prioritise completing the course over starting it quickly.'",
      "rationale": "On mature 5-year data PRODIGE 24 gives median overall survival 53.5 versus 35.5 months and 5-year survival 43.2% versus 31.4%, at the cost of grade 3–4 adverse events in 75.9% versus 52.9%, in a trial restricted to age under 80, no coronary disease, WHO performance status 0–1, full surgical recovery and postoperative CA 19-9 below 180 U/mL. The effect attenuated from the 3-year report (DFS HR 0.58 to 0.66, OS 0.64 to 0.68), 5-year disease-free survival differs by only 7.1 points, only 33.6% of patients achieved a relative dose intensity of 0.80 or more, post-relapse survival was numerically worse in the mFOLFIRINOX arm (13.1 versus 15.0 months) with fewer of its relapsing patients receiving any chemotherapy (66.9% versus 83.0%), and in the 101 patients aged 70 or older the benefit did not reach significance (HR 0.86, 0.53–1.39). Nothing in it describes the patient who has not recovered from a pancreatoduodenectomy, which is a substantial fraction of the real population, and quality of life was never collected.",
@@ -489,7 +489,7 @@
       },
       {
        "source": "NAPOLI-1",
-       "key": null,
+       "key": "pm26615328",
        "says": "Liposomal irinotecan with fluorouracil after gemcitabine improved survival (6.1 vs 4.2 months, HR 0.67); the roadmap notes no validated immediate reuse after FOLFIRINOX or NALIRIFOX.",
        "locator": "Supporting study appraisals (v16 extract) · 'NAPOLI-1: nal-IRI after gemcitabine'; Systemic treatment matrix row 'Liposomal irinotecan … Subsequent treatment'"
       },
@@ -662,7 +662,7 @@
       {
        "source": "FOLFIRINOX in LAPC meta-analysis",
        "key": "pm27160474",
-       "says": "Single-arm cohorts report pooled resection in 25.9% and R0 in 78.4% of those resected (19% of the cohort), with survival measured from the start of FOLFIRINOX and no control group.",
+       "says": "Single-arm cohorts report pooled resection in 25.9%, and R0 in 78.4% of resected patients with margin data (60 of 81, about 19% of the cohort), with survival measured from the start of FOLFIRINOX and no control group.",
        "locator": "Gate 7 · Standard 'Multiagent induction chemotherapy…' (pref, avoid)"
       },
       {
@@ -1021,6 +1021,14 @@
    "kind": "Systemic & targeted therapy",
    "links": {
     "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42223072/"
+   }
+  },
+  "pm26615328": {
+   "short": "NAPOLI-1",
+   "title": "",
+   "kind": "",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/26615328/"
    }
   },
   "pm24354378": {

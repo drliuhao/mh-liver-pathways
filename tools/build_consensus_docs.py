@@ -20,6 +20,7 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.opc.constants import RELATIONSHIP_TYPE as RT
 from lxml import etree as E
+import docx_text_fixes
 
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE, V16, OUT = Path(sys.argv[1]), Path(sys.argv[2]), Path(sys.argv[3])
@@ -345,9 +346,23 @@ def public_target(target):
     return SITE + 'evidence-libraries/'
 
 
+# Corrections to the V16 text from papers read in full after V16 (tools/consensus_source/document_fixes_*.json).
+FIXES = {}
+for _f in sorted((ROOT / 'tools/consensus_source').glob('document_fixes_*.json')):
+    for _x in json.loads(_f.read_text())['fixes']:
+        FIXES.setdefault(_x['document'], []).append(_x)
+APPLIED = set()
+
+
 def info_doc(src, dest, note, public):
     with zipfile.ZipFile(src) as z:
         parts = {n: z.read(n) for n in z.namelist()}
+    fixes = FIXES.get(Path(src).name, [])
+    if fixes:
+        parts['word/document.xml'], done = docx_text_fixes.apply(parts['word/document.xml'], fixes)
+        APPLIED.update(done)
+        note += (f' {len(fixes)} statement{"s" if len(fixes) > 1 else ""} corrected on 29 October 2026 against the full texts of '
+                 'papers previously cited from their abstracts.')
     parts['word/document.xml'] = companion_note(parts['word/document.xml'], note)
     if public:
         doc = E.fromstring(parts['word/document.xml'])
@@ -412,4 +427,7 @@ for n, key in enumerate(ORDER, 1):
         decision_doc(data, out / nm(f['decision']))
     report.append((data['code'], sorted(p.name for p in folder.iterdir())))
     print(f"{data['code']:9} {len(list(folder.iterdir()))} files")
+missing = {x['id'] for fs in FIXES.values() for x in fs} - APPLIED
+assert not missing, f'document corrections not applied: {sorted(missing)}'
 (OUT / 'document_manifest.json').write_text(json.dumps(report, indent=1))
+print(f'{len(APPLIED)} recorded text corrections applied to the full-content documents')

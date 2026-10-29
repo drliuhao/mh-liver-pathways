@@ -887,13 +887,19 @@
    "label": "CORRECT",
    "design": "RCT",
    "arms": "Regorafenib vs placebo (both with supportive care)",
-   "result": "Modest overall-survival gain with regorafenib in previously treated mCRC: HR 0.77 (95% CI 0.64–0.94); medians not given in summary",
-   "caution": "Focused summary; placebo comparison cannot rank regorafenib vs fruquintinib or FTD/TPI + bevacizumab",
+   "result": "Modest overall-survival gain with regorafenib in previously treated mCRC: median OS 6.4 vs 5.0 mo, HR 0.77 (95% CI 0.64–0.94); PFS 1.9 vs 1.7 mo, HR 0.49",
+   "caution": "OS met at planned interim; grade 3–4 treatment-related AEs 54% vs 14%; cannot rank vs fruquintinib or FTD/TPI",
    "quotes": [
     "CORRECT: a modest OS gain with regorafenib\nRandomized phase III in previously treated metastatic colorectal cancer. Both groups received supportive care.\nHR 0.77 (95% CI 0.64–0.94).",
     "Regorafenib versus placebo.",
     "This placebo comparison cannot rank regorafenib against fruquintinib or FTD/TPI plus bevacizumab.",
-    "Focused summary from the existing systemic matrix"
+    "Focused summary from the existing systemic matrix",
+    "Median overall survival was 6·4 months in the regorafenib group versus 5·0 months",
+    "Median PFS was 1·9 months (IQR 1·6–3·9) in the regorafenib group and 1·7 months",
+    "The HR for PFS was 0·49 for regorafenib versus placebo",
+    "The primary endpoint of overall survival was met at a preplanned interim analysis",
+    "Grade 3 or 4 treatment-related adverse events occurred in 270 (54%) patients",
+    "and 35 patients assigned placebo (14%; table 2)"
    ]
   },
   "23269991": {
@@ -910,15 +916,20 @@
   },
   "23442830": {
    "label": "Kim 2013",
-   "design": null,
-   "arms": "Design not appraised · citation only",
-   "result": "Appraisal pending: no substantive appraisal in the audited decks (prediction of carcinoma after resection of biopsy-proven ampullary adenoma)",
-   "caution": "No full text reviewed; the citation alone must not be treated as a completed review",
+   "design": "Retrospective cohort",
+   "arms": "91 biopsy-proven adenomas, all resected: 57 endoscopic, 34 surgical",
+   "result": "Upgraded after resection in 24 of 91 (26.4%; 4 carcinoma in situ, 20 carcinoma); biopsy HGD OR 6.66 (95% CI 1.52–29.08), ductal dilatation OR 10.96 (2.25–53.42)",
+   "caution": "Single centre; 24 events, no validation; abstract gives ORs 6.86 and 11.12; resection route not randomized",
    "quotes": [
-    "Appraisal pending",
-    "Prediction of carcinoma after resection in subjects with ampullary adenomas on endoscopic biopsy.",
-    "The audited decks do not contain a substantive appraisal for it.",
-    "The citation alone must not be treated as a completed full-text review."
+    "The malignancy rate in ampullary adenomas on endoscopic biopsy was 26.4%.",
+    "4 carcinoma in situ (Cis) (4.4%), and 20 adenocarcinoma (22%)",
+    "High-grade dysplasia on endoscopic biopsy 7.12 2.52-10.11 < 0.001 6.66 1.52-29.08 0.012",
+    "Ductal dilatation 17.0 5.02-57.47 < 0.001 10.96 2.25-53.42 0.003",
+    "57 subjects and surgical resection was performed in the remaining 34 subjects",
+    "There was agreement of 53.8% (48/91) between the histologic diagnoses",
+    "or carcinoma (category 5) was made for 24 lesions (26.4%)",
+    "HGD [odds ratio, 6.86 (95%",
+    "ductal dilatation [odds ratio, 11.12 (95%"
    ]
   },
   "23887712": {
@@ -1251,11 +1262,15 @@
    "design": "Phase 3 RCT",
    "arms": "FTD/TPI monotherapy vs placebo",
    "result": "OS improved vs placebo, HR 0.68 (95% CI 0.58–0.81); double-blind phase III, 800 refractory mCRC patients",
-   "caution": "Focused summary, not a full-text appraisal; no RECOURSE medians given; notable neutropenia/leukopenia",
+   "caution": "Modest gain: median OS 7.1 vs 5.3 mo, PFS 2.0 vs 1.7 mo; grade ≥3 neutropenia 38%, leukopenia 21%",
    "quotes": [
     "RECOURSE: FTD/TPI monotherapy improved OS versus placebo",
     "800 refractory colorectal cancer patients in a double-blind phase III trial.",
-    "HR 0.68 (95% CI 0.58–0.81). Clinically important neutropenia and leukopenia occurred."
+    "HR 0.68 (95% CI 0.58–0.81). Clinically important neutropenia and leukopenia occurred.",
+    "The median overall survival improved from 5.3 months with placebo to 7.1 months",
+    "2.0 months (95% CI, 1.9 to 2.1) in the TAS-102 group and 1.7 months",
+    "TAS-102, 38% had neutropenia of grade 3 or higher, 4% had febrile neutropenia",
+    "Leukopenia 407/528 (77) 113/528 (21)"
    ]
   },
   "26041666": {
@@ -1627,13 +1642,22 @@
   },
   "27457864": {
    "label": "Ampullary NET operation",
-   "design": null,
-   "arms": "Single-institution series over 15 years · appraisal pending",
-   "result": "Surgical approach to ampullary neuroendocrine tumours; no substantive appraisal in the audited decks, so no finding can be reported",
-   "caution": "Citation only: no matching PDF identified; not a completed full-text review",
+   "design": "Case series",
+   "arms": "14 ampullary NETs: eight PD vs six transduodenal ampullectomy (TA)",
+   "result": "R0 in all 8 PD vs 3 TA (75% of those with a margin reported); node-positive 7 (88%) vs 1 (17%), nodes assessed in 17% of TA; deaths 1 vs 2",
+   "caution": "Surgeon-chosen operation; suspicious nodes on imaging in 63% of PD vs 0% of TA; no adjusted comparison",
    "quotes": [
-    "Is there an Optimal Surgical Approach to Neuroendocrine Tumors of the Ampulla? A Single Institution Experience Over 15 Years.",
-    "The audited decks do not contain a substantive appraisal for it."
+    "achieved in all PD patients versus 75 per cent in TA patients",
+    "lymph node positivity in 88 vs 17 per cent",
+    "assessed in all PD patients versus only 17 per cent of TA patients",
+    "14 patients with well-differentiated ampullary NETs were identified",
+    "Eight (57%) patients underwent pancreaticoduodenectomy (PD) and six (43%) underwent transduodenal ampullectomy (TA)",
+    "was left to the discretion of the treating surgeon",
+    "R0 11 (92) 8 (100) 3 (75)",
+    "LN positivity 8 (57) 7 (88) 1 (17) 0.026",
+    "Death 3 (21) 1 (13) 2 (33) 0.538",
+    "the majority of patients who underwent PD (63%)",
+    "and in none who underwent TA (0%)"
    ]
   },
   "27481548": {
@@ -2053,13 +2077,22 @@
   "29091283": {
    "label": "Ng RCT",
    "design": "RCT",
-   "arms": "Hepatic resection vs radiofrequency ablation (early-stage HCC)",
-   "result": "Appraisal pending: the supplied decks contain no substantive appraisal or results for this trial",
-   "caution": "Citation only; no matching PDF and no completed full-text review",
+   "arms": "Resection vs radiofrequency ablation (RFA) · 218 early-stage HCC",
+   "result": "Resection vs RFA: recurrence 71.3% vs 81.7% (P = 0.092); 10-y OS 47.6% vs 41.8% (P = 0.531); 10-y DFS 31.9% vs 18.6% (P = 0.072); RFA not superior",
+   "caution": "Single-centre Hong Kong RCT, mostly HBV, 2002–2007; superiority design, possibly underpowered, not equivalence",
    "quotes": [
     "Randomized clinical trial of hepatic resection versus radiofrequency ablation for early-stage hepatocellular carcinoma.",
-    "The audited decks do not contain a substantive appraisal for it.",
-    "No matching PDF was identified in the audited depots."
+    "this single-centre RCT compared hepatic resection and RFA",
+    "The remaining 218 patients were randomized into the hepatic resection group (109 patients)",
+    "The inclusion period was from July 2002 to June 2007.",
+    "similar in the resection and RFA groups (71⋅3 versus 81⋅7 per cent respectively)",
+    "Although the difference was not statistically significant (P = 0⋅092),",
+    "and 10-year overall survival rates were 94⋅5, 80⋅6, 66⋅5 and 47⋅6 per cent",
+    "66⋅4 and 41⋅8 per cent in the RFA group (P = 0⋅531)",
+    "Corresponding disease-free survival rates were 74⋅1, 50⋅9, 41⋅5 and 31⋅9 per cent",
+    "33⋅6 and 18⋅6 per cent in the RFA group (P = 0⋅072)",
+    "It was designed as a superiority study but failed to refute the null hypothesis.",
+    "It might be underpowered to allow detection of any difference"
    ]
   },
   "29107679": {
@@ -2216,14 +2249,17 @@
   },
   "29573187": {
    "label": "Lunsford 2018 propensity-matched",
-   "design": null,
-   "arms": "cHCC-CCA vs HCC after LT, propensity-matched · title only",
-   "result": "No substantive appraisal in the audited decks and no matching PDF identified; results not transcribed from the citation alone",
-   "caution": "Citation alone; no full-text review available",
+   "design": "Retrospective cohort",
+   "arms": "UCLA · 12 explant cHCC-CCA vs HCC, matched 1:3 pre-LT and on explant",
+   "result": "5-y RFS 42% vs 61% matched pre-transplant (p=0.17; abstract 28%, p=0.12) and 42% vs 44% matched on explant (p=0.44); all 6 recurrences poorly differentiated",
+   "caution": "12 cases, three decades; no outcome comparison vs matched HCC significant; grade reliable only on explant",
    "quotes": [
-    "Propensity-Matched Analysis of Patients with Mixed Hepatocellular-Cholangiocarcinoma and Hepatocellular Carcinoma Undergoing Liver Transplantation.",
-    "The audited decks do not contain a substantive appraisal for it.",
-    "The citation alone must not be treated as a completed full-text review."
+    "recurrence-free survival (66%, 42%, and 42% versus 76%, 67%, and 61%; P = 0.17",
+    "recurrence-free survival at 5 years (28% versus 61%; P = 0.12)",
+    "similar 5-year recurrence-free survival (42% versus 44%; P = 0.45)",
+    "All 6 HCC-CCA recurrences occurred with poorly differentiated tumors",
+    "identified 12 patients with mixed HCC-CCA who were matched 1:3 to patients",
+    "versus 69%, 56%, and 44%; P = 0.44; Fig. 5C)"
    ]
   },
   "29574408": {
@@ -2511,12 +2547,21 @@
   "30834717": {
    "label": "Peng 2019",
    "design": "Diagnostic study",
-   "arms": "Ampullary adenoma EUS study · not appraised",
-   "result": "Appraisal pending: impact of endoscopic ultrasound in preoperative evaluation of ampullary adenomas; no substantive appraisal in the decks",
-   "caution": "Citation only; not a completed full-text review",
+   "arms": "Retrospective · 120 biopsy-proven adenomas; EUS vs resection pathology",
+   "result": "T-stage accuracy 81.7% (98/120), 20 overstaged vs 2 understaged; intraductal extension sensitivity 89.5%, specificity 86.1%; nodal accuracy 75.0% (12/16)",
+   "caution": "Single centre; carcinoma on biopsy excluded; only 6 pT2, 3 pT3, 2 pT4; nodes staged in 16 resected cancers",
    "quotes": [
-    "The audited decks do not contain a substantive appraisal for it.",
-    "The citation alone must not be treated as a completed full-text review."
+    "The overall accuracy for EUS in T staging was 81.7%.",
+    "In total 22 lesions were wrongly staged by EUS,",
+    "for the diagnosis of any intraductal extension were 89.5%, 86.1%,",
+    "The overall accuracy of EUS for regional lymph node staging was 75.0%.",
+    "Altogether 120 patients were enrolled in this study.",
+    "those having biopsy-suggested adenocarcinoma were excluded from the study",
+    "20 (16.7%) were over-staged and 2 (1.6%) were under-staged",
+    "Accuracy, % (n/N) 0/11 92/98 3/6 2/3 1/2 81.7 (98/120)",
+    "Total 11 98 6 3 2 120",
+    "Only patients with ampullary adenocarcinoma receiving both EUS",
+    "Accuracy, % (n/N) 7/8 5/8 12/16 (75.0)"
    ]
   },
   "30843343": {
@@ -2829,11 +2874,12 @@
    "design": "RCT",
    "arms": "Pembrolizumab vs placebo",
    "result": "Primary endpoints not met: OS HR 0.781 (95% CI 0.611–0.998), P=.0238 vs required P=.0174; 413 sorafenib-pretreated advanced HCC",
-   "caution": "Not significant by prespecified criteria; numerical median difference insufficient; focused summary",
+   "caution": "Missed prespecified significance; median gain insufficient; placebo after sorafenib; Child-Pugh A only",
    "quotes": [
     "413 previously sorafenib-treated advanced HCC patients. Randomized phase III trial.",
     "OS HR 0.781 (95% CI 0.611–0.998), P=.0238 versus required P=.0174. Neither primary endpoint met its specified significance criterion; a numerical median difference is insufficient.",
-    "Pembrolizumab versus placebo."
+    "Pembrolizumab versus placebo.",
+    "Patients had Child-Pugh liver class A disease,"
    ]
   },
   "31856076": {
@@ -3933,12 +3979,14 @@
    "label": "TOPIC-NEC",
    "arms": "Cisplatin–etoposide vs cisplatin–irinotecan · advanced NEC",
    "result": "No significant OS difference: 12.5 vs 10.9 mo (HR 1.04); the numerical difference does not establish superiority",
-   "caution": "Focused summary; toxicity differed (more myelosuppression with etoposide); NET data not transferable",
+   "caution": "Japan-only; not designed to show equivalence; more myelosuppression with etoposide; NET data not transferable",
    "quotes": [
     "TOPIC-NEC: cisplatin–etoposide versus cisplatin–irinotecan did not differ significantly in OS (12.5 versus 10.9 months; HR 1.04).",
     "The numerical difference does not establish superiority. Toxicity differed, including more myelosuppression with etoposide.",
     "Well-differentiated NET evidence does not automatically apply.",
-    "Focused summary from the existing systemic matrix"
+    "Focused summary from the existing systemic matrix",
+    "Participants were enrolled across 50 institutions in Japan",
+    "the study was not designed to assess the equivalence of the 2 regimens"
    ]
   },
   "35986682": {
@@ -4374,12 +4422,15 @@
    "label": "MOUNTAINEER (primary report)",
    "arms": "Noncomparative phase II cohorts · tucatinib + trastuzumab",
    "result": "Objective response rate 38.1% in the combination cohorts (chemotherapy-refractory HER2-positive, RAS-wild-type mCRC); primary report",
-   "caution": "Focused summary; noncomparative phase II, no randomized survival superiority or best post-HER2 sequence",
+   "caution": "Open-label, noncomparative; local HER2 testing (ten of 70 centrally HER2-negative); no survival comparison",
    "quotes": [
     "The primary report's combination cohorts had an objective response rate of 38.1%, as recorded in the matrix.",
     "Combination cohorts in chemotherapy-refractory HER2-positive, RAS-wild-type mCRC.\nNoncomparative phase II evidence.",
     "neither establishes randomized survival superiority or the best post-HER2 sequence",
-    "Focused summary from the existing systemic matrix"
+    "Focused summary from the existing systemic matrix",
+    "Limitations of MOUNTAINEER include the open-label design",
+    "Tissue samples were available for retrospective central testing in 70 (83%) of 84 patients",
+    "one of ten patients) in those with HER2-negative tumours"
    ]
   },
   "37174120": {
@@ -4807,11 +4858,12 @@
    "label": "KRYSTAL-1",
    "arms": "Single-arm · adagrasib + cetuximab · 94 patients",
    "result": "Objective response rate 34% in 94 previously treated KRAS G12C-mutated mCRC patients",
-   "caution": "Single-arm response data; no randomized survival benefit; not comparable with HER2 cohorts; focused summary",
+   "caution": "Single-arm, no randomized survival benefit; not comparable with HER2 cohorts; median DOR 5.8 mo, PFS 6.9 mo",
    "quotes": [
     "The existing matrix reports an objective response rate of 34% in 94 patients.",
     "94 patients with previously treated KRAS G12C-mutated metastatic colorectal cancer.",
-    "Single-arm response evidence does not establish randomized survival superiority. Do not compare this response rate directly with HER2-selected cohorts."
+    "Single-arm response evidence does not establish randomized survival superiority. Do not compare this response rate directly with HER2-selected cohorts.",
+    "ORR was 34.0%, median DOR was 5.8 months, median PFS was 6.9 months"
    ]
   },
   "38608150": {
@@ -5077,13 +5129,19 @@
   "39602630": {
    "label": "CheckMate 8HW first-line",
    "arms": "Nivolumab + ipilimumab vs chemotherapy",
-   "result": "Higher 24-month PFS vs chemotherapy (95% CIs 64–79% vs 6–25%); first-line, 255 centrally confirmed MSI-H/dMMR tumors",
-   "caution": "PFS, not OS; point estimates not in summary; HR 0.62 is the separate nivolumab-alone comparison",
+   "result": "24-month PFS 72% (95% CI 64–79) vs 14% (6–25) with chemotherapy; median not reached vs 5.9 mo; first-line, 255 centrally confirmed MSI-H/dMMR tumors",
+   "caution": "Interim; PFS only (OS immature); no HR, hazards non-proportional; 0.62 is vs nivolumab alone (other report)",
    "quotes": [
     "CheckMate 8HW: higher 24-month PFS than chemotherapy",
     "Primary analysis included 255 centrally confirmed MSI-H/dMMR tumors.",
     "95% CIs: 64–79% and 6–25%. The comparison is against chemotherapy, not nivolumab alone or pembrolizumab. PFS is not overall survival.",
-    "The separate nivolumab-alone comparison has a different publication. Its hazard ratio of 0.62 must not be assigned to this chemotherapy comparison."
+    "The separate nivolumab-alone comparison has a different publication. Its hazard ratio of 0.62 must not be assigned to this chemotherapy comparison.",
+    "24-month progression-free survival was 72% (95% confidence interval [CI], 64 to 79)",
+    "with nivolumab plus ipilimumab as compared with 14% (95% CI, 6 to 25",
+    "48/171 NR (38.4–NE) 52/84 5.9 (4.4–7.8)",
+    "At this prespecified interim analysis, the first primary end point",
+    "including overall survival. These data are not yet mature.",
+    "Because the proportional hazards assumption was violated,"
    ]
   },
   "39642968": {
@@ -5097,6 +5155,23 @@
     "82 of 512 (16.0%) versus 2 of 63 (3.2%), p = 0.01",
     "recurrence in R0-treated patients 5 of 62 (8.0%) versus 2 of 62 (3.2%), p = 0.07",
     "the matched analysis pairs the entire surgical population with a 1-in-9 selection of endoscopic patients"
+   ]
+  },
+  "39687036": {
+   "label": "IMbrave150 Vp4 analysis",
+   "design": "Secondary analysis",
+   "arms": "Exploratory IMbrave150 subgroups · Vp4 (48 vs 25) and without Vp4",
+   "result": "Atezolizumab–bevacizumab vs sorafenib, Vp4: median OS 7.6 vs 5.5 mo (HR 0.62, 0.34–1.11); without Vp4: 21.1 vs 15.4 mo (HR 0.67)",
+   "caution": "Exploratory, unadjusted p values; small Vp4 subgroup; 5 of 10 high-risk deaths on atezo–bev were upper-GI",
+   "quotes": [
+    "7.6 months (95% CI: 6.0–13.9) with atezolizumab plus bevacizumab (n = 48)",
+    "5.5 months (95% CI: 3.4–6.7) with sorafenib (n = 25;",
+    "HR 0.62 [95% CI: 0.34–1.11]; descriptive p = 0.104)",
+    "In patients without Vp4, median OS was 21.1 months",
+    "15.4 months (95% CI: 12.6–18.6) with sorafenib (n = 140; HR 0.67",
+    "Five of 10 grade 5 AEs in the atezolizumab plus bevacizumab arm",
+    "in the high-risk population were upper GI hemorrhage events",
+    "p values based on exploratory analyses were nominal and unadjusted for multiple comparisons"
    ]
   },
   "39689874": {
@@ -5654,14 +5729,21 @@
   },
   "41172153": {
    "label": "Wei · multifocal iCCA",
-   "design": null,
-   "arms": "Prognostic and genomic study · multifocal iCCA",
-   "result": "Compares satellite lesions with intrahepatic metastasis in multifocal iCCA for prognosis and genomic profile; no substantive appraisal in the audited decks",
-   "caution": "Appraisal pending: no PDF found; the citation alone is not a completed full-text review",
+   "design": "Retrospective cohort",
+   "arms": "15 centres · 1,064 resected iCCA, 358 multifocal: 263 satellite, 95 IM",
+   "result": "Satellite vs intrahepatic metastasis (IM): median OS 23.0 vs 20.0 mo (p=0.217); both worse than solitary (adjusted OS HR 1.6 and 1.8); both clonal from primary",
+   "caution": "Resected patients only; genomic cohort separate (24 patients, two Chinese centres, 2023–2024)",
    "quotes": [
-    "Satellite lesions versus intrahepatic metastasis in multifocal intrahepatic cholangiocarcinoma: Prognostic impact and genomic profiling.",
-    "The audited decks do not contain a substantive appraisal for it.",
-    "No matching PDF was identified in the audited depots."
+    "Among 1064 patients included in the cohort, 358 had multifocal tumors",
+    "either OS (median OS: IM, 20.0 vs. SL, 23.0 mo; p = 0.217)",
+    "Satellite lesion 2.162 (1.781–2.624) < 0.001 1.646 (1.162–2.334) 0.005",
+    "Intrahepatic metastasis 2.633 (2.007–3.455) < 0.001 1.833 (1.207–2.784) 0.004",
+    "73 tumor samples derived from 24 patients with multifocal ICC",
+    "a database of 15 hepatobiliary centers in North America, Europe, Australia, and Asia",
+    "defined as IM (n = 95) or SL (n = 263)",
+    "worse OS (SL, HR 1.6, 95% CI 1.2–2.3; IM, HR 1.8, 95% CI 1.2–2.8;",
+    "from January 2023 to December 2024 were screened for multiple tumor tissues",
+    "Both SL and IM are clonally derived from the primary ICC tumor"
    ]
   },
   "41192607": {
@@ -5987,12 +6069,20 @@
   "42225102": {
    "label": "OCLURANDOM",
    "arms": "Randomized noncomparative phase II · 177Lu-DOTATATE, sunitinib control",
-   "result": "Prospective activity and tolerability data informing PRRT sequencing in metastatic progressive pancreatic NET; summary gives no outcome figures",
-   "caution": "Noncomparative phase II; cannot establish superiority; focused summary, not a full-text appraisal",
+   "result": "Metastatic progressive pancreatic NET: 12-mo PFS 80.5% vs 41.9% with sunitinib control, median PFS 20.7 vs 11.0 mo; OS not different (55.8 vs 64.4 mo)",
+   "caution": "Noncomparative; post hoc comparisons; 65% of sunitinib arm crossed to PRRT; late grade ≥2 AEs, any cause, 60%",
    "quotes": [
     "Randomized, non-comparative phase II: 177Lu-DOTATATE with an internal sunitinib control.",
     "Prospective activity and tolerability information for the PRRT sequencing discussion.",
-    "A randomized noncomparative phase II design does not establish phase III superiority."
+    "A randomized noncomparative phase II design does not establish phase III superiority.",
+    "survival rate at 12 months was 33 (80·5% [90% CI 67·5–89·9])",
+    "versus 18 (41·9% [29·1–55·5]) of 43 patients in the sunitinib group",
+    "Median, months (95% CI) 20·7 (17·1–25·5) 11·0 (8·7–13·7)",
+    "Median, months (95% CI) 55·8 (43·1–69·5) 64·4 (39·7–NE)",
+    "was not significantly different between the groups",
+    "any comparison presented in the article should be considered as post-hoc,",
+    "28 (65%) of 43 patients from the sunitinib group received",
+    "24 (60%) of 40 patients had grade 2 or worse late adverse events"
    ]
   },
   "42312290": {
@@ -6026,12 +6116,14 @@
    "design": "Phase 3 RCT",
    "arms": "177Lu-edotreotide vs everolimus · GEP-NET",
    "result": "Phase III: median PFS 23.9 vs 14.1 mo (HR 0.67); edotreotide improved PFS versus everolimus",
-   "caution": "Focused summary; edotreotide and DOTATATE differ—not proof of interchangeability or US authorization",
+   "caution": "Open label, sponsor-run; OS immature, not significant (HR 0.78, p=0.21); edotreotide and DOTATATE differ",
    "quotes": [
     "COMPETE phase III found PFS 23.9 versus 14.1 months with 177Lu-edotreotide versus everolimus (HR 0.67).",
     "Phase III trial in gastroenteropancreatic NET comparing 177Lu-edotreotide with everolimus.",
     "Edotreotide and DOTATATE are different products. These results alone do not establish US authorization or interchangeability.",
-    "Focused summary from the existing systemic matrix"
+    "Focused summary from the existing systemic matrix",
+    "everolimus (stratified HR 0·78 [0·53–1·15]; p=0·21; figure 2C), but data were immature",
+    "The funder of the study had a role in the study design,"
    ]
   },
   "42409696": {
@@ -6079,13 +6171,21 @@
    "label": "NETTER-2 subgroup update",
    "design": "Secondary analysis",
    "arms": "177Lu-DOTATATE + octreotide vs high-dose octreotide · subgroups",
-   "result": "Preplanned and post hoc subgroup analyses: PRRT activity across pancreatic/GI primary sites and G2/G3 grades, extending the parent trial's signal",
-   "caution": "Subgroups not separately powered; partly post hoc; not for NEC; focused summary, no full-paper appraisal",
+   "result": "Preplanned and post hoc subgroups: PFS HR 0.306 (G2), 0.266 (G3), 0.336 (pancreatic), 0.233 (GI), with higher ORR in each subgroup",
+   "caution": "Subgroups descriptive, unpowered, no formal tests, partly post hoc; not NEC; chemotherapy candidates excluded",
    "quotes": [
     "177Lu-DOTATATE + octreotide versus high-dose octreotide",
     "preplanned and post-hoc efficacy analyses from the randomised, phase 3 NETTER-2 trial",
     "Not poorly differentiated NEC; subgroups are not separately powered new trials.",
-    "Focused existing matrix summary; no new standalone full-paper appraisal."
+    "Focused existing matrix summary; no new standalone full-paper appraisal.",
+    "HR 0·306 (95% CI 0·176–0·530)",
+    "HR 0·266 (95% CI 0·145–0·489)",
+    "HR 0·336 (95% CI 0·200–0·562)",
+    "HR 0·233 (95% CI 0·117–0·462)",
+    "0⋅306 (0⋅176–0⋅530) for those with grade 2 NETs, 0⋅266 (0⋅145–0⋅489) for grade 3 NETs,",
+    "0⋅336 (0⋅200– 0⋅562) for pancreatic NETs, and 0⋅233 (0⋅117– 0⋅462) for gastrointestinal NETs",
+    "subgroup analyses were descriptive in nature and no formal statistical tests were performed",
+    "excluding those for whom chemotherapy was considered more appropriate than the study treatments"
    ]
   },
   "42624290": {
@@ -6840,8 +6940,8 @@
    "rows": [
     {
      "pmid": "27457864",
-     "result": "Ampullary NET, 14-patient single-institution series: R0 in all 8 after pancreatoduodenectomy vs 75% of 6 transduodenal; nodal involvement reaching 88% in resection group",
-     "caution": "Cited from abstract only; transduodenal approach may understage these tumours"
+     "result": "Ampullary NET, 14-patient single-institution series: R0 in all 8 after pancreatoduodenectomy vs 3 of 4 transduodenal with margins reported; node-positive 7 of 8 vs 1 of 6",
+     "caution": "Nodes examined in only 1 of 6 transduodenal resections; operation chosen by the surgeon"
     }
    ]
   },
@@ -7479,8 +7579,8 @@
     },
     {
      "pmid": "29573187",
-     "result": "Secondary report, cHCC-CCA vs propensity-matched comparators: 5-y RFS 42% vs 44% matched on explant pathology (p=0.45); 28% vs 61% on pre-transplant factors (p=0.12)",
-     "caution": "12 recipients; paper not read, figures from the 2026 overview's secondary report"
+     "result": "cHCC-CCA vs propensity-matched HCC: 5-y RFS 42% vs 44% matched on explant pathology (p=0.44); 42% vs 61% on pre-transplant factors (p=0.17; abstract 28%, p=0.12)",
+     "caution": "12 incidental explant diagnoses, single centre; no outcome comparison vs matched HCC significant"
     }
    ]
   },

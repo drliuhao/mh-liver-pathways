@@ -11,7 +11,11 @@ from lxml import html
 
 ROOT = Path(__file__).resolve().parents[1]
 BASELINE = '76dacc5'
-old_text = subprocess.check_output(['git', 'show', f'{BASELINE}:systemic/index.html'], cwd=ROOT).decode()
+from revision_text import systemic_pdf_status, mark_library
+# PDF-status changes recorded in tools/clinical_revisions/ are replayed on the baseline References entries.
+_base_refs = json.loads(subprocess.check_output(['git', 'show', f'{BASELINE}:systemic/references.json'], cwd=ROOT).decode().replace('Full-text update: ', ''))
+old_text = mark_library(subprocess.check_output(['git', 'show', f'{BASELINE}:systemic/index.html'], cwd=ROOT).decode(),
+                        systemic_pdf_status(_base_refs, json.loads((ROOT / 'systemic/references.json').read_text())))
 for old_url, new_url in json.loads((ROOT / 'tools/systemic_link_targets.json').read_text()).items():
     old_text = old_text.replace(old_url, new_url)
 old = html.fromstring(old_text)
