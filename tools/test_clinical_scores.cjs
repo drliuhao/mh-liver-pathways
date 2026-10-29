@@ -26,7 +26,7 @@ eq(c.albi({bilirubin: 0.5, biliUnit: 'mgdl', albumin: 4.5, albUnit: 'gdl'}).grad
 eq(c.albi({bilirubin: 4, biliUnit: 'mgdl', albumin: 2.5, albUnit: 'gdl'}).grade, 3);
 
 // HCC tumor burden: the transplant HCC protocol's Milan, T2 and UNOS-downstaging wording; UCSF (Yao 2001).
-const hb = sizes => c.hccBurden({sizes});
+const hb = sizes => c.hccBurden({sizes, spread: false});
 eq([hb([5]).milan, hb([5]).t2], [true, 'met']);
 eq([hb([1.5]).milan, hb([1.5]).t2], [true, 'T1']);
 eq([hb([3, 3, 3]).milan, hb([3, 3, 3]).t2], [true, 'met']);
@@ -45,9 +45,9 @@ eq(c.fong({node: true, dfi: true, multiple: false, size: true, cea: true}).score
 eq(c.oslo({size: true, cea: false, interval: true, progression: false}).score, 2);
 
 // Standardized FLR (Vauthey 2002): TLV = −794.41 + 1267.28 × BSA (Mosteller).
-const f = c.futureRemnant({flr: 400, height: 175, weight: 80});
+const f = c.futureRemnant({method: 'estimated', flr: 400, height: 175, weight: 80});
 eq([f.bsa, f.tlv, f.percent], [1.97, 1705, 23.5]);
-eq(c.futureRemnant({flr: 500, tlv: 2000}).percent, 25);
+eq(c.futureRemnant({method: 'measured', flr: 500, tlv: 2000}).percent, 25);
 eq(c.futureRemnant({flr: 500}).ok, false);
 
 // WHO 2019 NET grade (the pNET roadmap's table): higher index wins; NEC is not graded.
@@ -55,12 +55,35 @@ eq(c.netGrade({ki67: 2.9, mitoses: 1, diff: 'well'}).grade, 'G1');
 eq(c.netGrade({ki67: 3, diff: 'well'}).grade, 'G2');
 eq(c.netGrade({ki67: 20, mitoses: 2, diff: 'well'}).grade, 'G2');
 eq(c.netGrade({ki67: 15, mitoses: 21, diff: 'well'}).grade, 'G3');
-eq(c.netGrade({ki67: 25}).needsDiff, true);
+eq(c.netGrade({ki67: 25}).ok, false);
 eq(c.netGrade({diff: 'poor'}).grade, 'NEC');
 
 // Spigelman (1989): I 1–4, II 5–6, III 7–8, IV 9–12.
 const sp = (a, b, h, d) => c.spigelman({number: a, size: b, histology: h, dysplasia: d}).stage;
 eq([sp('1', '1', '1', '1'), sp('2', '1', '1', '1'), sp('2', '2', '2', '1'), sp('3', '2', '2', '2'), sp('3', '3', '3', '3')], ['I', 'II', 'III', 'IV', 'IV']);
+
+// Unknown values must not silently score as favorable; reject impossible entries.
+eq(c.fong({}).ok, false);
+eq(c.oslo({size: 'no', cea: 'no', interval: 'no', progression: ''}).ok, false);
+eq(c.oslo({size: 'no', cea: 'no', interval: 'no', progression: 'no'}).score, 0);
+eq(c.hccBurden({sizes: [3]}).ok, false);
+eq(hb([3, -1]).ok, false);
+eq(hb([0]).ok, false);
+eq(hb([3, 'invalid']).ok, false);
+eq(hb([5, 2, 1.0001]).downstaging, false); // No rounding into eligibility.
+eq(hb([4.5, 2.5, 1.0001]).ucsf, false);
+eq(c.albi({bilirubin: 1, albumin: 4}).ok, false);
+eq(c.futureRemnant({method: 'estimated', flr: 400, height: 10, weight: 1}).ok, false);
+eq(c.futureRemnant({method: 'measured', flr: 500, tlv: -1}).ok, false);
+eq(c.futureRemnant({method: 'measured', flr: 2100, tlv: 2000}).ok, false);
+eq(c.netGrade({ki67: -1, mitoses: 2, diff: 'well'}).ok, false);
+eq(c.netGrade({ki67: 'invalid', mitoses: 2, diff: 'well'}).ok, false);
+eq(c.netGrade({ki67: 101, diff: 'well'}).ok, false);
+eq(c.netGrade({ki67: 2, mitoses: -1, diff: 'well'}).ok, false);
+eq(c.netGrade({ki67: 2, diff: 'well'}).partial, true);
+eq(c.netGrade({ki67: 2, mitoses: 2.5, diff: 'well'}).grade, 'G2');
+eq(sp('0','0','0','0'), '0');
+eq(c.spigelman({number: '0', size: '1', histology: '1', dysplasia: '1'}).ok, false);
 
 // Every item: a name, a kind, a definition with a source, and a place in the display order.
 for (const [id, item] of Object.entries(S.items)) {

@@ -26,12 +26,13 @@ COLUMN = """()=>{const t=document.querySelector('#answer.dw-ready .dw-tools');if
 FILL = {
     'child': {'bilirubin': '1.2', 'albumin': '3.6', 'inr': '1.1', 'ascites': '1', 'enceph': '1'},
     'albi': {'bilirubin': '1', 'albumin': '4'},
-    'hccburden': {'size1': '3', 'size2': '2'},
+    'hccburden': {'size1': '3', 'size2': '2', 'spread': 'no'},
     'tbs': {'max': '3', 'n': '4'},
     'flr': {'flr': '500', 'height': '170', 'weight': '70'},
     'netgrade': {'diff': 'well', 'ki67': '5'},
     'spigelman': {'number': '2', 'size': '2', 'histology': '2', 'dysplasia': '1'},
-    'fong': {'node': True}, 'oslo': {'cea': True},
+    'fong': {'node': 'yes', 'dfi': 'no', 'multiple': 'no', 'size': 'no', 'cea': 'no'},
+    'oslo': {'size': 'no', 'cea': 'yes', 'interval': 'no', 'progression': 'no'},
 }
 CALC = """async([id,values])=>{const f=[...document.querySelectorAll('#answer.dw-ready .tc-row[data-tc="'+id+'"] .tc-calc')][0];if(!f)return null;
  const row=f.closest('details');row.open=true;

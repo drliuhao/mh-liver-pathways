@@ -38,20 +38,9 @@
     crlm: ['unresectability', 'control'], nelm: ['options', 'exposure']};
 
   let systemicData = null, lrtData = null;
-  function jsonAfter(text, marker) {
-    const start = text.indexOf('{', text.indexOf(marker));
-    if (start < 0) throw new Error('matrix data not found');
-    let depth = 0, inString = false, escaped = false;
-    for (let i = start; i < text.length; i++) {
-      const c = text[i];
-      if (inString) { if (escaped) escaped = false; else if (c === '\\') escaped = true; else if (c === '"') inString = false; continue; }
-      if (c === '"') inString = true; else if (c === '{') depth++; else if (c === '}' && --depth === 0) return JSON.parse(text.slice(start, i + 1));
-    }
-    throw new Error('matrix data incomplete');
-  }
-  const loadSystemic = () => systemicData || (systemicData = fetch(new URL('systemic/matrix.json', root)).then(r => r.json()));
-  // The liver-directed matrix is published once, inside lrt/index.html; read it from there.
-  const loadLrt = () => lrtData || (lrtData = fetch(new URL('lrt/', root)).then(r => r.text()).then(t => jsonAfter(t, 'const DATA =')));
+  const loadSystemic = () => systemicData || (systemicData = fetch(new URL('systemic/matrix.json?v=20261029-tools2', root)).then(r => { if (!r.ok) throw new Error('Matrix unavailable'); return r.json(); }));
+  // All roadmap and pathway views use the same reviewed matrix data.
+  const loadLrt = () => lrtData || (lrtData = fetch(new URL('lrt/matrix.json?v=20261029-tools2', root)).then(r => { if (!r.ok) throw new Error('Matrix unavailable'); return r.json(); }));
   const SETTINGS = [['first', 'Initial advanced disease'], ['later', 'Subsequent'], ['biomarker', 'Molecularly selected'],
     ['perioperative', 'Around curative local treatment'], ['combination', 'Combination / sequencing'], ['transplant', 'Transplant strategy']];
 
