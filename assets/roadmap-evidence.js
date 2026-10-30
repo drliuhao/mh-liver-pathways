@@ -34,6 +34,12 @@
       target.aliases = [...new Set([...(target.aliases || []), row.id])];
       rows.splice(i, 1);
     }
+    // Sources the roadmap's Word document cites that the page data lacks (assets/document-references.js).
+    const docs = ((typeof window !== 'undefined' && window.DocumentReferences) || {})[page()] || [];
+    for (const doc of docs) {
+      if (rows.some(r => r.id === doc.id || (doc.pmid && r.pmid === doc.pmid))) continue;
+      rows.push({...doc, appraisal:{cited:doc.cited}});
+    }
     for (const paper of data().papers) {
       let row = rows.find(r => r.pmid === paper.pmid || (doi(r) && doi(r) === doi(paper)));
       if (!row) { row = {...paper, id:paper.pmid || paper.id}; rows.push(row); }
@@ -94,7 +100,7 @@
     const c = critique(row, critiques), a = row.appraisal;
     const paragraphs = [];
     if (row.design) paragraphs.push(`<p><b>Study design.</b> ${esc(row.design)}</p>`);
-    if (a) for (const [key,label] of [['note','Pathway note'],['scope','Design and population'],['application','Application'],['population','Population'],['results','Results'],['limitations','Limits of this evidence'],['locator','Source location']]) {
+    if (a) for (const [key,label] of [['note','Pathway note'],['cited','Cited in'],['scope','Design and population'],['application','Application'],['population','Population'],['results','Results'],['limitations','Limits of this evidence'],['locator','Source location']]) {
       if (a[key]) paragraphs.push(`<p><b>${label}.</b> ${esc(a[key])}</p>`);
     }
     if (c) {

@@ -20,6 +20,7 @@ quality monitoring, and the Evidence library. The pathways now end the same way 
 """
 import json, re
 from pathlib import Path
+import document_refs as DR
 
 ROOT = Path(__file__).resolve().parents[1]
 C = json.loads((ROOT / 'transplant/assets/content.json').read_text())
@@ -32,7 +33,9 @@ STUDIES = json.loads((ROOT / 'tools/compact_evidence_source.json').read_text())[
 SUMMARIES = json.loads((ROOT / 'tools/source_summaries.json').read_text())['summaries']
 POLICY = {'Allocation policy', 'NLRB guidance'}
 GUIDANCE = {'Clinical guidance', 'Expert consensus', 'Pathology reporting standard', 'Supportive-care reference'}
-GROUPS = ['Policy & review guidance', 'Guidelines & consensus', 'Studies']
+GROUPS = ['Policy & review guidance', 'Guidelines & consensus', 'Studies', 'Drug labels']
+DOCREC = {}  # sources the V16 documents cite that no site record holds: 'doc:<pmid or key>'
+NONPM_GROUP = {'label': 'Drug labels', 'policy': 'Policy & review guidance', 'guidance': 'Guidelines & consensus', 'abstract': 'Studies'}
 
 
 def pathway_refs(p):
@@ -74,19 +77,52 @@ def ref(key):
 
 
 def record(key):
-    return SOURCES.get(key) or HRS[key]
+    return SOURCES.get(key) or HRS.get(key) or DOCREC[key]
+
+
+def match_record(ref, keys):
+    """The site record a document reference names: its key, PMID, DOI or title; a key already listed wins."""
+    if ref.get('key') and (ref['key'] in SOURCES or ref['key'] in HRS):
+        return ref['key']
+    pool = list(keys) + [k for k in list(SOURCES) + list(HRS) if k not in keys]
+    cite = DR.norm(ref['cite'])
+    for test in (lambda k: ref['pmid'] and pmid_of(k) == ref['pmid'],
+                 lambda k: ref['doi'] and doi_of(k) == ref['doi'],
+                 lambda k: len(DR.norm(record(k).get('title'))) >= 30 and DR.norm(record(k).get('title'))[:90] in cite):
+        hit = next((k for k in pool if not k.startswith('doc:') and test(k)), None)
+        if hit:
+            return hit
+    return None
+
+
+def doc_record(ref):
+    """A library record for a document reference no site record holds."""
+    item = ref.get('nonpm') or {}
+    key = 'doc:' + (ref['pmid'] or item.get('key', ''))
+    assert key != 'doc:', f'no PMID or key for document reference {ref["cite"][:70]}'
+    if key not in DOCREC:
+        tag = STUDIES[ref['pmid']]['label'] if ref['pmid'] in STUDIES else item.get('tag') or DR.tag_from_cite(ref['cite'])
+        DOCREC[key] = {'short': tag, 'title': ref['cite'], 'pmid': ref['pmid'], 'doi': ref['doi'], 'url': '' if ref['pmid'] else ref['url'],
+                       'kind': item.get('kind', '')}
+    return key
+
+
+def doi_of(key):
+    s = record(key)
+    m = re.search(r'10\.\d{4,9}/[^\s#?]+', s.get('url') or '')
+    return (s.get('doi') or (m.group(0) if m else '')).rstrip('.').lower()
 
 
 def pmid_of(key):
     """PMID from the source record, else from its DOI through the evidence-library catalog."""
     s = record(key)
-    m = re.search(r'10\.\d{4,9}/[^\s#?]+', s.get('url') or '')
-    doi = (s.get('doi') or (m.group(0) if m else '')).rstrip('.').lower()
-    return str(s.get('pmid') or DOI_PMID.get(doi) or '')
+    return str(s.get('pmid') or DOI_PMID.get(doi_of(key)) or DR.DOI_PMID.get(doi_of(key)) or '')
 
 
 def group_of(key, pmid):
     s = record(key)
+    if key in DOCREC and s.get('kind'):
+        return NONPM_GROUP[s['kind']]
     if (key in SOURCES and s.get('kind') in POLICY) or (key in HRS and 'Organ Procurement' in (s.get('author') or '')):
         return GROUPS[0]
     if (key in SOURCES and s.get('kind') in GUIDANCE) or STUDIES.get(pmid, {}).get('design') in ('Guideline', 'Consensus'):
@@ -96,6 +132,8 @@ def group_of(key, pmid):
 
 def citation(key):
     s = record(key)
+    if key in DOCREC:
+        return s['title']
     if key in SOURCES:
         return f"{s['title'].rstrip('.')}. {s.get('locator', '')}".strip()
     # A personal author is a surname (with initials); an organisation is named in full, without "et al.".
@@ -105,7 +143,7 @@ def citation(key):
     return f"{head}{s['title'].rstrip('.')}." + (f' {tail}.' if tail else '')
 
 
-def library(keys, standard, reviews):
+def library(keys, standard, reviews, uses=None):
     """One row per publication, in citation order; the roadmaps' row fields (assets/roadmap-evidence.js)."""
     studies = {}
     for r in reviews:
@@ -163,6 +201,9 @@ def library(keys, standard, reviews):
             for src, dst in [('design_population', 'scope'), ('results', 'results'), ('limits', 'limitations'), ('locator', 'locator')]:
                 if hs.get(src):
                     appraisal[dst] = hs[src]
+        used = [u for k in keys_ for u in (uses or {}).get(k, [])]
+        if used:
+            appraisal = {'cited': DR.cited(used), **appraisal}
         if appraisal:
             item['appraisal'] = appraisal
         if not any(k in standard for k in keys_):
@@ -214,6 +255,15 @@ for slug in ORDER:
     for it in src['limited']:
         for k in it.get('refs', []):
             if k not in keys: keys.append(k)
+    # Every reference of the pathway's two Word documents (30 October 2026): a source a site record holds joins under
+    # its key; any other gets a document record. Each row says where the documents cite it.
+    uses = {}
+    for name, setting in DR.documents('transplant', slug):
+        for dref in DR.resolved(name):
+            key = match_record(dref, keys) or doc_record(dref)
+            if key not in keys: keys.append(key)
+            if setting == 'standard': standard.add(key)
+            uses.setdefault(key, []).append((setting, dref['label']))
     out[slug] = {
         'code': p['code'], 'name': p['name'],
         'limited': limited,
@@ -224,7 +274,7 @@ for slug in ORDER:
                     'locator': doc_name(src.get('quality_locator'))},
         'questions': {'standard': [{'id': i['id'], 'question': i['question'], 'href': f"#meeting-{i['id']}"} for i in p['issues']],
                       'highrisk': [{'id': r['id'], 'title': r['title'], 'status': r['status'], 'href': f"#high-risk-{r['anchor']}"} for r in reviews]},
-        'sources': library(keys, standard, reviews),
+        'sources': library(keys, standard, reviews, uses),
     }
 dest = ROOT / 'transplant/assets/pathway-sections.json'
 dest.write_text(json.dumps({'about': 'Closing sections of the transplant pathway pages; built by tools/build_pathway_sections.py.', 'pathways': out},

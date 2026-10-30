@@ -103,11 +103,11 @@
   }
   window.PathwaySections = {open};
   if (!window.RoadmapEvidence) {
-    const ev = document.createElement('script'); ev.async = false; ev.src = new URL('assets/roadmap-evidence.js?v=20261030-sum1', root); document.head.append(ev);
-    const evCss = document.createElement('link'); evCss.rel = 'stylesheet'; evCss.href = new URL('assets/roadmap-evidence.css?v=20261030-sum1', root); document.head.append(evCss);
+    const ev = document.createElement('script'); ev.async = false; ev.src = new URL('assets/roadmap-evidence.js?v=20261030-docs2', root); document.head.append(ev);
+    const evCss = document.createElement('link'); evCss.rel = 'stylesheet'; evCss.href = new URL('assets/roadmap-evidence.css?v=20261030-docs2', root); document.head.append(evCss);
     ev.addEventListener('load', () => { const box = document.getElementById('pathway-closing'); if (box) renderEv(box); });
   }
-  fetch(new URL('transplant/assets/pathway-sections.json?v=20261030-sum1', root)).then(r => r.ok ? r.json() : null).then(j => {
+  fetch(new URL('transplant/assets/pathway-sections.json?v=20261030-docs2', root)).then(r => r.ok ? r.json() : null).then(j => {
     data = j && j.pathways[slug];
     if (!data) return;
     const app = document.getElementById('app');

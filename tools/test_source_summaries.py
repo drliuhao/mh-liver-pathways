@@ -4,8 +4,8 @@ usage: python3 tools/test_source_summaries.py
 
 tools/source_summaries.json holds one line per guideline, policy, review guidance, registry record, abstract or local
 document cited by a roadmap (roadmap:<slug>:<nonpm key>) or a transplant pathway library (transplant:<source key>).
-- Coverage is exact: every roadmap non-PMID source and every transplant library source without a compact study line
-  has a line, and every line belongs to such a source.
+- Coverage is exact: every roadmap non-PMID source (including those only its Word document cites) and every
+  transplant library source without a compact study line has a line, and every line belongs to such a source.
 - Each line is plain text of at most 160 characters.
 - No new numbers: every number in a line occurs in the source's own citation, note or locator, or in the text of the
   page that cites it (the roadmap's pathway.json, the HCC roadmap page, or the transplant content).
@@ -47,8 +47,17 @@ for r in rows:
     if not have:
         fail.append(f"transplant:{r['key']}: no one-line summary")
     for k in have:
-        rec = records[k]
+        rec = records.get(k) or {'title': r['cit']}  # a source only the Word documents cite: its document citation
         expected[f'transplant:{k}'] = (' '.join(str(rec.get(x, '')) for x in ('short', 'title', 'locator', 'note', 'author', 'journal', 'year')), content_raw)
+# Sources only a roadmap's Word document cites (assets/document-references.js), without a PMID.
+djs = (ROOT / 'assets/document-references.js').read_text()
+for slug, drows in json.loads(djs[djs.index('{'):djs.rindex('}') + 1]).items():
+    page_raw = (ROOT / ('hcc/index.html' if slug == 'hcc' else f'{slug}/data/pathway.json')).read_text()
+    for r in drows:
+        if not r.get('pmid'):
+            expected[f'roadmap:{slug}:{r["id"]}'] = (r['cit'], page_raw)
+            if (r.get('summary') or {}).get('text') != S.get(f'roadmap:{slug}:{r["id"]}'):
+                fail.append(f'document-references.js: roadmap:{slug}:{r["id"]} line differs from tools/source_summaries.json')
 
 missing = sorted(set(expected) - set(S))
 orphans = sorted(set(S) - set(expected))

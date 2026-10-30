@@ -1,4 +1,4 @@
-"""Guard the concise evidence lines used by the compact treatment layer.
+"""Guard the concise evidence lines used by the compact treatment layer and the evidence libraries.
 
 Every number in a study line (label, arms, result, caution) must occur in a quoted passage for that
 PMID, and each passage must be verbatim in the site's verified text (roadmap critique bottom lines and
@@ -108,7 +108,15 @@ fulltext = json.loads((ROOT / 'tools/compact_evidence_fulltext_quotes.json').rea
 for pmid, quotes in fulltext.items():
     for q in quotes:
         assert len(q['quote'].split()) < 15 and re.fullmatch(r'[0-9a-f]{64}', q['sha256']), (pmid, q['quote'][:60])
-errors, site_q, deck_q, full_q = [], 0, 0, 0
+# Papers the V16 Word documents cite (30 October 2026): passages of the citing document (checked against the
+# documents by tools/check_compact_evidence_documents.py) and short passages of the PubMed abstract (under 15 words;
+# checked by tools/check_compact_evidence_abstracts.py).
+documents = json.loads((ROOT / 'tools/compact_evidence_document_quotes.json').read_text())['quotes']
+abstracts = json.loads((ROOT / 'tools/compact_evidence_abstract_quotes.json').read_text())['quotes']
+for pmid, quotes in abstracts.items():
+    for q in quotes:
+        assert len(q.split()) < 15, (pmid, q[:60])
+errors, site_q, deck_q, full_q, doc_q, abs_q = [], 0, 0, 0, 0, 0
 for pmid, s in src['studies'].items():
     assert re.fullmatch(r'\d{6,9}', pmid), pmid
     # PREMIERE-format line: every number in arms, result and caution comes from a quoted passage, and every quoted
@@ -116,6 +124,8 @@ for pmid, s in src['studies'].items():
     site = '\n'.join(text.get(pmid, []))
     from_deck = {q['quote'] for q in deck.get(pmid, [])}
     from_full = {q['quote'] for q in fulltext.get(pmid, [])}
+    from_doc = {q['quote'] for q in documents.get(pmid, [])}
+    from_abs = set(abstracts.get(pmid, []))
     pool = set()
     for q in s.get('quotes') or []:
         if q in site:
@@ -124,6 +134,10 @@ for pmid, s in src['studies'].items():
             deck_q += 1
         elif q in from_full:
             full_q += 1
+        elif q in from_doc:
+            doc_q += 1
+        elif q in from_abs:
+            abs_q += 1
         else:
             errors.append(f'{pmid}: quote without provenance: {q[:70]}')
         pool |= nums(q)
@@ -212,7 +226,7 @@ for key, ids in src['reference_links'].items():
     for g in payload['references'][key]:
         if g['k'] == 'systemic':
             assert g['l'] == cards[g['card']]['limits'], key
-print(f"PASS: {len(src['studies'])} PREMIERE-format study lines, every number in a quoted passage ({site_q} quotes on the site, {deck_q} from V15 decks, {full_q} from full texts); "
+print(f"PASS: {len(src['studies'])} PREMIERE-format study lines, every number in a quoted passage ({site_q} quotes on the site, {deck_q} from V15 decks, {full_q} from full texts, {doc_q} from V16 documents, {abs_q} from PubMed abstracts); "
       f"{nonpm_n} non-PMID sources; "
       f"{rows} option-tied results across {len(published)} options, every number present in that roadmap's clinical text; "
       f"{groups} reviewed source-study groups (numbers traced) on {len(payload['references'])} HCC options; asset in sync.")

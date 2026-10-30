@@ -354,6 +354,21 @@
     "Local recurrence at an ablated site in 7 of 63 patients (11%), a per-lesion local recurrence rate of 6.3%"
    ]
   },
+  "17941009": {
+   "label": "Gleisner synchronous liver mets",
+   "design": "Cohort",
+   "arms": "Cohort · Johns Hopkins, 22 synchronous liver resections with primary",
+   "result": "Median survival 5.9 months after synchronous liver resection vs 5.6 with bypass alone and 14.2 months for resected non-metastatic disease",
+   "caution": "Abstract only; pre-modern chemotherapy; small low-volume subgroup (1.4% of resections)",
+   "quotes": [
+    "Johns Hopkins, 22 synchronous hepatic resections (17 pancreatic, 5 other periampullary).",
+    "Results: Median survival 5.9 vs 5.6 months with bypass alone.",
+    "Limits: Pre-modern chemotherapy.",
+    "Gleisner 2007 · synchronous liver metastases Abstract only; full text pending.",
+    "14.2 months for patients with no metastatic disease",
+    "22 patients (1.4%) underwent simultaneous hepatic resection"
+   ]
+  },
   "18008357": {
    "label": "Livraghi",
    "design": "Cohort",
@@ -440,6 +455,21 @@
     "Median OS 10.7 versus 7.9 months; HR 0.69 (0.55–0.87). Radiologic time to progression 5.5 versus 2.8 months, HR 0.58; this is not PFS. ORR 2% versus 1%",
     "Historical placebo comparison, not a comparison with current ICI combinations",
     "97% Child-Pugh A"
+   ]
+  },
+  "18669451": {
+   "label": "Adam CRLM with nodal metastases",
+   "design": "Cohort",
+   "arms": "Cohort · 47 CRLM hepatectomies with lymphadenectomy after chemotherapy",
+   "result": "5-year OS 18% with vs 53% without nodal metastases; 25% pedicular vs 0% coeliac or para-aortic; justified if pedicular nodes respond or stabilise.",
+   "caution": "Small, older single-centre series; abstract-only reading.",
+   "quotes": [
+    "Single centre, 47 hepatectomies with lymphadenectomy. Nodes after chemotherapy.",
+    "Results: 5-year survival 25% pedicular vs 0% coeliac or para-aortic.",
+    "Limits: Small, older series.",
+    "with and without RLN involvement were 18% and 53%, respectively",
+    "All patients had received preoperative chemotherapy.",
+    "Combined liver resection and pedicular lymphadenectomy is justified when RLN metastases respond"
    ]
   },
   "18669577": {
@@ -816,6 +846,42 @@
     "79% for open ablation versus 31% for percutaneous (P=0.013)"
    ]
   },
+  "21937390": {
+   "label": "Hu · LT for iCCA",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · 20 iCCA transplants, single Chinese centre",
+   "result": "5-year survival 21.8% (tumour-free 18.8%); lymph node invasion, macrovascular invasion and multiple tumours independently predicted death",
+   "caution": "Small, older single-centre series (1999–2010); abstract-only reading",
+   "quotes": [
+    "Abstract only; full text pending.",
+    "Single-centre series, 20 transplants. Nodal invasion recorded.",
+    "Results: Nodal invasion an independent predictor of death.",
+    "Limits: Small, older series.",
+    "Between February 1999 and February 2010, 20 patients with ICC underwent liver transplantation.",
+    "Actuarial survival rate at 1, 2, 3 and 5 years",
+    "achieved 84.2%, 43.7%, 32.7% and 21.8%, respectively",
+    "Tumor-free survival at 1, 2, 3 and 5 years",
+    "was 55.6%, 43.2%, 28.8% and 18.8%, respectively",
+    "lymph node invasion, macrovascular invasion and multiple tumors were the independent predictors of survival"
+   ]
+  },
+  "22047762": {
+   "label": "Clavien · HCC LT consensus",
+   "design": "Consensus",
+   "arms": "Consensus · 19 expert working groups, independent jury; 37 statements",
+   "result": "LDLT only at experienced centres with donor–recipient double equipoise; an observation period such as 3 months may assess tumour behaviour before LDLT",
+   "caution": "2012 consensus; 3-month interval is a suggestion, not a validated threshold; predates SiLVER and ICIs",
+   "quotes": [
+    "Clavien 2012",
+    "Supports established LDLT expertise and donor-recipient double equipoise; informed donor evaluation remains independent of recipient benefit.",
+    "LDLT section describes considering an observation period such as 3 months to assess tumor behavior. It does not establish a universally mandatory minimum 3 months for every HCC LDLT candidate.",
+    "Immunosuppression conclusions predate the completed SiLVER trial and modern ICI cohorts.",
+    "19 working groups of experts prepared evidence-based reviews according to the Oxford classification",
+    "An independent jury of nine members was appointed",
+    "This report presents the final 37 statements and recommendations",
+    "2012 consensus predates modern immunotherapy; current allocation policy governs actual exceptions."
+   ]
+  },
   "22290335": {
    "label": "Darwish Murad 2012",
    "design": "Retrospective cohort",
@@ -1037,6 +1103,34 @@
     "Three-month mortality 10%. Five-year OS 52% measured from LT, versus 73% measured from liver-metastasis diagnosis; five-year DFS 30%. Post-2000 five-year OS 59%. Poor differentiation, hepatomegaly and concurrent major resection were adverse"
    ]
   },
+  "23532111": {
+   "label": "Hasegawa node-positive HCC",
+   "design": "Registry cohort",
+   "arms": "Registry cohort · 14,872 Japanese HCC resections, 112 node-positive",
+   "result": "3-year OS 38.9% with resected nodal metastases vs 51.6% node-negative IVA and 27.2% IVB; adjusted risk similar to IVA (IVA vs node-positive HR 0.88).",
+   "caution": "Pre-immunotherapy era; surgeon-selected patients; median follow-up 20.6 months; abstract-only reading.",
+   "quotes": [
+    "Japanese national survey, 14,872 resections. 112 with pathologically proven nodal metastasis.",
+    "Results: 3-year survival 38.9% (nodal) vs 27.2% (distant stage IVB).",
+    "Limits: Pre-immunotherapy era; surgeon-selected patients.",
+    "stage n1, and stage IVB were 51.6%, 38.9% and 27.2%",
+    "similar impact on the survival as stage n1 (hazard ratio: 0.88",
+    "The median follow-up period was 20.6 months."
+   ]
+  },
+  "23737695": {
+   "label": "Cancer Care Ontario guideline",
+   "design": "Guideline",
+   "arms": "Guideline · CRLM with lung, portal nodal or other extrahepatic disease",
+   "result": "Combined or staged metastasectomy when all lung metastases can be removed; routine liver resection not recommended with portal nodal or nonpulmonary EHD.",
+   "caution": "Archived December 2020; evidence to January 2010; based on non-comparative series.",
+   "quotes": [
+    "Cancer Care Ontario guideline (archived December 2020; evidence to January 2010). Liver and lung metastases.",
+    "Results: Combined or staged metastasectomy recommended when all lung metastases can be removed; liver resection may follow a prior lung resection; routine liver resection not recommended with portal nodal disease.",
+    "Limits: Archived; non-comparative series.",
+    "Routine liver resection is not recommended in patients with nonpulmonary ehms."
+   ]
+  },
   "23811303": {
    "label": "Vouche · radiation lobectomy",
    "design": "Retrospective cohort",
@@ -1186,6 +1280,21 @@
    "quotes": [
     "Prospective SECA-I cohort, 21 recipients; recurrence-pattern analysis with re-review of pre-transplant chest CT.",
     "Thirteen of 16 single-site first recurrences were pulmonary; on retrospective review, 7 recipients already had untreated pulmonary metastases at transplantation and 6 were among the longest survivors."
+   ]
+  },
+  "24384494": {
+   "label": "Frilling · NELM consensus",
+   "design": "Consensus",
+   "arms": "Consensus · 15 expert working groups and an independent jury on NELM",
+   "result": "LT rests on low-quality evidence; excludes poor differentiation, non-portal primary, extrahepatic disease except perihilar nodes, severe carcinoid heart disease",
+   "caution": "2012 consensus; LT selection criteria not prospectively validated; predates modern NET systemic therapy",
+   "quotes": [
+    "2012 London multidisciplinary consensus with systematic searches through October 2012, published 2014; not a new LT cohort.",
+    "LT recommendations rest on low-quality observational evidence. The paper explicitly says proposed NET selection criteria were not prospectively validated; downstaging had not been assessed.",
+    "Historical LT section lists poor differentiation, non-portal primary, extrahepatic disease except perihilar nodes, and severe carcinoid heart disease among exclusions.",
+    "therapeutic discussion predates CLARINET, NETTER-1, CABINET and modern WD G3/NEC differentiation.",
+    "for which 15 expert working groups prepared evidence-based assessments addressing specific questions",
+    "from which an independent jury derived final recommendations"
    ]
   },
   "24441817": {
@@ -1408,6 +1517,19 @@
     "In the subset with 12 or more nodes examined (n = 150) the N1 and N0 curves converged"
    ]
   },
+  "25789941": {
+   "label": "Andres LiverMetSurvey liver+lung",
+   "design": "Registry cohort",
+   "arms": "Registry cohort · 149 liver + lung resections vs 9,185 liver-only",
+   "result": "Adjusted 5-year survival similar after liver + lung resection and liver-only (44.5% vs 51.5%); 14.3% when lung disease was not resected.",
+   "caution": "Registry, non-randomised; resected liver + lung patients a selected minority; abstract-only reading.",
+   "quotes": [
+    "LiverMetSurvey registry. 149 liver plus lung resections vs 9,185 liver-only.",
+    "Results: Adjusted 5-year survival 44.5% vs 51.5%; 14.3% when lung disease was not resected.",
+    "Limits: Registry; selected minority.",
+    "SLLM was defined as liver and lung metastases diagnosed 3 months or less apart."
+   ]
+  },
   "25793719": {
    "label": "Recurrence after resection",
    "design": "Retrospective cohort",
@@ -1595,6 +1717,19 @@
     "Approximately 35 cases of cholangiocarcinoma associated with VMC have been reported in the literature since the 1960s"
    ]
   },
+  "26555945": {
+   "label": "SiLVER · Geissler",
+   "design": "Phase 3 RCT",
+   "arms": "Phase 3 RCT · 525 HCC LT recipients, sirolimus vs mTOR-free regimen",
+   "result": "No long-term RFS benefit: 70.2% sirolimus vs 64.5% mTOR-free (HR 0.84, 0.62–1.15; p=0.28); OS not different; apparent benefit only in first 3–5 years",
+   "caution": "Open-label, randomized 4–6 weeks after LT; low-risk and age ≤60 benefits are exploratory subgroups",
+   "quotes": [
+    "In the SiLVER randomized trial (n = 525, randomized 4-6 weeks post-transplant) the primary endpoint of recurrence-free survival was NOT met: 64.5% without sirolimus versus 70.2% with sirolimus (p = 0.28; HR 0.84, 95% CI 0.62-1.15). Overall survival also did not differ (HR 0.81, 95% CI 0.58-1.13). A benefit was apparent only across the first 3-5 years. The greater apparent benefit in low-risk (within-Milan) recipients and in recipients aged 60 or under comes from exploratory subgroup analyses that were neither powered nor corrected for multiplicity",
+    "Open-label international randomized immunosuppression trial: 525 LT recipients with HCC randomized at 4–6 weeks after LT, 264 mTOR-free versus 261 sirolimus-containing.",
+    "Recurrence-free survival was 64.5% in group A and 70.2% in group B",
+    "Sirolimus in LTx recipients with HCC does not improve long-term RFS beyond 5 years."
+   ]
+  },
   "26597365": {
    "label": "Sadot 2016",
    "design": "Retrospective cohort",
@@ -1762,6 +1897,20 @@
     "49 liver transplantations (64 initially identified in the registry)",
     "41/49 alive and well at reported follow-up; three fatal HCC recurrences.",
     "Three deaths within 90 days and five retransplantations."
+   ]
+  },
+  "27017160": {
+   "label": "Hadden CRLM + EHD meta-analysis",
+   "design": "Meta-analysis",
+   "arms": "Meta-analysis · 52 studies, 15,144 CRLM resections (2,308 with EHD)",
+   "result": "5-year survival after resection with EHD: lung 26%, peritoneum 17%, nodes 15%; R0 at both sites lowered the risk of death (RR 0.73).",
+   "caution": "Proportional meta-analysis of selected series; nodal locations pooled.",
+   "quotes": [
+    "Meta-analysis, 52 studies, 15,144 patients (2,308 with extrahepatic disease). Synchronous or previous extrahepatic disease resected with the liver.",
+    "Results: 5-year survival: lung 26% (15–39%), peritoneum 17%, nodes 15%; R0 at both sites lowered the risk of death (RR 0.73).",
+    "Limits: Nodal locations pooled; selected series.",
+    "Proportional meta-analyses and relative risk of death before five years",
+    "rejects the notion that EHD is an absolute contraindication to resection"
    ]
   },
   "27085809": {
@@ -1936,6 +2085,20 @@
     "while predominant histologic type failed (p = 0.39)"
    ]
   },
+  "27647626": {
+   "label": "DiMartini A2ALL-2 donor finances",
+   "design": "Prospective cohort",
+   "arms": "Prospective cohort · 271 A2ALL-2 liver donors surveyed to 24 months",
+   "result": "Cumulatively 75% had nonmedical out-of-pocket costs, 45% lost wages and 44% found costs burdensome; burden 39.6% at three months, 19.4% at two years",
+   "caution": "Self-report; variable denominators and attrition; selected English-only donors; two-year horizon",
+   "quotes": [
+    "Prospective A2ALL-2 interviews: 271/297 eligible donors, before and through 24 months after donation.",
+    "Cumulatively 75% reported nonmedical out-of-pocket expenses, 45% lost wages, 37% uncovered medical expenses and 44% burdensome costs at ≥1 assessment. Burden was 39.6% at three months (99/250) and 19.4% at two years (27/139).",
+    "Do not infer: Self-report, variable denominators, administrative censoring/attrition, English-only selected donors and two-year horizon.",
+    "Relationship changes were positive overall across postdonation time points",
+    "Living liver donation carried substantial financial burden"
+   ]
+  },
   "27693645": {
    "label": "Three-guideline comparison",
    "design": "Retrospective cohort",
@@ -1962,6 +2125,21 @@
     "rests on 4 studies and 128 patients"
    ]
   },
+  "27777223": {
+   "label": "Eldridge CONSORT pilot extension",
+   "design": "Guideline",
+   "arms": "Guideline · reporting checklist, randomised pilot/feasibility trials",
+   "result": "26-item checklist adds participant identification and consent, prespecified progression criteria to a definitive RCT, unintended consequences, ethics approval",
+   "caution": "Reporting guideline, no outcome data; not directly for nonrandomised or phase II pilots; LT use extrapolates",
+   "quotes": [
+    "CONSORT pilot principles are adapted here, not a direct validation of single-arm transplant trial design.",
+    "This article includes the 26 item checklist",
+    "non-randomised pilot and feasibility studies, or phase II studies",
+    "Reporting guideline for randomized external pilot/feasibility trials: prespecify feasibility objectives, progression criteria, sample-size rationale, screened/eligible/treated/analyzed flow, uncertainty, harms, protocol changes, registration and ethics approval.",
+    "The authors explicitly exclude direct application to nonrandomized/phase II designs;",
+    "adapting principles is local methodological extrapolation."
+   ]
+  },
   "27824027": {
    "label": "ERCP vs EUS",
    "design": "Meta-analysis",
@@ -1972,6 +2150,21 @@
     "mean sensitivity for tissue diagnosis was 75% (SD 19.87) for EUS-FNA versus 49% (SD 2.64) for ERCP-based sampling; specificity 100% (SD 0) versus 96.33% (SD 6.35)",
     "negative predictive value was only 47% (SD 14.73) and 34% (SD 24.63) respectively",
     "only 3 of the 8 applied both tests to the same patients and the pooled pre-test probability of malignancy was 76.66%"
+   ]
+  },
+  "27856064": {
+   "label": "Hackert M1 resection",
+   "design": "Cohort",
+   "arms": "Cohort · Heidelberg, 128 PDAC resections with liver or ILN metastases",
+   "result": "Median survival 12.3 months after M1 resection; 5-year survival 8.1% (liver), 10.1% (interaortocaval nodes); 30-day mortality 2.9% after synchronous resection",
+   "caution": "Abstract only; older era; no comparator; preoperative therapy and response selection not described",
+   "quotes": [
+    "Heidelberg, 128 M1 resections. Preoperative therapy and response selection not described in the abstract.",
+    "Results: 5-year survival 8.1% (liver) and 10.1% (interaortocaval nodes).",
+    "Limits: Older era.",
+    "Hackert 2016 · M1 resection Abstract only; full text pending.",
+    "Overall median survival after M1 resection was 12.3 months",
+    "30-day mortality after synchronous resection of M1 tumours were 45% and 2.9%"
    ]
   },
   "27932229": {
@@ -1997,6 +2190,22 @@
     "Symptomatic bleeding in 14% of patients; 3% developed HCC.",
     "size predicts bleeding found down a microscope but not bleeding that reaches a patient (P=0.29), and does not significantly predict malignancy (P=0.053), while subtype and sex do",
     "CTNNB1 exon 3 associated with the combined borderline/HCC endpoint (OR 9.3, 95% CI 4.4–20)"
+   ]
+  },
+  "28009741": {
+   "label": "Leung MSKCC hepatectomy + EHD",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · 219 hepatectomies with resected synchronous EHD",
+   "result": "5- and 10-year OS 28% and 10%; recurrence in 90.2%; no survivors beyond 3.5 years after incomplete extrahepatic resection.",
+   "caution": "Selected MSKCC series; true cure rare (disease-free at 10 years 3.2%); tables not available.",
+   "quotes": [
+    "MSKCC, 219 hepatectomies with resected extrahepatic disease. Synchronous disease, resected within 6 months.",
+    "Results: Portal vs retroperitoneal nodes: no survival difference (p=0.768); incomplete extrahepatic resection: no survivors beyond 3.5 years; disease-free at 10 years 3.2%.",
+    "Limits: Selected; tables not available.",
+    "Retrospective review of 219 patients",
+    "5, and 10-year overall survival were 34.4 months, 49%, 28%, and 10%",
+    "Disease recurred in 185 patients (90.2%)",
+    "but true cure is rare"
    ]
   },
   "28027599": {
@@ -2054,6 +2263,21 @@
     "Post-LT 5-year OS 79.5%; 37/149 recurred. Waiting ≤120 days associated with recurrence: Table 5 adjusted HR 2.5 (95% CI 1.2–5.3)",
     "Matched 5-year DFS: EHD 73.5% versus 81.6% without, P=.54. macrovascular invasion adjusted recurrence HR 4.9 (2.4–9.9); hilar nodes HR 2.2 (1.1–4.5).",
     "EHD comparison restricted to 23 matched pairs;"
+   ]
+  },
+  "28230639": {
+   "label": "Nashan mTOR review",
+   "design": "Review",
+   "arms": "Review · mTOR inhibitor immunosuppression after liver transplantation",
+   "result": "In H2304 (719 LT recipients), everolimus plus reduced tacrolimus improved renal function (80.9 vs 70.3 mL/min/1.73m2 at one year); SiLVER HCC endpoint negative",
+   "caution": "General LT review, not a NET/CRLM antirecurrence trial; several cited results were conference abstracts",
+   "quotes": [
+    "2018 narrative review of general LT mTOR immunosuppression; not a NET/CRLM antirecurrence trial.",
+    "Reported result: H2304 randomized 719 general LT recipients; everolimus plus reduced tacrolimus from day 30 improved estimated renal function versus standard tacrolimus. Review reports 80.9 versus 70.3 mL/min/1.73m2 at one year and discontinuation 25.7% versus 14.1%.",
+    "Review describes SiLVER HCC primary endpoint as negative",
+    "Several cited results were conference abstracts; no new independent trial data.",
+    "late conversion (>1 year) appears ineffective",
+    "not a NET/CRLM antirecurrence trial."
    ]
   },
   "28257902": {
@@ -2117,6 +2341,39 @@
     "Segmental n = 27: recurrence 9/27 (33.3%), five-year OS 50.3%, author-labelled DFS 63.9%. Lobar n = 7: recurrence 6/7 (85.7%), three-/five-year OS 14.3%/14.3%, DFS 14.3%/14.3%."
    ]
   },
+  "28513896": {
+   "label": "Spolverato NELM recurrence",
+   "design": "Cohort",
+   "arms": "Cohort · 322 curative-intent NELM operations; recurrence by site",
+   "result": "209 (64.9%) recurred; 10-year OS 42.5% intrahepatic-only vs 0% extrahepatic-only recurrence; 60.3% after repeat surgery",
+   "caution": "Abstract only; extrahepatic-only subgroup small (n = 19); treatment of recurrence selected, not randomised",
+   "quotes": [
+    "International, 322 NELM operations. Recurrence sites.",
+    "Results: 10-year survival 0% with extrahepatic-only recurrence.",
+    "Limits: Small subgroup.",
+    "Spolverato 2017 · recurrence after NELM surgery Abstract only; full text pending.",
+    "209 patients (64.9%) recurred",
+    "10-year OS: intrahepatic only, 42.5%",
+    "extrahepatic only (n = 19, 11.2%)",
+    "underwent repeat surgery or intra-arterial treatments was 60.3%"
+   ]
+  },
+  "28516291": {
+   "label": "Frigerio downstaged mPDAC",
+   "design": "Case series",
+   "arms": "Case series · Verona, 24 of 535 mPDAC resected after downstaging",
+   "result": "After liver metastases disappeared and CA19-9 fell: R0 88%, complete pathological response 17%, no postoperative deaths; OS 56 months",
+   "caution": "Abstract only; extreme selection (4.5% of metastatic patients); no comparator",
+   "quotes": [
+    "Verona, 24 of 535 metastatic PDAC. Disappearance of liver metastases and CA19-9 fall.",
+    "Results: R0 88%; complete pathological response 17%.",
+    "Limits: Extreme selection (4.5%).",
+    "Frigerio 2017 · downstaged metastatic PDAC Abstract only; full text pending.",
+    "there were no mortalities",
+    "OS and DFS was 56 and 27 months, respectively",
+    "This is supported by results of our retrospective study"
+   ]
+  },
   "28518415": {
    "label": "TAE systematic review",
    "design": "Systematic review",
@@ -2128,6 +2385,24 @@
     "41/49 (84%) avoided surgery",
     "Major complications occurred in 8/151 (5.3%)",
     "Median follow-up across the pooled series was 31 months"
+   ]
+  },
+  "28573685": {
+   "label": "Ramanan · pCCA LT infections",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · 124 pCCA LT recipients after Mayo protocol",
+   "result": "255 infections in 105/124 (84.7%); LDLT (HR 6.6), HAT and biliary stricture linked to infection; abdominal and C. difficile infections linked to death",
+   "caution": "Single-centre historical cohort; associations confounded by complications; not an immunosuppression trial",
+   "quotes": [
+    "Retrospective Mayo cohort of 124 pCCA recipients after neoadjuvant treatment and LT, 2004–2013",
+    "This is an infection cohort, not a randomized immunosuppression trial.",
+    "There were 255 infections in 105/124 patients (84.7%)",
+    "These are nonrandomized associations, not proof that LDLT causes infection.",
+    "Single center, historical practice, confounding by technical complexity and complications.",
+    "living donor transplantation (HR 6.6, P<.001)",
+    "hepatic artery thrombosis (HR 2.6, P=.005), biliary stricture (HR 3.8, P=.002)",
+    "Abdominal infections (HR 2.3, P=.02) and Clostridium difficile infections (HR 4.6, P=.01)",
+    "were independently associated with increased mortality"
    ]
   },
   "28580538": {
@@ -2271,6 +2546,20 @@
     "No complications occurred during the entire follow-up period"
    ]
   },
+  "28858392": {
+   "label": "Le Roy secondary resection iCCA",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · 74 locally advanced iCCA, chemotherapy first",
+   "result": "39 of 74 (53%) resected after chemotherapy; median survival 24.1 months vs 25.7 for initially resectable iCCA with surgery alone.",
+   "caution": "Single centre; locally advanced only, not metastatic; abstract-only reading.",
+   "quotes": [
+    "Single centre, 74 locally advanced iCCA. Locally advanced, not metastatic.",
+    "Results: 39 (53%) resected after chemotherapy, median survival 24.1 months (similar to upfront resection).",
+    "Limits: Locally advanced only.",
+    "The aim of this retrospective study",
+    "that of patients who had surgery alone was 25·7 months"
+   ]
+  },
   "28877981": {
    "label": "SHIP population MRCP",
    "design": "Prospective cohort",
@@ -2396,6 +2685,22 @@
     "Median tumour-volume doubling time 125 versus 130 days by diameter; five-year overall survival after first pulmonary resection 51% in the transplant group."
    ]
   },
+  "29196022": {
+   "label": "Partelli primary resection MA",
+   "design": "Meta-analysis",
+   "arms": "Meta-analysis · seven studies, 885 PanNEN with liver metastases",
+   "result": "Palliative primary resection linked to lower risk of death than non-surgical management (OR 0.38, 0.23–0.65); 252 of 885 resected",
+   "caution": "Abstract only; confounded observational data; secondary outcomes too poorly reported to pool",
+   "quotes": [
+    "Meta-analysis, 885 patients. Primary resection with unresectable liver metastases.",
+    "Results: Lower risk of death (OR 0.38, 0.23–0.65).",
+    "Limits: Confounded observational data.",
+    "Partelli 2017 · primary resection meta-analysis Abstract only; full text pending.",
+    "Seven studies were included.",
+    "of whom 252 (28%) underwent pPanNEN-R",
+    "a meta-analysis for the secondary outcomes was not performed"
+   ]
+  },
   "29360137": {
    "label": "Brunt 2018 consensus",
    "design": "Consensus",
@@ -2445,6 +2750,21 @@
     "Noninferiority trial, not proof of superior overall survival.",
     "Main portal-vein invasion, ≥50% liver occupation and bile-duct invasion were excluded.",
     "Focused summary from the existing systemic matrix"
+   ]
+  },
+  "29480952": {
+   "label": "Loveday · Toronto pCCA protocol",
+   "design": "Prospective cohort",
+   "arms": "Prospective cohort · 18 unresectable pCCA, chemoradiation then LT",
+   "result": "11/18 (61%) dropped out, six transplanted; ITT one-/two-year OS 70.6%/35.3%; post-LT one-/two-year OS 83.3%/55.6%; only one pCR in six explants",
+   "caution": "Very small single-centre series; high attrition; median recipient follow-up only 12.6 months",
+   "quotes": [
+    "In Toronto, 11/18 treated patients (61%) dropped out, six received LT and one remained waiting.",
+    "Prospective Toronto program, 2009–2015: 43 referred, 24 assessed in detail, 18 treated with neoadjuvant chemoradiation, six transplanted and one still awaiting LT.",
+    "ITT median OS was 16.4 months, with one-/two-year OS 70.6%/35.3%. Post-LT one-/two-year OS was 83.3%/55.6%.",
+    "Only one of six explants had pCR.",
+    "Very small single-center series, substantial all-pathway attrition, short recipient follow-up",
+    "median recipient follow-up was only 12.6 months."
    ]
   },
   "29485131": {
@@ -2533,6 +2853,22 @@
     "Prospective case series: 21 referrals, 12 accepted and six LT recipients.",
     "6 patients with locally advanced unresectable intrahepatic cholangiocarcinoma transplanted at a single centre",
     "Post-LT 1-/3-/5-year OS 100%/83.3%/83.3%; five-year CI 27.3–97.5. Three of six recurred, median 7.6 months; RFS 50%."
+   ]
+  },
+  "29560571": {
+   "label": "Chan cytoreduction with EHD",
+   "design": "Case series",
+   "arms": "Case series · 55 low-grade NET cytoreductions with extrahepatic mets",
+   "result": "Major morbidity 18%, mortality 3.6%; hormonal response 70%; 5-year OS 77% and 5-year PFS 51%",
+   "caution": "Abstract only; single centre, no comparator; 87% also had liver metastases",
+   "quotes": [
+    "Single centre, 55 cytoreductions with extrahepatic disease. 87% combined intra- and extrahepatic.",
+    "Results: Major morbidity 18%, mortality 3.6%.",
+    "Limits: No comparator.",
+    "Chan 2018 · cytoreduction with EHD Abstract only; full text pending.",
+    "cytoreductive surgery for grade 1 or 2 NETs with extrahepatic metastases",
+    "postoperative hormonal response occurred in 70% of patients",
+    "Five-year OS was 77% and 5-year PFS was 51%."
    ]
   },
   "29572896": {
@@ -2704,6 +3040,22 @@
     "15 of 27 endoscopic patients (56%) needed additional percutaneous drainage"
    ]
   },
+  "30218247": {
+   "label": "Xiang NF-NELM resection",
+   "design": "Cohort",
+   "arms": "Cohort · 332 resected NF-NELM; EHD vs none, primary resected vs not",
+   "result": "Extrahepatic metastasis independently linked to death (HR 3.9); 10-year OS 37.5% vs 69.3% without; primary resection not associated with OS",
+   "caution": "Abstract only; extrahepatic disease not split by treated vs untreated",
+   "quotes": [
+    "Multi-institutional, 332 NF-NELM. Resection.",
+    "Results: Extrahepatic metastasis HR 3.9 for death.",
+    "Limits: Not split by treated vs untreated.",
+    "Xiang 2018 · NF-NELM resection Abstract only; full text pending.",
+    "(10-year survival rate 37.5% vs. 69.3%, p = 0.002)",
+    "resection of the primary NET was not associated with OS",
+    "extrahepatic metastasis was independently associated with long-term risk of death"
+   ]
+  },
   "30251931": {
    "label": "LI-RADS v2018",
    "design": "Review",
@@ -2781,6 +3133,20 @@
     "Because HCC controls were deliberately matched 2:1 rather than sampled at true prevalence"
    ]
   },
+  "30568386": {
+   "label": "Au · post-LT HCC recurrence",
+   "design": "Review",
+   "arms": "Review · proposed MDT algorithm for HCC recurrence after LT",
+   "result": "Proposes MDT staging and local therapy for oligorecurrence; selected resection series report median survival ~28–65 vs 5–15 months with systemic therapy alone",
+   "caution": "Narrative review, sorafenib era; survival comparisons strongly selection-biased; overstates mTOR benefit",
+   "quotes": [
+    "Supports comprehensive staging, MDT review and consideration of surgery/ablation for technically treatable oligorecurrence with adequate organ reserve.",
+    "Selected resection series report median survival approximately 28–65 months versus 5–15 months with systemic treatment only, but the review explicitly acknowledges major selection bias",
+    "Older systemic-treatment era; do not import the paper's sorafenib-only pathway into a 2026 algorithm.",
+    "The review overstates some mTOR prevention conclusions relative to the long-term primary SiLVER endpoint",
+    "We hereby propose multi-disciplinary management with a systematic approach."
+   ]
+  },
   "30575490": {
    "label": "PRODIGE-24",
    "design": "RCT",
@@ -2792,6 +3158,37 @@
     "median overall survival 54.4 months (41.8-not reached) versus 35.0 months (28.7-43.9), stratified HR for death 0.64 (0.48-0.86), p = 0.003",
     "grade 3 or 4 adverse events in 180 of 237 (75.9%)",
     "age under 80 and CA19-9 below 180"
+   ]
+  },
+  "30610789": {
+   "label": "Saedon metastasectomy review",
+   "design": "Systematic review",
+   "arms": "Systematic review · 16 retrospective metastasectomy studies",
+   "result": "Ampullary primaries and isolated pulmonary recurrence had better prognosis than synchronous or liver metastases; insufficient evidence to change practice.",
+   "caution": "Abstract-only reading; all inputs retrospective and heterogeneous, with non-uniform survival reporting.",
+   "quotes": [
+    "Systematic review, 16 studies. Metastasectomy of pancreatic and periampullary cancer.",
+    "Results: Ampullary primaries and isolated pulmonary recurrence had better prognosis.",
+    "Limits: Low-quality inputs.",
+    "Sixteen studies were included in this review.",
+    "All the studies included were retrospective and heterogenous in nature",
+    "did not have a uniform reporting on survival outcomes",
+    "better prognosis than patients with synchronous metastasis or metastases to the liver",
+    "There is insufficient evidence to support a change of current practice"
+   ]
+  },
+  "30636895": {
+   "label": "Wang SEER metastatic ampullary",
+   "design": "Registry cohort",
+   "arms": "Registry cohort · 346 SEER metastatic ampullary, primary resection",
+   "result": "Primary-tumour resection vs none: matched median survival 16 vs 8 months; association strongest without chemotherapy (selection).",
+   "caution": "Primary resection, not metastasectomy after response; 90 matched patients; no metastatic-site data.",
+   "quotes": [
+    "SEER, 346 metastatic ampullary cancers. Primary-tumor resection; no metastatic-site or response data.",
+    "Results: Matched median survival 16 vs 8 months; association strongest without chemotherapy (selection).",
+    "Limits: Cannot support metastasectomy after response.",
+    "90 patients were screened by PSM",
+    "Propensity score matching (PSM) was performed to balance the characteristics"
    ]
   },
   "30665869": {
@@ -3284,6 +3681,20 @@
     "Patients had Child-Pugh liver class A disease,"
    ]
   },
+  "31818843": {
+   "label": "CSPAC-1 protocol (Wei)",
+   "design": "Phase 3 RCT",
+   "arms": "Phase 3 RCT protocol · ≤3 PDAC liver metastases after chemotherapy",
+   "result": "Protocol: SD/PR with CA19-9 fall >50% to <500 U/mL randomised 1:1 to synchronous resection vs standard chemotherapy; no results located",
+   "caution": "Protocol only; trial status unknown",
+   "quotes": [
+    "CSPAC-1 randomized trial protocol. ≤3 liver foci; randomization requires SD/PR and CA19-9 fall >50% to <500 U/mL.",
+    "Results: No results located.",
+    "Limits: Protocol; status unknown.",
+    "randomly assigned at a 1:1 ratio",
+    "The primary endpoint is real overall survival"
+   ]
+  },
   "31856076": {
    "label": "NANETS 2020 surgical",
    "design": "Consensus",
@@ -3445,6 +3856,20 @@
     "Liver transplantation may be valid in very selected patients [IV, B] if all hold"
    ]
   },
+  "32280473": {
+   "label": "Jiang resected cHCC-CC",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · 55 resected cHCC-CC, no distant metastasis",
+   "result": "Nodal metastasis (HR 6.95) and local extrahepatic invasion (HR 4.91) independently predicted worse survival; 5-year survival 16.4% overall.",
+   "caution": "Small single-centre series; survival by nodal status given only as hazard ratios, without numeric rates.",
+   "quotes": [
+    "Single-centre cohort, 55 resections; distant metastasis excluded. Nodal metastasis in 11 (20%).",
+    "Results: Nodal metastasis: survival HR 6.95 (2.15–22.44); local extrahepatic invasion HR 4.91; 5-year survival 16.4% overall.",
+    "Limits: Small; survival by nodal status shown only as curves and hazard ratios, without numeric rates.",
+    "by retrospectively reviewing the series of cHCC-CC after curative resection",
+    "were independent unfavorable prognostic factors for OS and RFS"
+   ]
+  },
   "32303439": {
    "label": "Yang 2020",
    "design": "Retrospective cohort",
@@ -3518,6 +3943,20 @@
     "local control after stereotactic radiotherapy in the liver was 50%, the worst of any site"
    ]
   },
+  "32573905": {
+   "label": "Midorikawa extrahepatic relapse",
+   "design": "Cohort",
+   "arms": "Cohort · 64 resectable extrahepatic HCC recurrences, surgery vs other",
+   "result": "Resection vs other therapies: median OS 5.3 vs 1.1 years; 5-year survival 60.5% vs 9.1%; intrahepatic disease absent or controlled.",
+   "caution": "Small, strongly selected, pre-immunotherapy; abstract-only reading.",
+   "quotes": [
+    "Comparison of 64 patients with extrahepatic recurrence and controlled liver disease. Nodes, adrenal, peritoneum, lung or brain; resectable.",
+    "Results: 5-year survival 60.5% with resection vs 9.1% without.",
+    "Limits: Small, strongly selected, pre-immunotherapy.",
+    "The median overall survival was 5.3 (95% CI, 2.5-8.8) and 1.1",
+    "intrahepatic recurrent HCC was absent or controlled by locoregional therapies"
+   ]
+  },
   "32615109": {
    "label": "XXL trial",
    "design": "RCT",
@@ -3542,6 +3981,21 @@
     "The institutional resection threshold migrated over the study period from 4 cm, to 5 cm, to non-steatotic adenomas over 5 cm plus all male patients",
     "Malignant transformation in 4/124 (3.2%), all beta-catenin-activated and all larger than 5 cm",
     "'None of the adenomas presented a significant regression' at 6 months of observation"
+   ]
+  },
+  "32671802": {
+   "label": "Tan · Mayo LT for pCCA review",
+   "design": "Review",
+   "arms": "Review · Mayo experience, 349 entered and 211 transplanted, 1993–2018",
+   "result": "ITT one-/five-/ten-year survival 80%/51%/46%, recipients 91%/69%/62%; PSC-associated pCCA fares better; late arterial/portal complication risk",
+   "caution": "Expert narrative on overlapping Mayo data; no randomized comparisons; PSC and de novo outcomes differ",
+   "quotes": [
+    "Narrative Mayo expert review with an updated 349-entry/211-LT program experience from 1993–2018; extensive overlap with prior Mayo reports, not an independent validation cohort.",
+    "Reported ITT one-/five-/ten-year survival was 80%/51%/46%; corresponding recipient survival was 91%/69%/62%. PSC and de novo outcomes differ substantially and should not be pooled without context.",
+    "Reported late arterial and portal-venous complication risks justify transplant vascular planning and surveillance.",
+    "Expert narrative, overlapping center data, treatment-era and selection effects, no randomized comparison",
+    "outcomes after liver transplantation for PSC-associated pCCA are superior to de novo pCCA",
+    "LDLT for de novo pCCA shows a trend toward more disease recurrence"
    ]
   },
   "32703081": {
@@ -3591,6 +4045,22 @@
     "Body-mass index fell from a mean of 41 to 28 after bariatric surgery (P=0.002)",
     "Spearman rho 0.78 (P=0.04)",
     "rho 0.46 (P=0.29)"
+   ]
+  },
+  "32787474": {
+   "label": "Zou PC + LM meta-analysis",
+   "design": "Meta-analysis",
+   "arms": "Meta-analysis · 9 studies, 746: PC + LM (221) vs PC alone (525)",
+   "result": "After curative surgery with intraperitoneal chemotherapy, PC + LM vs PC alone: worse OS (HR 1.68) and DFS (HR 1.82), more major morbidity (RR 1.47).",
+   "caution": "Observational inputs; abstract-only reading; comparator is isolated peritoneal disease.",
+   "quotes": [
+    "Meta-analysis, 9 studies, 746 patients. Peritoneal disease with vs without liver metastases.",
+    "Results: Overall survival HR 1.68 with liver metastases.",
+    "Limits: Observational.",
+    "746 patients (221 patients with PC + LM, 525 patients with PC)",
+    "disease-free survival (pooled HR 1.82",
+    "major postoperative morbidity (RR 1.47",
+    "curative surgery, including resections at both metastatic sites and synchronous intraabdominal chemotherapy"
    ]
   },
   "32818466": {
@@ -3667,6 +4137,21 @@
     "establishing roughly 97% technical success, 80% diagnostic yield, 83% accuracy and about 1% serious adverse events",
     "Versus conventional FNA, diagnostic yield improved with an OR of 4.79 (1.52-15.06; I2 = 87.42; P = 0.007)",
     "Versus conventional FNA, diagnostic accuracy gave an OR of 8.69 (1.12-67.12; I2 = 82.79; P = 0.038), from only 2 studies (one an abstract)"
+   ]
+  },
+  "33079246": {
+   "label": "Nitta para-aortic nodes, eCCA",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · 410 resected eCCA, 16 with para-aortic nodes",
+   "result": "Resected para-aortic N+ (16) vs unresected (9): median survival 33.7 vs 16.7 months; similar to regional node-positive (33.7 vs 36.0).",
+   "caution": "Very small subgroup; single centre; perihilar and distal mixed; abstract-only reading.",
+   "quotes": [
+    "Single centre, 410 resected extrahepatic CCA. 16 with para-aortic metastasis resected.",
+    "Results: Median survival 33.7 vs 16.7 months (resected vs unresected); not worse than regional node-positive.",
+    "Limits: Very small; perihilar and distal mixed.",
+    "The present retrospective study included 410 patients",
+    "These were compared to 9 patients in whom EHCC was not resected",
+    "(MST 33.7 vs 36.0 months, p=0.278)"
    ]
   },
   "33153555": {
@@ -3847,6 +4332,19 @@
     "25.9% (17.0-35.8) at 12 months with FOLFOX versus 35.5% (25.2-46.0) and 11.4% (5.6-19.5)",
     "The absolute difference in median overall survival is 0.9 months, 6.2 against 5.3, against grade 3 to 5 adverse events in 69% of the chemotherapy arm and three chemotherapy-related deaths",
     "Objective response was seen in only 4 of 81 patients (5%)"
+   ]
+  },
+  "33908381": {
+   "label": "Sposito · post-LT NET recurrence",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · 32 NET LT recipients with post-LT recurrence",
+   "result": "Survival from recurrence 76.3% at 5 and 45.5% at 10 years (median latency 82.9 months); recurrence within 24 months: 5-year OS 0% vs 89.5%",
+   "caution": "Small cohort; surgery vs other therapy 5-year OS 90.9% vs 64.5% (P=.062), unadjusted and not significant",
+   "quotes": [
+    "In Sposito et al., 32 patients with recurrence and at least 6 months of postrecurrence follow-up had median recurrence latency 82.9 months and 5-/10-year survival from recurrence of 76.3%/45.5%.",
+    "The seven early-recurrence cases (within 24 months) had five-year postrecurrence OS 0% versus 89.5% in 25 later recurrences",
+    "surgery versus other treatment was associated with 5-year postrecurrence survival of 90.9% versus 64.5% (P=.062), an unadjusted, non-significant overall comparison.",
+    "Selection, late-recurrence biology and resectability materially confound the results."
    ]
   },
   "33950167": {
@@ -4327,6 +4825,22 @@
     "CSPH, by an HVPG of 10 mmHg or more or by clinical manifestations of portal hypertension, is associated with higher risk of decompensation and mortality after liver resection for HCC"
    ]
   },
+  "35121522": {
+   "label": "Kruger PDAC lung metastases",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · 7 German centres, 115 lung-only PDAC metastases",
+   "result": "Median OS 20 months overall, 28 months for metachronous lung metastases after resection; metastasectomy 33.0 vs 19.0 months (n=24, unadjusted)",
+   "caution": "Retrospective; metastasectomy comparison small and unadjusted",
+   "quotes": [
+    "Seven German centres, 115 lung-only metastases.",
+    "Results: Metastasectomy 33.0 vs 19.0 months (n=24, unadjusted).",
+    "Limits: Retrospective.",
+    "115 M1-PUL PDAC patients from 7 participating centers",
+    "Median overall survival in the entire M1-PUL cohort was 20 months",
+    "the most favorable prognosis (median survival: 28 months)",
+    "metachronous lung metastases after previous curative-intent surgery"
+   ]
+  },
   "35164930": {
    "label": "CEUS LI-RADS meta",
    "design": "Meta-analysis",
@@ -4442,6 +4956,33 @@
     "Technical efficacy 97.4% of 38 adenomas",
     "Median follow-up 49.6 months",
     "Disease-free survival 100% at the first time point and 85.8% at subsequent time points"
+   ]
+  },
+  "35740555": {
+   "label": "Gül-Klein · IS in recurrent CCA",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · 67 CCA/mixed LT recipients, 44 recurrences",
+   "result": "Reduced immunosuppression after recurrence: median survival 16.7 vs 5.3 months (no reduction HR 4.19, 1.29–13.58); mTOR use not independently linked",
+   "caution": "Small nonrandomized cohort over >30 years; reduction not standardized; selection and fitness confound survival",
+   "quotes": [
+    "Historical single-center retrospective cohort, 1988–2022: 67 LT recipients (37 pCCA, 17 iCCA, 13 mixed HCC-CCA); 44 recurred.",
+    "Median post-recurrence OS was 16.7 months with RIM versus 5.3 months without it. Absence of RIM was associated with worse survival in the adjusted model (HR 4.19, 95% CI 1.29–13.58).",
+    "mTOR treatment before or after recurrence did not show an independent survival association.",
+    "Small, nonrandomized, >30-year mixed-disease cohort; treatment selection and performance-status confounding; RIM not standardized",
+    "Reduced IS after tumor recurrence improved survival (HR 4.2/CI: 1.3−13.6; p = 0.02)."
+   ]
+  },
+  "35758505": {
+   "label": "Hank Heidelberg conversion",
+   "design": "Cohort",
+   "arms": "Cohort · Heidelberg, 173 explored after chemotherapy for mPDAC",
+   "result": "93 resected (45 ypM0); median survival 25.5 months ypM0 vs 10.7 ypM1 vs 8.1 with exploration only; 46% unresectable at exploration",
+   "caution": "Single referral centre; no intention-to-treat denominator; selected responders",
+   "quotes": [
+    "Heidelberg, 173 explored after chemotherapy for metastatic PDAC. RECIST PR/CR of metastases plus a fall in CA19-9 and CEA, usually ≥6 cycles.",
+    "Results: 93 resected (45 ypM0); median survival 25.5 vs 10.7 vs 8.1 months; CA19-9 ≥400 HR 2.31; surgery ≥9 months after diagnosis HR 1.82.",
+    "Counsel: in Heidelberg, 46% were unresectable at exploration and only about 1 in 4 explored was ypM0; median survival 25.5 months (ypM0) vs 10.7 (ypM1) vs 8.1 (exploration only).",
+    "Limits: Single referral centre; no intention-to-treat denominator."
    ]
   },
   "35834226": {
@@ -4632,6 +5173,23 @@
     "Acute graft rejection occurred in 15 of 52 patients (28.8%)",
     "Seven patients, 13.4% of the whole cohort and 7 of the 15 who rejected, died of liver failure from rejection",
     "Disease control rate was 44.2% (23 of 52)"
+   ]
+  },
+  "36160651": {
+   "label": "Sposito · post-LT HCC recurrence",
+   "design": "Review",
+   "arms": "Review · treatment of HCC recurrence after LT (up to 20% of cases)",
+   "result": "Recurrence carries median survival ~12 months; surgery seems to benefit selected, especially late, recurrence; locoregional data small; ICIs risk rejection",
+   "caution": "Narrative review of small selected retrospective series; no proven adjuvant therapy or surveillance schedule",
+   "quotes": [
+    "No demonstrated optimal surveillance schedule.",
+    "No validated post-LT adjuvant anticancer regimen was established",
+    "Selection of later, limited, surgically accessible recurrence confounds treatment comparisons.",
+    "still occurs in up to 20% of cases, mostly within the first 2-3 years",
+    "the outcomes are poor with a median survival of 12 mo",
+    "Surgical treatment seems to provide a survival benefit, especially in case of late recurrence",
+    "the benefit of locoregional treatments has been suggested only in small retrospective studies",
+    "given the safety warnings for the risk of acute rejection"
    ]
   },
   "36175647": {
@@ -5127,6 +5685,22 @@
     "downstaging to within Milan over 3 to 6 months qualifies, with AFP above 1000 ng/mL required to fall below 500 (Level 2, Strong)"
    ]
   },
+  "37208566": {
+   "label": "Gudmundsdottir cytoreduction",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · Mayo, 546 cytoreductive hepatectomies for NETLM",
+   "result": "Extrahepatic metastases (16%) linked to worse OS, not PFS; median OS 122 months overall; major complications 20%; symptom relief 96% in functional disease",
+   "caution": "Single institution; tables unavailable at review; most recur or progress (median PFS 17 months)",
+   "quotes": [
+    "Mayo, 546 cytoreductive hepatectomies. Extrahepatic distant metastases in 16% (peritoneum, bone).",
+    "Results: Associated with worse overall survival, not progression-free survival; median survival 122 months overall.",
+    "Limits: Tables unavailable.",
+    "This retrospective single-institution analysis",
+    "Major complications occurred in 20%",
+    "symptomatic relief was achieved in 96%",
+    "progression-free survival was 17 months"
+   ]
+  },
   "37210451": {
    "label": "Hill technical series",
    "design": "Case series",
@@ -5216,6 +5790,24 @@
     "with only 2-3 cancers in those subgroups, incomplete ascertainment and a median of roughly 2.5 years of observation past the 5-year mark, it cannot exclude a clinically meaningful late risk"
    ]
   },
+  "37433437": {
+   "label": "NCCN Ampullary 1.2023",
+   "design": "Guideline",
+   "arms": "Guideline · NCCN ampullary adenocarcinoma, all stages",
+   "result": "Systemic therapy in all stages (neoadjuvant, adjuvant, advanced); radiation lacks high-level evidence; “select tumors may be treated surgically.”",
+   "caution": "Guideline summary read at abstract level; version-specific, re-verify against current NCCN before use.",
+   "quotes": [
+    "NCCN Ampullary 1.2023",
+    "NCCN ampullary guideline. Systemic therapy in all stages.",
+    "Results: “Select tumors may be treated surgically.”",
+    "Limits: Guideline summary.",
+    "Every criterion drawn from OPTN policy, drug labelling, NCCN or a device authorisation must be re-verified against the current source before any use.",
+    "Systemic therapy is used in all stages of ampullary cancer",
+    "including neoadjuvant therapy, adjuvant therapy, and first-line or subsequent-line therapy",
+    "there is no high-level evidence to support its utility",
+    "Select tumors may be treated surgically."
+   ]
+  },
   "37471075": {
    "label": "New EPOC biomarker",
    "design": "Translational study",
@@ -5268,6 +5860,20 @@
     "Twelve-month downstaging: 67% versus 83%. Three-year entry survival: 58% versus 69%; approximately 30% in all-comers with Child-Pugh B/C or AFP ≥500. LT occurred in 20/82 versus 85/229"
    ]
   },
+  "37555110": {
+   "label": "Kim · cHCC-CC LT, Korea",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · 111 cHCC-CC LT (nine centres) vs HCC LDLT",
+   "result": "Recurrence 44.1% vs 19.1% in HCC; first recurrence extrahepatic-only in 37 of 49; tumour >3 cm predicted death",
+   "caution": "Diagnosis on explant, not a selected pre-LT cohort; nodal signal rests on 3 patients",
+   "quotes": [
+    "Nine-centre cohort, 111 transplant recipients with cHCC–CC. Diagnosis on explant; nodal metastasis in 3.",
+    "Results: Recurrence 44.1% vs 19.1% in HCC; first recurrence extrahepatic-only in 37 of 49.",
+    "Limits: Nodal signal rests on 3 patients.",
+    "Only a maximum tumor size > 3 cm was a predisposing factor for death.",
+    "collected for a nine-center retrospective review"
+   ]
+  },
   "37578384": {
    "label": "ENETS 2023 functioning panNET",
    "design": "Guideline",
@@ -5317,6 +5923,23 @@
     "median overall survival 11.1 months (95% CI 10.0-12.1) with NALIRIFOX versus 9.2 months (8.3-10.6) with nab-paclitaxel plus gemcitabine, HR 0.83 (95% CI 0.70-0.99), p=0.036",
     "median progression-free survival 7.4 months (6.0-7.7) versus 5.6 months",
     "544 deaths at median follow-up 16.1 months"
+   ]
+  },
+  "37760542": {
+   "label": "Wassmer ICI and LT review",
+   "design": "Review",
+   "arms": "Review · ICI before and after LT; case reports and series",
+   "result": "Advises a three-month washout between ICI therapy and LT to reduce acute rejection; avoid ICIs after LT where possible, especially early.",
+   "caution": "Narrative review of case reports and series; no prospective data; abstract-only reading.",
+   "quotes": [
+    "after LT, do not automatically use the nontransplant ICI combinations because of rejection and graft-loss risk.",
+    "After LT, do not automatically apply the nontransplant ICI matrix. Rejection and graft-loss risk require transplant/oncology assessment and an explicit exceptional-use decision",
+    "A three-month washout period is desirable between ICI therapy and liver transplantation",
+    "to reduce the risk of acute rejection",
+    "Whenever possible, ICIs should be avoided after liver transplantation",
+    "and especially so early after a transplant",
+    "We analyze the available case reports and case series",
+    "more robust prospective data in the field are required"
    ]
   },
   "37770126": {
@@ -5411,6 +6034,36 @@
     "the pivotal surgical thresholds carry level 3 evidence, the follow-up schedule carries level 5"
    ]
   },
+  "37890597": {
+   "label": "de Jong · EUS before pCCA LT",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · 75 Dutch pCCA LT candidates screened with EUS",
+   "result": "EUS sampling found malignant nodes in 3 of 75 (4%); later surgical staging found non-regional nodal metastases in 6 of 43 (14%)",
+   "caution": "Small retrospective cohort; abstract-only reading; nodes sampled at endoscopist's discretion",
+   "quotes": [
+    "Abstract only; full text pending.",
+    "Dutch nationwide screening cohort, 75 patients. Any malignant node precludes further screening.",
+    "Results: EUS sampling found malignant nodes in 3 of 75; surgical staging found non-regional malignant nodes in 6 of 43.",
+    "Limits: Small.",
+    "confirming malignancy in LNs in 3 of 75 (4%) patients",
+    "nonregional LNs with malignancy were identified in 6 (14%) patients",
+    "sampling of a \"suspicious\" nonregional LN was performed based on the endoscopist's discretion"
+   ]
+  },
+  "37986552": {
+   "label": "Wu · pCR on CCA LT protocols",
+   "design": "Meta-analysis",
+   "arms": "Meta-analysis · 15 studies, 315 CCA recipients on LT protocols",
+   "result": "Pooled pCR 32% (95% CI 19–49): Mayo 46%, SBRT 9%; pCR not associated with OS; pooled 3-/5-year OS 72%/61%",
+   "caution": "Transplanted-only, mixed pCCA/iCCA; small nonrandomized subgroups; ecological meta-regression",
+   "quotes": [
+    "A meta-analysis of 15 studies/315 recipients estimated explant pCR at 32% (95% CI 19–49), with substantial heterogeneity and some mixed iCCA populations.",
+    "Mayo subgroup pCR was 46% (31–61), SBRT 9% (1–44), and other regimens 33% (13–63).",
+    "Study-level pCR was not associated with OS in meta-regression.",
+    "Transplanted-only selection; mixed pCCA/iCCA populations; small and nonrandomized regimen subgroups; center overlap addressed imperfectly; ecological meta-regression",
+    "Pooled 3- and 5-year OS among all studies was 72% and 61%, respectively."
+   ]
+  },
   "38015261": {
    "label": "Han 2023 recurrence timing",
    "design": "Retrospective cohort",
@@ -5447,6 +6100,23 @@
     "Goudsmit 2023 — Survival benefit from liver transplantation for patients with and without hepatocellular carcinoma.",
     "UNOS 2010–April 2019, adult first-LT population",
     "Mean five-year estimated benefit was 2.30 years for non-HCC, 1.19 for T2 HCC and 1.45 for initially outside-Milan HCC."
+   ]
+  },
+  "38055245": {
+   "label": "Gorji transplant oncology review",
+   "design": "Review",
+   "arms": "Review · liver transplant for primary and secondary liver malignancies",
+   "result": "Narrative review: transplant may suit well-selected primary and secondary liver cancers; a useful historical synthesis, not current allocation guidance",
+   "caution": "Older allocation sources, outdated for 2026; some cited outcomes misstated (NET era survival, SECA-II DFS)",
+   "quotes": [
+    "Narrative review; no new patient cohort or meta-analysis.",
+    "Reported result: Useful historical synthesis, not a substitute for current allocation guidance or primary trial denominators.",
+    "The paper says no iCCA/CRLM MELD exceptions and uses older allocation sources: outdated for 2026.",
+    "NET ELTR sentence p 216 reverses pre-/post-2000 five-year OS (46% versus 59%)",
+    "SECA-II DFS labels p 215 use 1/3/5 years although the primary paper reports 1/2/3 years",
+    "Transplant may be a suitable treatment option for primary and secondary hepatic malignancies",
+    "in well-selected patient populations",
+    "A cross-tumor transplant review is context—not a current eligibility policy"
    ]
   },
   "38059651": {
@@ -5587,6 +6257,21 @@
     "explicitly 'based on author consensus'"
    ]
   },
+  "38467379": {
+   "label": "Choi SABR oligometastatic HCC",
+   "design": "Single-arm phase 2",
+   "arms": "Single-arm phase 2 · 40 controlled HCC with 1–5 metastases, SABR",
+   "result": "SABR to all metastases: 2-year OS 80% but 2-year PFS 0% (median PFS 5.3 months); no grade 3+ toxicity.",
+   "caution": "Single arm, short follow-up (median 15.5 months); abstract-only reading.",
+   "quotes": [
+    "Phase II trial, 40 patients with controlled HCC and 1–5 metastases. Stereotactic ablative radiotherapy to all metastases.",
+    "Results: 2-year survival 80%; 2-year progression-free survival 0%.",
+    "Limits: Single arm, short follow-up.",
+    "Median PFS was 5.3 months",
+    "with no grade 3+ toxicity",
+    "After a median follow-up of 15.5 months"
+   ]
+  },
   "38488934": {
    "label": "Bai · adjuvant RT vs TACE",
    "design": "RCT",
@@ -5639,6 +6324,37 @@
     "rising to 19 of 29 (66 per cent) by 6 months. Across surgery, device and chemotherapy, 14 of 31 (45 per cent) had a grade 3 or worse event in the first two cycles."
    ]
   },
+  "38679630": {
+   "label": "Zhang conversion surgery, EHM",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · 150 HCC with EHM and intrahepatic PR/CR",
+   "result": "Surgery vs none after response: median OS 16.5 vs 11.3 months; PFS not different; only 8 of 26 operated patients had metastases removed.",
+   "caution": "Immortal-time bias; operated patients more often oligometastatic; counts inconsistent.",
+   "quotes": [
+    "15-centre cohort, 150 patients with extrahepatic metastases whose intrahepatic tumor reached partial or complete response (mRECIST). Only 8 of 26 operated patients had their metastases removed; 85% had partial (not complete) response of extrahepatic disease.",
+    "Results: Median survival 16.5 vs 11.3 months from response (surgery vs none); progression-free survival not different.",
+    "Limits: Immortal-time bias; operated patients more often oligometastatic; counts inconsistent.",
+    "We retrospectively collected data from 150 HCC patients with extrahepatic metastases",
+    "treated at 15 different centers"
+   ]
+  },
+  "38721015": {
+   "label": "Adam TransMet interim analysis",
+   "design": "Secondary analysis",
+   "arms": "Secondary analysis · TransMet RCT interim; 94 of 157 CRLM randomised",
+   "result": "38 of 47 allocated reached LT (81%) after median 51 days; nine did not, mainly progression; 3 of 38 retransplanted, one postoperative death",
+   "caution": "Unplanned interim analysis; feasibility among selected randomised patients, not all screened; no survival data",
+   "quotes": [
+    "Unplanned interim safety/feasibility analysis of TransMet RCT; 157 evaluated, 94 randomized, 47 per arm, 38 protocol-LT recipients.",
+    "38/47 reached LT after median 51 days; nine did not, including three occult metastatic nodes at laparotomy and one new prostate cancer. Eighty-one percent feasibility applies to selected/randomized candidates, not all screened.",
+    "Three of 38 retransplanted; one of 38 postoperative deaths.",
+    "Unplanned interim analysis, incomplete long-term endpoint reporting",
+    "the feasibility of LT was 81%",
+    "Three of the 38 transplanted patients (8%) were re-transplanted",
+    "one of whom (3%) died post-operatively from multi-organ failure",
+    "failed to undergo transplantation because of intercurrent disease progression"
+   ]
+  },
   "38728364": {
    "label": "TRICE",
    "design": "RCT",
@@ -5650,6 +6366,20 @@
     "R0/R1 resection with or without radiofrequency ablation or SBRT in 54.2% (39/72) versus 52.7% (39/74)",
     "median progression-free survival was 11.8 months with the triplet versus 13.4 months with the doublet",
     "designed assuming a doublet response of 60 percent when the doublet actually achieved 79.7"
+   ]
+  },
+  "38822227": {
+   "label": "Yabushita conversion surgery BTC",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · 56 conversion resections, locally advanced BTC",
+   "result": "Clavien–Dindo ≥III 60.7%; postoperative mortality 8.9%; 5-year survival 39.1% (median 37.7 months from start of initial treatment).",
+   "caution": "No non-operated denominator; selected Japan–Korea multicentre series; abstract-only reading.",
+   "quotes": [
+    "Japan–Korea multicentre, 56 conversion operations (biliary). Locally advanced.",
+    "Results: Clavien–Dindo ≥III 60.7%; postoperative mortality 8.9%; 5-year survival 39.1%.",
+    "Limits: No non-operated denominator.",
+    "We retrospectively collected clinical data from groups of patients in multiple centers",
+    "in all 56 patients who underwent conversion surgery was 37.7 months"
    ]
   },
   "38833301": {
@@ -5852,6 +6582,19 @@
     "an audit of 127 177Lu-Dotatate administrations at a single centre between October 2018 and February 2024, in which no carcinoid crisis occurred"
    ]
   },
+  "39274193": {
+   "label": "Mahuron NETLM with EHD",
+   "design": "Registry cohort",
+   "arms": "Registry cohort · California, 327 NETLM with extrahepatic disease",
+   "result": "Liver resection (n=23): 5-year survival 78%; non-surgical liver-directed therapy median 13 months vs 16 with none (not formally compared)",
+   "caution": "Univariate analysis; billing-code data; nodes not counted as extrahepatic; resected group small and selected",
+   "quotes": [
+    "California registry, 327 with extrahepatic disease. Nodes not counted as extrahepatic.",
+    "Results: Liver resection (n=23): 5-year survival 78%; non-surgical liver-directed therapy median survival 13 vs 16 months with none (not formally compared; the authors read liver-directed therapy favourably).",
+    "Limits: Univariate; billing codes.",
+    "Within the LDT group, 23 patients underwent liver resection."
+   ]
+  },
   "39279926": {
    "label": "Ye 2024",
    "design": "Retrospective cohort",
@@ -5887,6 +6630,21 @@
     "Brush cytology alone is 21-56% sensitive and intraductal biopsy 43-67%; combined, 70%",
     "decompressing more than 50% of viable liver",
     "only 56% to 57% of the panel accepted the drainage and stent statements completely and the volume rule assumes every sector is 30% of the liver"
+   ]
+  },
+  "39299553": {
+   "label": "Shin lung metastasectomy vs SBRT",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · 209 HCC lung oligometastases, resection vs SBRT",
+   "result": "2-year local control 98.2% (resection) vs 97.0% (SBRT); after weighting, 2-year PFS 23.0% vs 24.7% and OS 72.6% vs 83.0%, not significantly different.",
+   "caution": "Retrospective, propensity-weighted; no systemic-only comparator; abstract-only reading.",
+   "quotes": [
+    "Weighted comparison, 209 patients with lung oligometastases. Metastasectomy vs stereotactic radiotherapy.",
+    "Results: 2-year local control 98.2% vs 97.0% (unweighted); weighted 2-year progression-free survival 23.0% vs 24.7%.",
+    "Limits: No systemic-only comparator.",
+    "We retrospectively analyzed 209 patients with HCC with 322 metastatic lung lesions",
+    "and OS (72.6% vs 83.0%, P = .428) were not significantly different",
+    "Propensity score-based inverse probability of treatment weighting"
    ]
   },
   "39306468": {
@@ -5967,6 +6725,19 @@
     "Four of eight LT patients had tumors >10 cm versus 10% of non-LT patients."
    ]
   },
+  "39524972": {
+   "label": "Akahoshi JLCA/JSHBPS consensus",
+   "design": "Consensus",
+   "arms": "Consensus · 17-member Japanese expert panel on HCC resectability",
+   "result": "Grades HCC as resectable, BR1 or BR2; extrahepatic spread is basically BR2, localized spread (solitary node, P1, unilateral adrenal, few lung) could be BR1.",
+   "caution": "Surgeon-only panel; a classification, not a treatment recommendation; permissive (“could be”).",
+   "quotes": [
+    "Japanese expert consensus on oncological resectability (17 panelists). Statement 9 (15/17): extrahepatic spread is basically BR2; localized spread could be BR1 (solitary node at station 3, 8 or 12; P1 peritoneum; unilateral adrenal; few lung metastases).",
+    "Limits: Surgeon-only panel; a classification, not a treatment recommendation; permissive (“could be”); no response or interval criteria.",
+    "The criteria for oncological resectability in HCC are classified into three grades",
+    "These criteria aim to provide a common language"
+   ]
+  },
   "39526315": {
    "label": "Heo 2024 Korea",
    "design": "Retrospective cohort",
@@ -6003,6 +6774,19 @@
     "SYS-TARE 2024 — Liver Transplantation for Intrahepatic Cholangiocarcinoma After Chemotherapy and Radioembolization",
     "Prospective institutional SYS-TARE pathway; 13 entered, 4 LT, 9 dropout.",
     "Four recipients alive without recurrence at 73, 40, 12, 8 months; dropouts: three unrecovered intrahepatic progression, four with extrahepatic disease, two occult nodes."
+   ]
+  },
+  "39547997": {
+   "label": "Kasai · LDLT for NELM",
+   "design": "Review",
+   "arms": "Review · Japanese registry of 16 LDLT recipients for NELM",
+   "result": "Japanese registry: four of 16 LDLT recipients died within 90 days; median OS 58.4 months, five-year OS 50%; no consensus on LDLT indications",
+   "caution": "Historical series (none after 2012), narrative review; does not prove current LDLT safety or superiority",
+   "quotes": [
+    "Narrative review with descriptive JLTS LDLT registry data; 16 NET recipients, 14 transplanted in/before 2007, none after 2012.",
+    "four of 16 died within 90 days; median OS 58.4 months, five-year OS 50%.",
+    "Historical Japanese series does not prove current LDLT safety or superiority",
+    "no consensus has been reached on the indications or perioperative management of LDLT"
    ]
   },
   "39565488": {
@@ -6057,6 +6841,21 @@
     "82 of 512 (16.0%) versus 2 of 63 (3.2%), p = 0.01",
     "recurrence in R0-treated patients 5 of 62 (8.0%) versus 2 of 62 (3.2%), p = 0.07",
     "the matched analysis pairs the entire surgical population with a 1-in-9 selection of endoscopic patients"
+   ]
+  },
+  "39671534": {
+   "label": "SWOG S1815 (GAP vs GC)",
+   "design": "Phase 3 RCT",
+   "arms": "RCT · 441 advanced BTC: gem/cis/nab-paclitaxel vs gem/cis",
+   "result": "Adding nab-paclitaxel did not improve survival: median OS 14.0 vs 13.6 months (HR 0.91); PFS 7.5 vs 6.3 months; more toxicity",
+   "caution": "Open-label; 441 of 452 analysed; no transplant selection; iCCA subgroup OS 13.5 vs 13.6 months",
+   "quotes": [
+    "Median OS was 14.0 versus 13.6 months (HR 0.91, 95% CI 0.72–1.14; P=0.41); PFS was 7.5 versus 6.3 months",
+    "Multicenter open-label phase III trial",
+    "Of 452 randomized, 441 eligible participants were analyzed",
+    "The iCCA subgroup had median OS 13.5 versus 13.6 months",
+    "More toxicity was encountered with GAP versus GC.",
+    "randomized, open label phase III trial"
    ]
   },
   "39687036": {
@@ -6221,6 +7020,24 @@
     "patients without malignancy on final pathology had a threefold higher rate of major postoperative complications (45.6% vs 18.6%, p = 0.001)"
    ]
   },
+  "39834127": {
+   "label": "Ueberroth CRLM transplant review",
+   "design": "Review",
+   "arms": "Review · liver transplantation for colorectal liver metastases",
+   "result": "Narrative review: R0 primary, 6-12 months of chemotherapy, response and PET-CT restaging favour outcome; CEA ≤80 µg/L and tumour <5.5 cm prognostic",
+   "caution": "Narrative review; table errors (TransMet stable disease, timing-risk direction) need primary-source checking",
+   "quotes": [
+    "Narrative CRLM review; eight distinct primary cohorts plus overlapping follow-ups/cross-trial comparisons.",
+    "CEA 80 and lesion size 5.5 cm are prognostic associations",
+    "Table 1 simultaneously lists stable disease as inclusion and exclusion for TransMet",
+    "Table 2 reverses the direction of the <2-year timing risk. Do not copy table rules blindly.",
+    "primary tumor R0 resection, 6-12 months of pretransplantation chemotherapy",
+    "careful radiologic restaging (including positron emission tomography/computed tomography)",
+    "A carcinoembryonic antigen level ≤80 µg/L and largest liver tumor dimension <5.5 cm",
+    "A response to pretransplantation chemotherapy is a key predictor of long-term outcomes",
+    "CEA 80 and maximum lesion size 5.5 cm are prognostic features—not universal stand-alone gates."
+   ]
+  },
   "39837137": {
    "label": "D'Ambra meta-analysis",
    "design": "Meta-analysis",
@@ -6286,6 +7103,36 @@
     "All 36 pancreatic patients had KRAS wild-type disease"
    ]
   },
+  "39915735": {
+   "label": "METAPANC protocol (Ghadimi)",
+   "design": "Phase 3 RCT",
+   "arms": "Phase 3 RCT protocol · PDAC with ≤3 liver-only metastases",
+   "result": "Protocol: after 8 cycles mFOLFIRINOX, CR, PR or stable disease randomised to resection of primary and liver metastases vs 4 more cycles; no results yet",
+   "caution": "Protocol only; no results yet",
+   "quotes": [
+    "METAPANC randomized trial protocol. ≤3 liver metastases, no extrahepatic disease; 8 cycles mFOLFIRINOX; CR, PR or stable disease randomized.",
+    "Results: No results yet.",
+    "Limits: Protocol.",
+    "continuation of 4 cycles of the standard-of-care mFOLFIRINOX chemotherapy",
+    "resection of the primary tumor and liver metastases can improve overall survival"
+   ]
+  },
+  "39918658": {
+   "label": "Zhou conversion meta-analysis",
+   "design": "Meta-analysis",
+   "arms": "Meta-analysis · 96 studies, 466 initially unresectable BTC; 49.6% iCCA",
+   "result": "Conversion surgery linked to longer survival than non-surgical care (HR 0.39), similar to up-front resection (HR 1.02); 90-day mortality 4.3%",
+   "caution": "Case-report-based pooled data; strong selection; mostly locally advanced, only 19 of 55 iCCA metastatic",
+   "quotes": [
+    "Meta-analysis and pooled patient data, 466 patients (49.6% iCCA). Of 55 iCCA, 19 had metastatic disease before conversion, mostly nodal; most series are locally advanced only.",
+    "Results: Conversion associated with longer survival than non-surgical care (HR 0.39)",
+    "Limits: Case-report-based pooled data; strong selection.",
+    "(90-day mortality 4.3% pooled)",
+    "96 observational studies involving 466 patients",
+    "up-front surgery for resectable cancer (HR 1.02",
+    "The 90-day mortality rate was 4.3%"
+   ]
+  },
   "39936132": {
    "label": "Soliman 2025",
    "design": "Retrospective cohort",
@@ -6310,6 +7157,21 @@
     "Japanese nationwide survey: 263 of 20,853 new primary liver cancers (1.3%) were cHCC-CCA, but only 39 of those 263 were diagnosed pathologically",
     "Narrative review without systematic search or quantitative synthesis",
     "argues that cHCC-CCA is not yet an independent entity for treatment purposes"
+   ]
+  },
+  "39939239": {
+   "label": "Semaan · CCA LT with mTOR",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · 53 Houston LT recipients, 27 pCCA and 26 iCCA",
+   "result": "3-year OS 69.2%, RFS 57.4%; mTOR–OS association (HR 0.16) not confirmed in time-dependent analysis (HR 0.52, 0.19–1.43)",
+   "caution": "Small single-centre nonrandomized series; overlaps earlier Houston iCCA cohort; immortal-time bias",
+   "quotes": [
+    "Retrospective Houston Methodist cohort, 2008–2023: 53 LT recipients, 27 pCCA and 26 iCCA",
+    "Three-year OS was 69.2% (95% CI 56.9–84.2) and RFS 57.4% (43.7–75.4)",
+    "The optimized conventional Cox association between mTOR use and OS was HR 0.16 (0.06–0.45; p=.001). It was not confirmed when mTOR exposure was treated as time-dependent: OS HR 0.52 (0.19–1.43; p=.2)",
+    "Small, heterogeneous, nonrandomized cohort; stepwise model selection; post-LT exposure timing; overlapping Houston patients.",
+    "mTOR exposure starts after LT, creating an important timing/immortal-time problem in simple ever-treated comparisons.",
+    "Probabilities of OS and RFS at 3-years post-LT were 69.2%"
    ]
   },
   "39950525": {
@@ -6410,6 +7272,35 @@
     "In Moeckli, 15/30 and 6/23 recipients rejected in reported 0–30 and 30–50 day groups, versus 3/66 above 50 days."
    ]
   },
+  "40075720": {
+   "label": "Murakami conversion surgery BTC",
+   "design": "Cohort",
+   "arms": "Cohort · 101 unresectable BTC on chemotherapy; 20 converted to surgery",
+   "result": "5-year survival 55.0% with conversion vs 8.6% without (text; abstract 65.0% vs 4.3%); all 5 para-aortic cases node-negative at resection.",
+   "caution": "Single centre; mixed biliary subsites; immortal-time bias; abstract and text survival figures inconsistent.",
+   "quotes": [
+    "Single centre, 20 conversions of biliary cancer. 5 with para-aortic nodes; all 5 were negative on para-aortic sampling at conversion resection (in 3 the nodes had disappeared on imaging).",
+    "Results: One pCCA patient (para-aortic nodes cleared) had axial nodal recurrence 11 months after conversion.",
+    "Limits: Mixed subsites.",
+    "Single centre, 101 unresectable biliary cancers; 20 converted. 14 converted had distant disease (liver 6, para-aortic nodes 5, peritoneal 3).",
+    "Results: 5-year survival 55.0% with conversion vs 8.6% without, from the start of chemotherapy; recurrence 14 of 20.",
+    "Limits: Mixed biliary subsites; immortal-time bias; not iCCA-specific; the abstract gives 65.0% vs 4.3%, inconsistent with the text.",
+    "conversion surgery (65.0%) than in those who did not (4.3%"
+   ]
+  },
+  "40084343": {
+   "label": "Zhao lung metastasectomy MA",
+   "design": "Meta-analysis",
+   "arms": "Meta-analysis · 9 studies, 467 PDAC with lung metastases",
+   "result": "Pulmonary metastasectomy associated with better survival than chemotherapy alone (pooled HR 0.637, 0.531–0.764); significant publication bias",
+   "caution": "Mostly metachronous after pancreatectomy; survival timed from pancreatectomy (guarantee-time bias)",
+   "quotes": [
+    "Meta-analysis, 9 studies, 467 patients with lung metastases. Mostly metachronous after pancreatectomy; chemotherapy before lung resection uncommon.",
+    "Results: Pooled HR 0.637 (0.531–0.764); significant publication bias; survival from pancreatectomy.",
+    "Limits: Guarantee-time bias.",
+    "compared with patients who underwent only chemotherapy"
+   ]
+  },
   "40099404": {
    "label": "TESLA · Yaqub 2025",
    "design": "Single-arm trial",
@@ -6420,6 +7311,21 @@
     "Yaqub 2025 — Liver transplantation for locally advanced non-resectable intrahepatic cholangiocarcinoma treated with neoadjuvant therapy:",
     "Norwegian prospective early report; 7 referred, 6 enrolled, 5 LT.",
     "All five alive at 10–55 months; 2 recurrences at 12/13 months, both patients with >20 lesions. One HAT required re-LT; one occult 2-mm positive node."
+   ]
+  },
+  "40105312": {
+   "label": "Shindoh BR-HCC JSHBPS study",
+   "design": "Cohort",
+   "arms": "Cohort · 1,509 resected borderline-resectable HCC (BR1 718, BR2 791)",
+   "result": "5-year DSS 40.8%, 3-year RFS 19.7%; preceding systemic therapy linked to longer DSS in BR1 (HR 0.41), unclear in BR2.",
+   "caution": "Observational; no extrahepatic subgroup in the abstract; abstract-only reading.",
+   "quotes": [
+    "Nationwide Japanese study, 1,509 borderline-resectable HCC. BR1 as defined by the 2023 consensus, which includes localized extrahepatic spread; the number with extrahepatic spread is not given in the abstract.",
+    "Results: 5-year disease-specific survival 40.8%; 3-year recurrence-free survival 19.7%.",
+    "Limits: No extrahepatic subgroup in the abstract.",
+    "(BR1, n = 718 and BR2, n = 791)",
+    "Preceding systemic therapy was significantly correlated with a longer DSS (HR, 0.41",
+    "while its clinical significance was unclear in the patients with BR2 disease"
    ]
   },
   "40126570": {
@@ -6473,6 +7379,22 @@
     "PFS 30.8 months (25.4-NE) versus 30.3 (23.3-NE); no overall survival benefit was seen"
    ]
   },
+  "40317676": {
+   "label": "Kurimoto iCCA nodal areas",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · three centres, 84 node-positive iCCA resections",
+   "result": "Nodes beyond hepatoduodenal, common hepatic artery and peripancreatic area: median OS 13.3 vs 24.3 months (p=0.047); ≥4 vs 1–3 nodes 13.8 vs 25.4 months",
+   "caution": "Abstract only; small retrospective series; no chemotherapy response data",
+   "quotes": [
+    "Three centres, 84 node-positive resections.",
+    "Results: Nodes beyond the hepatoduodenal, common hepatic artery and peripancreatic area: median survival 13.3 vs 24.3 months (p=0.047).",
+    "Limits: No response data.",
+    "Kurimoto 2025 · iCCA nodal metastasis areas Abstract only; full text pending.",
+    "patients with 1-3 ILNs showed better OS",
+    "≥ 4 ILNs (25.4 vs. 13.8 months",
+    "were retrospectively analyzed"
+   ]
+  },
   "40349714": {
    "label": "CheckMate 9DW",
    "design": "RCT",
@@ -6484,6 +7406,22 @@
     "Objective response by blinded central review was 121 of 335 (36%) versus 44 of 333 (13%)",
     "Progression-free survival was not improved: median 9.1 months (95% CI 6.6 to 10.5) versus 9.2 months (7.9 to 11.1), hazard ratio 0.87 (0.72 to 1.06)",
     "the pre-specified piecewise hazard ratio was 1.65 (95% CI 1.12 to 2.43) in the first 6 months"
+   ]
+  },
+  "40372590": {
+   "label": "Taqi CRS/HIPEC + liver meta",
+   "design": "Meta-analysis",
+   "arms": "Meta-analysis · 17 retrospective studies, 988 with synchronous PC + LM",
+   "result": "CRS/HIPEC with liver-directed therapy: 3- and 5-year OS 47% and 37%; most had minor liver resection (90%) and limited PC (mean PCI 13).",
+   "caution": "Retrospective, selected series; pooled rates without a comparator; abstract-only reading.",
+   "quotes": [
+    "Meta-analysis, 17 studies, 988 patients. Synchronous peritoneal and liver metastases.",
+    "Results: CRS/HIPEC with liver treatment: 5-year survival 37%.",
+    "Limits: Retrospective, selected.",
+    "17 retrospective studies met the inclusion criteria, comprising a total of 988 patients",
+    "3- and 5-year OS rates of 47% and 37%, respectively",
+    "undergone minor liver resection (90%)",
+    "limited PC (mean peritoneal cancer index of 13)"
    ]
   },
   "40381735": {
@@ -6700,6 +7638,48 @@
     "locoregional recurrence as first event at 5 years 29.9% versus 40.9%"
    ]
   },
+  "40808313": {
+   "label": "Kulkarni · ICI and LT review",
+   "design": "Review",
+   "arms": "Narrative review · ICI before and after LT for HCC",
+   "result": "Supports individualized ICI use before LT, acknowledging rejection, infection and anti-VEGF wound-healing risk; ICI use should be selective, not ubiquitous",
+   "caution": "Narrative review of mixed small case series; some categorical statements exceed the cited evidence",
+   "quotes": [
+    "Supports individualized ICI use, acknowledgement of rejection, infection/decompensation and anti-VEGF wound-healing risk",
+    "Some categorical statements exceed the cited evidence",
+    "should therefore be selectively used in specific patients rather than being used ubiquitously"
+   ]
+  },
+  "40844852": {
+   "label": "Te · AASLD/AST graft guideline",
+   "design": "Guideline",
+   "arms": "Guideline · AASLD/AST adult LT graft management and immunosuppression",
+   "result": "Basiliximab may permit delayed CNI start (weak); advises against ATG induction; suggests mTOR only for HCC within Milan to improve RFS (weak)",
+   "caution": "Search ended September 2024; general LT guidance; HCC mTOR evidence should not be extrapolated to NET/CRLM",
+   "quotes": [
+    "Statement 25: basiliximab may permit delayed CNI initiation for renal recovery (Weak, Level 2); statement 26 advises against ATG induction (Strong, Level 2).",
+    "Statement 32 only suggests mTOR use for HCC WITHIN Milan to improve RFS up to three years (Weak, Level 3). It does not establish NET/CRLM recurrence reduction",
+    "Not a 2026 literature search: substantive search update ended September 2024.",
+    "Most immunosuppression and cancer evidence is indication-specific; do not extrapolate HCC benefit causally to NET/CRLM.",
+    "A multidisciplinary writing group of experts"
+   ]
+  },
+  "40889502": {
+   "label": "ZSAB-TransGOLP · Shi",
+   "design": "Single-arm phase 2",
+   "arms": "Single-arm phase 2 · 41 unresectable locally advanced BTC (GOLP)",
+   "result": "Tislelizumab + lenvatinib + GEMOX: R0 resection 63% (26 of 41); 68% underwent surgery; grade 3–4 TRAEs 49%; no treatment-related deaths",
+   "caution": "Single-arm, two Chinese centres; resection is a surrogate; not an LT or post-LT ICI safety study",
+   "quotes": [
+    "Conversion studies such as TransGOLP address a different population; neither establishes LT efficacy or post-LT ICI safety.",
+    "This single-arm, phase 2 study was conducted at two centres in China.",
+    "41 patients were enrolled and received the GOLP regimen",
+    "28 (68%) of 41 patients underwent surgery",
+    "the R0 resection rate was 63% (26 of 41 [95% CI 47-78])",
+    "grade 3-4 TRAEs occurred in 20 (49%) of 41 patients",
+    "No TRAE-related deaths occurred."
+   ]
+  },
   "40945523": {
    "label": "PREOPANC-2",
    "design": "RCT",
@@ -6722,6 +7702,36 @@
     "Prospective international DREAM diagnostic study at 21 centres",
     "Primary diagnostic analysis had 152 evaluable CT-plus-MRI disappearing lesions from 44 patients.",
     "Nonviability NPV was 62.5% (95/152; 90% CI 50.8–74.2), failing the prespecified >85% benchmark; CT-alone NPV 52.9%."
+   ]
+  },
+  "41056563": {
+   "label": "Fakhoury · TARE vs TACE bridging",
+   "design": "Registry cohort",
+   "arms": "Registry cohort · 8,367 OPTN HCC candidates, TARE vs TACE bridging",
+   "result": "TARE vs TACE: lower waitlist dropout (sHR 0.83, 0.74–0.93) and more complete necrosis (OR 2.24); no overall survival difference (HR 0.94, 0.85–1.03)",
+   "caution": "Registry with IPW; residual confounding by centre, tumour burden and access; sole-modality patients only",
+   "quotes": [
+    "Adult HCC-exception candidates listed during 2016–January 2024; 8,367 total: 5,472 TACE and 2,895 TARE.",
+    "TARE was associated with lower waitlist dropout: adjusted subdistribution HR 0.83 (95% CI 0.74–0.93).; Odds of complete pathologic necrosis were greater after TARE: OR 2.24 (95% CI 1.88–2.67).; No significant overall-survival difference: adjusted HR 0.94 (95% CI 0.85–1.03)",
+    "Residual confounding by center, era, technical suitability, tumor burden and access; selecting sole-modality recipients excludes treatment switchers",
+    "Inverse probability weighting (IPW) was applied to balance baseline covariates.",
+    "listed in the Organ Procurement and Transplantation Network (OPTN)"
+   ]
+  },
+  "41063730": {
+   "label": "Choi NCDB curative after ICI",
+   "design": "Registry cohort",
+   "arms": "Registry cohort · 4,329 NCDB HCC on first-line immunotherapy",
+   "result": "Curative treatment after immunotherapy (138, 3.2%) linked to longer survival: propensity-matched HR 0.22 in main text (0.20 in abstract).",
+   "caution": "Immortal-time and indication bias; modality not separated for the 15 distant and 10 nodal patients.",
+   "quotes": [
+    "US national cancer database, 4,329 patients on first-line immunotherapy. 138 (3.2%) had curative treatment afterwards, including 15 with distant and 10 with nodal metastasis.",
+    "Results: Propensity-matched HR 0.22 (0.14–0.33) for death with curative treatment.",
+    "Limits: Immortal-time bias; curative intent uncertain; modality not separated for the 15 distant and 10 nodal patients.",
+    "Results: Curative treatment after immunotherapy associated with longer survival (propensity-matched HR 0.22 in the main text).",
+    "Limits: Immortal-time and indication bias; no response or recurrence data; cannot inform transplantation after treated extrahepatic disease.",
+    "including after PS matching (HR: 0.20, 95% CI: 0.13-0.30)",
+    "The median survival was not reached versus 10 months"
    ]
   },
   "41082695": {
@@ -6849,6 +7859,20 @@
     "Pooled incidence of malignant transformation during follow-up: 0.8% (95% CI 0.4-1.9)"
    ]
   },
+  "41366165": {
+   "label": "Podrascanin pNET primary",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · 118 asymptomatic pNET, synchronous liver mets",
+   "result": "After cytoreductive hepatectomy, primary resection did not change survival (median 10 years; p = 0.589); extrahepatic disease predicted progression",
+   "caution": "Abstract only; single centre; univariate analysis",
+   "quotes": [
+    "Single centre, 118 with synchronous liver metastases. Asymptomatic pNET.",
+    "Results: Primary resection did not change survival (median 10 years); extrahepatic disease predicted progression.",
+    "Limits: Univariate.",
+    "Podrascanin 2025 · pNET with liver metastases Abstract only; full text pending.",
+    "DP: 9.5 years; p = 0.589"
+   ]
+  },
   "41399117": {
    "label": "KOTRY registry",
    "design": "Registry cohort",
@@ -6872,6 +7896,35 @@
     "pCCA statement 9: unresectable disease with radial diameter <3 cm (Strong, Level 3).",
     "Statement 10: neoadjuvant radiation plus chemotherapy and operative staging (Strong, Level 3).",
     "iCCA/mixed HCC–CCA statement 11: biopsy-proven unresectable tumor, maximum diameter <3 cm, no extrahepatic disease (Weak, Level 4)"
+   ]
+  },
+  "41405235": {
+   "label": "AASLD/AST non-graft guideline",
+   "design": "Guideline",
+   "arms": "Practice guideline · non-graft complications beyond 90 days after LT",
+   "result": "Preventive and disease-specific care after LT: cancer screening, metabolic, renal and cardiovascular disease; cited for post-LT skin and colorectal screening",
+   "caution": "Much rests on retrospective data and extrapolation; screening section excludes recurrent HCC/CCA care",
+   "quotes": [
+    "The recurrent HCC/CCA disease-specific management domain is explicitly outside this cancer-screening section",
+    "adult recipients beyond the first 90 days after liver transplant",
+    "derived from retrospective cohort studies, systematic reviews, and extrapolation"
+   ]
+  },
+  "41490475": {
+   "label": "Fernandes · SBRT bridging MA",
+   "design": "Meta-analysis",
+   "arms": "Meta-analysis · 476 HCC LT candidates (664 lesions), SBRT bridging",
+   "result": "Pooled radiologic response 61.2%, pathologic response 83.8%; 5-year post-LT OS 76.8%, DFS 71.3%; grade ≥3 toxicity 1.2%; dropout 20.1%",
+   "caution": "Low-certainty, small heterogeneous nonrandomized cohorts; Child-Pugh progression 23.5%; no superiority shown",
+   "quotes": [
+    "476 patients and 664 lesions; 381 underwent LT.",
+    "Radiologic objective response: 195/338 lesions; pooled 61.2% (95% CI 44.6–75.6).",
+    "pathologic objective response 298/370, pooled 83.8%.",
+    "Dropout 84/384, pooled 20.1% (15.0–26.5)",
+    "Child-Pugh progression 49/200, pooled 23.5% (15.2–34.5)",
+    "Low/very-low certainty, small heterogeneous nonrandomized cohorts and recipient selection. No demonstrated superiority over ablation, TACE or TARE.",
+    "The 5-year overall survival and disease-free survival rates were 76.8% and 71.3%, respectively",
+    "grade ≥3 toxicities occurring in only 1.2% of patients"
    ]
   },
   "41503570": {
@@ -7037,6 +8090,26 @@
     "Responders: 83 patients, five-year OS 66.6%, DFS 64.7%, recurrence 28/83; nonresponders: 54, OS 35.1%, DFS 19.7%, recurrence 42/54. Viable PVTT remained in 65/83 responder explants."
    ]
   },
+  "41720193": {
+   "label": "De Martin · post-LT ICI",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · 52 LT recipients given post-LT ICI, 14 centres",
+   "result": "Rejection 7/52 (13%), moderate/severe, median 27 days after ICI; 5/52 rejection-attributed deaths; CNI use linked to less rejection (unadjusted)",
+   "caution": "Small heterogeneous cohort, univariate only; 12-month OS 38.9%; post-LT use, not pre-LT bridging",
+   "quotes": [
+    "Post-LT ICI carries a distinct graft-loss risk and is not routine recurrence therapy.",
+    "Rejection occurred in 7 patients (13%) and was moderate/severe",
+    "at 3, 6, and 12 months was 65%, 46.9%, and 38.9%, respectively",
+    "Retrospective 14-French-center cohort, September 2015–March 2024;",
+    "52 adult LT recipients receiving at least one post-LT ICI.",
+    "Post-LT ICI: 7/52 rejection;",
+    "5/52 rejection-attributed death;",
+    "median rejection onset 27 days.",
+    "CNI-associated lower rejection was unadjusted—not a protective-regimen trial.",
+    "Small retrospective heterogeneous cancer/ICI/IS cohort;",
+    "physician and era confounding, only univariate analysis, no randomized comparator."
+   ]
+  },
   "41738362": {
    "label": "Liu 2026",
    "design": "Registry cohort",
@@ -7083,6 +8156,19 @@
     "retransplant 2/16"
    ]
   },
+  "41780001": {
+   "label": "neoGOLP · Shi",
+   "design": "RCT",
+   "arms": "Phase 2–3 RCT · 178 high-risk resectable iCCA, GOLP vs upfront surgery",
+   "result": "Neoadjuvant GOLP vs upfront surgery: median EFS 18.0 vs 8.7 months (P<0.001); 24-month OS 79% vs 61% (HR 0.43), short of interim boundary",
+   "caution": "Interim OS, median follow-up 16.9 months; fit resectable patients; not a transplant or allograft-safety study",
+   "quotes": [
+    "Open-label randomized phase 2–3 trial at 11 Chinese hospitals; 178 patients randomized to neoadjuvant GOLP (n=88) or immediate surgery (n=90)",
+    "Median EFS was 18.0 versus 8.7 months (P<0.001); 24-month EFS was 37% versus 25%.",
+    "At interim analysis, 24-month OS was 79% versus 61% (HR 0.43, 95% CI 0.23–0.79; P=0.005), which did NOT meet the prespecified interim OS significance boundary of P=0.0019.",
+    "Highly fit resectable population; median follow-up 16.9 months and interim OS analysis. This was neither a conversion-to-transplant trial nor an allograft-safety study."
+   ]
+  },
   "41781152": {
    "label": "Hong 2026 systemic review",
    "design": "Review",
@@ -7106,6 +8192,21 @@
     "because almost every reported transplant lacked a preoperative diagnosis, there is no evidence that selecting favourable cHCC-CCA for transplant works",
     "A 20-year UNOS analysis gave 5-year survival of 40% for cHCC-CCA versus 47% for iCCA and 62% for HCC (p=0.002)",
     "Narrative review with no systematic search or quality appraisal"
+   ]
+  },
+  "41785904": {
+   "label": "OligoPanc consensus (Leonhardt)",
+   "design": "Consensus",
+   "arms": "Consensus · international modified Delphi on oligometastatic PDAC",
+   "result": "Defines oligometastatic PDAC as ≤3 lesions in one organ (liver or lung), on relative majority only (58% and 42%); systemic therapy before local treatment",
+   "caution": "Expert opinion; no induction duration or response thresholds defined",
+   "quotes": [
+    "International Delphi consensus. ≤3 lesions in one organ (liver or lung) reached only relative majority (58% and 42%); systemic therapy before local treatment in synchronous disease (82%).",
+    "Results: No induction duration or response thresholds defined.",
+    "Limits: Expert opinion.",
+    "using a modified Delphi process and clinical vignettes",
+    "up to three lesions in a single organ, either the liver or the lung",
+    "Systemic treatment before any local consolidative treatment"
    ]
   },
   "41861992": {
@@ -7132,6 +8233,22 @@
     "BiliSeq v2/v3 had 82% sensitivity and 98% specificity for a neoplastic stricture, versus 44% sensitivity and 99% specificity for pathologic assessment (P<.001 by McNemar's test)",
     "Combining sequencing with pathology raised sensitivity to 88%",
     "for intrahepatic or hilar strictures the gap is 80% against 36%"
+   ]
+  },
+  "41986186": {
+   "label": "Budiman · HCC LT criteria review",
+   "design": "Systematic review",
+   "arms": "Systematic review · 23 studies, 6,318 recipients; Milan vs expanded",
+   "result": "Milan: 5-year survival >70% with low recurrence; expanded criteria (UCSF, Kyoto) gave comparable survival in selected cohorts; no pooled estimates",
+   "caution": "Descriptive synthesis of retrospective cohorts; internal count inconsistencies; does not prove equivalence",
+   "quotes": [
+    "Reports 23 studies and 6,318 patients, principally retrospective post-LT cohorts",
+    "no pooled estimate or validated program-quality trigger is calculated.",
+    "the review does not prove equivalence or establish a quantitative safe expansion boundary.",
+    "Internal flow/count inconsistencies, missing study sample counts/outcome estimates, variable definitions and reliance on retrospective cohorts limit reproducibility.",
+    "Milan criteria consistently demonstrated 5-year survival rates exceeding 70% with low recurrence rates",
+    "Expanded criteria, particularly UCSF and Kyoto, reported comparable survival outcomes in selected cohorts",
+    "Findings were synthesized descriptively in accordance with PRISMA guidelines."
    ]
   },
   "41990853": {
@@ -7201,6 +8318,39 @@
     "Leave-one-out analysis changed statistical significance for 3- and 5-year overall survival"
    ]
   },
+  "42073607": {
+   "label": "Demirors · pre-LT ICI review",
+   "design": "Systematic review",
+   "arms": "Scoping review · LT recipients with pre-transplant ICI for HCC or CCA",
+   "result": "Rejection 16.3–20.2% in large series, up to 56.3% with short washout; supports ≥50-day washout, with emerging data favouring 90–94 days",
+   "caution": "Mixed, overlapping data; mislabels guidance (AASLD 2023: ≥3 months); 50-day claim lacks a non-ICI control",
+   "quotes": [
+    "AASLD 2023 actually recommends discontinuation at least 3 months before LT",
+    "Guideline attribution errors, mixed eligibility/interventions, overlapping datasets and inconsistent denominators substantially weaken its use for protocol thresholds.",
+    "Claim that >50 days normalizes rejection versus non-ICI controls overstates the 119-recipient source, which lacks a parallel non-ICI control group.",
+    "A PRISMA-ScR-guided review was conducted",
+    "Rejection rates ranged from 16.3% to 20.2% in large series",
+    "but increased to 56.3% with short washout intervals",
+    "supports a minimum washout interval of at least 50 days",
+    "with emerging data favoring 90-94 days when feasible"
+   ]
+  },
+  "42081099": {
+   "label": "Hashimoto JPS conversion",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · Japan Pancreas Society, 90 PDAC with liver mets",
+   "result": "After median 10.4 months of chemotherapy, OS 39.7 months after conversion surgery and 53.1 months from initial treatment; liver metastasectomy in 27 (30%)",
+   "caution": "Abstract only; no non-operated denominator; highly selected responders",
+   "quotes": [
+    "Japan Pancreas Society, 90 conversion operations. Median 10.4 months of chemotherapy.",
+    "Results: Survival after conversion 39.7 months.",
+    "Limits: No non-operated denominator.",
+    "Hashimoto 2026 · Japan Pancreas Society conversion Abstract only; full text pending.",
+    "This retrospective, multicenter study",
+    "Overall survival (OS) from initial treatment was 53.1",
+    "Liver metastasectomy was performed in 27 patients (30%)."
+   ]
+  },
   "42090791": {
    "label": "Daraxonrasib phase 1–2",
    "design": "Phase 1/2",
@@ -7227,6 +8377,19 @@
     "only 31 percent of eligible centres contributed"
    ]
   },
+  "42153585": {
+   "label": "Heinrich · incidental CCA at LT",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · 19 incidental BTC on explant vs 140 Milan HCC",
+   "result": "Five-year OS 65% incidental BTC vs 73% Milan HCC (p=.31); DFS 54% vs 69%",
+   "caution": "Tiny incidental mixed-site cohort; non-significance is not equivalence; not evidence for planned LT of CCA",
+   "quotes": [
+    "Retrospective three-center German study, 2002–2021: 19 incidental biliary tract cancers found on explant versus 140 HCC recipients within Milan criteria.",
+    "Five-year OS was 65% in incidental BTC versus 73% in HCC (p=.31); DFS 54% versus 69% (p approximately .25). Failure to reject a difference is not proof of equivalence.",
+    "Incidental tumors without pre-LT suspicion, mixed anatomic sites, tiny sample, selection/era confounding and underpowered survival comparisons. Not evidence for intentional transplantation of known advanced iCCA or pCCA.",
+    "distal CCA/gallbladder: 6.5 months; p = 0.005"
+   ]
+  },
   "42156355": {
    "label": "LITCHI",
    "design": "Registry cohort",
@@ -7237,6 +8400,21 @@
     "Multinational European registry, ten centers, 18 recipients, 2018–2024.",
     "4 biopsy-proven rejection episodes (22%); one fatal event after a 13-day washout.",
     "Rejection occurred as late as days 147 and 686."
+   ]
+  },
+  "42169873": {
+   "label": "Yang SEER M1 iCCA surgery",
+   "design": "Registry cohort",
+   "arms": "Registry cohort · SEER, 256 metastatic iCCA; 68 matched pairs",
+   "result": "Primary-tumour surgery associated with longer OS after matching (HR 0.591); 3-year survival 13.8% with surgery vs 3% without",
+   "caution": "Registry with reporting errors; no response or metastatic-site data; selection bias not excluded",
+   "quotes": [
+    "SEER, 256 metastatic iCCA; matched 68 pairs. No response or metastatic-site data.",
+    "Results: 3-year survival 13.8% with surgery vs 3% without.",
+    "Limits: Registry; reporting errors.",
+    "Surgical treatment was significantly associated with improved OS",
+    "hazard ratio (HR) =0.591",
+    "this observational study cannot exclude selection bias"
    ]
   },
   "42191146": {
@@ -7320,6 +8498,21 @@
     "Calls for entry-level dropout/feasibility, ITT EFS/OS and graft/immune harms; discusses ≥60% five-year ITT OS benchmark in HCC."
    ]
   },
+  "42294332": {
+   "label": "Abdelrahim · peri-LT ICI review",
+   "design": "Review",
+   "arms": "Review · peri-transplant ICI use in HCC (pre- and post-LT)",
+   "result": "Reported rejection ~18–26% pre-LT and 28–37% post-LT; washout ≥50–90 days mitigates but does not eliminate risk; LDLT eases timing",
+   "caution": "Narrative review; ranges are not independent estimates; some cohorts misdescribed versus primary papers",
+   "quotes": [
+    "Supports the practical scheduling advantage of LDLT for coordinating an ICI-free interval, while explicitly stating that rejection risk is not eliminated.",
+    "Narrative ranges are not independent estimates and must be replaced by source-specific primary denominators for consent.",
+    "PDF p 3 wrongly describes Natarajan's 311 candidate cohort as 311 transplant recipients",
+    "Retrospective data indicate rejection rates of approximately 18%-26% pre-LT and 28%-37% post-LT",
+    "Optimal washout periods (typically ≥50-90 days, ideally ~3 months)",
+    "appear to mitigate but not eliminate the risk"
+   ]
+  },
   "42312290": {
    "label": "ILTS-ILCA 2024 consensus",
    "design": "Consensus",
@@ -7396,6 +8589,37 @@
     "shows indistinguishable survival (13.8 versus 13.3 months) and toxicity in 21 patients — an underpowered null whose confidence interval spans 2.1 to 25.6 months",
     "Before matching, median overall survival 13.3 months (95% CI 9.5-17.1) for CCA versus 13.8 months (95% CI 2.1-25.6) for cHCC-CCA, log-rank p=0.60; median progression-free survival 5.1 (95% CI 4.7-5.5) versus 5.3 months",
     "Histology was not an independent predictor of overall survival (HR 0.83, 95% CI 0.42-1.66, p=0.60)"
+   ]
+  },
+  "42488112": {
+   "label": "Abdelrahim · pre-LT ICI series",
+   "design": "Case series",
+   "arms": "Case series · 25 HCC/CCA LT recipients after neoadjuvant ICI",
+   "result": "Two hepatic acute rejections, one kidney rejection and one immediate graft failure (retransplanted); four HCC recurrences, no CCA recurrence reported",
+   "caution": "Selected one-centre series, no comparator; inconsistent rejection attribution; four-week washout unvalidated",
+   "quotes": [
+    "Single-center retrospective descriptive series of 25 selected transplant recipients after ICI",
+    "Table 2 identifies 17 HCC, seven iCCA and one pCCA recipient. No all-treated or referred-patient denominator and no comparator are supplied.",
+    "Four HCC recurrences and four HCC deaths were reported. No CCA recurrence or death was reported at available follow-up",
+    "two hepatic acute-rejection events, one rejection of a concurrently transplanted kidney, and one immediate liver graft failure requiring retransplantation",
+    "The aggregate statement assigning all rejection to HCC conflicts with case 23 and Table 2. The authors' approximate four-week washout suggestion is not a validated safe threshold",
+    "This retrospective cohort included 25 patients with HBC"
+   ]
+  },
+  "42524843": {
+   "label": "Rimini locally advanced BTC",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · 55 centres, 219 locally advanced BTC on CGD",
+   "result": "24 (10.9%) resected after first-line cisplatin, gemcitabine and durvalumab; median OS 22.5 months resected vs 19.9 months not resected",
+   "caution": "Abstract only; short follow-up (median 14.5 months); small selected resected group; no distant disease",
+   "quotes": [
+    "55-centre cohort, 219 locally advanced biliary cancers. No distant disease.",
+    "Results: 24 (10.9%) resected after systemic therapy; median survival 22.5 vs 19.9 months.",
+    "Limits: Short follow-up.",
+    "Rimini 2026 · locally advanced BTC Abstract only; full text pending.",
+    "first-line cisplatin, gemcitabine, and durvalumab (CGD) across 55 centers",
+    "Median follow-up was 14.5 months.",
+    "Median OS was 22.5 months in resected patients versus 19.9 months"
    ]
   },
   "42572136": {
@@ -7508,6 +8732,19 @@
     "12 RCTs, 1425 patients; 9 of the 12 trials conducted in India"
    ]
   },
+  "42804100": {
+   "label": "Takenouchi para-aortic sampling",
+   "design": "Retrospective cohort",
+   "arms": "Retrospective cohort · 143 pCCA with para-aortic sampling at surgery",
+   "result": "Para-aortic metastasis in 17 (11.9%), PET detected only 17.6%; when positive, survival did not differ with or without resection (15.6 vs 18.0 months).",
+   "caution": "Single centre; upfront surgery, not post-response; abstract-only reading.",
+   "quotes": [
+    "Single centre, 143 with intraoperative para-aortic sampling. Upfront surgery.",
+    "Results: Para-aortic metastasis in 17 (11.9%); PET identified only 17.6%; with para-aortic metastasis, survival did not differ with or without resection (15.6 vs 18.0 months, p=0.790).",
+    "Limits: Not post-response.",
+    "We retrospectively analyzed 143 patients with PHC"
+   ]
+  },
   "42810588": {
    "label": "Sethi 2026",
    "design": "Case series",
@@ -7566,6 +8803,37 @@
     "Broad tissue DNA/RNA profiling, MMR and HER2 testing at diagnosis. For eligible MSS/pMMR disease: GemCis plus durvalumab or pembrolizumab (high-quality/strong); GemCis without ICI if unsuitable (conditional). After progression without an actionable target: FOLFOX plus active symptom control or active symptom control alone (conditional).",
     "Advanced BTC systemic care, not pCCA transplant-neoadjuvant therapy or a transplant eligibility guideline.",
     "Rare targets often rely on small basket cohorts."
+   ]
+  },
+  "42882932": {
+   "label": "Kuriyama NAC-GS by nodal status",
+   "design": "Cohort",
+   "arms": "Cohort · 110 pCCA by anatomical resectability; 72 had gemcitabine–S-1",
+   "result": "Curative resection 85.1%, 65.8% and 24.0% in resectable, borderline and locally advanced groups; survival benefit over upfront surgery not established.",
+   "caution": "Single centre; nodes defined by FDG-PET only; no survival for node-positive patients.",
+   "quotes": [
+    "Single centre, 110 pCCA; 72 received neoadjuvant gemcitabine–S-1. Regional nodes defined by FDG-PET uptake only; distant disease excluded.",
+    "Results: Curative resection 85.1%, 65.8% and 24.0% in resectable, borderline and locally advanced groups.",
+    "Limits: No survival for node-positive patients; benefit not established.",
+    "these findings do not establish a survival benefit of NAC-GS over upfront surgery"
+   ]
+  },
+  "42905970": {
+   "label": "PANODE station 16b1 and 9",
+   "design": "Prospective cohort",
+   "arms": "Prospective cohort · 1,218 pancreatoduodenectomies, 212 ampullary",
+   "result": "16b1-positive vs negative median OS: PDAC 10 vs 24 months (aHR 2.33), ampullary 9 vs 62 (aHR 4.35); authors advise against aborting resection on 16b1 alone.",
+   "caution": "Mostly upfront surgery; ampullary 16b1-positive subgroup very small (n=7).",
+   "quotes": [
+    "PANODE, 212 ampullary resections. Upfront surgery; adjuvant therapy in 4%.",
+    "Results: 16b1-positive (n=7): median survival 9 vs 62 months (aHR 4.35).",
+    "Limits: Very small subgroup.",
+    "PANODE prospective cohort, 1,218 resections. Station 16b1 sampled at upfront surgery.",
+    "Results: PDAC 16b1-positive median survival 10 vs 24 months (aHR 2.33); authors advise against aborting resection on 16b1 alone.",
+    "Limits: Mostly upfront surgery.",
+    "This prospective multicentre study included patients undergoing pancreatoduodenectomy",
+    "Among 1218 included patients, 673 had PDAC",
+    "LNS 16b1 involvement was associated with worse OS in PDAC"
    ]
   }
  },

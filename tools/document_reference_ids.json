@@ -1,0 +1,151 @@
+{
+ "about": "Identifiers for the V16 document references (tools/document_refs.py). doi_pmid: DOI to PMID from PubMed look-ups, 30 October 2026 (the evidence-library catalog supplies the rest). nonpm: citation prefix to the key (and tag) of a source with no PMID, or to a PMID PubMed lists under a different link. override: \"<document>#<reference>\" to a pmid or key.",
+ "doi_pmid": {
+  "10.1002/bjs.10641": "28858392",
+  "10.1002/bjs.9783": "25789941",
+  "10.1002/cncr.23074": "17941009",
+  "10.1002/ijc.70641": "42524843",
+  "10.1002/jhbp.12138": "40105312",
+  "10.1002/jhbp.1437": "38822227",
+  "10.1002/jso.24670": "28513896",
+  "10.1007/s00268-020-05834-2": "33079246",
+  "10.1007/s00423-025-03630-x": "39918658",
+  "10.1007/s00535-026-02432-2": "42081099",
+  "10.1016/j.ejso.2016.10.023": "27856064",
+  "10.1016/j.esmoop.2022.100388": "35121522",
+  "10.1016/j.gie.2023.10.047": "37890597",
+  "10.1016/j.hpb.2015.12.004": "27017160",
+  "10.1016/j.hpb.2017.10.014": "29196022",
+  "10.1016/j.ijrobp.2024.09.022": "39299553",
+  "10.1016/j.jhep.2024.03.003": "38467379",
+  "10.1016/s1470-2045(25)00714-4": "41785904",
+  "10.1038/s41598-024-60379-x": "38679630",
+  "10.1080/02656736.2020.1803424": "32787474",
+  "10.1093/bjs/znaf054": "40099404",
+  "10.1093/bjsopen/zrag157": "42905970",
+  "10.1093/gastro/goaa003": "32280473",
+  "10.1097/sla.0000000000001624": "28009741",
+  "10.1097/sla.0000000000005481": "35758505",
+  "10.1097/sla.0b013e31828d4960": "23532111",
+  "10.1111/codi.15113": "32388895",
+  "10.1111/hepr.13526": "32573905",
+  "10.1111/hepr.14196": "40317676",
+  "10.1111/jne.70073": "40778558",
+  "10.1136/bmjopen-2019-033452": "31818843",
+  "10.1159/000538627": "39524972",
+  "10.1159/000547230": "41063730",
+  "10.1186/s12885-025-13573-7": "39915735",
+  "10.1200/jco.2007.15.7297": "18669451",
+  "10.1245/s10434-017-5885-4": "28516291",
+  "10.1245/s10434-018-6433-6": "29560571",
+  "10.1245/s10434-018-6751-8": "30218247",
+  "10.1245/s10434-023-13372-z": "37208566",
+  "10.1245/s10434-025-17321-w": "40372590",
+  "10.1245/s10434-025-18835-z": "41366165",
+  "10.1245/s10434-026-20612-5": "42804100",
+  "10.21037/jgo-2025-aw-859": "42169873",
+  "10.2147/cmar.s182312": "30636895",
+  "10.3389/fsurg.2025.1535212": "40084343",
+  "10.3390/cancers17050873": "40075720",
+  "10.3390/cancers18193238": "42882932",
+  "10.3390/jcm13174983": "39274193",
+  "10.3747/co.20.1341": "23737695",
+  "10.4240/wjgs.v15.i7.1340": "37555110",
+  "10.5754/hge10704": "21937390",
+  "10.6004/jnccn.2023.0034": "37433437"
+ },
+ "nonpm": {
+  "Genentech. Avastin bevacizumab US prescribing information": {
+   "key": "avastin-label",
+   "tag": "Avastin label",
+   "kind": "label"
+  },
+  "US Food and Drug Administration. FDA grants traditional approval to encorafenib": {
+   "key": "fda-encorafenib",
+   "tag": "FDA · encorafenib",
+   "kind": "label"
+  },
+  "US Food and Drug Administration. FDA approves sotorasib with panitumumab": {
+   "key": "fda-sotorasib",
+   "tag": "FDA · sotorasib + panitumumab",
+   "kind": "label"
+  },
+  "Merck. Keytruda pembrolizumab US prescribing information": {
+   "key": "keytruda-label",
+   "tag": "Keytruda label",
+   "kind": "label"
+  },
+  "AstraZeneca Pharmaceuticals. Imfinzi durvalumab US prescribing information": {
+   "key": "imfinzi-label",
+   "tag": "Imfinzi label",
+   "kind": "label"
+  },
+  "Bristol Myers Squibb. Opdivo nivolumab US prescribing information": {
+   "key": "opdivo-label",
+   "tag": "Opdivo label",
+   "kind": "label"
+  },
+  "BeOne Medicines. Tevimbra tislelizumab": {
+   "key": "tevimbra-label",
+   "tag": "Tevimbra label",
+   "kind": "label"
+  },
+  "American College of Radiology. LI RADS CT MRI Radiation Treatment Response Assessment": {
+   "key": "lirads-rt-tra",
+   "tag": "LI-RADS radiation TRA 2024",
+   "kind": "guidance"
+  },
+  "US Food and Drug Administration. FDA grants accelerated approval to zanidatamab": {
+   "key": "fda-zanidatamab",
+   "tag": "FDA · zanidatamab",
+   "kind": "label"
+  },
+  "US Food and Drug Administration. FDA approves zenocutuzumab": {
+   "key": "fda-zenocutuzumab",
+   "tag": "FDA · zenocutuzumab",
+   "kind": "label"
+  },
+  "US Food and Drug Administration. FDA approves daraxonrasib": {
+   "key": "fda-daraxonrasib",
+   "tag": "FDA · daraxonrasib",
+   "kind": "label"
+  },
+  "Outmani et al. Dutch PUMP randomized trial": {
+   "key": "pump2026",
+   "tag": "Dutch PUMP (conference abstract)",
+   "kind": "abstract"
+  },
+  "National Comprehensive Cancer Network. NCCN Clinical Practice Guidelines in Oncology: Hepatocellular Carcinoma": {
+   "key": "NCCN-hcc",
+   "kind": "guidance"
+  },
+  "National Comprehensive Cancer Network. NCCN Clinical Practice Guidelines in Oncology: Biliary Tract Cancers": {
+   "key_by_slug": {
+    "pcca": "NCCN-pcca",
+    "icca": "NCCN-icca"
+   },
+   "kind": "guidance"
+  },
+  "National Comprehensive Cancer Network. NCCN Clinical Practice Guidelines in Oncology: Neuroendocrine and Adrenal Tumors": {
+   "key": "NCCN-net",
+   "kind": "guidance"
+  },
+  "Novartis Pharmaceuticals Corporation. Zortress (everolimus) US prescribing information": {
+   "key": "zortress-label",
+   "tag": "Zortress label",
+   "kind": "label"
+  },
+  "US Department of Health and Human Services. 45 CFR 46.111": {
+   "key": "hhs_irb",
+   "kind": "policy"
+  },
+  "OPTN Ethics Committee. Ethical Principles in the Allocation of Human Organs": {
+   "key": "optn_ethics",
+   "kind": "policy"
+  },
+  "Yaqub, Sheraz; Busund, Sondre; Smedman, Tor Magnus; et al. Liver transplantation for locally advanced non-resectable intrahepatic": {
+   "pmid": "40099404"
+  }
+ },
+ "override": {}
+}

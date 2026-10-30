@@ -71,7 +71,7 @@ for slug, d in data.items():
                 else {'lead': '', 'text': next((SUMMARIES[f'transplant:{k}'] for k in s['keys'] if f'transplant:{k}' in SUMMARIES), None)})
         if not sm.get('text') or sm != want:
             fail.append(f'{slug}: {s["key"]} one-line summary missing or not from its source line')
-        if s['group'] not in ('Policy & review guidance', 'Guidelines & consensus', 'Studies') or not (s['tag'] and s['cit']):
+        if s['group'] not in ('Policy & review guidance', 'Guidelines & consensus', 'Studies', 'Drug labels') or not (s['tag'] and s['cit']):
             fail.append(f'{slug}: {s["key"]} row fields')
         n_sum += 1
     for r in reviews:
