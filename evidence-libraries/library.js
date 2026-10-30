@@ -5,8 +5,8 @@
  const slides=r=>r.slides.length?'PPT slides '+r.slides.join(', '):'No slide yet';
  const pdf=p=>p.pdf_available===true?'PDF matched in the audited depots':p.pdf_available===false?'PDF not yet matched in the audited depots':'PDF status not yet checked for this index entry';
  const links=p=>'<div class="access">'+(p.url?'<a href="'+e(p.url)+'" target="_blank" rel="noopener">Publication / full text ↗</a>':'')+(p.tmc?'<a href="'+e(p.tmc)+'" target="_blank" rel="noopener">TMC full-text access ↗</a>':'')+'</div>';
- const title=l=>l.title.replace(/\bprotocol\b/gi,'pathway');
- const pending=l=>l.no_slide_count?' · '+l.no_slide_count+' references have no slide yet':'';
+ const title=l=>l.title.replace(/\bprotocol\b/gi,'pathway').replace(/ cancer roadmap$/i,' roadmap');
+ const pending=l=>l.no_slide_count?' · '+l.no_slide_count+(l.no_slide_count===1?' reference has':' references have')+' no slide yet':'';
  try{
   const responses=await Promise.all([fetch('catalog.json?v=20261030-review1'),fetch('document-index.json?v=20261030-review1')]);
   if(responses.some(r=>!r.ok))throw Error('Catalog unavailable');
@@ -20,7 +20,7 @@
    const key=decodeURIComponent(location.hash.slice(1));select.value=data.libraries.some(l=>l.key===key)?key:'';
    const lib=data.libraries.find(l=>l.key===select.value),q=search.value.trim().toLowerCase();
    if(!lib){
-    const matches=data.libraries.filter(l=>l.title.toLowerCase().includes(q)||l.papers.some(r=>paperSearch(r,data.publications[r.id]).includes(q))||l.policy_records.some(r=>policySearch(r).includes(q)));
+    const matches=data.libraries.filter(l=>title(l).toLowerCase().includes(q)||l.papers.some(r=>paperSearch(r,data.publications[r.id]).includes(q))||l.policy_records.some(r=>policySearch(r).includes(q)));
     out.innerHTML='<p class="count">'+matches.length+' libraries shown</p><div class="library-grid">'+matches.map(l=>'<article class="library-card"><h2><a href="#'+e(l.key)+'">'+e(title(l))+'</a></h2><p>'+l.publication_count+' papers · '+l.matched_pdfs+' matched PDFs</p><p>'+l.slides+' slides in its PPT'+pending(l)+'</p><p class="meta">'+e(l.family.replace(/^\d+_/,'').replaceAll('_',' '))+'</p></article>').join('')+'</div>';return;
    }
    const matches=lib.papers.filter(r=>paperSearch(r,data.publications[r.id]).includes(q));
