@@ -97,4 +97,3 @@ if __name__ == '__main__':
     print(f"Document index: {sum(len(v['papers']) for v in data['libraries'].values())} paper entries and "
           f"{sum(len(v['policy_records']) for v in data['libraries'].values())} policy/document entries without slides "
           f"across {len(data['libraries'])} libraries; {len(data['publications'])} additional publications.")
-

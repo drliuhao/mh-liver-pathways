@@ -26,4 +26,3 @@
   if(typeof module==='object'&&module.exports)module.exports={merge};
   else root.LibraryDocumentIndex={merge};
 })(typeof window==='undefined'?globalThis:window);
-
