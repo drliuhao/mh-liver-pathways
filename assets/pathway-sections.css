@@ -37,3 +37,27 @@
 .pw-kind{display:block;font:700 10.5px/1.4 system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#5a6b79}
 @media(max-width:760px){.pw-head{margin-top:34px}.pw-toggle{margin-left:0}}
 @media print{.pw-body[hidden]{display:block!important}.pw-toggle{display:none}}
+/* Evidence library rows in the roadmaps' format (assets/roadmap-evidence.js), 30 October 2026. */
+.pw-closing .evtools{display:flex;gap:9px;flex-wrap:wrap;align-items:center}
+.pw-closing .evtools input[type=search]{font:inherit;font-size:14px;padding:8px 12px;border-radius:9px;border:1px solid #d3dce4;background:#fff;color:#16222d;min-width:min(100%,280px);flex:1 1 240px}
+.pw-closing .tabs{display:flex;gap:6px;flex-wrap:wrap}
+.pw-closing .tab{appearance:none;cursor:pointer;font:inherit;font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;border:1px solid #d3dce4;background:#fff;color:#5a6b79}
+.pw-closing .tab[aria-selected=true]{background:#16222d;color:#f4f6f8;border-color:#16222d}
+.pw-closing .evcount{font-size:12.5px;color:#5a6b79;margin-left:auto}
+.pw-closing .evlist{margin-top:14px;display:flex;flex-direction:column;gap:9px}
+.pw-closing .ev{--teal:#176a87;--ink:#16222d;--muted:#5a6b79;background:#fff;border:1px solid #d3dce4;border-radius:10px;padding:12px 14px;display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap;box-shadow:0 1px 2px rgba(22,34,45,.06),0 6px 18px rgba(22,34,45,.05)}
+.pw-closing .ev .evtag{font-size:11.5px;font-weight:700;letter-spacing:.03em;color:#176a87;flex:none;width:118px}
+.pw-closing .ev .evcit{flex:1 1 320px;min-width:0;font-size:13.3px;line-height:1.45}
+.pw-closing .ev .evlinks{display:flex;gap:6px;flex-wrap:wrap;flex:none}
+.pw-closing .lnk{font-size:11.5px;font-weight:600;text-decoration:none;padding:3px 9px;border-radius:999px;border:1px solid #d3dce4;color:#176a87;background:#edf1f5;white-space:nowrap}
+.pw-closing .lnk:hover{border-color:#176a87}
+.pw-closing .chip{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;border:1px solid #d3dce4;color:#5a6b79;background:#fff;white-space:nowrap}
+.pw-closing .chip.evflag{background:#fbefe2;border-color:#f0d6b8;color:#8a4b12}
+.pw-closing .evcrit{flex:1 1 100%;margin-top:2px;border-top:1px solid #e6ecf1;padding-top:9px}
+.pw-closing .evcrit>summary{cursor:pointer;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#8c2f26;list-style:none;display:flex;align-items:center;gap:7px}
+.pw-closing .evcrit>summary::-webkit-details-marker{display:none}
+.pw-closing .evcrit>summary::before{content:"\25B8";font-size:11px;transition:transform .12s}
+.pw-closing .evcrit[open]>summary::before{transform:rotate(90deg)}
+.pw-closing .evmeta{flex:1 1 100%;font-size:12.4px;color:#5a6b79;margin-top:6px}
+.pw-closing .evmeta b{color:#16222d;font-weight:600}
+@media(max-width:640px){.pw-closing .ev .evtag{width:auto}}

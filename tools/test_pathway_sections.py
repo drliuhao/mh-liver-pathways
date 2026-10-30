@@ -8,6 +8,9 @@ usage: python3 tools/test_pathway_sections.py
   setting, an index of every meeting question and high-risk review, and the evidence library.
 - Questions are an index, not copies: each links to #meeting-<id> or #high-risk-<anchor>, every meeting question and
   high-risk review appears exactly once.
+- The evidence library has one row per publication (no PMID twice), each with a category, a citation and a one-line
+  summary: a PubMed paper's compact study line (design · population, main result) or, for other sources, its line
+  in tools/source_summaries.json.
 - The page script loads only on transplant pathway pages and the shared navigation loads it.
 """
 import json, re, subprocess, sys
@@ -23,8 +26,10 @@ if dest.read_text() != before:
 data = json.loads(dest.read_text())['pathways']
 C = json.loads((ROOT / 'transplant/assets/content.json').read_text())
 HR = C['high_risk']
+STUDIES = json.loads((ROOT / 'tools/compact_evidence_source.json').read_text())['studies']
+SUMMARIES = json.loads((ROOT / 'tools/source_summaries.json').read_text())['summaries']
 assert list(data) == ['hcc', 'pcca', 'icca', 'crlm', 'nelm', 'hehe', 'hca'], list(data)
-n_items = n_q = 0
+n_items = n_q = n_sum = 0
 for slug, d in data.items():
     p = next(x for x in C['index'] if x['slug'] == slug)
     if not d['limited']:
@@ -56,9 +61,19 @@ for slug, d in data.items():
     reviews = HR['pathways'][slug]['reviews']
     if hr != [r['id'] for r in reviews] or any(q['href'] != f'#high-risk-{r["anchor"]}' for q, r in zip(d['questions']['highrisk'], reviews)):
         fail.append(f'{slug}: high-risk review index incomplete or mislinked')
-    keys = [s['key'] for s in d['sources']]
-    if len(keys) != len(set(keys)) or not keys:
+    keys = [k for s in d['sources'] for k in s['keys']]
+    pmids = [s['pmid'] for s in d['sources'] if s.get('pmid')]
+    if len(keys) != len(set(keys)) or not keys or len(pmids) != len(set(pmids)):
         fail.append(f'{slug}: evidence library empty or duplicated')
+    for s in d['sources']:
+        sm = s.get('summary') or {}
+        want = ({'lead': STUDIES[s['pmid']]['arms'], 'text': STUDIES[s['pmid']]['result']} if s.get('pmid') in STUDIES
+                else {'lead': '', 'text': next((SUMMARIES[f'transplant:{k}'] for k in s['keys'] if f'transplant:{k}' in SUMMARIES), None)})
+        if not sm.get('text') or sm != want:
+            fail.append(f'{slug}: {s["key"]} one-line summary missing or not from its source line')
+        if s['group'] not in ('Policy & review guidance', 'Guidelines & consensus', 'Studies') or not (s['tag'] and s['cit']):
+            fail.append(f'{slug}: {s["key"]} row fields')
+        n_sum += 1
     for r in reviews:
         for k in r['references']:
             if k not in keys:
@@ -73,4 +88,5 @@ for title in ['Practice choices with limited evidence', 'Questions for consensus
 if fail:
     print('FAIL:\n- ' + '\n- '.join(fail[:60])); sys.exit(1)
 print(f'PASS: 7 pathways; {n_items} limited-evidence choices with basis, locator and real sources; owners for every decision; '
-      f'team and quality measures by setting; {n_q} questions indexed once and linked to where they are set out; evidence libraries complete.')
+      f'team and quality measures by setting; {n_q} questions indexed once and linked to where they are set out; evidence libraries complete, '
+      f'{n_sum} sources (one row per publication) each with its one-line summary.')

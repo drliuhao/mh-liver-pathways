@@ -73,8 +73,8 @@
    }
   }
   if(isProtocol){for(const [view,label] of [['meeting','Protocol & meeting documents'],['care','Treatment reference']]){const a=make('a','clinical-button',label);a.href='#'+view;a.dataset.view=view;(view==='meeting'?documents:treatments).append(a);}}
-  const evidence=make(evidenceAction?'button':'a','clinical-button',evidenceAction?'Evidence & sources ↓':'Evidence library (all papers)');
-  if(evidenceAction){evidence.type='button';evidence.addEventListener('click',evidenceAction);}else{evidence.href='#evidence';if(isProtocol)evidence.dataset.view='evidence';}documents.append(evidence);
+  const evidence=make(evidenceAction?'button':'a','clinical-button',evidenceAction?'Evidence & sources ↓':'Evidence library (all sources) ↓');
+  if(evidenceAction){evidence.type='button';evidence.addEventListener('click',evidenceAction);}else{evidence.href='#evidence';if(isProtocol)evidence.dataset.evidenceJump='';}documents.append(evidence);
   for(const section of [calculators,treatments,documents])if(section.children.length>1)group.append(section);
   right.append(group);
   return right;

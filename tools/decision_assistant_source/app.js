@@ -66,7 +66,7 @@ function home() {
 
 function pathwayShell() {
  app.innerHTML=header()+`<main class="wrap"><div class="pathhero"><div><a class="back" href="/">← All pathways</a><p class="eyebrow">${e(active.route)}</p><h1>${e(active.name)}</h1><p class="lead">${e(active.entry)}</p></div><div class="herolinks">${active.roadmap?external(active.roadmap,`${active.code} roadmap`,'btn secondary'):external(DATA.sources['E-consensus'].pdf,'HEHE treatment consensus','btn secondary')}</div></div>
- <div class="viewbar" role="tablist" aria-label="Pathway sections"><button role="tab" id="tab-pathway" data-view="pathway">Decision pathway</button><button role="tab" id="tab-meeting" data-view="meeting">Meeting record <span>${active.issues.length}</span></button><button role="tab" id="tab-care" data-view="care">Treatment reference</button><button role="tab" id="tab-high-risk" class="high-risk-tab" data-view="high-risk">High-risk protocols <span>${HighRisk.reviews(DATA.high_risk,active.slug).length}</span></button><button role="tab" id="tab-evidence" data-view="evidence">Evidence library</button><span class="viewnote">Compare choices · nothing is saved</span></div>
+ <div class="viewbar" role="tablist" aria-label="Pathway sections"><button role="tab" id="tab-pathway" data-view="pathway">Decision pathway</button><button role="tab" id="tab-meeting" data-view="meeting">Meeting record <span>${active.issues.length}</span></button><button role="tab" id="tab-care" data-view="care">Treatment reference</button><button role="tab" id="tab-high-risk" class="high-risk-tab" data-view="high-risk">High-risk protocols <span>${HighRisk.reviews(DATA.high_risk,active.slug).length}</span></button><button type="button" class="viewjump" data-evidence-jump aria-controls="pw-evidence">Evidence library ↓</button><span class="viewnote">Compare choices · nothing is saved</span></div>
  <div id="view"></div></main>`+footer();
  renderView();
 }
@@ -79,7 +79,7 @@ function renderView(){
  document.querySelectorAll('.viewbar [role="tab"]').forEach(t=>t.setAttribute('aria-selected',t.dataset.view===(view==='risk-reference'?'high-risk':view)?'true':'false'));
  const out=document.getElementById('view');
  out.setAttribute('role','tabpanel');out.setAttribute('aria-labelledby','tab-'+(view==='risk-reference'?'high-risk':view));
- const content=view==='pathway'?renderStep():view==='meeting'?renderMeeting():view==='evidence'?renderEvidence():view==='high-risk'?HighRisk.overview(DATA.high_risk,active.slug):view==='risk-reference'?renderRiskReference():renderCare();
+ const content=view==='pathway'?renderStep():view==='meeting'?renderMeeting():view==='high-risk'?HighRisk.overview(DATA.high_risk,active.slug):view==='risk-reference'?renderRiskReference():renderCare();
  out.innerHTML=(view==='pathway'?renderOverview():'')+renderNavigation()+content;
  if(view==='pathway'){updateDecision();if(browseOrigin){const origin=active.steps.find(s=>s.id===browseOrigin);const note=document.createElement('p');note.className='dw-browse-note';note.innerHTML=`Viewing: <b>${e(decisionLabel(active.steps[stepIndex].id))}</b> · Current: ${e(decisionLabel(browseOrigin))}. <span>Use finding records your choice and makes this the current assessment.${laterFindingSummary(stepIndex)?' Recording here clears '+e(laterFindingSummary(stepIndex))+'.':''}</span> <button type="button" data-step="${e(browseOrigin)}" data-dw-browse>Return to ${e(decisionLabel(browseOrigin))}</button>`;document.querySelector('.question-head')?.after(note);}}else if(view==='care')renderLayerStack();
  navigationObserver?.disconnect();
@@ -447,10 +447,6 @@ function renderIssue(i,n){
  <div class="proposal"><div><span class="route-label">Proposed local approach · discussion draft</span><p>${e(i.proposal)}</p></div><div><b>Why this matters</b><p>${e(i.rationale)}</p></div></div><div class="meeting-status"><span><b>Proposed responsible team:</b> ${e(i.owners)}</span><span><b>Decision:</b> pending meeting</span><span><b>Approval / date:</b> not recorded</span></div></article>`;
 }
 
-function renderEvidence(){
- return `<section class="evidenceintro"><p class="eyebrow">Evidence is also linked at the point of use</p><h2>Sources for ${e(active.code)}</h2><p><a href="https://drliuhao.github.io/mh-liver-pathways/evidence-libraries/#standard_${e(active.slug)}">Standard-protocol library and PPT index →</a> · <a href="https://drliuhao.github.io/mh-liver-pathways/evidence-libraries/#high_risk_${e(active.slug)}">High-risk library and PPT index →</a></p><p>Policy, review guidance, clinical recommendations and study evidence have different roles. Open a source to see its locator and full text. Publisher access may require an institutional sign-in. A source link does not imply high-level or definitive evidence.</p></section><div class="evidence-search"><label for="evidence-search">Find a source across this pathway</label><input id="evidence-search" type="search" data-evidence-search placeholder="Author, trial, guideline, PMID or DOI…"><span role="status" data-evidence-count>All sources shown</span></div><h3 class="evidence-group-title">Sources linked to standard decisions</h3><div class="evidencegrid">${allRefs(active).map(id=>{const r=DATA.sources[id];return `<article class="evidencecard" data-evidence-item data-search-text="${e([r.short,r.title,r.locator,r.url,r.pmid,r.doi].filter(Boolean).join(' '))}"><span class="source-kind">${e(r.kind)}</span><h3>${e(r.title)}</h3><p>${e(r.locator)}</p><button class="btn secondary" data-ref="${id}">Source details & full text ↗</button></article>`;}).join('')}</div>${HighRisk.library(DATA.high_risk,active.slug)}`;
-}
-
 function showSource(id, trigger){
  const r=DATA.sources[id];
  if(!r)return;
@@ -482,7 +478,7 @@ function showHighRisk(id,push=true){
 
 function hashState(){
  browseOrigin=history.state?.browseOrigin||null;
- const h=decodeURIComponent(location.hash.slice(1));
+ const h=decodeURIComponent(location.hash.slice(1));let jump=false;
  const idx=active.steps.findIndex(s=>s.id===h);
  // A meeting question is addressed as #meeting-<id>: several question ids are also decision ids (e.g. #diagnosis).
  const question=h.startsWith('meeting-')&&active.issues.some(i=>i.id===h.slice(8))?h.slice(8):active.issues.some(i=>i.id===h)?h:null;
@@ -491,10 +487,12 @@ function hashState(){
  if(h.startsWith('care-')&&DATA.care[active.slug].some(p=>p.id===h.slice(5))){view='care';careId=h.slice(5);careOriginToken=history.state?.careToken||null;}
  else if(question&&(question!==h||DATA.mode==='alignment'))view='meeting';
  else if(idx>=0){view='pathway';if(idx!==stepIndex){const saved=history.state?.decisionTrail;const found=decisionTrail.indexOf(h);decisionTrail=Array.isArray(saved)?saved.filter(id=>{const key=active.slug+'/'+id;return id!==h&&DATA.assistants[key]?.questions.every(q=>!!assistantSession.answers[key]?.[q.id]);}):found>=0?decisionTrail.slice(0,found):[];focusedCriteria=null;}stepIndex=idx;}
- else if(h==='evidence')view='evidence';
+ else if(h==='evidence'){view=view==='high-risk'?'high-risk':'pathway';jump=true;}
  else if(h==='meeting'||active.issues.some(i=>i.id===h)||DATA.mode==='alignment')view='meeting';
  else view='pathway';
  renderView();
+ // The evidence library is the closing section of the pathway (assets/pathway-sections.js), not a separate view.
+ if(jump){window.PathwaySections?.open('pw-evidence');return;}
  if(view==='pathway'&&idx>=0)requestAnimationFrame(()=>document.querySelector('.decision')?.scrollIntoView({block:'start'}));
  if(view==='meeting'&&question)requestAnimationFrame(()=>document.getElementById(question)?.scrollIntoView({block:'start'}));
 }
@@ -505,11 +503,6 @@ document.addEventListener('input',ev=>{
   const studies=[...box.querySelectorAll('.hr-study')];
   studies.forEach(el=>el.hidden=!!q&&!el.textContent.toLowerCase().includes(q));
   box.querySelector('[data-study-count]').textContent=`${studies.filter(el=>!el.hidden).length} of ${studies.length} study summaries shown`;
- }
- if(ev.target.matches('[data-evidence-search]')){
-  const q=ev.target.value.trim().toLowerCase(),items=[...document.querySelectorAll('[data-evidence-item]')];
-  items.forEach(el=>el.hidden=!!q&&!`${el.textContent} ${el.dataset.searchText||''}`.toLowerCase().includes(q));
-  document.querySelector('[data-evidence-count]').textContent=`${items.filter(el=>!el.hidden).length} of ${items.length} source records shown`;
  }
 });
 
@@ -547,6 +540,7 @@ document.addEventListener('click',ev=>{
  }
  if(ev.target.closest('[data-assistant-show]')){const target=document.querySelector('.results .branch.is-highlighted:not([hidden])')||document.getElementById('decision-results');target.scrollIntoView({block:'start',behavior:'instant'});return;}
 
+ const jump=ev.target.closest('[data-evidence-jump]');if(jump){ev.preventDefault();if(!['pathway','high-risk'].includes(view)){view='pathway';renderView();}if(location.hash!=='#evidence')history.pushState(null,'','#evidence');window.PathwaySections?.open('pw-evidence');return;}
  const cite=ev.target.closest('[data-ref]');if(cite){showSource(cite.dataset.ref,cite);return;}
  if(ev.target.closest('.close-dialog')){document.getElementById('source-dialog').close();return;}
  const step=ev.target.closest('[data-step]');if(step&&!step.disabled){ev.preventDefault();setStep(step.dataset.step,true,!!step.closest('.next-action'),step.hasAttribute('data-dw-browse'));return;}

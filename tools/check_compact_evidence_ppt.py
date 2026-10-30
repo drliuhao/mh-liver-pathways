@@ -24,7 +24,9 @@ def deck_text(deck):
     return slides
 
 base = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT.parent.parent / 'V15_complete_evidence_libraries_2026-10-25'
-decks = {d.parent.name: d for d in base.glob('*/*/Evidence_Summaries_v15.pptx')}
+# A deck_text.json export ({library: {slide: text}}, same extraction as deck_text()) may stand in for the decks.
+exported = json.loads(base.read_text()) if base.suffix == '.json' else None
+decks = {lib: None for lib in exported} if exported else {d.parent.name: d for d in base.glob('*/*/Evidence_Summaries_v15.pptx')}
 prov = json.loads((ROOT / 'tools/compact_evidence_ppt_quotes.json').read_text())['quotes']
 cache, errors, checked = {}, [], 0
 for pmid, quotes in prov.items():
@@ -33,7 +35,7 @@ for pmid, quotes in prov.items():
         if lib not in decks:
             errors.append(f'{pmid}: deck {lib} not found'); continue
         if lib not in cache:
-            cache[lib] = deck_text(decks[lib])
+            cache[lib] = {int(k): v for k, v in exported[lib].items()} if exported else deck_text(decks[lib])
         text = '\n'.join(cache[lib].get(n, '') for n in q['slides'])
         checked += 1
         if q['quote'] not in text:

@@ -51,6 +51,15 @@ for s in studies():
     pmid = hr['sources'].get(s['key'], {}).get('pmid')
     if pmid:
         add(pmid, s['design_population'], s['results'])
+# The published high-risk data (transplant/assets/content.json, with the recorded revisions such as the
+# extrahepatic-disease reviews) is verified site text too.
+live_hr = json.loads((ROOT / 'transplant/assets/content.json').read_text())['high_risk']
+for p in live_hr['pathways'].values():
+    for r in p['reviews']:
+        for s in r['evidence']['studies']:
+            pmid = live_hr['sources'].get(s['key'], {}).get('pmid')
+            if pmid:
+                add(pmid, s.get('design_population'), s.get('results'), s.get('limits'))
 # Transplant pathway source records (title, locator, note) and the site's bibliographic citations.
 for f in glob.glob(str(ROOT / 'transplant/*/index.html')):
     m = re.search(r'<script[^>]*id="protocol-data"[^>]*>(.*?)</script>', Path(f).read_text(), re.S)
@@ -87,6 +96,9 @@ for f in glob.glob(str(ROOT / 'transplant/*/index.html')):
             labels.setdefault(str(v['pmid']), []).append(v['short'])
 for pmid, r in json.loads((ROOT / 'systemic/references.json').read_text()).items():
     labels.setdefault(pmid, []).append(r.get('trial') or '')
+for v in live_hr['sources'].values():
+    if v.get('pmid'):
+        labels.setdefault(str(v['pmid']), []).append(v.get('short') or '')
 
 src = json.loads((ROOT / 'tools/compact_evidence_source.json').read_text())
 deck = json.loads((ROOT / 'tools/compact_evidence_ppt_quotes.json').read_text())['quotes']

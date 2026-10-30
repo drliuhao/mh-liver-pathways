@@ -34,8 +34,8 @@ async def main():
             await pg.evaluate("()=>document.querySelectorAll('#pathway-closing .pw-toggle').forEach(b=>b.click())")
             r = await pg.evaluate('''()=>({open:[...document.querySelectorAll('#pathway-closing .pw-body')].every(b=>!b.hidden),
               rows:document.querySelectorAll('#pw-limited tbody tr').length,owners:document.querySelectorAll('#pw-team tbody tr').length,
-              q:document.querySelectorAll('#pw-questions .pw-list a').length,src:document.querySelectorAll('#pw-evidence tbody tr').length})''')
-            if not (r['open'] and r['rows'] and r['owners'] and r['q'] and r['src']):
+              q:document.querySelectorAll('#pw-questions .pw-list a').length,src:document.querySelectorAll('#pw-evidence .ev').length,sum:document.querySelectorAll('#pw-evidence .ev .evsum').length})''')
+            if not (r['open'] and r['rows'] and r['owners'] and r['q'] and r['src'] and r['sum'] == r['src']):
                 fail.append(f'{slug}: section bodies {r}')
             await pg.click('#pw-questions .pw-list a'); await pg.wait_for_timeout(500)
             r = await pg.evaluate("()=>({view:document.body.dataset.pathwayView,hash:location.hash,closing:!!document.getElementById('pathway-closing')})")

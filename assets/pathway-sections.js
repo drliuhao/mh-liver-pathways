@@ -2,7 +2,10 @@
    Practice choices with limited evidence · Questions for consensus · Team responsibilities and quality monitoring ·
    Evidence library. Presentation only. Data: transplant/assets/pathway-sections.json (tools/build_pathway_sections.py).
    Questions for consensus is an index: each question opens where it is set out once (the meeting record or the
-   high-risk view), and source chips open the page's own source dialog. Shown on the pathway and high-risk views. */
+   high-risk view), and source chips open the page's own source dialog. Shown on the pathway and high-risk views.
+   Evidence library (30 October 2026): the roadmaps' library format, rows drawn by assets/roadmap-evidence.js, with
+   search, category tabs and a one-line summary per source. It replaces the former card-grid "Evidence library"
+   view: the tab, #evidence and the right-column link open this section (window.PathwaySections.open). */
 (() => {
   'use strict';
   const root = new URL('../', document.currentScript.src);
@@ -12,7 +15,7 @@
   const slug = path[1];
   const VIEWS = new Set(['pathway', 'high-risk']);
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
-  const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = new URL('assets/pathway-sections.css?v=20261029-nav1', root); document.head.append(css);
+  const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = new URL('assets/pathway-sections.css?v=20261030-sum1', root); document.head.append(css);
 
   const chip = r => r.dialog ? `<button type="button" class="cite" data-ref="${esc(r.key)}">${esc(r.label)} ↗</button>`
     : r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.label)} ↗</a>` : `<span>${esc(r.label)}</span>`;
@@ -41,9 +44,21 @@
     return owners + mdt + std + hr + (q.locator ? `<p class="pw-related"><small>${esc(q.locator)}</small></p>` : '');
   }
   function evidence(d) {
-    return `<div class="pw-actions"><a href="#evidence">Search all sources for this pathway →</a><a href="${esc(new URL('evidence-libraries/#standard_' + slug, root).href)}">Standard pathway library →</a><a href="${esc(new URL('evidence-libraries/#high_risk_' + slug, root).href)}">High-risk pathway library →</a></div>
-      <div class="pw-tablewrap"><table class="pw-table"><thead><tr><th style="width:44%">Source</th><th>Type</th><th style="width:18%">Access</th></tr></thead><tbody>${d.sources.map(s =>
-      `<tr><td><b>${esc(s.short)}</b><small>${esc(s.title)}</small></td><td>${esc(s.kind)}</td><td>${s.dialog ? `<span class="pw-refs"><button type="button" class="cite" data-ref="${esc(s.key)}">Details & full text ↗</button></span>` : s.url ? `<span class="pw-refs"><a href="${esc(s.url)}" target="_blank" rel="noopener">${s.pmid ? 'PubMed' : 'Source'} ↗</a></span>` : ''}</td></tr>`).join('')}</tbody></table></div>`;
+    const groups = [...new Set(d.sources.map(r => r.group))];
+    return `<div class="pw-actions"><a href="${esc(new URL('evidence-libraries/#standard_' + slug, root).href)}">Standard pathway library and slide index →</a><a href="${esc(new URL('evidence-libraries/#high_risk_' + slug, root).href)}">High-risk pathway library and slide index →</a></div>
+      <div class="evtools"><input type="search" id="pw-ev-search" placeholder="Search trial, author, guideline, topic…" aria-label="Search the evidence library"><div class="tabs" id="pw-ev-groups">${['All', ...groups].map(g =>
+      `<button class="tab" type="button" data-group="${esc(g)}" aria-selected="${g === 'All'}">${esc(g)}</button>`).join('')}</div><span class="evcount" id="pw-ev-count"></span></div><div class="evlist" id="pw-ev-list"></div>`;
+  }
+  const rowOf = r => ({id: r.key, tag: r.tag, cit: r.cit, group: r.group, pmid: r.pmid, doi: r.doi, url: r.url, access: r.access, summary: r.summary, appraisal: r.appraisal, flag: r.flag});
+  let evGroup = 'All', evQuery = '';
+  function renderEv(box) {
+    const list = box.querySelector('#pw-ev-list'); if (!list || !window.RoadmapEvidence) return;
+    const q = evQuery.trim().toLowerCase(), all = data.sources.map(rowOf);
+    const rows = all.filter((r, i) => (evGroup === 'All' || r.group === evGroup) &&
+      (!q || [r.tag, r.cit, r.group, ...data.sources[i].keys, RoadmapEvidence.text(r, {})].join(' ').toLowerCase().includes(q)));
+    list.innerHTML = rows.length ? rows.map(r => RoadmapEvidence.row(r, {})).join('')
+      : `<div class="pw-text"><span class="pw-none">Nothing matches “${esc(evQuery)}”. Try a trial name, an author, or a guideline.</span></div>`;
+    box.querySelector('#pw-ev-count').textContent = `${rows.length} of ${all.length} sources`;
   }
   function build(d) {
     const box = document.createElement('div'); box.id = 'pathway-closing'; box.className = 'pw-closing';
@@ -51,29 +66,52 @@
       section('pw-limited', 'Practice choices with limited evidence', 'These practice choices in the pathway rest mainly on clinical reasoning, expert opinion or non-comparative data. Discuss the uncertainty and track outcomes prospectively.', limited(d)) +
       section('pw-questions', 'Questions for consensus', 'Every decision this pathway still needs the programme to make. Each opens where it is set out once, with source positions, the proposed approach and the decision record; the same questions are in the Word files under <b>Documents</b> (top right).', questions(d)) +
       section('pw-team', 'Team responsibilities and quality monitoring', 'Decision owners, the team and the quality measures written in the protocols. They need local approval and rest on operational consensus, not comparative treatment trials.', team(d)) +
-      section('pw-evidence', 'Evidence library', `Every source behind the pathway — policy, review guidance, clinical recommendations and studies — with its details and full-text access (${d.sources.length} sources).`, evidence(d));
+      section('pw-evidence', 'Evidence library', `Every source behind the pathway — policy, review guidance, clinical recommendations and studies — each with a one-line summary, a link into the TMC library resolver and what it can and cannot show (${d.sources.length} sources).`, evidence(d));
     box.querySelectorAll('.pw-toggle').forEach(btn => btn.addEventListener('click', () => {
-      const body = document.getElementById(btn.getAttribute('aria-controls')); const open = body.hidden;
-      body.hidden = !open; btn.textContent = open ? 'Hide' : 'Show'; btn.setAttribute('aria-expanded', String(open));
+      const body = box.querySelector('#' + btn.getAttribute('aria-controls')); fold(btn, body.hidden);
     }));
+    box.querySelector('#pw-ev-groups').addEventListener('click', e => {
+      const b = e.target.closest('.tab'); if (!b) return;
+      evGroup = b.dataset.group; box.querySelectorAll('#pw-ev-groups .tab').forEach(x => x.setAttribute('aria-selected', String(x === b))); renderEv(box);
+    });
+    box.querySelector('#pw-ev-search').addEventListener('input', e => { evQuery = e.target.value; renderEv(box); });
+    box.querySelector('#pw-ev-search').value = evQuery;
+    box.querySelectorAll('#pw-ev-groups .tab').forEach(x => x.setAttribute('aria-selected', String(x.dataset.group === evGroup)));
+    renderEv(box);
     return box;
   }
+  function fold(btn, open) {
+    const body = document.getElementById(btn.getAttribute('aria-controls')) || btn.closest('.pw-sec').querySelector('.pw-body');
+    body.hidden = !open; btn.textContent = open ? 'Hide' : 'Show'; btn.setAttribute('aria-expanded', String(open));
+  }
 
-  let data = null;
+  let data = null, pending = null;
   const place = () => {
     if (!data) return;
     const main = document.querySelector('#app main.wrap');
     const current = document.getElementById('pathway-closing');
     if (!main || !VIEWS.has(document.body.dataset.pathwayView || 'pathway')) { if (current) current.remove(); return; }
-    if (current && main.contains(current)) return;
-    if (current) current.remove();
-    main.append(build(data));
+    if (!(current && main.contains(current))) { if (current) current.remove(); main.append(build(data)); }
+    if (pending) { const id = pending; pending = null; open(id); }
   };
-  fetch(new URL('transplant/assets/pathway-sections.json?v=20261029-nav1', root)).then(r => r.ok ? r.json() : null).then(j => {
+  /* Open one closing section and bring it into view: the tab and right-column link "Evidence library" and #evidence. */
+  function open(id) {
+    const sec = document.getElementById(id);
+    if (!sec) { pending = id; place(); return; }
+    fold(sec.querySelector('.pw-toggle'), true);
+    requestAnimationFrame(() => sec.scrollIntoView({block: 'start'}));
+  }
+  window.PathwaySections = {open};
+  if (!window.RoadmapEvidence) {
+    const ev = document.createElement('script'); ev.async = false; ev.src = new URL('assets/roadmap-evidence.js?v=20261030-sum1', root); document.head.append(ev);
+    const evCss = document.createElement('link'); evCss.rel = 'stylesheet'; evCss.href = new URL('assets/roadmap-evidence.css?v=20261030-sum1', root); document.head.append(evCss);
+    ev.addEventListener('load', () => { const box = document.getElementById('pathway-closing'); if (box) renderEv(box); });
+  }
+  fetch(new URL('transplant/assets/pathway-sections.json?v=20261030-sum1', root)).then(r => r.ok ? r.json() : null).then(j => {
     data = j && j.pathways[slug];
     if (!data) return;
     const app = document.getElementById('app');
-    const start = () => { place(); if (app) new MutationObserver(place).observe(app, {childList: true}); new MutationObserver(place).observe(document.body, {attributes: true, attributeFilter: ['data-pathway-view']}); };
+    const start = () => { if (location.hash === '#evidence') pending = pending || 'pw-evidence'; place(); if (app) new MutationObserver(place).observe(app, {childList: true}); new MutationObserver(place).observe(document.body, {attributes: true, attributeFilter: ['data-pathway-view']}); };
     document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', start, {once: true}) : start();
   }).catch(() => {});
 })();

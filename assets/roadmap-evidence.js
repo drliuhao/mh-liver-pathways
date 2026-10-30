@@ -1,4 +1,8 @@
-/* One evidence card per source. Clinical categories, never revision batches. */
+/* One evidence card per source. Clinical categories, never revision batches.
+   Every card carries a one-line summary (30 October 2026): a PubMed paper's compact study line (design and
+   population, main result; window.CompactEvidenceData.studies), otherwise the source's line in
+   CompactEvidenceData.nonpm[<roadmap>][<key>].s (tools/source_summaries.json), or row.summary when the caller
+   supplies it (the transplant pathway libraries). Cards drawn before the data loads are filled on window load. */
 (() => {
   'use strict';
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -43,9 +47,35 @@
     return rows;
   }
   function critique(row, critiques) { return critiques[row.pmid] || critiques[row.id] || null; }
+  const page = () => { try { const parts = location.pathname.split('/').filter(x => x && !/\.html?$/.test(x)); return parts[parts.length - 1] || ''; } catch { return ''; } };
+  const ids = row => [row.pmid, row.id, ...(row.aliases || [])].filter(Boolean).map(String);
+  function lookup(list) {
+    const d = (typeof window !== 'undefined' && window.CompactEvidenceData) || null;
+    if (!d) return null;
+    for (const id of list) { const s = d.studies[id.replace(/^tmc/, '')]; if (s && s.r) return {lead:s.a || s.d || '', text:s.r}; }
+    const nonpm = (d.nonpm || {})[page()] || {};
+    for (const id of list) if (nonpm[id] && nonpm[id].s) return {lead:'', text:nonpm[id].s};
+    return {lead:'', text:''};
+  }
+  function summary(row) { return row.summary || lookup(ids(row)); }
+  const summaryHtml = s => s.lead ? `<b>${esc(s.lead)}.</b> ${esc(s.text)}` : esc(s.text);
+  function summaryLine(row) {
+    const s = summary(row);
+    if (!s) return `<p class="evsum" data-ev-sum="${esc(ids(row).join(' '))}" hidden></p>`;
+    return s.text ? `<p class="evsum">${summaryHtml(s)}</p>` : '';
+  }
+  function fill() {
+    document.querySelectorAll('[data-ev-sum]').forEach(p => {
+      const s = lookup(p.dataset.evSum.split(' '));
+      if (!s) return;
+      p.removeAttribute('data-ev-sum');
+      if (s.text) { p.innerHTML = summaryHtml(s); p.hidden = false; } else p.remove();
+    });
+  }
+  if (typeof window !== 'undefined') window.addEventListener('load', fill);
   function text(row, critiques) {
-    const c = critique(row, critiques);
-    return [row.doi, row.pmid, row.design, ...(row.aliases || []), ...Object.values(row.appraisal || {}),
+    const c = critique(row, critiques), s = summary(row);
+    return [row.doi, row.pmid, row.design, s?.lead, s?.text, ...(row.aliases || []), ...Object.values(row.appraisal || {}),
       ...(c?.limitations || []), ...(c?.critique || []), c?.n, c?.bottom_line, c?.funding].filter(Boolean).join(' ');
   }
   function render(row, critiques) {
@@ -64,7 +94,7 @@
     const c = critique(row, critiques), a = row.appraisal;
     const paragraphs = [];
     if (row.design) paragraphs.push(`<p><b>Study design.</b> ${esc(row.design)}</p>`);
-    if (a) for (const [key,label] of [['application','Application'],['population','Population'],['results','Results'],['limitations','Limits of this evidence'],['locator','Source location']]) {
+    if (a) for (const [key,label] of [['note','Pathway note'],['scope','Design and population'],['application','Application'],['population','Population'],['results','Results'],['limitations','Limits of this evidence'],['locator','Source location']]) {
       if (a[key]) paragraphs.push(`<p><b>${label}.</b> ${esc(a[key])}</p>`);
     }
     if (c) {
@@ -76,7 +106,8 @@
     const oldCritique = c ? `<div class="evcritin"><div class="lim"><h5>Limitations the authors state</h5><ul>${list(c.limitations)}</ul></div><div class="crit"><h5>What they do not say</h5><ul>${list(c.critique)}</ul></div></div>` : '';
     const disclosure = (a || c) ? `<details class="evcrit"><summary>How far this one goes</summary><div class="evmeta">${paragraphs.join('')}</div>${oldCritique}</details>` : '';
     const aliases = (row.aliases || []).flatMap(id=>[id,`ev-${id}`]).filter(id=>id!==`ev-${row.id}`).map(id=>`<span id="${esc(id)}" class="evidence-anchor" aria-hidden="true"></span>`).join('');
-    return `<div class="ev" id="ev-${esc(row.id)}">${aliases}<div class="evtag">${esc(row.tag)}</div><div class="evcit">${esc(row.cit)}</div><div class="evlinks">${depot}${access || '<span class="chip">Internal document</span>'}</div>${disclosure}</div>`;
+    const flag = row.flag ? `<span class="chip evflag">${esc(row.flag)}</span>` : '';
+    return `<div class="ev" id="ev-${esc(row.id)}">${aliases}<div class="evtag">${esc(row.tag)}</div><div class="evcit">${esc(row.cit)}${summaryLine(row)}</div><div class="evlinks">${flag}${depot}${access || '<span class="chip">Internal document</span>'}</div>${disclosure}</div>`;
   }
   function reveal() {
     let id; try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
@@ -90,8 +121,13 @@
     if (target.tagName === 'DETAILS') target.open = true;
     if (revealedHash !== id) {
       revealedHash = id;
-      requestAnimationFrame(() => (card || target).scrollIntoView({block:'center'}));
+      requestAnimationFrame(() => (card || target).scrollIntoView({block:card ? 'center' : 'start'}));
     }
   }
-  window.RoadmapEvidence = {merge, row:render, text, reveal};
+  // A link to #evidence (the right-column "Evidence library" link) opens the folded library, as the section menu does.
+  if (typeof document !== 'undefined' && document.addEventListener) document.addEventListener('click', e => {
+    if (!e.target.closest || !e.target.closest('a[href="#evidence"]') || !document.getElementById('evBody')) return;
+    revealedHash = null; setTimeout(reveal, 0);
+  });
+  window.RoadmapEvidence = {merge, row:render, text, reveal, summary, fill};
 })();

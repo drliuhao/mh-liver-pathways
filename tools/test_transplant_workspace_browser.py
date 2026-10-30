@@ -133,12 +133,12 @@ async def main():
                 failures.append(f'{slug}: step-by-step mode {r}')
             # Other views of the page: no decision toolbar, no "Return to decision choices" bar, tabs shown.
             hashes = await page.evaluate("""()=>{const j=JSON.parse(document.getElementById('protocol-data').textContent),s=j.pathway.slug;
-              const r=(j.high_risk?.pathways?.[s]?.reviews||[])[0];return ['meeting','high-risk','evidence','care-'+j.care[s][0].id].concat(r?['high-risk-'+r.anchor]:[])}""")
+              const r=(j.high_risk?.pathways?.[s]?.reviews||[])[0];return ['meeting','high-risk','care-'+j.care[s][0].id].concat(r?['high-risk-'+r.anchor]:[])}""")
             for h in hashes:
                 await page.evaluate(f"()=>{{location.hash='#{h}'}}")
                 await page.wait_for_timeout(350)
                 r = await page.evaluate(SECONDARY)
-                if r['toolbar'] or (r['layer'] and r['view'] != 'care') or r['tabs'] < 5 or r['view'] == 'pathway':
+                if r['toolbar'] or (r['layer'] and r['view'] != 'care') or r['tabs'] < 4 or r['view'] == 'pathway':
                     failures.append(f'{slug}#{h}: {r}')
                 else:
                     secondary += 1
