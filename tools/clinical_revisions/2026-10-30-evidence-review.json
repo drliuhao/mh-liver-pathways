@@ -1,0 +1,15 @@
+{
+  "id": "2026-10-30-evidence-review",
+  "requested_by": "Hao Liu, 30 October 2026: review Analyst B's evidence-library handoff and recorded discrepancies.",
+  "status": "Correct the time interval of the Vouche radiation-lobectomy result; no criterion, recommendation or routing change.",
+  "sources": [],
+  "edits": [],
+  "files": [
+    {
+      "file": "lrt/matrix.json",
+      "old": "radiation lobectomy: FLR +45% at 9 mo",
+      "new": "radiation lobectomy: median FLR +45% beyond 9 mo",
+      "why": "Vouche 2013, PMID 23811303: abstract says after 9 months and the full text says beyond 9 months. https://pubmed.ncbi.nlm.nih.gov/23811303/"
+    }
+  ]
+}

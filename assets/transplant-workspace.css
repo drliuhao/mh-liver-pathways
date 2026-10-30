@@ -161,3 +161,6 @@
    replaces the "Return to decision choices" bar. */
 body[data-pathway-view]:not([data-pathway-view="pathway"]) .clinical-tool-bar,
 body[data-pathway-view]:not([data-pathway-view="pathway"]):not([data-pathway-view="care"]) #layer-current{display:none!important}
+
+/* The evidence jump is an action beside the four view tabs, outside their ARIA tablist. */
+.tw .viewbar .viewtabs{display:flex;align-items:stretch;gap:inherit;flex:0 0 auto}
