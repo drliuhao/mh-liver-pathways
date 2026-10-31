@@ -31,6 +31,7 @@
   };
 
   function corner(t) {
+    if (document.documentElement.dataset.edition === 'share') return;  // share edition: no downloadable documents
     const nav = document.querySelector('nav.shared-portal-nav');
     if (!nav || nav.querySelector('.doc-corner')) return;
     const box = make('details', 'doc-corner'), summary = make('summary', '', 'Documents'), list = make('div', 'doc-corner-list');
@@ -90,7 +91,7 @@
       const ratify = set.ratify && set.ratify.length ? `<details class="cq-fold cq-ratify"><summary>Specialty ratification items <span>${set.ratify.length}</span></summary>${rows(set.ratify,
         [['Item', x => `<b>${esc(x.id)}</b><small>${esc(x.specialty)}</small>`], ['To ratify', x => esc(x.question)], ["Roadmap's stated position", x => `${esc(x.proposal)}<small>${esc(x.proposal_locator)}</small>`]])}</details>` : '';
       const na = (data.not_applicable || []).map(n => `<p class="cq-na"><b>Previously treated extrahepatic disease.</b> ${esc(n.text)}</p>`).join('');
-      sec.innerHTML = `<div class="sechead"><h3 class="ch-background-title">Questions for consensus</h3><p>Every decision this roadmap still needs the programme to make: what guidelines, trials and papers say, the proposed selection, and the group decision. The same questions are in the Word files under <b>Documents</b> (top right).</p><button class="xpand" type="button" aria-expanded="false">Show</button></div>
+      sec.innerHTML = `<div class="sechead"><h3 class="ch-background-title">Questions for consensus</h3><p>Every decision this roadmap still needs the programme to make: what guidelines, trials and papers say, the proposed selection, and the group decision.<span data-doc-note> The same questions are in the Word files under <b>Documents</b> (top right).</span></p><button class="xpand" type="button" aria-expanded="false">Show</button></div>
         <div class="cq-body" hidden><nav class="cq-index" aria-label="Questions for consensus">${set.questions.map(q => `<a href="#question-${esc(q.id)}">${esc(q.id)}</a>`).join('')}</nav>
         ${set.questions.map(q => card(data, q, slug)).join('')}${ratify}${na}</div>`;
       anchor.before(sec);

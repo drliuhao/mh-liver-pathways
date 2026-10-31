@@ -4,7 +4,7 @@
 
 /* Control row */
 .ct-peers{display:flex;flex-wrap:wrap;gap:5px;align-items:center;margin:8px 0 2px}
-.ct-peer{display:inline-flex;align-items:center;gap:5px;min-height:30px;padding:3px 9px 3px 7px;border:1px solid var(--ct-line);border-radius:999px;background:#fff;color:var(--ct-accent);font:600 12.5px/1.25 system-ui,-apple-system,"Segoe UI",sans-serif;cursor:pointer;white-space:normal;text-align:left;max-width:100%}
+.ct-peer{display:inline-flex;align-items:center;gap:5px;min-height:30px;padding:3px 9px 3px 7px;border:1px solid var(--ct-line);border-radius:999px;background:#fff;color:var(--ct-accent);font:600 12.5px/1.25 'Source Sans 3',system-ui,-apple-system,sans-serif;cursor:pointer;white-space:normal;text-align:left;max-width:100%}
 .ct-peer::before{content:'▸';font-size:11px;line-height:1;transition:transform .12s}
 .ct-peer[aria-expanded="true"]::before{transform:rotate(90deg)}
 .ct-peer:hover{border-color:currentColor}
@@ -144,7 +144,7 @@ ul.ct-ev>.ct-ev-row+.ct-ev-row{padding-top:7px;border-top:1px solid #e3e9ee}
 /* Version-history remarks: hidden in the clinical text, listed verbatim beside the change log */
 .ct-rev{display:none!important}
 .ct-rev-lead::first-letter{text-transform:uppercase}
-.ct-revision-log{margin:18px 0 8px;padding:8px 14px;border:1px solid #dfe5e8;border-radius:7px;background:#fafbfb;font:13px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:#4c5a64}
+.ct-revision-log{margin:18px 0 8px;padding:8px 14px;border:1px solid #dfe5e8;border-radius:7px;background:#fafbfb;font:13px/1.5 'Source Sans 3',system-ui,-apple-system,sans-serif;color:#4c5a64}
 .ct-revision-log>summary{cursor:pointer;font-weight:600;color:#4c5a64}
 .ct-revision-intro{margin:6px 0;font-size:12.5px}
 .ct-revision-log ul{margin:4px 0 2px;padding-left:20px}

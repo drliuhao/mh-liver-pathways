@@ -90,7 +90,7 @@
 .compact-trail .ct-entry-note{font:400 11px/1.4 var(--sans,system-ui);color:#52636b;margin:0 0 8px}
 .compact-trail .ct-entry-note[hidden]{display:none}
 .layer-missing-note{border-left-color:#226959;background:#edf7f3;color:#1c5146}
-.compact-trail .ct-scroll-button{align-self:center;flex:0 0 28px;min-height:44px;padding:0;margin:0 3px 0 0;border:1px solid #bdcbd2;border-radius:5px;color:#315566;background:#fff;font:600 24px/1 system-ui;cursor:pointer}
+.compact-trail .ct-scroll-button{align-self:center;flex:0 0 28px;min-height:44px;padding:0;margin:0 3px 0 0;border:1px solid #bdcbd2;border-radius:5px;color:#315566;background:#fff;font:600 24px/1 'Source Sans 3',system-ui,-apple-system,sans-serif;cursor:pointer}
 .compact-trail .ct-scroll-button:disabled{color:#a3b1b8;background:#f5f7f8;cursor:default}
 .compact-trail .ct-scroll-button[hidden]{display:none}
 @media(max-width:760px){.compact-trail .ct-scroll-button{display:none}}
@@ -105,7 +105,7 @@
 
 /* One working area: findings reveal the next finding; named actions advance. */
 .compact-trail span.ct-current-chip{cursor:default;pointer-events:none}
-.compact-trail .ct-edit-icon{color:#69808c;font:400 13px/1 system-ui;margin-left:2px}
+.compact-trail .ct-edit-icon{color:#69808c;font:400 13px/1 'Source Sans 3',system-ui,-apple-system,sans-serif;margin-left:2px}
 .compact-trail .ct-workspace{display:block;min-width:0;margin:0 0 14px;scroll-margin-top:calc(var(--pathway-nav-height,60px) + 12px)}
 .compact-trail .ct-workspace[hidden]{display:none!important}
 .compact-trail .ct-workspace .question-head{margin-top:14px}

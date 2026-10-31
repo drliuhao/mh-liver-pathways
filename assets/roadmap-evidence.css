@@ -9,3 +9,5 @@
 .ev .evsum{margin:6px 0 0;padding-left:9px;border-left:2px solid var(--teal,#176a87);font-size:12.8px;line-height:1.45;color:var(--ink,#16222d)}
 .ev .evsum b{font-weight:600;color:var(--muted,#5a6b79)}
 .ev .evflag{font-size:11px}
+/* A long link or identifier inside a row wraps rather than widening the page on a phone. */
+.ev .evcit,.ev .evmeta,.ev .evsum{overflow-wrap:anywhere}

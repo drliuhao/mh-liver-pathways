@@ -1,19 +1,19 @@
 /* Explanation controls are dotted; navigation retains arrows/solid links. */
 .ci-unit{display:inline-block;vertical-align:top;max-width:100%;margin:3px 8px 3px 0}
-button.ci-trigger{display:inline-flex;align-items:center;gap:7px;max-width:100%;min-height:32px;padding:4px 0;border:0;border-radius:3px;background:none;color:#116674;font:600 13px/1.45 system-ui,sans-serif;text-align:left;cursor:pointer;touch-action:pan-y;-webkit-touch-callout:none;user-select:none}
+button.ci-trigger{display:inline-flex;align-items:center;gap:7px;max-width:100%;min-height:32px;padding:4px 0;border:0;border-radius:3px;background:none;color:#116674;font:600 13px/1.45 'Source Sans 3',system-ui,-apple-system,sans-serif;text-align:left;cursor:pointer;touch-action:pan-y;-webkit-touch-callout:none;user-select:none}
 .ci-trigger .ci-label{text-decoration:underline;text-decoration-style:dotted;text-underline-offset:4px;text-decoration-thickness:1px}.ci-trigger:hover{color:#063b47}.ci-trigger .ci-icon{display:inline-flex;align-items:center;justify-content:center;width:17px;height:17px;flex-shrink:0;border:1px solid currentColor;border-radius:50%;font:700 11px/1 Georgia,serif;text-decoration:none}
 .ci-trigger:focus-visible,.ci-close:focus-visible,.ci-reading:focus-visible{outline:3px solid #ca9237;outline-offset:3px}
 .ci-source{margin:0!important;padding:0!important;border:0!important;background:none!important}.ci-source>summary[hidden]{display:none!important}
-.ci-panel{box-sizing:border-box;position:fixed;inset:auto;margin:0;padding:0;border:1px solid #bacdd0;border-radius:13px;background:#fff;color:#173441;box-shadow:0 12px 42px #092c3a38;font:400 14px/1.6 system-ui,sans-serif;max-width:calc(100vw - 24px);overflow:auto;overscroll-behavior:contain}
+.ci-panel{box-sizing:border-box;position:fixed;inset:auto;margin:0;padding:0;border:1px solid #bacdd0;border-radius:13px;background:#fff;color:#173441;box-shadow:0 12px 42px #092c3a38;font:400 14px/1.6 'Source Sans 3',system-ui,-apple-system,sans-serif;max-width:calc(100vw - 24px);overflow:auto;overscroll-behavior:contain}
 .ci-panel:not(.ci-inline-panel):not(.ci-sheet):not(:popover-open){display:none}.ci-panel:popover-open{display:block}.ci-panel::backdrop{background:transparent;backdrop-filter:none}
-.ci-panel-head{position:sticky;top:0;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 12px 10px 18px;background:#edf5f5;border-bottom:1px solid #d7e5e6}.ci-panel-head strong{font:700 14px/1.4 system-ui,sans-serif}
-button.ci-close{display:flex;justify-content:center;align-items:center;flex-shrink:0;width:44px;height:44px;min-width:44px;border:0;border-radius:8px;background:transparent;color:#173441;font:400 28px/1 system-ui,sans-serif;cursor:pointer}.ci-close:hover{background:#dcebed}
+.ci-panel-head{position:sticky;top:0;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 12px 10px 18px;background:#edf5f5;border-bottom:1px solid #d7e5e6}.ci-panel-head strong{font:700 14px/1.4 'Source Sans 3',system-ui,-apple-system,sans-serif}
+button.ci-close{display:flex;justify-content:center;align-items:center;flex-shrink:0;width:44px;height:44px;min-width:44px;border:0;border-radius:8px;background:transparent;color:#173441;font:400 28px/1 'Source Sans 3',system-ui,-apple-system,sans-serif;cursor:pointer}.ci-close:hover{background:#dcebed}
 .ci-body{padding:16px 18px}.ci-body>:first-child{margin-top:0}.ci-body>:last-child{margin-bottom:0}.ci-body ul{padding-left:22px}.ci-body p,.ci-body li{font-size:14px;line-height:1.6}.ci-body .moreinner{display:block;padding:0;border:0}.ci-body a{overflow-wrap:anywhere}.ci-body .contextline,.ci-body .assistant-help{margin:0}
 .ci-panel.ci-sheet{position:fixed;top:auto;left:0;right:0;bottom:0;width:100%;max-width:100%;max-height:70dvh;border-radius:18px 18px 0 0;padding-bottom:env(safe-area-inset-bottom);margin:0;animation:ci-arrive .15s ease-out}.ci-sheet::backdrop{background:#102c4566}
 .ci-inline .ci-panel{position:static;inset:auto!important;width:auto!important;max-width:100%;max-height:none!important;margin:5px 0;box-shadow:none;border-color:#d7e5e6;border-radius:8px;overflow:visible}.ci-inline .ci-panel-head{display:none}.ci-inline .ci-body{padding:12px}.ci-unit:has(.ci-inline){display:block;margin-right:0}
-.ci-reading{margin-left:auto;padding:7px 10px;min-height:36px;border:1px solid #c6d7da;border-radius:6px;background:#f4f9f9;color:#185768;font:600 12px/1.4 system-ui,sans-serif;cursor:pointer;white-space:nowrap}
+.ci-reading{margin-left:auto;padding:7px 10px;min-height:36px;border:1px solid #c6d7da;border-radius:6px;background:#f4f9f9;color:#185768;font:600 12px/1.4 'Source Sans 3',system-ui,-apple-system,sans-serif;cursor:pointer;white-space:nowrap}
 .contextual-explanations .contextline{align-items:center;gap:6px 18px}.contextual-explanations .contextline>span:first-child{flex:1 1 480px}.contextual-explanations .contextline>.ci-unit{margin:0}
-.ci-discussions>summary{cursor:pointer;color:#16616f;font:600 14px/1.5 system-ui,sans-serif;min-height:44px;align-content:center}.ci-discussions>.issue-link:first-of-type{margin-top:12px}
+.ci-discussions>summary{cursor:pointer;color:#16616f;font:600 14px/1.5 'Source Sans 3',system-ui,-apple-system,sans-serif;min-height:44px;align-content:center}.ci-discussions>.issue-link:first-of-type{margin-top:12px}
 .contextual-explanations .assistant-intro{font-size:12px;margin:0 0 14px;color:#516973}
 .contextual-explanations .decision .question-head h2{font-size:clamp(23px,2.2vw,32px);line-height:1.25}
 .contextual-explanations .rf-evidence-controls .ci-unit{margin:0}.contextual-explanations .rf-evidence-controls .ci-label{font-size:12px}.contextual-explanations .rf-related>.ci-unit{margin-bottom:12px}
@@ -37,7 +37,7 @@ button.ci-close{display:flex;justify-content:center;align-items:center;flex-shri
 
 /* The short clinical summary itself opens the complete explanation and sources. */
 .ci-summary{display:block;margin:5px 0 0}
-.ci-summary>.ci-trigger{display:grid;grid-template-columns:minmax(0,1fr) 18px;gap:3px 8px;font:400 13px/1.5 system-ui,sans-serif;align-items:start;min-height:0;padding:3px 0;color:#355d69}
+.ci-summary>.ci-trigger{display:grid;grid-template-columns:minmax(0,1fr) 18px;gap:3px 8px;font:400 13px/1.5 'Source Sans 3',system-ui,-apple-system,sans-serif;align-items:start;min-height:0;padding:3px 0;color:#355d69}
 .ci-summary .ci-icon{margin-top:2px}
 .ci-summary .ci-label{text-underline-offset:3px;text-decoration-color:#7ea0a7}
 .ci-heading-info{margin:0 0 0 8px;vertical-align:baseline}
@@ -51,7 +51,7 @@ button.ci-close{display:flex;justify-content:center;align-items:center;flex-shri
 .contextual-explanations .branch-action>.ci-unit{margin-left:24px}
 .contextual-explanations .rf-criteria>.ci-unit{margin:0 0 6px;display:block}
 .contextual-explanations .rf-context{display:none}
-.ci-authority{grid-column:1;font:500 10px/1.5 system-ui,sans-serif;color:#526a75}
+.ci-authority{grid-column:1;font:500 10px/1.5 'Source Sans 3',system-ui,-apple-system,sans-serif;color:#526a75}
 .ci-summary:has(.ci-inline)>.ci-trigger{display:none}
 .ci-heading-info:has(.ci-inline){display:none}
 .contextual-explanations .gray:has(.ci-discussions)>.section-head{display:none}
@@ -62,7 +62,7 @@ button.ci-close{display:flex;justify-content:center;align-items:center;flex-shri
 .ci-treatment-criteria{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;align-items:start;margin:10px 0 4px}
 .contextual-explanations .ci-treatment-criteria>details.ci-criteria-disclosure{margin:0!important;padding:0!important;min-width:0;border:1px solid #cbdcda;border-radius:6px;background:#f5f9f8;overflow:hidden}
 .contextual-explanations .ci-treatment-criteria>details.ci-contraindications{border-color:#ddc9c4;background:#fbf6f4}
-.ci-treatment-criteria details.ci-criteria-disclosure>summary{display:flex;align-items:center;gap:6px;min-height:52px;padding:8px 10px;width:100%;border:0;border-radius:0;background:transparent;box-sizing:border-box;font:600 12px/1.35 system-ui,sans-serif;color:#175e56;cursor:pointer;list-style:none}
+.ci-treatment-criteria details.ci-criteria-disclosure>summary{display:flex;align-items:center;gap:6px;min-height:52px;padding:8px 10px;width:100%;border:0;border-radius:0;background:transparent;box-sizing:border-box;font:600 12px/1.35 'Source Sans 3',system-ui,-apple-system,sans-serif;color:#175e56;cursor:pointer;list-style:none}
 .ci-criteria-disclosure>summary::-webkit-details-marker{display:none}
 .ci-criteria-disclosure>summary::before{content:'▸'!important;flex-shrink:0;font-size:13px}
 .ci-criteria-disclosure[open]>summary::before{content:'▾'!important}

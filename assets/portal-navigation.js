@@ -1,20 +1,36 @@
 /* Navigation only. No changes to clinical content or pathway state. */
 (() => {
   const root=new URL('../',document.currentScript.src);
+  // One type system on every page: Source Sans 3 for text and controls, Source Serif 4 for titles.
+  if(!document.querySelector('link[href*="family=Source+Sans+3"]')){const fonts=document.createElement('link');fonts.rel='stylesheet';fonts.href='https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap';document.head.prepend(fonts);}
+  // Share edition (tools/build_share_site.py sets data-edition="share"): the site's own Word and PDF files are not
+  // published, so any link to one is removed wherever a page renders it, and notes that point to them are hidden.
+  if(document.documentElement.dataset.edition==='share'){
+    const DOC=/\.(?:docx?|pdf|pptx?|xlsx?)$/i,SEP=/^[\s·|,;–—-]*$/;
+    const isDoc=a=>{try{const u=new URL(a.getAttribute('href'),location.href);return u.origin===location.origin&&DOC.test(u.pathname);}catch{return false;}};
+    const drop=a=>{const parent=a.parentElement;
+      if(a.querySelector('img,svg,picture')){a.replaceWith(...a.childNodes);return;}
+      const next=a.nextSibling,prev=a.previousSibling;a.remove();
+      if(next&&next.nodeType===3&&SEP.test(next.textContent))next.remove();else if(prev&&prev.nodeType===3&&SEP.test(prev.textContent))prev.remove();
+      if(parent&&parent!==document.body&&!parent.textContent.trim()&&!parent.querySelector('img,svg,input,select,button,textarea'))parent.remove();};
+    const scrub=node=>{if(node.matches?.('a[href]')){if(isDoc(node))drop(node);return;}node.querySelectorAll?.('a[href]').forEach(a=>{if(isDoc(a))drop(a);});};
+    new MutationObserver(list=>{for(const m of list)m.addedNodes.forEach(n=>{if(n.nodeType===1)scrub(n);});}).observe(document.documentElement,{childList:true,subtree:true});
+    scrub(document);document.addEventListener('DOMContentLoaded',()=>scrub(document));
+  }
   // Shared, progressive presentation layer for roadmaps and decision protocols.
-  const infoCSS=document.createElement('link');infoCSS.rel='stylesheet';infoCSS.href=new URL('assets/contextual-info.css?v=20261026-visible1',root);document.head.append(infoCSS);
-  const flowCSS=document.createElement('link');flowCSS.rel='stylesheet';flowCSS.href=new URL('assets/clinical-flow.css?v=20261025-1',root);document.head.append(flowCSS);
-  const layerCSS=document.createElement('link');layerCSS.rel='stylesheet';layerCSS.href=new URL('assets/decision-layers.css?v=20261026-tools1',root);document.head.append(layerCSS);
-  const compactCSS=document.createElement('link');compactCSS.rel='stylesheet';compactCSS.href=new URL('assets/compact-trail.css?v=20261026-visible1',root);document.head.append(compactCSS);
-  for(const file of ['contextual-copy.js','contextual-info.js','clinical-flow.js','clinical-reference.js','decision-workspace-data.js','decision-workspace.js','compact-trail-labels.js','compact-trail.js','allocation-reference.js','clinical-tools.js','allocation-overview.js','content-hierarchy-data.js','content-hierarchy.js','compact-evidence-data.js','compact-treatment.js','transplant-workspace.js','clinical-scores.js','tools-column.js','document-corner.js','pathway-sections.js']){const script=document.createElement('script');script.async=false;script.src=new URL('assets/'+file+'?v=20261030-review1',root);document.head.append(script);}
-  const allocationCSS=document.createElement('link');allocationCSS.rel='stylesheet';allocationCSS.href=new URL('assets/allocation-overview.css?v=20261026-wait1',root);document.head.append(allocationCSS);
+  const infoCSS=document.createElement('link');infoCSS.rel='stylesheet';infoCSS.href=new URL('assets/contextual-info.css?v=20261031-ui1',root);document.head.append(infoCSS);
+  const flowCSS=document.createElement('link');flowCSS.rel='stylesheet';flowCSS.href=new URL('assets/clinical-flow.css?v=20261031-ui1',root);document.head.append(flowCSS);
+  const layerCSS=document.createElement('link');layerCSS.rel='stylesheet';layerCSS.href=new URL('assets/decision-layers.css?v=20261031-ui1',root);document.head.append(layerCSS);
+  const compactCSS=document.createElement('link');compactCSS.rel='stylesheet';compactCSS.href=new URL('assets/compact-trail.css?v=20261031-ui1',root);document.head.append(compactCSS);
+  for(const file of ['contextual-copy.js','contextual-info.js','clinical-flow.js','clinical-reference.js','decision-workspace-data.js','decision-workspace.js','compact-trail-labels.js','compact-trail.js','allocation-reference.js','clinical-tools.js','allocation-overview.js','content-hierarchy-data.js','content-hierarchy.js','compact-evidence-data.js','compact-treatment.js','transplant-workspace.js','clinical-scores.js','tools-column.js','document-corner.js','pathway-sections.js']){const script=document.createElement('script');script.async=false;script.src=new URL('assets/'+file+'?v=20261031-ui1',root);document.head.append(script);}
+  const allocationCSS=document.createElement('link');allocationCSS.rel='stylesheet';allocationCSS.href=new URL('assets/allocation-overview.css?v=20261031-ui1',root);document.head.append(allocationCSS);
   const toolsCSS=document.createElement('link');toolsCSS.rel='stylesheet';toolsCSS.href=new URL('assets/clinical-tools.css?v=20261026-tools1',root);document.head.append(toolsCSS);
-  const workspaceCSS=document.createElement('link');workspaceCSS.rel='stylesheet';workspaceCSS.href=new URL('assets/decision-workspace.css?v=20261029-docs1',root);document.head.append(workspaceCSS);
-  const hierarchyCSS=document.createElement('link');hierarchyCSS.rel='stylesheet';hierarchyCSS.href=new URL('assets/content-hierarchy.css?v=20261027-hierarchy5',root);document.head.append(hierarchyCSS);
-  const compactTreatmentCSS=document.createElement('link');compactTreatmentCSS.rel='stylesheet';compactTreatmentCSS.href=new URL('assets/compact-treatment.css?v=20261029-docs1',root);document.head.append(compactTreatmentCSS);
+  const workspaceCSS=document.createElement('link');workspaceCSS.rel='stylesheet';workspaceCSS.href=new URL('assets/decision-workspace.css?v=20261031-ui1',root);document.head.append(workspaceCSS);
+  const hierarchyCSS=document.createElement('link');hierarchyCSS.rel='stylesheet';hierarchyCSS.href=new URL('assets/content-hierarchy.css?v=20261031-ui1',root);document.head.append(hierarchyCSS);
+  const compactTreatmentCSS=document.createElement('link');compactTreatmentCSS.rel='stylesheet';compactTreatmentCSS.href=new URL('assets/compact-treatment.css?v=20261031-ui1',root);document.head.append(compactTreatmentCSS);
   const toolsColumnCSS=document.createElement('link');toolsColumnCSS.rel='stylesheet';toolsColumnCSS.href=new URL('assets/tools-column.css?v=20261029-docs1',root);document.head.append(toolsColumnCSS);
-  const docCSS=document.createElement('link');docCSS.rel='stylesheet';docCSS.href=new URL('assets/document-corner.css?v=20261029-docs1',root);document.head.append(docCSS);
-  const transplantCSS=document.createElement('link');transplantCSS.rel='stylesheet';transplantCSS.href=new URL('assets/transplant-workspace.css?v=20261030-review1',root);document.head.append(transplantCSS);
+  const docCSS=document.createElement('link');docCSS.rel='stylesheet';docCSS.href=new URL('assets/document-corner.css?v=20261031-ui1',root);document.head.append(docCSS);
+  const transplantCSS=document.createElement('link');transplantCSS.rel='stylesheet';transplantCSS.href=new URL('assets/transplant-workspace.css?v=20261031-ui1',root);document.head.append(transplantCSS);
   const path=location.pathname.slice(root.pathname.length).split('/').filter(Boolean);
   const transplant=path[0]==='transplant';
   const highRisk=transplant&&path[1]==='high-risk';

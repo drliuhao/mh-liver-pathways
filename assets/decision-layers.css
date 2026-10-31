@@ -27,7 +27,7 @@
 .layer-heading>b{margin-right:auto}.layer-heading button,.layer-heading a{font:500 12px var(--sans,system-ui);padding:5px 8px;color:#205f53;background:#f3f8f6;border:1px solid #d1ded9;border-radius:5px;cursor:pointer}
 .layer-history{max-height:min(28dvh,240px);overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;border-top:1px solid #dce6e2}
 .layer-history:empty{display:none}.layer-row{display:flex;align-items:center;gap:10px;padding:8px 14px;border-bottom:1px solid #e2eae7;background:#f8fbfa}
-.layer-number{width:24px;height:24px;display:grid;place-items:center;flex:0 0 24px;border-radius:50%;background:#e3eeea;color:#315d51;font:600 12px system-ui}
+.layer-number{width:24px;height:24px;display:grid;place-items:center;flex:0 0 24px;border-radius:50%;background:#e3eeea;color:#315d51;font:600 12px 'Source Sans 3',system-ui,-apple-system,sans-serif}
 .layer-choice{min-width:0;flex:1}.layer-choice label{display:block!important;color:#263c35;font:600 12px/1.35 var(--sans,system-ui)!important;margin:0 0 4px!important;max-width:none!important}
 .layer-choice label small{display:inline;color:#566c63;font-size:10px;font-weight:500;margin-right:8px}
 .layer-choice select{display:block;width:100%;min-width:0;max-width:100%;margin:0!important;border:1px solid #b9cec5!important;border-radius:6px!important;padding:8px 30px 8px 10px!important;color:#173f34!important;background:#fff!important;font:500 14px/1.4 var(--sans,system-ui)!important;min-height:38px}

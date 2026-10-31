@@ -15,7 +15,7 @@
   const slug = path[1];
   const VIEWS = new Set(['pathway', 'high-risk']);
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
-  const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = new URL('assets/pathway-sections.css?v=20261030-sum1', root); document.head.append(css);
+  const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = new URL('assets/pathway-sections.css?v=20261031-ui1', root); document.head.append(css);
 
   const chip = r => r.dialog ? `<button type="button" class="cite" data-ref="${esc(r.key)}">${esc(r.label)} ↗</button>`
     : r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.label)} ↗</a>` : `<span>${esc(r.label)}</span>`;
@@ -64,7 +64,7 @@
     const box = document.createElement('div'); box.id = 'pathway-closing'; box.className = 'pw-closing';
     box.innerHTML =
       section('pw-limited', 'Practice choices with limited evidence', 'These practice choices in the pathway rest mainly on clinical reasoning, expert opinion or non-comparative data. Discuss the uncertainty and track outcomes prospectively.', limited(d)) +
-      section('pw-questions', 'Questions for consensus', 'Every decision this pathway still needs the programme to make. Each opens where it is set out once, with source positions, the proposed approach and the decision record; the same questions are in the Word files under <b>Documents</b> (top right).', questions(d)) +
+      section('pw-questions', 'Questions for consensus', 'Every decision this pathway still needs the programme to make. Each opens where it is set out once, with source positions, the proposed approach and the decision record<span data-doc-note>; the same questions are in the Word files under <b>Documents</b> (top right)</span>.', questions(d)) +
       section('pw-team', 'Team responsibilities and quality monitoring', 'Decision owners, the team and the quality measures written in the protocols. They need local approval and rest on operational consensus, not comparative treatment trials.', team(d)) +
       section('pw-evidence', 'Evidence library', `Every source behind the pathway — policy, review guidance, clinical recommendations and studies — each with a one-line summary, a link into the TMC library resolver and what it can and cannot show (${d.sources.length} sources).`, evidence(d));
     box.querySelectorAll('.pw-toggle').forEach(btn => btn.addEventListener('click', () => {
@@ -104,7 +104,7 @@
   window.PathwaySections = {open};
   if (!window.RoadmapEvidence) {
     const ev = document.createElement('script'); ev.async = false; ev.src = new URL('assets/roadmap-evidence.js?v=20261030-docs2', root); document.head.append(ev);
-    const evCss = document.createElement('link'); evCss.rel = 'stylesheet'; evCss.href = new URL('assets/roadmap-evidence.css?v=20261030-docs2', root); document.head.append(evCss);
+    const evCss = document.createElement('link'); evCss.rel = 'stylesheet'; evCss.href = new URL('assets/roadmap-evidence.css?v=20261031-ui1', root); document.head.append(evCss);
     ev.addEventListener('load', () => { const box = document.getElementById('pathway-closing'); if (box) renderEv(box); });
   }
   fetch(new URL('transplant/assets/pathway-sections.json?v=20261030-docs2', root)).then(r => r.ok ? r.json() : null).then(j => {

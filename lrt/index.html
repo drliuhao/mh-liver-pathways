@@ -1,7 +1,7 @@
-<!doctype html><html><head><meta name="robots" content="noindex"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../assets/portal-navigation.css"><script src="../assets/portal-navigation.js?v=20261030-review1" defer></script></head><body style="margin:0"><title>LRT Evidence Matrix</title>
+<!doctype html><html lang="en" data-theme="light"><head><meta name="robots" content="noindex"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../assets/portal-navigation.css?v=20261031-ui1"><script src="../assets/portal-navigation.js?v=20261031-ui1" defer></script></head><body style="margin:0"><title>LRT Evidence Matrix</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
 <style>
 /* Layout: clinical reference sheet — tumour tabs over a card grid, a matrix view for the overview, tier legend doubles as a filter */
 :root {
@@ -10,7 +10,7 @@
   --t4-fg: #a15c00; --t4-bg: #fbe8c9; --t5-fg: #5b616a; --t5-bg: #eceef1; --t0-fg: #9b2335; --t0-bg: #fbe4e7;
   --cx-fg: #8a2433; --cx-bg: #fbf0f1; --pill-bg: #ffffff;
   --f-display: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --f-body: "Public Sans", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --f-body: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
   --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
@@ -40,6 +40,7 @@ h1 { font-family: var(--f-display); font-weight: 700; font-size: clamp(26px, 3.4
 .views { display: flex; gap: 4px; flex-wrap: wrap; border-bottom: 1px solid var(--line); margin: 14px 0 14px; }
 .views button { font: inherit; font-weight: 600; font-size: 14px; color: var(--muted); background: none; border: 0; padding: 10px 12px; border-bottom: 3px solid transparent; cursor: pointer; margin-bottom: -1px; }
 .views button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+@media (max-width: 760px) { .views { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; border-bottom: 0; } .views button { margin: 0; text-align: center; padding: 11px 7px; border: 1px solid var(--line); border-radius: 5px; font-size: 12px; background: var(--surface); } .views button[aria-selected="true"] { border: 1px solid var(--accent); color: var(--ink); } }
 
 .legend { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 16px; }
 .legend .lbl { font-size: 12px; color: var(--muted); margin-right: 2px; }
@@ -302,4 +303,4 @@ function renderAll() {
 document.querySelectorAll('.views button').forEach(b => b.onclick = () => { state.view = b.dataset.view; save(); renderAll(); });
 renderAll();
 </script>
-<footer style="padding:18px;text-align:center;font:13px system-ui"><a href="../changes/">Change log</a></footer></body></html>
+<footer style="padding:18px;text-align:center;font:13px 'Source Sans 3',system-ui,-apple-system,sans-serif"><a href="../changes/">Change log</a></footer></body></html>

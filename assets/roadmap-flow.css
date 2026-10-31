@@ -23,7 +23,10 @@
  .roadmap-streamlined header.top .topin{padding:9px 14px;gap:8px}
  .roadmap-streamlined header.top .brand{font-size:15px}
  .roadmap-streamlined header.top .brand span{display:none}
- .roadmap-streamlined header.top .sec{display:flex;flex-wrap:nowrap;white-space:nowrap;overflow-x:auto;max-width:100%;gap:14px;padding:3px 0}
+ .roadmap-streamlined header.top .sec{display:flex;flex-wrap:wrap;white-space:nowrap;overflow:visible;max-width:100%;gap:0 14px;padding:3px 0}
+ .roadmap-streamlined header.top .ch-page-resources{position:static}
+ .roadmap-streamlined header.top .ch-page-resources>summary{padding:0 8px}
+ .roadmap-streamlined header.top .ch-page-resources-list{left:auto;right:14px;top:calc(100% - 4px);width:min(360px,calc(100% - 28px));min-width:0;box-sizing:border-box}
  .rf-selector label{width:auto;flex:1;order:0}.rf-selector .rf-permalink{display:block;order:1;font-size:11px}
  .rf-selector select{order:2}.rf-selector button{order:3}
 }

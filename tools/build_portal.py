@@ -52,7 +52,7 @@ def home(data):
         left.append(f'<section class="portal-group"><h3>{group}</h3>{rows}</section>')
     right = ''.join(card('transplant/'+p['slug']+'/', p['code'], p['name'], f'{len(p["steps"])} decisions · {p["route"]}', p['entry']) for p in data['index'])
     return '''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<html lang="en" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
 <title>Memorial Hermann · HPB Oncology & Transplant Pathways</title>
 <meta name="description" content="A shared clinical review portal: HPB oncology treatment roadmaps and guidance-aligned liver transplant pathways.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,700&display=swap">

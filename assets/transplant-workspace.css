@@ -8,13 +8,13 @@
 .tw .dw-protocol-decisions{display:flex;align-items:stretch;gap:7px}
 .tw .tw-phase{display:flex;flex-direction:column;gap:3px;min-width:0;flex:0 0 auto}
 .tw .tw-phase+.tw-phase{padding-left:7px;border-left:1px solid #d9e2e7}
-.tw .tw-phase-label{font:700 10px/1.3 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.05em;text-transform:uppercase;color:#6a7c89;white-space:nowrap;padding-left:2px}
+.tw .tw-phase-label{font:700 10px/1.3 'Source Sans 3',system-ui,-apple-system,sans-serif;letter-spacing:.05em;text-transform:uppercase;color:#6a7c89;white-space:nowrap;padding-left:2px}
 .tw .tw-phase-steps{display:flex;gap:5px;align-items:stretch}
 .tw .dw-protocol-topic{display:inline-flex;align-items:center;gap:6px;padding-left:9px;padding-right:10px}
 /* When the numbered row would not fit, the numbers go and the phase labels stay. */
 .tw .dw-protocol-decisions.tw-tight .tw-step-num{display:none}
 .tw .dw-protocol-decisions.tw-tight .dw-protocol-topic{padding-left:11px;padding-right:11px}
-.tw .tw-step-num{display:inline-flex;align-items:center;justify-content:center;flex:none;width:18px;height:18px;border-radius:50%;font:700 11px/1 system-ui,-apple-system,"Segoe UI",sans-serif;background:#e4ecf0;color:#3d5664}
+.tw .tw-step-num{display:inline-flex;align-items:center;justify-content:center;flex:none;width:18px;height:18px;border-radius:50%;font:700 11px/1 'Source Sans 3',system-ui,-apple-system,sans-serif;background:#e4ecf0;color:#3d5664}
 .tw .dw-protocol-topic[data-viewed] .tw-step-num{background:#fff;color:var(--tw-head)}
 .tw .dw-protocol-topic[aria-current="step"]:not([data-viewed]) .tw-step-num{background:var(--tw-head);color:#fff}
 @media (max-width:760px){
@@ -37,7 +37,7 @@
 .tw .decision.tw-decision>.stepfooter{margin:0;padding:10px 18px 14px;border-top:1px solid #e3e9ee}
 
 /* ---------- Middle column ---------- */
-.tw .tw-kicker{margin:0 0 6px;font:700 11px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.05em;text-transform:uppercase;color:var(--tw-muted)}
+.tw .tw-kicker{margin:0 0 6px;font:700 11px/1.4 'Source Sans 3',system-ui,-apple-system,sans-serif;letter-spacing:.05em;text-transform:uppercase;color:var(--tw-muted)}
 /* 1. Record the finding: an input, so neutral blue rather than a recommendation colour */
 .tw .tw-findings{margin:0 0 12px;padding:10px 12px 12px;border:1px solid #cfdde6;border-left:4px solid var(--tw-find);border-radius:8px;background:#f5f9fb}
 .tw .tw-findings>.tw-kicker{color:var(--tw-find)}
@@ -57,7 +57,7 @@
 .tw .tw-outcome{margin:0 0 14px;padding:14px;border:1px solid #dce5e8;border-radius:8px;background:#f8fafb}
 .tw .tw-outcome>#decision-results{margin:0!important;padding:0!important;border:0!important}
 .tw .tw-outcome #decision-results>.section-head{margin:0 0 4px;padding:0;border:0}
-.tw .tw-outcome #decision-results>.section-head h3{font:700 15px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:#3f5864}
+.tw .tw-outcome #decision-results>.section-head h3{font:700 15px/1.4 'Source Sans 3',system-ui,-apple-system,sans-serif;color:#3f5864}
 .tw .tw-outcome #decision-results>.logic-note{margin:0 0 10px;font-size:12.5px;color:var(--tw-muted)}
 /* The matched result, tinted by its kind */
 .tw .tw-outcome #current-result>.branch{--k-accent:#5a6b78;--k-bg:#f4f6f8;--k-line:#d6dee5;--k-ink:#3f5160;
@@ -73,7 +73,7 @@
 /* Reasons to reassess: brick, directly under the result, as Avoid / cautions under recommendations */
 .tw .tw-outcome>.stops.tw-stops{margin:12px 0 0;padding:10px 12px 12px;border:1px solid #ecd0c9;border-left:4px solid #9b3b2e;border-radius:8px;background:#fbefec}
 .tw .tw-outcome>.stops .section-head{margin:0 0 6px;padding:0;border:0}
-.tw .tw-outcome>.stops .section-head h3{font:700 12px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.035em;text-transform:uppercase;color:#86301f}
+.tw .tw-outcome>.stops .section-head h3{font:700 12px/1.5 'Source Sans 3',system-ui,-apple-system,sans-serif;letter-spacing:.035em;text-transform:uppercase;color:#86301f}
 .tw .tw-outcome>.stops .status-icon{background:#9b3b2e;color:#fff;border-color:#9b3b2e}
 .tw .tw-outcome>.stops ul{margin:0;padding-left:20px}
 /* Other possible results: reference only, neutral */
@@ -114,7 +114,7 @@
 .tw .tw-def-sources{margin:0 0 8px;font-size:12px}
 /* The results panel, as "Recommendations within this decision" */
 .tw .tw-options{margin:0 0 14px;padding:14px;border:1px solid #dce5e8;border-radius:8px;background:#f8fafb}
-.tw .tw-options-title{margin:0 0 10px;font:700 15px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:#3f5864}
+.tw .tw-options-title{margin:0 0 10px;font:700 15px/1.4 'Source Sans 3',system-ui,-apple-system,sans-serif;color:#3f5864}
 .tw .tw-group{--g-accent:#5a6b78;--g-bg:#f4f6f8;--g-line:#dbe2e7;--g-ink:#3f5160;margin:12px 0 0;padding:10px 8px 10px;border:1px solid var(--g-line);border-left:4px solid var(--g-accent);border-radius:8px;background:var(--g-bg)}
 .tw .tw-options>.tw-options-title+.tw-group{margin-top:0}
 .tw .tw-group.tw-k-advance{--g-accent:#2f7d55;--g-bg:#eef7f1;--g-line:#cfe3d6;--g-ink:#1f5c3d}
@@ -122,18 +122,18 @@
 .tw .tw-group.tw-k-redirect{--g-accent:#3c6fa8;--g-bg:#eef4fb;--g-line:#d3dfee;--g-ink:#2c5583}
 .tw .tw-group.tw-k-stop,.tw .tw-group.tw-k-reassess{--g-accent:#9b3b2e;--g-bg:#fbefec;--g-line:#ecd0c9;--g-ink:#86301f}
 .tw .tw-group.tw-k-risk{--g-accent:#a8470a;--g-bg:#fff4e8;--g-line:#f0d2b8;--g-ink:#a8470a}
-.tw .tw-group>h4{display:flex;align-items:center;gap:8px;margin:0 0 8px;font:700 12px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.035em;text-transform:uppercase;color:var(--g-ink)}
+.tw .tw-group>h4{display:flex;align-items:center;gap:8px;margin:0 0 8px;font:700 12px/1.5 'Source Sans 3',system-ui,-apple-system,sans-serif;letter-spacing:.035em;text-transform:uppercase;color:var(--g-ink)}
 .tw .tw-group>h4::before{content:'';flex:none;width:9px;height:9px;border-radius:2px;background:var(--g-accent)}
 .tw .tw-group.tw-k-reassess>h4::before,.tw .tw-group.tw-k-stop>h4::before{content:'⊘';width:auto;height:auto;background:none;color:var(--g-accent);font-size:15px;line-height:1}
 .tw .tw-option{background:#fff;border:1px solid var(--g-line);border-radius:6px;padding:10px 11px}
 .tw .tw-option+.tw-option{margin-top:8px}
-.tw .tw-option-title{margin:0 0 3px;font:700 15px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--tw-ink)}
-.tw .tw-option-status{margin:0 0 4px;font:700 11px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#a8470a}
+.tw .tw-option-title{margin:0 0 3px;font:700 15px/1.35 'Source Sans 3',system-ui,-apple-system,sans-serif;color:var(--tw-ink)}
+.tw .tw-option-status{margin:0 0 4px;font:700 11px/1.4 'Source Sans 3',system-ui,-apple-system,sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#a8470a}
 .tw .tw-option-action{margin:0;font-size:14px;line-height:1.5;color:#2c3b47}
 .tw .tw-next .next-actions{display:flex;flex-direction:column;gap:4px;margin:6px 0 0}
 .tw .tw-next .next-action{border:0;padding:0;background:none}
 .tw .tw-next .next-action p{margin:0 0 2px;font-size:12.5px;color:var(--tw-muted)}
-.tw .tw-next .route-button{display:inline-block;margin:0;padding:3px 0;background:none;color:#0b5d72;font:700 13.5px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:left}
+.tw .tw-next .route-button{display:inline-block;margin:0;padding:3px 0;background:none;color:#0b5d72;font:700 13.5px/1.4 'Source Sans 3',system-ui,-apple-system,sans-serif;text-align:left}
 .tw .tw-next .route-button:hover{text-decoration:underline}
 .tw .tw-next .high-risk-route{color:#a8470a;border:0!important;box-shadow:none!important;background:none!important;padding:3px 0!important}
 .tw .tw-static-criteria>.ct-peers{margin-top:10px}
@@ -145,7 +145,7 @@
 .tw .tw-ev-locator{font-size:11.5px;color:var(--tw-muted)}
 /* Optional step-by-step entry in Tools */
 .tw .tw-mode{margin-top:14px;padding-top:12px;border-top:1px solid #dbe4e8}
-.tw .tw-mode>h4{margin:0 0 6px;font:700 13px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--tw-ink)}
+.tw .tw-mode>h4{margin:0 0 6px;font:700 13px/1.4 'Source Sans 3',system-ui,-apple-system,sans-serif;color:var(--tw-ink)}
 .tw .tw-mode-button{width:100%}
 .tw .tw-mode-note{margin:6px 0 0;font-size:12px;color:var(--tw-muted)}
 @media (max-width:600px){
