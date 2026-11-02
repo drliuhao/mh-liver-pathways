@@ -4,6 +4,7 @@ Clinical content is a review draft, not an automated eligibility determination.
 References are attached to individual claims; local choices remain labelled draft.
 """
 from pathlib import Path
+import json
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / 'dist'
@@ -61,11 +62,11 @@ def comparison(ref, text, quote=False, locator=''):
 def issue(id, question, comparisons, proposal, rationale, owners, record):
     return dict(id=id,question=question,comparisons=comparisons,proposal=proposal,rationale=rationale,owners=owners,record=record,status='Discussion required — not yet approved')
 def pathway(slug,code,name,route,entry,roadmap,steps,issues):
-    docs=sorted((DIST/'docs').glob('*_v3.docx'))
-    prefix={'hcc':'01_','pcca':'02_','icca':'03_','crlm':'04_','nelm':'05_','hehe':'06_','hca':'07_'}[slug]
+    files=json.loads((ROOT.parent/'assets/documents.json').read_text())['tumors'][slug]['files']
+    base=f'/mh-liver-pathways/documents/{slug}/'
     return dict(slug=slug,code=code,name=name,route=route,entry=entry,roadmap=roadmap,
-                steps=steps,issues=issues,protocol=f'/protocols/{slug}_v3_protocol.docx',
-                docs=[dict(label='Alignment worksheet' if 'Worksheet' in d.name else 'Decision document',url='/docs/'+d.name) for d in docs if d.name.startswith(prefix)])
+                steps=steps,issues=issues,protocol=base+files['standard_info'],
+                docs=[dict(label=label,url=base+files[slot]) for slot,label in [('decision','Decision discussion'),('standard_questions','Standard pathway questions')]])
 
 PATHWAYS=[]
 

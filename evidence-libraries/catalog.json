@@ -1,8 +1,8 @@
 {
-  "updated": "October 29, 2026 at 01:19 PM CDT",
-  "unique_publications": 618,
-  "matched_publication_pdfs": 596,
-  "missing_publication_pdfs": 22,
+  "updated": "1 November 2026 · V18 synchronized artifacts",
+  "unique_publications": 622,
+  "matched_publication_pdfs": 598,
+  "missing_publication_pdfs": 24,
   "appraisals_pending": 25,
   "libraries": [
     {
@@ -13,9 +13,9 @@
       "publication_count": 92,
       "matched_pdfs": 90,
       "slides": 290,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "01_Treatment_Matrices/liver_directed_matrix",
-      "document": null,
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/01_Treatment_Matrices/liver_directed_matrix",
+      "document": "lrt/",
       "papers": [
         {
           "id": "doi:10.1056/nejm199912303412702",
@@ -1052,9 +1052,9 @@
       "publication_count": 134,
       "matched_pdfs": 131,
       "slides": 399,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "01_Treatment_Matrices/systemic_matrix",
-      "document": "HPB_Cross_Tumor_Systemic_Treatment_Matrix_2026-10-25.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/01_Treatment_Matrices/systemic_matrix",
+      "document": "systemic/",
       "papers": [
         {
           "id": "doi:10.1001/jama.2012.7352",
@@ -2552,12 +2552,12 @@
       "title": "Ampullary cancer cancer roadmap",
       "family": "02_Cancer_Roadmaps",
       "slug": "ampullary",
-      "publication_count": 36,
-      "matched_pdfs": 34,
-      "slides": 99,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "02_Cancer_Roadmaps/roadmap_ampullary",
-      "document": "Memorial_Hermann_Ampullary_System_Roadmap_v0.2.docx",
+      "publication_count": 37,
+      "matched_pdfs": 35,
+      "slides": 100,
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/02_Cancer_Roadmaps/roadmap_ampullary",
+      "document": "documents/ampullary/AMP_1_Roadmap.docx",
       "papers": [
         {
           "id": "doi:10.1001/jama.2012.7352",
@@ -2755,9 +2755,9 @@
         {
           "id": "doi:10.1016/s0140-6736(89)90840-4",
           "slides": [
-            52,
             53,
-            54
+            54,
+            55
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -2766,9 +2766,9 @@
         {
           "id": "doi:10.1097/mcg.0000000000000555",
           "slides": [
-            55,
             56,
-            57
+            57,
+            58
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -2777,9 +2777,9 @@
         {
           "id": "doi:10.1002/ueg2.12071",
           "slides": [
-            58,
             59,
-            60
+            60,
+            61
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -2788,9 +2788,9 @@
         {
           "id": "doi:10.1007/s00464-023-10567-z",
           "slides": [
-            61,
             62,
-            63
+            63,
+            64
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -2799,9 +2799,9 @@
         {
           "id": "doi:10.1055/a-0965-0605",
           "slides": [
-            64,
             65,
-            66
+            66,
+            67
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -2810,9 +2810,9 @@
         {
           "id": "doi:10.1055/a-1397-3198",
           "slides": [
-            67,
             68,
-            69
+            69,
+            70
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -2821,9 +2821,9 @@
         {
           "id": "doi:10.1002/ueg2.70074",
           "slides": [
-            70,
             71,
-            72
+            72,
+            73
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -2832,9 +2832,9 @@
         {
           "id": "doi:10.1016/j.gie.2005.04.020",
           "slides": [
-            73,
             74,
-            75
+            75,
+            76
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -2843,9 +2843,9 @@
         {
           "id": "doi:10.1111/jgh.13205",
           "slides": [
-            76,
             77,
-            78
+            78,
+            79
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -2854,7 +2854,7 @@
         {
           "id": "pmid:27457864",
           "slides": [
-            79
+            80
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -2863,9 +2863,9 @@
         {
           "id": "doi:10.5152/tjg.2018.17378",
           "slides": [
-            80,
             81,
-            82
+            82,
+            83
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -2874,9 +2874,9 @@
         {
           "id": "doi:10.3748/wjg.v28.i17.1845",
           "slides": [
-            83,
             84,
-            85
+            85,
+            86
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -2885,9 +2885,9 @@
         {
           "id": "doi:10.1007/s00464-022-09856-w",
           "slides": [
-            86,
             87,
-            88
+            88,
+            89
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -2896,7 +2896,7 @@
         {
           "id": "doi:10.1016/j.gassur.2023.11.008",
           "slides": [
-            89
+            90
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -2905,9 +2905,9 @@
         {
           "id": "doi:10.1136/gutjnl-2022-327996",
           "slides": [
-            90,
             91,
-            92
+            92,
+            93
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -2916,9 +2916,9 @@
         {
           "id": "doi:10.1016/j.gie.2025.10.037",
           "slides": [
-            93,
             94,
-            95
+            95,
+            96
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -2927,7 +2927,7 @@
         {
           "id": "doi:10.1097/mcg.0b013e318272f2ef",
           "slides": [
-            96
+            97
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -2936,12 +2936,21 @@
         {
           "id": "doi:10.1097/xcs.0000000000001289",
           "slides": [
-            97,
             98,
-            99
+            99,
+            100
           ],
           "inclusion": [
             "Cited in this active source document"
+          ]
+        },
+        {
+          "id": "doi:10.1016/s1470-2045(21)00027-9",
+          "slides": [
+            52
+          ],
+          "inclusion": [
+            "Source supporting the accepted clinical correction; focused evidence card with explicit limitations."
           ]
         }
       ],
@@ -2955,9 +2964,9 @@
       "publication_count": 62,
       "matched_pdfs": 60,
       "slides": 186,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "02_Cancer_Roadmaps/roadmap_chcca",
-      "document": "Memorial_Hermann_MixedTumour_System_Roadmap_v12.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/02_Cancer_Roadmaps/roadmap_chcca",
+      "document": "documents/chcca/cHCCCCA_1_Roadmap.docx",
       "papers": [
         {
           "id": "doi:10.3390/cancers13133336",
@@ -3657,9 +3666,9 @@
       "publication_count": 65,
       "matched_pdfs": 60,
       "slides": 186,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "02_Cancer_Roadmaps/roadmap_crlm",
-      "document": "Memorial_Hermann_CRLM_System_Roadmap_v12.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/02_Cancer_Roadmaps/roadmap_crlm",
+      "document": "documents/crlm/CRLM_1_Roadmap.docx",
       "papers": [
         {
           "id": "doi:10.1056/nejm199912303412702",
@@ -4376,9 +4385,9 @@
       "publication_count": 48,
       "matched_pdfs": 46,
       "slides": 142,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "02_Cancer_Roadmaps/roadmap_hca",
-      "document": "Memorial_Hermann_Adenoma_System_Roadmap_v0.2.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/02_Cancer_Roadmaps/roadmap_hca",
+      "document": "documents/hca/HCA_1_Roadmap.docx",
       "papers": [
         {
           "id": "doi:10.1002/hep.21068",
@@ -4915,9 +4924,9 @@
       "publication_count": 83,
       "matched_pdfs": 83,
       "slides": 252,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "02_Cancer_Roadmaps/roadmap_hcc",
-      "document": "Memorial_Hermann_HCC_System_Roadmap_v12.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/02_Cancer_Roadmaps/roadmap_hcc",
+      "document": "documents/hcc/HCC_1_Roadmap.docx",
       "papers": [
         {
           "id": "doi:10.1016/j.jhep.2013.06.015",
@@ -5848,12 +5857,12 @@
       "title": "Intrahepatic CCA cancer roadmap",
       "family": "02_Cancer_Roadmaps",
       "slug": "icca",
-      "publication_count": 50,
+      "publication_count": 51,
       "matched_pdfs": 48,
-      "slides": 151,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "02_Cancer_Roadmaps/roadmap_icca",
-      "document": "Memorial_Hermann_iCCA_System_Roadmap_v12.docx",
+      "slides": 152,
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/02_Cancer_Roadmaps/roadmap_icca",
+      "document": "documents/icca/iCCA_1_Roadmap.docx",
       "papers": [
         {
           "id": "doi:10.1002/bjs.10776",
@@ -6249,9 +6258,9 @@
         {
           "id": "doi:10.1001/jamaoncol.2025.4736",
           "slides": [
-            106,
             107,
-            108
+            108,
+            109
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -6260,7 +6269,7 @@
         {
           "id": "doi:10.1097/hep.0000000000001594",
           "slides": [
-            109
+            110
           ],
           "inclusion": [
             "Current tumor roadmap or its tumor-specific treatment-matrix citations"
@@ -6269,9 +6278,9 @@
         {
           "id": "doi:10.1016/s1470-2045(21)00027-9",
           "slides": [
-            110,
             111,
-            112
+            112,
+            113
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -6280,9 +6289,9 @@
         {
           "id": "doi:10.1016/s2468-1253(24)00119-5",
           "slides": [
-            113,
             114,
-            115
+            115,
+            116
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -6291,9 +6300,9 @@
         {
           "id": "doi:10.1002/hep.28744",
           "slides": [
-            116,
             117,
-            118
+            118,
+            119
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -6302,9 +6311,9 @@
         {
           "id": "doi:10.1016/s2468-1253(18)30045-1",
           "slides": [
-            119,
             120,
-            121
+            121,
+            122
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -6313,9 +6322,9 @@
         {
           "id": "doi:10.1002/hep.32258",
           "slides": [
-            122,
             123,
-            124
+            124,
+            125
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -6324,9 +6333,9 @@
         {
           "id": "doi:10.1245/s10434-023-13652-8",
           "slides": [
-            125,
             126,
-            127
+            127,
+            128
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -6335,9 +6344,9 @@
         {
           "id": "doi:10.1159/000550600",
           "slides": [
-            128,
             129,
-            130
+            130,
+            131
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -6346,9 +6355,9 @@
         {
           "id": "doi:10.1200/jco.2026.44.17_suppl.lba3506",
           "slides": [
-            131,
             132,
-            133
+            133,
+            134
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -6357,9 +6366,9 @@
         {
           "id": "doi:10.1136/gutjnl-2018-317817",
           "slides": [
-            134,
             135,
-            136
+            136,
+            137
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -6368,9 +6377,9 @@
         {
           "id": "doi:10.1053/j.gastro.2026.02.040",
           "slides": [
-            137,
             138,
-            139
+            139,
+            140
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -6379,9 +6388,9 @@
         {
           "id": "doi:10.1016/j.esmoop.2024.104003",
           "slides": [
-            140,
             141,
-            142
+            142,
+            143
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -6390,12 +6399,21 @@
         {
           "id": "doi:10.1200/jco-26-02462",
           "slides": [
-            143,
             144,
-            145
+            145,
+            146
           ],
           "inclusion": [
             "Cited in this active source document"
+          ]
+        },
+        {
+          "id": "doi:10.1200/jco-26-00788",
+          "slides": [
+            106
+          ],
+          "inclusion": [
+            "Source supporting the accepted clinical correction; focused evidence card with explicit limitations."
           ]
         }
       ],
@@ -6403,12 +6421,12 @@
         {
           "title": "NCCN Clinical Practice Guidelines in Oncology: Biliary Tract Cancers, Version 1.2026 (10 March 2026)",
           "slides": [
-            146,
             147,
             148,
             149,
             150,
-            151
+            151,
+            152
           ],
           "pdf_available": true
         }
@@ -6422,9 +6440,9 @@
       "publication_count": 37,
       "matched_pdfs": 33,
       "slides": 107,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "02_Cancer_Roadmaps/roadmap_incidental",
-      "document": "Memorial_Hermann_IncidentalMass_System_Roadmap_v0.2.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/02_Cancer_Roadmaps/roadmap_incidental",
+      "document": "documents/incidental/INC_1_Roadmap.docx",
       "papers": [
         {
           "id": "doi:10.1002/bjs.4888",
@@ -6838,9 +6856,9 @@
       "publication_count": 40,
       "matched_pdfs": 40,
       "slides": 122,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "02_Cancer_Roadmaps/roadmap_nelm",
-      "document": "Memorial_Hermann_NELM_System_Roadmap_v0.7.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/02_Cancer_Roadmaps/roadmap_nelm",
+      "document": "documents/nelm/NELM_1_Roadmap.docx",
       "papers": [
         {
           "id": "doi:10.1016/s0140-6736(18)32487-5",
@@ -7300,9 +7318,9 @@
       "publication_count": 50,
       "matched_pdfs": 49,
       "slides": 153,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "02_Cancer_Roadmaps/roadmap_pcca",
-      "document": "Memorial_Hermann_HilarCCA_System_Roadmap_v12.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/02_Cancer_Roadmaps/roadmap_pcca",
+      "document": "documents/pcca/pCCA_1_Roadmap.docx",
       "papers": [
         {
           "id": "doi:10.1002/bjs.10776",
@@ -7872,12 +7890,12 @@
       "title": "Pancreatic cysts cancer roadmap",
       "family": "02_Cancer_Roadmaps",
       "slug": "pcyst",
-      "publication_count": 28,
-      "matched_pdfs": 28,
-      "slides": 97,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "02_Cancer_Roadmaps/roadmap_pcyst",
-      "document": "Memorial_Hermann_PancreaticCyst_System_Roadmap_v0.2.docx",
+      "publication_count": 29,
+      "matched_pdfs": 29,
+      "slides": 98,
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/02_Cancer_Roadmaps/roadmap_pcyst",
+      "document": "documents/pcyst/PCYST_1_Roadmap.docx",
       "papers": [
         {
           "id": "doi:10.1136/gutjnl-2015-309638",
@@ -8104,9 +8122,9 @@
         {
           "id": "doi:10.1097/sla.0000000000001008",
           "slides": [
-            73,
             74,
-            75
+            75,
+            76
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8115,9 +8133,9 @@
         {
           "id": "doi:10.1177/2050640620945534",
           "slides": [
-            76,
             77,
-            78
+            78,
+            79
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8126,9 +8144,9 @@
         {
           "id": "doi:10.1053/j.gastro.2004.02.013",
           "slides": [
-            79,
             80,
-            81
+            81,
+            82
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8137,9 +8155,9 @@
         {
           "id": "doi:10.1016/s0016-5107(05)01581-6",
           "slides": [
-            82,
             83,
-            84
+            84,
+            85
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8148,7 +8166,7 @@
         {
           "id": "doi:10.1016/j.dld.2013.01.010",
           "slides": [
-            85
+            86
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8157,9 +8175,9 @@
         {
           "id": "doi:10.1136/gutjnl-2016-313586",
           "slides": [
-            86,
             87,
-            88
+            88,
+            89
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8168,9 +8186,9 @@
         {
           "id": "doi:10.1016/j.gie.2021.04.025",
           "slides": [
-            89,
             90,
-            91
+            91,
+            92
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8179,9 +8197,9 @@
         {
           "id": "doi:10.1097/mcg.0000000000001507",
           "slides": [
-            92,
             93,
-            94
+            94,
+            95
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8190,12 +8208,21 @@
         {
           "id": "doi:10.1053/j.gastro.2022.09.028",
           "slides": [
-            95,
             96,
-            97
+            97,
+            98
           ],
           "inclusion": [
             "Cited in this active source document"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.pan.2023.05.005",
+          "slides": [
+            73
+          ],
+          "inclusion": [
+            "Source supporting the accepted clinical correction; focused evidence card with explicit limitations."
           ]
         }
       ],
@@ -8206,12 +8233,12 @@
       "title": "Pancreatic cancer cancer roadmap",
       "family": "02_Cancer_Roadmaps",
       "slug": "pdac",
-      "publication_count": 37,
+      "publication_count": 38,
       "matched_pdfs": 36,
-      "slides": 111,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "02_Cancer_Roadmaps/roadmap_pdac",
-      "document": "Memorial_Hermann_PDAC_System_Roadmap_v12.docx",
+      "slides": 112,
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/02_Cancer_Roadmaps/roadmap_pdac",
+      "document": "documents/pdac/PDAC_1_Roadmap.docx",
       "papers": [
         {
           "id": "doi:10.1111/j.1365-2559.2009.03376.x",
@@ -8346,9 +8373,9 @@
         {
           "id": "doi:10.1200/jco.21.02233",
           "slides": [
-            37,
             38,
-            39
+            39,
+            40
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8357,9 +8384,9 @@
         {
           "id": "doi:10.1200/jco.22.01134",
           "slides": [
-            40,
             41,
-            42
+            42,
+            43
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8368,9 +8395,9 @@
         {
           "id": "doi:10.1016/s2468-1253(22)00348-x",
           "slides": [
-            43,
             44,
-            45
+            45,
+            46
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8379,9 +8406,9 @@
         {
           "id": "doi:10.1016/s2468-1253(23)00405-3",
           "slides": [
-            46,
             47,
-            48
+            48,
+            49
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8390,9 +8417,9 @@
         {
           "id": "doi:10.1016/s1470-2045(25)00363-8",
           "slides": [
-            49,
             50,
-            51
+            51,
+            52
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8401,9 +8428,9 @@
         {
           "id": "doi:10.1093/bjsopen/zrae172",
           "slides": [
-            52,
             53,
-            54
+            54,
+            55
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8412,9 +8439,9 @@
         {
           "id": "doi:10.1016/s0140-6736(25)01685-x",
           "slides": [
-            55,
             56,
-            57
+            57,
+            58
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8423,9 +8450,9 @@
         {
           "id": "doi:10.1056/nejmoa1011923",
           "slides": [
-            58,
             59,
-            60
+            60,
+            61
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8434,9 +8461,9 @@
         {
           "id": "doi:10.1056/nejmoa1304369",
           "slides": [
-            61,
             62,
-            63
+            63,
+            64
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8445,9 +8472,9 @@
         {
           "id": "doi:10.1016/s0140-6736(23)01366-1",
           "slides": [
-            64,
             65,
-            66
+            66,
+            67
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8456,9 +8483,9 @@
         {
           "id": "doi:10.1056/nejmoa1903387",
           "slides": [
-            67,
             68,
-            69
+            69,
+            70
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8467,9 +8494,9 @@
         {
           "id": "doi:10.1056/nejmoa2405008",
           "slides": [
-            70,
             71,
-            72
+            72,
+            73
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8478,9 +8505,9 @@
         {
           "id": "doi:10.1016/s0140-6736(15)00986-1",
           "slides": [
-            73,
             74,
-            75
+            75,
+            76
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8489,9 +8516,9 @@
         {
           "id": "doi:10.1056/nejmoa2505783",
           "slides": [
-            76,
             77,
-            78
+            78,
+            79
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8500,9 +8527,9 @@
         {
           "id": "doi:10.1056/nejmoa2605555",
           "slides": [
-            79,
             80,
-            81
+            81,
+            82
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8511,9 +8538,9 @@
         {
           "id": "doi:10.1016/j.surg.2021.12.029",
           "slides": [
-            82,
             83,
-            84
+            84,
+            85
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8522,9 +8549,9 @@
         {
           "id": "doi:10.1097/sla.0000000000005753",
           "slides": [
-            85,
             86,
-            87
+            87,
+            88
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8533,9 +8560,9 @@
         {
           "id": "doi:10.1016/j.ejso.2025.109598",
           "slides": [
-            88,
             89,
-            90
+            90,
+            91
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8544,9 +8571,9 @@
         {
           "id": "doi:10.3390/cancers17040688",
           "slides": [
-            91,
             92,
-            93
+            93,
+            94
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8555,9 +8582,9 @@
         {
           "id": "doi:10.1001/jama.2016.4324",
           "slides": [
-            94,
             95,
-            96
+            96,
+            97
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8566,9 +8593,9 @@
         {
           "id": "doi:10.1016/s1470-2045(16)00172-8",
           "slides": [
-            97,
             98,
-            99
+            99,
+            100
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8577,9 +8604,9 @@
         {
           "id": "doi:10.1200/jco.23.00434",
           "slides": [
-            100,
             101,
-            102
+            102,
+            103
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8588,9 +8615,9 @@
         {
           "id": "doi:10.1016/j.annonc.2023.08.009",
           "slides": [
-            103,
             104,
-            105
+            105,
+            106
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8599,9 +8626,9 @@
         {
           "id": "doi:10.1056/nejmoa2208470",
           "slides": [
-            106,
             107,
-            108
+            108,
+            109
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8610,12 +8637,21 @@
         {
           "id": "doi:10.1200/jco-24-01502",
           "slides": [
-            109,
             110,
-            111
+            111,
+            112
           ],
           "inclusion": [
             "Cited in this active source document"
+          ]
+        },
+        {
+          "id": "doi:10.1200/jco-25-02520",
+          "slides": [
+            37
+          ],
+          "inclusion": [
+            "Source supporting the accepted clinical correction; focused evidence card with explicit limitations."
           ]
         }
       ],
@@ -8626,12 +8662,12 @@
       "title": "Pancreatic NET cancer roadmap",
       "family": "02_Cancer_Roadmaps",
       "slug": "pnet",
-      "publication_count": 48,
-      "matched_pdfs": 46,
-      "slides": 141,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "02_Cancer_Roadmaps/roadmap_pnet",
-      "document": "Memorial_Hermann_PNET_System_Roadmap_v0.2.docx",
+      "publication_count": 49,
+      "matched_pdfs": 47,
+      "slides": 142,
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/02_Cancer_Roadmaps/roadmap_pnet",
+      "document": "documents/pnet/pNET_1_Roadmap.docx",
       "papers": [
         {
           "id": "doi:10.1111/cyt.12111",
@@ -8940,9 +8976,9 @@
         {
           "id": "doi:10.1111/jne.13343",
           "slides": [
-            83,
             84,
-            85
+            85,
+            86
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8951,9 +8987,9 @@
         {
           "id": "doi:10.2967/jnumed.122.264860",
           "slides": [
-            86,
             87,
-            88
+            88,
+            89
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8962,7 +8998,7 @@
         {
           "id": "doi:10.1016/j.eprac.2025.02.001",
           "slides": [
-            89
+            90
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8971,9 +9007,9 @@
         {
           "id": "doi:10.1016/s2213-8587(25)00119-6",
           "slides": [
-            90,
             91,
-            92
+            92,
+            93
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8982,9 +9018,9 @@
         {
           "id": "doi:10.1097/01.sla.0000234802.44320.a5",
           "slides": [
-            93,
             94,
-            95
+            95,
+            96
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -8993,9 +9029,9 @@
         {
           "id": "doi:10.1097/sla.0b013e31815b9cae",
           "slides": [
-            96,
             97,
-            98
+            98,
+            99
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -9004,9 +9040,9 @@
         {
           "id": "doi:10.1245/s10434-014-3769-4",
           "slides": [
-            99,
             100,
-            101
+            101,
+            102
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -9015,9 +9051,9 @@
         {
           "id": "doi:10.1097/sla.0000000000000348",
           "slides": [
-            102,
             103,
-            104
+            104,
+            105
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -9026,9 +9062,9 @@
         {
           "id": "doi:10.1002/bjs.9819",
           "slides": [
-            105,
             106,
-            107
+            107,
+            108
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -9037,8 +9073,8 @@
         {
           "id": "doi:10.1056/nejmoa1009290",
           "slides": [
-            108,
-            109
+            109,
+            110
           ],
           "inclusion": [
             "Current tumor roadmap or its tumor-specific treatment-matrix citations"
@@ -9047,9 +9083,9 @@
         {
           "id": "doi:10.1056/nejmoa1003825",
           "slides": [
-            110,
             111,
-            112
+            112,
+            113
           ],
           "inclusion": [
             "Current tumor roadmap or its tumor-specific treatment-matrix citations"
@@ -9058,8 +9094,8 @@
         {
           "id": "doi:10.1016/s0140-6736(15)00817-x",
           "slides": [
-            113,
-            114
+            114,
+            115
           ],
           "inclusion": [
             "Current tumor roadmap or its tumor-specific treatment-matrix citations"
@@ -9068,9 +9104,9 @@
         {
           "id": "doi:10.1056/nejmoa1607427",
           "slides": [
-            115,
             116,
-            117
+            117,
+            118
           ],
           "inclusion": [
             "Current tumor roadmap or its tumor-specific treatment-matrix citations"
@@ -9079,9 +9115,9 @@
         {
           "id": "doi:10.1016/s1470-2045(21)00572-6",
           "slides": [
-            118,
             119,
-            120
+            120,
+            121
           ],
           "inclusion": [
             "Current tumor roadmap or its tumor-specific treatment-matrix citations"
@@ -9090,9 +9126,9 @@
         {
           "id": "doi:10.1111/jne.13249",
           "slides": [
-            121,
             122,
-            123
+            123,
+            124
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -9101,9 +9137,9 @@
         {
           "id": "doi:10.1056/nejmoa2403991",
           "slides": [
-            124,
             125,
-            126
+            126,
+            127
           ],
           "inclusion": [
             "Current tumor roadmap or its tumor-specific treatment-matrix citations"
@@ -9112,8 +9148,8 @@
         {
           "id": "doi:10.1016/s1470-2045(26)00108-7",
           "slides": [
-            127,
-            128
+            128,
+            129
           ],
           "inclusion": [
             "Current tumor roadmap or its tumor-specific treatment-matrix citations"
@@ -9122,8 +9158,8 @@
         {
           "id": "doi:10.1016/s0140-6736(26)00604-5",
           "slides": [
-            129,
-            130
+            130,
+            131
           ],
           "inclusion": [
             "Current tumor roadmap or its tumor-specific treatment-matrix citations"
@@ -9132,9 +9168,9 @@
         {
           "id": "doi:10.1093/annonc/mds276",
           "slides": [
-            131,
             132,
-            133
+            133,
+            134
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -9143,12 +9179,21 @@
         {
           "id": "doi:10.1200/jco.23.01529",
           "slides": [
-            134,
             135,
-            136
+            136,
+            137
           ],
           "inclusion": [
             "Current tumor roadmap or its tumor-specific treatment-matrix citations"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.cgh.2023.02.022",
+          "slides": [
+            83
+          ],
+          "inclusion": [
+            "Source supporting the accepted clinical correction; focused evidence card with explicit limitations."
           ]
         }
       ],
@@ -9156,11 +9201,11 @@
         {
           "title": "NCCN Clinical Practice Guidelines in Oncology: Neuroendocrine and Adrenal Tumors, Version 1.2026 (21 April 2026)",
           "slides": [
-            137,
             138,
             139,
             140,
-            141
+            141,
+            142
           ],
           "pdf_available": true
         }
@@ -9174,9 +9219,9 @@
       "publication_count": 22,
       "matched_pdfs": 22,
       "slides": 87,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "03_Standard_Transplant/standard_crlm",
-      "document": "04_CRLM_Standard_Guidance_Aligned_Protocol_v12.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/03_Standard_Transplant/standard_crlm",
+      "document": "documents/crlm/CRLM_3_Standard_Pathway.docx",
       "papers": [
         {
           "id": "doi:10.1016/s2468-1253(21)00219-3",
@@ -9463,9 +9508,9 @@
       "publication_count": 7,
       "matched_pdfs": 7,
       "slides": 27,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "03_Standard_Transplant/standard_hca",
-      "document": "07_HCA_Standard_Guidance_Aligned_Protocol_v8.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/03_Standard_Transplant/standard_hca",
+      "document": "documents/hca/HCA_3_Standard_Pathway.docx",
       "papers": [
         {
           "id": "doi:10.1053/j.gastro.2016.11.042",
@@ -9572,9 +9617,9 @@
       "publication_count": 49,
       "matched_pdfs": 49,
       "slides": 194,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "03_Standard_Transplant/standard_hcc",
-      "document": "01_HCC_Standard_Guidance_Aligned_Protocol_v12.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/03_Standard_Transplant/standard_hcc",
+      "document": "documents/hcc/HCC_3_Standard_Pathway.docx",
       "papers": [
         {
           "id": "doi:10.1056/nejmoa0708857",
@@ -10190,9 +10235,9 @@
       "publication_count": 10,
       "matched_pdfs": 10,
       "slides": 38,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "03_Standard_Transplant/standard_hehe",
-      "document": "06_HEHE_Standard_Guidance_Aligned_Protocol_v8.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/03_Standard_Transplant/standard_hehe",
+      "document": "documents/hehe/HEHE_3_Standard_Pathway.docx",
       "papers": [
         {
           "id": "doi:10.14309/ajg.0000000000002857",
@@ -10334,9 +10379,9 @@
       "publication_count": 30,
       "matched_pdfs": 30,
       "slides": 114,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "03_Standard_Transplant/standard_icca",
-      "document": "03_ICCA_Standard_Guidance_Aligned_Protocol_v12.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/03_Standard_Transplant/standard_icca",
+      "document": "documents/icca/iCCA_3_Standard_Pathway.docx",
       "papers": [
         {
           "id": "doi:10.1056/nejmoa2513918",
@@ -10720,9 +10765,9 @@
       "publication_count": 21,
       "matched_pdfs": 21,
       "slides": 92,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "03_Standard_Transplant/standard_nelm",
-      "document": "05_NELM_Standard_Guidance_Aligned_Protocol_v8.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/03_Standard_Transplant/standard_nelm",
+      "document": "documents/nelm/NELM_3_Standard_Pathway.docx",
       "papers": [
         {
           "id": "doi:10.1056/nejmoa1316158",
@@ -11012,9 +11057,9 @@
       "publication_count": 25,
       "matched_pdfs": 25,
       "slides": 93,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "03_Standard_Transplant/standard_pcca",
-      "document": "02_PCCA_Standard_Guidance_Aligned_Protocol_v12.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/03_Standard_Transplant/standard_pcca",
+      "document": "documents/pcca/pCCA_3_Standard_Pathway.docx",
       "papers": [
         {
           "id": "doi:10.1002/hep.32771",
@@ -11337,9 +11382,9 @@
       "publication_count": 30,
       "matched_pdfs": 30,
       "slides": 111,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "04_High_Risk_Transplant/high_risk_crlm",
-      "document": "04_CRLM_High_Risk_Protocol_v12.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/04_High_Risk_Transplant/high_risk_crlm",
+      "document": "documents/crlm/CRLM_5_High_Risk_Pathway.docx",
       "papers": [
         {
           "id": "doi:10.1016/s2468-1253(21)00219-3",
@@ -11714,9 +11759,9 @@
       "publication_count": 7,
       "matched_pdfs": 7,
       "slides": 27,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "04_High_Risk_Transplant/high_risk_hca",
-      "document": "07_HCA_Clinical_Protocol_Boundary_Addendum_v8.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/04_High_Risk_Transplant/high_risk_hca",
+      "document": "documents/hca/HCA_5_High_Risk_Pathway.docx",
       "papers": [
         {
           "id": "doi:10.1053/j.gastro.2016.11.042",
@@ -11823,9 +11868,9 @@
       "publication_count": 53,
       "matched_pdfs": 53,
       "slides": 199,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "04_High_Risk_Transplant/high_risk_hcc",
-      "document": "01_HCC_High_Risk_Protocol_v12.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/04_High_Risk_Transplant/high_risk_hcc",
+      "document": "documents/hcc/HCC_5_High_Risk_Pathway.docx",
       "papers": [
         {
           "id": "doi:10.1097/tp.0000000000002094",
@@ -12478,9 +12523,9 @@
       "publication_count": 7,
       "matched_pdfs": 6,
       "slides": 25,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "04_High_Risk_Transplant/high_risk_hehe",
-      "document": "06_HEHE_Clinical_Protocol_Boundary_Addendum_v8.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/04_High_Risk_Transplant/high_risk_hehe",
+      "document": "documents/hehe/HEHE_5_High_Risk_Pathway.docx",
       "papers": [
         {
           "id": "doi:10.14309/ajg.0000000000002857",
@@ -12585,9 +12630,9 @@
       "publication_count": 37,
       "matched_pdfs": 37,
       "slides": 139,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "04_High_Risk_Transplant/high_risk_icca",
-      "document": "03_ICCA_High_Risk_Protocol_v12.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/04_High_Risk_Transplant/high_risk_icca",
+      "document": "documents/icca/iCCA_5_High_Risk_Pathway.docx",
       "papers": [
         {
           "id": "doi:10.1056/nejmoa2513918",
@@ -13052,9 +13097,9 @@
       "publication_count": 26,
       "matched_pdfs": 26,
       "slides": 107,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "04_High_Risk_Transplant/high_risk_nelm",
-      "document": "05_NELM_High_Risk_Protocol_v8.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/04_High_Risk_Transplant/high_risk_nelm",
+      "document": "documents/nelm/NELM_5_High_Risk_Pathway.docx",
       "papers": [
         {
           "id": "doi:10.1056/nejmoa1316158",
@@ -13399,9 +13444,9 @@
       "publication_count": 35,
       "matched_pdfs": 35,
       "slides": 128,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "04_High_Risk_Transplant/high_risk_pcca",
-      "document": "02_PCCA_High_Risk_Protocol_v12.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/04_High_Risk_Transplant/high_risk_pcca",
+      "document": "documents/pcca/pCCA_5_High_Risk_Pathway.docx",
       "papers": [
         {
           "id": "doi:10.1111/j.1477-2574.2011.00298.x",
@@ -13839,9 +13884,9 @@
       "publication_count": 6,
       "matched_pdfs": 6,
       "slides": 30,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "05_Meeting_Records/hcc_afp_b1_1",
-      "document": "HCC_B1_1_AFP_Evidence_and_Open_Meeting_Record_v12.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/05_Meeting_Records/hcc_afp_b1_1",
+      "document": "documents/hcc/HCC_7_Decision_Discussion.docx",
       "papers": [
         {
           "id": "doi:10.1097/tp.0000000000002094",
@@ -13949,9 +13994,9 @@
       "publication_count": 11,
       "matched_pdfs": 11,
       "slides": 62,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "05_Meeting_Records/meeting_allocation",
-      "document": "09_ALLOC_Alignment_and_Meeting_Decisions_v8.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/05_Meeting_Records/meeting_allocation",
+      "document": "transplant/high-risk/#readiness",
       "papers": [
         {
           "id": "doi:10.1111/j.1600-6143.2011.03972.x",
@@ -14149,9 +14194,9 @@
       "publication_count": 7,
       "matched_pdfs": 7,
       "slides": 27,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "05_Meeting_Records/meeting_hca",
-      "document": "07_HCA_Alignment_and_Meeting_Decisions_v8.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/05_Meeting_Records/meeting_hca",
+      "document": "documents/hca/HCA_7_Decision_Discussion.docx",
       "papers": [
         {
           "id": "doi:10.1053/j.gastro.2016.11.042",
@@ -14258,9 +14303,9 @@
       "publication_count": 39,
       "matched_pdfs": 39,
       "slides": 151,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "05_Meeting_Records/meeting_hcc",
-      "document": "01_HCC_Alignment_and_Meeting_Decisions_v12.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/05_Meeting_Records/meeting_hcc",
+      "document": "documents/hcc/HCC_7_Decision_Discussion.docx",
       "papers": [
         {
           "id": "doi:10.1097/tp.0000000000002094",
@@ -14753,9 +14798,9 @@
       "publication_count": 7,
       "matched_pdfs": 6,
       "slides": 25,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "05_Meeting_Records/meeting_hehe",
-      "document": "06_HEHE_Alignment_and_Meeting_Decisions_v8.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/05_Meeting_Records/meeting_hehe",
+      "document": "documents/hehe/HEHE_7_Decision_Discussion.docx",
       "papers": [
         {
           "id": "doi:10.14309/ajg.0000000000002857",
@@ -14860,9 +14905,9 @@
       "publication_count": 14,
       "matched_pdfs": 14,
       "slides": 65,
-      "ppt_filename": "Evidence_Summaries_v15.pptx",
-      "local_folder": "05_Meeting_Records/meeting_nelm",
-      "document": "05_NET_Alignment_and_Meeting_Decisions_v8.docx",
+      "ppt_filename": "Evidence_Summaries_v18.pptx",
+      "local_folder": "V18_consistent_release_2026-11-02/Evidence_Libraries/05_Meeting_Records/meeting_nelm",
+      "document": "documents/nelm/NELM_7_Decision_Discussion.docx",
       "papers": [
         {
           "id": "doi:10.1056/nejmoa1316158",
@@ -21860,6 +21905,63 @@
       "tmc": "https://libkey.io/libraries/480/10.3390/jcm15030938",
       "pdf_available": true,
       "coverage": "Substantive appraisal"
+    },
+    "doi:10.1200/jco-26-00788": {
+      "title": "Pemigatinib versus gemcitabine and cisplatin in FGFR2-rearranged advanced cholangiocarcinoma (FIGHT-302).",
+      "author": "Bekaii-Saab TS, et al.",
+      "journal": "Journal of Clinical Oncology",
+      "year": "2026",
+      "doi": "10.1200/JCO-26-00788",
+      "pmid": "42223137",
+      "publication_type": "Journal publication",
+      "url": "https://doi.org/10.1200/JCO-26-00788",
+      "tmc": "https://libkey.io/libraries/480/pmid/42223137",
+      "pdf_available": false,
+      "coverage": "Focused main-report review",
+      "coverage_notes": "The trial closed early and permitted substantial crossover. It did not compare pemigatinib with chemo-immunotherapy. Results do not resolve the current first-line sequencing question."
+    },
+    "doi:10.1016/j.pan.2023.05.005": {
+      "title": "Predictive ability of pancreatic cyst fluid biomarkers: a systematic review and meta-analysis.",
+      "author": "Pflüger MJ, et al.",
+      "journal": "Pancreatology",
+      "year": "2023",
+      "doi": "10.1016/j.pan.2023.05.005",
+      "pmid": "37230894",
+      "publication_type": "Journal publication",
+      "url": "https://doi.org/10.1016/j.pan.2023.05.005",
+      "tmc": "https://libkey.io/libraries/480/pmid/37230894",
+      "pdf_available": true,
+      "coverage": "Focused main-report review",
+      "coverage_notes": "Study selection, assay methods and partial surgical verification limit generalization. High specificity is not high sensitivity; a negative VHL result cannot exclude serous cystadenoma."
+    },
+    "doi:10.1200/jco-25-02520": {
+      "title": "Adjuvant chemotherapy with or without chemoradiotherapy for adenocarcinoma of the pancreatic head: radiotherapy randomization of NRG Oncology/RTOG 0848.",
+      "author": "Abrams RA, et al.",
+      "journal": "Journal of Clinical Oncology",
+      "year": "2026",
+      "doi": "10.1200/JCO-25-02520",
+      "pmid": "42456089",
+      "publication_type": "Journal publication",
+      "url": "https://doi.org/10.1200/JCO-25-02520",
+      "tmc": "https://libkey.io/libraries/480/pmid/42456089",
+      "pdf_available": false,
+      "coverage": "Focused main-report review",
+      "coverage_notes": "No patient received FOLFIRINOX: 67% gemcitabine alone, 28% gemcitabine/erlotinib and 5% other gemcitabine combinations. Modern-regimen transfer and SBRT substitution are unestablished. Only ten patients were both node-negative and margin-positive. Main text, tables and figure captions were reviewed; separate supplement/protocol and figure pixels were not."
+    },
+    "doi:10.1016/j.cgh.2023.02.022": {
+      "title": "Endoscopic ultrasound-guided radiofrequency ablation versus surgical resection for treatment of pancreatic insulinoma.",
+      "author": "Crinò SF, et al.",
+      "journal": "Clinical Gastroenterology and Hepatology",
+      "year": "2023",
+      "doi": "10.1016/j.cgh.2023.02.022",
+      "pmid": "36871765",
+      "publication_type": "Journal publication",
+      "url": "https://doi.org/10.1016/j.cgh.2023.02.022",
+      "tmc": "https://libkey.io/libraries/480/pmid/36871765",
+      "pdf_available": true,
+      "coverage": "Focused main-report review",
+      "coverage_notes": "Matching does not remove unmeasured selection, repeat treatment contributes to success and follow-up differs. The study does not establish durable oncologic equivalence."
     }
-  }
+  },
+  "artifact_release": "V18_consistent_release_2026-11-02"
 }

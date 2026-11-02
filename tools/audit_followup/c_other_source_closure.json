@@ -1,0 +1,213 @@
+{
+  "reviewer": "Analyst A (Codex), internal focused implementation",
+  "baseline": "b3ef22b",
+  "scope": [
+    "ampullary/data/pathway.json",
+    "ampullary/data/critique.json",
+    "pdac/data/pathway.json",
+    "pdac/data/critique.json",
+    "tools/consensus_source/roadmap_ampullary.json",
+    "tools/consensus_source/roadmap_pdac.json"
+  ],
+  "changes": [
+    {
+      "file": "ampullary/data/pathway.json",
+      "path": "/gates/7/standard/0/note",
+      "finding_ids": [
+        "C0063",
+        "C0064",
+        "C0065"
+      ],
+      "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/Figure_and_Definition_Checks.md; sources/22782416.txt, Table1 PDFp5/JAMAp151 (columns FU/FA n143, gemcitabine n141, observation n144); primary/adjusted results PDFpp3–4",
+      "old": "Downgraded from B to C on the full-text read, and the reason is specific: this page cannot cite ESPAC-3 as establishing adjuvant benefit in ampullary cancer. The trial was powered on 243 deaths and 430 patients to detect a 12 percentage-point absolute gain in 5-year survival (hazard ratio 0.68) across the pooled periampullary population, and the authors state that a separate survival analysis for each tumour type could not be built into the design because the incidence of each would have required an unattainable sample. It was never powered for the ampullary subgroup, and no hypothesis test for ampullary-only survival is reported anywhere in the paper: within the 297 ampullary patients the medians are observation 40.6 months (95% CI 30.6–61.4, 59 deaths), fluorouracil 57.8 months (32.8–84.0, 50 deaths) and gemcitabine 70.8 months (45.3–not estimable, 42 deaths), and they appear without a P value. Two further features of the full text matter. First, the adjustment that turns the result positive was for four variables on two of which the observation arm was prognostically the worst at baseline — poorly differentiated 33% against 22% and 19%, node positive 62% against 60% and 54% — so the shift from 0.86 to 0.75 is partly correcting a randomisation imbalance rather than independently confirming the primary analysis, and its interval only just excludes 1. Second, pooling created a group in which chemotherapy looked harmful: in the 96 intrapancreatic bile duct patients, median survival was 27.2 months (15.4–31.9) with observation against 18.3 (12.9–28.7) with fluorouracil and 19.5 (16.2–36.1) with gemcitabine. Any pooled benefit is therefore carried by the ampullary and other patients, in whom it was never formally tested. Survival differed sharply by tumour type — ampullary 53.1 months (42.3–72.5), other 32.6, bile duct 20.9 (17.0–27.5), χ²=27.75, P<0.001, bile duct hazard ratio 2.13 (1.61–2.83) against ampullary — and the trial's own discussion concedes that intrapancreatic bile duct cancer may need to be treated as a separate entity. Observation-arm survival of 35 months is also far better than the ampullary literature of the era, which implies a fit, early-stage, selected population; screening data on who was excluded and why were not collected. See <i>nonpm</i> for a discrepancy in the extracted guideline text at this point.",
+      "new": "Downgraded from B to C on the full-text read, and the reason is specific: this page cannot cite ESPAC-3 as establishing adjuvant benefit in ampullary cancer. The trial was powered on 243 deaths and 430 patients to detect a 12 percentage-point absolute gain in 5-year survival (hazard ratio 0.68) across the pooled periampullary population, and the authors state that a separate survival analysis for each tumour type could not be built into the design because the incidence of each would have required an unattainable sample. It was never powered for the ampullary subgroup, and no hypothesis test for ampullary-only survival is reported anywhere in the paper: within the 297 ampullary patients the medians are observation 40.6 months (95% CI 30.6–61.4, 59 deaths), fluorouracil 57.8 months (32.8–84.0, 50 deaths) and gemcitabine 70.8 months (45.3–not estimable, 42 deaths), and they appear without a P value. Two further features of the full text matter. First, Table 1 shows more favorable grade and nodal features in the observation arm: poor differentiation 19% versus 33% with fluorouracil/folinic acid and 22% with gemcitabine; node positivity 54% versus 62% and 60%. Observation had more positive margins (19% versus 14% and 15%), so it was not uniformly more or less favorable. The adjusted HR 0.75 (95% CI 0.57–0.98) is a secondary estimate from the same trial, not independent confirmation of its nonsignificant primary HR 0.86 (0.66–1.11; P=0.25). Second, pooling created a group in which chemotherapy looked harmful: in the 96 intrapancreatic bile duct patients, median survival was 27.2 months (15.4–31.9) with observation against 18.3 (12.9–28.7) with fluorouracil and 19.5 (16.2–36.1) with gemcitabine. Any pooled benefit is therefore carried by the ampullary and other patients, in whom it was never formally tested. Survival differed sharply by tumour type — ampullary 53.1 months (42.3–72.5), other 32.6, bile duct 20.9 (17.0–27.5), χ²=27.75, P<0.001, bile duct hazard ratio 2.13 (1.61–2.83) against ampullary — and the trial's own discussion concedes that intrapancreatic bile duct cancer may need to be treated as a separate entity. Observation-arm survival of 35 months is also far better than the ampullary literature of the era, which implies a fit, early-stage, selected population; screening data on who was excluded and why were not collected. See <i>nonpm</i> for a discrepancy in the extracted guideline text at this point."
+    },
+    {
+      "file": "ampullary/data/pathway.json",
+      "path": "/honest/4/why",
+      "finding_ids": [
+        "C0063",
+        "C0064",
+        "C0065"
+      ],
+      "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/Figure_and_Definition_Checks.md; sources/22782416.txt, Table1 PDFp5/JAMAp151 (columns FU/FA n143, gemcitabine n141, observation n144); primary/adjusted results PDFpp3–4",
+      "old": "This is the single most important correction the full-text read produced. The trial was powered on 243 deaths and 430 patients to detect a 12 percentage-point absolute 5-year gain across the pooled periampullary population, and its authors state that a separate analysis for each tumour type could not be built into the design. Within the 297 ampullary patients the medians are observation 40.6 months (95% CI 30.6–61.4, 59 deaths), fluorouracil 57.8 months (32.8–84.0, 50 deaths) and gemcitabine 70.8 months (45.3–not estimable, 42 deaths), and they appear with no P value because none was computed. The primary analysis across all 428 patients was negative (hazard ratio 0.86, 95% CI 0.66–1.11, P=0.25) and became significant only after multivariable adjustment (0.75, 0.57–0.98, P=0.03) for age, bile duct histology, poor differentiation and node positivity — and the observation arm was prognostically the worst at baseline on two of those four (poorly differentiated 33% against 22% and 19%; node positive 62% against 60% and 54%), so the shift partly corrects a randomisation imbalance rather than independently confirming the result. Quoting the ampullary medians alone is the most favourable possible framing of this trial, and the page says so wherever it quotes them. Adjuvant chemotherapy is still offered, because the adjusted estimate and the registry data point the same way and because there is nothing better; it is offered as a reasonable choice, not as a demonstrated benefit.",
+      "new": "This is the single most important correction the full-text read produced. The trial was powered on 243 deaths and 430 patients to detect a 12 percentage-point absolute 5-year gain across the pooled periampullary population, and its authors state that a separate analysis for each tumour type could not be built into the design. Within the 297 ampullary patients the medians are observation 40.6 months (95% CI 30.6–61.4, 59 deaths), fluorouracil 57.8 months (32.8–84.0, 50 deaths) and gemcitabine 70.8 months (45.3–not estimable, 42 deaths), and they appear with no P value because none was computed. The primary analysis across all 428 patients was negative (hazard ratio 0.86, 95% CI 0.66–1.11, P=0.25) and became significant only after multivariable adjustment (0.75, 0.57–0.98, P=0.03) for age, bile duct histology, poor differentiation and node positivity — but observation had fewer poorly differentiated tumors (19% versus 33% with fluorouracil/folinic acid and 22% with gemcitabine) and fewer positive nodes (54% versus 62% and 60%). Observation had more positive margins (19% versus 14% and 15%). These mixed baseline differences do not support a global prognostic ranking of the arms, and the adjusted analysis is not an independent confirmation of the primary result. Quoting the ampullary medians alone is the most favourable possible framing of this trial, and the page says so wherever it quotes them. Adjuvant chemotherapy is still offered, because the adjusted estimate and the registry data point the same way and because there is nothing better; it is offered as a reasonable choice, not as a demonstrated benefit."
+    },
+    {
+      "file": "ampullary/data/pathway.json",
+      "path": "/gates/7/avoid/0/pref",
+      "finding_ids": [
+        "C0063",
+        "C0064",
+        "C0065"
+      ],
+      "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/Figure_and_Definition_Checks.md; sources/22782416.txt, Table1 PDFp5/JAMAp151 (columns FU/FA n143, gemcitabine n141, observation n144); primary/adjusted results PDFpp3–4",
+      "old": "Say what is true: the one randomised trial missed its primary endpoint (hazard ratio 0.86, 95% CI 0.66–1.11, P=0.25), became significant only after adjustment for four prognostic variables on two of which the observation arm was worse at baseline (0.75, 0.57–0.98, P=0.03), was never powered for the ampullary subgroup, and reports no hypothesis test for ampullary-only survival anywhere. Then offer it, because the adjusted estimate and the registry data point the same way and because there is nothing better to offer — but offer it as a reasonable choice rather than as a demonstrated benefit, and record which it was presented as.",
+      "new": "Present the nonsignificant primary periampullary comparison (HR 0.86, 95% CI 0.66–1.11; P=0.25) alongside the hypothesis-generating adjusted estimate (HR 0.75, 0.57–0.98; P=0.03). Observation had more favorable grade and nodal features but more positive margins. The trial was not powered for an ampullary-specific survival effect; discuss adjuvant chemotherapy as a reasonable choice with uncertain benefit in this subgroup."
+    },
+    {
+      "file": "ampullary/data/pathway.json",
+      "path": "/gates/7/alt/0/opts/1/avoid",
+      "finding_ids": [
+        "C0063",
+        "C0064",
+        "C0065"
+      ],
+      "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/Figure_and_Definition_Checks.md; sources/22782416.txt, Table1 PDFp5/JAMAp151 (columns FU/FA n143, gemcitabine n141, observation n144); primary/adjusted results PDFpp3–4",
+      "old": "All of the supportive evidence is registry and retrospective, and the confounding runs one way: NCCN records that in the studies finding no effect, adjuvant therapy was more frequently used in patients with more advanced disease. That biases towards finding no benefit in unadjusted analyses and towards finding benefit once stage is adjusted — which is exactly the pattern the literature shows, including inside ESPAC-3 itself. The propensity-matched null is not a clean negative either: matching discarded 195 of 357 patients, the matched intervals do not exclude a 25% to 35% relative risk reduction, half the screened population (369 of 756) was excluded for unknown subtype, matching omitted grade, lymphovascular invasion, margin, CA 19-9 and year of surgery despite grade, lymphovascular invasion and margin all differing between treated and untreated patients, median follow-up of 34 months is shorter than the 57-month median survival, and the 17-year accrual is dominated by gemcitabine monotherapy so it cannot speak to modern multiagent therapy. Black race appeared as one of the strongest predictors of both death (hazard ratio 3.93, 95% CI 1.95–7.93) and treatment omission (odds ratio 0.26, 0.09–0.76), which signals access and socioeconomic confounding that no propensity model built on tumour variables can absorb.",
+      "new": "All of the supportive evidence is registry and retrospective, and the confounding runs one way: NCCN records that in the studies finding no effect, adjuvant therapy was more frequently used in patients with more advanced disease. That biases towards finding no benefit in unadjusted analyses and towards finding benefit once stage is adjusted — which can affect retrospective estimates. This treatment-selection confounding is distinct from the mixed baseline imbalances in randomized ESPAC-3. The propensity-matched null is not a clean negative either: matching discarded 195 of 357 patients, the matched intervals do not exclude a 25% to 35% relative risk reduction, half the screened population (369 of 756) was excluded for unknown subtype, matching omitted grade, lymphovascular invasion, margin, CA 19-9 and year of surgery despite grade, lymphovascular invasion and margin all differing between treated and untreated patients, median follow-up of 34 months is shorter than the 57-month median survival, and the 17-year accrual is dominated by gemcitabine monotherapy so it cannot speak to modern multiagent therapy. Black race appeared as one of the strongest predictors of both death (hazard ratio 3.93, 95% CI 1.95–7.93) and treatment omission (odds ratio 0.26, 0.09–0.76), which signals access and socioeconomic confounding that no propensity model built on tumour variables can absorb."
+    },
+    {
+      "file": "ampullary/data/critique.json",
+      "path": "/22782416/critique/0",
+      "finding_ids": [
+        "C0063",
+        "C0064",
+        "C0065"
+      ],
+      "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/Figure_and_Definition_Checks.md; sources/22782416.txt, Table1 PDFp5/JAMAp151 (columns FU/FA n143, gemcitabine n141, observation n144); primary/adjusted results PDFpp3–4",
+      "old": "The adjustment that converts the result from negative to positive was for age, bile duct histology, poor differentiation and node positivity - and the observation arm was prognostically the worst on two of those at baseline (poorly differentiated 33% vs 22% and 19%; node positive 62% vs 60% and 54%), so the shift from HR 0.86 to 0.75 is partly correcting a randomisation imbalance. That cuts both ways, but it means the 0.75 is not an independent confirmation of the primary analysis; it is the same data with the imbalance removed, and its CI (0.57-0.98) only just excludes 1",
+      "new": "Table 1 favors observation on poor differentiation (19% versus 33% with fluorouracil/folinic acid and 22% with gemcitabine) and node positivity (54% versus 62% and 60%), but observation has more positive margins (19% versus 14% and 15%). Do not describe observation as globally worse at baseline. The primary comparison was nonsignificant (HR 0.86, 95% CI 0.66–1.11; P=0.25); the prespecified multivariable estimate (HR 0.75, 0.57–0.98; P=0.03) uses the same patients and remains hypothesis generating, without establishing an ampullary-specific benefit."
+    },
+    {
+      "file": "tools/consensus_source/roadmap_ampullary.json",
+      "path": "/questions/3/positions/0/position",
+      "finding_ids": [
+        "C0063",
+        "C0064",
+        "C0065"
+      ],
+      "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/Figure_and_Definition_Checks.md; sources/22782416.txt, Table1 PDFp5/JAMAp151 (columns FU/FA n143, gemcitabine n141, observation n144); primary/adjusted results PDFpp3–4",
+      "old": "The only randomised trial: primary analysis negative (HR 0.86, P=0.25), significant only after adjustment (HR 0.75) that partly corrects baseline imbalance; never powered for, or tested in, its ampullary subgroup.",
+      "new": "Primary periampullary comparison nonsignificant (HR 0.86, 95% CI 0.66–1.11; P=0.25); adjusted HR 0.75 (0.57–0.98; P=0.03) is hypothesis generating. Observation had better grade and nodal features but more positive margins. The trial was not powered for an ampullary-specific survival effect."
+    },
+    {
+      "file": "pdac/data/pathway.json",
+      "path": "/gates/8/alt/0/opts/4/when",
+      "finding_ids": [
+        "C0234",
+        "C0237",
+        "C0241"
+      ],
+      "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/PDAC_and_Renderer_Adjudications.md; sources/39908431.txt, Methods PDFp3, Results PDFpp4/6 (printed569/571), Table1 and Table2; supplementary TableS7/FigureS8 cited in main text but not newly reviewed",
+      "old": "NCCN lists zenocutuzumab-zbco as a subsequent therapy option for NRG1 fusion-positive disease at performance status 0–2. In the eNRGy basket trial, 36 of 158 patients in the primary efficacy population had pancreatic ductal adenocarcinoma, and <b>all 36 were KRAS wild-type</b>: 15 of 36 (42%, 95% CI 25–59) responded by investigator assessment and 16 of 36 (44%, 28–62) by blinded independent central review, with median duration of response 7.4 months (4.0–11.2) investigator-assessed and 9.1 months centrally. Twenty-four of 31 pancreatic patients with baseline data (77%) had a CA 19-9 fall of at least 50%.",
+      "new": "NCCN lists zenocutuzumab-zbco as a subsequent therapy option for NRG1 fusion-positive disease at performance status 0–2. eNRGy treated 204 patients; 161 met the primary-efficacy definition, including 158 with investigator-assessed measurable disease for the response analysis. The prespecified pancreatic cohort comprised 36 patients, all KRAS wild-type. Investigator-assessed response was 15/36 (42%, 95% CI 25–59), versus 16/36 (44%, 28–62) by blinded central review; median response duration was 7.4 months (4.0–11.2) and 9.1 months, respectively. Pancreatic median PFS was 9.2 months (95% CI 5.5–11.2); pancreatic OS was not reported. Among 31 pancreatic patients with baseline CA 19-9 data, 24 (77%) had a fall of at least 50%."
+    },
+    {
+      "file": "pdac/data/pathway.json",
+      "path": "/gates/8/alt/0/opts/4/avoid",
+      "finding_ids": [
+        "C0234",
+        "C0237",
+        "C0241"
+      ],
+      "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/PDAC_and_Renderer_Adjudications.md; sources/39908431.txt, Methods PDFp3, Results PDFpp4/6 (printed569/571), Table1 and Table2; supplementary TableS7/FigureS8 cited in main text but not newly reviewed",
+      "old": "Downgraded to D. Single-arm, 36 pancreatic patients inside a basket trial sized only for the pooled estimate, with a 95% CI of 25% to 59% that cannot distinguish a major advance from a modest one. <b>No progression-free or overall survival is reported for the pancreatic subgroup</b>, so no survival claim can be derived from it. The primary endpoint was investigator-assessed response in an open-label trial with blinded central review only as a secondary endpoint, and the primary efficacy population is a post-enrolment construct — 204 treated patients become 158 evaluable, with exclusions for short follow-up falling disproportionately on early progressors. Only 9 of 47 responses across the whole trial were ongoing at a median follow-up of 7.1 months. Adverse events were mostly grade 1 or 2 with treatment-related grade 3–4 in 7%, so the risk is low — but NRG1 fusions occur in well under 1% of PDAC, no screening denominator is given, and the sponsor designed the trial, analysed the data and drafted the manuscript.",
+      "new": "This single-arm trial provides response and PFS estimates, not comparative survival benefit. The prespecified pancreatic cohort contained 36 patients within a basket trial sized for the pooled estimate. The primary-efficacy definition required the first dose at least 24 weeks before the data cutoff and other eligibility criteria; it did not require each patient to remain progression-free or on treatment for 24 weeks. Of 204 treated patients, 43 were outside that efficacy set, mainly because they started treatment later; three of the remaining 161 lacked measurable disease for investigator response assessment. The report does not establish disproportionate exclusion of early progressors. No pancreatic OS estimate or screening denominator was reported; sponsor involvement and open-label investigator response assessment remain limitations."
+    },
+    {
+      "file": "pdac/data/pathway.json",
+      "path": "/quickref/2/rows/6/1",
+      "finding_ids": [
+        "C0234",
+        "C0237",
+        "C0241"
+      ],
+      "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/PDAC_and_Renderer_Adjudications.md; sources/39908431.txt, Methods PDFp3, Results PDFpp4/6 (printed569/571), Table1 and Table2; supplementary TableS7/FigureS8 cited in main text but not newly reviewed",
+      "old": "Zenocutuzumab: 15 of 36 pancreatic patients responded by investigator assessment (42%, 25–59) and 16 of 36 centrally (44%); median duration of response 7.4 months (4.0–11.2) investigator-assessed, 9.1 months centrally. <b>All 36 were KRAS wild-type, and no PFS or OS is reported for this subgroup.</b> Enriched in younger KRAS wild-type patients — median age 48.5 years in a 10-patient series",
+      "new": "Zenocutuzumab: prespecified pancreatic cohort, 36 KRAS wild-type patients. Response 15/36 (42%, 95% CI 25–59) by investigator and 16/36 (44%, 28–62) centrally; median response duration 7.4 months (4.0–11.2) and 9.1 months, respectively. Pancreatic median PFS 9.2 months (95% CI 5.5–11.2); OS not reported. Single-arm estimates do not establish comparative benefit. The overall trial treated 204 patients, with 161 in the primary-efficacy set and 158 measurable for investigator response assessment."
+    },
+    {
+      "file": "pdac/data/pathway.json",
+      "path": "/honest/20/why",
+      "finding_ids": [
+        "C0234",
+        "C0237",
+        "C0241"
+      ],
+      "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/PDAC_and_Renderer_Adjudications.md; sources/39908431.txt, Methods PDFp3, Results PDFpp4/6 (printed569/571), Table1 and Table2; supplementary TableS7/FigureS8 cited in main text but not newly reviewed",
+      "old": "The sotorasib pancreatic cohort pooled 38 patients across phase 1 dose exploration, phase 1 expansion and phase 2, with <b>no prespecified response benchmark and no hypothesis test</b>, and its response interval (10% to 37%) is compatible with the under-10% historical benchmark the authors invoke. Adagrasib's prespecified 10% null applies to the pooled tumour-agnostic cohort of 57 evaluable patients, not to its 21 pancreatic patients, and six patients counted as evaluable by investigators were removed by central review for having no measurable disease, moving the denominator favourably. Zenocutuzumab's 36 pancreatic patients were <b>all KRAS wild-type</b>, its primary endpoint was investigator-assessed response with blinded central review only secondary, its primary efficacy population is a post-enrolment construct (204 treated to 158 evaluable, with short-follow-up exclusions falling on early progressors), and no progression-free or overall survival is reported for the pancreatic subgroup at all. None of the three reports a screening denominator, so the testing burden implied by any of them is invisible. The NTRK, RET, BRAF and FGFR entries were not retrieved for this depot.",
+      "new": "The sotorasib pancreatic cohort pooled 38 patients across phase 1 dose exploration, phase 1 expansion and phase 2, with <b>no prespecified response benchmark and no hypothesis test</b>, and its response interval (10% to 37%) is compatible with the under-10% historical benchmark the authors invoke. Adagrasib's prespecified 10% null applies to the pooled tumour-agnostic cohort of 57 evaluable patients, not to its 21 pancreatic patients, and six patients counted as evaluable by investigators were removed by central review for having no measurable disease, moving the denominator favourably. Zenocutuzumab's prespecified pancreatic cohort included 36 KRAS wild-type patients and had median PFS 9.2 months (95% CI 5.5–11.2); pancreatic OS was not reported. The trial treated 204 patients, of whom 161 met the primary-efficacy definition and 158 had measurable disease for investigator response assessment. The first-dose timing cutoff and other exclusions do not establish disproportionate exclusion of early progressors. Response and PFS estimates from this single-arm study do not establish comparative benefit. None of the three reports a screening denominator, so the testing burden implied by any of them is invisible. The NTRK, RET, BRAF and FGFR entries were not retrieved for this depot."
+    },
+    {
+      "file": "pdac/data/critique.json",
+      "path": "/39908431/critique/2",
+      "finding_ids": [
+        "C0234",
+        "C0237",
+        "C0241"
+      ],
+      "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/PDAC_and_Renderer_Adjudications.md; sources/39908431.txt, Methods PDFp3, Results PDFpp4/6 (printed569/571), Table1 and Table2; supplementary TableS7/FigureS8 cited in main text but not newly reviewed",
+      "old": "The primary efficacy population is a post-enrolment construct: it requires a functionally predicted fusion, at least 24 weeks of follow-up before data cutoff, absence of other oncogenic alterations and no prior anti-HER3 exposure. 204 treated patients become 158 evaluable, and patients excluded for short follow-up are disproportionately early progressors",
+      "new": "The primary-efficacy set required a functionally predicted fusion, first dose at least 24 weeks before the data cutoff, absence of specified other oncogenic alterations and no prior anti-HER3 exposure. Of 204 treated patients, 161 entered this set; 158 had measurable disease for the investigator-assessed primary response analysis. Exclusions were mainly for later treatment initiation. The report does not establish that excluded patients were disproportionately early progressors, and the timing criterion is not a requirement to survive progression-free for 24 weeks."
+    },
+    {
+      "file": "pdac/data/critique.json",
+      "path": "/39908431/critique/5",
+      "finding_ids": [
+        "C0234",
+        "C0237",
+        "C0241"
+      ],
+      "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/PDAC_and_Renderer_Adjudications.md; sources/39908431.txt, Methods PDFp3, Results PDFpp4/6 (printed569/571), Table1 and Table2; supplementary TableS7/FigureS8 cited in main text but not newly reviewed",
+      "old": "No progression-free or overall survival is reported for the pancreatic subgroup in the main text, only response and duration of response; a pathway cannot derive a survival claim from this paper",
+      "new": "The main Results text reports pancreatic-cohort median PFS of 9.2 months (95% CI 5.5–11.2), citing Table S7/Figure S8. Pancreatic OS is not reported. The prespecified 36-patient cohort provides single-arm outcome estimates and cannot establish comparative survival benefit."
+    },
+    {
+      "file": "pdac/data/critique.json",
+      "path": "/39908431/n",
+      "finding_ids": [
+        "C0234",
+        "C0237",
+        "C0241"
+      ],
+      "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/PDAC_and_Renderer_Adjudications.md; sources/39908431.txt, Methods PDFp3, Results PDFpp4/6 (printed569/571), Table1 and Table2; supplementary TableS7/FigureS8 cited in main text but not newly reviewed",
+      "old": "204 patients treated at 750 mg every 2 weeks; 158 in the primary efficacy population with measurable disease; 36 with pancreatic cancer",
+      "new": "204 patients treated at 750 mg every 2 weeks; 161 in the primary-efficacy population, including 158 with investigator-assessed measurable disease for the primary response analysis; 36 patients in the prespecified pancreatic efficacy cohort (42 pancreatic patients treated overall)."
+    },
+    {
+      "file": "pdac/data/critique.json",
+      "path": "/39908431/bottom_line",
+      "finding_ids": [
+        "C0234",
+        "C0237",
+        "C0241"
+      ],
+      "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/PDAC_and_Renderer_Adjudications.md; sources/39908431.txt, Methods PDFp3, Results PDFpp4/6 (printed569/571), Table1 and Table2; supplementary TableS7/FigureS8 cited in main text but not newly reviewed",
+      "old": "Validates NRG1 fusions as a drug target, with a 42% investigator-assessed response rate in 36 KRAS wild-type pancreatic patients, but provides no survival data for that subgroup, no control arm and no screening denominator, so it supports RNA-based fusion testing in KRAS wild-type PDAC rather than a quantified survival benefit.",
+      "new": "eNRGy showed antitumor activity in 36 KRAS wild-type pancreatic patients: investigator-assessed response 42% (15/36; 95% CI 25–59), median PFS 9.2 months (5.5–11.2), and no reported pancreatic OS estimate. The single-arm design and lack of a screening denominator limit interpretation; these results do not establish comparative survival benefit."
+    }
+  ],
+  "read_extent": "Existing A adjudications plus targeted original text: ESPAC-3 Table1 and eNRGy Methods/Results/Tables1–2. No new full-paper or supplement read claimed.",
+  "groups": [
+    {
+      "finding_ids": [
+        "C0063",
+        "C0064",
+        "C0065"
+      ],
+      "pmid": "22782416",
+      "disposition": "Implemented in assigned roadmap/critique/consensus copies; primary comparison remains nonsignificant; shared/generated propagation proposed separately."
+    },
+    {
+      "finding_ids": [
+        "C0234",
+        "C0237",
+        "C0241"
+      ],
+      "pmid": "39908431",
+      "disposition": "Implemented PFS/OS distinction, prespecified cohort, three analysis populations and unsupported early-progressor inference correction in assigned roadmap/critique copies. No matching eNRGy claim found in roadmap_pdac consensus source."
+    }
+  ],
+  "validation": {
+    "exact_replay": "PASS: five files exactly replay from b3ef22b using ten unique replacement chunks",
+    "targeted_clinical_assertions": "PASS: ESPAC3 arm-specific table values and negative primary result; eNRGy pancreatic PFS/CI/OS distinction and 204/161/158/36 populations; stale omission phrases absent; root reference dictionaries retained",
+    "software_checks": [
+      "PASS test_content_hierarchy.cjs",
+      "PASS test_roadmap_flow.cjs (103 topics,305 conditional links)",
+      "PASS test_uniform_evidence.cjs"
+    ],
+    "scope_limit": "Shared proposal application, generated questions, Word/PPT synchronization and publication remain with parent; no such edits made here."
+  }
+}

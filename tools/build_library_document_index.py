@@ -1,6 +1,6 @@
 """Add document-only references to the PPT index without inventing slides or PDF matches.
 
-The V15 catalog remains the audited slide inventory. This reproducible supplement
+The current catalog remains the audited slide inventory. This reproducible supplement
 joins the 26 document bibliographies to their corresponding libraries.
 """
 import json
@@ -25,7 +25,7 @@ def build():
     pmids = {str(p['pmid']): key for key, p in catalog['publications'].items() if p.get('pmid')}
     dois = {p['doi'].lower(): key for key, p in catalog['publications'].items() if p.get('doi')}
     pathways = json.loads((ROOT / 'transplant/assets/pathway-sections.json').read_text())['pathways']
-    output = {'about': 'Document references not represented by slides in the corresponding V15 PPT. No slide number or PDF availability is inferred.', 'libraries': {}, 'publications': {}}
+    output = {'about': 'Document references not represented by slides in the current corresponding PPT catalog. No slide number or PDF availability is inferred.', 'libraries': {}, 'publications': {}}
     for name, doc in R.DOCS.items():
         key = library_key(doc)
         original = originals[key]

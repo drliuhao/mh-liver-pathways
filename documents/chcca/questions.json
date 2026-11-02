@@ -2,7 +2,7 @@
  "key": "chcca",
  "code": "cHCC-CCA",
  "name": "Combined hepatocellular–cholangiocarcinoma",
- "generated": "29 October 2026",
+ "generated": "1 November 2026",
  "files": {
   "roadmap_info": "cHCCCCA_1_Roadmap.docx",
   "roadmap_questions": "cHCCCCA_2_Roadmap_Questions.docx",
@@ -219,7 +219,7 @@
       {
        "source": "Lee 2019 LR-M features",
        "key": "pm30552477",
-       "says": "At least one LR-M feature appeared in 93.9% of cHCC-CCA but in about half of HCC (specificity 48.5%), so LR-M flags the tumour without confirming it.",
+       "says": "At least one LR-M feature appeared in 93.9% of cHCC-CCA but in about half of HCC (specificity 48.5%), so LR-M flags the tumour without confirming it. Targetoid appearance alone occurred in 25/33 mixed tumours (75.8%) and 23/66 matched HCC controls (34.8%), giving 65.2% specificity; these are separate results from the any-LR-M-feature rule.",
        "locator": "Gate 0 · Standard 'Treat an LR-M read as a reason to get tissue…' (pref)"
       },
       {
@@ -477,7 +477,7 @@
       {
        "source": "OPTN NLRB transplant-oncology guidance",
        "key": "np-chcca-optnnlrb",
-       "says": "Requires only locoregional or systemic therapy followed by six months of stability, and imposes neither restriction.",
+       "says": "The nonstandard NLRB guidance route concerns biopsy-proven, unresectable solitary mixed HCC-iCCA 3 cm or less in cirrhosis, after locoregional or systemic therapy. It requires six months from diagnosis or last treatment with the tumour remaining ≤3 cm, no new lesions and no extrahepatic disease. It does not reproduce the local CPG’s external-beam-radiation exclusion or its strict under-3-cm restriction on locoregional therapy alone.",
        "locator": "Gate 8 · Reasonable liver-directed options (flagnote)"
       },
       {
@@ -487,8 +487,8 @@
        "locator": "Gate 8 · Standard 'On a transplant pathway, locoregional therapy is the instrument…' (pref, avoid)"
       }
      ],
-     "divergence": "The local CPG is stricter than the OPTN wording on locoregional-only bridging and on radiation, and the roadmap says no data in this disease support either the restriction or its absence.",
-     "proposal": "The local rule stands until the group changes it: the roadmap lists external-beam radiation before transplant as Avoid under the local protocol and calls the locoregional-only restriction more conservative than needed. Locoregional therapy should be planned as part of the listing strategy to generate the six months of stability.",
+     "divergence": "For the NLRB guidance population of a solitary tumour ≤3 cm in cirrhosis, the local CPG imposes a stricter under-3-cm restriction on locoregional-only bridging and excludes external-beam radiation. Small retrospective liver-directed series do not resolve those local transplant restrictions.",
+     "proposal": "The local rule stands until the group changes it: external-beam radiation before transplant remains Avoid under the local protocol, and the locoregional-only restriction remains an OPEN local choice. Plan treatment and the six-month stability assessment together, applying the full NLRB guidance criteria rather than stability alone.",
      "proposal_locator": "Gate 8 · Standard 'On a transplant pathway, locoregional therapy is the instrument…' (note); Gate 8 · Avoid 'Do not use external-beam radiation as pre-transplant therapy under the local protocol'; Gate 8 · Reasonable options (flagnote)",
      "rationale": "The local CPG says locoregional therapy must not be the sole pre-transplant therapy except for a solitary tumour under 3 cm, and excludes external-beam radiation. The OPTN wording supports consideration after locoregional or systemic therapy with six months of stability for a solitary tumour ≤3 cm in cirrhosis; a tumour above 3 cm already falls outside that route. The patient in the gap — a solitary 3.0 cm tumour treated with TACE alone and stable for six months — is a real one, and the two documents give different answers.",
      "audit": "Modality, indication, response, time to listing, and dropout.",

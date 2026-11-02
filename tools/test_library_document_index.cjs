@@ -18,7 +18,9 @@ for(const lib of data.libraries){
 for(const p of Object.values(supplement.publications)){assert.equal(p.pdf_available,null);assert.match(p.url,/^https:\/\//);}
 const crlm=data.libraries.find(l=>l.key==='standard_crlm');
 assert.ok(crlm.papers.length>base.libraries.find(l=>l.key==='standard_crlm').papers.length,'CRLM document references included');
-assert.equal(data.matched_publication_pdfs,596,'no unverified PDF matches introduced');
+assert.equal(data.matched_publication_pdfs,598,'only the two verified V18 PDF additions may change the prior 596 matched files');
+for(const pmid of ['37230894','36871765'])assert.equal(Object.values(base.publications).find(p=>p.pmid===pmid)?.pdf_available,true);
+for(const pmid of ['42456089','42223137'])assert.equal(Object.values(base.publications).find(p=>p.pmid===pmid)?.pdf_available,false,'XML access must not imply a downloaded PDF');
 assert.ok(data.no_slide_entries>0);
 const app=fs.readFileSync(path.join(root,'transplant/assets/app.js'),'utf8');
 assert.match(app,/<div class="viewbar"><div class="viewtabs" role="tablist"/);

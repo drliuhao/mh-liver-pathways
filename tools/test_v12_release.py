@@ -42,8 +42,9 @@ for file in pages:
    if slug:assert data['pathway']==next(x for x in content['index'] if x['slug']==slug)
    embedded+=1
 
-documents=list((ROOT/'evidence/2026-10-25/docs').glob('*.docx'))
-assert len(documents)==17
+documents=list((ROOT/'documents').rglob('*.docx'))
+assert len(documents)==65
+assert not list((ROOT/'evidence/2026-10-25/docs').glob('*.docx'))
 ns={'w':'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
 for path in documents:
  with ZipFile(path) as z:
@@ -68,4 +69,4 @@ for k in reviews:
  assert 'V12-'+k in content['sources']
  assert content['high_risk']['sources'][k]['pmid'],k
  assert content['high_risk']['sources'][k]['doi']==reviews[k]['doi'],k
-print(f'PASS: {checked} static internal links; {embedded} synchronized embedded payloads; 17 valid public DOCX citation packages; 14/14 sources; no licensed PDFs or private file paths in new publication.')
+print(f'PASS: {checked} static internal links; {embedded} synchronized embedded payloads; 65 current public DOCX citation packages; 14/14 historical evidence sources retained; no licensed PDFs or private file paths in new publication.')

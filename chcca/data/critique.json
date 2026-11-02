@@ -173,7 +173,7 @@
       "Pathology was the reference standard only in resected or transplanted patients, so lesions never operated on — the ones hardest to characterise — are absent from the denominator"
     ],
     "n": "33 cHCC-CCA matched to 66 HCC controls",
-    "bottom_line": "Shows that LR-M features are common in cHCC-CCA but also in half of HCC, and that even a three-feature rule misses 45% of cHCC-CCA, so MRI criteria cannot reliably exclude the diagnosis before surgery."
+    "bottom_line": "In 33 cHCC-CCA and 66 matched HCC controls, targetoid appearance occurred in 25/33 (75.8%) and 23/66 (34.8%), respectively, giving 65.2% specificity. A three-feature LR-M rule had 80.8% accuracy but only 54.5% sensitivity. These selected, surgically confirmed groups do not establish clinic-wide predictive values or an imaging-only diagnosis."
   },
   "30690729": {
     "kind": "basic/translational",
@@ -366,13 +366,13 @@
       "Modest numbers in each histological group"
     ],
     "critique": [
-      "This is one of the few imaging papers in the depot that honestly re-states its predictive values at real prevalence; the resulting 1.6-39.6% PPV should be the figure quoted, not the 89.9% specificity",
-      "40% sensitivity means CEUS cannot be used to exclude cHCC-CCA before listing, yet the abstract's framing of 74.3% LR-M invites exactly that misreading",
-      "AUC 0.649 is barely better than chance for a diagnostic criterion being proposed for clinical use",
+      "The 40.0% sensitivity and 89.9% specificity apply to a combined CEUS LI-RADS/AFP/CA 19-9 rule. The modelled PPV range of 1.6–39.6% depends on assumed prevalence; neither that range nor the enriched-cohort PPV is an observed unselected-clinic estimate.",
+      "The combined rule misses 60% of mixed tumours at 40.0% sensitivity and cannot exclude cHCC-CCA. The separate finding that 74.3% of mixed tumours were CEUS LR-M is a category proportion, not the combined rule’s sensitivity.",
+      "The combined rule’s AUC of 0.649 indicates limited discrimination in this selected cohort; it requires prospective validation and cannot establish an imaging-only diagnosis.",
       "All lesions had histology, so the lesions managed on imaging alone — the population the criterion is aimed at — are absent from the denominator"
     ],
-    "n": "134 lesions: 35 cHCC-CCA, 29 and 70 in the comparator groups",
-    "bottom_line": "Shows CEUS LI-RADS identifies cHCC-CCA with only 40% sensitivity and an AUC of 0.649, and — unusually — states honestly that its positive predictive value at real prevalence is 1.6-39.6%."
+    "n": "134 surgically confirmed lesions: 35 cHCC-CCA, 29 iCCA and 70 matched HCC controls",
+    "bottom_line": "A combined CEUS LI-RADS/AFP/CA 19-9 rule had 40.0% sensitivity, 89.9% specificity and AUC 0.649 in 35 cHCC-CCA, 29 iCCA and 70 matched HCC controls. The modelled PPV was 1.6–39.6% across assumed prevalences. These are not CEUS-alone accuracy estimates, and the selected surgical cohort does not establish clinic-wide predictive values."
   },
   "34113169": {
     "kind": "retrospective cohort",
@@ -413,12 +413,12 @@
       "Acknowledges that the underlying evidence for each modality is retrospective and heterogeneous"
     ],
     "critique": [
-      "Almost all the quantitative material concerns cholangiocarcinoma; cHCC-CCA appears in the title but has essentially no dedicated evidence base in the review, so every recommendation reaching it is extrapolation from a different disease",
-      "No distinction is drawn between the hypervascular HCC-dominant cHCC-CCA, which might respond to arterial therapies, and the hypovascular cholangiocarcinoma-dominant form, which the one dedicated TACE study (Kim 2010) shows has median survival of 4 versus 16 months — the single most important selection variable for locoregional therapy here goes unaddressed",
-      "No pooled estimates, so a pathway cannot derive an expected response rate or survival for any modality",
-      "The review predates the interventional-plus-immunotargeted combinations that now dominate practice in this entity"
+      "The review has a dedicated cHCC-CCA section and Table 2 with retrospective TACE, TARE and hepatic arterial infusion experience. Cohort totals are not interchangeable with treated denominators: the Fowler series contained 79 patients overall but only 18 receiving liver-directed therapy.",
+      "The review discusses enhancement-pattern associations after TACE. Its lower-responsiveness rationale concerns TACE and percutaneous ethanol injection, not proven inferiority of every modality to HCC. Enhancement pattern is not equivalent to histological predominance and is not a validated universal eligibility rule.",
+      "No pooled estimates are provided. Outcome labels and survival time origins conflict between parts of the narrative and Table 2; do not sum cohorts as an independent treated population or quote a response/survival figure without checking its primary report.",
+      "The small retrospective mixed-tumour series do not validate comparative curative efficacy, modern combination regimens or transplant selection."
     ],
-    "bottom_line": "A broad survey of locoregional techniques for biliary liver cancer whose cHCC-CCA content is extrapolated from cholangiocarcinoma, with no pooled estimates and no account of how tumour vascularity should drive modality choice."
+    "bottom_line": "A narrative locoregional review with dedicated small retrospective cHCC-CCA TACE and TARE data and an enhancement-pattern analysis. It provides no pooled effect or validated transplant-selection rule; inconsistent outcome labels require primary-report checks before quoting numerical efficacy."
   },
   "34925507": {
     "kind": "registry",
@@ -478,9 +478,9 @@
       "Acknowledges the absence of prospective data specific to cHCC-CCA"
     ],
     "critique": [
-      "The cHCC-CCA recommendations are extrapolated essentially in full from intrahepatic cholangiocarcinoma, and the review does not quantify the uncertainty that extrapolation introduces, nor address the HCC-like genomics reported by Joseph and Murugesan that argue the opposite way",
-      "No pooled response or survival estimates are offered for cHCC-CCA, so the review cannot inform an expected benefit or a consent discussion",
-      "The extraction of this paper is truncated after the main text into the reference list only, so no limitations paragraph beyond the general acknowledgement of absent prospective data was recoverable",
+      "The principal subject is interventional iCCA therapy, followed by an outlook for cHCC-CCA. It provides no cHCC-CCA-specific comparative systemic-treatment result and does not establish a gemcitabine–platinum/checkpoint standard for mixed histology.",
+      "No pooled cHCC-CCA response or survival estimate is supplied. Its interventional rationale may inform discussion, but numerical expected benefit must come from an applicable primary cohort with its limitations.",
+      "Statements about locoregional downstaging and retrospective activity principally concern iCCA; they are not validated cHCC-CCA efficacy or transplant-selection estimates.",
       "The review’s principal scope is interventional iCCA treatment; mixed-tumour systemic choices require separately identified primary or review sources and explicit extrapolation."
     ],
     "bottom_line": "A narrative review of interventional treatment for iCCA with an outlook for mixed tumours. It supplies no cHCC–CCA-specific comparative systemic-treatment estimate and cannot establish a gemcitabine–platinum/checkpoint standard for this histology."

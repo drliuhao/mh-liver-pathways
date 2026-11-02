@@ -1,0 +1,823 @@
+{
+  "id": "2026-11-02-zzzzzzzz-download-consolidation",
+  "requested_by": "Hao Liu: synchronize current website downloads and retire superseded authored copies",
+  "status": "Serving URLs and document metadata only; clinical claims, criteria and rules unchanged.",
+  "sources": [],
+  "edits": [
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        0,
+        "protocol"
+      ],
+      "old": "/mh-liver-pathways/evidence/2026-10-25/docs/01_HCC_Standard_Guidance_Aligned_Protocol_v12.docx",
+      "new": "/mh-liver-pathways/documents/hcc/HCC_3_Standard_Pathway.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        0,
+        "docs",
+        0,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/evidence/2026-10-25/docs/HCC_B1_1_AFP_Evidence_and_Open_Meeting_Record_v12.docx",
+      "new": "/mh-liver-pathways/documents/hcc/HCC_7_Decision_Discussion.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        0,
+        "docs",
+        1,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/evidence/2026-10-25/docs/01_HCC_Alignment_and_Meeting_Decisions_v12.docx",
+      "new": "/mh-liver-pathways/documents/hcc/HCC_7_Decision_Discussion.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        0,
+        "docs",
+        2,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/transplant/docs/01_HCC_Alignment_Meeting_Decision_Document_2026-10-16_v3.docx",
+      "new": "/mh-liver-pathways/documents/hcc/HCC_7_Decision_Discussion.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        0,
+        "docs",
+        3,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/transplant/docs/01_HCC_Guideline_Alignment_Worksheet_2026-10-16_v3.docx",
+      "new": "/mh-liver-pathways/documents/hcc/HCC_4_Standard_Pathway_Questions.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        1,
+        "protocol"
+      ],
+      "old": "/mh-liver-pathways/evidence/2026-10-25/docs/02_PCCA_Standard_Guidance_Aligned_Protocol_v12.docx",
+      "new": "/mh-liver-pathways/documents/pcca/pCCA_3_Standard_Pathway.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        1,
+        "docs",
+        0,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/transplant/docs/02_Perihilar_CCA_Alignment_Meeting_Decision_Document_2026-10-16_v3.docx",
+      "new": "/mh-liver-pathways/documents/pcca/pCCA_7_Decision_Discussion.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        1,
+        "docs",
+        1,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/transplant/docs/02_Perihilar_CCA_Guideline_Alignment_Worksheet_2026-10-16_v3.docx",
+      "new": "/mh-liver-pathways/documents/pcca/pCCA_4_Standard_Pathway_Questions.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        2,
+        "protocol"
+      ],
+      "old": "/mh-liver-pathways/evidence/2026-10-25/docs/03_ICCA_Standard_Guidance_Aligned_Protocol_v12.docx",
+      "new": "/mh-liver-pathways/documents/icca/iCCA_3_Standard_Pathway.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        2,
+        "docs",
+        0,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/transplant/docs/03_iCCA_Alignment_Meeting_Decision_Document_2026-10-16_v3.docx",
+      "new": "/mh-liver-pathways/documents/icca/iCCA_7_Decision_Discussion.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        2,
+        "docs",
+        1,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/transplant/docs/03_iCCA_Guideline_Alignment_Worksheet_2026-10-16_v3.docx",
+      "new": "/mh-liver-pathways/documents/icca/iCCA_4_Standard_Pathway_Questions.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        3,
+        "protocol"
+      ],
+      "old": "/mh-liver-pathways/evidence/2026-10-25/docs/04_CRLM_Standard_Guidance_Aligned_Protocol_v12.docx",
+      "new": "/mh-liver-pathways/documents/crlm/CRLM_3_Standard_Pathway.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        3,
+        "docs",
+        0,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/transplant/docs/04_CRLM_Alignment_Meeting_Decision_Document_2026-10-16_v3.docx",
+      "new": "/mh-liver-pathways/documents/crlm/CRLM_7_Decision_Discussion.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        3,
+        "docs",
+        1,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/transplant/docs/04_CRLM_Guideline_Alignment_Worksheet_2026-10-16_v3.docx",
+      "new": "/mh-liver-pathways/documents/crlm/CRLM_4_Standard_Pathway_Questions.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        4,
+        "protocol"
+      ],
+      "old": "/mh-liver-pathways/transplant/protocols/nelm_v3_protocol.docx",
+      "new": "/mh-liver-pathways/documents/nelm/NELM_3_Standard_Pathway.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        4,
+        "docs",
+        0,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/transplant/docs/05_NELM_Alignment_Meeting_Decision_Document_2026-10-16_v3.docx",
+      "new": "/mh-liver-pathways/documents/nelm/NELM_7_Decision_Discussion.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        4,
+        "docs",
+        1,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/transplant/docs/05_NELM_Guideline_Alignment_Worksheet_2026-10-16_v3.docx",
+      "new": "/mh-liver-pathways/documents/nelm/NELM_4_Standard_Pathway_Questions.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        5,
+        "protocol"
+      ],
+      "old": "/mh-liver-pathways/transplant/protocols/hehe_v3_protocol.docx",
+      "new": "/mh-liver-pathways/documents/hehe/HEHE_3_Standard_Pathway.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        5,
+        "docs",
+        0,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/transplant/docs/06_HEHE_Alignment_Meeting_Decision_Document_2026-10-16_v3.docx",
+      "new": "/mh-liver-pathways/documents/hehe/HEHE_7_Decision_Discussion.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        5,
+        "docs",
+        1,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/transplant/docs/06_HEHE_Guideline_Alignment_Worksheet_2026-10-16_v3.docx",
+      "new": "/mh-liver-pathways/documents/hehe/HEHE_4_Standard_Pathway_Questions.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        6,
+        "protocol"
+      ],
+      "old": "/mh-liver-pathways/transplant/protocols/hca_v3_protocol.docx",
+      "new": "/mh-liver-pathways/documents/hca/HCA_3_Standard_Pathway.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        6,
+        "docs",
+        0,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/transplant/docs/07_Hepatic_Adenoma_Alignment_Meeting_Decision_Document_2026-10-16_v3.docx",
+      "new": "/mh-liver-pathways/documents/hca/HCA_7_Decision_Discussion.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        6,
+        "docs",
+        1,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/transplant/docs/07_Hepatic_Adenoma_Guideline_Alignment_Worksheet_2026-10-16_v3.docx",
+      "new": "/mh-liver-pathways/documents/hca/HCA_4_Standard_Pathway_Questions.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "documents",
+        0,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/evidence/2026-10-25/docs/01_HCC_High_Risk_Protocol_v12.docx",
+      "new": "/mh-liver-pathways/documents/hcc/HCC_5_High_Risk_Pathway.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "pcca",
+        "documents",
+        0,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/evidence/2026-10-25/docs/02_PCCA_High_Risk_Protocol_v12.docx",
+      "new": "/mh-liver-pathways/documents/pcca/pCCA_5_High_Risk_Pathway.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "icca",
+        "documents",
+        0,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/evidence/2026-10-25/docs/03_ICCA_High_Risk_Protocol_v12.docx",
+      "new": "/mh-liver-pathways/documents/icca/iCCA_5_High_Risk_Pathway.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "crlm",
+        "documents",
+        0,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/evidence/2026-10-25/docs/04_CRLM_High_Risk_Protocol_v12.docx",
+      "new": "/mh-liver-pathways/documents/crlm/CRLM_5_High_Risk_Pathway.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "nelm",
+        "documents",
+        0,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/transplant/high-risk/docs/05_NELM_High_Risk_Protocol_v7.pdf",
+      "new": "/mh-liver-pathways/documents/nelm/NELM_5_High_Risk_Pathway.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "nelm",
+        "documents",
+        1,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/transplant/high-risk/docs/05_NELM_High_Risk_Protocol_v7.docx",
+      "new": "/mh-liver-pathways/documents/nelm/NELM_5_High_Risk_Pathway.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hehe",
+        "documents",
+        0,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/transplant/high-risk/docs/06_HEHE_Clinical_Protocol_Boundary_Addendum_v7.pdf",
+      "new": "/mh-liver-pathways/documents/hehe/HEHE_5_High_Risk_Pathway.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hehe",
+        "documents",
+        1,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/transplant/high-risk/docs/06_HEHE_Clinical_Protocol_Boundary_Addendum_v7.docx",
+      "new": "/mh-liver-pathways/documents/hehe/HEHE_5_High_Risk_Pathway.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hca",
+        "documents",
+        0,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/transplant/high-risk/docs/07_HCA_Clinical_Protocol_Boundary_Addendum_v7.pdf",
+      "new": "/mh-liver-pathways/documents/hca/HCA_5_High_Risk_Pathway.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hca",
+        "documents",
+        1,
+        "url"
+      ],
+      "old": "/mh-liver-pathways/transplant/high-risk/docs/07_HCA_Clinical_Protocol_Boundary_Addendum_v7.docx",
+      "new": "/mh-liver-pathways/documents/hca/HCA_5_High_Risk_Pathway.docx"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        0,
+        "docs"
+      ],
+      "old": [
+        {
+          "label": "B1.1 evidence and OPEN meeting record",
+          "url": "/mh-liver-pathways/documents/hcc/HCC_7_Decision_Discussion.docx"
+        },
+        {
+          "label": "HCC alignment and meeting decisions",
+          "url": "/mh-liver-pathways/documents/hcc/HCC_7_Decision_Discussion.docx"
+        },
+        {
+          "label": "Decision document",
+          "url": "/mh-liver-pathways/documents/hcc/HCC_7_Decision_Discussion.docx"
+        },
+        {
+          "label": "Alignment worksheet",
+          "url": "/mh-liver-pathways/documents/hcc/HCC_4_Standard_Pathway_Questions.docx"
+        }
+      ],
+      "new": [
+        {
+          "label": "Decision discussion · Word",
+          "url": "/mh-liver-pathways/documents/hcc/HCC_7_Decision_Discussion.docx"
+        },
+        {
+          "label": "Standard pathway questions · Word",
+          "url": "/mh-liver-pathways/documents/hcc/HCC_4_Standard_Pathway_Questions.docx"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        1,
+        "docs"
+      ],
+      "old": [
+        {
+          "label": "Decision document",
+          "url": "/mh-liver-pathways/documents/pcca/pCCA_7_Decision_Discussion.docx"
+        },
+        {
+          "label": "Alignment worksheet",
+          "url": "/mh-liver-pathways/documents/pcca/pCCA_4_Standard_Pathway_Questions.docx"
+        }
+      ],
+      "new": [
+        {
+          "label": "Decision discussion · Word",
+          "url": "/mh-liver-pathways/documents/pcca/pCCA_7_Decision_Discussion.docx"
+        },
+        {
+          "label": "Standard pathway questions · Word",
+          "url": "/mh-liver-pathways/documents/pcca/pCCA_4_Standard_Pathway_Questions.docx"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        2,
+        "docs"
+      ],
+      "old": [
+        {
+          "label": "Decision document",
+          "url": "/mh-liver-pathways/documents/icca/iCCA_7_Decision_Discussion.docx"
+        },
+        {
+          "label": "Alignment worksheet",
+          "url": "/mh-liver-pathways/documents/icca/iCCA_4_Standard_Pathway_Questions.docx"
+        }
+      ],
+      "new": [
+        {
+          "label": "Decision discussion · Word",
+          "url": "/mh-liver-pathways/documents/icca/iCCA_7_Decision_Discussion.docx"
+        },
+        {
+          "label": "Standard pathway questions · Word",
+          "url": "/mh-liver-pathways/documents/icca/iCCA_4_Standard_Pathway_Questions.docx"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        3,
+        "docs"
+      ],
+      "old": [
+        {
+          "label": "Decision document",
+          "url": "/mh-liver-pathways/documents/crlm/CRLM_7_Decision_Discussion.docx"
+        },
+        {
+          "label": "Alignment worksheet",
+          "url": "/mh-liver-pathways/documents/crlm/CRLM_4_Standard_Pathway_Questions.docx"
+        }
+      ],
+      "new": [
+        {
+          "label": "Decision discussion · Word",
+          "url": "/mh-liver-pathways/documents/crlm/CRLM_7_Decision_Discussion.docx"
+        },
+        {
+          "label": "Standard pathway questions · Word",
+          "url": "/mh-liver-pathways/documents/crlm/CRLM_4_Standard_Pathway_Questions.docx"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        4,
+        "docs"
+      ],
+      "old": [
+        {
+          "label": "Decision document",
+          "url": "/mh-liver-pathways/documents/nelm/NELM_7_Decision_Discussion.docx"
+        },
+        {
+          "label": "Alignment worksheet",
+          "url": "/mh-liver-pathways/documents/nelm/NELM_4_Standard_Pathway_Questions.docx"
+        }
+      ],
+      "new": [
+        {
+          "label": "Decision discussion · Word",
+          "url": "/mh-liver-pathways/documents/nelm/NELM_7_Decision_Discussion.docx"
+        },
+        {
+          "label": "Standard pathway questions · Word",
+          "url": "/mh-liver-pathways/documents/nelm/NELM_4_Standard_Pathway_Questions.docx"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        5,
+        "docs"
+      ],
+      "old": [
+        {
+          "label": "Decision document",
+          "url": "/mh-liver-pathways/documents/hehe/HEHE_7_Decision_Discussion.docx"
+        },
+        {
+          "label": "Alignment worksheet",
+          "url": "/mh-liver-pathways/documents/hehe/HEHE_4_Standard_Pathway_Questions.docx"
+        }
+      ],
+      "new": [
+        {
+          "label": "Decision discussion · Word",
+          "url": "/mh-liver-pathways/documents/hehe/HEHE_7_Decision_Discussion.docx"
+        },
+        {
+          "label": "Standard pathway questions · Word",
+          "url": "/mh-liver-pathways/documents/hehe/HEHE_4_Standard_Pathway_Questions.docx"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        6,
+        "docs"
+      ],
+      "old": [
+        {
+          "label": "Decision document",
+          "url": "/mh-liver-pathways/documents/hca/HCA_7_Decision_Discussion.docx"
+        },
+        {
+          "label": "Alignment worksheet",
+          "url": "/mh-liver-pathways/documents/hca/HCA_4_Standard_Pathway_Questions.docx"
+        }
+      ],
+      "new": [
+        {
+          "label": "Decision discussion · Word",
+          "url": "/mh-liver-pathways/documents/hca/HCA_7_Decision_Discussion.docx"
+        },
+        {
+          "label": "Standard pathway questions · Word",
+          "url": "/mh-liver-pathways/documents/hca/HCA_4_Standard_Pathway_Questions.docx"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "documents"
+      ],
+      "old": [
+        {
+          "label": "High-risk protocol · Word",
+          "url": "/mh-liver-pathways/documents/hcc/HCC_5_High_Risk_Pathway.docx",
+          "format": "docx"
+        }
+      ],
+      "new": [
+        {
+          "url": "/mh-liver-pathways/documents/hcc/HCC_5_High_Risk_Pathway.docx",
+          "label": "Current high-risk pathway · Word",
+          "format": "docx"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "pcca",
+        "documents"
+      ],
+      "old": [
+        {
+          "label": "High-risk protocol · Word",
+          "url": "/mh-liver-pathways/documents/pcca/pCCA_5_High_Risk_Pathway.docx",
+          "format": "docx"
+        }
+      ],
+      "new": [
+        {
+          "url": "/mh-liver-pathways/documents/pcca/pCCA_5_High_Risk_Pathway.docx",
+          "label": "Current high-risk pathway · Word",
+          "format": "docx"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "icca",
+        "documents"
+      ],
+      "old": [
+        {
+          "label": "High-risk protocol · Word",
+          "url": "/mh-liver-pathways/documents/icca/iCCA_5_High_Risk_Pathway.docx",
+          "format": "docx"
+        }
+      ],
+      "new": [
+        {
+          "url": "/mh-liver-pathways/documents/icca/iCCA_5_High_Risk_Pathway.docx",
+          "label": "Current high-risk pathway · Word",
+          "format": "docx"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "crlm",
+        "documents"
+      ],
+      "old": [
+        {
+          "label": "High-risk protocol · Word",
+          "url": "/mh-liver-pathways/documents/crlm/CRLM_5_High_Risk_Pathway.docx",
+          "format": "docx"
+        }
+      ],
+      "new": [
+        {
+          "url": "/mh-liver-pathways/documents/crlm/CRLM_5_High_Risk_Pathway.docx",
+          "label": "Current high-risk pathway · Word",
+          "format": "docx"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "nelm",
+        "documents"
+      ],
+      "old": [
+        {
+          "url": "/mh-liver-pathways/documents/nelm/NELM_5_High_Risk_Pathway.docx",
+          "label": "High-risk protocol · PDF",
+          "format": "pdf",
+          "sha256": "cbf1090476a0c446afae784a12b0db2be0f1963859919969ddb86a921aa60cab"
+        },
+        {
+          "url": "/mh-liver-pathways/documents/nelm/NELM_5_High_Risk_Pathway.docx",
+          "label": "High-risk protocol · Word",
+          "format": "docx",
+          "sha256": "a6490652635729552f29aa0465101c1964ca6196a98ed90ee952ab86295faefe"
+        }
+      ],
+      "new": [
+        {
+          "url": "/mh-liver-pathways/documents/nelm/NELM_5_High_Risk_Pathway.docx",
+          "label": "Current high-risk pathway · Word",
+          "format": "docx"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hehe",
+        "documents"
+      ],
+      "old": [
+        {
+          "url": "/mh-liver-pathways/documents/hehe/HEHE_5_High_Risk_Pathway.docx",
+          "label": "High-risk boundary addendum · PDF",
+          "format": "pdf",
+          "sha256": "23cad6850ee620740d60a0e099da76066ee061471ccdf4f62a74a87b30b4aee6"
+        },
+        {
+          "url": "/mh-liver-pathways/documents/hehe/HEHE_5_High_Risk_Pathway.docx",
+          "label": "High-risk boundary addendum · Word",
+          "format": "docx",
+          "sha256": "55252cdb7bc8c33761a79ff229ef38502150e857037221515ee4640447c88c89"
+        }
+      ],
+      "new": [
+        {
+          "url": "/mh-liver-pathways/documents/hehe/HEHE_5_High_Risk_Pathway.docx",
+          "label": "Current high-risk pathway · Word",
+          "format": "docx"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hca",
+        "documents"
+      ],
+      "old": [
+        {
+          "url": "/mh-liver-pathways/documents/hca/HCA_5_High_Risk_Pathway.docx",
+          "label": "High-risk boundary addendum · PDF",
+          "format": "pdf",
+          "sha256": "4d00c4b5386bdbaedc6c8dde26ae97c4639ba0a1b9271ccc1b2bc1cd43e07d5d"
+        },
+        {
+          "url": "/mh-liver-pathways/documents/hca/HCA_5_High_Risk_Pathway.docx",
+          "label": "High-risk boundary addendum · Word",
+          "format": "docx",
+          "sha256": "d24f6ccfba48fd719951ed0171bcc6c97ac54cce16f8e716fc9cc10679ae2765"
+        }
+      ],
+      "new": [
+        {
+          "url": "/mh-liver-pathways/documents/hca/HCA_5_High_Risk_Pathway.docx",
+          "label": "Current high-risk pathway · Word",
+          "format": "docx"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "file": "tools/decision_assistant_source/build.py",
+      "old": "<link rel=\"stylesheet\" href=\"/assets/high-risk.css?v={STAMP}\"><script src=\"/assets/high-risk.js?v={STAMP}\" defer></script><script src=\"/assets/assistant.js?v={STAMP}\" defer></script><script src=\"/assets/risk-routing.js?v={STAMP}\" defer></script><script src=\"/assets/app.js?v={STAMP}\" defer></script></head><body><div id=\"app\"></div>\n<dialog id=\"source-dialog\" aria-labelledby=\"source-title\"></dialog><script id=\"protocol-data\" type=\"application/json\">{payload}</script>\n<noscript><main><h1>{e(title)}</h1><p>This interactive reference needs JavaScript. The printable alignment records and original protocols remain available.</p><ul>{''.join(f'<li><a href=\"/meeting-records/{p[\"slug\"]}.html\">{e(p[\"name\"])} alignment record</a> · <a href=\"{p[\"protocol\"]}\">V3 protocol</a></li>' for p in PATHWAYS)}</ul></main></noscript></body></html>'''\n\ndef moved(code, target, questions):\n",
+      "new": "<link rel=\"stylesheet\" href=\"/assets/high-risk.css?v={STAMP}\"><script src=\"/assets/high-risk.js?v={STAMP}\" defer></script><script src=\"/assets/assistant.js?v={STAMP}\" defer></script><script src=\"/assets/risk-routing.js?v={STAMP}\" defer></script><script src=\"/assets/app.js?v={STAMP}\" defer></script></head><body><div id=\"app\"></div>\n<dialog id=\"source-dialog\" aria-labelledby=\"source-title\"></dialog><script id=\"protocol-data\" type=\"application/json\">{payload}</script>\n<noscript><main><h1>{e(title)}</h1><p>This interactive reference needs JavaScript. The printable discussion records and current Word pathways remain available.</p><ul>{''.join(f'<li><a href=\"/meeting-records/{p[\"slug\"]}.html\">{e(p[\"name\"])} alignment record</a> · <a href=\"{p[\"protocol\"]}\">Current V18 pathway · Word</a></li>' for p in PATHWAYS)}</ul></main></noscript></body></html>'''\n\ndef moved(code, target, questions):\n"
+    },
+    {
+      "file": "tools/decision_assistant_source/build.py",
+      "old": "        comparisons=''.join(f'<section class=\"comparison\"><div class=\"source-kind\">{e(SOURCES[c[\"ref\"]][\"kind\"])}</div><h4>{e(SOURCES[c[\"ref\"]][\"short\"])}</h4><p class=\"quotation\">{(\"“\" if c[\"quote\"] else \"\")+e(c[\"text\"])+(\"”\" if c[\"quote\"] else \"\")}</p><p class=\"small muted\">{\"Short verbatim excerpt\" if c[\"quote\"] else \"Source summary / scope\"} · {e(c[\"locator\"] or SOURCES[c[\"ref\"]][\"locator\"])}</p>{ref_link(c)}</section>' for c in i['comparisons'])\n        sections.append(f'<article class=\"issue-record\" id=\"{i[\"id\"]}\"><p class=\"eyebrow\">{e(i[\"record\"])}</p><h2>{e(i[\"question\"])}</h2><p class=\"small\">Status: discussion required — not yet approved. <a href=\"/{p[\"slug\"]}/\">Return to interactive pathway</a></p><div class=\"comparison-grid\">{comparisons}</div><div class=\"proposal\"><div><b>Proposed local approach</b><p>{e(i[\"proposal\"])}</p></div><div><b>Rationale</b><p>{e(i[\"rationale\"])}</p></div></div><p class=\"small\">Proposed responsible team: {e(i[\"owners\"])}</p><p>Meeting decision: ____________________ &nbsp; Responsible team/date: ____________________</p><p>Implementation / protocol changes: __________________________________________________</p></article>')\n    return f'<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>{e(p[\"code\"])} — alignment meeting record</title><link rel=\"stylesheet\" href=\"/assets/style.css?v={STAMP}\"></head><body><main class=\"wrap\"><div class=\"pathhero\"><div><p class=\"eyebrow\">Source comparison: October 17, 2026 · language revision: October 24, 2026</p><h1>{e(p[\"code\"])} alignment & decision record</h1><p>Draft for meeting discussion. No proposal is approved. Use browser Print to save this current record as PDF; reconcile agreed decisions with the separately linked V3 Word documents.</p></div></div>{\"\".join(sections)}</main></body></html>'\n\ndef build():\n",
+      "new": "        comparisons=''.join(f'<section class=\"comparison\"><div class=\"source-kind\">{e(SOURCES[c[\"ref\"]][\"kind\"])}</div><h4>{e(SOURCES[c[\"ref\"]][\"short\"])}</h4><p class=\"quotation\">{(\"“\" if c[\"quote\"] else \"\")+e(c[\"text\"])+(\"”\" if c[\"quote\"] else \"\")}</p><p class=\"small muted\">{\"Short verbatim excerpt\" if c[\"quote\"] else \"Source summary / scope\"} · {e(c[\"locator\"] or SOURCES[c[\"ref\"]][\"locator\"])}</p>{ref_link(c)}</section>' for c in i['comparisons'])\n        sections.append(f'<article class=\"issue-record\" id=\"{i[\"id\"]}\"><p class=\"eyebrow\">{e(i[\"record\"])}</p><h2>{e(i[\"question\"])}</h2><p class=\"small\">Status: discussion required — not yet approved. <a href=\"/{p[\"slug\"]}/\">Return to interactive pathway</a></p><div class=\"comparison-grid\">{comparisons}</div><div class=\"proposal\"><div><b>Proposed local approach</b><p>{e(i[\"proposal\"])}</p></div><div><b>Rationale</b><p>{e(i[\"rationale\"])}</p></div></div><p class=\"small\">Proposed responsible team: {e(i[\"owners\"])}</p><p>Meeting decision: ____________________ &nbsp; Responsible team/date: ____________________</p><p>Implementation / protocol changes: __________________________________________________</p></article>')\n    return f'<!doctype html><html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>{e(p[\"code\"])} — alignment meeting record</title><link rel=\"stylesheet\" href=\"/assets/style.css?v={STAMP}\"></head><body><main class=\"wrap\"><div class=\"pathhero\"><div><p class=\"eyebrow\">Source comparison: October 17, 2026 · language revision: October 24, 2026</p><h1>{e(p[\"code\"])} alignment & decision record</h1><p>Draft for meeting discussion. No proposal is approved. Use browser Print to save this current record as PDF; reconcile agreed decisions with the separately linked current V18 Word documents.</p></div></div>{\"\".join(sections)}</main></body></html>'\n\ndef build():\n"
+    },
+    {
+      "file": "tools/decision_assistant_source/build.py",
+      "old": "    def local(url):\n        if url.startswith('/'):\n            if not (DIST/url.split('#')[0].lstrip('/')).exists():problems.append(f'Missing local resource: {url}')\n    for id,r in SOURCES.items():local(r['pdf'])\n    for p in PATHWAYS:\n",
+      "new": "    def local(url):\n        if url.startswith('/'):\n            base='/mh-liver-pathways/'\n            root=Path(__file__).resolve().parents[2] if url.startswith(base) else DIST\n            target=url.split('#')[0].removeprefix(base).lstrip('/')\n            if not (root/target).exists():problems.append(f'Missing local resource: {url}')\n    for id,r in SOURCES.items():local(r['pdf'])\n    for p in PATHWAYS:\n"
+    },
+    {
+      "file": "tools/decision_assistant_source/build.py",
+      "old": "        local(p['protocol'])\n        for d in p['docs']:local(d['url'])\n        if len(p['docs'])!=2:problems.append(f'Missing governance documents: {p[\"slug\"]}')\n        used=set()\n        for s in p['steps']:\n",
+      "new": "        local(p['protocol'])\n        for d in p['docs']:local(d['url'])\n        if len({d['url'] for d in p['docs']})<2:problems.append(f'Missing current governance documents: {p[\"slug\"]}')\n        used=set()\n        for s in p['steps']:\n"
+    },
+    {
+      "file": "tools/decision_assistant_source/build.py",
+      "old": "    if problems:\n        print('\\n'.join(problems));sys.exit(1)\n    print('PASS: every decision has inputs/results; every clinical bullet is referenced; every branch/question/resource resolves; all seven protocol + paired governance DOCX links preserved.')\n\nif __name__=='__main__':\n",
+      "new": "    if problems:\n        print('\\n'.join(problems));sys.exit(1)\n    print('PASS: every decision has inputs/results; every clinical bullet is referenced; every branch/question/resource resolves; current pathway and governance Word links resolve.')\n\nif __name__=='__main__':\n"
+    },
+    {
+      "file": "tools/decision_assistant_source/content.py",
+      "old": "\"\"\"\nfrom pathlib import Path\n\nROOT = Path(__file__).resolve().parents[1]\n",
+      "new": "\"\"\"\nfrom pathlib import Path\nimport json\n\nROOT = Path(__file__).resolve().parents[1]\n"
+    },
+    {
+      "file": "tools/decision_assistant_source/content.py",
+      "old": "    return dict(id=id,question=question,comparisons=comparisons,proposal=proposal,rationale=rationale,owners=owners,record=record,status='Discussion required — not yet approved')\ndef pathway(slug,code,name,route,entry,roadmap,steps,issues):\n    docs=sorted((DIST/'docs').glob('*_v3.docx'))\n    prefix={'hcc':'01_','pcca':'02_','icca':'03_','crlm':'04_','nelm':'05_','hehe':'06_','hca':'07_'}[slug]\n    return dict(slug=slug,code=code,name=name,route=route,entry=entry,roadmap=roadmap,\n                steps=steps,issues=issues,protocol=f'/protocols/{slug}_v3_protocol.docx',\n                docs=[dict(label='Alignment worksheet' if 'Worksheet' in d.name else 'Decision document',url='/docs/'+d.name) for d in docs if d.name.startswith(prefix)])\n\nPATHWAYS=[]\n",
+      "new": "    return dict(id=id,question=question,comparisons=comparisons,proposal=proposal,rationale=rationale,owners=owners,record=record,status='Discussion required — not yet approved')\ndef pathway(slug,code,name,route,entry,roadmap,steps,issues):\n    files=json.loads((ROOT.parent/'assets/documents.json').read_text())['tumors'][slug]['files']\n    base=f'/mh-liver-pathways/documents/{slug}/'\n    return dict(slug=slug,code=code,name=name,route=route,entry=entry,roadmap=roadmap,\n                steps=steps,issues=issues,protocol=base+files['standard_info'],\n                docs=[dict(label=label,url=base+files[slot]) for slot,label in [('decision','Decision discussion'),('standard_questions','Standard pathway questions')]])\n\nPATHWAYS=[]\n"
+    }
+  ]
+}

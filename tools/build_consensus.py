@@ -19,7 +19,7 @@ from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '/mh-liver-pathways/'
-DATE = '29 October 2026'
+DATE = '1 November 2026'
 C = json.loads((ROOT / 'transplant/assets/content.json').read_text())
 EHD = json.loads((ROOT / 'tools/ehd_positions.json').read_text())
 HQ = json.loads((ROOT / 'tools/consensus_source/high_risk_questions.json').read_text())

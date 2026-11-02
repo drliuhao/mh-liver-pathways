@@ -1014,7 +1014,7 @@
       "design": "RCT",
       "arms": "Adjuvant chemotherapy (FU/FA or gemcitabine) vs observation",
       "result": "Primary endpoint not met: median OS 43.1 vs 35.2 mo, HR 0.86 (95% CI 0.66-1.11), p = 0.25; adjusted HR 0.75, p = 0.03 (hypothesis generating)",
-      "caution": "Ampullary subgroup never powered or formally tested; only 135 of 297 ampullary tumours could be subtyped",
+      "caution": "Ampullary subgroup underpowered; the adjusted secondary estimate does not confirm the primary null result",
       "quotes": [
         "median overall survival 35.2 months (95% CI 27.2-43.0) with observation versus 43.1 months (34.0-56.0) with chemotherapy, HR 0.86 (95% CI 0.66-1.11), chi-square 1.33, p = 0.25",
         "(HR 0.75, p = 0.03) that the authors themselves call hypothesis generating",
@@ -3158,13 +3158,10 @@
       "label": "Lee 2019 LR-M features",
       "design": "Retrospective cohort",
       "arms": "Diagnostic case-control · 33 cHCC-CCA vs 66 matched HCC",
-      "result": "At least one LR-M feature in 93.9% of cHCC-CCA but also in about half of HCC; three or more features: 80.8% accuracy, sensitivity only 54.5%",
-      "caution": "Single-centre case-control with 2:1 matching; predictive values do not apply at true prevalence",
+      "result": "Targetoid appearance: 25/33 cHCC-CCA (75.8%) versus 23/66 matched HCC (34.8%); specificity 65.2%. Three-feature LR-M rule: accuracy 80.8%, sensitivity 54.5%",
+      "caution": "Selected surgical, propensity-matched cohort; predictive values do not transfer to an unselected clinic",
       "quotes": [
-        "33 cHCC-CCA matched to 66 HCC controls",
-        "At least one LR-M feature in 93.9% of cHCC-CCA",
-        "Requiring three or more LR-M features gave 80.8% accuracy but sensitivity of only 54.5% for cHCC-CCA",
-        "Because HCC controls were deliberately matched 2:1 rather than sampled at true prevalence"
+        "In 33 cHCC-CCA and 66 matched HCC controls, targetoid appearance occurred in 25/33 (75.8%) and 23/66 (34.8%), respectively, giving 65.2% specificity. A three-feature LR-M rule had 80.8% accuracy but only 54.5% sensitivity. These selected, surgically confirmed groups do not establish clinic-wide predictive values or an imaging-only diagnosis."
       ]
     },
     "30568386": {
@@ -4277,13 +4274,11 @@
     "33362387": {
       "label": "Yang 2020 CEUS",
       "design": "Retrospective cohort",
-      "arms": "Retrospective diagnostic accuracy · 134 lesions (35 cHCC-CCA)",
-      "result": "CEUS LI-RADS criteria for cHCC-CCA: sensitivity 40.0%, specificity 89.9%, AUC 0.649; PPV at real prevalence only 1.6% to 39.6%",
-      "caution": "Retrospective; histology-proven lesions only; operator-dependent with single-centre readers",
+      "arms": "35 cHCC-CCA, 29 iCCA, 70 matched HCC; retrospective diagnostics",
+      "result": "Combined CEUS LI-RADS/AFP/CA 19-9 rule: sensitivity 40.0%, specificity 89.9%, AUC 0.649; modelled PPV 1.6–39.6% across assumed prevalences",
+      "caution": "Selected surgical cohort; combined-test accuracy and modelled predictive values require validation",
       "quotes": [
-        "134 lesions: 35 cHCC-CCA",
-        "CEUS LI-RADS criteria for cHCC-CCA: sensitivity 40.0%, specificity 89.9%, AUC 0.649",
-        "obtained a range of 1.6% to 39.6%"
+        "A combined CEUS LI-RADS/AFP/CA 19-9 rule had 40.0% sensitivity, 89.9% specificity and AUC 0.649 in 35 cHCC-CCA, 29 iCCA and 70 matched HCC controls. The modelled PPV was 1.6–39.6% across assumed prevalences. These are not CEUS-alone accuracy estimates, and the selected surgical cohort does not establish clinic-wide predictive values."
       ]
     },
     "33475684": {
@@ -4518,13 +4513,10 @@
       "label": "Renzulli 2021 locoregional",
       "design": "Review",
       "arms": "Narrative review",
-      "result": "Locoregional therapy (TACE, DEB-TACE, Y-90, ablation) reasonable for unresectable liver-confined CCA, chosen by size, site, vascularity; cHCC-CCA extrapolated",
-      "caution": "No systematic search, appraisal or pooled estimates; essentially no dedicated cHCC-CCA evidence",
+      "result": "Dedicated small retrospective cHCC-CCA TACE and TARE data and an enhancement-pattern analysis; no pooled effect or validated transplant-selection rule",
+      "caution": "Small retrospective cohorts; inconsistent outcome labels require primary-report checks before citing numbers",
       "quotes": [
-        "transarterial radioembolisation with yttrium-90",
-        "Concludes that locoregional therapy is a reasonable option for unresectable disease confined to the liver, with modality choice driven by tumour size, location and vascularity",
-        "Narrative review without systematic search, quality appraisal or quantitative synthesis",
-        "cHCC-CCA appears in the title but has essentially no dedicated evidence base in the review"
+        "A narrative locoregional review with dedicated small retrospective cHCC-CCA TACE and TARE data and an enhancement-pattern analysis. It provides no pooled effect or validated transplant-selection rule; inconsistent outcome labels require primary-report checks before quoting numerical efficacy."
       ]
     },
     "34289649": {
@@ -5732,11 +5724,11 @@
       "label": "Auer 2023 interventional",
       "design": "Review",
       "arms": "Narrative review",
-      "result": "With no cHCC-CCA-specific trials, treat as biliary tract cancer: gemcitabine-platinum backbone plus checkpoint inhibition",
-      "caution": "Extrapolated from iCCA with no pooled estimates; HCC-like genomic data not addressed",
+      "result": "Interventional iCCA review with an outlook for mixed tumours; does not establish a gemcitabine–platinum/checkpoint standard for cHCC-CCA",
+      "caution": "Narrative review; no pooled mixed-tumour efficacy or comparative systemic-treatment estimate",
       "quotes": [
-        "Concludes that in the absence of cHCC-CCA-specific trials, treatment should follow the biliary tract cancer paradigm, with gemcitabine-platinum backbone and checkpoint inhibition",
-        "The cHCC-CCA recommendations are extrapolated essentially in full from intrahepatic cholangiocarcinoma"
+        "A narrative review of interventional treatment for iCCA with an outlook for mixed tumours. It supplies no cHCC–CCA-specific comparative systemic-treatment estimate and cannot establish a gemcitabine–platinum/checkpoint standard for this histology.",
+        "The principal subject is interventional iCCA therapy, followed by an outlook for cHCC-CCA. It provides no cHCC-CCA-specific comparative systemic-treatment result and does not establish a gemcitabine–platinum/checkpoint standard for mixed histology."
       ]
     },
     "37199193": {
@@ -7168,15 +7160,31 @@
     "39908431": {
       "label": "eNRGy zenocutuzumab",
       "design": "Single-arm trial",
-      "arms": "Single-arm basket trial · 204 patients (36 pancreatic)",
-      "result": "Primary endpoint ORR 30% overall (47/158); KRAS wild-type NRG1+ pancreatic subgroup ORR 42% (15/36) by investigator, 44% central; median DoR 7.4 mo",
-      "caution": "Single-arm; no survival data for pancreatic subgroup; no screening denominator",
+      "arms": "204 treated; 161 efficacy patients; 158 measurable; 36 pancreatic",
+      "result": "Pancreatic subgroup: ORR 42% (15/36 investigator), 44% central; median DoR 7.4 mo; median PFS 9.2 mo (95% CI 5.5–11.2)",
+      "caution": "Single-arm basket trial; pancreatic OS not reported; no screening denominator",
       "quotes": [
-        "204 patients treated at 750 mg every 2 weeks; 158 in the primary efficacy population with measurable disease; 36 with pancreatic cancer",
-        "PRIMARY ENDPOINT: investigator-assessed confirmed objective response in 47 of 158 patients, 30% (95% CI 23-37)",
-        "PANCREATIC SUBGROUP: 15 of 36 (42%, 95% CI 25-59) by investigator assessment and 16 of 36 (44%, 95% CI 28-62) by blinded independent central review; median duration of response 7.4 months",
-        "All 36 pancreatic patients had KRAS wild-type disease"
-      ]
+        "204 patients treated at 750 mg every 2 weeks; 161 in the primary-efficacy population, including 158 with investigator-assessed measurable disease for the primary response analysis; 36 patients in the prespecified pancreatic efficacy cohort (42 pancreatic patients treated overall).",
+        "eNRGy showed antitumor activity in 36 KRAS wild-type pancreatic patients: investigator-assessed response 42% (15/36; 95% CI 25–59), median PFS 9.2 months (5.5–11.2), and no reported pancreatic OS estimate. The single-arm design and lack of a screening denominator limit interpretation; these results do not establish comparative survival benefit.",
+        "There is no stated limitations paragraph as such; the caveats above are scattered through the discussion, and the single-group design is never named as a limitation even though every efficacy claim is uncontrolled",
+        "The primary endpoint is investigator-assessed response in an open-label trial, with blinded central review relegated to a secondary endpoint — the weaker assessment carries the primary claim, and the two differ by tumour type",
+        "The primary-efficacy set required a functionally predicted fusion, first dose at least 24 weeks before the data cutoff, absence of specified other oncogenic alterations and no prior anti-HER3 exposure. Of 204 treated patients, 161 entered this set; 158 had measurable disease for the investigator-assessed primary response analysis. Exclusions were mainly for later treatment initiation. The report does not establish that excluded patients were disproportionately early progressors, and the timing criterion is not a requirement to survive progression-free for 24 weeks.",
+        "The pancreatic result is a prespecified subgroup of 36 patients within a basket trial whose sample size was justified only for the pooled estimate; the 95% CI of 25-59% is too wide to distinguish a major advance from a modest one",
+        "All 36 pancreatic patients were KRAS wild-type — a group that is perhaps 8-10% of PDAC and has a different natural history from KRAS-mutant disease. Since NRG1 fusions occur in well under 1% of PDAC, this is a very small slice of the disease and the paper gives no screening denominator",
+        "The main Results text reports pancreatic-cohort median PFS of 9.2 months (95% CI 5.5–11.2), citing Table S7/Figure S8. Pancreatic OS is not reported. The prespecified 36-patient cohort provides single-arm outcome estimates and cannot establish comparative survival benefit.",
+        "Nine fatal adverse events (4%) in 204 patients are reported as not treatment-related on investigator attribution alone, in an unblinded trial",
+        "Merus designed the trial, sponsor-employed statisticians analysed the data, and the sponsor together with the first and last authors drafted the manuscript with sponsor-funded medical writing across multiple drafts",
+        "Zenocutuzumab, for NRG1 fusions",
+        "D",
+        "NCCN lists zenocutuzumab-zbco as a subsequent therapy option for NRG1 fusion-positive disease at performance status 0–2. eNRGy treated 204 patients; 161 met the primary-efficacy definition, including 158 with investigator-assessed measurable disease for the response analysis. The prespecified pancreatic cohort comprised 36 patients, all KRAS wild-type. Investigator-assessed response was 15/36 (42%, 95% CI 25–59), versus 16/36 (44%, 28–62) by blinded central review; median response duration was 7.4 months (4.0–11.2) and 9.1 months, respectively. Pancreatic median PFS was 9.2 months (95% CI 5.5–11.2); pancreatic OS was not reported. Among 31 pancreatic patients with baseline CA 19-9 data, 24 (77%) had a fall of at least 50%.",
+        "A patient with KRAS wild-type disease, where NRG1 fusions are enriched — in a single-institution series the median age of 10 patients with a detectable NRG1 fusion was 48.5 years, and KRAS wild-type status is the practical trigger to look.",
+        "This single-arm trial provides response and PFS estimates, not comparative survival benefit. The prespecified pancreatic cohort contained 36 patients within a basket trial sized for the pooled estimate. The primary-efficacy definition required the first dose at least 24 weeks before the data cutoff and other eligibility criteria; it did not require each patient to remain progression-free or on treatment for 24 weeks. Of 204 treated patients, 43 were outside that efficacy set, mainly because they started treatment later; three of the remaining 161 lacked measurable disease for investigator response assessment. The report does not establish disproportionate exclusion of early progressors. No pancreatic OS estimate or screening denominator was reported; sponsor involvement and open-label investigator response assessment remain limitations."
+      ],
+      "review": {
+        "date": "2026-11-01",
+        "basis": "Primary report, Results pp569/571 and Table2. PFS is reported in the main text; the cited supplementary table was not newly reviewed.",
+        "source": "PMID39908431"
+      }
     },
     "39915735": {
       "label": "METAPANC protocol (Ghadimi)",
@@ -7529,13 +7537,11 @@
       "label": "Milan consensus",
       "design": "Consensus",
       "arms": "Consensus statement · 71 experts, ten-member jury, 570 studies",
-      "result": "LT after neoadjuvant therapy for node-negative pCCA regardless of resectability; left-sided hepatectomy preferred; FLR ≥30% if healthy, ≥40% if impaired",
-      "caution": "84% of 570 studies observational, most surgical advice evidence level 4; industry paid 55%; no voting record",
+      "result": "PVE first; upfront/additional LVD for substantial augmentation (strong, level 3). LT: stronger support for selected unresectable/PSC than resectable pCCA",
+      "caution": "Consensus mass ≤3 cm is separate from OPTN <3 cm; mostly observational evidence",
       "quotes": [
-        "71 international experts in eight panels considering 570 studies",
-        "cutoff 30% if healthy, at least 40% if frail, cholangitic, cholestatic or malnourished",
-        "84% of its 570 studies are observational and that most surgical recommendations sit at level of evidence 4",
-        "Industry covered 55% of the conference's costs"
+        "The Milan jury-based consensus covers staging, drainage, liver augmentation, resection, systemic therapy, transplantation and outcomes; 84% of its 570 studies are observational and most surgical recommendations sit at level of evidence 4. Hypertrophy is a specific exception: PVE is the initial technique (Recommendation 23), and upfront or additional LVD may be considered for substantial augmentation (Recommendation 24), both strong, level 3, with limited nonrandomized pCCA comparative evidence. Transplant Recommendation 59 concerns selected unresectable or PSC-associated pCCA ≤3.0 cm without nodal or distant metastases (strong, level 3); Recommendation 64 only weakly supports consideration in resectable or questionably resectable disease with appropriate donor access (level 3). Benchmark and retrospective data do not establish universal superiority over resection, and TRANSPHIL failed to recruit. The consensus size boundary is separate from OPTN’s strict <3 cm mass criterion. Resectability criteria still need validation. Industry covered 55% of the conference’s costs, no individual author conflict statement is printed, and no voting record is reported.",
+        "71 international experts in eight panels considering 570 studies published January 2000 to March 2024, with a ten-member jury of hepatologists, non-hepato-pancreato-biliary surgeons, epidemiologists and bioethicists, none directly involved in the care of or research into perihilar cholangiocarcinoma, at a two-day consensus meeting in Milan on 5-6 December 2024 with 226 on-site attendees; there is no patient cohort"
       ]
     },
     "40523372": {
@@ -9938,10 +9944,6 @@
         }
       ]
     },
-    "chcca:1dsqvv8": {
-      "lead": "Transarterial radioembolisation Covered in both interventional reviews as an opt",
-      "rows": []
-    },
     "chcca:1f2tf1r": {
       "lead": "Do not treat a liver-directed response as evidence that the diagnosis was someth",
       "rows": []
@@ -9991,16 +9993,6 @@
           "pmid": "41639545",
           "result": "Surgical review of retrospective series: 5-y OS after R0 resection 25–40%, recurrence in more than 60%",
           "caution": "No prospective trial; applies iCCA oncologic principles; does not discuss transplantation"
-        }
-      ]
-    },
-    "chcca:1lfyo5u": {
-      "lead": "Gadoxetate-enhanced MRI, read against the LR-M feature set The most studied sing",
-      "rows": [
-        {
-          "pmid": "40603768",
-          "result": "Three-centre study: progressive enhancement OR 0.283, targetoid HBP OR 0.196, targetoid diffusion restriction OR 0.157 all predicted iCCA rather than cHCC-CCA",
-          "caution": "Best combination specificity only 64.7%, mislabelling about a third of iCCA"
         }
       ]
     },
@@ -10067,10 +10059,6 @@
           "caution": "Only 11 cHCC-CCA among 53; counts recurrences, not patients at risk"
         }
       ]
-    },
-    "chcca:1rqlfg0": {
-      "lead": "Record every liver-directed treatment in this disease as borrowed evidence, and ",
-      "rows": []
     },
     "chcca:1tcpg0n": {
       "lead": "Cisplatin–gemcitabine plus durvalumab or pembrolizumabPROTOCOL What NCCN names, ",
@@ -10186,16 +10174,6 @@
           "pmid": "41399117",
           "result": "Registry series, 40 recipients: everolimus at 1, 6 or 12 mo made no difference to survival or recurrence",
           "caution": "Small series; mTOR rationale borrowed from HCC"
-        }
-      ]
-    },
-    "chcca:b5j4bm": {
-      "lead": "Transarterial chemoembolisation The most used modality and the one with the most",
-      "rows": [
-        {
-          "pmid": "34213048",
-          "result": "National registry (observational): HR for TACE 0.56 in the non-surgical stratum vs 1.64 in the surgical stratum",
-          "caution": "Confounding by indication rather than a treatment effect"
         }
       ]
     },
@@ -10971,10 +10949,6 @@
         }
       ]
     },
-    "hilar:1curdlq": {
-      "lead": "Liver venous deprivationEXPERTISE The Milan consensus places it after portal vei",
-      "rows": []
-    },
     "hilar:1gfrn09": {
       "lead": "Endoscopic drainage (ERCP)EXPERTISE ESGE 2026 recommends ERCP over percutaneous ",
       "rows": [
@@ -10994,10 +10968,6 @@
           "caution": "IDH1 mutations concentrate in intrahepatic tumours"
         }
       ]
-    },
-    "hilar:1mez1oa": {
-      "lead": "Portal vein embolisation Recommended where the anticipated remnant is inadequate",
-      "rows": []
     },
     "hilar:1nx7t3e": {
       "lead": "Treat CA 19-9 and CEA as supporting measurements, not proof of malignancy, and r",
@@ -13034,16 +13004,6 @@
         }
       ]
     },
-    "pdac:13j4zfm": {
-      "lead": "Zenocutuzumab, for NRG1 fusions NCCN lists zenocutuzumab-zbco as a subsequent th",
-      "rows": [
-        {
-          "pmid": "39908431",
-          "result": "Single-arm basket, PDAC subset (n=36, all KRAS wild-type): ORR 42% (95% CI 25–59) investigator, 44% (28–62) central review; median response duration 7.4 mo",
-          "caution": "No PFS or OS for pancreatic subgroup; open-label; NRG1 fusions in under 1% of PDAC"
-        }
-      ]
-    },
     "pdac:14ejiif": {
       "lead": "mFOLFIRINOX for 24 weeks PRODIGE 24 / CCTG PA.6 (n=493) is the strongest adjuvan",
       "rows": [
@@ -13950,6 +13910,52 @@
     "pnet:m9913u": {
       "lead": "Confirm and stabilize the hormonal syndrome; interpret gastrin with PPI exposure",
       "rows": []
+    },
+    "chcca:rj7o6h": {
+      "lead": "Gadoxetate-enhanced MRI, read against the LR-M feature set Gadoxetate MRI assess",
+      "rows": [
+        {
+          "pmid": "40603768",
+          "result": "Three-centre study: progressive enhancement OR 0.283, targetoid HBP OR 0.196, targetoid diffusion restriction OR 0.157 all predicted iCCA rather than cHCC-CCA",
+          "caution": "Best combination specificity only 64.7%, mislabelling about a third of iCCA"
+        }
+      ]
+    },
+    "chcca:1dzpmty": {
+      "lead": "Record the disease-specific retrospective evidence and the extrapolation behind ",
+      "rows": []
+    },
+    "chcca:k3y0xn": {
+      "lead": "Transarterial chemoembolisation Dedicated retrospective TACE series include unre",
+      "rows": [
+        {
+          "pmid": "34213048",
+          "result": "National registry (observational): HR for TACE 0.56 in the non-surgical stratum vs 1.64 in the surgical stratum",
+          "caution": "Confounding by indication rather than a treatment effect"
+        }
+      ]
+    },
+    "chcca:11xhhgq": {
+      "lead": "Transarterial radioembolisation Small retrospective cHCC-CCA radioembolisation s",
+      "rows": []
+    },
+    "hilar:2mhl44": {
+      "lead": "Portal vein embolisation Milan recommends portal vein embolisation as the initia",
+      "rows": []
+    },
+    "hilar:123osjh": {
+      "lead": "Liver venous deprivationEXPERTISE Milan Recommendation 24 supports considering u",
+      "rows": []
+    },
+    "pdac:13pb02b": {
+      "lead": "Zenocutuzumab, for NRG1 fusions NCCN lists zenocutuzumab-zbco as a subsequent th",
+      "rows": [
+        {
+          "pmid": "39908431",
+          "result": "Pancreatic efficacy cohort (n=36): ORR 42% investigator, 44% central review; median response duration 7.4 mo; median PFS 9.2 mo (95% CI 5.5–11.2)",
+          "caution": "Single-arm basket trial; pancreatic OS not reported; no comparative survival estimate"
+        }
+      ]
     }
   },
   "reference_links": {

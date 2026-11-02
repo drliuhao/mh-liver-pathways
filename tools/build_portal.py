@@ -10,6 +10,7 @@ import re
 import shutil
 from html import escape
 from pathlib import Path
+from current_downloads import canonical_url, canonical_files, rewrite_text
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '/mh-liver-pathways'
@@ -39,6 +40,8 @@ def transform(value):
     if isinstance(value, list):
         return [transform(v) for v in value]
     if isinstance(value, str) and value.startswith('/'):
+        current=canonical_url(value)
+        if current!=value or current.startswith(BASE+'/'):return current
         return TP + value
     return value
 
@@ -89,9 +92,10 @@ def export(source, preserve_documents=False):
             text = text.replace(escape(old, quote=True), escape(new, quote=True))
         text = re.sub(r'(href|src)="/(?!mh-liver-pathways/)', r'\1="'+TP+'/', text)
         text = re.sub(r'content="0;url=/(?!mh-liver-pathways/)', 'content="0;url='+TP+'/', text)
+        text = rewrite_text(text)
         if '/evidence/' in text:
             raise ValueError(f'Private PDF reference survives in {file}')
-        text = text.replace('</head>', f'<link rel="stylesheet" href="{BASE}/assets/portal-navigation.css"><script src="{BASE}/assets/portal-navigation.js?v=20261102-review1" defer></script></head>')
+        text = text.replace('</head>', f'<link rel="stylesheet" href="{BASE}/assets/portal-navigation.css"><script src="{BASE}/assets/portal-navigation.js?v=20261102-sync1" defer></script></head>')
         target = dest/file.relative_to(source); target.parent.mkdir(parents=True, exist_ok=True); target.write_text(text)
     assets = dest/'assets'; assets.mkdir(exist_ok=True)
     app = (source/'assets/app.js').read_text().replace('href="/', 'href="'+TP+'/')
@@ -108,18 +112,13 @@ def export(source, preserve_documents=False):
     for file in template_dest.iterdir():
         if file.is_file() and file.suffix in ('.md','.zip','.css','.js'):
             file.unlink()
-    copied=[]
-    for p in original['index']:
-        for url in [p['protocol']] + [d['url'] for d in p['docs']]:
-            rel=url.lstrip('/'); target=dest/rel; target.parent.mkdir(parents=True,exist_ok=True)
-            if not (preserve_documents and target.exists()):
-                shutil.copy2(source/rel, target)
-            copied.append({'path':'transplant/'+rel,'sha256':hashlib.sha256(target.read_bytes()).hexdigest()})
+    copied=[{'path':rel,'edition':'V18'} for rel in canonical_files()]
+    assert all((ROOT/x['path']).is_file() for x in copied)
     manifest={'hosting_export':STAMP,'clinical_source_date':'2026-10-23','pathways':len(data['index']),'steps':sum(len(p['steps']) for p in data['index']),'meeting_questions':sum(len(p['issues']) for p in data['index']),'evidence_sources':len(data['sources']),'licensed_pdfs_published':0,'documents':copied,'clinical_changes':'Source revised for plain clinical language and iCCA focality clarification; export preserves source content except hosting and evidence-access URLs.'}
     manifest.update(language_revision='2026-10-24',next_actions_revision='2026-10-24',decision_assistant_version=original['assistant_version'],decision_assistants=len(original['assistants']),recording_templates=0,research_data_kits=0,care_plans=sum(len(x) for x in original['care'].values()),documentation_changes='Reviewed all 46 transplant decisions and 45 linked discussion questions for explicit treatment, transplant-listing and MELD-exception language. Added next actions for every decision result, including conditional AFP treatment choices, reassessment after treatment, and best supportive care. NCCN sources cite original PDF pages. Existing selection thresholds and matching rules are retained; Word documents keep their separately dated wording. No recording, signatures, export or persistent storage.')
     manifest.update(interface_revision='2026-10-24',example_presets=len(original['assistants']),journey_overviews=len(original['journeys']),sticky_decision_navigation=True,
                     interface_changes='Each pathway opens with clearly labeled example choices toward transplantation. A four-stage overview and sticky step navigation show the full journey. Restore-example and clear-all controls are available. Changing a finding clears later examples; no automatic refill on navigation. No clinical criteria or matching rules changed.')
-    manifest.update(high_risk_integration='2026-10-24',high_risk_reviews=21,high_risk_protocol_pdfs=7,high_risk_sources=105,high_risk_interface='Orange-labeled reviews at relevant standard decisions, with selection criteria, study evidence and PDF/TMC access. Standard matching rules unchanged.')
+    manifest.update(high_risk_integration='2026-10-24',high_risk_reviews=21,high_risk_protocol_pdfs=0,high_risk_sources=105,high_risk_interface='Orange-labeled reviews at relevant standard decisions, with selection criteria, study evidence and PDF/TMC access. Standard matching rules unchanged.')
     manifest.update(contextual_routing_revision='2026-10-24',contextual_routing='Answer-specific review options appear inside matching next actions after ordinary care. Clarification selectors distinguish conflated findings. Closed expansions remain explanatory; HCC-B4 remains research reference only. Earlier adverse findings carry forward and upstream edits clear dependent choices. All 46 decisions and 21 reviews checked with B/C mapping reviews and D/E clinical reviews; no selection threshold or source evidence changed.')
     manifest.update(streamlining_revision='2026-10-25',streamlining='One current next-step result; unmatched or superseded results are reference-only. Distinct treatments keep separate conditional actions. Closed local protocols and inactive study proposals do not produce forward protocol buttons. Smaller sticky navigation and a collapsible mobile overview. Three rounds of external B/C/D/E review, with coverage limits recorded. No clinical thresholds, sources or matching rules changed.')
     manifest.update(afp_review_revision='2026-10-24',afp_review='Separate AFP-related clinical and individual allocation review at allocation, treatment, listing and waitlist decisions. This is not enrollment in the beyond-UNOS tumor-burden pilot; standard AFP thresholds and existing study criteria are unchanged.')
@@ -129,22 +128,24 @@ def export(source, preserve_documents=False):
     manifest.update(interface_revision='2026-10-26',layered_decision_interface='2026-10-26',ordinary_entry_unanswered=True,entry_example_opt_in=True,criteria_display='Current threshold summaries visible; selected definitions expanded; supporting detail on demand',interface_changes='Ordinary entry starts unanswered. Dropdowns stage choices; Use finding / Apply change commits them. A compact strip opens one prior-finding editor at a time; Cancel, Escape or closing the editor discards an unapplied draft. Actual conditional actions appear once beside their conditions. Roadmap topics require Open topic and do not imply eligibility. No clinical matching or threshold changes.')
     editorial=ROOT/'tools/clarity_document_hashes.json'
     if editorial.exists():
-        manifest['editorial_documents']=json.loads(editorial.read_text())
-        manifest['documentation_changes']='Seventeen current Word documents use clinical-topic headings and evidence placement, with citation field structures, source links, OPEN status and orange high-risk styling preserved. Preserve these copies during a rebuild. Native EndNote refresh is not claimed.'
+        manifest['editorial_documents']=copied
+        manifest['documentation_changes']='The 65 current V18 Word documents retain clinical-topic headings, source links, OPEN status and high-risk styling. Legacy downloads are archived outside the served website; rebuilding the portal must not restore them.'
+    manifest['document_edition']='V18'
+    manifest['high_risk_protocol_pdfs']=0
     (dest/'export-manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     (ROOT/'index.html').write_text(home(data))
     for slug in [*(row[1] for row in ROADMAPS), 'lrt']:
         file=ROOT/slug/'index.html'; text=file.read_text()
         if 'portal-navigation.js' not in text:
-            text=text.replace('</head>', '<link rel="stylesheet" href="../assets/portal-navigation.css"><script src="../assets/portal-navigation.js?v=20261102-review1" defer></script></head>')
-        text=re.sub(r'(src="[^"]*portal-navigation\.js)(?:\?[^"]*)?(\")', r'\1?v=20261102-review1\2', text)
+            text=text.replace('</head>', '<link rel="stylesheet" href="../assets/portal-navigation.css"><script src="../assets/portal-navigation.js?v=20261102-sync1" defer></script></head>')
+        text=re.sub(r'(src="[^"]*portal-navigation\.js)(?:\?[^"]*)?(\")', r'\1?v=20261102-sync1\2', text)
         file.write_text(text)
-    assert len(copied)==21
-    # Only the seven author-created V7 protocol PDFs may be published here.
+    assert len(copied)==65
+    # Current serving downloads are canonical Word files; authored PDFs are archived.
     authored=json.loads((dest/'high-risk/authored-documents.json').read_text())
     allowed={x['path']:x['sha256'] for x in authored if x['path'].endswith('.pdf')}
     pdfs=list(dest.rglob('*.pdf'))
-    assert len(pdfs)==len(allowed)==7
+    assert len(pdfs)==len(allowed)==0
     for p in pdfs:assert hashlib.sha256(p.read_bytes()).hexdigest()==allowed[str(p.relative_to(ROOT))]
     print(json.dumps({k:v for k,v in manifest.items() if k!='documents'},indent=2))
 

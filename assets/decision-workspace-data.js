@@ -775,7 +775,7 @@ window.DecisionWorkspaceData={
         "Liver-confined unresectable disease, or bridging or downstaging on a transplant pathway",
         "A tumour with an arterialised component, where an embolic response is mechanistically plausible",
         "Preserved liver function, a patent portal vein, and no extrahepatic disease driving the prognosis",
-        "Explicit acknowledgement that no trial of any liver-directed modality has been conducted in this disease"
+        "Explicit acknowledgement of small retrospective disease-specific cohorts, with no established comparative curative benefit or validated transplant-selection rule"
       ],
       "team": "Interventional radiology · Radiation oncology · HPB surgery · Medical oncology",
       "inputs": [

@@ -46,7 +46,7 @@
       "30798397"
      ],
      "pref": "Any at-risk patient whose observation is categorised LR-M, and any patient in whom one LR-M feature appears alongside otherwise HCC-like enhancement. On gadoxetate-enhanced MRI in 33 cHCC-CCA against 66 HCC, at least one LR-M feature was present in 93.9% of cHCC-CCA but also in 51.5% of HCC, so specificity was 48.5%. Note that the same paper reports the HCC figure as 48.5% in one place and 51.5% in another; both cannot be right and the direction of the finding — that half of true HCC carries an LR-M feature — is unaffected.",
-     "avoid": "Do not read LR-M as 'this is cHCC-CCA', and do not read its absence as exclusion. Requiring three or more LR-M features raises accuracy to 80.8% but drops sensitivity to 54.5%, so that rule misses nearly half of these tumours. And targetoid appearance on its own is close to useless here: it was present in 75.8% of cHCC-CCA but also in 65.2% of the HCC controls. There is no threshold that both finds and confirms this tumour.",
+     "avoid": "Do not read LR-M as 'this is cHCC-CCA', and do not read its absence as exclusion. Requiring three or more LR-M features raises accuracy to 80.8% but drops sensitivity to 54.5%, so that rule misses nearly half of these tumours. Targetoid appearance was present in 25 of 33 cHCC-CCA (75.8%) and 23 of 66 matched HCC controls (34.8%), giving 65.2% specificity. This surgically confirmed, propensity-matched sample does not establish clinic-wide predictive values or an imaging-only diagnosis.",
      "note": "The policy-relevant figure is the other way round. In 105 HCC and 73 non-HCC malignancies read at two transplant centres, LR-5 was 89–90% specific but only 55–66% sensitive for HCC, and cHCC-CCA made up 63–86% of the false-positive LR-5 reads; LR-M and LR-TIV together identified only 70.8% and 62.3% of cHCC-CCA against 88% and 92% of intrahepatic cholangiocarcinoma. LI-RADS protects the HCC diagnosis and detects iCCA as non-HCC; it does not keep this tumour out of an imaging-based HCC pathway. Both case-control series down-sampled HCC relative to true prevalence, so only sensitivity and specificity transfer."
     },
     {
@@ -73,7 +73,7 @@
       {
        "name": "Gadoxetate-enhanced MRI, read against the LR-M feature set",
        "g": "C",
-       "when": "The most studied single test. Rim arterial phase hyperenhancement, peripheral washout, delayed central enhancement and targetoid diffusion restriction are the features that pull a tumour out of the HCC algorithm. Targetoid appearance alone was present in 75.8% of cHCC-CCA — but also in 65.2% of matched HCC, so by itself it separates almost nothing.",
+       "when": "Gadoxetate MRI assesses rim arterial phase hyperenhancement, peripheral washout, delayed central enhancement and targetoid diffusion restriction. Targetoid appearance occurred in 25 of 33 cHCC-CCA (75.8%) and 23 of 66 matched HCC controls (34.8%), giving 65.2% specificity; it raises suspicion but does not establish mixed histology.",
        "pref": "The at-risk patient with an indeterminate or targetoid mass where the question is whether to biopsy and whether to involve the transplant team before anyone does.",
        "avoid": "Do not expect it to separate cHCC-CCA from iCCA. In the three-centre study of tumours with rim or progressive enhancement, progressive enhancement (OR 0.283, p=0.013), targetoid appearance on hepatobiliary phase (OR 0.196, p=0.001) and targetoid diffusion restriction (OR 0.157, p<0.001) all predicted iCCA rather than cHCC-CCA, and only raised AFP went the other way. The best combination still mislabels about a third of iCCA as cHCC-CCA, at 64.7% specificity.",
        "refs": [
@@ -87,7 +87,7 @@
        "g": "C",
        "when": "In 134 pathologically confirmed lesions including 35 cHCC-CCA, 74.3% of cHCC-CCA were assigned LR-M on contrast-enhanced ultrasound and the rest were not — 25.7% were assigned LR-5.",
        "pref": "A problem-solving tool at a centre with the expertise, in a patient in whom MRI is contraindicated or non-diagnostic.",
-       "avoid": "Not for whole-liver assessment, surveillance or staging — NCCN does not recommend it for those. And read the performance figures, not the LR-M proportion: the CEUS LI-RADS criteria for cHCC-CCA were 40.0% sensitive and 89.9% specific with an AUC of 0.649, and the authors recalculated the positive predictive value at realistic disease prevalence as 1.6% to 39.6%. A positive read is wrong most of the time. A quarter of these tumours reading LR-5 is the failure mode that puts a cHCC-CCA onto an HCC transplant pathway undetected.",
+       "avoid": "Not for whole-liver assessment, surveillance or staging — NCCN does not recommend it for those. The 40.0% sensitivity, 89.9% specificity and AUC 0.649 describe a combined CEUS LI-RADS/AFP/CA 19-9 diagnostic rule, not CEUS alone. The authors modelled PPV as 1.6–39.6% across assumed disease prevalences; these are not predictive values measured in an unselected clinic. Separately, 25.7% of the 35 mixed tumours were assigned CEUS LR-5, showing that this imaging label can miss mixed histology.",
        "refs": [
         "33362387"
        ]
@@ -929,12 +929,12 @@
     "Liver-confined unresectable disease, or bridging or downstaging on a transplant pathway",
     "A tumour with an arterialised component, where an embolic response is mechanistically plausible",
     "Preserved liver function, a patent portal vein, and no extrahepatic disease driving the prognosis",
-    "Explicit acknowledgement that no trial of any liver-directed modality has been conducted in this disease"
+    "Explicit acknowledgement of small retrospective disease-specific cohorts, with no established comparative curative benefit or validated transplant-selection rule"
    ],
    "ask": "Is liver-directed therapy appropriate, given the limited disease-specific evidence?",
    "standard": [
     {
-     "t": "Record every liver-directed treatment in this disease as borrowed evidence, and expect lower response than in hepatocellular carcinoma.",
+     "t": "Record the disease-specific retrospective evidence and the extrapolation behind each liver-directed treatment.",
      "l": "Standard",
      "g": "D",
      "refs": [
@@ -943,9 +943,9 @@
       "38343605",
       "42409696"
      ],
-     "pref": "Every case. The reviews that address this question directly reach the same conclusion: liver-directed methods — TACE, percutaneous ethanol injection, hepatic arterial infusion, radioembolisation and ablation — are less effective here than in HCC because of the cholangiocytic component's vascularity and desmoplasia, and transarterial chemoembolisation may be effective in unresectable disease particularly where the tumour is hypervascular. The one dataset that tested vascularity as a selection variable agrees: adjuvant TACE improved early recurrence-free survival only in the HCC-dominant third of 306 resected tumours (53.3% against 32.3% at two years, p=0.028) and not in balanced (p=0.276) or CCA-dominant (p=0.433) patients.",
-     "avoid": "Do not quote an HCC response rate, a BCLC stage-based algorithm, or an iCCA radioembolisation series as though either applied directly. There is no prospective trial of any liver-directed modality in cHCC-CCA, and the evidence base for this assessment is review-level synthesis of HCC and iCCA experience plus small retrospective cohorts. Both interventional reviews are explicit that essentially all their quantitative material concerns cholangiocarcinoma, and neither distinguishes the hypervascular HCC-dominant tumour that might respond to an arterial therapy from the hypovascular CCA-dominant one that will not.",
-     "note": "Grade D is the honest grade for this whole assessment. It is labelled Standard because liver-directed therapy is what gets done, and the page's job is to say what is known about it, not to pretend the modality is unevidenced and then recommend it silently."
+     "pref": "Every case. Renzulli reviews dedicated retrospective cHCC-CCA cohorts treated with TACE, TARE and hepatic arterial infusion, including a TACE analysis by enhancement pattern. Its reduced-responsiveness discussion concerns TACE and percutaneous ethanol injection; it does not establish that every liver-directed modality is less effective than in HCC. Enhancement pattern and histological predominance are different observations, neither a validated universal selection rule. Separate adjuvant data in 306 resected tumours found improved early recurrence-free survival only in the HCC-dominant group (53.3% against 32.3% at two years, p=0.028), not in balanced (p=0.276) or CCA-dominant (p=0.433) patients.",
+     "avoid": "Do not quote an HCC response rate, a BCLC algorithm or an iCCA radioembolisation series as a cHCC-CCA treatment effect. The dedicated mixed-tumour series are small, retrospective and heterogeneous in treatment, response criteria and survival time origin. The review contains inconsistent outcome labels across its narrative and table, so primary reports must control any numerical estimate. These data do not establish comparative curative benefit or validate transplant selection.",
+     "note": "The Standard/grade D label applies to documenting the evidence and uncertainty for every proposed treatment. It does not designate one liver-directed modality as an established standard for cHCC-CCA."
     },
     {
      "t": "On a transplant pathway, locoregional therapy is the instrument that generates the six months of documented stability the exception requires — plan it as part of the listing strategy, not as treatment in parallel with it.",
@@ -957,7 +957,7 @@
      ],
      "pref": "Every protocol candidate. The OPTN review-board criteria require six months from diagnosis or last treatment with the tumour remaining 3 cm or less, no new lesions and no extrahepatic disease, with imaging every three months; the ILTS-ILCA consensus frames bridging with neoadjuvant therapy as a way of identifying favourable tumour biology, with more than six months of stability or successful downstaging (low evidence, weak strength).",
      "avoid": "Do not let the locoregional plan and the listing timeline be managed by different people. And note what the consensus statement actually claims: that bridging helps identify favourable biology, not that it improves outcome.",
-     "note": "The local CPG permits locoregional therapy other than external-beam radiation — TACE, radiofrequency ablation, Y-90 — but states it should not be the sole pre-transplant therapy except for a solitary tumour under 3 cm. That is the one place where the local document is more conservative than it needs to be and more specific than the evidence; it is also the only written local rule on the subject, so it stands until the group changes it."
+     "note": "The local CPG permits TACE, radiofrequency ablation and Y-90 but excludes external-beam radiation, and permits locoregional therapy alone before transplant only for a solitary tumour under 3 cm. This remains an OPEN local rule. The NLRB guidance route is restricted to a solitary tumour ≤3 cm in cirrhosis with the other required criteria; the retrospective liver-directed series do not establish whether the local restrictions should be changed."
     }
    ],
    "alt": [
@@ -968,9 +968,9 @@
       {
        "name": "Transarterial chemoembolisation",
        "g": "C",
-       "when": "The most used modality and the one with the most supporting data, though all of it is retrospective and the benefit is confined. Post-operative adjuvant TACE was independently associated with better overall survival (HR 0.2, p=0.005, no confidence interval reported) in 95 radically resected patients, and in 306 resections it improved early recurrence-free survival only in HCC-dominant tumours, with overall recurrence-free and overall survival both non-significant even there (p=0.068 and p=0.549).",
+       "when": "Dedicated retrospective TACE series include unresectable and recurrent cHCC-CCA; enhancement-pattern associations do not establish a causal treatment benefit. Keep the following adjuvant cohorts separate from those treatment settings. Post-operative adjuvant TACE was independently associated with better overall survival (HR 0.2, p=0.005, no confidence interval reported) in 95 radically resected patients, and in 306 resections it improved early recurrence-free survival only in HCC-dominant tumours, with overall recurrence-free and overall survival both non-significant even there (p=0.068 and p=0.549).",
        "pref": "A hypervascular, HCC-predominant, liver-confined tumour with preserved function, and bridging on a transplant pathway.",
-       "avoid": "Do not use it for a hypovascular, CCA-predominant tumour and expect a response — the quantitative imaging work in this disease shows that a large hypovascular component is what distinguishes cHCC-CCA from HCC in the first place, and the one cohort that stratified adjuvant TACE by component found no signal outside the HCC-dominant group. And in the Taiwan national registry the hazard ratio for TACE was 0.56 in the non-surgical stratum and 1.64 in the surgical one, which is confounding by indication rather than an effect.",
+       "avoid": "Hypovascularity may limit embolic responsiveness, but enhancement is not interchangeable with histological predominance and does not prove that an individual tumour cannot respond. The separate component-stratified adjuvant cohort found no signal outside the HCC-dominant group. And in the Taiwan national registry the hazard ratio for TACE was 0.56 in the non-surgical stratum and 1.64 in the surgical one, which is confounding by indication rather than an effect.",
        "refs": [
         "36405111",
         "42409696",
@@ -982,9 +982,9 @@
       {
        "name": "Transarterial radioembolisation",
        "g": "D",
-       "when": "Covered in both interventional reviews as an option extrapolated from HCC and iCCA experience, with no cHCC-CCA-specific data.",
+       "when": "Small retrospective cHCC-CCA radioembolisation series are reported in the disease-specific literature summarized by Renzulli. Auer supplies an interventional iCCA review with an outlook for mixed tumours, not a separate mixed-tumour efficacy estimate.",
        "pref": "A larger liver-dominant tumour, or one in which the biliary component makes a bland or chemoembolic response unlikely, at a centre with the dosimetry expertise.",
-       "avoid": "There is no series in this histology to quote. Treat it as protocol or registry territory rather than routine.",
+       "avoid": "Small uncontrolled series do not establish superiority to TACE, systemic therapy or surgery, nor validate transplant selection. Response denominators, criteria and survival time origins differ; do not combine their estimates. Treat use as an individualized multidisciplinary or protocol/registry decision.",
        "refs": [
         "37174120",
         "34283065"
@@ -1002,7 +1002,7 @@
        ]
       }
      ],
-     "order": "Ordered by how much published experience each has in this disease, which for the second and third options is none and for the first is retrospective adjuvant data confined to HCC-dominant tumours. No comparative study exists, so the order carries no survival claim whatsoever and should not be read as one.",
+     "order": "The order is for discussion, not a comparative efficacy ranking. Dedicated retrospective experience exists for TACE and TARE; evidence for ablation remains limited and includes extrapolation. The reviewed series do not establish which modality improves survival most or which response qualifies a patient for transplant.",
      "flagnote": "Local approval item: does this programme adopt the local CPG's rule that locoregional therapy may not be the sole pre-transplant therapy except for a solitary tumour under 3 cm, or does it align with the OPTN wording, which supports consideration after locoregional or systemic therapy with six months of stability, but only for a solitary tumour ≤3 cm in cirrhosis? These two documents disagree and the patient in the gap — a solitary 3.0 cm tumour treated with TACE alone and stable for six months — is a real one. Audit: modality, response, time to listing, dropout."
     }
    ],
@@ -1267,7 +1267,7 @@
     ],
     [
      "Targetoid appearance alone",
-     "Present in 75.8% of cHCC-CCA — and in 65.2% of the matched HCC controls"
+     "Present in 25/33 cHCC-CCA (75.8%) and 23/66 matched HCC controls (34.8%); specificity 65.2%"
     ],
     [
      "Three or more LR-M features together",
@@ -1282,8 +1282,8 @@
      "Caught 70.8% and 62.3% of cHCC-CCA across two readers, against 88% and 92% of iCCA"
     ],
     [
-     "CEUS LI-RADS criteria for cHCC-CCA",
-     "40.0% sensitive, 89.9% specific, AUC 0.649; positive predictive value 1.6–39.6% at true prevalence. 74.3% assigned LR-M, 25.7% assigned LR-5"
+     "Combined CEUS LI-RADS plus AFP/CA 19-9 rule",
+     "40.0% sensitive, 89.9% specific, AUC 0.649; modelled PPV 1.6–39.6% across assumed prevalences. Separately, CEUS assigned 74.3% of mixed tumours LR-M and 25.7% LR-5"
     ],
     [
      "AFP above 100 ng/mL, against mass-forming iCCA",
@@ -1373,7 +1373,7 @@
   },
   {
    "t": "No imaging test on this page can exclude the diagnosis, and the one that matters most for a transplant programme has never been measured.",
-   "why": "At least one LR-M feature was present in 93.9% of cHCC-CCA but also in 51.5% of HCC, so specificity is 48.5%; a three-feature rule reaches 80.8% accuracy at 54.5% sensitivity; targetoid appearance alone was present in 75.8% of cHCC-CCA and 65.2% of matched HCC. On contrast-enhanced ultrasound the CEUS LI-RADS criteria for cHCC-CCA were 40.0% sensitive with an AUC of 0.649, and the authors honestly recalculated the positive predictive value at real prevalence as 1.6% to 39.6%. LI-RADS protects the HCC diagnosis rather than finding this one: LR-5 was 89–90% specific but cHCC-CCA made up 63–86% of the false-positive LR-5 reads, and LR-M with LR-TIV caught only 62–71% of cHCC-CCA against about 90% of iCCA. The best marker-plus-MRI model published separates cHCC-CCA from mass-forming iCCA with an AUC of 0.807 — and that study had no HCC comparator group at all, so the error that puts a mixed tumour onto an HCC transplant pathway remains unquantified. Every one of these series had pathological proof in every lesion and down-sampled HCC relative to true prevalence, so the lesions managed on imaging alone are absent from all of them."
+   "why": "At least one LR-M feature was present in 93.9% of cHCC-CCA but also in 51.5% of HCC, so specificity is 48.5%; a three-feature rule reaches 80.8% accuracy at 54.5% sensitivity; targetoid appearance was present in 25/33 cHCC-CCA (75.8%) and 23/66 matched HCC (34.8%), giving 65.2% specificity. The combined CEUS LI-RADS/AFP/CA 19-9 rule was 40.0% sensitive and 89.9% specific, with AUC 0.649; its modelled positive predictive value was 1.6–39.6% across assumed disease prevalences. These are not CEUS-alone accuracy estimates or predictive values observed in an unselected clinic. LI-RADS protects the HCC diagnosis rather than finding this one: LR-5 was 89–90% specific but cHCC-CCA made up 63–86% of the false-positive LR-5 reads, and LR-M with LR-TIV caught only 62–71% of cHCC-CCA against about 90% of iCCA. The best marker-plus-MRI model published separates cHCC-CCA from mass-forming iCCA with an AUC of 0.807 — and that study had no HCC comparator group at all, so the error that puts a mixed tumour onto an HCC transplant pathway remains unquantified. Every one of these series had pathological proof in every lesion and down-sampled HCC relative to true prevalence, so the lesions managed on imaging alone are absent from all of them."
   },
   {
    "t": "The local Mixed Hepatocholangiocarcinoma CPG's diagnostic criterion cannot be met as written. It asks for \"imaging characteristics consistent with intrahepatic mixed hepato-cholangiocarcinoma on CT or MRI\" plus biopsy or cytology showing malignancy.",
@@ -1396,8 +1396,8 @@
    "why": "In 75 patients after R0 resection, the 19 given adjuvant chemotherapy had better overall survival unmatched (p=0.029) and after matching (p=0.0011), with benefit confined to a nomogram-defined high-risk group — 13 treated against 32 untreated patients, from a nomogram with a time-dependent AUC of 0.694, in a study whose inclusion criteria excluded macrovascular invasion while its final model contains it. In 197 resected SEER patients, median overall survival was 40 months without chemotherapy and 26 months with it, but the difference was not significant before matching (HR 1.290, 95% CI 0.850–1.956) or after it (HR 1.063, 95% CI 0.646–1.749); the treated arm had more T3–T4 disease (25.5% against 15.2%) and four times the node positivity (11.9% against 2.2%); 87 transplant recipients were excluded; and no recurrence data exist. The matched interval still admits a 35% relative mortality reduction. That is an uninformative null, not evidence against adjuvant therapy, and the page previously read it the wrong way. Adjuvant TACE has the most consistent signal and the narrowest one: benefit confined to early recurrence-free survival in HCC-dominant tumours (53.3% against 32.3% at two years, p=0.028, on 30 treated patients), with overall recurrence-free and overall survival non-significant even there, and with the Taiwan registry's TACE hazard ratio reversing between strata (0.56 non-surgical, 1.64 surgical). The first prospective adjuvant study in this histology (NCT07243951) is single-arm against a historical control."
   },
   {
-   "t": "Liver-directed therapy in this disease has no trial, no series of any size, and no modality comparison. Its entire evidence base is review-level synthesis of HCC and iCCA experience.",
-   "why": "Both interventional reviews state that essentially all their quantitative material concerns cholangiocarcinoma, and neither distinguishes the hypervascular HCC-dominant tumour that might respond to an arterial therapy from the hypovascular CCA-dominant one that will not — which is the single most important selection variable in this assessment. The one dataset that stratified by component found adjuvant TACE helped only HCC-dominant tumours and only for early recurrence. The strongest number anywhere in this area is adjuvant post-operative TACE in 95 resected patients (HR 0.2 for overall survival, p=0.005, no confidence interval reported), from a hepatitis-B-endemic population, retrospective, with adjuvant TACE almost certainly given to selected patients. The page labels this Standard because it is what gets done and the board needs the honest figures, not because the modality is evidenced."
+   "t": "Liver-directed therapy has small retrospective cHCC-CCA series, including TACE and TARE, but no established comparative curative benefit or validated transplant-selection rule.",
+   "why": "Renzulli includes dedicated mixed-histology cohorts and an enhancement-pattern analysis. Auer mainly reviews interventional iCCA therapy and presents an outlook for cHCC-CCA. Tumour enhancement and histological predominance should not be conflated or treated as validated universal predictors. Small cohorts, heterogeneous treatments, response criteria and survival time origins prevent a pooled efficacy claim; numerical outcomes require checking the primary reports because the review has inconsistent labels. Separate adjuvant post-operative TACE data in 95 resected patients reported HR 0.2 for overall survival (p=0.005, no confidence interval reported), from a retrospective hepatitis-B-endemic cohort with substantial selection concerns. That association does not establish efficacy in unresectable disease or on a transplant pathway."
   },
   {
    "t": "Two intervals on this page are operating rules rather than evidence thresholds: the local protocol's three-monthly MR bone survey, and the three-monthly surveillance schedule this page recommends after treatment.",

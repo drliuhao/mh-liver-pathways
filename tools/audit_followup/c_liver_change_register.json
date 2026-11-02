@@ -1,0 +1,834 @@
+{
+  "baseline": "b3ef22b",
+  "manifest": "tools/clinical_revisions/2026-11-02-zzzzzzz-c-liver.json",
+  "changes": [
+    {
+      "file": "chcca/data/pathway.json",
+      "pointer": "/gates/0/standard/1/avoid",
+      "old": "Do not read LR-M as 'this is cHCC-CCA', and do not read its absence as exclusion. Requiring three or more LR-M features raises accuracy to 80.8% but drops sensitivity to 54.5%, so that rule misses nearly half of these tumours. And targetoid appearance on its own is close to useless here: it was present in 75.8% of cHCC-CCA but also in 65.2% of the HCC controls. There is no threshold that both finds and confirms this tumour.",
+      "new": "Do not read LR-M as 'this is cHCC-CCA', and do not read its absence as exclusion. Requiring three or more LR-M features raises accuracy to 80.8% but drops sensitivity to 54.5%, so that rule misses nearly half of these tumours. Targetoid appearance was present in 25 of 33 cHCC-CCA (75.8%) and 23 of 66 matched HCC controls (34.8%), giving 65.2% specificity. This surgically confirmed, propensity-matched sample does not establish clinic-wide predictive values or an imaging-only diagnosis.",
+      "group": "lee",
+      "source": {
+        "pmid": "30552477",
+        "findings": [
+          "C-0067",
+          "C-0068",
+          "C-0076"
+        ],
+        "locator": "Primary PDF pp2–5 and Table 3, PDF p7 / printed p2414; Denominator_Phenotype_Version_Checks.md"
+      },
+      "why": "Correct HCC-control positivity versus specificity and remove the inference built on the inverted denominator."
+    },
+    {
+      "file": "chcca/data/pathway.json",
+      "pointer": "/gates/0/alt/0/opts/0/when",
+      "old": "The most studied single test. Rim arterial phase hyperenhancement, peripheral washout, delayed central enhancement and targetoid diffusion restriction are the features that pull a tumour out of the HCC algorithm. Targetoid appearance alone was present in 75.8% of cHCC-CCA — but also in 65.2% of matched HCC, so by itself it separates almost nothing.",
+      "new": "Gadoxetate MRI assesses rim arterial phase hyperenhancement, peripheral washout, delayed central enhancement and targetoid diffusion restriction. Targetoid appearance occurred in 25 of 33 cHCC-CCA (75.8%) and 23 of 66 matched HCC controls (34.8%), giving 65.2% specificity; it raises suspicion but does not establish mixed histology.",
+      "group": "lee",
+      "source": {
+        "pmid": "30552477",
+        "findings": [
+          "C-0067",
+          "C-0068",
+          "C-0076"
+        ],
+        "locator": "Primary PDF pp2–5 and Table 3, PDF p7 / printed p2414; Denominator_Phenotype_Version_Checks.md"
+      },
+      "why": "Use the verified targetoid numerator, denominator and diagnostic limitation."
+    },
+    {
+      "file": "chcca/data/pathway.json",
+      "pointer": "/quickref/3/rows/1/1",
+      "old": "Present in 75.8% of cHCC-CCA — and in 65.2% of the matched HCC controls",
+      "new": "Present in 25/33 cHCC-CCA (75.8%) and 23/66 matched HCC controls (34.8%); specificity 65.2%",
+      "group": "lee",
+      "source": {
+        "pmid": "30552477",
+        "findings": [
+          "C-0067",
+          "C-0068",
+          "C-0076"
+        ],
+        "locator": "Primary PDF pp2–5 and Table 3, PDF p7 / printed p2414; Denominator_Phenotype_Version_Checks.md"
+      },
+      "why": "Propagate the corrected diagnostic denominator into the quick reference."
+    },
+    {
+      "file": "chcca/data/pathway.json",
+      "pointer": "/honest/11/why",
+      "old": "At least one LR-M feature was present in 93.9% of cHCC-CCA but also in 51.5% of HCC, so specificity is 48.5%; a three-feature rule reaches 80.8% accuracy at 54.5% sensitivity; targetoid appearance alone was present in 75.8% of cHCC-CCA and 65.2% of matched HCC. On contrast-enhanced ultrasound the CEUS LI-RADS criteria for cHCC-CCA were 40.0% sensitive with an AUC of 0.649, and the authors honestly recalculated the positive predictive value at real prevalence as 1.6% to 39.6%. LI-RADS protects the HCC diagnosis rather than finding this one: LR-5 was 89–90% specific but cHCC-CCA made up 63–86% of the false-positive LR-5 reads, and LR-M with LR-TIV caught only 62–71% of cHCC-CCA against about 90% of iCCA. The best marker-plus-MRI model published separates cHCC-CCA from mass-forming iCCA with an AUC of 0.807 — and that study had no HCC comparator group at all, so the error that puts a mixed tumour onto an HCC transplant pathway remains unquantified. Every one of these series had pathological proof in every lesion and down-sampled HCC relative to true prevalence, so the lesions managed on imaging alone are absent from all of them.",
+      "new": "At least one LR-M feature was present in 93.9% of cHCC-CCA but also in 51.5% of HCC, so specificity is 48.5%; a three-feature rule reaches 80.8% accuracy at 54.5% sensitivity; targetoid appearance was present in 25/33 cHCC-CCA (75.8%) and 23/66 matched HCC (34.8%), giving 65.2% specificity. On contrast-enhanced ultrasound the CEUS LI-RADS criteria for cHCC-CCA were 40.0% sensitive with an AUC of 0.649, and the authors honestly recalculated the positive predictive value at real prevalence as 1.6% to 39.6%. LI-RADS protects the HCC diagnosis rather than finding this one: LR-5 was 89–90% specific but cHCC-CCA made up 63–86% of the false-positive LR-5 reads, and LR-M with LR-TIV caught only 62–71% of cHCC-CCA against about 90% of iCCA. The best marker-plus-MRI model published separates cHCC-CCA from mass-forming iCCA with an AUC of 0.807 — and that study had no HCC comparator group at all, so the error that puts a mixed tumour onto an HCC transplant pathway remains unquantified. Every one of these series had pathological proof in every lesion and down-sampled HCC relative to true prevalence, so the lesions managed on imaging alone are absent from all of them.",
+      "group": "lee",
+      "source": {
+        "pmid": "30552477",
+        "findings": [
+          "C-0067",
+          "C-0068",
+          "C-0076"
+        ],
+        "locator": "Primary PDF pp2–5 and Table 3, PDF p7 / printed p2414; Denominator_Phenotype_Version_Checks.md"
+      },
+      "why": "Propagate targetoid positivity/specificity distinction into uncertainty text."
+    },
+    {
+      "file": "chcca/data/critique.json",
+      "pointer": "/30552477/bottom_line",
+      "old": "Shows that LR-M features are common in cHCC-CCA but also in half of HCC, and that even a three-feature rule misses 45% of cHCC-CCA, so MRI criteria cannot reliably exclude the diagnosis before surgery.",
+      "new": "In 33 cHCC-CCA and 66 matched HCC controls, targetoid appearance occurred in 25/33 (75.8%) and 23/66 (34.8%), respectively, giving 65.2% specificity. A three-feature LR-M rule had 80.8% accuracy but only 54.5% sensitivity. These selected, surgically confirmed groups do not establish clinic-wide predictive values or an imaging-only diagnosis.",
+      "group": "lee",
+      "source": {
+        "pmid": "30552477",
+        "findings": [
+          "C-0067",
+          "C-0068",
+          "C-0076"
+        ],
+        "locator": "Primary PDF pp2–5 and Table 3, PDF p7 / printed p2414; Denominator_Phenotype_Version_Checks.md"
+      },
+      "why": "Give the correct source-specific diagnostic result and retain the selected-cohort limitation."
+    },
+    {
+      "file": "tools/consensus_source/roadmap_chcca.json",
+      "pointer": "/questions/2/positions/2/position",
+      "old": "At least one LR-M feature appeared in 93.9% of cHCC-CCA but in about half of HCC (specificity 48.5%), so LR-M flags the tumour without confirming it.",
+      "new": "At least one LR-M feature appeared in 93.9% of cHCC-CCA but in about half of HCC (specificity 48.5%), so LR-M flags the tumour without confirming it. Targetoid appearance alone occurred in 25/33 mixed tumours (75.8%) and 23/66 matched HCC controls (34.8%), giving 65.2% specificity; these are separate results from the any-LR-M-feature rule.",
+      "group": "lee",
+      "source": {
+        "pmid": "30552477",
+        "findings": [
+          "C-0067",
+          "C-0068",
+          "C-0076"
+        ],
+        "locator": "Primary PDF pp2–5 and Table 3, PDF p7 / printed p2414; Denominator_Phenotype_Version_Checks.md"
+      },
+      "why": "Keep the consensus source aligned while distinguishing the two diagnostic rules."
+    },
+    {
+      "file": "chcca/data/pathway.json",
+      "pointer": "/gates/8/crit/3",
+      "old": "Explicit acknowledgement that no trial of any liver-directed modality has been conducted in this disease",
+      "new": "Explicit acknowledgement of small retrospective disease-specific cohorts, with no established comparative curative benefit or validated transplant-selection rule",
+      "group": "lrt",
+      "source": {
+        "pmid": "34283065",
+        "findings": [
+          "C-0102–0109",
+          "B:S5b098ff484",
+          "B:S9dfefe4224",
+          "B:S5daae33b88",
+          "B:Scf83e1ea7c"
+        ],
+        "locator": "Primary PDF pp9–11, CHC section and Table 2; CCA_Consensus_and_LRT_Targeted_Checks.md. Underlying Y90 reports not fully re-read; no new survival/response figure adopted."
+      },
+      "why": "Acknowledge dedicated cHCC-CCA evidence without claiming an established treatment or listing rule."
+    },
+    {
+      "file": "chcca/data/pathway.json",
+      "pointer": "/gates/8/standard/0/t",
+      "old": "Record every liver-directed treatment in this disease as borrowed evidence, and expect lower response than in hepatocellular carcinoma.",
+      "new": "Record the disease-specific retrospective evidence and the extrapolation behind each liver-directed treatment.",
+      "group": "lrt",
+      "source": {
+        "pmid": "34283065",
+        "findings": [
+          "C-0102–0109",
+          "B:S5b098ff484",
+          "B:S9dfefe4224",
+          "B:S5daae33b88",
+          "B:Scf83e1ea7c"
+        ],
+        "locator": "Primary PDF pp9–11, CHC section and Table 2; CCA_Consensus_and_LRT_Targeted_Checks.md. Underlying Y90 reports not fully re-read; no new survival/response figure adopted."
+      },
+      "why": "Remove the false all-modalities/all-extrapolation and uniformly lower-response premise."
+    },
+    {
+      "file": "chcca/data/pathway.json",
+      "pointer": "/gates/8/standard/0/pref",
+      "old": "Every case. The reviews that address this question directly reach the same conclusion: liver-directed methods — TACE, percutaneous ethanol injection, hepatic arterial infusion, radioembolisation and ablation — are less effective here than in HCC because of the cholangiocytic component's vascularity and desmoplasia, and transarterial chemoembolisation may be effective in unresectable disease particularly where the tumour is hypervascular. The one dataset that tested vascularity as a selection variable agrees: adjuvant TACE improved early recurrence-free survival only in the HCC-dominant third of 306 resected tumours (53.3% against 32.3% at two years, p=0.028) and not in balanced (p=0.276) or CCA-dominant (p=0.433) patients.",
+      "new": "Every case. Renzulli reviews dedicated retrospective cHCC-CCA cohorts treated with TACE, TARE and hepatic arterial infusion, including a TACE analysis by enhancement pattern. Its reduced-responsiveness discussion concerns TACE and percutaneous ethanol injection; it does not establish that every liver-directed modality is less effective than in HCC. Enhancement pattern and histological predominance are different observations, neither a validated universal selection rule. Separate adjuvant data in 306 resected tumours found improved early recurrence-free survival only in the HCC-dominant group (53.3% against 32.3% at two years, p=0.028), not in balanced (p=0.276) or CCA-dominant (p=0.433) patients.",
+      "group": "lrt",
+      "source": {
+        "pmid": "34283065",
+        "findings": [
+          "C-0102–0109",
+          "B:S5b098ff484",
+          "B:S9dfefe4224",
+          "B:S5daae33b88",
+          "B:Scf83e1ea7c"
+        ],
+        "locator": "Primary PDF pp9–11, CHC section and Table 2; CCA_Consensus_and_LRT_Targeted_Checks.md. Underlying Y90 reports not fully re-read; no new survival/response figure adopted."
+      },
+      "why": "Separate dedicated retrospective cohorts, modality-specific rationale and adjuvant component-defined data."
+    },
+    {
+      "file": "chcca/data/pathway.json",
+      "pointer": "/gates/8/standard/0/avoid",
+      "old": "Do not quote an HCC response rate, a BCLC stage-based algorithm, or an iCCA radioembolisation series as though either applied directly. There is no prospective trial of any liver-directed modality in cHCC-CCA, and the evidence base for this assessment is review-level synthesis of HCC and iCCA experience plus small retrospective cohorts. Both interventional reviews are explicit that essentially all their quantitative material concerns cholangiocarcinoma, and neither distinguishes the hypervascular HCC-dominant tumour that might respond to an arterial therapy from the hypovascular CCA-dominant one that will not.",
+      "new": "Do not quote an HCC response rate, a BCLC algorithm or an iCCA radioembolisation series as a cHCC-CCA treatment effect. The dedicated mixed-tumour series are small, retrospective and heterogeneous in treatment, response criteria and survival time origin. The review contains inconsistent outcome labels across its narrative and table, so primary reports must control any numerical estimate. These data do not establish comparative curative benefit or validate transplant selection.",
+      "group": "lrt",
+      "source": {
+        "pmid": "34283065",
+        "findings": [
+          "C-0102–0109",
+          "B:S5b098ff484",
+          "B:S9dfefe4224",
+          "B:S5daae33b88",
+          "B:Scf83e1ea7c"
+        ],
+        "locator": "Primary PDF pp9–11, CHC section and Table 2; CCA_Consensus_and_LRT_Targeted_Checks.md. Underlying Y90 reports not fully re-read; no new survival/response figure adopted."
+      },
+      "why": "Retain evidence limits while removing the claim that dedicated mixed cohorts and enhancement analyses do not exist."
+    },
+    {
+      "file": "chcca/data/pathway.json",
+      "pointer": "/gates/8/standard/0/note",
+      "old": "Grade D is the honest grade for this whole assessment. It is labelled Standard because liver-directed therapy is what gets done, and the page's job is to say what is known about it, not to pretend the modality is unevidenced and then recommend it silently.",
+      "new": "The Standard/grade D label applies to documenting the evidence and uncertainty for every proposed treatment. It does not designate one liver-directed modality as an established standard for cHCC-CCA.",
+      "group": "lrt",
+      "source": {
+        "pmid": "34283065",
+        "findings": [
+          "C-0102–0109",
+          "B:S5b098ff484",
+          "B:S9dfefe4224",
+          "B:S5daae33b88",
+          "B:Scf83e1ea7c"
+        ],
+        "locator": "Primary PDF pp9–11, CHC section and Table 2; CCA_Consensus_and_LRT_Targeted_Checks.md. Underlying Y90 reports not fully re-read; no new survival/response figure adopted."
+      },
+      "why": "Clarify the existing documentation label without activating a treatment policy or changing grades."
+    },
+    {
+      "file": "chcca/data/pathway.json",
+      "pointer": "/gates/8/alt/0/opts/0/when",
+      "old": "The most used modality and the one with the most supporting data, though all of it is retrospective and the benefit is confined. Post-operative adjuvant TACE was independently associated with better overall survival (HR 0.2, p=0.005, no confidence interval reported) in 95 radically resected patients, and in 306 resections it improved early recurrence-free survival only in HCC-dominant tumours, with overall recurrence-free and overall survival both non-significant even there (p=0.068 and p=0.549).",
+      "new": "Dedicated retrospective TACE series include unresectable and recurrent cHCC-CCA; enhancement-pattern associations do not establish a causal treatment benefit. Keep the following adjuvant cohorts separate from those treatment settings. Post-operative adjuvant TACE was independently associated with better overall survival (HR 0.2, p=0.005, no confidence interval reported) in 95 radically resected patients, and in 306 resections it improved early recurrence-free survival only in HCC-dominant tumours, with overall recurrence-free and overall survival both non-significant even there (p=0.068 and p=0.549).",
+      "group": "lrt",
+      "source": {
+        "pmid": "34283065",
+        "findings": [
+          "C-0102–0109",
+          "B:S5b098ff484",
+          "B:S9dfefe4224",
+          "B:S5daae33b88",
+          "B:Scf83e1ea7c"
+        ],
+        "locator": "Primary PDF pp9–11, CHC section and Table 2; CCA_Consensus_and_LRT_Targeted_Checks.md. Underlying Y90 reports not fully re-read; no new survival/response figure adopted."
+      },
+      "why": "Do not reduce all TACE evidence to adjuvant treatment or claim an untested modality ranking."
+    },
+    {
+      "file": "chcca/data/pathway.json",
+      "pointer": "/gates/8/alt/0/opts/0/avoid",
+      "old": "Do not use it for a hypovascular, CCA-predominant tumour and expect a response — the quantitative imaging work in this disease shows that a large hypovascular component is what distinguishes cHCC-CCA from HCC in the first place, and the one cohort that stratified adjuvant TACE by component found no signal outside the HCC-dominant group. And in the Taiwan national registry the hazard ratio for TACE was 0.56 in the non-surgical stratum and 1.64 in the surgical one, which is confounding by indication rather than an effect.",
+      "new": "Hypovascularity may limit embolic responsiveness, but enhancement is not interchangeable with histological predominance and does not prove that an individual tumour cannot respond. The separate component-stratified adjuvant cohort found no signal outside the HCC-dominant group. And in the Taiwan national registry the hazard ratio for TACE was 0.56 in the non-surgical stratum and 1.64 in the surgical one, which is confounding by indication rather than an effect.",
+      "group": "lrt",
+      "source": {
+        "pmid": "34283065",
+        "findings": [
+          "C-0102–0109",
+          "B:S5b098ff484",
+          "B:S9dfefe4224",
+          "B:S5daae33b88",
+          "B:Scf83e1ea7c"
+        ],
+        "locator": "Primary PDF pp9–11, CHC section and Table 2; CCA_Consensus_and_LRT_Targeted_Checks.md. Underlying Y90 reports not fully re-read; no new survival/response figure adopted."
+      },
+      "why": "Remove an absolute no-response claim and distinguish imaging enhancement from histological component."
+    },
+    {
+      "file": "chcca/data/pathway.json",
+      "pointer": "/gates/8/alt/0/opts/1/when",
+      "old": "Covered in both interventional reviews as an option extrapolated from HCC and iCCA experience, with no cHCC-CCA-specific data.",
+      "new": "Small retrospective cHCC-CCA radioembolisation series are reported in the disease-specific literature summarized by Renzulli. Auer supplies an interventional iCCA review with an outlook for mixed tumours, not a separate mixed-tumour efficacy estimate.",
+      "group": "lrt",
+      "source": {
+        "pmid": "34283065",
+        "findings": [
+          "C-0102–0109",
+          "B:S5b098ff484",
+          "B:S9dfefe4224",
+          "B:S5daae33b88",
+          "B:Scf83e1ea7c"
+        ],
+        "locator": "Primary PDF pp9–11, CHC section and Table 2; CCA_Consensus_and_LRT_Targeted_Checks.md. Underlying Y90 reports not fully re-read; no new survival/response figure adopted."
+      },
+      "why": "Replace the false no-cHCC-CCA-data claim and distinguish the two reviews."
+    },
+    {
+      "file": "chcca/data/pathway.json",
+      "pointer": "/gates/8/alt/0/opts/1/avoid",
+      "old": "There is no series in this histology to quote. Treat it as protocol or registry territory rather than routine.",
+      "new": "Small uncontrolled series do not establish superiority to TACE, systemic therapy or surgery, nor validate transplant selection. Response denominators, criteria and survival time origins differ; do not combine their estimates. Treat use as an individualized multidisciplinary or protocol/registry decision.",
+      "group": "lrt",
+      "source": {
+        "pmid": "34283065",
+        "findings": [
+          "C-0102–0109",
+          "B:S5b098ff484",
+          "B:S9dfefe4224",
+          "B:S5daae33b88",
+          "B:Scf83e1ea7c"
+        ],
+        "locator": "Primary PDF pp9–11, CHC section and Table 2; CCA_Consensus_and_LRT_Targeted_Checks.md. Underlying Y90 reports not fully re-read; no new survival/response figure adopted."
+      },
+      "why": "Retain restrictive interpretation while acknowledging the dedicated series."
+    },
+    {
+      "file": "chcca/data/pathway.json",
+      "pointer": "/gates/8/alt/0/order",
+      "old": "Ordered by how much published experience each has in this disease, which for the second and third options is none and for the first is retrospective adjuvant data confined to HCC-dominant tumours. No comparative study exists, so the order carries no survival claim whatsoever and should not be read as one.",
+      "new": "The order is for discussion, not a comparative efficacy ranking. Dedicated retrospective experience exists for TACE and TARE; evidence for ablation remains limited and includes extrapolation. The reviewed series do not establish which modality improves survival most or which response qualifies a patient for transplant.",
+      "group": "lrt",
+      "source": {
+        "pmid": "34283065",
+        "findings": [
+          "C-0102–0109",
+          "B:S5b098ff484",
+          "B:S9dfefe4224",
+          "B:S5daae33b88",
+          "B:Scf83e1ea7c"
+        ],
+        "locator": "Primary PDF pp9–11, CHC section and Table 2; CCA_Consensus_and_LRT_Targeted_Checks.md. Underlying Y90 reports not fully re-read; no new survival/response figure adopted."
+      },
+      "why": "Remove the false absent-series claim without introducing a new clinical ranking."
+    },
+    {
+      "file": "chcca/data/pathway.json",
+      "pointer": "/honest/17/t",
+      "old": "Liver-directed therapy in this disease has no trial, no series of any size, and no modality comparison. Its entire evidence base is review-level synthesis of HCC and iCCA experience.",
+      "new": "Liver-directed therapy has small retrospective cHCC-CCA series, including TACE and TARE, but no established comparative curative benefit or validated transplant-selection rule.",
+      "group": "lrt",
+      "source": {
+        "pmid": "34283065",
+        "findings": [
+          "C-0102–0109",
+          "B:S5b098ff484",
+          "B:S9dfefe4224",
+          "B:S5daae33b88",
+          "B:Scf83e1ea7c"
+        ],
+        "locator": "Primary PDF pp9–11, CHC section and Table 2; CCA_Consensus_and_LRT_Targeted_Checks.md. Underlying Y90 reports not fully re-read; no new survival/response figure adopted."
+      },
+      "why": "Correct the repeated assertion of no dedicated evidence."
+    },
+    {
+      "file": "chcca/data/pathway.json",
+      "pointer": "/honest/17/why",
+      "old": "Both interventional reviews state that essentially all their quantitative material concerns cholangiocarcinoma, and neither distinguishes the hypervascular HCC-dominant tumour that might respond to an arterial therapy from the hypovascular CCA-dominant one that will not — which is the single most important selection variable in this assessment. The one dataset that stratified by component found adjuvant TACE helped only HCC-dominant tumours and only for early recurrence. The strongest number anywhere in this area is adjuvant post-operative TACE in 95 resected patients (HR 0.2 for overall survival, p=0.005, no confidence interval reported), from a hepatitis-B-endemic population, retrospective, with adjuvant TACE almost certainly given to selected patients. The page labels this Standard because it is what gets done and the board needs the honest figures, not because the modality is evidenced.",
+      "new": "Renzulli includes dedicated mixed-histology cohorts and an enhancement-pattern analysis. Auer mainly reviews interventional iCCA therapy and presents an outlook for cHCC-CCA. Tumour enhancement and histological predominance should not be conflated or treated as validated universal predictors. Small cohorts, heterogeneous treatments, response criteria and survival time origins prevent a pooled efficacy claim; numerical outcomes require checking the primary reports because the review has inconsistent labels. Separate adjuvant post-operative TACE data in 95 resected patients reported HR 0.2 for overall survival (p=0.005, no confidence interval reported), from a retrospective hepatitis-B-endemic cohort with substantial selection concerns. That association does not establish efficacy in unresectable disease or on a transplant pathway.",
+      "group": "lrt",
+      "source": {
+        "pmid": "34283065",
+        "findings": [
+          "C-0102–0109",
+          "B:S5b098ff484",
+          "B:S9dfefe4224",
+          "B:S5daae33b88",
+          "B:Scf83e1ea7c"
+        ],
+        "locator": "Primary PDF pp9–11, CHC section and Table 2; CCA_Consensus_and_LRT_Targeted_Checks.md. Underlying Y90 reports not fully re-read; no new survival/response figure adopted."
+      },
+      "why": "Preserve the adjuvant result and caveats while correcting the broader evidence scope."
+    },
+    {
+      "file": "chcca/data/critique.json",
+      "pointer": "/34283065/critique/0",
+      "old": "Almost all the quantitative material concerns cholangiocarcinoma; cHCC-CCA appears in the title but has essentially no dedicated evidence base in the review, so every recommendation reaching it is extrapolation from a different disease",
+      "new": "The review has a dedicated cHCC-CCA section and Table 2 with retrospective TACE, TARE and hepatic arterial infusion experience. Cohort totals are not interchangeable with treated denominators: the Fowler series contained 79 patients overall but only 18 receiving liver-directed therapy.",
+      "group": "lrt",
+      "source": {
+        "pmid": "34283065",
+        "findings": [
+          "C-0102–0109",
+          "B:S5b098ff484",
+          "B:S9dfefe4224",
+          "B:S5daae33b88",
+          "B:Scf83e1ea7c"
+        ],
+        "locator": "Primary PDF pp9–11, CHC section and Table 2; CCA_Consensus_and_LRT_Targeted_Checks.md. Underlying Y90 reports not fully re-read; no new survival/response figure adopted."
+      },
+      "why": "Correct the absent-dedicated-data claim and guard the cohort versus treatment denominator."
+    },
+    {
+      "file": "chcca/data/critique.json",
+      "pointer": "/34283065/critique/1",
+      "old": "No distinction is drawn between the hypervascular HCC-dominant cHCC-CCA, which might respond to arterial therapies, and the hypovascular cholangiocarcinoma-dominant form, which the one dedicated TACE study (Kim 2010) shows has median survival of 4 versus 16 months — the single most important selection variable for locoregional therapy here goes unaddressed",
+      "new": "The review discusses enhancement-pattern associations after TACE. Its lower-responsiveness rationale concerns TACE and percutaneous ethanol injection, not proven inferiority of every modality to HCC. Enhancement pattern is not equivalent to histological predominance and is not a validated universal eligibility rule.",
+      "group": "lrt",
+      "source": {
+        "pmid": "34283065",
+        "findings": [
+          "C-0102–0109",
+          "B:S5b098ff484",
+          "B:S9dfefe4224",
+          "B:S5daae33b88",
+          "B:Scf83e1ea7c"
+        ],
+        "locator": "Primary PDF pp9–11, CHC section and Table 2; CCA_Consensus_and_LRT_Targeted_Checks.md. Underlying Y90 reports not fully re-read; no new survival/response figure adopted."
+      },
+      "why": "Remove the unsupported Kim 4-versus-16-month claim and the false absent-enhancement-analysis claim."
+    },
+    {
+      "file": "chcca/data/critique.json",
+      "pointer": "/34283065/critique/2",
+      "old": "No pooled estimates, so a pathway cannot derive an expected response rate or survival for any modality",
+      "new": "No pooled estimates are provided. Outcome labels and survival time origins conflict between parts of the narrative and Table 2; do not sum cohorts as an independent treated population or quote a response/survival figure without checking its primary report.",
+      "group": "lrt",
+      "source": {
+        "pmid": "34283065",
+        "findings": [
+          "C-0102–0109",
+          "B:S5b098ff484",
+          "B:S9dfefe4224",
+          "B:S5daae33b88",
+          "B:Scf83e1ea7c"
+        ],
+        "locator": "Primary PDF pp9–11, CHC section and Table 2; CCA_Consensus_and_LRT_Targeted_Checks.md. Underlying Y90 reports not fully re-read; no new survival/response figure adopted."
+      },
+      "why": "Retain the synthesis limitation and record the verified internal inconsistencies."
+    },
+    {
+      "file": "chcca/data/critique.json",
+      "pointer": "/34283065/critique/3",
+      "old": "The review predates the interventional-plus-immunotargeted combinations that now dominate practice in this entity",
+      "new": "The small retrospective mixed-tumour series do not validate comparative curative efficacy, modern combination regimens or transplant selection.",
+      "group": "lrt",
+      "source": {
+        "pmid": "34283065",
+        "findings": [
+          "C-0102–0109",
+          "B:S5b098ff484",
+          "B:S9dfefe4224",
+          "B:S5daae33b88",
+          "B:Scf83e1ea7c"
+        ],
+        "locator": "Primary PDF pp9–11, CHC section and Table 2; CCA_Consensus_and_LRT_Targeted_Checks.md. Underlying Y90 reports not fully re-read; no new survival/response figure adopted."
+      },
+      "why": "Remove the unsupported assertion that combination regimens dominate cHCC-CCA practice."
+    },
+    {
+      "file": "chcca/data/critique.json",
+      "pointer": "/34283065/bottom_line",
+      "old": "A broad survey of locoregional techniques for biliary liver cancer whose cHCC-CCA content is extrapolated from cholangiocarcinoma, with no pooled estimates and no account of how tumour vascularity should drive modality choice.",
+      "new": "A narrative locoregional review with dedicated small retrospective cHCC-CCA TACE and TARE data and an enhancement-pattern analysis. It provides no pooled effect or validated transplant-selection rule; inconsistent outcome labels require primary-report checks before quoting numerical efficacy.",
+      "group": "lrt",
+      "source": {
+        "pmid": "34283065",
+        "findings": [
+          "C-0102–0109",
+          "B:S5b098ff484",
+          "B:S9dfefe4224",
+          "B:S5daae33b88",
+          "B:Scf83e1ea7c"
+        ],
+        "locator": "Primary PDF pp9–11, CHC section and Table 2; CCA_Consensus_and_LRT_Targeted_Checks.md. Underlying Y90 reports not fully re-read; no new survival/response figure adopted."
+      },
+      "why": "Summarize the actual source scope and limitations."
+    },
+    {
+      "file": "chcca/data/critique.json",
+      "pointer": "/37174120/critique/0",
+      "old": "The cHCC-CCA recommendations are extrapolated essentially in full from intrahepatic cholangiocarcinoma, and the review does not quantify the uncertainty that extrapolation introduces, nor address the HCC-like genomics reported by Joseph and Murugesan that argue the opposite way",
+      "new": "The principal subject is interventional iCCA therapy, followed by an outlook for cHCC-CCA. It provides no cHCC-CCA-specific comparative systemic-treatment result and does not establish a gemcitabine–platinum/checkpoint standard for mixed histology.",
+      "group": "auer",
+      "source": {
+        "pmid": "37174120",
+        "findings": [
+          "B:S582505efe5",
+          "B:Sb8a44024c0",
+          "B:S2d0ba34ff5"
+        ],
+        "locator": "Primary abstract and conclusion, printed pp1 and 13–14; Analyst_B/B16/R7/37174120.md and B16_A_Continuation.md"
+      },
+      "why": "Correct the systemic recommendation attribution to an interventional review."
+    },
+    {
+      "file": "chcca/data/critique.json",
+      "pointer": "/37174120/critique/1",
+      "old": "No pooled response or survival estimates are offered for cHCC-CCA, so the review cannot inform an expected benefit or a consent discussion",
+      "new": "No pooled cHCC-CCA response or survival estimate is supplied. Its interventional rationale may inform discussion, but numerical expected benefit must come from an applicable primary cohort with its limitations.",
+      "group": "auer",
+      "source": {
+        "pmid": "37174120",
+        "findings": [
+          "B:S582505efe5",
+          "B:Sb8a44024c0",
+          "B:S2d0ba34ff5"
+        ],
+        "locator": "Primary abstract and conclusion, printed pp1 and 13–14; Analyst_B/B16/R7/37174120.md and B16_A_Continuation.md"
+      },
+      "why": "Distinguish absent quantitative efficacy from a claim that the review cannot inform discussion."
+    },
+    {
+      "file": "chcca/data/critique.json",
+      "pointer": "/37174120/critique/2",
+      "old": "The extraction of this paper is truncated after the main text into the reference list only, so no limitations paragraph beyond the general acknowledgement of absent prospective data was recoverable",
+      "new": "Statements about locoregional downstaging and retrospective activity principally concern iCCA; they are not validated cHCC-CCA efficacy or transplant-selection estimates.",
+      "group": "auer",
+      "source": {
+        "pmid": "37174120",
+        "findings": [
+          "B:S582505efe5",
+          "B:Sb8a44024c0",
+          "B:S2d0ba34ff5"
+        ],
+        "locator": "Primary abstract and conclusion, printed pp1 and 13–14; Analyst_B/B16/R7/37174120.md and B16_A_Continuation.md"
+      },
+      "why": "Replace an obsolete extraction-status assertion with the source-specific clinical limitation verified by the later complete read."
+    },
+    {
+      "file": "chcca/data/pathway.json",
+      "pointer": "/gates/0/alt/0/opts/1/avoid",
+      "old": "Not for whole-liver assessment, surveillance or staging — NCCN does not recommend it for those. And read the performance figures, not the LR-M proportion: the CEUS LI-RADS criteria for cHCC-CCA were 40.0% sensitive and 89.9% specific with an AUC of 0.649, and the authors recalculated the positive predictive value at realistic disease prevalence as 1.6% to 39.6%. A positive read is wrong most of the time. A quarter of these tumours reading LR-5 is the failure mode that puts a cHCC-CCA onto an HCC transplant pathway undetected.",
+      "new": "Not for whole-liver assessment, surveillance or staging — NCCN does not recommend it for those. The 40.0% sensitivity, 89.9% specificity and AUC 0.649 describe a combined CEUS LI-RADS/AFP/CA 19-9 diagnostic rule, not CEUS alone. The authors modelled PPV as 1.6–39.6% across assumed disease prevalences; these are not predictive values measured in an unselected clinic. Separately, 25.7% of the 35 mixed tumours were assigned CEUS LR-5, showing that this imaging label can miss mixed histology.",
+      "group": "ceus",
+      "source": {
+        "pmid": "33362387",
+        "findings": [
+          "C-0118–0121"
+        ],
+        "locator": "Primary PDF pp3–5 and 8, Methods, diagnostic rule, Results and Table 5; CCA_Consensus_and_LRT_Targeted_Checks.md"
+      },
+      "why": "Attribute diagnostic accuracy to the combined test and distinguish modelled PPV from observed clinic performance."
+    },
+    {
+      "file": "chcca/data/pathway.json",
+      "pointer": "/quickref/3/rows/5/0",
+      "old": "CEUS LI-RADS criteria for cHCC-CCA",
+      "new": "Combined CEUS LI-RADS plus AFP/CA 19-9 rule",
+      "group": "ceus",
+      "source": {
+        "pmid": "33362387",
+        "findings": [
+          "C-0118–0121"
+        ],
+        "locator": "Primary PDF pp3–5 and 8, Methods, diagnostic rule, Results and Table 5; CCA_Consensus_and_LRT_Targeted_Checks.md"
+      },
+      "why": "Name the complete tested diagnostic method."
+    },
+    {
+      "file": "chcca/data/pathway.json",
+      "pointer": "/quickref/3/rows/5/1",
+      "old": "40.0% sensitive, 89.9% specific, AUC 0.649; positive predictive value 1.6–39.6% at true prevalence. 74.3% assigned LR-M, 25.7% assigned LR-5",
+      "new": "40.0% sensitive, 89.9% specific, AUC 0.649; modelled PPV 1.6–39.6% across assumed prevalences. Separately, CEUS assigned 74.3% of mixed tumours LR-M and 25.7% LR-5",
+      "group": "ceus",
+      "source": {
+        "pmid": "33362387",
+        "findings": [
+          "C-0118–0121"
+        ],
+        "locator": "Primary PDF pp3–5 and 8, Methods, diagnostic rule, Results and Table 5; CCA_Consensus_and_LRT_Targeted_Checks.md"
+      },
+      "why": "Separate the combined-rule accuracy from CEUS category proportions."
+    },
+    {
+      "file": "chcca/data/pathway.json",
+      "pointer": "/honest/11/why",
+      "old": "At least one LR-M feature was present in 93.9% of cHCC-CCA but also in 51.5% of HCC, so specificity is 48.5%; a three-feature rule reaches 80.8% accuracy at 54.5% sensitivity; targetoid appearance was present in 25/33 cHCC-CCA (75.8%) and 23/66 matched HCC (34.8%), giving 65.2% specificity. On contrast-enhanced ultrasound the CEUS LI-RADS criteria for cHCC-CCA were 40.0% sensitive with an AUC of 0.649, and the authors honestly recalculated the positive predictive value at real prevalence as 1.6% to 39.6%. LI-RADS protects the HCC diagnosis rather than finding this one: LR-5 was 89–90% specific but cHCC-CCA made up 63–86% of the false-positive LR-5 reads, and LR-M with LR-TIV caught only 62–71% of cHCC-CCA against about 90% of iCCA. The best marker-plus-MRI model published separates cHCC-CCA from mass-forming iCCA with an AUC of 0.807 — and that study had no HCC comparator group at all, so the error that puts a mixed tumour onto an HCC transplant pathway remains unquantified. Every one of these series had pathological proof in every lesion and down-sampled HCC relative to true prevalence, so the lesions managed on imaging alone are absent from all of them.",
+      "new": "At least one LR-M feature was present in 93.9% of cHCC-CCA but also in 51.5% of HCC, so specificity is 48.5%; a three-feature rule reaches 80.8% accuracy at 54.5% sensitivity; targetoid appearance was present in 25/33 cHCC-CCA (75.8%) and 23/66 matched HCC (34.8%), giving 65.2% specificity. The combined CEUS LI-RADS/AFP/CA 19-9 rule was 40.0% sensitive and 89.9% specific, with AUC 0.649; its modelled positive predictive value was 1.6–39.6% across assumed disease prevalences. These are not CEUS-alone accuracy estimates or predictive values observed in an unselected clinic. LI-RADS protects the HCC diagnosis rather than finding this one: LR-5 was 89–90% specific but cHCC-CCA made up 63–86% of the false-positive LR-5 reads, and LR-M with LR-TIV caught only 62–71% of cHCC-CCA against about 90% of iCCA. The best marker-plus-MRI model published separates cHCC-CCA from mass-forming iCCA with an AUC of 0.807 — and that study had no HCC comparator group at all, so the error that puts a mixed tumour onto an HCC transplant pathway remains unquantified. Every one of these series had pathological proof in every lesion and down-sampled HCC relative to true prevalence, so the lesions managed on imaging alone are absent from all of them.",
+      "group": "ceus",
+      "source": {
+        "pmid": "33362387",
+        "findings": [
+          "C-0118–0121"
+        ],
+        "locator": "Primary PDF pp3–5 and 8, Methods, diagnostic rule, Results and Table 5; CCA_Consensus_and_LRT_Targeted_Checks.md"
+      },
+      "why": "Propagate the diagnostic-method and modelled-PPV distinction."
+    },
+    {
+      "file": "chcca/data/critique.json",
+      "pointer": "/33362387/critique/0",
+      "old": "This is one of the few imaging papers in the depot that honestly re-states its predictive values at real prevalence; the resulting 1.6-39.6% PPV should be the figure quoted, not the 89.9% specificity",
+      "new": "The 40.0% sensitivity and 89.9% specificity apply to a combined CEUS LI-RADS/AFP/CA 19-9 rule. The modelled PPV range of 1.6–39.6% depends on assumed prevalence; neither that range nor the enriched-cohort PPV is an observed unselected-clinic estimate.",
+      "group": "ceus",
+      "source": {
+        "pmid": "33362387",
+        "findings": [
+          "C-0118–0121"
+        ],
+        "locator": "Primary PDF pp3–5 and 8, Methods, diagnostic rule, Results and Table 5; CCA_Consensus_and_LRT_Targeted_Checks.md"
+      },
+      "why": "Keep method, endpoint and prevalence denominator together."
+    },
+    {
+      "file": "chcca/data/critique.json",
+      "pointer": "/33362387/critique/1",
+      "old": "40% sensitivity means CEUS cannot be used to exclude cHCC-CCA before listing, yet the abstract's framing of 74.3% LR-M invites exactly that misreading",
+      "new": "The combined rule misses 60% of mixed tumours at 40.0% sensitivity and cannot exclude cHCC-CCA. The separate finding that 74.3% of mixed tumours were CEUS LR-M is a category proportion, not the combined rule’s sensitivity.",
+      "group": "ceus",
+      "source": {
+        "pmid": "33362387",
+        "findings": [
+          "C-0118–0121"
+        ],
+        "locator": "Primary PDF pp3–5 and 8, Methods, diagnostic rule, Results and Table 5; CCA_Consensus_and_LRT_Targeted_Checks.md"
+      },
+      "why": "Correct the CEUS-alone interpretation and separate category proportion from diagnostic sensitivity."
+    },
+    {
+      "file": "chcca/data/critique.json",
+      "pointer": "/33362387/critique/2",
+      "old": "AUC 0.649 is barely better than chance for a diagnostic criterion being proposed for clinical use",
+      "new": "The combined rule’s AUC of 0.649 indicates limited discrimination in this selected cohort; it requires prospective validation and cannot establish an imaging-only diagnosis.",
+      "group": "ceus",
+      "source": {
+        "pmid": "33362387",
+        "findings": [
+          "C-0118–0121"
+        ],
+        "locator": "Primary PDF pp3–5 and 8, Methods, diagnostic rule, Results and Table 5; CCA_Consensus_and_LRT_Targeted_Checks.md"
+      },
+      "why": "Attach discrimination to the tested combined rule."
+    },
+    {
+      "file": "chcca/data/critique.json",
+      "pointer": "/33362387/n",
+      "old": "134 lesions: 35 cHCC-CCA, 29 and 70 in the comparator groups",
+      "new": "134 surgically confirmed lesions: 35 cHCC-CCA, 29 iCCA and 70 matched HCC controls",
+      "group": "ceus",
+      "source": {
+        "pmid": "33362387",
+        "findings": [
+          "C-0118–0121"
+        ],
+        "locator": "Primary PDF pp3–5 and 8, Methods, diagnostic rule, Results and Table 5; CCA_Consensus_and_LRT_Targeted_Checks.md"
+      },
+      "why": "Use the verified comparator denominators and selected surgical population."
+    },
+    {
+      "file": "chcca/data/critique.json",
+      "pointer": "/33362387/bottom_line",
+      "old": "Shows CEUS LI-RADS identifies cHCC-CCA with only 40% sensitivity and an AUC of 0.649, and — unusually — states honestly that its positive predictive value at real prevalence is 1.6-39.6%.",
+      "new": "A combined CEUS LI-RADS/AFP/CA 19-9 rule had 40.0% sensitivity, 89.9% specificity and AUC 0.649 in 35 cHCC-CCA, 29 iCCA and 70 matched HCC controls. The modelled PPV was 1.6–39.6% across assumed prevalences. These are not CEUS-alone accuracy estimates, and the selected surgical cohort does not establish clinic-wide predictive values.",
+      "group": "ceus",
+      "source": {
+        "pmid": "33362387",
+        "findings": [
+          "C-0118–0121"
+        ],
+        "locator": "Primary PDF pp3–5 and 8, Methods, diagnostic rule, Results and Table 5; CCA_Consensus_and_LRT_Targeted_Checks.md"
+      },
+      "why": "Correct the source summary and retain prevalence and selection limitations."
+    },
+    {
+      "file": "tools/consensus_source/roadmap_chcca.json",
+      "pointer": "/questions/7/positions/1/position",
+      "old": "Requires only locoregional or systemic therapy followed by six months of stability, and imposes neither restriction.",
+      "new": "The nonstandard NLRB guidance route concerns biopsy-proven, unresectable solitary mixed HCC-iCCA 3 cm or less in cirrhosis, after locoregional or systemic therapy. It requires six months from diagnosis or last treatment with the tumour remaining ≤3 cm, no new lesions and no extrahepatic disease. It does not reproduce the local CPG’s external-beam-radiation exclusion or its strict under-3-cm restriction on locoregional therapy alone.",
+      "group": "nlrb",
+      "source": {
+        "pmid": null,
+        "findings": [
+          "accepted carry-through: cHCC-CCA-D8 qualifying scope"
+        ],
+        "locator": "Previously reconciled OPTN NLRB Adult MELD Exceptions for Transplant Oncology, Intrahepatic Cholangiocarcinoma section; current roadmap Gate 5 and Gate 8 flagnote; D8 rationale"
+      },
+      "why": "Carry the accepted qualifying scope into the previously overbroad consensus position."
+    },
+    {
+      "file": "tools/consensus_source/roadmap_chcca.json",
+      "pointer": "/questions/7/divergence",
+      "old": "The local CPG is stricter than the OPTN wording on locoregional-only bridging and on radiation, and the roadmap says no data in this disease support either the restriction or its absence.",
+      "new": "For the NLRB guidance population of a solitary tumour ≤3 cm in cirrhosis, the local CPG imposes a stricter under-3-cm restriction on locoregional-only bridging and excludes external-beam radiation. Small retrospective liver-directed series do not resolve those local transplant restrictions.",
+      "group": "nlrb",
+      "source": {
+        "pmid": null,
+        "findings": [
+          "accepted carry-through: cHCC-CCA-D8 qualifying scope"
+        ],
+        "locator": "Previously reconciled OPTN NLRB Adult MELD Exceptions for Transplant Oncology, Intrahepatic Cholangiocarcinoma section; current roadmap Gate 5 and Gate 8 flagnote; D8 rationale"
+      },
+      "why": "State the narrow policy disagreement without suggesting unrestricted eligibility or absence of all mixed LRT data."
+    },
+    {
+      "file": "tools/consensus_source/roadmap_chcca.json",
+      "pointer": "/questions/7/proposal",
+      "old": "The local rule stands until the group changes it: the roadmap lists external-beam radiation before transplant as Avoid under the local protocol and calls the locoregional-only restriction more conservative than needed. Locoregional therapy should be planned as part of the listing strategy to generate the six months of stability.",
+      "new": "The local rule stands until the group changes it: external-beam radiation before transplant remains Avoid under the local protocol, and the locoregional-only restriction remains an OPEN local choice. Plan treatment and the six-month stability assessment together, applying the full NLRB guidance criteria rather than stability alone.",
+      "group": "nlrb",
+      "source": {
+        "pmid": null,
+        "findings": [
+          "accepted carry-through: cHCC-CCA-D8 qualifying scope"
+        ],
+        "locator": "Previously reconciled OPTN NLRB Adult MELD Exceptions for Transplant Oncology, Intrahepatic Cholangiocarcinoma section; current roadmap Gate 5 and Gate 8 flagnote; D8 rationale"
+      },
+      "why": "Preserve the unapproved policy choice and remove an unsupported claim that the local restriction is unnecessarily conservative."
+    },
+    {
+      "file": "chcca/data/pathway.json",
+      "pointer": "/gates/8/standard/1/note",
+      "old": "The local CPG permits locoregional therapy other than external-beam radiation — TACE, radiofrequency ablation, Y-90 — but states it should not be the sole pre-transplant therapy except for a solitary tumour under 3 cm. That is the one place where the local document is more conservative than it needs to be and more specific than the evidence; it is also the only written local rule on the subject, so it stands until the group changes it.",
+      "new": "The local CPG permits TACE, radiofrequency ablation and Y-90 but excludes external-beam radiation, and permits locoregional therapy alone before transplant only for a solitary tumour under 3 cm. This remains an OPEN local rule. The NLRB guidance route is restricted to a solitary tumour ≤3 cm in cirrhosis with the other required criteria; the retrospective liver-directed series do not establish whether the local restrictions should be changed.",
+      "group": "nlrb",
+      "source": {
+        "pmid": null,
+        "findings": [
+          "accepted carry-through: cHCC-CCA-D8 qualifying scope"
+        ],
+        "locator": "Previously reconciled OPTN NLRB Adult MELD Exceptions for Transplant Oncology, Intrahepatic Cholangiocarcinoma section; current roadmap Gate 5 and Gate 8 flagnote; D8 rationale"
+      },
+      "why": "Align the repeated local-policy comparison with the accepted full NLRB scope without activating a policy."
+    },
+    {
+      "file": "hilar/data/pathway.json",
+      "pointer": "/gates/3/alt/0/opts/0/when",
+      "old": "Recommended where the anticipated remnant is inadequate and the disease is otherwise resectable. NCCN requires the contralateral liver to have intact arterial and portal inflow as well as biliary drainage.",
+      "new": "Milan recommends portal vein embolisation as the initial hypertrophy technique (Recommendation 23: strong, level of evidence 3) when the anticipated remnant is inadequate. The remaining lobe needs intact arterial and portal inflow and effective biliary drainage.",
+      "group": "lvd",
+      "source": {
+        "pmid": "40478744",
+        "findings": [
+          "C-0214",
+          "C-0215",
+          "C-0299"
+        ],
+        "locator": "Primary PDF pp21–22 and Table 2, PDF p76, Recommendations 23–25; CCA_Consensus_and_LRT_Targeted_Checks.md"
+      },
+      "why": "State the source’s initial-technique recommendation and actual evidence level."
+    },
+    {
+      "file": "hilar/data/pathway.json",
+      "pointer": "/gates/3/alt/0/opts/1/when",
+      "old": "The Milan consensus places it after portal vein embolisation, for a remnant under 20–25% — a level-4 expert-opinion statement with no comparative data in this disease.",
+      "new": "Milan Recommendation 24 supports considering upfront or additional liver venous deprivation when substantial augmentation is needed: future liver remnant <20–25%, altered liver parenchyma and/or right extended hepatectomy. The recommendation is strong, level of evidence 3.",
+      "group": "lvd",
+      "source": {
+        "pmid": "40478744",
+        "findings": [
+          "C-0214",
+          "C-0215",
+          "C-0299"
+        ],
+        "locator": "Primary PDF pp21–22 and Table 2, PDF p76, Recommendations 23–25; CCA_Consensus_and_LRT_Targeted_Checks.md"
+      },
+      "why": "Correct the after-PVE-only timing, indication scope and source evidence level."
+    },
+    {
+      "file": "hilar/data/pathway.json",
+      "pointer": "/gates/3/alt/0/opts/1/pref",
+      "old": "Expert centres where portal vein embolisation alone will not deliver the volume needed.",
+      "new": "Expert-centre review for expected impaired regeneration or substantial augmentation needs. PVE remains the recommended initial technique; LVD need not be restricted to rescue after PVE failure.",
+      "group": "lvd",
+      "source": {
+        "pmid": "40478744",
+        "findings": [
+          "C-0214",
+          "C-0215",
+          "C-0299"
+        ],
+        "locator": "Primary PDF pp21–22 and Table 2, PDF p76, Recommendations 23–25; CCA_Consensus_and_LRT_Targeted_Checks.md"
+      },
+      "why": "Separate general PVE initial preference from the permitted upfront-LVD scenario."
+    },
+    {
+      "file": "hilar/data/pathway.json",
+      "pointer": "/gates/3/alt/0/opts/1/avoid",
+      "old": "Not a first manoeuvre, and not a substitute for drainage of the remnant.",
+      "new": "LVD does not substitute for drainage of the remnant. Limited pCCA comparative data suggest better functional growth with similar morbidity, but do not establish a randomized survival advantage or a universal LVD-first policy.",
+      "group": "lvd",
+      "source": {
+        "pmid": "40478744",
+        "findings": [
+          "C-0214",
+          "C-0215",
+          "C-0299"
+        ],
+        "locator": "Primary PDF pp21–22 and Table 2, PDF p76, Recommendations 23–25; CCA_Consensus_and_LRT_Targeted_Checks.md"
+      },
+      "why": "Remove the false no-comparative-data claim and retain the small nonrandomized evidence limitation."
+    },
+    {
+      "file": "hilar/data/pathway.json",
+      "pointer": "/gates/3/alt/0/order",
+      "old": "Ordered as the guidelines order augmentation, not by comparative survival data — no trial compares these in perihilar disease, and the Milan recommendations on augmentation sit at level 4. The registry mortality figure for ALPPS is the one hard number in the group and it argues against it.",
+      "new": "PVE is Milan’s recommended initial technique; upfront or additional LVD may be considered for substantial augmentation. Both Recommendations 23 and 24 are strong, level of evidence 3. This is not a comparative survival ranking. Milan does not suggest ALPPS as the initial procedure; its recommendation is weak, level of evidence 5, and the registry mortality concern remains.",
+      "group": "lvd",
+      "source": {
+        "pmid": "40478744",
+        "findings": [
+          "C-0214",
+          "C-0215",
+          "C-0299"
+        ],
+        "locator": "Primary PDF pp21–22 and Table 2, PDF p76, Recommendations 23–25; CCA_Consensus_and_LRT_Targeted_Checks.md"
+      },
+      "why": "Replace the blanket level-4/strict-sequence assertion with the separate source recommendations."
+    },
+    {
+      "file": "hilar/data/pathway.json",
+      "pointer": "/gates/4/avoid/1/note",
+      "old": "The node-negative R0 resection subgroup fared no better (87%, 53% and 18% at 1, 3 and 5 years), and the 20–21% 5-year survival after resection matches other specialist centres, so the comparator is not substandard. Three of 26 resections (12%) died within 30 days, and the discussants' point was that non-cancer deaths, not recurrence, drive much of the gap — recurrence after resection was 35% while 5-year survival was 20%. There is no intention-to-treat analysis and no accounting of organ cost: 38 grafts, 7 of them living donor, for 71 patients enrolled. The Milan jury acknowledged benefit in node-negative patients independent of resectability; that is a consensus position resting on one benchmark study and mixed retrospective comparisons, and TRANSPHIL, the randomised trial meant to settle it, failed to recruit.",
+      "new": "The node-negative R0 resection subgroup fared no better (87%, 53% and 18% at 1, 3 and 5 years), and the 20–21% 5-year survival after resection matches other specialist centres, so the comparator is not substandard. Three of 26 resections (12%) died within 30 days, and the discussants' point was that non-cancer deaths, not recurrence, drive much of the gap — recurrence after resection was 35% while 5-year survival was 20%. There is no intention-to-treat analysis and no accounting of organ cost: 38 grafts, 7 of them living donor, for 71 patients enrolled. Milan Recommendation 59 supports transplant consideration for selected unresectable or PSC-associated pCCA above the cystic duct, ≤3.0 cm radial diameter and without nodal or distant metastases (strong, level 3), with staging and neoadjuvant therapy specified separately. Recommendation 64 only weakly supports consideration for resectable or questionably resectable pCCA when appropriate donor access exists (level 3). These are distinct consensus recommendations, not proof that transplantation is superior for every resectable patient; TRANSPHIL failed to recruit. The consensus ≤3.0 cm boundary does not replace the separate OPTN strict <3 cm mass criterion.",
+      "group": "milan_tx",
+      "source": {
+        "pmid": "40478744",
+        "findings": [
+          "C-0214",
+          "C-0215",
+          "C-0299",
+          "accepted carry-through: distinct LT recommendations"
+        ],
+        "locator": "Primary PDF pp30–32 and Table 2, PDF p80, Recommendations 59–64; CCA_Consensus_and_LRT_Targeted_Checks.md"
+      },
+      "why": "Separate recommendations, disease setting and source strength while preserving the distinct OPTN boundary."
+    },
+    {
+      "file": "hilar/data/critique.json",
+      "pointer": "/40478744/bottom_line",
+      "old": "The Milan jury-based consensus is the most comprehensive current statement on perihilar cholangiocarcinoma, covering definition, staging, drainage, liver augmentation, the operation, systemic therapy, transplantation and outcome metrics, and it is candid that 84% of its 570 studies are observational and that most surgical recommendations sit at level of evidence 4. Its two central positions are unresolved by its own evidence: the resectability criteria it adopts are expert opinion awaiting validation while it declines to endorse any staging system for predicting resectability, and it extends transplantation to node-negative patients independent of resectability on a benchmark study and mixed retrospective comparisons after TRANSPHIL failed to recruit. Industry covered 55% of the conference's costs, no individual author conflict statement is printed, and no voting record exists for any recommendation.",
+      "new": "The Milan jury-based consensus covers staging, drainage, liver augmentation, resection, systemic therapy, transplantation and outcomes; 84% of its 570 studies are observational and most surgical recommendations sit at level of evidence 4. Hypertrophy is a specific exception: PVE is the initial technique (Recommendation 23), and upfront or additional LVD may be considered for substantial augmentation (Recommendation 24), both strong, level 3, with limited nonrandomized pCCA comparative evidence. Transplant Recommendation 59 concerns selected unresectable or PSC-associated pCCA ≤3.0 cm without nodal or distant metastases (strong, level 3); Recommendation 64 only weakly supports consideration in resectable or questionably resectable disease with appropriate donor access (level 3). Benchmark and retrospective data do not establish universal superiority over resection, and TRANSPHIL failed to recruit. The consensus size boundary is separate from OPTN’s strict <3 cm mass criterion. Resectability criteria still need validation. Industry covered 55% of the conference’s costs, no individual author conflict statement is printed, and no voting record is reported.",
+      "group": "milan_tx",
+      "source": {
+        "pmid": "40478744",
+        "findings": [
+          "C-0214",
+          "C-0215",
+          "C-0299",
+          "accepted carry-through: distinct LT recommendations"
+        ],
+        "locator": "Primary PDF pp30–32 and Table 2, PDF p80, Recommendations 59–64; CCA_Consensus_and_LRT_Targeted_Checks.md"
+      },
+      "why": "Correct the flattened transplant stance and the LVD-specific evidence grade while retaining the source’s methodological caveats."
+    },
+    {
+      "file": "tools/consensus_source/roadmap_hilar.json",
+      "pointer": "/questions/0/positions/3/position",
+      "old": "The jury acknowledged benefit in node-negative patients regardless of resectability; the roadmap calls this consensus resting on one benchmark study and mixed retrospective comparisons, with the randomised TRANSPHIL trial having failed to recruit.",
+      "new": "Recommendation 59 supports consideration for selected unresectable or PSC-associated pCCA ≤3.0 cm radial diameter without nodal or distant metastases (strong, level 3), with staging and neoadjuvant therapy specified separately. Recommendation 64 only weakly supports consideration in resectable or questionably resectable disease with appropriate donor access (level 3). Neither establishes universal superiority over resection; the consensus boundary does not replace OPTN’s strict <3 cm mass criterion.",
+      "group": "milan_tx",
+      "source": {
+        "pmid": "40478744",
+        "findings": [
+          "C-0214",
+          "C-0215",
+          "C-0299",
+          "accepted carry-through: distinct LT recommendations"
+        ],
+        "locator": "Primary PDF pp30–32 and Table 2, PDF p80, Recommendations 59–64; CCA_Consensus_and_LRT_Targeted_Checks.md"
+      },
+      "why": "Propagate distinct Milan recommendations into the consensus record."
+    },
+    {
+      "file": "tools/consensus_source/roadmap_hilar.json",
+      "pointer": "/questions/0/divergence",
+      "old": "Milan and AASLD lean towards transplantation for selected node-negative or PSC patients, but every supporting dataset is retrospective and heavily selected and no randomised comparison exists, so opening the protocol rests on institutional judgement.",
+      "new": "Milan distinguishes selected unresectable/PSC-associated disease from a weaker recommendation for resectable or questionably resectable disease; AASLD has its own PSC preference. Supporting transplant comparisons are retrospective and heavily selected, and TRANSPHIL failed to recruit. Opening a protocol remains an institutional decision under the applicable OPTN requirements.",
+      "group": "milan_tx",
+      "source": {
+        "pmid": "40478744",
+        "findings": [
+          "C-0214",
+          "C-0215",
+          "C-0299",
+          "accepted carry-through: distinct LT recommendations"
+        ],
+        "locator": "Primary PDF pp30–32 and Table 2, PDF p80, Recommendations 59–64; CCA_Consensus_and_LRT_Targeted_Checks.md"
+      },
+      "why": "Preserve governance status without flattening different source recommendations."
+    }
+  ]
+}

@@ -368,6 +368,12 @@ window.ContextualCopy = {
       "title": "Are the transplant selection decision and applicable MELD-exception review complete?",
       "label": "Transplant selection and MELD-exception reviews complete?"
     },
+    "icca/follow-up/phase": {
+      "source": "Before transplantation, all earlier selection findings remain relevant. After transplantation, assess the recipient, graft, recurrence and ongoing care; a prior selection boundary does not prevent follow-up.",
+      "concise": "Before transplantation, all earlier selection findings remain relevant. After transplantation, assess the recipient, graft, recurrence and ongoing care; a prior selection boundary does not prevent follow-up.",
+      "title": "Is this assessment before or after liver transplantation?",
+      "label": "Is this assessment before or after liver transplantation?"
+    },
     "icca/follow-up/plan": {
       "source": "Reconfirm disease control, fitness and informed consent. Review explant findings and agree oncology/transplant surveillance; selected cohort evidence does not establish a universal interval.",
       "concise": "Recheck control, fitness and consent. Review explant; agree surveillance. Selected cohorts do not define a universal interval.",
@@ -428,6 +434,12 @@ window.ContextualCopy = {
       "title": "Are the transplant selection decision and applicable MELD-exception review complete?",
       "label": "Transplant selection and MELD-exception reviews complete?"
     },
+    "crlm/transplant/phase": {
+      "source": "Before transplantation, all earlier selection findings remain relevant. After transplantation, assess the recipient, graft, recurrence and ongoing care; a prior selection boundary does not prevent follow-up.",
+      "concise": "Before transplantation, all earlier selection findings remain relevant. After transplantation, assess the recipient, graft, recurrence and ongoing care; a prior selection boundary does not prevent follow-up.",
+      "title": "Is this assessment before or after liver transplantation?",
+      "label": "Is this assessment before or after liver transplantation?"
+    },
     "crlm/transplant/plan": {
       "source": "Recheck disease control, fitness and consent, and whether resection or ablation can now treat all liver disease. Agree recurrence surveillance and postoperative oncology care.",
       "concise": "Recheck control, fitness, consent and feasibility of complete resection/ablation; agree recurrence surveillance and oncology care.",
@@ -482,6 +494,12 @@ window.ContextualCopy = {
       "title": "Are the transplant selection decision and applicable MELD-exception review complete?",
       "label": "Transplant selection and MELD-exception reviews complete?"
     },
+    "nelm/follow-up/phase": {
+      "source": "Before transplantation, all earlier selection findings remain relevant. After transplantation, assess the recipient, graft, recurrence and ongoing care; a prior selection boundary does not prevent follow-up.",
+      "concise": "Before transplantation, all earlier selection findings remain relevant. After transplantation, assess the recipient, graft, recurrence and ongoing care; a prior selection boundary does not prevent follow-up.",
+      "title": "Is this assessment before or after liver transplantation?",
+      "label": "Is this assessment before or after liver transplantation?"
+    },
     "nelm/follow-up/plan": {
       "source": "Review explant grade/burden, functional symptoms and treatment history. Agree disease-specific recurrence surveillance with the NET and transplant teams.",
       "concise": "Review explant grade/burden, functional symptoms and treatment history; agree NET/transplant recurrence surveillance.",
@@ -517,6 +535,12 @@ window.ContextualCopy = {
       "concise": "Confirm transplant suitability and MELD-exception review separately; a highlight approves neither.",
       "title": "Are the transplant selection decision and applicable MELD-exception review complete?",
       "label": "Transplant selection and MELD-exception reviews complete?"
+    },
+    "hehe/follow-up/phase": {
+      "source": "Before transplantation, all earlier selection findings remain relevant. After transplantation, assess the recipient, graft, recurrence and ongoing care; a prior selection boundary does not prevent follow-up.",
+      "concise": "Before transplantation, all earlier selection findings remain relevant. After transplantation, assess the recipient, graft, recurrence and ongoing care; a prior selection boundary does not prevent follow-up.",
+      "title": "Is this assessment before or after liver transplantation?",
+      "label": "Is this assessment before or after liver transplantation?"
     },
     "hehe/follow-up/plan": {
       "source": "Reconcile explant and pretransplant findings; agree risk-informed imaging and long-term recurrence assessment. No universal OPTN surveillance interval is specified.",
@@ -559,6 +583,12 @@ window.ContextualCopy = {
       "concise": "Confirm transplant suitability and MELD-exception review separately; a highlight approves neither.",
       "title": "Are the transplant selection decision and applicable MELD-exception review complete?",
       "label": "Transplant selection and MELD-exception reviews complete?"
+    },
+    "hca/follow-up/phase": {
+      "source": "Before transplantation, all earlier selection findings remain relevant. After transplantation, assess the recipient, graft, recurrence and ongoing care; a prior selection boundary does not prevent follow-up.",
+      "concise": "Before transplantation, all earlier selection findings remain relevant. After transplantation, assess the recipient, graft, recurrence and ongoing care; a prior selection boundary does not prevent follow-up.",
+      "title": "Is this assessment before or after liver transplantation?",
+      "label": "Is this assessment before or after liver transplantation?"
     },
     "hca/follow-up/plan": {
       "source": "Reassess bleeding or transformation while waiting. After transplant, review explant findings and continuing care for the underlying metabolic/vascular condition.",

@@ -1,0 +1,86 @@
+[
+  {
+    "file": "tools/compact_evidence_source.json",
+    "path": "/studies/22782416/caution",
+    "finding_ids": [
+      "C0063",
+      "C0064",
+      "C0065"
+    ],
+    "pmid": "22782416",
+    "old": "Ampullary subgroup never powered or formally tested; only 135 of 297 ampullary tumours could be subtyped",
+    "new": "Ampullary subgroup not powered for a survival effect. Observation had better grade/nodal features but more positive margins; the adjusted estimate is hypothesis generating, not independent confirmation of the nonsignificant primary result.",
+    "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/Figure_and_Definition_Checks.md; sources/22782416.txt, Table1 PDFp5/JAMAp151 (columns FU/FA n143, gemcitabine n141, observation n144); primary/adjusted results PDFpp3–4"
+  },
+  {
+    "file": "tools/compact_evidence_source.json",
+    "path": "/studies/39908431/arms",
+    "finding_ids": [
+      "C0237",
+      "C0241"
+    ],
+    "pmid": "39908431",
+    "old": "Single-arm basket trial · 204 patients (36 pancreatic)",
+    "new": "Single-arm basket trial: 204 treated (42 pancreatic); 161 primary-efficacy patients (36 pancreatic); 158 with measurable disease for investigator response assessment",
+    "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/PDAC_and_Renderer_Adjudications.md; sources/39908431.txt, Methods PDFp3, Results PDFpp4/6 (printed569/571), Table1 and Table2; supplementary TableS7/FigureS8 cited in main text but not newly reviewed"
+  },
+  {
+    "file": "tools/compact_evidence_source.json",
+    "path": "/studies/39908431/result",
+    "finding_ids": [
+      "C0234",
+      "C0237",
+      "C0241"
+    ],
+    "pmid": "39908431",
+    "old": "Primary endpoint ORR 30% overall (47/158); KRAS wild-type NRG1+ pancreatic subgroup ORR 42% (15/36) by investigator, 44% central; median DoR 7.4 mo",
+    "new": "ORR 30% overall (47/158); prespecified KRAS wild-type pancreatic cohort ORR 42% (15/36) by investigator and 44% (16/36) centrally; median DoR 7.4 mo; pancreatic median PFS 9.2 mo (95% CI 5.5–11.2)",
+    "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/PDAC_and_Renderer_Adjudications.md; sources/39908431.txt, Methods PDFp3, Results PDFpp4/6 (printed569/571), Table1 and Table2; supplementary TableS7/FigureS8 cited in main text but not newly reviewed"
+  },
+  {
+    "file": "tools/compact_evidence_source.json",
+    "path": "/studies/39908431/caution",
+    "finding_ids": [
+      "C0234",
+      "C0237",
+      "C0241"
+    ],
+    "pmid": "39908431",
+    "old": "Single-arm; no survival data for pancreatic subgroup; no screening denominator",
+    "new": "Single-arm estimates do not establish comparative survival benefit. Pancreatic OS not reported; no screening denominator. First-dose timing exclusions do not establish disproportionate exclusion of early progressors.",
+    "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/PDAC_and_Renderer_Adjudications.md; sources/39908431.txt, Methods PDFp3, Results PDFpp4/6 (printed569/571), Table1 and Table2; supplementary TableS7/FigureS8 cited in main text but not newly reviewed"
+  },
+  {
+    "file": "tools/compact_evidence_source.json",
+    "path": "/studies/39908431/quotes",
+    "finding_ids": [
+      "C0237"
+    ],
+    "pmid": "39908431",
+    "action": "Correct the first audit/provenance quotation so it distinguishes 161 in the primary-efficacy set from 158 measurable for the investigator response analysis; add primary-text provenance for PFS9.2(5.5–11.2). Do not treat a reviewer paraphrase as a verbatim paper quotation.",
+    "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/PDAC_and_Renderer_Adjudications.md; sources/39908431.txt, Methods PDFp3, Results PDFpp4/6 (printed569/571), Table1 and Table2; supplementary TableS7/FigureS8 cited in main text but not newly reviewed"
+  },
+  {
+    "file": "documents/ampullary/questions.json",
+    "action": "Regenerate matching ESPAC-3 consensus-position copy from corrected tools/consensus_source/roadmap_ampullary.json; retain primary nonsignificance and subgroup uncertainty.",
+    "finding_ids": [
+      "C0063",
+      "C0064",
+      "C0065"
+    ],
+    "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/Figure_and_Definition_Checks.md; sources/22782416.txt, Table1 PDFp5/JAMAp151 (columns FU/FA n143, gemcitabine n141, observation n144); primary/adjusted results PDFpp3–4"
+  },
+  {
+    "file": "tools/source_summaries.json",
+    "action": "Verify summaries derived from the updated critique records for PMID22782416/39908431. No explicit existing PMID-keyed summary for these two sources was found in this file; avoid inventing a duplicate key.",
+    "finding_ids": [
+      "C0063",
+      "C0064",
+      "C0065",
+      "C0234",
+      "C0237",
+      "C0241"
+    ],
+    "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/Figure_and_Definition_Checks.md; sources/22782416.txt, Table1 PDFp5/JAMAp151 (columns FU/FA n143, gemcitabine n141, observation n144); primary/adjusted results PDFpp3–4; Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/PDAC_and_Renderer_Adjudications.md; sources/39908431.txt, Methods PDFp3, Results PDFpp4/6 (printed569/571), Table1 and Table2; supplementary TableS7/FigureS8 cited in main text but not newly reviewed"
+  }
+]

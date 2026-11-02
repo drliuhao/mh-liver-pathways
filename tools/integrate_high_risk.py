@@ -7,6 +7,7 @@ from pathlib import Path
 from urllib.parse import quote
 import argparse, hashlib, json, shutil
 from build_high_risk import GROUPS, TITLES, LABELS, plain
+from current_downloads import BASE, high_risk_document
 
 ROOT=Path(__file__).resolve().parents[1]
 STEPS={
@@ -63,13 +64,9 @@ def build(src,access,output):
  links=json.loads(access.read_text());used=set();pathways={};docs=[]
  for group,slug,name,doc in GROUPS:
   reviews=[make_review(x,v[x['id']]) for x in d.values() if x['group']==group]
-  files=[]
-  for ext in ['pdf','docx']:
-   name_doc=Path(doc).with_suffix('.'+ext).name
-   source=next(src.rglob(name_doc));target=ROOT/'transplant/high-risk/docs'/name_doc
-   target.parent.mkdir(exist_ok=True,parents=True);shutil.copyfile(source,target)
-   info={'url':'/high-risk/docs/'+name_doc,'label':f'V7 high-risk {"boundary addendum" if slug in ["hehe","hca"] else "protocol"} · {ext.upper()}','format':ext,'sha256':hashlib.sha256(target.read_bytes()).hexdigest()}
-   files.append(info);docs.append({'path':str(target.relative_to(ROOT)), 'sha256':info['sha256'],'kind':'Author-created protocol; not a journal article'})
+  target=high_risk_document(slug)
+  files=[{'url':BASE+target,'label':'Current V18 high-risk pathway · Word','format':'docx'}]
+  docs.append({'path':target,'kind':'Current V18 author-created pathway; not a journal article'})
   pathways[slug]={'name':name,'reviews':reviews,'documents':files}
   for r in reviews:used.update(r['references'])
  readiness=[make_review(x,v[x['id']]) for x in d.values() if x['group']=='ALLOC']
@@ -92,11 +89,9 @@ def build(src,access,output):
  assert '/Users/' not in text and 'file://' not in text and 'PDAC-' not in text
  output.parent.mkdir(exist_ok=True,parents=True);output.write_text(text)
  public=json.loads(text)
- for entry in public['pathways'].values():
-  for doc in entry['documents']:doc['url']='/mh-liver-pathways/transplant'+doc['url']
  (ROOT/'transplant/high-risk/integrated-protocols.json').write_text(json.dumps(public,ensure_ascii=False,indent=2)+'\n')
  (ROOT/'transplant/high-risk/authored-documents.json').write_text(json.dumps(docs,indent=2)+'\n')
- print(f'Integrated {sum(len(x["reviews"]) for x in pathways.values())} reviews across {len(pathways)} protocols; {len(sources)} sources; {sum(bool(x["pdf_links"]) for x in sources.values())} sources with direct PDF links; seven authored protocol PDFs.')
+ print(f'Integrated {sum(len(x["reviews"]) for x in pathways.values())} reviews across {len(pathways)} protocols; {len(sources)} sources; {sum(bool(x["pdf_links"]) for x in sources.values())} sources with direct PDF links; current V18 Word downloads.')
 
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('source',type=Path);p.add_argument('access',type=Path);p.add_argument('output',type=Path);a=p.parse_args();build(a.source,a.access,a.output)

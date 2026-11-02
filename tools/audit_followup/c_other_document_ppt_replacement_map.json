@@ -1,0 +1,94 @@
+{
+  "scope": "Accepted factual replacements for current document/PPT synchronization; adapt to local sentence context and retain the listed caveats. No document or PPT edited by this task.",
+  "replacements": [
+    {
+      "disease": "ampullary",
+      "pmid": "22782416",
+      "finding_ids": [
+        "C0063",
+        "C0064",
+        "C0065"
+      ],
+      "old_factual_claim_variants": [
+        "observation arm was prognostically the worst",
+        "observation arm was worse at baseline",
+        "poorly differentiated 33% against 22% and 19%; node positive 62% against 60% and 54%"
+      ],
+      "corrected_short_text": "Observation had more favorable grade/nodal features but more positive margins. Primary HR 0.86 (95% CI 0.66–1.11; P=.25) remains nonsignificant; adjusted HR 0.75 is hypothesis generating.",
+      "corrected_long_text": "In Table 1, observation had poor differentiation 19% versus 33% with fluorouracil/folinic acid and 22% with gemcitabine, and node positivity 54% versus 62% and 60%. Positive margins were more frequent in observation:19% versus 14% and 15%. The mixed baseline differences do not establish a global ranking of the arms. The primary periampullary comparison was nonsignificant (HR 0.86, 95% CI 0.66–1.11; P=.25); the adjusted secondary estimate (HR 0.75, 0.57–0.98; P=.03) is hypothesis generating and does not independently establish ampullary-specific benefit.",
+      "caveats_to_preserve": [
+        "Primary endpoint not met",
+        "Prespecified adjustment uses the same trial patients",
+        "No powered ampullary-specific survival effect",
+        "Adjuvant treatment remains an individualized reasonable choice rather than proven subgroup benefit"
+      ],
+      "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/Figure_and_Definition_Checks.md; sources/22782416.txt, Table1 PDFp5/JAMAp151 (columns FU/FA n143, gemcitabine n141, observation n144); primary/adjusted results PDFpp3–4"
+    },
+    {
+      "disease": "pdac",
+      "pmid": "39908431",
+      "finding_ids": [
+        "C0234",
+        "C0241"
+      ],
+      "old_factual_claim_variants": [
+        "no PFS or OS is reported for this subgroup",
+        "No progression-free or overall survival is reported for the pancreatic subgroup",
+        "no survival data for pancreatic subgroup",
+        "provides no survival data for that subgroup"
+      ],
+      "corrected_short_text": "Prespecified pancreatic cohort: median PFS 9.2 months (95% CI 5.5–11.2); OS not reported. Single-arm estimates do not establish comparative survival benefit.",
+      "corrected_long_text": "The prespecified pancreatic efficacy cohort comprised 36 KRAS wild-type patients. The main Results text reports median PFS 9.2 months (95% CI 5.5–11.2), citing supplementary Table S7/Figure S8; pancreatic OS is not reported. Investigator response was 15/36 (42%, 95% CI 25–59) and central response 16/36 (44%, 28–62). The study has no control arm, so these outcomes do not establish comparative benefit.",
+      "caveats_to_preserve": [
+        "Single-arm basket study",
+        "36-patient prespecified pancreatic cohort",
+        "OS not reported",
+        "No comparative survival claim",
+        "No screening denominator"
+      ],
+      "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/PDAC_and_Renderer_Adjudications.md; sources/39908431.txt, Methods PDFp3, Results PDFpp4/6 (printed569/571), Table1 and Table2; supplementary TableS7/FigureS8 cited in main text but not newly reviewed"
+    },
+    {
+      "disease": "pdac",
+      "pmid": "39908431",
+      "finding_ids": [
+        "C0237"
+      ],
+      "old_factual_claim_variants": [
+        "204 treated patients become 158 evaluable",
+        "204 treated to 158 evaluable",
+        "158 in the primary efficacy population",
+        "36 of 158 patients in the primary efficacy population"
+      ],
+      "corrected_short_text": "204 treated; 161 in the primary-efficacy set; 158 measurable for investigator response assessment; 36 pancreatic efficacy patients (42 pancreatic treated overall).",
+      "corrected_long_text": "eNRGy treated 204 patients, including 42 with pancreatic cancer. Its primary-efficacy set contained 161 patients, including 36 pancreatic patients. Three of the 161 lacked measurable disease for the investigator-assessed primary response analysis, leaving 158 for that analysis. Do not label 158 as the entire primary-efficacy population.",
+      "caveats_to_preserve": [
+        "Investigator and central measurable-disease sets are not interchangeable",
+        "Primary endpoint investigator-assessed response",
+        "All 36 pancreatic efficacy patients KRAS wild-type"
+      ],
+      "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/PDAC_and_Renderer_Adjudications.md; sources/39908431.txt, Methods PDFp3, Results PDFpp4/6 (printed569/571), Table1 and Table2; supplementary TableS7/FigureS8 cited in main text but not newly reviewed"
+    },
+    {
+      "disease": "pdac",
+      "pmid": "39908431",
+      "finding_ids": [
+        "C0237",
+        "C0241"
+      ],
+      "old_factual_claim_variants": [
+        "short-follow-up exclusions falling on early progressors",
+        "patients excluded for short follow-up are disproportionately early progressors",
+        "at least 24 weeks of follow-up before data cutoff"
+      ],
+      "corrected_short_text": "The efficacy cutoff required first dose≥24 weeks before data cutoff. Later initiation accounted for most exclusions; disproportionate exclusion of early progressors is not established.",
+      "corrected_long_text": "The primary-efficacy definition required first dose at least 24 weeks before the data cutoff and other specified molecular/treatment criteria. Forty-three of 204 treated patients were outside that set, mainly because they began treatment later. The criterion did not require remaining progression-free or on treatment for 24 weeks, and the report does not establish that exclusions disproportionately removed early progressors.",
+      "caveats_to_preserve": [
+        "Defined efficacy population remains selected",
+        "No randomization or control arm",
+        "Preserve sponsor/open-label assessment limitations without inventing an exclusion mechanism"
+      ],
+      "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/PDAC_and_Renderer_Adjudications.md; sources/39908431.txt, Methods PDFp3, Results PDFpp4/6 (printed569/571), Table1 and Table2; supplementary TableS7/FigureS8 cited in main text but not newly reviewed"
+    }
+  ]
+}

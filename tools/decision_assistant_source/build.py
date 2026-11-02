@@ -28,7 +28,7 @@ def document(title, data):
 <title>{e(title)} · Memorial Hermann Transplant Oncology</title><link rel="stylesheet" href="/assets/style.css?v={STAMP}"><link rel="stylesheet" href="/assets/assistant.css?v={STAMP}">
 <link rel="stylesheet" href="/assets/high-risk.css?v={STAMP}"><script src="/assets/high-risk.js?v={STAMP}" defer></script><script src="/assets/assistant.js?v={STAMP}" defer></script><script src="/assets/risk-routing.js?v={STAMP}" defer></script><script src="/assets/app.js?v={STAMP}" defer></script></head><body><div id="app"></div>
 <dialog id="source-dialog" aria-labelledby="source-title"></dialog><script id="protocol-data" type="application/json">{payload}</script>
-<noscript><main><h1>{e(title)}</h1><p>This interactive reference needs JavaScript. The printable alignment records and original protocols remain available.</p><ul>{''.join(f'<li><a href="/meeting-records/{p["slug"]}.html">{e(p["name"])} alignment record</a> · <a href="{p["protocol"]}">V3 protocol</a></li>' for p in PATHWAYS)}</ul></main></noscript></body></html>'''
+<noscript><main><h1>{e(title)}</h1><p>This interactive reference needs JavaScript. The printable discussion records and current Word pathways remain available.</p><ul>{''.join(f'<li><a href="/meeting-records/{p["slug"]}.html">{e(p["name"])} alignment record</a> · <a href="{p["protocol"]}">Current V18 pathway · Word</a></li>' for p in PATHWAYS)}</ul></main></noscript></body></html>'''
 
 def moved(code, target, questions):
     """Redirect an old alignment-record URL to the meeting view of the pathway page.
@@ -51,7 +51,7 @@ def printable(p):
     for i in p['issues']:
         comparisons=''.join(f'<section class="comparison"><div class="source-kind">{e(SOURCES[c["ref"]]["kind"])}</div><h4>{e(SOURCES[c["ref"]]["short"])}</h4><p class="quotation">{("“" if c["quote"] else "")+e(c["text"])+("”" if c["quote"] else "")}</p><p class="small muted">{"Short verbatim excerpt" if c["quote"] else "Source summary / scope"} · {e(c["locator"] or SOURCES[c["ref"]]["locator"])}</p>{ref_link(c)}</section>' for c in i['comparisons'])
         sections.append(f'<article class="issue-record" id="{i["id"]}"><p class="eyebrow">{e(i["record"])}</p><h2>{e(i["question"])}</h2><p class="small">Status: discussion required — not yet approved. <a href="/{p["slug"]}/">Return to interactive pathway</a></p><div class="comparison-grid">{comparisons}</div><div class="proposal"><div><b>Proposed local approach</b><p>{e(i["proposal"])}</p></div><div><b>Rationale</b><p>{e(i["rationale"])}</p></div></div><p class="small">Proposed responsible team: {e(i["owners"])}</p><p>Meeting decision: ____________________ &nbsp; Responsible team/date: ____________________</p><p>Implementation / protocol changes: __________________________________________________</p></article>')
-    return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(p["code"])} — alignment meeting record</title><link rel="stylesheet" href="/assets/style.css?v={STAMP}"></head><body><main class="wrap"><div class="pathhero"><div><p class="eyebrow">Source comparison: October 17, 2026 · language revision: October 24, 2026</p><h1>{e(p["code"])} alignment & decision record</h1><p>Draft for meeting discussion. No proposal is approved. Use browser Print to save this current record as PDF; reconcile agreed decisions with the separately linked V3 Word documents.</p></div></div>{"".join(sections)}</main></body></html>'
+    return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(p["code"])} — alignment meeting record</title><link rel="stylesheet" href="/assets/style.css?v={STAMP}"></head><body><main class="wrap"><div class="pathhero"><div><p class="eyebrow">Source comparison: October 17, 2026 · language revision: October 24, 2026</p><h1>{e(p["code"])} alignment & decision record</h1><p>Draft for meeting discussion. No proposal is approved. Use browser Print to save this current record as PDF; reconcile agreed decisions with the separately linked current V18 Word documents.</p></div></div>{"".join(sections)}</main></body></html>'
 
 def build():
     (DIST/'assets').mkdir(exist_ok=True)
@@ -94,7 +94,10 @@ def validate():
     continuations=REVIEWED_DATA['continuations'] if REVIEWED_DATA else build_continuations(PATHWAYS,ASSISTANTS)
     def local(url):
         if url.startswith('/'):
-            if not (DIST/url.split('#')[0].lstrip('/')).exists():problems.append(f'Missing local resource: {url}')
+            base='/mh-liver-pathways/'
+            root=Path(__file__).resolve().parents[2] if url.startswith(base) else DIST
+            target=url.split('#')[0].removeprefix(base).lstrip('/')
+            if not (root/target).exists():problems.append(f'Missing local resource: {url}')
     for id,r in SOURCES.items():local(r['pdf'])
     for p in PATHWAYS:
         ids=[s['id'] for s in p['steps']];issues={i['id'] for i in p['issues']}
@@ -113,7 +116,7 @@ def validate():
         if len(set(ids))!=len(ids):problems.append(f'Duplicate steps: {p["slug"]}')
         local(p['protocol'])
         for d in p['docs']:local(d['url'])
-        if len(p['docs'])!=2:problems.append(f'Missing governance documents: {p["slug"]}')
+        if len({d['url'] for d in p['docs']})<2:problems.append(f'Missing current governance documents: {p["slug"]}')
         used=set()
         for s in p['steps']:
             a=ASSISTANTS.get(f'{p["slug"]}/{s["id"]}')
@@ -168,7 +171,7 @@ def validate():
                 if c['ref'] not in SOURCES:problems.append(f'Unknown comparison source: {c["ref"]}')
     if problems:
         print('\n'.join(problems));sys.exit(1)
-    print('PASS: every decision has inputs/results; every clinical bullet is referenced; every branch/question/resource resolves; all seven protocol + paired governance DOCX links preserved.')
+    print('PASS: every decision has inputs/results; every clinical bullet is referenced; every branch/question/resource resolves; current pathway and governance Word links resolve.')
 
 if __name__=='__main__':
     validate()

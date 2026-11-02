@@ -1,0 +1,59 @@
+{
+  "status": "PROPOSAL ONLY; current ownership excludes HCC source edits",
+  "changes": [
+    {
+      "file": "hcc/data/critique.json",
+      "pointer": "/32402160/critique/8",
+      "old": "Hepatitis B accounted for 49 percent of patients and 40 percent came from Asia excluding Japan, while non-viral disease, which dominates Western practice, was only 30 percent and would later show no survival benefit in the trial's own updated subgroup analysis",
+      "new": "Hepatitis B accounted for 49 percent of patients and 40 percent came from Asia excluding Japan, while non-viral disease accounted for 30 percent. The updated non-viral subgroup estimate was exploratory and imprecise (HR 1.05, 95% CI 0.68–1.63); it does not establish absence of benefit or a validated aetiology-based exclusion.",
+      "source": [
+        {
+          "change_id": "LIVER-196",
+          "finding_id": "C-0181",
+          "source_locator": "C-0181; Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/C_Final_Addendum_Assessment.md IMbrave150; updated34902530 subgroup figure; C-0181"
+        },
+        {
+          "manifest": "2026-11-02-liver-roadmap-audit",
+          "why": "C-0181; Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/C_Final_Addendum_Assessment.md IMbrave150; updated34902530 subgroup figure; C-0181"
+        },
+        {
+          "manifest": "2026-11-02-zzzzzz-release",
+          "why": ""
+        },
+        {
+          "change_id": "LIVER-197",
+          "finding_id": "C-0181",
+          "source_locator": "C-0181; Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/C_Final_Addendum_Assessment.md IMbrave150; updated34902530 subgroup figure; C-0181"
+        }
+      ],
+      "reason": "Already accepted non-viral subgroup qualification; source appraisal remained inconsistent with the current treatment stance."
+    },
+    {
+      "file": "hcc/data/critique.json",
+      "pointer": "/34902530/bottom_line",
+      "old": "A post hoc 12-month update of IMbrave150 giving median overall survival of 19.2 against 13.4 months (HR 0.66) and progression-free survival of 6.9 against 4.3 months, with an objective response rate of 30 percent and 8 percent complete responses. The p values are labelled descriptive because no alpha was allocated, the median survival exceeds the median follow-up, and the one subgroup without benefit is non-viral disease (HR for death 1.05, 95% CI 0.68 to 1.63), which is the commonest aetiology in Western practice.",
+      "new": "A post hoc 12-month update of IMbrave150 giving median overall survival of 19.2 against 13.4 months (HR 0.66) and progression-free survival of 6.9 against 4.3 months, with an objective response rate of 30 percent and 8 percent complete responses. The p values are labelled descriptive because no alpha was allocated, the median survival exceeds the median follow-up, and the exploratory non-viral subgroup estimate was imprecise (HR for death 1.05, 95% CI 0.68 to 1.63), so it does not establish absence of benefit or justify aetiology-based exclusion.",
+      "source": [
+        {
+          "change_id": "LIVER-196",
+          "finding_id": "C-0181",
+          "source_locator": "C-0181; Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/C_Final_Addendum_Assessment.md IMbrave150; updated34902530 subgroup figure; C-0181"
+        },
+        {
+          "manifest": "2026-11-02-liver-roadmap-audit",
+          "why": "C-0181; Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/C_Final_Addendum_Assessment.md IMbrave150; updated34902530 subgroup figure; C-0181"
+        },
+        {
+          "manifest": "2026-11-02-zzzzzz-release",
+          "why": ""
+        },
+        {
+          "change_id": "LIVER-197",
+          "finding_id": "C-0181",
+          "source_locator": "C-0181; Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/reconciliation/C_Final_Addendum_Assessment.md IMbrave150; updated34902530 subgroup figure; C-0181"
+        }
+      ],
+      "reason": "Already accepted non-viral subgroup qualification; source appraisal remained inconsistent with the current treatment stance."
+    }
+  ]
+}

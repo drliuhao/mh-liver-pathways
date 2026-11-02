@@ -9,3 +9,7 @@ Keep clinical decisions visible, preserve conditional next actions and source qu
 ## Analyst designations
 
 Analyst A = Codex; B = Claude.ai; C = Claude.science (localhost service); D = Doximity; E = OpenEvidence. App and web interfaces retain the same designation. Do not substitute internal subagents for these named external analysts. Preserve reviewer comments and reconciliation in Markdown when conducting multi-analyst reviews.
+
+## Keep website, documents and presentations consistent
+
+When clinical website content changes, propagate the accepted correction to all affected current Word documents and PowerPoint evidence libraries before publishing. Preserve prior editions locally and preserve editable figures, charts, citations and source qualifiers. Regenerate discussion documents from the current decision data, verify updated artifacts and record their hashes in the artifact release manifest. Publish the same clinical content to the full and sharing websites; the sharing edition must not expose institutional document or presentation downloads. Do not treat historical archived editions as current downloads.

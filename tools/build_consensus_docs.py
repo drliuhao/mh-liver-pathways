@@ -25,8 +25,10 @@ import docx_text_fixes
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE, V16, OUT = Path(sys.argv[1]), Path(sys.argv[2]), Path(sys.argv[3])
 WEB = '--web' in sys.argv
+QUESTIONS_ONLY = '--questions-only' in sys.argv
+EDITION = next((x.split('=', 1)[1] for x in sys.argv if x.startswith('--edition=')), '17')
 SITE = 'https://drliuhao.github.io/mh-liver-pathways/'
-DATE = '29 October 2026'
+DATE = next((x.split('=', 1)[1] for x in sys.argv if x.startswith('--date=')), '29 October 2026')
 NAVY, FILL, LINE, GREY = '17365D', 'F1F5F8', 'CCD6DF', '5A6069'
 ORDER = ['hcc', 'pcca', 'icca', 'crlm', 'nelm', 'hehe', 'hca', 'chcca', 'pdac', 'pnet', 'ampullary', 'pcyst', 'incidental']
 V16_ROADMAP = {'hcc': 'HCC', 'pcca': 'HilarCCA', 'icca': 'iCCA', 'crlm': 'CRLM', 'nelm': 'NELM', 'hca': 'Adenoma', 'chcca': 'MixedTumour',
@@ -248,7 +250,7 @@ def references(d, b):
 def front(d, data, title, lines, companions):
     t = d.add_paragraph(style='Title'); run(t, title, size=22)
     t.paragraph_format.line_spacing = 1.05; t.paragraph_format.space_after = Pt(6)
-    para(d, f'UTHealth Houston and Memorial Hermann · HPB oncology · {DATE} · V17 standardized documents', size=9, color=GREY)
+    para(d, f'UTHealth Houston and Memorial Hermann · HPB oncology · {DATE} · V{EDITION}', size=9, color=GREY)
     for x in lines:
         para(d, x)
     p = para(d, '', label='Companion files:', after=8)
@@ -265,6 +267,9 @@ def questions_doc(data, setname, path):
            "our proposed selection, and space for the group decision. All proposals are OPEN; nothing in this document is activated or approved.",
            f"Web page: {SITE + s['web']}"],
           [('Full content', info), ('Decision discussion for all settings', f['decision'])])
+    if setname == 'highrisk':
+        for r in d.paragraphs[0].runs:
+            r.font.color.rgb = RGBColor.from_string('B45309')
     heading(d, 'Summary', 1)
     summary(d, s['questions'])
     heading(d, 'Questions', 1)
@@ -302,7 +307,10 @@ def decision_doc(data, path):
     summary(d, allq, setting=True)
     for n, k in enumerate(sets, 1):
         s = sets[k]
-        heading(d, f'Part {n}. {s["label"]}', 1)
+        h = heading(d, f'Part {n}. {s["label"]}', 1)
+        if k == 'highrisk':
+            for r in h.runs:
+                r.font.color.rgb = RGBColor.from_string('B45309')
         para(d, f"Web page: {SITE + s['web']}", size=9, color=GREY)
         for q in s['questions']:
             question(d, b, q)
@@ -403,7 +411,7 @@ def info_sources(key):
 
 
 def v17(name):
-    return name.replace('.docx', '_v17.docx')
+    return name.replace('.docx', f'_v{EDITION}.docx')
 
 
 report = []
@@ -413,7 +421,7 @@ for n, key in enumerate(ORDER, 1):
     folder = OUT / f'{n:02d}_{data["code"].replace("-", "")}'
     folder.mkdir(parents=True, exist_ok=True)
     targets = [(folder, v17, False)] + ([(ROOT / 'documents' / key, lambda x: x, True)] if WEB else [])
-    for setname, src in info_sources(key).items():
+    for setname, src in ({} if QUESTIONS_ONLY else info_sources(key)).items():
         base = setname.replace('_info', '')
         note = (f'Standardized document set, {DATE}: this is the full-content document for the {SET_NAME[base].lower()}. '
                 f'Questions for consensus: {f[base + "_questions"]}. Decision discussion for all settings: {f["decision"]}. '
@@ -427,7 +435,7 @@ for n, key in enumerate(ORDER, 1):
         decision_doc(data, out / nm(f['decision']))
     report.append((data['code'], sorted(p.name for p in folder.iterdir())))
     print(f"{data['code']:9} {len(list(folder.iterdir()))} files")
-missing = {x['id'] for fs in FIXES.values() for x in fs} - APPLIED
+missing = (set() if QUESTIONS_ONLY else {x['id'] for fs in FIXES.values() for x in fs}) - APPLIED
 assert not missing, f'document corrections not applied: {sorted(missing)}'
 (OUT / 'document_manifest.json').write_text(json.dumps(report, indent=1))
 print(f'{len(APPLIED)} recorded text corrections applied to the full-content documents')

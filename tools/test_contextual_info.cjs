@@ -3,7 +3,18 @@ const fs=require('node:fs'),cp=require('node:child_process'),vm=require('node:vm
 const root=path.resolve(__dirname,'..'),read=f=>fs.readFileSync(path.join(root,f),'utf8');
 const orangeFiles=JSON.parse(read('tools/orange_document_hashes.json'));
 const clarityFiles=JSON.parse(read('tools/clarity_document_hashes.json'));
-for(const item of [...orangeFiles,...clarityFiles])assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(path.join(root,item.path))).digest('hex'),clarityFiles.find(x=>x.path===item.path)?.after||item.after,item.path+' document checksum');
+const archive=JSON.parse(read('tools/download_archive_manifest.json'));
+for(const item of [...orangeFiles,...clarityFiles]){
+ const expected=clarityFiles.find(x=>x.path===item.path)?.after||item.after;
+ const current=path.join(root,item.path),retired=archive.files.find(x=>x.old_path===item.path);
+ if(fs.existsSync(current))assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(current)).digest('hex'),expected,item.path+' document checksum');
+ else{
+  assert(retired,item.path+' absent without an archive record');
+  assert.equal(retired.sha256,expected,item.path+' immutable archive checksum');
+  const saved=path.join(root,'..',archive.archive_directory,retired.archive_path);
+  if(fs.existsSync(saved))assert.equal(require('node:crypto').createHash('sha256').update(fs.readFileSync(saved)).digest('hex'),expected,item.path+' archive copy checksum');
+ }
+}
 // The only content-payload change is the checksum of these ten recolored author-created files.
 const original=f=>orangeFiles.reduce((text,item)=>text.replaceAll(item.before,item.after),cp.execFileSync('git',['show','a787e08:'+f],{cwd:root,encoding:'utf8',maxBuffer:8e6}));
 function neutralPresentation(raw){
@@ -26,7 +37,7 @@ for(const [key,entry] of Object.entries(copy.help)){
  const [slug,step,id]=key.split('/');const q=data.assistants[slug+'/'+step].questions.find(q=>q.id===id);
  assert.equal(entry.source,q.help,key+' exact source');assert.equal(entry.title,q.label,key+' original prompt');assert(entry.concise&&entry.label);reviewed++;
 }
-assert.equal(reviewed,63);assert.equal(Object.keys(copy.headings).length,46);
+assert.equal(reviewed,68);assert.equal(Object.keys(copy.headings).length,46);
 for(const p of data.index)for(const s of p.steps)assert.equal(copy.headings[p.slug+'/'+s.id].source,s.question);
 for(const key of ['hcc/allocation/afp','hcc/treatment/afp'])assert.equal(copy.help[key].concise,copy.help[key].source,'AFP rule must remain complete');
 assert(copy.help['pcca/phenotype/size'].concise.includes('Exactly 3 cm fails <3 cm'));
@@ -54,5 +65,5 @@ for(const file of ['transplant/assets/app.js','assets/transplant-workspace.js','
  assert.equal(read(file),Revisions.applyText(file,base,auditRevisions),file+' differs from exact clinical revision replay');
 }
 const docs=Object.keys(JSON.parse(read('assets/roadmap-links.json'))).map(x=>x+'/index.html').concat(data.index.map(p=>'transplant/'+p.slug+'/index.html'));
-for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261102-review1'),doc+' missing display update');
+for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261102-sync1'),doc+' missing display update');
 console.log(`PASS: Pinned V12 data and clinical renderers match exact recorded revisions; ${docs.length} pages; 46 headings, ${reviewed} help summaries and 46 recommendation guards verified; all Avoid wording retained.`);

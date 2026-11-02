@@ -29,7 +29,13 @@ await page.goto(base+'transplant/',{waitUntil:'networkidle'});await noOutcomeWid
 for(const p of D.index){
  await page.goto(base+'transplant/'+p.slug+'/',{waitUntil:'networkidle'});
  for(const s of p.steps){
-  await page.evaluate(id=>{location.hash='#'+id},s.id);await page.waitForTimeout(130);
+  await page.evaluate(id=>{location.hash='#'+id},s.id);
+  // Hash navigation and the compact workspace render in separate animation frames.
+  // Wait for this decision's completed UI, not a fixed delay that can inspect its predecessor.
+  await page.waitForFunction(id=>{
+   const d=document.querySelector('.decision.dw-protocol.tw-decision'),o=d?.querySelector('.tw-options');
+   return d?.querySelector('.permalink')?.getAttribute('href')==='#'+id&&!!o?.getClientRects().length;
+  },s.id,{timeout:5000});
   await noOutcomeWidget(page,p.slug+'/'+s.id);const r=await page.evaluate('('+VIEW+')()');assert(!r.missing&&r.card&&r.shown&&r.hiddenOld,p.slug+'/'+s.id);
   const tuples=(a,b,c,d)=>a.map((x,i)=>[x,b[i],c[i],d[i]]).sort((x,y)=>JSON.stringify(x).localeCompare(JSON.stringify(y)));
   assert.deepEqual(tuples(r.kinds,r.titles,r.actions,r.evidence),tuples(r.wantKinds,r.want,r.wantActions,r.wantEvidence),p.slug+'/'+s.id+' authored options');

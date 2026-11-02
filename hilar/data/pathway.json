@@ -386,7 +386,7 @@
             {
               "name": "Portal vein embolisation",
               "g": "C",
-              "when": "Recommended where the anticipated remnant is inadequate and the disease is otherwise resectable. NCCN requires the contralateral liver to have intact arterial and portal inflow as well as biliary drainage.",
+              "when": "Milan recommends portal vein embolisation as the initial hypertrophy technique (Recommendation 23: strong, level of evidence 3) when the anticipated remnant is inadequate. The remaining lobe needs intact arterial and portal inflow and effective biliary drainage.",
               "pref": "Most useful when the future liver remnant is below 30–40%. A meta-analysis of 1,140 patients found remnant gains of 8–27% with no mortality and under 3% morbidity.",
               "avoid": "Do not embolise a remnant that is still obstructed. If the post-embolisation remnant is 20% or less, or hypertrophy is 5% or less, resection may be contraindicated — reassess at 3–6 weeks and check remnant drainage and nutrition before abandoning the operation.",
               "refs": [
@@ -400,9 +400,9 @@
               "flags": [
                 "EXPERTISE"
               ],
-              "when": "The Milan consensus places it after portal vein embolisation, for a remnant under 20–25% — a level-4 expert-opinion statement with no comparative data in this disease.",
-              "pref": "Expert centres where portal vein embolisation alone will not deliver the volume needed.",
-              "avoid": "Not a first manoeuvre, and not a substitute for drainage of the remnant.",
+              "when": "Milan Recommendation 24 supports considering upfront or additional liver venous deprivation when substantial augmentation is needed: future liver remnant <20–25%, altered liver parenchyma and/or right extended hepatectomy. The recommendation is strong, level of evidence 3.",
+              "pref": "Expert-centre review for expected impaired regeneration or substantial augmentation needs. PVE remains the recommended initial technique; LVD need not be restricted to rescue after PVE failure.",
+              "avoid": "LVD does not substitute for drainage of the remnant. Limited pCCA comparative data suggest better functional growth with similar morbidity, but do not establish a randomized survival advantage or a universal LVD-first policy.",
               "refs": [
                 "40478744"
               ]
@@ -423,7 +423,7 @@
               ]
             }
           ],
-          "order": "Ordered as the guidelines order augmentation, not by comparative survival data — no trial compares these in perihilar disease, and the Milan recommendations on augmentation sit at level 4. The registry mortality figure for ALPPS is the one hard number in the group and it argues against it.",
+          "order": "PVE is Milan’s recommended initial technique; upfront or additional LVD may be considered for substantial augmentation. Both Recommendations 23 and 24 are strong, level of evidence 3. This is not a comparative survival ranking. Milan does not suggest ALPPS as the initial procedure; its recommendation is weak, level of evidence 5, and the registry mortality concern remains.",
           "flagnote": "Local approval item (§11 item 4, and alignment area 11): the roadmap states no numeric remnant threshold and does not list ALPPS in its Avoid row. The alignment worksheet recommends adding both — a written threshold makes the embolisation decision auditable, and BSG's 48% registry mortality is strong enough to justify an explicit Avoid line. Audit: volume, 90-day mortality, R0 rate."
         },
         {
@@ -557,7 +557,7 @@
           ],
           "pref": "The defensible claim from that paper is what the Mayo protocol achieves in a selected, node-negative, mostly PSC population — not that transplantation beats resection in a patient who is resectable.",
           "avoid": "The selection asymmetry is complete and the authors say so. By protocol no transplant patient was resectable, and every recipient was proved node-negative at staging laparotomy, while 8 of 26 resected patients (31%) were node-positive and 3 of 26 (12%) R1. The curves also start at different points: 82% 5-year survival is measured from transplantation among the 38 of 71 enrolled who got there, against 21% from resection among the 26 of 54 explored; from the start of treatment the comparison is 58% versus about 21%. Recipients were 15 years younger (48 versus 63, P<0.001) and 58% had PSC against 8%. 16 of 38 explants showed no residual tumour and 8 of those patients had no tissue proof of cancer before neoadjuvant therapy.",
-          "note": "The node-negative R0 resection subgroup fared no better (87%, 53% and 18% at 1, 3 and 5 years), and the 20–21% 5-year survival after resection matches other specialist centres, so the comparator is not substandard. Three of 26 resections (12%) died within 30 days, and the discussants' point was that non-cancer deaths, not recurrence, drive much of the gap — recurrence after resection was 35% while 5-year survival was 20%. There is no intention-to-treat analysis and no accounting of organ cost: 38 grafts, 7 of them living donor, for 71 patients enrolled. The Milan jury acknowledged benefit in node-negative patients independent of resectability; that is a consensus position resting on one benchmark study and mixed retrospective comparisons, and TRANSPHIL, the randomised trial meant to settle it, failed to recruit."
+          "note": "The node-negative R0 resection subgroup fared no better (87%, 53% and 18% at 1, 3 and 5 years), and the 20–21% 5-year survival after resection matches other specialist centres, so the comparator is not substandard. Three of 26 resections (12%) died within 30 days, and the discussants' point was that non-cancer deaths, not recurrence, drive much of the gap — recurrence after resection was 35% while 5-year survival was 20%. There is no intention-to-treat analysis and no accounting of organ cost: 38 grafts, 7 of them living donor, for 71 patients enrolled. Milan Recommendation 59 supports transplant consideration for selected unresectable or PSC-associated pCCA above the cystic duct, ≤3.0 cm radial diameter and without nodal or distant metastases (strong, level 3), with staging and neoadjuvant therapy specified separately. Recommendation 64 only weakly supports consideration for resectable or questionably resectable pCCA when appropriate donor access exists (level 3). These are distinct consensus recommendations, not proof that transplantation is superior for every resectable patient; TRANSPHIL failed to recruit. The consensus ≤3.0 cm boundary does not replace the separate OPTN strict <3 cm mass criterion."
         },
         {
           "t": "Apply OPTN allocation criteria exactly as written. A favorable clinical assessment does not override the requirements for a standardized exception.",
