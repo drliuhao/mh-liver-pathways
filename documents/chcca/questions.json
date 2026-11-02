@@ -490,7 +490,7 @@
      "divergence": "The local CPG is stricter than the OPTN wording on locoregional-only bridging and on radiation, and the roadmap says no data in this disease support either the restriction or its absence.",
      "proposal": "The local rule stands until the group changes it: the roadmap lists external-beam radiation before transplant as Avoid under the local protocol and calls the locoregional-only restriction more conservative than needed. Locoregional therapy should be planned as part of the listing strategy to generate the six months of stability.",
      "proposal_locator": "Gate 8 · Standard 'On a transplant pathway, locoregional therapy is the instrument…' (note); Gate 8 · Avoid 'Do not use external-beam radiation as pre-transplant therapy under the local protocol'; Gate 8 · Reasonable options (flagnote)",
-     "rationale": "The local CPG says locoregional therapy must not be the sole pre-transplant therapy except for a solitary tumour under 3 cm, and excludes external-beam radiation. The OPTN wording requires only locoregional or systemic therapy with six months of stability and imposes neither restriction. The patient in the gap — a solitary 3 to 5 cm tumour treated with TACE alone and stable for six months — is a real one, and the two documents give different answers.",
+     "rationale": "The local CPG says locoregional therapy must not be the sole pre-transplant therapy except for a solitary tumour under 3 cm, and excludes external-beam radiation. The OPTN wording supports consideration after locoregional or systemic therapy with six months of stability for a solitary tumour ≤3 cm in cirrhosis; a tumour above 3 cm already falls outside that route. The patient in the gap — a solitary 3.0 cm tumour treated with TACE alone and stable for six months — is a real one, and the two documents give different answers.",
      "audit": "Modality, indication, response, time to listing, and dropout.",
      "web": "chcca/#question-cHCC-CCA-D8"
     },
@@ -622,8 +622,8 @@
     {
      "id": "cHCC-CCA-D12",
      "set": "roadmap",
-     "title": "What pathology safeguard does the programme adopt, given that the diagnosis is reproduced at kappa 0.19 to 0.37?",
-     "question": "What pathology safeguard does the programme adopt, given that the diagnosis is reproduced at kappa 0.19 to 0.37?",
+     "title": "What pathology safeguard does the programme adopt, given sampling limitations and imperfect agreement on dominant-component reclassification?",
+     "question": "What pathology safeguard does the programme adopt, given sampling limitations and imperfect agreement on dominant-component reclassification?",
      "kind": "governance",
      "status": "OPEN — not yet decided",
      "where": [
@@ -665,7 +665,7 @@
      "divergence": "The consensus definition is the agreed standard, but it is poorly reproducible between pathologists and genomic re-review overturns many HCC calls, so a single read is weak.",
      "proposal": "Pathology is pre-alerted for every flagged case and reports both components, proportion, grade, invasion, margins and nodes; a biopsy first read as HCC or iCCA in a flagged case is re-reviewed. The roadmap does not decide on external or central review, or on a genomic-discordance trigger for a re-read.",
      "proposal_locator": "Operations · board meeting 'Pathology'; Gate 1 · Reasonable tissue options (flagnote)",
-     "rationale": "Pathologist agreement with the reference cHCC-CCA diagnosis was kappa 0.19 across 405 cases, with inter-observer agreement kappa 0.37. When 117 cases called HCC that carried iCCA-typical alterations were re-reviewed, the HCC diagnosis was confirmed in only 41%. Biopsy is 48% sensitive and CK19 is positive in 33% of biopsies against 84% of the matching specimens. The question is whether every flagged case gets a second reader, whether any case gets external or central review, and whether a genomic result that does not fit the histology triggers a re-read.",
+     "rationale": "In 405 cHCC-CCA cases, dominant-component reclassification agreement was kappa 0.19 for model versus pathologist and 0.37 between pathologists; these are not diagnostic-agreement estimates for cHCC-CCA. When 117 cases called HCC that carried iCCA-typical alterations were re-reviewed, the HCC diagnosis was confirmed in only 41%. Biopsy is 48% sensitive and CK19 is positive in 33% of biopsies against 84% of the matching specimens. The question is whether every flagged case gets a second reader, whether any case gets external or central review, and whether a genomic result that does not fit the histology triggers a re-read.",
      "audit": "Proportion of flagged cases with a documented second pathology read, and the rate at which the diagnosis changed on re-review.",
      "web": "chcca/#question-cHCC-CCA-D12"
     },

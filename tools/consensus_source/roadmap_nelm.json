@@ -39,14 +39,14 @@
     {
      "source": "RETNET protocol",
      "ref": "30016989",
-     "position": "Protocol of the only prospective three-way comparison, still enrolling; it reports no outcome data. Its drug-eluting-bead arm later closed for severe complications, reported in ENETS 2024 rather than the protocol.",
+     "position": "The 2018 paper is the protocol and contains no outcomes. Separate NANETS 2025 conference results report 151 TAE/cTACE patients, hepatic-PFS HR 1.40 (95% CI 0.80–2.46; P=.234), without evidence of equivalence; the DEB arm closed for toxicity.",
      "locator": "What we are not sure about #15; Gate 7 · Avoid 'Avoid drug-eluting embolics in NET.' · note"
     }
    ],
    "divergence": "NCCN accepts both techniques while ENETS 2024 leans to bland embolisation in small-intestine NET and ENETS 2023 to chemoembolisation in functioning pancreatic NET, and the comparative data are either underpowered or confounded by referral.",
    "proposal": "No default is set. Bland embolisation and conventional TACE are both Reasonable (grade C), chosen by burden, symptoms, liver reserve and biliary-infection risk and not treated as interchangeable; drug-eluting embolics are avoided. The roadmap calls the default an expertise-and-availability decision, with technique, goal, hepatic progression-free survival and toxicity recorded for every procedure.",
    "proposal_locator": "Gate 7 · Reasonable option 'Bland embolisation or conventional TACE'; Gate 7 · Avoid 'Avoid drug-eluting embolics in NET.' · pref; Gate 7 · flag note; What we are not sure about #14",
-   "rationale": "The only prospective three-way comparison is still enrolling and its drug-eluting-bead arm closed for severe complications. One small randomised TAE versus TACE trial (Maire 2012, 26 patients, cited from ENETS rather than read in full) found no significant 2-year progression-free survival difference but was underpowered. The best non-randomised comparison favours bland embolisation on response in carcinoid disease (81.0% versus 44.4%, odds ratio 6.41) with no survival difference, but treatment was chosen by the referring physician; ENETS 2024 prefers bland in small-intestine NET while ENETS 2023 calls chemoembolisation possibly more effective in functioning pancreatic NET. Any choice is expertise and availability.",
+   "rationale": "RETNET reported randomized TAE-versus-cTACE results at NANETS 2025 without a significant hepatic-PFS difference; this does not establish equivalence. Its drug-eluting-bead arm had closed after an early safety signal. One small randomised TAE versus TACE trial (Maire 2012, 26 patients, cited from ENETS rather than read in full) found no significant 2-year progression-free survival difference but was underpowered. The best non-randomised comparison favours bland embolisation on response in carcinoid disease (81.0% versus 44.4%, odds ratio 6.41) with no survival difference, but treatment was chosen by the referring physician; ENETS 2024 prefers bland in small-intestine NET while ENETS 2023 calls chemoembolisation possibly more effective in functioning pancreatic NET. Any choice is expertise and availability.",
    "audit": "Registry: technique, goal, hepatic progression-free survival, toxicity."
   },
   {
@@ -427,10 +427,10 @@
      "locator": "What we are not sure about #15"
     }
    ],
-   "divergence": "All sources point to avoidance, but the roadmap judges the basis thin, one 13-patient interim analysis plus an arm closure reported only in a guideline, so the position is precautionary rather than a demonstrated class effect.",
-   "proposal": "Keep the avoidance (Avoid, downgraded to grade C) and state its basis: a precautionary institutional choice, justified because the biliary harm is irreversible and two patients died, not a demonstrated class effect; use bland embolisation or conventional TACE instead. Any drug-eluting embolic use in NET is recorded as an exception with named approval.",
+   "divergence": "All sources point to avoidance, but the roadmap judges the basis thin, one 13-patient interim analysis plus an early RETNET arm closure subsequently reported in conference safety/results material, so the position is precautionary rather than a demonstrated class effect.",
+   "proposal": "Keep the avoidance (Avoid, downgraded to grade C) and state its basis: a precautionary institutional choice, justified because serious hepatobiliary harm, including potentially permanent injury, was reported, not a demonstrated class effect; use bland embolisation or conventional TACE instead. Any drug-eluting embolic use in NET is recorded as an exception with named approval.",
    "proposal_locator": "Gate 7 · Avoid 'Avoid drug-eluting embolics in NET.' · pref and note; What we are not sure about #16; Decisions table #11 · audit",
-   "rationale": "The position is kept but it is a precautionary institutional choice, not a demonstrated class effect: a 13-patient interrupted interim analysis in which bilomas fell on the lowest-burden patients, with invisible beads and a tactile endpoint, and a biliary injury rate far out of line with other drug-eluting series. The confirmatory signal is an arm closure in an ongoing trial reported in a guideline. Stating the basis matters because the harm is irreversible and two patients died.",
+   "rationale": "The position is kept but it is a precautionary institutional choice, not a demonstrated class effect: a 13-patient interrupted interim analysis in which bilomas fell on the lowest-burden patients, with invisible beads and a tactile endpoint, and a biliary injury rate far out of line with other drug-eluting series. The RETNET safety signal was also reported in conference material; the 2025 results remain conference evidence. Stating the basis matters because serious harm may be permanent and the treatment alternatives must be considered.",
    "audit": "Audit: any drug-eluting embolic use in NET recorded as an exception with named approval."
   },
   {
@@ -451,14 +451,14 @@
     {
      "source": "ENETS 2024 small intestine",
      "ref": "38977327",
-     "position": "Is where the closure of RETNET’s drug-eluting-bead arm is reported, the trial’s only practice-changing result so far.",
+     "position": "Reports the RETNET DEB-arm safety closure; the later NANETS 2025 conference results separately address TAE versus cTACE.",
      "locator": "What we are not sure about #15; Gate 7 · Avoid 'Avoid drug-eluting embolics in NET.' · note"
     }
    ],
    "divergence": "No source disagreement: the shared matrix cites outcome figures the RETNET paper does not contain, and who corrects it is a programme decision.",
-   "proposal": "No efficacy figure on the NELM page is attributed to RETNET. The shared matrix entry should be corrected at its source and the other pathways checked for the same entry, with a named owner reconciling matrix entries against the depot abstracts each cycle; the owner is not yet named.",
+   "proposal": "Attribute RETNET efficacy results to the 2025 NANETS conference abstract/poster, not the 2018 protocol. Retain conference status and endpoint definitions, remove unsupported medians and do not infer equivalence from nonsignificance. Name an owner for source-version updates across the shared matrix.",
    "proposal_locator": "Gate 7 · flag note; What we are not sure about #15; Decisions table #12 · why and audit",
-   "rationale": "The RETNET paper is a published protocol with no outcome data of any kind, so any response, progression-free survival or survival figure attributed to it is unsourced. The matrix is shared across pathways, so the correction has to be made at its source and the other pathways checked for the same entry.",
+   "rationale": "The 2018 protocol contains no outcomes, whereas the 2025 conference abstract/poster reports randomized TAE-versus-cTACE results. These are distinct sources. All shared entries must preserve that provenance and the limitations of conference reporting.",
    "audit": "Source-recency check: matrix entries reconciled against the depot abstracts by a named owner each cycle."
   },
   {

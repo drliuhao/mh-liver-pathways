@@ -6,7 +6,7 @@ const data=JSON.parse(read('transplant/assets/content.json'));let count=0;
 for(const [key,c] of Object.entries(data.assistants))for(const q of c.questions){
  const entry=labels.core[key+'/'+q.id];assert(entry,key+'/'+q.id);assert.equal(entry.source,q.label);assert(entry.label.length<=44);count++;
 }
-assert.equal(count,96);assert.equal(Object.keys(labels.core).length,count);
+assert.equal(count,101);assert.equal(Object.keys(labels.core).length,count);
 assert.equal(labels.core['hcc/allocation/burden'].label,'Tumor burden');
 assert.equal(labels.core['hcc/allocation/afp'].label,'AFP');
 assert.equal(labels.core['hcc/treatment/response'].label,'Tumor response');
@@ -23,7 +23,7 @@ for(const slug of Object.keys(JSON.parse(read('assets/roadmap-links.json')))){
 }
 assert.equal(topics,103);
 for(const f of ['assets/compact-trail.js','assets/compact-trail-labels.js','assets/portal-navigation.js'])new vm.Script(read(f),{filename:f});
-console.log(`PASS: ${count} core labels, 23 supplemental labels, ${topics} topic labels match exact source questions; baseline and response remain distinct; shared scripts parse.`);
+console.log(`PASS: ${count} core labels, 25 supplemental labels, ${topics} topic labels match exact source questions; baseline and response remain distinct; shared scripts parse.`);
 // A missing supplemental source must fail closed instead of invoking old navigation.
 const js=read('assets/compact-trail.js'),fn=js.slice(js.indexOf(' function bindInlineCriteria('),js.indexOf(' function shortControl('));
 const criteriaContext={slug:'hcc',protocol:{assistants:{}},riskSources:new Map()};vm.createContext(criteriaContext);vm.runInContext(fn,criteriaContext);

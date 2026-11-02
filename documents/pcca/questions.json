@@ -137,7 +137,7 @@
      "status": "OPEN — not yet decided",
      "where": [
       {
-       "label": "0 · Assess the need for biliary drainage",
+       "label": "0 · Assess drainage after staging imaging, unless urgent",
        "url": "hilar/#decision-0"
       }
      ],
@@ -189,7 +189,7 @@
      "status": "OPEN — not yet decided",
      "where": [
       {
-       "label": "0 · Assess the need for biliary drainage",
+       "label": "0 · Assess drainage after staging imaging, unless urgent",
        "url": "hilar/#decision-0"
       },
       {
@@ -266,7 +266,7 @@
       {
        "source": "Milan consensus",
        "key": "pm40478744",
-       "says": "Records that the adjuvant trials showed no benefit in the perihilar subgroup.",
+       "says": "Recommends six months of adjuvant capecitabine or S-1 after pCCA resection (strong recommendation, level 2); the trials were not powered for the perihilar subgroup.",
        "locator": "Gate 3 · Reasonable 'Capecitabine for 6 months…' (avoid)"
       },
       {
@@ -282,7 +282,7 @@
        "locator": "Gate 3 · Reasonable 'Capecitabine for 6 months…' (note)"
       }
      ],
-     "divergence": "NCCN treats capecitabine as a preferred category 1 standard, whereas BILCAP missed its primary endpoint, the Milan consensus records no perihilar-subgroup benefit and BCAT was null for gemcitabine, so the roadmap is deliberately more cautious than NCCN.",
+     "divergence": "Milan, ESMO, AASLD and NCCN support adjuvant capecitabine after resection. The roadmap’s more cautious Reasonable/grade C label is an OPEN local divergence; a nonsignificant pCCA subgroup does not establish absence of benefit.",
      "proposal": "Reasonable, grade C, not an obligation: offer six months of capecitabine to a fit resected patient who wants adjuvant treatment, particularly with adverse features, quoting the actual BILCAP numbers and toxicity; it is not to be presented as established benefit in this tumour. The local label is more cautious than NCCN and needs explicit multidisciplinary approval.",
      "proposal_locator": "Gate 3 · Reasonable 'Capecitabine for 6 months is a reasonable option after resection, not an obligation…'",
      "rationale": "BILCAP's primary analysis was not significant and BCAT was null for gemcitabine in bile duct cancer specifically.",
@@ -354,7 +354,7 @@
      "status": "OPEN — not yet decided",
      "where": [
       {
-       "label": "0 · Assess the need for biliary drainage",
+       "label": "0 · Assess drainage after staging imaging, unless urgent",
        "url": "hilar/#decision-0"
       }
      ],
@@ -487,7 +487,7 @@
      "status": "OPEN — not yet decided",
      "where": [
       {
-       "label": "0 · Assess the need for biliary drainage",
+       "label": "0 · Assess drainage after staging imaging, unless urgent",
        "url": "hilar/#decision-0"
       },
       {
@@ -583,7 +583,7 @@
      "status": "OPEN — not yet decided",
      "where": [
       {
-       "label": "0 · Assess the need for biliary drainage",
+       "label": "0 · Assess drainage after staging imaging, unless urgent",
        "url": "hilar/#decision-0"
       },
       {
@@ -1144,10 +1144,10 @@
       {
        "source": "Ethun 2018",
        "key": "hr-pcca_ethun",
-       "population": "Multicenter 2000–2015; 234 attempted resections and 70 entered LT protocols; 191 curative-intent resections and 41 confirmed-CCA LT in recipient analysis. LT patients were younger (52 vs 65), more often PSC(61% vs 2%), and more often treated with chemo/RT(98% vs 57%).",
-       "results": "Recipient 3-/5-year OS 72%/64% LT versus 33%/18% resection. Restricted non-PSC,<3 cm, node-negative comparison favored LT at 5 years 54% vs 29%(p=.03); adjusted/restricted ITT comparison remained significant (p=.049).",
-       "limits": "Conflicting observational evidence versus Dong; major selection/era/therapy confounding. Exact ITT exclusions and time origin require full-PDF recheck; no unsupported ITT rate is reproduced here.",
-       "locator": "Ann Surg 2018; 267: 797–805; primary abstract and indexed Results/Discussion."
+       "population": "Multicenter 2000–2015; 234 attempted resections and 70 entered LT protocols; 191 curative-intent resections and 41 confirmed-CCA LT in recipient analysis. In Table 1, median age was 54 years after LT versus 67 after resection; PSC 61% versus 2%. Neoadjuvant chemotherapy was 95% versus 5%, and radiation 95% versus 3%. These table values differ from the abstract summary.",
+       "results": "Recipient 3-/5-year OS was 72%/64% after LT versus 33%/18% after resection. In the restricted non-PSC comparison against resection for <3 cm, node-negative disease, five-year OS was 54% versus 29% (log-rank P=.03). The restricted intention-to-treat comparison was also significant (log-rank P=.049); this was not a multivariable-adjusted treatment effect.",
+       "limits": "Observational comparison with major selection, PSC, treatment and era differences. Recipient OS starts at surgery. Intention-to-treat OS starts at surgery for attempted resection, but at protocol initiation for LT. Four LT-protocol entrants lacked initiation dates and were excluded from the ITT analysis (66 of 70 analyzed). Restricted analyses do not establish LT superiority for all resectable pCCA.",
+       "locator": "Ethun 2018, Ann Surg267:797–805. Targeted full-text read: p798 Methods/time origins; p799 ITT exclusions and restricted log-rank; p800 Table1. B26/R6 saved primary text29064885.txt."
       },
       {
        "source": "Vugts 2021",
@@ -1431,7 +1431,7 @@
        "source": "TransMet 2024",
        "key": "hr-transmet",
        "population": "Multicentre open-label randomized trial, 20 European centres, 157 screened and 94 randomized (47 LT-plus-chemotherapy, 47 chemotherapy); 63 screened excluded, including 13 with equivocal unresectability and 36 with progression. Age 18–65; ECOG 0–1; R0 colorectal primary; BRAF nonmutated; no prior or current extrahepatic disease/local recurrence; chemotherapy response or stable disease for at least 3 months, at most three lines. CEA <80 ng/mL OR at least 50% reduction from peak was permitted. Independent committee of at least two surgeons, two oncologists and one radiologist reviewed original and current lesion maps. These are trial criteria, not identical to current NLRB guidance.",
-       "results": "Primary time origin was randomization. Median follow-up 59.3 months. Five-year ITT OS was 56.6% versus 12.6% (HR 0.37, 95% CI 0.21–0.65); per-protocol OS 73.3% versus 9.3%. Of 47 assigned LT, 38 received LT and 36 were per-protocol; nine had progression-related exclusion/dropout. The control arm included seven subsequent resections and two LT crossovers. Safety population comprised 40 grafted patients. Among 36 per-protocol LT recipients, 26 recurred; 19/26 received chemotherapy and 12/26 local curative-intent treatment. Median per-protocol PFS was 17.4 versus 6.4 months, and secondary PFS after salvage was 35.4 months in the LT arm. Three of 36 per-protocol recipients required retransplantation (primary nonfunction, donor gallbladder cancer, caval obstruction/large-for-size); one postoperative death was reported. Serious adverse events occurred in 32/40 safety LT recipients. Median wait to LT was 50.5 days, which limits transfer to longer-wait systems.",
+       "results": "Primary time origin was randomization. Median follow-up 59.3 months. Five-year ITT OS was 56.6% versus 12.6% (HR 0.37, 95% CI 0.21–0.65); per-protocol OS 73.3% versus 9.3%. Of 47 assigned LT, 38 received LT and 36 were per-protocol; nine were not transplanted (five progressed while waiting, three had extrahepatic disease at laparotomy, one had prostate cancer). The control arm included seven resections and two transplants outside protocol; crossover was not allowed. Safety population comprised 40 grafted patients. Among 36 per-protocol LT recipients, 26 recurred; 19/26 received chemotherapy and 12/26 local curative-intent treatment. Median per-protocol PFS was 17.4 versus 6.4 months (recurrence after LT versus RECIST progression on chemotherapy; PET surveillance differed by arm), and secondary PFS after salvage was 35.4 months in the LT arm. Three of 36 per-protocol recipients required retransplantation (primary nonfunction, donor gallbladder cancer, caval obstruction/large-for-size); one postoperative death was reported. Serious adverse events occurred in 32/40 safety LT recipients. Median wait to LT was 50.5 days, which limits transfer to longer-wait systems.",
        "limits": "Strong evidence for the selected trial population, not for BRAF-mutant, ECOG 2, active extrahepatic, truly NED, resectable or broadly expanded disease. PP survival conditions on reaching treatment and must not replace ITT. The Results recurrence denominator is 26/36; Figure 3 caption says 28 recurrences, consistent with a broader all-grafted report, so do not mix these denominators. QoL collection had only 55/74 per-protocol baseline questionnaires and is descriptive, not proof of a large QoL gain. Priority allocation and rapid access were part of the treatment strategy.",
        "locator": "Lancet 2024;404:1107–1118. PDF pp.2–4 eligibility/committee; pp.5–6 trial flow/Table 1; pp.8–9 recurrence, safety, retransplantation, Figure 3; p.10 QoL/limitations."
       },

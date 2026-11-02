@@ -371,8 +371,8 @@ window.ContextualCopy = {
     "icca/follow-up/plan": {
       "source": "Reconfirm disease control, fitness and informed consent. Review explant findings and agree oncology/transplant surveillance; selected cohort evidence does not establish a universal interval.",
       "concise": "Recheck control, fitness and consent. Review explant; agree surveillance. Selected cohorts do not define a universal interval.",
-      "title": "Final clinical review and recurrence-surveillance plan complete?",
-      "label": "Final clinical review and recurrence plan complete?"
+      "title": "Clinical plan and follow-up responsibilities agreed for this stage of care?",
+      "label": "Stage-specific plan and follow-up agreed?"
     },
     "crlm/map-disease/primary": {
       "source": "Use primary pathology, pretreatment liver imaging and current liver/chest/abdomen/pelvis staging.",
@@ -431,8 +431,8 @@ window.ContextualCopy = {
     "crlm/transplant/plan": {
       "source": "Recheck disease control, fitness and consent, and whether resection or ablation can now treat all liver disease. Agree recurrence surveillance and postoperative oncology care.",
       "concise": "Recheck control, fitness, consent and feasibility of complete resection/ablation; agree recurrence surveillance and oncology care.",
-      "title": "Final benefit–risk review supports transplant and follow-up is agreed?",
-      "label": "Benefit–risk review supports transplant, with follow-up agreed?"
+      "title": "Clinical plan and follow-up responsibilities agreed for this stage of care?",
+      "label": "Stage-specific plan and follow-up agreed?"
     },
     "nelm/biology/grade": {
       "source": "Guidance specifies Ki-67 (proliferative index) <20% and mitoses <20 per 10 HPF. Reconcile discordant primary and liver samples.",
@@ -485,8 +485,8 @@ window.ContextualCopy = {
     "nelm/follow-up/plan": {
       "source": "Review explant grade/burden, functional symptoms and treatment history. Agree disease-specific recurrence surveillance with the NET and transplant teams.",
       "concise": "Review explant grade/burden, functional symptoms and treatment history; agree NET/transplant recurrence surveillance.",
-      "title": "Are pathology review and the follow-up plan in place?",
-      "label": "Pathology reviewed and follow-up planned?"
+      "title": "Clinical plan and follow-up responsibilities agreed for this stage of care?",
+      "label": "Stage-specific plan and follow-up agreed?"
     },
     "hehe/diagnosis/pathology": {
       "source": "Use expert morphology and appropriate immunohistochemical/molecular assessment.",
@@ -521,8 +521,8 @@ window.ContextualCopy = {
     "hehe/follow-up/plan": {
       "source": "Reconcile explant and pretransplant findings; agree risk-informed imaging and long-term recurrence assessment. No universal OPTN surveillance interval is specified.",
       "concise": "Reconcile explant/pretransplant findings; plan risk-based, long-term recurrence imaging. No universal OPTN interval.",
-      "title": "Are pathology review and the follow-up plan in place?",
-      "label": "Pathology reviewed and follow-up planned?"
+      "title": "Clinical plan and follow-up responsibilities agreed for this stage of care?",
+      "label": "Stage-specific plan and follow-up agreed?"
     },
     "hca/characterize/diagnosis": {
       "source": "MRI assesses burden, growth and bleeding. Consider sex, hormonal exposure, metabolic disease and subtype. Imaging cannot reliably establish β-catenin activation or exclude HCC in every case.",
@@ -563,8 +563,8 @@ window.ContextualCopy = {
     "hca/follow-up/plan": {
       "source": "Reassess bleeding or transformation while waiting. After transplant, review explant findings and continuing care for the underlying metabolic/vascular condition.",
       "concise": "While waiting: reassess bleeding/transformation. After transplant: explant review and continuing metabolic/vascular care.",
-      "title": "Fitness for transplantation confirmed and follow-up for the underlying condition agreed?",
-      "label": "Transplant fitness confirmed and underlying-condition follow-up agreed?"
+      "title": "Clinical plan and follow-up responsibilities agreed for this stage of care?",
+      "label": "Stage-specific plan and follow-up agreed?"
     }
   },
   "recommendations": {
@@ -645,8 +645,8 @@ window.ContextualCopy = {
       "concise": "WHO 2019: unequivocal hepatocytic AND cholangiocytic differentiation within one tumor on H&E. Immunostains are supportive, not essential."
     },
     "adenoma/4/standard/0": {
-      "source": "Treat a lesion that is persistently larger than 5 cm, or growing by 20% or more, as an indication for curative treatment — and say plainly, to the patient and in the note, that 5 cm is a convention and not a derived threshold.",
-      "concise": "Persistent size >5 cm or growth ≥20% is an indication for curative treatment. Explain that 5 cm is a conventional threshold."
+      "source": "Assess resection for a persistently ≥5 cm or growing adenoma after appropriate risk-factor modification; account for subtype, sex, symptoms, bleeding and suspicion of malignancy.",
+      "concise": "Assess resection for persistent size ≥5 cm or growth after risk-factor modification; account for subtype, sex, symptoms, bleeding and suspected malignancy."
     },
     "adenoma/5/alt/1": {
       "source": "Where the bleeding lesion is exophytic, peripheral and small and the patient is stable in a centre without interventional radiology, a limited resection is a reasonable alternative to transfer.",
@@ -657,8 +657,8 @@ window.ContextualCopy = {
       "concise": "Unstable bleeding: blood-product resuscitation, contrast CT and transfer for embolization; embolization precedes resection."
     },
     "adenoma/2/standard/2": {
-      "source": "Reimage with contrast-enhanced MRI at 6 months, and treat that scan as a trajectory rather than a verdict — six months is too early to call risk-factor modification a failure.",
-      "concise": "Repeat contrast MRI at 6 months; assess trajectory. This is too early to declare risk-factor modification unsuccessful."
+      "source": "Reimage after risk-factor modification and assess the trajectory. In women with lesions ≥5 cm, individualize reassessment and intervention over 6–12 months unless bleeding, concerning growth or suspected malignancy requires earlier action.",
+      "concise": "After risk-factor modification: assess growth and regression. In women with lesions ≥5 cm, individualize reassessment or intervention over 6–12 months; act earlier for concerning features."
     },
     "incidental/0/alt/1": {
       "source": "In a liver with a vascular disorder — Budd-Chiari, chronic portal vein occlusion, obliterative portal venopathy, hereditary haemorrhagic telangiectasia, cardiac congestion — treat the case as its own category and get it to a benign-liver-tumour multidisciplinary review rather than through either arm of this assessment.",
@@ -693,8 +693,8 @@ window.ContextualCopy = {
       "concise": "Multiagent induction chemotherapy if performance, biliary drainage and nutrition permit; schedule reassessment at treatment start."
     },
     "pnet/4/standard/1": {
-      "source": "State the actual evidence for the threshold when you offer observation: three uncontrolled cohorts with two to four years of follow-up, no randomised comparison, and not one direct comparison of the two strategies in any of them.",
-      "concise": "Observation evidence: three uncontrolled cohorts, 2–4 years follow-up; no randomized or direct strategy comparison."
+      "source": "Explain that observation evidence is nonrandomized: prospective cohorts have short follow-up, and Sadot provides a retrospective size-matched observation-versus-resection comparison.",
+      "concise": "Observation evidence is nonrandomized: short prospective follow-up and a retrospective size-matched comparison with resection."
     },
     "pnet/5/alt/0": {
       "source": "Enucleation and central pancreatectomy are legitimate for a small, superficial tumour clear of the main duct - at a centre doing enough of them, and with the nodal question settled before the incision.",
@@ -705,12 +705,12 @@ window.ContextualCopy = {
       "concise": "Unlocalized insulinoma after CT/MRI and EUS: GLP-1 receptor imaging or arterial stimulation with venous sampling, not another anatomic study."
     },
     "pnet/7/standard/1": {
-      "source": "In MEN1, resect a functional tumour whatever its size, observe a nonfunctional tumour under 1 cm, and resect above 2 cm or on significant growth — accepting that surgery will not clear the gland.",
-      "concise": "MEN1: resect functional tumors at any size; observe nonfunctional <1 cm; resect >2 cm or significant growth. Surgery will not clear the gland."
+      "source": "In MEN1, individualize treatment by functional syndrome and hereditary context. Symptomatic insulinoma generally requires treatment; MEN1 gastrinoma timing and extent remain controversial. Nonfunctioning lesions may be observed when small, with resection considered for size, growth and other concerning features. Surgery will not clear the inherited risk.",
+      "concise": "MEN1: treatment depends on syndrome, size, growth and hereditary context. Insulinoma usually needs treatment; gastrinoma surgery is individualized. Small nonfunctioning lesions may be observed."
     },
     "pcyst/2/standard/0": {
-      "source": "Resect, in a patient fit for pancreatectomy, for jaundice with a head cyst, an enhancing mural nodule of 5 mm or more or a solid component, a main pancreatic duct of 10 mm or more, or cytology suspicious or positive for high-grade dysplasia or carcinoma.",
-      "concise": "If fit for pancreatectomy, resect for: jaundice with a head cyst; enhancing mural nodule ≥5 mm or solid component; main duct ≥10 mm; or suspicious/positive high-grade dysplasia/carcinoma cytology."
+      "source": "Obtain surgical assessment for a high-risk stigma: obstructive jaundice with a head cyst, an enhancing mural nodule ≥5 mm or solid component, main pancreatic duct ≥10 mm, or cytology suspicious or positive for high-grade dysplasia or carcinoma. Consider resection when clinically appropriate after assessing fitness, comorbidity, life expectancy and preference.",
+      "concise": "High-risk stigma → surgical assessment: obstructive jaundice with a head cyst; enhancing nodule ≥5 mm or solid component; main duct ≥10 mm; suspicious/positive HGD or carcinoma cytology. Assess fitness and preferences."
     },
     "pcyst/1/standard/0": {
       "source": "Characterise the cyst on MRI with MRCP and write the main pancreatic duct diameter down in millimetres, because the 5 mm and 10 mm duct thresholds are what separate surveillance from an operation.",

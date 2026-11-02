@@ -321,7 +321,7 @@
      "divergence": "ESMO ranks mFOLFIRINOX first for fit patients and names criteria for the doublet, whereas NCCN lists both as preferred without ranking them; PRODIGE 24's restricted eligibility leaves the unrecovered or older patient undefined, and the two regimens were never compared.",
      "proposal": "mFOLFIRINOX for 24 weeks is listed first for a recovered patient with good performance status; gemcitabine with capecitabine for a patient who cannot take a triplet (poorer performance status, neuropathy, slow recovery or preference); gemcitabine alone for the frail. No numeric switch threshold is stated; restage before the first cycle and prioritise completing the course.",
      "proposal_locator": "Gate 6 · Standard group · options (pref); Standard 'Restage before the first cycle…'; Standard 'Prioritise completing the course over starting it quickly.'",
-     "rationale": "On mature 5-year data PRODIGE 24 gives median overall survival 53.5 versus 35.5 months and 5-year survival 43.2% versus 31.4%, at the cost of grade 3–4 adverse events in 75.9% versus 52.9%, in a trial restricted to age under 80, no coronary disease, WHO performance status 0–1, full surgical recovery and postoperative CA 19-9 below 180 U/mL. The effect attenuated from the 3-year report (DFS HR 0.58 to 0.66, OS 0.64 to 0.68), 5-year disease-free survival differs by only 7.1 points, only 33.6% of patients achieved a relative dose intensity of 0.80 or more, post-relapse survival was numerically worse in the mFOLFIRINOX arm (13.1 versus 15.0 months) with fewer of its relapsing patients receiving any chemotherapy (66.9% versus 83.0%), and in the 101 patients aged 70 or older the benefit did not reach significance (HR 0.86, 0.53–1.39). Nothing in it describes the patient who has not recovered from a pancreatoduodenectomy, which is a substantial fraction of the real population, and quality of life was never collected.",
+     "rationale": "On mature 5-year data PRODIGE 24 gives median overall survival 53.5 versus 35.5 months and 5-year survival 43.2% versus 31.4%, at the cost of grade 3–4 adverse events in 75.9% versus 52.9%, in a trial restricted to age under 80, no symptomatic heart failure or coronary artery disease, WHO performance status 0–1, full surgical recovery and postoperative CA 19-9 of 180 U/mL or less. The effect attenuated from the 3-year report (DFS HR 0.58 to 0.66, OS 0.64 to 0.68), 5-year disease-free survival differs by only 7.1 points, only 33.6% of patients achieved a relative dose intensity of 0.80 or more, post-relapse survival was numerically worse in the mFOLFIRINOX arm (13.1 versus 15.0 months) with fewer of its relapsing patients receiving any chemotherapy (66.9% versus 83.0%), and in the 101 patients aged 70 or older the benefit did not reach significance (HR 0.86, 0.53–1.39). Nothing in it describes the patient who has not recovered from a pancreatoduodenectomy, which is a substantial fraction of the real population, and quality of life was never collected.",
      "audit": "Registry: adjuvant regimen, cycles completed, dose intensity, grade 3–4 toxicity, time from surgery to first cycle.",
      "web": "pdac/#question-PDAC-D4"
     },
@@ -479,7 +479,7 @@
        "source": "RASolute 302",
        "key": "pm42223072",
        "says": "In previously treated RAS G12 disease daraxonrasib doubled median survival (13.2 vs 6.6 months, HR 0.40); non-G12 HR 1.38 (0.60–3.17); 15.1% of the chemotherapy arm never received it, which the roadmap says inflates the effect.",
-       "locator": "Gate 8 · Reasonable group · option 'Daraxonrasib, for RAS-mutated disease after prior therapy' (when, pref, avoid, note)"
+       "locator": "Gate 8 · Reasonable group · option 'Daraxonrasib for eligible metastatic PDAC; the US indication is not restricted to a RAS mutation' (when, pref, avoid, note)"
       },
       {
        "source": "US FDA daraxonrasib approval (2026)",
@@ -500,10 +500,10 @@
        "locator": "Gate 8 · Standard 'Order comprehensive genomic profiling and germline testing at the first visit…' (pref, avoid)"
       }
      ],
-     "divergence": "RASolute 302 supports benefit only in previously treated RAS G12 disease while the US label is broader, and the roadmap leaves daraxonrasib's place against other second-line options to availability, regulatory status and cost.",
+     "divergence": "RASolute 302 demonstrated benefit in both RAS G12 and the overall previously treated population; the US indication also includes patients unable to receive multiagent therapy, and the roadmap leaves daraxonrasib's place against other second-line options to availability, regulatory status and cost.",
      "proposal": "Order profiling at the first visit, bank extra passes at biopsy, and have medical oncology name the person who chases the result. Daraxonrasib is listed first among later-line options for a previously treated patient with a documented RAS G12 mutation, after checking availability, regulatory status and coverage; its place relative to other second-line regimens is not set.",
      "proposal_locator": "Operations · board meeting 'Molecular' step; Gate 8 · Avoid 'Do not let the molecular report arrive after it can be used.'; Gate 8 · Reasonable group · option 'Daraxonrasib…' (pref, avoid) and flagnote",
-     "rationale": "The commonest failure in metastatic PDAC is a genomic report that arrives after the patient is too unwell to act on it, which is an operational problem with a named-owner solution. The sequencing question is separate: RASolute 302 is a phase 3 result with dual primary endpoints met in the RAS G12 population (median overall survival 13.2 versus 6.6 months, HR 0.40; progression-free survival 7.3 versus 3.5 months, HR 0.45), but the benefit is not established outside G12 (non-G12 HR 1.38, 0.60–3.17), 38 of 252 patients (15.1%) allocated to the comparator never received it against 7 of 248 (2.8%) on daraxonrasib, and the comparator was unconstrained investigator's choice with a 6.6-month median at the low end of published second-line outcomes. The local position depends on availability, regulatory status and cost, and should state which RAS alterations it covers. [PAYER]",
+     "rationale": "The commonest failure in metastatic PDAC is a genomic report that arrives after the patient is too unwell to act on it, which is an operational problem with a named-owner solution. The sequencing question is separate: RASolute 302 is a phase 3 result with dual primary endpoints met in the RAS G12 population (median overall survival 13.2 versus 6.6 months, HR 0.40; progression-free survival 7.3 versus 3.5 months, HR 0.45), and benefit was also demonstrated in the overall population; the non-G12 subgroup was small and exploratory (n=41; PFS HR 1.38, 0.60–3.17; OS HR 0.37, 0.15–0.93), 38 of 252 patients (15.1%) allocated to the comparator never received it against 7 of 248 (2.8%) on daraxonrasib, and the comparator was unconstrained investigator's choice with a 6.6-month median at the low end of published second-line outcomes. The local position depends on availability, regulatory status and cost, and should state which RAS alterations it covers. [PAYER]",
      "audit": "Registry: proportion with completed germline and genomic results before second line, time from biopsy to report, proportion of actionable results acted on, second-line agent.",
      "web": "pdac/#question-PDAC-D8"
     },
@@ -689,9 +689,9 @@
      "where": [],
      "positions": [],
      "divergence": "No source positions; programme decision.",
-     "proposal": "No owner is proposed. The roadmap lists what still needs primary reports (the full ISGPS consensus; PAXG, RTOG 0848, ESPAC-3 completion, CONKO-004 and maintenance rucaparib; EUS staging, re-imaging and margin-clearance figures), asks that PAXG be read before the regimen is used, and tracks source currency on the dashboard.",
+     "proposal": "Name an owner for residual source verification and keep actual read extent visible. The continuation has resolved some earlier gaps, including the final RTOG 0848 report; use the preserved source dossiers to maintain the remaining list.",
      "proposal_locator": "What we are not sure about · 'One reference remains cited from abstract only…'; Gate 3 · Reasonable 'PAXG…' (note); Operations · dashboard 'Source currency…'",
-     "rationale": "Retrieve the full ISGPS lymphadenectomy consensus (PMID 25061003) and the primary reports behind guideline-only figures, including PAXG, RTOG 0848, ESPAC-3 completion, CONKO-004 and maintenance rucaparib.",
+     "rationale": "Assign ownership of the residual source-review list, record the actual source version and read extent, and propagate verified corrections. RTOG 0848 is resolved to PMID42456089; do not continue to label it an unavailable primary report.",
      "audit": "Named owner per reference, with retrieval date and a note of any figure that changed on reading; the page's grades revisited where a D was assigned for provenance rather than for design.",
      "web": "pdac/#question-PDAC-D16"
     },
@@ -1025,8 +1025,8 @@
   },
   "pm26615328": {
    "short": "NAPOLI-1",
-   "title": "",
-   "kind": "",
+   "title": "Wang-Gillam A, et al. Nanoliposomal irinotecan with fluorouracil and folinic acid in metastatic pancreatic cancer after previous gemcitabine-based therapy (NAPOLI-1). Lancet. 2016;387:545–557. doi:10.1016/S0140-6736(15)00986-1. PMID:26615328.",
+   "kind": "Systemic therapy",
    "links": {
     "pubmed": "https://pubmed.ncbi.nlm.nih.gov/26615328/"
    }

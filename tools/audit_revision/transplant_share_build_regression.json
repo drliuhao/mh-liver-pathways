@@ -1,0 +1,39 @@
+{
+  "finding": "Share cleaner conflated semantic JSON null with removal sentinel",
+  "missing_branch_null_rules": 80,
+  "examples": [
+    {
+      "decision": "hcc/diagnosis",
+      "rule_index": 0,
+      "title": "Review the treatment and transplant plan"
+    },
+    {
+      "decision": "hcc/curative-route",
+      "rule_index": 0,
+      "title": "Review the treatment and transplant plan"
+    },
+    {
+      "decision": "hcc/curative-route",
+      "rule_index": 1,
+      "title": "Review prior rupture or vascular invasion"
+    },
+    {
+      "decision": "hcc/curative-route",
+      "rule_index": 2,
+      "title": "Clarify the curative treatment plan"
+    },
+    {
+      "decision": "hcc/allocation",
+      "rule_index": 0,
+      "title": "Review the treatment and transplant plan"
+    },
+    {
+      "decision": "hcc/allocation",
+      "rule_index": 1,
+      "title": "Clarify the qualifying tumor burden"
+    }
+  ],
+  "correction": "Use a distinct removal sentinel in clean_data, preserving valid None/null values in dictionaries and lists; rebuild and rerun oracle comparison.",
+  "resolution": "Parent fixed distinct removal sentinel and rebuilt. All80null rules retained; browser now shows169outcomes and all6AFP alternatives.",
+  "resolved": true
+}

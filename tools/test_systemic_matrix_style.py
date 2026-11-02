@@ -69,11 +69,17 @@ assert len(table.xpath('.//div[@class="matrix-option"]')) == len(old.xpath('//ta
 assert sorted(norm(x.text_content()) for x in table.xpath('.//span[@class="empty-cell"]')) == sorted(norm(x.text_content()) for x in old.xpath('//table[@class="therapy-matrix"]//span[@class="empty-cell"]'))
 before = Counter(u for u in old.xpath('//a/@href') if not u.startswith('#'))
 after = Counter(u for u in page.xpath('//a/@href') if not u.startswith('#'))
-assert before == after, 'External source links changed'
+before.update(u for _, u in cards['crlm-conversion']['links'])
+assert before == after, 'External source links changed beyond the recorded CAIRO5 survival sources'
 for u in page.xpath('//a/@href'):
     if u.startswith('#'):
         assert u[1:] in ids, u
-for section in ['molecular', 'supportive', 'guidelines', 'safety', 'library']:
+for section in ['molecular', 'supportive', 'guidelines']:
     assert norm(old.get_element_by_id(section).text_content()) == norm(page.get_element_by_id(section).text_content()), section
+for row, node in zip(matrix['safety'],page.xpath('//details[@class="safety-disclosure"]')):
+    for text in row[:3]: assert norm(text) in norm(node.text_content()),row[0]
+for node in page.xpath('//article[@class="library-entry"]'):
+    pm=next(u.rstrip('/').split('/')[-1] for u in node.xpath('.//a/@href') if 'pubmed.ncbi.nlm.nih.gov/' in u)
+    assert sorted(node.get('data-tumors').split())==sorted(refs[pm]['diseases'])
 print(f'PASS: 49 regimen cards in LRT layout; {tied} evidence rows with PMID chips and {statements} statement rows reassemble every evidence sentence; '
       '9×6 matrix keeps all 66 entries and empty-cell notes; peers, anchors and external links verified.')

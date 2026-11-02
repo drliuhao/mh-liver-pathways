@@ -1,0 +1,51 @@
+# Analyst A transplant revision: completion and remaining items
+
+Reviewed baseline: `30039fe0cec15a29ac2f326e0ee316eaf6bfb48e`. Edits are confined to Website_Revision_2026-11-02. Analyst A is Codex; no internal agent is represented as external B or C. The saved A/B/C review files and original documents were not changed. No commit, push or deployment was performed by this agent.
+
+## Implemented and recorded
+
+`transplant_change_register.json` contains exact old/new values, finding/statement identifiers, source locators and affected files. The five `2026-11-02-transplant-*.json` manifests replay the changes against the reviewed release. Existing decision counts, original baselines and source records are retained.
+
+- Default pathway view now includes the custom assistant hold, stop and redirect results; all six authored AFP actions are visible even when they share a destination.
+- Authored upstream stop results, local closed-cohort boundaries, missing earlier decisions and selected uncertain supplemental findings persist. Forward clinical actions are suppressed when the guard applies; review/treatment/backward navigation remains available. Clinical exclusions take precedence over a local status note.
+- AFP history distinguishes pretreatment-only >1000 from post-LRT >=500 in that history. A later favorable answer alone cannot erase the finding. An explicit documented pretreatment-only response can resolve it; post-LRT history remains individual review.
+- HCA benign reassessment returns to omitted conventional-treatment/exception-route checks; completed earlier checks permit final review without a forced loop. Confirmed HCC has a named diagnosis/staging destination.
+- Five mixed final decisions now ask before-/after-transplant context. Recipient follow-up has separate results/actions and does not say to proceed to transplantation. All seven pathways have a separate recipient recurrence resource addressing graft function, immunosuppression and treatment safety.
+- Corrected HCC exact8cm floating arithmetic without rounding patient measurements to tenths; preserved strict4–5-lesion <3cm operator. Subcentimeter entries are not silently treated as qualifying HCC. Corrected Metroticket whole active-nodule measurement/necrosis/count/timing, explicit Fong synchronous disease, AFP model timing/measurement, RETREAT applicability, NET grade/allocation distinction, BavenoVIII definitions and contextual tool placement. iCCA/mixed exception reference states solitary biopsy-proven unresectable <=3cm in cirrhosis with >=6months stability; policy, guidance and local proposals remain distinct.
+- Corrected TransMet RAS attribution, nongrafted reasons and PFS comparability; ImmunoXXL selection/endpoint/safety context; Ethun Table1 values and restricted log-rank/time origins; Wehrle ctDNA recurrence attribution to resection. HEHE six-month proposal is attributed to German DGVS guidance, not international or US policy.
+- All legacy high-risk redirect banners state OPEN/not activated. Canonical source JS matches live JS exactly; `high_risk_data.json`, snapshot, all embedded payloads and the source builder's reviewed-data import are synchronized.
+
+## Actual verification
+
+- `test_contextual_routing.cjs`: PASS130 targeted assertions,2,091 categorical states,25 clinical review triggers and reference-only HCC-B4.
+- `test_clinical_scores.cjs`: PASS141 calculator/definition/placement checks.
+- `test_decision_assistants.cjs`: PASS46 decisions,2,091 states,363 action links,80 custom outcomes, six AFP actions and reset/unknown protections.
+- `test_clinical_flow.cjs`: PASS33 care plans/77 actions, exact source mirror, care origins and navigation.
+- `test_content_hierarchy.cjs`, `test_visible_decisions.cjs`, `test_decision_layers.cjs`: PASS;46 decision labels remain, original hierarchy/inline criteria retained.
+- `test_audit_transplant.cjs`: PASS107 upstream-stop carry checks,119 skipped-decision holds,5 explicit recipient contexts, exact8cm/permutation and genuinely>8cm boundaries, full source/runtime/payload equality, and exact nine-file clinical-revision replay from30039fe.
+- Source-builder import check: PASS reviewed pathways, assistants, care, high-risk and continuations equal current published data. The archived builder itself was not run over the styled public portal.
+- `test_audit_transplant_browser.cjs`: PASS46 decisions/169 authored ordinary+custom outcomes,7 phone pages,6 distinct AFP alternatives,0 page errors. Screenshot `transplant_afp_browser.png` was visually inspected; orange high-risk labels and column hierarchy remain. Uses bundled Node Playwright and installed Chromium headless shell1248 via explicit executable path. Python Playwright was unavailable, so the Python browser test was updated but the new Node harness executed its authored-inventory expression.
+- The frozen external B08 R7 harness was run unmodified on the revised checkout:36PASS,2FAIL,1INFO in39rows. Its two controls require adjudication below; the raw output is preserved, not relabeled.
+- Shared `test_contextual_info.cjs` initially reached and passed pinned content/routing replay, then failed a stale adenoma recommendation display-copy guard after another owner's roadmap correction. Parent was notified and owns the shared regeneration. `test_decision_workspace.cjs` likewise found old generated CRLM copy after roadmap edits. These were not bypassed or weakened; parent is doing integrated QA.
+
+Detailed logs: `transplant_test_results.json`, `transplant_browser_results.json`, `r7_targeted_output.json`. Test updates preserve exact clinical revision replay, source equality, all original outcome counts plus the added explicit context, and verified dynamic destinations; they do not ignore arbitrary clinical changes.
+
+## Two raw B-control differences
+
+C06 supplied only “AFP not met” then “yes” while describing a pretreatment-only >1000 scenario. Those answers cannot distinguish the mandatory post-LRT history. The new context fields are required to establish that scenario; the dedicated regression verifies that explicitly pretreatment-only history with sustained <500 resolves, while post-LRT history does not. The raw old control remains FAIL by design.
+
+C09 expected no guard for previously proven malignant pCCA nodes after current negative staging. The local opening protocol remains closed; the new guard enforces that boundary and labels it local. This is not asserted to be a universal national prohibition. The raw old control remains FAIL by design.
+
+## Remaining source and document work
+
+`transplant_b_dispositions.json` records55 B08/B26 high-priority and complete R7 dispositions with original identifiers, issues and source locators. No claim is made that every partly-supported review flag, every document paragraph, or every paper appendix has been fully resolved.
+
+1. **Parent-owned shared source:** apply `transplant_shared_proposals.json` to `tools/compact_evidence_source.json` then regenerate dependent evidence assets. This is the exact ImmunoXXL replacement: prospective observational cohort,61 treated/16 selected recipients, endpoints start at listing, death censored for recurrence,4/16 acute rejection and2 retransplants. Existing compact “phaseII/recipient RFS” labels are not reliable. Live transplant high-risk card is already corrected.
+2. **Original downloadable documents:** B26 HCC policy details/score clock, downstaging timing and observation conflation; pCCA-B1 identifier collision; iCCAB4/CRLMB5 activation lists; CRLM5.5cm prognosis-versus-gate wording; NET imaging-timing interpretation; HEHE cohort/interval conflicts; HCA skim-only critique claims require the separate document revision workflow. Website changes do not certify the preserved Word/PDFs as corrected. In particular, B26-R1-CF03 must not be adopted blindly as a universal post-treatment T1 exclusion: pretreatment qualifying stage, response and continuing-exception policy must be considered together.
+3. **Uncompleted HCC full-text status reconciliation:** beyond the targeted ImmunoXXL correction, B26-R2-F01/F11 and R3-F2 encompass Soin/Sinha/Choi/Yang/Sposito/VITALITY and other cohort cards. Do not upgrade all to full-text-reviewed merely because a PDF exists. Soin all25 curve and VITALITY denominators need their source-specific reconciliation carried through original documents and shared summaries. No institution-wide approval inference is warranted.
+4. **Wehrle ctDNA internal discrepancy:** primary Results recurrence denominators14 positive+6 negative do not reconcile with18 postoperative patients in abstract/Table1. The corrected card preserves this limitation and specifies resection-only recurrence. No transplant-selection rule is inferred.
+5. **Remaining low-severity R7:** heterogeneous first-match combinations (R7-14), “not excluded” versus proven spread wording (R7-15), earlier prior-spread title specificity (R7-16), numeric beyond-UNOS pilot entry refinement (R7-17), unexpected programmatic supplemental values (R7-20), unreachable conflict branch mechanics (R7-21) and dedicated advanced-iCCA study questions (R7-22) remain targeted-review items. R7-13 safety was corrected by carrying guards independently of display-card coverage; display cards themselves still use limited coverage. The advanced-iCCA pathway remains unactivated and must not borrow the small-cirrhotic guidance route.
+6. **Spigelman PA-039/B22 proposal, not implemented:** retain current arithmetic; revise the definition only after the source-specific review confirms visible-polyp input restriction, the historical hyperplasia/inflammation1-point category and manual handling of microscopic-only findings. Do not map all modern LGD to both historical mild and moderate dysplasia. No last-minute unverified category substitution was made.
+7. **Other ownership:** B08-R6 waiting/prognosis display and B08-R4-CF02 HCA quickref source corrections belong to the parent/roadmap agents. Their integrated outcomes are not asserted by this transplant report.
+
+No reproduced high-severity execution defect remains in the tested transplant scenario set. This is a bounded test result, not a claim that the entire clinical website or preserved documents have no residual clinical issue. All clinical content remains a review draft; all local high-risk proposals remain unactivated.

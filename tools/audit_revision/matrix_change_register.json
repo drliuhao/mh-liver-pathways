@@ -1,0 +1,1256 @@
+[
+  {
+    "batch": "B09",
+    "path": [
+      "tiers",
+      "2",
+      "label"
+    ],
+    "old": "Curative-intent alternative — when resection / transplant / ablation not feasible",
+    "new": "Curative-intent alternative — selection and evidence depend on tumor type and the reference treatment",
+    "source_locator": "B09 R11; avoid making ablation an alternative only when ablation is infeasible",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "hcc|sbrt",
+      "roles",
+      0,
+      "when"
+    ],
+    "old": "Single ≤5 cm (incl. recurrent), not ablatable — dome, perivascular, subcapsular, ≥2 cm",
+    "new": "Single HCC ≤5 cm with suitable liver reserve; Xi randomized ablation-eligible recurrent HCC. Difficult ablation anatomy is a separate clinical reason to consider SBRT.",
+    "source_locator": "PMID 39693584 PDF p2, p5, Fig4; 26628466 retrospective anatomy/size comparison",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "hcc|sbrt",
+      "roles",
+      0,
+      "ev",
+      0,
+      2
+    ],
+    "old": "2-y local PFS 92.7 vs 75.8%; OS ≡",
+    "new": "Recurrent HCC: 2-y local PFS 92.7 vs 75.8%; OS HR 0.91 (0.37–2.22), not an equivalence result",
+    "source_locator": "PMID 39693584 p4, Fig2",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "hcc|sbrt",
+      "roles",
+      1,
+      "ev",
+      0,
+      2
+    ],
+    "old": "dropout 16.7% ≈ TACE/RFA",
+    "new": "ITT dropout 16.7%; nonrandomized comparison with TACE/RFA",
+    "source_locator": "PMID 28257902; B09 R2 cohort comparison",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "hcc|abl",
+      "roles",
+      3,
+      "ev",
+      0,
+      2
+    ],
+    "old": "dropout ≈ TACE/SBRT",
+    "new": "Nonrandomized bridge comparison; no significant dropout difference from TACE/SBRT",
+    "source_locator": "PMID 28257902; not an equivalence trial",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "hcc|sbrt",
+      "roles",
+      2,
+      "ev",
+      0,
+      2
+    ],
+    "old": "neoadjuvant: HCC death HR 0.35 vs surgery alone",
+    "new": "Neoadjuvant 3D-CRT, not SBRT: HCC-death HR 0.47 (univariable ITT); 9/82 did not reach surgery",
+    "source_locator": "PMID 31283409 p3, Table A4 pp17–18",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "hcc|sbrt",
+      "roles",
+      2,
+      "ev",
+      1,
+      2
+    ],
+    "old": "adjuvant: intrahepatic recurrence 20.8 vs 52.1% vs TACE",
+    "new": "Conventional RT vs TACE: intrahepatic recurrence 20.8 vs 52.1%; extrahepatic 37.5 vs 14.6%; PFS/OS not significantly different",
+    "source_locator": "PMID 38488934 pp6–8, Table2; exploratory recurrence patterns",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "hcc|sbrt",
+      "roles",
+      3,
+      "when"
+    ],
+    "old": "Incomplete TACE; macrovascular invasion with systemic Rx",
+    "new": "Separate trial settings: salvage after incomplete TACE; first-line alternative to TACE; or vascular invasion with systemic treatment",
+    "source_locator": "PMIDs 36421345,37037359,39699905,29543938; populations must not be pooled",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "hcc|sbrt",
+      "roles",
+      3,
+      "ev",
+      1,
+      2
+    ],
+    "old": "TTP NS; LC ↑ vs DEB-TACE (post hoc)",
+    "new": "TACE-eligible small HCC: primary TTP not improved; local-control signal post hoc; n=28, closed early",
+    "source_locator": "PMID 37037359 p2 eligibility and results",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "hcc|sbrt",
+      "roles",
+      3,
+      "ev",
+      2,
+      2
+    ],
+    "old": "+sorafenib OS 15.8 vs 12.3 mo",
+    "new": "SBRT→sorafenib vs sorafenib: OS 15.8 vs 12.3 mo; HR 0.77 (90% CI 0.59–1.01), primary P=.06",
+    "source_locator": "PMID 39699905 pp3–5, primary analysis",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "hcc|sbrt",
+      "roles",
+      3,
+      "ev",
+      3,
+      0
+    ],
+    "old": "START RCT",
+    "new": "Yoon RCT",
+    "source_locator": "PMID 29543938; START is not the published trial name",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "hcc|sbrt",
+      "roles",
+      3,
+      "ev",
+      3,
+      2
+    ],
+    "old": "TACE+EBRT > sorafenib (MVI)",
+    "new": "Macrovascular invasion: TACE+EBRT vs sorafenib; 91% crossover from sorafenib",
+    "source_locator": "PMID 29543938; B09 R2",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "hcc|y90",
+      "roles",
+      1,
+      "ev",
+      0,
+      2
+    ],
+    "old": "TTP >26 vs 6.8 mo vs cTACE",
+    "new": "TTP >26 vs 6.8 mo vs cTACE; OS not significantly different; stopped at 45/124",
+    "source_locator": "PMID 27575820; B09 R3",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "hcc|y90",
+      "roles",
+      1,
+      "ev",
+      1,
+      2
+    ],
+    "old": "OS 30.2 vs 15.6 mo vs DEB-TACE",
+    "new": "OS 30.2 vs 15.6 mo vs DEB-TACE; phase II trial stopped early",
+    "source_locator": "PMID 35258371; B09 R3",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "hcc|y90",
+      "roles",
+      1,
+      "ev",
+      2,
+      2
+    ],
+    "old": "Y90 ≈ TACE for downstaging",
+    "new": "No significant Y90–TACE difference in downstaging; observational, not equivalence evidence",
+    "source_locator": "PMID 34331914; B09 R3",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "hcc|y90",
+      "roles",
+      2,
+      "ev",
+      3,
+      2
+    ],
+    "old": "ORR 71 vs 36%",
+    "new": "Personalized vs standard Y90 dosimetry: ORR 71 vs 36%; not a Y90–sorafenib comparison",
+    "source_locator": "PMID 33166497; B09 R3",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "hcc|tace",
+      "roles",
+      3,
+      "when"
+    ],
+    "old": "BCLC-B multinodular, Child-Pugh A–B7, no MVI; ± systemic",
+    "new": "Embolization-eligible HCC without macrovascular invasion; TACE–systemic combinations require separate selection and guideline review",
+    "source_locator": "PMIDs 39798579,39798578; BCLC2026 does not establish routine combination use",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "hcc|tace",
+      "roles",
+      3,
+      "ev",
+      2,
+      2
+    ],
+    "old": "+durva/bev PFS 15.0 vs 8.2 mo",
+    "new": "Durvalumab+bevacizumab+TACE: PFS 15.0 vs 8.2 mo; PFS benefit does not establish OS benefit; Child-Pugh A–B7",
+    "source_locator": "PMID 39798579 eligibility/results",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "hcc|tace",
+      "roles",
+      3,
+      "ev",
+      3,
+      2
+    ],
+    "old": "+len/pembro PFS 14.6 vs 10.0 mo",
+    "new": "Lenvatinib+pembrolizumab+TACE: PFS 14.6 vs 10.0 mo; OS not significant; grade ≥3 toxicity 71 vs 32%; Child-Pugh A",
+    "source_locator": "PMID 39798578 eligibility/results",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "hcc|hai",
+      "roles",
+      0,
+      "when"
+    ],
+    "old": "Large unresectable, high burden, PVTT (Vp3–4)",
+    "new": "Large unresectable HCC: vascular-invasion eligibility differs by trial; Li 2021 excluded macrovascular invasion",
+    "source_locator": "PMIDs 34905388,31070690,34648352; B09 R4",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "hcc|hai",
+      "roles",
+      2,
+      "when"
+    ],
+    "old": "Adjuvant HAIC-FOLFOX after resection for MVI",
+    "new": "Adjuvant HAIC-FOLFOX after R0 resection for histological microvascular invasion, without macrovascular invasion",
+    "source_locator": "PMID 36525610 pp2–3",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "icca|sbrt",
+      "roles",
+      0,
+      "when"
+    ],
+    "old": "Liver-confined, unresectable, no nodal/EHD; BED >80 Gy",
+    "new": "Localized unresectable iCCA; ablative dose subject to organ constraints. Tao compared BED >80.5 Gy with ≤80.5 Gy.",
+    "source_locator": "PMID 26503201 dose-group definition",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "icca|abl",
+      "roles",
+      0,
+      "ev",
+      1,
+      2
+    ],
+    "old": "MWA ≈ repeat resection OS",
+    "new": "Retrospective matched cohort: no significant OS difference from repeat resection; not equivalence evidence",
+    "source_locator": "PMID 41528222; B09 R8",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "icca|y90",
+      "head"
+    ],
+    "old": "Add to 1st-line gem/cis; minority downstaged",
+    "new": "Selected chemo–Y90 control/conversion; substantial cirrhosis-related toxicity",
+    "source_locator": "PMID 31670746 pp3–4,7",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "icca|y90",
+      "roles",
+      0,
+      "when"
+    ],
+    "old": "Unresectable, liver-confined",
+    "new": "Unresectable iCCA, predominantly hepatic; MISPHEC allowed limited extrahepatic disease. Avoid extrapolation to routine chemo–Y90 in cirrhosis.",
+    "source_locator": "PMID 31670746 p2 eligibility, p7 recommendation",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "icca|y90",
+      "roles",
+      0,
+      "ev",
+      0,
+      2
+    ],
+    "old": "+gem/cis, mOS 22 mo",
+    "new": "GemCis+Y90, single arm: median OS 22 mo; hepatic failure 9/12 with cirrhosis vs 5/29 without",
+    "source_locator": "PMID 31670746 pp3–4; no randomized comparison",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "icca|hai",
+      "roles",
+      0,
+      "when"
+    ],
+    "old": "Unresectable liver-confined disease ± selected resectable regional nodes; systemic-treatment plan required Pump FUDR evidence is distinct from pCCA catheter GemCis plus I-125 stents.",
+    "new": "Unresectable liver-confined iCCA ± selected resectable regional nodes; systemic-treatment plan required. Pump FUDR evidence is distinct from pCCA catheter GemCis plus I-125 stents.",
+    "source_locator": "B09 source/population distinction; punctuation repair",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "crlm|abl",
+      "roles",
+      0,
+      "ev",
+      0,
+      2
+    ],
+    "old": "Early-stop non-inferiority trial; OS HR 1.05 (95% CI 0.69–1.58); AEs 19 vs 46%",
+    "new": "Early-stop trial: OS HR 1.05 (95% CI 0.69–1.58); CI crosses the 1.30 noninferiority margin; AEs 19 vs 46%",
+    "source_locator": "PMID 39848272 pp1–2; retain design and uncertainty",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "crlm|sbrt",
+      "roles",
+      0,
+      "when"
+    ],
+    "old": "1–3 lesions, ≤6 cm, not resectable or ablatable",
+    "new": "Selected limited metastases when surgery/ablation is unsuitable; Rusthoven studied 1–3 lesions each <6 cm in a mixed-primary cohort",
+    "source_locator": "PMID 19255321 p2; 15/47 colorectal",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "crlm|sbrt",
+      "roles",
+      0,
+      "ev",
+      2,
+      2
+    ],
+    "old": "5-y OS 42.3 vs 17.7%",
+    "new": "Mixed-primary oligometastases: 5-y OS 42.3 vs 17.7%; not a CRLM-only estimate",
+    "source_locator": "PMID 32484754; B09 R5",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "crlm|y90",
+      "roles",
+      0,
+      "when"
+    ],
+    "old": "Chemo-refractory or 2nd-line, liver-only / dominant",
+    "new": "Previously treated liver-only disease in these trials; EPOCH excluded confirmed extrahepatic metastases",
+    "source_locator": "PMIDs 34541864,20567019 eligibility",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "crlm|y90",
+      "roles",
+      0,
+      "ev",
+      0,
+      2
+    ],
+    "old": "PFS 8.0 vs 7.2, hPFS 9.1 vs 7.2 mo; OS NS",
+    "new": "PFS 8.0 vs 7.2, hepatic PFS 9.1 vs 7.2 mo; OS not significant; grade ≥3 AEs 68.4 vs 49.3%",
+    "source_locator": "PMID 34541864; B09 R5",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "crlm|tace",
+      "roles",
+      0,
+      "when"
+    ],
+    "old": "Chemo-refractory liver-dominant (salvage)",
+    "new": "Selected salvage discussion; Fiorentini studied liver-only disease in a small historical trial",
+    "source_locator": "PMID 22493375; comparator/population limit",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "crlm|hai",
+      "roles",
+      0,
+      "when"
+    ],
+    "old": "Adjuvant after resection: selective expert-centre discussion, not routine low-risk use Pump FUDR evidence is distinct from pCCA catheter GemCis plus I-125 stents.",
+    "new": "Adjuvant after resection: expert-center discussion. Dutch PUMP did not establish PFS benefit in its low-risk population; pump FUDR is distinct from pCCA catheter therapy.",
+    "source_locator": "PMID 28426374; primary PUMP abstract reconciled by A on 1 Nov",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "crlm|hai",
+      "roles",
+      0,
+      "ev",
+      1,
+      2
+    ],
+    "old": "PSM OS HR 0.67",
+    "new": "Propensity-score quartile-adjusted OS HR 0.67; retrospective association, not matching or randomized benefit",
+    "source_locator": "PMID 28426374 pp2–4, Appendix A1",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "nelm|abl",
+      "tier"
+    ],
+    "old": 2,
+    "new": 4,
+    "source_locator": "PMIDs 17629995,21134563; reported cohorts support cytoreduction/control, not comparative cure",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "nelm|abl",
+      "head"
+    ],
+    "old": "Limited small lesions; adjunct to resection / debulking",
+    "new": "Selected local control / cytoreduction; case-series evidence",
+    "source_locator": "PMIDs 17629995,21134563",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "nelm|abl",
+      "roles",
+      0,
+      "t"
+    ],
+    "old": 2,
+    "new": 4,
+    "source_locator": "B09 R9: treatment intent is cytoreduction/control",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "nelm|abl",
+      "roles",
+      0,
+      "when"
+    ],
+    "old": "Few small lesions, alone or combined with resection",
+    "new": "Selected unresectable progressive or symptomatic NELM; cited laparoscopic RFA series included multifocal disease and did not test combined resection",
+    "source_locator": "PMIDs 17629995 p10–12;21134563 p2",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "nelm|abl",
+      "roles",
+      0,
+      "ev",
+      0,
+      2
+    ],
+    "old": "LTP 6.3%; mOS 3.9 y post-RFA",
+    "new": "Local recurrence 6.3% per lesion (11% per patient); median OS 3.9 y after RFA; hepatic progression elsewhere common",
+    "source_locator": "PMID 17629995 pp13–15",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "nelm|abl",
+      "roles",
+      1,
+      "t"
+    ],
+    "old": 3,
+    "new": 4,
+    "source_locator": "B09 R9; symptom control is not a bridge-to-surgery endpoint",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "nelm|tace",
+      "roles",
+      0,
+      "ev",
+      1,
+      2
+    ],
+    "old": "TAE ≈ cTACE, hPFS 18 vs 13 mo, NS*",
+    "new": "NANETS 2025 abstract: hepatic PFS difference not significant, not equivalence; PMID links the protocol, not results",
+    "source_locator": "PMID 30016989 protocol; abstract not full paper. Remove unsupported abstract medians.",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "pcca|sbrt",
+      "roles",
+      0,
+      "ev",
+      0,
+      2
+    ],
+    "old": "287 enrolled; 5-year intention-to-treat overall survival 53% from start of therapy; 5-year post-transplant recurrence-free survival 65%. No isolated RT effect.",
+    "new": "287-patient retrospective series; 5-y ITT OS 53% from presentation; post-LT recurrence-free survival 65%; 25% pre-LT dropout. No isolated RT effect.",
+    "source_locator": "PMID 22504095; B09 R10",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "pcca|sbrt",
+      "roles",
+      0,
+      "ev",
+      2,
+      2
+    ],
+    "old": "26 LT recipients: 12 GemCis-only vs 14 RT-containing. No significant OS/RFS difference; no equivalence or ITT benefit established.",
+    "new": "26 recipients: 12 GemCis-only vs 14 RT-containing; recurrence 6/12 vs 3/14. No significant OS/RFS difference; no equivalence or ITT benefit established.",
+    "source_locator": "PMID 39936132; B09 R10",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "cells",
+      "hcc|htx",
+      "roles",
+      0,
+      "when"
+    ],
+    "old": "≤3 tumours <3 cm with acoustic window; trial / registry",
+    "new": "Up to 3 treated tumors <3 cm with an adequate acoustic window; trial / registry assessment",
+    "source_locator": "PMID 39225612; treated targets, not total lesion count",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "contra",
+      "abl",
+      "items",
+      0
+    ],
+    "old": "Size: >3 cm (RFA) or >5 cm (MWA) for curative intent; >3–5 lesions (relative)",
+    "new": "Selection depends on tumor type, size, number and achievable margin; strongest small-tumor evidence is generally ≤3 cm. MWA ≤5 cm is not a universal curative threshold.",
+    "source_locator": "PMID 32382856 Tables1–2, pp3–4",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "contra",
+      "abl",
+      "items",
+      2
+    ],
+    "old": "<1 cm from hilar / central bile duct (stricture)",
+    "new": "Central bile duct proximity: thermal-injury risk; specialized duct protection may change feasibility",
+    "source_locator": "PMID 32382856 Table3; duct-cooling exception",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "contra",
+      "abl",
+      "items",
+      6
+    ],
+    "old": "Platelets <50k / INR >1.5 uncorrectable; Child-Pugh C; refractory ascites",
+    "new": "Uncorrectable bleeding risk, ascites along the needle path or poor liver reserve: assess individually with IR; use procedure- and liver-disease-specific thresholds",
+    "source_locator": "PMID 32382856; remove unsupported universal INR/platelet/Child cutoffs",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "contra",
+      "sbrt",
+      "items",
+      0
+    ],
+    "old": "Inadequate uninvolved liver (≥700 mL must be spared); Child-Pugh ≥B8 relative, C absolute",
+    "new": "Insufficient uninvolved liver to meet the dose/fractionation plan; baseline liver dysfunction increases risk. A bare 700-mL volume is not a universal validated cutoff.",
+    "source_locator": "PMID 29482870 p9; HyTEC could not validate 700-cm3 rule",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "contra",
+      "sbrt",
+      "items",
+      4
+    ],
+    "old": "Very large or multifocal disease (>6–8 cm; relative)",
+    "new": "Large or multifocal targets: feasibility depends on normal-liver and adjacent-organ dose constraints",
+    "source_locator": "PMID 29482870; no universal 6–8cm prohibition",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "contra",
+      "y90",
+      "items",
+      0
+    ],
+    "old": "Lung shunt: lung dose >30 Gy single / >50 Gy cumulative",
+    "new": "Excess lung shunting: calculate absorbed lung dose and apply the selected device instructions and cumulative exposure limits",
+    "source_locator": "PMID 36114872; numerical device limits not in this source",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "contra",
+      "y90",
+      "items",
+      2
+    ],
+    "old": "Bilirubin >2 mg/dL (unless segmental); Child-Pugh C; ECOG ≥2",
+    "new": "Decompensated liver disease, elevated bilirubin or poor performance: assess reserve, treatment volume and device-specific selection",
+    "source_locator": "PMID 36114872; HCC/glass guidance is not a universal all-tumor cutoff",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "contra",
+      "y90",
+      "items",
+      5
+    ],
+    "old": "Note: PVTT is NOT a contraindication",
+    "new": "PVTT is not automatically prohibitive; extent, targeting, portal flow and liver reserve determine feasibility",
+    "source_locator": "PMID 36114872 Tables4,7",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "contra",
+      "y90",
+      "items"
+    ],
+    "old": [
+      "Excess lung shunting: calculate absorbed lung dose and apply the selected device instructions and cumulative exposure limits",
+      "Uncorrectable GI / extrahepatic deposition on MAA",
+      "Decompensated liver disease, elevated bilirubin or poor performance: assess reserve, treatment volume and device-specific selection",
+      "Insufficient hepatic reserve; extensive tumour replacement with poor function",
+      "Prior biliary intervention or prior hepatic RT (relative)",
+      "PVTT is not automatically prohibitive; extent, targeting, portal flow and liver reserve determine feasibility"
+    ],
+    "new": [
+      "Excess lung shunting: calculate absorbed lung dose and apply the selected device instructions and cumulative exposure limits",
+      "Uncorrectable GI / extrahepatic deposition on MAA",
+      "Decompensated liver disease, elevated bilirubin or poor performance: assess reserve, treatment volume and device-specific selection",
+      "Insufficient hepatic reserve; extensive tumour replacement with poor function",
+      "Prior biliary intervention or prior hepatic RT (relative)",
+      "PVTT is not automatically prohibitive; extent, targeting, portal flow and liver reserve determine feasibility",
+      "GemCis with Y90 in cirrhotic iCCA: MISPHEC reported hepatic failure in 9/12; avoid routine extrapolation (PMID 31670746)."
+    ],
+    "source_locator": "PMID 31670746 pp3–4,7",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "contra",
+      "tace",
+      "items",
+      0
+    ],
+    "old": "Main PV occlusion / hepatofugal flow without collaterals (selective TACE may still be possible)",
+    "new": "Portal-vein obstruction or hepatofugal flow requires IR review. CIRSE lists neoplastic PVT as an absolute contraindication; selected alternative practice needs an explicit rationale.",
+    "source_locator": "PMID 34694454 contraindications; do not silently turn source attribution into new local blanket rule",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "contra",
+      "tace",
+      "items",
+      1
+    ],
+    "old": "Decompensated cirrhosis: Child-Pugh C (≥B8 relative), bilirubin >3 mg/dL, refractory ascites, HE",
+    "new": "Decompensated cirrhosis, ascites or encephalopathy; CIRSE lists Child-Pugh ≥B8 and ECOG ≥2 as absolute contraindications",
+    "source_locator": "PMID 34694454 Table of contraindications",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "contra",
+      "tace",
+      "items",
+      2
+    ],
+    "old": "Tumour burden >50% of liver",
+    "new": "Extensive liver replacement or marginal reserve: thresholds are tumor- and protocol-specific; >50% is not a universal contraindication",
+    "source_locator": "B09 R7; NCCN NET burden differs; retain individualized IR selection",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "contra",
+      "tace",
+      "items",
+      5
+    ],
+    "old": "DEB-TACE in NET (biliary injury)",
+    "new": "DEB-TACE in NELM: biliary injury/biloma concern (Bhagat, PMID 22722717); not attributed to CIRSE alone",
+    "source_locator": "PMID 22722717; B09 R7",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "contra",
+      "hai",
+      "items",
+      2
+    ],
+    "old": "Unrelieved biliary obstruction / infection; unsuitable for pump surgery",
+    "new": "Unrelieved biliary obstruction, active infection or inability to tolerate pump surgery: clinical safety review",
+    "source_locator": "B09 R7; reasonable clinical safeguards, not quoted toolkit requirements",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "contra",
+      "hai",
+      "items",
+      4
+    ],
+    "old": "Prior liver radiation requires review before sequencing; retain NCCN CRLM restriction",
+    "new": "Prior liver-directed radiation: expert review of hepatic reserve, perfusion and sequencing; prior TARE is a program-selection consideration",
+    "source_locator": "PMID 39962001; remove unspecified NCCN restriction",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "contra",
+      "htx",
+      "items",
+      3
+    ],
+    "old": "Beyond trial limits: >3 tumours or >3 cm",
+    "new": "Outside pivotal evidence: more than 3 treated targets or target size ≥3 cm; total liver lesion count is a separate assessment",
+    "source_locator": "PMID 39225612; treated target eligibility",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "contra",
+      "htx",
+      "items"
+    ],
+    "old": [
+      "No acoustic window: rib / lung shadow or bowel gas in beam path",
+      "Target not visible on diagnostic US or beyond transducer focal depth",
+      "Unable to tolerate general anaesthesia (needed for respiratory control)",
+      "Outside pivotal evidence: more than 3 treated targets or target size ≥3 cm; total liver lesion count is a separate assessment",
+      "Lung or bowel immediately adjacent to the treatment zone"
+    ],
+    "new": [
+      "No acoustic window: rib / lung shadow or bowel gas in beam path",
+      "Target not visible on diagnostic US or beyond transducer focal depth",
+      "Unable to tolerate general anaesthesia (needed for respiratory control)",
+      "Outside pivotal evidence: more than 3 treated targets or target size ≥3 cm; total liver lesion count is a separate assessment",
+      "Lung or bowel immediately adjacent to the treatment zone",
+      "Biliary instrumentation or limited liver reserve: individualized safety assessment; the pivotal study does not establish safety in these groups."
+    ],
+    "source_locator": "PMID 39225612; B09 R7",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "notes",
+      1
+    ],
+    "old": "Cell colour = principal role; tagged lines = other evidence-supported roles. Numbers in boxes are PubMed IDs.",
+    "new": "Cell color and number describe clinical role, not evidence grade. Chips include other roles and cautions; numbers beside studies are PubMed IDs.",
+    "source_locator": "B09 R11 role vs evidence hierarchy",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "notes",
+      4
+    ],
+    "old": "15 October 2026 HAI update: Dutch adjuvant PUMP (ASCO LBA3506), US EA2222 (NCT05863195, unresectable CRLM) and iCCA PUMP-2 are distinct trials. Lecture and published PUMP analyses differ; this matrix uses the published abstract. HAI does not establish MELD exception or LT eligibility. Shared programme safeguards: PMIDs 39962001, 36346892, 24154839.",
+    "new": "Dutch adjuvant PUMP (ASCO LBA3506), EA2222 (unresectable CRLM) and iCCA PUMP-2 are distinct trials. PUMP is an abstract with OS immature; do not extrapolate its low-risk resectable population to conversion treatment. HAI does not establish MELD exception or transplant eligibility.",
+    "source_locator": "A PUMP_and_ClarIDHy_Verification.md; rejected conflicting secondary report",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B09",
+    "path": [
+      "notes",
+      5
+    ],
+    "old": "23 October 2026: pCCA added separately from iCCA. Endobiliary RFA, PDT and radiation-emitting stents are reviewed below as biliary-directed techniques. No standalone local modality has established curative equivalence to resection or protocol LT for primary pCCA. Proposed institutional interpretation remains subject to MDT ratification.",
+    "new": "pCCA is assessed separately from iCCA. No standalone local modality has established curative equivalence to resection or protocol transplantation for primary pCCA.",
+    "source_locator": "User removed biliary-directed panel; retain disease-specific distinction",
+    "file": "lrt/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      3,
+      "limits"
+    ],
+    "old": "These agents do not have identical evidence or regulatory indications. Check the current agent-specific label; a later-line study does not establish first-line superiority.",
+    "new": "Guideline options and US indications differ: durvalumab monotherapy is not the labelled HCC regimen; the HCC label specifies combination treatment. KEYNOTE-240/394 are later-line studies, not first-line superiority evidence.",
+    "source_locator": "B26 drug-label finding; B10 R1/R2; durvalumab indication",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      4,
+      "evidence"
+    ],
+    "old": "REFLECT: lenvatinib was noninferior to sorafenib for overall survival (13.6 versus 12.3 months). SHARP established sorafenib benefit over placebo (10.7 versus 7.9 months). Median OS 10.7 versus 7.9 months; HR 0.69 (0.55–0.87). Radiologic time to progression 5.5 versus 2.8 months, HR 0.58; this is not PFS. ORR 2% versus 1%, no complete responses.",
+    "new": "REFLECT: lenvatinib vs sorafenib OS 13.6 vs 12.3 months; noninferiority design. SHARP: sorafenib vs placebo OS 10.7 vs 7.9 months, HR 0.69 (0.55–0.87); radiologic time to progression 5.5 vs 2.8 months, not PFS.",
+    "source_locator": "PMIDs 29433850,18650514; B10 R1/R2",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      4,
+      "limits"
+    ],
+    "old": "REFLECT excluded main portal-vein invasion, ≥50% liver occupation and bile-duct invasion. Dose tolerance and hepatic function matter; trial medians are not individual predictions. Historical placebo comparison, not a comparison with current ICI combinations. Grade 3 diarrhea and hand–foot reaction each 8%; dose interruptions/reductions frequent. Little evidence for decompensated cirrhosis.",
+    "new": "REFLECT enrolled Child-Pugh A, ECOG 0–1 and excluded main portal-vein invasion, ≥50% liver occupation and obvious bile-duct invasion. SHARP reported grade 3 diarrhea and hand–foot reaction of 8% each with sorafenib; these are not lenvatinib toxicity rates. Little evidence supports use in decompensated cirrhosis.",
+    "source_locator": "PMID 29433850 eligibility;18650514 safety",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      6,
+      "who"
+    ],
+    "old": "HCC with no residual disease after resection or ablation.",
+    "new": "No residual HCC after resection or ablation; IMbrave050 enrolled patients at high recurrence risk.",
+    "source_locator": "PMIDs 37871608,41580093 trial eligibility",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      6,
+      "evidence"
+    ],
+    "old": "IMbrave050 initially reported a recurrence-free survival advantage. The 2026 update did not sustain that result: RFS HR 0.90 (95% CI 0.72–1.12); overall survival remained immature.",
+    "new": "IMbrave050 initially reported a recurrence-free survival advantage. The 2026 update did not sustain that result: RFS HR 0.90 (95% CI 0.72–1.12); overall survival remained immature. Updated OS HR 1.26; immature survival data do not establish benefit or harm.",
+    "source_locator": "PMID 41580093 update; B10 R1",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      7,
+      "who"
+    ],
+    "old": "Embolization-eligible unresectable HCC with suitable liver reserve; review the specific regimen, current label and guideline position.",
+    "new": "TACE-eligible unresectable HCC: eligibility differs by regimen. LEAP-012 and EMERALD-3 mainly required Child-Pugh A; EMERALD-1 allowed B7. Evaluate current guideline position and competing curative options.",
+    "source_locator": "PMIDs 39798579,39798578,42636832",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      7,
+      "limits"
+    ],
+    "old": "Regimens, comparators and follow-up differ. PFS benefit does not establish cure, transplant benefit or interchangeability. Combined treatment can increase serious toxicity.",
+    "new": "PFS benefit is not proof of OS benefit or a transplant bridge. LEAP-012 grade ≥3 treatment-related toxicity was 71% vs 32%; EMERALD-3 grade 3–4 treatment-related toxicity was 63% vs 19%. EMERALD-1 durvalumab without bevacizumab did not improve PFS.",
+    "source_locator": "PMIDs 39798578,42636832 Table3,39798579",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      18,
+      "who"
+    ],
+    "old": "A more intensive regimen may be appropriate when substantial shrinkage could permit complete local treatment. Review by an experienced liver multidisciplinary team is essential.",
+    "new": "For fit patients when shrinkage may enable complete local treatment; CAIRO5 triplet evidence applies to right-sided or RAS/BRAF-mutant disease. Reassess resectability with the liver multidisciplinary team.",
+    "source_locator": "PMID 37329889 eligibility",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      18,
+      "evidence"
+    ],
+    "old": "CAIRO5: FOLFOXIRI–bevacizumab improved PFS over doublet–bevacizumab in its right-sided or RAS/BRAF-mutant group (10.6 versus 9.0 months; HR 0.76), with greater toxicity. TRICE studied cetuximab with triplet versus doublet chemotherapy in RAS/BRAF-wild-type CRLM.",
+    "new": "CAIRO5: FOLFOXIRI–bevacizumab improved PFS over doublet–bevacizumab in its right-sided or RAS/BRAF-mutant group (10.6 versus 9.0 months; HR 0.76), with greater toxicity. TRICE studied cetuximab with triplet versus doublet chemotherapy in RAS/BRAF-wild-type CRLM. TRICE did not meet its primary endpoint; grade ≥3 neutropenia increased. CAIRO5 long-term OS was not significantly improved (HR 0.90).",
+    "source_locator": "PMIDs 38728364,39570583; long-term report",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      19,
+      "evidence"
+    ],
+    "old": "KEYNOTE-177: pembrolizumab PFS 16.5 versus 8.2 months with chemotherapy. CheckMate 8HW established first-line PFS benefit of nivolumab–ipilimumab versus chemotherapy; its separate comparison versus nivolumab alone also favored the combination (HR 0.62).",
+    "new": "KEYNOTE-177: pembrolizumab PFS 16.5 vs 8.2 months with chemotherapy; final OS superiority was not statistically established. CheckMate 8HW: first-line nivolumab–ipilimumab improved PFS vs chemotherapy; the separate PFS HR 0.62 comparison vs nivolumab pools treatment lines.",
+    "source_locator": "PMIDs 33264544,39602630,39874977 pp4,8–10",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      21,
+      "evidence"
+    ],
+    "old": "MOUNTAINEER: ORR 38.1% in its combination cohorts. CodeBreaK 300: PFS 5.6 versus 2.2 months with the approved-dose sotorasib combination versus standard care. KRYSTAL-1: adagrasib–cetuximab ORR 34% in 94 patients. Tucatinib plus trastuzumab: confirmed ORR 39.3% (28.8–50.5), median response duration 15.2 months, PFS 8.1 months, OS 23.9 months. Grade 3 and 4 events 33.7% and 7.0%; 5.8% discontinued for adverse events.",
+    "new": "MOUNTAINEER final: tucatinib–trastuzumab ORR 39.3%, median response duration 15.2 months in HER2-positive, RAS-wild-type CRC. CodeBreaK 300, corrected 2025: sotorasib 960 mg–panitumumab PFS 5.6 vs 2.0 months, HR 0.48 (0.30–0.78), vs trifluridine–tipiracil or regorafenib. KRYSTAL-1: adagrasib–cetuximab ORR 34% in 94 patients.",
+    "source_locator": "PMIDs 41526345 p3,37870968 corrected Table2,38587856; erratum39938112",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      21,
+      "limits"
+    ],
+    "old": "MOUNTAINEER and KRYSTAL-1 do not establish randomized survival superiority. Do not compare their response rates across different molecular groups. No randomized combination comparator or proven best sequence after other HER2 drugs. Do not rank its median OS against unrelated later-line trials. Exploratory HER2 copy-number thresholds are not mandatory selection cutoffs.",
+    "new": "MOUNTAINEER randomized combination vs tucatinib alone in cohorts B/C, with crossover, but had no powered standard-care survival comparison and excluded prior HER2 therapy. KRYSTAL-1 was single-arm. CodeBreaK 300 improved PFS; OS superiority was not established. Do not rank these different molecular populations by response or survival.",
+    "source_locator": "PMID41526345 p8;37870968 p13;40215429 OS",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      23,
+      "evidence"
+    ],
+    "old": "SUNLIGHT: OS 10.8 versus 7.5 months for trifluridine–tipiracil + bevacizumab versus trifluridine–tipiracil alone. FRESCO-2 and CORRECT demonstrated survival benefit of fruquintinib and regorafenib, respectively, versus placebo. OS 10.8 versus 7.5 months, HR 0.61 (0.49–0.77); PFS 5.6 versus 2.4 months, HR 0.44. ORR 6.1% versus 1.2%. Grade ≥3 events 72.4% versus 69.5%; neutropenia 43.1% versus 32.1%. Fruquintinib versus placebo plus supportive care: OS 7.4 versus 4.8 months, HR 0.66 (0.55–0.80); PFS 3.7 versus 1.8, HR 0.32. Seven partial responses among 461; no complete response. Grade ≥3 events 63% versus 50%.",
+    "new": "SUNLIGHT: trifluridine–tipiracil+bevacizumab vs trifluridine–tipiracil OS 10.8 vs 7.5 months, HR 0.61; PFS 5.6 vs 2.4 months. FRESCO-2: fruquintinib vs placebo/supportive care OS 7.4 vs 4.8 months, HR 0.66; PFS 3.7 vs 1.8 months. CORRECT: regorafenib improved OS vs placebo in its separate refractory population.",
+    "source_locator": "PMIDs37133585 pp5–7,37331369,23177514; remove duplicated/unlabelled SUNLIGHT data",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      23,
+      "limits"
+    ],
+    "old": "Different prior-treatment populations and comparators; these numbers do not rank the options. RECOURSE supports trifluridine–tipiracil alone when combination treatment is unsuitable. Open-label; no head-to-head comparison with fruquintinib/regorafenib. Low response rate and an advanced refractory population: not a preferred curative conversion regimen or LT trial. Very late-line population, no direct comparison with SUNLIGHT. Grade ≥3 hypertension 14%, asthenia 8%, hand–foot syndrome 6%; one treatment-related intestinal-perforation death.",
+    "new": "Separate trials do not rank these options. SUNLIGHT grade ≥3 adverse events were 72.4% vs 69.5%, including grade 3–4 neutropenia 43.1% vs 32.1%. FRESCO-2 grade ≥3 adverse events were 63% vs 50%. These are refractory-treatment studies, not preferred conversion or transplant regimens.",
+    "source_locator": "PMIDs37133585 Table2,37331369",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      27,
+      "position"
+    ],
+    "old": "Well-differentiated G2/G3, SSTR-positive GEP-NET",
+    "new": "Newly diagnosed well-differentiated GEP-NET; Ki-67 10–55%; SSTR-positive",
+    "source_locator": "PMID38851203; avoid extending trial to all G2",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      26,
+      "limits"
+    ],
+    "old": "Long-term risks include marrow toxicity and uncommon myelodysplasia/leukemia. Primary site and prior therapy affect applicability.",
+    "new": "Long-term risks include marrow toxicity and uncommon myelodysplasia/leukemia. Primary site and prior therapy affect applicability. NETTER-1 enrolled midgut NET; its numerical results are not pancreatic-NET-specific estimates.",
+    "source_locator": "PMIDs28076709,34793718",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      31,
+      "who"
+    ],
+    "old": "OCLURANDOM: pretreated progressive SSTR-positive pancreatic NET. COMPETE: progressive SSTR-positive G1/G2 GEP-NET.",
+    "new": "OCLURANDOM: pretreated progressive SSTR-positive pancreatic NET. COMPETE: progressive SSTR-positive G1/G2 GEP-NET; functioning GI NET and prior PRRT/mTOR therapy were excluded.",
+    "source_locator": "PMIDs42225102,42392118 eligibility; A focused continuation",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      40,
+      "setting"
+    ],
+    "old": "first",
+    "new": "later",
+    "source_locator": "B10 R9; trial previously treated, retain broader FDA indication in eligibility text",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      40,
+      "position"
+    ],
+    "old": "Setting-specific MDT option",
+    "new": "Subsequent treatment; broader label includes patients unfit for multiagent therapy",
+    "source_locator": "FDA26Aug2026; A Current_FDA_and_eCFR_2026-11-01.md",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      19,
+      "transplant"
+    ],
+    "old": "Effective immunotherapy is a major competing option. MSI-H/dMMR expansion is closed in the initial V7 CRLM transplant proposal.",
+    "new": "Effective immunotherapy is a major competing option. MSI-H/dMMR expansion is closed in the proposed local opening CRLM transplant proposal.",
+    "source_locator": "B25/B26 obsolete version label; no policy change",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      20,
+      "transplant"
+    ],
+    "old": "BRAF-mutant expansion remains closed in the initial V7 CRLM transplant proposal; response does not remove that boundary.",
+    "new": "BRAF-mutant expansion remains closed in the proposed local opening CRLM transplant proposal; response does not remove that boundary.",
+    "source_locator": "B25/B26 obsolete version label; no policy change",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "cards",
+      27,
+      "transplant"
+    ],
+    "old": "G3 treatment activity does not make G3 disease eligible for the initial V7 NET transplant cohort.",
+    "new": "G3 treatment activity does not make G3 disease eligible for the proposed local opening NET transplant cohort.",
+    "source_locator": "B25/B26 obsolete version label; no policy change",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "safety",
+      1,
+      2
+    ],
+    "old": "Coordinate surgery and agent-specific interruption intervals. HCC with portal hypertension needs particular attention to varices.",
+    "new": "Bevacizumab: withhold at least 28 days before elective surgery and for at least 28 days after major surgery, until adequate healing. Review perforation, fistula, arterial thrombosis and bleeding risks. Other VEGF agents have different intervals.",
+    "source_locator": [
+      "Bevacizumab prescribing information sections2.1,5.1–5.5"
+    ],
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "safety",
+      3,
+      1
+    ],
+    "old": "Correct active infection and major organ dysfunction before treatment. Cisplatin: renal function, hearing and neuropathy. Oxaliplatin: neuropathy and hepatic sinusoidal injury. Irinotecan: bilirubin, severe diarrhea and UGT1A1-related toxicity risk.",
+    "new": "Stabilize active infection and assess organ dysfunction; dose adjustment or a different regimen may be needed rather than normalization of every test. Cisplatin: renal function, hearing and neuropathy. Oxaliplatin: neuropathy and hepatic sinusoidal injury. Irinotecan: bilirubin, severe diarrhea and UGT1A1-related toxicity risk.",
+    "source_locator": "A focused targeted-label review; avoid blanket requirement",
+    "file": "systemic/matrix.json"
+  },
+  {
+    "batch": "B10",
+    "path": [
+      "safety",
+      5,
+      2
+    ],
+    "old": "Assess cumulative radiation and marrow toxicity when sequencing with alkylating chemotherapy.",
+    "new": "Review cumulative marrow and radiation exposure with nuclear medicine when sequencing PRRT and alkylators; NETTER-1 did not establish an optimal or universally safe sequence.",
+    "source_locator": "B10 PRRT source attribution",
+    "file": "systemic/matrix.json"
+  }
+]

@@ -200,8 +200,9 @@
     panel.append(list);
     return {panel, count: ids.length};
   }
-  function actionsFor(step, index) {
-    const list = (data.continuations?.[slug + '/' + step.id]?.branches?.[index] || []).filter(a => a.step !== step.id);
+  function actionsFor(step, index, ruleIndex) {
+    const route = data.continuations?.[slug + '/' + step.id];
+    const list = (ruleIndex === undefined ? route?.branches?.[index] || [] : route?.rules?.[ruleIndex] || []).filter(a => a.step !== step.id);
     if (!list.length) return null;
     if (typeof renderActions === 'function') {          // the page's own renderer, so links behave as before
       const box = make('div', 'tw-next');
@@ -210,12 +211,13 @@
     }
     return null;
   }
-  function optionCard(step, branch, index) {
+  function optionCard(step, branch, index, ruleIndex) {
     const card = make('article', 'tw-option tw-k-' + branch.kind);
-    card.dataset.branchIndex = String(index);
+    if (ruleIndex === undefined) card.dataset.branchIndex = String(index);
+    else card.dataset.customRuleIndex = String(ruleIndex);
     card.append(make('h5', 'tw-option-title', branch.title));
     if (branch.action) card.append(make('p', 'tw-option-action', branch.action));
-    const next = actionsFor(step, index);
+    const next = actionsFor(step, index, ruleIndex);
     if (next) card.append(next);
     const row = make('div', 'ct-peers');
     row.setAttribute('role', 'group');
@@ -306,12 +308,23 @@
     const box = make('section', 'tw-options');
     box.setAttribute('aria-label', 'Possible results within this decision');
     box.append(make('h4', 'tw-options-title', 'Possible results within this decision'));
+    const config = data.assistants[slug + '/' + step.id];
+    const results = step.branches.map((b, i) => [b, i]);
+    config.rules.forEach((r, ri) => {
+      if (r.branch !== null) return;
+      const criteria = Object.entries(r.when).map(([qid, values]) => {
+        const q = config.questions.find(q => q.id === qid);
+        const choices = (Array.isArray(values) ? values : [values]).map(v => q.options.find(o => o.value === v));
+        return {text: q.label + ' ' + choices.map(o => o.label).join(' OR '), refs: q.refs || [], children: []};
+      });
+      results.push([{kind:r.kind,title:r.title,action:r.text,criteria,refs:r.refs},null,ri]);
+    });
     for (const [kind, title] of GROUPS) {
-      const branches = step.branches.map((b, i) => [b, i]).filter(([b]) => b.kind === kind);
+      const branches = results.filter(([b]) => b.kind === kind);
       if (!branches.length) continue;
       const group = make('section', 'tw-group tw-k-' + kind);
       group.append(make('h4', '', title));
-      for (const [b, i] of branches) group.append(optionCard(step, b, i));
+      for (const [b, i, ri] of branches) group.append(optionCard(step, b, i, ri));
       box.append(group);
     }
     const risk = highRiskGroup(step);

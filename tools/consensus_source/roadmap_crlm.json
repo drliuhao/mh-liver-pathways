@@ -360,7 +360,7 @@
   {
    "id": "CRLM-D11",
    "n": 11,
-   "question": "Resolve the two numeric boundaries in the OPTN transplant-oncology guidance before the first filing: a CEA of exactly 80 µg/L, and the definition of progression as a 10% increase in diameter while being labelled RECIST 1.1.",
+   "question": "Resolve the two numeric boundaries in the OPTN transplant-oncology guidance before the first filing: a CEA of exactly 80 µg/L, and the definition of progression as more than a 10% increase in diameter while being labelled RECIST 1.1.",
    "kind": "governance",
    "decisions": [
     "4"
@@ -429,7 +429,7 @@
    "divergence": "ASCO's strong survival-based recommendation stands, but the one randomised trial that measured clearance found deeper response without more complete local treatment, so a conversion rationale is unsupported.",
    "proposal": "Use anti-EGFR plus doublet first line for left-sided, RAS and BRAF wild-type, mismatch-repair proficient disease when maximal shrinkage is the goal (grade B for this use), but do not read shrinkage as a survival or conversion advantage: the first-line recommendation is kept while the claim that it converts more livers is rejected.",
    "proposal_locator": "Gate 1 · Standard molecular options · 'Doublet plus anti-EGFR' (pref, avoid, note) and flagnote",
-   "rationale": "In the one randomised comparison that measured clearance, panitumumab raised objective response from 53% to 80% and deepened response without changing complete local treatment (58% in both arms), and those groups were closed early for futility; the conversion rationale and the first-line rationale are not the same claim.",
+   "rationale": "In CAIRO5’s relevant randomized comparison, panitumumab raised objective response from 53% to 80% without changing complete local treatment (58% in both arms). Other randomized studies, including Ye 2013 and ATOM, also assessed resection. Their populations and treatment comparisons differ; CAIRO5 alone does not establish absence of a conversion role.",
    "audit": "Conversion-intent regimen recorded against the stated indication, with the complete-local-treatment rate reported by regimen."
   },
   {
@@ -475,7 +475,7 @@
    "divergence": "EPOCH met surrogate endpoints without a survival gain and ASCO advises against routine SIRT, while the DEBIRI survival signal comes from one small trial against an obsolete comparator.",
    "proposal": "Keep second-line Y90 (Reasonable, grade B) and TACE or DEBIRI (grade D) as hepatic-control options for selected liver-dominant refractory disease, never offered for survival, with no set priority among them; record intent as control with a reassessment date, restage before repeating, check HAI eligibility before liver radiation; IR to ratify the regional-control label and not-first-line use.",
    "proposal_locator": "Gate 5 · Standard 'Record the intent as control…'; Gate 5 · Reasonable options (order, flagnote)",
-   "rationale": "Neither improved overall survival — EPOCH gave 14.0 versus 14.4 months with grade 3 or worse events in 68% and three treatment-related deaths, and the DEBIRI survival figure comes from 74 patients against an obsolete comparator — and ASCO does not recommend SIRT routinely at all.",
+   "rationale": "EPOCH did not demonstrate OS benefit (14.0 versus 14.4 months), with grade ≥3 events in 68% and three possibly related deaths. The small DEBIRI trial reported OS 22 versus 15 months (P=.031), but its older comparator and reporting limitations restrict application. These results do not establish routine superiority to current systemic treatment; ASCO does not recommend SIRT routinely.",
    "audit": "Every transarterial case recorded with intent, reassessment date and hepatic reserve before and after; cumulative radiation record maintained and HAI eligibility checked before liver irradiation."
   },
   {
@@ -641,7 +641,7 @@
     {
      "source": "Hill, liver transplantation after HAI",
      "ref": "37210451",
-     "position": "Of seven patients transplanted after HAI, five were for biliary complications and two for residual tumour, and dissection and arterial reconstruction were difficult; this supports early technical planning, not a validated HAI-to-transplant schedule.",
+     "position": "Seven patients with mixed diagnoses underwent LT after HAI; only three had CRLM, two for cholangiopathy and one for residual tumour. Difficult dissection and arterial reconstruction support early technical planning, not an established CRLM HAI-to-LT schedule.",
      "locator": "What we are not sure about · 'HAI referral and transplant evaluation should proceed in parallel'; HAI evidence and pathway revision · 'Parallel transplant assessment'"
     },
     {
@@ -651,7 +651,7 @@
      "locator": "Gate 3 · Reasonable 'Adjuvant hepatic arterial infusion after resection…' (note); HAI evidence and pathway revision · 'Adjuvant HAI: updated evidence'"
     }
    ],
-   "divergence": "NCCN, the expert-programme paper and the bevacizumab data agree on restrictive safeguards, but adjuvant evidence is negative or dated and the HAI-to-transplant evidence is seven cases, so the parallel-pathway timing is unvalidated.",
+   "divergence": "NCCN, the expert-programme paper and the bevacizumab data agree on restrictive safeguards, but adjuvant evidence is negative or dated and the HAI-to-transplant evidence is a seven-patient mixed-indication series, including three CRLM cases (two transplanted for cholangiopathy and one for tumour), so the parallel-pathway timing is unvalidated.",
    "proposal": "Review HAI early, during first-line planning, reassess after systemic therapy and before hepatic radiation; record conversion, regional-control and adjuvant intent separately, adjuvant use only selectively; run transplant review in parallel without requiring HAI exhaustion; name the whole service team before activation; avoid bevacizumab with floxuridine and keep NCCN's VEGF restriction.",
    "proposal_locator": "HAI evidence and pathway revision (15 October 2026) · all subsections; Gate 3 · HAI option and Reasonable 'Adjuvant hepatic arterial infusion…'; Gate 4 · Deceased-donor option (avoid)",
    "rationale": "Before activation, name the HPB pump surgeon and backup, medical oncology lead, nursing/pharmacy team, nuclear-medicine perfusion service and IR rescue service; define refill/maintenance coverage, laboratory monitoring and dose holds, biliary-toxicity escalation, and an outcomes registry. Minimum programme requirements: PMID 39962001; surgical toolkit: PMID 36346892. Avoid concurrent bevacizumab with FUDR (PMID 24154839); retain the NCCN CRLM restriction on concurrent VEGF inhibitors. Separate conversion, regional-control and selective adjuvant intent; transplant review proceeds in parallel.",

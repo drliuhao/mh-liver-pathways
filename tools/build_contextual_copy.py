@@ -222,5 +222,14 @@ for key, concise in recommendations.items():
     slug, step, group, index = key.split('/')
     source = next(s for s in roadmaps[slug] if s['id'] == step)[group][int(index)]['t']
     out['recommendations'][key] = {'source': source, 'concise': concise}
+# Retain explicitly reviewed concise replacements while updating exact source guards.
+reviewed_copy = ROOT / 'tools/contextual_copy_reviewed.json'
+if reviewed_copy.exists():
+    reviewed = json.loads(reviewed_copy.read_text())
+    for section in ['headings', 'help', 'recommendations']:
+        for key, entry in out[section].items():
+            prior = reviewed.get(section, {}).get(key)
+            if prior and prior.get('source') == entry.get('source'):
+                entry.update(prior)
 (ROOT / 'assets/contextual-copy.js').write_text('/* Reviewed display copy; exact source guards prevent stale summaries. */\nwindow.ContextualCopy = ' + json.dumps(out, ensure_ascii=False, indent=2) + ';\n')
 print({k: len(v) for k, v in out.items() if isinstance(v, dict)})

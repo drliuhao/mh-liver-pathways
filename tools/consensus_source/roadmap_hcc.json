@@ -90,8 +90,8 @@
      "locator": "Locoregional tab · Stop and switch rules; Quick reference · LI-RADS table (v16 text); What we are not sure about #2"
     }
    ],
-   "divergence": "Within the roadmap, the stop/switch card keeps persistent viability after two well-executed sessions as a switch trigger, while stage B and the limited-evidence table record that v0.8 withdrew the fixed two-session rule for per-session reassessment.",
-   "proposal": "Ratify a non-ranked selector chosen by goal, anatomy and reserve, with no universal ablation-to-histotripsy sequence; device availability and specialty preference are not indications. Stop/switch: reassess after every treatment; move away from repeated TACE for decompensation, worsening ALBI or Child-Pugh, lost selective access, or out-of-territory, vascular or extrahepatic progression, or persistent viable disease after two well-executed sessions unless a curative or downstaging rationale is recorded (a trigger the stage B note says v0.8 withdrew); allow delayed response after radiation.",
+   "divergence": "Use per-session multidisciplinary reassessment; the guidance’s one-or-two nonresponse signal prompts consideration of alternatives rather than an automatic treatment-count rule.",
+   "proposal": "Ratify a non-ranked selector chosen by goal, anatomy and reserve, with no universal ablation-to-histotripsy sequence; device availability and specialty preference are not indications. Stop/switch: reassess after every treatment; move away from repeated TACE for decompensation, worsening ALBI or Child-Pugh, lost selective access, or out-of-territory, vascular or extrahepatic progression, or inadequate response after technically adequate treatment, assessed after each session; continued treatment needs a recorded goal and rationale; allow delayed response after radiation.",
    "proposal_locator": "Locoregional tab · Decision sequence, selector table and Stop and switch rules; Decisions table #4 (why)",
    "rationale": "The selector is the page's operative content and it crosses six specialties; a concept everyone agrees with and a table nobody has signed is not a ratified pathway. Hepatobiliary and transplant surgery, hepatology, interventional radiology, radiation oncology, diagnostic radiology and medical oncology each own part of it.",
    "audit": ""
@@ -251,7 +251,7 @@
   {
    "id": "HCC-D9",
    "n": 9,
-   "question": "Decide whether this roadmap adopts the BCLC 2026 preference for microwave over radiofrequency up to 3 to 4 cm, given that no randomised trial has shown a difference, and whether the preference is stated as operational rather than outcome-based.",
+   "question": "Decide whether to adopt the BCLC 2026 microwave preference, distinguishing a device-specific local-control advantage from an unproven survival advantage.",
    "kind": "clinical",
    "decisions": [
     "0",
@@ -261,7 +261,7 @@
     {
      "source": "BCLC 2026",
      "ref": "41151697",
-     "position": "Prefers microwave over radiofrequency ablation up to 3-4 cm; the roadmap calls this a change of guideline position, not a trial result.",
+     "position": "Prefers microwave up to 3–4 cm on local-control evidence, including Sugimoto 2025 (PMID 39802807); a survival advantage was not demonstrated.",
      "locator": "Stage A · Thermal ablation; What we are not sure about #7"
     },
     {
@@ -273,14 +273,14 @@
     {
      "source": "EASL 2025",
      "ref": "39690085",
-     "position": "Treats radiofrequency and microwave ablation as equivalent.",
+     "position": "Does not recommend one thermal technique over the other; this is not proof of equivalence.",
      "locator": "Appendix · EASL 2025 (bottom line)"
     }
    ],
-   "divergence": "BCLC 2026 prefers microwave up to 3-4 cm while EASL 2025 treats the techniques as equivalent, and the one randomised trial neither showed superiority nor tested non-inferiority.",
-   "proposal": "Microwave or radiofrequency. The roadmap records the BCLC 2026 preference but states no randomised trial has shown a difference, so the preference is operational (a workflow preference, not outcome-based); the v16 matrix states no universal preference between the two.",
+   "divergence": "BCLC 2026 prefers microwave on local-control evidence. EASL 2025 does not recommend one thermal technique over the other; neither position establishes survival equivalence or universal device superiority.",
+   "proposal": "Microwave or radiofrequency according to anatomy, achievable margin and expertise. BCLC 2026 prefers microwave up to 3–4 cm on local-control evidence; adopting that preference locally remains an OPEN decision.",
    "proposal_locator": "Stage A · Thermal ablation; Curative tab · Thermal ablation; Liver-directed treatment matrix, thermal ablation row (v16 text)",
-   "rationale": "The one randomised comparison was a superiority trial that did not show superiority and did not test non-inferiority, at a mean lesion size of 18 mm with only 11 lesions in the 3 to 4 cm range the preference is argued for. Calling it operational is accurate; calling it outcome-based is not.",
+   "rationale": "MWA and RFA are both options. Sugimoto 2025 found lower two-year lesion-level local progression with MWA than single-needle RFA (20/122, 16.4%, versus 38/125, 30.4%; RR 0.54, 95% CI 0.33–0.87; P=.007), without a demonstrated overall-survival advantage. Most lesions were small; this does not establish superiority over every RFA system or a specific 3–4 cm subgroup. Earlier randomized comparisons did not show significant superiority; nonsignificance does not establish equivalence.",
    "audit": ""
   },
   {
@@ -327,7 +327,7 @@
   {
    "id": "HCC-D11",
    "n": 11,
-   "question": "Agree the AFP rule that actually binds listing here, since OPTN and AASLD allow listing once an AFP of 1,000 ng/mL or more falls below 500 while EASL treats an AFP above 1,000 as an absolute contraindication requiring three months at or below 1,000.",
+   "question": "Agree the local AFP approach while distinguishing OPTN exception scoring (>1,000 then <500 after treatment), AASLD guidance (≥1,000) and the EASL downstaging condition (<1,000 for at least three months).",
    "kind": "clinical",
    "decisions": [
     "0",
@@ -338,19 +338,19 @@
     {
      "source": "OPTN Policy 9",
      "ref": "OPTN9",
-     "position": "An AFP of 1,000 ng/mL or more blocks the standard exception until it falls below 500 after locoregional therapy; a later rise to 500 or more requires review-board referral, not automatic continuation.",
+     "position": "An AFP above 1,000 ng/mL blocks the standard exception until it falls below 500 after locoregional therapy; a later rise to 500 or more requires review-board referral, not automatic continuation.",
      "locator": "Transplant tab · Eligibility pathways (AFP rule); Quick reference · Transplant table (v16 text)"
     },
     {
      "source": "AASLD 2023",
      "ref": "37199193",
-     "position": "Like OPTN, allows listing once an AFP of 1,000 or more falls below 500 ng/mL.",
+     "position": "Uses AFP ≥1,000 followed by a reduction below 500 ng/mL after treatment; OPTN policy itself uses >1,000 for the standardized exception. Verify and apply the current policy operator.",
      "locator": "What we are not sure about #12"
     },
     {
      "source": "EASL 2025",
      "ref": "39690085",
-     "position": "An AFP above 1,000 ng/mL is an absolute contraindication whatever the tumour burden, and 1,000 or less must be sustained for three months before listing.",
+     "position": "An AFP above 1,000 ng/mL is an absolute contraindication whatever the tumour burden, and AFP below 1,000 must be sustained for at least three months after downstaging.",
      "locator": "What we are not sure about #12; Appendix · EASL 2025 (bottom line)"
     },
     {
@@ -366,10 +366,10 @@
      "locator": "What we are not sure about #12"
     }
    ],
-   "divergence": "OPTN and AASLD versus EASL set incompatible AFP listing rules, and the roadmap notes that neither threshold was derived from a trial.",
+   "divergence": "OPTN standardized exception policy, AASLD guidance and EASL clinical selection wording differ. Exception priority, waitlist registration and any stricter OPEN local proposal are separate decisions.",
    "proposal": "The page applies the OPTN rule (to be verified against current Policy 9 text), with the stricter of OPTN and local policy governing, and every AFP recorded with its date and intervening treatment. HCC B1.1 AFP proposals, such as a conservative hold at confirmed AFP of 500 or more, are OPEN, not automatic delisting rules. No monitor is named.",
    "proposal_locator": "Transplant tab · Four kinds of statement and Eligibility pathways (AFP rule); AFP-only discordance and HCC B1.1 OPEN proposals (v16 text)",
-   "rationale": "OPTN and AASLD allow listing once an AFP of 1,000 ng/mL or more falls below 500, while EASL treats an AFP above 1,000 as an absolute contraindication requiring three months at or below 1,000. Two incompatible rules cannot both govern the same listing decision, and transplant surgery must also name who monitors it.",
+   "rationale": "Apply current OPTN policy to standardized exception scoring: AFP >1,000 requires reduction below 500 after treatment. AASLD uses ≥1,000, while EASL requires AFP <1,000 for at least three months after downstaging. Record the source and purpose of each threshold; do not convert an OPEN local AFP proposal into automatic delisting.",
    "audit": ""
   },
   {
@@ -449,7 +449,7 @@
   {
    "id": "HCC-D14",
    "n": 14,
-   "question": "Decide whether any adjuvant locoregional therapy, TACE or hepatic arterial infusion, is offered after high-risk resection, noting that the AASLD statement against adjuvant therapy concerns atezolizumab plus bevacizumab and that the two randomised adjuvant locoregional trials are single-country hepatitis B populations.",
+   "question": "Decide whether any adjuvant locoregional therapy is offered after high-risk resection, recognizing that AASLD advises against neoadjuvant/adjuvant systemic therapy and EASL 2025 advises against any adjuvant treatment.",
    "kind": "clinical",
    "decisions": [
     "0",
@@ -459,7 +459,7 @@
     {
      "source": "AASLD critical update",
      "ref": "39992051",
-     "position": "Advises against adjuvant and neoadjuvant systemic therapy after resection or ablation because IMbrave050's benefit did not hold; roadmap: it concerns atezolizumab-bevacizumab, rests on an interim analysis, and extends to neoadjuvant therapy without a cited trial.",
+     "position": "Advises against neoadjuvant and adjuvant systemic therapy after resection or local ablation (statement 32, Level 1, strong). Small neoadjuvant studies do not establish a survival benefit over immediate surgery.",
      "locator": "Appendix · AASLD critical update (bottom line); Decisions table #14 (why)"
     },
     {
@@ -487,10 +487,10 @@
      "locator": "What we are not sure about #30"
     }
    ],
-   "divergence": "The AASLD and NCCN statements concern adjuvant atezolizumab-bevacizumab, while two single-country hepatitis B randomised trials report benefit from adjuvant TACE or HAI that the page does not yet address.",
+   "divergence": "AASLD advises against neoadjuvant/adjuvant systemic therapy and EASL against any adjuvant treatment. Adjuvant TACE/HAI signals from predominantly Eastern populations do not create an approved local treatment policy.",
    "proposal": "The roadmap states only that adjuvant atezolizumab-bevacizumab is not recommended (Avoid) and that resected patients get multiphase liver and chest imaging every 3-6 months with long-term surveillance; it takes no position on adjuvant TACE or HAI, and lists HAI as Trial only, not a routine locoregional line.",
    "proposal_locator": "Curative tab · Resection; Systemic therapy tab · Adjuvant therapy; What we are not sure about #30; Locoregional selector row 'Hepatic arterial infusion'",
-   "rationale": "The AASLD statement against adjuvant therapy concerns atezolizumab plus bevacizumab, whose recurrence-free survival signal was lost on updated analysis; it is not a statement about every adjuvant strategy. The two randomised adjuvant locoregional trials that do report benefit are single-country hepatitis B populations with unblinded controls, so whether they apply here is a local judgement.",
+   "rationale": "AASLD statement 32 advises against neoadjuvant and adjuvant systemic therapy after resection or ablation. EASL 2025 advises against any adjuvant treatment. Chinese trials and broader meta-analyses report locoregional benefit signals, but generalizability and the local treatment policy require explicit review.",
    "audit": ""
   },
   {
@@ -524,7 +524,7 @@
   {
    "id": "HCC-D16",
    "n": 16,
-   "question": "Decide whether SBRT may be used as a transplant bridge, given explant complete necrosis of 13% after SBRT against 49% after radiofrequency ablation in the only comparative series, and name who adjudicates bridging modality choice.",
+   "question": "Decide how SBRT bridging is selected, considering the differing nonrandomized comparative cohorts, and name who adjudicates bridging modality choice.",
    "kind": "clinical",
    "decisions": [
     "A",
@@ -544,10 +544,10 @@
      "locator": "Appendix · MERITS-LT (bottom line)"
     }
    ],
-   "divergence": "The only comparative bridging series favours RFA on explant necrosis but its arms were not comparable, and the roadmap notes no trial has compared bridging with no bridging.",
+   "divergence": "Comparative bridging cohorts differ in selection and design. Toronto reserved SBRT for patients unsuitable for other options; the later Hong Kong prospective SBRT cohort with historical controls reported more complete pathological responses and less dropout. These comparisons do not establish one universally superior bridge.",
    "proposal": "The roadmap lists thermal ablation, TACE, radiation segmentectomy and SBRT among bridge uses, states that no technique is a universal best bridge, requires bridge use of SBRT to be named separately, and holds that technical feasibility does not confer transplant eligibility. No adjudicator of bridging modality is named.",
    "proposal_locator": "Locoregional selector (thermal ablation, segmentectomy, TACE and SBRT rows); Liver-directed treatment matrix, arterial embolization and external beam rows (v16 text)",
-   "rationale": "In the only comparative series explant complete necrosis was 13.3% after SBRT against 24.3% after TACE and 49.2% after radiofrequency ablation, with liver function deteriorating in 38.9% against 19.4% and 13.0% — but SBRT was reserved by design for patients who could not have the other two, so the arms are not comparable. Someone has to own the choice rather than let availability decide it.",
+   "rationale": "Toronto reported explant complete necrosis of 13.3% after SBRT, 24.3% after TACE and 49.2% after RFA, with unequal patient selection. Wong 2021 (PMID 34091914; abstract-level verification) reported 48.1%, 25% and 17.9% after prospective SBRT versus historical TACE/HIFU. Different selection and comparators prevent a causal ranking; modality choice requires transplant and radiation review.",
    "audit": ""
   },
   {
@@ -919,9 +919,9 @@
   {
    "id": "HCC-RT-20",
    "specialty": "Interventional radiology",
-   "question": "The two-session TACE stop rule and what counts as ‘well executed’.",
+   "question": "Per-session TACE response and reserve review, including what counts as technically adequate treatment.",
    "kind": "clinical",
-   "proposal": "v0.8 withdrew the fixed two-session rule for reassessment after each session in MDT context, yet the stop/switch card still lists persistent viability after two well-executed sessions as a switch trigger; 'well executed' is undefined.",
+   "proposal": "Assess response, technical adequacy, hepatic reserve and treatment intent after each session; define these inputs locally rather than using a mandatory session count.",
    "proposal_locator": "Stage B Avoid (note); Locoregional tab · Stop and switch rules; What we are not sure about #32",
    "positions": [
     {

@@ -1,0 +1,150 @@
+[
+  {
+    "file": "tools/compact_evidence_source.json",
+    "json_path": [
+      "studies",
+      "34554208",
+      "result"
+    ],
+    "old": "Final ITT OS 10.3 vs 7.5 mo (HR 0.79, 0.56-1.12; 1-sided P=.09), not significant; crossover-adjusted HR 0.49; earlier primary PFS HR 0.37",
+    "new": "Final ITT OS 10.3 vs 7.5 mo (HR 0.79, 95% CI 0.56–1.12; P=.09); corrected crossover-adjusted HR 0.49 (bootstrap 95% CI 0.25–1.24); primary PFS HR 0.37",
+    "finding_id": "HB040",
+    "source_locator": "A hepatobiliary/Source_Reviews/42879142.md; October2026 correction PMID42879142, current Fig2"
+  },
+  {
+    "file": "tools/compact_evidence_source.json",
+    "json_path": [
+      "studies",
+      "34554208",
+      "caution"
+    ],
+    "old": "70% of placebo patients crossed over, so significance needs an adjustment model; response rate only 2%",
+    "new": "70% crossover; corrected adjusted OS is not statistically significant; model-dependent estimate, 2% response; no established conversion strategy",
+    "finding_id": "HB040;HB049",
+    "source_locator": "A hepatobiliary/Source_Reviews/ClarIDHy_Audit_Summary.md"
+  },
+  {
+    "file": "tools/compact_evidence_source.json",
+    "json_path": [
+      "studies",
+      "38092727",
+      "result"
+    ],
+    "old": "Post-LT 5-y OS 45.4% iCCA-like vs 76.4% HCC-like, HR 2.69 (95% CI 1.15-6.31); pathologist agreement on cHCC-CCA only kappa 0.19",
+    "new": "Post-LT 5-y OS 45.4% iCCA-like vs 76.4% HCC-like (HR 2.69, 95% CI 1.15–6.31); model–pathologist dominant-component reclassification kappa 0.19",
+    "finding_id": "B16-R9-001",
+    "source_locator": "B16/R4/38092727.md; original pp3–4"
+  },
+  {
+    "file": "tools/compact_evidence_source.json",
+    "json_path": [
+      "studies",
+      "38092727",
+      "caution"
+    ],
+    "old": "Retrospective; small transplant subset; trained on unreliable pathologist labels; explant slides only",
+    "new": "Retrospective; small transplant subset; no ground truth for reclassification; resection/explant slides, no prospective biopsy validation",
+    "finding_id": "B16-R9-001",
+    "source_locator": "B16/R4/38092727.md; original pp3–4"
+  },
+  {
+    "file": "tools/compact_evidence_source.json",
+    "json_path": [
+      "studies",
+      "25014687",
+      "caution"
+    ],
+    "old": "Non-functioning and 96% stable at entry; grade 2 HR 0.58 (0.32-1.04) crosses 1",
+    "new": "Non-functioning NET; 96% stable at entry; grade 2 HR 0.45 (95% CI 0.22–0.91), pancreatic subgroup HR 0.58 (0.32–1.04); no validated predictive cutoff",
+    "finding_id": "MB086;B15-CLARINET",
+    "source_locator": "A metastatic_benign/Clinical_Continuation/Adjudications.csv CC07; CLARINET Fig2; C final reconciliation"
+  },
+  {
+    "file": "tools/compact_evidence_source.json",
+    "json_path": [
+      "studies",
+      "39802807"
+    ],
+    "old": null,
+    "new": {
+      "label": "Sugimoto 2025 MWA vs RFA",
+      "design": "RCT",
+      "arms": "Emprint MWA vs single-needle RFA; HCC ≤4 cm, 236 treated patients",
+      "result": "2-y lesion-level local progression 20/122 (16.4%) vs 38/125 (30.4%); RR 0.54 (95% CI 0.33–0.87), P=.007; no demonstrated OS advantage",
+      "caution": "Device-specific; mostly small lesions; complete-case lesion analysis; no universal RFA or dedicated 3–4 cm superiority claim",
+      "quotes": [
+        "MWA and RFA are both options. Sugimoto 2025 found lower two-year lesion-level local progression with MWA than single-needle RFA (20/122, 16.4%, versus 38/125, 30.4%; RR 0.54, 95% CI 0.33–0.87; P=.007), without a demonstrated overall-survival advantage."
+      ]
+    },
+    "finding_id": "HB031;B11-R13-CF01",
+    "source_locator": "A hepatobiliary/Source_Reviews/39802807.md; original PDF5/printed4; quote now in hcc/index.html; add ownership HCC0/A and compact evidence option where appropriate"
+  },
+  {
+    "file": "tools/compact_evidence_source.json",
+    "json_path": [
+      "studies",
+      "42223137"
+    ],
+    "old": null,
+    "new": {
+      "label": "FIGHT-302",
+      "design": "RCT",
+      "arms": "First-line pemigatinib vs GemCis; 167 FGFR2-rearranged advanced CCA",
+      "result": "PFS 8.3 vs 6.8 mo; HR 0.58 (95% CI 0.39–0.87), nominal P=.0078; OS 24.4 vs 25.0 mo, no demonstrated benefit",
+      "caution": "Early closure; substantial crossover; GemCis comparator without ICI; does not establish a new first-line policy or transplant strategy",
+      "quotes": [
+        "FIGHT-302 has reported (PMID 42223137): 167 randomized patients, PFS 8.3 versus 6.8 months with pemigatinib versus GemCis (HR 0.58, 95% CI 0.39–0.87; nominal P=.0078), without demonstrated OS benefit (24.4 versus 25.0 months)."
+      ]
+    },
+    "finding_id": "HB081",
+    "source_locator": "A hepatobiliary/Source_Reviews/42223137_FIGHT302_partial.md; main Results/Fig2–3; quote now icca/data/pathway.json; source package remains partially audited"
+  },
+  {
+    "file": "assets/decision-workspace-data.js",
+    "finding_id": "LIVER-propagation",
+    "action": "Rebuild from revised owned roadmaps: HCC0 criteria and pCCA regional nodes; preserve compact layout.",
+    "source_locator": "tools/audit_revision/liver_change_register.json"
+  },
+  {
+    "file": "assets/contextual-copy.js",
+    "finding_id": "LIVER-propagation",
+    "action": "Reconcile any exact old clinical sentences against liver change register; changes to HCC MWA/AFP, pCCA regional nodes and iCCA/NET interpretation must not leave stale recommendation copies.",
+    "source_locator": "tools/audit_revision/liver_change_register.json"
+  },
+  {
+    "file": "tools/content_hierarchy.json",
+    "finding_id": "LIVER-propagation",
+    "action": "Add source ownership: HCC39802807 -> 0/A evidence; iCCA42223137 -> molecular/systemic decisions; iCCA34856069 -> transplant10 evidence; ClarIDHy correction42879142 -> IDH1 evidence (iCCA and pCCA).",
+    "source_locator": "tools/audit_revision/liver_change_register.json"
+  },
+  {
+    "file": "tools/source_summaries.json",
+    "finding_id": "LIVER-propagation",
+    "action": "Add correction PMID42879142 summary or compact correction line; the corrected CI is0.25–1.24, adjustedOS not significant.",
+    "source_locator": "tools/audit_revision/liver_change_register.json"
+  },
+  {
+    "file": "tools/compact_evidence_source.json",
+    "action": "Refresh literal quotes for revised source appraisals from the final roadmap files, preserving the current compact result/caution corrections. In particular: 25014687, 36260828, 36924180, 22722717, 33798493, 34554208, 38092727. Do not restore stale clinical claims to satisfy an old quote guard.",
+    "finding_id": "LIVER-final-propagation",
+    "source_locator": "tools/audit_revision/liver_change_register.json"
+  },
+  {
+    "file": "assets/decision-workspace.js",
+    "action": "Check shared option-group headings: NELM standard[] includes individual options labelled Reasonable/Trial, so the group must not promote these to approved Standard care. Preserve option-level badges and compact layout.",
+    "finding_id": "B15-recommendation-status",
+    "source_locator": "nelm/data/pathway.json option-level status; original B15 audit/reconciliation"
+  },
+  {
+    "file": "tools/compact_evidence_source.json",
+    "action": "RETNET outcome summaries must identify NANETS 2025 conference abstract/poster separately from the 2018 protocol: 151 randomized TAE/cTACE; hepatic-PFS HR 1.40 (95% CI 0.80–2.46), P=.234. No equivalence inference and no unsupported 18/13-month medians.",
+    "finding_id": "MB067",
+    "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Full_Reaudit_2026-11-01/reviews/metastatic_benign/Source_Reviews/RETNET_2025_POSTER.md; DOI10.1530/endoabs.116.C12"
+  },
+  {
+    "file": "tools/compact_evidence_source.json",
+    "action": "Wong2021 PMID34091914 is mentioned in HCC-D16 with abstract-level verification only. Do not imply complete-paper review or create a causal bridging modality ranking.",
+    "finding_id": "B11-R13-CF02",
+    "source_locator": "Full_Text_Review_2026-10-31/Analyst_B/batches/B11_hcc_roadmap/reviews/R13/R13_REPORT.md CF02"
+  }
+]

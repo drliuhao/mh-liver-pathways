@@ -414,14 +414,14 @@
       {
        "source": "Oyama 2020",
        "key": "pm31473224",
-       "says": "Among 804 Tokyo patients followed beyond 5 years, the increase in main-duct diameter predicted later carcinoma (SHR 1.71 per mm) while the increase in cyst size did not (1.46, 0.96 to 2.20).",
+       "says": "Among 804 Tokyo patients followed beyond 5 years, the increase in main-duct diameter predicted later carcinoma (SHR 1.71 per mm) while the increase in cyst size did not show a significant association (SHR 1.46 per 10 mm, 0.96 to 2.20).",
        "locator": "Gate 3 · Standard 'Define growth rate before using it…' note; Practice choices with limited evidence · item 5; Gate 9 · Standard option 'Continue while the patient remains fit…' (804 of 1,404 Tokyo patients)"
       }
      ],
      "divergence": "Four growth definitions coexist, none derived from performance or tested for reproducibility, and the one cohort that measured both found duct growth predicted cancer where cyst growth did not.",
      "proposal": "Define growth before using it and compute it only against a recorded baseline on the same modality. The draft uses Kyoto's 2.5 mm a year as the spine's worrisome feature while labelling it a frequency-chosen consensus value, and argues that duct diameter growth should be recorded under a consistent protocol; adoption is left to the programme.",
      "proposal_locator": "Gate 3 · Standard 'Define growth rate before using it…'; Gate 1 · Avoid 'Do not enter a cyst into surveillance without a baseline…'; Gate 8 · Standard 'Use MRI with MRCP…'; Practice choices with limited evidence · item 5",
-     "rationale": "There are four definitions, not three: Kyoto 2.5 mm per year, ACG more than 3 mm per year, Fukuoka 2017 5 mm over 2 years, the European guideline 5 mm per year. Kyoto adopted 2.5 because it was the value most frequently reported among candidates spanning 0.96 to 3.5 mm per year, which is a choice by vote frequency rather than performance. None has published measurement reproducibility and 2.5 mm is inside the range over which two readers can disagree. Separately, in the one cohort that measured both, the increase in main pancreatic duct diameter over 5 years predicted later carcinoma (SHR 1.71 per mm, 1.44 to 2.03) and the increase in cyst size did not (1.46, 0.96 to 2.20) — and no guideline records duct growth, Kyoto having considered and rejected it for lack of evidence.",
+     "rationale": "There are four definitions, not three: Kyoto 2.5 mm per year, ACG more than 3 mm per year, Fukuoka 2017 5 mm over 2 years, the European guideline 5 mm per year. Kyoto adopted 2.5 because it was the value most frequently reported among candidates spanning 0.96 to 3.5 mm per year, which is a choice by vote frequency rather than performance. None has published measurement reproducibility and 2.5 mm is inside the range over which two readers can disagree. Separately, in the one cohort that measured both, the increase in main pancreatic duct diameter over 5 years predicted later carcinoma (SHR 1.71 per mm, 1.44 to 2.03) and the increase in cyst size did not show a significant association (SHR 1.46 per 10 mm, 0.96 to 2.20) — and no guideline records duct growth, Kyoto having considered and rejected it for lack of evidence.",
      "audit": "Report completeness for size and duct diameter; proportion of progression events declared on a same-modality comparison.",
      "web": "pcyst/#question-PCYST-D8"
     },
@@ -690,8 +690,8 @@
     {
      "id": "PCYST-D15",
      "set": "roadmap",
-     "title": "Is a local 'suspicious' cytology treated as an absolute surgical indication here, and who reads it?",
-     "question": "Is a local 'suspicious' cytology treated as an absolute surgical indication here, and who reads it?",
+     "title": "Is a local 'suspicious' cytology treated as a high-risk stigma for clinically appropriate surgical assessment here, and who reads it?",
+     "question": "Is a local 'suspicious' cytology treated as a high-risk stigma for clinically appropriate surgical assessment here, and who reads it?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
      "where": [

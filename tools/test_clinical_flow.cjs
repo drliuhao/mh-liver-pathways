@@ -36,7 +36,7 @@ for(const p of data.index){box.active=p;for(const plan of data.care[p.slug]){
  plans++;actions+=plan.actions.length;
 }}
 for(const asset of ['assets/clinical-flow.js','transplant/assets/app.js'])assert(!/localStorage|sessionStorage|document\.cookie|indexedDB/.test(read(asset)),'Findings must not persist');
-const mirror=read('tools/decision_assistant_source/app.js').replaceAll('href="/','href="/mh-liver-pathways/transplant/').replace('The linked source supports the adjacent statement.','Access through the publisher or official source; institutional sign-in may be required. The linked source supports the adjacent statement.');
+const mirror=read('tools/decision_assistant_source/app.js');
 assert.equal(mirror,src,'Source mirror must reproduce the current public renderer');
 const nav=read('assets/portal-navigation.js');for(const slug of Object.keys(JSON.parse(read('assets/roadmap-links.json'))))assert(nav.includes("'"+slug+"/'"),slug+' missing from navigation');
 console.log(`PASS: ${plans} care plans and ${actions} actions preserved; canonical stale detection, clear/reference behavior, bounded origins, source mirror and all roadmap menu entries verified.`);

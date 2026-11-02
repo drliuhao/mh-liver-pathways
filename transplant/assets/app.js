@@ -252,7 +252,7 @@ function renderActions(actions){
 
 function afpReviewHTML(finding){
  if(!finding)return '';
- return `<details class="risk-next-option ${finding.deferred?'risk-neutral':'risk-proposed'}" data-afp-review><summary><span class="risk-next-status">High-risk HCC review · individual assessment</span><b>AFP criterion not met: review transplant options</b><span class="risk-trigger">${finding.carried?'From decision '+(active.steps.findIndex(s=>s.id===finding.origin)+1)+': ':''}${e(finding.why)}</span><span class="risk-open-label">Open the AFP review and supporting guidance ↓</span></summary><div class="risk-next-body"><p><b>Review remains an option.</b> An unmet AFP requirement prevents a standardized exception; it does not by itself end the transplant assessment. Review AFP history and trend, treatment response, staging, liver reserve and expected transplant benefit.</p><p>OPTN Policy 9.5.I.iv sends the specified AFP nonresponse cases to individual NLRB review. The transplant-oncology guidance says these cases are generally unfavorable for exception approval, but selected cases may be appropriate.</p><p><a href="#high-risk-hcc-b1-1" data-high-risk="hcc-b1-1">HCC B1.1: full-text evidence and OPEN proposed thresholds</a> · <a href="/mh-liver-pathways/transplant/meeting-records/hcc-b1-1/">B1.1a–f meeting decisions</a></p><p>This is an individual high-risk review route. The existing beyond-UNOS tumor-burden study has separate entry limits, including AFP &lt;100; it is not an AFP-only expansion protocol.</p><p>${external('https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf#page=197','OPTN Policy 9.5.I.iv · PDF pp197–198')} · ${external('https://www.hrsa.gov/sites/default/files/hrsa/optn/adult-meld-exception-transplant-oncology-review-guidance.pdf#page=3','NLRB HCC guidance · PDF p3')}</p>${renderActions([{label:'High-risk HCC and individual allocation assessment',care:'exception'},{label:'Continue or change HCC treatment',care:'treatment'},{label:'Recheck the AFP requirement',step:finding.origin}])}</div></details>`;
+ return `<details class="risk-next-option ${finding.deferred?'risk-neutral':'risk-proposed'}" data-afp-review><summary><span class="risk-next-status">High-risk HCC review · individual assessment</span><b>AFP criterion not met: review transplant options</b><span class="risk-trigger">${finding.carried?'From decision '+(active.steps.findIndex(s=>s.id===finding.origin)+1)+': ':''}${e(finding.why)}</span><span class="risk-open-label">Open the AFP review and supporting guidance ↓</span></summary><div class="risk-next-body"><p><b>Review remains an option.</b> An unmet AFP requirement prevents a standardized exception; it does not by itself end the transplant assessment. Review AFP history and trend, treatment response, staging, liver reserve and expected transplant benefit.</p><p>OPTN Policy 9.5.I.iv sends the specified AFP nonresponse cases to individual NLRB review. The transplant-oncology guidance says these cases are generally unfavorable for exception approval, but selected cases may be appropriate.</p><p><a href="#high-risk-hcc-b1-1" data-high-risk="hcc-b1-1">HCC B1.1: full-text evidence and OPEN proposed thresholds</a> · <a href="/mh-liver-pathways/transplant/meeting-records/hcc-b1-1/">B1.1a–f meeting decisions</a></p><p>This is an individual high-risk review route. The existing beyond-UNOS tumor-burden study has separate entry limits, including AFP &lt;100; it is not an AFP-only expansion protocol.</p><p>${external('https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf#page=197','OPTN Policy 9.5.I.iv · PDF pp197–198')} · ${external('https://www.hrsa.gov/sites/default/files/hrsa/optn/adult-meld-exception-transplant-oncology-review-guidance.pdf#page=3','NLRB HCC guidance · PDF p3')}</p>${renderActions([...(DATA.continuations['hcc/allocation'].rules['4']||[]),{label:'Recheck the AFP requirement and history',step:finding.origin}])}</div></details>`;
 }
 function riskOptionsHTML(context){
  const descriptions={review:'Proposed high-risk review · not active',safety:'Immunotherapy safety review · proposed local approach','safety-note':'Immunotherapy safety context · proposed local approach',closed:'Local proposal: expansion remains closed',notice:'Selection / allocation clarification',checklist:'Proposed local review · approval pending',readiness:'Study development · no protocol-directed transplant'};
@@ -274,6 +274,9 @@ function canContinueIndividualReview(context){
 function isReadinessOnlyReview(context){
  return !context.guard&&context.options.length>0&&context.options.every(o=>o.anchor==='icca-b3'&&o.mode==='readiness');
 }
+function guardedActions(actions,context){
+ return (actions||[]).filter(a=>!context.guard||!a.step||active.steps.findIndex(s=>s.id===a.step)<=stepIndex);
+}
 function updateDecision(){
  document.body.dataset.currentAssessment=browseOrigin||active.steps[stepIndex].id;
  const out=document.getElementById('view');
@@ -292,7 +295,7 @@ function updateDecision(){
  }
  updateExampleLabels();
  const onward=DATA.continuations[assistantKey()];
- out.querySelectorAll('[data-next-branch]').forEach(el=>{el.innerHTML=el.closest('.is-highlighted')?renderActions(onward.branches[el.dataset.nextBranch]):'';});
+ out.querySelectorAll('[data-next-branch]').forEach(el=>{el.innerHTML=el.closest('.is-highlighted')?renderActions(guardedActions(onward.branches[el.dataset.nextBranch],context)):'';});
  const extra=out.querySelector('.assistant-other-result');
  if(override){
   extra.hidden=false;extra.className='assistant-other-result branch hold is-highlighted';
@@ -303,7 +306,7 @@ function updateDecision(){
  }else if(!extra.hidden){
   const noAnswers=Object.values(assistantSession.answers[assistantKey()]).every(v=>!v);
   const actions=result.state==='matched'?onward.rules[String(result.ruleIndex)]:noAnswers?[]:onward.clarify;
-  if(actions.length)extra.insertAdjacentHTML('beforeend',`<h5 class="next-heading">Choose the next action</h5>${renderActions(actions)}`);
+  if(actions.length)extra.insertAdjacentHTML('beforeend',`<h5 class="next-heading">Choose the next action</h5>${renderActions(guardedActions(actions,context))}`);
  }
  if(result.state==='pending'&&extra.hidden){
   extra.hidden=false;extra.className='assistant-other-result branch pending is-highlighted';
@@ -360,8 +363,8 @@ function streamlineResult(out,result,context){
  // The nested AFP review repeats navigation, not distinct treatment choices.
  // Keep those choices in the main result and retain only new destinations here.
  const destination=link=>link.dataset.step?'step:'+link.dataset.step:link.dataset.care?'care:'+link.dataset.care:link.getAttribute('href');
- const mainDestinations=new Set([...current.querySelectorAll('.route-button')].filter(link=>!link.closest('[data-afp-review]')).map(destination));
- current.querySelectorAll('[data-afp-review] .route-button').forEach(link=>{if(mainDestinations.has(destination(link)))link.closest('.next-action').remove();});
+ const mainDestinations=new Set([...current.querySelectorAll('.route-button')].filter(link=>!link.closest('[data-afp-review]')).map(link=>destination(link)+'|'+link.textContent.trim()));
+ current.querySelectorAll('[data-afp-review] .route-button').forEach(link=>{if(mainDestinations.has(destination(link)+'|'+link.textContent.trim()))link.closest('.next-action').remove();});
  current.querySelectorAll('[data-afp-review] .next-actions:empty').forEach(el=>el.remove());
 }
 

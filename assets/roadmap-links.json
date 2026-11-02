@@ -347,11 +347,11 @@
         "decision": "4"
       },
       {
-        "when": "If well-differentiated G1\u2013G2 disease is low volume",
+        "when": "If well-differentiated G1–G2 disease is low volume",
         "decision": "2"
       },
       {
-        "when": "If well-differentiated G1\u2013G2 disease is high volume or progressing",
+        "when": "If well-differentiated G1–G2 disease is high volume or progressing",
         "decision": "3"
       }
     ],
@@ -712,7 +712,7 @@
     ],
     "9": [
       {
-        "when": "If HCC is confirmed, reassess under the HCC roadmap",
+        "when": "If HCC is confirmed, assess HCC treatment; this does not establish standardized transplant eligibility",
         "url": "hcc/",
         "label": "Open HCC roadmap"
       },
@@ -755,6 +755,10 @@
         "when": "If an HCC-specific assessment is indicated",
         "url": "hcc/",
         "label": "Open HCC roadmap"
+      },
+      {
+        "when": "If liver disease or HCC risk status is unresolved, obtain hepatology assessment and reassess",
+        "decision": "0"
       }
     ],
     "1": [
@@ -779,6 +783,10 @@
         "when": "If neuroendocrine liver metastases are established",
         "url": "nelm/#decision-1",
         "label": "Open NELM diagnosis and grade assessment"
+      },
+      {
+        "when": "If staging imaging leaves the lesion indeterminate",
+        "decision": "6"
       }
     ],
     "2": [
@@ -844,6 +852,11 @@
         "when": "If the working diagnosis is hepatocellular adenoma and subtype assessment is needed",
         "url": "adenoma/#decision-1",
         "label": "Review adenoma diagnosis and subtype"
+      },
+      {
+        "when": "If a perihilar primary is suspected, review transplant before primary-tumour biopsy",
+        "url": "hilar/#decision-2",
+        "label": "pCCA diagnosis and biopsy route"
       }
     ],
     "8": [
@@ -959,12 +972,24 @@
       {
         "when": "If disease remains locally advanced",
         "decision": "7"
+      },
+      {
+        "when": "If distant metastasis or malignant peritoneal washings are found",
+        "decision": "8"
       }
     ],
     "5": [
       {
         "when": "After postoperative recovery and pathology review",
         "decision": "6"
+      },
+      {
+        "when": "If distant metastasis or malignant peritoneal washings are found",
+        "decision": "8"
+      },
+      {
+        "when": "If locally unresectable disease is found without distant spread",
+        "decision": "7"
       }
     ],
     "6": [
@@ -1080,6 +1105,10 @@
         "when": "If liver metastases affect the operation being considered",
         "url": "nelm/#decision-5",
         "label": "Review NELM surgical cytoreduction"
+      },
+      {
+        "when": "If high-grade disease requires distinction between well-differentiated NET and NEC",
+        "decision": "8"
       }
     ],
     "6": [
@@ -1189,6 +1218,10 @@
       {
         "when": "If surveillance is selected",
         "decision": "8"
+      },
+      {
+        "when": "If cytology is suspicious or positive for high-grade dysplasia or carcinoma",
+        "decision": "2"
       }
     ],
     "5": [
@@ -1288,6 +1321,10 @@
       {
         "when": "If surgical treatment is being considered",
         "decision": "4"
+      },
+      {
+        "when": "If biopsy confirms invasive carcinoma",
+        "decision": "5"
       }
     ],
     "2": [
@@ -1302,12 +1339,16 @@
     ],
     "3": [
       {
-        "when": "If residual disease or adverse pathology changes the operation",
+        "when": "If residual adenoma requires further local treatment",
         "decision": "4"
       },
       {
         "when": "If surveillance is appropriate",
         "decision": "9"
+      },
+      {
+        "when": "If the papillectomy specimen contains invasive carcinoma",
+        "decision": "5"
       }
     ],
     "4": [
@@ -1328,6 +1369,10 @@
       {
         "when": "After postoperative recovery and pathology review",
         "decision": "7"
+      },
+      {
+        "when": "If disease is locally unresectable or metastatic",
+        "decision": "8"
       }
     ],
     "6": [

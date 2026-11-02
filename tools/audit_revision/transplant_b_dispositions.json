@@ -1,0 +1,497 @@
+[
+  {
+    "id": "B08-R1-R1-F01",
+    "severity": "high",
+    "target": "assets/clinical-scores.js",
+    "issue": "CSPH card is built on Baveno VII and says \"a later Baveno edition was not verified here\", but Baveno VIII (J Hepatol 2026;85(5):993-1018, PMID 42624290) is published and sits in the project HCC reference depot. Baveno VIII revised the non-invasive criteria. Rule-in is now ANTICIPATE/ANTICIPATE-NASH (or NICER) probability >=75%, LSM >=25 kPa (virus/alcohol/non-obese MASLD), or SSM (100 Hz) >55 kPa. The Baveno VII grey-zone statement shown on the card (\">=60% risk at 20-25 kPa with PLT <150, or 15-20 kPa with PLT <110\") is not carried forward. Indeterminate results are re-evaluated at 12 months. New HCC-specific statements: NITs may not apply with macrovascular invasion; the rule-out holds in BCLC 0-C; ANTICIPATE >=75% is highly suggestive only in BCLC 0-A without a >5 cm right-lobe nodule. The card is shown at the HCC curative-route (resection vs transplant/ablation) decision.",
+    "source_locator": "Baveno VIII pre-proof PDF p.16, statements 1.11-1.17 and 1.21-1.23; HVPG and resection statements kept as \"valid\" in the summary box, PDF p.76-77. Baveno VII PDF p.5 (1.10, 1.13), p.6 (1.18), p.8-9 (2.15-2.17).",
+    "disposition": "corrected_in_live_transplant_scope",
+    "note": "Corrected BavenoVIII definition with etiology/BMI,100Hz and HCC qualifiers."
+  },
+  {
+    "id": "B08-R2-F01",
+    "severity": "high",
+    "target": "assets/clinical-scores.js",
+    "issue": "The Milan/T2/UNOS-downstaging/UCSF calculator has pages [\"hcc\",\"chcca\",\"T:hcc\"]. Its match regex (Milan | UCSF | \"T2 criteria\" | downstag) fires on 6 of the 10 cHCC-CCA roadmap gates (2, 3, 5, 7, 8, 9). Gate 3 matches \"T2 criteria\", which there means the AJCC T category. So an OPTN HCC standardized-exception calculator (\"T2 (OPTN standard exception)\", \"T2: size criteria met\") is shown for a tumour that is not a Class 5 HCC. (Gate attachment was approximated by running the site regexes over the gate JSON. The live roadmap reads only the visible decision nodes, so confirm in a browser.)",
+    "source_locator": "OPTN Policy 9.5.I.vi and Table 9-9, PDF p.198: Class 5 imaging criteria \"apply only to observations which do not represent ... non-HCC malignancy (i.e. targetoid or LR-M)\"; 9.5.I applies to HCC",
+    "disposition": "corrected_in_live_transplant_scope",
+    "note": "Removed HCC burden tool from cHCC-CCA; added mixed/iCCA nonstandard exception definition."
+  },
+  {
+    "id": "B08-R2-F02",
+    "severity": "high",
+    "target": "assets/clinical-scores.js",
+    "issue": "The sum is a floating-point reduce, compared with \"sum <= 8\". Sets of 0.1 cm sizes that total exactly 8.0 cm can sum to 8.000000000000002, depending on entry order, and are then reported \"outside\" the downstaging criteria. The display rounds the sum to 4 dp (\"sum 8 cm\"), so the output contradicts itself.",
+    "source_locator": "OPTN Policy 9.5.I.iii, PDF p.197",
+    "disposition": "corrected_in_live_transplant_scope",
+    "note": "Compensated sum + machine tolerance; exact8cm accepts, genuinely >8 fails; did not round patient inputs to tenths."
+  },
+  {
+    "id": "B08-R2-F03",
+    "severity": "high",
+    "target": "assets/clinical-scores.js",
+    "issue": "The form, read-out and card define the size term as the \"largest viable tumor diameter\". In Metroticket 2.0 a nodule is counted if it is active (arterial enhancement with washout, \"even in the context of a necrotic nodule\"), and \"the maximum diameter was measured, including any concomitant necrotic areas\". Only nodules of 1 cm or more count. Entering the enhancing-rim diameter (mRECIST-style) understates the sum and can flip out to in.",
+    "source_locator": "Mazzaferro 2018 Gastroenterology 154:128, PDF p.4 Methods (nodule definition and measurement; >=1 cm rule); PDF p.5 (CR = 0, last pre-LT radiology)",
+    "disposition": "corrected_in_live_transplant_scope",
+    "note": "Whole active-nodule diameter including necrosis;>=1cm; lastpreLT and CR0 definitions."
+  },
+  {
+    "id": "B08-R3-R3-F01",
+    "severity": "high",
+    "target": "assets/clinical-scores.js",
+    "issue": "The disease-free-interval factor is worded \"primary resection to liver metastasis diagnosis under 12 months\". Fong 1999 scores a disease-free interval under 12 months, and that includes synchronous presentation; Dueland 2020 scores it as \"synchronous metastatic disease (<12 months from diagnosis)\". Read literally, the label gives 0 for synchronous metastases found before or at primary resection, so a common subgroup is under-scored by one point and can move from the 3–5 to the 0–2 group.",
+    "source_locator": "Fong 1999 Ann Surg 230:309-21, p312 (PDF p4) \"synchronous or within 12 months\", Table 3 p313, Table 5 p314 (PDF p6); Dueland 2020 AJT 20:530-7, p531 (PDF p2) \"synchronous metastatic disease (<12 months from diagnosis)\"; SECA-II Ann Surg 271:212-8, p213",
+    "disposition": "corrected_in_live_transplant_scope",
+    "note": "Synchronous CRLM explicitly counts for FongDFI."
+  },
+  {
+    "id": "B08-R4-CF01",
+    "severity": "high",
+    "target": "assets/clinical-scores.js",
+    "issue": "hccburden lists 'chcca' in pages and matches /[Dd]ownstag/ and /\\bMilan\\b/, so the HCC size calculator (with 'T2 (OPTN standard exception)' and 'UNOS downstaging' outputs) attaches to cHCC-CCA roadmap decisions 2,3,5,7,8,9. For combined HCC-CCA the OPTN 9.5.I standardized HCC exception and downstaging route do not apply; the NLRB route is solitary biopsy-proven unresectable mixed HCC-iCCA <=3 cm in cirrhosis, nonstandard, MMaT-3. A user can read 'T2: size criteria met' for a mixed tumour as exception eligibility.",
+    "source_locator": "OPTN Policies 1 Oct 2026, 9.5.I.ii-iii PDF p197 (HCC only); NLRB Adult Transplant Oncology Guidance Dec 2025 pp7-8 (iCCA or mixed HCC-iCCA <=3 cm, MMaT-3)",
+    "disposition": "corrected_in_live_transplant_scope",
+    "note": "Same HCC calculator placement correction; mixed route explicit."
+  },
+  {
+    "id": "B08-R4-CF02",
+    "severity": "high",
+    "target": "adenoma/data/pathway.json (quickref, via clinical-scores.js shared card)",
+    "issue": "hcasurv row 'ACG 2024 - suspected HCA: CT or MRI at 6- to 12-month intervals (conditional, low)' and footer 'ACG uses a looser 6- to 12-month interval and ties it to no size trigger' misstate ACG 2024. ACG Recommendation 6: women with HCA <5 cm, contrast-enhanced imaging every 6 months for 2 years then annually (conditional, low). Key concept 13: women with HCA >=5 cm modify risk factors, observe 6-12 months, resect if not regressed to <5 cm (a size trigger). The 6-12-month interval in ACG is the observation period for >=5 cm and post-treatment surveillance. hca5 also says 26 weeks is 'the exact point at which EASL and ACG advise resection' (ACG: 6-12 months). Shown on T:hca 'standard-care'.",
+    "source_locator": "Frenette 2024 ACG Clinical Guideline, Am J Gastroenterol 119:1235 - Recommendation 6 and Key concept 13, PDF p16 (journal p1250); Key concept 13 also PDF p4; surveillance text PDF p14",
+    "disposition": "other_agent_owned_roadmap_source",
+    "note": "HCA shared-card source is adenoma quickref; delegated roadmap owner corrects and rebuilds."
+  },
+  {
+    "id": "B08-R6-R6-F01",
+    "severity": "high",
+    "target": "assets/waiting-analysis.js",
+    "issue": "Choosing pCCA, iCCA, CRLM, NELM, HEHE or HCA (or arriving with ?disease=) automatically shows the all-diagnosis first-listing curve. The headline cards read DDLT 49.4% by 12 months and 54.9% by 24 months, the curve shows 28.1% DDLT in month 1, and the recipient-only median is 0.7 months. That curve is driven by early transplants at high laboratory MELD. A CRLM candidate relying on an NLRB MMaT-20 exception (=15 in Houston) with low laboratory MELD is a different population. A one-sentence scope note is shown, but the default display invites exactly the substitution the methods prohibit, and could affect LDLT-vs-wait counselling.",
+    "source_locator": "JSON cohorts/all points[1].ddlt=0.28121, recipient_only_wait.median_months=0.7; NLRB guidance p.10 (CRLM MMaT-20, floor 15); OPTN 9.4.E PDF p.189 (floor 15)",
+    "disposition": "parent_owned_waiting_scope",
+    "note": "Parent handles waiting/prognosis presentation; no change by transplant agent."
+  },
+  {
+    "id": "B08-R6-R6-F02",
+    "severity": "high",
+    "target": "assets/decision-evidence-data.js (built from tools/prognosis_cards.json lines 1143-1176, placements ~1441/1504)",
+    "issue": "The all-diagnosis card (12-month DDLT 49.4%, death/too-sick 15.2%) is placed at transplant/crlm/review, icca/review, pcca/listing, hca/review, nelm/review and hehe/review. Its caution line (\"All diagnoses: not a disease-specific estimate for this cancer\") sits beneath a headline number at the exact decision where an NLRB exception or LDLT route is chosen. This amplifies F01.",
+    "source_locator": "JSON cohorts/all points[12]; NLRB p.10",
+    "disposition": "parent_owned_waiting_scope",
+    "note": "Parent handles waiting/prognosis presentation; no change by transplant agent."
+  },
+  {
+    "id": "B08-R7-R7-01",
+    "severity": "high",
+    "target": "transplant/assets/risk-routing.js",
+    "issue": "An option added as closed with blocks=true never produces a guard: `blocked` only feeds `deferred`; guard = hard||unknown||currentUnknown||finalReview. For iCCA with a previously proven malignant node / extrahepatic site the core result stays \"All clinical selection criteria met\" with an enabled \"Continue: Plan pretransplant treatment\" button, and the carried closed card reappears at therapy, stability and review while each core step advances.",
+    "source_locator": "NLRB Adult MELD Transplant Oncology Guidance 12/2025 PDF p7-8 (iCCA elements); content.json high_risk.pathways.icca icca-b4 stance/rules",
+    "disposition": "corrected_in_live_transplant_scope",
+    "note": "Closed priorN/EHD local boundary generates persistent guard."
+  },
+  {
+    "id": "B26-R1-CF01",
+    "severity": "high",
+    "target": "V17_standardized_documents_2026-10-29/01_HCC/HCC_3_Standard_Pathway_v17.docx",
+    "issue": "MMaT is described for \"the distribution area\". OPTN 9.4.D/E defines MMaT per donor hospital (150 NM radius, expanding in 50 NM steps, 365-day cohort) and floors exception scores at 15.",
+    "source_locator": "OPTN_Policies_local_20261001.pdf 9.4.D/E, Table 9-10",
+    "disposition": "remaining_document_or_evidence_review",
+    "note": "Original document text and review folders preserved; requires owning document/shared-data revision or source-specific further review. Not claimed fixed by this agent."
+  },
+  {
+    "id": "B26-R1-CF02",
+    "severity": "high",
+    "target": "V17_standardized_documents_2026-10-29/01_HCC/HCC_3_Standard_Pathway_v17.docx",
+    "issue": "2-3 lesion group omits \"at least one lesion >3 cm\"; omits that criteria apply before completing LRT.",
+    "source_locator": "OPTN 9.5.I.iii",
+    "disposition": "remaining_document_or_evidence_review",
+    "note": "Original document text and review folders preserved; requires owning document/shared-data revision or source-specific further review. Not claimed fixed by this agent."
+  },
+  {
+    "id": "B26-R1-CF03",
+    "severity": "high",
+    "target": "V17_standardized_documents_2026-10-29/01_HCC/HCC_3_Standard_Pathway_v17.docx",
+    "issue": "Success defined by Milan (single lesion <=5 cm); allocation needs T2 (single lesion >=2 cm). A single lesion <2 cm after treatment is T1, exception-ineligible, and no route is given.",
+    "source_locator": "OPTN 9.5.I.i; NLRB guidance (T1 contraindication)",
+    "disposition": "remaining_document_or_evidence_review",
+    "note": "Original document text and review folders preserved; requires owning document/shared-data revision or source-specific further review. Not claimed fixed by this agent."
+  },
+  {
+    "id": "B26-R1-CF04",
+    "severity": "high",
+    "target": "V17_standardized_documents_2026-10-29/01_HCC/HCC_3_Standard_Pathway_v17.docx",
+    "issue": "Mixes NLRB downstaging-to-T2 wording (beyond standard downstaging criteria: imaging >=4 weeks after treatment, 6-month wait) with the standardized UNOS-DS path (no such wait).",
+    "source_locator": "NLRB guidance (Dec 2025); OPTN 9.5.I.iii",
+    "disposition": "remaining_document_or_evidence_review",
+    "note": "Original document text and review folders preserved; requires owning document/shared-data revision or source-specific further review. Not claimed fixed by this agent."
+  },
+  {
+    "id": "B26-R1-CF06",
+    "severity": "high",
+    "target": "V17_standardized_documents_2026-10-29/01_HCC/HCC_3_Standard_Pathway_v17.docx",
+    "issue": "Confirmed AFP >=500 treated as a \"high-risk LT hold\" inside the standard document. OPTN permits T2 with AFP <=1000; \"hold\" undefined; operates while HCC_4 B1.1b is OPEN.",
+    "source_locator": "OPTN 9.5.I.i",
+    "disposition": "remaining_document_or_evidence_review",
+    "note": "Original document text and review folders preserved; requires owning document/shared-data revision or source-specific further review. Not claimed fixed by this agent."
+  },
+  {
+    "id": "B26-R1-CF12",
+    "severity": "high",
+    "target": "V17_standardized_documents_2026-10-29/01_HCC/HCC_3_Standard_Pathway_v17.docx",
+    "issue": "No route for progression beyond criteria, delisting, or best-supportive/palliative care; the website has these.",
+    "source_locator": "Snapshot transplant/hcc; NLRB guidance",
+    "disposition": "remaining_document_or_evidence_review",
+    "note": "Original document text and review folders preserved; requires owning document/shared-data revision or source-specific further review. Not claimed fixed by this agent."
+  },
+  {
+    "id": "B26-R2-F01",
+    "severity": "high",
+    "target": "HCC_6_High_Risk_Pathway_Questions_v17.docx; documents/hcc/questions.json",
+    "issue": "HCC_6 and the questions.json highrisk set carry abstract-only / PDF-pending / not-available statements that HCC_5 contradicts with a complete full-text read, and that the depot PDFs allow R2 to check. Four are factually wrong against the source (Sinha, Soin, Sposito, VITALITY/ImmunoXXL).",
+    "source_locator": "Sinha 30779440; Soin 32032291 p5; Sposito 42228945; ImmunoXXL 41763363",
+    "disposition": "remaining_document_or_evidence_review",
+    "note": "Original document text and review folders preserved; requires owning document/shared-data revision or source-specific further review. Not claimed fixed by this agent."
+  },
+  {
+    "id": "B26-R2-F11",
+    "severity": "high",
+    "target": "HCC_6",
+    "issue": "Says neither curve represents all 25 recipients; Soin reports all DS patients (n=25) 1/3/5-y OS 75/53/53% and RFS 78/52/52%.",
+    "source_locator": "Soin 2020 p5",
+    "disposition": "remaining_document_or_evidence_review",
+    "note": "Original document text and review folders preserved; requires owning document/shared-data revision or source-specific further review. Not claimed fixed by this agent."
+  },
+  {
+    "id": "B26-R3-R3-F1",
+    "severity": "high",
+    "target": "transplant/high-risk/hcc/index.html",
+    "issue": "Banner says \"Now integrated into the standard protocol\" but every proposal is labelled OPEN / not activated / research use only; footer \"Source review 24 October 2026\".",
+    "source_locator": "stmt Safd9522823",
+    "disposition": "corrected_in_live_transplant_scope",
+    "note": "Legacy redirect banner corrected for all7; canonical high-risk labels remain OPEN."
+  },
+  {
+    "id": "B26-R3-R3-F2",
+    "severity": "high",
+    "target": "transplant/high-risk/hcc/index.html",
+    "issue": "Cards still say abstract-only, full text pending or full paper unavailable although full texts are in the depot. Consequences: Choi lobar DFS 14.3% exists; Yang subgroup sizes (47/28) exist; Sposito viable thrombus in 8 patients and decompensation 23.3%; ImmunoXXL has one retransplantation; VITALITY 41 vs 43 is in the paper.",
+    "source_locator": "claims CSV rows for Sinha, Choi, Yang, Sposito, ImmunoXXL, VITALITY",
+    "disposition": "partly_corrected_or_canonical_redirect",
+    "note": "ImmunoXXL clinical endpoint/selection/retransplant corrections applied; other HCC study-depth labels not promoted without their full-text reread."
+  },
+  {
+    "id": "B26-R4-R4-F01",
+    "severity": "high",
+    "target": "V17/iCCA_5_High_Risk_Pathway_v17.docx",
+    "issue": "Pre-activation list omits iCCA-B4 although B4 is an OPEN decision in the same document.",
+    "source_locator": "iCCA_5 p514 vs p517; iCCA_3 p441",
+    "disposition": "remaining_document_or_evidence_review",
+    "note": "Original document text and review folders preserved; requires owning document/shared-data revision or source-specific further review. Not claimed fixed by this agent."
+  },
+  {
+    "id": "B26-R4-R4-F02",
+    "severity": "high",
+    "target": "transplant/high-risk/icca/index.html",
+    "issue": "Lead says the high-risk review is \"Now integrated into the standard protocol\" while iCCA_5/iCCA_6 say it is a proposed study, B1 (keep pathways separate?) is OPEN and no LT is activated.",
+    "source_locator": "statements S246/Sd135b3e3eb; iCCA_5 p11",
+    "disposition": "corrected_in_live_transplant_scope",
+    "note": "Legacy redirect banner corrected; small-cirrhotic and advanced-study routes stay separate."
+  },
+  {
+    "id": "B26-R5-R5-F01",
+    "severity": "high",
+    "target": "pCCA_3 / pCCA_5 / pCCA_6 v17",
+    "issue": "\"pCCA-B1\" names two different questions (previously malignant nodes/peritoneal/distant disease vs size/prior biopsy/prior nodes).",
+    "source_locator": "pCCA_3 p276 vs pCCA_5 p18",
+    "disposition": "remaining_document_or_evidence_review",
+    "note": "Original document text and review folders preserved; requires owning document/shared-data revision or source-specific further review. Not claimed fixed by this agent."
+  },
+  {
+    "id": "B26-R6-F-01",
+    "severity": "high",
+    "target": "transplant/high-risk/pcca/index.html",
+    "issue": "Age 52 vs 65 and chemo/RT 98% vs 57% come from the abstract; Table 1 differs. \"Adjusted/restricted ITT p=.049\" is a restricted log-rank, not adjusted. \"Full-PDF recheck pending\" is stale.",
+    "source_locator": "Ethun 2018 abstract vs Table 1, p.798-800",
+    "disposition": "corrected_in_live_transplant_scope",
+    "note": "Ethun Table1 age/neoadjuvant percentages and restricted log-rank/time origins corrected after primary targeted read."
+  },
+  {
+    "id": "B26-R6-F-08",
+    "severity": "high",
+    "target": "V17/CRLM_3_Standard_Pathway_v17.docx",
+    "issue": "Largest lesion <=5.5 cm \"preferred, >5.5 cm relative contraindication\" is not an NLRB criterion (NLRB excludes >10 cm) and Ueberroth reports it as a prognostic association; page itself says so at p223.",
+    "source_locator": "Ueberroth 2025; NLRB pp.9-10",
+    "disposition": "remaining_document_or_evidence_review",
+    "note": "Original document text and review folders preserved; requires owning document/shared-data revision or source-specific further review. Not claimed fixed by this agent."
+  },
+  {
+    "id": "B26-R7-F-01",
+    "severity": "high",
+    "target": "transplant/high-risk/crlm/index.html",
+    "issue": "Page shows 4 review questions and groups 'Molecular findings and previous extrahepatic disease' as question 3; V17 CRLM_6/questions.json have 5 questions with previous extrahepatic disease as separate CRLM-B5 (closed, lung-only study proposed).",
+    "source_locator": "CRLM_6 p168-p414; questions.json highrisk/questions[4]",
+    "disposition": "partly_corrected_or_canonical_redirect",
+    "note": "Public legacy URL redirects to canonical current5review CRLM page, which includesB5; archived oldHTML body not regenerated except status. Canonical source/runtime now synchronized."
+  },
+  {
+    "id": "B26-R7-F-02",
+    "severity": "high",
+    "target": "CRLM_5 High-Risk Pathway v17",
+    "issue": "CRLM_5 B3 text still includes extrahepatic expansions while CRLM_6 and the B5 text moved them to B5.",
+    "source_locator": "CRLM_5 p514; CRLM_6 p171",
+    "disposition": "remaining_document_or_evidence_review",
+    "note": "Original document text and review folders preserved; requires owning document/shared-data revision or source-specific further review. Not claimed fixed by this agent."
+  },
+  {
+    "id": "B26-R7-F-08",
+    "severity": "high",
+    "target": "CRLM_6 p217 area; page 'Results' card",
+    "issue": "'Postoperative recurrence 57% versus 0% by ctDNA status (P=0.0419)' follows the nine paired LT patients but belongs to the resection patients.",
+    "source_locator": "PDF 37820293",
+    "disposition": "corrected_in_live_transplant_scope",
+    "note": "57%vs0% recurrence explicitly resection-only; paired series mixed; denominator discrepancy retained."
+  },
+  {
+    "id": "B26-R7-F-09",
+    "severity": "high",
+    "target": "CRLM_6 p236",
+    "issue": "'KRAS mutation alone was allowed in TransMet (17/47 assigned LT)': the figure relates to RAS-mutant disease.",
+    "source_locator": "TransMet 39306468",
+    "disposition": "corrected_in_live_transplant_scope",
+    "note": "RAS-mutant (including KRAS)17/47 corrected in canonical data."
+  },
+  {
+    "id": "B26-R8-F04",
+    "severity": "high",
+    "target": "NELM_3",
+    "issue": "Standard pathway asserts workup/PET within 3 months of listing while NELM_4 G5/G6 leaves the NLRB phrase (at least 3 months prior to request) OPEN.",
+    "source_locator": "NLRB PDF p8",
+    "disposition": "remaining_document_or_evidence_review",
+    "note": "Original document text and review folders preserved; requires owning document/shared-data revision or source-specific further review. Not claimed fixed by this agent."
+  },
+  {
+    "id": "B26-R8-F06",
+    "severity": "high",
+    "target": "HEHE_3",
+    "issue": "Waiting-time HR given as 2.6 (p40) and 2.5 (p169); p158 calls wait >120 days a usable test of time while p40 says short wait is confounded and no evidence delay helps.",
+    "source_locator": "Lai PDF Table 5",
+    "disposition": "remaining_document_or_evidence_review",
+    "note": "Original document text and review folders preserved; requires owning document/shared-data revision or source-specific further review. Not claimed fixed by this agent."
+  },
+  {
+    "id": "B26-R9-F01",
+    "severity": "high",
+    "target": "V17/HEHE_3_Standard_Pathway_v17.docx; HEHE_5; HEHE_6",
+    "issue": "HEHE_3 sec.5.2 admits \"limited, biopsy-characterized extrahepatic HEHE that is stable or locally controlled\" to the high-risk individualized cohort, while the standardized pathway states it requires no extrahepatic disease, HEHE_5 says EHD is \"not admitted by any cohort ... unless a stratum below says otherwise\", and B2 defines a lung-only stratum as \"not activated\". ESMO says LT should not be proposed with extrahepatic disease [V,A].",
+    "source_locator": "ESMO PDF p8 [V,A]; NLRB p11 (EHD not an absolute contraindication); Lai Table 5 (EHD HR 1.5, 0.8-3.0); ACG Table 3 KC35",
+    "disposition": "corrected_in_live_transplant_scope",
+    "note": "Local HEHEEHD stratum guarded; no forward active-cohort route; NLRB case-level distinction preserved."
+  },
+  {
+    "id": "B26-R9-F02",
+    "severity": "high",
+    "target": "HEHE_3 sec.5.1/B2 rule; HEHE_5/6 B1; hehe high-risk page",
+    "issue": "HEHE_3 sec.5.1 imposes no waiting interval, calling >120 days preferred only when safe; B1 (HEHE_5/6 and the web page) proposes a six-month stable default; one rule calls >120 days \"a usable pre-transplant test of time\" while the same document says there is no validated 120-day cliff. The only guideline with an explicit interval (DGVS S2k Empfehlung 1.3.3, strong recommendation, strong consensus: >=6 months largely stable disease) is not cited in HEHE_3.",
+    "source_locator": "DGVS PDF p36; NLRB p11; Lai p4,p7; Brahmbhatt (median wait 78.5 d)",
+    "disposition": "corrected_in_live_transplant_scope",
+    "note": "Canonical6month rule labelled local proposal from GermanDGVS, not nationalUS/international mandate; original document conflicts remain."
+  },
+  {
+    "id": "B26-R9-F14",
+    "severity": "high",
+    "target": "HCA_7_Decision_Discussion_v17.docx",
+    "issue": "Paraphrase of text seen on skim: \"almost all of that mortality is treatment-attributable\" (Ziogas deaths include malignancy 3, extrahepatic cancer 6, infection 7; waitlist deaths are pre-LT; no comparator); \"true transformation in only 17 of 49 explants\" (Chiche: 16 HCC proven before LT; 17 MT before and/or after); \"EASL does not recommend transplantation for multiple adenoma\" (EASL allows consideration for >10 lesions with underlying liver disease).",
+    "source_locator": "Ziogas Results; Chiche p5; EASL p10",
+    "disposition": "remaining_document_or_evidence_review",
+    "note": "Original document text and review folders preserved; requires owning document/shared-data revision or source-specific further review. Not claimed fixed by this agent."
+  },
+  {
+    "id": "B08-R7-R7-02",
+    "severity": "medium",
+    "target": "transplant/assets/risk-routing.js",
+    "issue": "Same blocks->guard gap for hcc-b5. Decision 2 shows the hold \"Review prior rupture or vascular invasion\"; browsing to decisions 3-6 with standard answers shows the plain advance \"T2 tumor burden and AFP requirements met\" (and later listing/waitlist advances) with only a carried closed card.",
+    "source_locator": "NLRB guidance PDF p3 (HCC contraindications); content.json high_risk hcc-b5",
+    "disposition": "corrected",
+    "note": "Source-backed guard/unknown/blank/source-sync correction with targeted regressions."
+  },
+  {
+    "id": "B08-R7-R7-03",
+    "severity": "medium",
+    "target": "transplant/assets/risk-routing.js",
+    "issue": "Closed/blocking net-b3 option does not stop the core advance at options or review; the card is not carried to exposure or observation (coverage options,review only), so those steps show no trace.",
+    "source_locator": "content.json high_risk nelm net-b3 rules; NLRB p8-9 has no burden limit (correctly stated as local by the site)",
+    "disposition": "corrected",
+    "note": "Source-backed guard/unknown/blank/source-sync correction with targeted regressions."
+  },
+  {
+    "id": "B08-R7-R7-04",
+    "severity": "medium",
+    "target": "transplant/assets/content.json; transplant/assets/risk-routing.js",
+    "issue": "The hold branch \"Limited extrahepatic disease\" carries to=risk and a \"Continue: Assess benefit and risk\" button while risk-routing shows hehe-b2 as closed+blocks. At the next decision the core advances to \"Prepare the individual HEHE MELD-exception request\" with the closed card still shown; nonstandard route only recognises vascular=no.",
+    "source_locator": "NLRB PDF p10-11 (HEHE); content.json high_risk hehe-b2 rules (\"outside the opening cohort\")",
+    "disposition": "corrected",
+    "note": "Source-backed guard/unknown/blank/source-sync correction with targeted regressions."
+  },
+  {
+    "id": "B08-R7-R7-05",
+    "severity": "medium",
+    "target": "transplant/assets/risk-routing.js; transplant/assets/content.json",
+    "issue": "Core stop results are carried to later decisions only when hardStop() repeats them. Not mirrored: hcc/waitlist control=lost (non-spread); icca/diagnosis histology=other; icca/therapy and icca/stability progression (unless spread or unresolved); icca/review, crlm/review, nelm/review, hehe/review, hca/review criteria=lost; crlm/biology cea=high; crlm/control progression; crlm/clocks primary=no; hehe/risk criteria=no. Browsing on with standard answers gives unguarded advances, and the final decision of iCCA, CRLM and HCA then shows \"Proceed to transplantation under the approved program\". This contradicts app.js line 286 (\"An unresolved upstream exclusion cannot be cleared by a later favorable example\").",
+    "source_locator": "Site stop-rule texts (content.json assistants.<key>.rules[]); NLRB p9 (CRLM primary R0/no local recurrence), p10 (CEA >80 exclusion)",
+    "disposition": "corrected",
+    "note": "Source-backed guard/unknown/blank/source-sync correction with targeted regressions."
+  },
+  {
+    "id": "B08-R7-R7-06",
+    "severity": "medium",
+    "target": "transplant/assets/risk-routing.js",
+    "issue": "crlm/biology rule 1 (CEA >80) is a stop citing the NLRB exclusion, but risk-routing turns it into a crlm-b3 \"notice\" that becomes an individual-review route: later decisions offer \"Next decision for individual review\", and at unresectability (not in crlm-b3 coverage) the core advance shows with no CEA trace.",
+    "source_locator": "NLRB PDF p10 Exclusion Criteria (\"CEA greater than 80 ug/L with or without radiographic evidence of disease progression\")",
+    "disposition": "corrected",
+    "note": "Source-backed guard/unknown/blank/source-sync correction with targeted regressions."
+  },
+  {
+    "id": "B08-R7-R7-07",
+    "severity": "medium",
+    "target": "transplant/assets/risk-routing.js",
+    "issue": "Any later met/yes/maintained clears an earlier AFP failure. The categorical options cannot distinguish pre-LRT AFP >1000 (recoverable if it falls <500) from AFP >=500 after LRT, which policy sends to the NLRB \"at any time\". listing exception_reason=afp is also cleared by waitlist control=maintained.",
+    "source_locator": "OPTN Policies eff. 2026-10-01, 9.5.I.ii and 9.5.I.iv, PDF p197-198; 9.5.I.vii PDF p198",
+    "disposition": "corrected",
+    "note": "Source-backed guard/unknown/blank/source-sync correction with targeted regressions."
+  },
+  {
+    "id": "B08-R7-R7-08",
+    "severity": "medium",
+    "target": "transplant/assets/content.json",
+    "issue": "\"Possible malignant transformation\" (hold) carries to=transformation and a Continue button that skips standard-care and exception-route. transformation=benign then advances to review and follow-up (\"Proceed to transplantation ...\") although no NLRB HCA criterion and no failure of standard management was ever recorded; nothing flags the unvisited decisions.",
+    "source_locator": "NLRB PDF p11 (Hepatic Adenomas)",
+    "disposition": "corrected",
+    "note": "Source-backed guard/unknown/blank/source-sync correction with targeted regressions."
+  },
+  {
+    "id": "B08-R7-R7-09",
+    "severity": "medium",
+    "target": "transplant/assets/risk-routing.js",
+    "issue": "Every risk question gets an unknown option, but local() raises a clarify only for some. Unknown is silently accepted for icca ehd_history (core advance at the same step), crlm visible at control/restaging (whereas the weaker \"uncertain\" option does clarify), and hcc burden_history when decision 3 is blank.",
+    "source_locator": "content.json high_risk icca-b4 rules; OPTN 9.5.I.i-iii PDF p196-197",
+    "disposition": "corrected",
+    "note": "Source-backed guard/unknown/blank/source-sync correction with targeted regressions."
+  },
+  {
+    "id": "B08-R7-R7-10",
+    "severity": "medium",
+    "target": "transplant/assets/risk-routing.js; transplant/assets/app.js",
+    "issue": "An earlier decision is \"unresolved\" only if it has at least one answer (Object.keys(a).length). A deep link or \"Browse next\" to a later decision with every earlier decision blank gives an unqualified Proceed with an enabled Continue button. This happens at 20 of 39 non-first decisions before any risk question is answered (e.g. hcc/allocation, crlm/review, hca/review), and at others once the risk questions are answered (e.g. hcc/listing, T17).",
+    "source_locator": "assistant.js line 54 comment (\"A proceed highlight requires every essential question to be resolved\"); app.js line 286 comment",
+    "disposition": "corrected",
+    "note": "Source-backed guard/unknown/blank/source-sync correction with targeted regressions."
+  },
+  {
+    "id": "B08-R7-R7-11",
+    "severity": "medium",
+    "target": "tools/decision_assistant_source/risk-routing.js; tools/decision_assistant_source/build.py",
+    "issue": "build.py copies risk-routing.js from tools/decision_assistant_source into the published assets, but that source lacks the deployed hcc-b5, icca-b4, crlm-b5 and net-b4 routes, the hcc history option \"ehd\", the icca ehd_history question and the hcc-b1-1 anchor. Rebuilding would silently remove these exclusions. (app.js differences are path prefixes only.)",
+    "source_locator": "n/a (repository integrity)",
+    "disposition": "corrected",
+    "note": "Source-backed guard/unknown/blank/source-sync correction with targeted regressions."
+  },
+  {
+    "id": "B08-R7-R7-12",
+    "severity": "low",
+    "target": "transplant/assets/risk-routing.js",
+    "issue": "Unknown is accepted without a clarify for nelm benefit/age/burden (options, review), hehe tempo (risk), icca donor (review) and hcc ici_review at treatment (guarded later at listing/waitlist by finalReview).",
+    "source_locator": "content.json high_risk net-b1/net-b3/hehe-b1 rules (local proposals)",
+    "disposition": "corrected",
+    "note": "Source-backed guard/unknown/blank/source-sync correction with targeted regressions."
+  },
+  {
+    "id": "B08-R7-R7-13",
+    "severity": "low",
+    "target": "transplant/assets/risk-routing.js",
+    "issue": "Carried cards vanish at intermediate decisions: crlm-b3 (CEA notice) not at unresectability; net-b3 not at exposure/observation; crlm-b2 failure notice not at clocks; net-b4 cleared checklist not at options/exposure; crlm-b5 not at biology-clocks (guard still present).",
+    "source_locator": "n/a (internal consistency)",
+    "disposition": "corrected",
+    "note": "Safety effect corrected: hard/local guards persist through all intervening steps independently of card coverage. Display-card coverage itself remains intentionally limited."
+  },
+  {
+    "id": "B08-R7-R7-14",
+    "severity": "low",
+    "target": "transplant/assets/content.json",
+    "issue": "177 complete states match more than one rule with different outcomes; first-match is mostly stop-first, but in 24 states a less restrictive rule wins: crlm/biology BRAF/MSI redirect hides CEA >80 and >10 cm stops (hardStop still guards), icca/phenotype redirects hide \"program no\" and \"indeterminate nodule\" holds.",
+    "source_locator": "NLRB PDF p9-10",
+    "disposition": "remaining_not_adopted_or_deferred",
+    "note": "Further targeted review remains; no claim that every low-severity routing/editorial flag was resolved."
+  },
+  {
+    "id": "B08-R7-R7-15",
+    "severity": "low",
+    "target": "transplant/assets/content.json",
+    "issue": "Answer \"No\" means \"not excluded\" but triggers stop texts asserting that invasion or extrahepatic disease is present; incomplete staging and proven disease share one option, separate from \"Uncertain\".",
+    "source_locator": "OPTN 9.5.I.i items 3-4 PDF p196",
+    "disposition": "remaining_not_adopted_or_deferred",
+    "note": "Further targeted review remains; no claim that every low-severity routing/editorial flag was resolved."
+  },
+  {
+    "id": "B08-R7-R7-16",
+    "severity": "low",
+    "target": "transplant/assets/content.json",
+    "issue": "Option \"Previously treated rupture, vascular invasion or extrahepatic metastasis\" leads to the hold \"Review prior rupture or vascular invasion\" whose text omits extrahepatic metastasis (the case risk-routing then closes as hcc-b5).",
+    "source_locator": "NLRB PDF p3",
+    "disposition": "remaining_not_adopted_or_deferred",
+    "note": "Further targeted review remains; no claim that every low-severity routing/editorial flag was resolved."
+  },
+  {
+    "id": "B08-R7-R7-17",
+    "severity": "low",
+    "target": "transplant/assets/risk-routing.js",
+    "issue": "Beyond-UNOS with AFP \"met\" (<=1000, or <500 after >1000) is offered the hcc-b1 \"Proposed high-risk review\"; the proposal itself requires AFP <100, count+largest diameter <=12 and Child-Pugh A, none of which the options capture.",
+    "source_locator": "content.json high_risk hcc-b1 rules[0]",
+    "disposition": "remaining_not_adopted_or_deferred",
+    "note": "Review remains explicitly proposed/not active; entry criteria are displayed in the linked review. No numeric pilot-selection calculator added."
+  },
+  {
+    "id": "B08-R7-R7-18",
+    "severity": "low",
+    "target": "transplant/assets/content.json",
+    "issue": "Three \"Pause and clarify\" branches carry to= and a Continue button to the next decision. nelm (cleared nodes) is defensible because observation re-checks >=6 months; hehe and hca are covered in R7-04 and R7-08.",
+    "source_locator": "NLRB PDF p8-9 (NET 6-month rule)",
+    "disposition": "corrected",
+    "note": "Source-backed guard/unknown/blank/source-sync correction with targeted regressions."
+  },
+  {
+    "id": "B08-R7-R7-19",
+    "severity": "low",
+    "target": "transplant/assets/risk-routing.js",
+    "issue": "criteria=lost (core stop) still shows the icca-b3 living-donor readiness card because readiness is hidden only when deferred.",
+    "source_locator": "n/a",
+    "disposition": "corrected",
+    "note": "Source-backed guard/unknown/blank/source-sync correction with targeted regressions."
+  },
+  {
+    "id": "B08-R7-R7-20",
+    "severity": "low",
+    "target": "transplant/assets/risk-routing.js",
+    "issue": "known() accepts any non-empty value; unexpected values are not rejected (history=\"VP4\" gives hcc-b2 closed but no vp4 hard stop; \"bogus\" gives hcc-b2 closed). Not reachable through the selects; the core evaluate() correctly ignores non-option values.",
+    "source_locator": "n/a",
+    "disposition": "remaining_not_adopted_or_deferred",
+    "note": "Further targeted review remains; no claim that every low-severity routing/editorial flag was resolved."
+  },
+  {
+    "id": "B08-R7-R7-21",
+    "severity": "low",
+    "target": "transplant/assets/risk-routing.js; transplant/assets/assistant.js",
+    "issue": "The burden-conflict check (L236) cannot fire through the UI: burden_history is asked only when decision 3 is blank, and editing decision 3 clears later context. assistant.js L55 never triggers because every advance rule enumerates all questions (harmless safety net). All 172 core rules are reachable; V8 coverage confirmed every other risk-routing logic branch executes (L117 and L237 via T21/T22).",
+    "source_locator": "n/a",
+    "disposition": "remaining_not_adopted_or_deferred",
+    "note": "Further targeted review remains; no claim that every low-severity routing/editorial flag was resolved."
+  },
+  {
+    "id": "B08-R7-R7-22",
+    "severity": "low",
+    "target": "transplant/assets/content.json; transplant/assets/risk-routing.js",
+    "issue": "After an icca-b1 advanced-study review, decisions 3-5 still define control as \"Solitary tumor <=3 cm\"; a stable advanced tumor can only be recorded as progression/unclear (stop/hold) or a false \"controlled\".",
+    "source_locator": "NLRB PDF p7-8; content.json icca-b1/icca-b2",
+    "disposition": "remaining_not_adopted_or_deferred",
+    "note": "Advanced-iCCA is an unactivated separate proposal; standard small-cirrhotic questions not rewritten as an advanced pathway. This route needs a dedicated protocol before activation."
+  }
+]

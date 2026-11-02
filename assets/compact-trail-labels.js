@@ -174,9 +174,13 @@ window.CompactTrailLabels = {
       "source": "Are the transplant selection decision and applicable MELD-exception review complete?",
       "label": "Selection / exception review"
     },
+    "icca/follow-up/phase": {
+      "source": "Is this assessment before or after liver transplantation?",
+      "label": "Before or after transplant"
+    },
     "icca/follow-up/plan": {
-      "source": "Final clinical review and recurrence-surveillance plan complete?",
-      "label": "Final review / follow-up"
+      "source": "Clinical plan and follow-up responsibilities agreed for this stage of care?",
+      "label": "Care plan / follow-up"
     },
     "icca/follow-up/concern": {
       "source": "Any new concerning finding?",
@@ -250,9 +254,13 @@ window.CompactTrailLabels = {
       "source": "Are the transplant selection decision and applicable MELD-exception review complete?",
       "label": "Selection / exception review"
     },
+    "crlm/transplant/phase": {
+      "source": "Is this assessment before or after liver transplantation?",
+      "label": "Before or after transplant"
+    },
     "crlm/transplant/plan": {
-      "source": "Final benefit–risk review supports transplant and follow-up is agreed?",
-      "label": "Benefit / follow-up"
+      "source": "Clinical plan and follow-up responsibilities agreed for this stage of care?",
+      "label": "Care plan / follow-up"
     },
     "crlm/transplant/concern": {
       "source": "Any new concerning finding?",
@@ -302,9 +310,13 @@ window.CompactTrailLabels = {
       "source": "Are the transplant selection decision and applicable MELD-exception review complete?",
       "label": "Selection / exception review"
     },
+    "nelm/follow-up/phase": {
+      "source": "Is this assessment before or after liver transplantation?",
+      "label": "Before or after transplant"
+    },
     "nelm/follow-up/plan": {
-      "source": "Are pathology review and the follow-up plan in place?",
-      "label": "Follow-up plan"
+      "source": "Clinical plan and follow-up responsibilities agreed for this stage of care?",
+      "label": "Care plan / follow-up"
     },
     "nelm/follow-up/concern": {
       "source": "Any new concerning finding?",
@@ -342,9 +354,13 @@ window.CompactTrailLabels = {
       "source": "Are the transplant selection decision and applicable MELD-exception review complete?",
       "label": "Selection / exception review"
     },
+    "hehe/follow-up/phase": {
+      "source": "Is this assessment before or after liver transplantation?",
+      "label": "Before or after transplant"
+    },
     "hehe/follow-up/plan": {
-      "source": "Are pathology review and the follow-up plan in place?",
-      "label": "Follow-up plan"
+      "source": "Clinical plan and follow-up responsibilities agreed for this stage of care?",
+      "label": "Care plan / follow-up"
     },
     "hehe/follow-up/concern": {
       "source": "Any new concerning finding?",
@@ -378,9 +394,13 @@ window.CompactTrailLabels = {
       "source": "Are the transplant selection decision and applicable MELD-exception review complete?",
       "label": "Selection / exception review"
     },
+    "hca/follow-up/phase": {
+      "source": "Is this assessment before or after liver transplantation?",
+      "label": "Before or after transplant"
+    },
     "hca/follow-up/plan": {
-      "source": "Fitness for transplantation confirmed and follow-up for the underlying condition agreed?",
-      "label": "Fitness / follow-up"
+      "source": "Clinical plan and follow-up responsibilities agreed for this stage of care?",
+      "label": "Care plan / follow-up"
     },
     "hca/follow-up/concern": {
       "source": "Any new concerning finding?",
@@ -413,6 +433,14 @@ window.CompactTrailLabels = {
     "Which issue needs further review?": "Reason for further review"
   },
   "riskById": {
+    "afp_history": {
+      "source": "Which AFP history requires review?",
+      "label": "AFP history"
+    },
+    "afp_resolution": {
+      "source": "What has resolved the earlier AFP finding?",
+      "label": "AFP finding review"
+    },
     "history": {
       "source": "Which previously treated finding is present?",
       "label": "Prior invasion, rupture or spread"
@@ -625,8 +653,8 @@ window.CompactTrailLabels = {
       "label": "Disease-specific roadmap"
     },
     "hilar/0": {
-      "source": "Assess the need for biliary drainage",
-      "label": "Biliary drainage"
+      "source": "Assess drainage after staging imaging, unless urgent",
+      "label": "Stage before drainage unless urgent"
     },
     "hilar/1": {
       "source": "Define tumor extent",

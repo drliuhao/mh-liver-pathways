@@ -14,7 +14,7 @@
    "req": "all",
    "crit": [
     "Well-differentiated neuroendocrine tumour, not a poorly differentiated neuroendocrine carcinoma",
-    "An exact Ki-67 proliferative index reported as a number, not a range, with the mitotic count per 2 mm²",
+    "Exact Ki-67 index and mitotic rate per 2 mm² when assessable; document tissue adequacy and use Ki-67 when a small biopsy cannot support a reliable mitotic count",
     "Two of synaptophysin, chromogranin A and INSM1 positive, with a broad-spectrum keratin",
     "Acinar cell carcinoma and the other neuroendocrine-marker mimics excluded where the morphology is unusual",
     "Functional status recorded as a clinical and biochemical judgement, not an immunohistochemical one"
@@ -22,7 +22,7 @@
    "ask": "Are differentiation, grade, and the measured Ki-67 index established?",
    "standard": [
     {
-     "t": "Grade with the WHO 2019 criteria and insist on the exact Ki-67 index and the mitotic rate per 2 mm², with the raw counts reported.",
+     "t": "Report differentiation, exact Ki-67 and mitotic rate per 2 mm² when assessable. Record specimen adequacy; a reliable Ki-67-based grade can be used when mitotic counting is not possible.",
      "l": "Standard",
      "g": "B",
      "refs": [
@@ -61,7 +61,7 @@
    ],
    "alt": [
     {
-     "t": "Biopsy is not obligatory to decide to observe a small incidental lesion with the imaging phenotype of a neuroendocrine tumour.",
+     "t": "For a small incidental suspected nonfunctioning pNET, discuss whether tissue confirmation will change observation or treatment; ENETS recommends confirmation where possible.",
      "l": "Reasonable",
      "g": "D",
      "refs": [
@@ -166,7 +166,7 @@
       "36725249"
      ],
      "pref": "The NETPET grade summarises the pair on the single lesion that is most FDG-avid relative to its receptor uptake, plus the burden of such lesions. In the 62-patient derivation cohort, median overall survival was not reached for receptor-positive, FDG-negative disease (P1) or for the mixed group (P2-4) and was 11 months for significant FDG-positive, receptor-negative disease (P5), p=0.0018. In a 319-patient three-centre cohort, median overall survival was 101.8, 46.5 and 11.5 months and median time to progression 25.5, 16.7 and 6.6 months across the same three strata (both p<0.001), with the score independent of histological grade on multivariable analysis (HR 2.376, 95% CI 1.682-3.357, p<0.001) and grade independent of the score (HR 1.615, 1.192-2.187, p=0.002). Inter-rater kappa was 0.8 and intra-rater kappa 0.9.",
-     "avoid": "Do not use this to decide an operation on a localised primary. Both cohorts were metastatic or unresectable disease; only 39% and 36% of patients had pancreatic primaries and no pancreas-specific subgroup is reported in either; two of the three validation centres supplied the original derivation data, so this is partly a re-analysis rather than external validation; and treatment was not modelled in either paper, which matters because receptor-positive, FDG-negative disease is precisely the eligibility criterion for peptide receptor radionuclide therapy, so part of the P1 advantage is access to an effective drug. The 5-point scale has never been shown to be prognostic level by level - every published analysis collapses it to three categories, and several sub-grades contained a single patient. The score carries no treatment threshold.",
+     "avoid": "Do not use NETPET alone to decide an operation on a localized primary. The cohorts involved metastatic or unresectable disease, with only 39% and 36% pancreatic primaries and no pancreas-specific analysis. The validation centres had published earlier series, but patient overlap with those series is unquantified. Treatment was not adjusted for. SSTR-positive disease across P1–P4 may be eligible for PRRT; FDG positivity does not by itself exclude it, so treatment access cannot be attributed only to P1. These data support prognosis, not a validated treatment threshold or a localized-primary resection rule.",
      "note": "The SNMMI/EANM procedure standard makes the same point more cautiously: FDG positivity is not rare in G1 and G2 tumours and predicts progression and prognosis more strongly than tumour grade, and combining the two scans can identify the highest-grade, most aggressive lesion and direct a biopsy to it. What no source gives is what to do with the result in a localised primary. See the limited-evidence section. [EXPERTISE]"
     }
    ],
@@ -197,7 +197,7 @@
    "name": "3 · Control hormone-related symptoms",
    "req": "any",
    "crit": [
-    "Insulinoma — neuroglycopenic symptoms with raised insulin, pro-insulin and C-peptide during concurrent hypoglycaemia",
+    "Insulinoma — documented hypoglycaemia with inappropriately nonsuppressed insulin, proinsulin and C-peptide, interpreted with the simultaneous glucose and evaluation of mimics",
     "Gastrinoma — Zollinger-Ellison syndrome with a raised fasting gastrin, interpreted against proton-pump inhibitor use",
     "Glucagonoma — glucagon excess with diabetes or necrolytic migratory erythema",
     "VIPoma — watery diarrhoea, hypokalaemia and achlorhydria with a raised VIP",
@@ -206,7 +206,7 @@
    "ask": "Is the tumor functional, and what hormonal control and perioperative preparation are required?",
    "standard": [
     {
-     "t": "A localised, biochemically confirmed functional tumour is resected, whatever its size — the syndrome is the indication and the 2 cm rule does not apply here.",
+     "t": "For appropriate sporadic, localized functioning tumours, the hormonal syndrome can justify resection irrespective of size. MEN1-associated gastrinoma requires individualized hereditary and endocrine assessment.",
      "l": "Standard",
      "g": "C",
      "refs": [
@@ -219,7 +219,7 @@
      "note": "Biochemical cure for apparently sporadic gastrinoma is 60% immediately after resection and 30-40% at 5 years, with 15-year disease-free survival of 15%, so \"cured\" means something different in each syndrome and should be said in those terms. For gastrinoma the strongest datum for operating is not randomised: on prospective NIH, UCSF and Stanford protocols, 160 patients who had a standardised exploration were compared with 35 who met the same criteria but did not have surgery. A gastrinoma was found and removed in 150 of 160 (94%), 51% were disease-free immediately and 41% at last follow-up. Liver metastases developed in 8 of 160 (5%) against 10 of 35 (29%), p=0.0002; death from any cause in 34 of 160 (21%) against 19 of 35 (54%), p=0.0002; disease-related death in 2 of 160 (1%) against 8 of 35 (23%), p=0.00001; and 15-year disease-related survival from first admission was 98% against 74%. Those 35 controls were not randomly formed - 19 refused after consulting their own physician, 10 had MEN1 with no lesion above 2.5 cm and 5 had comorbidity - non-disease mortality was numerically higher in them (31% against 20%, p=0.18), the surgical arm's disease-related figure rests on 2 deaths, cause of death was adjudicated unblinded by the operating investigators, and the controls were imaged every 6 to 12 months against yearly evaluation in the operated patients. Almost every primary was duodenal or nodal, so none of this transfers to an incidental non-functional pancreatic tumour. See the limited-evidence section and approval 4."
     },
     {
-     "t": "Confirm the syndrome biochemically before localising, and read gastrin against the proton-pump inhibitor.",
+     "t": "Confirm and stabilize the hormonal syndrome; interpret gastrin with PPI exposure and maintain acid suppression when withdrawal would be unsafe.",
      "l": "Standard",
      "g": "D",
      "refs": [
@@ -227,10 +227,10 @@
       "31856076"
      ],
      "pref": "Serum gastrin ideally drawn fasting and off a proton-pump inhibitor for more than a week. Where there are overt clinical symptoms of gastrinoma or a risk of complications, NCCN says to continue the acid suppression and interpret the gastrin with that in mind rather than stop it. Consider endocrinology involvement to establish the endocrine diagnosis.",
-     "avoid": "Do not start a localisation workup on a gastrin drawn on a proton-pump inhibitor and do not stop acid suppression in a patient who is symptomatic or at risk of perforation or bleeding to obtain a cleaner number. Genetic counselling and testing is recommended for every gastrinoma — see clinical decision 7."
+     "avoid": "Do not diagnose gastrinoma from hypergastrinaemia on a PPI alone. If acid suppression cannot safely be withdrawn, specialist assessment may use the clinical syndrome, imaging and appropriate tissue sampling while excluding other causes. Assess hereditary features and arrange genetic evaluation when indicated; do not delay necessary acid suppression."
     },
     {
-     "t": "For insulinoma, enucleate an exophytic lesion that is clear of the main pancreatic duct; take a spleen-preserving distal pancreatectomy for a deep lesion or one close to the duct.",
+     "t": "For insulinoma, choose the operation by tumour location and main-duct proximity: enucleation for suitable superficial lesions, spleen-preserving distal resection for appropriate deep distal lesions, and a head-specific operation for deep head lesions.",
      "l": "Standard",
      "g": "C",
      "refs": [
@@ -240,6 +240,16 @@
      "pref": "Insulinomas are highly symptomatic and rarely malignant, which is exactly the setting in which NCCN and NANETS place enucleation. Ninety per cent pursue an indolent course. Where splenic vessels are involved by a larger tumour, splenectomy is performed; otherwise spleen preservation should be considered.",
      "avoid": "Do not enucleate a lesion within 2-3 mm of the main pancreatic duct, and do not enucleate a tumour large enough to carry nodal risk - see clinical decision 5 for the trade. And cost the fistula honestly: in a pooled analysis of 22 non-randomised comparative studies (432 enucleations against 716 standard resections), pancreatic fistula occurred in 25.5% after enucleation against 19.7% after standard resection, OR 2.09 (95% CI 1.41-3.11), p<0.001, and OR 1.93 (1.14-3.27) for clinically relevant grade B or C disease; the excess lost significance only in the four studies performing more than 20 enucleations in total and at least 4 a year. Vaccinate against pneumococcus, Haemophilus influenzae b and meningococcus at least 14 days before any operation that might include splenectomy.",
      "note": "A formal lymphadenectomy is not part of the operation for a benign insulinoma."
+    },
+    {
+     "t": "Stabilize the hormonal syndrome while localization and definitive treatment are planned.",
+     "l": "Standard",
+     "g": "D",
+     "refs": [
+      "37578384"
+     ],
+     "pref": "Coordinate endocrinology and the treating team: prevent and treat insulinoma hypoglycaemia; maintain acid suppression for gastrinoma; replace fluids and electrolytes in VIPoma; address syndrome-specific metabolic and thrombotic risks.",
+     "avoid": "Severe hypoglycaemia, dehydration, electrolyte disturbance, bleeding or other acute complications require urgent clinical care rather than waiting for the tumour board."
     }
    ],
    "alt": [
@@ -261,24 +271,26 @@
      "l": "Reasonable",
      "g": "D",
      "refs": [
-      "31856076"
+      "31856076",
+      "37578384",
+      "36871765"
      ],
      "pref": "NCCN lists this for highly selected cases only. Stabilise first with diet, diazoxide at 3 to 8 mg/kg per day in three or four divided doses, or everolimus.",
-     "avoid": "This is a symptom-control manoeuvre with no comparative outcome data in this disease and no established oncologic endpoint. Do not offer it to an operable patient. [EXPERTISE]",
+     "avoid": "Nonrandomized comparative evidence exists. ERASING matched 89 EUS-RFA and 89 surgical patients: symptom control was 95.5% versus 100%, with repeat ablation counted as success and shorter RFA follow-up (23 versus 37 months). This does not establish durable oncologic equivalence. Reserve ablation for appropriately selected patients after expert multidisciplinary review. [EXPERTISE]",
      "note": "Correct the metabolic consequences of the syndrome before operating: potassium, magnesium and bicarbonate and dehydration in a VIPoma, glucose in an insulinoma. Glucagonoma carries a described hypercoagulable state and NCCN allows consideration of perioperative anticoagulation."
     }
    ],
    "avoid": [
     {
-     "t": "Do not give a somatostatin analogue to a patient with insulinoma whose somatostatin-receptor imaging is negative.",
+     "t": "Avoid an unmonitored start of a somatostatin analogue for insulinoma: hypoglycaemia can worsen.",
      "l": "Avoid",
      "g": "C",
      "refs": [
       "31856076",
       "37578384"
      ],
-     "pref": "Only consider an analogue in insulinoma where the tumour demonstrably expresses somatostatin receptors, and use it with caution even then because it can transiently worsen hypoglycaemia.",
-     "avoid": "Analogues suppress the counter-regulatory hormones — growth hormone, glucagon and catecholamines — and in a receptor-negative insulinoma can precipitously worsen hypoglycaemia with fatal complications reported. About two-thirds of insulinomas are receptor-PET negative, so this is a common trap rather than a rare one, and it is why the receptor scan is obtained before the drug."
+     "pref": "Stabilize with diet and appropriate medical therapy. ENETS supports a monitored short-acting octreotide trial before long-acting treatment; NCCN emphasizes receptor-positive disease. Specialist review should reconcile receptor findings and the clinical response.",
+     "avoid": "Suppression of counterregulatory hormones may worsen hypoglycaemia even when an antitumour effect is possible. Monitor glucose and symptoms closely during a short-acting trial; do not infer safe long-acting treatment from receptor imaging alone."
     },
     {
      "t": "Do not rely on prophylactic octreotide to prevent an intraoperative crisis.",
@@ -307,7 +319,7 @@
    "ask": "For a small nonfunctional tumor, is surveillance or resection appropriate?",
    "standard": [
     {
-     "t": "Observation is the default for an incidental, low-grade, non-functional tumour of 1 cm or less, and biopsy is not required to make that decision.",
+     "t": "Observation is an option for an asymptomatic, low-grade, nonfunctioning tumour ≤1 cm without main pancreatic duct dilation; consider tissue confirmation where possible and document diagnostic confidence.",
      "l": "Standard",
      "g": "D",
      "refs": [
@@ -323,7 +335,7 @@
      "note": "Grade D, downgraded on the full-text read. Neither 1 cm nor 2 cm was derived from data. NCCN's own supporting citations for the observation footnote are the three cohorts in the next item and nothing stronger; ENETS's surgical thresholds carry level 3 evidence while its strongest wording is reserved for the threshold above which it operates; and the only systematic comparison of surgery against surveillance for lesions of 2 cm or less that exists anywhere - 37 of 3,048 screened publications, 1,814 patients, carried out for the 2025 MEN1 recommendations - found no difference in metastasis or mortality, at low to very low GRADE certainty. The recommendation to observe a sub-centimetre lesion is reasonable and near-universal. It is not derived, and it should not be offered to a patient as though it were."
     },
     {
-     "t": "State the actual evidence for the threshold when you offer observation: three uncontrolled cohorts with two to four years of follow-up, no randomised comparison, and not one direct comparison of the two strategies in any of them.",
+     "t": "Explain that observation evidence is nonrandomized: prospective cohorts have short follow-up, and Sadot provides a retrospective size-matched observation-versus-resection comparison.",
      "l": "Standard",
      "g": "C",
      "refs": [
@@ -345,8 +357,8 @@
       "37877341"
      ],
      "pref": "NCCN states that its surveillance recommendations apply to cases where observation has been chosen: history and examination with multiphasic abdomen with or without pelvis CT or MRI at 12 weeks to 12 months, then every 6 to 12 months to a maximum of 10 years, then as clinically indicated, with chest CT as clinically indicated and earlier imaging if symptoms develop. Use the same modality and contrast agent each time so that growth is measurable rather than inferred - ENETS makes the same point explicitly, that imaging modality, contrast type, contrast timing and tracer should not be changed during follow-up.",
-     "avoid": "Receptor-based imaging and FDG-PET are not recommended for routine surveillance. Do not let the interval drift: the trigger for resection in every one of the three cohorts above was measurable growth, which only exists if the measurements are comparable.",
-     "note": "Grade D, and the borrowed schedule is now known to disagree with its own source. The published follow-up recommendations for completely resected gastroenteropancreatic tumours - a 22-member RAND/UCLA panel scoring 193 scenarios against an evidence base of 6 eligible studies plus two then-unpublished cohorts - recommend for a resected pancreatic tumour consultation with triple-phase CT or MRI yearly for 3 years, then every 1 to 2 years to a total of 10 years, deliberately de-intensifying the first three years relative to NCCN, ENETS, ESMO and NANETS while extending surveillance past ten. They also recommend no follow-up at all for a grade 1, node-negative pancreatic tumour smaller than 2 cm. That exemption is expert opinion at a 75% agreement threshold, in a dataset whose cumulative recurrence was 33.5% at 5 years and 48.5% at 10 and whose median time to pancreatic recurrence was 7.2 years, and node-negative in a small tumour usually means few or no nodes were taken. It applies to resected patients and not to observed ones, and this page does not adopt it - but the group should know that the schedule it borrows is contradicted by the paper it is borrowed from. ENETS 2023 sets a third schedule again, imaging at 3 to 6 months after curative resection, then every 6 to 12 months for 5 years, every 12 to 24 months to 10 years and then every 5 years, at level 5 evidence graded B, with patients told to expect at least 20 years and possibly lifelong surveillance. See approval 13."
+     "avoid": "Routine surveillance uses CT or MRI. SSTR PET and FDG PET are reserved for defined clinical questions. Reassess for growth, duct dilation, symptoms or other progression; not every operation in the observation cohorts was triggered by growth.",
+     "note": "Grade D, and the borrowed schedule is now known to disagree with its own source. The published follow-up recommendations for completely resected gastroenteropancreatic tumours - a 22-member RAND/UCLA panel scoring 193 scenarios against an evidence base of 6 eligible studies plus two then-unpublished cohorts - recommend for a resected pancreatic tumour consultation with triple-phase CT or MRI yearly for 3 years, then every 1 to 2 years to a total of 10 years, deliberately de-intensifying the first three years relative to NCCN, ENETS, ESMO and NANETS while extending surveillance past ten. They also recommend no follow-up at all for a grade 1, node-negative pancreatic tumour smaller than 2 cm. That exemption is expert opinion at a 75% agreement threshold, in a dataset whose cumulative recurrence was 33.5% at 5 years and 48.5% at 10 and whose median time to pancreatic recurrence was 7.2 years, and node-negative in a small tumour usually means few or no nodes were taken. It applies to resected patients and not to observed ones, and this page does not adopt it - but the group should know that the schedule it borrows is contradicted by the paper it is borrowed from. ENETS 2023 sets a third schedule again, imaging at 3 to 6 months after curative resection, then every 6 to 12 months for 5 years, every 12 to 24 months for 10 years after the first five years (the ENETS wording) and then every 5 years, at level 5 evidence graded B, with patients told to expect at least 20 years and possibly lifelong surveillance. See approval 13."
     }
    ],
    "alt": [
@@ -362,6 +374,17 @@
      "pref": "Two thresholds are in circulation and the board should pick one and write it down. PANDORA used growth of more than 0.5 cm per year as its protocol trigger, and 8 of 76 patients (11%) met it at a median of 17 months. The 2025 MEN1 recommendations use growth of under 1 mm per year as the point at which the imaging interval may be lengthened to every 1 to 2 years, at 92% panel agreement, with intervals individualised to the observed growth rate and the absolute size. In ASPEN, increasing size was the stated indication for surgery in only 4 of the 406 surveillance patients, against patient preference in 42 of 94 operated patients and centre preference in 37.",
      "avoid": "Do not present either number as biological - neither has any cited derivation. One millimetre a year lies below the measurement reproducibility of serial cross-sectional imaging of a small pancreatic lesion across different scanners and readers, and will generate both false stability and false progression. Half a centimetre a year is no better founded: in PANDORA the 8 patients who met it had a mean size at last follow-up of still only 1.2 cm (SD 0.7), and only 2 of them ever crossed 2.0 cm, so the threshold was detecting measurement variation as much as growth. What makes either threshold usable at all is the same modality, the same contrast agent and the same measurement convention every time, which is the one part of this that is entirely within the programme's control.",
      "note": "Record the measurement in the body of the note, in millimetres, naming the phase and sequence it was made on. A growth rate that cannot be recomputed from the chart is not a growth rate. See approval 12."
+    },
+    {
+     "t": "For a nonfunctioning tumour >1 to ≤2 cm, choose observation or resection individually with the multidisciplinary team.",
+     "l": "Reasonable",
+     "g": "C",
+     "refs": [
+      "37877341",
+      "31856076"
+     ],
+     "pref": "Consider grade and diagnostic confidence, symptoms, interval growth, main-duct dilation, imaging evidence of invasion or nodes, hereditary context, patient fitness and preference, and the pancreatic operation required. Document a surveillance schedule when observing.",
+     "avoid": "Main-duct dilation, concerning growth, higher grade, invasion, nodal disease or symptoms should prompt reassessment for treatment; 2 cm is not a guarantee of benign behavior."
     }
    ],
    "avoid": [
@@ -402,7 +425,8 @@
     "Malignant-appearing tumour of any size",
     "A functional tumour that has been localised",
     "A 1–2 cm tumour where the board has decided to resect",
-    "Patient fit for the operation that the tumour's position actually requires"
+    "Patient fit for the operation that the tumour's position actually requires",
+    "Differentiation/grade and hereditary or multifocal disease assessed before choosing the operation; refer to decisions 7 and 8 when relevant"
    ],
    "ask": "Is a pancreas-preserving operation appropriate, or is formal oncologic resection needed?",
    "standard": [
@@ -584,7 +608,7 @@
      "note": "The MEN1 recommendations were comprehensively revised in 2025, and the revision read in full for this page produced 55 recommendations: 52 Delphi consensus statements from an expert panel in 22 countries, plus 3 from systematic reviews that found only 37 of 3,048 screened publications usable, covering 1,814 patients, with all three resulting recommendations rated low or very low certainty by GRADE. Use that document or the separate AACE consensus statement rather than a pre-2021 source for the surveillance schedule. The AACE statement is cited on this page from its abstract only - its full text was not obtained - so every numeric criterion attributed to it must be confirmed against the published paper before use."
     },
     {
-     "t": "In MEN1, resect a functional tumour whatever its size, observe a nonfunctional tumour under 1 cm, and resect above 2 cm or on significant growth — accepting that surgery will not clear the gland.",
+     "t": "In MEN1, individualize treatment by functional syndrome and hereditary context. Symptomatic insulinoma generally requires treatment; MEN1 gastrinoma timing and extent remain controversial. Nonfunctioning lesions may be observed when small, with resection considered for size, growth and other concerning features. Surgery will not clear the inherited risk.",
      "l": "Standard",
      "g": "D",
      "refs": [
@@ -697,16 +721,16 @@
      "note": "The 310-patient and 119-patient resected series quoted above are taken from the NANETS consensus text and are not in this page's full-text depot. The 305-patient Nordic study of advanced gastrointestinal neuroendocrine carcinoma that is in the depot concerns unresectable disease and bears on this assessment only through its prognostic findings: median survival was 11 months (95% CI 9.4-12.6) with palliative chemotherapy and 1 month (0.3-1.8) with best supportive care, but the untreated group was twelve years older with 52% at performance status 3-4, so that contrast is late referral rather than a treatment effect. Pancreatic primaries, 71 of the 305, had the longest median survival of any site - 15 months against 8 for colonic, p=0.01 across sites - and were more often receptor-positive (46% against 0-25%, p=0.001). Performance status dominated the final model: median survival 18 months at PS 0, 12 at PS 1 and 5 at PS 2, alongside primary site, platelets below 400 and a normal lactate dehydrogenase. There is no role for adjuvant therapy here outside a trial."
     },
     {
-     "t": "Do not resect a poorly differentiated pancreatic neuroendocrine carcinoma for cure; treat it as a carcinoma.",
+     "t": "For poorly differentiated pancreatic NEC, prioritize multidisciplinary systemic-treatment assessment; selected localized disease may still warrant consideration of R0 surgery.",
      "l": "Standard",
      "g": "C",
      "refs": [
       "31856076",
       "36924180"
      ],
-     "pref": "NANETS states that patients with poorly differentiated carcinoma, small or large cell, should not undergo resection, given the aggressive behaviour and extremely poor prognosis that does not appear to be affected by surgery. ENETS 2023 allows that surgery can benefit localised disease after extensive preoperative imaging, and places carboplatin with etoposide first line in metastatic disease, with irinotecan and a fluoropyrimidine as the best-evidenced second line; median survival in metastatic disease is 11 to 12 months.",
+     "pref": "NANETS 2020 generally advises against resection of pancreatic NEC. ENETS 2023 permits selected localized disease to be considered for surgery after thorough staging, with perioperative treatment discussed. Differentiation informs care but is not the sole determinant: integrate stage, anatomy, fitness and expected benefit. Metastatic NEC generally follows a systemic-therapy pathway.",
      "avoid": "Do not read the two guidelines as agreeing. NANETS is close to absolute; ENETS leaves a door open for genuinely localised disease after thorough imaging. Where they do agree is that cytoreduction of liver metastases is not indicated in this histology because of high relapse rates and poor survival, and that chemotherapy comes first.",
-     "note": "Immunotherapy plays a minor role in biomarker-unselected patients. Molecular profiling is encouraged to identify new targets, which is a statement about the research agenda rather than about today's treatment. The ENETS digestive neuroendocrine carcinoma guidance is cited on this page from the programme-supplied guideline text and was not part of the full-text depot read for this revision."
+     "note": "Molecular profiling can identify treatment-relevant alterations. Biomarker-unselected immunotherapy has limited activity. Keep poorly differentiated NEC separate from well-differentiated NET G3 and do not use a Ki-67 threshold alone to choose between them."
     }
    ],
    "alt": [
@@ -748,13 +772,13 @@
      "note": "Two cautions from the full-text read. First, the 55-against-16-month contrast is unmatched: once stage IV was matched, pancreatic grade 1-2 tumours and those with a high-grade component did not differ significantly in disease-specific survival, and both did far better than poorly differentiated carcinoma (median 61 against 16 months, p<0.001), which is the result most corrosive to a sharp prognostic split between the first two. The first draft of this page gave 11 months for the carcinoma comparator; the paper's figure is 16. Second, the Ki-67 55% cut point NCCN uses is not independently prognostic in its own derivation study - see the reasonable-alternative item above and approval 6."
     },
     {
-     "t": "Do not give adjuvant systemic therapy after resection of a high-grade tumour outside a trial.",
+     "t": "For resected well-differentiated NET G3, adjuvant systemic therapy is not established; assess clinical-trial eligibility.",
      "l": "Avoid",
      "g": "D",
      "refs": [
       "31856076"
      ],
-     "pref": "Enrol in a clinical trial. NCCN states there is no role for adjuvant therapy outside one and asks for trial enrolment to be considered.",
+     "pref": "Do not generalize this NET statement to poorly differentiated NEC. For selected resected localized NEC, ENETS allows discussion of adjuvant platinum-based therapy within multidisciplinary care.",
      "avoid": "The temptation is strong because relapse is near-universal, but nothing establishes benefit, and the only comparative data in this disease — propensity-matched NCDB — found worse survival in the adjuvant group (P=0.037)."
     }
    ]
@@ -781,7 +805,7 @@
       "31856076",
       "37877341"
      ],
-     "pref": "Every resected patient. NCCN states flatly that there is no known role for systemic treatment in the adjuvant setting, and repeats it on the grade 1–2 and grade 3 pages. A randomised trial of chemotherapy after resection is ongoing (NCT05040360) and is the right place for a patient who wants treatment.",
+     "pref": "For resected well-differentiated pNET, no routine adjuvant systemic treatment is established. Consider trials after checking current eligibility and an accessible site. SWOG S2104 (NCT05040360) tests CAPTEM versus observation in a selected higher-risk population, including 14–120 days after resection, Ki-67 3–55% and Zaidi recurrence-risk score ≥3; it is not available to every resected patient.",
      "avoid": "Do not improvise. The only comparative data are a propensity-matched NCDB analysis of 301 patients receiving perioperative systemic therapy against 301 having surgery alone, in which the adjuvant group did worse (P=0.037) - a result that is almost certainly selection rather than harm, since the agents were not recorded, but which does not support treating. That analysis is quoted from the NANETS and NCCN text and is not in this page's full-text depot.",
      "note": "Somatostatin analogues are not adjuvant therapy. Their antiproliferative evidence is in advanced disease, the only prospective study in small tumours is in MEN1 and was not randomised (see clinical decision 7), and ENETS states plainly that no evidence supports somatostatin analogues for controlling the progression of a small nonfunctioning tumour under surveillance."
     },
@@ -796,7 +820,7 @@
      ],
      "pref": "History and examination, multiphasic abdomen with or without pelvis CT or MRI, chest CT as clinically indicated, and biochemical markers for functional tumours as clinically indicated. Earlier if symptoms. Use the same modality and contrast agent each time. For high-grade disease the interval is shorter: every 12 to 24 weeks for 2 years, then every 6 to 12 months for up to 10 years depending on biology and Ki-67.",
      "avoid": "Receptor-based imaging and FDG-PET are not recommended for routine surveillance. Do not stop at 5 years in a G2 or node-positive patient: recurrences appear at a median of 5.1 years after resection of small tumours in the matched case-control series, at a median of 43 months in the three-centre European cohort of G1-G2 non-functional tumours, and at a median of 7.2 years for pancreatic primaries in the Ontario population cohort behind the published follow-up recommendations, where cumulative recurrence reached 33.5% at 5 years and 48.5% at 10. Ten-year overall survival after resection is 37.7% across the whole resected National Cancer Data Base population. ENETS tells patients to expect at least 20 years of surveillance and possibly lifelong. The tail of this disease is long.",
-     "note": "This schedule is consensus, not trial-derived, and the three consensus sources disagree with one another. NCCN starts at 12 weeks to 12 months and runs to a maximum of 10 years. ENETS 2023 starts at 3 to 6 months with a somatostatin-receptor PET, then every 6 to 12 months for 5 years, every 12 to 24 months to 10 years and then every 5 years, at level 5 evidence graded B - an inversion the GRADE framework it claims to follow would not permit. The RAND/UCLA follow-up recommendations for completely resected gastroenteropancreatic tumours deliberately de-intensify the first three years - yearly imaging for 3 years, then every 1 to 2 years to 10, with the decision to continue or stop discussed with the patient at 10 - while extending beyond 10, and exempt a grade 1, node-negative pancreatic tumour under 2 cm from follow-up altogether. That exemption came from a 22-member panel at a 75% agreement threshold, over an evidence base of 6 eligible studies plus two then-unpublished cohorts that carried no grade, stage or margin data - the very variables the recommendations stratify on. It is not adopted here. All three agree on one thing: no serum or urine biomarker has a routine role, and an isolated rise in chromogranin A is not an indication to change treatment without radiological progression. See approval 13."
+     "note": "This schedule is consensus, not trial-derived, and the three consensus sources disagree with one another. NCCN starts at 12 weeks to 12 months and runs to a maximum of 10 years. ENETS 2023 starts at 3 to 6 months; SSTR PET is considered if no pretherapeutic scan was obtained or when clinically indicated, alongside morphological imaging, then every 6 to 12 months for 5 years, every 12 to 24 months for 10 years after the first five years (the ENETS wording) and then every 5 years, at level 5 evidence graded B in the guidance's own framework. The RAND/UCLA follow-up recommendations for completely resected gastroenteropancreatic tumours deliberately de-intensify the first three years - yearly imaging for 3 years, then every 1 to 2 years to 10, with the decision to continue or stop discussed with the patient at 10 - while extending beyond 10, and exempt a grade 1, node-negative pancreatic tumour under 2 cm from follow-up altogether. That exemption came from a 22-member panel at a 75% agreement threshold, over an evidence base of 6 eligible studies plus two then-unpublished cohorts that carried no grade, stage or margin data - the very variables the recommendations stratify on. It is not adopted here. All three agree on one thing: no serum or urine biomarker has a routine role, and an isolated rise in chromogranin A is not an indication to change treatment without radiological progression. See approval 13."
     },
     {
      "t": "Risk-stratify the surveillance intensity on grade, nodal status and perineural invasion rather than on size.",
@@ -1130,7 +1154,7 @@
   },
   {
    "t": "What to do with a receptor-positive, FDG-positive localised primary in a patient whose biopsy says G1 or G2 is not covered by any guideline, and is currently decided case by case.",
-   "why": "The combined-PET score is now better supported and still inapplicable here. In the 319-patient three-centre cohort it independently predicted overall survival (HR 2.376, 1.682-3.357, p<0.001) and time to progression, with inter-rater kappa 0.8 - but histological grade was independently prognostic alongside it (HR 1.615, 1.192-2.187, p=0.002), so the claim in the first draft that the score outperformed pathological grading holds only in the 62-patient derivation cohort where grade was non-significant and no multivariable model was fitted. Both cohorts were metastatic or unresectable disease; only 39% and 36% of patients had pancreatic primaries and neither paper reports a pancreatic subgroup; two of the three validation centres supplied the derivation data; and treatment was not modelled, which matters because receptor-positive, FDG-negative disease is the eligibility criterion for radionuclide therapy. The 5-point scale has never been validated level by level and carries no treatment threshold. The SNMMI/EANM standard says FDG positivity predicts progression more strongly than grade and that the combination can direct a biopsy to the worst lesion, and stops there. Applying any of it to a 1.5 cm primary is an extrapolation with no outcome data behind it either way."
+   "why": "NETPET and histological grade were independently prognostic in the 319-patient metastatic GEP-NEN validation cohort. This does not establish superiority over pathology or determine treatment for a small localized primary. The study did not adjust for treatment; PRRT eligibility can extend to SSTR-positive P1–P4 disease rather than requiring FDG negativity. Centres had earlier published series, but patient overlap is unquantified. Dual-tracer imaging may help identify a higher-risk biopsy target in selected patients; document how the result would change care."
   },
   {
    "t": "Non-localised sporadic gastrinoma is left unsettled on this page, with the two guideline positions stated side by side.",
@@ -1244,7 +1268,7 @@
    {
     "n": 7,
     "q": "Who owns an observed tumour's next scan, and what happens when it is missed?",
-    "why": "Not an evidence question. The entire safety case for observation rests on detecting growth, and in ASPEN patient preference and centre preference together accounted for 84% of the stated indications for surgery, with anxiety independently associated with operating. Unowned surveillance converts into an unplanned operation.",
+    "why": "Not an evidence question. The entire safety case for observation rests on detecting growth, and in ASPEN preference accounted for many upfront operations; crossover from surveillance was mostly prompted by progression, so preference must not be described as the cause of most surveillance failures. Unowned surveillance converts into an unplanned operation.",
     "audit": "Audit: surveillance adherence for observed primaries, and the stated indication for every crossover to surgery."
    },
    {
@@ -1268,7 +1292,7 @@
    {
     "n": 11,
     "q": "Do we obtain tissue before choosing surveillance for a sub-2 cm nonfunctional lesion, or not?",
-    "why": "NANETS says biopsy is not routinely necessary before deciding to observe a sub-centimetre lesion with a characteristic imaging phenotype. ENETS 2023, read in full, says a suspected nonfunctioning tumour under 2 cm with positive receptor imaging should be confirmed histologically or cytologically where possible (level 3, grade B). The 2025 MEN1 recommendations find no role for routine EUS-guided biopsy in that syndrome. There is no outcome evidence separating the three, and both options carry a real cost: EUS-FNA cytology called 71% of histological G2 tumours G1, while two thirds of ASPEN's surveillance arm had no evaluable histology at all. The programme needs one answer, and a stated reason.",
+    "why": "NANETS says biopsy is not routinely necessary before deciding to observe a sub-centimetre lesion with a characteristic imaging phenotype. ENETS 2023, read in full, says a suspected nonfunctioning tumour under 2 cm with positive receptor imaging should be confirmed histologically or cytologically where possible (level 3, grade B). The 2025 MEN1 recommendations find no role for routine EUS-guided biopsy in that syndrome. There is no outcome evidence separating the three, and both options carry a real cost: EUS-FNA cytology called 71% of histological G2 tumours G1, while 215 of 406 ASPEN surveillance patients (53%) had no evaluable cytological grade. The programme needs one answer, and a stated reason.",
     "audit": "Registry: for every observed lesion, whether tissue was obtained, by what route, the cytological grade where available, and the resection grade in every patient who later crossed over."
    },
    {
@@ -1292,7 +1316,7 @@
    {
     "n": 15,
     "q": "Does the programme obtain a paired receptor and FDG-PET in a localised G2 or higher primary, and what does a discordant result change?",
-    "why": "FDG positivity is not rare in G1 and G2 disease and predicts progression and prognosis more strongly than grade on the SNMMI/EANM standard's own reading, and the combined score independently predicted survival in a 319-patient cohort. But both score cohorts were metastatic or unresectable, only about a third of patients had pancreatic primaries, treatment was not modelled, and the score carries no treatment threshold. If the pair is obtained and nothing is done differently, it is a cost; if something is done differently, the programme is acting beyond any published evidence and should say so and record it.",
+    "why": "The dual-tracer score is prognostic in metastatic or unresectable GEP-NEN, with only about a third pancreatic primaries and no validated threshold for treating a localized primary. Treatment was not adjusted for; SSTR-positive P1–P4 patients may receive PRRT. Define the selected clinical question, biopsy implications and intended management change before adding FDG imaging.",
     "audit": "Registry: receptor and FDG status at diagnosis for every localised tumour of G2 or higher, the decision taken, and the resection pathology against both."
    }
   ]
@@ -1462,13 +1486,18 @@
    "Singh 2018 follow-up",
    "Surveillance",
    "Singh S, Moody L, Chan DL, et al. Follow-up recommendations for completely resected gastroenteropancreatic neuroendocrine tumors. JAMA Oncol. 2018;4(11):1597-1604. doi:10.1001/jamaoncol.2018.2428. PMID:30054622."
+  ],
+  "36871765": [
+   "ERASING insulinoma comparison",
+   "Crinò 2023",
+   "Crinò SF, et al. Endoscopic ultrasound-guided radiofrequency ablation versus surgical resection for treatment of pancreatic insulinoma. Clin Gastroenterol Hepatol. 2023;21:2834–2843.e2. doi:10.1016/j.cgh.2023.02.022. PMID:36871765."
   ]
  },
  "nonpm": {
   "nccn": [
    "NCCN Neuroendocrine and Adrenal Tumors",
    "Guidelines & policy",
-   "National Comprehensive Cancer Network. Neuroendocrine and Adrenal Tumors. NCCN Clinical Practice Guidelines in Oncology. Version not stated in the programme-supplied extraction: its most recent references, including the MEN1 guideline of June 2025, place it at v3.2025 or later. Sections used: clinical presentations and diagnosis; nonfunctioning pancreatic tumours (evaluation, management of primary non-metastatic disease, surveillance); gastrinoma, insulinoma, glucagonoma and VIPoma pages; principles of imaging for neuroendocrine neoplasms; principles of pathology for the diagnosis of neuroendocrine neoplasms, including the 2019 WHO grading table; principles of surgical management of neuroendocrine tumours; principles of systemic anti-tumour therapy for pancreatic NET; well-differentiated grade 3 (WDG3) and poorly differentiated carcinoma (PDNEC) pages; principles of hereditary cancer risk assessment and genetic counselling; MEN1 screening, MEN1-1 and MEN1-A. The extraction is machine-converted and the layout of several algorithm pages is mangled; page numbers are deliberately not cited, and every numeric criterion must be confirmed against the current published PDF before use.",
+   "National Comprehensive Cancer Network. Neuroendocrine and Adrenal Tumors. Version 1.2026, 21 April 2026. Targeted original-PDF checks support the cited pathology, functional-tumour, imaging, surgery and surveillance sections. The whole guideline and every underlying reference have not been re-audited; confirm current recommendations in the licensed guideline.",
    "https://www.nccn.org/guidelines/category_1"
   ],
   "who2019": [
@@ -1499,5 +1528,5 @@
    "Twenty-eight of the 33 indexed papers on this page were obtained in full text, abstracted to a fixed schema capturing setting, inclusion, exclusion, results, the authors' own stated limitations, an independent critique and a bottom line, and every evidence string on the page was checked against that abstraction. Not in the depot: the NANETS 2020 surgical consensus, the ENETS 2023 functioning-syndromes guidance and the ENETS 2023 digestive neuroendocrine carcinoma guidance, which remain the programme-supplied guideline sources; and the AACE MEN1 consensus statement of March 2025 and the 2021 international consensus statement on the pancreas in MEN1, which are still cited from their abstracts only. Figures quoted from the NANETS text with no primary paper in the depot are listed in the limited-evidence section and labelled where they are used."
   ]
  },
- "provenance": "Revised on 7 October 2026 after a full-text read of this page's reference depot. Twenty-eight of the 33 indexed papers were read in full and abstracted to a fixed schema recording setting, inclusion and exclusion criteria, results, the authors' own stated limitations, an independent critique and a bottom line, and every evidence string, number and grade on the page was checked against that abstraction. Thirty-nine evidence strings were changed and thirteen grades were downgraded; the assessment structure, ids, names and tone values are unchanged, five previously empty recommendation slots were filled from depot papers that the first draft indexed but did not cite, the limited-evidence section grew from 12 items to 25 and the approvals list from 10 to 15. Originally built from the programme-supplied extraction of NCCN Neuroendocrine and Adrenal Tumors (version not stated in the extracted text; its most recent references, including the MEN1 guideline of June 2025, place it at v3.2025 or later) as the spine, with the NANETS 2020 consensus paper on the surgical management of pancreatic neuroendocrine tumours (Pancreas 2020;49:1-33) as the main surgical source, and the ENETS 2023 guidance papers for nonfunctioning pancreatic NET (J Neuroendocrinol 2023;35:e13343), for functioning pancreatic NET syndromes (e13318) and for digestive neuroendocrine carcinoma (e13249). Grading follows the WHO 2019 criteria as reproduced in the NCCN pathology principles. Liver metastases are out of scope throughout and hand off by name to the NELM pathway, which carries the hepatic decisions and the primary-resection question in metastatic disease. What the full-text read changed most is the observation-versus-resection assessment. The ENETS position on the 1-2 cm band, previously taken from the abstract and from how NANETS and the ASPEN investigators report it, was wrong: the full text observes 1 cm or less, personalises 1-2 cm and strongly recommends surgery above 2 cm or with duct dilation, and the page and quick-reference table are corrected. Sadot 2016's inclusion band was 3 cm or less rather than 2 cm, so the paper most often cited for the 2 cm threshold never tested it; a quarter of its observation arm crossed to surgery and remain in it by intention to treat; the patients never operated were followed a median of 33 months against a median time to recurrence of 5.1 years in the resected arm; its metastasis-free survival advantage for observation is an endpoint artefact; and 51% of observed tumours grew. ASPEN's 20% rate of aggressive histology comes only from its 94 resected patients, a denominator selected for size, duct dilatation, age, anxiety and surgeon preference, and no comparison between strategies was performed; its metastasis rate is printed as 0.08% when 4 of 500 is 0.8%. In PANDORA, six of the eight progressing patients refused the protocol-mandated operation, so the protocol was not tested. Gratian 2014 is a National Cancer Data Base analysis rather than SEER, and the registry excludes tumours coded benign, which removes exactly the indolent lesions a surveillance policy concerns; its 33% nodal figure for sub-5 mm tumours rests on a 94-patient band in a variable missing in 45% of the cohort. The 2025 MEN1 best-practice recommendations contribute the only systematic comparison that exists: across 37 studies and 1,814 patients, surgery and surveillance for lesions under 2 cm showed no difference in metastasis or mortality at low to very low GRADE certainty. And Hashim 2014, Zheng-Pywell 2022 and Makris 2023 all draw observation-versus-resection conclusions from cohorts in which every patient was resected, which is recorded on the page as a structural defect of the nodal-risk literature rather than as a caveat. Still cited from abstract only, because no new papers were obtained in this pass: the AACE consensus statement on MEN1 of March 2025 (PMID 40232217) and the 2021 international consensus statement on the pancreas in MEN1 (PMID 32971521). Both are labelled as abstract-only wherever they are cited, and their numeric criteria must be confirmed before use. The NANETS 2020 surgical consensus and the ENETS functioning-syndromes and neuroendocrine carcinoma guidance papers were not part of the full-text depot and remain the programme-supplied guideline sources; a list of figures quoted from the NANETS text with no primary paper in the depot is recorded in the limited-evidence section and each is labelled where it is used. There is still no ratified Memorial Hermann roadmap behind this page and no alignment worksheet. It remains a draft, assembled from guidelines and primary literature, pending multidisciplinary and institutional governance review. It is not active clinical policy, it does not replace clinician judgement, and every numeric criterion on it must be verified against the current source before use."
+ "provenance": "Revised 2 November 2026 using source-linked clinical audit findings. The change register records the original wording, revision and source locator. Source access and review depth vary; remaining critiques, unavailable sources and unreviewed material are retained in the audit record. Clinical decisions, society guidance and open local proposals retain their distinct status."
 }

@@ -245,8 +245,8 @@
        "locator": "Locoregional tab · Stop and switch rules; Quick reference · LI-RADS table (v16 text); What we are not sure about #2"
       }
      ],
-     "divergence": "Within the roadmap, the stop/switch card keeps persistent viability after two well-executed sessions as a switch trigger, while stage B and the limited-evidence table record that v0.8 withdrew the fixed two-session rule for per-session reassessment.",
-     "proposal": "Ratify a non-ranked selector chosen by goal, anatomy and reserve, with no universal ablation-to-histotripsy sequence; device availability and specialty preference are not indications. Stop/switch: reassess after every treatment; move away from repeated TACE for decompensation, worsening ALBI or Child-Pugh, lost selective access, or out-of-territory, vascular or extrahepatic progression, or persistent viable disease after two well-executed sessions unless a curative or downstaging rationale is recorded (a trigger the stage B note says v0.8 withdrew); allow delayed response after radiation.",
+     "divergence": "Use per-session multidisciplinary reassessment; the guidance’s one-or-two nonresponse signal prompts consideration of alternatives rather than an automatic treatment-count rule.",
+     "proposal": "Ratify a non-ranked selector chosen by goal, anatomy and reserve, with no universal ablation-to-histotripsy sequence; device availability and specialty preference are not indications. Stop/switch: reassess after every treatment; move away from repeated TACE for decompensation, worsening ALBI or Child-Pugh, lost selective access, or out-of-territory, vascular or extrahepatic progression, or inadequate response after technically adequate treatment, assessed after each session; continued treatment needs a recorded goal and rationale; allow delayed response after radiation.",
      "proposal_locator": "Locoregional tab · Decision sequence, selector table and Stop and switch rules; Decisions table #4 (why)",
      "rationale": "The selector is the page's operative content and it crosses six specialties; a concept everyone agrees with and a table nobody has signed is not a ratified pathway. Hepatobiliary and transplant surgery, hepatology, interventional radiology, radiation oncology, diagnostic radiology and medical oncology each own part of it.",
      "audit": "",
@@ -443,8 +443,8 @@
     {
      "id": "HCC-D9",
      "set": "roadmap",
-     "title": "Decide whether this roadmap adopts the BCLC 2026 preference for microwave over radiofrequency up to 3 to 4 cm, given that no randomised trial has shown a difference, and whether the preference is stated as operational rather than outcome-based.",
-     "question": "Decide whether this roadmap adopts the BCLC 2026 preference for microwave over radiofrequency up to 3 to 4 cm, given that no randomised trial has shown a difference, and whether the preference is stated as operational rather than outcome-based.",
+     "title": "Decide whether to adopt the BCLC 2026 microwave preference, distinguishing a device-specific local-control advantage from an unproven survival advantage.",
+     "question": "Decide whether to adopt the BCLC 2026 microwave preference, distinguishing a device-specific local-control advantage from an unproven survival advantage.",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
      "where": [
@@ -461,7 +461,7 @@
       {
        "source": "BCLC 2026",
        "key": "pm41151697",
-       "says": "Prefers microwave over radiofrequency ablation up to 3-4 cm; the roadmap calls this a change of guideline position, not a trial result.",
+       "says": "Prefers microwave up to 3–4 cm on local-control evidence, including Sugimoto 2025 (PMID 39802807); a survival advantage was not demonstrated.",
        "locator": "Stage A · Thermal ablation; What we are not sure about #7"
       },
       {
@@ -473,14 +473,14 @@
       {
        "source": "EASL 2025",
        "key": "pm39690085",
-       "says": "Treats radiofrequency and microwave ablation as equivalent.",
+       "says": "Does not recommend one thermal technique over the other; this is not proof of equivalence.",
        "locator": "Appendix · EASL 2025 (bottom line)"
       }
      ],
-     "divergence": "BCLC 2026 prefers microwave up to 3-4 cm while EASL 2025 treats the techniques as equivalent, and the one randomised trial neither showed superiority nor tested non-inferiority.",
-     "proposal": "Microwave or radiofrequency. The roadmap records the BCLC 2026 preference but states no randomised trial has shown a difference, so the preference is operational (a workflow preference, not outcome-based); the v16 matrix states no universal preference between the two.",
+     "divergence": "BCLC 2026 prefers microwave on local-control evidence. EASL 2025 does not recommend one thermal technique over the other; neither position establishes survival equivalence or universal device superiority.",
+     "proposal": "Microwave or radiofrequency according to anatomy, achievable margin and expertise. BCLC 2026 prefers microwave up to 3–4 cm on local-control evidence; adopting that preference locally remains an OPEN decision.",
      "proposal_locator": "Stage A · Thermal ablation; Curative tab · Thermal ablation; Liver-directed treatment matrix, thermal ablation row (v16 text)",
-     "rationale": "The one randomised comparison was a superiority trial that did not show superiority and did not test non-inferiority, at a mean lesion size of 18 mm with only 11 lesions in the 3 to 4 cm range the preference is argued for. Calling it operational is accurate; calling it outcome-based is not.",
+     "rationale": "MWA and RFA are both options. Sugimoto 2025 found lower two-year lesion-level local progression with MWA than single-needle RFA (20/122, 16.4%, versus 38/125, 30.4%; RR 0.54, 95% CI 0.33–0.87; P=.007), without a demonstrated overall-survival advantage. Most lesions were small; this does not establish superiority over every RFA system or a specific 3–4 cm subgroup. Earlier randomized comparisons did not show significant superiority; nonsignificance does not establish equivalence.",
      "audit": "",
      "web": "hcc/#question-HCC-D9"
     },
@@ -537,8 +537,8 @@
     {
      "id": "HCC-D11",
      "set": "roadmap",
-     "title": "Agree the AFP rule that actually binds listing here, since OPTN and AASLD allow listing once an AFP of 1,000 ng/mL or more falls below 500 while EASL treats an AFP above 1,000 as an absolute contraindication requiring three months at or below 1,000.",
-     "question": "Agree the AFP rule that actually binds listing here, since OPTN and AASLD allow listing once an AFP of 1,000 ng/mL or more falls below 500 while EASL treats an AFP above 1,000 as an absolute contraindication requiring three months at or below 1,000.",
+     "title": "Agree the local AFP approach while distinguishing OPTN exception scoring (>1,000 then <500 after treatment), AASLD guidance (≥1,000) and the EASL downstaging condition (<1,000 for at least three months).",
+     "question": "Agree the local AFP approach while distinguishing OPTN exception scoring (>1,000 then <500 after treatment), AASLD guidance (≥1,000) and the EASL downstaging condition (<1,000 for at least three months).",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
      "where": [
@@ -559,19 +559,19 @@
       {
        "source": "OPTN Policy 9",
        "key": null,
-       "says": "An AFP of 1,000 ng/mL or more blocks the standard exception until it falls below 500 after locoregional therapy; a later rise to 500 or more requires review-board referral, not automatic continuation.",
+       "says": "An AFP above 1,000 ng/mL blocks the standard exception until it falls below 500 after locoregional therapy; a later rise to 500 or more requires review-board referral, not automatic continuation.",
        "locator": "Transplant tab · Eligibility pathways (AFP rule); Quick reference · Transplant table (v16 text)"
       },
       {
        "source": "AASLD 2023",
        "key": "pm37199193",
-       "says": "Like OPTN, allows listing once an AFP of 1,000 or more falls below 500 ng/mL.",
+       "says": "Uses AFP ≥1,000 followed by a reduction below 500 ng/mL after treatment; OPTN policy itself uses >1,000 for the standardized exception. Verify and apply the current policy operator.",
        "locator": "What we are not sure about #12"
       },
       {
        "source": "EASL 2025",
        "key": "pm39690085",
-       "says": "An AFP above 1,000 ng/mL is an absolute contraindication whatever the tumour burden, and 1,000 or less must be sustained for three months before listing.",
+       "says": "An AFP above 1,000 ng/mL is an absolute contraindication whatever the tumour burden, and AFP below 1,000 must be sustained for at least three months after downstaging.",
        "locator": "What we are not sure about #12; Appendix · EASL 2025 (bottom line)"
       },
       {
@@ -587,10 +587,10 @@
        "locator": "What we are not sure about #12"
       }
      ],
-     "divergence": "OPTN and AASLD versus EASL set incompatible AFP listing rules, and the roadmap notes that neither threshold was derived from a trial.",
+     "divergence": "OPTN standardized exception policy, AASLD guidance and EASL clinical selection wording differ. Exception priority, waitlist registration and any stricter OPEN local proposal are separate decisions.",
      "proposal": "The page applies the OPTN rule (to be verified against current Policy 9 text), with the stricter of OPTN and local policy governing, and every AFP recorded with its date and intervening treatment. HCC B1.1 AFP proposals, such as a conservative hold at confirmed AFP of 500 or more, are OPEN, not automatic delisting rules. No monitor is named.",
      "proposal_locator": "Transplant tab · Four kinds of statement and Eligibility pathways (AFP rule); AFP-only discordance and HCC B1.1 OPEN proposals (v16 text)",
-     "rationale": "OPTN and AASLD allow listing once an AFP of 1,000 ng/mL or more falls below 500, while EASL treats an AFP above 1,000 as an absolute contraindication requiring three months at or below 1,000. Two incompatible rules cannot both govern the same listing decision, and transplant surgery must also name who monitors it.",
+     "rationale": "Apply current OPTN policy to standardized exception scoring: AFP >1,000 requires reduction below 500 after treatment. AASLD uses ≥1,000, while EASL requires AFP <1,000 for at least three months after downstaging. Record the source and purpose of each threshold; do not convert an OPEN local AFP proposal into automatic delisting.",
      "audit": "",
      "web": "hcc/#question-HCC-D11"
     },
@@ -683,8 +683,8 @@
     {
      "id": "HCC-D14",
      "set": "roadmap",
-     "title": "Decide whether any adjuvant locoregional therapy, TACE or hepatic arterial infusion, is offered after high-risk resection, noting that the AASLD statement against adjuvant therapy concerns atezolizumab plus bevacizumab and that the two randomised adjuvant locoregional trials are single-country hepatitis B populations.",
-     "question": "Decide whether any adjuvant locoregional therapy, TACE or hepatic arterial infusion, is offered after high-risk resection, noting that the AASLD statement against adjuvant therapy concerns atezolizumab plus bevacizumab and that the two randomised adjuvant locoregional trials are single-country hepatitis B populations.",
+     "title": "Decide whether any adjuvant locoregional therapy is offered after high-risk resection, recognizing that AASLD advises against neoadjuvant/adjuvant systemic therapy and EASL 2025 advises against any adjuvant treatment.",
+     "question": "Decide whether any adjuvant locoregional therapy is offered after high-risk resection, recognizing that AASLD advises against neoadjuvant/adjuvant systemic therapy and EASL 2025 advises against any adjuvant treatment.",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
      "where": [
@@ -701,7 +701,7 @@
       {
        "source": "AASLD critical update",
        "key": "pm39992051",
-       "says": "Advises against adjuvant and neoadjuvant systemic therapy after resection or ablation because IMbrave050's benefit did not hold; roadmap: it concerns atezolizumab-bevacizumab, rests on an interim analysis, and extends to neoadjuvant therapy without a cited trial.",
+       "says": "Advises against neoadjuvant and adjuvant systemic therapy after resection or local ablation (statement 32, Level 1, strong). Small neoadjuvant studies do not establish a survival benefit over immediate surgery.",
        "locator": "Appendix · AASLD critical update (bottom line); Decisions table #14 (why)"
       },
       {
@@ -729,10 +729,10 @@
        "locator": "What we are not sure about #30"
       }
      ],
-     "divergence": "The AASLD and NCCN statements concern adjuvant atezolizumab-bevacizumab, while two single-country hepatitis B randomised trials report benefit from adjuvant TACE or HAI that the page does not yet address.",
+     "divergence": "AASLD advises against neoadjuvant/adjuvant systemic therapy and EASL against any adjuvant treatment. Adjuvant TACE/HAI signals from predominantly Eastern populations do not create an approved local treatment policy.",
      "proposal": "The roadmap states only that adjuvant atezolizumab-bevacizumab is not recommended (Avoid) and that resected patients get multiphase liver and chest imaging every 3-6 months with long-term surveillance; it takes no position on adjuvant TACE or HAI, and lists HAI as Trial only, not a routine locoregional line.",
      "proposal_locator": "Curative tab · Resection; Systemic therapy tab · Adjuvant therapy; What we are not sure about #30; Locoregional selector row 'Hepatic arterial infusion'",
-     "rationale": "The AASLD statement against adjuvant therapy concerns atezolizumab plus bevacizumab, whose recurrence-free survival signal was lost on updated analysis; it is not a statement about every adjuvant strategy. The two randomised adjuvant locoregional trials that do report benefit are single-country hepatitis B populations with unblinded controls, so whether they apply here is a local judgement.",
+     "rationale": "AASLD statement 32 advises against neoadjuvant and adjuvant systemic therapy after resection or ablation. EASL 2025 advises against any adjuvant treatment. Chinese trials and broader meta-analyses report locoregional benefit signals, but generalizability and the local treatment policy require explicit review.",
      "audit": "",
      "web": "hcc/#question-HCC-D14"
     },
@@ -773,8 +773,8 @@
     {
      "id": "HCC-D16",
      "set": "roadmap",
-     "title": "Decide whether SBRT may be used as a transplant bridge, given explant complete necrosis of 13% after SBRT against 49% after radiofrequency ablation in the only comparative series, and name who adjudicates bridging modality choice.",
-     "question": "Decide whether SBRT may be used as a transplant bridge, given explant complete necrosis of 13% after SBRT against 49% after radiofrequency ablation in the only comparative series, and name who adjudicates bridging modality choice.",
+     "title": "Decide how SBRT bridging is selected, considering the differing nonrandomized comparative cohorts, and name who adjudicates bridging modality choice.",
+     "question": "Decide how SBRT bridging is selected, considering the differing nonrandomized comparative cohorts, and name who adjudicates bridging modality choice.",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
      "where": [
@@ -801,10 +801,10 @@
        "locator": "Appendix · MERITS-LT (bottom line)"
       }
      ],
-     "divergence": "The only comparative bridging series favours RFA on explant necrosis but its arms were not comparable, and the roadmap notes no trial has compared bridging with no bridging.",
+     "divergence": "Comparative bridging cohorts differ in selection and design. Toronto reserved SBRT for patients unsuitable for other options; the later Hong Kong prospective SBRT cohort with historical controls reported more complete pathological responses and less dropout. These comparisons do not establish one universally superior bridge.",
      "proposal": "The roadmap lists thermal ablation, TACE, radiation segmentectomy and SBRT among bridge uses, states that no technique is a universal best bridge, requires bridge use of SBRT to be named separately, and holds that technical feasibility does not confer transplant eligibility. No adjudicator of bridging modality is named.",
      "proposal_locator": "Locoregional selector (thermal ablation, segmentectomy, TACE and SBRT rows); Liver-directed treatment matrix, arterial embolization and external beam rows (v16 text)",
-     "rationale": "In the only comparative series explant complete necrosis was 13.3% after SBRT against 24.3% after TACE and 49.2% after radiofrequency ablation, with liver function deteriorating in 38.9% against 19.4% and 13.0% — but SBRT was reserved by design for patients who could not have the other two, so the arms are not comparable. Someone has to own the choice rather than let availability decide it.",
+     "rationale": "Toronto reported explant complete necrosis of 13.3% after SBRT, 24.3% after TACE and 49.2% after RFA, with unequal patient selection. Wong 2021 (PMID 34091914; abstract-level verification) reported 48.1%, 25% and 17.9% after prospective SBRT versus historical TACE/HIFU. Different selection and comparators prevent a causal ranking; modality choice requires transplant and radiation review.",
      "audit": "",
      "web": "hcc/#question-HCC-D16"
     },
@@ -1201,9 +1201,9 @@
     {
      "id": "HCC-RT-20",
      "specialty": "Interventional radiology",
-     "question": "The two-session TACE stop rule and what counts as ‘well executed’.",
+     "question": "Per-session TACE response and reserve review, including what counts as technically adequate treatment.",
      "kind": "clinical",
-     "proposal": "v0.8 withdrew the fixed two-session rule for reassessment after each session in MDT context, yet the stop/switch card still lists persistent viability after two well-executed sessions as a switch trigger; 'well executed' is undefined.",
+     "proposal": "Assess response, technical adequacy, hepatic reserve and treatment intent after each session; define these inputs locally rather than using a mandatory session count.",
      "proposal_locator": "Stage B Avoid (note); Locoregional tab · Stop and switch rules; What we are not sure about #32",
      "positions": [
       {
@@ -2432,10 +2432,10 @@
       {
        "source": "ImmunoXXL 2026",
        "key": "hr-immunoxxl",
-       "population": "Prospective phase II experience: 61 potentially eligible atezolizumab–bevacizumab-treated patients; 16 enrolled/listed/transplanted responders. The 45 not included comprised 25 treatment discontinuations (15 progression, four adverse events, six decompensation) and 20 failing downstaging criteria. Eight of 16 had portal thrombosis, grades not verified; 15 had prior locoregional treatment.",
-       "results": "Median washout 57.5 days (IQR 29–87), median follow-up 16 months. Acute rejection 4/16 (25%); three irAEs. Ninety-day morbidity 62.5%, mortality 1/16. Explants: ten complete and six partial responses; one recurrence. Two-year recipient OS 94%, RFS 90%.",
-       "limits": "These are selected-16 outcomes, not 61-patient ITT efficacy. Small, nonrandomized, short follow-up; a shorter median washout does not establish safety. Retransplantation count was not independently extractable from accessible primary text and is not asserted.",
-       "locator": "Published abstract plus accessible publisher Results, PMID 41763363; full PDF needed for eligibility, flow and adverse-event denominators."
+       "population": "Prospective single-centre observational cohort: 61 potentially eligible patients treated with atezolizumab–bevacizumab; 16 selected responders were enrolled, listed and transplanted. Among 45 not included, 25 discontinued treatment (15 progression, four adverse events, six decompensation) and 20 failed downstaging criteria. Eight of 16 had baseline portal-vein tumor thrombosis (six Vp2, one Vp3, one Vp4); 15 had prior locoregional treatment. These were selected research recipients, not proof of standard eligibility after vascular invasion.",
+       "results": "Median washout 57.5 days (IQR 29–87), median follow-up 16 months. Four biopsy-confirmed acute rejections (25%); three irAEs. Ninety-day morbidity 10/16 and mortality 1/16; two retransplants. Explants: ten complete and six partial responses; one recurrence. Reported two-year OS 94% (95% CI 67–100) and recurrence-free estimate 90% (62–98) in the 16 recipients; Methods start both clocks at listing and censor death for recurrence, so the latter is not conventional recurrence-or-death RFS.",
+       "limits": "Selected-16 outcomes, not efficacy among all 61 treated patients. Small, observational cohort with short follow-up. A shorter median washout does not establish safety. The fatal course included graft dysfunction, rejection, sepsis and retransplantation; graft loss should not all be attributed to rejection. Supplement and mechanistic analyses were not fully reviewed.",
+       "locator": "J Hepatol2026;85:117–129. PMID41763363. PDF pp3–5 selection, flow and endpoint definitions; Figures1–3; p8 safety; Table2. Targeted main clinical read; supplement not reviewed."
       },
       {
        "source": "Moeckli 2025",
@@ -2850,7 +2850,7 @@
        "source": "TransMet 2024",
        "key": "hr-transmet",
        "population": "Multicentre open-label randomized trial, 20 European centres, 157 screened and 94 randomized (47 LT-plus-chemotherapy, 47 chemotherapy); 63 screened excluded, including 13 with equivocal unresectability and 36 with progression. Age 18–65; ECOG 0–1; R0 colorectal primary; BRAF nonmutated; no prior or current extrahepatic disease/local recurrence; chemotherapy response or stable disease for at least 3 months, at most three lines. CEA <80 ng/mL OR at least 50% reduction from peak was permitted. Independent committee of at least two surgeons, two oncologists and one radiologist reviewed original and current lesion maps. These are trial criteria, not identical to current NLRB guidance.",
-       "results": "Primary time origin was randomization. Median follow-up 59.3 months. Five-year ITT OS was 56.6% versus 12.6% (HR 0.37, 95% CI 0.21–0.65); per-protocol OS 73.3% versus 9.3%. Of 47 assigned LT, 38 received LT and 36 were per-protocol; nine had progression-related exclusion/dropout. The control arm included seven subsequent resections and two LT crossovers. Safety population comprised 40 grafted patients. Among 36 per-protocol LT recipients, 26 recurred; 19/26 received chemotherapy and 12/26 local curative-intent treatment. Median per-protocol PFS was 17.4 versus 6.4 months, and secondary PFS after salvage was 35.4 months in the LT arm. Three of 36 per-protocol recipients required retransplantation (primary nonfunction, donor gallbladder cancer, caval obstruction/large-for-size); one postoperative death was reported. Serious adverse events occurred in 32/40 safety LT recipients. Median wait to LT was 50.5 days, which limits transfer to longer-wait systems.",
+       "results": "Primary time origin was randomization. Median follow-up 59.3 months. Five-year ITT OS was 56.6% versus 12.6% (HR 0.37, 95% CI 0.21–0.65); per-protocol OS 73.3% versus 9.3%. Of 47 assigned LT, 38 received LT and 36 were per-protocol; nine were not transplanted (five progressed while waiting, three had extrahepatic disease at laparotomy, one had prostate cancer). The control arm included seven resections and two transplants outside protocol; crossover was not allowed. Safety population comprised 40 grafted patients. Among 36 per-protocol LT recipients, 26 recurred; 19/26 received chemotherapy and 12/26 local curative-intent treatment. Median per-protocol PFS was 17.4 versus 6.4 months (recurrence after LT versus RECIST progression on chemotherapy; PET surveillance differed by arm), and secondary PFS after salvage was 35.4 months in the LT arm. Three of 36 per-protocol recipients required retransplantation (primary nonfunction, donor gallbladder cancer, caval obstruction/large-for-size); one postoperative death was reported. Serious adverse events occurred in 32/40 safety LT recipients. Median wait to LT was 50.5 days, which limits transfer to longer-wait systems.",
        "limits": "Strong evidence for the selected trial population, not for BRAF-mutant, ECOG 2, active extrahepatic, truly NED, resectable or broadly expanded disease. PP survival conditions on reaching treatment and must not replace ITT. The Results recurrence denominator is 26/36; Figure 3 caption says 28 recurrences, consistent with a broader all-grafted report, so do not mix these denominators. QoL collection had only 55/74 per-protocol baseline questionnaires and is descriptive, not proof of a large QoL gain. Priority allocation and rapid access were part of the treatment strategy.",
        "locator": "Lancet 2024;404:1107–1118. PDF pp.2–4 eligibility/committee; pp.5–6 trial flow/Table 1; pp.8–9 recurrence, safety, retransplantation, Figure 3; p.10 QoL/limitations."
       },

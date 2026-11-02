@@ -1,0 +1,148 @@
+[
+  {
+    "type": "source_summary",
+    "slug": "pcyst",
+    "pmid": "37230894",
+    "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Full_Reaudit_2026-11-01/reviews/pancreatic_ampullary/Source_Reviews/PMID_37230894.md; Pflüger 2023, PDF p4 and Figure 5/p7; PMID_38182527.md, Kyoto PDF p9",
+    "requested": "Add/verify compact evidence line or source summary for this reference in the shared evidence library."
+  },
+  {
+    "type": "source_summary",
+    "slug": "pnet",
+    "pmid": "36871765",
+    "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Full_Reaudit_2026-11-01/reviews/pancreatic_ampullary/Source_Reviews/36871765_ERASING.md",
+    "requested": "Add/verify compact evidence line or source summary for this reference in the shared evidence library."
+  },
+  {
+    "type": "source_summary",
+    "slug": "ampullary",
+    "pmid": "33798493",
+    "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Full_Reaudit_2026-11-01/reviews/pancreatic_ampullary/Source_Reviews/33798493_ABC06_application.md; ABC-06 main PDF pp3–5 and7/Figure3; original appendix PDF10",
+    "requested": "Add/verify compact evidence line or source summary for this reference in the shared evidence library."
+  },
+  {
+    "type": "source_summary",
+    "slug": "pdac",
+    "pmid": "26615328",
+    "source_locator": "Full_Text_Review_2026-10-31/Analyst_B/batches/B19_pdac_roadmap/reviews/R3/26615328.md; NAPOLI-1 original main report, Figures1–3/Tables1–3",
+    "requested": "Add/verify compact evidence line or source summary for this reference in the shared evidence library."
+  },
+  {
+    "type": "routing",
+    "file": "assets/roadmap-links.json",
+    "slug": "incidental",
+    "requested": "Add decision 1 → 6 for an indeterminate lesion after cancer-staging imaging; decision 7 → hilar for a suspected perihilar primary before primary-tumour biopsy; undetermined risk at decision 0 → hepatology clarification and repeat risk assessment.",
+    "finding_ids": [
+      "B18-R8-F01",
+      "B18-R8-F03",
+      "B18-R8-F05"
+    ]
+  },
+  {
+    "type": "routing",
+    "file": "assets/roadmap-links.json",
+    "slug": "ampullary",
+    "requested": "Add decision 1 → 5 for biopsy-proven invasive carcinoma and decision 3 → 5 for invasive carcinoma in a papillectomy specimen. Keep decision 3 → 4 specifically for residual adenoma. Locally advanced unresectable disease should reach decision 8.",
+    "finding_ids": [
+      "B22-R7-F01",
+      "B22-R7-F02"
+    ]
+  },
+  {
+    "type": "routing",
+    "file": "assets/roadmap-links.json",
+    "slug": "pdac",
+    "requested": "Remove navigation to PDAC-B1/B2 speculative transplant questions. Add operation/restaging → decision 8 for M1/positive washings and → decision 7 for locally unresectable nonmetastatic disease.",
+    "finding_ids": [
+      "PA-024",
+      "B19-R8-F03"
+    ]
+  },
+  {
+    "type": "routing",
+    "file": "assets/roadmap-links.json",
+    "slug": "pnet",
+    "requested": "Before operation selection at decision 5, link to decision 7 for hereditary/multifocal context and decision 8 for high-grade differentiation review; ensure decision 4 has a route to decision 5 when a 1–2 cm lesion is selected for resection.",
+    "finding_ids": [
+      "B20-R9-F01",
+      "B20-R9-F02"
+    ]
+  },
+  {
+    "type": "routing",
+    "file": "assets/roadmap-links.json",
+    "slug": "pcyst",
+    "requested": "Add decision 4 → 2 when cytology is suspicious/positive for high-grade dysplasia or carcinoma; note familial/genetic risk needs specialist assessment outside ordinary stopping rules.",
+    "finding_ids": [
+      "B21-R8-F01"
+    ]
+  },
+  {
+    "type": "routing",
+    "file": "assets/roadmap-links.json",
+    "slug": "adenoma",
+    "requested": "Qualify the decision 9 → HCC link: HCC treatment review does not imply automatic standardized transplant eligibility in a non-at-risk liver. Maintain decision 10 nonstandard transplant assessment and continued nontransplant-care route.",
+    "finding_ids": [
+      "B17-R9-F01"
+    ]
+  },
+  {
+    "type": "shared_evidence",
+    "requested": "Update shared compact rows that say ABC-02 did not count ampullary patients (n=20, subgroup OS HR0.62, 0.21–1.82); add ABC-06 only as subsequent therapy after GemCis, n11 ampullary, HR0.71,0.18–2.77.",
+    "finding_ids": [
+      "PA-049",
+      "PA107"
+    ]
+  },
+  {
+    "type": "shared_evidence",
+    "requested": "Propagate RASolute non-G12 endpoint correction: n41, PFS HR1.38(0.60–3.17), OS HR0.37(0.15–0.93); align current daraxonrasib eligibility with the FDA26Aug2026 approval, which is not mutation-restricted.",
+    "finding_ids": [
+      "B19-R7-F01",
+      "B19-R7-F02"
+    ]
+  },
+  {
+    "type": "shared_evidence",
+    "requested": "Propagate low cyst-fluid amylase as pseudocyst exclusion evidence, not rule-in; VHL pooled sensitivity56%, specificity99% (Pflüger37230894); retain assay-specific PancreaSeq71%/100% separately.",
+    "finding_ids": [
+      "PA-001",
+      "PA-015"
+    ]
+  },
+  {
+    "type": "shared_evidence",
+    "requested": "Propagate PRODIGE age uncertainty and exact relapse denominators; HCA TAE emergency-death context/symptom nonsignificance; LR-M histology and strict ACR<1cm boundary.",
+    "finding_ids": [
+      "PA099",
+      "PA100",
+      "MB079",
+      "MB080",
+      "MB060",
+      "MB062"
+    ]
+  },
+  {
+    "type": "shared_net_update",
+    "requested": "Add the dated NETTER-2 later OS/safety update where current treatment resources use the trial: interim OS HR1.25(0.74–2.13), OS benefit not established; 3 MDS patients, one progressing to AML. Preserve original2024cutoff values as historical, later crossover/attrition limits and EU/US distinction.",
+    "finding_ids": [
+      "PA-064"
+    ],
+    "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Full_Reaudit_2026-11-01/reviews/pancreatic_ampullary/Source_Reviews/PMID_42604001.md; EMA_Lutathera_II52_2025.md"
+  },
+  {
+    "type": "calculator",
+    "file": "assets/clinical-scores.js",
+    "requested": "Spigelman: retain arithmetic, clarify restricted visible-polyp input scope and provide source-defined hyperplasia/inflammation 1-point histology/manual handling for microscopic-only cases; do not automatically map all modern LGD into both mild and moderate historical categories.",
+    "finding_ids": [
+      "PA-039"
+    ]
+  },
+  {
+    "type": "source_summary",
+    "slug": "pdac",
+    "pmid": "42456089",
+    "source_locator": "Full_Text_Review_2026-10-31/Analyst_A_Continuation_2026-11-01/batches/B26_residual_sources/42456089.md; original PMC13374715 author-manuscript Methods, Results, Tables1–2 and Discussion",
+    "requested": "Add/verify compact evidence line or source summary for this reference in the shared evidence library."
+  }
+]

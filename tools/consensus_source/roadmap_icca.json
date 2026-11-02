@@ -201,7 +201,7 @@
    "divergence": "OPTN 2025 and ILTS-ILCA 2024 support consideration for small cirrhotic tumours after stability, AASLD and BSG confine transplantation to research or national protocols, and LCSGJ 2022 considers iCCA generally not an indication.",
    "proposal": "Current position: transplantation for known iCCA only within a formally approved trial or prospective registry protocol, with review-board approval and registry entry, an institutional graft-stewardship restriction stricter than OPTN and ILTS-ILCA. The roadmap states the cost (an OPTN-eligible patient has no route here) and offers a registry-tracked OPTN/ILTS-ILCA pathway as the alternative to decide.",
    "proposal_locator": "Gate 10 · Standard 'Treat transplantation for known intrahepatic cholangiocarcinoma as trial or prospective registry only…'; Gate 10 · Reasonable options (order, flagnote)",
-   "rationale": "Evidence is retrospective and confined to small tumours first diagnosed on explant pathology, most seen before transplant as presumed hepatocellular carcinoma. Graft stewardship is an institutional judgement, not an evidence question.",
+   "rationale": "Evidence includes retrospective incidental-explant series and small prospective protocols for known locally advanced disease, with substantial selection and limited waitlist denominators. The later Houston update included 18 transplanted patients. These data support protocol discussion, not routine transplantation or proof that a particular selection rule is optimal.",
    "audit": "Registry required if opened."
   },
   {
@@ -397,7 +397,7 @@
   {
    "id": "iCCA-D11",
    "n": 11,
-   "question": "What counts as 'a period of stability' before a transplant referral — what duration, on what therapy, and at what imaging interval?",
+   "question": "Define how treatment response and the six-month NLRB stability interval are documented; permit early transplant referral while that assessment continues.",
    "kind": "clinical",
    "decisions": [
     "10"
@@ -412,7 +412,7 @@
     {
      "source": "ILTS-ILCA 2024 consensus",
      "ref": "42312290",
-     "position": "Attaches no duration to the cirrhotic 3 cm recommendation, only an observed period of stability; its six-month requirement belongs to the weakly graded non-cirrhotic investigational route.",
+     "position": "Attaches no duration to its cirrhotic ≤3 cm recommendation. The NLRB guidance separately specifies six months for its small-cirrhotic exception route; do not attribute that interval only to advanced-disease protocols.",
      "locator": "What we are not sure about · 'Six months from diagnosis or last treatment with tumour stability…'; Gate 10 · Reasonable 'Open a defined, registry-tracked pathway…'"
     },
     {
@@ -428,10 +428,10 @@
      "locator": "Gate 10 · Standard 'Read the supporting evidence for what it is…' (note); What we are not sure about · 'Six months from diagnosis…'"
     }
    ],
-   "divergence": "The OPTN route requires six months while ILTS-ILCA sets no duration for the cirrhotic phenotype, the six-month figure comes from a six-patient protocol in locally advanced disease, and the explant series behind the size data required no stability at all.",
+   "divergence": "NLRB guidance directly specifies six months for its small-cirrhotic exception route; ILTS–ILCA does not specify a duration for the corresponding cirrhotic phenotype. Explant and locally advanced protocol cohorts address different populations.",
    "proposal": "Keep six months from diagnosis or last treatment with serial-scan stability (still 3 cm or less, no new lesions, no extrahepatic disease), recording both dates; one responding scan is insufficient. The roadmap defends six months as a biology test, calls the right length unknown, and sets no therapy or scan interval for that period.",
    "proposal_locator": "Gate 10 criteria; Quick reference · 'Transplant eligibility — the nonstandard MMaT-3 route' ('Stability period'); What we are not sure about · 'Six months from diagnosis or last treatment…'",
-   "rationale": "ILTS-ILCA 2024 attaches no duration to the cirrhotic ≤3 cm recommendation; the six-month figure in our criteria comes from its separate weakly graded non-cirrhotic route and from the Houston Methodist–MD Anderson protocol, whose own authors concede that selecting for stability may be selecting indolent biology. The explant series that supplies our size data required no stability at all.",
+   "rationale": "The NLRB small-cirrhotic exception guidance directly specifies six months of stability. This administrative recommendation is separate from ILTS–ILCA’s observation wording and from the Houston locally advanced protocol; neither establishes the optimal biological interval. Early referral may occur while treatment and observation continue.",
    "audit": "Registry: stability interval achieved, regimen, imaging interval, and waitlist dropout for progression."
   },
   {

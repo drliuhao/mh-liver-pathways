@@ -34,8 +34,8 @@ const allRefs = p => {
 
 function header() {
  return `<div class="draftbar">Clinical review draft <span>Not approved institutional policy · Not an automated eligibility tool.</span></div>
- <header class="top"><a class="brand" href="/">Memorial Hermann<span>Pathways</span></a>
- <nav aria-label="Tumor pathways">${DATA.index.map(p=>`<a href="/${p.slug}/" ${active?.slug===p.slug?'aria-current="page"':''}>${e(p.code)}</a>`).join('')}</nav>
+ <header class="top"><a class="brand" href="/mh-liver-pathways/transplant/">Memorial Hermann<span>Pathways</span></a>
+ <nav aria-label="Tumor pathways">${DATA.index.map(p=>`<a href="/mh-liver-pathways/transplant/${p.slug}/" ${active?.slug===p.slug?'aria-current="page"':''}>${e(p.code)}</a>`).join('')}</nav>
  <a class="cancer-link" href="https://drliuhao.github.io/mh-liver-pathways/" target="_blank" rel="noopener">Roadmaps ↗</a></header>`;
 }
 
@@ -46,7 +46,7 @@ function footer() {
 function home() {
  app.innerHTML = header()+`<main class="wrap home"><div class="homehero"><div><p class="eyebrow">Diagnosis → selection → disease control → transplant</p><h1>Liver transplant assessment and treatment pathways</h1><p class="lead">Transplant oncology pathways with the information to collect, the findings that change treatment or transplant plans, and the evidence beside each decision.</p></div><div class="how"><b>How to use the pathways</b><ol><li>Choose the tumor and current decision.</li><li>Compare the possible results, selection criteria and next steps.</li><li>Expand the supporting evidence or open a linked discussion question.</li><li>Use Tools & resources for calculators or optional step-by-step findings.</li></ol></div></div>
  <div class="searchbar"><label for="search">Find a pathway or clinical question</label><input id="search" type="search" placeholder="Try “LR-4”, “biopsy”, “CEA”, “nodes” or “unresectability”…" autocomplete="off"><p id="search-count" class="muted small" aria-live="polite">Seven disease-specific pathways · different step counts, one shared decision structure.</p></div>
- <section id="pathway-grid" class="pathway-grid" aria-label="Choose a pathway">${DATA.index.map(p=>`<article class="pathway-tile" data-slug="${p.slug}"><div class="tiletop"><span class="code">${e(p.code)}</span><span class="small muted">${p.steps.length} decisions</span></div><h2><a href="/${p.slug}/">${e(p.name)}</a></h2><span class="authority">${e(p.route)}</span><p>${e(p.entry)}</p><div class="tileflow">${e(p.steps[0].title)} <span>→</span> ${e(p.steps[p.steps.length-1].title)}</div><a class="tilego" href="/${p.slug}/">Open pathway <span>→</span></a></article>`).join('')}</section><section id="search-results" hidden aria-label="Matching decisions"></section>
+ <section id="pathway-grid" class="pathway-grid" aria-label="Choose a pathway">${DATA.index.map(p=>`<article class="pathway-tile" data-slug="${p.slug}"><div class="tiletop"><span class="code">${e(p.code)}</span><span class="small muted">${p.steps.length} decisions</span></div><h2><a href="/mh-liver-pathways/transplant/${p.slug}/">${e(p.name)}</a></h2><span class="authority">${e(p.route)}</span><p>${e(p.entry)}</p><div class="tileflow">${e(p.steps[0].title)} <span>→</span> ${e(p.steps[p.steps.length-1].title)}</div><a class="tilego" href="/mh-liver-pathways/transplant/${p.slug}/">Open pathway <span>→</span></a></article>`).join('')}</section><section id="search-results" hidden aria-label="Matching decisions"></section>
  <section class="key"><div><span class="keyline go"></span><b>Proceed</b><p>The findings support reviewing the next decision.</p></div><div><span class="keyline hold"></span><b>Pause and clarify</b><p>Assign a clinician to resolve missing or uncertain information.</p></div><div><span class="keyline stop"></span><b>Stop and review</b><p>Read which decision is affected, then follow the stated assessment, treatment or continuing-care action.</p></div><div><span class="keyline discuss"></span><b>Meeting question</b><p>Compare sources and see the proposed local approach.</p></div></section></main>`+footer();
  document.getElementById('search').addEventListener('input', ev=>{
   const q=ev.target.value.trim().toLowerCase();
@@ -56,8 +56,8 @@ function home() {
   if(!q){document.getElementById('search-count').textContent='Seven disease-specific pathways · different step counts, one shared decision structure.';return;}
   const found=[];
   DATA.index.forEach(p=>{
-   p.steps.forEach(s=>{if(JSON.stringify(s).toLowerCase().includes(q)||p.name.toLowerCase().includes(q)||p.code.toLowerCase()===q)found.push(`<a class="search-result" href="/${p.slug}/#${s.id}"><span class="tag">${e(p.code)} · pathway decision</span><b>${e(s.question)}</b><span>${e(s.title)} →</span></a>`);});
-   p.issues.forEach(i=>{if((i.question+' '+i.proposal).toLowerCase().includes(q))found.push(`<a class="search-result" href="/${p.slug}/#meeting-${i.id}"><span class="tag amber">${e(p.code)} · meeting question</span><b>${e(i.question)}</b><span>Compare sources →</span></a>`);});
+   p.steps.forEach(s=>{if(JSON.stringify(s).toLowerCase().includes(q)||p.name.toLowerCase().includes(q)||p.code.toLowerCase()===q)found.push(`<a class="search-result" href="/mh-liver-pathways/transplant/${p.slug}/#${s.id}"><span class="tag">${e(p.code)} · pathway decision</span><b>${e(s.question)}</b><span>${e(s.title)} →</span></a>`);});
+   p.issues.forEach(i=>{if((i.question+' '+i.proposal).toLowerCase().includes(q))found.push(`<a class="search-result" href="/mh-liver-pathways/transplant/${p.slug}/#meeting-${i.id}"><span class="tag amber">${e(p.code)} · meeting question</span><b>${e(i.question)}</b><span>Compare sources →</span></a>`);});
   });
   document.getElementById('search-count').textContent=`${found.length} matching decisions or meeting questions`;
   results.innerHTML=found.length?found.join(''):'<p class="empty">No match. Try a tumor name or a shorter clinical term.</p>';
@@ -65,7 +65,7 @@ function home() {
 }
 
 function pathwayShell() {
- app.innerHTML=header()+`<main class="wrap"><div class="pathhero"><div><a class="back" href="/">← All pathways</a><p class="eyebrow">${e(active.route)}</p><h1>${e(active.name)}</h1><p class="lead">${e(active.entry)}</p></div><div class="herolinks">${active.roadmap?external(active.roadmap,`${active.code} roadmap`,'btn secondary'):external(DATA.sources['E-consensus'].pdf,'HEHE treatment consensus','btn secondary')}</div></div>
+ app.innerHTML=header()+`<main class="wrap"><div class="pathhero"><div><a class="back" href="/mh-liver-pathways/transplant/">← All pathways</a><p class="eyebrow">${e(active.route)}</p><h1>${e(active.name)}</h1><p class="lead">${e(active.entry)}</p></div><div class="herolinks">${active.roadmap?external(active.roadmap,`${active.code} roadmap`,'btn secondary'):external(DATA.sources['E-consensus'].pdf,'HEHE treatment consensus','btn secondary')}</div></div>
  <div class="viewbar"><div class="viewtabs" role="tablist" aria-label="Pathway sections"><button role="tab" id="tab-pathway" data-view="pathway">Decision pathway</button><button role="tab" id="tab-meeting" data-view="meeting">Meeting record <span>${active.issues.length}</span></button><button role="tab" id="tab-care" data-view="care">Treatment reference</button><button role="tab" id="tab-high-risk" class="high-risk-tab" data-view="high-risk">High-risk protocols <span>${HighRisk.reviews(DATA.high_risk,active.slug).length}</span></button></div><button type="button" class="viewjump" data-evidence-jump aria-controls="pw-evidence">Evidence library ↓</button><span class="viewnote">Compare choices · nothing is saved</span></div>
  <div id="view"></div></main>`+footer();
  renderView();
@@ -252,7 +252,7 @@ function renderActions(actions){
 
 function afpReviewHTML(finding){
  if(!finding)return '';
- return `<details class="risk-next-option ${finding.deferred?'risk-neutral':'risk-proposed'}" data-afp-review><summary><span class="risk-next-status">High-risk HCC review · individual assessment</span><b>AFP criterion not met: review transplant options</b><span class="risk-trigger">${finding.carried?'From decision '+(active.steps.findIndex(s=>s.id===finding.origin)+1)+': ':''}${e(finding.why)}</span><span class="risk-open-label">Open the AFP review and supporting guidance ↓</span></summary><div class="risk-next-body"><p><b>Review remains an option.</b> An unmet AFP requirement prevents a standardized exception; it does not by itself end the transplant assessment. Review AFP history and trend, treatment response, staging, liver reserve and expected transplant benefit.</p><p>OPTN Policy 9.5.I.iv sends the specified AFP nonresponse cases to individual NLRB review. The transplant-oncology guidance says these cases are generally unfavorable for exception approval, but selected cases may be appropriate.</p><p><a href="#high-risk-hcc-b1-1" data-high-risk="hcc-b1-1">HCC B1.1: full-text evidence and OPEN proposed thresholds</a> · <a href="/meeting-records/hcc-b1-1/">B1.1a–f meeting decisions</a></p><p>This is an individual high-risk review route. The existing beyond-UNOS tumor-burden study has separate entry limits, including AFP &lt;100; it is not an AFP-only expansion protocol.</p><p>${external('https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf#page=197','OPTN Policy 9.5.I.iv · PDF pp197–198')} · ${external('https://www.hrsa.gov/sites/default/files/hrsa/optn/adult-meld-exception-transplant-oncology-review-guidance.pdf#page=3','NLRB HCC guidance · PDF p3')}</p>${renderActions([{label:'High-risk HCC and individual allocation assessment',care:'exception'},{label:'Continue or change HCC treatment',care:'treatment'},{label:'Recheck the AFP requirement',step:finding.origin}])}</div></details>`;
+ return `<details class="risk-next-option ${finding.deferred?'risk-neutral':'risk-proposed'}" data-afp-review><summary><span class="risk-next-status">High-risk HCC review · individual assessment</span><b>AFP criterion not met: review transplant options</b><span class="risk-trigger">${finding.carried?'From decision '+(active.steps.findIndex(s=>s.id===finding.origin)+1)+': ':''}${e(finding.why)}</span><span class="risk-open-label">Open the AFP review and supporting guidance ↓</span></summary><div class="risk-next-body"><p><b>Review remains an option.</b> An unmet AFP requirement prevents a standardized exception; it does not by itself end the transplant assessment. Review AFP history and trend, treatment response, staging, liver reserve and expected transplant benefit.</p><p>OPTN Policy 9.5.I.iv sends the specified AFP nonresponse cases to individual NLRB review. The transplant-oncology guidance says these cases are generally unfavorable for exception approval, but selected cases may be appropriate.</p><p><a href="#high-risk-hcc-b1-1" data-high-risk="hcc-b1-1">HCC B1.1: full-text evidence and OPEN proposed thresholds</a> · <a href="/mh-liver-pathways/transplant/meeting-records/hcc-b1-1/">B1.1a–f meeting decisions</a></p><p>This is an individual high-risk review route. The existing beyond-UNOS tumor-burden study has separate entry limits, including AFP &lt;100; it is not an AFP-only expansion protocol.</p><p>${external('https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf#page=197','OPTN Policy 9.5.I.iv · PDF pp197–198')} · ${external('https://www.hrsa.gov/sites/default/files/hrsa/optn/adult-meld-exception-transplant-oncology-review-guidance.pdf#page=3','NLRB HCC guidance · PDF p3')}</p>${renderActions([...(DATA.continuations['hcc/allocation'].rules['4']||[]),{label:'Recheck the AFP requirement and history',step:finding.origin}])}</div></details>`;
 }
 function riskOptionsHTML(context){
  const descriptions={review:'Proposed high-risk review · not active',safety:'Immunotherapy safety review · proposed local approach','safety-note':'Immunotherapy safety context · proposed local approach',closed:'Local proposal: expansion remains closed',notice:'Selection / allocation clarification',checklist:'Proposed local review · approval pending',readiness:'Study development · no protocol-directed transplant'};
@@ -274,6 +274,9 @@ function canContinueIndividualReview(context){
 function isReadinessOnlyReview(context){
  return !context.guard&&context.options.length>0&&context.options.every(o=>o.anchor==='icca-b3'&&o.mode==='readiness');
 }
+function guardedActions(actions,context){
+ return (actions||[]).filter(a=>!context.guard||!a.step||active.steps.findIndex(s=>s.id===a.step)<=stepIndex);
+}
 function updateDecision(){
  document.body.dataset.currentAssessment=browseOrigin||active.steps[stepIndex].id;
  const out=document.getElementById('view');
@@ -292,7 +295,7 @@ function updateDecision(){
  }
  updateExampleLabels();
  const onward=DATA.continuations[assistantKey()];
- out.querySelectorAll('[data-next-branch]').forEach(el=>{el.innerHTML=el.closest('.is-highlighted')?renderActions(onward.branches[el.dataset.nextBranch]):'';});
+ out.querySelectorAll('[data-next-branch]').forEach(el=>{el.innerHTML=el.closest('.is-highlighted')?renderActions(guardedActions(onward.branches[el.dataset.nextBranch],context)):'';});
  const extra=out.querySelector('.assistant-other-result');
  if(override){
   extra.hidden=false;extra.className='assistant-other-result branch hold is-highlighted';
@@ -303,7 +306,7 @@ function updateDecision(){
  }else if(!extra.hidden){
   const noAnswers=Object.values(assistantSession.answers[assistantKey()]).every(v=>!v);
   const actions=result.state==='matched'?onward.rules[String(result.ruleIndex)]:noAnswers?[]:onward.clarify;
-  if(actions.length)extra.insertAdjacentHTML('beforeend',`<h5 class="next-heading">Choose the next action</h5>${renderActions(actions)}`);
+  if(actions.length)extra.insertAdjacentHTML('beforeend',`<h5 class="next-heading">Choose the next action</h5>${renderActions(guardedActions(actions,context))}`);
  }
  if(result.state==='pending'&&extra.hidden){
   extra.hidden=false;extra.className='assistant-other-result branch pending is-highlighted';
@@ -360,8 +363,8 @@ function streamlineResult(out,result,context){
  // The nested AFP review repeats navigation, not distinct treatment choices.
  // Keep those choices in the main result and retain only new destinations here.
  const destination=link=>link.dataset.step?'step:'+link.dataset.step:link.dataset.care?'care:'+link.dataset.care:link.getAttribute('href');
- const mainDestinations=new Set([...current.querySelectorAll('.route-button')].filter(link=>!link.closest('[data-afp-review]')).map(destination));
- current.querySelectorAll('[data-afp-review] .route-button').forEach(link=>{if(mainDestinations.has(destination(link)))link.closest('.next-action').remove();});
+ const mainDestinations=new Set([...current.querySelectorAll('.route-button')].filter(link=>!link.closest('[data-afp-review]')).map(link=>destination(link)+'|'+link.textContent.trim()));
+ current.querySelectorAll('[data-afp-review] .route-button').forEach(link=>{if(mainDestinations.has(destination(link)+'|'+link.textContent.trim()))link.closest('.next-action').remove();});
  current.querySelectorAll('[data-afp-review] .next-actions:empty').forEach(el=>el.remove());
 }
 
@@ -442,7 +445,7 @@ function renderMeeting(){
 
 function renderIssue(i,n){
  const linked=active.steps.filter(s=>s.issues.includes(i.id));
- return `<article class="issue-record" id="${i.id}"><div class="issue-heading"><span class="issue-num">${String(n+1).padStart(2,'0')}</span><div><p class="eyebrow">Source-document item: ${e(i.record)}</p><h3>${e(i.question)}</h3></div><span class="pending">Pending approval</span></div><div class="backsteps">In the pathway: ${linked.map(s=>`<a href="/${active.slug}/#${s.id}">${e(s.title)} ↗</a>`).join(' · ')}</div>
+ return `<article class="issue-record" id="${i.id}"><div class="issue-heading"><span class="issue-num">${String(n+1).padStart(2,'0')}</span><div><p class="eyebrow">Source-document item: ${e(i.record)}</p><h3>${e(i.question)}</h3></div><span class="pending">Pending approval</span></div><div class="backsteps">In the pathway: ${linked.map(s=>`<a href="/mh-liver-pathways/transplant/${active.slug}/#${s.id}">${e(s.title)} ↗</a>`).join(' · ')}</div>
  <div class="comparison-grid">${i.comparisons.map(c=>`<section class="comparison"><div class="source-kind">${e(DATA.sources[c.ref].kind)}</div><h4>${e(DATA.sources[c.ref].short)}</h4><p class="quotation ${c.quote?'exact':''}">${c.quote?'“':''}${e(c.text)}${c.quote?'”':''}</p><p class="small muted">${c.quote?'Short verbatim excerpt':'Source summary / scope'}${c.locator?' · '+e(c.locator):''}</p>${refs([c.ref])}</section>`).join('')}</div>
  <div class="proposal"><div><span class="route-label">Proposed local approach · discussion draft</span><p>${e(i.proposal)}</p></div><div><b>Why this matters</b><p>${e(i.rationale)}</p></div></div><div class="meeting-status"><span><b>Proposed responsible team:</b> ${e(i.owners)}</span><span><b>Decision:</b> pending meeting</span><span><b>Approval / date:</b> not recorded</span></div></article>`;
 }
@@ -452,7 +455,7 @@ function showSource(id, trigger){
  if(!r)return;
  lastTrigger=window.ContextualInfo?.sourceOrigin(trigger)||trigger;
  const d=document.getElementById('source-dialog');
- d.innerHTML=`<button type="button" class="close-dialog" aria-label="Close evidence">×</button><p class="eyebrow">${e(r.kind)}</p><h2 id="source-title">${e(r.title)}</h2><p class="locator">${e(r.locator)}</p>${r.note?`<div class="source-note">${e(r.note)}</div>`:''}<div class="source-actions">${external(r.url,r.kind==='Allocation policy'||r.kind==='NLRB guidance'?'Open official source':'Publisher / full-text access','btn')}</div><p class="small muted">The linked source supports the adjacent statement. Guidance is not binding allocation policy; cohort results and local proposals are not universal eligibility rules.</p>`;
+ d.innerHTML=`<button type="button" class="close-dialog" aria-label="Close evidence">×</button><p class="eyebrow">${e(r.kind)}</p><h2 id="source-title">${e(r.title)}</h2><p class="locator">${e(r.locator)}</p>${r.note?`<div class="source-note">${e(r.note)}</div>`:''}<div class="source-actions">${external(r.url,r.kind==='Allocation policy'||r.kind==='NLRB guidance'?'Open official source':'Publisher / full-text access','btn')}</div><p class="small muted">Access through the publisher or official source; institutional sign-in may be required. The linked source supports the adjacent statement. Guidance is not binding allocation policy; cohort results and local proposals are not universal eligibility rules.</p>`;
  d.showModal();
 }
 

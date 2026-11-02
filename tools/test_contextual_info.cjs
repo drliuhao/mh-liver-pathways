@@ -45,10 +45,14 @@ for(const [key,entry]of Object.entries(copy.recommendations)){
  assert.equal(entry.source,stages.find(s=>s.id===id)[group][index].t,key+' exact source');
 }
 assert(!src.includes("if(!d.open)enhance(d)"),'Criteria must remain native inline expansions');
-const app=read('transplant/assets/app.js'),old=original('transplant/assets/app.js');
-for(const [a,b] of [['function renderActions(', 'function renderRiskReference('],['function renderStep()', 'function renderMeeting()']]){
- const slice=s=>s.slice(s.indexOf(a),s.indexOf(b,s.indexOf(a)));const metadata=' data-action-label="${e(a.label)}" data-action-condition="${e(a.detail||\'\')}"';assert.equal(slice(app).replaceAll(metadata,'').replace(' renderLayerStack();\n','').replace(' document.body.dataset.currentAssessment=browseOrigin||active.steps[stepIndex].id;\n','').replace('config.questions.filter(q=>answers[q.id]).map(q=>q.id)',"config.questions.filter(q=>!answers[q.id]||answers[q.id]==='unknown').map(q=>q.id)").replace('href="#meeting-${i.id}"','href="/mh-liver-pathways/transplant/alignment/${active.slug}/#${i.id}"'),slice(old),'Changed clinical action renderer '+a);
+// Clinical renderers now have source-verified changes. Require exact recorded replay from the
+// reviewed release, rather than ignoring renderer changes or pretending they are presentation only.
+const reviewedBaseline='30039fe0cec15a29ac2f326e0ee316eaf6bfb48e';
+const auditRevisions=Revisions.revisions().filter(r=>r.id.startsWith('2026-11-02'));
+for(const file of ['transplant/assets/app.js','assets/transplant-workspace.js','assets/clinical-scores.js']){
+ const base=cp.execFileSync('git',['show',reviewedBaseline+':'+file],{cwd:root,encoding:'utf8',maxBuffer:8e6});
+ assert.equal(read(file),Revisions.applyText(file,base,auditRevisions),file+' differs from exact clinical revision replay');
 }
 const docs=Object.keys(JSON.parse(read('assets/roadmap-links.json'))).map(x=>x+'/index.html').concat(data.index.map(p=>'transplant/'+p.slug+'/index.html'));
-for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261031-ui1'),doc+' missing display update');
-console.log(`PASS: V12 data and clinical renderers unchanged; ${docs.length} pages; 46 headings, ${reviewed} help summaries and 46 recommendation guards verified; all Avoid wording retained.`);
+for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261102-review1'),doc+' missing display update');
+console.log(`PASS: Pinned V12 data and clinical renderers match exact recorded revisions; ${docs.length} pages; 46 headings, ${reviewed} help summaries and 46 recommendation guards verified; all Avoid wording retained.`);

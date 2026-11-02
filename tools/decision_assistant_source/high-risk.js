@@ -12,6 +12,7 @@ const HighRisk = (() => {
  const badge=()=>'<span class="high-risk-label">High-risk protocol</span>';
  // Presentation labels describe the review, never patient eligibility or activation.
  const states={
+  'hcc-b1-1':['review','AFP-only review · OPEN'],
   'hcc-b1':['proposal','Proposed study · not active'],
   'hcc-b2':['mixed','Different limits by invasion level'],
   'hcc-b3':['proposal','Proposed safety approach'],
@@ -32,13 +33,22 @@ const HighRisk = (() => {
   'hehe-b1':['review','Review timing and need for transplant'],
   'hehe-b2':['mixed','Initial selection and expansion limits'],
   'hca-b1':['review','Review allocation separately'],
-  'hca-b2':['review','Review the clinical indication']
+  'hca-b2':['review','Review the clinical indication'],
+  'hcc-b5':['closed','Closed · registry only'],
+  'icca-b4':['closed','Closed'],
+  'crlm-b5':['mixed','Closed · lung-only study proposed'],
+  'net-b4':['mixed','Resected nodes only, after clearance']
  };
  const ruleLabels={
   'hcc-b1':['Entry criteria','Response and reassessment','History and exclusions'],
   'hcc-b2':['Invasion level','Response and observation','Review and exclusions'],
   'hcc-b3':['Interval after immunotherapy','Immune toxicity','Exceptional review','Consent and evidence limits'],
-  'pcca-b1':['Radial tumor size','Primary-tumor biopsy','Previously malignant nodes']
+  'pcca-b1':['Radial tumor size','Primary-tumor biopsy','Previously malignant nodes','Distant or peritoneal disease'],
+  'hcc-b5':['Meaning of “no extrahepatic disease”','Nodes and resolved findings','Registry','No combination'],
+  'icca-b4':['Previous nodes or distant disease','Indeterminate nodes','Nodal staging before listing','Future research'],
+  'crlm-b5':['Default','Proposed lung-only stratum','No other relaxation','Closed sites'],
+  'net-b4':['Resected nodes','Non-surgical clearance','Solid-organ metastases','Progression and surgery'],
+  'hehe-b2':['Opening boundary','Suspicious lesions and scores','Proposed extrahepatic stratum','Closed extrahepatic sites']
  };
  const cautions={
   'hcc-b1':'Transplant benefit in selected responders does not validate the proposed combination of expanded-entry limits and observation time.',
@@ -62,12 +72,16 @@ const HighRisk = (() => {
   'hehe-b2':'Prognostic associations do not establish benefit from transplanting extrahepatic disease; explant findings cannot be assumed before transplantation.',
   'hca-b1':'Meeting an NLRB recommendation does not itself establish a clinical indication or comparative benefit from transplantation.',
   'hca-b2':'Favorable outcomes in selected recipients do not prove benefit over feasible nontransplant treatment.',
+  'hcc-b5':'One case report cannot establish safety or benefit after metastatic HCC, even with a complete response to immunotherapy.',
+  'icca-b4':'No study has tested transplantation after previously malignant nodes or treated distant disease in iCCA.',
+  'crlm-b5':'Indolent lung recurrence after transplantation does not show benefit from transplanting after treated lung metastases; direct evidence is one patient.',
+  'net-b4':'Accepting resected nodes rests on selected Milan practice; previous nodal disease still carries recurrence risk, and the solid-organ exclusion rests on guidance rather than outcome data.',
   'alloc-b1':'Clinical suitability, allocation access, donor clearance and research authorization answer separate questions.',
   'alloc-b2':'Acceptable recipient survival does not establish incremental benefit or account for the opportunity cost of graft use.',
   'alloc-b3':'Population donor-risk estimates do not predict an individual donor’s outcome or replace independent donor review.',
   'alloc-b4':'Small pilot survival estimates cannot establish efficacy or justify automatic expansion; the proposed stopping rules require independent review.'
  };
- const sourceKinds={consort_pilot:'Reporting guideline',optn:'OPTN policy',nlrb:'NLRB guidance',hhs_irb:'Research regulation',optn_ethics:'Ethics guidance',aasld:'Clinical guidance',acg_fll2024:'Clinical guideline',candidate2026:'Clinical guideline',dgvs_lt2024:'Clinical guideline',easl_benign:'Clinical guideline',ehe_consensus:'Consensus statement',enets:'Position statement',hcc_design:'Consensus statement',ihpba:'Consensus guideline',ilts:'Consensus recommendations',cirse:'Technical guidance'};
+ const sourceKinds={consort_pilot:'Reporting guideline',optn:'OPTN policy',nlrb:'NLRB guidance',hhs_irb:'Research regulation',optn_ethics:'Ethics guidance',aasld:'Clinical guidance',acg_fll2024:'Clinical guideline',candidate2026:'Clinical guideline',dgvs_lt2024:'Clinical guideline',easl_benign:'Clinical guideline',ehe_consensus:'Consensus statement',enets:'Position statement',hcc_design:'Consensus statement',ihpba:'Consensus guideline',ilts:'Consensus recommendations',cirse:'Technical guidance',crlm_seca3:'Trial registration',crlm_fukumitsu:'Study protocol'};
  const sourceKind=r=>sourceKinds[r.key]||'Published research';
  const statusLabel=anchor=>states[anchor]?.[1]||'Local review · approval pending';
  const isResearch=r=>sourceKind(r)==='Published research';
@@ -93,11 +107,12 @@ const HighRisk = (() => {
   return `<article class="hr-study" data-study-key="${e(s.key)}"><header class="hr-study-heading"><h5>${e(r?.short||s.key)}</h5>${r?typeLabel(r):''}</header>${r?.review_depth?`<p class="hr-review-depth"><b>Review coverage:</b> ${e(r.review_depth)}</p>`:''}<div class="hr-study-grid">${['design_population','selection','results','limits','limitations'].filter(k=>s[k]).map(k=>`<section class="hr-study-row hr-field-${k}"><h6>${({design_population:'Who was studied?',selection:'Selection and applicability',results:'Results · retain the stated population and time origin',limits:'Limitations and conflicting findings',limitations:'Limitations and conflicting findings'})[k]}</h6>${text(s[k])}</section>`).join('')}</div>${s.locator?`<p class="hr-locator">Source location: ${e(s.locator)}</p>`:''}${r?`<div class="hr-study-access" data-source-key="${e(s.key)}"><p class="hr-citation">${citation(r)}</p><p class="hr-identifiers">${r.pmid?link('https://pubmed.ncbi.nlm.nih.gov/'+r.pmid+'/','PMID '+r.pmid):''}${r.pmid&&r.doi?' · ':''}${r.doi?link('https://doi.org/'+r.doi,'DOI '+r.doi):''}</p>${access(r)}</div>`:''}</article>`;
  }
  function next(r,slug){
+  if(r.anchor==='hcc-b1-1')return 'Confirm the AFP signal, complete staging and obtain individual clinical/allocation review. The proposed biochemical hold and release thresholds remain OPEN. A research expansion, if proposed, needs separate approval; ordinary case review does not itself enroll a study.';
   if(r.anchor==='hcc-b4')return 'Use the model for research and prospective validation only. Make listing, treatment and allocation decisions through the standard multidisciplinary assessment; do not use this model to award priority or determine eligibility.';
   if(r.anchor==='icca-b3')return 'Complete the proposed study, recipient-benefit and independent donor reviews before seeking activation. This proposal does not yet permit transplantation; continue appropriate nontransplant treatment and reassessment.';
   if(r.anchor==='pcca-b3')return 'Use the established center neoadjuvant protocol when clinically appropriate. Alternative regimens remain unactivated and require separate review; do not substitute them automatically.';
   if(slug==='hca')return 'Review the remaining nontransplant options with the liver team. If a clear transplant benefit is not established, agree treatment or surveillance through the standard adenoma pathway.';
-  if(['pcca-b1','crlm-b2'].includes(r.anchor))return 'These findings do not open a transplant route under this proposal. Clarify any uncertain finding, then choose another treatment or surveillance plan when transplantation remains unsuitable.';
+  if(['pcca-b1','crlm-b2','hcc-b5','icca-b4'].includes(r.anchor))return 'These findings do not open a transplant route under this proposal. Clarify any uncertain finding, then choose another treatment or surveillance plan when transplantation remains unsuitable.';
   return 'Review the findings with the transplant multidisciplinary team. A proposed expanded route requires the relevant clinical, allocation, donor and study approvals before use. Continue appropriate treatment and reassess while that decision is pending.';
  }
  function card(data,slug,r,shared=false){
@@ -105,7 +120,7 @@ const HighRisk = (() => {
   const [state,status]=states[r.anchor]||['proposal','Proposed operating requirement'];
   const additional=r.references.filter(k=>!papers.some(s=>s.key===k));
   return `<article class="hr-protocol hr-state-${state}" id="high-risk-${r.anchor}" aria-labelledby="title-${r.anchor}"><div class="hr-card-top"><span class="hr-status">${e(status)}</span>${badge()}<span class="hr-code">${e(r.id)}</span></div><h3 id="title-${r.anchor}" tabindex="-1">${e(r.title)}</h3><p class="hr-context"><b>When this applies:</b> ${e(r.context||r.stance)}</p><div class="hr-position"><span class="hr-source-type">Local review · institutional approval pending</span><p><b>Proposed position:</b> ${e(r.stance)}</p></div>
-  <div class="hr-next"><h4>Next step</h4><p>${e(next(r,slug))}</p><div class="hr-next-links">${r.steps.length?`<button data-step="${e(r.steps[0])}">Return to the standard decision →</button>`:''}${!shared?'<a href="#high-risk-readiness" data-high-risk="readiness">Approvals required before study use →</a>':''}<a href="#care-treatment" data-care="treatment">Treatment and continuing care →</a></div></div>
+  ${r.anchor==='hcc-b1-1'?'<p><a href="/mh-liver-pathways/transplant/meeting-records/hcc-b1-1/">B1.1a–f: source comparisons and meeting decisions</a></p>':''}<div class="hr-next"><h4>Next step</h4><p>${e(next(r,slug))}</p><div class="hr-next-links">${r.steps.length?`<button data-step="${e(r.steps[0])}">Return to the standard decision →</button>`:''}${!shared?'<a href="#high-risk-readiness" data-high-risk="readiness">Approvals required before study use →</a>':''}<a href="#care-treatment" data-care="treatment">Treatment and continuing care →</a></div></div>
   <details class="hr-criteria" open><summary>Clinical criteria and limits <span>${r.rules.length} requirements · recorded status: ${e(r.status)}</span></summary><ol class="hr-rule-grid">${r.rules.map((rule,n)=>`<li><b>${e(ruleLabels[r.anchor]?.[n]||`Requirement ${n+1}`)}</b><p>${e(rule)}</p></li>`).join('')}</ol>${r.anchor==='icca-b1'?distribution():''}</details>
   <div class="hr-interpretation"><section class="hr-allocation"><h4>Allocation and donor considerations</h4>${text(r.allocation)}<div class="hr-authority-links"><span>Check current requirements separately:</span>${['optn','nlrb'].filter(k=>data.sources[k]).map(k=>link(data.sources[k].url,sourceKind(data.sources[k]))).join('')}</div></section><section class="hr-certainty"><h4>What remains uncertain?</h4><p>${e(cautions[r.anchor]||ev.certainty)}</p></section></div>
   <details class="hr-information"><summary>Tests and information needed</summary>${text(r.tests)}</details>
@@ -114,15 +129,15 @@ const HighRisk = (() => {
  }
  function inline(data,slug,step){
   const rs=reviews(data,slug,step);if(!rs.length)return '';
-  return `<section class="high-risk-section" aria-labelledby="hr-inline-title"><div class="hr-section-heading"><div><p class="hr-eyebrow">Within this transplant protocol</p><h2 id="hr-inline-title">High-risk protocols at this decision</h2><p>Review the proposed criteria, evidence and next steps below. Each option retains its stated limits and approval status.</p></div><a href="#high-risk" data-view="high-risk" class="hr-overview-link">All high-risk protocols for this tumor →</a></div>${rs.map(r=>card(data,slug,r)).join('')}${downloads(data,slug)}</section>`;
+  return `<section class="high-risk-section" aria-labelledby="hr-inline-title"><div class="hr-section-heading"><div><p class="hr-eyebrow">Within this transplant protocol</p><h2 id="hr-inline-title">High-risk protocols at this decision</h2><p>Review the proposed criteria, evidence and next steps below. Each option retains its stated limits and approval status.</p></div><a href="#high-risk" data-view="high-risk" class="hr-overview-link">All high-risk protocols for this tumor →</a></div>${rs.map(r=>card(data,slug,r)).join('')}</section>`;
  }
  function overview(data,slug){
   const rs=reviews(data,slug);
-  return `<section class="high-risk-view" aria-labelledby="high-risk-title"><div class="hr-section-heading"><div>${badge()}<h2 id="high-risk-title" tabindex="-1">High-risk protocols within the ${e(slug==='nelm'?'NELM':slug==='pcca'?'pCCA':slug==='icca'?'iCCA':slug.toUpperCase())} pathway</h2><p>Clinical reviews appear with matching next-step choices when the relevant findings are selected. Research-only models remain references. Orange identifies a proposed high-risk option; closed local expansions are explanatory notices. No proposal is activated by this website.</p></div></div>${downloads(data,slug)}<nav class="hr-index" aria-label="High-risk protocol decisions">${rs.map(r=>`<a href="#high-risk-${r.anchor}" data-high-risk="${r.anchor}">${e(r.title)} →<small>${e(statusLabel(r.anchor))}</small></a>`).join('')}<a href="#high-risk-readiness" data-high-risk="readiness">Shared approval requirements →</a></nav>${rs.map(r=>card(data,slug,r)).join('')}<section class="hr-readiness" id="high-risk-readiness"><h2 tabindex="-1">Before a proposed study can open</h2><p>Recipient selection, allocation, donor protection and institutional study approval are separate decisions.</p>${data.readiness.map(r=>card(data,slug,r,true)).join('')}</section></section>`;
+  return `<section class="high-risk-view" aria-labelledby="high-risk-title"><div class="hr-section-heading"><div>${badge()}<h2 id="high-risk-title" tabindex="-1">High-risk protocols within the ${e(slug==='nelm'?'NELM':slug==='pcca'?'pCCA':slug==='icca'?'iCCA':slug.toUpperCase())} pathway</h2><p>Clinical reviews appear with matching next-step choices when the relevant findings are selected. Research-only models remain references. Orange identifies a proposed high-risk option; closed local expansions are explanatory notices. No proposal is activated by this website.</p></div></div><nav class="hr-index" aria-label="High-risk protocol decisions">${rs.map(r=>`<a href="#high-risk-${r.anchor}" data-high-risk="${r.anchor}">${e(r.title)} →<small>${e(statusLabel(r.anchor))}</small></a>`).join('')}<a href="#high-risk-readiness" data-high-risk="readiness">Shared approval requirements →</a></nav>${rs.map(r=>card(data,slug,r)).join('')}<section class="hr-readiness" id="high-risk-readiness"><h2 tabindex="-1">Before a proposed study can open</h2><p>Recipient selection, allocation, donor protection and institutional study approval are separate decisions.</p>${data.readiness.map(r=>card(data,slug,r,true)).join('')}</section></section>`;
  }
  function library(data,slug){
   const sources=keys(data,slug).map(k=>data.sources[k]);
-  return `<section class="hr-library"><div class="hr-section-heading"><div>${badge()}<h2>Evidence for the high-risk protocols</h2><p>Start with the clinical question; open its study summaries for outcomes and limitations. Document types below describe authority, not evidence grades.</p></div><a href="#high-risk" data-view="high-risk">Open the high-risk protocols →</a></div>${downloads(data,slug)}${[['Policy, guidance and consensus',sources.filter(r=>!isResearch(r))],['Published research',sources.filter(isResearch)]].filter(([,rows])=>rows.length).map(([label,rows])=>`<section class="hr-library-group"><h3>${label}</h3><div class="hr-library-grid">${rows.map(r=>source(r)).join('')}</div></section>`).join('')}</section>`;
+  return `<section class="hr-library"><div class="hr-section-heading"><div>${badge()}<h2>Evidence for the high-risk protocols</h2><p>Start with the clinical question; open its study summaries for outcomes and limitations. Document types below describe authority, not evidence grades.</p></div><a href="#high-risk" data-view="high-risk">Open the high-risk protocols →</a></div>${[['Policy, guidance and consensus',sources.filter(r=>!isResearch(r))],['Published research',sources.filter(isResearch)]].filter(([,rows])=>rows.length).map(([label,rows])=>`<section class="hr-library-group"><h3>${label}</h3><div class="hr-library-grid">${rows.map(r=>source(r)).join('')}</div></section>`).join('')}</section>`;
  }
  function destination(url){
   if(!url)return null;

@@ -10,7 +10,7 @@
     {
       "id": "0",
       "tone": "loco",
-      "name": "0 · Assess the need for biliary drainage",
+      "name": "0 · Assess drainage after staging imaging, unless urgent",
       "req": "any",
       "crit": [
         "Cholangitis, or a bilirubin that is rising",
@@ -348,7 +348,7 @@
         "Biliary and vascular extent that permits a technically achievable R0 resection",
         "Contralateral liver with intact arterial and portal inflow as well as biliary drainage",
         "Future liver remnant adequate, or made adequate by embolisation after the remnant has been drained",
-        "No intrahepatic, extrahepatic, nodal or peritoneal metastases on the staging package",
+        "No intrahepatic, extrahepatic, distant (non-regional) nodal or peritoneal metastases on the staging package; regional nodal disease requires prognostic assessment and does not by itself exclude resection.",
         "Patient fit for extended hepatectomy with biliary reconstruction, at a center with appropriate surgical expertise"
       ],
       "ask": "Can resection achieve negative margins while preserving adequate liver function?",
@@ -435,7 +435,7 @@
             "36681415"
           ],
           "pref": "A resected patient fit for 8 cycles who wants adjuvant treatment, particularly with adverse features. BILCAP (n=447) gave median overall survival 51.1 versus 36.4 months with an adjusted hazard ratio of 0.81 (95% CI 0.63–1.04), p=0.097 — the intention-to-treat primary analysis did not meet significance. Significance appeared per protocol (210 versus 220 patients, HR 0.75, 0.58–0.97) and in the protocol-specified intention-to-treat sensitivity analysis adjusted for nodal status, grade and sex (HR 0.71, 0.55–0.92), and the trial was unmasked.",
-          "avoid": "Do not present it as established benefit in this tumour. 128 of 447 patients (29%) had hilar tumours, the trial was not powered for site-specific effects, and the Milan consensus records that these trials showed no benefit in the perihilar subgroup. The recurrence-free survival advantage was confined to the first 24 months (HR 0.75, 0.58–0.98) with none from 24 to 60 months (HR 1.48, 0.80–2.77), which the authors read as recurrence deferred rather than prevented. Grade 3 events occurred in 44% of treated patients, 55% completed all eight cycles, 46% needed a dose reduction and 32% stopped for toxicity.",
+          "avoid": "Do not present it as established benefit in this tumour. 128 of 447 patients (29%) had hilar tumours, the trial was not powered for site-specific effects, and the BILCAP perihilar subgroup estimate was imprecise (HR 1.08, 95% CI 0.68–1.71); Milan nevertheless recommends six months of capecitabine or S-1 (strong, level 2). The recurrence-free survival advantage was confined to the first 24 months (HR 0.75, 0.58–0.98) with none from 24 to 60 months (HR 1.48, 0.80–2.77), which the authors read as recurrence deferred rather than prevented. Grade 3 events occurred in 44% of treated patients, 55% completed all eight cycles, 46% needed a dose reduction and 32% stopped for toxicity.",
           "note": "Downgraded from B to C, because the trial is negative on its prespecified primary endpoint and the positive signal rests on a per-protocol analysis and an adjusted model; the linked commentary asks whether that is enough to define a standard of care. NCCN designates capecitabine preferred, category 1, while also acknowledging BILCAP's nonsignificant intention-to-treat analysis; the local label and grade remain more cautious and require explicit multidisciplinary local approval. ASCOT (n=440) was positive for S-1 — 3-year survival 77.1% versus 67.6%, HR 0.69 (0.51–0.94) — but relapse-free survival did not reach significance (HR 0.80, 0.61–1.04, p=0.088), the analysis was taken at 179 deaths against 285 planned events, the R1 subgroup showed nothing (HR 1.04, 0.57–1.92), the trial was conducted only in Japan and S-1 is unavailable in the United States."
         },
         {
@@ -578,7 +578,7 @@
       "name": "5 · Unresectable disease outside a transplant protocol",
       "req": "any",
       "crit": [
-        "Regional nodal disease, or a mass of 3 cm or more in radial diameter: these do not meet the standardized exception criteria. Confirm borderline measurements and clinical options with the transplant team before excluding transplantation",
+        "Unresectable disease outside the standardized transplant route, for example regional nodal disease or radial mass ≥3 cm. Regional nodes or size alone do not exclude resection: if otherwise resectable, return to resection assessment; confirm transplant measurements with the team.",
         "Intrahepatic or extrahepatic metastases",
         "Comorbidity or performance status that rules out transplantation",
         "No OPTN-approved protocol available, or the patient declines that route"
@@ -674,7 +674,7 @@
           ],
           "pref": "FGFR2 fusions or rearrangements, IDH1 mutation, BRAF V600E, HER2 overexpression (IHC 3+), MSI-high or mismatch-repair deficiency, and rare targetable fusions can all occur in this disease.",
           "avoid": "Except for IDH1, these are single-arm response data rather than comparative survival data, and the matched-therapy trials enrolled almost only intrahepatic tumours — FIGHT-202 cohort A 107 of 108 intrahepatic, FOENIX-CCA2 intrahepatic only, ROAR 39 of 43 (91%) intrahepatic, ClarIDHy 6 of 187 extrahepatic or perihilar — so their effect in perihilar disease is an extrapolation. Every one of these trials was industry sponsored with company employees among the authors, and all of them are second-line or later, so none says anything about conversion to resection. HER2 is the exception worth pursuing here, because it is enriched in extrahepatic disease: in HERIZON-BTC-01 zanidatamab gave a confirmed response rate of 41% overall but 52% (39–65) in immunohistochemistry 3+ tumours against 6% (1 of 18) in 2+, with median overall survival 18.1 versus 5.2 months — so the 3+ restriction is doing the work, and the trial reports no breakdown by anatomical subsite.",
-          "note": "Even the randomised case is partial: in ClarIDHy ivosidenib improved progression-free survival (HR 0.37, 95% CI 0.25–0.54) but the intention-to-treat overall-survival difference was not significant (median 10.3 versus 7.5 months, HR 0.79, 0.56–1.12, one-sided P=.09), significance appearing only after a rank-preserving structural failure time adjustment for the 70% of placebo patients who crossed over; objective response was 2%, the comparator was placebo rather than second-line FOLFOX, and the agent will not convert unresectable disease to resectable. No randomised evidence sequences the targeted options."
+          "note": "ClarIDHy improved PFS in previously treated IDH1-mutant cholangiocarcinoma (2.7 versus 1.4 months; HR 0.37). Final ITT OS was 10.3 versus 7.5 months (HR 0.79, 95% CI 0.56–1.12; P=.09), with 70% crossover. The October 2026 correction retains the crossover-adjusted HR 0.49 but changes its bootstrap 95% CI to 0.25–1.24; adjusted OS is not statistically significant. Response was 2%, so large shrinkage is uncommon; surgical conversion was not established. The final population was predominantly intrahepatic, with only six extrahepatic/perihilar cases; no pCCA-specific treatment effect is established. No randomized evidence establishes a sequence among all targeted options."
         }
       ],
       "avoid": [
@@ -1114,7 +1114,7 @@
     },
     {
       "t": "The adjuvant evidence in this disease is a trial that missed its primary endpoint and a trial that was null, and both need reading in full.",
-      "why": "BILCAP missed its intention-to-treat primary endpoint (HR 0.81, 0.63–1.04, p=0.097); significance came from a per-protocol analysis and a model adjusted for nodal status, grade and sex. Recurrence-free survival favoured capecitabine over the first 24 months (HR 0.75, 0.58–0.98) and not at all from 24 to 60 months (HR 1.48, 0.80–2.77). 128 of 447 patients (29%) had hilar tumours, the trial was not powered for site, and the Milan consensus records no benefit in the perihilar subgroup. Grade 3 events in 44%, 46% dose-reduced, 32% stopped for toxicity. Offer it with those numbers, not as an obligation. The one adjuvant randomised trial confined to this population, BCAT, enrolled perihilar and distal bile duct cancer only and found nothing for gemcitabine (overall survival HR 1.01, 0.70–1.45), with no subgroup benefiting including node-positive and R1 patients — but its null is also underpowered: recruitment stopped at 226 of a planned 300 because most patients wanted adjuvant chemotherapy, the authors calculate only a 2.8% probability of significance even with the planned events, and observed 5-year survival was about 50% against an assumed 30% in a cohort from which R2 resections, metastases, severe complications and in-hospital deaths were all excluded. It rules out gemcitabine; it does not rule out adjuvant therapy.",
+      "why": "BILCAP missed its intention-to-treat primary endpoint (HR 0.81, 0.63–1.04, p=0.097); significance came from a per-protocol analysis and a model adjusted for nodal status, grade and sex. Recurrence-free survival favoured capecitabine over the first 24 months (HR 0.75, 0.58–0.98) and not at all from 24 to 60 months (HR 1.48, 0.80–2.77). 128 of 447 patients (29%) had hilar tumours, the trial was not powered for site, and Milan recommends adjuvant capecitabine or S-1 despite imprecise perihilar-specific estimates. Grade 3 events in 44%, 46% dose-reduced, 32% stopped for toxicity. Offer it with those numbers, not as an obligation. The one adjuvant randomised trial confined to this population, BCAT, enrolled perihilar and distal bile duct cancer only and found nothing for gemcitabine (overall survival HR 1.01, 0.70–1.45), with no subgroup benefiting including node-positive and R1 patients — but its null is also underpowered: recruitment stopped at 226 of a planned 300 because most patients wanted adjuvant chemotherapy, the authors calculate only a 2.8% probability of significance even with the planned events, and observed 5-year survival was about 50% against an assumed 30% in a cohort from which R2 resections, metastases, severe complications and in-hospital deaths were all excluded. It rules out gemcitabine; it does not rule out adjuvant therapy.",
       "refs": [
         "30922733",
         "40478744",
@@ -1487,6 +1487,11 @@
       "HAI floxuridine phase II",
       "Liver-directed",
       "Cercek A, Boerner T, Tan BR, et al. Assessment of hepatic arterial infusion of floxuridine in combination with systemic gemcitabine and oxaliplatin in patients with unresectable intrahepatic cholangiocarcinoma: a phase 2 clinical trial. JAMA Oncol. 2020;6(1):60-67. doi:10.1001/jamaoncol.2019.3718. PMID:31670750."
+    ],
+    "42879142": [
+      "ClarIDHy 2026 correction",
+      "Corrections",
+      "Correction: final overall survival efficacy results of ivosidenib for advanced cholangiocarcinoma. JAMA Oncol. 2026. doi:10.1001/jamaoncol.2026.4298. PMID:42879142."
     ]
   },
   "nonpm": {

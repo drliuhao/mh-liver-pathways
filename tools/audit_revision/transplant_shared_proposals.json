@@ -1,0 +1,47 @@
+[
+  {
+    "analyst": "A (Codex)",
+    "status": "Proposal for parent-owned shared file; not applied by transplant agent",
+    "source_locator": "A shared Source_Reviews/41763363_ImmunoXXL_Clinical_Continuation.md; original JHepatol2026;85:117–129 PDF pp3–5 endpoints/selection, pp7–8 and Table2 safety",
+    "target_file": "tools/compact_evidence_source.json",
+    "path": [
+      "studies",
+      "41763363"
+    ],
+    "old": {
+      "label": "ImmunoXXL",
+      "design": "Single-arm phase 2",
+      "arms": "Prospective phase II · 16 of 61 atezolizumab–bevacizumab responders",
+      "result": "Selected recipient subset: 2-y OS 94% from listing; death-censored recurrence-free estimate 90%; rejection 4/16 (25%); retransplant 2/16",
+      "caution": "16 selected from 61 treated; no ITT benefit or safe ICI washout established; short follow-up",
+      "quotes": [
+        "immunoxxl",
+        "Prospective single-centre observational cohort: 61 potentially eligible patients treated with atezolizumab–bevacizumab; 16 selected responders were enrolled, listed and transplanted.",
+        "Among 45 not included, 25 discontinued treatment (15 progression, four adverse events, six decompensation) and 20 failed downstaging criteria. Eight of 16 had baseline portal-vein tumor thrombosis (six Vp2, one Vp3, one Vp4); 15 had prior locoregional treatment. These were selected research recipients, not proof of standard eligibility after vascular invasion.",
+        "Median washout 57.5 days (IQR 29–87), median follow-up 16 months. Four biopsy-confirmed acute rejections (25%); three irAEs. Ninety-day morbidity 10/16 and mortality 1/16; two retransplants. Explants: ten complete and six partial responses; one recurrence. Reported two-year OS 94% (95% CI 67–100) and recurrence-free estimate 90% (62–98) in the 16 recipients; Methods start both clocks at listing and censor death for recurrence, so the latter is not conventional recurrence-or-death RFS.",
+        "Selected-16 outcomes, not efficacy among all 61 treated patients. Small, observational cohort with short follow-up. A shorter median washout does not establish safety. The fatal course included graft dysfunction, rejection, sepsis and retransplantation; graft loss should not all be attributed to rejection. Supplement and mechanistic analyses were not fully reviewed.",
+        "J Hepatol2026;85:117–129. PMID41763363. PDF pp3–5 selection, flow and endpoint definitions; Figures1–3; p8 safety; Table2. Targeted main clinical read; supplement not reviewed."
+      ]
+    },
+    "new": {
+      "label": "ImmunoXXL",
+      "design": "Prospective observational cohort",
+      "arms": "61 treated; 16 selected responders enrolled, listed and transplanted",
+      "result": "Selected-16 two-year OS 94% (95% CI67–100); recurrence-free estimate90% (62–98), with both clocks starting at listing and death censored for recurrence; rejection4/16, retransplant2/16, 90-day mortality1/16",
+      "caution": "Selected-16 outcomes are not efficacy among all61. The recurrence endpoint excludes death and is not conventional recurrence-or-death RFS; short follow-up, no randomized comparator or established safe washout.",
+      "quotes": [
+        "Prospective observational cohort: 61 potentially eligible treated patients;16 selected responders were enrolled/listed/transplanted.",
+        "Four biopsy-confirmed acute rejections;three irAEs;90-day morbidity10/16 and mortality1/16;two retransplants.",
+        "Reported two-year OS94% and recurrence-free estimate90% are in the selected16, starting at listing; death was censored for recurrence."
+      ]
+    },
+    "canonical_corrected_card": {
+      "key": "immunoxxl",
+      "design_population": "Prospective single-centre observational cohort: 61 potentially eligible patients treated with atezolizumab–bevacizumab; 16 selected responders were enrolled, listed and transplanted.",
+      "selection": "Among 45 not included, 25 discontinued treatment (15 progression, four adverse events, six decompensation) and 20 failed downstaging criteria. Eight of 16 had baseline portal-vein tumor thrombosis (six Vp2, one Vp3, one Vp4); 15 had prior locoregional treatment. These were selected research recipients, not proof of standard eligibility after vascular invasion.",
+      "results": "Median washout 57.5 days (IQR 29–87), median follow-up 16 months. Four biopsy-confirmed acute rejections (25%); three irAEs. Ninety-day morbidity 10/16 and mortality 1/16; two retransplants. Explants: ten complete and six partial responses; one recurrence. Reported two-year OS 94% (95% CI 67–100) and recurrence-free estimate 90% (62–98) in the 16 recipients; Methods start both clocks at listing and censor death for recurrence, so the latter is not conventional recurrence-or-death RFS.",
+      "limits": "Selected-16 outcomes, not efficacy among all 61 treated patients. Small, observational cohort with short follow-up. A shorter median washout does not establish safety. The fatal course included graft dysfunction, rejection, sepsis and retransplantation; graft loss should not all be attributed to rejection. Supplement and mechanistic analyses were not fully reviewed.",
+      "locator": "J Hepatol2026;85:117–129. PMID41763363. PDF pp3–5 selection, flow and endpoint definitions; Figures1–3; p8 safety; Table2. Targeted main clinical read; supplement not reviewed."
+    }
+  }
+]

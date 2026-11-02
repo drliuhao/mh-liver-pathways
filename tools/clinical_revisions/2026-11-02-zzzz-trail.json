@@ -1,0 +1,80 @@
+{
+  "id": "2026-11-02-zzzz-trail",
+  "note": "Exact display-only aliases for five recorded phase questions. Source controls and clinical data remain unmodified.",
+  "sources": [],
+  "edits": [],
+  "files": [
+    {
+      "file": "assets/compact-trail-labels.js",
+      "old": "    \"icca/follow-up/plan\": {",
+      "new": "    \"icca/follow-up/phase\": {\n      \"source\": \"Is this assessment before or after liver transplantation?\",\n      \"label\": \"Before or after transplant\"\n    },\n    \"icca/follow-up/plan\": {",
+      "why": "Display alias for the recorded icca/follow-up/phase question; exact current source label, with explicit pre-/post-transplant distinction."
+    },
+    {
+      "file": "assets/compact-trail-labels.js",
+      "old": "    \"crlm/transplant/plan\": {",
+      "new": "    \"crlm/transplant/phase\": {\n      \"source\": \"Is this assessment before or after liver transplantation?\",\n      \"label\": \"Before or after transplant\"\n    },\n    \"crlm/transplant/plan\": {",
+      "why": "Display alias for the recorded crlm/transplant/phase question; exact current source label, with explicit pre-/post-transplant distinction."
+    },
+    {
+      "file": "assets/compact-trail-labels.js",
+      "old": "    \"nelm/follow-up/plan\": {",
+      "new": "    \"nelm/follow-up/phase\": {\n      \"source\": \"Is this assessment before or after liver transplantation?\",\n      \"label\": \"Before or after transplant\"\n    },\n    \"nelm/follow-up/plan\": {",
+      "why": "Display alias for the recorded nelm/follow-up/phase question; exact current source label, with explicit pre-/post-transplant distinction."
+    },
+    {
+      "file": "assets/compact-trail-labels.js",
+      "old": "    \"hehe/follow-up/plan\": {",
+      "new": "    \"hehe/follow-up/phase\": {\n      \"source\": \"Is this assessment before or after liver transplantation?\",\n      \"label\": \"Before or after transplant\"\n    },\n    \"hehe/follow-up/plan\": {",
+      "why": "Display alias for the recorded hehe/follow-up/phase question; exact current source label, with explicit pre-/post-transplant distinction."
+    },
+    {
+      "file": "assets/compact-trail-labels.js",
+      "old": "    \"hca/follow-up/plan\": {",
+      "new": "    \"hca/follow-up/phase\": {\n      \"source\": \"Is this assessment before or after liver transplantation?\",\n      \"label\": \"Before or after transplant\"\n    },\n    \"hca/follow-up/plan\": {",
+      "why": "Display alias for the recorded hca/follow-up/phase question; exact current source label, with explicit pre-/post-transplant distinction."
+    },
+    {
+      "file": "assets/compact-trail-labels.js",
+      "old": "    \"icca/follow-up/plan\": {\n      \"source\": \"Final clinical review and recurrence-surveillance plan complete?\",\n      \"label\": \"Final review / follow-up\"\n    }",
+      "new": "    \"icca/follow-up/plan\": {\n      \"source\": \"Clinical plan and follow-up responsibilities agreed for this stage of care?\",\n      \"label\": \"Care plan / follow-up\"\n    }",
+      "why": "Synchronize icca/follow-up/plan with its recorded stage-of-care question; preserve exact source guard and a concise neutral care-plan label."
+    },
+    {
+      "file": "assets/compact-trail-labels.js",
+      "old": "    \"crlm/transplant/plan\": {\n      \"source\": \"Final benefit–risk review supports transplant and follow-up is agreed?\",\n      \"label\": \"Benefit / follow-up\"\n    }",
+      "new": "    \"crlm/transplant/plan\": {\n      \"source\": \"Clinical plan and follow-up responsibilities agreed for this stage of care?\",\n      \"label\": \"Care plan / follow-up\"\n    }",
+      "why": "Synchronize crlm/transplant/plan with its recorded stage-of-care question; preserve exact source guard and a concise neutral care-plan label."
+    },
+    {
+      "file": "assets/compact-trail-labels.js",
+      "old": "    \"nelm/follow-up/plan\": {\n      \"source\": \"Are pathology review and the follow-up plan in place?\",\n      \"label\": \"Follow-up plan\"\n    }",
+      "new": "    \"nelm/follow-up/plan\": {\n      \"source\": \"Clinical plan and follow-up responsibilities agreed for this stage of care?\",\n      \"label\": \"Care plan / follow-up\"\n    }",
+      "why": "Synchronize nelm/follow-up/plan with its recorded stage-of-care question; preserve exact source guard and a concise neutral care-plan label."
+    },
+    {
+      "file": "assets/compact-trail-labels.js",
+      "old": "    \"hehe/follow-up/plan\": {\n      \"source\": \"Are pathology review and the follow-up plan in place?\",\n      \"label\": \"Follow-up plan\"\n    }",
+      "new": "    \"hehe/follow-up/plan\": {\n      \"source\": \"Clinical plan and follow-up responsibilities agreed for this stage of care?\",\n      \"label\": \"Care plan / follow-up\"\n    }",
+      "why": "Synchronize hehe/follow-up/plan with its recorded stage-of-care question; preserve exact source guard and a concise neutral care-plan label."
+    },
+    {
+      "file": "assets/compact-trail-labels.js",
+      "old": "    \"hca/follow-up/plan\": {\n      \"source\": \"Fitness for transplantation confirmed and follow-up for the underlying condition agreed?\",\n      \"label\": \"Fitness / follow-up\"\n    }",
+      "new": "    \"hca/follow-up/plan\": {\n      \"source\": \"Clinical plan and follow-up responsibilities agreed for this stage of care?\",\n      \"label\": \"Care plan / follow-up\"\n    }",
+      "why": "Synchronize hca/follow-up/plan with its recorded stage-of-care question; preserve exact source guard and a concise neutral care-plan label."
+    },
+    {
+      "file": "assets/compact-trail-labels.js",
+      "old": "  \"riskById\": {\n",
+      "new": "  \"riskById\": {\n    \"afp_history\": {\n      \"source\": \"Which AFP history requires review?\",\n      \"label\": \"AFP history\"\n    },\n    \"afp_resolution\": {\n      \"source\": \"What has resolved the earlier AFP finding?\",\n      \"label\": \"AFP finding review\"\n    },\n",
+      "why": "Add exact source-guarded display aliases for the two recorded supplemental AFP history/resolution questions; retain separate history and review state."
+    },
+    {
+      "file": "assets/compact-trail-labels.js",
+      "old": "    \"hilar/0\": {\n      \"source\": \"Assess the need for biliary drainage\",\n      \"label\": \"Biliary drainage\"\n    }",
+      "new": "    \"hilar/0\": {\n      \"source\": \"Assess drainage after staging imaging, unless urgent\",\n      \"label\": \"Stage before drainage unless urgent\"\n    }",
+      "why": "Synchronize pCCA drainage topic alias with the recorded imaging-before-elective-drainage correction; retain the urgent-care exception in the concise label."
+    }
+  ]
+}

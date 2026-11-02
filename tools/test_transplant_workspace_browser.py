@@ -26,14 +26,19 @@ VIEW = """()=>{const d=document.querySelector('.decision.dw-protocol');if(!d)ret
  const j=JSON.parse(document.getElementById('protocol-data').textContent);const id=d.querySelector('.permalink').getAttribute('href').slice(1);
  const step=j.pathway.steps.find(s=>s.id===id);const m=d.querySelector('.dw-criteria');const vis=n=>!!n&&n.getClientRects().length>0;
  const opts=[...m.querySelectorAll('.tw-options .tw-option:not(.tw-k-risk)')];
+ const config=j.assistants[j.pathway.slug+'/'+id];
+ // The authored inventory includes ordinary branches and every custom assistant result.
+ const authored=step.branches.concat(config.rules.filter(r=>r.branch===null).map(r=>({
+  title:r.title,action:r.text,kind:r.kind,refs:r.refs,criteria:Object.keys(r.when).map(qid=>({refs:config.questions.find(q=>q.id===qid).refs}))
+ })));
  const reviews=(j.high_risk?.pathways?.[j.pathway.slug]?.reviews||[]).filter(r=>(r.steps||[]).includes(id)).length;
  const refs=b=>{const out=[];const walk=a=>(a||[]).forEach(x=>{out.push(...(x.refs||[]));walk(x.children);});walk(b.criteria);out.push(...(b.refs||[]));return [...new Set(out)].filter(r=>j.sources[r]).length};
  return {card:d.classList.contains('tw-decision'),phases:document.querySelectorAll('.tw-phase').length,journey:j.journeys[j.pathway.slug].length,
   hiddenOld:['.tw-findings','.tw-criteria','.tw-outcome'].every(s=>!vis(m.querySelector(s))),shown:vis(m.querySelector('.tw-options')),
-  titles:opts.map(o=>o.querySelector('.tw-option-title').textContent),want:step.branches.map(b=>b.title),
-  actions:opts.map(o=>o.querySelector('.tw-option-action')?.textContent||''),wantActions:step.branches.map(b=>b.action||''),
-  kinds:opts.map(o=>[...o.classList].find(c=>c.startsWith('tw-k-')).slice(5)),wantKinds:step.branches.map(b=>b.kind),
-  evidence:opts.map(o=>o.querySelectorAll('.ct-evidence .ct-ev-row').length),wantEvidence:step.branches.map(refs),
+  titles:opts.map(o=>o.querySelector('.tw-option-title').textContent),want:authored.map(b=>b.title),
+  actions:opts.map(o=>o.querySelector('.tw-option-action')?.textContent||''),wantActions:authored.map(b=>b.action||''),
+  kinds:opts.map(o=>[...o.classList].find(c=>c.startsWith('tw-k-')).slice(5)),wantKinds:authored.map(b=>b.kind),
+  evidence:opts.map(o=>o.querySelectorAll('.ct-evidence .ct-ev-row').length),wantEvidence:authored.map(refs),
   noResult:[...m.querySelectorAll('.tw-options .ct-ev-row,.tw-static-criteria .ct-ev-row')].filter(li=>li.querySelector('.ct-pm')&&!li.querySelector('.ct-ev-result')).length,
   stops:m.querySelectorAll('.tw-k-reassess li').length,wantStops:step.stops.length,
   risk:m.querySelectorAll('.tw-options .tw-option.tw-k-risk').length,wantRisk:reviews,

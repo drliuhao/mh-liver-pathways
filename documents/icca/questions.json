@@ -341,7 +341,7 @@
      "divergence": "OPTN 2025 and ILTS-ILCA 2024 support consideration for small cirrhotic tumours after stability, AASLD and BSG confine transplantation to research or national protocols, and LCSGJ 2022 considers iCCA generally not an indication.",
      "proposal": "Current position: transplantation for known iCCA only within a formally approved trial or prospective registry protocol, with review-board approval and registry entry, an institutional graft-stewardship restriction stricter than OPTN and ILTS-ILCA. The roadmap states the cost (an OPTN-eligible patient has no route here) and offers a registry-tracked OPTN/ILTS-ILCA pathway as the alternative to decide.",
      "proposal_locator": "Gate 10 · Standard 'Treat transplantation for known intrahepatic cholangiocarcinoma as trial or prospective registry only…'; Gate 10 · Reasonable options (order, flagnote)",
-     "rationale": "Evidence is retrospective and confined to small tumours first diagnosed on explant pathology, most seen before transplant as presumed hepatocellular carcinoma. Graft stewardship is an institutional judgement, not an evidence question.",
+     "rationale": "Evidence includes retrospective incidental-explant series and small prospective protocols for known locally advanced disease, with substantial selection and limited waitlist denominators. The later Houston update included 18 transplanted patients. These data support protocol discussion, not routine transplantation or proof that a particular selection rule is optimal.",
      "audit": "Registry required if opened.",
      "web": "icca/#question-iCCA-D5"
     },
@@ -580,8 +580,8 @@
     {
      "id": "iCCA-D11",
      "set": "roadmap",
-     "title": "What counts as 'a period of stability' before a transplant referral — what duration, on what therapy, and at what imaging interval?",
-     "question": "What counts as 'a period of stability' before a transplant referral — what duration, on what therapy, and at what imaging interval?",
+     "title": "Define how treatment response and the six-month NLRB stability interval are documented; permit early transplant referral while that assessment continues.",
+     "question": "Define how treatment response and the six-month NLRB stability interval are documented; permit early transplant referral while that assessment continues.",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
      "where": [
@@ -600,7 +600,7 @@
       {
        "source": "ILTS-ILCA 2024 consensus",
        "key": "pm42312290",
-       "says": "Attaches no duration to the cirrhotic 3 cm recommendation, only an observed period of stability; its six-month requirement belongs to the weakly graded non-cirrhotic investigational route.",
+       "says": "Attaches no duration to its cirrhotic ≤3 cm recommendation. The NLRB guidance separately specifies six months for its small-cirrhotic exception route; do not attribute that interval only to advanced-disease protocols.",
        "locator": "What we are not sure about · 'Six months from diagnosis or last treatment with tumour stability…'; Gate 10 · Reasonable 'Open a defined, registry-tracked pathway…'"
       },
       {
@@ -616,10 +616,10 @@
        "locator": "Gate 10 · Standard 'Read the supporting evidence for what it is…' (note); What we are not sure about · 'Six months from diagnosis…'"
       }
      ],
-     "divergence": "The OPTN route requires six months while ILTS-ILCA sets no duration for the cirrhotic phenotype, the six-month figure comes from a six-patient protocol in locally advanced disease, and the explant series behind the size data required no stability at all.",
+     "divergence": "NLRB guidance directly specifies six months for its small-cirrhotic exception route; ILTS–ILCA does not specify a duration for the corresponding cirrhotic phenotype. Explant and locally advanced protocol cohorts address different populations.",
      "proposal": "Keep six months from diagnosis or last treatment with serial-scan stability (still 3 cm or less, no new lesions, no extrahepatic disease), recording both dates; one responding scan is insufficient. The roadmap defends six months as a biology test, calls the right length unknown, and sets no therapy or scan interval for that period.",
      "proposal_locator": "Gate 10 criteria; Quick reference · 'Transplant eligibility — the nonstandard MMaT-3 route' ('Stability period'); What we are not sure about · 'Six months from diagnosis or last treatment…'",
-     "rationale": "ILTS-ILCA 2024 attaches no duration to the cirrhotic ≤3 cm recommendation; the six-month figure in our criteria comes from its separate weakly graded non-cirrhotic route and from the Houston Methodist–MD Anderson protocol, whose own authors concede that selecting for stability may be selecting indolent biology. The explant series that supplies our size data required no stability at all.",
+     "rationale": "The NLRB small-cirrhotic exception guidance directly specifies six months of stability. This administrative recommendation is separate from ILTS–ILCA’s observation wording and from the Houston locally advanced protocol; neither establishes the optimal biological interval. Early referral may occur while treatment and observation continue.",
      "audit": "Registry: stability interval achieved, regimen, imaging interval, and waitlist dropout for progression.",
      "web": "icca/#question-iCCA-D11"
     },
@@ -1617,7 +1617,7 @@
        "source": "TransMet 2024",
        "key": "hr-transmet",
        "population": "Multicentre open-label randomized trial, 20 European centres, 157 screened and 94 randomized (47 LT-plus-chemotherapy, 47 chemotherapy); 63 screened excluded, including 13 with equivocal unresectability and 36 with progression. Age 18–65; ECOG 0–1; R0 colorectal primary; BRAF nonmutated; no prior or current extrahepatic disease/local recurrence; chemotherapy response or stable disease for at least 3 months, at most three lines. CEA <80 ng/mL OR at least 50% reduction from peak was permitted. Independent committee of at least two surgeons, two oncologists and one radiologist reviewed original and current lesion maps. These are trial criteria, not identical to current NLRB guidance.",
-       "results": "Primary time origin was randomization. Median follow-up 59.3 months. Five-year ITT OS was 56.6% versus 12.6% (HR 0.37, 95% CI 0.21–0.65); per-protocol OS 73.3% versus 9.3%. Of 47 assigned LT, 38 received LT and 36 were per-protocol; nine had progression-related exclusion/dropout. The control arm included seven subsequent resections and two LT crossovers. Safety population comprised 40 grafted patients. Among 36 per-protocol LT recipients, 26 recurred; 19/26 received chemotherapy and 12/26 local curative-intent treatment. Median per-protocol PFS was 17.4 versus 6.4 months, and secondary PFS after salvage was 35.4 months in the LT arm. Three of 36 per-protocol recipients required retransplantation (primary nonfunction, donor gallbladder cancer, caval obstruction/large-for-size); one postoperative death was reported. Serious adverse events occurred in 32/40 safety LT recipients. Median wait to LT was 50.5 days, which limits transfer to longer-wait systems.",
+       "results": "Primary time origin was randomization. Median follow-up 59.3 months. Five-year ITT OS was 56.6% versus 12.6% (HR 0.37, 95% CI 0.21–0.65); per-protocol OS 73.3% versus 9.3%. Of 47 assigned LT, 38 received LT and 36 were per-protocol; nine were not transplanted (five progressed while waiting, three had extrahepatic disease at laparotomy, one had prostate cancer). The control arm included seven resections and two transplants outside protocol; crossover was not allowed. Safety population comprised 40 grafted patients. Among 36 per-protocol LT recipients, 26 recurred; 19/26 received chemotherapy and 12/26 local curative-intent treatment. Median per-protocol PFS was 17.4 versus 6.4 months (recurrence after LT versus RECIST progression on chemotherapy; PET surveillance differed by arm), and secondary PFS after salvage was 35.4 months in the LT arm. Three of 36 per-protocol recipients required retransplantation (primary nonfunction, donor gallbladder cancer, caval obstruction/large-for-size); one postoperative death was reported. Serious adverse events occurred in 32/40 safety LT recipients. Median wait to LT was 50.5 days, which limits transfer to longer-wait systems.",
        "limits": "Strong evidence for the selected trial population, not for BRAF-mutant, ECOG 2, active extrahepatic, truly NED, resectable or broadly expanded disease. PP survival conditions on reaching treatment and must not replace ITT. The Results recurrence denominator is 26/36; Figure 3 caption says 28 recurrences, consistent with a broader all-grafted report, so do not mix these denominators. QoL collection had only 55/74 per-protocol baseline questionnaires and is descriptive, not proof of a large QoL gain. Priority allocation and rapid access were part of the treatment strategy.",
        "locator": "Lancet 2024;404:1107–1118. PDF pp.2–4 eligibility/committee; pp.5–6 trial flow/Table 1; pp.8–9 recurrence, safety, retransplantation, Figure 3; p.10 QoL/limitations."
       },

@@ -13,7 +13,11 @@ ROOT = Path(__file__).resolve().parents[1]
 # Decimal points as printed: '.', Lancet '·' (U+00B7) and BJS '⋅' (U+22C5).
 NUM = re.compile(r'(?<![A-Za-z0-9.])\d+(?:[.,·⋅]\d+)*')
 norm = lambda s: s.replace(',', '').replace('·', '.').replace('⋅', '.')
-nums = lambda s: {norm(m) for m in NUM.findall(s or '')}
+def nums(s, spelled=False):
+    # Exact numerical meaning is unchanged when the reviewed source spells small counts out.
+    words = {'one':'1','two':'2','three':'3','four':'4','five':'5','six':'6','seven':'7','eight':'8','nine':'9','ten':'10'}
+    s = re.sub(r'\b(one|two|three|four|five|six|seven|eight|nine|ten)\b',lambda m:words[m[0].lower()],s or '',flags=re.I) if spelled else (s or '')
+    return {norm(m) for m in NUM.findall(s)}
 DESIGNS = {'RCT', 'Phase 3 RCT', 'Phase 2 RCT', 'Randomized phase 2', 'Single-arm trial', 'Single-arm phase 2', 'Phase 1/2',
            'Prospective cohort', 'Retrospective cohort', 'Registry cohort', 'Cohort', 'Case series', 'Case-control',
            'Meta-analysis', 'Systematic review', 'Pooled analysis', 'Secondary analysis', 'Guideline', 'Consensus', 'Review',
@@ -25,7 +29,22 @@ def add(pmid, *parts):
 
 for f in glob.glob(str(ROOT / '*/data/critique.json')):
     for pmid, c in json.loads(Path(f).read_text()).items():
-        add(pmid, c.get('n') if isinstance(c.get('n'), str) else None, c.get('bottom_line'))
+        add(pmid, c.get('n') if isinstance(c.get('n'), str) else None, c.get('bottom_line'), *c.get('critique', []))
+# Revised recommendation text is also source-specific: only passages explicitly citing a
+# PMID enter that PMID's pool. This covers newly reconciled evidence before a long appraisal.
+def cited_passages(node):
+    if isinstance(node, dict):
+        for pmid in node.get('refs', []):
+            if re.fullmatch(r'\d{6,9}', str(pmid)):
+                add(pmid, *(v for k,v in node.items() if k != 'refs' and isinstance(v,str)))
+        for value in node.values(): cited_passages(value)
+    elif isinstance(node, list):
+        for value in node: cited_passages(value)
+for f in glob.glob(str(ROOT / '*/data/pathway.json')):
+    cited_passages(json.loads(Path(f).read_text()).get('gates', []))
+# The correction concerns this same trial; both publications are explicitly cited on the page.
+if '34554208' in text:
+    text['42879142'] = list(text['34554208'])
 def cells(model):
     for cell in model['cells'].values():
         for role in cell['roles']:
@@ -39,7 +58,7 @@ cells(json.loads(re.search(r'const DATA = (\{.*?\});\n', page, re.S).group(1)))
 matrix = json.loads((ROOT / 'systemic/matrix.json').read_text())
 for card in matrix['cards']:
     for pmid in card['refs']:
-        add(pmid, card['title'], card['evidence'])
+        add(pmid, card['title'], card['evidence'], card['who'], card['limits'])
 hr = json.loads((ROOT / 'tools/decision_assistant_source/high_risk_data.json').read_text())
 def studies():
     for p in hr['pathways'].values():
@@ -50,7 +69,7 @@ def studies():
 for s in studies():
     pmid = hr['sources'].get(s['key'], {}).get('pmid')
     if pmid:
-        add(pmid, s['design_population'], s['results'])
+        add(pmid, s.get('design_population') or s.get('design'), s['results'])
 # The published high-risk data (transplant/assets/content.json, with the recorded revisions such as the
 # extrahepatic-disease reviews) is verified site text too.
 live_hr = json.loads((ROOT / 'transplant/assets/content.json').read_text())['high_risk']
@@ -140,7 +159,7 @@ for pmid, s in src['studies'].items():
             abs_q += 1
         else:
             errors.append(f'{pmid}: quote without provenance: {q[:70]}')
-        pool |= nums(q)
+        pool |= nums(q, spelled=True)
     for field in ['label', 'arms', 'result', 'caution']:
         allowed = pool | (nums(' '.join(labels.get(pmid, []))) if field == 'label' else set())
         bad = sorted(nums(s.get(field)) - allowed)

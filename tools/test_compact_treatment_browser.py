@@ -24,7 +24,7 @@ mapping = json.loads((ROOT / 'tools/compact_evidence_source.json').read_text())[
 expected_rows = {k: len(v['rows']) for k, v in mapping.items() if v['rows']}
 reference_links = json.loads((ROOT / 'tools/compact_evidence_source.json').read_text())['reference_links']
 OPTIONS = """()=>[...document.querySelectorAll('#answer .ci-treatment-criteria')].map(tc=>{const row=tc.previousElementSibling,ev=tc.querySelector('.ct-evidence');
- return {ready:tc.dataset.ctReady==='true',key:tc.dataset.ctOption,peers:row&&row.matches('.ct-peers')?row.querySelectorAll('.ct-peer').length:0,
+ return {ready:tc.dataset.ctReady==='true',key:tc.dataset.ctOption,lead:CompactTreatment.optionLead(tc),peers:row&&row.matches('.ct-peers')?row.querySelectorAll('.ct-peer').length:0,
  panels:tc.querySelectorAll(':scope>details').length,open:tc.querySelectorAll(':scope>details[open]').length,
  text:CompactTreatment.optionText(tc),groups:ev?ev.querySelectorAll('.ct-ref').length:0,tied:ev?[...ev.querySelectorAll('.ct-ev-tied')].map(li=>li.querySelector('.ct-ev-result').textContent+' '+(li.querySelector('.ct-ev-caution')?.textContent||'')):[]}})"""
 
@@ -32,10 +32,17 @@ LAYER = """()=>{const vis=n=>n.getClientRects().length>0;const a=document.queryS
  const recs=[...a.querySelectorAll('.rf-option-group .rec')];
  const raw=recs.filter(r=>[...r.querySelectorAll(':scope>.ci-unit')].some(u=>vis(u)&&/evidence|sources|explanation/i.test(u.querySelector('.ci-label')?.textContent||'')&&!/^\\s*full explanation/i.test(u.querySelector('.ci-label')?.textContent||''))).length;
  const groups=[...a.querySelectorAll('.rf-recommendations .rf-option-group')].map(g=>[g.className.split(' ').pop(),getComputedStyle(g).backgroundColor]);
+ const key=a.dataset.workspaceKey?.split('/')[1];
+ const source=(typeof STAGES!=='undefined'?STAGES:(typeof P!=='undefined'?P?.gates:[]))?.find(s=>s.id===key);
+ const sourceRecs=[...(source?.standard||[]),...(source?.alt||[])];
+ const expectedGroups=[];
+ if(sourceRecs.some(r=>!/^(Reasonable|Trial|Investigational)/i.test(r.l||'')))expectedGroups.push('rf-standard');
+ if(sourceRecs.some(r=>/^(Reasonable|Trial|Investigational)/i.test(r.l||'')))expectedGroups.push('rf-alternatives');
+ if(source?.avoid?.length)expectedGroups.push('rf-cautions');
  const rows=[...document.querySelectorAll('.ct-ev-row')].filter(li=>li.querySelector('.ct-pm')&&!li.classList.contains('ct-ev-ref'));
  // A guideline or policy chip that names its source carries no grey type label (it would repeat the name).
  const chips=[...document.querySelectorAll('.refchip[data-ref]')].filter(c=>vis(c)&&!(c.nextElementSibling&&c.nextElementSibling.matches('.ct-chip-meta'))&&!(!/^\\d{6,9}$/.test(c.dataset.ref)&&CompactTreatment.namesItself(c.textContent)));
- return {raw,groups,rows:rows.length,noResult:rows.filter(li=>!li.querySelector('.ct-ev-result')).map(li=>li.querySelector('.ct-pm').textContent),
+ return {raw,groups,expectedGroups,rows:rows.length,noResult:rows.filter(li=>!li.querySelector('.ct-ev-result')).map(li=>li.querySelector('.ct-pm').textContent),
   chipsNoMeta:chips.map(c=>c.dataset.ref+':'+c.textContent).slice(0,5),studies:Object.keys(CompactEvidenceData.studies).length,
   missing:[...new Set([...document.querySelectorAll('.refchip[data-ref]')].map(c=>c.dataset.ref).filter(k=>/^\\d{6,9}$/.test(k)&&!CompactEvidenceData.studies[k]))],
   rev:/v0\\.8 removed the requirement|v0\\.2 graded this A|v0\\.8 withdrew|earlier draft acknowledged|page previously quoted the placebo/.test(document.body.innerText)}}"""
@@ -50,6 +57,7 @@ async def topic(page, road, key):
 
 async def main():
     failures, seen, groups_seen, options, tied, study_rows = [], {}, {}, 0, 0, 0
+    live_options = {}
     async with async_playwright() as p:
         browser = await p.chromium.launch()
         page = await browser.new_page(viewport={'width': 1280, 'height': 900})
@@ -68,6 +76,8 @@ async def main():
                         failures.append(f'{road}/{key}: panel open initially')
                     seen[o['key']] = len(o['tied'])
                     groups_seen[o['key']] = o['groups']
+                    live_options[(road, key, o['key'])] = {'roadmap': road, 'decision': key, 'key': o['key'],
+                        'lead': o['lead'], 'text': o['text'], 'tied_results': o['tied'], 'reference_groups': o['groups']}
                     tied += len(o['tied'])
                     for line in o['tied']:
                         missing = nums(line) - nums(o['text'])
@@ -84,8 +94,12 @@ async def main():
                 if layer['rev']:
                     failures.append(f'{road}/{key}: revision-history remark visible')
                 colours = {c for _, c in layer['groups']}
-                if len(layer['groups']) != 3 or len(colours) != 3 or 'rgba(0, 0, 0, 0)' in colours:
+                if ([g for g, _ in layer['groups']] != layer['expectedGroups']
+                        or len(colours) != len(layer['groups']) or 'rgba(0, 0, 0, 0)' in colours):
                     failures.append(f'{road}/{key}: recommendation groups not distinct {layer["groups"]}')
+        audit = ROOT / 'tools/audit_revision'
+        audit.mkdir(exist_ok=True)
+        (audit / 'live_option_keys.json').write_text(json.dumps(list(live_options.values()), ensure_ascii=False, indent=2) + '\n')
         for key, n in expected_rows.items():
             if seen.get(key) != n:
                 failures.append(f'{key}: expected {n} option-tied rows, saw {seen.get(key)}')
@@ -146,10 +160,11 @@ async def main():
                 failures.append(f'phone {url}: horizontal overflow {overflow}px')
         await browser.close()
     failures += [f'page error: {e}' for e in errors]
+    (audit / 'compact_browser_failures.json').write_text(json.dumps(failures, ensure_ascii=False, indent=2) + '\n')
     assert not failures, '\n'.join(failures[:40])
     print(f'PASS: {options} option views across 103 topics (with a revisit per roadmap); {tied} option-tied results rendered with numbers in their own option text; '
           f'{study_rows} study lines, each with its result; every pop-up explanation in a recommendation replaced by peer panels; every visible source chip with PMID/description; '
-          f'three distinct recommendation-group panels per topic; no revision remark visible; transplant citations typed; '
+          f'nonempty recommendation groups match source labels and have distinct panels; no revision remark visible; transplant citations typed; '
           f'{len(expected_rows)} mapped options and {len(reference_links)} treatment-reference links matched; 7 high-risk pages compacted; systemic peers and PMID anchors work, every PubMed source with its study line; no phone overflow or page errors.')
 
 asyncio.run(main())

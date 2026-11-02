@@ -63,7 +63,7 @@
       "position": "Selected alternative",
       "who": "Tislelizumab or durvalumab when a single-agent approach is appropriate. NCCN HCC v2.2026 also lists pembrolizumab first line, category 2B.",
       "evidence": "RATIONALE-301 established overall-survival noninferiority of tislelizumab to sorafenib. HIMALAYA established noninferiority of durvalumab. KEYNOTE-394 supported later-line pembrolizumab in an Asian population; KEYNOTE-240 did not meet its prespecified statistical thresholds.",
-      "limits": "These agents do not have identical evidence or regulatory indications. Check the current agent-specific label; a later-line study does not establish first-line superiority.",
+      "limits": "Guideline options and US indications differ: durvalumab monotherapy is not the labelled HCC regimen; the HCC label specifies combination treatment. KEYNOTE-240/394 are later-line studies, not first-line superiority evidence.",
       "transplant": "Single-agent checkpoint therapy still carries transplant rejection concerns.",
       "refs": [
         "37796513",
@@ -82,8 +82,8 @@
       "title": "Lenvatinib or sorafenib",
       "position": "Alternative when immunotherapy is unsuitable",
       "who": "Unresectable HCC with adequate liver reserve; consider when checkpoint therapy is contraindicated or inconsistent with the transplant plan.",
-      "evidence": "REFLECT: lenvatinib was noninferior to sorafenib for overall survival (13.6 versus 12.3 months). SHARP established sorafenib benefit over placebo (10.7 versus 7.9 months). Median OS 10.7 versus 7.9 months; HR 0.69 (0.55–0.87). Radiologic time to progression 5.5 versus 2.8 months, HR 0.58; this is not PFS. ORR 2% versus 1%, no complete responses.",
-      "limits": "REFLECT excluded main portal-vein invasion, ≥50% liver occupation and bile-duct invasion. Dose tolerance and hepatic function matter; trial medians are not individual predictions. Historical placebo comparison, not a comparison with current ICI combinations. Grade 3 diarrhea and hand–foot reaction each 8%; dose interruptions/reductions frequent. Little evidence for decompensated cirrhosis.",
+      "evidence": "REFLECT: lenvatinib vs sorafenib OS 13.6 vs 12.3 months; noninferiority design. SHARP: sorafenib vs placebo OS 10.7 vs 7.9 months, HR 0.69 (0.55–0.87); radiologic time to progression 5.5 vs 2.8 months, not PFS.",
+      "limits": "REFLECT enrolled Child-Pugh A, ECOG 0–1 and excluded main portal-vein invasion, ≥50% liver occupation and obvious bile-duct invasion. SHARP reported grade 3 diarrhea and hand–foot reaction of 8% each with sorafenib; these are not lenvatinib toxicity rates. Little evidence supports use in decompensated cirrhosis.",
       "transplant": "Coordinate perioperative treatment interruption and liver reserve with the transplant team.",
       "refs": [
         "29433850",
@@ -118,8 +118,8 @@
       "setting": "perioperative",
       "title": "After curative resection or ablation",
       "position": "Surveillance; avoid routine adjuvant atezolizumab–bevacizumab",
-      "who": "HCC with no residual disease after resection or ablation.",
-      "evidence": "IMbrave050 initially reported a recurrence-free survival advantage. The 2026 update did not sustain that result: RFS HR 0.90 (95% CI 0.72–1.12); overall survival remained immature.",
+      "who": "No residual HCC after resection or ablation; IMbrave050 enrolled patients at high recurrence risk.",
+      "evidence": "IMbrave050 initially reported a recurrence-free survival advantage. The 2026 update did not sustain that result: RFS HR 0.90 (95% CI 0.72–1.12); overall survival remained immature. Updated OS HR 1.26; immature survival data do not establish benefit or harm.",
       "limits": "The updated evidence does not support routine adjuvant atezolizumab–bevacizumab. Trial participation remains an option.",
       "transplant": "Continue surveillance and reassess recurrent disease through the standard pathway.",
       "refs": [
@@ -136,9 +136,9 @@
       "setting": "combination",
       "title": "Systemic therapy combined with TACE",
       "position": "Selected multidisciplinary or trial consideration",
-      "who": "Embolization-eligible unresectable HCC with suitable liver reserve; review the specific regimen, current label and guideline position.",
+      "who": "TACE-eligible unresectable HCC: eligibility differs by regimen. LEAP-012 and EMERALD-3 mainly required Child-Pugh A; EMERALD-1 allowed B7. Evaluate current guideline position and competing curative options.",
       "evidence": "EMERALD-1, LEAP-012 and EMERALD-3 reported progression-free survival benefit for their respective combinations. In EMERALD-3, STRIDE + lenvatinib + TACE yielded PFS 13.0 versus 9.8 months; overall-survival superiority was not established at the reported analysis.",
-      "limits": "Regimens, comparators and follow-up differ. PFS benefit does not establish cure, transplant benefit or interchangeability. Combined treatment can increase serious toxicity.",
+      "limits": "PFS benefit is not proof of OS benefit or a transplant bridge. LEAP-012 grade ≥3 treatment-related toxicity was 71% vs 32%; EMERALD-3 grade 3–4 treatment-related toxicity was 63% vs 19%. EMERALD-1 durvalumab without bevacizumab did not improve PFS.",
       "transplant": "These trials do not validate routine checkpoint therapy as a transplant bridge. Review the transplant plan before treatment.",
       "refs": [
         "39798579",
@@ -367,15 +367,24 @@
       "setting": "combination",
       "title": "Selected triplet chemotherapy for conversion",
       "position": "For fit patients with initially unresectable liver disease",
-      "who": "A more intensive regimen may be appropriate when substantial shrinkage could permit complete local treatment. Review by an experienced liver multidisciplinary team is essential.",
-      "evidence": "CAIRO5: FOLFOXIRI–bevacizumab improved PFS over doublet–bevacizumab in its right-sided or RAS/BRAF-mutant group (10.6 versus 9.0 months; HR 0.76), with greater toxicity. TRICE studied cetuximab with triplet versus doublet chemotherapy in RAS/BRAF-wild-type CRLM.",
+      "who": "For fit patients when shrinkage may enable complete local treatment; CAIRO5 triplet evidence applies to right-sided or RAS/BRAF-mutant disease. Reassess resectability with the liver multidisciplinary team.",
+      "evidence": "CAIRO5: FOLFOXIRI–bevacizumab improved PFS over doublet–bevacizumab in its right-sided or RAS/BRAF-mutant group (10.6 versus 9.0 months; HR 0.76), with greater toxicity. TRICE studied cetuximab with triplet versus doublet chemotherapy in RAS/BRAF-wild-type CRLM. TRICE did not meet its primary endpoint; grade ≥3 neutropenia increased. CAIRO5 long-term OS was not significantly improved (HR 0.90).",
       "limits": "Do not prescribe triplet therapy for every patient or extrapolate one molecular/sidedness group to another. Response, conversion and survival are different endpoints.",
       "transplant": "Confirm persistent unresectability after reviewing resection, ablation and selected HAI conversion options before transplant review.",
       "refs": [
         "37329889",
         "38728364"
       ],
-      "links": []
+      "links": [
+        [
+          "CAIRO5 overall-survival analysis · PMID 39570583",
+          "https://pubmed.ncbi.nlm.nih.gov/39570583/"
+        ],
+        [
+          "CAIRO5 survival paper · TMC Library",
+          "https://libkey.io/libraries/480/pmid/39570583"
+        ]
+      ]
     },
     {
       "id": "crlm-msi",
@@ -386,9 +395,9 @@
       "title": "Pembrolizumab or nivolumab + ipilimumab",
       "position": "MSI-H / dMMR metastatic colorectal cancer",
       "who": "Confirm mismatch-repair deficiency or microsatellite instability before treatment.",
-      "evidence": "KEYNOTE-177: pembrolizumab PFS 16.5 versus 8.2 months with chemotherapy. CheckMate 8HW established first-line PFS benefit of nivolumab–ipilimumab versus chemotherapy; its separate comparison versus nivolumab alone also favored the combination (HR 0.62).",
+      "evidence": "KEYNOTE-177: pembrolizumab PFS 16.5 vs 8.2 months with chemotherapy; final OS superiority was not statistically established. CheckMate 8HW: first-line nivolumab–ipilimumab improved PFS vs chemotherapy; the separate PFS HR 0.62 comparison vs nivolumab pools treatment lines.",
       "limits": "These are not head-to-head pembrolizumab versus nivolumab–ipilimumab data. Dual therapy increased grade 3–4 treatment-related toxicity versus nivolumab alone.",
-      "transplant": "Effective immunotherapy is a major competing option. MSI-H/dMMR expansion is closed in the initial V7 CRLM transplant proposal.",
+      "transplant": "Effective immunotherapy is a major competing option. MSI-H/dMMR expansion is closed in the proposed local opening CRLM transplant proposal.",
       "refs": [
         "33264544",
         "39602630",
@@ -407,7 +416,7 @@
       "who": "Confirm BRAF V600E. BREAKWATER supports first-line encorafenib–cetuximab with chemotherapy; the February 2026 FDA indication includes mFOLFOX6 or FOLFIRI.",
       "evidence": "BREAKWATER: encorafenib–cetuximab + mFOLFOX6 improved PFS (12.8 versus 7.1 months) and OS (30.3 versus 15.1 months) over standard care. BEACON established encorafenib–cetuximab-based treatment after prior therapy.",
       "limits": "A first-line chemotherapy-containing regimen and later-line targeted doublet are different settings. Do not switch between them without considering prior treatment.",
-      "transplant": "BRAF-mutant expansion remains closed in the initial V7 CRLM transplant proposal; response does not remove that boundary.",
+      "transplant": "BRAF-mutant expansion remains closed in the proposed local opening CRLM transplant proposal; response does not remove that boundary.",
       "refs": [
         "40444708",
         "31566309"
@@ -428,8 +437,8 @@
       "title": "HER2 or KRAS G12C-directed combinations",
       "position": "After appropriate prior therapy",
       "who": "HER2-positive, RAS-wild-type disease: tucatinib + trastuzumab. KRAS G12C: sotorasib + panitumumab or adagrasib + cetuximab, subject to the agent’s prior-treatment indication.",
-      "evidence": "MOUNTAINEER: ORR 38.1% in its combination cohorts. CodeBreaK 300: PFS 5.6 versus 2.2 months with the approved-dose sotorasib combination versus standard care. KRYSTAL-1: adagrasib–cetuximab ORR 34% in 94 patients. Tucatinib plus trastuzumab: confirmed ORR 39.3% (28.8–50.5), median response duration 15.2 months, PFS 8.1 months, OS 23.9 months. Grade 3 and 4 events 33.7% and 7.0%; 5.8% discontinued for adverse events.",
-      "limits": "MOUNTAINEER and KRYSTAL-1 do not establish randomized survival superiority. Do not compare their response rates across different molecular groups. No randomized combination comparator or proven best sequence after other HER2 drugs. Do not rank its median OS against unrelated later-line trials. Exploratory HER2 copy-number thresholds are not mandatory selection cutoffs.",
+      "evidence": "MOUNTAINEER final: tucatinib–trastuzumab ORR 39.3%, median response duration 15.2 months in HER2-positive, RAS-wild-type CRC. CodeBreaK 300, corrected 2025: sotorasib 960 mg–panitumumab PFS 5.6 vs 2.0 months, HR 0.48 (0.30–0.78), vs trifluridine–tipiracil or regorafenib. KRYSTAL-1: adagrasib–cetuximab ORR 34% in 94 patients.",
+      "limits": "MOUNTAINEER randomized combination vs tucatinib alone in cohorts B/C, with crossover, but had no powered standard-care survival comparison and excluded prior HER2 therapy. KRYSTAL-1 was single-arm. CodeBreaK 300 improved PFS; OS superiority was not established. Do not rank these different molecular populations by response or survival.",
       "transplant": "Review the full tumor biology and donor/allocation requirements separately from the treatment response.",
       "refs": [
         "37142372",
@@ -468,8 +477,8 @@
       "title": "Trifluridine–tipiracil + bevacizumab; fruquintinib or regorafenib",
       "position": "Later-line options when treatment remains appropriate",
       "who": "Disease progressing after relevant standard chemotherapy and biomarker-directed options; select according to performance status and toxicity.",
-      "evidence": "SUNLIGHT: OS 10.8 versus 7.5 months for trifluridine–tipiracil + bevacizumab versus trifluridine–tipiracil alone. FRESCO-2 and CORRECT demonstrated survival benefit of fruquintinib and regorafenib, respectively, versus placebo. OS 10.8 versus 7.5 months, HR 0.61 (0.49–0.77); PFS 5.6 versus 2.4 months, HR 0.44. ORR 6.1% versus 1.2%. Grade ≥3 events 72.4% versus 69.5%; neutropenia 43.1% versus 32.1%. Fruquintinib versus placebo plus supportive care: OS 7.4 versus 4.8 months, HR 0.66 (0.55–0.80); PFS 3.7 versus 1.8, HR 0.32. Seven partial responses among 461; no complete response. Grade ≥3 events 63% versus 50%.",
-      "limits": "Different prior-treatment populations and comparators; these numbers do not rank the options. RECOURSE supports trifluridine–tipiracil alone when combination treatment is unsuitable. Open-label; no head-to-head comparison with fruquintinib/regorafenib. Low response rate and an advanced refractory population: not a preferred curative conversion regimen or LT trial. Very late-line population, no direct comparison with SUNLIGHT. Grade ≥3 hypertension 14%, asthenia 8%, hand–foot syndrome 6%; one treatment-related intestinal-perforation death.",
+      "evidence": "SUNLIGHT: trifluridine–tipiracil+bevacizumab vs trifluridine–tipiracil OS 10.8 vs 7.5 months, HR 0.61; PFS 5.6 vs 2.4 months. FRESCO-2: fruquintinib vs placebo/supportive care OS 7.4 vs 4.8 months, HR 0.66; PFS 3.7 vs 1.8 months. CORRECT: regorafenib improved OS vs placebo in its separate refractory population.",
+      "limits": "Separate trials do not rank these options. SUNLIGHT grade ≥3 adverse events were 72.4% vs 69.5%, including grade 3–4 neutropenia 43.1% vs 32.1%. FRESCO-2 grade ≥3 adverse events were 63% vs 50%. These are refractory-treatment studies, not preferred conversion or transplant regimens.",
       "transplant": "If further treatment offers little benefit or is declined, agree best supportive care and symptom management.",
       "refs": [
         "37133585",
@@ -530,7 +539,7 @@
       "position": "Progressive SSTR-positive, well-differentiated disease",
       "who": "Confirm adequate receptor uptake, renal function and marrow reserve. NETTER-1 directly studied progressive midgut NET despite a somatostatin analogue.",
       "evidence": "NETTER-1: 20-month PFS 65.2% versus 10.8% with high-dose octreotide. Final median OS 48.0 versus 36.3 months was not statistically significant (HR 0.84; p=0.30).",
-      "limits": "Long-term risks include marrow toxicity and uncommon myelodysplasia/leukemia. Primary site and prior therapy affect applicability.",
+      "limits": "Long-term risks include marrow toxicity and uncommon myelodysplasia/leukemia. Primary site and prior therapy affect applicability. NETTER-1 enrolled midgut NET; its numerical results are not pancreatic-NET-specific estimates.",
       "transplant": "Record disease control and treatment toxicity before any transplant benefit review. PRRT response does not expand accepted grade or spread criteria.",
       "refs": [
         "28076709",
@@ -546,11 +555,11 @@
       ],
       "setting": "first",
       "title": "First-line PRRT for selected higher-grade NET",
-      "position": "Well-differentiated G2/G3, SSTR-positive GEP-NET",
+      "position": "Newly diagnosed well-differentiated GEP-NET; Ki-67 10–55%; SSTR-positive",
       "who": "NETTER-2 population: newly diagnosed advanced, well-differentiated GEP-NET, Ki-67 10–55%, with suitable somatostatin-receptor expression.",
       "evidence": "NETTER-2: median PFS 22.8 versus 8.5 months with 177Lu-DOTATATE + octreotide versus high-dose octreotide; HR 0.276. The 2026 subgroup report supports activity across pancreatic/GI origin and G2/G3 subsets.",
       "limits": "Comparator was high-dose octreotide, not CAPTEM or another chemotherapy regimen. This does not apply to poorly differentiated NEC.",
-      "transplant": "G3 treatment activity does not make G3 disease eligible for the initial V7 NET transplant cohort.",
+      "transplant": "G3 treatment activity does not make G3 disease eligible for the proposed local opening NET transplant cohort.",
       "refs": [
         "38851203",
         "42604001"
@@ -622,7 +631,7 @@
       "setting": "combination",
       "title": "PRRT sequencing: OCLURANDOM and COMPETE",
       "position": "Evidence informing discussion; check product availability",
-      "who": "OCLURANDOM: pretreated progressive SSTR-positive pancreatic NET. COMPETE: progressive SSTR-positive G1/G2 GEP-NET.",
+      "who": "OCLURANDOM: pretreated progressive SSTR-positive pancreatic NET. COMPETE: progressive SSTR-positive G1/G2 GEP-NET; functioning GI NET and prior PRRT/mTOR therapy were excluded.",
       "evidence": "OCLURANDOM was a randomized noncomparative phase II trial of 177Lu-DOTATATE with an internal sunitinib control. COMPETE phase III found PFS 23.9 versus 14.1 months with 177Lu-edotreotide versus everolimus (HR 0.67).",
       "limits": "OCLURANDOM does not establish phase III superiority. Edotreotide and DOTATATE are different products; the COMPETE result alone does not establish US authorization or interchangeability.",
       "transplant": "Use these results when comparing alternatives to transplantation; they are not transplant outcome studies.",
@@ -782,9 +791,9 @@
       "tumors": [
         "pdac"
       ],
-      "setting": "first",
+      "setting": "later",
       "title": "Daraxonrasib — Current US option",
-      "position": "Setting-specific MDT option",
+      "position": "Subsequent treatment; broader label includes patients unfit for multiagent therapy",
       "who": "US approval August 2026: metastatic pancreatic adenocarcinoma after at least one prior systemic treatment or when not a candidate for multiagent systemic therapy. The indication is not restricted to a RAS mutation.",
       "evidence": "RASolute 302 randomized previously treated patients: overall-population OS 13.2 versus 6.7 months, HR 0.40. That trial does not independently establish the same effect in treatment-naive frail patients included in the broader label.",
       "limits": "Evidence and label requirements vary by regimen and setting; confirm the source and pharmacy plan.",
@@ -960,7 +969,7 @@
     [
       "VEGF antibodies and VEGFR inhibitors",
       "Avoid or delay when uncontrolled serious bleeding, unhealed major wounds, uncontrolled hypertension or relevant vascular complications make treatment unsafe. Check proteinuria and agent-specific hepatic/cardiac risks.",
-      "Coordinate surgery and agent-specific interruption intervals. HCC with portal hypertension needs particular attention to varices.",
+      "Bevacizumab: withhold at least 28 days before elective surgery and for at least 28 days after major surgery, until adequate healing. Review perforation, fistula, arterial thrombosis and bleeding risks. Other VEGF agents have different intervals.",
       [
         [
           "Bevacizumab prescribing information",
@@ -981,7 +990,7 @@
     ],
     [
       "Platinum agents / irinotecan / cytotoxic combinations",
-      "Correct active infection and major organ dysfunction before treatment. Cisplatin: renal function, hearing and neuropathy. Oxaliplatin: neuropathy and hepatic sinusoidal injury. Irinotecan: bilirubin, severe diarrhea and UGT1A1-related toxicity risk.",
+      "Stabilize active infection and assess organ dysfunction; dose adjustment or a different regimen may be needed rather than normalization of every test. Cisplatin: renal function, hearing and neuropathy. Oxaliplatin: neuropathy and hepatic sinusoidal injury. Irinotecan: bilirubin, severe diarrhea and UGT1A1-related toxicity risk.",
       "Review cumulative chemotherapy-associated liver injury and functional remnant before liver surgery.",
       [
         [
@@ -1008,7 +1017,7 @@
     [
       "177Lu-DOTATATE PRRT",
       "Requires suitable somatostatin-receptor expression, renal function and marrow reserve. Review pregnancy, prior marrow-toxic treatment, blood counts and the ability to receive renal-protective amino acids.",
-      "Assess cumulative radiation and marrow toxicity when sequencing with alkylating chemotherapy.",
+      "Review cumulative marrow and radiation exposure with nuclear medicine when sequencing PRRT and alkylators; NETTER-1 did not establish an optimal or universally safe sequence.",
       [
         [
           "NETTER-1",

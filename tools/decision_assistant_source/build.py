@@ -10,6 +10,15 @@ from care_options import CARE, build_continuations
 
 STAMP='20261026-visible1'
 HIGH_RISK=json.loads((Path(__file__).parent/'high_risk_data.json').read_text())
+# The checkout's reviewed content is canonical; legacy Python literals remain as provenance.
+REVIEWED=Path(__file__).resolve().parents[1]/'v12_content_snapshot.json'
+REVIEWED_DATA=json.loads(REVIEWED.read_text()) if REVIEWED.exists() else None
+if REVIEWED_DATA:
+    PATHWAYS[:]=REVIEWED_DATA['index']; SOURCES.clear(); SOURCES.update(REVIEWED_DATA['sources'])
+    ASSISTANTS.clear(); ASSISTANTS.update(REVIEWED_DATA['assistants'])
+    CARE.clear(); CARE.update(REVIEWED_DATA['care'])
+    HIGH_RISK=REVIEWED_DATA['high_risk']
+
 
 def document(title, data):
     payload=json.dumps(data,ensure_ascii=False).replace('</','<\\/')
@@ -50,6 +59,7 @@ def build():
         shutil.copyfile(Path(__file__).parent/asset,DIST/'assets'/asset)
     base=dict(index=PATHWAYS,sources=SOURCES,assistants=ASSISTANTS,assistant_version=VERSION,journeys=JOURNEYS,high_risk=HIGH_RISK,
               care=CARE,continuations=build_continuations(PATHWAYS,ASSISTANTS))
+    if REVIEWED_DATA: base=REVIEWED_DATA
     (DIST/'index.html').write_text(document('Decision pathways',dict(base,mode='home')),encoding='utf8')
     (DIST/'meeting-records').mkdir(exist_ok=True)
     (DIST/'alignment').mkdir(exist_ok=True)
@@ -81,7 +91,7 @@ def build():
 
 def validate():
     problems=[]
-    continuations=build_continuations(PATHWAYS,ASSISTANTS)
+    continuations=REVIEWED_DATA['continuations'] if REVIEWED_DATA else build_continuations(PATHWAYS,ASSISTANTS)
     def local(url):
         if url.startswith('/'):
             if not (DIST/url.split('#')[0].lstrip('/')).exists():problems.append(f'Missing local resource: {url}')

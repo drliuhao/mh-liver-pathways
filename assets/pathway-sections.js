@@ -15,7 +15,7 @@
   const slug = path[1];
   const VIEWS = new Set(['pathway', 'high-risk']);
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
-  const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = new URL('assets/pathway-sections.css?v=20261031-ui1', root); document.head.append(css);
+  const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = new URL('assets/pathway-sections.css?v=20261102-review1', root); document.head.append(css);
 
   const chip = r => r.dialog ? `<button type="button" class="cite" data-ref="${esc(r.key)}">${esc(r.label)} ↗</button>`
     : r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.label)} ↗</a>` : `<span>${esc(r.label)}</span>`;
@@ -103,11 +103,11 @@
   }
   window.PathwaySections = {open};
   if (!window.RoadmapEvidence) {
-    const ev = document.createElement('script'); ev.async = false; ev.src = new URL('assets/roadmap-evidence.js?v=20261030-docs2', root); document.head.append(ev);
-    const evCss = document.createElement('link'); evCss.rel = 'stylesheet'; evCss.href = new URL('assets/roadmap-evidence.css?v=20261031-ui1', root); document.head.append(evCss);
+    const ev = document.createElement('script'); ev.async = false; ev.src = new URL('assets/roadmap-evidence.js?v=20261102-review1', root); document.head.append(ev);
+    const evCss = document.createElement('link'); evCss.rel = 'stylesheet'; evCss.href = new URL('assets/roadmap-evidence.css?v=20261102-review1', root); document.head.append(evCss);
     ev.addEventListener('load', () => { const box = document.getElementById('pathway-closing'); if (box) renderEv(box); });
   }
-  fetch(new URL('transplant/assets/pathway-sections.json?v=20261030-docs2', root)).then(r => r.ok ? r.json() : null).then(j => {
+  fetch(new URL('transplant/assets/pathway-sections.json?v=20261102-review1', root)).then(r => r.ok ? r.json() : null).then(j => {
     data = j && j.pathways[slug];
     if (!data) return;
     const app = document.getElementById('app');

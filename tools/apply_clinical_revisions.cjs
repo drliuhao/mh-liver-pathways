@@ -50,6 +50,15 @@ function applyOne(data, rev) {
     hr.sources[s.key] = s;
   }
   for (const e of rev.edits || []) {
+    // Exact structural replacements preserve the pinned baseline and record every clinical delta.
+    if (e.op === 'replace_value') {
+      let holder = data;
+      for (const key of e.path.slice(0, -1)) holder = holder[key];
+      const key = e.path[e.path.length - 1];
+      if (JSON.stringify(holder[key]) !== JSON.stringify(e.old)) throw new Error(`${label}: old value differs at ${e.path.join('.')}`);
+      holder[key] = JSON.parse(JSON.stringify(e.new));
+      continue;
+    }
     if (e.op === 'add_review') {
       const list = hr.pathways[e.pathway].reviews;
       if (list.some(r => r.id === e.review.id)) throw new Error(`${label}: ${e.review.id} already present`);

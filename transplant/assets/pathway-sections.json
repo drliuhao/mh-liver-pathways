@@ -953,7 +953,7 @@
      ],
      "summary": {
       "lead": "LT vs non-transplant therapy after downstaging",
-      "text": "5-yr OS 77.5% vs 31.2% (HR 0.22, 95% CI 0.08-0.61); tumour-event-free survival 76.8% vs 18.3%; 45 randomised responders"
+      "text": "5-y OS 77.5% vs 31.2% (published HR 0.32, 95% CI 0.11–0.92); tumor-event-free survival 76.8% vs 18.3%; 45 randomized responders"
      },
      "appraisal": {
       "cited": "High-risk pathway document, reference V16-5",
@@ -1357,15 +1357,15 @@
      "pmid": "41763363",
      "doi": "10.1016/j.jhep.2026.02.019",
      "summary": {
-      "lead": "Prospective phase II · 16 of 61 atezolizumab–bevacizumab responders",
-      "text": "Two-year recipient OS 94%, RFS 90%; one recurrence; acute rejection 4/16 (25%); retransplant 2/16; ninety-day morbidity 62.5%"
+      "lead": "61 treated; 16 selected responders listed and transplanted",
+      "text": "Selected recipient subset: 2-y OS 94% from listing; death-censored recurrence-free estimate 90%; rejection 4/16 (25%); retransplant 2/16"
      },
      "appraisal": {
       "cited": "Standard pathway document, reference V16-46; High-risk pathway document, reference V16-35",
-      "scope": "Prospective phase II experience: 61 potentially eligible atezolizumab–bevacizumab-treated patients; 16 enrolled/listed/transplanted responders.",
-      "results": "Median washout 57.5 days (IQR 29–87), median follow-up 16 months. Acute rejection 4/16 (25%); three irAEs. Ninety-day morbidity 62.5%, mortality 1/16. Explants: ten complete and six partial responses; one recurrence. Two-year recipient OS 94%, RFS 90%.",
-      "limitations": "These are selected-16 outcomes, not 61-patient ITT efficacy. Small, nonrandomized, short follow-up; a shorter median washout does not establish safety. Retransplantation count was not independently extractable from accessible primary text and is not asserted.",
-      "locator": "Published abstract plus accessible publisher Results, PMID 41763363; full PDF needed for eligibility, flow and adverse-event denominators."
+      "scope": "Prospective single-centre observational cohort: 61 potentially eligible patients treated with atezolizumab–bevacizumab; 16 selected responders were enrolled, listed and transplanted.",
+      "results": "Median washout 57.5 days (IQR 29–87), median follow-up 16 months. Four biopsy-confirmed acute rejections (25%); three irAEs. Ninety-day morbidity 10/16 and mortality 1/16; two retransplants. Explants: ten complete and six partial responses; one recurrence. Reported two-year OS 94% (95% CI 67–100) and recurrence-free estimate 90% (62–98) in the 16 recipients; Methods start both clocks at listing and censor death for recurrence, so the latter is not conventional recurrence-or-death RFS.",
+      "limitations": "Selected-16 outcomes, not efficacy among all 61 treated patients. Small, observational cohort with short follow-up. A shorter median washout does not establish safety. The fatal course included graft dysfunction, rejection, sepsis and retransplantation; graft loss should not all be attributed to rejection. Supplement and mechanistic analyses were not fully reviewed.",
+      "locator": "J Hepatol2026;85:117–129. PMID41763363. PDF pp3–5 selection, flow and endpoint definitions; Figures1–3; p8 safety; Table2. Targeted main clinical read; supplement not reviewed."
      }
     },
     {
@@ -2559,6 +2559,29 @@
      }
     },
     {
+     "key": "H-aasld",
+     "keys": [
+      "H-aasld"
+     ],
+     "tag": "AASLD · HCC",
+     "cit": "AASLD Practice Guidance: prevention, diagnosis, and treatment of HCC. 2023 · diagnosis pp.11–13; resection pp.15–18; transplant pp.19–23 (PDF pages)",
+     "group": "Guidelines & consensus",
+     "pmid": "37199193",
+     "access": [
+      {
+       "label": "Full PDF",
+       "url": "https://doi.org/10.1097/HEP.0000000000000466"
+      }
+     ],
+     "summary": {
+      "lead": "Guideline · AASLD practice guidance 2023",
+      "text": "Resect Child-Pugh A without portal hypertension; transplant early HCC with CSPH or decompensation; downstaging to Milan qualifies (AFP >1000 must fall <500)"
+     },
+     "appraisal": {
+      "note": "The transplant/diagnostic sections are cited here. Systemic treatment updates belong in the linked cancer roadmap, not this transplant checklist."
+     }
+    },
+    {
      "key": "pcca_ahpba2015",
      "keys": [
       "pcca_ahpba2015"
@@ -2997,14 +3020,14 @@
      ],
      "summary": {
       "lead": "Multicentre retrospective · 41 LT vs 191 curative-intent resections",
-      "text": "5-y OS 64% after LT vs 18% after resection; restricted to non-PSC, <3 cm, node-negative: 54% vs 29% (p=.03), ITT 41% vs 27%"
+      "text": "Recipient 5-y OS 64% LT vs 18% resection; restricted non-PSC, <3 cm, node-negative comparison 54% vs 29% (P=.03)"
      },
      "appraisal": {
       "cited": "Standard pathway document, reference V16-5; High-risk pathway document, reference V16-12",
       "scope": "Multicenter 2000–2015; 234 attempted resections and 70 entered LT protocols; 191 curative-intent resections and 41 confirmed-CCA LT in recipient analysis.",
-      "results": "Recipient 3-/5-year OS 72%/64% LT versus 33%/18% resection. Restricted non-PSC,<3 cm, node-negative comparison favored LT at 5 years 54% vs 29%(p=.03); adjusted/restricted ITT comparison remained significant (p=.049).",
-      "limitations": "Conflicting observational evidence versus Dong; major selection/era/therapy confounding. Exact ITT exclusions and time origin require full-PDF recheck; no unsupported ITT rate is reproduced here.",
-      "locator": "Ann Surg 2018; 267: 797–805; primary abstract and indexed Results/Discussion."
+      "results": "Recipient 3-/5-year OS was 72%/64% after LT versus 33%/18% after resection. In the restricted non-PSC comparison against resection for <3 cm, node-negative disease, five-year OS was 54% versus 29% (log-rank P=.03). The restricted intention-to-treat comparison was also significant (log-rank P=.049); this was not a multivariable-adjusted treatment effect.",
+      "limitations": "Observational comparison with major selection, PSC, treatment and era differences. Recipient OS starts at surgery. Intention-to-treat OS starts at surgery for attempted resection, but at protocol initiation for LT. Four LT-protocol entrants lacked initiation dates and were excluded from the ITT analysis (66 of 70 analyzed). Restricted analyses do not establish LT superiority for all resectable pCCA.",
+      "locator": "Ethun 2018, Ann Surg267:797–805. Targeted full-text read: p798 Methods/time origins; p799 ITT exclusions and restricted log-rank; p800 Table1. B26/R6 saved primary text29064885.txt."
      }
     },
     {
@@ -3533,7 +3556,7 @@
      ],
      "summary": {
       "lead": "LT vs non-transplant therapy after downstaging",
-      "text": "5-yr OS 77.5% vs 31.2% (HR 0.22, 95% CI 0.08-0.61); tumour-event-free survival 76.8% vs 18.3%; 45 randomised responders"
+      "text": "5-y OS 77.5% vs 31.2% (published HR 0.32, 95% CI 0.11–0.92); tumor-event-free survival 76.8% vs 18.3%; 45 randomized responders"
      },
      "appraisal": {
       "cited": "High-risk pathway document, reference V16-31"
@@ -4210,6 +4233,30 @@
      }
     },
     {
+     "key": "H-aasld",
+     "keys": [
+      "H-aasld"
+     ],
+     "tag": "AASLD · HCC",
+     "cit": "AASLD Practice Guidance: prevention, diagnosis, and treatment of HCC. 2023 · diagnosis pp.11–13; resection pp.15–18; transplant pp.19–23 (PDF pages)",
+     "group": "Guidelines & consensus",
+     "pmid": "37199193",
+     "access": [
+      {
+       "label": "Full PDF",
+       "url": "https://doi.org/10.1097/HEP.0000000000000466"
+      }
+     ],
+     "summary": {
+      "lead": "Guideline · AASLD practice guidance 2023",
+      "text": "Resect Child-Pugh A without portal hypertension; transplant early HCC with CSPH or decompensation; downstaging to Milan qualifies (AFP >1000 must fall <500)"
+     },
+     "appraisal": {
+      "cited": "Standard pathway document, reference V16-14",
+      "note": "The transplant/diagnostic sections are cited here. Systemic treatment updates belong in the linked cancer roadmap, not this transplant checklist."
+     }
+    },
+    {
      "key": "ilts",
      "keys": [
       "ilts"
@@ -4257,30 +4304,6 @@
      },
      "appraisal": {
       "cited": "Standard pathway document, reference V16-4; High-risk pathway document, reference V16-10"
-     }
-    },
-    {
-     "key": "H-aasld",
-     "keys": [
-      "H-aasld"
-     ],
-     "tag": "AASLD · HCC",
-     "cit": "AASLD Practice Guidance: prevention, diagnosis, and treatment of HCC. 2023 · diagnosis pp.11–13; resection pp.15–18; transplant pp.19–23 (PDF pages)",
-     "group": "Guidelines & consensus",
-     "pmid": "37199193",
-     "access": [
-      {
-       "label": "Full PDF",
-       "url": "https://doi.org/10.1097/HEP.0000000000000466"
-      }
-     ],
-     "summary": {
-      "lead": "Guideline · AASLD practice guidance 2023",
-      "text": "Resect Child-Pugh A without portal hypertension; transplant early HCC with CSPH or decompensation; downstaging to Milan qualifies (AFP >1000 must fall <500)"
-     },
-     "appraisal": {
-      "cited": "Standard pathway document, reference V16-14",
-      "note": "The transplant/diagnostic sections are cited here. Systemic treatment updates belong in the linked cancer roadmap, not this transplant checklist."
      }
     },
     {
@@ -5149,7 +5172,7 @@
      ],
      "summary": {
       "lead": "LT vs non-transplant therapy after downstaging",
-      "text": "5-yr OS 77.5% vs 31.2% (HR 0.22, 95% CI 0.08-0.61); tumour-event-free survival 76.8% vs 18.3%; 45 randomised responders"
+      "text": "5-y OS 77.5% vs 31.2% (published HR 0.32, 95% CI 0.11–0.92); tumor-event-free survival 76.8% vs 18.3%; 45 randomized responders"
      },
      "appraisal": {
       "cited": "High-risk pathway document, reference V16-31"
@@ -5741,6 +5764,29 @@
      }
     },
     {
+     "key": "H-aasld",
+     "keys": [
+      "H-aasld"
+     ],
+     "tag": "AASLD · HCC",
+     "cit": "AASLD Practice Guidance: prevention, diagnosis, and treatment of HCC. 2023 · diagnosis pp.11–13; resection pp.15–18; transplant pp.19–23 (PDF pages)",
+     "group": "Guidelines & consensus",
+     "pmid": "37199193",
+     "access": [
+      {
+       "label": "Full PDF",
+       "url": "https://doi.org/10.1097/HEP.0000000000000466"
+      }
+     ],
+     "summary": {
+      "lead": "Guideline · AASLD practice guidance 2023",
+      "text": "Resect Child-Pugh A without portal hypertension; transplant early HCC with CSPH or decompensation; downstaging to Milan qualifies (AFP >1000 must fall <500)"
+     },
+     "appraisal": {
+      "note": "The transplant/diagnostic sections are cited here. Systemic treatment updates belong in the linked cancer roadmap, not this transplant checklist."
+     }
+    },
+    {
      "key": "cirse",
      "keys": [
       "cirse"
@@ -5892,7 +5938,7 @@
       "cited": "Standard pathway document, reference V16-3; High-risk pathway document, reference V16-3",
       "note": "Trial selection and outcomes support a selected permanently unresectable population; trial eligibility is not interchangeable with NLRB guidance.",
       "scope": "Multicentre open-label randomized trial, 20 European centres, 157 screened and 94 randomized (47 LT-plus-chemotherapy, 47 chemotherapy); 63 screened excluded, including 13 with equivocal unresectability and 36 with progression.",
-      "results": "Primary time origin was randomization. Median follow-up 59.3 months. Five-year ITT OS was 56.6% versus 12.6% (HR 0.37, 95% CI 0.21–0.65); per-protocol OS 73.3% versus 9.3%. Of 47 assigned LT, 38 received LT and 36 were per-protocol; nine had progression-related exclusion/dropout. The control arm included seven subsequent resections and two LT crossovers. Safety population comprised 40 grafted patients. Among 36 per-protocol LT recipients, 26 recurred; 19/26 received chemotherapy and 12/26 local curative-intent treatment. Median per-protocol PFS was 17.4 versus 6.4 months, and secondary PFS after salvage was 35.4 months in the LT arm. Three of 36 per-protocol recipients required retransplantation (primary nonfunction, donor gallbladder cancer, caval obstruction/large-for-size); one postoperative death was reported. Serious adverse events occurred in 32/40 safety LT recipients. Median wait to LT was 50.5 days, which limits transfer to longer-wait systems.",
+      "results": "Primary time origin was randomization. Median follow-up 59.3 months. Five-year ITT OS was 56.6% versus 12.6% (HR 0.37, 95% CI 0.21–0.65); per-protocol OS 73.3% versus 9.3%. Of 47 assigned LT, 38 received LT and 36 were per-protocol; nine were not transplanted (five progressed while waiting, three had extrahepatic disease at laparotomy, one had prostate cancer). The control arm included seven resections and two transplants outside protocol; crossover was not allowed. Safety population comprised 40 grafted patients. Among 36 per-protocol LT recipients, 26 recurred; 19/26 received chemotherapy and 12/26 local curative-intent treatment. Median per-protocol PFS was 17.4 versus 6.4 months (recurrence after LT versus RECIST progression on chemotherapy; PET surveillance differed by arm), and secondary PFS after salvage was 35.4 months in the LT arm. Three of 36 per-protocol recipients required retransplantation (primary nonfunction, donor gallbladder cancer, caval obstruction/large-for-size); one postoperative death was reported. Serious adverse events occurred in 32/40 safety LT recipients. Median wait to LT was 50.5 days, which limits transfer to longer-wait systems.",
       "limitations": "Strong evidence for the selected trial population, not for BRAF-mutant, ECOG 2, active extrahepatic, truly NED, resectable or broadly expanded disease. PP survival conditions on reaching treatment and must not replace ITT. The Results recurrence denominator is 26/36; Figure 3 caption says 28 recurrences, consistent with a broader all-grafted report, so do not mix these denominators. QoL collection had only 55/74 per-protocol baseline questionnaires and is descriptive, not proof of a large QoL gain. Priority allocation and rapid access were part of the treatment strategy.",
       "locator": "Lancet 2024;404:1107–1118. PDF pp.2–4 eligibility/committee; pp.5–6 trial flow/Table 1; pp.8–9 recurrence, safety, retransplantation, Figure 3; p.10 QoL/limitations."
      }
@@ -6218,14 +6264,14 @@
      "doi": "10.1200/CCI.23.00111",
      "summary": {
       "lead": "Observational resection/LT series · 52 with ctDNA, nine paired",
-      "text": "All nine paired patients ctDNA-positive before surgery, three still positive after; of four LT recipients with paired tests, three cleared and none recurred"
+      "text": "Nine paired samples: all ctDNA-positive before surgery, three remained positive. Recurrence association was after resection, not LT"
      },
      "appraisal": {
       "cited": "Standard pathway document, reference V16-22; High-risk pathway document, reference V16-17",
-      "scope": "Observational mixed resection/LT cohort, 52 patients with ctDNA data, 34 preoperative and 18 postoperative tests; only nine paired samples. Abstract-only verification.",
-      "results": "All nine paired patients were ctDNA-positive preoperatively; three remained positive postoperatively. Abstract reports postoperative recurrence 57% versus 0% by ctDNA status (P=0.0419).",
-      "limitations": "Small numbers, mixed operations, incomplete pairs, possible overlap with other centre cohorts and no strategy comparison. Association supports research and risk discussion, not mandatory negative ctDNA, empirical treatment until negative, or declaring cure from a negative result.",
-      "locator": "JCO Clin Cancer Inform 2023;7:e2300111; PubMed PMID37820293 abstract only."
+      "scope": "Observational mixed liver-resection/LT cohort: 52 patients with ctDNA data, 34 assessed preoperatively and 18 postoperatively, with nine sequential pre-/postoperative pairs. The paired cohort includes both operations.",
+      "results": "All nine sequentially tested patients were ctDNA-positive before surgery; three remained positive afterward. The reported 57% versus 0% recurrence association (P=.0419) concerns recurrence after liver resection, not a transplant-specific recurrence comparison.",
+      "limitations": "Small heterogeneous cohort with variable testing and incomplete pairs; no ctDNA-directed allocation or transplant strategy trial. The Results recurrence denominators (14 positive plus six negative) do not reconcile cleanly with the 18 postoperative patients in the abstract/Table1; this needs clarification. Do not infer a mandatory negative-ctDNA selection rule, benefit from empirical treatment until negative, or cure from a negative test.",
+      "locator": "Wehrle2023 JCO Clin Cancer Inform7:e2300111, PMID37820293. Targeted primary full-text Methods/Results, Table1, Table2, Figure1 and Discussion (PDF pp2–6); original B26/R6/_txt/C_37820293.txt."
      }
     },
     {
@@ -6688,7 +6734,7 @@
      ],
      "summary": {
       "lead": "LT vs non-transplant therapy after downstaging",
-      "text": "5-yr OS 77.5% vs 31.2% (HR 0.22, 95% CI 0.08-0.61); tumour-event-free survival 76.8% vs 18.3%; 45 randomised responders"
+      "text": "5-y OS 77.5% vs 31.2% (published HR 0.32, 95% CI 0.11–0.92); tumor-event-free survival 76.8% vs 18.3%; 45 randomized responders"
      },
      "appraisal": {
       "cited": "High-risk pathway document, reference V16-27"
@@ -7250,6 +7296,29 @@
      "summary": {
       "lead": "",
       "text": "NCI fact sheet on palliative care in cancer; supports each pathway's best supportive care plan and that palliative care can accompany treatment."
+     }
+    },
+    {
+     "key": "H-aasld",
+     "keys": [
+      "H-aasld"
+     ],
+     "tag": "AASLD · HCC",
+     "cit": "AASLD Practice Guidance: prevention, diagnosis, and treatment of HCC. 2023 · diagnosis pp.11–13; resection pp.15–18; transplant pp.19–23 (PDF pages)",
+     "group": "Guidelines & consensus",
+     "pmid": "37199193",
+     "access": [
+      {
+       "label": "Full PDF",
+       "url": "https://doi.org/10.1097/HEP.0000000000000466"
+      }
+     ],
+     "summary": {
+      "lead": "Guideline · AASLD practice guidance 2023",
+      "text": "Resect Child-Pugh A without portal hypertension; transplant early HCC with CSPH or decompensation; downstaging to Milan qualifies (AFP >1000 must fall <500)"
+     },
+     "appraisal": {
+      "note": "The transplant/diagnostic sections are cited here. Systemic treatment updates belong in the linked cancer roadmap, not this transplant checklist."
      }
     },
     {
@@ -7991,7 +8060,7 @@
      ],
      "summary": {
       "lead": "LT vs non-transplant therapy after downstaging",
-      "text": "5-yr OS 77.5% vs 31.2% (HR 0.22, 95% CI 0.08-0.61); tumour-event-free survival 76.8% vs 18.3%; 45 randomised responders"
+      "text": "5-y OS 77.5% vs 31.2% (published HR 0.32, 95% CI 0.11–0.92); tumor-event-free survival 76.8% vs 18.3%; 45 randomized responders"
      },
      "appraisal": {
       "cited": "High-risk pathway document, reference V16-23"
@@ -8426,6 +8495,29 @@
      "summary": {
       "lead": "",
       "text": "NCI fact sheet on palliative care in cancer; supports each pathway's best supportive care plan and that palliative care can accompany treatment."
+     }
+    },
+    {
+     "key": "H-aasld",
+     "keys": [
+      "H-aasld"
+     ],
+     "tag": "AASLD · HCC",
+     "cit": "AASLD Practice Guidance: prevention, diagnosis, and treatment of HCC. 2023 · diagnosis pp.11–13; resection pp.15–18; transplant pp.19–23 (PDF pages)",
+     "group": "Guidelines & consensus",
+     "pmid": "37199193",
+     "access": [
+      {
+       "label": "Full PDF",
+       "url": "https://doi.org/10.1097/HEP.0000000000000466"
+      }
+     ],
+     "summary": {
+      "lead": "Guideline · AASLD practice guidance 2023",
+      "text": "Resect Child-Pugh A without portal hypertension; transplant early HCC with CSPH or decompensation; downstaging to Milan qualifies (AFP >1000 must fall <500)"
+     },
+     "appraisal": {
+      "note": "The transplant/diagnostic sections are cited here. Systemic treatment updates belong in the linked cancer roadmap, not this transplant checklist."
      }
     },
     {
@@ -9062,6 +9154,29 @@
       "results": "Six-month observation in suitable women; ≥5 cm or growth prompts resection. LT is not routine for multiple adenomas; underlying liver disease can alter consideration.",
       "limitations": "Older clinical guidance is narrower than current NLRB alternative exception routes. A resection threshold is not an LT threshold.",
       "locator": "HCA recommendations and multiple-HCA discussion, PDF pp9–10."
+     }
+    },
+    {
+     "key": "H-aasld",
+     "keys": [
+      "H-aasld"
+     ],
+     "tag": "AASLD · HCC",
+     "cit": "AASLD Practice Guidance: prevention, diagnosis, and treatment of HCC. 2023 · diagnosis pp.11–13; resection pp.15–18; transplant pp.19–23 (PDF pages)",
+     "group": "Guidelines & consensus",
+     "pmid": "37199193",
+     "access": [
+      {
+       "label": "Full PDF",
+       "url": "https://doi.org/10.1097/HEP.0000000000000466"
+      }
+     ],
+     "summary": {
+      "lead": "Guideline · AASLD practice guidance 2023",
+      "text": "Resect Child-Pugh A without portal hypertension; transplant early HCC with CSPH or decompensation; downstaging to Milan qualifies (AFP >1000 must fall <500)"
+     },
+     "appraisal": {
+      "note": "The transplant/diagnostic sections are cited here. Systemic treatment updates belong in the linked cancer roadmap, not this transplant checklist."
      }
     },
     {

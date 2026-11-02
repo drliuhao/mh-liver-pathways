@@ -1,0 +1,42 @@
+{
+  "id": "2026-11-02-transplant-validation",
+  "date": "2026-11-02",
+  "summary": "Correct new HCA recipient-resource destination after route validation.",
+  "edits": [
+    {
+      "op": "replace_value",
+      "path": [
+        "care",
+        "hca",
+        3,
+        "actions"
+      ],
+      "old": [
+        {
+          "label": "Return to the transplant follow-up plan",
+          "detail": "Preserve graft and immunosuppression context.",
+          "step": null,
+          "care": "follow-up",
+          "url": null
+        },
+        {
+          "label": "Supportive care alongside tumor treatment",
+          "detail": "When symptom support is needed or tumor-directed treatment is unsuitable.",
+          "step": null,
+          "care": "supportive",
+          "url": null
+        }
+      ],
+      "new": [
+        {
+          "label": "Return to the transplant follow-up plan",
+          "detail": "Preserve graft and immunosuppression context.",
+          "step": null,
+          "care": "follow-up",
+          "url": null
+        }
+      ]
+    }
+  ],
+  "files": []
+}

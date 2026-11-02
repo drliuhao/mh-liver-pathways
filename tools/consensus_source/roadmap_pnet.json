@@ -241,7 +241,7 @@
    "divergence": "No source assigns ownership; the cohorts show that unowned or poorly kept surveillance drifts into operations driven by preference and anxiety rather than growth.",
    "proposal": "Every observation decision names one owner, one date and one imaging modality in the board output, plus contrast agent, interval and the finding that triggers resection; observed patients return to the referring clinician with a written schedule and are surveilled no less carefully than resected ones. The response to a missed scan is not specified.",
    "proposal_locator": "Gate 4 · Avoid 'Do not let an observation decision be made without naming who owns the next scan…'; Operations · board meeting · Output and Referring relationships; Gate 9 · Avoid 'Do not surveil an observed primary less carefully…'",
-   "rationale": "Not an evidence question. The entire safety case for observation rests on detecting growth, and in ASPEN patient preference and centre preference together accounted for 84% of the stated indications for surgery, with anxiety independently associated with operating. Unowned surveillance converts into an unplanned operation.",
+   "rationale": "Not an evidence question. The entire safety case for observation rests on detecting growth, and in ASPEN preference accounted for many upfront operations; crossover from surveillance was mostly prompted by progression, so preference must not be described as the cause of most surveillance failures. Unowned surveillance converts into an unplanned operation.",
    "audit": "Audit: surveillance adherence for observed primaries, and the stated indication for every crossover to surgery."
   },
   {
@@ -364,7 +364,7 @@
    "divergence": "NANETS and the MEN1 recommendations do not require tissue while ENETS 2023 asks for it under 2 cm, no outcome evidence separates them, and cytology under-grades while observation without tissue leaves grade unknown.",
    "proposal": "Biopsy is not obligatory to observe a sub-centimetre lesion with a characteristic phenotype when surveillance is planned whatever the grade (Reasonable, grade D); obtain tissue when the diagnosis is in doubt, grade would change the plan, or a 1–2 cm observe-or-resect decision is live, treating needle grade as a floor. One programme answer is pending.",
    "proposal_locator": "Gate 1 · Reasonable 'Biopsy is not obligatory…' · pref and caveat; Gate 1 · Standard 'Treat a grade obtained from a needle biopsy as a floor…'; What we are not sure about #14",
-   "rationale": "NANETS says biopsy is not routinely necessary before deciding to observe a sub-centimetre lesion with a characteristic imaging phenotype. ENETS 2023, read in full, says a suspected nonfunctioning tumour under 2 cm with positive receptor imaging should be confirmed histologically or cytologically where possible (level 3, grade B). The 2025 MEN1 recommendations find no role for routine EUS-guided biopsy in that syndrome. There is no outcome evidence separating the three, and both options carry a real cost: EUS-FNA cytology called 71% of histological G2 tumours G1, while two thirds of ASPEN's surveillance arm had no evaluable histology at all. The programme needs one answer, and a stated reason.",
+   "rationale": "NANETS says biopsy is not routinely necessary before deciding to observe a sub-centimetre lesion with a characteristic imaging phenotype. ENETS 2023, read in full, says a suspected nonfunctioning tumour under 2 cm with positive receptor imaging should be confirmed histologically or cytologically where possible (level 3, grade B). The 2025 MEN1 recommendations find no role for routine EUS-guided biopsy in that syndrome. There is no outcome evidence separating the three, and both options carry a real cost: EUS-FNA cytology called 71% of histological G2 tumours G1, while 215 of 406 ASPEN surveillance patients (53%) had no evaluable cytological grade. The programme needs one answer, and a stated reason.",
    "audit": "Registry: for every observed lesion, whether tissue was obtained, by what route, the cytological grade where available, and the resection grade in every patient who later crossed over."
   },
   {
@@ -506,14 +506,14 @@
     {
      "source": "NETPET validation",
      "ref": "36434154",
-     "position": "319 patients: score independently predicted survival alongside grade. Roadmap critique: metastatic or unresectable disease, about a third pancreatic, partly the derivation centres, treatment not modelled, no treatment threshold.",
+     "position": "319 metastatic GEP-NEN patients: score independently predicted survival alongside grade. About a third had pancreatic primaries; earlier-series overlap is unquantified, treatment was not adjusted for, and no localized-primary treatment threshold was established.",
      "locator": "Gate 2 · Reasonable 'Where a G2 or higher tumour has had both…' · pref and caveat; What we are not sure about #15"
     }
    ],
    "divergence": "The standard and the NETPET cohorts support prognostic value, but all evidence comes from metastatic or unresectable disease and no source says what a discordant result should change in a localised primary.",
    "proposal": "Gate 2 staging already lists FDG-PET for G2 or higher tumours and receptor PET where it would change the plan. Report the pair together (Reasonable, grade D) but never use the combined score to decide an operation on a localised primary; acting on a discordant result goes beyond published evidence and must be stated and recorded.",
    "proposal_locator": "Gate 2 · criteria; Gate 2 · Reasonable 'Where a G2 or higher tumour has had both a receptor PET and an FDG-PET…' · caveat; What we are not sure about #15; Decisions table #15 · why",
-   "rationale": "FDG positivity is not rare in G1 and G2 disease and predicts progression and prognosis more strongly than grade on the SNMMI/EANM standard's own reading, and the combined score independently predicted survival in a 319-patient cohort. But both score cohorts were metastatic or unresectable, only about a third of patients had pancreatic primaries, treatment was not modelled, and the score carries no treatment threshold. If the pair is obtained and nothing is done differently, it is a cost; if something is done differently, the programme is acting beyond any published evidence and should say so and record it.",
+   "rationale": "The dual-tracer score is prognostic in metastatic or unresectable GEP-NEN, with only about a third pancreatic primaries and no validated threshold for treating a localized primary. Treatment was not adjusted for; SSTR-positive P1–P4 patients may receive PRRT. Define the selected clinical question, biopsy implications and intended management change before adding FDG imaging.",
    "audit": "Registry: receptor and FDG status at diagnosis for every localised tumour of G2 or higher, the decision taken, and the resection pathology against both."
   }
  ]

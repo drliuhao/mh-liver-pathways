@@ -13,16 +13,16 @@
    "name": "0 · Obtain adequate staging imaging",
    "req": "all",
    "crit": [
-    "Pancreas-protocol multiphase CT with a pancreatic parenchymal phase at 40–50 seconds and a portal venous phase at 65–70 seconds",
-    "Chest and pelvis CT in the same episode, for complete staging",
-    "CA 19-9 and liver function drawn after biliary decompression, not before",
-    "Genetic counselling and germline testing offered to every patient, whatever the stage",
-    "High-quality imaging no more than 4 weeks old at the time of the operation"
+    "High-quality pancreas-protocol contrast CT (preferred) or contrast MRI adequate to assess the primary, vessels and liver",
+    "Chest imaging and appropriate abdomen/pelvis assessment to complete staging",
+    "Liver tests and CA 19-9 interpreted with bilirubin; when drainage is indicated, reassess CA 19-9 after decompression",
+    "Germline testing offered for confirmed pancreatic cancer in parallel with care; an unfinished result does not prevent initial review",
+    "Before planned surgery, review whether imaging remains current; acquisition within four weeks is preferred, not an absolute prerequisite for initial assessment"
    ],
    "ask": "Is pancreatic-protocol imaging adequate for staging and treatment planning?",
    "standard": [
     {
-     "t": "Repeat the scan as a pancreas-protocol CT if the one in front of you is not one — a non-protocol CT is not a staging study.",
+     "t": "Obtain adequate pancreas-protocol cross-sectional imaging when the referral study cannot stage the tumour: contrast CT is preferred, and high-quality contrast MRI is an accepted alternative.",
      "l": "Standard",
      "g": "C",
      "refs": [
@@ -30,7 +30,7 @@
      ],
      "pref": "Every patient referred with an outside scan. NCCN reports that re-imaging patients who arrived with a non-pancreas-protocol CT changed the stage and the management in 56% of cases at a single institution, and that where CT showed a resectable tumour 70% to 85% of patients went on to resection. Both figures are NCCN's citation of single-institution series and are not in the reporting-template paper this item is referenced to.",
      "avoid": "Do not accept thick sections, positive oral contrast or a single post-contrast phase. Neutral oral contrast only, because positive contrast degrades the 3D and maximum-intensity-projection reformats that show the vessels. Sections as thin as the scanner allows, under 3 mm and preferably submillimetre, reconstructed at 2–3 mm with multiplanar reformats.",
-     "note": "Accuracy decays with time because the disease moves: NCCN sets an outer limit of 4 weeks between the staging CT and the operation. Sensitivity for small hepatic and peritoneal deposits is limited however good the protocol is, and protocol quality is not the whole of the problem — in SWOG S1505, 43 of 146 patients centrally reviewed (29%) did not meet the trial's own resectability criteria, 51% of them for arterial interface and 65% for suspicion of distant disease, and adding a mandatory site radiologist checklist moved that only from 33% to 26%. [EXPERTISE]"
+     "note": "Accuracy decays with time because the disease moves: NCCN prefers imaging within four weeks of surgery; reassess timing in context rather than using it as an absolute initial-review exclusion. Sensitivity for small hepatic and peritoneal deposits is limited however good the protocol is, and protocol quality is not the whole of the problem — in SWOG S1505, 43 of 146 patients centrally reviewed (29%) did not meet the trial's own resectability criteria, 51% of them for arterial interface and 65% for suspicion of distant disease, and adding a mandatory site radiologist checklist moved that only from 33% to 26%. [EXPERTISE]"
     },
     {
      "t": "Report it against the Society of Abdominal Radiology and American Pancreatic Association template, in degrees of vessel contact — not in adjectives.",
@@ -58,7 +58,7 @@
      "t": "Treat CA 19-9 as a baseline measurement whose value depends on the bilirubin and the patient's Lewis antigen status, not as a diagnostic test.",
      "l": "Standard",
      "g": "C",
-     "pref": "Draw it once the biliary tree is decompressed and record the bilirubin alongside it, so the number can be compared with later ones. It is most useful as a trajectory under treatment and as one of the three response metrics after neoadjuvant therapy.",
+     "pref": "Measure baseline CA 19-9 with the bilirubin recorded. If drainage is indicated, prefer reassessment after adequate decompression and improvement in bilirubin. A predrainage value may still be obtained, with its limited interpretation documented. Use serial values alongside imaging and clinical response.",
      "avoid": "An elevated CA 19-9 does not indicate cancer or advanced disease — it rises with biliary obstruction, cholangitis and benign or malignant inflammation. It is undetectable in Lewis-antigen-negative individuals, in whom NCCN suggests obtaining CEA and CA-125 instead.",
      "note": "NCCN grades surveillance CA 19-9 after resection as category 2B, and states there are no data that a rising marker leads to earlier intervention or better outcomes. Treat the two uses — baseline and surveillance — as separate questions. The one place CA 19-9 has randomised-adjacent support is as a response measure: ESMO's 2023 guideline cites a pooled analysis of 17 studies and 2,242 patients in which a fall of more than 50% or normalisation after neoadjuvant treatment was associated with better overall survival (P<0.0001).",
      "refs": [
@@ -68,11 +68,11 @@
    ],
    "alt": [
     {
-     "t": "Pancreas-protocol MRI with contrast as an adjunct to CT, not a replacement for it.",
+     "t": "Use high-quality pancreas-protocol contrast MRI as an alternative to CT when appropriate, and as a problem-solving study for indeterminate findings.",
      "l": "Reasonable",
      "g": "C",
      "pref": "Three situations: a CT-indeterminate liver lesion, a suspected tumour not visible on CT (the isoattenuating tumour, which the template asks to be reported as non-measurable), and iodinated contrast allergy. The protocol is axial T2 single-shot fast spin echo, in- and opposed-phase gradient echo, fat-suppressed T2, diffusion-weighted imaging, dynamic post-contrast 3D fat-suppressed gradient echo in pancreatic, portal venous and equilibrium phases at 2–3 mm, and coronal MRCP under 3 mm.",
-     "avoid": "Do not substitute MRI for the arterial and venous assessment the pancreas-protocol CT provides, and do not read unenhanced MRI as a staging study — NCCN reserves it for renal failure or a gadolinium contraindication when enhanced CT also cannot be obtained."
+     "avoid": "Ensure the MRI adequately assesses arterial and venous relationships and distant disease. If both iodinated and gadolinium contrast are contraindicated, individualize noncontrast imaging and supplementary assessment with radiology."
     },
     {
      "t": "FDG-PET/CT or PET/MRI after the pancreas-protocol CT in patients with high-risk features, to look for extrapancreatic metastases.",
@@ -219,7 +219,7 @@
      "note": "In metastatic disease, obtaining enough tissue for sequencing is part of the indication, not an afterthought. The seeding argument for EUS over the percutaneous route is NCCN's wording — <i>potentially lower risk</i> — and is not a measured rate. [EXPERTISE]"
     },
     {
-     "t": "Where the patient is jaundiced and needs tissue, do the EUS needle biopsy and the ERCP for drainage in the same anaesthesia session.",
+     "t": "When a jaundiced patient needs both tissue sampling and biliary drainage, consider EUS biopsy and ERCP during the same anaesthesia session.",
      "l": "Standard",
      "g": "D",
      "pref": "Best practice per NCCN in obstructive jaundice. It saves a procedure, a sedation and usually a week.",
@@ -271,7 +271,7 @@
    ],
    "avoid": [
     {
-     "t": "Do not draw the baseline CA 19-9 in a jaundiced patient and then use it prognostically.",
+     "t": "Do not interpret a CA 19-9 measured during obstructive jaundice as an unconfounded tumour baseline.",
      "l": "Avoid",
      "g": "C",
      "pref": "Draw it after adequate biliary drainage, with liver function tests, and record the bilirubin beside it.",
@@ -702,19 +702,19 @@
        "g": "A",
        "when": "PRODIGE 24 / CCTG PA.6 (n=493) is the strongest adjuvant result in this disease and NCCN lists mFOLFIRINOX as a preferred adjuvant option for patients who had no neoadjuvant therapy. ESMO's 2023 guideline takes the same position for fit patients at [I, A], and recommends completing 6 months of adjuvant chemotherapy at [I, A].",
        "pref": "A recovered patient with good performance status. On the mature 5-year analysis, median disease-free survival 21.4 months (95% CI 17.5–26.7) versus 12.8 months (11.6–15.2) against gemcitabine, hazard ratio 0.66 (0.54–0.82), P<.001; median overall survival 53.5 months (43.5–58.4) versus 35.5 months (30.1–40.3), hazard ratio 0.68 (0.54–0.85), P=.001; 5-year overall survival 43.2% (36.5–49.7) versus 31.4% (25.5–37.5); metastasis-free survival 29.4 versus 17.7 months.",
-       "avoid": "The toxicity is the whole of the trade-off and must be said out loud: grade 3 or 4 adverse events in 180 of 237 (75.9%) versus 128 of 242 (52.9%), with the one treatment-related death in the <b>gemcitabine</b> arm. Delivery was poor — 67.2% completed all 12 cycles, only 33.6% achieved a relative dose intensity of 0.80 or more, and 55% discontinued oxaliplatin at least once — so adjuvant mFOLFIRINOX in practice means a dose-attenuated, incompletely delivered regimen. Eligibility was restricted to age 18 to 79, no coronary disease, WHO performance status 0 or 1, full recovery from surgery, a clear postoperative scan and a postoperative CA 19-9 below 180 U/mL, so these figures do not transfer to a patient who has not recovered from a pancreatoduodenectomy, and they are not the expectation for resected PDAC in general.",
+       "avoid": "The toxicity is the whole of the trade-off and must be said out loud: grade 3 or 4 adverse events in 180 of 237 (75.9%) versus 128 of 242 (52.9%), with the one treatment-related death in the <b>gemcitabine</b> arm. Delivery was poor — 67.2% completed all 12 cycles, only 33.6% achieved a relative dose intensity of 0.80 or more, and 55% discontinued oxaliplatin at least once — so adjuvant mFOLFIRINOX in practice means a dose-attenuated, incompletely delivered regimen. Eligibility was restricted to age 18 to 79, no symptomatic heart failure or coronary artery disease, WHO performance status 0 or 1, full recovery from surgery, a clear postoperative scan and a postoperative CA 19-9 of 180 U/mL or less, so these figures do not transfer to a patient who has not recovered from a pancreatoduodenectomy, and they are not the expectation for resected PDAC in general.",
        "refs": [
         "30575490",
         "36048453",
         "37678671"
        ],
-       "note": "Three things the 3-year report did not show. The effect attenuated with mature data, as early stopping for benefit at 91.8% of expected events predicts: the disease-free survival hazard ratio moved from 0.58 to 0.66, overall survival from 0.64 to 0.68, and the much-quoted 54.4-month median to 53.5 months. Most patients in both arms still relapse — 5-year disease-free survival differs by only 7.1 points (26.1% versus 19.0%) against 11.8 points at 5-year overall survival, so part of the survival gain accrues after relapse. And post-relapse survival was numerically <b>worse</b> in the mFOLFIRINOX arm (13.1 versus 15.0 months), with chemotherapy at relapse reaching 66.9% against 83.0% of relapsing control patients, 74.2% of whom received FOLFIRINOX — so the trial partly measures the benefit of giving the regimen early rather than at relapse. In the 101 patients aged 70 or older (20.5% of the trial) the disease-free survival benefit did not reach significance (HR 0.86, 95% CI 0.53–1.39). Quality of life was never collected."
+       "note": "Three things the 3-year report did not show. The effect attenuated with mature data, as early stopping for benefit at 91.8% of expected events predicts: the disease-free survival hazard ratio moved from 0.58 to 0.66, overall survival from 0.64 to 0.68, and the much-quoted 54.4-month median to 53.5 months. Most patients in both arms still relapse — 5-year disease-free survival differs by only 7.1 points (26.1% versus 19.0%) against 11.8 points at 5-year overall survival, so part of the survival gain accrues after relapse. And post-relapse survival was numerically <b>worse</b> in the mFOLFIRINOX arm (13.1 versus 15.0 months), with first-relapse chemotherapy given to 107/160 (66.9%) versus 151/182 (83.0%) relapsers. Among the 151 control-arm patients receiving chemotherapy, 112 (74.2%) received FOLFIRINOX; that is 61.5% of all 182 control-arm relapsers — so the trial partly measures the benefit of giving the regimen early rather than at relapse. In the 101 patients aged 70 or older (20.5% of the trial) the disease-free survival estimate was imprecise (HR 0.86, 95% CI 0.53–1.39). The mature overall-survival HR was 0.90 (0.56–1.46), with interaction P=.32; this does not demonstrate loss of benefit with age. Assess fitness and tolerance individually. Quality of life was never collected."
       },
       {
        "name": "Gemcitabine with capecitabine",
        "g": "A",
        "when": "NCCN's other preferred adjuvant option for patients who had no neoadjuvant therapy, and ESMO's alternative for patients over 75, ECOG performance status 2 or a contraindication to mFOLFIRINOX at [I, B]. ESPAC-4 (n=730 analysed) gave median overall survival 28.0 months (95% CI 23.5–31.5) versus 25.5 months (22.7–27.9) against gemcitabine monotherapy, hazard ratio 0.82 (0.68–0.98), stratified log-rank p=0.032.",
-       "pref": "A patient who wants adjuvant treatment but cannot take a triplet — poorer performance status, neuropathy, a slow recovery, or a preference against irinotecan and oxaliplatin. Its population is the least selected in the adjuvant literature: WHO performance status up to 2, R1 margins allowed and <b>no ceiling on postoperative CA 19-9</b>, which is why its medians sit below PRODIGE-24's and CONKO-001's.",
+       "pref": "A patient who wants adjuvant treatment but cannot take a triplet — poorer performance status, neuropathy, a slow recovery, or a preference against irinotecan and oxaliplatin. Its population is the least selected in the adjuvant literature: WHO performance status up to 2, R1 margins allowed and <b>no ceiling on postoperative CA 19-9</b>, These selection differences prevent ranking regimens by cross-trial survival medians.",
        "avoid": "Do not offer it as equivalent to mFOLFIRINOX, and state both halves. The comparator was gemcitabine alone, the two combinations have never been compared directly, and the difference in medians against gemcitabine was 2.5 months. The relapse-free survival endpoint was <b>negative</b> (13.9 versus 13.1 months, hazard ratio 0.86, 95% CI 0.73–1.02, p=0.082), the trial was stopped and published early at 458 of 480 target deaths on a signal of efficacy, and the widely quoted 5-year figures (28.8% versus 16.3%) are estimates extrapolated well past the bulk of the data at 43.2 months median follow-up. Grade 3–4 events occurred in 226 of 359 (63%) versus 196 of 366 (54%), with neutropenia 38% versus 24% and hand-foot syndrome 7% versus 0%, and 169 of 364 combination patients (46%) did not complete all six cycles.",
        "refs": [
         "28129987",
@@ -731,7 +731,7 @@
        "refs": [
         "24104372"
        ],
-       "note": "Downgraded from A to B on the full-text read. Overall survival was a <b>secondary</b> endpoint that became significant only on the final of several analyses, nine years after the primary report, with no multiplicity adjustment reported for the repeated testing. The authors themselves note that because relapse was common in the first year and gemcitabine was standard therapy at relapse, the design is better read as <b>immediate versus delayed</b> gemcitabine than as chemotherapy versus none. The primary disease-free survival endpoint was assessed in part by abdominal ultrasound every 8 weeks with no central radiology review and recurrence dated from the first subjective symptom, in an open-label trial — which is why a 2.4-fold disease-free survival difference sits beside a 2.6-month median survival difference. Eighteen of 186 patients (10%) never started gemcitabine, mainly for postoperative complications, and only 62% completed all six cycles. Enrolment ran 1998 to 2004 across 88 centres with no central pathology review and no uniform margin definition, so neither its R1 rate nor its 20.2-month observation arm is a usable benchmark today."
+       "note": "Downgraded from A to B on the full-text read. Overall survival was a <b>secondary</b> endpoint that became significant only on the final of several analyses, nine years after the primary report, with no multiplicity adjustment reported for the repeated testing. The authors themselves note that because relapse was common in the first year and gemcitabine was standard therapy at relapse, the design is better read as <b>immediate versus delayed</b> gemcitabine than as chemotherapy versus none. The primary disease-free survival endpoint was assessed in part by abdominal ultrasound every 8 weeks with no central radiology review and recurrence dated from the first subjective symptom, in an open-label trial — which is why a 2.0-fold difference in median disease-free survival sits beside a 2.6-month median survival difference. Eighteen of 186 patients (10%) never started gemcitabine, mainly for postoperative complications, and only 62% completed all six cycles. Enrolment ran 1998 to 2004 across 88 centres with no central pathology review and no uniform margin definition, so neither its R1 rate nor its 20.2-month observation arm is a usable benchmark today."
       },
       {
        "name": "A fluoropyrimidine alone",
@@ -741,7 +741,7 @@
        "avoid": "No trial establishes a fluoropyrimidine alone as equivalent to the combinations above. The arms that support it sit inside ESPAC-1 and ESPAC-3, neither of which was retrieved or read in full for this depot; their medians (20.1 and 23.0 months) are in the same range as every other single-agent arm from that era, and NCCN notes scepticism about the efficacy of the fluorouracil and folinic acid regimens used in those trials."
       }
      ],
-     "order": "Ordered by the size and quality of the randomised comparison each regimen achieved, which is a real ranking here — unusually for this page — but a narrower one than the medians suggest. PRODIGE 24 is the only adjuvant trial to report an 18-month difference in median overall survival, and it did so against the then-standard, in a population restricted to age under 80, no cardiac disease, WHO performance status 0 or 1, full surgical recovery and postoperative CA 19-9 below 180 U/mL; nothing in it describes what to do for a patient who has not recovered from a pancreatoduodenectomy, and its 5-year disease-free survival advantage is 7.1 percentage points. Every comparator in this list is adjuvant gemcitabine monotherapy or observation, so the ordering is a chain of comparisons against regimens no pathway would now offer a fit patient, and the two preferred options have never been compared with each other. NCCN also notes how similar the single-agent arms of the older trials were to one another — 22.8 months in the gemcitabine arm of CONKO-001, 20.5 in the gemcitabine-containing arm of RTOG 9704, 20.1 in the bolus fluorouracil arm of ESPAC-1, and 23.6 and 23.0 in the two arms of ESPAC-3 — which is a useful reminder of how small the single-agent era's differences were, and a reminder that those arms were selected very differently on CA 19-9 and age.",
+     "order": "Choose an adjuvant regimen using guideline recommendations, recovery, fitness and tolerance. PRODIGE-24 randomized mFOLFIRINOX against gemcitabine; ESPAC-4 randomized GemCap against gemcitabine. The two combinations have not been compared head to head, so their different survival medians do not establish a comparative ranking. Trial eligibility and subsequent therapy differ materially.",
      "flagnote": "Local approval item 4: is mFOLFIRINOX the local default for every recovered good-performance-status patient who had no neoadjuvant therapy, given 75.9% grade 3–4 toxicity, a relative dose intensity of 0.80 or more in only 33.6% of patients, no significant benefit in the 101 patients aged 70 or older (HR 0.86, 0.53–1.39) and post-relapse survival numerically worse than in the gemcitabine arm — and what performance-status or recovery threshold moves a patient to gemcitabine with capecitabine? Local approval item 5: what is the local rule for adjuvant therapy <b>after</b> neoadjuvant therapy? NCCN says only that the options depend on the response to neoadjuvant therapy and other clinical factors, and ESMO states plainly that the benefit of adjuvant chemotherapy following neoadjuvant therapy and pancreatectomy remains to be established with randomised data lacking. No trial defines total duration, whether to continue the same regimen or switch, or what to do after a complete pathologic response — and PREOPANC-2's FOLFIRINOX arm gave no adjuvant treatment at all. Audit: regimen, cycles completed, dose intensity, time from surgery to first cycle, and grade 3–4 toxicity."
     },
     {
@@ -776,12 +776,15 @@
      "note": "Downgraded from B to C. The unpriced cost is neurological: grade 3 or worse peripheral neuropathy in 15% of the combination arm and <b>0%</b> of the gemcitabine arm, with 84% of those affected not improved to grade 1 or less at the primary cutoff and a median 195 days to improve by one grade — in a trial that collected no quality-of-life data at all. Only 287 of 432 patients completed six cycles against 310 of 434 on gemcitabine, 64% needed a dose reduction, and the population is the most selected in the adjuvant literature: CA 19-9 below 100 U/mL with a median of 13.6 U/mL, a clear screening scan, ECOG 0–1, and 1,226 patients screened to randomise 866, which is why the gemcitabine arm reached 37.7 months. The trial's most durable contribution has nothing to do with the regimen: in the same gemcitabine arm, blinded independent review gave a median disease-free survival of 18.8 months and the unblinded investigators gave 13.7 months, with 77% concordance and 48% to 51% of patients censored. Every other adjuvant trial on this page used unblinded investigator-assessed disease-free survival and reported 12.8 to 13.4 months, so disease-free survival differences in open-label adjuvant trials are partly a detection artefact."
     },
     {
-     "t": "Adjuvant chemoradiation after chemotherapy, in a node-negative patient, as a discussion rather than a recommendation.",
+     "t": "Consider adjuvant chemoradiation after chemotherapy in selected node-negative patients through multidisciplinary discussion; the overall RTOG 0848 result was negative.",
      "l": "Reasonable",
-     "g": "D",
-     "pref": "RTOG 0848 randomised the addition of fluoropyrimidine-based chemoradiation after adjuvant gemcitabine-based chemotherapy in resected pancreatic head cancer. Patients with node-negative disease had longer overall and disease-free survival with the addition; patients with node-positive disease did not.",
-     "avoid": "Do not extend this to node-positive disease — in RTOG 0848 chemoradiation did not improve overall or disease-free survival in that group, which is the opposite of the intuition. The benefit was seen in patients who received <b>single-agent gemcitabine</b> as their systemic therapy, so it does not transfer to a patient who had mFOLFIRINOX, and no study has shown superiority of chemoradiation before versus after chemotherapy in the adjuvant setting.",
-     "note": "Downgraded from C to D: the RTOG 0848 primary publication was not retrieved or read in full for this depot, and the result is carried only in the NCCN discussion text supplied to this page. Adjuvant chemoradiation remains a controversial topic in resected pancreatic cancer, and NCCN warns that RTOG 9704 cannot be compared directly with CONKO-001, ESPAC-1 or ESPAC-3 because of differences in design, imaging timing and patient characteristics. The margin-status subset analyses are retrospective and carried in the same extraction: pooled analyses report benefit in both R0 and R1 subsets, with a relative risk of 0.52 (95% CI 0.36–0.74, P<.001) in one R1 analysis and a non-significant hazard ratio of 0.72 (0.47–1.10) in a four-study meta-analysis. None of these figures has been checked against a primary report."
+     "g": "C",
+     "pref": "RTOG 0848 randomized 354 patients without recurrence after five chemotherapy cycles. From this randomization, overall survival was not significantly improved (HR 0.96, 90% CI 0.79–1.18), nor was final-report disease-free survival (HR 0.82, 95% CI 0.65–1.03; two-sided P=.089). Significant nodal-status interactions and favorable node-negative results support an individualized discussion, not routine treatment of every resected patient.",
+     "avoid": "None of the patients received FOLFIRINOX: 67% received gemcitabine alone, 28% gemcitabine/erlotinib and 5% other gemcitabine combinations. Benefit after modern chemotherapy is unestablished. Only ten patients were both node-negative and margin-positive, so margin-specific inference is inadequate. SBRT substitution is unestablished.",
+     "note": "The final primary report is now available. Grade-3 toxicity was greater with chemoradiation (38% versus 19%); grade-4/5 toxicity did not significantly differ. The main clinical text, tables and figure captions were reviewed in the continuation; figure pixels, the separate supplement and protocol were not. The earlier abstract’s one-sided DFS formulation should not replace the final nonsignificant two-sided result.",
+     "refs": [
+      "42456089"
+     ]
     },
     {
      "t": "Surveillance after resection — history and examination, CA 19-9 and contrast CT of the abdomen and pelvis — offered with an explicit statement of what it is for.",
@@ -801,11 +804,11 @@
      "avoid": "This is a sequence error rather than a judgement call: a patient with radiologic recurrence is on a different pathway and a different conversation."
     },
     {
-     "t": "Do not give adjuvant chemoradiation to a node-positive patient on the strength of RTOG 0848.",
+     "t": "Do not present RTOG 0848 as establishing routine adjuvant chemoradiation benefit in node-positive disease.",
      "l": "Avoid",
      "g": "D",
-     "pref": "Where the discussion is being had at all, have it in node-negative disease, after chemotherapy, with radiation oncology review.",
-     "avoid": "The trial's node-positive subgroup showed no improvement in overall or disease-free survival. Extending a subgroup result to the subgroup it excluded is the specific error here — and the subgroup result itself is carried only in the NCCN discussion text supplied to this page, with no primary report read for this depot."
+     "pref": "Individualize radiation decisions with oncology and radiation oncology review, considering the systemic regimen, margins, nodal status, recovery, toxicity and patient preferences.",
+     "avoid": "The overall primary result was negative and the node-positive subgroup did not show benefit. A subgroup result does not establish a universal prohibition for every clinical context. The node-negative signal also requires caution after modern chemotherapy."
     },
     {
      "t": "Do not present adjuvant nab-paclitaxel with gemcitabine as established.",
@@ -1041,11 +1044,11 @@
      "g": "B",
      "opts": [
       {
-       "name": "Daraxonrasib, for RAS-mutated disease after prior therapy",
+       "name": "Daraxonrasib for eligible metastatic PDAC; the US indication is not restricted to a RAS mutation",
        "g": "A",
        "when": "RASolute 302 (phase 3, n=500 randomised, 248 daraxonrasib and 252 investigator's-choice chemotherapy, more than 90% with RAS G12 mutations) had dual primary endpoints in the RAS G12 population and met both: median overall survival 13.2 versus 6.6 months, hazard ratio 0.40, P<0.001, and median progression-free survival by blinded independent central review 7.3 versus 3.5 months, hazard ratio 0.45.",
-       "pref": "A previously treated patient with a documented RAS <b>G12</b> mutation, which is the population in which benefit is established. Grade 3 or higher adverse events were less frequent than with chemotherapy, 61.8% versus 69.6%, treatment-related discontinuation far less, 1.2% versus 11.2%, and time to deterioration in quality of life and in pain favoured daraxonrasib.",
-       "avoid": "Check availability, regulatory status and coverage before raising it with a patient, and state three limits. The benefit is established only for RAS G12 disease: in patients <b>without</b> a G12 mutation the hazard ratio was 1.38 (95% CI 0.60–3.17), a point estimate favouring chemotherapy. The effect size is inseparable from the comparator's delivery — 38 of 252 patients (15.1%) assigned to chemotherapy never received it against 7 of 248 (2.8%) assigned daraxonrasib, 29 of them withdrawing, and some no longer met eligibility because ECOG had risen above 1 by the time treatment was due, which an oral agent started the same day does not face. And the result is in the previously treated setting only — it says nothing about first line, about the adjuvant setting, or about use around an operation.",
+       "pref": "The FDA approval of 26 August 2026 covers adults with metastatic PDAC after at least one systemic therapy, or those not candidates for multiagent systemic therapy. The randomized trial studied patients progressing after one prior line; it does not directly establish the same benefit in untreated patients unfit for combinations.",
+       "avoid": "Benefit was shown in the RAS G12 and overall randomized populations. In the small non-G12 subgroup (n=41), PFS HR was 1.38 (95% CI 0.60–3.17) while OS HR was 0.37 (0.15–0.93); these exploratory, imprecise estimates do not establish lack of benefit. Interpretation also requires the open-label design, short follow-up and differential treatment non-initiation (38/252 chemotherapy versus 7/248 daraxonrasib). Check the current prescribing information and patient-specific toxicity risks.",
        "refs": [
         "42223072",
         "42090791"
@@ -1066,7 +1069,7 @@
       {
        "name": "Pembrolizumab or dostarlimab, for MSI-high or dMMR disease",
        "g": "D",
-       "when": "NCCN lists pembrolizumab for MSI-high, dMMR or TMB-high (≥10 mutations/Mb) disease across lines, and dostarlimab for MSI-high or dMMR as subsequent therapy.",
+       "when": "Separate MSI-high/dMMR eligibility from the TMB-high indication. Under the FDA update of 16 October 2026, pembrolizumab for TMB-H solid tumours requires ≥13 mut/Mb by an FDA-authorized test, progression after prior treatment and no satisfactory alternative. The prior ≥10 threshold is historical. Check the applicable current label for each agent.",
        "pref": "The small minority of pancreatic tumours that are MSI-high or mismatch-repair deficient. It is the one alteration on this list that can produce a durable response.",
        "avoid": "Do not test for it late. A patient who has exhausted chemotherapy before anyone checked mismatch repair status has lost the opportunity, and the frequency in PDAC is low enough that nobody finds it by clinical suspicion. Graded D because no trial in pancreatic cancer supports either agent: both are tumour-agnostic approvals carried here through the NCCN listing, and no primary report was retrieved or read in full for this depot."
       },
@@ -1099,7 +1102,7 @@
        "avoid": "Downgraded to D: none of these reports was retrieved or read in full for this depot, and all the figures are carried in the NCCN listing supplied to this page. Do not treat the gene as the target. The pancreatic subsets in these trials are tiny — one patient with pancreatic cancer in the larotrectinib analysis, two of three responders among pancreatic patients in the entrectinib trials — and response rates from mixed-tumour baskets do not transfer cleanly to this disease."
       }
      ],
-     "order": "Ordered by the strength of the evidence in pancreatic cancer specifically and by how many patients the alteration reaches, not by response rate. Daraxonrasib is first because it is the only randomised phase 3 result here, and the only one with a survival endpoint — but its benefit is established in the RAS <b>G12</b> population that was its primary analysis set, and the non-G12 subgroup points the other way (HR 1.38, 0.60–3.17). Olaparib is second because POLO is randomised and double-blind but in 154 patients found from 3,315 screened, against placebo rather than continued chemotherapy, and positive only for progression-free survival with no overall survival or quality-of-life difference at interim. Everything below is single-arm, in rare alterations, with pancreatic subsets of 21 to 38 patients, no control groups, and in two cases no prespecified efficacy threshold at all.",
+     "order": "Ordered by the strength of the evidence in pancreatic cancer specifically and by how many patients the alteration reaches, not by response rate. Daraxonrasib is first because it is the only randomised phase 3 result here, and the only one with a survival endpoint — but benefit was demonstrated in both the RAS <b>G12</b> primary population and the overall population. Non-G12 estimates are exploratory: PFS HR 1.38 (0.60–3.17), OS HR 0.37 (0.15–0.93), n=41. Olaparib is second because POLO is randomised and double-blind but in 154 patients found from 3,315 screened, against placebo rather than continued chemotherapy, and positive only for progression-free survival with no overall survival or quality-of-life difference at interim. Everything below is single-arm, in rare alterations, with pancreatic subsets of 21 to 38 patients, no control groups, and in two cases no prespecified efficacy threshold at all.",
      "flagnote": "Local approval item 8: what is the local sequence after first-line failure, and where does daraxonrasib sit in it given its availability, cost, the absence of any first-line or perioperative data, and the fact that 15.1% of its comparator arm never received the chemotherapy it was allocated? The group should also agree who owns chasing the molecular report, because the commonest failure in this disease is a result that arrives after the patient is too unwell to act on it. Audit: proportion of metastatic patients with a completed germline result and a completed genomic profile before second line, time from biopsy to report, and proportion of actionable results acted on. [PAYER]"
     },
     {
@@ -1115,6 +1118,16 @@
      "g": "D",
      "pref": "A phase 2 trial of maintenance rucaparib after at least 16 weeks of platinum-based chemotherapy in advanced disease with germline or somatic pathogenic variants in <i>BRCA1</i>, <i>BRCA2</i> or <i>PALB2</i> reported median progression-free survival of 13.1 months and median duration of response 17.3 months, with no new safety signal.",
      "avoid": "Downgraded to D: single-arm phase 2 with no control, and the primary report was not retrieved or read in full for this depot — the figures are carried in the NCCN discussion text supplied to this page. The 13.1-month progression-free survival figure cannot be compared with POLO's 7.4 months. Its one advantage over the POLO population is that it included somatic as well as germline variants and <i>PALB2</i>."
+    },
+    {
+     "t": "After progression on gemcitabine-based therapy, consider liposomal irinotecan with fluorouracil/leucovorin for a suitable patient.",
+     "l": "Reasonable",
+     "g": "A",
+     "refs": [
+      "26615328"
+     ],
+     "pref": "In NAPOLI-1, 117 combination patients versus 119 concurrent 5-FU/leucovorin controls had median OS 6.1 versus 4.2 months, HR 0.67 (95% CI 0.49–0.92). The trial selected patients with KPS ≥70 and adequate liver function. Reassess performance status, bilirubin/drainage, prior treatment and goals.",
+     "avoid": "The evidence does not establish immediate reuse after irinotecan-containing FOLFIRINOX or NALIRIFOX. Liposomal irinotecan is not interchangeable with conventional irinotecan; use the actual product label and pharmacy-verified dosing. Continue symptom-directed care and consider trials or supportive care when further cytotoxic therapy is unsuitable."
     }
    ],
    "avoid": [
@@ -1248,8 +1261,8 @@
      "Test everyone, regardless of family history: deleterious variants in <i>CDKN2A</i>, <i>TP53</i>, <i>MLH1</i>, <i>BRCA2</i>, <i>ATM</i> or <i>BRCA1</i> in 5.5% of 3,030 registry patients — 7.9% with a family history, 5.2% without. A clinic-based case series against public sequencing databases, not a recruited control group; carriage was not associated with survival (HR 0.86, P=.09); and of the six genes only <i>BRCA1/2</i> has a randomised treatment consequence in this disease, so 5.5% is not the actionable fraction"
     ],
     [
-     "RAS G12 mutation, previously treated",
-     "Daraxonrasib: median OS 13.2 vs 6.6 months in the RAS G12 population, HR 0.40, P<0.001; PFS by blinded central review 7.3 vs 3.5 months, HR 0.45. Phase 3, n=500, open label, unconstrained investigator's-choice comparator. <b>Non-G12 patients: HR 1.38 (0.60–3.17)</b>, favouring chemotherapy. 38 of 252 (15.1%) of the chemotherapy arm never received it, against 7 of 248 (2.8%) on daraxonrasib"
+     "Metastatic PDAC eligible for daraxonrasib",
+     "RASolute 302: overall median OS 13.2 versus 6.7 months (HR 0.40, 95% CI 0.30–0.53); PFS 7.2 versus 3.6 (HR 0.49, 0.38–0.64). The US indication includes prior systemic therapy or inability to receive multiagent therapy and is not mutation-restricted. Non-G12 subgroup n=41: exploratory PFS HR 1.38 (0.60–3.17), OS HR 0.37 (0.15–0.93)."
     ],
     [
      "Germline BRCA1/2, platinum-exposed",
@@ -1261,7 +1274,7 @@
     ],
     [
      "MSI-high or dMMR",
-     "Pembrolizumab, or dostarlimab as subsequent therapy. Pembrolizumab also for TMB-high (≥10 mut/Mb). Tumour-agnostic approvals; no pancreatic trial read for this depot"
+     "Pembrolizumab or other appropriately labelled therapy for MSI-H/dMMR. The updated US TMB-H pembrolizumab indication is ≥13 mut/Mb by an FDA-authorized test after progression on prior treatment with no satisfactory alternative; this is separate from MSI-H/dMMR."
     ],
     [
      "KRAS G12C (1–2% of PDAC)",
@@ -1292,7 +1305,7 @@
      "Test by IHC ± FISH as well as on the NGS panel; fam-trastuzumab deruxtecan was studied in 25 pancreatic patients in DESTINY-PanTumor2, under 20% of whom were IHC 3+; no primary report read for this depot"
     ]
    ],
-   "foot": "Two operational points matter more than any single row. Order profiling and germline testing at the first visit and bank two extra needle passes at the index biopsy, because the commonest failure in this disease is a report that arrives after the patient is too unwell to act on it — and do not wait for the result to start treatment, since NCCN states that if BRCA1/2 status is unknown the patient is treated as clinically indicated. Then read the denominators. Apart from daraxonrasib and olaparib, every row here is a single-arm result in a pancreatic subset of between one and thirty-eight patients, usually drawn from a mixed-tumour basket trial, with no screening denominator reported, and response rates from baskets do not transfer cleanly to this disease; two of the rows — sotorasib's pancreatic cohort and the subgroup reads from the adagrasib basket — had no prespecified efficacy threshold applying to pancreatic patients at all, so there was nothing they could have failed. Read the germline row the same way: 5.5% is a prevalence estimate from a clinic-based case series compared with public sequencing databases rather than a recruited control group, carriage was not associated with survival, and of the six genes only <i>BRCA1/2</i> carries a randomised treatment consequence in this disease — so 5.5% is not the actionable fraction. Do not treat the gene as the target; different alterations in the same gene do not predict the same response, which is the point the non-G12 subgroup of RASolute 302 makes (HR 1.38, 0.60–3.17).",
+   "foot": "Two operational points matter more than any single row. Order profiling and germline testing at the first visit and bank two extra needle passes at the index biopsy, because the commonest failure in this disease is a report that arrives after the patient is too unwell to act on it — and do not wait for the result to start treatment, since NCCN states that if BRCA1/2 status is unknown the patient is treated as clinically indicated. Then read the denominators. Apart from daraxonrasib and olaparib, every row here is a single-arm result in a pancreatic subset of between one and thirty-eight patients, usually drawn from a mixed-tumour basket trial, with no screening denominator reported, and response rates from baskets do not transfer cleanly to this disease; two of the rows — sotorasib's pancreatic cohort and the subgroup reads from the adagrasib basket — had no prespecified efficacy threshold applying to pancreatic patients at all, so there was nothing they could have failed. Read the germline row the same way: 5.5% is a prevalence estimate from a clinic-based case series compared with public sequencing databases rather than a recruited control group, carriage was not associated with survival, and of the six genes only <i>BRCA1/2</i> carries a randomised treatment consequence in this disease — so 5.5% is not the actionable fraction. Do not treat the gene as the target; different alterations in the same gene do not predict the same response, and do not confuse a small subgroup's PFS estimate with its OS result or with the overall trial result.",
    "src": "NCCN Pancreatic Adenocarcinoma, extracted text supplied to the programme (dated 22 April 2026), Principles of Systemic Therapy and Discussion; Hu 2018, PMID 29922827; O'Reilly 2026 RASolute 302, PMID 42223072; Golan 2019 POLO, PMID 31157963; Strickler 2023, PMID 36546651; Bekaii-Saab 2023, PMID 37099736; Schram 2025 eNRGy, PMID 39908431"
   }
  ],
@@ -1335,11 +1348,11 @@
   },
   {
    "t": "Disease-free survival in the open-label adjuvant trials this page relies on is partly a detection artefact, and the trial that showed it is the one this page treats as the weakest.",
-   "why": "APACT is the only adjuvant pancreatic trial to use blinded independently assessed disease-free survival as its primary endpoint, and in the same gemcitabine arm, central review gave a median of 18.8 months while the unblinded investigators gave 13.7 months, with 77% concordance and 48% to 51% of patients censored. The investigator figure matches the gemcitabine arms of ESPAC-4 (13.4 months) and PRODIGE-24 (12.8 months), both of which used unblinded investigator assessment, as did CONKO-001 — where recurrence was dated from the first subjective symptom and assessed in part by abdominal ultrasound with no central review. That is why CONKO-001 can show a 2.4-fold disease-free survival difference beside a 2.6-month median survival difference. Every adjuvant disease-free survival hazard ratio on this page should be read with a five-month detection allowance."
+   "why": "APACT is the only adjuvant pancreatic trial to use blinded independently assessed disease-free survival as its primary endpoint, and in the same gemcitabine arm, central review gave a median of 18.8 months while the unblinded investigators gave 13.7 months, with 77% concordance and 48% to 51% of patients censored. The investigator figure matches the gemcitabine arms of ESPAC-4 (13.4 months) and PRODIGE-24 (12.8 months), both of which used unblinded investigator assessment, as did CONKO-001 — where recurrence was dated from the first subjective symptom and assessed in part by abdominal ultrasound with no central review. That is why CONKO-001 can show a 2.0-fold difference in median disease-free survival beside a 2.6-month median survival difference. Every adjuvant disease-free survival hazard ratio on this page should be read with a five-month detection allowance."
   },
   {
    "t": "PRODIGE-24's 54.4-month median was an artefact of an immature database, and the mature data are a smaller result than the headline.",
-   "why": "The trial was stopped early for efficacy at 91.8% of expected disease-free survival events, and with mature 5-year data the disease-free survival hazard ratio moved from 0.58 to 0.66, overall survival from 0.64 to 0.68, and the median from 54.4 to 53.5 months. Five-year disease-free survival differs by only 7.1 percentage points (26.1% versus 19.0%) against 11.8 points at 5-year overall survival, so part of the survival gain accrues after relapse — and post-relapse survival was numerically <b>worse</b> in the mFOLFIRINOX arm (13.1 versus 15.0 months), with chemotherapy at relapse reaching 66.9% of its relapsing patients against 83.0% of the control arm's, 74.2% of whom received FOLFIRINOX. Delivery was poor: 67.2% completed all 12 cycles and only 33.6% achieved a relative dose intensity of 0.80 or more. The population was age 18 to 79, no coronary disease, WHO 0–1, fully recovered, with a clear postoperative scan and postoperative CA 19-9 below 180 U/mL; in the 101 patients aged 70 or older the benefit did not reach significance (HR 0.86, 0.53–1.39), and the median age of this disease is around 70. Quality of life was never collected."
+   "why": "The trial was stopped early for efficacy at 91.8% of expected disease-free survival events, and with mature 5-year data the disease-free survival hazard ratio moved from 0.58 to 0.66, overall survival from 0.64 to 0.68, and the median from 54.4 to 53.5 months. Five-year disease-free survival differs by only 7.1 percentage points (26.1% versus 19.0%) against 11.8 points at 5-year overall survival, so part of the survival gain accrues after relapse — and post-relapse survival was numerically <b>worse</b> in the mFOLFIRINOX arm (13.1 versus 15.0 months), with first-relapse chemotherapy given to 107/160 (66.9%) versus 151/182 (83.0%) relapsers. Among the latter chemotherapy recipients, 112/151 (74.2%) received FOLFIRINOX. Delivery was poor: 67.2% completed all 12 cycles and only 33.6% achieved a relative dose intensity of 0.80 or more. The population was age 18 to 79, no symptomatic heart failure or coronary artery disease, WHO 0–1, fully recovered, with a clear postoperative scan and postoperative CA 19-9 of 180 U/mL or less; in the 101 patients aged 70 or older the benefit did not reach significance (HR 0.86, 0.53–1.39), and the median age of this disease is around 70. Quality of life was never collected."
   },
   {
    "t": "APACT was a negative trial. Its overall survival result is a descriptive secondary endpoint read at the third of three successive data cutoffs.",
@@ -1382,16 +1395,16 @@
    "why": "The sotorasib pancreatic cohort pooled 38 patients across phase 1 dose exploration, phase 1 expansion and phase 2, with <b>no prespecified response benchmark and no hypothesis test</b>, and its response interval (10% to 37%) is compatible with the under-10% historical benchmark the authors invoke. Adagrasib's prespecified 10% null applies to the pooled tumour-agnostic cohort of 57 evaluable patients, not to its 21 pancreatic patients, and six patients counted as evaluable by investigators were removed by central review for having no measurable disease, moving the denominator favourably. Zenocutuzumab's 36 pancreatic patients were <b>all KRAS wild-type</b>, its primary endpoint was investigator-assessed response with blinded central review only secondary, its primary efficacy population is a post-enrolment construct (204 treated to 158 evaluable, with short-follow-up exclusions falling on early progressors), and no progression-free or overall survival is reported for the pancreatic subgroup at all. None of the three reports a screening denominator, so the testing burden implied by any of them is invisible. The NTRK, RET, BRAF and FGFR entries were not retrieved for this depot."
   },
   {
-   "t": "RASolute 302's hazard ratio of 0.40 is the largest effect on this page, it is established only in RAS G12 disease, and it is inseparable from how badly its comparator arm was delivered.",
-   "why": "The dual primary endpoints were met in the RAS G12 population: median overall survival 13.2 versus 6.6 months, hazard ratio 0.40, P<0.001, and progression-free survival by blinded central review 7.3 versus 3.5 months, hazard ratio 0.45. In patients <b>without</b> a G12 mutation the hazard ratio was 1.38 (95% CI 0.60–3.17), a point estimate favouring chemotherapy. And 38 of 252 patients (15.1%) allocated to chemotherapy never received it, against 7 of 248 (2.8%) allocated daraxonrasib — 29 of them withdrawing, and some no longer eligible because ECOG had risen above 1 by the time treatment was due, which an oral agent started the same day does not face. Those patients remain in the comparator's intention-to-treat survival curve. The comparator itself was unconstrained investigator's choice given per local prescribing practice, with a 6.6-month median at the low end of published second-line outcomes, and its quality is not auditable from the report. The sponsor supported the trial and performed and validated the analyses. The direction of the result is not in doubt; the magnitude should be read with the comparator in view."
+   "t": "RASolute 302's hazard ratio of 0.40 is the largest effect on this page, benefit was demonstrated in RAS G12 and overall populations, and it is inseparable from how badly its comparator arm was delivered.",
+   "why": "The dual primary endpoints were met in the RAS G12 population: median overall survival 13.2 versus 6.6 months, hazard ratio 0.40, P<0.001, and progression-free survival by blinded central review 7.3 versus 3.5 months, hazard ratio 0.45. In 41 patients without G12, the PFS HR was 1.38 (95% CI 0.60–3.17) and OS HR 0.37 (0.15–0.93); these small exploratory estimates must be distinguished by endpoint. And 38 of 252 patients (15.1%) allocated to chemotherapy never received it, against 7 of 248 (2.8%) allocated daraxonrasib — 29 of them withdrawing, and some no longer eligible because ECOG had risen above 1 by the time treatment was due, which an oral agent started the same day does not face. Those patients remain in the comparator's intention-to-treat survival curve. The comparator itself was unconstrained investigator's choice given per local prescribing practice, with a 6.6-month median at the low end of published second-line outcomes, and its quality is not auditable from the report. The sponsor supported the trial and performed and validated the analyses. The direction of the result is not in doubt; the magnitude should be read with the comparator in view."
   },
   {
    "t": "The pooled hazard ratio of 0.41 for resecting liver-only metastatic PDAC appears twice in the 2025 literature from largely the same patients, and the better of the two analyses shows it tracks chemotherapy rather than surgery.",
    "why": "Two 2025 meta-analyses report 0.41 (0.31–0.53) and 0.41 (0.32–0.52) from substantially overlapping study sets, so citing both double-counts one evidence base. The first pooled only <b>univariate</b> hazard ratios by explicit design, reported I² of 12% from seven retrospective studies with different definitions of oligometastasis, and never mentions immortal-time bias; the second found I² of 64.5% in the same literature. The second's meta-regression is the finding: the relative rate of chemotherapy between arms explained 87.1% of between-study heterogeneity, roughly half the non-surgical patients received gemcitabine monotherapy against multi-agent regimens in the surgical arm, and the adjusted effect reached HR 0.18 (0.08–0.40) only where both pre- and postoperative chemotherapy were given, with no difference in any other scenario — an estimate fitted to 7 comparisons with 11 candidate covariates that its own authors call mathematical rather than empirical. The first review's own data say the same thing: a 32.5-versus-9.2-month gap generated by a RECIST response criterion, and the best outcomes in the whole review coming from 52 patients whose liver metastases had completely regressed and who had only the primary resected. Nationally, 891 of 47,785 patients with liver-only stage IV disease (1.9%) had the primary resected, only 137 (0.29%) had a metastasectomy, only 13.5% had preoperative chemotherapy, 85% had the primary removed without touching the liver metastases, and the whole surgical cohort's median survival was 10.74 months — no better than chemotherapy alone in unselected metastatic disease."
   },
   {
-   "t": "One reference remains cited from abstract only, and some results are carried only in guideline discussion.",
-   "why": "The ISGPS lymphadenectomy consensus (PMID 25061003) remains cited from abstract only. PAXG, RTOG 0848, ESPAC-3 completion, CONKO-004, maintenance rucaparib, EUS staging, re-imaging and margin-clearance figures require their primary reports. The remaining PDAC pathway retains these evidence limitations."
+   "t": "Source availability and read extent differ; the continuation resolved some earlier gaps.",
+   "why": "RTOG 0848 now has a reviewed final primary report and is summarized above. Other statements may depend on targeted original-guideline checks, abstracts, or reports with unread supplements. Consult the preserved source-level audit records rather than treating an old retrieval list or a passing website test as full verification."
   },
   {
    "t": "Industry sponsors chose the comparator in four of the trials this page cites, and in each case the choice was the one most favourable to the sponsor.",
@@ -1408,7 +1421,7 @@
    "Triage — a coordinator and a clinical reviewer check completeness, imaging quality and protocol, duplicate cases, urgent referrals, and whether the question is actually a decision question. A non-pancreas-protocol CT is returned for re-imaging rather than discussed, and the degrees of arterial and venous contact are checked against the images by a named reader before the case is listed — in SWOG S1505, 29% of patients called resectable by their own centres did not meet the criteria on central review. Owners: coordinator and chair.",
    "Imaging currency — the staging scan's date is read out with the case. High-quality CT older than 4 weeks is re-acquired before an operative decision is taken, and a case that waits two board cycles is re-imaged. This is the one operating rule specific to this disease. Owner: coordinator.",
    "Agenda — stable at least 24 hours ahead, approximately 10–12 decision cases per session, each carrying one focused question. Owner: coordinator.",
-   "Urgent referral route — a same-week slot with chair approval, used routinely here: cholangitis, a rising bilirubin and gastric outlet obstruction are time-critical, and so is a borderline resectable patient whose scan is about to expire. Owner: chair.",
+   "Urgent clinical care precedes the board: suspected cholangitis requires same-day assessment and timely biliary decompression according to severity; symptomatic gastric outlet obstruction requires prompt assessment, resuscitation and relief as indicated. Escalate immediately for sepsis, dehydration or inability to maintain intake. The board can then coordinate the oncologic plan. Owner: treating clinician and appropriate emergency/endoscopy teams.",
    "Attendance — surgical oncology or hepatopancreatobiliary surgery, medical oncology, radiation oncology, diagnostic radiology, advanced endoscopy, pathology, genetics or a genetic counsellor, nutrition, palliative care and coordination are all required. Owners: specialty leads.",
    "Resectability call — the category is assigned in the meeting, by consensus, and recorded with the degrees of contact, the date and the names of those who agreed it. A single-reader determination is not accepted as the category, and the category is recorded as what it is: a consensus threshold nobody derived, applied to a measurement with no published inter-reader reproducibility. Owner: chair.",
    "Pathology — pre-alerted for every resection specimen, with the agreed inking and slicing protocol and millimetre reporting of every margin within 1.0 cm of tumour; peritoneal washing results are reported to the board, not only to the chart. Owner: pathology.",
@@ -1457,7 +1470,7 @@
    {
     "n": 4,
     "q": "Is mFOLFIRINOX the adjuvant default for every recovered good-performance-status patient, and what threshold moves a patient to gemcitabine with capecitabine?",
-    "why": "On mature 5-year data PRODIGE 24 gives median overall survival 53.5 versus 35.5 months and 5-year survival 43.2% versus 31.4%, at the cost of grade 3–4 adverse events in 75.9% versus 52.9%, in a trial restricted to age under 80, no coronary disease, WHO performance status 0–1, full surgical recovery and postoperative CA 19-9 below 180 U/mL. The effect attenuated from the 3-year report (DFS HR 0.58 to 0.66, OS 0.64 to 0.68), 5-year disease-free survival differs by only 7.1 points, only 33.6% of patients achieved a relative dose intensity of 0.80 or more, post-relapse survival was numerically worse in the mFOLFIRINOX arm (13.1 versus 15.0 months) with fewer of its relapsing patients receiving any chemotherapy (66.9% versus 83.0%), and in the 101 patients aged 70 or older the benefit did not reach significance (HR 0.86, 0.53–1.39). Nothing in it describes the patient who has not recovered from a pancreatoduodenectomy, which is a substantial fraction of the real population, and quality of life was never collected.",
+    "why": "On mature 5-year data PRODIGE 24 gives median overall survival 53.5 versus 35.5 months and 5-year survival 43.2% versus 31.4%, at the cost of grade 3–4 adverse events in 75.9% versus 52.9%, in a trial restricted to age under 80, no symptomatic heart failure or coronary artery disease, WHO performance status 0–1, full surgical recovery and postoperative CA 19-9 of 180 U/mL or less. The effect attenuated from the 3-year report (DFS HR 0.58 to 0.66, OS 0.64 to 0.68), 5-year disease-free survival differs by only 7.1 points, only 33.6% of patients achieved a relative dose intensity of 0.80 or more, post-relapse survival was numerically worse in the mFOLFIRINOX arm (13.1 versus 15.0 months) with fewer of its relapsing patients receiving any chemotherapy (66.9% versus 83.0%), and in the 101 patients aged 70 or older the benefit did not reach significance (HR 0.86, 0.53–1.39). Nothing in it describes the patient who has not recovered from a pancreatoduodenectomy, which is a substantial fraction of the real population, and quality of life was never collected.",
     "audit": "Registry: adjuvant regimen, cycles completed, dose intensity, grade 3–4 toxicity, time from surgery to first cycle."
    },
    {
@@ -1481,7 +1494,7 @@
    {
     "n": 8,
     "q": "Who owns chasing the molecular report, and where does daraxonrasib sit in the local second-line sequence?",
-    "why": "The commonest failure in metastatic PDAC is a genomic report that arrives after the patient is too unwell to act on it, which is an operational problem with a named-owner solution. The sequencing question is separate: RASolute 302 is a phase 3 result with dual primary endpoints met in the RAS <b>G12</b> population (median overall survival 13.2 versus 6.6 months, HR 0.40; progression-free survival 7.3 versus 3.5 months, HR 0.45), but the benefit is not established outside G12 (non-G12 HR 1.38, 0.60–3.17), 38 of 252 patients (15.1%) allocated to the comparator never received it against 7 of 248 (2.8%) on daraxonrasib, and the comparator was unconstrained investigator's choice with a 6.6-month median at the low end of published second-line outcomes. The local position depends on availability, regulatory status and cost, and should state which RAS alterations it covers. [PAYER]",
+    "why": "The commonest failure in metastatic PDAC is a genomic report that arrives after the patient is too unwell to act on it, which is an operational problem with a named-owner solution. The sequencing question is separate: RASolute 302 is a phase 3 result with dual primary endpoints met in the RAS <b>G12</b> population (median overall survival 13.2 versus 6.6 months, HR 0.40; progression-free survival 7.3 versus 3.5 months, HR 0.45), and benefit was also demonstrated in the overall population; the non-G12 subgroup was small and exploratory (n=41; PFS HR 1.38, 0.60–3.17; OS HR 0.37, 0.15–0.93), 38 of 252 patients (15.1%) allocated to the comparator never received it against 7 of 248 (2.8%) on daraxonrasib, and the comparator was unconstrained investigator's choice with a 6.6-month median at the low end of published second-line outcomes. The local position depends on availability, regulatory status and cost, and should state which RAS alterations it covers. [PAYER]",
     "audit": "Registry: proportion with completed germline and genomic results before second line, time from biopsy to report, proportion of actionable results acted on, second-line agent."
    },
    {
@@ -1511,7 +1524,7 @@
    {
     "n": 16,
     "q": "Who owns retrieving the remaining full texts and verifying guideline-only figures?",
-    "why": "Retrieve the full ISGPS lymphadenectomy consensus (PMID 25061003) and the primary reports behind guideline-only figures, including PAXG, RTOG 0848, ESPAC-3 completion, CONKO-004 and maintenance rucaparib.",
+    "why": "Assign ownership of the residual source-review list, record the actual source version and read extent, and propagate verified corrections. RTOG 0848 is resolved to PMID42456089; do not continue to label it an unavailable primary report.",
     "audit": "Named owner per reference, with retrieval date and a note of any figure that changed on reading; the page's grades revisited where a D was assigned for provenance rather than for design."
    }
   ]
@@ -1691,6 +1704,16 @@
    "Clements meta-analysis",
    "Oligometastatic disease",
    "Clements N, Gaskins J, Martin RCG. Surgical outcomes in stage IV pancreatic cancer with liver metastasis, current evidence and future directions: a systematic review and meta-analysis of surgical resection. Cancers (Basel). 2025;17(4):688. doi:10.3390/cancers17040688. PMID:40002281."
+  ],
+  "26615328": [
+   "NAPOLI-1",
+   "Systemic therapy",
+   "Wang-Gillam A, et al. Nanoliposomal irinotecan with fluorouracil and folinic acid in metastatic pancreatic cancer after previous gemcitabine-based therapy (NAPOLI-1). Lancet. 2016;387:545–557. doi:10.1016/S0140-6736(15)00986-1. PMID:26615328."
+  ],
+  "42456089": [
+   "RTOG 0848 final report",
+   "Neoadjuvant & adjuvant trials",
+   "Abrams RA, et al. Adjuvant chemotherapy +/− chemoradiotherapy for adenocarcinoma of the pancreatic head: results of the radiotherapy randomization of NRG Oncology/RTOG 0848. J Clin Oncol. 2026;44(24):2316–2328. doi:10.1200/JCO-25-02520. PMID:42456089."
   ]
  },
  "nonpm": {
@@ -1715,7 +1738,7 @@
   "rtog0848": [
    "RTOG 0848",
    "Neoadjuvant & adjuvant trials",
-   "Randomised trial of fluoropyrimidine-based chemoradiation after adjuvant gemcitabine-based chemotherapy in resected adenocarcinoma of the pancreatic head. Reported on this page through the NCCN discussion text only: longer overall and disease-free survival with added chemoradiation in node-negative patients, no improvement in node-positive patients, in patients treated with single-agent gemcitabine. The primary publication was not retrieved and should be read before the result is relied on."
+   "Resolved to the primary NRG Oncology/RTOG 0848 report, PMID42456089, DOI10.1200/JCO-25-02520. Among 354 patients randomized after five recurrence-free chemotherapy cycles, added chemoradiation did not significantly improve overall OS or final-report DFS. Node-negative subgroup results support individual discussion, with unestablished transfer to modern chemotherapy."
   ],
   "paxg": [
    "PAXG randomised phase 3",
@@ -1738,5 +1761,5 @@
    "Tol JAMG, Gouma DJ, Bassi C, et al. Definition of a standard lymphadenectomy in surgery for pancreatic ductal adenocarcinoma: a consensus statement by the International Study Group on Pancreatic Surgery (ISGPS). Surgery. 2014;156(3):591-600. doi:10.1016/j.surg.2014.06.016. PMID:25061003. Listed here as well as in the reference library to record that no full text was obtained for this depot: the nodal station list, the claim that extended lymphadenectomy gives no survival benefit, and the absence of consensus on what to do when a frozen-section node outside the resection field is positive are all taken from the abstract and the consensus statement's own summary, not from the trials behind them. The item it supports in the surgery assessment is graded C for that reason."
   ]
  },
- "provenance": "Revised 15 October 2026, Batch 09, PDAC roadmap v0.3. Decision points 0–8 cover diagnosis, resectability, perioperative treatment, locally advanced and metastatic disease. The pancreatic adenocarcinoma liver-metastasis experimental branch and its associated eligibility rules, activation questions and reference material have been removed. Evidence limitations for the retained PDAC pathway remain visible. Draft for multidisciplinary review; not ratified clinical policy."
+ "provenance": "Revised 2 November 2026 using source-linked clinical audit findings. The change register records the original wording, revision and source locator. Source access and review depth vary; remaining critiques, unavailable sources and unreviewed material are retained in the audit record. Clinical decisions, society guidance and open local proposals retain their distinct status."
 }

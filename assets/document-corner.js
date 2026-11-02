@@ -9,7 +9,7 @@
 (() => {
   'use strict';
   const root = new URL('../', document.currentScript.src);
-  const KEY = '20261029-docs1';
+  const KEY = '20261102-review1';
   const path = location.pathname.slice(root.pathname.length).split('/').filter(Boolean);
   const ROADMAP = {hcc: 'hcc', hilar: 'pcca', icca: 'icca', crlm: 'crlm', nelm: 'nelm', adenoma: 'hca', chcca: 'chcca', pdac: 'pdac',
     pnet: 'pnet', ampullary: 'ampullary', pcyst: 'pcyst', incidental: 'incidental'};
@@ -40,7 +40,7 @@
       const set = setInView();
       list.innerHTML = `<p class="doc-corner-head">${esc(t.code)} · ${esc({roadmap: 'Roadmap', standard: 'Standard pathway', highrisk: 'High-risk pathway'}[set])}</p>` +
         LABELS[set].filter(([k]) => t.files[k]).map(([k, label, note]) =>
-          `<a href="${esc(new URL(`documents/${key}/${t.files[k]}`, root).href)}" download data-doc="${esc(k)}"><b>${esc(label)}</b><small>${esc(note)} · Word</small></a>`).join('');
+          `<a href="${esc(new URL(`documents/${key}/${t.files[k]}`, root).href)}" download data-doc="${esc(k)}"><b>${esc(label)}</b><small>${esc(note)} · Word source edition</small></a>`).join('');
       box.dataset.set = set;
     };
     fill();
@@ -91,7 +91,7 @@
       const ratify = set.ratify && set.ratify.length ? `<details class="cq-fold cq-ratify"><summary>Specialty ratification items <span>${set.ratify.length}</span></summary>${rows(set.ratify,
         [['Item', x => `<b>${esc(x.id)}</b><small>${esc(x.specialty)}</small>`], ['To ratify', x => esc(x.question)], ["Roadmap's stated position", x => `${esc(x.proposal)}<small>${esc(x.proposal_locator)}</small>`]])}</details>` : '';
       const na = (data.not_applicable || []).map(n => `<p class="cq-na"><b>Previously treated extrahepatic disease.</b> ${esc(n.text)}</p>`).join('');
-      sec.innerHTML = `<div class="sechead"><h3 class="ch-background-title">Questions for consensus</h3><p>Every decision this roadmap still needs the programme to make: what guidelines, trials and papers say, the proposed selection, and the group decision.<span data-doc-note> The same questions are in the Word files under <b>Documents</b> (top right).</span></p><button class="xpand" type="button" aria-expanded="false">Show</button></div>
+      sec.innerHTML = `<div class="sechead"><h3 class="ch-background-title">Questions for consensus</h3><p>Every decision this roadmap still needs the programme to make: what guidelines, trials and papers say, the proposed selection, and the group decision.<span data-doc-note> Versioned Word source files are under <b>Documents</b> (top right); the web questions include later review corrections.</span></p><button class="xpand" type="button" aria-expanded="false">Show</button></div>
         <div class="cq-body" hidden><nav class="cq-index" aria-label="Questions for consensus">${set.questions.map(q => `<a href="#question-${esc(q.id)}">${esc(q.id)}</a>`).join('')}</nav>
         ${set.questions.map(q => card(data, q, slug)).join('')}${ratify}${na}</div>`;
       anchor.before(sec);

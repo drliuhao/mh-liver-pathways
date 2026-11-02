@@ -21,11 +21,11 @@
   const extLink = (url, label) => `<p class="tc-ext"><a class="tc-ext-link" href="${esc(url)}" target="_blank" rel="noopener">${esc(label)} ↗</a></p>`;
   // Exception scores, verified against OPTN Policy 9 (Tables 9-2, 9-10) and the NLRB transplant oncology guidance.
   const MELD_EXCEPTIONS = [
-    ['hcc', 'HCC (T2, OPTN standardized)', 'Calculated MELD at the initial request and first extension; MMaT − 3 from the second extension', 'OPTN Policy 9.5 · Table 9-10'],
+    ['hcc', 'HCC (T2, OPTN standardized)', 'Calculated MELD at the initial request and first extension; MMaT − 3 from the second extension', 'OPTN Policy 9.5 · Table 9-10; age ≥18 at registration; exception-score floor 15 under 9.4.E'],
     ['pcca', 'Perihilar cholangiocarcinoma (OPTN standardized protocol)', 'MMaT − 3', 'OPTN Policy 9.5 · Table 9-2'],
-    ['icca', 'Intrahepatic cholangiocarcinoma ≤3 cm in cirrhosis', 'MMaT − 3', 'NLRB guidance'],
+    ['icca', 'iCCA or mixed HCC–iCCA: solitary, biopsy-proven, unresectable, ≤3 cm in cirrhosis; ≥6 months stability after qualifying therapy; no extrahepatic disease', 'MMaT − 3', 'Nonbinding NLRB guidance; all selection and extension criteria apply'],
     ['nelm', 'Neuroendocrine liver metastases', 'MMaT − 3', 'NLRB guidance'],
-    ['crlm', 'Colorectal liver metastases', 'MMaT − 20; a result below 15 is set to 15', 'NLRB guidance'],
+    ['crlm', 'Colorectal liver metastases', 'MMaT − 20; a result below 15 is set to 15', 'NLRB score recommendation; floor 15 is OPTN Policy 9.4.E. Extensions include CEA <80 ng/mL.'],
     ['hehe', 'Hepatic epithelioid hemangioendothelioma', 'MMaT − 3', 'NLRB guidance'],
     ['hca', 'Hepatocellular adenoma', 'MMaT − 3', 'NLRB guidance']];
   let pageSlug = '';
@@ -65,16 +65,21 @@
     if (sizes.some(x => x === null || x <= 0)) return fail('Each entered lesion diameter must be a positive number. Leave unused fields blank.');
     if (!sizes.length) return fail('Enter the diameter of each qualifying lesion.');
     if (!answered(v.spread)) return fail('Confirm whether macrovascular invasion or extrahepatic disease is present.');
-    const n = sizes.length, max = Math.max(...sizes), sum = sizes.reduce((a, b) => a + b, 0), spread = positive(v.spread);
+    if (sizes.some(x => x < 1)) return fail('Enter only qualifying HCC lesions at least 1 cm. Review subcentimeter observations separately; they are not OPTN Class 5 lesions.');
+    // Compensated summation plus representation-scale tolerance; retain arbitrarily precise inputs.
+    let sum = 0, correction = 0;
+    for (const size of sizes) { const y = size - correction, t = sum + y; correction = (t - sum) - y; sum = t; }
+    const withinSum = sum <= 8 || sum - 8 <= Number.EPSILON * Math.max(8, sum) * sizes.length;
+    const n = sizes.length, max = Math.max(...sizes), spread = positive(v.spread);
     const milan = !spread && ((n === 1 && max <= 5) || (n >= 2 && n <= 3 && max <= 3));
     let t2 = 'not met';
     if (!spread && n === 1 && max >= 2 && max <= 5) t2 = 'met';
     else if (!spread && n === 1 && max >= 1 && max < 2) t2 = 'T1';
     else if (!spread && n >= 2 && n <= 3 && sizes.every(x => x >= 1 && x <= 3)) t2 = 'met';
     const downstaging = !spread && ((n === 1 && max > 5 && max <= 8) ||
-      (n >= 2 && n <= 3 && max > 3 && max <= 5 && sum <= 8) ||
-      (n >= 4 && n <= 5 && max < 3 && sum <= 8));
-    const ucsf = !spread && ((n === 1 && max <= 6.5) || (n >= 2 && n <= 3 && max <= 4.5 && sum <= 8));
+      (n >= 2 && n <= 3 && max > 3 && max <= 5 && withinSum) ||
+      (n >= 4 && n <= 5 && max < 3 && withinSum));
+    const ucsf = !spread && ((n === 1 && max <= 6.5) || (n >= 2 && n <= 3 && max <= 4.5 && withinSum));
     return {ok: true, n, max, sum, milan, t2, downstaging, ucsf, tbs: round(Math.sqrt(max ** 2 + n ** 2)), under1: sizes.some(x => x < 1)};
   }
 
@@ -166,7 +171,7 @@
     if (afp === null || afp < 0) return fail('Enter AFP at transplant (ng/mL).');
     if (!answered(v.mvi)) return fail('Confirm microvascular invasion on the explant.');
     if (n === null || n < 0 || !Number.isInteger(n)) return fail('Enter the number of viable tumors on the explant (0 if none).');
-    if (n > 0 && (d === null || d <= 0)) return fail('Enter the largest viable tumor diameter (cm).');
+    if (n > 0 && (d === null || d < 1)) return fail('Enter the largest active nodule diameter including necrotic areas (at least 1 cm).');
     if (n === 0 && d !== null && d > 0) return fail('With no viable tumor the largest viable diameter is 0. Check the explant entries.');
     const sum = n === 0 ? 0 : d + n;
     const pAfp = afp <= 20 ? 0 : afp < 100 ? 1 : afp < 1000 ? 2 : 3, pMvi = positive(v.mvi) ? 2 : 0, pSum = sum === 0 ? 0 : sum < 5 ? 1 : sum < 10 ? 2 : 3;
@@ -183,15 +188,16 @@
     return {ok: true, score: pd + pn + pa, pd, pn, pa, high: pd + pn + pa > 2};
   }
 
-  // Metroticket 2.0 (Mazzaferro 2018): number of viable tumors + largest viable diameter (cm) within an AFP-adjusted limit.
+  // Metroticket 2.0 (Mazzaferro 2018): active nodules ≥1 cm + whole largest active-nodule diameter (including necrosis) within an AFP-adjusted limit.
   function metroticket(v) {
     const afp = num(v.afp), n = num(v.number), d = num(v.largest);
     if (afp === null || afp < 0) return fail('Enter AFP (ng/mL).');
-    if (n === null || n < 0 || !Number.isInteger(n)) return fail('Enter the number of viable tumors (0 after a complete response).');
-    if (n > 0 && (d === null || d <= 0)) return fail('Enter the largest viable tumor diameter (cm).');
-    if (n === 0 && d !== null && d > 0) return fail('With no viable tumor the size is 0. Check the entries.');
+    if (n === null || n < 0 || !Number.isInteger(n)) return fail('Enter the number of active nodules at least 1 cm (0 after a complete response).');
+    if (n > 0 && (d === null || d < 1)) return fail('Enter the largest active nodule diameter including necrotic areas (at least 1 cm).');
+    if (d !== null && d < 0) return fail('Diameter cannot be negative.');
+    if (n === 0 && d !== null && d > 0) return fail('With no active qualifying nodule the size is 0. Check the entries.');
     const sum = n === 0 ? 0 : n + d, limit = afp < 200 ? 7 : afp < 400 ? 5 : afp <= 1000 ? 4 : null;
-    return {ok: true, sum: round(sum, 1), limit, within: limit !== null && sum <= limit, sharedBoundary: afp === 400};
+    return {ok: true, sum, limit, within: limit !== null && sum <= limit, sharedBoundary: afp === 400};
   }
 
   /* ---------- Calculator forms: fields and how a result reads ---------- */
@@ -223,9 +229,9 @@
     ], run: childPugh, read: r => `Child-Pugh ${r.score} points · class ${r.cls}`},
     albi: {fields: [
       {id: 'bilirubin', label: 'Bilirubin', type: 'number', step: '0.1'},
-      {id: 'biliUnit', label: 'Bilirubin unit', type: 'select', options: [['mgdl', 'mg/dL'], ['umol', 'µmol/L']]},
+      {id: 'biliUnit', label: 'Bilirubin unit', type: 'select', options: [['', 'Choose units'], ['mgdl', 'mg/dL'], ['umol', 'µmol/L']]},
       {id: 'albumin', label: 'Albumin', type: 'number', step: '0.1'},
-      {id: 'albUnit', label: 'Albumin unit', type: 'select', options: [['gdl', 'g/dL'], ['gl', 'g/L']]}
+      {id: 'albUnit', label: 'Albumin unit', type: 'select', options: [['', 'Choose units'], ['gdl', 'g/dL'], ['gl', 'g/L']]}
     ], run: albi, read: r => [`ALBI ${r.score.toFixed(2)} · grade ${r.grade}`, 'Grade uses the unrounded score.']},
     hccburden: {fields: [
       ...[1, 2, 3, 4, 5, 6].map(i => ({id: 'size' + i, label: 'Lesion ' + i, unit: 'cm', type: 'number', step: '0.1'})),
@@ -234,7 +240,7 @@
     read: r => [`${r.n} lesion${r.n > 1 ? 's' : ''}, largest ${r.max} cm, sum ${round(r.sum, 4)} cm`,
       `Milan: ${r.milan ? 'within' : 'outside'}`,
       `T2: ${r.t2 === 'met' ? 'size criteria met' : r.t2 === 'T1' ? 'T1 (single 1 to <2 cm)' : 'not met'}`,
-      `UNOS downstaging (pretreatment): ${r.milan ? 'not needed (within Milan)' : r.downstaging ? 'within' : 'outside'}`,
+      `UNOS downstaging (pretreatment): ${r.t2 === 'met' ? 'not needed (within T2)' : r.downstaging ? 'within' : 'outside'}`,
       `UCSF: ${r.ucsf ? 'within' : 'outside'}`,
       `Tumor burden score: ${r.tbs.toFixed(2)}`].concat(r.under1 ? ['Lesions under 1 cm do not satisfy the T2 minimum lesion size. Confirm which observations are qualifying HCCs.'] : [])},
     tbs: {fields: [{id: 'max', label: 'Largest tumor', unit: 'cm', type: 'number', step: '0.1'}, {id: 'n', label: 'Number of tumors', type: 'number', step: '1'}],
@@ -255,20 +261,20 @@
         : r.score <= 3 ? 'Surveillance proposed by the derivation paper: multiphasic CT or MRI, chest CT and AFP every 6 months for 2 years.'
         : r.score === 4 ? 'Surveillance proposed by the derivation paper: multiphasic CT or MRI, chest CT and AFP every 6 months for 5 years.'
         : 'Surveillance proposed by the derivation paper: every 3–4 months for 2 years, then every 6 months to year 5. 5-year recurrence exceeded 75% at 5 or more.',
-      'Derived in recipients within Milan on imaging; an external cohort found weaker discrimination when the explant was beyond Milan.']},
+      'Derived in recipients within Milan on imaging; patients downstaged from beyond Milan were excluded. The external validation advises against using RETREAT beyond Milan on explant; it is not a pretransplant eligibility test.']},
     afpmodel: {fields: [
-      {id: 'largest', label: 'Largest tumor diameter', unit: 'cm', type: 'number', step: '0.1'},
-      {id: 'number', label: 'Number of tumors', type: 'number', step: '1'},
-      {id: 'afp', label: 'AFP', unit: 'ng/mL', type: 'number', step: '0.1'}
+      {id: 'largest', label: 'Largest current active nodule, whole diameter', unit: 'cm', type: 'number', step: '0.1'},
+      {id: 'number', label: 'Current active typical nodules over 1 cm', type: 'number', step: '1'},
+      {id: 'afp', label: 'AFP at this assessment', unit: 'ng/mL', type: 'number', step: '0.1'}
     ], run: afpModel, read: r => [`AFP model ${r.score} (size ${r.pd} + number ${r.pn} + AFP ${r.pa})`,
       r.high ? 'Above 2: higher-risk group. Validation cohort 5-year recurrence 50.6% against 8.8% for 2 or less.' : '2 or less: lower-risk group. Validation cohort 5-year recurrence 8.8% against 50.6% above 2.',
       'A French selection model, separate from the OPTN exception rules.']},
     metroticket: {fields: [
       {id: 'afp', label: 'AFP', unit: 'ng/mL', type: 'number', step: '0.1'},
-      {id: 'number', label: 'Number of viable tumors', type: 'number', step: '1'},
-      {id: 'largest', label: 'Largest viable tumor diameter', unit: 'cm', type: 'number', step: '0.1'}
+      {id: 'number', label: 'Number of active nodules at least 1 cm', type: 'number', step: '1'},
+      {id: 'largest', label: 'Largest active nodule, whole diameter including necrosis', unit: 'cm', type: 'number', step: '0.1'}
     ], run: metroticket, read: r => [r.limit === null ? 'AFP above 1000 ng/mL: outside the Metroticket 2.0 criteria' : `${r.within ? 'Within' : 'Outside'} the AFP-adjusted limit: ${r.sum} ${r.within ? '≤' : '>'} ${r.limit}`,
-      'Sum = number of viable tumors + largest viable diameter (cm), on the last imaging before transplant; a complete response counts as 0.',
+      'Sum = active nodules ≥1 cm + whole largest active-nodule diameter including necrosis (cm), on the last imaging before transplant; a complete response counts as 0.',
       'Criteria for an estimated 70% 5-year HCC-specific survival after transplant. Prognostic, not an allocation rule.'].concat(r.sharedBoundary ? ['The published AFP ranges share 400 ng/mL; this value is given the stricter limit.'] : [])},
     netgrade: {fields: [
       {id: 'diff', label: 'Differentiation', type: 'select', options: [['', 'Choose'], ['well', 'Well differentiated (NET)'], ['poor', 'Poorly differentiated (NEC)']]},
@@ -292,7 +298,7 @@
       html: () => `<p><b>ALBI = log<sub>10</sub> bilirubin (µmol/L) × 0.66 + albumin (g/L) × −0.085.</b> Grade 1 ≤ −2.60; grade 2 above −2.60 to −1.39; grade 3 above −1.39.</p><p>An objective liver-function grade derived in HCC, without the subjective Child-Pugh items. It does not replace Child-Pugh where a protocol specifies Child-Pugh.</p>${src(pm('25512453', 'Johnson 2015'))}`},
     {id: 'ecog', name: 'ECOG performance status', kind: 'Scale', match: /\bECOG\b|\bperformance status\b/i, html: () => term('ecog')},
     {id: 'lirads', name: 'LI-RADS categories', kind: 'Classification', match: /\bLI-?RADS\b|\bLR-(?:[1-5]|M|TR)\b|\bClass 5\b/, html: () => term('lr5'), shared: ['incidental', 'CT/MRI LI-RADS v2018 — category, and what each one means']},
-    {id: 'hccburden', name: 'Milan, T2, UNOS downstaging and UCSF', kind: 'Calculator', pages: ['hcc', 'chcca', 'T:hcc'],
+    {id: 'hccburden', name: 'Milan, T2, UNOS downstaging and UCSF', kind: 'Calculator', pages: ['hcc', 'T:hcc'],
       match: /\bMilan\b(?![- ]NET| consensus)|\bUCSF\b|\bT2 (?:criteria|exception|size|tumou?r|burden)|[Dd]ownstag/,
       html: () => `<p><b>Milan:</b> one HCC ≤5 cm, or 2–3 HCCs each ≤3 cm; no macrovascular invasion or extrahepatic spread. Milan is a selection rule, not the T2 exception definition.</p><p><b>T2 (OPTN standard exception):</b> one qualifying Class 5 lesion 2–5 cm, or 2–3 qualifying lesions each 1–3 cm. A single 1 to &lt;2 cm HCC is T1.</p><p><b>UNOS downstaging, pretreatment inclusion:</b> one lesion &gt;5 to ≤8 cm; or 2–3 lesions, at least one &gt;3 cm, each ≤5 cm, summed diameters ≤8 cm; or 4–5 lesions each &lt;3 cm, summed diameters ≤8 cm. No macrovascular invasion or extrahepatic disease. After treatment the viable tumor must meet T2 size; AFP and observation requirements also apply.</p><p><b>UCSF:</b> one tumor ≤6.5 cm, or 2–3 tumors with the largest ≤4.5 cm and summed diameters ≤8 cm; no macrovascular invasion.</p><p>Use pretreatment qualifying HCC lesion sizes; six fields are provided. This is a size-pattern check, not a post-treatment viability assessment. AFP, response, observation time and the policy version in force still apply.</p>${src(web(OPTN, 'OPTN Policy 9.5'), pm('8594428', 'Mazzaferro 1996'), pm('11391528', 'Yao 2001'), pm('25689978', 'Yao 2015'))}`},
     {id: 'vp', name: 'Portal vein tumor invasion (Vp)', kind: 'Classification', pages: ['hcc', 'chcca', 'T:hcc'], match: /\bVp ?[0-4]\b|\bPVTT\b|portal[- ]vein tumou?r/i,
@@ -300,13 +306,13 @@
     {id: 'tbs', name: 'Tumor burden score', kind: 'Calculator', match: /[Tt]umou?r burden score|\bTBS\b/,
       html: () => `<p><b>TBS = √[(largest diameter in cm)² + (number of tumors)²]</b>, the distance from the origin on a size-by-number plot. A prognostic measure; it carries no eligibility threshold on its own.</p>${src(pm('27763897', 'Sasaki 2018'))}`},
     {id: 'fong', name: 'Fong risk score', kind: 'Calculator', pages: ['crlm', 'T:crlm'], match: /\bFong\b|[Cc]linical risk score|\bCRS ?[0-5]/,
-      html: () => `<p>Five preoperative factors, one point each: node-positive primary; under 12 months from primary resection to liver metastasis diagnosis; more than one hepatic tumor; largest tumor over 5 cm; CEA over 200 ng/mL. It stratifies outcome after resection; it does not decide operability.</p>${src(pm('10493478', 'Fong 1999'))}`},
+      html: () => `<p>Five preoperative factors, one point each: node-positive primary; synchronous liver metastases or diagnosis under 12 months after primary resection; more than one hepatic tumor; largest tumor over 5 cm; CEA over 200 ng/mL. It stratifies outcome after resection; it does not decide operability.</p>${src(pm('10493478', 'Fong 1999'))}`},
     {id: 'oslo', name: 'Oslo score', kind: 'Calculator', pages: ['crlm', 'T:crlm'], match: /\bOslo\b/,
       html: () => `<p>Four factors, one point each: largest lesion over 5.5 cm; CEA over 80 µg/L; under 2 years from primary resection to transplant; progressive disease on chemotherapy at transplant. Prognostic only: keep it apart from the eligibility decision points.</p>${src(pm('31188200', 'Dueland 2020'), pm('31674105', 'Dueland 2020'))}`},
     {id: 'hehelt', name: 'HEHE-LT score', kind: 'Score', pages: ['T:hehe'], match: /\bH?EHE-LT\b/,
       html: () => `<p>Registry prognostic score for recurrence after transplant for HEHE, built from macrovascular invasion, a pre-transplant waiting time of 120 days or less and hilar lymph-node invasion. Five-year disease-free survival was 93.9% with a score of 2 or less against 38.5% with 6 or more.</p><p>Use it for counseling, not as a MELD score or a qualification test: some components are known only from pathology.</p>${src(pm('28212256', 'Lai 2017'))}`},
     {id: 'netgrade', name: 'WHO 2019 NET grade (Ki-67)', kind: 'Calculator', pages: ['nelm', 'pnet', 'T:nelm'], match: /\bKi-?67\b|\bWHO (?:2019 )?grade\b/,
-      html: () => `<p><b>Well-differentiated NET:</b> G1 under 2 mitoses/2 mm² and Ki-67 under 3%; G2 2–20 mitoses/2 mm² and/or Ki-67 3–20%; G3 over 20 mitoses/2 mm² and/or Ki-67 over 20%. <b>Poorly differentiated carcinoma (NEC)</b> is high grade by definition. When the two indices disagree, assign the higher grade.</p>${src(pm('31433515', 'WHO 2019 classification'))}`},
+      html: () => `<p><b>Well-differentiated NET:</b> G1 under 2 mitoses/2 mm² and Ki-67 under 3%; G2 2–20 mitoses/2 mm² and/or Ki-67 3–20%; G3 over 20 mitoses/2 mm² and/or Ki-67 over 20%. <b>Poorly differentiated carcinoma (NEC)</b> is high grade by definition. When the two indices disagree, assign the higher grade. On a small biopsy, use representative Ki-67 and differentiation when mitoses are not evaluable; expert review or additional tissue may be needed. WHO G2 includes Ki-67 exactly 20%, but the NLRB NET exception guidance uses a separate strict &lt;20% limit; this grade does not establish allocation eligibility.</p>${src(pm('31433515', 'WHO 2019 classification'))}`},
     {id: 'krenning', name: 'Krenning score (SSTR uptake)', kind: 'Scale', pages: ['nelm', 'pnet', 'T:nelm'], match: /\bKrenning\b|[Uu]ptake score|\bSSTR\b|DOTATATE/,
       html: () => `<p>Modified Krenning score of somatostatin-receptor uptake: <b>0</b> none; <b>1</b> very low; <b>2</b> at or below liver; <b>3</b> above liver; <b>4</b> above spleen. Uptake above liver supports consideration of PRRT; suitability also depends on uptake across lesions, disease biology and organ reserve.</p>${src(pm('30850506', 'Hope 2019'), web('https://snmmi.org/common/Uploaded%20files/Web/Clinical%20Practice/Procedure%20Standards/2022/SSTR-PET%2003.11.22%20Final%20Clean.pdf', 'SNMMI/EANM SSTR-PET guidance'))}`},
     {id: 'spigelman', name: 'Spigelman stage', kind: 'Calculator', pages: ['ampullary'], match: /\bSpigelman\b/,
@@ -323,7 +329,7 @@
       html: () => `<p><b>I</b> any deviation from the normal course without specific treatment; <b>II</b> needs drugs, transfusion or parenteral nutrition; <b>IIIa/IIIb</b> needs surgical, endoscopic or radiological intervention without/with general anesthesia; <b>IVa/IVb</b> life-threatening single/multiple organ dysfunction needing intensive care; <b>V</b> death.</p>${src(pm('15273542', 'Dindo 2004'))}`},
     {id: 'mmat', name: 'Exception score (MMaT)', kind: 'Allocation', match: /\bMMaT\b/,
       html: () => `<p>MMaT is the median MELD at transplant for the cohort around the donor hospital. The donor-specific value is used on the match run. Approved exceptions are scored against it, for example MMaT−3 for an applicable adult exception; the protocol for each disease states which value applies. Verify the policy in force when filing.</p>${src(web(OPTN + '#page=189', 'OPTN Policy 9.4.D–E · PDF p.189'))}`},
-    {id: 'bclc', name: 'BCLC stage', kind: 'Classification', pages: ['chcca', 'T:hcc'], match: /\bBCLC\b/,
+    {id: 'bclc', name: 'BCLC stage', kind: 'Classification', pages: ['T:hcc'], match: /\bBCLC\b/,
       html: () => `<p>Barcelona Clinic Liver Cancer staging links tumor burden, liver function and performance status to treatment: 0 very early, A early, B intermediate, C advanced, D terminal. The HCC roadmap is organized by these stages and follows the 2026 update.</p>${src(`<a href="${esc(new URL('hcc/', ROOT_URL()).href)}">HCC roadmap · stages 0–D</a>`)}`},
     {id: 'lfi', name: 'Liver Frailty Index', kind: 'External tool', match: /[Ff]railty/,
       html: () => `<p>Three performance tests: grip strength (dominant hand, three trials), time for five chair stands, and balance held in three positions for up to 10 seconds each. Derived in 536 outpatients listed for transplant at UCSF; with MELDNa it ranked 3-month waitlist mortality better than MELDNa alone (C-statistic 0.82 against 0.80).</p><p>Calculate it with the UCSF tool, which applies the sex-adjusted grip formula; the formula is not reproduced here. The Harvard eFrailty tool page classifies 4.5 or more as frail.</p>${extLink('https://liverfrailtyindex.ucsf.edu/', 'Open the UCSF Liver Frailty Index calculator')}${src(pm('28422306', 'Lai 2017'), web('https://efrailty.hsl.harvard.edu/ToolLiverFrailtyIndex.html', 'eFrailty · Liver Frailty Index'))}`},
@@ -334,17 +340,17 @@
     {id: 'retreat', name: 'RETREAT score (after transplant for HCC)', kind: 'Calculator', pages: ['T:hcc'], match: /\bRETREAT\b/,
       html: () => `<p>Recurrence risk after transplant for HCC from three findings. <b>AFP at transplant</b> (ng/mL): 0–20 = 0, 21–99 = 1, 100–999 = 2, 1000 or more = 3. <b>Microvascular invasion</b> on the explant = 2. <b>Largest viable tumor diameter (cm) plus number of viable tumors</b>: 0 = 0, 1.1–4.9 = 1, 5.0–9.9 = 2, 10 or more = 3. Completely necrotic tumors are not counted. Score 0–8.</p><p>A post-transplant tool for surveillance planning, not a pre-transplant eligibility test.</p>${src(pm('27838698', 'Mehta 2017'), pm('35158898', 'van Hooff 2022'))}`},
     {id: 'afpmodel', name: 'AFP model (French)', kind: 'Prognostic score', pages: ['hcc', 'T:hcc'], match: /AFP model|French model/i,
-      html: () => `<p><b>Largest diameter</b>: 3 cm or less = 0, over 3 to 6 cm = 1, over 6 cm = 4. <b>Number of tumors</b>: 1–3 = 0, 4 or more = 2. <b>AFP</b> (ng/mL): 100 or less = 0, over 100 to 1000 = 2, over 1000 = 3. A score above 2 identified higher recurrence risk (validation cohort 5-year recurrence 50.6% against 8.8%).</p><p>A selection model used in France; separate from OPTN exception rules.</p>${src(pm('22750200', 'Duvoux 2012'))}`},
+      html: () => `<p><b>Largest diameter</b>: 3 cm or less = 0, over 3 to 6 cm = 1, over 6 cm = 4. <b>Number of tumors</b>: 1–3 = 0, 4 or more = 2. <b>AFP</b> (ng/mL): 100 or less = 0, over 100 to 1000 = 2, over 1000 = 3. A score above 2 identified higher recurrence risk (validation cohort 5-year recurrence 50.6% against 8.8%).</p><p>French operational guidance uses current assessment AFP and active typical nodules over 1 cm after treatment, measuring the maximum whole nodule rather than an enhancing rim. Record the assessment date and preserve pretreatment burden separately for allocation. AFEF 2025 Table 3 specifies ≥4 for the high count band; these operational definitions are separate from the original model validation.</p><p>A selection model used in France; separate from OPTN exception rules.</p>${src(pm('22750200', 'Duvoux 2012'), web('https://www.agence-biomedecine.fr/IMG/pdf/guide_score_foie_v4.pdf#page=20', 'ABM Score Foie 2024 · pp19–22'), web('https://afef.asso.fr/wp-content/uploads/2025/03/Recommandations-Afef-2025-CHC.pdf#page=65', 'AFEF 2025 · Table 3'))}`},
     {id: 'metroticket', name: 'Metroticket 2.0', kind: 'Prognostic score', pages: ['hcc', 'T:hcc'], match: /Metroticket|[Uu]p-to-7/,
-      html: () => `<p>Sum of the number of viable tumors and the largest viable diameter (cm), on the last imaging before transplant, within an AFP-adjusted limit: <b>7 or less</b> with AFP under 200 ng/mL; <b>5 or less</b> with AFP 200–400; <b>4 or less</b> with AFP 400–1000. Inside these limits the model estimated at least 70% 5-year HCC-specific survival after transplant. A complete response counts as zero tumors.</p><p>Prognostic, from Italian training and Chinese validation cohorts; it is not an allocation rule.</p>${extLink('https://www.hcc-olt-metroticket.org/', 'Open the Metroticket 2.0 online calculator')}${src(pm('28989060', 'Mazzaferro 2018'))}`},
+      html: () => `<p>Sum of the number of active nodules at least 1 cm and the whole largest active-nodule diameter including necrotic areas (cm), on the last imaging before transplant, within an AFP-adjusted limit: <b>7 or less</b> with AFP under 200 ng/mL; <b>5 or less</b> with AFP 200–400; <b>4 or less</b> with AFP 400–1000. Inside these limits the model estimated at least 70% 5-year HCC-specific survival after transplant. A complete response counts as zero tumors.</p><p>Prognostic, from Italian training and Chinese validation cohorts; it is not an allocation rule.</p>${extLink('https://www.hcc-olt-metroticket.org/', 'Open the Metroticket 2.0 online calculator')}${src(pm('28989060', 'Mazzaferro 2018'))}`},
     {id: 'netpet', name: 'NETPET grade (SSTR and FDG PET)', kind: 'Classification', pages: ['nelm', 'pnet', 'T:nelm'], match: /\bNETPET\b|\bFDG\b/,
       html: () => `<p>Dual SSTR and FDG PET read on the lesion most FDG-avid relative to its SSTR uptake. <b>P0</b> no disease on either scan; <b>P1</b> SSTR-avid disease with no FDG uptake; <b>P2–P4</b> lesions avid on both, graded by relative FDG uptake and extent; <b>P5</b> significant FDG-positive, SSTR-negative disease.</p><p>In 62 patients, median survival was 11 months at P5 and not reached at P1 or P2–P4. The authors suggest P4b–P5 disease may not be controlled by PRRT alone, a hypothesis to test. Retrospective and single-center.</p>${src(pm('28435454', 'Chan 2017'))}`},
     {id: 'meldexc', name: 'MELD exception score by diagnosis', kind: 'Allocation', match: NEVER,
       html: () => `<table class="minitab tc-table"><tbody>${MELD_EXCEPTIONS.map(([slug, d, s, w]) => `<tr${slug === pageSlug ? ' class="tc-current"' : ''}><td>${esc(d)}</td><td>${esc(s)}<br><small>${esc(w)}</small></td></tr>`).join('')}</tbody></table><p>Adult candidates. NLRB guidance values are recommendations to the review board, not automatic awards. Confirm the policy version in force when filing.</p>${src(web(OPTN, 'OPTN Policy 9'), web(NLRB, 'NLRB transplant oncology guidance'))}`},
     {id: 'afpexc', name: 'AFP rules for the HCC exception', kind: 'Criteria', pages: ['hcc', 'T:hcc'], match: NEVER,
-      html: () => `<p><b>T2 with AFP 1000 ng/mL or less:</b> eligible for the standardized exception.</p><p><b>AFP over 1000 at any time:</b> locoregional therapy may be given; the candidate becomes eligible if AFP falls below 500 and stays below 500. An AFP of 500 or more after locoregional therapy at any time means referral to the NLRB.</p><p><b>Extensions</b> are no longer automatic if the tumor progresses beyond T2, if AFP rises above 1000 after an initial value of 1000 or less, or if AFP rises to 500 or more after having fallen below 500.</p>${src(web(OPTN, 'OPTN Policy 9.5.I.ii, 9.5.I.iv and extensions'))}`},
+      html: () => `<p><b>T2 with AFP 1000 ng/mL or less:</b> satisfies this AFP condition only if the relevant prior AFP history and all other policy conditions are met.</p><p><b>AFP over 1000 at any time:</b> locoregional therapy may be given; the candidate becomes eligible if AFP falls below 500 and stays below 500. An AFP of 500 or more after locoregional therapy at any time means referral to the NLRB.</p><p><b>Extensions</b> are no longer automatic if the tumor progresses beyond T2, if AFP rises above 1000 after an initial value of 1000 or less, or if AFP rises to 500 or more after having fallen below 500. Automatic extension also stops after resection since the preceding request or when the requested score differs from Table 9-10.</p>${src(web(OPTN, 'OPTN Policy 9.5.I.ii, 9.5.I.iv and extensions'))}`},
     {id: 'csph', name: 'Clinically significant portal hypertension', kind: 'Criteria', pages: ['hcc', 'T:hcc', 'chcca'], match: /\bCSPH\b|portal hypertension/i,
-      html: () => `<p><b>Reference standard:</b> HVPG 10 mmHg or more, in viral and alcohol-related cirrhosis. Varices, ascites or portosystemic collaterals are clinical signs of portal hypertension.</p><p><b>Noninvasive (compensated advanced chronic liver disease):</b> liver stiffness by transient elastography of 15 kPa or less with platelets 150 ×10⁹/L or more rules CSPH out; 25 kPa or more rules it in for viral, alcohol-related and non-obese NASH disease. Between these, ANTICIPATE estimates at least 60% risk at 20–25 kPa with platelets under 150, or 15–20 kPa with platelets under 110.</p><p>CSPH, by HVPG or clinical signs, raises the risk of decompensation and death after resection for HCC.</p><p>These are Baveno VII (2022) statements. The HCC roadmap follows the 2026 BCLC update; a later Baveno edition was not verified here.</p>${src(pm('35120736', 'de Franchis 2022 · Baveno VII'))}`},
+      html: () => `<p><b>Reference standard:</b> HVPG ≥10 mmHg in viral and alcohol-related cirrhosis. CSPH raises decompensation risk after HCC resection.</p><p><b>Baveno VIII (2026), compensated advanced chronic liver disease:</b> LSM ≤15 kPa plus platelets ≥150 ×10⁹/L rules out CSPH. Diagnostic criteria, with their individual limitations, are ANTICIPATE/ANTICIPATE-NASH or NICER probability ≥75%; LSM ≥25 kPa for viral/alcohol-related disease or non-obese (BMI &lt;30) MASLD; or spleen stiffness &gt;55 kPa measured at 100 Hz. LSM refers to vibration-controlled transient elastography. Use ANTICIPATE-NASH for MASLD with obesity.</p><p>For indeterminate results, reassessment at 12 months may be preferred (weak recommendation; low-level evidence). <b>HCC limits:</b> noninvasive tests may not apply with macrovascular invasion. The LSM/platelet rule-out applies in BCLC 0–C; ANTICIPATE probability ≥75% is highly suggestive in BCLC 0–A without a right-lobe nodule &gt;5 cm. Apply the clinical and imaging context.</p>${src(pm('42624290', 'Baveno VIII 2026 · statements 1.14–1.17, 1.21–1.23'), pm('35120736', 'Baveno VII · HVPG and resection risk'))}`},
     {id: 'lrtfeas', name: 'Treatment feasibility · liver-directed', kind: 'Table', match: NEVER, lrt: true,
       html: () => `<p>When each liver-directed treatment is unsuitable, from the published liver-directed therapy matrix.</p>`},
     {id: 'bismuth', name: 'Bismuth–Corlette classification', kind: 'Classification', pages: ['T:pcca'], match: NEVER, shared: ['hilar', 'Bismuth-Corlette type and the operation it implies'], html: () => ''},
@@ -387,14 +393,14 @@
     icca: {3: SURGERY, 4: ['flr', 'recist'], 5: ['recist'], 7: ['lrtfeas'], 9: ['recist'], 10: ['lfi', 'meldexc']},
     hilar: {3: SURGERY, 4: ['lfi', 'meldexc'], 5: ['ccamol', 'recist']},
     nelm: {1: ['netpet'], 2: ['recist'], 3: ['recist', 'netpet'], 4: ['netpet'], 5: SURGERY, 6: ['recist', 'netpet'], 7: ['lrtfeas'], 9: ['lfi', 'meldexc']},
-    chcca: {3: SURGERY, 5: ['lfi'], 7: ['recist']},
+    chcca: {3: SURGERY, 5: ['lfi', 'meldexc'], 7: ['recist']},
     adenoma: {4: ['nsqip'], 10: ['lfi', 'meldexc']},
     pdac: {3: ['nsqip'], 4: ['recist'], 7: ['recist'], 8: ['recist']},
     pnet: {1: ['netpet'], 2: ['netpet'], 5: ['nsqip'], 8: ['netpet']},
     pcyst: {6: ['nsqip']},
     ampullary: {4: ['nsqip'], 5: ['nsqip'], 8: ['recist']},
     'T:hcc': {diagnosis: ['lipop'], 'curative-route': ['albi', 'csph', ...SURGERY, 'lrtfeas'], allocation: ['afpexc', 'meldexc', 'afpmodel', 'metroticket'],
-      treatment: ['mrecist', 'lrtfeas'], listing: ['meldexc', 'afpexc', 'lfi'], waitlist: ['mrecist', 'lfi'], 'after-transplant': ['retreat']},
+      treatment: ['mrecist', 'lrtfeas'], listing: ['meldexc', 'afpexc', 'lfi'], waitlist: ['mrecist', 'afpexc', 'lfi'], 'after-transplant': ['retreat']},
     'T:pcca': {localize: ['bismuth', 'drainage'], diagnosis: ['pccadx'], phenotype: ['bismuth', 'meldexc'], listing: ['lfi', 'meldexc']},
     'T:icca': {diagnosis: ['ccamol'], phenotype: ['multifocal', 'iccares'], therapy: ['recist', 'ccamol', 'lrtfeas'], stability: ['recist'], review: ['meldexc', 'lfi']},
     'T:crlm': {'map-disease': ['tbs', 'fong'], biology: ['fong', 'oslo', 'crlmmol'], unresectability: ['flr', 'fong', 'crlmres'], control: ['recist', 'lrtfeas'],

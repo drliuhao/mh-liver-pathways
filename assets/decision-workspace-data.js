@@ -69,7 +69,7 @@ window.DecisionWorkspaceData={
       "title": "4 · Assess transplant eligibility",
       "criteria": [
         "Permanent unresectability formally determined, with a written record of why resection, margin-verified ablation, portal vein embolisation or liver venous deprivation, staged hepatectomy, ALPPS and hepatic arterial infusion each cannot clear the liver at acceptable functional risk",
-        "Unequivocally liver-only on CT/MRI and PET/CT, with no extrahepatic, nodal or peritoneal disease at any time",
+        "Liver-only metastatic disease on CT/MRI and PET/CT for the NLRB exception route, with no extrahepatic disease after primary resection, including nodes outside the primary regional resection field or peritoneal metastases. A history of regional nodes removed with the primary is distinct. Broader clinical/LDLT review requires its own protocol.",
         "Histologically confirmed colorectal adenocarcinoma, BRAF wild type and microsatellite stable, with R0 primary resection and colonoscopy within 12 months excluding local recurrence",
         "At least 12 months from CRLM diagnosis and at least six months of stability or regression on systemic or locoregional therapy; CEA not above 80 µg/L; no hepatic lesion above 10 cm before treatment",
         "ECOG 0–1 with adequate organ function and low frailty, under a written protocol with a transplant-oncology MDT, a defined graft strategy, a prospective registry and an agreed recurrence plan"
@@ -313,7 +313,7 @@ window.DecisionWorkspaceData={
       ]
     },
     "hilar/0": {
-      "title": "0 · Assess the need for biliary drainage",
+      "title": "0 · Assess drainage after staging imaging, unless urgent",
       "criteria": [
         "Cholangitis, or a bilirubin that is rising",
         "Jaundice in a patient whose planned operation is a major hepatectomy with a predicted future liver remnant of 30% or less",
@@ -377,7 +377,7 @@ window.DecisionWorkspaceData={
         "Biliary and vascular extent that permits a technically achievable R0 resection",
         "Contralateral liver with intact arterial and portal inflow as well as biliary drainage",
         "Future liver remnant adequate, or made adequate by embolisation after the remnant has been drained",
-        "No intrahepatic, extrahepatic, nodal or peritoneal metastases on the staging package",
+        "No intrahepatic, extrahepatic, distant (non-regional) nodal or peritoneal metastases on the staging package; regional nodal disease requires prognostic assessment and does not by itself exclude resection.",
         "Patient fit for extended hepatectomy with biliary reconstruction, at a center with appropriate surgical expertise"
       ],
       "team": "HPB surgery · Abdominal radiology · Hepatology",
@@ -415,7 +415,7 @@ window.DecisionWorkspaceData={
     "hilar/5": {
       "title": "5 · Unresectable disease outside a transplant protocol",
       "criteria": [
-        "Regional nodal disease, or a mass of 3 cm or more in radial diameter: these do not meet the standardized exception criteria. Confirm borderline measurements and clinical options with the transplant team before excluding transplantation",
+        "Unresectable disease outside the standardized transplant route, for example regional nodal disease or radial mass ≥3 cm. Regional nodes or size alone do not exclude resection: if otherwise resectable, return to resection assessment; confirm transplant measurements with the team.",
         "Intrahepatic or extrahepatic metastases",
         "Comorbidity or performance status that rules out transplantation",
         "No OPTN-approved protocol available, or the patient declines that route"
@@ -452,7 +452,7 @@ window.DecisionWorkspaceData={
     "nelm/1": {
       "title": "1 · Confirm differentiation and grade",
       "criteria": [
-        "Biopsy reporting differentiation, an exact Ki-67 index and a mitotic count",
+        "Biopsy reporting differentiation and a representative Ki-67 index; include a mitotic count when evaluable. Document tissue adequacy and resolve discordance with expert pathology review.",
         "Somatostatin-receptor PET/CT for receptor status and whole-body staging",
         "Functional syndrome recorded explicitly, confirmed with directed tests",
         "Hepatic burden and distribution: unilobar versus bilobar, resectable versus diffuse-miliary",
@@ -718,8 +718,8 @@ window.DecisionWorkspaceData={
         "Cirrhosis, with disease unresectable on technical grounds or because of the underlying liver",
         "Biopsy-proven cHCC-CCA or mixed HCC-iCCA, solitary and 3 cm or less, to meet the OPTN review-board criteria",
         "Six months of documented stability on locoregional or systemic therapy, no new lesions, no extrahepatic disease",
-        "Well or moderately differentiated, with no macrovascular invasion and no nodal disease",
-        "A programme that has written down which criteria it is using, and a registry that records every case"
+        "Record differentiation, vascular invasion and nodal status for individualized clinical selection. These are not additional explicit NLRB small-cirrhotic eligibility bullets; any stricter local exclusions require a stated programme decision.",
+        "An approved written programme pathway and registry are required locally; decision D1 on opening this route remains OPEN. Meeting NLRB guidance alone does not activate a local transplant protocol."
       ],
       "team": "Liver transplant surgery · Transplant hepatology · Medical oncology · Pathology",
       "inputs": [
@@ -864,7 +864,7 @@ window.DecisionWorkspaceData={
     "adenoma/4": {
       "title": "4 · Size, growth, and intervention",
       "criteria": [
-        "Adenoma still larger than 5 cm after an adequate trial of risk-factor modification — and an explicit note of how long that trial has run, because six months is too early",
+        "Adenoma persistently ≥5 cm after an individualized trial of risk-factor modification, with duration, regression trajectory and any high-risk exception recorded",
         "Diameter increase of 20% or more on comparable imaging — EASL's RECIST-based growth trigger, never validated in a benign liver lesion",
         "Exophytic protrusion from the liver surface, or lesional arteries visible on imaging",
         "Lesion in segment II or III",
@@ -973,7 +973,7 @@ window.DecisionWorkspaceData={
       "criteria": [
         "A qualifying guidance route named explicitly in the narrative: syndromic, molecular, adenomatosis, or progressive and complicated",
         "Unresectable after expert hepatobiliary surgical review, with embolisation and ablation exhausted, infeasible or contraindicated",
-        "At least 6 months of adequate risk-factor modification documented for non-urgent oestrogen- or weight-associated disease",
+        "For non-urgent oestrogen- or weight-associated disease, document the adequate modification period and trajectory; six months alone does not establish failure, particularly while a lesion is regressing",
         "Multidisciplinary confirmation that non-transplant options are unsafe, infeasible or inadequate and that expected benefit justifies lifelong immunosuppression and graft use",
         "No extrahepatic metastasis and no macrovascular invasion where transformation is confirmed"
       ],
@@ -1138,7 +1138,7 @@ window.DecisionWorkspaceData={
         "LR-5, or LR-4 after board discussion, in an at-risk liver",
         "An LR-M or targetoid observation, or a peripheral mass with capsular retraction and delayed central enhancement",
         "A confirmed colorectal or neuroendocrine primary",
-        "A hepatocellular lesion in a normal liver that is not focal nodular hyperplasia",
+        "A hepatocellular lesion in a normal liver with unresolved FNH, HCA or HCC differential",
         "A lesion carrying both hepatocellular and cholangiocytic phenotypes, or discordant markers"
       ],
       "team": "Abdominal radiology · Hepatology · HPB surgery · Medical oncology",
@@ -1154,11 +1154,11 @@ window.DecisionWorkspaceData={
     "pdac/0": {
       "title": "0 · Obtain adequate staging imaging",
       "criteria": [
-        "Pancreas-protocol multiphase CT with a pancreatic parenchymal phase at 40–50 seconds and a portal venous phase at 65–70 seconds",
-        "Chest and pelvis CT in the same episode, for complete staging",
-        "CA 19-9 and liver function drawn after biliary decompression, not before",
-        "Genetic counselling and germline testing offered to every patient, whatever the stage",
-        "High-quality imaging no more than 4 weeks old at the time of the operation"
+        "High-quality pancreas-protocol contrast CT (preferred) or contrast MRI adequate to assess the primary, vessels and liver",
+        "Chest imaging and appropriate abdomen/pelvis assessment to complete staging",
+        "Liver tests and CA 19-9 interpreted with bilirubin; when drainage is indicated, reassess CA 19-9 after decompression",
+        "Germline testing offered for confirmed pancreatic cancer in parallel with care; an unfinished result does not prevent initial review",
+        "Before planned surgery, review whether imaging remains current; acquisition within four weeks is preferred, not an absolute prerequisite for initial assessment"
       ],
       "team": "Abdominal radiology · HPB surgery · Medical oncology · Genetics",
       "inputs": [
@@ -1322,7 +1322,7 @@ window.DecisionWorkspaceData={
       "title": "1 · Confirm differentiation and grade",
       "criteria": [
         "Well-differentiated neuroendocrine tumour, not a poorly differentiated neuroendocrine carcinoma",
-        "An exact Ki-67 proliferative index reported as a number, not a range, with the mitotic count per 2 mm²",
+        "Exact Ki-67 index and mitotic rate per 2 mm² when assessable; document tissue adequacy and use Ki-67 when a small biopsy cannot support a reliable mitotic count",
         "Two of synaptophysin, chromogranin A and INSM1 positive, with a broad-spectrum keratin",
         "Acinar cell carcinoma and the other neuroendocrine-marker mimics excluded where the morphology is unusual",
         "Functional status recorded as a clinical and biochemical judgement, not an immunohistochemical one"
@@ -1355,7 +1355,7 @@ window.DecisionWorkspaceData={
     "pnet/3": {
       "title": "3 · Control hormone-related symptoms",
       "criteria": [
-        "Insulinoma — neuroglycopenic symptoms with raised insulin, pro-insulin and C-peptide during concurrent hypoglycaemia",
+        "Insulinoma — documented hypoglycaemia with inappropriately nonsuppressed insulin, proinsulin and C-peptide, interpreted with the simultaneous glucose and evaluation of mimics",
         "Gastrinoma — Zollinger-Ellison syndrome with a raised fasting gastrin, interpreted against proton-pump inhibitor use",
         "Glucagonoma — glucagon excess with diabetes or necrolytic migratory erythema",
         "VIPoma — watery diarrhoea, hypokalaemia and achlorhydria with a raised VIP",
@@ -1395,7 +1395,8 @@ window.DecisionWorkspaceData={
         "Malignant-appearing tumour of any size",
         "A functional tumour that has been localised",
         "A 1–2 cm tumour where the board has decided to resect",
-        "Patient fit for the operation that the tumour's position actually requires"
+        "Patient fit for the operation that the tumour's position actually requires",
+        "Differentiation/grade and hereditary or multifocal disease assessed before choosing the operation; refer to decisions 7 and 8 when relevant"
       ],
       "team": "HPB surgery · NET medical oncology · Abdominal radiology",
       "inputs": [
@@ -1833,8 +1834,7 @@ window.DecisionWorkspaceData={
       "criteria": [
         "Single lesion ≤2 cm",
         "ECOG 0",
-        "Child-Pugh A",
-        "No clinically significant portal hypertension"
+        "Preserved liver function"
       ],
       "team": "Hepatology · HPB surgery · Interventional radiology",
       "inputs": [

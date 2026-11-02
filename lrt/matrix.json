@@ -6,7 +6,7 @@
     },
     "2": {
       "short": "Curative-intent alt.",
-      "label": "Curative-intent alternative — when resection / transplant / ablation not feasible"
+      "label": "Curative-intent alternative — selection and evidence depend on tumor type and the reference treatment"
     },
     "3": {
       "short": "Bridge / adjunct",
@@ -150,7 +150,7 @@
             [
               "Sapisochin ITT",
               "28257902",
-              "dropout ≈ TACE/SBRT"
+              "Nonrandomized bridge comparison; no significant dropout difference from TACE/SBRT"
             ]
           ]
         }
@@ -162,12 +162,12 @@
       "roles": [
         {
           "t": 2,
-          "when": "Single ≤5 cm (incl. recurrent), not ablatable — dome, perivascular, subcapsular, ≥2 cm",
+          "when": "Single HCC ≤5 cm with suitable liver reserve; Xi randomized ablation-eligible recurrent HCC. Difficult ablation anatomy is a separate clinical reason to consider SBRT.",
           "ev": [
             [
               "Xi RCT vs RFA",
               "39693584",
-              "2-y local PFS 92.7 vs 75.8%; OS ≡"
+              "Recurrent HCC: 2-y local PFS 92.7 vs 75.8%; OS HR 0.91 (0.37–2.22), not an equivalence result"
             ],
             [
               "Wahl",
@@ -183,7 +183,7 @@
             [
               "Sapisochin ITT",
               "28257902",
-              "dropout 16.7% ≈ TACE/RFA"
+              "ITT dropout 16.7%; nonrandomized comparison with TACE/RFA"
             ]
           ]
         },
@@ -194,18 +194,18 @@
             [
               "Wei RCT",
               "31283409",
-              "neoadjuvant: HCC death HR 0.35 vs surgery alone"
+              "Neoadjuvant 3D-CRT, not SBRT: HCC-death HR 0.47 (univariable ITT); 9/82 did not reach surgery"
             ],
             [
               "Bai RCT",
               "38488934",
-              "adjuvant: intrahepatic recurrence 20.8 vs 52.1% vs TACE"
+              "Single-centre RCT, n=72; conventional RT vs TACE: intrahepatic recurrence 20.8 vs 52.1%; extrahepatic 37.5 vs 14.6%; PFS/OS not significantly different"
             ]
           ]
         },
         {
           "t": 4,
-          "when": "Incomplete TACE; macrovascular invasion with systemic Rx",
+          "when": "Separate trial settings: salvage after incomplete TACE; first-line alternative to TACE; or vascular invasion with systemic treatment",
           "ev": [
             [
               "Comito ph III",
@@ -215,17 +215,17 @@
             [
               "TRENDY ph II",
               "37037359",
-              "TTP NS; LC ↑ vs DEB-TACE (post hoc)"
+              "TACE-eligible small HCC: primary TTP not improved; local-control signal post hoc; n=28, closed early"
             ],
             [
               "RTOG 1112",
               "39699905",
-              "+sorafenib OS 15.8 vs 12.3 mo"
+              "SBRT→sorafenib vs sorafenib: OS 15.8 vs 12.3 mo; HR 0.77 (90% CI 0.59–1.01), primary P=.06"
             ],
             [
-              "START RCT",
+              "Yoon RCT",
               "29543938",
-              "TACE+EBRT > sorafenib (MVI)"
+              "Macrovascular invasion: TACE+EBRT vs sorafenib; 91% crossover from sorafenib"
             ]
           ]
         },
@@ -269,17 +269,17 @@
             [
               "PREMIERE RCT",
               "27575820",
-              "TTP >26 vs 6.8 mo vs cTACE"
+              "TTP >26 vs 6.8 mo vs cTACE; OS not significantly different; stopped at 45/124"
             ],
             [
               "TRACE RCT",
               "35258371",
-              "OS 30.2 vs 15.6 mo vs DEB-TACE"
+              "OS 30.2 vs 15.6 mo vs DEB-TACE; phase II trial stopped early"
             ],
             [
               "MERITS-LT",
               "34331914",
-              "Y90 ≈ TACE for downstaging"
+              "No significant Y90–TACE difference in downstaging; observational, not equivalence evidence"
             ],
             [
               "Vouche",
@@ -310,7 +310,7 @@
             [
               "DOSISPHERE-01",
               "33166497",
-              "ORR 71 vs 36%"
+              "Personalized vs standard Y90 dosimetry: ORR 71 vs 36%; not a Y90–sorafenib comparison"
             ]
           ]
         }
@@ -361,7 +361,7 @@
         },
         {
           "t": 4,
-          "when": "BCLC-B multinodular, Child-Pugh A–B7, no MVI; ± systemic",
+          "when": "Embolization-eligible HCC without macrovascular invasion; TACE–systemic combinations require separate selection and guideline review",
           "ev": [
             [
               "Llovet RCT",
@@ -376,12 +376,12 @@
             [
               "EMERALD-1",
               "39798579",
-              "+durva/bev PFS 15.0 vs 8.2 mo"
+              "Durvalumab+bevacizumab+TACE: PFS 15.0 vs 8.2 mo; PFS benefit does not establish OS benefit; Child-Pugh A–B7"
             ],
             [
               "LEAP-012",
               "39798578",
-              "+len/pembro PFS 14.6 vs 10.0 mo"
+              "Lenvatinib+pembrolizumab+TACE: PFS 14.6 vs 10.0 mo; OS not significant; grade ≥3 toxicity 71 vs 32%; Child-Pugh A"
             ]
           ]
         }
@@ -393,7 +393,7 @@
       "roles": [
         {
           "t": 4,
-          "when": "Large unresectable, high burden, PVTT (Vp3–4)",
+          "when": "Large unresectable HCC: vascular-invasion eligibility differs by trial; Li 2021 excluded macrovascular invasion",
           "ev": [
             [
               "FOHAIC-1",
@@ -425,7 +425,7 @@
         },
         {
           "t": 3,
-          "when": "Adjuvant HAIC-FOLFOX after resection for MVI",
+          "when": "Adjuvant HAIC-FOLFOX after R0 resection for histological microvascular invasion, without macrovascular invasion",
           "ev": [
             [
               "Li ph III",
@@ -442,7 +442,7 @@
       "roles": [
         {
           "t": 5,
-          "when": "≤3 tumours <3 cm with acoustic window; trial / registry",
+          "when": "Up to 3 treated tumors <3 cm with an adequate acoustic window; trial / registry assessment",
           "ev": [
             [
               "#HOPE4LIVER",
@@ -474,7 +474,7 @@
             [
               "MALRIC recurrent",
               "41528222",
-              "MWA ≈ repeat resection OS"
+              "Retrospective matched cohort: no significant OS difference from repeat resection; not equivalence evidence"
             ],
             [
               "Meta-analysis",
@@ -491,7 +491,7 @@
       "roles": [
         {
           "t": 2,
-          "when": "Liver-confined, unresectable, no nodal/EHD; BED >80 Gy",
+          "when": "Localized unresectable iCCA; ablative dose subject to organ constraints. Tao compared BED >80.5 Gy with ≤80.5 Gy.",
           "ev": [
             [
               "Tao",
@@ -509,16 +509,16 @@
     },
     "icca|y90": {
       "tier": 4,
-      "head": "Add to 1st-line gem/cis; minority downstaged",
+      "head": "Selected chemo–Y90 control/conversion; substantial cirrhosis-related toxicity",
       "roles": [
         {
           "t": 4,
-          "when": "Unresectable, liver-confined",
+          "when": "Unresectable iCCA, predominantly hepatic; MISPHEC allowed limited extrahepatic disease. Avoid extrapolation to routine chemo–Y90 in cirrhosis.",
           "ev": [
             [
               "MISPHEC ph II",
               "31670746",
-              "+gem/cis, mOS 22 mo"
+              "GemCis+Y90, single arm: median OS 22 mo; hepatic failure 9/12 with cirrhosis vs 5/29 without"
             ]
           ]
         },
@@ -569,7 +569,7 @@
       "roles": [
         {
           "t": 4,
-          "when": "Unresectable liver-confined disease ± selected resectable regional nodes; systemic-treatment plan required Pump FUDR evidence is distinct from pCCA catheter GemCis plus I-125 stents.",
+          "when": "Unresectable liver-confined iCCA ± selected resectable regional nodes; systemic-treatment plan required. Pump FUDR evidence is distinct from pCCA catheter GemCis plus I-125 stents.",
           "ev": [
             [
               "Cercek ph II",
@@ -639,7 +639,7 @@
             [
               "COLLISION RCT",
               "39848272",
-              "Early-stop non-inferiority trial; OS HR 1.05 (95% CI 0.69–1.58); AEs 19 vs 46%"
+              "Early-stop trial: OS HR 1.05 (95% CI 0.69–1.58); CI crosses the 1.30 noninferiority margin; AEs 19 vs 46%"
             ],
             [
               "Shady",
@@ -667,7 +667,7 @@
       "roles": [
         {
           "t": 2,
-          "when": "1–3 lesions, ≤6 cm, not resectable or ablatable",
+          "when": "Selected limited metastases when surgery/ablation is unsuitable; Rusthoven studied 1–3 lesions each <6 cm in a mixed-primary cohort",
           "ev": [
             [
               "Rusthoven ph I/II",
@@ -682,7 +682,7 @@
             [
               "SABR-COMET LT",
               "32484754",
-              "5-y OS 42.3 vs 17.7%"
+              "Mixed-primary oligometastases: 5-y OS 42.3 vs 17.7%; not a CRLM-only estimate"
             ]
           ]
         }
@@ -694,12 +694,12 @@
       "roles": [
         {
           "t": 4,
-          "when": "Chemo-refractory or 2nd-line, liver-only / dominant",
+          "when": "Previously treated liver-only disease in these trials; EPOCH excluded confirmed extrahepatic metastases",
           "ev": [
             [
               "EPOCH ph III",
               "34541864",
-              "PFS 8.0 vs 7.2, hPFS 9.1 vs 7.2 mo; OS NS"
+              "PFS 8.0 vs 7.2, hepatic PFS 9.1 vs 7.2 mo; OS not significant; grade ≥3 AEs 68.4 vs 49.3%"
             ],
             [
               "Hendlisz ph III",
@@ -738,7 +738,7 @@
       "roles": [
         {
           "t": 4,
-          "when": "Chemo-refractory liver-dominant (salvage)",
+          "when": "Selected salvage discussion; Fiorentini studied liver-only disease in a small historical trial",
           "ev": [
             [
               "Fiorentini RCT (n=74)",
@@ -755,7 +755,7 @@
       "roles": [
         {
           "t": 3,
-          "when": "Adjuvant after resection: selective expert-centre discussion, not routine low-risk use Pump FUDR evidence is distinct from pCCA catheter GemCis plus I-125 stents.",
+          "when": "Adjuvant after resection: expert-center discussion. Dutch PUMP did not establish PFS benefit in its low-risk population; pump FUDR is distinct from pCCA catheter therapy.",
           "ev": [
             [
               "Kemeny NEJM RCT",
@@ -765,7 +765,7 @@
             [
               "Groot Koerkamp",
               "28426374",
-              "PSM OS HR 0.67"
+              "Propensity-score quartile-adjusted OS HR 0.67; retrospective association, not matching or randomized benefit"
             ],
             [
               "Dutch PUMP, ASCO 2026 LBA3506",
@@ -848,17 +848,17 @@
       ]
     },
     "nelm|abl": {
-      "tier": 2,
-      "head": "Limited small lesions; adjunct to resection / debulking",
+      "tier": 4,
+      "head": "Selected local control / cytoreduction; case-series evidence",
       "roles": [
         {
-          "t": 2,
-          "when": "Few small lesions, alone or combined with resection",
+          "t": 4,
+          "when": "Selected unresectable progressive or symptomatic NELM; cited laparoscopic RFA series included multifocal disease and did not test combined resection",
           "ev": [
             [
               "Mazzaglia (n=63)",
               "17629995",
-              "LTP 6.3%; mOS 3.9 y post-RFA"
+              "Local recurrence 6.3% per lesion (11% per patient); median OS 3.9 y after RFA; hepatic progression elsewhere common"
             ],
             [
               "Akyildiz",
@@ -868,7 +868,7 @@
           ]
         },
         {
-          "t": 3,
+          "t": 4,
           "when": "Cytoreduction / hormonal symptom control",
           "ev": [
             [
@@ -941,7 +941,7 @@
             [
               "RETNET RCT",
               "30016989",
-              "TAE ≈ cTACE, hPFS 18 vs 13 mo, NS*"
+              "NANETS 2025 abstract: hepatic PFS difference not significant, not equivalence; PMID links the protocol, not results"
             ],
             [
               "Bhagat ph II",
@@ -1008,7 +1008,7 @@
             [
               "Darwish Murad, 12 centres",
               "22504095",
-              "287 enrolled; 5-year intention-to-treat overall survival 53% from start of therapy; 5-year post-transplant recurrence-free survival 65%. No isolated RT effect."
+              "287-patient retrospective series; 5-y ITT OS 53% from presentation; post-LT recurrence-free survival 65%; 25% pre-LT dropout. No isolated RT effect."
             ],
             [
               "Welling pilot, Liver Transpl 2014",
@@ -1018,7 +1018,7 @@
             [
               "Soliman, Transplant Direct 2025",
               "39936132",
-              "26 LT recipients: 12 GemCis-only vs 14 RT-containing. No significant OS/RFS difference; no equivalence or ITT benefit established."
+              "26 recipients: 12 GemCis-only vs 14 RT-containing; recurrence 6/12 vs 3/14. No significant OS/RFS difference; no equivalence or ITT benefit established."
             ],
             [
               "Hoogwater, BJS Open 2023",
@@ -1148,13 +1148,13 @@
   "contra": {
     "abl": {
       "items": [
-        "Size: >3 cm (RFA) or >5 cm (MWA) for curative intent; >3–5 lesions (relative)",
+        "Selection depends on tumor type, size, number and achievable margin; strongest small-tumor evidence is generally ≤3 cm. MWA ≤5 cm is not a universal curative threshold.",
         "Not visible on US/CT or no safe needle path",
-        "<1 cm from hilar / central bile duct (stricture)",
+        "Central bile duct proximity: thermal-injury risk; specialized duct protection may change feasibility",
         "Abutting bowel, stomach, GB, diaphragm or heart without hydro-/pneumodissection",
         "Heat sink: abutting vessel ≥3 mm (RFA > MWA)",
         "Bilio-enteric anastomosis, sphincterotomy or stent (abscess; relative)",
-        "Platelets <50k / INR >1.5 uncorrectable; Child-Pugh C; refractory ascites"
+        "Uncorrectable bleeding risk, ascites along the needle path or poor liver reserve: assess individually with IR; use procedure- and liver-disease-specific thresholds"
       ],
       "ref": [
         "CIRSE SoP",
@@ -1163,11 +1163,11 @@
     },
     "sbrt": {
       "items": [
-        "Inadequate uninvolved liver (≥700 mL must be spared); Child-Pugh ≥B8 relative, C absolute",
+        "Insufficient uninvolved liver to meet the dose/fractionation plan; baseline liver dysfunction increases risk. A bare 700-mL volume is not a universal validated cutoff.",
         "Stomach / duodenum / bowel abutting target (dose limits)",
         "Overlapping prior hepatic RT",
         "Cannot manage motion (fiducials, breath-hold) or lie flat",
-        "Very large or multifocal disease (>6–8 cm; relative)"
+        "Large or multifocal targets: feasibility depends on normal-liver and adjacent-organ dose constraints"
       ],
       "ref": [
         "HyTEC liver SBRT",
@@ -1176,12 +1176,13 @@
     },
     "y90": {
       "items": [
-        "Lung shunt: lung dose >30 Gy single / >50 Gy cumulative",
+        "Excess lung shunting: calculate absorbed lung dose and apply the selected device instructions and cumulative exposure limits",
         "Uncorrectable GI / extrahepatic deposition on MAA",
-        "Bilirubin >2 mg/dL (unless segmental); Child-Pugh C; ECOG ≥2",
+        "Decompensated liver disease, elevated bilirubin or poor performance: assess reserve, treatment volume and device-specific selection",
         "Insufficient hepatic reserve; extensive tumour replacement with poor function",
         "Prior biliary intervention or prior hepatic RT (relative)",
-        "Note: PVTT is NOT a contraindication"
+        "PVTT is not automatically prohibitive; extent, targeting, portal flow and liver reserve determine feasibility",
+        "GemCis with Y90 in cirrhotic iCCA: MISPHEC reported hepatic failure in 9/12; avoid routine extrapolation (PMID 31670746)."
       ],
       "ref": [
         "Y-90 recs 2022",
@@ -1190,12 +1191,12 @@
     },
     "tace": {
       "items": [
-        "Main PV occlusion / hepatofugal flow without collaterals (selective TACE may still be possible)",
-        "Decompensated cirrhosis: Child-Pugh C (≥B8 relative), bilirubin >3 mg/dL, refractory ascites, HE",
-        "Tumour burden >50% of liver",
+        "Portal-vein obstruction or hepatofugal flow requires IR review. CIRSE lists neoplastic PVT as an absolute contraindication; selected alternative practice needs an explicit rationale.",
+        "Decompensated cirrhosis, ascites or encephalopathy; CIRSE lists Child-Pugh ≥B8 and ECOG ≥2 as absolute contraindications",
+        "Extensive liver replacement or marginal reserve: thresholds are tumor- and protocol-specific; >50% is not a universal contraindication",
         "Bilio-enteric anastomosis, stent or sphincterotomy (abscess)",
         "CrCl <30, uncorrectable coagulopathy, large AV shunt",
-        "DEB-TACE in NET (biliary injury)"
+        "DEB-TACE in NELM: biliary injury/biloma concern (Bhagat, PMID 22722717); not attributed to CIRSE alone"
       ],
       "ref": [
         "CIRSE SoP",
@@ -1206,9 +1207,9 @@
       "items": [
         "Uncorrectable extrahepatic perfusion or inadequate hepatic perfusion",
         "Unsuitable arterial anatomy or impaired portal inflow; significant portal hypertension or poor hepatic reserve",
-        "Unrelieved biliary obstruction / infection; unsuitable for pump surgery",
+        "Unrelieved biliary obstruction, active infection or inability to tolerate pump surgery: clinical safety review",
         "No reliable refill, laboratory surveillance or rescue service",
-        "Prior liver radiation requires review before sequencing; retain NCCN CRLM restriction",
+        "Prior liver-directed radiation: expert review of hepatic reserve, perfusion and sequencing; prior TARE is a program-selection consideration",
         "Avoid concurrent bevacizumab with FUDR. Disease extent and transplant eligibility remain tumour-specific."
       ],
       "ref": [
@@ -1221,8 +1222,9 @@
         "No acoustic window: rib / lung shadow or bowel gas in beam path",
         "Target not visible on diagnostic US or beyond transducer focal depth",
         "Unable to tolerate general anaesthesia (needed for respiratory control)",
-        "Beyond trial limits: >3 tumours or >3 cm",
-        "Lung or bowel immediately adjacent to the treatment zone"
+        "Outside pivotal evidence: more than 3 treated targets or target size ≥3 cm; total liver lesion count is a separate assessment",
+        "Lung or bowel immediately adjacent to the treatment zone",
+        "Biliary instrumentation or limited liver reserve: individualized safety assessment; the pivotal study does not establish safety in these groups."
       ],
       "ref": [
         "#HOPE4LIVER",
@@ -1237,28 +1239,28 @@
     ],
     [
       2,
-      "SBRT (HCC ≤5 cm, CRLM 1–3 lesions, iCCA at BED >80 Gy); Y-90 segmentectomy (solitary HCC ≤8 cm); ablation for iCCA ≤3 cm and limited NELM."
+      "Selected definitive local treatment: SBRT or Y-90 segmentectomy in HCC; SBRT for selected CRLM or iCCA; ablation for small iCCA. Evidence and feasibility differ by tumour. NELM ablation is cytoreductive or symptom-directed, with no established curative survival benefit."
     ],
     [
       3,
-      "HCC: bridge/downstage to LT; adjuvant HAIC, TACE or RT; neoadjuvant RT for PVTT; TAE then staged resection for rupture. HAI adjuvant/conversion in CRLM and iCCA. Y-90 radiation lobectomy for FLR."
+      "Treatment within a curative strategy: bridge or downstage to transplant; selected perioperative or conversion treatment; liver-volume optimisation. pCCA radiotherapy is a component of an approved transplant regimen. These roles do not establish benefit as stand-alone treatment."
     ],
     [
       4,
-      "TACE standard for BCLC-B and NELM; Y-90 for refractory CRLM and bulky NELM; HAIC for advanced HCC; TACE / HAI for unresectable iCCA; single-fraction RT for liver pain."
+      "Disease control or symptom relief: embolisation for appropriate HCC or NELM; selected Y-90, HAI/HAIC or radiotherapy in the relevant disease. Compare eligibility, endpoints and harms in each cell."
     ],
     [
       5,
-      "Histotripsy for all tumours; SBRT and HAI in NELM; Y-90 1st-line in CRLM."
+      "Investigational or unsupported routine use: histotripsy as an oncologic strategy; SBRT or HAI for NELM; routine first-line Y-90 for CRLM. Trial participation and MDT review depend on the clinical setting."
     ]
   ],
   "notes": [
     "Resection and liver transplantation remain the reference standard; tiers describe each modality's role relative to them.",
-    "Cell colour = principal role; tagged lines = other evidence-supported roles. Numbers in boxes are PubMed IDs.",
+    "Cell color and number describe clinical role, not evidence grade. Chips include other roles and cautions; numbers beside studies are PubMed IDs.",
     "*RETNET results presented at NANETS 2025 (abstract); not yet PubMed-indexed — PMID shown is the protocol.",
     "Abbrev.: LT liver transplant; LC local control; LTP local tumour progression; FFLP freedom from local progression; MVI macrovascular invasion; PVTT portal vein tumour thrombus; EHD extrahepatic disease; BED biologically effective dose; FLR future liver remnant; DCR disease control rate; HE hepatic encephalopathy.",
-    "15 October 2026 HAI update: Dutch adjuvant PUMP (ASCO LBA3506), US EA2222 (NCT05863195, unresectable CRLM) and iCCA PUMP-2 are distinct trials. Lecture and published PUMP analyses differ; this matrix uses the published abstract. HAI does not establish MELD exception or LT eligibility. Shared programme safeguards: PMIDs 39962001, 36346892, 24154839.",
-    "23 October 2026: pCCA added separately from iCCA. Endobiliary RFA, PDT and radiation-emitting stents are reviewed below as biliary-directed techniques. No standalone local modality has established curative equivalence to resection or protocol LT for primary pCCA. Proposed institutional interpretation remains subject to MDT ratification.",
+    "Dutch adjuvant PUMP (ASCO LBA3506), EA2222 (unresectable CRLM) and iCCA PUMP-2 are distinct trials. PUMP is an abstract with OS immature; do not extrapolate its low-risk resectable population to conversion treatment. HAI does not establish MELD exception or transplant eligibility.",
+    "pCCA is assessed separately from iCCA. No standalone local modality has established curative equivalence to resection or protocol transplantation for primary pCCA.",
     "ABCDE review, 23 October 2026: tiers describe clinical intent, not guaranteed cure, a formal evidence grade, or approval. Read each endpoint and time origin. pCCA RT may support protocol LT or selected local control; RT is not specifically mandated by OPTN. Clinical benefit, allocation eligibility and institutional approval are separate. Other tumour selection criteria were not expanded by this pCCA review."
   ],
   "refs": [

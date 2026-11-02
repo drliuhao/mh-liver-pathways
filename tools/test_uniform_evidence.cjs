@@ -2,14 +2,17 @@
 const fs = require('fs'), vm = require('vm'), assert = require('assert'), cp = require('child_process');
 const root = require('path').resolve(__dirname, '..');
 const slugs = ['hcc','hilar','icca','crlm','nelm','chcca','pdac','pnet','ampullary','pcyst','adenoma','incidental'];
-const baseline = '0773285';
+const baseline = '30039fe';
 const read = p => fs.readFileSync(root + '/' + p, 'utf8');
 // Recorded clinical revisions (tools/clinical_revisions/) are replayed on the baseline: the only permitted change.
-const old = p => require('./apply_clinical_revisions.cjs').applyText(p,cp.execFileSync('git',['show',baseline + ':' + p],{cwd:root,encoding:'utf8',maxBuffer:8e6}));
+const releaseRevisions=require('./apply_clinical_revisions.cjs');
+const old = p => releaseRevisions.applyText(p,cp.execFileSync('git',['show',baseline + ':' + p],{cwd:root,encoding:'utf8',maxBuffer:8e6}),releaseRevisions.revisions().filter(r=>r.id.startsWith('2026-11-02')));
 const htmlText = s => s.replace(/<[^>]*>/g,'').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&#13;/g,'\r').replace(/\s+/g,' ').trim();
 let appraisals = 0, aliases = 0;
 for (const slug of slugs) {
   const page = read(slug + '/index.html');
+  // Preserve the original appraisal text separately from the new release's clinical baseline.
+  const originalAppraisalPage = cp.execFileSync('git',['show','0773285:' + slug + '/index.html'],{cwd:root,encoding:'utf8',maxBuffer:8e6});
   assert(page.includes('RoadmapEvidence.row(r, CRIT)'),slug);
   assert(!page.includes('class="study-appraisals"'),slug);
   assert(!page.includes('Batch 09 HAI update'),slug);
@@ -62,13 +65,13 @@ for (const slug of slugs) {
       assert(searched.includes(val),slug + ' appraisal searchable');
       assert(htmlText(rendered).includes(htmlText(val)),slug + ' appraisal rendered');
     }
-    const prior = old(slug + '/index.html').match(new RegExp('<details id="'+paper.id+'" class="study-appraisal">([\\s\\S]*?)</details>'));
+    const prior = originalAppraisalPage.match(new RegExp('<details id="'+paper.id+'" class="study-appraisal">([\\s\\S]*?)</details>'));
     assert(prior,slug + ' original appraisal');
     const originalParagraphs = [...prior[1].matchAll(/<p>([\s\S]*?)<\/p>/g)].map(m=>htmlText(m[1]));
     for (const value of originalParagraphs.filter(v=>!v.includes('TMC full-text access'))) {
       assert(htmlText(rendered).includes(value),slug + ' original appraisal text retained: '+value.slice(0,55));
     }
-    assert(old(slug + '/index.html').includes('id="'+paper.id+'"'),slug + ' stable original anchor');
+    assert(originalAppraisalPage.includes('id="'+paper.id+'"'),slug + ' stable original anchor');
     appraisals++;
   }
   const queries = ['no-such-publication-xyz', ...data.papers.map(p=>p.id), 'HAI'];

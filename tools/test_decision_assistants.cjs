@@ -28,7 +28,7 @@ const proceed={
  'icca/therapy':{control:'controlled',safe:'yes'},
  'icca/stability':{duration:'met',disease:'stable'},
  'icca/review':{criteria:'met',reviews:'yes'},
- 'icca/follow-up':{plan:'yes',concern:'none'},
+ 'icca/follow-up':{phase:'before',plan:'yes',concern:'none'},
  'crlm/map-disease':{primary:'yes',spread:'clear'},
  'crlm/biology':{molecular:'fits',cea:'low',size:'yes'},
  'crlm/unresectability':{clearance:'no'},
@@ -36,25 +36,25 @@ const proceed={
  'crlm/clocks':{primary:'yes',interval:'yes',synchronous:'na'},
  'crlm/restaging':{stage:'clear',timing:'yes',control:'yes'},
  'crlm/review':{criteria:'met',reviews:'yes'},
- 'crlm/transplant':{plan:'yes',concern:'none'},
+ 'crlm/transplant':{phase:'before',plan:'yes',concern:'none'},
  'nelm/biology':{grade:'fits',primary:'yes'},
  'nelm/distribution':{primary:'yes',spread:'none'},
  'nelm/options':{strategy:'transplant'},
  'nelm/exposure':{safety:'acceptable'},
  'nelm/observation':{clearance:'met',imaging:'yes',control:'yes'},
  'nelm/review':{criteria:'met',reviews:'yes'},
- 'nelm/follow-up':{plan:'yes',concern:'none'},
+ 'nelm/follow-up':{phase:'before',plan:'yes',concern:'none'},
  'hehe/diagnosis':{pathology:'hehe'},
  'hehe/stage':{vascular:'yes',strategy:'transplant',extrahepatic:'none'},
  'hehe/risk':{criteria:'yes',benefit:'supported'},
  'hehe/review':{criteria:'met',reviews:'yes'},
- 'hehe/follow-up':{plan:'yes',concern:'none'},
+ 'hehe/follow-up':{phase:'before',plan:'yes',concern:'none'},
  'hca/characterize':{diagnosis:'hca'},
  'hca/standard-care':{bleeding:'no',management:'no'},
  'hca/exception-route':{route:'syndrome'},
  'hca/transformation':{diagnosis:'benign'},
  'hca/review':{criteria:'met',reviews:'yes'},
- 'hca/follow-up':{plan:'yes',concern:'none'},
+ 'hca/follow-up':{phase:'before',plan:'yes',concern:'none'},
 };
 assert.equal(Object.keys(D.assistants).length,46);
 assert.deepEqual(Object.keys(proceed).sort(),Object.keys(D.assistants).sort());
@@ -151,7 +151,15 @@ for(const p of D.index){
     let target=path.join(root,u.pathname.slice('/mh-liver-pathways/'.length));
     if(u.pathname.endsWith('/'))target=path.join(target,'index.html');
     assert(fs.existsSync(target),a.url);
-    if(u.hash)assert(fs.readFileSync(target,'utf8').includes(`id="${decodeURIComponent(u.hash.slice(1))}"`),a.url);
+    if(u.hash){
+     const hash=decodeURIComponent(u.hash.slice(1));
+     const slug=u.pathname.match(/\/transplant\/([^/]+)\//)?.[1];
+     const other=D.index.find(x=>x.slug===slug);
+     const dynamic=other&&(other.steps.some(x=>x.id===hash)||
+      (hash.startsWith('high-risk-')&&D.high_risk.pathways[slug].reviews.some(x=>x.anchor===hash.slice(10)))||
+      (hash.startsWith('care-')&&D.care[slug].some(x=>x.id===hash.slice(5))));
+     assert(dynamic||fs.readFileSync(target,'utf8').includes(`id="${hash}"`),a.url);
+    }
    }
   }
  };

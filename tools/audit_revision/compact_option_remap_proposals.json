@@ -1,0 +1,494 @@
+{
+  "baseline": "30039fe",
+  "live_option_occurrences": 773,
+  "live_unique_keys": 773,
+  "method": "Exact hash of source lead (including guarded contextual display copy) plus unchanged roadmap/gate/group/item/option identity, checked against full live lead. Numerical row validity is a separate check.",
+  "remaps": [
+    {
+      "old_key": "adenoma:boa0jv",
+      "source_option_identity": "adenoma/10/alt/0/opts/2",
+      "new_key": "adenoma:1u92qew",
+      "old_lead": "Adenomatosis routePROTOCOL REGISTRY Unresectable liver adenomatosis with more than 10 adenomas AND at least one of: recurrent or life-threatening haemorrhage or prior rupture not controllable by embolisation or targeted resection; confirmed or strongly suspected malignant transformation, or a high-risk molecular subtype; a syndromic driver or underlying liver disease independently threatening hepatic function; or documented progression despite at least 6 months of adequate risk-factor modification with liver-directed options exhausted or contraindicated.",
+      "new_lead": "Adenomatosis routePROTOCOL REGISTRY Unresectable liver adenomatosis with more than 10 adenomas AND at least one of: recurrent or life-threatening haemorrhage or prior rupture not controllable by embolisation or targeted resection; confirmed or strongly suspected malignant transformation, or a high-risk molecular subtype; a syndromic driver or underlying liver disease independently threatening hepatic function; or documented progression despite an adequate, individualized risk-factor-modification period, with the trajectory and reason for intervention recorded with liver-directed options exhausted or contraindicated.",
+      "live_decisions": [
+        "10"
+      ],
+      "old_option_rows": [],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "adenoma:m5dp7o",
+      "source_option_identity": "adenoma/2/standard/2",
+      "new_key": "adenoma:15pryzx",
+      "old_lead": "Repeat contrast MRI at 6 months; assess trajectory. This is too early to declare risk-factor modification unsuccessful.",
+      "new_lead": "After risk-factor modification: assess growth and regression. In women with lesions ≥5 cm, individualize reassessment or intervention over 6–12 months; act earlier for concerning features.",
+      "live_decisions": [
+        "2"
+      ],
+      "old_option_rows": [],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "adenoma:p1lask",
+      "source_option_identity": "adenoma/4/standard/0",
+      "new_key": "adenoma:l256ia",
+      "old_lead": "Persistent size >5 cm or growth ≥20% is an indication for curative treatment. Explain that 5 cm is a conventional threshold.",
+      "new_lead": "Assess resection for persistent size ≥5 cm or growth after risk-factor modification; account for subtype, sex, symptoms, bleeding and suspected malignancy.",
+      "live_decisions": [
+        "4"
+      ],
+      "old_option_rows": [],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "ampullary:1sk2z14",
+      "source_option_identity": "ampullary/2/avoid/0",
+      "new_key": "ampullary:9jmqqd",
+      "old_lead": "Do not perform a papillectomy when intraductal extension exceeds 20 mm, when the lesion is over 4 cm, or when a diverticulum prevents access.",
+      "new_lead": "Refer for surgical or expert endoscopic assessment when papillectomy is technically infeasible, including selected lesions >4 cm or intraductal extension >20 mm.",
+      "live_decisions": [
+        "2"
+      ],
+      "old_option_rows": [
+        {
+          "pmid": "41192607",
+          "result": "Multicentre cohort: R0 achieved in only 28 of 137 (20.4%) with pathologically confirmed ductal extension"
+        }
+      ],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "hcc:1x56n8t",
+      "source_option_identity": "hcc/0/standard/0/opts/1",
+      "new_key": "hcc:1s6mphc",
+      "old_lead": "Thermal ablationEXPERTISE When transplant is not feasible, ablation is the recommended option — radiofrequency or microwave. No randomised trial separates them — Vietti Violi was a negative superiority trial at a mean lesion size of 18 mm — but BCLC 2026 now prefers microwave up to 3–4 cm. Also the “ablate and wait” strategy: ablate now and consider transplant at recurrence if still within criteria.",
+      "new_lead": "Thermal ablationEXPERTISE When transplant is not feasible, ablation is the recommended option — radiofrequency or microwave. BCLC 2026 prefers microwave up to 3–4 cm on local-control evidence. Sugimoto 2025 found two-year lesion progression of 16.4% with MWA versus 30.4% with single-needle RFA, without a demonstrated survival advantage; earlier trials did not show a significant difference. Also the “ablate and wait” strategy: ablate now and consider transplant at recurrence if still within criteria.",
+      "live_decisions": [
+        "0"
+      ],
+      "old_option_rows": [],
+      "reference_links": [
+        "hcc-ablation"
+      ],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "hcc:lxmsur",
+      "source_option_identity": "hcc/A/standard/0/opts/1",
+      "new_key": "hcc:7sfecx",
+      "old_lead": "Thermal ablationEXPERTISE Local curative treatment with a circumferential ablative margin. Microwave or radiofrequency. BCLC 2026 prefers microwave up to 3–4 cm; no randomised trial has shown a difference, so below that the choice is operational.",
+      "new_lead": "Thermal ablationEXPERTISE Local curative treatment with a circumferential ablative margin. Microwave or radiofrequency. BCLC 2026 prefers microwave up to 3–4 cm on local-control evidence; the positive trial used single-needle RFA and did not demonstrate a survival advantage.",
+      "live_decisions": [
+        "A"
+      ],
+      "old_option_rows": [],
+      "reference_links": [
+        "hcc-ablation"
+      ],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "icca:c5jpd",
+      "source_option_identity": "icca/10/alt/0/opts/1",
+      "new_key": "icca:amm2xx",
+      "old_lead": "Open a defined, registry-tracked pathway on the OPTN 2025 and ILTS-ILCA 2024 criteriaREGISTRY Biopsy-proven, unresectable, solitary iCCA or mixed HCC-iCCA of 3 cm or less, in cirrhosis, after a period of observed radiographic stability, scored at MMaT-3. Note that ILTS-ILCA attaches no duration to that period for the cirrhotic ≤3 cm phenotype; the six-month figure in our criteria comes from its separate, weakly graded route for non-cirrhotic locally advanced disease and from the prospective protocol below.",
+      "new_lead": "Open a defined, registry-tracked pathway on the OPTN 2025 and ILTS-ILCA 2024 criteriaREGISTRY The nonbinding NLRB guidance supports consideration of MMaT-3 for biopsy-proven, unresectable, solitary iCCA or mixed HCC-iCCA ≤3 cm in cirrhosis, after treatment and six months of documented stability. The six-month interval is specified directly in this guidance; it is not proof of an optimal biological observation period.",
+      "live_decisions": [
+        "10"
+      ],
+      "old_option_rows": [],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "icca:gddu4j",
+      "source_option_identity": "icca/10/alt/0/opts/2",
+      "new_key": "icca:16jk2se",
+      "old_lead": "Locally advanced disease selected on sustained stability, under protocolPROTOCOL REGISTRY The prospective Houston Methodist–MD Anderson protocol: 21 patients referred, 12 listed, 6 transplanted after a mandatory 6 months of radiographic stability on gemcitabine-based therapy. Post-transplant survival 100% at 1 year and 83.3% at 3 and 5 years, but recurrence-free survival 50% at 1, 3 and 5 years.",
+      "new_lead": "Locally advanced disease selected on sustained stability, under protocolPROTOCOL REGISTRY The Houston update analyzed 32 listed patients, of whom 18 underwent transplantation after at least six months of stability or response; 5-year OS was 49% for the analyzed listed cohort and 57% among eventual recipients, both measured from listing. Recipient 1- and 3-year OS were 100% and 71%. The earlier six-recipient report (83.3% at 3 and 5 years) overlaps and is not an independent cohort.",
+      "live_decisions": [
+        "10"
+      ],
+      "old_option_rows": [
+        {
+          "pmid": "29548617",
+          "result": "Prospective single-arm protocol, 6 transplanted (21 referred, 12 listed): OS 100% at 1 y, 83.3% at 3 and 5 y; RFS 50% at 1, 3 and 5 y",
+          "caution": "Six patients, no control arm; 3 of 6 recurred at median 7.6 mo"
+        }
+      ],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "incidental:16zj62k",
+      "source_option_identity": "incidental/3/avoid/0",
+      "new_key": "incidental:1l5e1yu",
+      "old_lead": "Do not use FDG PET to characterise a liver lesion.",
+      "new_lead": "Do not use FDG PET/CT routinely to characterize an incidental liver lesion; reserve it for selected oncology questions.",
+      "live_decisions": [
+        "3"
+      ],
+      "old_option_rows": [
+        {
+          "pmid": "20829538",
+          "result": "Meta-analysis, per-lesion sensitivity for CRLM: FDG PET 81.4% (95% CI 66.5–90.6) vs MRI 80.3%, not significantly different",
+          "caution": "FDG PET/CT data came from one per-lesion data set"
+        }
+      ],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "incidental:19zzdhv",
+      "source_option_identity": "incidental/5/standard/2",
+      "new_key": "incidental:1oagcc9",
+      "old_lead": "A nodule in a cirrhotic liver with no arterial hyperenhancement and no other major feature is a regenerative or dysplastic nodule in all probability, and LI-RADS already states what to do with it — do not improvise an interval.",
+      "new_lead": "For a nodule without arterial hyperenhancement in an at-risk liver, assign the full LI-RADS category using all major and ancillary features; absence of hyperenhancement does not establish a benign or dysplastic nodule.",
+      "live_decisions": [
+        "5"
+      ],
+      "old_option_rows": [
+        {
+          "pmid": "30445016",
+          "result": "Pooled review: confirmed HCC in 13% (95% CI 8–22) of LR-2 and 38% (31–45) of LR-3; confirmed malignant 14% (9–21) and 40% (31–50)",
+          "caution": "LR-2 estimate provisional, high risk of bias; 223 observations"
+        },
+        {
+          "pmid": "34783596",
+          "result": "IPD meta-analysis: threshold growth not associated with HCC, OR 1.6 (95% CI 0.8–3.4), assessable in 452 of 4,434; enhancing capsule OR 2.4 (1.7–3.5)",
+          "caution": "Capsule significant in one of three cohorts; retrospective, verification bias"
+        }
+      ],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "incidental:1yoe3e3",
+      "source_option_identity": "incidental/8/standard/2",
+      "new_key": "incidental:gccnaj",
+      "old_lead": "Route by primary where there is one: a confirmed colorectal primary is the CRLM pathway, a confirmed neuroendocrine primary is the NELM pathway, and a hepatocellular lesion in a normal liver that is not focal nodular hyperplasia is the HCA pathway.",
+      "new_lead": "Route confirmed colorectal liver metastases to CRLM and confirmed neuroendocrine liver disease to NELM. A hepatocellular lesion in a normal liver requires positive assessment for HCA and exclusion of HCC; exclusion of FNH alone does not diagnose HCA.",
+      "live_decisions": [
+        "8"
+      ],
+      "old_option_rows": [],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "incidental:fsqk86",
+      "source_option_identity": "incidental/8/standard/1",
+      "new_key": "incidental:y7c2dl",
+      "old_lead": "A targetoid or LR-M observation is a non-HCC malignancy until proved otherwise — route it to the iCCA pathway, and to the cHCC-CCA pathway where both phenotypes are present or the diagnosis is genuinely mixed.",
+      "new_lead": "An LR-M observation is probably or definitely malignant but is not specific for HCC. Clarify the diagnosis before choosing the HCC, iCCA, mixed-tumour or metastatic treatment pathway.",
+      "live_decisions": [
+        "8"
+      ],
+      "old_option_rows": [
+        {
+          "pmid": "34289649",
+          "result": "Meta-analysis, 1,046 CEUS LR-M observations: HCC 54% (44–65), non-HCC malignancy 40% (28–53); I² 84% and 88%",
+          "caution": "Quoted 94% malignant is an unpooled sum; 31% of non-HCC malignancies unspecified"
+        }
+      ],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "incidental:gn7oka",
+      "source_option_identity": "incidental/1/standard/0",
+      "new_key": "incidental:1u00rqv",
+      "old_lead": "Characterise with MRI, including diffusion-weighted imaging, rather than repeating the CT — but order it for the sub-centimetre lesion, which is the only place MRI has been shown to beat CT.",
+      "new_lead": "Characterize an indeterminate liver lesion in a patient with known extrahepatic cancer using a test chosen for the lesion size, initial modality and clinical question; contrast MRI is often appropriate.",
+      "live_decisions": [
+        "1"
+      ],
+      "old_option_rows": [
+        {
+          "pmid": "20829538",
+          "result": "Colorectal staging: for lesions <10 mm, sensitivity 60.2% MRI vs 47.3% CT; no proof of equivalence for larger lesions",
+          "caution": "Treatment-naive colorectal staging cohorts; no predictive values reported"
+        }
+      ],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "nelm:1kxmm23",
+      "source_option_identity": "nelm/1/standard/0",
+      "new_key": "nelm:8uyyay",
+      "old_lead": "Get a biopsy with the Ki-67 index and the mitotic count, read by a pathologist experienced in neuroendocrine neoplasms, and have differentiation stated explicitly rather than inferred from grade.",
+      "new_lead": "Obtain expert pathology reporting differentiation and representative Ki-67, with mitoses when evaluable. An adequate small biopsy may be graded with Ki-67 when mitoses cannot be assessed; inadequate or discordant tissue needs review and further sampling if it would change treatment.",
+      "live_decisions": [
+        "1"
+      ],
+      "old_option_rows": [],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "nelm:u9d3up",
+      "source_option_identity": "nelm/4/standard/0/opts/1",
+      "new_key": "nelm:62e9v1",
+      "old_lead": "Capecitabine–temozolomide, or platinum-based therapy Reasonable alternative where behaviour is aggressive and receptor expression is low or absent. E2211 (n=133, pancreatic, progression within 12 months) met its primary endpoint at an interim analysis with an adjusted two-sided alpha of 0.119 in a phase 2 trial designed at a two-sided significance level of 0.20: median progression-free survival 22.7 versus 14.4 months with temozolomide alone, hazard ratio 0.58 (95% CI 0.36–0.93), P=.022. The final analysis at a median 59.9 months gave 23.2 versus 15.1 months, hazard ratio 0.71 (0.46–1.07).",
+      "new_lead": "Capecitabine–temozolomide, or platinum-based therapy Reasonable alternative where behaviour is aggressive and receptor expression is low or absent. E2211 (n=133 evaluable, low/intermediate-grade pancreatic NET, progression within 12 months; G3 use is extrapolation) met its primary endpoint at an interim analysis with an adjusted two-sided alpha of 0.119 in a phase 2 trial designed at a two-sided significance level of 0.20: median progression-free survival 22.7 versus 14.4 months with temozolomide alone, hazard ratio 0.58 (95% CI 0.36–0.93), P=.022. The final analysis at a median 59.9 months gave 23.2 versus 15.1 months, hazard ratio 0.71 (0.46–1.07).",
+      "live_decisions": [
+        "4"
+      ],
+      "old_option_rows": [
+        {
+          "pmid": "36260828",
+          "result": "Phase 2, primary met at interim: PFS 22.7 vs 14.4 mo, capecitabine–temozolomide vs temozolomide, HR 0.58 (95% CI 0.36–0.93); final 23.2 vs 15.1 mo, HR 0.71 (0.46–1.07)",
+          "caution": "Two-sided 0.20 design; OS NS (HR 0.82, P=.42); grade 3–4 toxicity doubled, 45% vs 22%"
+        }
+      ],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "pcyst:7b5u49",
+      "source_option_identity": "pcyst/2/standard/0",
+      "new_key": "pcyst:19ducax",
+      "old_lead": "If fit for pancreatectomy, resect for: jaundice with a head cyst; enhancing mural nodule ≥5 mm or solid component; main duct ≥10 mm; or suspicious/positive high-grade dysplasia/carcinoma cytology.",
+      "new_lead": "High-risk stigma → surgical assessment: obstructive jaundice with a head cyst; enhancing nodule ≥5 mm or solid component; main duct ≥10 mm; suspicious/positive HGD or carcinoma cytology. Assess fitness and preferences.",
+      "live_decisions": [
+        "2"
+      ],
+      "old_option_rows": [],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "pcyst:8wsvxd",
+      "source_option_identity": "pcyst/5/standard/0/opts/4",
+      "new_key": "pcyst:rb6fdk",
+      "old_lead": "Pseudocyst or walled-off collection — not an oncological problem A pancreatitis, alcohol or trauma history with a cyst fluid amylase above 250 U/L and no epithelium. Amylase below 250 U/L effectively excludes it (sensitivity 44%, specificity 98%).",
+      "new_lead": "Pseudocyst or walled-off collection — not an oncological problem A pancreatitis, alcohol or trauma history with compatible cyst-fluid findings and no epithelium; an amylase above 250 U/L is nonspecific. Amylase below 250 U/L makes a pseudocyst unlikely. In the pooled study, low amylase identified non-pseudocyst lesions with 44% sensitivity and 98% specificity; high amylase alone does not establish a pseudocyst.",
+      "live_decisions": [
+        "5"
+      ],
+      "old_option_rows": [
+        {
+          "pmid": "16111956",
+          "result": "Pooled analysis: cyst fluid amylase <250 U/L excludes pseudocyst — sensitivity 44%, specificity 98%",
+          "caution": "Pooled analysis excluded IPMN"
+        }
+      ],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "pdac:10htwr3",
+      "source_option_identity": "pdac/0/standard/0",
+      "new_key": "pdac:1utm1l2",
+      "old_lead": "Repeat the scan as a pancreas-protocol CT if the one in front of you is not one — a non-protocol CT is not a staging study.",
+      "new_lead": "Obtain adequate pancreas-protocol cross-sectional imaging when the referral study cannot stage the tumour: contrast CT is preferred, and high-quality contrast MRI is an accepted alternative.",
+      "live_decisions": [
+        "0"
+      ],
+      "old_option_rows": [],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "pdac:12cqccz",
+      "source_option_identity": "pdac/8/alt/0/opts/0",
+      "new_key": "pdac:o86xte",
+      "old_lead": "Daraxonrasib, for RAS-mutated disease after prior therapy RASolute 302 (phase 3, n=500 randomised, 248 daraxonrasib and 252 investigator's-choice chemotherapy, more than 90% with RAS G12 mutations) had dual primary endpoints in the RAS G12 population and met both: median overall survival 13.2 versus 6.6 months, hazard ratio 0.40, P<0.001, and median progression-free survival by blinded independent central review 7.3 versus 3.5 months, hazard ratio 0.45.",
+      "new_lead": "Daraxonrasib for eligible metastatic PDAC; the US indication is not restricted to a RAS mutation RASolute 302 (phase 3, n=500 randomised, 248 daraxonrasib and 252 investigator's-choice chemotherapy, more than 90% with RAS G12 mutations) had dual primary endpoints in the RAS G12 population and met both: median overall survival 13.2 versus 6.6 months, hazard ratio 0.40, P<0.001, and median progression-free survival by blinded independent central review 7.3 versus 3.5 months, hazard ratio 0.45.",
+      "live_decisions": [
+        "8"
+      ],
+      "old_option_rows": [
+        {
+          "pmid": "42223072",
+          "result": "RAS G12, daraxonrasib vs chemotherapy: median OS 13.2 vs 6.6 mo, HR 0.40, P<0.001; PFS (BICR) 7.3 vs 3.5 mo, HR 0.45; both primary endpoints met",
+          "caution": "Non-G12 HR 1.38 (95% CI 0.60–3.17); 15.1% of the chemotherapy arm never received it"
+        }
+      ],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "pnet:1h9bzdj",
+      "source_option_identity": "pnet/8/avoid/1",
+      "new_key": "pnet:142m3oh",
+      "old_lead": "Do not give adjuvant systemic therapy after resection of a high-grade tumour outside a trial.",
+      "new_lead": "For resected well-differentiated NET G3, adjuvant systemic therapy is not established; assess clinical-trial eligibility.",
+      "live_decisions": [
+        "8"
+      ],
+      "old_option_rows": [],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "pnet:1p0vzxw",
+      "source_option_identity": "pnet/4/standard/0",
+      "new_key": "pnet:1ginvi",
+      "old_lead": "Observation is the default for an incidental, low-grade, non-functional tumour of 1 cm or less, and biopsy is not required to make that decision.",
+      "new_lead": "Observation is an option for an asymptomatic, low-grade, nonfunctioning tumour ≤1 cm without main pancreatic duct dilation; consider tissue confirmation where possible and document diagnostic confidence.",
+      "live_decisions": [
+        "4"
+      ],
+      "old_option_rows": [
+        {
+          "pmid": "40523372",
+          "result": "Guideline systematic review (MEN1; 37 studies, 1,814 patients): no difference in metastasis or mortality, surgery vs surveillance, ≤2 cm",
+          "caution": "Low to very low GRADE certainty; done for MEN1 recommendations"
+        }
+      ],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "pnet:1tfbdtt",
+      "source_option_identity": "pnet/3/standard/2",
+      "new_key": "pnet:h4kjbh",
+      "old_lead": "For insulinoma, enucleate an exophytic lesion that is clear of the main pancreatic duct; take a spleen-preserving distal pancreatectomy for a deep lesion or one close to the duct.",
+      "new_lead": "For insulinoma, choose the operation by tumour location and main-duct proximity: enucleation for suitable superficial lesions, spleen-preserving distal resection for appropriate deep distal lesions, and a head-specific operation for deep head lesions.",
+      "live_decisions": [
+        "3"
+      ],
+      "old_option_rows": [],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "pnet:1w8gstt",
+      "source_option_identity": "pnet/3/avoid/0",
+      "new_key": "pnet:yk3syj",
+      "old_lead": "Do not give a somatostatin analogue to a patient with insulinoma whose somatostatin-receptor imaging is negative.",
+      "new_lead": "Avoid an unmonitored start of a somatostatin analogue for insulinoma: hypoglycaemia can worsen.",
+      "live_decisions": [
+        "3"
+      ],
+      "old_option_rows": [],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "pnet:8n8093",
+      "source_option_identity": "pnet/7/standard/1",
+      "new_key": "pnet:wh4i1y",
+      "old_lead": "MEN1: resect functional tumors at any size; observe nonfunctional <1 cm; resect >2 cm or significant growth. Surgery will not clear the gland.",
+      "new_lead": "MEN1: treatment depends on syndrome, size, growth and hereditary context. Insulinoma usually needs treatment; gastrinoma surgery is individualized. Small nonfunctioning lesions may be observed.",
+      "live_decisions": [
+        "7"
+      ],
+      "old_option_rows": [],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "pnet:ckf8kc",
+      "source_option_identity": "pnet/3/standard/0",
+      "new_key": "pnet:1v1pbaq",
+      "old_lead": "A localised, biochemically confirmed functional tumour is resected, whatever its size — the syndrome is the indication and the 2 cm rule does not apply here.",
+      "new_lead": "For appropriate sporadic, localized functioning tumours, the hormonal syndrome can justify resection irrespective of size. MEN1-associated gastrinoma requires individualized hereditary and endocrine assessment.",
+      "live_decisions": [
+        "3"
+      ],
+      "old_option_rows": [
+        {
+          "pmid": "16926567",
+          "result": "Gastrinoma, non-randomised: surgery (160) vs no surgery (35): liver metastases 5% vs 29%, p=0.0002; disease-related death 1% vs 23%, p=0.00001",
+          "caution": "Controls not randomised (19 refused surgery); cause of death adjudicated unblinded"
+        }
+      ],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "pnet:dvi8qg",
+      "source_option_identity": "pnet/1/standard/0",
+      "new_key": "pnet:if203j",
+      "old_lead": "Grade with the WHO 2019 criteria and insist on the exact Ki-67 index and the mitotic rate per 2 mm², with the raw counts reported.",
+      "new_lead": "Report differentiation, exact Ki-67 and mitotic rate per 2 mm² when assessable. Record specimen adequacy; a reliable Ki-67-based grade can be used when mitotic counting is not possible.",
+      "live_decisions": [
+        "1"
+      ],
+      "old_option_rows": [],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "pnet:foejc",
+      "source_option_identity": "pnet/8/standard/1",
+      "new_key": "pnet:12e90jd",
+      "old_lead": "Do not resect a poorly differentiated pancreatic neuroendocrine carcinoma for cure; treat it as a carcinoma.",
+      "new_lead": "For poorly differentiated pancreatic NEC, prioritize multidisciplinary systemic-treatment assessment; selected localized disease may still warrant consideration of R0 surgery.",
+      "live_decisions": [
+        "8"
+      ],
+      "old_option_rows": [],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "pnet:mxqkgc",
+      "source_option_identity": "pnet/4/standard/1",
+      "new_key": "pnet:z048cd",
+      "old_lead": "Observation evidence: three uncontrolled cohorts, 2–4 years follow-up; no randomized or direct strategy comparison.",
+      "new_lead": "Observation evidence is nonrandomized: short prospective follow-up and a retrospective size-matched comparison with resection.",
+      "live_decisions": [
+        "4"
+      ],
+      "old_option_rows": [
+        {
+          "pmid": "26597365",
+          "result": "Matched case-control (104 observed, 77 resected): no metastases if observed, no disease deaths; 25% crossed over at median 30 mo; resection grade 3 complications 21%",
+          "caution": "Inclusion ≤3 cm, not 2 cm; never-operated followed median 33 mo vs 57 mo after resection"
+        },
+        {
+          "pmid": "33783475",
+          "result": "Prospective watchful-waiting cohort, 76 tumours ≤2 cm, median follow-up 17 mo: 89% no progression, 11% grew >0.5 cm/y, 8% operated",
+          "caution": "Six of eight meeting resection criterion declined surgery; poor protocol adherence"
+        },
+        {
+          "pmid": "35986682",
+          "result": "Prospective cohort, 500 (406 surveillance, 94 resected), median follow-up 25 mo: 2% of surveilled came to surgery; metastases 4 of 500 (0.8%), all at diagnosis",
+          "caution": "Non-randomised, no strategy comparison; 20% aggressive histology is from the resected only"
+        },
+        {
+          "pmid": "40523372",
+          "result": "Guideline systematic review (MEN1), 37 publications, 1,814 patients: metastatic disease and mortality did not differ, surgery vs surveillance, ≤2 cm",
+          "caution": "Low to very low GRADE certainty; MEN1 only, not sporadic disease"
+        }
+      ],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "pnet:shbj1e",
+      "source_option_identity": "pnet/1/alt/0",
+      "new_key": "pnet:10xbu6v",
+      "old_lead": "Biopsy is not obligatory to decide to observe a small incidental lesion with the imaging phenotype of a neuroendocrine tumour.",
+      "new_lead": "For a small incidental suspected nonfunctioning pNET, discuss whether tissue confirmation will change observation or treatment; ENETS recommends confirmation where possible.",
+      "live_decisions": [
+        "1"
+      ],
+      "old_option_rows": [],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    },
+    {
+      "old_key": "pnet:uqrjzo",
+      "source_option_identity": "pnet/3/standard/1",
+      "new_key": "pnet:m9913u",
+      "old_lead": "Confirm the syndrome biochemically before localising, and read gastrin against the proton-pump inhibitor.",
+      "new_lead": "Confirm and stabilize the hormonal syndrome; interpret gastrin with PPI exposure and maintain acid suppression when withdrawal would be unsafe.",
+      "live_decisions": [
+        "3"
+      ],
+      "old_option_rows": [],
+      "reference_links": [],
+      "action": "Remap the option identity; validate each numerical row against the corrected live option text before retaining it. Preserve linked treatment-reference groups."
+    }
+  ],
+  "unresolved": []
+}

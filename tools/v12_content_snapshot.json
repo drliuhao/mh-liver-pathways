@@ -7619,8 +7619,35 @@
     "icca/follow-up": {
       "questions": [
         {
+          "id": "phase",
+          "label": "Is this assessment before or after liver transplantation?",
+          "options": [
+            {
+              "value": "before",
+              "label": "Before transplantation: final selection and care planning",
+              "details": []
+            },
+            {
+              "value": "after",
+              "label": "After transplantation: recipient follow-up",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-icca",
+            "I-cohort"
+          ],
+          "help": "Before transplantation, all earlier selection findings remain relevant. After transplantation, assess the recipient, graft, recurrence and ongoing care; a prior selection boundary does not prevent follow-up.",
+          "criteria": []
+        },
+        {
           "id": "plan",
-          "label": "Final clinical review and recurrence-surveillance plan complete?",
+          "label": "Clinical plan and follow-up responsibilities agreed for this stage of care?",
           "options": [
             {
               "value": "yes",
@@ -7676,7 +7703,51 @@
       "rules": [
         {
           "when": {
+            "phase": "after",
             "concern": "concern"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Assess the new finding in the transplant recipient",
+          "text": "Review recurrence, graft function, immunosuppression and treatment safety with the disease-specific oncology and transplant teams.",
+          "refs": [
+            "N-icca",
+            "I-cohort"
+          ]
+        },
+        {
+          "when": {
+            "phase": "after",
+            "plan": "no"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Complete the recipient follow-up plan",
+          "text": "Assign surveillance and responsibility for suspected recurrence, graft care and the underlying condition.",
+          "refs": [
+            "N-icca",
+            "I-cohort"
+          ]
+        },
+        {
+          "when": {
+            "phase": "after",
+            "plan": "yes",
+            "concern": "none"
+          },
+          "branch": null,
+          "kind": "advance",
+          "title": "Continue recipient follow-up",
+          "text": "Continue the agreed oncology and transplant follow-up plan. This is a post-transplant care result.",
+          "refs": [
+            "N-icca",
+            "I-cohort"
+          ]
+        },
+        {
+          "when": {
+            "concern": "concern",
+            "phase": "before"
           },
           "branch": null,
           "kind": "hold",
@@ -7689,7 +7760,8 @@
         },
         {
           "when": {
-            "plan": "no"
+            "plan": "no",
+            "phase": "before"
           },
           "branch": null,
           "kind": "hold",
@@ -7703,7 +7775,8 @@
         {
           "when": {
             "plan": "yes",
-            "concern": "none"
+            "concern": "none",
+            "phase": "before"
           },
           "branch": 0,
           "kind": null,
@@ -7714,7 +7787,8 @@
       ],
       "example": {
         "plan": "yes",
-        "concern": "none"
+        "concern": "none",
+        "phase": "before"
       }
     },
     "crlm/map-disease": {
@@ -8617,8 +8691,35 @@
     "crlm/transplant": {
       "questions": [
         {
+          "id": "phase",
+          "label": "Is this assessment before or after liver transplantation?",
+          "options": [
+            {
+              "value": "before",
+              "label": "Before transplantation: final selection and care planning",
+              "details": []
+            },
+            {
+              "value": "after",
+              "label": "After transplantation: recipient follow-up",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-crlm",
+            "C-transmet"
+          ],
+          "help": "Before transplantation, all earlier selection findings remain relevant. After transplantation, assess the recipient, graft, recurrence and ongoing care; a prior selection boundary does not prevent follow-up.",
+          "criteria": []
+        },
+        {
           "id": "plan",
-          "label": "Final benefit–risk review supports transplant and follow-up is agreed?",
+          "label": "Clinical plan and follow-up responsibilities agreed for this stage of care?",
           "options": [
             {
               "value": "yes",
@@ -8674,7 +8775,51 @@
       "rules": [
         {
           "when": {
+            "phase": "after",
             "concern": "concern"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Assess the new finding in the transplant recipient",
+          "text": "Review recurrence, graft function, immunosuppression and treatment safety with the disease-specific oncology and transplant teams.",
+          "refs": [
+            "N-crlm",
+            "C-transmet"
+          ]
+        },
+        {
+          "when": {
+            "phase": "after",
+            "plan": "no"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Complete the recipient follow-up plan",
+          "text": "Assign surveillance and responsibility for suspected recurrence, graft care and the underlying condition.",
+          "refs": [
+            "N-crlm",
+            "C-transmet"
+          ]
+        },
+        {
+          "when": {
+            "phase": "after",
+            "plan": "yes",
+            "concern": "none"
+          },
+          "branch": null,
+          "kind": "advance",
+          "title": "Continue recipient follow-up",
+          "text": "Continue the agreed oncology and transplant follow-up plan. This is a post-transplant care result.",
+          "refs": [
+            "N-crlm",
+            "C-transmet"
+          ]
+        },
+        {
+          "when": {
+            "concern": "concern",
+            "phase": "before"
           },
           "branch": null,
           "kind": "hold",
@@ -8687,7 +8832,8 @@
         },
         {
           "when": {
-            "plan": "no"
+            "plan": "no",
+            "phase": "before"
           },
           "branch": null,
           "kind": "hold",
@@ -8701,7 +8847,8 @@
         {
           "when": {
             "plan": "yes",
-            "concern": "none"
+            "concern": "none",
+            "phase": "before"
           },
           "branch": 0,
           "kind": null,
@@ -8712,7 +8859,8 @@
       ],
       "example": {
         "plan": "yes",
-        "concern": "none"
+        "concern": "none",
+        "phase": "before"
       }
     },
     "nelm/biology": {
@@ -9333,8 +9481,35 @@
     "nelm/follow-up": {
       "questions": [
         {
+          "id": "phase",
+          "label": "Is this assessment before or after liver transplantation?",
+          "options": [
+            {
+              "value": "before",
+              "label": "Before transplantation: final selection and care planning",
+              "details": []
+            },
+            {
+              "value": "after",
+              "label": "After transplantation: recipient follow-up",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-net",
+            "NET-milan"
+          ],
+          "help": "Before transplantation, all earlier selection findings remain relevant. After transplantation, assess the recipient, graft, recurrence and ongoing care; a prior selection boundary does not prevent follow-up.",
+          "criteria": []
+        },
+        {
           "id": "plan",
-          "label": "Are pathology review and the follow-up plan in place?",
+          "label": "Clinical plan and follow-up responsibilities agreed for this stage of care?",
           "options": [
             {
               "value": "yes",
@@ -9390,7 +9565,51 @@
       "rules": [
         {
           "when": {
+            "phase": "after",
             "concern": "concern"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Assess the new finding in the transplant recipient",
+          "text": "Review recurrence, graft function, immunosuppression and treatment safety with the disease-specific oncology and transplant teams.",
+          "refs": [
+            "N-net",
+            "NET-milan"
+          ]
+        },
+        {
+          "when": {
+            "phase": "after",
+            "plan": "no"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Complete the recipient follow-up plan",
+          "text": "Assign surveillance and responsibility for suspected recurrence, graft care and the underlying condition.",
+          "refs": [
+            "N-net",
+            "NET-milan"
+          ]
+        },
+        {
+          "when": {
+            "phase": "after",
+            "plan": "yes",
+            "concern": "none"
+          },
+          "branch": null,
+          "kind": "advance",
+          "title": "Continue recipient follow-up",
+          "text": "Continue the agreed oncology and transplant follow-up plan. This is a post-transplant care result.",
+          "refs": [
+            "N-net",
+            "NET-milan"
+          ]
+        },
+        {
+          "when": {
+            "concern": "concern",
+            "phase": "before"
           },
           "branch": null,
           "kind": "hold",
@@ -9403,7 +9622,8 @@
         },
         {
           "when": {
-            "plan": "no"
+            "plan": "no",
+            "phase": "before"
           },
           "branch": null,
           "kind": "hold",
@@ -9417,7 +9637,8 @@
         {
           "when": {
             "plan": "yes",
-            "concern": "none"
+            "concern": "none",
+            "phase": "before"
           },
           "branch": 0,
           "kind": null,
@@ -9428,7 +9649,8 @@
       ],
       "example": {
         "plan": "yes",
-        "concern": "none"
+        "concern": "none",
+        "phase": "before"
       }
     },
     "hehe/diagnosis": {
@@ -9873,8 +10095,35 @@
     "hehe/follow-up": {
       "questions": [
         {
+          "id": "phase",
+          "label": "Is this assessment before or after liver transplantation?",
+          "options": [
+            {
+              "value": "before",
+              "label": "Before transplantation: final selection and care planning",
+              "details": []
+            },
+            {
+              "value": "after",
+              "label": "After transplantation: recipient follow-up",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "E-score",
+            "E-consensus"
+          ],
+          "help": "Before transplantation, all earlier selection findings remain relevant. After transplantation, assess the recipient, graft, recurrence and ongoing care; a prior selection boundary does not prevent follow-up.",
+          "criteria": []
+        },
+        {
           "id": "plan",
-          "label": "Are pathology review and the follow-up plan in place?",
+          "label": "Clinical plan and follow-up responsibilities agreed for this stage of care?",
           "options": [
             {
               "value": "yes",
@@ -9930,7 +10179,51 @@
       "rules": [
         {
           "when": {
+            "phase": "after",
             "concern": "concern"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Assess the new finding in the transplant recipient",
+          "text": "Review recurrence, graft function, immunosuppression and treatment safety with the disease-specific oncology and transplant teams.",
+          "refs": [
+            "E-score",
+            "E-consensus"
+          ]
+        },
+        {
+          "when": {
+            "phase": "after",
+            "plan": "no"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Complete the recipient follow-up plan",
+          "text": "Assign surveillance and responsibility for suspected recurrence, graft care and the underlying condition.",
+          "refs": [
+            "E-score",
+            "E-consensus"
+          ]
+        },
+        {
+          "when": {
+            "phase": "after",
+            "plan": "yes",
+            "concern": "none"
+          },
+          "branch": null,
+          "kind": "advance",
+          "title": "Continue recipient follow-up",
+          "text": "Continue the agreed oncology and transplant follow-up plan. This is a post-transplant care result.",
+          "refs": [
+            "E-score",
+            "E-consensus"
+          ]
+        },
+        {
+          "when": {
+            "concern": "concern",
+            "phase": "before"
           },
           "branch": null,
           "kind": "hold",
@@ -9943,7 +10236,8 @@
         },
         {
           "when": {
-            "plan": "no"
+            "plan": "no",
+            "phase": "before"
           },
           "branch": null,
           "kind": "hold",
@@ -9957,7 +10251,8 @@
         {
           "when": {
             "plan": "yes",
-            "concern": "none"
+            "concern": "none",
+            "phase": "before"
           },
           "branch": 0,
           "kind": null,
@@ -9968,7 +10263,8 @@
       ],
       "example": {
         "plan": "yes",
-        "concern": "none"
+        "concern": "none",
+        "phase": "before"
       }
     },
     "hca/characterize": {
@@ -10421,8 +10717,35 @@
     "hca/follow-up": {
       "questions": [
         {
+          "id": "phase",
+          "label": "Is this assessment before or after liver transplantation?",
+          "options": [
+            {
+              "value": "before",
+              "label": "Before transplantation: final selection and care planning",
+              "details": []
+            },
+            {
+              "value": "after",
+              "label": "After transplantation: recipient follow-up",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "N-hca",
+            "A-easl"
+          ],
+          "help": "Before transplantation, all earlier selection findings remain relevant. After transplantation, assess the recipient, graft, recurrence and ongoing care; a prior selection boundary does not prevent follow-up.",
+          "criteria": []
+        },
+        {
           "id": "plan",
-          "label": "Fitness for transplantation confirmed and follow-up for the underlying condition agreed?",
+          "label": "Clinical plan and follow-up responsibilities agreed for this stage of care?",
           "options": [
             {
               "value": "yes",
@@ -10478,7 +10801,51 @@
       "rules": [
         {
           "when": {
+            "phase": "after",
             "concern": "concern"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Assess the new finding in the transplant recipient",
+          "text": "Review recurrence, graft function, immunosuppression and treatment safety with the disease-specific oncology and transplant teams.",
+          "refs": [
+            "N-hca",
+            "A-easl"
+          ]
+        },
+        {
+          "when": {
+            "phase": "after",
+            "plan": "no"
+          },
+          "branch": null,
+          "kind": "hold",
+          "title": "Complete the recipient follow-up plan",
+          "text": "Assign surveillance and responsibility for suspected recurrence, graft care and the underlying condition.",
+          "refs": [
+            "N-hca",
+            "A-easl"
+          ]
+        },
+        {
+          "when": {
+            "phase": "after",
+            "plan": "yes",
+            "concern": "none"
+          },
+          "branch": null,
+          "kind": "advance",
+          "title": "Continue recipient follow-up",
+          "text": "Continue the agreed oncology and transplant follow-up plan. This is a post-transplant care result.",
+          "refs": [
+            "N-hca",
+            "A-easl"
+          ]
+        },
+        {
+          "when": {
+            "concern": "concern",
+            "phase": "before"
           },
           "branch": null,
           "kind": "hold",
@@ -10491,7 +10858,8 @@
         },
         {
           "when": {
-            "plan": "no"
+            "plan": "no",
+            "phase": "before"
           },
           "branch": null,
           "kind": "hold",
@@ -10505,7 +10873,8 @@
         {
           "when": {
             "plan": "yes",
-            "concern": "none"
+            "concern": "none",
+            "phase": "before"
           },
           "branch": 0,
           "kind": null,
@@ -10516,7 +10885,8 @@
       ],
       "example": {
         "plan": "yes",
-        "concern": "none"
+        "concern": "none",
+        "phase": "before"
       }
     }
   },
@@ -11067,11 +11437,11 @@
                 },
                 {
                   "key": "immunoxxl",
-                  "design_population": "Prospective phase II experience: 61 potentially eligible atezolizumab–bevacizumab-treated patients; 16 enrolled/listed/transplanted responders.",
-                  "selection": "The 45 not included comprised 25 treatment discontinuations (15 progression, four adverse events, six decompensation) and 20 failing downstaging criteria. Eight of 16 had portal thrombosis, grades not verified; 15 had prior locoregional treatment.",
-                  "results": "Median washout 57.5 days (IQR 29–87), median follow-up 16 months. Acute rejection 4/16 (25%); three irAEs. Ninety-day morbidity 62.5%, mortality 1/16. Explants: ten complete and six partial responses; one recurrence. Two-year recipient OS 94%, RFS 90%.",
-                  "limits": "These are selected-16 outcomes, not 61-patient ITT efficacy. Small, nonrandomized, short follow-up; a shorter median washout does not establish safety. Retransplantation count was not independently extractable from accessible primary text and is not asserted.",
-                  "locator": "Published abstract plus accessible publisher Results, PMID 41763363; full PDF needed for eligibility, flow and adverse-event denominators."
+                  "design_population": "Prospective single-centre observational cohort: 61 potentially eligible patients treated with atezolizumab–bevacizumab; 16 selected responders were enrolled, listed and transplanted.",
+                  "selection": "Among 45 not included, 25 discontinued treatment (15 progression, four adverse events, six decompensation) and 20 failed downstaging criteria. Eight of 16 had baseline portal-vein tumor thrombosis (six Vp2, one Vp3, one Vp4); 15 had prior locoregional treatment. These were selected research recipients, not proof of standard eligibility after vascular invasion.",
+                  "results": "Median washout 57.5 days (IQR 29–87), median follow-up 16 months. Four biopsy-confirmed acute rejections (25%); three irAEs. Ninety-day morbidity 10/16 and mortality 1/16; two retransplants. Explants: ten complete and six partial responses; one recurrence. Reported two-year OS 94% (95% CI 67–100) and recurrence-free estimate 90% (62–98) in the 16 recipients; Methods start both clocks at listing and censor death for recurrence, so the latter is not conventional recurrence-or-death RFS.",
+                  "limits": "Selected-16 outcomes, not efficacy among all 61 treated patients. Small, observational cohort with short follow-up. A shorter median washout does not establish safety. The fatal course included graft dysfunction, rejection, sepsis and retransplantation; graft loss should not all be attributed to rejection. Supplement and mechanistic analyses were not fully reviewed.",
+                  "locator": "J Hepatol2026;85:117–129. PMID41763363. PDF pp3–5 selection, flow and endpoint definitions; Figures1–3; p8 safety; Table2. Targeted main clinical read; supplement not reviewed."
                 },
                 {
                   "key": "moeckli",
@@ -11495,10 +11865,10 @@
                 {
                   "key": "pcca_ethun",
                   "design_population": "Multicenter 2000–2015; 234 attempted resections and 70 entered LT protocols; 191 curative-intent resections and 41 confirmed-CCA LT in recipient analysis.",
-                  "selection": "LT patients were younger (52 vs 65), more often PSC(61% vs 2%), and more often treated with chemo/RT(98% vs 57%).",
-                  "results": "Recipient 3-/5-year OS 72%/64% LT versus 33%/18% resection. Restricted non-PSC,<3 cm, node-negative comparison favored LT at 5 years 54% vs 29%(p=.03); adjusted/restricted ITT comparison remained significant (p=.049).",
-                  "limits": "Conflicting observational evidence versus Dong; major selection/era/therapy confounding. Exact ITT exclusions and time origin require full-PDF recheck; no unsupported ITT rate is reproduced here.",
-                  "locator": "Ann Surg 2018; 267: 797–805; primary abstract and indexed Results/Discussion."
+                  "selection": "In Table 1, median age was 54 years after LT versus 67 after resection; PSC 61% versus 2%. Neoadjuvant chemotherapy was 95% versus 5%, and radiation 95% versus 3%. These table values differ from the abstract summary.",
+                  "results": "Recipient 3-/5-year OS was 72%/64% after LT versus 33%/18% after resection. In the restricted non-PSC comparison against resection for <3 cm, node-negative disease, five-year OS was 54% versus 29% (log-rank P=.03). The restricted intention-to-treat comparison was also significant (log-rank P=.049); this was not a multivariable-adjusted treatment effect.",
+                  "limits": "Observational comparison with major selection, PSC, treatment and era differences. Recipient OS starts at surgery. Intention-to-treat OS starts at surgery for attempted resection, but at protocol initiation for LT. Four LT-protocol entrants lacked initiation dates and were excluded from the ITT analysis (66 of 70 analyzed). Restricted analyses do not establish LT superiority for all resectable pCCA.",
+                  "locator": "Ethun 2018, Ann Surg267:797–805. Targeted full-text read: p798 Methods/time origins; p799 ITT exclusions and restricted log-rank; p800 Table1. B26/R6 saved primary text29064885.txt."
                 },
                 {
                   "key": "pcca_vugts",
@@ -12069,7 +12439,7 @@
                   "key": "transmet",
                   "design_population": "Multicentre open-label randomized trial, 20 European centres, 157 screened and 94 randomized (47 LT-plus-chemotherapy, 47 chemotherapy); 63 screened excluded, including 13 with equivocal unresectability and 36 with progression.",
                   "selection": "Age 18–65; ECOG 0–1; R0 colorectal primary; BRAF nonmutated; no prior or current extrahepatic disease/local recurrence; chemotherapy response or stable disease for at least 3 months, at most three lines. CEA <80 ng/mL OR at least 50% reduction from peak was permitted. Independent committee of at least two surgeons, two oncologists and one radiologist reviewed original and current lesion maps. These are trial criteria, not identical to current NLRB guidance.",
-                  "results": "Primary time origin was randomization. Median follow-up 59.3 months. Five-year ITT OS was 56.6% versus 12.6% (HR 0.37, 95% CI 0.21–0.65); per-protocol OS 73.3% versus 9.3%. Of 47 assigned LT, 38 received LT and 36 were per-protocol; nine had progression-related exclusion/dropout. The control arm included seven subsequent resections and two LT crossovers. Safety population comprised 40 grafted patients. Among 36 per-protocol LT recipients, 26 recurred; 19/26 received chemotherapy and 12/26 local curative-intent treatment. Median per-protocol PFS was 17.4 versus 6.4 months, and secondary PFS after salvage was 35.4 months in the LT arm. Three of 36 per-protocol recipients required retransplantation (primary nonfunction, donor gallbladder cancer, caval obstruction/large-for-size); one postoperative death was reported. Serious adverse events occurred in 32/40 safety LT recipients. Median wait to LT was 50.5 days, which limits transfer to longer-wait systems.",
+                  "results": "Primary time origin was randomization. Median follow-up 59.3 months. Five-year ITT OS was 56.6% versus 12.6% (HR 0.37, 95% CI 0.21–0.65); per-protocol OS 73.3% versus 9.3%. Of 47 assigned LT, 38 received LT and 36 were per-protocol; nine were not transplanted (five progressed while waiting, three had extrahepatic disease at laparotomy, one had prostate cancer). The control arm included seven resections and two transplants outside protocol; crossover was not allowed. Safety population comprised 40 grafted patients. Among 36 per-protocol LT recipients, 26 recurred; 19/26 received chemotherapy and 12/26 local curative-intent treatment. Median per-protocol PFS was 17.4 versus 6.4 months (recurrence after LT versus RECIST progression on chemotherapy; PET surveillance differed by arm), and secondary PFS after salvage was 35.4 months in the LT arm. Three of 36 per-protocol recipients required retransplantation (primary nonfunction, donor gallbladder cancer, caval obstruction/large-for-size); one postoperative death was reported. Serious adverse events occurred in 32/40 safety LT recipients. Median wait to LT was 50.5 days, which limits transfer to longer-wait systems.",
                   "limits": "Strong evidence for the selected trial population, not for BRAF-mutant, ECOG 2, active extrahepatic, truly NED, resectable or broadly expanded disease. PP survival conditions on reaching treatment and must not replace ITT. The Results recurrence denominator is 26/36; Figure 3 caption says 28 recurrences, consistent with a broader all-grafted report, so do not mix these denominators. QoL collection had only 55/74 per-protocol baseline questionnaires and is descriptive, not proof of a large QoL gain. Priority allocation and rapid access were part of the treatment strategy.",
                   "locator": "Lancet 2024;404:1107–1118. PDF pp.2–4 eligibility/committee; pp.5–6 trial flow/Table 1; pp.8–9 recurrence, safety, retransplantation, Figure 3; p.10 QoL/limitations."
                 },
@@ -12184,7 +12554,7 @@
                   "key": "transmet",
                   "design_population": "Multicentre open-label randomized trial, 20 European centres, 157 screened and 94 randomized (47 LT-plus-chemotherapy, 47 chemotherapy); 63 screened excluded, including 13 with equivocal unresectability and 36 with progression.",
                   "selection": "Age 18–65; ECOG 0–1; R0 colorectal primary; BRAF nonmutated; no prior or current extrahepatic disease/local recurrence; chemotherapy response or stable disease for at least 3 months, at most three lines. CEA <80 ng/mL OR at least 50% reduction from peak was permitted. Independent committee of at least two surgeons, two oncologists and one radiologist reviewed original and current lesion maps. These are trial criteria, not identical to current NLRB guidance.",
-                  "results": "Primary time origin was randomization. Median follow-up 59.3 months. Five-year ITT OS was 56.6% versus 12.6% (HR 0.37, 95% CI 0.21–0.65); per-protocol OS 73.3% versus 9.3%. Of 47 assigned LT, 38 received LT and 36 were per-protocol; nine had progression-related exclusion/dropout. The control arm included seven subsequent resections and two LT crossovers. Safety population comprised 40 grafted patients. Among 36 per-protocol LT recipients, 26 recurred; 19/26 received chemotherapy and 12/26 local curative-intent treatment. Median per-protocol PFS was 17.4 versus 6.4 months, and secondary PFS after salvage was 35.4 months in the LT arm. Three of 36 per-protocol recipients required retransplantation (primary nonfunction, donor gallbladder cancer, caval obstruction/large-for-size); one postoperative death was reported. Serious adverse events occurred in 32/40 safety LT recipients. Median wait to LT was 50.5 days, which limits transfer to longer-wait systems.",
+                  "results": "Primary time origin was randomization. Median follow-up 59.3 months. Five-year ITT OS was 56.6% versus 12.6% (HR 0.37, 95% CI 0.21–0.65); per-protocol OS 73.3% versus 9.3%. Of 47 assigned LT, 38 received LT and 36 were per-protocol; nine were not transplanted (five progressed while waiting, three had extrahepatic disease at laparotomy, one had prostate cancer). The control arm included seven resections and two transplants outside protocol; crossover was not allowed. Safety population comprised 40 grafted patients. Among 36 per-protocol LT recipients, 26 recurred; 19/26 received chemotherapy and 12/26 local curative-intent treatment. Median per-protocol PFS was 17.4 versus 6.4 months (recurrence after LT versus RECIST progression on chemotherapy; PET surveillance differed by arm), and secondary PFS after salvage was 35.4 months in the LT arm. Three of 36 per-protocol recipients required retransplantation (primary nonfunction, donor gallbladder cancer, caval obstruction/large-for-size); one postoperative death was reported. Serious adverse events occurred in 32/40 safety LT recipients. Median wait to LT was 50.5 days, which limits transfer to longer-wait systems.",
                   "limits": "Strong evidence for the selected trial population, not for BRAF-mutant, ECOG 2, active extrahepatic, truly NED, resectable or broadly expanded disease. PP survival conditions on reaching treatment and must not replace ITT. The Results recurrence denominator is 26/36; Figure 3 caption says 28 recurrences, consistent with a broader all-grafted report, so do not mix these denominators. QoL collection had only 55/74 per-protocol baseline questionnaires and is descriptive, not proof of a large QoL gain. Priority allocation and rapid access were part of the treatment strategy.",
                   "locator": "Lancet 2024;404:1107–1118. PDF pp.2–4 eligibility/committee; pp.5–6 trial flow/Table 1; pp.8–9 recurrence, safety, retransplantation, Figure 3; p.10 QoL/limitations."
                 }
@@ -12221,7 +12591,7 @@
               "ihpba"
             ],
             "evidence": {
-              "synthesis": "BRAF-wild-type, controlled liver-only disease with a cleared primary has the strongest treatment evidence. KRAS mutation alone was allowed in TransMet (17/47 assigned LT), so a blanket KRAS ban would exceed evidence; that does not prove every molecular subgroup derives equal benefit. Arm D is a warning against stacking expansions. PET/Oslo/CEA markers forecast prognosis in recipients but have not demonstrated that crossing a threshold changes the incremental benefit of LT over modern non-LT care.",
+              "synthesis": "BRAF-wild-type, controlled liver-only disease with a cleared primary has the strongest treatment evidence. RAS-mutant disease (including KRAS) was allowed in TransMet (17/47 assigned LT), so a blanket RAS ban would exceed evidence; that does not prove every molecular subgroup derives equal benefit. Arm D is a warning against stacking expansions. PET/Oslo/CEA markers forecast prognosis in recipients but have not demonstrated that crossing a threshold changes the incremental benefit of LT over modern non-LT care.",
               "counterevidence": "IHPBA specifically excludes BRAF V600E, whereas NLRB requests BRAF wild type; non-V600E cases are therefore a true guideline/research gap, not automatically eligible. TransMet accepted CEA <80 OR a ≥50% decline, unlike the draft strict <80 rule. SECA-II's excellent long-term outcomes mostly occurred with CEA ≤33, small lesions and low MTV; they cannot establish safety at every nominal upper limit. Negative ctDNA has not been validated to rescue other exclusion criteria.",
               "certainty": "Moderate-to-high for narrow TransMet eligibility; low/very low for non-V600E BRAF, prior pulmonary disease, R1 primary, ECOG 2, or ctDNA-directed selection. Prognostic association does not equal predictive treatment-benefit validation. Allocation criteria have authoritative administrative status but are not randomized cutoff evidence.",
               "threshold_basis": "Current NLRB contains six-month/12-month/10-cm/CEA requirements and >10% growth wording. TransMet used at least three months control and a CEA-decline alternative. Oslo >5.5 cm, CEA >80, <2 years and progression are prognostic score components; MTV ~70 is data-derived; TLG 260 is consensus, not the same as Grut's 238.8. Resetting a six-month clock after confirmed progression and requiring repeat CEA are proposed local safeguards, not validated rescue rules.",
@@ -12230,7 +12600,7 @@
                   "key": "transmet",
                   "design_population": "Multicentre open-label randomized trial, 20 European centres, 157 screened and 94 randomized (47 LT-plus-chemotherapy, 47 chemotherapy); 63 screened excluded, including 13 with equivocal unresectability and 36 with progression.",
                   "selection": "Age 18–65; ECOG 0–1; R0 colorectal primary; BRAF nonmutated; no prior or current extrahepatic disease/local recurrence; chemotherapy response or stable disease for at least 3 months, at most three lines. CEA <80 ng/mL OR at least 50% reduction from peak was permitted. Independent committee of at least two surgeons, two oncologists and one radiologist reviewed original and current lesion maps. These are trial criteria, not identical to current NLRB guidance.",
-                  "results": "Primary time origin was randomization. Median follow-up 59.3 months. Five-year ITT OS was 56.6% versus 12.6% (HR 0.37, 95% CI 0.21–0.65); per-protocol OS 73.3% versus 9.3%. Of 47 assigned LT, 38 received LT and 36 were per-protocol; nine had progression-related exclusion/dropout. The control arm included seven subsequent resections and two LT crossovers. Safety population comprised 40 grafted patients. Among 36 per-protocol LT recipients, 26 recurred; 19/26 received chemotherapy and 12/26 local curative-intent treatment. Median per-protocol PFS was 17.4 versus 6.4 months, and secondary PFS after salvage was 35.4 months in the LT arm. Three of 36 per-protocol recipients required retransplantation (primary nonfunction, donor gallbladder cancer, caval obstruction/large-for-size); one postoperative death was reported. Serious adverse events occurred in 32/40 safety LT recipients. Median wait to LT was 50.5 days, which limits transfer to longer-wait systems.",
+                  "results": "Primary time origin was randomization. Median follow-up 59.3 months. Five-year ITT OS was 56.6% versus 12.6% (HR 0.37, 95% CI 0.21–0.65); per-protocol OS 73.3% versus 9.3%. Of 47 assigned LT, 38 received LT and 36 were per-protocol; nine were not transplanted (five progressed while waiting, three had extrahepatic disease at laparotomy, one had prostate cancer). The control arm included seven resections and two transplants outside protocol; crossover was not allowed. Safety population comprised 40 grafted patients. Among 36 per-protocol LT recipients, 26 recurred; 19/26 received chemotherapy and 12/26 local curative-intent treatment. Median per-protocol PFS was 17.4 versus 6.4 months (recurrence after LT versus RECIST progression on chemotherapy; PET surveillance differed by arm), and secondary PFS after salvage was 35.4 months in the LT arm. Three of 36 per-protocol recipients required retransplantation (primary nonfunction, donor gallbladder cancer, caval obstruction/large-for-size); one postoperative death was reported. Serious adverse events occurred in 32/40 safety LT recipients. Median wait to LT was 50.5 days, which limits transfer to longer-wait systems.",
                   "limits": "Strong evidence for the selected trial population, not for BRAF-mutant, ECOG 2, active extrahepatic, truly NED, resectable or broadly expanded disease. PP survival conditions on reaching treatment and must not replace ITT. The Results recurrence denominator is 26/36; Figure 3 caption says 28 recurrences, consistent with a broader all-grafted report, so do not mix these denominators. QoL collection had only 55/74 per-protocol baseline questionnaires and is descriptive, not proof of a large QoL gain. Priority allocation and rapid access were part of the treatment strategy.",
                   "locator": "Lancet 2024;404:1107–1118. PDF pp.2–4 eligibility/committee; pp.5–6 trial flow/Table 1; pp.8–9 recurrence, safety, retransplantation, Figure 3; p.10 QoL/limitations."
                 },
@@ -12268,11 +12638,11 @@
                 },
                 {
                   "key": "ctdna",
-                  "design_population": "Observational mixed resection/LT cohort, 52 patients with ctDNA data, 34 preoperative and 18 postoperative tests; only nine paired samples. Abstract-only verification.",
+                  "design_population": "Observational mixed liver-resection/LT cohort: 52 patients with ctDNA data, 34 assessed preoperatively and 18 postoperatively, with nine sequential pre-/postoperative pairs. The paired cohort includes both operations.",
                   "selection": "Guardant360 profiling, variable timing; the 29 mutation types reported are not 29 patients. Not a ctDNA-directed LT eligibility trial.",
-                  "results": "All nine paired patients were ctDNA-positive preoperatively; three remained positive postoperatively. Abstract reports postoperative recurrence 57% versus 0% by ctDNA status (P=0.0419).",
-                  "limits": "Small numbers, mixed operations, incomplete pairs, possible overlap with other centre cohorts and no strategy comparison. Association supports research and risk discussion, not mandatory negative ctDNA, empirical treatment until negative, or declaring cure from a negative result.",
-                  "locator": "JCO Clin Cancer Inform 2023;7:e2300111; PubMed PMID37820293 abstract only."
+                  "results": "All nine sequentially tested patients were ctDNA-positive before surgery; three remained positive afterward. The reported 57% versus 0% recurrence association (P=.0419) concerns recurrence after liver resection, not a transplant-specific recurrence comparison.",
+                  "limits": "Small heterogeneous cohort with variable testing and incomplete pairs; no ctDNA-directed allocation or transplant strategy trial. The Results recurrence denominators (14 positive plus six negative) do not reconcile cleanly with the 18 postoperative patients in the abstract/Table1; this needs clarification. Do not infer a mandatory negative-ctDNA selection rule, benefit from empirical treatment until negative, or cure from a negative test.",
+                  "locator": "Wehrle2023 JCO Clin Cancer Inform7:e2300111, PMID37820293. Targeted primary full-text Methods/Results, Table1, Table2, Figure1 and Discussion (PDF pp2–6); original B26/R6/_txt/C_37820293.txt."
                 },
                 {
                   "key": "ihpba",
@@ -12320,7 +12690,7 @@
             ],
             "evidence": {
               "synthesis": "The relevant endpoint is the entire strategy from a shared eligibility/randomization date: access to a first graft, wait-list progression, perioperative death, graft failure, recurrence, salvage treatment, long-term survival and QoL. Recurrence does not erase all benefit, but is a substantial burden; SECA-II shows both long post-recurrence survival and late metastatic death. TransMet's 56.6% ITT survival is the appropriate randomized headline, with 73.3% PP provided only secondarily.",
-              "counterevidence": "TransMet's nine progression dropouts and three retransplants show why post-LT survival alone is inadequate. The 2026 SECA-II ten-year OS was 51.5%, not its five-year 77.8%; four metastatic deaths occurred after five years. Arm D's 18-month median OS cautions against assuming every expanded candidate obtains sufficient benefit. Selected HAIP/conversion patients can have durable survival without a graft, but cross-study comparisons cannot calculate an individual's LT gain.",
+              "counterevidence": "TransMet's nine non-transplanted LT-arm patients (eight progression/extrahepatic disease and one prostate cancer) and three retransplants show why post-LT survival alone is inadequate. The 2026 SECA-II ten-year OS was 51.5%, not its five-year 77.8%; four metastatic deaths occurred after five years. Arm D's 18-month median OS cautions against assuming every expanded candidate obtains sufficient benefit. Selected HAIP/conversion patients can have durable survival without a graft, but cross-study comparisons cannot calculate an individual's LT gain.",
               "certainty": "Moderate-to-high for a survival advantage in selected TransMet patients; low for an individual numerical benefit model, long-wait extrapolation, high-risk graft strategies or predetermined retransplant policy. Long-term SECA-II is informative but small and uncontrolled.",
               "threshold_basis": "No validated minimum RFS, individual five-year benefit percentage or fixed number of salvage operations establishes acceptable LT value. The two-year/three-year thresholds sometimes used in economic models are not recipient-selection validation. One planned graft and safety-review triggers are institutional ethical/operational proposals.",
               "studies": [
@@ -12328,7 +12698,7 @@
                   "key": "transmet",
                   "design_population": "Multicentre open-label randomized trial, 20 European centres, 157 screened and 94 randomized (47 LT-plus-chemotherapy, 47 chemotherapy); 63 screened excluded, including 13 with equivocal unresectability and 36 with progression.",
                   "selection": "Age 18–65; ECOG 0–1; R0 colorectal primary; BRAF nonmutated; no prior or current extrahepatic disease/local recurrence; chemotherapy response or stable disease for at least 3 months, at most three lines. CEA <80 ng/mL OR at least 50% reduction from peak was permitted. Independent committee of at least two surgeons, two oncologists and one radiologist reviewed original and current lesion maps. These are trial criteria, not identical to current NLRB guidance.",
-                  "results": "Primary time origin was randomization. Median follow-up 59.3 months. Five-year ITT OS was 56.6% versus 12.6% (HR 0.37, 95% CI 0.21–0.65); per-protocol OS 73.3% versus 9.3%. Of 47 assigned LT, 38 received LT and 36 were per-protocol; nine had progression-related exclusion/dropout. The control arm included seven subsequent resections and two LT crossovers. Safety population comprised 40 grafted patients. Among 36 per-protocol LT recipients, 26 recurred; 19/26 received chemotherapy and 12/26 local curative-intent treatment. Median per-protocol PFS was 17.4 versus 6.4 months, and secondary PFS after salvage was 35.4 months in the LT arm. Three of 36 per-protocol recipients required retransplantation (primary nonfunction, donor gallbladder cancer, caval obstruction/large-for-size); one postoperative death was reported. Serious adverse events occurred in 32/40 safety LT recipients. Median wait to LT was 50.5 days, which limits transfer to longer-wait systems.",
+                  "results": "Primary time origin was randomization. Median follow-up 59.3 months. Five-year ITT OS was 56.6% versus 12.6% (HR 0.37, 95% CI 0.21–0.65); per-protocol OS 73.3% versus 9.3%. Of 47 assigned LT, 38 received LT and 36 were per-protocol; nine were not transplanted (five progressed while waiting, three had extrahepatic disease at laparotomy, one had prostate cancer). The control arm included seven resections and two transplants outside protocol; crossover was not allowed. Safety population comprised 40 grafted patients. Among 36 per-protocol LT recipients, 26 recurred; 19/26 received chemotherapy and 12/26 local curative-intent treatment. Median per-protocol PFS was 17.4 versus 6.4 months (recurrence after LT versus RECIST progression on chemotherapy; PET surveillance differed by arm), and secondary PFS after salvage was 35.4 months in the LT arm. Three of 36 per-protocol recipients required retransplantation (primary nonfunction, donor gallbladder cancer, caval obstruction/large-for-size); one postoperative death was reported. Serious adverse events occurred in 32/40 safety LT recipients. Median wait to LT was 50.5 days, which limits transfer to longer-wait systems.",
                   "limits": "Strong evidence for the selected trial population, not for BRAF-mutant, ECOG 2, active extrahepatic, truly NED, resectable or broadly expanded disease. PP survival conditions on reaching treatment and must not replace ITT. The Results recurrence denominator is 26/36; Figure 3 caption says 28 recurrences, consistent with a broader all-grafted report, so do not mix these denominators. QoL collection had only 55/74 per-protocol baseline questionnaires and is descriptive, not proof of a large QoL gain. Priority allocation and rapid access were part of the treatment strategy.",
                   "locator": "Lancet 2024;404:1107–1118. PDF pp.2–4 eligibility/committee; pp.5–6 trial flow/Table 1; pp.8–9 recurrence, safety, retransplantation, Figure 3; p.10 QoL/limitations."
                 },
@@ -12988,7 +13358,7 @@
               "counterevidence": "There is no randomized immediate-versus-delayed LT comparison. Time accrued before referral, urgent liver failure, selection to survive waiting, lead time and different OS clocks can generate apparent benefits of observation.",
               "certainty": "Low certainty for selected post-LT survival; very low certainty that a fixed observation interval improves outcomes. No validated universal 120-day eligibility cliff. Lai measured waiting time from waiting-list registration, not completed staging, diagnosis or referral; our proposed staging-based clock is an explicit adaptation.",
               "threshold_basis": [
-                "Six months: international expert-guidance default, not US policy or a proven biological cliff. Reliable pre-referral stability may contribute.",
+                "Six months: proposed local default informed by German DGVS/DGAV S2k guidance, not US policy, the international EHE consensus, or a proven biological cliff. Reliable pre-referral stability may contribute.",
                 "120 days: Lai registry exposure measured from waiting-list registration to LT; it is not the same as diagnosis-to-treatment or completed-staging observation and does not causally validate four months.",
                 "Approximately eight-week reassessment and exceptions: local workflow/safety judgment; adjust to disease trajectory."
               ],
@@ -13504,7 +13874,7 @@
               "key": "transmet",
               "design_population": "Multicentre open-label randomized trial, 20 European centres, 157 screened and 94 randomized (47 LT-plus-chemotherapy, 47 chemotherapy); 63 screened excluded, including 13 with equivocal unresectability and 36 with progression.",
               "selection": "Age 18–65; ECOG 0–1; R0 colorectal primary; BRAF nonmutated; no prior or current extrahepatic disease/local recurrence; chemotherapy response or stable disease for at least 3 months, at most three lines. CEA <80 ng/mL OR at least 50% reduction from peak was permitted. Independent committee of at least two surgeons, two oncologists and one radiologist reviewed original and current lesion maps. These are trial criteria, not identical to current NLRB guidance.",
-              "results": "Primary time origin was randomization. Median follow-up 59.3 months. Five-year ITT OS was 56.6% versus 12.6% (HR 0.37, 95% CI 0.21–0.65); per-protocol OS 73.3% versus 9.3%. Of 47 assigned LT, 38 received LT and 36 were per-protocol; nine had progression-related exclusion/dropout. The control arm included seven subsequent resections and two LT crossovers. Safety population comprised 40 grafted patients. Among 36 per-protocol LT recipients, 26 recurred; 19/26 received chemotherapy and 12/26 local curative-intent treatment. Median per-protocol PFS was 17.4 versus 6.4 months, and secondary PFS after salvage was 35.4 months in the LT arm. Three of 36 per-protocol recipients required retransplantation (primary nonfunction, donor gallbladder cancer, caval obstruction/large-for-size); one postoperative death was reported. Serious adverse events occurred in 32/40 safety LT recipients. Median wait to LT was 50.5 days, which limits transfer to longer-wait systems.",
+              "results": "Primary time origin was randomization. Median follow-up 59.3 months. Five-year ITT OS was 56.6% versus 12.6% (HR 0.37, 95% CI 0.21–0.65); per-protocol OS 73.3% versus 9.3%. Of 47 assigned LT, 38 received LT and 36 were per-protocol; nine were not transplanted (five progressed while waiting, three had extrahepatic disease at laparotomy, one had prostate cancer). The control arm included seven resections and two transplants outside protocol; crossover was not allowed. Safety population comprised 40 grafted patients. Among 36 per-protocol LT recipients, 26 recurred; 19/26 received chemotherapy and 12/26 local curative-intent treatment. Median per-protocol PFS was 17.4 versus 6.4 months (recurrence after LT versus RECIST progression on chemotherapy; PET surveillance differed by arm), and secondary PFS after salvage was 35.4 months in the LT arm. Three of 36 per-protocol recipients required retransplantation (primary nonfunction, donor gallbladder cancer, caval obstruction/large-for-size); one postoperative death was reported. Serious adverse events occurred in 32/40 safety LT recipients. Median wait to LT was 50.5 days, which limits transfer to longer-wait systems.",
               "limits": "Strong evidence for the selected trial population, not for BRAF-mutant, ECOG 2, active extrahepatic, truly NED, resectable or broadly expanded disease. PP survival conditions on reaching treatment and must not replace ITT. The Results recurrence denominator is 26/36; Figure 3 caption says 28 recurrences, consistent with a broader all-grafted report, so do not mix these denominators. QoL collection had only 55/74 per-protocol baseline questionnaires and is descriptive, not proof of a large QoL gain. Priority allocation and rapid access were part of the treatment strategy.",
               "locator": "Lancet 2024;404:1107–1118. PDF pp.2–4 eligibility/committee; pp.5–6 trial flow/Table 1; pp.8–9 recurrence, safety, retransplantation, Figure 3; p.10 QoL/limitations."
             },
@@ -13940,7 +14310,7 @@
         "url": "https://doi.org/10.1200/CCI.23.00111",
         "pdf_links": [],
         "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1200%2FCCI.23.00111&lang=en",
-        "review_depth": "Published primary abstract reviewed; complete PDF not available in searched depots/Downloads"
+        "review_depth": "Targeted primary full-text Methods, Results, Tables1–2 and Discussion read; resection recurrence attribution corrected. Internal postoperative denominator discrepancy remains unresolved."
       },
       "dgvs_lt2024": {
         "key": "dgvs_lt2024",
@@ -15212,7 +15582,7 @@
           }
         ],
         "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1097%2FSLA.0000000000002574&lang=en",
-        "review_depth": "Primary abstract plus indexed full-text excerpts; PDF, exact ITT analytic exclusions and time-origin detail require final full-PDF check."
+        "review_depth": "Targeted primary full-text Methods, Table1 and ITT Results read (Ethun2018 pp798–800); not an assertion that every analysis or supplement was audited."
       },
       "pcca_murad_predictors": {
         "key": "pcca_murad_predictors",
@@ -16539,10 +16909,10 @@
         ],
         "actions": [
           {
-            "label": "Review treatment options for new disease",
+            "label": "Review new disease after transplantation",
             "detail": "",
             "step": null,
-            "care": "treatment",
+            "care": "post-transplant-recurrence",
             "url": null
           }
         ],
@@ -16585,6 +16955,38 @@
           }
         ],
         "endpoint": false
+      },
+      {
+        "id": "post-transplant-recurrence",
+        "title": "New or recurrent disease after transplantation",
+        "when": "A liver transplant recipient has suspected or confirmed new or recurrent tumor.",
+        "tasks": [
+          "Confirm the diagnosis and extent with the tumor and transplant teams, including the graft and extrahepatic sites.",
+          "Review graft function, immunosuppression, drug interactions and organ-specific treatment risks before choosing local or systemic therapy.",
+          "Review disease-specific treatment options with transplant specialists. An immune checkpoint inhibitor carries rejection and graft-loss risks after liver transplantation; for HCC, AASLD advises against routine post-transplant ICI.",
+          "Agree symptom management, a follow-up plan and a contact for worsening symptoms. This review does not authorize retransplantation."
+        ],
+        "refs": [
+          "H-policy",
+          "H-aasld"
+        ],
+        "endpoint": false,
+        "actions": [
+          {
+            "label": "Return to the transplant follow-up plan",
+            "detail": "Preserve graft and immunosuppression context.",
+            "step": null,
+            "care": "follow-up",
+            "url": null
+          },
+          {
+            "label": "Supportive care alongside tumor treatment",
+            "detail": "When symptom support is needed or tumor-directed treatment is unsuitable.",
+            "step": null,
+            "care": "supportive",
+            "url": null
+          }
+        ]
       }
     ],
     "pcca": [
@@ -16677,14 +17079,47 @@
         ],
         "actions": [
           {
-            "label": "Review treatment options for new disease",
+            "label": "Review new disease after transplantation",
             "detail": "",
             "step": null,
-            "care": "treatment",
+            "care": "post-transplant-recurrence",
             "url": null
           }
         ],
         "endpoint": true
+      },
+      {
+        "id": "post-transplant-recurrence",
+        "title": "New or recurrent disease after transplantation",
+        "when": "A liver transplant recipient has suspected or confirmed new or recurrent tumor.",
+        "tasks": [
+          "Confirm the diagnosis and extent with the tumor and transplant teams, including the graft and extrahepatic sites.",
+          "Review graft function, immunosuppression, drug interactions and organ-specific treatment risks before choosing local or systemic therapy.",
+          "Review disease-specific treatment options with transplant specialists. An immune checkpoint inhibitor carries rejection and graft-loss risks after liver transplantation; for HCC, AASLD advises against routine post-transplant ICI.",
+          "Agree symptom management, a follow-up plan and a contact for worsening symptoms. This review does not authorize retransplantation."
+        ],
+        "refs": [
+          "P-cohort",
+          "P-policy",
+          "H-aasld"
+        ],
+        "endpoint": false,
+        "actions": [
+          {
+            "label": "Return to the transplant follow-up plan",
+            "detail": "Preserve graft and immunosuppression context.",
+            "step": null,
+            "care": "follow-up",
+            "url": null
+          },
+          {
+            "label": "Supportive care alongside tumor treatment",
+            "detail": "When symptom support is needed or tumor-directed treatment is unsuitable.",
+            "step": null,
+            "care": "supportive",
+            "url": null
+          }
+        ]
       }
     ],
     "icca": [
@@ -16784,14 +17219,46 @@
         ],
         "actions": [
           {
-            "label": "Review treatment options for new disease",
+            "label": "Review new disease after transplantation",
             "detail": "",
             "step": null,
-            "care": "treatment",
+            "care": "post-transplant-recurrence",
             "url": null
           }
         ],
         "endpoint": true
+      },
+      {
+        "id": "post-transplant-recurrence",
+        "title": "New or recurrent disease after transplantation",
+        "when": "A liver transplant recipient has suspected or confirmed new or recurrent tumor.",
+        "tasks": [
+          "Confirm the diagnosis and extent with the tumor and transplant teams, including the graft and extrahepatic sites.",
+          "Review graft function, immunosuppression, drug interactions and organ-specific treatment risks before choosing local or systemic therapy.",
+          "Review disease-specific treatment options with transplant specialists. An immune checkpoint inhibitor carries rejection and graft-loss risks after liver transplantation; for HCC, AASLD advises against routine post-transplant ICI.",
+          "Agree symptom management, a follow-up plan and a contact for worsening symptoms. This review does not authorize retransplantation."
+        ],
+        "refs": [
+          "I-cohort",
+          "H-aasld"
+        ],
+        "endpoint": false,
+        "actions": [
+          {
+            "label": "Return to the transplant follow-up plan",
+            "detail": "Preserve graft and immunosuppression context.",
+            "step": null,
+            "care": "follow-up",
+            "url": null
+          },
+          {
+            "label": "Supportive care alongside tumor treatment",
+            "detail": "When symptom support is needed or tumor-directed treatment is unsuitable.",
+            "step": null,
+            "care": "supportive",
+            "url": null
+          }
+        ]
       }
     ],
     "crlm": [
@@ -16899,14 +17366,47 @@
         ],
         "actions": [
           {
-            "label": "Review treatment options for new disease",
+            "label": "Review new disease after transplantation",
             "detail": "",
             "step": null,
-            "care": "treatment",
+            "care": "post-transplant-recurrence",
             "url": null
           }
         ],
         "endpoint": true
+      },
+      {
+        "id": "post-transplant-recurrence",
+        "title": "New or recurrent disease after transplantation",
+        "when": "A liver transplant recipient has suspected or confirmed new or recurrent tumor.",
+        "tasks": [
+          "Confirm the diagnosis and extent with the tumor and transplant teams, including the graft and extrahepatic sites.",
+          "Review graft function, immunosuppression, drug interactions and organ-specific treatment risks before choosing local or systemic therapy.",
+          "Review disease-specific treatment options with transplant specialists. An immune checkpoint inhibitor carries rejection and graft-loss risks after liver transplantation; for HCC, AASLD advises against routine post-transplant ICI.",
+          "Agree symptom management, a follow-up plan and a contact for worsening symptoms. This review does not authorize retransplantation."
+        ],
+        "refs": [
+          "C-consensus",
+          "C-transmet",
+          "H-aasld"
+        ],
+        "endpoint": false,
+        "actions": [
+          {
+            "label": "Return to the transplant follow-up plan",
+            "detail": "Preserve graft and immunosuppression context.",
+            "step": null,
+            "care": "follow-up",
+            "url": null
+          },
+          {
+            "label": "Supportive care alongside tumor treatment",
+            "detail": "When symptom support is needed or tumor-directed treatment is unsuitable.",
+            "step": null,
+            "care": "supportive",
+            "url": null
+          }
+        ]
       }
     ],
     "nelm": [
@@ -16995,14 +17495,46 @@
         ],
         "actions": [
           {
-            "label": "Review treatment options for new disease",
+            "label": "Review new disease after transplantation",
             "detail": "",
             "step": null,
-            "care": "treatment",
+            "care": "post-transplant-recurrence",
             "url": null
           }
         ],
         "endpoint": true
+      },
+      {
+        "id": "post-transplant-recurrence",
+        "title": "New or recurrent disease after transplantation",
+        "when": "A liver transplant recipient has suspected or confirmed new or recurrent tumor.",
+        "tasks": [
+          "Confirm the diagnosis and extent with the tumor and transplant teams, including the graft and extrahepatic sites.",
+          "Review graft function, immunosuppression, drug interactions and organ-specific treatment risks before choosing local or systemic therapy.",
+          "Review disease-specific treatment options with transplant specialists. An immune checkpoint inhibitor carries rejection and graft-loss risks after liver transplantation; for HCC, AASLD advises against routine post-transplant ICI.",
+          "Agree symptom management, a follow-up plan and a contact for worsening symptoms. This review does not authorize retransplantation."
+        ],
+        "refs": [
+          "NET-milan",
+          "H-aasld"
+        ],
+        "endpoint": false,
+        "actions": [
+          {
+            "label": "Return to the transplant follow-up plan",
+            "detail": "Preserve graft and immunosuppression context.",
+            "step": null,
+            "care": "follow-up",
+            "url": null
+          },
+          {
+            "label": "Supportive care alongside tumor treatment",
+            "detail": "When symptom support is needed or tumor-directed treatment is unsuitable.",
+            "step": null,
+            "care": "supportive",
+            "url": null
+          }
+        ]
       }
     ],
     "hehe": [
@@ -17085,14 +17617,47 @@
         ],
         "actions": [
           {
-            "label": "Review treatment options for new disease",
+            "label": "Review new disease after transplantation",
             "detail": "",
             "step": null,
-            "care": "treatment",
+            "care": "post-transplant-recurrence",
             "url": null
           }
         ],
         "endpoint": true
+      },
+      {
+        "id": "post-transplant-recurrence",
+        "title": "New or recurrent disease after transplantation",
+        "when": "A liver transplant recipient has suspected or confirmed new or recurrent tumor.",
+        "tasks": [
+          "Confirm the diagnosis and extent with the tumor and transplant teams, including the graft and extrahepatic sites.",
+          "Review graft function, immunosuppression, drug interactions and organ-specific treatment risks before choosing local or systemic therapy.",
+          "Review disease-specific treatment options with transplant specialists. An immune checkpoint inhibitor carries rejection and graft-loss risks after liver transplantation; for HCC, AASLD advises against routine post-transplant ICI.",
+          "Agree symptom management, a follow-up plan and a contact for worsening symptoms. This review does not authorize retransplantation."
+        ],
+        "refs": [
+          "E-consensus",
+          "E-score",
+          "H-aasld"
+        ],
+        "endpoint": false,
+        "actions": [
+          {
+            "label": "Return to the transplant follow-up plan",
+            "detail": "Preserve graft and immunosuppression context.",
+            "step": null,
+            "care": "follow-up",
+            "url": null
+          },
+          {
+            "label": "Supportive care alongside tumor treatment",
+            "detail": "When symptom support is needed or tumor-directed treatment is unsuitable.",
+            "step": null,
+            "care": "supportive",
+            "url": null
+          }
+        ]
       }
     ],
     "hca": [
@@ -17179,14 +17744,40 @@
         ],
         "actions": [
           {
-            "label": "Review treatment options for new disease",
+            "label": "Review new disease after transplantation",
             "detail": "",
             "step": null,
-            "care": "treatment",
+            "care": "post-transplant-recurrence",
             "url": null
           }
         ],
         "endpoint": true
+      },
+      {
+        "id": "post-transplant-recurrence",
+        "title": "New or recurrent disease after transplantation",
+        "when": "A liver transplant recipient has suspected or confirmed new or recurrent tumor.",
+        "tasks": [
+          "Confirm the diagnosis and extent with the tumor and transplant teams, including the graft and extrahepatic sites.",
+          "Review graft function, immunosuppression, drug interactions and organ-specific treatment risks before choosing local or systemic therapy.",
+          "Review disease-specific treatment options with transplant specialists. An immune checkpoint inhibitor carries rejection and graft-loss risks after liver transplantation; for HCC, AASLD advises against routine post-transplant ICI.",
+          "Agree symptom management, a follow-up plan and a contact for worsening symptoms. This review does not authorize retransplantation."
+        ],
+        "refs": [
+          "A-easl",
+          "N-hca",
+          "H-aasld"
+        ],
+        "endpoint": false,
+        "actions": [
+          {
+            "label": "Return to the transplant follow-up plan",
+            "detail": "Preserve graft and immunosuppression context.",
+            "step": null,
+            "care": "follow-up",
+            "url": null
+          }
+        ]
       }
     ]
   },
@@ -18352,6 +18943,33 @@
       "rules": {
         "0": [
           {
+            "label": "Evaluate possible recurrence after transplantation",
+            "detail": "Use the recipient-specific oncology and transplant assessment.",
+            "step": null,
+            "care": "post-transplant-recurrence",
+            "url": null
+          }
+        ],
+        "1": [
+          {
+            "label": "Open the recipient continuing-care plan",
+            "detail": "",
+            "step": null,
+            "care": "follow-up",
+            "url": null
+          }
+        ],
+        "2": [
+          {
+            "label": "Open the recipient continuing-care plan",
+            "detail": "",
+            "step": null,
+            "care": "follow-up",
+            "url": null
+          }
+        ],
+        "3": [
+          {
             "label": "Reassess after resolving the finding",
             "detail": "Complete the assessment described above, then update the choices for this decision.",
             "step": "follow-up",
@@ -18366,7 +18984,7 @@
             "url": null
           }
         ],
-        "1": [
+        "4": [
           {
             "label": "Reassess after resolving the finding",
             "detail": "Complete the assessment described above, then update the choices for this decision.",
@@ -18816,6 +19434,33 @@
       "rules": {
         "0": [
           {
+            "label": "Evaluate possible recurrence after transplantation",
+            "detail": "Use the recipient-specific oncology and transplant assessment.",
+            "step": null,
+            "care": "post-transplant-recurrence",
+            "url": null
+          }
+        ],
+        "1": [
+          {
+            "label": "Open the recipient continuing-care plan",
+            "detail": "",
+            "step": null,
+            "care": "follow-up",
+            "url": null
+          }
+        ],
+        "2": [
+          {
+            "label": "Open the recipient continuing-care plan",
+            "detail": "",
+            "step": null,
+            "care": "follow-up",
+            "url": null
+          }
+        ],
+        "3": [
+          {
             "label": "Reassess after resolving the finding",
             "detail": "Complete the assessment described above, then update the choices for this decision.",
             "step": "transplant",
@@ -18830,7 +19475,7 @@
             "url": null
           }
         ],
-        "1": [
+        "4": [
           {
             "label": "Reassess after resolving the finding",
             "detail": "Complete the assessment described above, then update the choices for this decision.",
@@ -19150,6 +19795,33 @@
       "rules": {
         "0": [
           {
+            "label": "Evaluate possible recurrence after transplantation",
+            "detail": "Use the recipient-specific oncology and transplant assessment.",
+            "step": null,
+            "care": "post-transplant-recurrence",
+            "url": null
+          }
+        ],
+        "1": [
+          {
+            "label": "Open the recipient continuing-care plan",
+            "detail": "",
+            "step": null,
+            "care": "follow-up",
+            "url": null
+          }
+        ],
+        "2": [
+          {
+            "label": "Open the recipient continuing-care plan",
+            "detail": "",
+            "step": null,
+            "care": "follow-up",
+            "url": null
+          }
+        ],
+        "3": [
+          {
             "label": "Reassess after resolving the finding",
             "detail": "Complete the assessment described above, then update the choices for this decision.",
             "step": "follow-up",
@@ -19164,7 +19836,7 @@
             "url": null
           }
         ],
-        "1": [
+        "4": [
           {
             "label": "Reassess after resolving the finding",
             "detail": "Complete the assessment described above, then update the choices for this decision.",
@@ -19269,11 +19941,11 @@
         ],
         "2": [
           {
-            "label": "Continue: Assess benefit and risk",
-            "detail": "",
-            "step": "risk",
+            "label": "Review the proposed HEHE extrahepatic-disease boundary",
+            "detail": "The local stratum is not activated. NLRB case-level review is a separate question.",
+            "step": null,
             "care": null,
-            "url": null
+            "url": "/mh-liver-pathways/transplant/hehe/#high-risk-hehe-b2"
           }
         ]
       },
@@ -19427,6 +20099,33 @@
       "rules": {
         "0": [
           {
+            "label": "Evaluate possible recurrence after transplantation",
+            "detail": "Use the recipient-specific oncology and transplant assessment.",
+            "step": null,
+            "care": "post-transplant-recurrence",
+            "url": null
+          }
+        ],
+        "1": [
+          {
+            "label": "Open the recipient continuing-care plan",
+            "detail": "",
+            "step": null,
+            "care": "follow-up",
+            "url": null
+          }
+        ],
+        "2": [
+          {
+            "label": "Open the recipient continuing-care plan",
+            "detail": "",
+            "step": null,
+            "care": "follow-up",
+            "url": null
+          }
+        ],
+        "3": [
+          {
             "label": "Reassess after resolving the finding",
             "detail": "Complete the assessment described above, then update the choices for this decision.",
             "step": "follow-up",
@@ -19441,7 +20140,7 @@
             "url": null
           }
         ],
-        "1": [
+        "4": [
           {
             "label": "Reassess after resolving the finding",
             "detail": "Complete the assessment described above, then update the choices for this decision.",
@@ -19595,14 +20294,28 @@
       "branches": {
         "0": [
           {
-            "label": "Continue: Review benefit and submit",
-            "detail": "",
+            "label": "Return to standard-care and exception-route assessment",
+            "detail": "Use this route if the conventional-treatment and exception-route assessments have not been completed.",
+            "step": "standard-care",
+            "care": null,
+            "url": null
+          },
+          {
+            "label": "Continue to final HCA review after the earlier assessments are complete",
+            "detail": "Confirm that standard nontransplant options and the specific exception-guidance alternative were assessed; unresolved earlier findings remain a hold.",
             "step": "review",
             "care": null,
             "url": null
           }
         ],
         "1": [
+          {
+            "label": "If HCC is confirmed, open HCC diagnosis and staging",
+            "detail": "Confirm the malignant diagnosis first. Transformation does not itself establish standardized HCC exception eligibility.",
+            "step": null,
+            "care": null,
+            "url": "/mh-liver-pathways/transplant/hcc/#diagnosis"
+          },
           {
             "label": "Review treatment and continuing care",
             "detail": "If transplantation is unsuitable, choose a disease-specific treatment or ongoing-care plan.",
@@ -19704,6 +20417,33 @@
       "rules": {
         "0": [
           {
+            "label": "Evaluate possible recurrence after transplantation",
+            "detail": "Use the recipient-specific oncology and transplant assessment.",
+            "step": null,
+            "care": "post-transplant-recurrence",
+            "url": null
+          }
+        ],
+        "1": [
+          {
+            "label": "Open the recipient continuing-care plan",
+            "detail": "",
+            "step": null,
+            "care": "follow-up",
+            "url": null
+          }
+        ],
+        "2": [
+          {
+            "label": "Open the recipient continuing-care plan",
+            "detail": "",
+            "step": null,
+            "care": "follow-up",
+            "url": null
+          }
+        ],
+        "3": [
+          {
             "label": "Reassess after resolving the finding",
             "detail": "Complete the assessment described above, then update the choices for this decision.",
             "step": "follow-up",
@@ -19718,7 +20458,7 @@
             "url": null
           }
         ],
-        "1": [
+        "4": [
           {
             "label": "Reassess after resolving the finding",
             "detail": "Complete the assessment described above, then update the choices for this decision.",

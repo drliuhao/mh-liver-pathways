@@ -38,30 +38,33 @@ for card in matrix['cards']:
     for key in ['title', 'position', 'who', 'evidence', 'limits', 'transplant']:
         assert norm(card[key]) in norm(node.text_content()), (card['id'], key)
     before = old.get_element_by_id(card['id'])
-    assert before.xpath('.//a/@href') == [u for u in node.xpath('.//a/@href') if not u.startswith('#sources-')]
-    for paragraph in before.findall('p'):
-        assert norm(paragraph.text_content()) in norm(node.text_content()), card['id']
+    expected_links = before.xpath('.//a/@href') + ([u for _, u in card['links']] if card['id'] == 'crlm-conversion' else [])
+    assert expected_links == [u for u in node.xpath('.//a/@href') if not u.startswith('#sources-')]
+    # Clinical revisions are now intentional. The canonical matrix above must
+    # equal the pinned data plus recorded revisions, and all six of its fields
+    # must appear here. Comparing old paragraphs would require restoring errors.
 for before, after in zip(old.xpath('//article[@class="library-entry"]'), new.xpath('//article[@class="library-entry"]')):
     assert before.get('data-pdf') == after.get('data-pdf')
-    assert before.get('data-tumors') == after.get('data-tumors')
-    for child in before:
-        assert norm(child.text_content()) in norm(after.text_content())
+    pm=next(u.rstrip('/').split('/')[-1] for u in after.xpath('.//a/@href') if 'pubmed.ncbi.nlm.nih.gov/' in u)
+    assert sorted(after.get('data-tumors').split()) == sorted(refs[pm]['diseases'])
+    assert refs[pm]['title'].rstrip('.') in after.text_content()
     assert before.xpath('.//a/@href') == after.xpath('.//a/@href')
 for section_id in ['molecular', 'supportive', 'guidelines']:
     before, after = old.get_element_by_id(section_id), new.get_element_by_id(section_id)
     assert norm(before.text_content()) == norm(after.text_content()), section_id
     assert before.xpath('.//a/@href') == after.xpath('.//a/@href')
-for before, after in zip(old.xpath('//table[@class="safety-table"]/tbody/tr'), new.xpath('//details[@class="safety-disclosure"]')):
-    for cell in before:
-        assert norm(cell.text_content()) in norm(after.text_content()), cell.text_content()
+for before, after, row in zip(old.xpath('//table[@class="safety-table"]/tbody/tr'), new.xpath('//details[@class="safety-disclosure"]'), matrix['safety']):
+    for text in row[:3]:
+        assert norm(text) in norm(after.text_content()), text
     assert before.xpath('.//a/@href') == after.xpath('.//a/@href')
 before_links = Counter(u for u in old.xpath('//a/@href') if not u.startswith('#'))
 after_links = Counter(u for u in new.xpath('//a/@href') if not u.startswith('#'))
-assert before_links == after_links, 'Source/destination links changed'
+before_links.update(u for card in matrix['cards'] if card['id'] == 'crlm-conversion' for _, u in card['links'])
+assert before_links == after_links, 'Source/destination links changed beyond recorded CAIRO5 survival sources'
 for u in new.xpath('//a/@href'):
     if u.startswith('#'):
         assert u[1:] in ids, u
 assert len(new.xpath('//div[@class="matrix-option"]')) == len(old.xpath('//table[@class="therapy-matrix"]//td/p'))
 assert new.xpath('//button[@data-view="options"]/@aria-selected') == ['true']
 assert new.xpath('//button[@data-filter="hcc"]/@aria-pressed') == ['true']
-print('PASS: 49 complete regimen records, 96 reference records, all safety/molecular/guideline text and all external links unchanged; native disclosures and four views valid.')
+print('PASS: 49 regimen records and safety rows match revision-guarded canonical data; 96 reference identities/tags, source links, native disclosures and four views valid.')

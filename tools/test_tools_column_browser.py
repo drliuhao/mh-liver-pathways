@@ -10,7 +10,7 @@ a result from example values. The roadmap's treatment matrices are folded and lo
 chip after a guideline or policy source carries no grey type label. Phone: no horizontal overflow.
 """
 import asyncio, sys
-from playwright.async_api import async_playwright
+from playwright.async_api import async_playwright, TimeoutError as PlaywrightTimeoutError
 
 BASE = sys.argv[1] if len(sys.argv) > 1 else 'http://127.0.0.1:8884/mh-liver-pathways/'
 ROADMAPS = {'hcc': 2, 'crlm': 2, 'icca': 2, 'hilar': 2, 'nelm': 2, 'chcca': 1, 'pdac': 1, 'pnet': 1, 'ampullary': 1,
@@ -25,7 +25,7 @@ COLUMN = """()=>{const t=document.querySelector('#answer.dw-ready .dw-tools');if
   calcs:[...t.querySelectorAll('.tc-calc')].map(f=>f.closest('[data-tc]')?.dataset.tc)}}"""
 FILL = {
     'child': {'bilirubin': '1.2', 'albumin': '3.6', 'inr': '1.1', 'ascites': '1', 'enceph': '1'},
-    'albi': {'bilirubin': '1', 'albumin': '4'},
+    'albi': {'bilirubin': '1', 'biliUnit': 'mgdl', 'albumin': '4', 'albUnit': 'gdl'},
     'hccburden': {'size1': '3', 'size2': '2', 'spread': 'no'},
     'tbs': {'max': '3', 'n': '4'},
     'recist': {'baseline': '100', 'current': '60', 'gone': 'no', 'nontarget': 'non', 'newLesion': 'no'},
@@ -43,6 +43,15 @@ CALC = """async([id,values])=>{const f=[...document.querySelectorAll('#answer.dw
  await new Promise(r=>setTimeout(r,50));const out=f.querySelector('.tc-result');row.open=false;return out.classList.contains('has-result')?out.querySelector('strong').textContent:'no result: '+out.textContent}"""
 
 
+async def wait_for_column(page, key):
+    # Hash navigation, workspace layout and Tools arrangement run in separate render passes.
+    # Require the requested decision, so a settled column from the previous decision cannot pass.
+    await page.wait_for_function("""key=>{
+      const answer=document.querySelector('#answer.dw-ready');
+      return answer?.dataset.workspaceKey===key && !!answer.querySelector('.dw-tools.tc-ready');
+    }""", arg=key, timeout=5000)
+
+
 async def main():
     failures, decisions, calculators = [], 0, set()
     async with async_playwright() as p:
@@ -56,7 +65,10 @@ async def main():
             matrix_sets = set()
             for i in ids:
                 await page.evaluate(f"()=>{{location.hash='#decision-{i}'}}")
-                await page.wait_for_timeout(700)
+                try:
+                    await wait_for_column(page, f'{slug}/{i}')
+                except PlaywrightTimeoutError:
+                    failures.append(f'{slug}/{i}: requested decision Tools column did not mount'); continue
                 c = await page.evaluate(COLUMN)
                 if not c:
                     failures.append(f'{slug}/{i}: no tools column'); continue
@@ -91,8 +103,12 @@ async def main():
         phone = await browser.new_page(viewport={'width': 390, 'height': 844})
         phone.on('pageerror', lambda e: errors.append(str(e)))
         for slug in ['hcc', 'crlm', 'pnet', 'ampullary']:
-            await phone.goto(BASE + slug + '/#decision-' + ('B' if slug == 'hcc' else '1'), wait_until='networkidle')
-            await phone.wait_for_timeout(600)
+            decision = 'B' if slug == 'hcc' else '1'
+            await phone.goto(BASE + slug + '/#decision-' + decision, wait_until='networkidle')
+            try:
+                await wait_for_column(phone, f'{slug}/{decision}')
+            except PlaywrightTimeoutError:
+                failures.append(f'phone {slug}/{decision}: Tools column did not mount'); continue
             await phone.evaluate("()=>{document.getElementById('dw-tab-tools')?.click();document.querySelectorAll('#answer .tc-row').forEach(d=>d.open=true)}")
             await phone.wait_for_timeout(300)
             overflow = await phone.evaluate('()=>document.documentElement.scrollWidth-innerWidth')

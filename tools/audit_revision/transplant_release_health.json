@@ -1,0 +1,119 @@
+{
+  "scope": "8 transplant pages; final propagated release; no new clinical edits",
+  "status": "PASS: final full and rebuilt share transplant release checks",
+  "node": [
+    {
+      "name": "test_contextual_routing.cjs",
+      "chunk_id": "f2ffe6",
+      "wall_time_seconds": 0.198724042,
+      "exit_code": 0,
+      "original_token_count": 59,
+      "output": "PASS: 130 targeted assertions; 2091 categorical states across all 46 decisions; 25 clinical review triggers (including distinct AFP-only review) and HCC-B4 reference-only; unknown/excluded/composite findings, prior context and reset.\n"
+    },
+    {
+      "name": "test_clinical_scores.cjs",
+      "chunk_id": "bfb259",
+      "wall_time_seconds": 0.125744709,
+      "exit_code": 0,
+      "original_token_count": 79,
+      "output": "PASS: 141 checks — Child-Pugh, ALBI, Milan/T2/UNOS-downstaging/UCSF, tumor burden, Fong, Oslo, FLR, NET grade, Spigelman, RECIST/mRECIST response, RETREAT, AFP model and Metroticket 2.0 calculators (interval, marker-trend and cytoreduction calculators removed); 46 sourced definitions; detection and page limits.\n"
+    },
+    {
+      "name": "test_decision_assistants.cjs",
+      "chunk_id": "9bd7f2",
+      "wall_time_seconds": 0.152883042,
+      "exit_code": 0,
+      "original_token_count": 134,
+      "output": "PASS: all 46 decisions; 2091 categorical states; explicit clinical boundary/exclusion scenarios; unknown and missing findings cannot proceed; source links and redirects; no record collection/storage/export.\nPASS: 363 next-action links; 80 custom outcomes; every branch has a destination; six AFP options; supportive/ongoing-care endpoints; original NCCN page locations.\nPASS: 46 explicit transplant examples; 7 ordered journey overviews; immutable defaults; changed/unknown findings clear every later example; clear-all starts empty.\n"
+    },
+    {
+      "name": "test_clinical_flow.cjs",
+      "chunk_id": "59d775",
+      "wall_time_seconds": 0.149821417,
+      "exit_code": 0,
+      "original_token_count": 43,
+      "output": "PASS: 33 care plans and 77 actions preserved; canonical stale detection, clear/reference behavior, bounded origins, source mirror and all roadmap menu entries verified.\n"
+    },
+    {
+      "name": "test_content_hierarchy.cjs",
+      "chunk_id": "1e2e6c",
+      "wall_time_seconds": 1.133860042,
+      "exit_code": 0,
+      "original_token_count": 46,
+      "output": "PASS: 49 references assigned to clinical decisions; BILCAP only in adjuvant evidence; clinical data and branching unchanged; recommendations before evidence and secondary navigation.\n"
+    },
+    {
+      "name": "test_visible_decisions.cjs",
+      "chunk_id": "33b252",
+      "wall_time_seconds": 0.159475083,
+      "exit_code": 0,
+      "original_token_count": 43,
+      "output": "PASS: all 46 transplant decision labels visible, HCC clinical sections cannot fold; exact treatment criteria and citation expectations generated for 103 roadmap topics.\n"
+    },
+    {
+      "name": "test_decision_layers.cjs",
+      "chunk_id": "3fe560",
+      "wall_time_seconds": 0.160271583,
+      "exit_code": 0,
+      "original_token_count": 94,
+      "output": "PASS: 7 single-entry presets; 101 blank successive layers; 101 same-decision and downstream rollbacks; unchanged clinical matcher and sources; criteria stay inline.\nPASS: core and supplemental focality questions have distinct controls and criteria targets.\nPASS: explicit finding and topic confirmation; blank entry; no single-option or condition-free navigation dropdowns.\n"
+    },
+    {
+      "name": "test_audit_transplant.cjs",
+      "chunk_id": "1254c6",
+      "wall_time_seconds": 0.780809042,
+      "exit_code": 0,
+      "original_token_count": 42,
+      "output": "PASS: 107 upstream-stop carry checks, 119 skipped-decision holds, 5 explicit recipient contexts, exact decimal boundaries, source/runtime and all embedded payloads.\n"
+    },
+    {
+      "name": "test_contextual_info.cjs",
+      "chunk_id": "ad7c02",
+      "wall_time_seconds": 0.669040417,
+      "exit_code": 0,
+      "original_token_count": 47,
+      "output": "PASS: Pinned V12 data and clinical renderers match exact recorded revisions; 19 pages; 46 headings, 63 help summaries and 46 recommendation guards verified; all Avoid wording retained.\n"
+    },
+    {
+      "name": "test_clinical_tools.cjs",
+      "chunk_id": "7c867f",
+      "wall_time_seconds": 0.138405667,
+      "exit_code": 0,
+      "original_token_count": 36,
+      "output": "PASS: MELD required inputs, age/sex, dialysis, bounds, invalid values and 320 combinations; 46 read-only previews with 116 source placements.\n"
+    }
+  ],
+  "full_browser": {
+    "pass": true,
+    "baseURL": "http://127.0.0.1:8892/mh-liver-pathways/",
+    "edition": "full",
+    "widgetChecks": 68,
+    "decisions": 46,
+    "ordinaryAndCustomOptions": 169,
+    "phonePages": 7,
+    "afpDistinctAlternatives": 6,
+    "pageErrors": []
+  },
+  "interactive_spot_checks": {
+    "pass": true,
+    "postTransplantActualRenderer": true,
+    "hcaSkippedAssessmentActualRenderer": true,
+    "pageErrors": []
+  },
+  "share_status": "PASS: 46 decisions,169 canonical ordinary/custom outcomes,all6AFP actions,75 no-widget and no-local-document-link checks,7phonepages,0pageerrors",
+  "share_browser": {
+    "pass": true,
+    "baseURL": "http://127.0.0.1:8892/mh-liver-pathways-share/",
+    "edition": "share",
+    "widgetChecks": 75,
+    "documentChecks": 75,
+    "decisions": 46,
+    "ordinaryAndCustomOptions": 169,
+    "phonePages": 7,
+    "afpDistinctAlternatives": 6,
+    "pageErrors": []
+  },
+  "share_semantic_null_rules": 80,
+  "share_downloadable_document_files": [],
+  "share_builder_regression": "Resolved by parent: distinct removal sentinel preserves semantic nulls; strengthened full-inventory browser comparison passes."
+}

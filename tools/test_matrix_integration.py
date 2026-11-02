@@ -1,34 +1,22 @@
 """Check evidence identifiers, public-file boundaries and clinical review destinations."""
-import json,re,subprocess,hashlib
+import json,re,subprocess,hashlib,shutil
 from pathlib import Path
 from urllib.parse import urlsplit,unquote
 
 ROOT=Path(__file__).resolve().parents[1]
 data=json.loads((ROOT/'transplant/assets/content.json').read_text())
-base=json.loads(subprocess.check_output(['git','show','f77348e:transplant/assets/content.json'],cwd=ROOT))
-for old,new in zip(base['index'],data['index']):
- assert old['slug']==new['slug']
- for k in old:
-  if k not in ['docs','protocol','issues','steps']:assert old[k]==new[k],(old['slug'],k)
- assert new['issues'][:len(old['issues'])]==old['issues'],'An earlier decision was changed'
- additions=new['issues'][len(old['issues']):]
- assert len(additions)==(6 if old['slug']=='hcc' else 0)
- assert all(x['record'].startswith('HCC B1.1') and x['status']=='OPEN — not approved' for x in additions)
- assert len(old['steps'])==len(new['steps'])
- for a,b in zip(old['steps'],new['steps']):
-  assert {k:v for k,v in a.items() if k!='issues'}=={k:v for k,v in b.items() if k!='issues'},'Standard clinical criteria changed'
-  assert b['issues'][:len(a['issues'])]==a['issues']
-  assert set(b['issues'][len(a['issues']):]).issubset({x['id'] for x in additions})
-# Recorded clinical revisions (tools/clinical_revisions/) may relabel an assistant option; nothing else in matching may change.
-for rev in sorted((ROOT/'tools/clinical_revisions').glob('*.json')):
- for e in json.loads(rev.read_text())['edits']:
-  if e['op']=='replace_option':
-   o=next(o for q in base['assistants'][e['key']]['questions'] if q['id']==e['question'] for o in q['options'] if o['value']==e['value'])
-   assert o['label'].count(e['old'])==1;o['label']=o['label'].replace(e['old'],e['new'])
-assert data['assistants']==base['assistants'], 'Standard matching rules changed'
-assert all(data['sources'][k]==v for k,v in base['sources'].items()), 'An inherited source changed'
-new_sources=set(data['sources'])-set(base['sources'])
-assert len(new_sources)==14 and all(k.startswith('V12-') for k in new_sources)
+# Replay every recorded release content edit through the same strict exact-value applier.
+# File-only manifests are valid; unrecorded changes anywhere in content.json still fail.
+node=shutil.which('node') or str(Path.home()/'.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node')
+replay=r"""
+const cp=require('node:child_process'), R=require('./tools/apply_clinical_revisions.cjs');
+const base=JSON.parse(cp.execFileSync('git',['show','30039fe:transplant/assets/content.json'],{encoding:'utf8'}));
+const revisions=R.revisions().filter(r=>r.id.startsWith('2026-11-02'));
+if(!revisions.length)throw new Error('No recorded release revisions found');
+process.stdout.write(JSON.stringify(R.applyContent(base,revisions)));
+"""
+expected=json.loads(subprocess.check_output([node,'-e',replay],cwd=ROOT))
+assert data==expected, 'Content differs from exact 30039fe baseline plus recorded 2026-11-02 revisions'
 
 links=[]
 for config in data['continuations'].values():
@@ -72,4 +60,4 @@ for pdf in public_pdfs:assert hashlib.sha256(pdf.read_bytes()).hexdigest()==allo
 home=(ROOT/'index.html').read_text()
 assert home.index('id="therapy-matrices"')>home.index('id="hpb-roadmaps"')
 assert 'href="systemic/"' in home and 'href="transplant/high-risk/"' in home
-print(f'PASS: unchanged standard criteria/rules; six OPEN AFP meeting questions; {len(review_links)} valid high-risk review destinations; 49 treatment summaries; {len(refs)} complete citations and TMC links; no PDAC transplant route, local paths or licensed PDFs published.')
+print(f'PASS: exact release baseline plus recorded clinical revisions; {len(review_links)} valid high-risk review destinations; 49 treatment summaries; {len(refs)} complete citations and TMC links; no PDAC transplant route, local paths or licensed PDFs published.')

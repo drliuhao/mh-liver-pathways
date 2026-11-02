@@ -1,0 +1,699 @@
+[
+ {
+  "id": "T01",
+  "desc": "iCCA: prior proven nodal/extrahepatic disease, otherwise small-cirrhotic criteria met",
+  "expected_source": "site icca-b4 record: \"exclude the small-cirrhotic route ... Confirm node-negative status pathologically before listing\"; NLRB p8 \"no ... extrahepatic disease\"",
+  "pass": "PASS",
+  "actual": {
+   "result": "additional-review",
+   "forward": [],
+   "options": [
+    "icca-b4:closed"
+   ],
+   "clarify": [],
+   "guard": "Previously proven malignant nodes or extrahepatic disease are outside the iCCA transplant routes in this edition, even after response or resection. This local boundary has not been activated; individual clinical and allocation review remains separate.",
+   "route": null,
+   "afpReview": false,
+   "final_action": "Plan cancer treatment and the required period of stable disease before MELD-exception review."
+  }
+ },
+ {
+  "id": "T02",
+  "desc": "iCCA: previous nodal/extrahepatic history answered \"Uncertain / not yet assessed\"",
+  "expected_source": "site icca-b4 rule: \"Suspicious or indeterminate nodes are HOLD until resolved pathologically\"",
+  "pass": "PASS",
+  "actual": {
+   "result": "additional-review",
+   "forward": [],
+   "options": [],
+   "clarify": [
+    "An additional finding remains uncertain: Any previous nodal or extrahepatic disease, even if treated or responded?"
+   ],
+   "guard": "An additional finding remains uncertain: Any previous nodal or extrahepatic disease, even if treated or responded?",
+   "route": null,
+   "afpReview": false,
+   "final_action": "Plan cancer treatment and the required period of stable disease before MELD-exception review."
+  }
+ },
+ {
+  "id": "T03",
+  "desc": "HCC: previously treated extrahepatic metastasis (decision 2), then T2/AFP met at decision 3",
+  "expected_source": "site hcc-b5 record: \"this edition offers no transplant route\"; NLRB p3 lists extra-hepatic metastatic disease as contraindication",
+  "pass": "PASS",
+  "actual": {
+   "result": "additional-review",
+   "forward": [],
+   "options": [
+    "hcc-b5:closed"
+   ],
+   "clarify": [],
+   "guard": "Previously treated extrahepatic metastasis is outside every HCC transplant cohort in this edition, even after a complete response. Record durable complete responders in the registry. This local boundary has not been activated; individual clinical and allocation review remains separate.",
+   "route": null,
+   "afpReview": false,
+   "final_action": "Continue the transplant evaluation and plan treatment to control HCC during the wait, provided the remaining transplant requirements are met."
+  }
+ },
+ {
+  "id": "T04",
+  "desc": "HCC: AFP not met at decision 3 (e.g. AFP >=500 after LRT), AFP \"maintained\" at decision 4",
+  "expected_source": "OPTN 9.5.I.iv (PDF p197-198): AFP >=500 after LRT \"at any time must be referred to the NLRB\"",
+  "pass": "PASS",
+  "actual": {
+   "result": "individual-review",
+   "forward": [],
+   "options": [],
+   "clarify": [],
+   "guard": null,
+   "route": "The AFP requirement is not met. Continue high-risk HCC clinical review and individual allocation assessment alongside treatment; radiographic response alone does not resolve the AFP finding.",
+   "afpReview": true,
+   "final_action": "Prepare the HCC MELD-exception request and complete the separate assessment of fitness for transplantation."
+  }
+ },
+ {
+  "id": "T05",
+  "desc": "CRLM: CEA >80 at decision 2, then unresectability confirmed",
+  "expected_source": "NLRB p10 exclusion \"CEA greater than 80 ug/L\"; site rule crlm/biology#1 is a stop",
+  "pass": "PASS",
+  "actual": {
+   "result": "additional-review",
+   "forward": [],
+   "options": [
+    "crlm-b1:checklist"
+   ],
+   "clarify": [],
+   "guard": "CEA >80 µg/L excludes an initial CRLM MELD exception under the described guidance, even if the value is falling. Reassess this finding at its originating decision before advancing under the pathway.",
+   "route": null,
+   "afpReview": false,
+   "final_action": "Continue disease-control therapy and observation."
+  }
+ },
+ {
+  "id": "T06",
+  "desc": "CRLM: CEA >80 at decision 2, standard answers to decision 4",
+  "expected_source": "NLRB p10 exclusion; site stop rule",
+  "pass": "PASS",
+  "actual": {
+   "result": "additional-review",
+   "forward": [],
+   "options": [
+    "crlm-b3:notice"
+   ],
+   "clarify": [],
+   "guard": "CEA >80 µg/L excludes an initial CRLM MELD exception under the described guidance, even if the value is falling. Reassess this finding at its originating decision before advancing under the pathway.",
+   "route": "Continue individual CRLM review with the earlier CEA finding visible. A later favorable staging result does not resolve the CEA requirement.",
+   "afpReview": false,
+   "final_action": "Confirm treatment of the primary tumor and all required time intervals."
+  }
+ },
+ {
+  "id": "T07",
+  "desc": "CRLM: primary not R0 / local recurrence at decision 5, then restaging clear",
+  "expected_source": "NLRB p9 \"standard resection ... negative margins; no local recurrence\"; site stop rule crlm/clocks#0",
+  "pass": "PASS",
+  "actual": {
+   "result": "additional-review",
+   "forward": [],
+   "options": [],
+   "clarify": [],
+   "guard": "Treat residual or recurrent primary colorectal cancer before reconsidering a CRLM MELD-exception request. Reassess this finding at its originating decision before advancing under the pathway.",
+   "route": null,
+   "afpReview": false,
+   "final_action": "Prepare the individual CRLM MELD-exception request and the plan for repeat imaging and CEA testing."
+  }
+ },
+ {
+  "id": "T08",
+  "desc": "iCCA: disease-specific criteria lost at decision 5, final decision answered yes",
+  "expected_source": "site stop rule icca/review#0; app.js comment \"An unresolved upstream exclusion cannot be cleared by a later favorable example\"",
+  "pass": "PASS",
+  "actual": {
+   "result": "additional-review",
+   "forward": [],
+   "options": [],
+   "clarify": [],
+   "guard": "Reassess the treatment plan and eligibility for the disease-specific MELD exception. Any further transplant proposal needs an explicit selection-team decision. Reassess this finding at its originating decision before advancing under the pathway.",
+   "route": null,
+   "afpReview": false,
+   "final_action": "Proceed to transplantation under the approved program, then follow the agreed surveillance plan and record outcomes."
+  }
+ },
+ {
+  "id": "T09",
+  "desc": "CRLM: criteria lost at decision 7, final decision answered yes",
+  "expected_source": "site stop rule crlm/review#0",
+  "pass": "PASS",
+  "actual": {
+   "result": "additional-review",
+   "forward": [],
+   "options": [],
+   "clarify": [],
+   "guard": "Reassess the treatment plan and eligibility for the disease-specific MELD exception. Any further transplant proposal needs an explicit selection-team decision. Reassess this finding at its originating decision before advancing under the pathway.",
+   "route": null,
+   "afpReview": false,
+   "final_action": "Proceed to transplantation under the approved program, then follow the agreed oncology and transplant care plan."
+  }
+ },
+ {
+  "id": "T10",
+  "desc": "HCA: criteria lost at decision 5, final decision answered yes",
+  "expected_source": "site stop rule hca/review#0",
+  "pass": "PASS",
+  "actual": {
+   "result": "additional-review",
+   "forward": [],
+   "options": [
+    "hca-b2:checklist"
+   ],
+   "clarify": [],
+   "guard": "Reassess the treatment plan and eligibility for the disease-specific MELD exception. Any further transplant proposal needs an explicit selection-team decision. Reassess this finding at its originating decision before advancing under the pathway.",
+   "route": null,
+   "afpReview": false,
+   "final_action": "Proceed to transplantation under the approved program when clinically appropriate, then continue follow-up for the underlying condition."
+  }
+ },
+ {
+  "id": "T11a",
+  "desc": "HCA path by Continue buttons only: possible malignancy (decision 1) -> transformation",
+  "expected_source": "NLRB p11: one of four criteria \"is mandatory\"; decisions 2-3 assess standard care and the criterion",
+  "pass": "INFO",
+  "actual": {
+   "result": "hold — Possible malignant transformation",
+   "forward": [
+    "transformation"
+   ],
+   "options": [],
+   "clarify": [],
+   "guard": null,
+   "route": null,
+   "afpReview": false,
+   "final_action": "Confirm the diagnosis, then use the corresponding cancer treatment pathway and MELD-exception criteria."
+  }
+ },
+ {
+  "id": "T11b",
+  "desc": "  ... transformation benign -> review",
+  "expected_source": "same",
+  "pass": "PASS",
+  "actual": {
+   "result": "additional-review",
+   "forward": [],
+   "options": [],
+   "clarify": [
+    "An earlier essential finding is unresolved. Review that decision before choosing a proposed transplant review.",
+    "An earlier essential finding is unresolved. Review that decision before choosing a proposed transplant review."
+   ],
+   "guard": "An earlier essential finding is unresolved. Review that decision before choosing a proposed transplant review.",
+   "route": null,
+   "afpReview": false,
+   "final_action": "Review the expected benefit of transplantation and prepare an individual HCA MELD-exception request if appropriate."
+  }
+ },
+ {
+  "id": "T11c",
+  "desc": "  ... review met/yes -> follow-up (decisions 2-3 never answered)",
+  "expected_source": "NLRB p11 criterion mandatory; expect an unresolved-criterion guard",
+  "pass": "PASS",
+  "actual": {
+   "result": "additional-review",
+   "forward": [],
+   "options": [],
+   "clarify": [
+    "An earlier essential finding is unresolved. Review that decision before choosing a proposed transplant review.",
+    "An earlier essential finding is unresolved. Review that decision before choosing a proposed transplant review."
+   ],
+   "guard": "An earlier essential finding is unresolved. Review that decision before choosing a proposed transplant review.",
+   "route": null,
+   "afpReview": false,
+   "final_action": "Continue surveillance for bleeding, growth or malignant transformation, and complete the final assessment of fitness for transplantation."
+  }
+ },
+ {
+  "id": "T12",
+  "desc": "NET: liver involvement >70% (local proposal: outside the opening program)",
+  "expected_source": "site net-b3 record: \">70% is outside the initial local program\"",
+  "pass": "PASS",
+  "actual": {
+   "result": "additional-review",
+   "forward": [],
+   "options": [
+    "net-b1:checklist",
+    "net-b3:closed"
+   ],
+   "clarify": [],
+   "guard": "Liver involvement >70% is outside the local opening proposal, not a national declaration of futility. This local boundary has not been activated; individual clinical and allocation review remains separate.",
+   "route": null,
+   "afpReview": false,
+   "final_action": "Review cumulative treatment exposure and observation."
+  }
+ },
+ {
+  "id": "T13",
+  "desc": "HEHE: limited extrahepatic disease (local proposal: outside opening cohort)",
+  "expected_source": "site hehe-b2 record: \"outside the opening cohort\"; NLRB p11 permits case-level review",
+  "pass": "PASS",
+  "actual": {
+   "result": "hold — Limited extrahepatic disease",
+   "forward": [],
+   "options": [
+    "hehe-b2:closed"
+   ],
+   "clarify": [],
+   "guard": "Limited extrahepatic disease requires the specific local-boundary review. The initial proposal is narrower than national case-level review. This local boundary has not been activated; individual clinical and allocation review remains separate.",
+   "route": null,
+   "afpReview": false,
+   "final_action": "Ask the sarcoma and transplant teams to decide whether transplantation offers sufficient benefit for this disease distribution."
+  }
+ },
+ {
+  "id": "T14",
+  "desc": "HEHE: limited EHD at decision 2, decision 3 benefit supported",
+  "expected_source": "same",
+  "pass": "PASS",
+  "actual": {
+   "result": "additional-review",
+   "forward": [],
+   "options": [
+    "hehe-b2:closed"
+   ],
+   "clarify": [
+    "Ask the sarcoma and transplant teams to decide whether transplantation offers sufficient benefit for this disease distribution. Review and update the originating finding; a later favorable answer does not resolve it."
+   ],
+   "guard": "Limited extrahepatic disease requires the specific local-boundary review. The initial proposal is narrower than national case-level review. This local boundary has not been activated; individual clinical and allocation review remains separate.",
+   "route": null,
+   "afpReview": false,
+   "final_action": "Prepare the individual HEHE MELD-exception request and document the transplant team's selection decision."
+  }
+ },
+ {
+  "id": "T15",
+  "desc": "CRLM: treated-lesion interpretation \"Uncertain / not yet assessed\" at decision 4",
+  "expected_source": "site option \"uncertain\" (indeterminate) produces a clarify; unknown should not be weaker",
+  "pass": "PASS",
+  "actual": {
+   "result": "additional-review",
+   "forward": [],
+   "options": [],
+   "clarify": [
+    "An additional finding remains uncertain: What is the current interpretation of the treated liver lesions?"
+   ],
+   "guard": "An additional finding remains uncertain: What is the current interpretation of the treated liver lesions?",
+   "route": null,
+   "afpReview": false,
+   "final_action": "Confirm treatment of the primary tumor and all required time intervals."
+  }
+ },
+ {
+  "id": "T16",
+  "desc": "HCC: decision 3 left blank, pretreatment burden \"Uncertain\" at decision 4",
+  "expected_source": "OPTN 9.5.I.i requires pretreatment number/size; 9.5.I.iii depends on it",
+  "pass": "PASS",
+  "actual": {
+   "result": "additional-review",
+   "forward": [],
+   "options": [],
+   "clarify": [
+    "An earlier essential finding is unresolved. Review that decision before choosing a proposed transplant review.",
+    "An additional finding remains uncertain: Original tumor burden before treatment"
+   ],
+   "guard": "An earlier essential finding is unresolved. Review that decision before choosing a proposed transplant review.",
+   "route": null,
+   "afpReview": false,
+   "final_action": "Prepare the HCC MELD-exception request and complete the separate assessment of fitness for transplantation."
+  }
+ },
+ {
+  "id": "T17",
+  "desc": "HCC: jump straight to decision 5 with decisions 1-4 blank",
+  "expected_source": "app.js/assistant.js comments: proceed requires resolved essentials; blank earlier decisions are not flagged",
+  "pass": "PASS",
+  "actual": {
+   "result": "additional-review",
+   "forward": [],
+   "options": [],
+   "clarify": [
+    "An earlier essential finding is unresolved. Review that decision before choosing a proposed transplant review.",
+    "An earlier essential finding is unresolved. Review that decision before choosing a proposed transplant review.",
+    "An earlier essential finding is unresolved. Review that decision before choosing a proposed transplant review.",
+    "An earlier essential finding is unresolved. Review that decision before choosing a proposed transplant review."
+   ],
+   "guard": "An earlier essential finding is unresolved. Review that decision before choosing a proposed transplant review.",
+   "route": null,
+   "afpReview": false,
+   "final_action": "List or maintain the patient on the transplant waiting list as agreed by the selection team, and schedule tumor surveillance."
+  }
+ },
+ {
+  "id": "T18",
+  "desc": "iCCA: therapy progression, standard pathway, first liver-only; standard answers at decision 4",
+  "expected_source": "site stop rule icca/therapy#0 \"no longer meets the described iCCA transplant criteria\"",
+  "pass": "PASS",
+  "actual": {
+   "result": "additional-review",
+   "forward": [],
+   "options": [],
+   "clarify": [],
+   "guard": "The patient no longer meets the described iCCA transplant criteria. Reassess treatment and obtain program review before proposing further transplant evaluation. Reassess this finding at its originating decision before advancing under the pathway.",
+   "route": null,
+   "afpReview": false,
+   "final_action": "Prepare the request for individual NLRB review of an iCCA MELD exception."
+  }
+ },
+ {
+  "id": "T19",
+  "desc": "iCCA: diagnosis \"Other primary / metastatic cancer\", then phenotype example",
+  "expected_source": "site stop rule icca/diagnosis#0 (cf. hcc/diagnosis other and hehe angiosarcoma, which are hard stops)",
+  "pass": "PASS",
+  "actual": {
+   "result": "additional-review",
+   "forward": [],
+   "options": [],
+   "clarify": [],
+   "guard": "Use the pathway for the verified tumor type. Reassess this finding at its originating decision before advancing under the pathway.",
+   "route": null,
+   "afpReview": false,
+   "final_action": "Plan cancer treatment and the required period of stable disease before MELD-exception review."
+  }
+ },
+ {
+  "id": "T20",
+  "desc": "HEHE: criteria no at decision 3, review example",
+  "expected_source": "site stop rule hehe/risk#0",
+  "pass": "PASS",
+  "actual": {
+   "result": "additional-review",
+   "forward": [],
+   "options": [],
+   "clarify": [],
+   "guard": "Reassess resectability and vascular involvement before requesting a HEHE MELD exception. Reassess this finding at its originating decision before advancing under the pathway.",
+   "route": null,
+   "afpReview": false,
+   "final_action": "Complete the final assessment of fitness for transplantation and agree the post-transplant follow-up plan."
+  }
+ },
+ {
+  "id": "T21",
+  "desc": "iCCA advanced-study path: stability short + stable after an icca-b1 review (risk-routing L117)",
+  "expected_source": "exercise an otherwise unexecuted branch",
+  "pass": "PASS",
+  "actual": {
+   "result": "hold — Observation interval incomplete or start date uncertain",
+   "forward": [],
+   "options": [
+    "icca-b1:review",
+    "icca-b2:checklist"
+   ],
+   "clarify": [],
+   "guard": null,
+   "route": "Continue the separate iCCA study assessment. The small-cirrhotic exception pathway does not establish eligibility for an advanced or living-donor study proposal; approvals and its own selection requirements remain necessary.",
+   "afpReview": false,
+   "final_action": "Continue serial imaging and confirm the required observation start date with the clinician responsible for MELD-exception requests."
+  }
+ },
+ {
+  "id": "T22",
+  "desc": "iCCA: mixed histology + advanced pattern (risk-routing L237)",
+  "expected_source": "site excludes mixed from advanced pilot; expect a guard",
+  "pass": "PASS",
+  "actual": {
+   "result": "redirect — Resectable, noncirrhotic, multifocal or >3 cm",
+   "forward": [],
+   "options": [],
+   "clarify": [
+    "Complete pathology and staging review. Confirm that the local transplant program accepts the diagnosed tumor type, including mixed HCC-iCCA when applicable. Review and update the originating finding; a later favorable answer does not resolve it."
+   ],
+   "guard": "Mixed histology is not included in the advanced-iCCA pilot; assess the separate small-cirrhotic route when applicable.",
+   "route": null,
+   "afpReview": false,
+   "final_action": "Review resection, other cancer treatments or a clinical trial through the iCCA roadmap. Any transplant proposal outside the described criteria requires separate institutional review."
+  }
+ },
+ {
+  "id": "C01",
+  "desc": "HCC T2 + AFP met + no invasion/EHD",
+  "expected_source": "OPTN 9.5.I.ii",
+  "pass": "PASS",
+  "actual": {
+   "result": "advance — T2 tumor burden and AFP requirements met",
+   "forward": [
+    "treatment"
+   ],
+   "options": [],
+   "clarify": [],
+   "guard": null,
+   "route": null,
+   "afpReview": false,
+   "final_action": "Continue the transplant evaluation and plan treatment to control HCC during the wait, provided the remaining transplant requirements are met."
+  }
+ },
+ {
+  "id": "C02",
+  "desc": "HCC single 1 to <2 cm (T1)",
+  "expected_source": "OPTN 9.5.I.ii (single lesion must be >=2 cm); NLRB p3 T1 contraindication",
+  "pass": "PASS",
+  "actual": {
+   "result": "hold — T1: single lesion 1 to <2 cm",
+   "forward": [],
+   "options": [],
+   "clarify": [],
+   "guard": null,
+   "route": "The original assessment recorded T1 disease. Confirm qualifying burden and the applicable allocation route at that decision; later favorable answers do not create a standardized exception.",
+   "afpReview": false,
+   "final_action": "T1 HCC does not qualify for HCC MELD-exception points. T1 alone does not rule out liver transplantation. Discuss surveillance versus immediate liver-directed treatment at the multidisciplinary tumor board."
+  }
+ },
+ {
+  "id": "C03",
+  "desc": "HCC within UNOS downstaging + AFP met",
+  "expected_source": "OPTN 9.5.I.iii",
+  "pass": "PASS",
+  "actual": {
+   "result": "advance — Pretreatment tumor burden within UNOS downstaging criteria",
+   "forward": [
+    "treatment"
+   ],
+   "options": [],
+   "clarify": [],
+   "guard": null,
+   "route": null,
+   "afpReview": false,
+   "final_action": "Plan downstaging, then demonstrate viable burden within T2 size requirements."
+  }
+ },
+ {
+  "id": "C04",
+  "desc": "HCC beyond downstaging -> NLRB / study review, not standard",
+  "expected_source": "OPTN 9.5.I.iii last sentence",
+  "pass": "PASS",
+  "actual": {
+   "result": "hold — Beyond standardized downstaging criteria",
+   "forward": [],
+   "options": [
+    "hcc-b1:review"
+   ],
+   "clarify": [],
+   "guard": null,
+   "route": "Continue case-specific transplant and allocation review. The original burden or invasion history is not erased by a current T2 response; standardized exception eligibility must not be assumed.",
+   "afpReview": false,
+   "final_action": "Assess transplant suitability, calculated MELD score and donor options separately. Request individual NLRB review if seeking HCC MELD-exception points."
+  }
+ },
+ {
+  "id": "C05",
+  "desc": "HCC beyond downstaging carried to decision 4 controlled",
+  "expected_source": "OPTN 9.5.I.iii \"not automatically eligible\"",
+  "pass": "PASS",
+  "actual": {
+   "result": "individual-review",
+   "forward": [
+    "listing"
+   ],
+   "options": [
+    "hcc-b1:review"
+   ],
+   "clarify": [],
+   "guard": null,
+   "route": "Continue case-specific transplant and allocation review. The original burden or invasion history is not erased by a current T2 response; standardized exception eligibility must not be assumed.",
+   "afpReview": false,
+   "final_action": "Prepare the HCC MELD-exception request and complete the separate assessment of fitness for transplantation."
+  }
+ },
+ {
+  "id": "C06",
+  "desc": "HCC AFP >1000 pre-LRT falls <500 (not met -> yes)",
+  "expected_source": "OPTN 9.5.I.iv first sentence",
+  "pass": "FAIL",
+  "actual": {
+   "result": "individual-review",
+   "forward": [],
+   "options": [],
+   "clarify": [],
+   "guard": null,
+   "route": "The AFP requirement is not met. Continue high-risk HCC clinical review and individual allocation assessment alongside treatment; radiographic response alone does not resolve the AFP finding.",
+   "afpReview": true,
+   "final_action": "Prepare the HCC MELD-exception request and complete the separate assessment of fitness for transplantation."
+  }
+ },
+ {
+  "id": "C07",
+  "desc": "pCCA mass exactly 3 cm radial (option \"Mass >=3 cm\")",
+  "expected_source": "OPTN 9.5.A item 3 \"less than three cm\"",
+  "pass": "PASS",
+  "actual": {
+   "result": "hold — Size or resectability requires review",
+   "forward": [],
+   "options": [
+    "pcca-b1:closed"
+   ],
+   "clarify": [],
+   "guard": "The selected original mass size or multiplicity does not meet the standard pCCA mass criterion. Review treatment and the applicable transplant protocol separately.",
+   "route": "Continue case-specific protocol review with the earlier finding visible. Neither an alternative regimen nor apparent clearance of previously malignant nodes activates a closed local expansion or establishes standardized exception eligibility.",
+   "afpReview": false,
+   "final_action": "Review radial size, number of masses and resectability with the transplant and HPB teams before claiming eligibility for a standardized pCCA MELD exception."
+  }
+ },
+ {
+  "id": "C08",
+  "desc": "pCCA transperitoneal primary biopsy",
+  "expected_source": "OPTN 9.5.A item 6",
+  "pass": "PASS",
+  "actual": {
+   "result": "additional-review",
+   "forward": [],
+   "options": [
+    "pcca-b1:closed"
+   ],
+   "clarify": [],
+   "guard": "Prior transperitoneal primary-tumor biopsy requires program eligibility review and is outside the local opening protocol. OPTN requires avoiding this biopsy route; review does not imply a policy waiver or automatic eligibility.",
+   "route": "Continue case-specific protocol review with the earlier finding visible. Neither an alternative regimen nor apparent clearance of previously malignant nodes activates a closed local expansion or establishes standardized exception eligibility.",
+   "afpReview": false,
+   "final_action": "If accepted by the transplant program, begin neoadjuvant treatment under its approved pCCA transplant protocol."
+  }
+ },
+ {
+  "id": "C09",
+  "desc": "pCCA previously proven malignant nodes with current staging clear",
+  "expected_source": "site pcca-b1 (local); OPTN 9.5.A item 1.iii/5",
+  "pass": "FAIL",
+  "actual": {
+   "result": "additional-review",
+   "forward": [],
+   "options": [
+    "pcca-b1:closed"
+   ],
+   "clarify": [],
+   "guard": "Previously proven malignant nodes remain outside the initial proposal, even after apparent clearance. This local boundary has not been activated; individual clinical and allocation review remains separate.",
+   "route": "Continue case-specific protocol review with the earlier finding visible. Neither an alternative regimen nor apparent clearance of previously malignant nodes activates a closed local expansion or establishes standardized exception eligibility.",
+   "afpReview": false,
+   "final_action": "If accepted by the transplant program, begin neoadjuvant treatment under its approved pCCA transplant protocol."
+  }
+ },
+ {
+  "id": "C10",
+  "desc": "CRLM CEA exactly 80",
+  "expected_source": "NLRB p10: initial excludes >80, extension needs <80 (site holds for review)",
+  "pass": "PASS",
+  "actual": {
+   "result": "hold — Clarify the CEA boundary",
+   "forward": [],
+   "options": [
+    "crlm-b3:notice"
+   ],
+   "clarify": [],
+   "guard": null,
+   "route": "Continue individual CRLM review with the earlier CEA finding visible. A later favorable staging result does not resolve the CEA requirement.",
+   "afpReview": false,
+   "final_action": null
+  }
+ },
+ {
+  "id": "C11",
+  "desc": "CRLM lesion >10 cm pretreatment",
+  "expected_source": "NLRB p9 \"No hepatic lesion should be greater than 10 cm\"",
+  "pass": "PASS",
+  "actual": {
+   "result": "stop — Review the treatment and transplant plan",
+   "forward": [],
+   "options": [
+    "crlm-b3:closed"
+   ],
+   "clarify": [],
+   "guard": "The selected molecular or pretreatment size finding does not meet the defined CRLM selection route. A later favorable response does not waive it.",
+   "route": null,
+   "afpReview": false,
+   "final_action": null
+  }
+ },
+ {
+  "id": "C12",
+  "desc": "NET lung/bone metastasis history",
+  "expected_source": "NLRB p9 \"permanent exclusion\"",
+  "pass": "PASS",
+  "actual": {
+   "result": "stop — Review the treatment and transplant plan",
+   "forward": [],
+   "options": [
+    "net-b4:closed"
+   ],
+   "clarify": [],
+   "guard": "The selected extrahepatic finding does not meet the current NET opening pathway.",
+   "route": null,
+   "afpReview": false,
+   "final_action": null
+  }
+ },
+ {
+  "id": "C13",
+  "desc": "HCA multiplicity alone",
+  "expected_source": "NLRB p11 adenomatosis requires unresectable >10",
+  "pass": "PASS",
+  "actual": {
+   "result": "hold — Multiple adenomas alone, without another qualifying criterion",
+   "forward": [],
+   "options": [
+    "hca-b2:checklist",
+    "hca-b1:notice"
+   ],
+   "clarify": [],
+   "guard": null,
+   "route": "No listed HCA exception-guidance route was identified earlier. Assess the clinical indication and any individual allocation request separately; do not infer exception eligibility from a favorable later review.",
+   "afpReview": false,
+   "final_action": "Review standard treatment with the benign liver tumor team. Confirm a specific NLRB criterion before requesting an HCA MELD exception."
+  }
+ },
+ {
+  "id": "C14",
+  "desc": "iCCA solitary <=3 cm cirrhotic unresectable, 6 months stable",
+  "expected_source": "NLRB p7-8",
+  "pass": "PASS",
+  "actual": {
+   "result": "advance — Stability interval and clinical criteria documented",
+   "forward": [
+    "review"
+   ],
+   "options": [],
+   "clarify": [],
+   "guard": null,
+   "route": null,
+   "afpReview": false,
+   "final_action": "Prepare the request for individual NLRB review of an iCCA MELD exception."
+  }
+ },
+ {
+  "id": "C15",
+  "desc": "HEHE macrovascular invasion",
+  "expected_source": "NLRB p11 \"Absence of macrovascular invasion\"",
+  "pass": "PASS",
+  "actual": {
+   "result": "stop — Review the treatment and transplant plan",
+   "forward": [],
+   "options": [
+    "hehe-b2:closed"
+   ],
+   "clarify": [],
+   "guard": "Macrovascular invasion does not meet the stated HEHE exception-guidance criterion. Review clinical suitability and any individual allocation request separately before continuing.",
+   "route": "Macrovascular invasion does not meet the stated HEHE exception-guidance criterion. Clinical suitability and any individual allocation request require separate expert review.",
+   "afpReview": false,
+   "final_action": null
+  }
+ }
+]
