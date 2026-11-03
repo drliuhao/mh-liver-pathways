@@ -6,7 +6,7 @@ const baseline = '30039fe';
 const read = p => fs.readFileSync(root + '/' + p, 'utf8');
 // Recorded clinical revisions (tools/clinical_revisions/) are replayed on the baseline: the only permitted change.
 const releaseRevisions=require('./apply_clinical_revisions.cjs');
-const old = p => releaseRevisions.applyText(p,cp.execFileSync('git',['show',baseline + ':' + p],{cwd:root,encoding:'utf8',maxBuffer:8e6}),releaseRevisions.revisions().filter(r=>r.id.startsWith('2026-11-02')));
+const old = p => releaseRevisions.applyText(p,cp.execFileSync('git',['show',baseline + ':' + p],{cwd:root,encoding:'utf8',maxBuffer:8e6}),releaseRevisions.revisions().filter(r=>r.id >= '2026-11-02'));
 const htmlText = s => s.replace(/<[^>]*>/g,'').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&#13;/g,'\r').replace(/\s+/g,' ').trim();
 let appraisals = 0, aliases = 0;
 for (const slug of slugs) {

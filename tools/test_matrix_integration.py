@@ -11,7 +11,7 @@ node=shutil.which('node') or str(Path.home()/'.cache/codex-runtimes/codex-primar
 replay=r"""
 const cp=require('node:child_process'), R=require('./tools/apply_clinical_revisions.cjs');
 const base=JSON.parse(cp.execFileSync('git',['show','30039fe:transplant/assets/content.json'],{encoding:'utf8'}));
-const revisions=R.revisions().filter(r=>r.id.startsWith('2026-11-02'));
+const revisions=R.revisions().filter(r=>r.id >= '2026-11-02');
 if(!revisions.length)throw new Error('No recorded release revisions found');
 process.stdout.write(JSON.stringify(R.applyContent(base,revisions)));
 """

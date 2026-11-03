@@ -59,11 +59,11 @@ assert(!src.includes("if(!d.open)enhance(d)"),'Criteria must remain native inlin
 // Clinical renderers now have source-verified changes. Require exact recorded replay from the
 // reviewed release, rather than ignoring renderer changes or pretending they are presentation only.
 const reviewedBaseline='30039fe0cec15a29ac2f326e0ee316eaf6bfb48e';
-const auditRevisions=Revisions.revisions().filter(r=>r.id.startsWith('2026-11-02'));
+const auditRevisions=Revisions.revisions().filter(r=>r.id >= '2026-11-02');
 for(const file of ['transplant/assets/app.js','assets/transplant-workspace.js','assets/clinical-scores.js']){
  const base=cp.execFileSync('git',['show',reviewedBaseline+':'+file],{cwd:root,encoding:'utf8',maxBuffer:8e6});
  assert.equal(read(file),Revisions.applyText(file,base,auditRevisions),file+' differs from exact clinical revision replay');
 }
 const docs=Object.keys(JSON.parse(read('assets/roadmap-links.json'))).map(x=>x+'/index.html').concat(data.index.map(p=>'transplant/'+p.slug+'/index.html'));
-for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261102-sync1'),doc+' missing display update');
+for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261103-lrt1'),doc+' missing display update');
 console.log(`PASS: Pinned V12 data and clinical renderers match exact recorded revisions; ${docs.length} pages; 46 headings, ${reviewed} help summaries and 46 recommendation guards verified; all Avoid wording retained.`);

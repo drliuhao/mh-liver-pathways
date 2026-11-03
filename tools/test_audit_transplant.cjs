@@ -46,6 +46,6 @@ for(const p of D.index){const html=fs.readFileSync(path.join(root,'transplant',p
 const revisions=require('./apply_clinical_revisions.cjs'),cp=require('node:child_process');
 for(const file of ['transplant/assets/app.js','transplant/assets/risk-routing.js','assets/transplant-workspace.js','assets/clinical-scores.js','tools/decision_assistant_source/app.js','tools/decision_assistant_source/risk-routing.js','tools/decision_assistant_source/high-risk.js','tools/decision_assistant_source/high_risk_data.json','tools/decision_assistant_source/build.py']){
  const base=cp.execFileSync('git',['show','30039fe0cec15a29ac2f326e0ee316eaf6bfb48e:'+file],{cwd:root,encoding:'utf8',maxBuffer:8e6});
- assert.equal(fs.readFileSync(path.join(root,file),'utf8'),revisions.applyText(file,base,revisions.revisions().filter(r=>r.id.startsWith('2026-11-02'))),file+' exact reviewed-baseline replay');
+ assert.equal(fs.readFileSync(path.join(root,file),'utf8'),revisions.applyText(file,base,revisions.revisions().filter(r=>r.id >= '2026-11-02')),file+' exact reviewed-baseline replay');
 }
 console.log(`PASS: ${inheritedStops} upstream-stop carry checks, ${missing} skipped-decision holds, ${phases} explicit recipient contexts, exact decimal boundaries, source/runtime and all embedded payloads.`);

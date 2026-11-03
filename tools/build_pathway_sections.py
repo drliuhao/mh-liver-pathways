@@ -135,7 +135,8 @@ def citation(key):
     if key in DOCREC:
         return s['title']
     if key in SOURCES:
-        return f"{s['title'].rstrip('.')}. {s.get('locator', '')}".strip()
+        author = (s.get("author", "") + ", et al. ") if key.startswith("LRT-") and s.get("author") else ""
+        return f"{author}{s['title'].rstrip('.')}. {s.get('locator', '')}".strip()
     # A personal author is a surname (with initials); an organisation is named in full, without "et al.".
     author = s.get('author') or ''
     head = (f'{author}. ' if len(author.split()) >= 3 else f'{author} et al. ') if author else ''
@@ -248,6 +249,13 @@ for slug in ORDER:
         limited.append({'t': it['t'], 'why': it['why'], 'setting': it['setting'], 'locator': loc,
                         'refs': [ref(k) for k in it.get('refs', [])], 'related': related})
     keys = pathway_refs(p)
+    # Comparative evidence remains owned by the matching disease, below its clinical decisions.
+    comparisons = ROOT / 'tools/lrt_comparative_evidence.json'
+    if comparisons.exists():
+        for study in json.loads(comparisons.read_text())['studies']:
+            key = 'LRT-' + study['pmid']
+            if study['tumor'] == slug and key not in keys:
+                keys.append(key)
     standard = set(keys) | {k for it in src['limited'] if it['setting'] == 'standard' for k in it.get('refs', [])}
     for r in reviews:
         for k in r['references']:

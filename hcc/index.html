@@ -7,7 +7,7 @@
 <meta name="description" content="Hepatocellular carcinoma — Memorial Hermann system roadmap v0.9, draft under development.">
 <title>Memorial Hermann HCC Roadmap</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap">
-<link rel="stylesheet" href="../assets/portal-navigation.css?v=20261102-sync1"><script src="../assets/portal-navigation.js?v=20261102-sync1" defer></script><link rel="stylesheet" href="/mh-liver-pathways/assets/roadmap-evidence.css?v=20261102-sync1"><script src="/mh-liver-pathways/assets/document-references.js?v=20261102-sync1"></script><script src="/mh-liver-pathways/assets/roadmap-evidence.js?v=20261102-sync1"></script></head>
+<link rel="stylesheet" href="../assets/portal-navigation.css?v=20261103-lrt1"><script src="../assets/portal-navigation.js?v=20261103-lrt1" defer></script><link rel="stylesheet" href="/mh-liver-pathways/assets/roadmap-evidence.css?v=20261103-lrt1"><script src="/mh-liver-pathways/assets/document-references.js?v=20261103-lrt1"></script><script src="/mh-liver-pathways/assets/roadmap-evidence.js?v=20261103-lrt1"></script></head>
 <body>
 <style>
 /* Layout: a decision strip on top, a stage answer below it, then topic sections, then the evidence library everything links back into. */
@@ -345,8 +345,8 @@ footer p + p{margin-top:8px}
 }
 @media (prefers-reduced-motion:reduce){ *{transition:none !important} }
 </style>
-<link rel="stylesheet" href="../assets/roadmap-flow.css?v=20261102-sync1">
-<script src="../assets/roadmap-flow.js?v=20261102-sync1"></script>
+<link rel="stylesheet" href="../assets/roadmap-flow.css?v=20261103-lrt1">
+<script src="../assets/roadmap-flow.js?v=20261103-lrt1"></script>
 
 <header class="top">
   <div class="devbar">Clinical review draft · Not approved institutional policy · Not an automated eligibility tool.</div>
@@ -861,7 +861,7 @@ const STAGES = [
       {name:"Thermal ablation", g:"A", flags:["EXPERTISE"],
        when:"When transplant is not feasible, ablation is the recommended option — radiofrequency or microwave. BCLC 2026 prefers microwave up to 3–4 cm on local-control evidence. Sugimoto 2025 found two-year lesion progression of 16.4% with MWA versus 30.4% with single-needle RFA, without a demonstrated survival advantage; earlier trials did not show a significant difference. Also the “ablate and wait” strategy: ablate now and consider transplant at recurrence if still within criteria.",
        pref:"Tumour ≤3 cm, up to three nodules, with a safe percutaneous route and a circumferential ablative margin achievable. Preferred at ≤2 cm.",
-       avoid:"Lesions abutting central bile ducts, bowel, gallbladder, diaphragm, heart, or major vessels where a heat sink is expected — use an adjunctive technique or another modality. Also: target not reliably visible, unsafe access, uncorrectable coagulopathy. At 3–5 cm, single-probe ablation alone is not curative-intent therapy. An anatomic contraindication can justify upfront SBRT or Y-90 segmentectomy.",
+       avoid:"Lesions abutting central bile ducts, bowel, gallbladder, diaphragm, heart, or major vessels where a heat sink is expected — use an adjunctive technique or another modality. Also: target not reliably visible, unsafe access, uncorrectable coagulopathy. For tumors of 3–5 cm, durable local control is less reliable. Assess complete coverage and an adequate ablation margin, and compare combined or alternative treatments in the MDT. Size alone does not determine treatment intent. An anatomic contraindication can justify upfront SBRT or Y-90 segmentectomy.",
        refs:["41151697","18008357","35949295","40554738","29503247","39802807"]}],
     order:"<b>This order follows the BCLC very-early-stage text, not a survival advantage.</b> BCLC 2026: without CSPH, “liver resection remains the recommended first step”; and “when LT is not feasible, ablation is the recommended option”. The randomised trials do not separate the two on <i>survival</i>, but none of them proves equivalence either. SURF closed at 302 of a planned 600 patients, so it is a failed superiority trial; its final report gave 5-year overall survival of 74.6% versus 70.4% (HR 0.96). <b>Local control is not equal:</b> recurrence at the treated site was 8.0% after resection versus 15.8% after ablation in SURF, and equal survival therefore depends on salvage being available. Chen was analysed per protocol after 21% of its ablation arm crossed to resection, and Ng 2017, cited here for 10-year follow-up, was designed to show ablation superior and did not (10-year overall survival 47.6% versus 41.8%, P = 0.53). What moves a patient between the two is portal pressure, resectability, tumour size and transplant strategy.",
     flagnote:"<b>Decision requiring local approval.</b> The v0.8 BCLC 0 row reads “thermal ablation when a circumferential margin is achievable; resection when anatomy and reserve favour it”, which puts ablation first. That is more permissive than the BCLC 2026 text this roadmap is anchored to, which makes resection the first step in the absence of CSPH and brings ablation in when transplant is not feasible. Hepatology and hepatobiliary surgery should decide which reading the roadmap adopts."}],
@@ -887,7 +887,7 @@ const STAGES = [
       {name:"Thermal ablation", g:"A", flags:["EXPERTISE"],
        when:"Local curative treatment with a circumferential ablative margin. Microwave or radiofrequency. BCLC 2026 prefers microwave up to 3–4 cm on local-control evidence; the positive trial used single-needle RFA and did not demonstrate a survival advantage.",
        pref:"Tumours ≤3 cm, up to three nodules, safe percutaneous route, complete margin achievable. Also recurrence treatment and transplant bridge.",
-       avoid:"Lesions abutting central bile ducts, bowel, gallbladder, diaphragm, heart, or major vessels with an expected heat sink — use an adjunctive technique or another modality. Target not reliably visible, unsafe access, uncorrectable coagulopathy. At 3–5 cm, single-probe ablation alone must not be presented as curative-intent therapy; combined or alternative approaches are selected in the MDT.",
+       avoid:"Lesions abutting central bile ducts, bowel, gallbladder, diaphragm, heart, or major vessels with an expected heat sink — use an adjunctive technique or another modality. Target not reliably visible, unsafe access, uncorrectable coagulopathy. For tumors of 3–5 cm, durable local control is less reliable. Assess complete coverage and an adequate ablation margin, and compare combined or alternative treatments in the MDT. Size alone does not determine treatment intent.",
        refs:["35949295","40554738","29503247","39802807"]},
       {name:"Transplant", g:"A",
        when:"Consider transplantation when portal hypertension, decompensation, or recurrent disease makes treatment of both the tumor and the underlying liver disease appropriate.",
@@ -1026,7 +1026,7 @@ const TOPICS = [
   <p class="kicker"><span class="pill p-std">Standard</span> <span class="grade A">A</span> &nbsp; Tumours ≤3 cm, up to three nodules, when a circumferential ablative margin can be achieved safely.</p>
   <p><b>Microwave versus radiofrequency.</b> MWA and RFA are both options. Sugimoto 2025 found lower two-year lesion-level local progression with MWA than single-needle RFA (20/122, 16.4%, versus 38/125, 30.4%; RR 0.54, 95% CI 0.33–0.87; P=.007), without a demonstrated overall-survival advantage. Most lesions were small; this does not establish superiority over every RFA system or a specific 3–4 cm subgroup. The earlier Vietti Violi superiority trial did not show a significant local-progression difference and did not test equivalence. {{29503247|39802807}}</p>
   <p><b>Resection versus ablation for small HCC.</b> The randomised SURF trial (308 registered, 301 analysed — 150 resection, 151 ablation; tumours ≤3 cm, up to three nodules, Child-Pugh ≤7) did not demonstrate superior recurrence-free survival for resection, but non-inferiority was not formally established and the trial was underpowered. The evidence supports the conclusion that for this phenotype the two are reasonable alternatives selected on anatomy, reserve and access — not that they are proven equivalent. {{35949295}}</p>
-  <p>Use adjunctive technique or another modality for lesions abutting central bile ducts, bowel, gallbladder, diaphragm, heart or major vessels where a heat sink is expected. For tumours of 3–5 cm, single-probe thermal ablation alone should not be presented as curative-intent therapy.</p>
+  <p>Use adjunctive technique or another modality for lesions abutting central bile ducts, bowel, gallbladder, diaphragm, heart or major vessels where a heat sink is expected. For tumors of 3–5 cm, durable local control is less reliable. Assess complete coverage and an adequate ablation margin, and compare combined or alternative treatments in the MDT. Size alone does not determine treatment intent.</p>
 </div>`},
 
 {id:"tx", name:"Transplant & allocation", html:`
@@ -1194,7 +1194,7 @@ const HONEST = [
  ["Resection and thermal ablation are equivalent for small HCC.",
   "No trial has shown equivalence. SURF-RCT closed at 302 of a planned 600 patients, leaving 67.2% power, and reported 5-year overall survival of 74.6% versus 70.4% (HR 0.96, 95% CI 0.64 to 1.43) and recurrence-free survival of 42.9% versus 42.7% (HR 0.90, 0.67 to 1.22). Local control was not equal: recurrence at the treated site was 12 of 150 (8.0%) after resection versus 24 of 152 (15.8%) after ablation (P = 0.03), and 19 of 382 (5.0%) versus 49 of 371 (13.2%) in the parallel cohort. The population was far narrower than the entry criteria: 90% solitary, about 65% no larger than 2.0 cm, median 1.8 cm, with tumours near vessels, bile ducts or adjacent organs excluded as unfeasible for ablation. Chen 2006 is quoted for the same claim but 19 of its 90 ablation patients (21%) withdrew and had resection instead, and a single RFA session achieved complete necrosis in only 62.0%.",
   "Tumour size and location, achievable circumferential margin, hepatic reserve and portal pressure, and whether salvage of a local recurrence will actually be available.",
-  "Local recurrence at the treated site by modality and by size band; proportion of 3 to 5 cm tumours treated with single-probe ablation and called curative-intent."],
+  "Local recurrence at the treated site by modality and by size band; local control and complications after treatment of 3 to 5 cm tumors, with the achieved margin and treatment intent documented."],
  ["Microwave ablation is preferred over radiofrequency ablation.",
   "The earlier Vietti Violi comparison was a superiority trial that did not show superiority and did not test non-inferiority: 2-year local tumour progression in 6 of 98 lesions (6%) after microwave versus 12 of 104 (12%) after radiofrequency, risk ratio 1.62 (95% CI 0.66 to 3.94), P = 0.27, with 2-year overall survival of 86% versus 84%. Mean lesion size was 18 mm and only 11 lesions measured 3 to 4 cm, which is the size range where microwave is argued to help. The analysis was per protocol, one device was used throughout, and the manufacturer funded the trial. The later Sugimoto trial supports a device-specific local-control advantage for MWA, without a demonstrated survival advantage (PMID 39802807).",
   "Tumour size, proximity to large vessels, expected procedure time, operator familiarity.",
@@ -1674,7 +1674,7 @@ function renderCell(){
     <p style="margin-top:12px; font-size:14.5px"><b>${esc(expandAbbr(c.head))}</b></p>
     ${c.roles.map(r=>`<div class="role">
         <div class="rolewhen">${tchip(r.t, (MX.tiers[r.t] || {short:"Caution"}).short)}<span>${esc(expandAbbr(r.when))}</span></div>
-        <details class="more"><summary>${r.ev.length} ${r.ev.length===1?"trial":"trials"}</summary>
+        <details class="more"><summary>${r.ev.length} ${r.ev.length===1?"study":"studies"}</summary>
           <div class="moreinner">${r.ev.map(evLine).join("")}</div></details>
       </div>`).join("")}`;
   const ci = MX.contra && MX.contra[mod[0]];
@@ -1693,8 +1693,8 @@ fetch("data/critique.json?v=20261023-language").then(r=>r.ok?r.json():{}).catch(
   .then(c=>{ CRIT = c || {}; renderEv(); });
 
 Promise.all([
-  fetch("../lrt/matrix.json?v=20261102-sync1").then(r=>r.json()),
-  fetch("data/lrt_refs.json?v=20261027-depot").then(r=>r.json())
+  fetch("../lrt/matrix.json?v=20261103-lrt1").then(r=>r.json()),
+  fetch("data/lrt_refs.json?v=20261103-lrt1").then(r=>r.json())
 ]).then(([mx, refs])=>{
   MX = mx;
   renderTierLegend(); renderCards(); renderCell();

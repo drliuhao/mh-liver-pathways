@@ -433,7 +433,10 @@
             "38608150",
             "24646562",
             "39565488",
-            "39962001"
+            "39962001",
+            "40709764",
+            "29181682",
+            "41118066"
           ],
           "pref": "Selected unresectable liver-only CRLM at a credentialed pump centre. Review during first-line planning, reassess after systemic therapy, and discuss before hepatic radiation. Early referral does not waive NCCN treatment eligibility. D’Angelica phase II (PMID 24646562): n=49, 47% conversion, 76% response, median OS 38 months. Distinct from Kemeny phase I (PMID 19470932): n=49, 47% conversion and 92% response.",
           "avoid": "No dedicated pump programme; unsuitable arterial anatomy; extrahepatic disease; portal hypertension; prior liver radiation; direct bilirubin above 1.5 mg/dL or alkaline phosphatase at or above twice the upper limit of normal. NCCN also requires at least one prior systemic line and operative fitness, and HAI cannot be delivered with concurrent bevacizumab or other VEGF inhibitors.",
@@ -472,7 +475,9 @@
             "10615075",
             "28426374",
             "30953467",
-            "pump2026"
+            "pump2026",
+            "39644535",
+            "42018958"
           ],
           "pref": "A completely resected patient at a credentialed pump centre. The randomised Memorial Sloan Kettering trial gave 2-year survival free of hepatic progression of 90% versus 60% (p<0.001) and 2-year overall survival 86% versus 72% (p=0.03). Selective MDT discussion; not routine for every low-risk resection.",
           "avoid": "Extrahepatic disease or a positive margin, where the propensity-matched series found no benefit (37 versus 33 months and 37 versus 28 months). Do not offer it outside a programme with credentialed surgeons, oncologists and pump management.",
@@ -904,7 +909,10 @@
       "refs": [
         "19470932",
         "38608150",
-        "37329889"
+        "37329889",
+        "40709764",
+        "29181682",
+        "41118066"
       ]
     },
     {
@@ -1041,7 +1049,9 @@
         "10615075",
         "28426374",
         "30953467",
-        "pump2026"
+        "pump2026",
+        "39644535",
+        "42018958"
       ]
     },
     {
@@ -1144,7 +1154,13 @@
       "t": "HAI referral and transplant evaluation should proceed in parallel.",
       "why": "Do not require exhaustion of HAI before transplant review in otherwise eligible persistently unresectable liver-only CRLM. Response does not establish listing or a MELD exception. Hill (PMID 37210451) describes seven transplants across mixed diagnoses, of which three were CRLM: two for HAI cholangiopathy and one for residual tumour. Difficult dissection and arterial reconstruction require advance planning. This supports early technical planning, not a validated fixed HAI-to-LT schedule.",
       "refs": [
-        "37210451"
+        "37210451",
+        "40709764",
+        "29181682",
+        "11843249",
+        "41118066",
+        "39644535",
+        "42018958"
       ]
     }
   ],
@@ -1551,6 +1567,46 @@
       "Floxuridine hepatic arterial infusion associated biliary toxicity is increased by concurrent administration of systemic bevacizumab",
       "Liver-directed",
       "Floxuridine hepatic arterial infusion associated biliary toxicity is increased by concurrent administration of systemic bevacizumab. DOI: 10.1245/s10434-013-3275-0. PMID: 24154839."
+    ],
+    "40709764": [
+      "Saadat 2025",
+      "Liver-directed therapy",
+      "Saadat LV, et al. Hepatic Artery Infusion Chemotherapy Compared to Transarterial Radioembolization For Unresectable Colorectal Liver Metastases. Ann Surg. 2025. PMID 40709764. DOI 10.1097/sla.0000000000006851."
+    ],
+    "29181682": [
+      "Dhir 2018",
+      "Liver-directed therapy",
+      "Dhir M, et al. Effectiveness of Hepatic Artery Infusion (HAI) Versus Selective Internal Radiation Therapy (Y90) for Pretreated Isolated Unresectable Colorectal Liver Metastases (IU-CRCLM). Ann Surg Oncol. 2018. PMID 29181682. DOI 10.1245/s10434-017-6265-9."
+    ],
+    "11843249": [
+      "Gray 2001",
+      "Liver-directed therapy",
+      "Gray B, et al. Randomised trial of SIR-Spheres plus chemotherapy vs. chemotherapy alone for treating patients with liver metastases from primary large bowel cancer. Ann Oncol. 2001. PMID 11843249. DOI 10.1023/a:1013569329846."
+    ],
+    "31177151": [
+      "Mokkarala 2019",
+      "Liver-directed therapy",
+      "Mokkarala M, et al. Comparison of Response and Outcomes of Drug-eluting Bead Chemoembolization (DEB-TACE) <i>Versus</i> Radioembolization (TARE) for Patients With Colorectal Cancer Liver Metastases. Anticancer Res. 2019. PMID 31177151. DOI 10.21873/anticanres.13442."
+    ],
+    "41118066": [
+      "Boilève 2026",
+      "Liver-directed therapy",
+      "Boilève A, et al. Treatment Intensification with Hepatic Arterial Infusion Chemotherapy in Patients with Liver-Only Colorectal Metastases Still Unresectable After Systemic Induction Chemotherapy: Exploratory Findings From a Prematurely Closed Multicenter Randomized Phase II Study: SULTAN UCGI 30/PRODIGE 53 (NCT03164655). Ann Surg Oncol. 2026. PMID 41118066. DOI 10.1245/s10434-025-18570-5."
+    ],
+    "39644535": [
+      "Wang 2025",
+      "Liver-directed therapy",
+      "Wang DS, et al. Safety and efficacy of adjuvant FOLFOX/FOLFIRI with versus without hepatic arterial infusion of floxuridine in patients following colorectal cancer liver metastasectomy (HARVEST trial): A randomized controlled trial. Eur J Cancer. 2025. PMID 39644535. DOI 10.1016/j.ejca.2024.115154."
+    ],
+    "42018958": [
+      "Gelli 2026",
+      "Liver-directed therapy",
+      "Gelli M, et al. Postoperative Hepatic Arterial Infusion With Oxaliplatin After Surgery of Four or More Colorectal Liver Metastases: A Randomized Phase II Trial. J Clin Oncol. 2026. PMID 42018958. DOI 10.1200/jco-25-01737."
+    ],
+    "42829779": [
+      "Risumlund 2026",
+      "Liver-directed therapy",
+      "Risumlund SL, et al. Microwave ablation versus stereotactic body radiotherapy for oligometastatic colorectal liver metastases (LAVA-CRLM): a prospective, randomised, phase II trial. Lancet Reg Health Eur. 2026. PMID 42829779. DOI 10.1016/j.lanepe.2026.101879."
     ]
   },
   "nonpm": {

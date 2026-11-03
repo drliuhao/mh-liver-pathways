@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '/mh-liver-pathways/'
-KEY = '20261102-sync1'
+KEY = '20261103-lrt1'
 data = json.loads((ROOT / 'tools/ehd_positions.json').read_text())
 manifest = json.loads((ROOT / 'assets/documents.json').read_text())['tumors']
 e = html.escape
@@ -42,7 +42,7 @@ css = ('.ehd-list{list-style:none;padding:0;margin:0}.ehd-list li{padding:9px 0;
        '.ehd-tumor{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:14px 18px;margin:12px 0}.ehd-tumor h2{font:600 20px/1.3 "Source Serif 4",Georgia,serif;margin:0 0 6px}')
 out = ['<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
        '<meta name="robots" content="noindex"><title>Previously treated extrahepatic disease | Memorial Hermann HPB Oncology</title>'
-       f'<link rel="stylesheet" href="{BASE}assets/evidence-tools.css?v=20261102-sync1">'
+       f'<link rel="stylesheet" href="{BASE}assets/evidence-tools.css?v=20261103-lrt1">'
        f'<link rel="stylesheet" href="{BASE}assets/portal-navigation.css?v={KEY}"><script src="{BASE}assets/portal-navigation.js?v={KEY}" defer></script>'
        f'<style>{css}</style></head><body><main class="evidence-wrap" id="ehd-positions">',
        '<header class="tool-hero"><p class="eyebrow">Index · proposed positions</p><h1>Previously treated extrahepatic disease</h1>'

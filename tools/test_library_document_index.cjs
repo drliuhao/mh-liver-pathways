@@ -18,7 +18,9 @@ for(const lib of data.libraries){
 for(const p of Object.values(supplement.publications)){assert.equal(p.pdf_available,null);assert.match(p.url,/^https:\/\//);}
 const crlm=data.libraries.find(l=>l.key==='standard_crlm');
 assert.ok(crlm.papers.length>base.libraries.find(l=>l.key==='standard_crlm').papers.length,'CRLM document references included');
-assert.equal(data.matched_publication_pdfs,598,'only the two verified V18 PDF additions may change the prior 596 matched files');
+assert.equal(data.matched_publication_pdfs,602,'V18 598 verified PDFs plus four newly downloaded comparative-study PDFs');
+for(const pmid of ['29167951','35619164','33868997','25373796'])assert.equal(Object.values(base.publications).find(p=>p.pmid===pmid)?.pdf_available,true);
+for(const pmid of ['33230652','41580092','40709764','42829779'])assert.equal(Object.values(base.publications).find(p=>p.pmid===pmid)?.pdf_available,false,'Verified metadata or main text must not imply a saved PDF');
 for(const pmid of ['37230894','36871765'])assert.equal(Object.values(base.publications).find(p=>p.pmid===pmid)?.pdf_available,true);
 for(const pmid of ['42456089','42223137'])assert.equal(Object.values(base.publications).find(p=>p.pmid===pmid)?.pdf_available,false,'XML access must not imply a downloaded PDF');
 assert.ok(data.no_slide_entries>0);

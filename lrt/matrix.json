@@ -153,6 +153,79 @@
               "Nonrandomized bridge comparison; no significant dropout difference from TACE/SBRT"
             ]
           ]
+        },
+        {
+          "t": 1,
+          "when": "Definitive local treatment · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Arndt 2021",
+              "33230652",
+              "Retrospective, propensity matched. Solitary treatment-naïve HCC ≤4 cm; 68 patients, 24 matched pairs. RS versus MWA. Mean target-tumor PFS 57.8 versus 38.6 months (p=0.005); mean OS 59.0 versus 44.3 months (p=0.203). Small selected cohorts; local-control association, not proven OS superiority or equivalence. Title uses <4 cm; abstract uses ≤4 cm; do not derive an eligibility boundary from this report."
+            ],
+            [
+              "Abdalla 2026",
+              "42434250",
+              "Retrospective cohort. Solitary AJCC stage I HCC ≤4 cm; resin RS 20 versus MWA 40. RS tumors were larger. Main-text CR 85% versus 82.5%; adjusted PFS HR 0.56 (95% CI 0.20–1.51), OS HR 1.38 (0.30–6.34). No significant PFS/OS difference. Anatomy determined treatment; deaths within 1 month excluded. Abstract CR differs from main text; main-text denominator used. No equivalence conclusion."
+            ],
+            [
+              "Biederman 2017",
+              "27930089",
+              "Retrospective, propensity matched. Solitary HCC ≤3 cm; RS 41 versus TACE plus MWA 80 before matching. After matching: no significant difference in CR (p=0.94), time to progression (p=0.83), or OS (p>0.99). Comparator is TACE plus MWA, not MWA alone. Selection bias and limited power; nonsignificance does not establish equivalence."
+            ],
+            [
+              "Yu 2022",
+              "36100064",
+              "Retrospective, propensity matched. Solitary unresectable HCC ≥3 cm; TARE versus DEB-TACE plus ablation; 19 matched pairs. DCR 94.7% versus 100%; locoregional sessions 1.3 versus 1.9 (p=0.02). No significant survival, PFS or transplant-rate difference. Combined comparator; small selected cohorts. Results do not show that TARE is superior to ablation alone."
+            ]
+          ]
+        },
+        {
+          "t": 3,
+          "when": "Bridge to transplantation · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Yu 2026",
+              "42379392",
+              "Retrospective explant study. 53 transplanted patients; RS 28 versus TACE-MWA 25; 40 tumors per group, HCC ≤5 cm. Mean pathologic tumor necrosis 83.6% versus 79.0% (p=0.484); treatment modality was not independently associated with complete necrosis. Recipient-only, tumor-level analysis; cannot estimate waitlist dropout. Abstract CPN denominator is unclear; omit that percentage pending full text. Not an equivalence trial."
+            ],
+            [
+              "Kwong 2022",
+              "34358718",
+              "National observational cohort. 31,609 US HCC transplant candidates, 2003–2018; 24,145 received LRT. First-line radioembolization or thermal ablation was associated with less waitlist dropout than chemoembolization in adjusted analyses. Modality selection and era confounding remain; this is not a randomized comparison. Some registry years overlap later national reports."
+            ],
+            [
+              "Mohamed 2016",
+              "28799575",
+              "Retrospective recipient cohort. 60 recipients; 79 treatments across SBRT, TACE, RFA and Y90; only 9 Y90 and 9 RFA treatments. Complete pathologic response was reported in 75% after Y90 and 60% after RFA among evaluable explants. Very small, unequal evaluable groups, mixed treatments and recipient selection; illustrative pathology results, not a modality ranking or dropout comparison."
+            ]
+          ]
+        },
+        {
+          "t": 1,
+          "when": "Ablation with regional chemotherapy · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Oyama 2021",
+              "33687130",
+              "Randomized study. 70 early HCC patients: cisplatin HAIC before RFA versus RFA alone, 35 per arm. 3-year RFS 54.3% versus 34.3%; HR 0.597 (95% CI 0.320–1.091), p=0.094. Primary RFS endpoint was not significant. A secondary distant-intrahepatic recurrence signal does not establish routine HAIC addition or HAIC as a replacement for ablation."
+            ]
+          ]
+        },
+        {
+          "t": 1,
+          "when": "Conversion and combined treatment · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "You 2022",
+              "35993224",
+              "Retrospective, IPTW. 228 HCC patients with tumors >5 cm: HAIC followed by ablation 93 versus HAIC alone 135. Median OS 22.2 versus 14.5 months; PFS 8.5 versus 4.6 months (both p<0.001). Sequential-treatment selection and time-dependent bias remain. Tests addition of ablation after HAIC, not standalone HAIC versus ablation."
+            ]
+          ]
         }
       ]
     },
@@ -239,16 +312,40 @@
               "pain response 67 vs 22% vs BSC"
             ]
           ]
+        },
+        {
+          "t": 3,
+          "when": "Bridge to transplantation · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Mohamed 2016",
+              "28799575",
+              "Retrospective recipient cohort. 60 recipients; 79 treatments across SBRT, TACE, RFA and Y90; only 9 Y90 and 9 RFA treatments. Complete pathologic response was reported in 75% after Y90 and 60% after RFA among evaluable explants. Very small, unequal evaluable groups, mixed treatments and recipient selection; illustrative pathology results, not a modality ranking or dropout comparison."
+            ]
+          ]
+        },
+        {
+          "t": 2,
+          "when": "Radiation options · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Oladeru 2016",
+              "27284477",
+              "Retrospective registry analysis. SEER 2004–2011; 189 unresectable HCC patients, SIRT 77 versus coded SBRT 112. Adjusted OS HR 0.72 (95% CI 0.49–1.07) for SIRT versus SBRT; no significant difference. Older registry radiation coding and missing liver-function/dosimetry details limit applicability to modern RS versus SBRT. No equivalence conclusion."
+            ]
+          ]
         }
       ]
     },
     "hcc|y90": {
       "tier": 2,
-      "head": "Segmentectomy = curative-intent; lobar = bridge or palliative",
+      "head": "Segmentectomy can have curative intent; broader treatment may bridge, downstage or control disease",
       "roles": [
         {
           "t": 2,
-          "when": "Solitary ≤8 cm, unresectable / not ablatable; ablative segmental dosimetry",
+          "when": "Selected localized HCC with achievable ablative segmental dosimetry; strongest prospective evidence in small tumors unsuitable for resection or thermal ablation",
           "ev": [
             [
               "LEGACY",
@@ -264,17 +361,17 @@
         },
         {
           "t": 3,
-          "when": "Bridge / downstage to LT or resection; radiation lobectomy for FLR",
+          "when": "Bridge / downstage to LT or resection; distinguish general HCC tumor-control trials from transplant-specific outcomes",
           "ev": [
             [
               "PREMIERE RCT",
               "27575820",
-              "TTP >26 vs 6.8 mo vs cTACE; OS not significantly different; stopped at 45/124"
+              "TTP >26 vs 6.8 mo vs cTACE; OS not significantly different; stopped at 45/124. Small listed subgroup: 13/15 vs 7/10 transplanted; not a definitive transplant-endpoint trial."
             ],
             [
               "TRACE RCT",
               "35258371",
-              "OS 30.2 vs 15.6 mo vs DEB-TACE; phase II trial stopped early"
+              "General HCC phase II RCT, mainly BCLC B: OS 30.2 vs 15.6 mo vs DEB-TACE; stopped early. Not a dedicated bridging/dropout comparison."
             ],
             [
               "MERITS-LT",
@@ -311,6 +408,126 @@
               "DOSISPHERE-01",
               "33166497",
               "Personalized vs standard Y90 dosimetry: ORR 71 vs 36%; not a Y90–sorafenib comparison"
+            ]
+          ]
+        },
+        {
+          "t": 2,
+          "when": "Definitive local treatment · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Arndt 2021",
+              "33230652",
+              "Retrospective, propensity matched. Solitary treatment-naïve HCC ≤4 cm; 68 patients, 24 matched pairs. RS versus MWA. Mean target-tumor PFS 57.8 versus 38.6 months (p=0.005); mean OS 59.0 versus 44.3 months (p=0.203). Small selected cohorts; local-control association, not proven OS superiority or equivalence. Title uses <4 cm; abstract uses ≤4 cm; do not derive an eligibility boundary from this report."
+            ],
+            [
+              "Abdalla 2026",
+              "42434250",
+              "Retrospective cohort. Solitary AJCC stage I HCC ≤4 cm; resin RS 20 versus MWA 40. RS tumors were larger. Main-text CR 85% versus 82.5%; adjusted PFS HR 0.56 (95% CI 0.20–1.51), OS HR 1.38 (0.30–6.34). No significant PFS/OS difference. Anatomy determined treatment; deaths within 1 month excluded. Abstract CR differs from main text; main-text denominator used. No equivalence conclusion."
+            ],
+            [
+              "Biederman 2017",
+              "27930089",
+              "Retrospective, propensity matched. Solitary HCC ≤3 cm; RS 41 versus TACE plus MWA 80 before matching. After matching: no significant difference in CR (p=0.94), time to progression (p=0.83), or OS (p>0.99). Comparator is TACE plus MWA, not MWA alone. Selection bias and limited power; nonsignificance does not establish equivalence."
+            ],
+            [
+              "Yu 2022",
+              "36100064",
+              "Retrospective, propensity matched. Solitary unresectable HCC ≥3 cm; TARE versus DEB-TACE plus ablation; 19 matched pairs. DCR 94.7% versus 100%; locoregional sessions 1.3 versus 1.9 (p=0.02). No significant survival, PFS or transplant-rate difference. Combined comparator; small selected cohorts. Results do not show that TARE is superior to ablation alone."
+            ],
+            [
+              "De la Garza-Ramos 2022",
+              "35346857",
+              "Retrospective multisite cohort. Solitary HCC ≤8 cm; RS 57 versus resection 66. Target progression 5% versus 8%; adjusted overall-progression HR 1.16 (95% CI 0.51–2.63). Median OS not reached in either group. Propensity distributions were too dissimilar to match. Different surgical candidacy and liver function prevent a claim of equivalence to resection."
+            ]
+          ]
+        },
+        {
+          "t": 3,
+          "when": "Bridge to transplantation · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Yu 2026",
+              "42379392",
+              "Retrospective explant study. 53 transplanted patients; RS 28 versus TACE-MWA 25; 40 tumors per group, HCC ≤5 cm. Mean pathologic tumor necrosis 83.6% versus 79.0% (p=0.484); treatment modality was not independently associated with complete necrosis. Recipient-only, tumor-level analysis; cannot estimate waitlist dropout. Abstract CPN denominator is unclear; omit that percentage pending full text. Not an equivalence trial."
+            ],
+            [
+              "Kwong 2022",
+              "34358718",
+              "National observational cohort. 31,609 US HCC transplant candidates, 2003–2018; 24,145 received LRT. First-line radioembolization or thermal ablation was associated with less waitlist dropout than chemoembolization in adjusted analyses. Modality selection and era confounding remain; this is not a randomized comparison. Some registry years overlap later national reports."
+            ],
+            [
+              "Fakhoury 2026",
+              "41056563",
+              "National observational cohort. 8,367 OPTN candidates, 2016–2024; sole modality TARE 2,895 versus TACE 5,472. Death/too-sick dropout sHR 0.83 (95% CI 0.74–0.93); complete-necrosis aOR 2.24 (1.88–2.67). No significant adjusted OS, post-LT OS or recurrence difference. Switching/mixed LRT and LDLT excluded; overlaps Kim registry population. Final issue 2026, online 2025. Adjusted overall survival HR 0.94 (95% CI 0.85–1.03)."
+            ],
+            [
+              "Kim 2026",
+              "41580092",
+              "National observational cohort, IPTW. 5,677 HCC-exception candidates, 2019–2024; first-line TARE versus TACE. Dropout HR 0.78 (95% CI 0.69–0.89); 2-year dropout 14.2% versus 19.0%. One LRT only: 80.6% versus 57.8%. Adjusted association, not causal proof. Overlaps Fakhoury OPTN cohort; do not count as independent replication. Current review is abstract-level; full text pending."
+            ],
+            [
+              "Gabr 2017",
+              "28668402",
+              "Retrospective recipient cohort. 172 transplanted patients: Y90 93 versus TACE 79. Post-LT recurrence 9% versus 8%; RFS and OS did not differ significantly. Only recipients were analyzed. This cannot establish equivalent bridging success or compare dropout before transplantation."
+            ],
+            [
+              "Benkö 2022",
+              "35619164",
+              "Retrospective recipient cohort. 131 recipients: Y90 44 versus TACE 87. Within Milan initially: 20.5% versus 65.5%. Post-LT recurrence 23% versus 11% (p=0.1224); no significant survival difference. Major baseline imbalance; pre-LT dropouts (6 Y90, 8 TACE) excluded. Recipient outcomes do not answer the waitlist-dropout question."
+            ],
+            [
+              "Mohamed 2016",
+              "28799575",
+              "Retrospective recipient cohort. 60 recipients; 79 treatments across SBRT, TACE, RFA and Y90; only 9 Y90 and 9 RFA treatments. Complete pathologic response was reported in 75% after Y90 and 60% after RFA among evaluable explants. Very small, unequal evaluable groups, mixed treatments and recipient selection; illustrative pathology results, not a modality ranking or dropout comparison."
+            ]
+          ]
+        },
+        {
+          "t": 3,
+          "when": "Downstaging · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Lewandowski 2009",
+              "19552767",
+              "Retrospective comparison. UNOS T3 HCC; 43 TARE versus 43 TACE patients. Downstaging to T2: 58% versus 31%. The often-quoted 61% versus 37% is partial response, not downstaging. Older nonrandomized cohort predating current UNOS-DS rules; supports a downstaging signal, not universal superiority."
+            ],
+            [
+              "Xu 2025",
+              "39808828",
+              "Prospective multicenter cohort. MERITS-LT: 326 within UNOS-DS and 190 all-comers beyond UNOS-DS; 2015–2023. In the all-comers subgroup, 2-year successful downstaging was 74% with initial Y90 versus 65% with TACE (p<0.001). Treatment was not randomized; subgroup finding does not expand allocation criteria. Overlaps earlier MERITS-LT enrollment. Earlier within-UNOS-DS study found no significant modality difference."
+            ]
+          ]
+        },
+        {
+          "t": 2,
+          "when": "Radiation options · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Oladeru 2016",
+              "27284477",
+              "Retrospective registry analysis. SEER 2004–2011; 189 unresectable HCC patients, SIRT 77 versus coded SBRT 112. Adjusted OS HR 0.72 (95% CI 0.49–1.07) for SIRT versus SBRT; no significant difference. Older registry radiation coding and missing liver-function/dosimetry details limit applicability to modern RS versus SBRT. No equivalence conclusion."
+            ]
+          ]
+        },
+        {
+          "t": 2,
+          "when": "Arterial treatment · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Kolligs 2015",
+              "25443863",
+              "Randomized pilot (SIRTACE). 28 unresectable HCC patients: single-session SIRT 13 versus repeated TACE 15. DCR 76.9% versus 73.3%; no significant difference in 12-week health-related quality of life. Safety/QoL pilot, not powered for survival or transplant endpoints. Complements, rather than confirms, PREMIERE and TRACE."
+            ],
+            [
+              "Pitton 2015",
+              "25373796",
+              "Randomized pilot. 24 predominantly BCLC-B HCC patients: SIRT versus DEB-TACE, 12 per arm. Median PFS 180 versus 216 days; OS 592 versus 788 days; neither difference significant. Four liver-failure deaths occurred after SIRT. Small trial with older delivery/dosimetry; no class-wide Y90 survival advantage."
             ]
           ]
         }
@@ -384,6 +601,99 @@
               "Lenvatinib+pembrolizumab+TACE: PFS 14.6 vs 10.0 mo; OS not significant; grade ≥3 toxicity 71 vs 32%; Child-Pugh A"
             ]
           ]
+        },
+        {
+          "t": 4,
+          "when": "Definitive local treatment · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Biederman 2017",
+              "27930089",
+              "Retrospective, propensity matched. Solitary HCC ≤3 cm; RS 41 versus TACE plus MWA 80 before matching. After matching: no significant difference in CR (p=0.94), time to progression (p=0.83), or OS (p>0.99). Comparator is TACE plus MWA, not MWA alone. Selection bias and limited power; nonsignificance does not establish equivalence."
+            ],
+            [
+              "Yu 2022",
+              "36100064",
+              "Retrospective, propensity matched. Solitary unresectable HCC ≥3 cm; TARE versus DEB-TACE plus ablation; 19 matched pairs. DCR 94.7% versus 100%; locoregional sessions 1.3 versus 1.9 (p=0.02). No significant survival, PFS or transplant-rate difference. Combined comparator; small selected cohorts. Results do not show that TARE is superior to ablation alone."
+            ]
+          ]
+        },
+        {
+          "t": 3,
+          "when": "Bridge to transplantation · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Yu 2026",
+              "42379392",
+              "Retrospective explant study. 53 transplanted patients; RS 28 versus TACE-MWA 25; 40 tumors per group, HCC ≤5 cm. Mean pathologic tumor necrosis 83.6% versus 79.0% (p=0.484); treatment modality was not independently associated with complete necrosis. Recipient-only, tumor-level analysis; cannot estimate waitlist dropout. Abstract CPN denominator is unclear; omit that percentage pending full text. Not an equivalence trial."
+            ],
+            [
+              "Kwong 2022",
+              "34358718",
+              "National observational cohort. 31,609 US HCC transplant candidates, 2003–2018; 24,145 received LRT. First-line radioembolization or thermal ablation was associated with less waitlist dropout than chemoembolization in adjusted analyses. Modality selection and era confounding remain; this is not a randomized comparison. Some registry years overlap later national reports."
+            ],
+            [
+              "Fakhoury 2026",
+              "41056563",
+              "National observational cohort. 8,367 OPTN candidates, 2016–2024; sole modality TARE 2,895 versus TACE 5,472. Death/too-sick dropout sHR 0.83 (95% CI 0.74–0.93); complete-necrosis aOR 2.24 (1.88–2.67). No significant adjusted OS, post-LT OS or recurrence difference. Switching/mixed LRT and LDLT excluded; overlaps Kim registry population. Final issue 2026, online 2025. Adjusted overall survival HR 0.94 (95% CI 0.85–1.03)."
+            ],
+            [
+              "Kim 2026",
+              "41580092",
+              "National observational cohort, IPTW. 5,677 HCC-exception candidates, 2019–2024; first-line TARE versus TACE. Dropout HR 0.78 (95% CI 0.69–0.89); 2-year dropout 14.2% versus 19.0%. One LRT only: 80.6% versus 57.8%. Adjusted association, not causal proof. Overlaps Fakhoury OPTN cohort; do not count as independent replication. Current review is abstract-level; full text pending."
+            ],
+            [
+              "Gabr 2017",
+              "28668402",
+              "Retrospective recipient cohort. 172 transplanted patients: Y90 93 versus TACE 79. Post-LT recurrence 9% versus 8%; RFS and OS did not differ significantly. Only recipients were analyzed. This cannot establish equivalent bridging success or compare dropout before transplantation."
+            ],
+            [
+              "Benkö 2022",
+              "35619164",
+              "Retrospective recipient cohort. 131 recipients: Y90 44 versus TACE 87. Within Milan initially: 20.5% versus 65.5%. Post-LT recurrence 23% versus 11% (p=0.1224); no significant survival difference. Major baseline imbalance; pre-LT dropouts (6 Y90, 8 TACE) excluded. Recipient outcomes do not answer the waitlist-dropout question."
+            ],
+            [
+              "Mohamed 2016",
+              "28799575",
+              "Retrospective recipient cohort. 60 recipients; 79 treatments across SBRT, TACE, RFA and Y90; only 9 Y90 and 9 RFA treatments. Complete pathologic response was reported in 75% after Y90 and 60% after RFA among evaluable explants. Very small, unequal evaluable groups, mixed treatments and recipient selection; illustrative pathology results, not a modality ranking or dropout comparison."
+            ]
+          ]
+        },
+        {
+          "t": 3,
+          "when": "Downstaging · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Lewandowski 2009",
+              "19552767",
+              "Retrospective comparison. UNOS T3 HCC; 43 TARE versus 43 TACE patients. Downstaging to T2: 58% versus 31%. The often-quoted 61% versus 37% is partial response, not downstaging. Older nonrandomized cohort predating current UNOS-DS rules; supports a downstaging signal, not universal superiority."
+            ],
+            [
+              "Xu 2025",
+              "39808828",
+              "Prospective multicenter cohort. MERITS-LT: 326 within UNOS-DS and 190 all-comers beyond UNOS-DS; 2015–2023. In the all-comers subgroup, 2-year successful downstaging was 74% with initial Y90 versus 65% with TACE (p<0.001). Treatment was not randomized; subgroup finding does not expand allocation criteria. Overlaps earlier MERITS-LT enrollment. Earlier within-UNOS-DS study found no significant modality difference."
+            ]
+          ]
+        },
+        {
+          "t": 4,
+          "when": "Arterial treatment · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Kolligs 2015",
+              "25443863",
+              "Randomized pilot (SIRTACE). 28 unresectable HCC patients: single-session SIRT 13 versus repeated TACE 15. DCR 76.9% versus 73.3%; no significant difference in 12-week health-related quality of life. Safety/QoL pilot, not powered for survival or transplant endpoints. Complements, rather than confirms, PREMIERE and TRACE."
+            ],
+            [
+              "Pitton 2015",
+              "25373796",
+              "Randomized pilot. 24 predominantly BCLC-B HCC patients: SIRT versus DEB-TACE, 12 per arm. Median PFS 180 versus 216 days; OS 592 versus 788 days; neither difference significant. Four liver-failure deaths occurred after SIRT. Small trial with older delivery/dosimetry; no class-wide Y90 survival advantage."
+            ]
+          ]
         }
       ]
     },
@@ -431,6 +741,42 @@
               "Li ph III",
               "36525610",
               "DFS 20.3 vs 10.0 mo; OS NS"
+            ]
+          ]
+        },
+        {
+          "t": 4,
+          "when": "Ablation with regional chemotherapy · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Oyama 2021",
+              "33687130",
+              "Randomized study. 70 early HCC patients: cisplatin HAIC before RFA versus RFA alone, 35 per arm. 3-year RFS 54.3% versus 34.3%; HR 0.597 (95% CI 0.320–1.091), p=0.094. Primary RFS endpoint was not significant. A secondary distant-intrahepatic recurrence signal does not establish routine HAIC addition or HAIC as a replacement for ablation."
+            ]
+          ]
+        },
+        {
+          "t": 4,
+          "when": "Conversion and combined treatment · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "You 2022",
+              "35993224",
+              "Retrospective, IPTW. 228 HCC patients with tumors >5 cm: HAIC followed by ablation 93 versus HAIC alone 135. Median OS 22.2 versus 14.5 months; PFS 8.5 versus 4.6 months (both p<0.001). Sequential-treatment selection and time-dependent bias remain. Tests addition of ablation after HAIC, not standalone HAIC versus ablation."
+            ]
+          ]
+        },
+        {
+          "t": 4,
+          "when": "Advanced disease · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Kudo 2018",
+              "29631810",
+              "Randomized phase III (SILIUS). 206 advanced HCC patients; low-dose cisplatin/5-FU HAIC plus sorafenib versus sorafenib. Median OS 11.8 versus 11.5 months; HR 1.009 (95% CI 0.743–1.371), p=0.955. Negative OS trial. Regimen differs from FOLFOX-HAIC trials; increased hematologic toxicity. Do not generalize a benefit across all HAIC regimens."
             ]
           ]
         }
@@ -504,6 +850,18 @@
               "2-y LC 94%, OS 46.5%"
             ]
           ]
+        },
+        {
+          "t": 2,
+          "when": "Radiation options · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Sebastian 2019",
+              "31517072",
+              "Retrospective NCDB comparison. Main-text analysis: SBRT 27, chemoradiation 54, TARE 60; nonmetastatic node-negative unresected iCCA. Adjusted OS HR 0.42 (95% CI 0.21–0.84) for SBRT versus TARE. TARE tumors were larger/more often multifocal or vascular-invasive. Strong selection bias and abstract/main-text cohort-count discrepancy; not causal superiority or equivalent treatment eligibility."
+            ]
+          ]
         }
       ]
     },
@@ -543,6 +901,30 @@
               "few non-HCC cases"
             ]
           ]
+        },
+        {
+          "t": 4,
+          "when": "Unresectable disease · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Akinwande 2017",
+              "30191056",
+              "Retrospective cohort. 40 unresectable iCCA patients: Y90 25 versus chemoembolization 15. DCR 48% versus 46%; adverse events 26% versus 20%; no significant differences. Small heterogeneous cohort focused on imaging response/toxicity; does not establish equivalent survival or curative efficacy."
+            ]
+          ]
+        },
+        {
+          "t": 4,
+          "when": "Radiation options · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Sebastian 2019",
+              "31517072",
+              "Retrospective NCDB comparison. Main-text analysis: SBRT 27, chemoradiation 54, TARE 60; nonmetastatic node-negative unresected iCCA. Adjusted OS HR 0.42 (95% CI 0.21–0.84) for SBRT versus TARE. TARE tumors were larger/more often multifocal or vascular-invasive. Strong selection bias and abstract/main-text cohort-count discrepancy; not causal superiority or equivalent treatment eligibility."
+            ]
+          ]
         }
       ]
     },
@@ -558,6 +940,28 @@
               "Kiefer 2-centre",
               "21425151",
               "mOS 15 mo; 28 vs 16 mo with systemic"
+            ]
+          ]
+        },
+        {
+          "t": 4,
+          "when": "Unresectable disease · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Cai 2021",
+              "33868997",
+              "Retrospective cohort. 126 unresectable iCCA patients; mFOLFOX-HAIC versus TACE. 1-year OS 60.2% versus 42.9%; 2-year OS 38.7% versus 29.4% (OS comparison p=0.028). PFS did not differ significantly. Nonrandomized, regional catheter regimen. Does not establish pump-FUDR superiority or replace contemporary systemic therapy."
+            ],
+            [
+              "Zhang 2025",
+              "40216615",
+              "Retrospective multicenter cohort. 181 patients: HAIC 24, conventional TACE 73, DEB-TACE 84. HAIC versus conventional TACE median OS 10.3 versus 5.1 months (p=0.0042); no significant HAIC-versus-DEB-TACE difference reported. Very small HAIC cohort; treatment selection and TACE formulation matter. Do not generalize the comparison to all arterial therapy."
+            ],
+            [
+              "Akinwande 2017",
+              "30191056",
+              "Retrospective cohort. 40 unresectable iCCA patients: Y90 25 versus chemoembolization 15. DCR 48% versus 46%; adverse events 26% versus 20%; no significant differences. Small heterogeneous cohort focused on imaging response/toxicity; does not establish equivalent survival or curative efficacy."
             ]
           ]
         }
@@ -606,6 +1010,40 @@
               "PUMP-2",
               "41082695",
               "5/50 (10%) resected; no randomized comparison with modern chemo-immunotherapy"
+            ]
+          ]
+        },
+        {
+          "t": 4,
+          "when": "Unresectable disease · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Cai 2021",
+              "33868997",
+              "Retrospective cohort. 126 unresectable iCCA patients; mFOLFOX-HAIC versus TACE. 1-year OS 60.2% versus 42.9%; 2-year OS 38.7% versus 29.4% (OS comparison p=0.028). PFS did not differ significantly. Nonrandomized, regional catheter regimen. Does not establish pump-FUDR superiority or replace contemporary systemic therapy."
+            ],
+            [
+              "Zhang 2025",
+              "40216615",
+              "Retrospective multicenter cohort. 181 patients: HAIC 24, conventional TACE 73, DEB-TACE 84. HAIC versus conventional TACE median OS 10.3 versus 5.1 months (p=0.0042); no significant HAIC-versus-DEB-TACE difference reported. Very small HAIC cohort; treatment selection and TACE formulation matter. Do not generalize the comparison to all arterial therapy."
+            ],
+            [
+              "Franssen 2024",
+              "37814188",
+              "Retrospective cross-center cohort. 268 liver-confined unresectable iCCA patients: HAIP ± systemic 192 versus gemcitabine/cisplatin 76. Median OS 27.7 versus 11.8 months; approximately one third of HAIP patients alive at 3 years. Nonrandomized center, era and treatment-line differences; 71.9% of HAIP patients also received systemic treatment. Comparator predates current chemoimmunotherapy; not HAI versus Y90 or ablation."
+            ]
+          ]
+        },
+        {
+          "t": 4,
+          "when": "Multifocal disease · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Franssen 2022",
+              "35544131",
+              "Retrospective comparison. 319 multifocal iCCA patients: unresectable HAIP-FUDR 141 versus resection 178 across different centers/eras. Median OS 20.3 versus 18.9 months; adjusted HR 0.75 (95% CI 0.55–1.03), p=0.07. HAIP patients had substantially more bilobar/multifocal disease. Not an equivalence trial or reason to deny resection to an otherwise suitable patient; does not distinguish all satellites from metastases."
             ]
           ]
         }
@@ -658,6 +1096,30 @@
               "8-y OS 35.9 vs 8.9%"
             ]
           ]
+        },
+        {
+          "t": 3,
+          "when": "After complete local clearance · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Gelli 2026",
+              "42018958",
+              "Randomized phase II. 99 patients after resection/ablation of ≥4 CRLM: HAI-oxaliplatin 50 versus IV oxaliplatin 49, both with IV LV5FU2. Hepatic RFS 25 versus 12 months, HR 0.63 (95% CI 0.40–0.99); OS HR 0.61 (0.33–1.12), not significant. Grade 3–4 AEs 58% versus 32%. Adjuvant treatment after local clearance, not HAI instead of ablation. Oxaliplatin regimen and high-burden population differ from pump-FUDR PUMP and HARVEST."
+            ]
+          ]
+        },
+        {
+          "t": 1,
+          "when": "Definitive local treatment · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Risumlund 2026",
+              "42829779",
+              "Randomized phase II (LAVA-CRLM). 1–3 CRLM, each ≤4 cm and suitable for both treatments; 100 randomized, 92 modified ITT. 1-year freedom from local progression: MWA 77.7% versus SBRT 83.0%; HR 0.87 (95% CI 0.43–1.74), p=0.70. Grade ≥2 toxicity 25% versus 3%. No demonstrated local-control difference; wide CI and postrandomization exclusions. No survival/noninferiority claim. Grade ≥3 toxicity occurred only after MWA, including one treatment-related death."
+            ]
+          ]
         }
       ]
     },
@@ -683,6 +1145,18 @@
               "SABR-COMET LT",
               "32484754",
               "Mixed-primary oligometastases: 5-y OS 42.3 vs 17.7%; not a CRLM-only estimate"
+            ]
+          ]
+        },
+        {
+          "t": 2,
+          "when": "Definitive local treatment · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Risumlund 2026",
+              "42829779",
+              "Randomized phase II (LAVA-CRLM). 1–3 CRLM, each ≤4 cm and suitable for both treatments; 100 randomized, 92 modified ITT. 1-year freedom from local progression: MWA 77.7% versus SBRT 83.0%; HR 0.87 (95% CI 0.43–1.74), p=0.70. Grade ≥2 toxicity 25% versus 3%. No demonstrated local-control difference; wide CI and postrandomization exclusions. No survival/noninferiority claim. Grade ≥3 toxicity occurred only after MWA, including one treatment-related death."
             ]
           ]
         }
@@ -729,6 +1203,40 @@
               "no OS benefit"
             ]
           ]
+        },
+        {
+          "t": 4,
+          "when": "Unresectable disease · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Saadat 2025",
+              "40709764",
+              "Retrospective multicenter, propensity matched. 708 HAI versus 481 TARE patients; matched within prior systemic-therapy lines. TARE-versus-HAI mortality HR: 1 prior line 1.46 (95% CI 1.02–2.08); 2 lines 1.96 (1.32–2.89); 3–4 lines 0.88 (0.57–1.35). HAI came from one high-volume center, TARE from five others. More subsequent systemic therapy/resection after HAI; treatment and center effects cannot be separated. Not a comparison with ablation."
+            ],
+            [
+              "Dhir 2018",
+              "29181682",
+              "Retrospective comparison. 97 pretreated liver-only CRLM patients: HAI 48 versus Y90 49, with modern systemic therapy. Reported survival favored HAI; treatment timing and survival time origin materially affect interpretation. Abstract/time-origin reporting and later discussion disagree; do not reproduce a pooled median or use this small cohort to establish superiority. Prefer the larger stratified Saadat analysis."
+            ],
+            [
+              "Mokkarala 2019",
+              "31177151",
+              "Retrospective, propensity matched. 202 CRLM patients; 44 matched pairs, DEB-TACE versus TARE. Adjusted OS association for DEB-TACE: HR 0.94 (95% CI 0.54–1.65), p=0.83; toxicity trend 27% versus 9.1%, p=0.057. No significant survival difference; baseline burden and extrahepatic disease varied. Not an equivalence trial."
+            ]
+          ]
+        },
+        {
+          "t": 4,
+          "when": "Regional combination treatment · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Gray 2001",
+              "11843249",
+              "Randomized phase III. 74 patients with bilobar unresectable CRLM: Y90 plus regional FUDR versus regional FUDR alone. Tumor-volume response 50% versus 24% (p=0.03); liver progression was delayed. Tests adding Y90 to HAI, not Y90 versus HAI alone. Older chemotherapy era; no established overall-survival benefit. Not evidence against ablation of small lesions."
+            ]
+          ]
         }
       ]
     },
@@ -744,6 +1252,18 @@
               "Fiorentini RCT (n=74)",
               "22493375",
               "DEBIRI vs FOLFIRI OS 22 vs 15 mo"
+            ]
+          ]
+        },
+        {
+          "t": 4,
+          "when": "Unresectable disease · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Mokkarala 2019",
+              "31177151",
+              "Retrospective, propensity matched. 202 CRLM patients; 44 matched pairs, DEB-TACE versus TARE. Adjusted OS association for DEB-TACE: HR 0.94 (95% CI 0.54–1.65), p=0.83; toxicity trend 27% versus 9.1%, p=0.057. No significant survival difference; baseline burden and extrahepatic disease varied. Not an equivalence trial."
             ]
           ]
         }
@@ -820,6 +1340,64 @@
               "Hill technical series",
               "37210451",
               "7 transplants: 5 for biliary injury, 2 residual tumour; difficult arterial reconstruction"
+            ]
+          ]
+        },
+        {
+          "t": 3,
+          "when": "Unresectable disease · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Saadat 2025",
+              "40709764",
+              "Retrospective multicenter, propensity matched. 708 HAI versus 481 TARE patients; matched within prior systemic-therapy lines. TARE-versus-HAI mortality HR: 1 prior line 1.46 (95% CI 1.02–2.08); 2 lines 1.96 (1.32–2.89); 3–4 lines 0.88 (0.57–1.35). HAI came from one high-volume center, TARE from five others. More subsequent systemic therapy/resection after HAI; treatment and center effects cannot be separated. Not a comparison with ablation."
+            ],
+            [
+              "Dhir 2018",
+              "29181682",
+              "Retrospective comparison. 97 pretreated liver-only CRLM patients: HAI 48 versus Y90 49, with modern systemic therapy. Reported survival favored HAI; treatment timing and survival time origin materially affect interpretation. Abstract/time-origin reporting and later discussion disagree; do not reproduce a pooled median or use this small cohort to establish superiority. Prefer the larger stratified Saadat analysis."
+            ]
+          ]
+        },
+        {
+          "t": 3,
+          "when": "Regional combination treatment · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Gray 2001",
+              "11843249",
+              "Randomized phase III. 74 patients with bilobar unresectable CRLM: Y90 plus regional FUDR versus regional FUDR alone. Tumor-volume response 50% versus 24% (p=0.03); liver progression was delayed. Tests adding Y90 to HAI, not Y90 versus HAI alone. Older chemotherapy era; no established overall-survival benefit. Not evidence against ablation of small lesions."
+            ]
+          ]
+        },
+        {
+          "t": 3,
+          "when": "Conversion treatment · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Boilève 2026",
+              "41118066",
+              "Prematurely closed randomized phase II (SULTAN). Persistently unresectable liver-only CRLM after systemic induction; 11 HAI-oxaliplatin plus systemic versus 9 systemic alone randomized. Conversion to resection/ablation 7/11 (64%) versus 2/9 (22%), p=0.09; PFS 12.6 versus 4.37 months. Very small, early-closed trial; conversion endpoint not significant. Supports further study, not a confirmed conversion advantage or direct comparison against ablation."
+            ]
+          ]
+        },
+        {
+          "t": 3,
+          "when": "After complete local clearance · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Wang 2025",
+              "39644535",
+              "Prematurely stopped randomized trial (HARVEST). 92 randomized after CRLM surgery; modified ITT 77, HAI-FUDR plus systemic 38 versus systemic 39. 3-year RFS 31.4% versus 34.4%, p=0.28. Stopped for FUDR supply shortage; primary endpoint negative. Exploratory early-RFS/subgroup signals do not establish routine postoperative HAI."
+            ],
+            [
+              "Gelli 2026",
+              "42018958",
+              "Randomized phase II. 99 patients after resection/ablation of ≥4 CRLM: HAI-oxaliplatin 50 versus IV oxaliplatin 49, both with IV LV5FU2. Hepatic RFS 25 versus 12 months, HR 0.63 (95% CI 0.40–0.99); OS HR 0.61 (0.33–1.12), not significant. Grade 3–4 AEs 58% versus 32%. Adjuvant treatment after local clearance, not HAI instead of ablation. Oxaliplatin regimen and high-burden population differ from pump-FUDR PUMP and HARVEST."
             ]
           ]
         }
@@ -922,6 +1500,45 @@
               "15 of 52 with >1-y follow-up"
             ]
           ]
+        },
+        {
+          "t": 4,
+          "when": "Arterial disease control · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Elf 2018",
+              "29167951",
+              "Randomized pilot. 11 small-intestinal NET patients: Y90 6 versus bland embolization 5. 3-month RECIST response 0/6 versus 5/5 (p=0.0022); 6-month response 2/6 versus 4/5, not significant. Tiny study; response timing differs after radiation. No survival ranking and no extrapolation to all NET primaries."
+            ],
+            [
+              "Egger 2020",
+              "32032719",
+              "Retrospective two-center cohort. 248 NELM patients: TARE 51 versus TACE 197. Initial DCR 83% versus 96% (p<0.01); no significant OS or PFS difference. TARE was usually outpatient. Nonrandomized baseline and treatment-selection differences. Does not prove equivalence; treatment burden and delayed toxicity also matter."
+            ],
+            [
+              "Do Minh 2017",
+              "28677067",
+              "Retrospective, propensity analysis. 192 GEP-NET patients: cTACE 122, DEB-TACE 26, Y90 44. Median OS: cTACE 33.8, DEB-TACE 21.7, Y90 23.6 months; adjusted analysis favored cTACE over Y90 (p=0.02). Older nonrandomized cohort; confounding and technique differences prevent a universal ranking. Consider alongside discordant Egger results."
+            ],
+            [
+              "Yuan 2026",
+              "42006283",
+              "Retrospective single-center cohort. 30 lung-carcinoid patients, 53 primary embolization procedures; Y90 versus bland TAE. Local progression-free survival 30.57 versus 13.9 months (p=0.01); OS 43.5 versus 40.6 months (p=0.49). Primary-specific, small retrospective study with repeated procedures and systemic-treatment confounding; not generalizable to all NELM."
+            ]
+          ]
+        },
+        {
+          "t": 4,
+          "when": "Delayed hepatic toxicity · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Currie 2020",
+              "33004146",
+              "Retrospective survivor cohort. 91 NET patients surviving ≥1 year: TACE 63 versus TARE 28. Chronic grade ≥3 hepatic toxicity: 22% versus 29%; TARE injuries more often clinical decompensation. Conditioned on 1-year survival; small nonrandomized series. These are not baseline risks for every patient; prolonged survival makes late liver injury relevant."
+            ]
+          ]
         }
       ]
     },
@@ -947,6 +1564,45 @@
               "Bhagat ph II",
               "22722717",
               "DEB-TACE: biloma 54%"
+            ]
+          ]
+        },
+        {
+          "t": 4,
+          "when": "Arterial disease control · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Elf 2018",
+              "29167951",
+              "Randomized pilot. 11 small-intestinal NET patients: Y90 6 versus bland embolization 5. 3-month RECIST response 0/6 versus 5/5 (p=0.0022); 6-month response 2/6 versus 4/5, not significant. Tiny study; response timing differs after radiation. No survival ranking and no extrapolation to all NET primaries."
+            ],
+            [
+              "Egger 2020",
+              "32032719",
+              "Retrospective two-center cohort. 248 NELM patients: TARE 51 versus TACE 197. Initial DCR 83% versus 96% (p<0.01); no significant OS or PFS difference. TARE was usually outpatient. Nonrandomized baseline and treatment-selection differences. Does not prove equivalence; treatment burden and delayed toxicity also matter."
+            ],
+            [
+              "Do Minh 2017",
+              "28677067",
+              "Retrospective, propensity analysis. 192 GEP-NET patients: cTACE 122, DEB-TACE 26, Y90 44. Median OS: cTACE 33.8, DEB-TACE 21.7, Y90 23.6 months; adjusted analysis favored cTACE over Y90 (p=0.02). Older nonrandomized cohort; confounding and technique differences prevent a universal ranking. Consider alongside discordant Egger results."
+            ],
+            [
+              "Yuan 2026",
+              "42006283",
+              "Retrospective single-center cohort. 30 lung-carcinoid patients, 53 primary embolization procedures; Y90 versus bland TAE. Local progression-free survival 30.57 versus 13.9 months (p=0.01); OS 43.5 versus 40.6 months (p=0.49). Primary-specific, small retrospective study with repeated procedures and systemic-treatment confounding; not generalizable to all NELM."
+            ]
+          ]
+        },
+        {
+          "t": 4,
+          "when": "Delayed hepatic toxicity · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Currie 2020",
+              "33004146",
+              "Retrospective survivor cohort. 91 NET patients surviving ≥1 year: TACE 63 versus TARE 28. Chronic grade ≥3 hepatic toxicity: 22% versus 29%; TARE injuries more often clinical decompensation. Conditioned on 1-year survival; small nonrandomized series. These are not baseline risks for every patient; prolonged survival makes late liver injury relevant."
             ]
           ]
         }
@@ -1124,6 +1780,18 @@
               "126 patients; OS 10.2 vs 6.7 months. Effect is the stent comparison within HAIC, not proof of HAI benefit."
             ]
           ]
+        },
+        {
+          "t": 5,
+          "when": "Nontransplant disease control · comparative evidence",
+          "comparative": true,
+          "ev": [
+            [
+              "Dai 2026",
+              "42433279",
+              "Prospective nonrandomized cohort. 127 advanced pCCA patients after biliary drainage: catheter HAIC 63 versus best supportive care 64; preserved reserve, no distant/N2 disease. Median OS 17.63 versus 6.10 months. Patient preference/clinical selection; no contemporary systemic-therapy comparator. Hypothesis-generating disease-control evidence, not established standard, cure, or a transplant-bridging protocol."
+            ]
+          ]
         }
       ]
     },
@@ -1235,11 +1903,11 @@
   "summary": [
     [
       1,
-      "Randomized comparisons support ablation for selected small HCC and CRLM. A nonsignificant difference does not establish equivalence: read each trial’s population, endpoint and limits."
+      "Ablation has randomized comparative evidence in selected small HCC and CRLM. Treatment intent and certainty of comparative benefit are separate: nonsignificance does not establish equivalence, and curative intent does not guarantee cure."
     ],
     [
       2,
-      "Selected definitive local treatment: SBRT or Y-90 segmentectomy in HCC; SBRT for selected CRLM or iCCA; ablation for small iCCA. Evidence and feasibility differ by tumour. NELM ablation is cytoreductive or symptom-directed, with no established curative survival benefit."
+      "Selected definitive local treatment includes Y90 radiation segmentectomy or SBRT in HCC, and ablation or SBRT in other specified settings. Anatomy, margins or dosimetry, liver reserve and tumor biology determine feasibility. Direct comparisons and their limits appear within each modality."
     ],
     [
       3,
@@ -1255,13 +1923,15 @@
     ]
   ],
   "notes": [
-    "Resection and liver transplantation remain the reference standard; tiers describe each modality's role relative to them.",
+    "Clinical role, evidence strength and treatment feasibility are separate judgments. Resection, transplantation, ablation and selected radiation treatments have different eligible populations; cross-study survival numbers cannot rank them.",
     "Cell color and number describe clinical role, not evidence grade. Chips include other roles and cautions; numbers beside studies are PubMed IDs.",
     "*RETNET results presented at NANETS 2025 (abstract); not yet PubMed-indexed — PMID shown is the protocol.",
     "Abbrev.: LT liver transplant; LC local control; LTP local tumour progression; FFLP freedom from local progression; MVI macrovascular invasion; PVTT portal vein tumour thrombus; EHD extrahepatic disease; BED biologically effective dose; FLR future liver remnant; DCR disease control rate; HE hepatic encephalopathy.",
     "Dutch adjuvant PUMP (ASCO LBA3506), EA2222 (unresectable CRLM) and iCCA PUMP-2 are distinct trials. PUMP is an abstract with OS immature; do not extrapolate its low-risk resectable population to conversion treatment. HAI does not establish MELD exception or transplant eligibility.",
     "pCCA is assessed separately from iCCA. No standalone local modality has established curative equivalence to resection or protocol transplantation for primary pCCA.",
-    "ABCDE review, 23 October 2026: tiers describe clinical intent, not guaranteed cure, a formal evidence grade, or approval. Read each endpoint and time origin. pCCA RT may support protocol LT or selected local control; RT is not specifically mandated by OPTN. Clinical benefit, allocation eligibility and institutional approval are separate. Other tumour selection criteria were not expanded by this pCCA review."
+    "ABCDE review, 23 October 2026: tiers describe clinical intent, not guaranteed cure, a formal evidence grade, or approval. Read each endpoint and time origin. pCCA RT may support protocol LT or selected local control; RT is not specifically mandated by OPTN. Clinical benefit, allocation eligibility and institutional approval are separate. Other tumour selection criteria were not expanded by this pCCA review.",
+    "Comparative studies are grouped by clinical setting. Pump-based FUDR HAI, oxaliplatin infusion and catheter-based FOLFOX/cisplatin HAIC are different regimens. Add-on and post-clearance studies do not establish that HAI can replace ablation. Overlapping registry and institutional cohorts are not independent replications.",
+    "Comparative evidence search: 3 November 2026. Some newer reports are abstract-verified while available full texts were checked; evidence-library entries identify review depth. TMC links provide access to papers with a pending PDF."
   ],
   "refs": [
     {
@@ -2071,6 +2741,326 @@
       "j": "BJS Open",
       "y": "2023",
       "doi": "10.1093/bjsopen/zrad025"
+    },
+    {
+      "pmid": "33230652",
+      "au": "Arndt",
+      "j": "Cardiovasc Intervent Radiol",
+      "y": "2021",
+      "t": "Evaluation of Medium-Term Efficacy of Y90 Radiation Segmentectomy vs Percutaneous Microwave Ablation in Patients with Solitary Surgically Unresectable < 4 cm Hepatocellular Carcinoma: A Propensity Score Matched Study.",
+      "doi": "10.1007/s00270-020-02712-1"
+    },
+    {
+      "pmid": "42434250",
+      "au": "Abdalla",
+      "j": "J Gastrointest Oncol",
+      "y": "2026",
+      "t": "A retrospective study on the outcomes of yttrium-90 radiation segmentectomy with resin microspheres compared to microwave ablation for early primary hepatocellular carcinoma.",
+      "doi": "10.21037/jgo-2026-0208"
+    },
+    {
+      "pmid": "27930089",
+      "au": "Biederman",
+      "j": "Radiology",
+      "y": "2017",
+      "t": "Radiation Segmentectomy versus TACE Combined with Microwave Ablation for Unresectable Solitary Hepatocellular Carcinoma Up to 3 cm: A Propensity Score Matching Study.",
+      "doi": "10.1148/radiol.2016160718"
+    },
+    {
+      "pmid": "36100064",
+      "au": "Yu",
+      "j": "J Vasc Interv Radiol",
+      "y": "2022",
+      "t": "Transarterial Radioembolization versus Transarterial Chemoembolization Plus Percutaneous Ablation for Unresectable, Solitary Hepatocellular Carcinoma of ≥3 cm: A Propensity Score-Matched Study.",
+      "doi": "10.1016/j.jvir.2022.09.005"
+    },
+    {
+      "pmid": "42379392",
+      "au": "Yu",
+      "j": "J Vasc Interv Radiol",
+      "y": "2026",
+      "t": "Radiation Segmentectomy versus Combined Chemoembolization plus Microwave Ablation: Histopathologic Tumor Necrosis in Hepatocellular Carcinoma Measuring up to 5 cm.",
+      "doi": "10.1016/j.jvir.2026.108926"
+    },
+    {
+      "pmid": "35346857",
+      "au": "De la Garza-Ramos",
+      "j": "J Vasc Interv Radiol",
+      "y": "2022",
+      "t": "Radiation Segmentectomy for the Treatment of Solitary Hepatocellular Carcinoma: Outcomes Compared with Those of Surgical Resection.",
+      "doi": "10.1016/j.jvir.2022.03.021"
+    },
+    {
+      "pmid": "19552767",
+      "au": "Lewandowski",
+      "j": "Am J Transplant",
+      "y": "2009",
+      "t": "A comparative analysis of transarterial downstaging for hepatocellular carcinoma: chemoembolization versus radioembolization.",
+      "doi": "10.1111/j.1600-6143.2009.02695.x"
+    },
+    {
+      "pmid": "34358718",
+      "au": "Kwong",
+      "j": "Clin Gastroenterol Hepatol",
+      "y": "2022",
+      "t": "National Trends and Waitlist Outcomes of Locoregional Therapy Among Liver Transplant Candidates With Hepatocellular Carcinoma in the United States.",
+      "doi": "10.1016/j.cgh.2021.07.048"
+    },
+    {
+      "pmid": "41056563",
+      "au": "Fakhoury",
+      "j": "Liver Transpl",
+      "y": "2026",
+      "t": "Evolving trends and comparative outcomes of bridging transarterial locoregional therapy in liver transplant candidates with hepatocellular carcinoma.",
+      "doi": "10.1097/lvt.0000000000000743"
+    },
+    {
+      "pmid": "41580092",
+      "au": "Kim",
+      "j": "J Hepatol",
+      "y": "2026",
+      "t": "Yttrium-90 radioembolization is associated with a lower risk of liver transplant waitlist dropout than chemoembolization in hepatocellular carcinoma.",
+      "doi": "10.1016/j.jhep.2026.01.008"
+    },
+    {
+      "pmid": "39808828",
+      "au": "Xu",
+      "j": "Hepatology",
+      "y": "2025",
+      "t": "Downstaging of hepatocellular carcinoma before liver transplantation: Results from a national multicenter prospective cohort study.",
+      "doi": "10.1097/hep.0000000000001231"
+    },
+    {
+      "pmid": "28668402",
+      "au": "Gabr",
+      "j": "Eur J Radiol",
+      "y": "2017",
+      "t": "Comparative study of post-transplant outcomes in hepatocellular carcinoma patients treated with chemoembolization or radioembolization.",
+      "doi": "10.1016/j.ejrad.2017.05.022"
+    },
+    {
+      "pmid": "35619164",
+      "au": "Benkö",
+      "j": "Eur J Med Res",
+      "y": "2022",
+      "t": "Bridging treatment prior to liver transplantation for hepatocellular carcinoma: radioembolization or transarterial chemoembolization?",
+      "doi": "10.1186/s40001-022-00708-w"
+    },
+    {
+      "pmid": "28799575",
+      "au": "Mohamed",
+      "j": "Adv Radiat Oncol",
+      "y": "2016",
+      "t": "Comparison of outcomes between SBRT, yttrium-90 radioembolization, transarterial chemoembolization, and radiofrequency ablation as bridge to transplant for hepatocellular carcinoma.",
+      "doi": "10.1016/j.adro.2015.12.003"
+    },
+    {
+      "pmid": "27284477",
+      "au": "Oladeru",
+      "j": "J Gastrointest Oncol",
+      "y": "2016",
+      "t": "Conformal external beam radiation or selective internal radiation therapy-a comparison of treatment outcomes for hepatocellular carcinoma.",
+      "doi": "10.21037/jgo.2015.10.04"
+    },
+    {
+      "pmid": "25443863",
+      "au": "Kolligs",
+      "j": "Liver Int",
+      "y": "2015",
+      "t": "Pilot randomized trial of selective internal radiation therapy vs. chemoembolization in unresectable hepatocellular carcinoma.",
+      "doi": "10.1111/liv.12750"
+    },
+    {
+      "pmid": "25373796",
+      "au": "Pitton",
+      "j": "Cardiovasc Intervent Radiol",
+      "y": "2015",
+      "t": "Randomized comparison of selective internal radiotherapy (SIRT) versus drug-eluting bead transarterial chemoembolization (DEB-TACE) for the treatment of hepatocellular carcinoma.",
+      "doi": "10.1007/s00270-014-1012-0"
+    },
+    {
+      "pmid": "33687130",
+      "au": "Oyama",
+      "j": "Hepatol Res",
+      "y": "2021",
+      "t": "Randomized controlled study to examine the efficacy of hepatic arterial infusion chemotherapy with cisplatin before radiofrequency ablation for hepatocellular carcinoma.",
+      "doi": "10.1111/hepr.13633"
+    },
+    {
+      "pmid": "35993224",
+      "au": "You",
+      "j": "Int J Hyperthermia",
+      "y": "2022",
+      "t": "Hepatic arterial infusion chemotherapy and sequential ablation treatment in large hepatocellular carcinoma.",
+      "doi": "10.1080/02656736.2022.2112307"
+    },
+    {
+      "pmid": "29631810",
+      "au": "Kudo",
+      "j": "Lancet Gastroenterol Hepatol",
+      "y": "2018",
+      "t": "Sorafenib plus low-dose cisplatin and fluorouracil hepatic arterial infusion chemotherapy versus sorafenib alone in patients with advanced hepatocellular carcinoma (SILIUS): a randomised, open label, phase 3 trial.",
+      "doi": "10.1016/s2468-1253(18)30078-5"
+    },
+    {
+      "pmid": "40709764",
+      "au": "Saadat",
+      "j": "Ann Surg",
+      "y": "2025",
+      "t": "Hepatic Artery Infusion Chemotherapy Compared to Transarterial Radioembolization For Unresectable Colorectal Liver Metastases.",
+      "doi": "10.1097/sla.0000000000006851"
+    },
+    {
+      "pmid": "29181682",
+      "au": "Dhir",
+      "j": "Ann Surg Oncol",
+      "y": "2018",
+      "t": "Effectiveness of Hepatic Artery Infusion (HAI) Versus Selective Internal Radiation Therapy (Y90) for Pretreated Isolated Unresectable Colorectal Liver Metastases (IU-CRCLM).",
+      "doi": "10.1245/s10434-017-6265-9"
+    },
+    {
+      "pmid": "11843249",
+      "au": "Gray",
+      "j": "Ann Oncol",
+      "y": "2001",
+      "t": "Randomised trial of SIR-Spheres plus chemotherapy vs. chemotherapy alone for treating patients with liver metastases from primary large bowel cancer.",
+      "doi": "10.1023/a:1013569329846"
+    },
+    {
+      "pmid": "31177151",
+      "au": "Mokkarala",
+      "j": "Anticancer Res",
+      "y": "2019",
+      "t": "Comparison of Response and Outcomes of Drug-eluting Bead Chemoembolization (DEB-TACE) <i>Versus</i> Radioembolization (TARE) for Patients With Colorectal Cancer Liver Metastases.",
+      "doi": "10.21873/anticanres.13442"
+    },
+    {
+      "pmid": "41118066",
+      "au": "Boilève",
+      "j": "Ann Surg Oncol",
+      "y": "2026",
+      "t": "Treatment Intensification with Hepatic Arterial Infusion Chemotherapy in Patients with Liver-Only Colorectal Metastases Still Unresectable After Systemic Induction Chemotherapy: Exploratory Findings From a Prematurely Closed Multicenter Randomized Phase II Study: SULTAN UCGI 30/PRODIGE 53 (NCT03164655).",
+      "doi": "10.1245/s10434-025-18570-5"
+    },
+    {
+      "pmid": "39644535",
+      "au": "Wang",
+      "j": "Eur J Cancer",
+      "y": "2025",
+      "t": "Safety and efficacy of adjuvant FOLFOX/FOLFIRI with versus without hepatic arterial infusion of floxuridine in patients following colorectal cancer liver metastasectomy (HARVEST trial): A randomized controlled trial.",
+      "doi": "10.1016/j.ejca.2024.115154"
+    },
+    {
+      "pmid": "42018958",
+      "au": "Gelli",
+      "j": "J Clin Oncol",
+      "y": "2026",
+      "t": "Postoperative Hepatic Arterial Infusion With Oxaliplatin After Surgery of Four or More Colorectal Liver Metastases: A Randomized Phase II Trial.",
+      "doi": "10.1200/jco-25-01737"
+    },
+    {
+      "pmid": "42829779",
+      "au": "Risumlund",
+      "j": "Lancet Reg Health Eur",
+      "y": "2026",
+      "t": "Microwave ablation versus stereotactic body radiotherapy for oligometastatic colorectal liver metastases (LAVA-CRLM): a prospective, randomised, phase II trial.",
+      "doi": "10.1016/j.lanepe.2026.101879"
+    },
+    {
+      "pmid": "33868997",
+      "au": "Cai",
+      "j": "Front Oncol",
+      "y": "2021",
+      "t": "Survival Comparisons of Hepatic Arterial Infusion Chemotherapy With mFOLFOX and Transarterial Chemoembolization in Patients With Unresectable Intrahepatic Cholangiocarcinoma.",
+      "doi": "10.3389/fonc.2021.611118"
+    },
+    {
+      "pmid": "40216615",
+      "au": "Zhang",
+      "j": "Eur Radiol",
+      "y": "2025",
+      "t": "Hepatic arterial infusion chemotherapy versus transarterial chemoembolization in patients with unresectable intrahepatic cholangiocarcinoma: a multicenter retrospective cohort study.",
+      "doi": "10.1007/s00330-025-11557-6"
+    },
+    {
+      "pmid": "35544131",
+      "au": "Franssen",
+      "j": "JAMA Surg",
+      "y": "2022",
+      "t": "Comparison of Hepatic Arterial Infusion Pump Chemotherapy vs Resection for Patients With Multifocal Intrahepatic Cholangiocarcinoma.",
+      "doi": "10.1001/jamasurg.2022.1298"
+    },
+    {
+      "pmid": "37814188",
+      "au": "Franssen",
+      "j": "Ann Surg Oncol",
+      "y": "2024",
+      "t": "Gemcitabine with Cisplatin Versus Hepatic Arterial Infusion Pump Chemotherapy for Liver-Confined Unresectable Intrahepatic Cholangiocarcinoma.",
+      "doi": "10.1245/s10434-023-14409-z"
+    },
+    {
+      "pmid": "30191056",
+      "au": "Akinwande",
+      "j": "Hepat Oncol",
+      "y": "2017",
+      "t": "Chemoembolization versus radioembolization for the treatment of unresectable intrahepatic cholangiocarcinoma in a single institution image-based efficacy and comparative toxicity.",
+      "doi": "10.2217/hep-2017-0005"
+    },
+    {
+      "pmid": "31517072",
+      "au": "Sebastian",
+      "j": "Clin Transl Radiat Oncol",
+      "y": "2019",
+      "t": "Stereotactic body radiation therapy is associated with improved overall survival compared to chemoradiation or radioembolization in the treatment of unresectable intrahepatic cholangiocarcinoma.",
+      "doi": "10.1016/j.ctro.2019.07.007"
+    },
+    {
+      "pmid": "42433279",
+      "au": "Dai",
+      "j": "EClinicalMedicine",
+      "y": "2026",
+      "t": "Biliary drainage plus hepatic arterial infusion chemotherapy versus biliary drainage plus best supportive care for advanced perihilar cholangiocarcinoma in China: a prospective multicentre non-randomised controlled study.",
+      "doi": "10.1016/j.eclinm.2026.104040"
+    },
+    {
+      "pmid": "29167951",
+      "au": "Elf",
+      "j": "World J Surg",
+      "y": "2018",
+      "t": "Radioembolization Versus Bland Embolization for Hepatic Metastases from Small Intestinal Neuroendocrine Tumors: Short-Term Results of a Randomized Clinical Trial.",
+      "doi": "10.1007/s00268-017-4324-9"
+    },
+    {
+      "pmid": "32032719",
+      "au": "Egger",
+      "j": "J Am Coll Surg",
+      "y": "2020",
+      "t": "Transarterial Chemoembolization vs Radioembolization for Neuroendocrine Liver Metastases: A Multi-Institutional Analysis.",
+      "doi": "10.1016/j.jamcollsurg.2019.12.026"
+    },
+    {
+      "pmid": "28677067",
+      "au": "Do Minh",
+      "j": "Eur Radiol",
+      "y": "2017",
+      "t": "Intra-arterial therapy of neuroendocrine tumour liver metastases: comparing conventional TACE, drug-eluting beads TACE and yttrium-90 radioembolisation as treatment options using a propensity score analysis model.",
+      "doi": "10.1007/s00330-017-4856-2"
+    },
+    {
+      "pmid": "33004146",
+      "au": "Currie",
+      "j": "J Vasc Interv Radiol",
+      "y": "2020",
+      "t": "Chronic Hepatotoxicity in Patients with Metastatic Neuroendocrine Tumor: Transarterial Chemoembolization versus Transarterial Radioembolization.",
+      "doi": "10.1016/j.jvir.2020.05.019"
+    },
+    {
+      "pmid": "42006283",
+      "au": "Yuan",
+      "j": "JTO Clin Res Rep",
+      "y": "2026",
+      "t": "Yttrium-90 Radioembolization Versus Transarterial Embolization for Lung Carcinoid Hepatic Metastasis.",
+      "doi": "10.1016/j.jtocrr.2026.100989"
     }
   ],
   "notGraded": "Not graded here: irreversible electroporation (investigational in pCCA; proximity to ducts alone does not establish suitability), cryoablation, percutaneous ethanol injection, interstitial HDR brachytherapy, holmium-166 radioembolization, PVE / liver venous deprivation (FLR), percutaneous hepatic perfusion with melphalan (uveal melanoma).",

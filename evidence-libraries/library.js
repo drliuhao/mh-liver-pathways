@@ -8,7 +8,7 @@
  const title=l=>l.title.replace(/\bprotocol\b/gi,'pathway').replace(/ cancer roadmap$/i,' roadmap');
  const pending=l=>l.no_slide_count?' · '+l.no_slide_count+(l.no_slide_count===1?' reference has':' references have')+' no slide yet':'';
  try{
-  const responses=await Promise.all([fetch('catalog.json?v=20261102-sync1'),fetch('document-index.json?v=20261102-sync1')]);
+  const responses=await Promise.all([fetch('catalog.json?v=20261103-lrt1'),fetch('document-index.json?v=20261103-lrt1')]);
   if(responses.some(r=>!r.ok))throw Error('Catalog unavailable');
   const [base,supplement]=await Promise.all(responses.map(r=>r.json()));
   const data=LibraryDocumentIndex.merge(base,supplement);
