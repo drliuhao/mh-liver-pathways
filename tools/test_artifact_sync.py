@@ -22,6 +22,6 @@ if local.is_dir():
 catalog=json.loads((R/'evidence-libraries/catalog.json').read_text())
 for x in d['presentations']:
  lib=next(v for v in catalog['libraries'] if v['key']==x['key'])
- assert lib['slides']==x['slides'] and lib['ppt_filename']=='Evidence_Summaries_v19.pptx'
+ assert lib['slides']==x['slides'] and lib['ppt_filename']=='Evidence_Summaries_v20.pptx'
 assert d['counts']['slides']==4390 and d['counts']['native_charts']==109 and d['counts']['native_tables']==64
 print('PASS: 65 current Word downloads, 34 PPT libraries, 4390 slides; source and artifact hashes aligned, private links absent, catalog slide counts exact.')

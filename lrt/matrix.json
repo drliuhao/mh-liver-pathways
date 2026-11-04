@@ -162,7 +162,7 @@
             [
               "Arndt 2021",
               "33230652",
-              "Retrospective, propensity matched. Solitary treatment-naïve HCC ≤4 cm; 68 patients, 24 matched pairs. RS versus MWA. Mean target-tumor PFS 57.8 versus 38.6 months (p=0.005); mean OS 59.0 versus 44.3 months (p=0.203). Small selected cohorts; local-control association, not proven OS superiority or equivalence. Title uses <4 cm; abstract uses ≤4 cm; do not derive an eligibility boundary from this report."
+              "Retrospective, propensity matched. Solitary treatment-naïve HCC ≤4 cm; 68 patients, 24 matched pairs. RS versus MWA. Mean target-tumor PFS 57.8 versus 38.6 months (p=0.005); mean OS 59.0 versus 44.3 months (p=0.203). Small matched cohorts; RS often selected for anatomy unsuitable for MWA. These are mean survival times, not medians. No proven OS superiority or equivalence."
             ],
             [
               "Abdalla 2026",
@@ -189,12 +189,12 @@
             [
               "Yu 2026",
               "42379392",
-              "Retrospective explant study. 53 transplanted patients; RS 28 versus TACE-MWA 25; 40 tumors per group, HCC ≤5 cm. Mean pathologic tumor necrosis 83.6% versus 79.0% (p=0.484); treatment modality was not independently associated with complete necrosis. Recipient-only, tumor-level analysis; cannot estimate waitlist dropout. Abstract CPN denominator is unclear; omit that percentage pending full text. Not an equivalence trial."
+              "Retrospective explant study. 53 transplanted patients; RS 28 versus TACE-MWA 25; 40 tumors per group, HCC ≤5 cm. Mean pathologic tumor necrosis 83.6% versus 79.0% (p=0.484); treatment modality was not independently associated with complete necrosis. Transplanted patients only; cannot assess waitlist dropout. Complete-necrosis percentages have inconsistent denominators in Table 2 and are omitted. Most RS doses preceded current high-dose practice."
             ],
             [
               "Kwong 2022",
               "34358718",
-              "National observational cohort. 31,609 US HCC transplant candidates, 2003–2018; 24,145 received LRT. First-line radioembolization or thermal ablation was associated with less waitlist dropout than chemoembolization in adjusted analyses. Modality selection and era confounding remain; this is not a randomized comparison. Some registry years overlap later national reports."
+              "National observational cohort. 31,609 US HCC transplant candidates, 2003–2018; 24,145 received LRT. IPTW-adjusted dropout sHR versus TACE: radioembolization 0.85 (95% CI 0.81–0.89); thermal ablation 0.95 (0.91–0.99). Observational first-treatment comparison, with later treatments allowed. Center, era and patient selection remain confounders. Registry cohorts overlap with later studies."
             ],
             [
               "Mohamed 2016",
@@ -223,7 +223,7 @@
             [
               "You 2022",
               "35993224",
-              "Retrospective, IPTW. 228 HCC patients with tumors >5 cm: HAIC followed by ablation 93 versus HAIC alone 135. Median OS 22.2 versus 14.5 months; PFS 8.5 versus 4.6 months (both p<0.001). Sequential-treatment selection and time-dependent bias remain. Tests addition of ablation after HAIC, not standalone HAIC versus ablation."
+              "Retrospective, IPTW. 228 HCC patients with tumors >5 cm: HAIC followed by ablation 93 versus HAIC alone 135. Reported 2-year OS: 74.3% versus 27.7%. IPTW and 6-month landmark analyses favored HAIC followed by ablation. Selected HAIC responders; substantial selection bias. Reported survival medians conflict with Results/Figure 2 and are omitted. Tests adding ablation after HAIC, not replacing ablation with HAIC."
             ]
           ]
         }
@@ -419,7 +419,7 @@
             [
               "Arndt 2021",
               "33230652",
-              "Retrospective, propensity matched. Solitary treatment-naïve HCC ≤4 cm; 68 patients, 24 matched pairs. RS versus MWA. Mean target-tumor PFS 57.8 versus 38.6 months (p=0.005); mean OS 59.0 versus 44.3 months (p=0.203). Small selected cohorts; local-control association, not proven OS superiority or equivalence. Title uses <4 cm; abstract uses ≤4 cm; do not derive an eligibility boundary from this report."
+              "Retrospective, propensity matched. Solitary treatment-naïve HCC ≤4 cm; 68 patients, 24 matched pairs. RS versus MWA. Mean target-tumor PFS 57.8 versus 38.6 months (p=0.005); mean OS 59.0 versus 44.3 months (p=0.203). Small matched cohorts; RS often selected for anatomy unsuitable for MWA. These are mean survival times, not medians. No proven OS superiority or equivalence."
             ],
             [
               "Abdalla 2026",
@@ -451,12 +451,12 @@
             [
               "Yu 2026",
               "42379392",
-              "Retrospective explant study. 53 transplanted patients; RS 28 versus TACE-MWA 25; 40 tumors per group, HCC ≤5 cm. Mean pathologic tumor necrosis 83.6% versus 79.0% (p=0.484); treatment modality was not independently associated with complete necrosis. Recipient-only, tumor-level analysis; cannot estimate waitlist dropout. Abstract CPN denominator is unclear; omit that percentage pending full text. Not an equivalence trial."
+              "Retrospective explant study. 53 transplanted patients; RS 28 versus TACE-MWA 25; 40 tumors per group, HCC ≤5 cm. Mean pathologic tumor necrosis 83.6% versus 79.0% (p=0.484); treatment modality was not independently associated with complete necrosis. Transplanted patients only; cannot assess waitlist dropout. Complete-necrosis percentages have inconsistent denominators in Table 2 and are omitted. Most RS doses preceded current high-dose practice."
             ],
             [
               "Kwong 2022",
               "34358718",
-              "National observational cohort. 31,609 US HCC transplant candidates, 2003–2018; 24,145 received LRT. First-line radioembolization or thermal ablation was associated with less waitlist dropout than chemoembolization in adjusted analyses. Modality selection and era confounding remain; this is not a randomized comparison. Some registry years overlap later national reports."
+              "National observational cohort. 31,609 US HCC transplant candidates, 2003–2018; 24,145 received LRT. IPTW-adjusted dropout sHR versus TACE: radioembolization 0.85 (95% CI 0.81–0.89); thermal ablation 0.95 (0.91–0.99). Observational first-treatment comparison, with later treatments allowed. Center, era and patient selection remain confounders. Registry cohorts overlap with later studies."
             ],
             [
               "Fakhoury 2026",
@@ -466,7 +466,7 @@
             [
               "Kim 2026",
               "41580092",
-              "National observational cohort, IPTW. 5,677 HCC-exception candidates, 2019–2024; first-line TARE versus TACE. Dropout HR 0.78 (95% CI 0.69–0.89); 2-year dropout 14.2% versus 19.0%. One LRT only: 80.6% versus 57.8%. Adjusted association, not causal proof. Overlaps Fakhoury OPTN cohort; do not count as independent replication. Current review is abstract-level; full text pending."
+              "National observational cohort, IPTW. 5,677 HCC-exception candidates, 2019–2024; first-line TARE versus TACE. Weighted cause-specific dropout HR 0.78 (95% CI 0.69–0.89); 2-year dropout 14.2% versus 19.0%. One LRT only: 80.6% versus 57.8%. Observational registry association; both-modality recipients excluded from the primary analysis. Treatment details and selection remain incompletely measured. No proven post-transplant survival advantage."
             ],
             [
               "Gabr 2017",
@@ -493,7 +493,7 @@
             [
               "Lewandowski 2009",
               "19552767",
-              "Retrospective comparison. UNOS T3 HCC; 43 TARE versus 43 TACE patients. Downstaging to T2: 58% versus 31%. The often-quoted 61% versus 37% is partial response, not downstaging. Older nonrandomized cohort predating current UNOS-DS rules; supports a downstaging signal, not universal superiority."
+              "Retrospective comparison. UNOS T3 HCC; 43 TARE versus 43 TACE patients. Downstaging to T2: Y90 25/43 (58%) versus TACE 11/35 (31%), p=0.023. The 61% versus 37% figures describe partial response. Retrospective. Eight TACE patients lacked follow-up imaging and were excluded from response analyses. Downstaging measured the whole lesion, including necrotic tissue; this is not the current viable-tumor method."
             ],
             [
               "Xu 2025",
@@ -627,12 +627,12 @@
             [
               "Yu 2026",
               "42379392",
-              "Retrospective explant study. 53 transplanted patients; RS 28 versus TACE-MWA 25; 40 tumors per group, HCC ≤5 cm. Mean pathologic tumor necrosis 83.6% versus 79.0% (p=0.484); treatment modality was not independently associated with complete necrosis. Recipient-only, tumor-level analysis; cannot estimate waitlist dropout. Abstract CPN denominator is unclear; omit that percentage pending full text. Not an equivalence trial."
+              "Retrospective explant study. 53 transplanted patients; RS 28 versus TACE-MWA 25; 40 tumors per group, HCC ≤5 cm. Mean pathologic tumor necrosis 83.6% versus 79.0% (p=0.484); treatment modality was not independently associated with complete necrosis. Transplanted patients only; cannot assess waitlist dropout. Complete-necrosis percentages have inconsistent denominators in Table 2 and are omitted. Most RS doses preceded current high-dose practice."
             ],
             [
               "Kwong 2022",
               "34358718",
-              "National observational cohort. 31,609 US HCC transplant candidates, 2003–2018; 24,145 received LRT. First-line radioembolization or thermal ablation was associated with less waitlist dropout than chemoembolization in adjusted analyses. Modality selection and era confounding remain; this is not a randomized comparison. Some registry years overlap later national reports."
+              "National observational cohort. 31,609 US HCC transplant candidates, 2003–2018; 24,145 received LRT. IPTW-adjusted dropout sHR versus TACE: radioembolization 0.85 (95% CI 0.81–0.89); thermal ablation 0.95 (0.91–0.99). Observational first-treatment comparison, with later treatments allowed. Center, era and patient selection remain confounders. Registry cohorts overlap with later studies."
             ],
             [
               "Fakhoury 2026",
@@ -642,7 +642,7 @@
             [
               "Kim 2026",
               "41580092",
-              "National observational cohort, IPTW. 5,677 HCC-exception candidates, 2019–2024; first-line TARE versus TACE. Dropout HR 0.78 (95% CI 0.69–0.89); 2-year dropout 14.2% versus 19.0%. One LRT only: 80.6% versus 57.8%. Adjusted association, not causal proof. Overlaps Fakhoury OPTN cohort; do not count as independent replication. Current review is abstract-level; full text pending."
+              "National observational cohort, IPTW. 5,677 HCC-exception candidates, 2019–2024; first-line TARE versus TACE. Weighted cause-specific dropout HR 0.78 (95% CI 0.69–0.89); 2-year dropout 14.2% versus 19.0%. One LRT only: 80.6% versus 57.8%. Observational registry association; both-modality recipients excluded from the primary analysis. Treatment details and selection remain incompletely measured. No proven post-transplant survival advantage."
             ],
             [
               "Gabr 2017",
@@ -669,7 +669,7 @@
             [
               "Lewandowski 2009",
               "19552767",
-              "Retrospective comparison. UNOS T3 HCC; 43 TARE versus 43 TACE patients. Downstaging to T2: 58% versus 31%. The often-quoted 61% versus 37% is partial response, not downstaging. Older nonrandomized cohort predating current UNOS-DS rules; supports a downstaging signal, not universal superiority."
+              "Retrospective comparison. UNOS T3 HCC; 43 TARE versus 43 TACE patients. Downstaging to T2: Y90 25/43 (58%) versus TACE 11/35 (31%), p=0.023. The 61% versus 37% figures describe partial response. Retrospective. Eight TACE patients lacked follow-up imaging and were excluded from response analyses. Downstaging measured the whole lesion, including necrotic tissue; this is not the current viable-tumor method."
             ],
             [
               "Xu 2025",
@@ -764,7 +764,7 @@
             [
               "You 2022",
               "35993224",
-              "Retrospective, IPTW. 228 HCC patients with tumors >5 cm: HAIC followed by ablation 93 versus HAIC alone 135. Median OS 22.2 versus 14.5 months; PFS 8.5 versus 4.6 months (both p<0.001). Sequential-treatment selection and time-dependent bias remain. Tests addition of ablation after HAIC, not standalone HAIC versus ablation."
+              "Retrospective, IPTW. 228 HCC patients with tumors >5 cm: HAIC followed by ablation 93 versus HAIC alone 135. Reported 2-year OS: 74.3% versus 27.7%. IPTW and 6-month landmark analyses favored HAIC followed by ablation. Selected HAIC responders; substantial selection bias. Reported survival medians conflict with Results/Figure 2 and are omitted. Tests adding ablation after HAIC, not replacing ablation with HAIC."
             ]
           ]
         },
@@ -910,7 +910,7 @@
             [
               "Akinwande 2017",
               "30191056",
-              "Retrospective cohort. 40 unresectable iCCA patients: Y90 25 versus chemoembolization 15. DCR 48% versus 46%; adverse events 26% versus 20%; no significant differences. Small heterogeneous cohort focused on imaging response/toxicity; does not establish equivalent survival or curative efficacy."
+              "Retrospective cohort. 40 unresectable iCCA patients: Y90 25 versus chemoembolization 15. Table 3 disease control: Y90 12/25 (48%) versus chemoembolization 7/15 (47%); no significant difference. Survival was not assessed. Small retrospective cohort. Abstract and body percentages conflict; counts from Table 3 are used. Missing response status and treatment crossover limit comparison."
             ]
           ]
         },
@@ -961,7 +961,7 @@
             [
               "Akinwande 2017",
               "30191056",
-              "Retrospective cohort. 40 unresectable iCCA patients: Y90 25 versus chemoembolization 15. DCR 48% versus 46%; adverse events 26% versus 20%; no significant differences. Small heterogeneous cohort focused on imaging response/toxicity; does not establish equivalent survival or curative efficacy."
+              "Retrospective cohort. 40 unresectable iCCA patients: Y90 25 versus chemoembolization 15. Table 3 disease control: Y90 12/25 (48%) versus chemoembolization 7/15 (47%); no significant difference. Survival was not assessed. Small retrospective cohort. Abstract and body percentages conflict; counts from Table 3 are used. Missing response status and treatment crossover limit comparison."
             ]
           ]
         }
@@ -1105,7 +1105,7 @@
             [
               "Gelli 2026",
               "42018958",
-              "Randomized phase II. 99 patients after resection/ablation of ≥4 CRLM: HAI-oxaliplatin 50 versus IV oxaliplatin 49, both with IV LV5FU2. Hepatic RFS 25 versus 12 months, HR 0.63 (95% CI 0.40–0.99); OS HR 0.61 (0.33–1.12), not significant. Grade 3–4 AEs 58% versus 32%. Adjuvant treatment after local clearance, not HAI instead of ablation. Oxaliplatin regimen and high-burden population differ from pump-FUDR PUMP and HARVEST."
+              "Randomized phase II. 99 patients after resection/ablation of ≥4 CRLM: HAI-oxaliplatin 50 versus IV oxaliplatin 49, both with IV LV5FU2. Hepatic RFS 25 versus 12 months, HR 0.63 (95% CI 0.40–0.99); OS HR 0.61 (0.33–1.12), not significant. Grade 3–4 AEs 58% versus 32%. Selected adjuvant setting after complete local treatment of ≥4 CRLM. Phase II design amended before database lock; early closure and immature OS limit certainty. Oxaliplatin infusion is not FUDR pump therapy."
             ]
           ]
         },
@@ -1217,7 +1217,7 @@
             [
               "Dhir 2018",
               "29181682",
-              "Retrospective comparison. 97 pretreated liver-only CRLM patients: HAI 48 versus Y90 49, with modern systemic therapy. Reported survival favored HAI; treatment timing and survival time origin materially affect interpretation. Abstract/time-origin reporting and later discussion disagree; do not reproduce a pooled median or use this small cohort to establish superiority. Prefer the larger stratified Saadat analysis."
+              "Retrospective comparison. 97 pretreated liver-only CRLM patients: HAI 48 versus Y90 49, with modern systemic therapy. Median OS from isolated unresectable diagnosis: 31.2 versus 16.3 months (p<0.001). From initial stage IV diagnosis: 34.4 versus 32.0 months (p=0.291). Retrospective, 97 patients. Survival time origin changes the apparent comparison; treatment timing, subsequent therapy and selection limit causal interpretation."
             ],
             [
               "Mokkarala 2019",
@@ -1356,7 +1356,7 @@
             [
               "Dhir 2018",
               "29181682",
-              "Retrospective comparison. 97 pretreated liver-only CRLM patients: HAI 48 versus Y90 49, with modern systemic therapy. Reported survival favored HAI; treatment timing and survival time origin materially affect interpretation. Abstract/time-origin reporting and later discussion disagree; do not reproduce a pooled median or use this small cohort to establish superiority. Prefer the larger stratified Saadat analysis."
+              "Retrospective comparison. 97 pretreated liver-only CRLM patients: HAI 48 versus Y90 49, with modern systemic therapy. Median OS from isolated unresectable diagnosis: 31.2 versus 16.3 months (p<0.001). From initial stage IV diagnosis: 34.4 versus 32.0 months (p=0.291). Retrospective, 97 patients. Survival time origin changes the apparent comparison; treatment timing, subsequent therapy and selection limit causal interpretation."
             ]
           ]
         },
@@ -1397,7 +1397,7 @@
             [
               "Gelli 2026",
               "42018958",
-              "Randomized phase II. 99 patients after resection/ablation of ≥4 CRLM: HAI-oxaliplatin 50 versus IV oxaliplatin 49, both with IV LV5FU2. Hepatic RFS 25 versus 12 months, HR 0.63 (95% CI 0.40–0.99); OS HR 0.61 (0.33–1.12), not significant. Grade 3–4 AEs 58% versus 32%. Adjuvant treatment after local clearance, not HAI instead of ablation. Oxaliplatin regimen and high-burden population differ from pump-FUDR PUMP and HARVEST."
+              "Randomized phase II. 99 patients after resection/ablation of ≥4 CRLM: HAI-oxaliplatin 50 versus IV oxaliplatin 49, both with IV LV5FU2. Hepatic RFS 25 versus 12 months, HR 0.63 (95% CI 0.40–0.99); OS HR 0.61 (0.33–1.12), not significant. Grade 3–4 AEs 58% versus 32%. Selected adjuvant setting after complete local treatment of ≥4 CRLM. Phase II design amended before database lock; early closure and immature OS limit certainty. Oxaliplatin infusion is not FUDR pump therapy."
             ]
           ]
         }
@@ -1519,7 +1519,7 @@
             [
               "Do Minh 2017",
               "28677067",
-              "Retrospective, propensity analysis. 192 GEP-NET patients: cTACE 122, DEB-TACE 26, Y90 44. Median OS: cTACE 33.8, DEB-TACE 21.7, Y90 23.6 months; adjusted analysis favored cTACE over Y90 (p=0.02). Older nonrandomized cohort; confounding and technique differences prevent a universal ranking. Consider alongside discordant Egger results."
+              "Retrospective, propensity analysis. 192 GEP-NET patients: cTACE 122, DEB-TACE 26, Y90 44. Propensity-weighted median OS: cTACE versus Y90 34.0 versus 22.9 months (p=0.032); cTACE versus DEB-TACE 33.8 versus 23.4 months (p=0.04). Retrospective pairwise weighting across a long treatment era. These adjusted medians differ from the unadjusted three-group medians. Residual confounding prevents a definitive modality ranking."
             ],
             [
               "Yuan 2026",
@@ -1536,7 +1536,7 @@
             [
               "Currie 2020",
               "33004146",
-              "Retrospective survivor cohort. 91 NET patients surviving ≥1 year: TACE 63 versus TARE 28. Chronic grade ≥3 hepatic toxicity: 22% versus 29%; TARE injuries more often clinical decompensation. Conditioned on 1-year survival; small nonrandomized series. These are not baseline risks for every patient; prolonged survival makes late liver injury relevant."
+              "Retrospective survivor cohort. NELM patients surviving ≥1 year: TACE 63 versus TARE 28; chronic grade ≥3 hepatic toxicity beginning ≥6 months after treatment. Chronic hepatic toxicity: 22% versus 29%. Injury attributed solely to embolotherapy: 3% versus 14% (p=0.07), with more clinical decompensation after TARE. Retrospective survivor-selected cohort. Most TACE toxicities coincided with progression. This cannot estimate toxicity in all treated patients or establish equivalent safety."
             ]
           ]
         }
@@ -1585,7 +1585,7 @@
             [
               "Do Minh 2017",
               "28677067",
-              "Retrospective, propensity analysis. 192 GEP-NET patients: cTACE 122, DEB-TACE 26, Y90 44. Median OS: cTACE 33.8, DEB-TACE 21.7, Y90 23.6 months; adjusted analysis favored cTACE over Y90 (p=0.02). Older nonrandomized cohort; confounding and technique differences prevent a universal ranking. Consider alongside discordant Egger results."
+              "Retrospective, propensity analysis. 192 GEP-NET patients: cTACE 122, DEB-TACE 26, Y90 44. Propensity-weighted median OS: cTACE versus Y90 34.0 versus 22.9 months (p=0.032); cTACE versus DEB-TACE 33.8 versus 23.4 months (p=0.04). Retrospective pairwise weighting across a long treatment era. These adjusted medians differ from the unadjusted three-group medians. Residual confounding prevents a definitive modality ranking."
             ],
             [
               "Yuan 2026",
@@ -1602,7 +1602,7 @@
             [
               "Currie 2020",
               "33004146",
-              "Retrospective survivor cohort. 91 NET patients surviving ≥1 year: TACE 63 versus TARE 28. Chronic grade ≥3 hepatic toxicity: 22% versus 29%; TARE injuries more often clinical decompensation. Conditioned on 1-year survival; small nonrandomized series. These are not baseline risks for every patient; prolonged survival makes late liver injury relevant."
+              "Retrospective survivor cohort. NELM patients surviving ≥1 year: TACE 63 versus TARE 28; chronic grade ≥3 hepatic toxicity beginning ≥6 months after treatment. Chronic hepatic toxicity: 22% versus 29%. Injury attributed solely to embolotherapy: 3% versus 14% (p=0.07), with more clinical decompensation after TARE. Retrospective survivor-selected cohort. Most TACE toxicities coincided with progression. This cannot estimate toxicity in all treated patients or establish equivalent safety."
             ]
           ]
         }
@@ -1931,7 +1931,7 @@
     "pCCA is assessed separately from iCCA. No standalone local modality has established curative equivalence to resection or protocol transplantation for primary pCCA.",
     "ABCDE review, 23 October 2026: tiers describe clinical intent, not guaranteed cure, a formal evidence grade, or approval. Read each endpoint and time origin. pCCA RT may support protocol LT or selected local control; RT is not specifically mandated by OPTN. Clinical benefit, allocation eligibility and institutional approval are separate. Other tumour selection criteria were not expanded by this pCCA review.",
     "Comparative studies are grouped by clinical setting. Pump-based FUDR HAI, oxaliplatin infusion and catheter-based FOLFOX/cisplatin HAIC are different regimens. Add-on and post-clearance studies do not establish that HAI can replace ablation. Overlapping registry and institutional cohorts are not independent replications.",
-    "Comparative evidence search: 3 November 2026. Some newer reports are abstract-verified while available full texts were checked; evidence-library entries identify review depth. TMC links provide access to papers with a pending PDF."
+    "Comparative evidence search: 3 November 2026; focused full-text update: 4 November 2026. All 40 comparative papers are available in the local libraries. Study descriptions retain population, endpoint and design limitations."
   ],
   "refs": [
     {
