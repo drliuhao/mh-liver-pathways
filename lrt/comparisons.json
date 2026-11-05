@@ -1,5 +1,5 @@
 {
-  "version": "20261104-compare1",
+  "version": "20261104-grid1",
   "settings": {
     "local": "Definitive local treatment",
     "transplant": "Bridge / downstaging / transplant",
@@ -2445,6 +2445,1073 @@
       "doi": "10.1097/JS9.0000000000002089",
       "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39311927/",
       "tmc": "https://libkey.io/libraries/480/pmid/39311927"
+    }
+  ],
+  "arms": {
+    "abl": "Thermal ablation",
+    "sbrt": "SBRT / EBRT",
+    "y90": "Y-90 (TARE)",
+    "tace": "TACE / TAE",
+    "hai": "HAI / HAIC",
+    "htx": "Histotripsy",
+    "resection": "Resection",
+    "lt": "Transplant",
+    "systemic": "Systemic therapy",
+    "supportive": "Supportive care",
+    "nonlt": "Non-transplant care",
+    "tace_abl": "TACE + ablation",
+    "hai_abl": "HAIC + ablation",
+    "hai_sys": "HAI / HAIC + systemic",
+    "sbrt_sys": "SBRT + systemic",
+    "tace_rt": "TACE + EBRT",
+    "tace_sys": "TACE + systemic",
+    "y90_sys": "Y-90 + systemic",
+    "y90_hai": "Y-90 + HAI",
+    "abl_sys": "Ablation ± resection + systemic",
+    "rt_surgery": "Radiotherapy → resection",
+    "embol_surgery": "Embolization → resection",
+    "surgery_hai": "Resection + perioperative HAI",
+    "surgery_tace": "Resection + adjuvant TACE",
+    "surgery_nohai": "Resection without HAI",
+    "surgery_observe": "Resection → observation",
+    "sabr_care": "SABR + standard care",
+    "standard_care": "Standard care",
+    "hai_mixed": "Pump HAI ± systemic",
+    "drain_hai": "Drainage + HAIC",
+    "drain_support": "Drainage + supportive care",
+    "nat_rt": "RT-containing neoadjuvant therapy",
+    "nat_gemcis": "GemCis neoadjuvant therapy",
+    "lt_crt": "Chemoradiation → transplant",
+    "lt_nocrt": "Transplant without chemoradiation",
+    "gemcis_sbrt": "GemCis → SBRT",
+    "gemcis": "Continued GemCis",
+    "mwa": "MWA",
+    "rfa": "RFA",
+    "personal_y90": "Personalized Y-90 dosimetry",
+    "standard_y90": "Standard Y-90 dosimetry",
+    "high_rt": "Higher radiation dose",
+    "low_rt": "Lower radiation dose",
+    "ctace": "Conventional TACE",
+    "debtace": "DEB-TACE",
+    "tae": "Bland embolization",
+    "stent_radio": "Radioactive stent + HAIC",
+    "stent_plain": "Conventional stent + HAIC"
+  },
+  "modes": {
+    "direct": "Treatment vs treatment",
+    "combined": "Combination / add-on",
+    "technique": "Technique / dose"
+  },
+  "pairs": [
+    {
+      "study": "crlm-42829779",
+      "id": "crlm-42829779-0",
+      "mode": "direct",
+      "a": "abl",
+      "b": "sbrt",
+      "arms": "MWA vs SBRT",
+      "brief": "1-y freedom from local progression 77.7% vs 83.0% (P=.70).",
+      "note": "LAVA-CRLM RCT; no noninferiority conclusion."
+    },
+    {
+      "study": "crlm-30982687",
+      "id": "crlm-30982687-0",
+      "mode": "combined",
+      "a": "sabr_care",
+      "b": "standard_care",
+      "arms": "SABR + standard care vs standard care",
+      "brief": "OS 41 vs 28 mo (P=.09; phase II α=.20).",
+      "note": "Mixed primaries/sites; not a CRLM-specific result."
+    },
+    {
+      "study": "crlm-32484754",
+      "id": "crlm-32484754-0",
+      "mode": "combined",
+      "a": "sabr_care",
+      "b": "standard_care",
+      "arms": "SABR + standard care vs standard care",
+      "brief": "OS 50 vs 28 mo; HR 0.47 (0.27–0.81).",
+      "note": "SABR-COMET follow-up; mixed primaries/sites."
+    },
+    {
+      "study": "crlm-39848272",
+      "id": "crlm-39848272-0",
+      "mode": "direct",
+      "a": "abl",
+      "b": "resection",
+      "arms": "Thermal ablation vs resection",
+      "brief": "OS HR 1.05 (0.69–1.58); AEs 19% vs 46%.",
+      "note": "COLLISION; CI crosses noninferiority margin."
+    },
+    {
+      "study": "crlm-31177151",
+      "id": "crlm-31177151-0",
+      "mode": "direct",
+      "a": "tace",
+      "b": "y90",
+      "arms": "DEB-TACE vs Y90",
+      "brief": "OS HR 0.94 (0.54–1.65); no significant difference.",
+      "note": "Matched cohort; not equivalence."
+    },
+    {
+      "study": "crlm-22493375",
+      "id": "crlm-22493375-0",
+      "mode": "direct",
+      "a": "tace",
+      "b": "systemic",
+      "arms": "DEBIRI vs FOLFIRI",
+      "brief": "OS 22 vs 15 mo; PFS 7 vs 4 mo.",
+      "note": "Small RCT; historical FOLFIRI control."
+    },
+    {
+      "study": "crlm-16505413",
+      "id": "crlm-16505413-0",
+      "mode": "direct",
+      "a": "hai",
+      "b": "systemic",
+      "arms": "HAI vs systemic fluorouracil / leucovorin",
+      "brief": "OS 24.4 vs 20.0 mo (P=.0034).",
+      "note": "CALGB RCT; superseded bolus FU/LV control."
+    },
+    {
+      "study": "crlm-29181682",
+      "id": "crlm-29181682-0",
+      "mode": "direct",
+      "a": "hai",
+      "b": "y90",
+      "arms": "Pump HAI vs Y90",
+      "brief": "OS 31.2 vs 16.3 mo from unresectable diagnosis.",
+      "note": "Retrospective; from stage IV diagnosis, OS difference NS."
+    },
+    {
+      "study": "crlm-40709764",
+      "id": "crlm-40709764-0",
+      "mode": "direct",
+      "a": "hai",
+      "b": "y90",
+      "arms": "Pump HAI vs Y90",
+      "brief": "Y-90 vs HAI mortality HR 1.46 / 1.96 / 0.88 after 1 / 2 / 3–4 lines.",
+      "note": "Matched cohorts; treatment and center confounded."
+    },
+    {
+      "study": "crlm-41118066",
+      "id": "crlm-41118066-0",
+      "mode": "combined",
+      "a": "hai_sys",
+      "b": "systemic",
+      "arms": "HAI + systemic vs systemic",
+      "brief": "Conversion 7/11 vs 2/9 (P=.09); PFS 12.6 vs 4.37 mo.",
+      "note": "SULTAN; 20 patients; conversion endpoint NS."
+    },
+    {
+      "study": "crlm-28376151",
+      "id": "crlm-28376151-0",
+      "mode": "combined",
+      "a": "abl_sys",
+      "b": "systemic",
+      "arms": "RFA ± resection + systemic vs systemic",
+      "brief": "8-y OS 35.9% vs 8.9%; OS HR 0.58.",
+      "note": "CLOCC phase II; OS was secondary."
+    },
+    {
+      "study": "crlm-28781171",
+      "id": "crlm-28781171-0",
+      "mode": "combined",
+      "a": "y90_sys",
+      "b": "systemic",
+      "arms": "Y90 + FOLFOX vs FOLFOX",
+      "brief": "OS 22.6 vs 23.3 mo; HR 1.04 (0.90–1.19).",
+      "note": "FOXFIRE pooled RCTs; no OS benefit."
+    },
+    {
+      "study": "crlm-11843249",
+      "id": "crlm-11843249-0",
+      "mode": "combined",
+      "a": "y90_hai",
+      "b": "hai",
+      "arms": "Y90 + arterial FUDR vs arterial FUDR",
+      "brief": "Tumor-volume response 50% vs 24%; liver progression delayed.",
+      "note": "Older RCT; add-on study, no established OS benefit."
+    },
+    {
+      "study": "crlm-20567019",
+      "id": "crlm-20567019-0",
+      "mode": "combined",
+      "a": "y90_sys",
+      "b": "systemic",
+      "arms": "Y90 + fluorouracil vs fluorouracil",
+      "brief": "Liver TTP 5.5 vs 2.1 mo; OS difference NS.",
+      "note": "Small RCT; control crossover."
+    },
+    {
+      "study": "crlm-34541864",
+      "id": "crlm-34541864-0",
+      "mode": "combined",
+      "a": "y90_sys",
+      "b": "systemic",
+      "arms": "Y90 + second-line systemic vs systemic",
+      "brief": "PFS 8.0 vs 7.2 mo; OS 14.0 vs 14.4 mo (NS).",
+      "note": "EPOCH; more grade ≥3 toxicity."
+    },
+    {
+      "study": "crlm-abstract-Dutch-PUMP",
+      "id": "crlm-abstract-Dutch-PUMP-0",
+      "mode": "combined",
+      "a": "surgery_hai",
+      "b": "surgery_nohai",
+      "arms": "Adjuvant pump HAI vs no pump HAI",
+      "brief": "PFS HR 0.88 (0.62–1.25); OS immature.",
+      "note": "Conference results; no adjuvant systemic therapy."
+    },
+    {
+      "study": "crlm-42018958",
+      "id": "crlm-42018958-0",
+      "mode": "combined",
+      "a": "hai_sys",
+      "b": "systemic",
+      "arms": "Arterial vs IV oxaliplatin",
+      "brief": "Hepatic RFS 25 vs 12 mo; OS HR 0.61 (0.33–1.12).",
+      "note": "Adjuvant oxaliplatin route; both arms IV LV5FU2."
+    },
+    {
+      "study": "crlm-10615075",
+      "id": "crlm-10615075-0",
+      "mode": "combined",
+      "a": "hai_sys",
+      "b": "systemic",
+      "arms": "HAI + systemic vs systemic",
+      "brief": "2-y OS 86% vs 72% (P=.03); full OS curves NS.",
+      "note": "Adjuvant RCT; landmark vs whole-curve distinction."
+    },
+    {
+      "study": "crlm-39644535",
+      "id": "crlm-39644535-0",
+      "mode": "combined",
+      "a": "hai_sys",
+      "b": "systemic",
+      "arms": "HAI + systemic vs systemic",
+      "brief": "3-y RFS 31.4% vs 34.4% (P=.28).",
+      "note": "HARVEST: primary negative; stopped for FUDR shortage."
+    },
+    {
+      "study": "crlm-28426374",
+      "id": "crlm-28426374-0",
+      "mode": "combined",
+      "a": "surgery_hai",
+      "b": "surgery_nohai",
+      "arms": "Perioperative HAI vs no HAI",
+      "brief": "OS 67 vs 44 mo; adjusted HR 0.67 (0.59–0.76).",
+      "note": "Retrospective, single center; residual confounding."
+    },
+    {
+      "study": "hcc-16495695",
+      "id": "hcc-16495695-0",
+      "mode": "direct",
+      "a": "abl",
+      "b": "resection",
+      "arms": "Ablation vs resection",
+      "brief": "4-y OS 65.9% vs 64.0%; no significant difference.",
+      "note": "RCT; crossover; not equivalence."
+    },
+    {
+      "study": "hcc-29503247",
+      "id": "hcc-29503247-0",
+      "mode": "technique",
+      "a": "mwa",
+      "b": "rfa",
+      "arms": "MWA vs RFA",
+      "brief": "2-y local progression 6% vs 12% (P=.27).",
+      "note": "Per-lesion analysis; superiority not shown."
+    },
+    {
+      "study": "hcc-31774468",
+      "id": "hcc-31774468-0",
+      "mode": "direct",
+      "a": "resection",
+      "b": "abl",
+      "arms": "Repeat resection vs RFA",
+      "brief": "5-y OS 43.6% vs 38.5% (P=.17).",
+      "note": "Recurrent HCC; primary endpoint negative."
+    },
+    {
+      "study": "hcc-29091283",
+      "id": "hcc-29091283-0",
+      "mode": "direct",
+      "a": "resection",
+      "b": "abl",
+      "arms": "Resection vs RFA",
+      "brief": "10-y OS 47.6% vs 41.8% (P=.531).",
+      "note": "RCT; superiority not shown."
+    },
+    {
+      "study": "hcc-35949295",
+      "id": "hcc-35949295-0",
+      "mode": "direct",
+      "a": "resection",
+      "b": "abl",
+      "arms": "Resection vs RFA",
+      "brief": "RFS 3.46 vs 3.04 y (P=.58).",
+      "note": "SURF interim report; stopped early."
+    },
+    {
+      "study": "hcc-40554738",
+      "id": "hcc-40554738-0",
+      "mode": "direct",
+      "a": "resection",
+      "b": "abl",
+      "arms": "Resection vs RFA",
+      "brief": "5-y OS 74.6% vs 70.4% (P=.84).",
+      "note": "SURF final; not proven equivalence."
+    },
+    {
+      "study": "hcc-26628466",
+      "id": "hcc-26628466-0",
+      "mode": "direct",
+      "a": "sbrt",
+      "b": "abl",
+      "arms": "SBRT vs RFA",
+      "brief": "Better freedom from local progression with SBRT for tumors ≥2 cm.",
+      "note": "Retrospective; treatment selection differed."
+    },
+    {
+      "study": "hcc-39693584",
+      "id": "hcc-39693584-0",
+      "mode": "direct",
+      "a": "sbrt",
+      "b": "abl",
+      "arms": "SBRT vs RFA",
+      "brief": "2-y local PFS 92.7% vs 75.8%; HR 0.45.",
+      "note": "Recurrent HCC; no significant OS difference."
+    },
+    {
+      "study": "hcc-33230652",
+      "id": "hcc-33230652-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "abl",
+      "arms": "Y90 segmentectomy vs MWA",
+      "brief": "Mean target PFS 57.8 vs 38.6 mo; OS difference NS.",
+      "note": "Matched cohort; means, not medians."
+    },
+    {
+      "study": "hcc-42434250",
+      "id": "hcc-42434250-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "abl",
+      "arms": "Y90 segmentectomy vs MWA",
+      "brief": "PFS HR 0.56 (0.20–1.51); OS HR 1.38 (0.30–6.34).",
+      "note": "Retrospective; wide CIs."
+    },
+    {
+      "study": "hcc-27930089",
+      "id": "hcc-27930089-0",
+      "mode": "combined",
+      "a": "y90",
+      "b": "tace_abl",
+      "arms": "Y90 segmentectomy vs TACE + MWA",
+      "brief": "No significant CR, progression or OS difference.",
+      "note": "Matched cohort; comparator includes MWA."
+    },
+    {
+      "study": "hcc-35346857",
+      "id": "hcc-35346857-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "resection",
+      "arms": "Y90 segmentectomy vs resection",
+      "brief": "Progression HR 1.16 (0.51–2.63); OS unreached in both.",
+      "note": "Retrospective; not equivalence."
+    },
+    {
+      "study": "hcc-36100064",
+      "id": "hcc-36100064-0",
+      "mode": "combined",
+      "a": "y90",
+      "b": "tace_abl",
+      "arms": "Y90 vs DEB-TACE + ablation",
+      "brief": "Disease control 94.7% vs 100%; sessions 1.3 vs 1.9.",
+      "note": "Retrospective; no significant OS/PFS difference."
+    },
+    {
+      "study": "hcc-32615109",
+      "id": "hcc-32615109-0",
+      "mode": "direct",
+      "a": "lt",
+      "b": "nonlt",
+      "arms": "LT vs non-transplant care after downstaging",
+      "brief": "5-y OS 77.5% vs 31.2%; HR 0.32 (0.11–0.92).",
+      "note": "45 selected downstaging responders; early closure."
+    },
+    {
+      "study": "hcc-28257902",
+      "id": "hcc-28257902-0",
+      "mode": "direct",
+      "a": "sbrt",
+      "b": "tace",
+      "arms": "SBRT vs TACE",
+      "brief": "Dropout 16.7% vs 20.2%; 5-y ITT OS 61% vs 56%.",
+      "note": "Three-group P=.7 / .4; no pairwise significance claim."
+    },
+    {
+      "study": "hcc-28257902",
+      "id": "hcc-28257902-1",
+      "mode": "direct",
+      "a": "sbrt",
+      "b": "abl",
+      "arms": "SBRT vs RFA",
+      "brief": "Dropout 16.7% vs 16.8%; 5-y ITT OS 61% vs 61%.",
+      "note": "Nonrandomized; SBRT reserved for less suitable patients."
+    },
+    {
+      "study": "hcc-28257902",
+      "id": "hcc-28257902-2",
+      "mode": "direct",
+      "a": "tace",
+      "b": "abl",
+      "arms": "TACE vs RFA",
+      "brief": "Dropout 20.2% vs 16.8%; 5-y ITT OS 56% vs 61%.",
+      "note": "Three-group P=.7 / .4; no pairwise significance claim."
+    },
+    {
+      "study": "hcc-28799575",
+      "id": "hcc-28799575-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "abl",
+      "arms": "Y-90 vs RFA",
+      "brief": "Explant complete necrosis 75% vs 60%.",
+      "note": "Tiny, unequal recipient groups; no dropout inference."
+    },
+    {
+      "study": "hcc-34358718",
+      "id": "hcc-34358718-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "tace",
+      "arms": "Y-90 vs TACE",
+      "brief": "Dropout sHR 0.85 (0.81–0.89).",
+      "note": "IPTW registry cohort; not randomized."
+    },
+    {
+      "study": "hcc-34358718",
+      "id": "hcc-34358718-1",
+      "mode": "direct",
+      "a": "abl",
+      "b": "tace",
+      "arms": "Ablation vs TACE",
+      "brief": "Dropout sHR 0.95 (0.91–0.99).",
+      "note": "Same cohort; not an ablation–Y-90 comparison."
+    },
+    {
+      "study": "hcc-42379392",
+      "id": "hcc-42379392-0",
+      "mode": "combined",
+      "a": "y90",
+      "b": "tace_abl",
+      "arms": "Y90 segmentectomy vs TACE + MWA",
+      "brief": "Mean explant necrosis 83.6% vs 79.0% (P=.484).",
+      "note": "Recipients only; no dropout estimate."
+    },
+    {
+      "study": "hcc-19552767",
+      "id": "hcc-19552767-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "tace",
+      "arms": "Y90 vs TACE",
+      "brief": "Downstaging: 25/43 (58%) vs 11/35 (31%).",
+      "note": "Retrospective; 8 TACE scans missing; older criteria."
+    },
+    {
+      "study": "hcc-28668402",
+      "id": "hcc-28668402-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "tace",
+      "arms": "Y90 vs TACE",
+      "brief": "Recurrence 9% vs 8%; OS/RFS differences NS.",
+      "note": "Recipients only; excludes waitlist dropout."
+    },
+    {
+      "study": "hcc-34331914",
+      "id": "hcc-34331914-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "tace",
+      "arms": "Y90 vs TACE",
+      "brief": "No significant difference in downstaging.",
+      "note": "Nonrandom treatment; not equivalence."
+    },
+    {
+      "study": "hcc-35619164",
+      "id": "hcc-35619164-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "tace",
+      "arms": "Y90 vs TACE",
+      "brief": "Recurrence 23% vs 11% (P=.1224).",
+      "note": "Recipients only; baseline burden differed."
+    },
+    {
+      "study": "hcc-39808828",
+      "id": "hcc-39808828-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "tace",
+      "arms": "Y90 vs TACE",
+      "brief": "2-y downstaging: 74% vs 65% in all-comers.",
+      "note": "Nonrandomized; overlaps MERITS-LT."
+    },
+    {
+      "study": "hcc-41056563",
+      "id": "hcc-41056563-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "tace",
+      "arms": "Y90 vs TACE",
+      "brief": "Dropout sHR 0.83 (0.74–0.93); OS aHR 0.94 (0.85–1.03).",
+      "note": "Observational; overlapping OPTN cohorts."
+    },
+    {
+      "study": "hcc-41580092",
+      "id": "hcc-41580092-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "tace",
+      "arms": "Y90 vs TACE",
+      "brief": "2-y dropout 14.2% vs 19.0%; cause-specific HR 0.78.",
+      "note": "IPTW registry cohort; residual confounding."
+    },
+    {
+      "study": "hcc-29631810",
+      "id": "hcc-29631810-0",
+      "mode": "combined",
+      "a": "hai_sys",
+      "b": "systemic",
+      "arms": "HAIC + sorafenib vs sorafenib",
+      "brief": "OS 11.8 vs 11.5 mo; HR 1.009 (0.743–1.371).",
+      "note": "SILIUS: no OS benefit; more toxicity."
+    },
+    {
+      "study": "hcc-34648352",
+      "id": "hcc-34648352-0",
+      "mode": "direct",
+      "a": "hai",
+      "b": "tace",
+      "arms": "HAIC-FOLFOX vs cTACE",
+      "brief": "OS 23.1 vs 16.1 mo; resection conversion 24% vs 12%.",
+      "note": "RCT; no macrovascular invasion; mostly HBV."
+    },
+    {
+      "study": "hcc-34905388",
+      "id": "hcc-34905388-0",
+      "mode": "direct",
+      "a": "hai",
+      "b": "systemic",
+      "arms": "HAIC-FOLFOX vs sorafenib",
+      "brief": "OS 13.9 vs 8.2 mo; HR 0.408 (0.301–0.552).",
+      "note": "RCT; large tumors; historical sorafenib control."
+    },
+    {
+      "study": "hcc-37037359",
+      "id": "hcc-37037359-0",
+      "mode": "direct",
+      "a": "sbrt",
+      "b": "tace",
+      "arms": "SBRT vs DEB-TACE",
+      "brief": "TTP difference NS; local-control signal post hoc.",
+      "note": "TRENDY: 30 patients; underpowered."
+    },
+    {
+      "study": "hcc-36421345",
+      "id": "hcc-36421345-0",
+      "mode": "direct",
+      "a": "sbrt",
+      "b": "tace",
+      "arms": "SBRT vs repeat embolization",
+      "brief": "Local control favored SBRT over repeat embolization.",
+      "note": "40 patients; most controls had bland TAE."
+    },
+    {
+      "study": "hcc-11981766",
+      "id": "hcc-11981766-0",
+      "mode": "direct",
+      "a": "tace",
+      "b": "supportive",
+      "arms": "TACE vs supportive care",
+      "brief": "TACE improved survival over symptomatic treatment.",
+      "note": "RCT; selected, mostly HBV population."
+    },
+    {
+      "study": "hcc-12049862",
+      "id": "hcc-12049862-0",
+      "mode": "direct",
+      "a": "tace",
+      "b": "supportive",
+      "arms": "TAE / TACE / supportive care",
+      "brief": "TACE vs supportive care: OS HR 0.47.",
+      "note": "Three-arm RCT; estimate is for TACE only."
+    },
+    {
+      "study": "hcc-25373796",
+      "id": "hcc-25373796-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "tace",
+      "arms": "Y90 vs DEB-TACE",
+      "brief": "PFS 180 vs 216 d; OS 592 vs 788 d; both NS.",
+      "note": "Pilot RCT; older dosimetry."
+    },
+    {
+      "study": "hcc-35258371",
+      "id": "hcc-35258371-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "tace",
+      "arms": "Y90 vs DEB-TACE",
+      "brief": "TTP 17.1 vs 9.5 mo; OS 30.2 vs 15.6 mo.",
+      "note": "TRACE RCT; stopped early at 72 patients."
+    },
+    {
+      "study": "hcc-25443863",
+      "id": "hcc-25443863-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "tace",
+      "arms": "Y90 vs TACE",
+      "brief": "Disease control 76.9% vs 73.3%; QoL difference NS.",
+      "note": "SIRTACE pilot; not survival equivalence."
+    },
+    {
+      "study": "hcc-27575820",
+      "id": "hcc-27575820-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "tace",
+      "arms": "Y90 vs cTACE",
+      "brief": "TTP >26 vs 6.8 mo; OS 18.6 vs 17.7 mo (NS).",
+      "note": "PREMIERE RCT; 45 patients; 12 TTP events."
+    },
+    {
+      "study": "hcc-27284477",
+      "id": "hcc-27284477-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "sbrt",
+      "arms": "Y90 vs external-beam radiation",
+      "brief": "OS HR 0.72 (0.49–1.07); difference NS.",
+      "note": "Registry; historical radiation coding."
+    },
+    {
+      "study": "hcc-29107679",
+      "id": "hcc-29107679-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "systemic",
+      "arms": "Y90 vs sorafenib",
+      "brief": "OS 8.0 vs 9.9 mo; HR 1.15 (0.94–1.41).",
+      "note": "SARAH RCT; 22% of Y-90 arm untreated."
+    },
+    {
+      "study": "hcc-29498924",
+      "id": "hcc-29498924-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "systemic",
+      "arms": "Y90 vs sorafenib",
+      "brief": "OS 8.8 vs 10.0 mo; HR 1.12 (0.9–1.4).",
+      "note": "SIRveNIB RCT; no OS benefit."
+    },
+    {
+      "study": "hcc-33687130",
+      "id": "hcc-33687130-0",
+      "mode": "combined",
+      "a": "hai_abl",
+      "b": "abl",
+      "arms": "HAIC + RFA vs RFA",
+      "brief": "3-y RFS 54.3% vs 34.3% (P=.094).",
+      "note": "Randomized; primary recurrence endpoint negative."
+    },
+    {
+      "study": "hcc-31070690",
+      "id": "hcc-31070690-0",
+      "mode": "combined",
+      "a": "hai_sys",
+      "b": "systemic",
+      "arms": "HAIC + sorafenib vs sorafenib",
+      "brief": "OS 13.4 vs 7.1 mo.",
+      "note": "RCT; 80.6% Vp3/4 invasion; sorafenib control."
+    },
+    {
+      "study": "hcc-35993224",
+      "id": "hcc-35993224-0",
+      "mode": "combined",
+      "a": "hai_abl",
+      "b": "hai",
+      "arms": "HAIC → ablation vs HAIC",
+      "brief": "2-y OS 74.3% vs 27.7%.",
+      "note": "Selected responders; tests adding ablation."
+    },
+    {
+      "study": "hcc-39699905",
+      "id": "hcc-39699905-0",
+      "mode": "combined",
+      "a": "sbrt_sys",
+      "b": "systemic",
+      "arms": "SBRT + sorafenib vs sorafenib",
+      "brief": "OS 15.8 vs 12.3 mo; primary P=.06; PFS 9.2 vs 5.5 mo.",
+      "note": "RTOG 1112: unadjusted primary OS endpoint not met."
+    },
+    {
+      "study": "hcc-29543938",
+      "id": "hcc-29543938-0",
+      "mode": "combined",
+      "a": "tace_rt",
+      "b": "systemic",
+      "arms": "TACE + EBRT vs sorafenib",
+      "brief": "12-wk PFS 86.7% vs 34.3%; OS 55 vs 43 wk.",
+      "note": "RCT; high control-arm crossover."
+    },
+    {
+      "study": "hcc-23269991",
+      "id": "hcc-23269991-0",
+      "mode": "combined",
+      "a": "tace_abl",
+      "b": "abl",
+      "arms": "TACE + RFA vs RFA",
+      "brief": "4-y OS 61.8% vs 45.0%; OS HR 0.525.",
+      "note": "Single-center RCT; changed sample size."
+    },
+    {
+      "study": "hcc-39798579",
+      "id": "hcc-39798579-0",
+      "mode": "combined",
+      "a": "tace_sys",
+      "b": "tace",
+      "arms": "TACE + durvalumab / bevacizumab vs TACE",
+      "brief": "PFS 15.0 vs 8.2 mo; HR 0.77; interim OS NS.",
+      "note": "EMERALD-1: durvalumab + bevacizumab add-on."
+    },
+    {
+      "study": "hcc-39798578",
+      "id": "hcc-39798578-0",
+      "mode": "combined",
+      "a": "tace_sys",
+      "b": "tace",
+      "arms": "TACE + lenvatinib / pembrolizumab vs TACE",
+      "brief": "PFS 14.6 vs 10.0 mo; HR 0.66; interim OS NS.",
+      "note": "LEAP-012: lenvatinib + pembrolizumab add-on."
+    },
+    {
+      "study": "hcc-31421157",
+      "id": "hcc-31421157-0",
+      "mode": "combined",
+      "a": "y90_sys",
+      "b": "systemic",
+      "arms": "Y90 + sorafenib vs sorafenib",
+      "brief": "No OS benefit from adding Y-90 to sorafenib.",
+      "note": "SORAMIC; major treatment noncompletion."
+    },
+    {
+      "study": "hcc-36525610",
+      "id": "hcc-36525610-0",
+      "mode": "combined",
+      "a": "surgery_hai",
+      "b": "surgery_observe",
+      "arms": "Adjuvant HAIC vs observation",
+      "brief": "DFS 20.3 vs 10.0 mo; OS difference NS.",
+      "note": "Adjuvant HAIC-FOLFOX; detection asymmetry."
+    },
+    {
+      "study": "hcc-29420221",
+      "id": "hcc-29420221-0",
+      "mode": "combined",
+      "a": "surgery_tace",
+      "b": "surgery_observe",
+      "arms": "Adjuvant TACE vs observation",
+      "brief": "3-y OS 85.2% vs 77.4%; RFS favored adjuvant TACE.",
+      "note": "HBV RCT; does not establish routine adjuvant use."
+    },
+    {
+      "study": "hcc-37328589",
+      "id": "hcc-37328589-0",
+      "mode": "combined",
+      "a": "embol_surgery",
+      "b": "resection",
+      "arms": "Embolization → resection vs emergency resection",
+      "brief": "Lower in-hospital mortality; better 1-/3-y OS.",
+      "note": "Ruptured HCC; nonrandomized meta-analysis."
+    },
+    {
+      "study": "hcc-38488934",
+      "id": "hcc-38488934-0",
+      "mode": "direct",
+      "a": "sbrt",
+      "b": "tace",
+      "arms": "Postoperative RT vs TACE",
+      "brief": "No PFS or OS difference after resection.",
+      "note": "Postoperative RCT; no surgery-alone arm."
+    },
+    {
+      "study": "hcc-31283409",
+      "id": "hcc-31283409-0",
+      "mode": "combined",
+      "a": "rt_surgery",
+      "b": "resection",
+      "arms": "RT → resection vs resection",
+      "brief": "HCC-death HR 0.47; 9/82 did not reach surgery.",
+      "note": "Neoadjuvant 3D-CRT, not SBRT; univariable ITT."
+    },
+    {
+      "study": "hcc-33166497",
+      "id": "hcc-33166497-0",
+      "mode": "technique",
+      "a": "personal_y90",
+      "b": "standard_y90",
+      "arms": "Personalized vs standard Y90 dosimetry",
+      "brief": "3-mo response 71% vs 36%; OS 26.6 vs 10.7 mo.",
+      "note": "Phase II; stopped early; OS affected by resection."
+    },
+    {
+      "study": "hcc-39245060",
+      "id": "hcc-39245060-0",
+      "mode": "direct",
+      "a": "sbrt",
+      "b": "supportive",
+      "arms": "RT vs supportive care",
+      "brief": "Pain response 67% vs 22%.",
+      "note": "Whole-liver 8 Gy; mixed hepatic cancers; not OS."
+    },
+    {
+      "study": "icca-41528222",
+      "id": "icca-41528222-0",
+      "mode": "direct",
+      "a": "abl",
+      "b": "resection",
+      "arms": "MWA vs repeat resection",
+      "brief": "OS 29.8 vs 34.0 mo; major complications 5.5% vs 31.3%.",
+      "note": "Recurrent iCCA; observational, not equivalence."
+    },
+    {
+      "study": "icca-38261915",
+      "id": "icca-38261915-0",
+      "mode": "direct",
+      "a": "abl",
+      "b": "resection",
+      "arms": "MWA vs resection",
+      "brief": "5-y OS 44.8% vs 40.4%; DFS 1.7 vs 3.6 y.",
+      "note": "Matched cohort; DFS favored resection."
+    },
+    {
+      "study": "icca-26695839",
+      "id": "icca-26695839-0",
+      "mode": "combined",
+      "a": "hai_sys",
+      "b": "systemic",
+      "arms": "HAI + systemic vs systemic",
+      "brief": "OS 30.8 vs 18.4 mo; PFS difference NS.",
+      "note": "Nonrandomized; unadjusted OS."
+    },
+    {
+      "study": "icca-33868997",
+      "id": "icca-33868997-0",
+      "mode": "direct",
+      "a": "hai",
+      "b": "tace",
+      "arms": "HAIC vs TACE",
+      "brief": "1-y OS 60.2% vs 42.9%; 2-y OS 38.7% vs 29.4%.",
+      "note": "Retrospective; catheter HAIC, not pump FUDR."
+    },
+    {
+      "study": "icca-40216615",
+      "id": "icca-40216615-0",
+      "mode": "direct",
+      "a": "hai",
+      "b": "tace",
+      "arms": "HAIC vs cTACE / DEB-TACE",
+      "brief": "OS 10.3 vs 5.1 mo vs cTACE; DEB-TACE contrast NS.",
+      "note": "Retrospective; 24 HAIC patients."
+    },
+    {
+      "study": "icca-35544131",
+      "id": "icca-35544131-0",
+      "mode": "direct",
+      "a": "hai",
+      "b": "resection",
+      "arms": "Pump HAI vs resection",
+      "brief": "OS 20.3 vs 18.9 mo; adjusted HR 0.75 (0.55–1.03).",
+      "note": "Multifocal iCCA; different centers/eras."
+    },
+    {
+      "study": "icca-37814188",
+      "id": "icca-37814188-0",
+      "mode": "combined",
+      "a": "hai_mixed",
+      "b": "systemic",
+      "arms": "Pump HAI ± systemic vs GemCis",
+      "brief": "OS 27.7 vs 11.8 mo.",
+      "note": "Cross-center cohort; most HAI also received systemic."
+    },
+    {
+      "study": "icca-31517072",
+      "id": "icca-31517072-0",
+      "mode": "direct",
+      "a": "sbrt",
+      "b": "y90",
+      "arms": "SBRT vs TARE",
+      "brief": "Adjusted OS HR 0.42 (0.21–0.84).",
+      "note": "Registry; burden/selection differed; not causal superiority."
+    },
+    {
+      "study": "icca-30191056",
+      "id": "icca-30191056-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "tace",
+      "arms": "Y90 vs chemoembolization",
+      "brief": "Disease control 12/25 (48%) vs 7/15 (47%).",
+      "note": "Small cohort; survival not assessed."
+    },
+    {
+      "study": "icca-26503201",
+      "id": "icca-26503201-0",
+      "mode": "technique",
+      "a": "high_rt",
+      "b": "low_rt",
+      "arms": "Higher vs lower radiation dose",
+      "brief": "3-y OS 73% vs 38%; local control 78% vs 45%.",
+      "note": "Retrospective; only 19 high-dose patients."
+    },
+    {
+      "study": "nelm-abstract-RETNET-RCT",
+      "id": "nelm-abstract-RETNET-RCT-0",
+      "mode": "technique",
+      "a": "tae",
+      "b": "ctace",
+      "arms": "Bland embolization vs cTACE",
+      "brief": "Hepatic PFS difference not significant.",
+      "note": "Conference results; PMID opens protocol, not results."
+    },
+    {
+      "study": "nelm-16134179",
+      "id": "nelm-16134179-0",
+      "mode": "technique",
+      "a": "tae",
+      "b": "ctace",
+      "arms": "Bland vs chemoembolization",
+      "brief": "Carcinoid response 81.0% vs 44.4%; islet-cell 25% vs 50%.",
+      "note": "Retrospective; islet-cell difference NS; not a survival gain."
+    },
+    {
+      "study": "nelm-32032719",
+      "id": "nelm-32032719-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "tace",
+      "arms": "Y90 vs TACE",
+      "brief": "Disease control 83% vs 96%; OS/PFS differences NS.",
+      "note": "Retrospective; not equivalence."
+    },
+    {
+      "study": "nelm-29167951",
+      "id": "nelm-29167951-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "tace",
+      "arms": "Y90 vs bland embolization",
+      "brief": "3-mo response 0/6 vs 5/5; 6-mo 2/6 vs 4/5.",
+      "note": "Y-90 vs bland TAE; 11 patients; no survival comparison."
+    },
+    {
+      "study": "nelm-42006283",
+      "id": "nelm-42006283-0",
+      "mode": "direct",
+      "a": "y90",
+      "b": "tace",
+      "arms": "Y90 vs bland embolization",
+      "brief": "Local PFS 30.57 vs 13.9 mo; OS difference NS.",
+      "note": "Lung carcinoid only; retrospective; bland TAE control."
+    },
+    {
+      "study": "nelm-28677067",
+      "id": "nelm-28677067-0",
+      "mode": "direct",
+      "a": "tace",
+      "b": "y90",
+      "arms": "cTACE vs Y-90",
+      "brief": "Weighted OS 34.0 vs 22.9 mo.",
+      "note": "Retrospective; pairwise weighting; not a modality ranking."
+    },
+    {
+      "study": "nelm-28677067",
+      "id": "nelm-28677067-1",
+      "mode": "technique",
+      "a": "ctace",
+      "b": "debtace",
+      "arms": "cTACE vs DEB-TACE",
+      "brief": "Weighted OS 33.8 vs 23.4 mo.",
+      "note": "Same report, different weighted cohorts."
+    },
+    {
+      "study": "nelm-33004146",
+      "id": "nelm-33004146-0",
+      "mode": "direct",
+      "a": "tace",
+      "b": "y90",
+      "arms": "TACE vs Y90: delayed toxicity",
+      "brief": "Chronic hepatic toxicity 22% vs 29%; solely attributed 3% vs 14% (P=.07).",
+      "note": "Survivors ≥1 y only; not all treated patients."
+    },
+    {
+      "study": "pcca-39936132",
+      "id": "pcca-39936132-0",
+      "mode": "combined",
+      "a": "nat_gemcis",
+      "b": "nat_rt",
+      "arms": "GemCis-only vs RT-containing neoadjuvant therapy",
+      "brief": "No significant OS or explant-response difference.",
+      "note": "Recipients only; small nonrandom groups."
+    },
+    {
+      "study": "pcca-37032423",
+      "id": "pcca-37032423-0",
+      "mode": "combined",
+      "a": "lt_crt",
+      "b": "lt_nocrt",
+      "arms": "Neoadjuvant chemoradiation vs none before LT",
+      "brief": "Recurrence HR 0.30; 5-y OS 41% vs 53% (NS).",
+      "note": "Nonrandomized; more vascular complications with CRT."
+    },
+    {
+      "study": "pcca-42433279",
+      "id": "pcca-42433279-0",
+      "mode": "combined",
+      "a": "drain_hai",
+      "b": "drain_support",
+      "arms": "Drainage + HAIC vs drainage + supportive care",
+      "brief": "OS 17.63 vs 6.10 mo.",
+      "note": "Nonrandomized; investigational; not transplant bridging."
+    },
+    {
+      "study": "pcca-abstract-ABC-07-randomized-phase-II",
+      "id": "pcca-abstract-ABC-07-randomized-phase-II-0",
+      "mode": "combined",
+      "a": "gemcis_sbrt",
+      "b": "gemcis",
+      "arms": "GemCis → SBRT vs continued GemCis",
+      "brief": "PFS 8.6 vs 9.0 mo; HR 1.00; OS difference NS.",
+      "note": "Conference results; 84% perihilar."
+    },
+    {
+      "study": "pcca-39311927",
+      "id": "pcca-39311927-0",
+      "mode": "technique",
+      "a": "stent_radio",
+      "b": "stent_plain",
+      "arms": "Radioactive vs conventional stents; both with HAIC",
+      "brief": "OS 10.2 vs 6.7 mo.",
+      "note": "Both arms received HAIC; effect is stent comparison."
     }
   ]
 }

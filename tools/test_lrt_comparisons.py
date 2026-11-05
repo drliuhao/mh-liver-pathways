@@ -29,4 +29,20 @@ for pid in ['33739462','35617978','39225612','31670746']:
 for f in ['lrt/matrix.json','tools/compact_evidence_source.json','tools/lrt_comparative_evidence.json','transplant/assets/content.json']:
  baseline=subprocess.check_output(['git','show','90d7afb:'+f],cwd=R)
  assert baseline==(R/f).read_bytes(),f
-print('PASS: 97 unique tumour-study rows; all 40 detailed comparisons preserved, older trials included, single-arm evidence excluded; clinical sources unchanged.')
+pairs=data['pairs']
+assert {p['study'] for p in pairs}=={r['id'] for r in rows}
+assert len({p['id'] for p in pairs})==len(pairs)
+for p in pairs:
+ assert p['a'] in data['arms'] and p['b'] in data['arms'] and p['a']!=p['b']
+ assert p['mode'] in data['modes'] and p['arms'] and p['brief'] and p['note']
+ assert len(p['brief'])<=180 and len(p['note'])<=110,(p['id'],'not concise')
+def at(pid):return [p for p in pairs if p['study'].endswith('-'+pid)]
+assert {(p['a'],p['b']) for p in at('34358718')}=={('y90','tace'),('abl','tace')}
+for pid,a,b in [('27930089','y90','tace_abl'),('36100064','y90','tace_abl'),('11843249','y90_hai','hai'),('42018958','hai_sys','systemic'),('33687130','hai_abl','abl'),('35993224','hai_abl','hai')]:
+ assert [(p['mode'],p['a'],p['b']) for p in at(pid)]==[('combined',a,b)],pid
+assert at('39311927')[0]['mode']=='technique' and 'Both arms received HAIC' in at('39311927')[0]['note']
+assert all('Recipient' in p['note'] or 'recipient' in p['note'] for pid in ['28799575','28668402','35619164','42379392'] for p in at(pid))
+assert at('32615109')[0]['a']=='lt' and at('32615109')[0]['b']=='nonlt'
+assert not any('htx' in [p['a'],p['b']] for p in pairs),'No comparative histotripsy trial in this source set'
+assert [(p['a'],p['b']) for p in at('abstract-RETNET-RCT')]==[('tae','ctace')]
+print(f'PASS: 97 source records and {len(pairs)} explicit treatment pairs; combination arms and effect order retained; full clinical sources unchanged.')

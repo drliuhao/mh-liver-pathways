@@ -5,6 +5,7 @@ are shown once per tumour. Single-arm series are not comparative rows.
 """
 from pathlib import Path
 import json
+from lrt_pairwise_layout import ARMS, MODES, build_pairs
 
 R=Path(__file__).resolve().parents[1]
 load=lambda name:json.loads((R/name).read_text())
@@ -84,6 +85,6 @@ for tumor,name,setting,label,treatments,doi in [
 assert len({r['id'] for r in rows})==len(rows)
 order={k:i for i,k in enumerate(settings)}
 rows.sort(key=lambda r:(r['tumor'],order[r['setting']],r['comparison'],r['year'],r['id']))
-out={'version':'20261104-compare1','settings':settings,'treatments':dict((m[0],m[1]) for m in matrix['modalities'])|{'surgery':'Resection / transplant','systemic':'Systemic therapy','supportive':'Supportive care'},'rows':rows}
+out={'version':'20261104-grid1','settings':settings,'treatments':dict((m[0],m[1]) for m in matrix['modalities'])|{'surgery':'Resection / transplant','systemic':'Systemic therapy','supportive':'Supportive care'},'rows':rows,'arms':ARMS,'modes':MODES,'pairs':build_pairs(rows)}
 (R/'lrt/comparisons.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
 print('Built comparison tables:',{t:sum(r['tumor']==t for r in rows) for t,_,_ in matrix['tumours']})
