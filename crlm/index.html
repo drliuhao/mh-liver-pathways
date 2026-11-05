@@ -314,6 +314,8 @@ footer p + p{margin-top:8px}
 @media (max-width:640px){ .ev .evtag{width:auto} }
 @media (prefers-reduced-motion:reduce){ *{transition:none !important} }
 </style>
+<link rel="stylesheet" href="../assets/lrt-comparisons.css?v=20261104-compare1">
+<script defer src="../assets/lrt-comparisons.js?v=20261104-compare1"></script>
 <link rel="stylesheet" href="../assets/roadmap-flow.css?v=20261104-pdf1">
 <script src="../assets/roadmap-flow.js?v=20261104-pdf1"></script>
 
@@ -698,7 +700,7 @@ function renderCell(){
       ${tchip(c.tier, MX.tiers[c.tier].label)}
     </div>
     <p style="margin-top:12px; font-size:14.5px"><b>${esc(expandAbbr(c.head))}</b></p>
-    ${c.roles.map(r=>`<div class="role">
+    ${c.roles.filter(r=>!r.comparative).map(r=>`<div class="role">
         <div class="rolewhen">${tchip(r.t, (MX.tiers[r.t] || {short:"Caution"}).short)}<span>${esc(expandAbbr(r.when))}</span></div>
         <details class="more"><summary>${r.ev.length} ${r.ev.length===1?"study":"studies"}</summary>
           <div class="moreinner">${r.ev.map(evLine).join("")}</div></details>

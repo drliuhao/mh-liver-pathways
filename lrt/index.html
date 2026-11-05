@@ -147,6 +147,8 @@ ol.refs .links { display: inline-flex; gap: 10px; margin-left: 4px; font-size: 1
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 .comparative summary{cursor:pointer;font-weight:650;color:var(--ink);padding:8px 0}.comparative small{font-weight:400}.comparative[open] summary{margin-bottom:10px}
 </style>
+<link rel="stylesheet" href="../assets/lrt-comparisons.css?v=20261104-compare1">
+<script defer src="../assets/lrt-comparisons.js?v=20261104-compare1"></script>
 
 <div class="wrap">
   <header class="top">
@@ -169,6 +171,7 @@ ol.refs .links { display: inline-flex; gap: 10px; margin-left: 4px; font-size: 1
     <div class="tumtabs" id="tumtabs" role="tablist" aria-label="Tumour type"></div>
     <div class="ladder" id="ladder"></div>
     <div class="cards" id="cards"></div>
+    <section id="comparison-matrix" data-lrt-tumor="hcc"></section>
   </section>
 
   <section id="view-matrix" hidden>
@@ -249,12 +252,15 @@ function renderTumour() {
   $('#cards').innerHTML = cells.map(([mk, c]) => {
     const m = modName[mk];
     const has = !state.filter || cellTiers(c).has(state.filter);
-    const roles = c.roles.map(r => r.comparative ? `<details class="role comparative"><summary>${esc(r.when)} <small>(${r.ev.length} ${r.ev.length === 1 ? 'study' : 'studies'})</small></summary>${evList(r.ev)}</details>` : `<div class="role${state.filter && r.t !== state.filter ? ' dim' : ''}"><div>${chip(r.t)}${r.flag ? `<span class="flag">${esc(r.flag)}</span>` : ''}</div><div class="when">${esc(r.when)}</div>${evList(r.ev)}</div>`).join('');
+    const roles = c.roles.filter(r => !r.comparative).map(r => `<div class="role${state.filter && r.t !== state.filter ? ' dim' : ''}"><div>${chip(r.t)}${r.flag ? `<span class="flag">${esc(r.flag)}</span>` : ''}</div><div class="when">${esc(r.when)}</div>${evList(r.ev)}</div>`).join('');
     return `<article class="card t${c.tier}${has ? '' : ' dim'}" id="card-${mk}">
       <div class="ch"><div class="row1"><span><span class="mod">${esc(m[1])}</span> <span class="msub">${esc(m[2])}</span></span>${chip(c.tier)}</div>
       <div class="headline">${esc(c.head)}</div></div>
       <div class="roles">${roles}</div></article>`;
   }).join('');
+  const comparisons = document.getElementById('comparison-matrix');
+  comparisons.dataset.lrtTumor = tk;
+  if (window.LrtComparisons) window.LrtComparisons.mount(comparisons, tk);
 }
 
 function renderMatrix() {

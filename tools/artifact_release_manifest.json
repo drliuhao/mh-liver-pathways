@@ -786,7 +786,7 @@
     "hcc/data/critique.json": "50589a89046ef49379ff76f34f9404b02106756df5658ef43fd0c65a9539cf7d",
     "hcc/data/lrt_matrix.json": "c9278424c37fdf48489e2cfe3664a74d9090ff9f3dc3321cdce33c372c83c032",
     "hcc/data/lrt_refs.json": "0ec07c77b2ffda487d92b32b22318a019df86c136e3da048a8f0d774e7011722",
-    "hcc/index.html": "83cc826060a8cf9aaa2c47303e4f011d38d56c91cf708cc5254e30b247a0c107",
+    "hcc/index.html": "727443d31fc44a649012f53ee1b1be0a71603665fccbe086bd92b97ad4d01a08",
     "hilar/data/critique.json": "cf8977de23a4f0d560fd63c0ec24198f31dc3a195967b1c36523eb170d8866ed",
     "hilar/data/pathway.json": "2c4319ebf075e0f150ff4857f8082ca764b4132392402a9fc8dedfb7c86acd43",
     "icca/data/critique.json": "eb4eaeb16aa74b490e0fb80d59ba602078c239c07795cdb58cb91b99988e78e3",
@@ -795,7 +795,7 @@
     "icca/data/pathway.json": "c191a6baddfacbf74a8161e89fc2e9e6283e5291df3e713167130c7fcf3a611d",
     "incidental/data/critique.json": "bc0e12a34bd5761080e06ba2545619f767bc49635b7b1fdf5950be0fafa9c385",
     "incidental/data/pathway.json": "435d10eab4c3eb0406fa1c79cd8e0df562c15d5df6ed1ce729bc5125588d4441",
-    "lrt/index.html": "303cf65d337520545b5dd9638a71450434455447ff914d296dc79da672eef6f7",
+    "lrt/index.html": "7cbb13aa9a8aa1e3dae64878b1dcd52bf7aa5dcdec55045a6ec9ef894b213317",
     "lrt/matrix.json": "3e12517e5b9055763a450bec5e95603c1bb70a26222571faf28d1f7ee95552ab",
     "nelm/data/critique.json": "7dc108a430301a2b35b6108e54429c967148900e7972039c347ed4d6e6a1f065",
     "nelm/data/lrt_matrix.json": "c9278424c37fdf48489e2cfe3664a74d9090ff9f3dc3321cdce33c372c83c032",
@@ -814,7 +814,11 @@
     "transplant/assets/assistant.js": "f27a41d62acdbddae4eaa83b88d6fb89678d560dfc6f9f70f35de5beac0ac756",
     "transplant/assets/content.json": "4d6396d4e1adede6b5a11cbdd0493f9f683c342fff5ca55c3d47c445b80023f5",
     "transplant/assets/pathway-sections.json": "57cb3b71cdf690af5fa1e33ebf332908d5ffcd9620cef58ddeaa350e453c0fea",
-    "transplant/assets/risk-routing.js": "5135a79900b39e6906d42949f0ec691fbbc006048607581b85789983ac8848a9"
+    "transplant/assets/risk-routing.js": "5135a79900b39e6906d42949f0ec691fbbc006048607581b85789983ac8848a9",
+    "assets/lrt-comparisons.css": "b6e1025bf83eb23ebbb51f0860180e59fe015b51b09cf8c1a8f09fc83d15e02b",
+    "lrt/comparisons.json": "ea64b8a65a11d4899b447e7b2e38ad6701e6c4e44231bfcf044c25477598ebc4",
+    "assets/lrt-comparisons.js": "c21df492e86adba7964229b69f49d5ea302c88fbce9ccff4ae6f89973152d222",
+    "tools/build_lrt_comparisons.py": "be12ddabda21b469a33e76c8c4a6f6eb0cc1eaf797f955c91e4ede73513a433c"
   },
   "verification_limits": "Review covers design, population, key outcomes, relevant tables/figures and clinical limitations in 34 downloaded papers. It is not an every-statement or every-supplement audit. Nine modified Word sections rendered separately and in the full documents. All 40 comparative PPT cards rendered; all 12 clinically changed cards inspected visually. Twenty modified decks passed package/layout/import checks. All pre-comparative slide, chart, table, media and workbook parts remain byte-identical to the V18 base. Prior comparative cards were replaced in place, not duplicated. Unchanged documents and slides were not re-reviewed in full.",
   "counts": {
@@ -831,5 +835,13 @@
     "downloaded_checklist_papers": 34,
     "physical_pdf_copies": 277,
     "clinical_summary_refinements": 12
+  },
+  "website_presentation_update": {
+    "date": "2026-11-04",
+    "version": "20261104-compare1",
+    "description": "Per-tumor treatment comparison tables with source-preserving rows, replacing repeated appended comparative lists.",
+    "study_report_rows": 97,
+    "clinical_data_unchanged_from": "90d7afba90a04a56ee36639428d5da6871cac9ce",
+    "word_and_ppt_unchanged": true
   }
 }
