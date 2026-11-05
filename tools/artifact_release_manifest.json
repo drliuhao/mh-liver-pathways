@@ -786,7 +786,7 @@
     "hcc/data/critique.json": "50589a89046ef49379ff76f34f9404b02106756df5658ef43fd0c65a9539cf7d",
     "hcc/data/lrt_matrix.json": "c9278424c37fdf48489e2cfe3664a74d9090ff9f3dc3321cdce33c372c83c032",
     "hcc/data/lrt_refs.json": "0ec07c77b2ffda487d92b32b22318a019df86c136e3da048a8f0d774e7011722",
-    "hcc/index.html": "9d13b54d136eb2b0cdba09832f74f112406325519924e9206840d6a10e6e7b5f",
+    "hcc/index.html": "46af7f25b2149c368775a92dd411ffeebbe041437959d92a30af24a006e8129b",
     "hilar/data/critique.json": "cf8977de23a4f0d560fd63c0ec24198f31dc3a195967b1c36523eb170d8866ed",
     "hilar/data/pathway.json": "2c4319ebf075e0f150ff4857f8082ca764b4132392402a9fc8dedfb7c86acd43",
     "icca/data/critique.json": "eb4eaeb16aa74b490e0fb80d59ba602078c239c07795cdb58cb91b99988e78e3",
@@ -795,7 +795,7 @@
     "icca/data/pathway.json": "c191a6baddfacbf74a8161e89fc2e9e6283e5291df3e713167130c7fcf3a611d",
     "incidental/data/critique.json": "bc0e12a34bd5761080e06ba2545619f767bc49635b7b1fdf5950be0fafa9c385",
     "incidental/data/pathway.json": "435d10eab4c3eb0406fa1c79cd8e0df562c15d5df6ed1ce729bc5125588d4441",
-    "lrt/index.html": "39828c768238d99a7c972720420d79abc4cb4d94c2a61262f1dd52fb97728577",
+    "lrt/index.html": "acd1314dff05d17cc78c3f07efabca90ea05bb85d93e4b632752dbef0cedd52c",
     "lrt/matrix.json": "3e12517e5b9055763a450bec5e95603c1bb70a26222571faf28d1f7ee95552ab",
     "nelm/data/critique.json": "7dc108a430301a2b35b6108e54429c967148900e7972039c347ed4d6e6a1f065",
     "nelm/data/lrt_matrix.json": "c9278424c37fdf48489e2cfe3664a74d9090ff9f3dc3321cdce33c372c83c032",
@@ -815,14 +815,15 @@
     "transplant/assets/content.json": "4d6396d4e1adede6b5a11cbdd0493f9f683c342fff5ca55c3d47c445b80023f5",
     "transplant/assets/pathway-sections.json": "57cb3b71cdf690af5fa1e33ebf332908d5ffcd9620cef58ddeaa350e453c0fea",
     "transplant/assets/risk-routing.js": "5135a79900b39e6906d42949f0ec691fbbc006048607581b85789983ac8848a9",
-    "assets/lrt-comparisons.css": "7d3eef06ca0739e96f9fb6180f89599c017c16fc46b384841e0c9071307f1bf1",
-    "lrt/comparisons.json": "511ff79ecf63b6c40510c165fa163a588b4031c514cf8fcb6b157f2c29ad6e8e",
-    "assets/lrt-comparisons.js": "5248c499a2299deb1b39a669131edf09051bd50f42554c512fff164112535ede",
-    "tools/build_lrt_comparisons.py": "e5475c903512f96d8396f097d8fc949a11ce24530e3064ba856d2df6f0638027",
-    "crlm/index.html": "585a6e6fc1ca1ac54b2c11bc69a850ef42036a6176836c023f7ef84479a4c44a",
-    "icca/index.html": "ef5d4943c816edd84993d618d4f2534ceb7b713306875b2afab3583e4216309b",
-    "nelm/index.html": "c13be08ba82af9efd6461d798dabe23be32b975c33fd23cf51bab46fdfc4f1a2",
-    "tools/lrt_pairwise_layout.py": "5bcfb622fce3c52fe9f7739c5b52616d1eefa4ebb0c34937126abf869be0586a"
+    "assets/lrt-comparisons.css": "abd197aefc9c90a60d08e961a101c40049621e886140273550525f1b129ff1b4",
+    "lrt/comparisons.json": "47c8db10465f0ab4e838925a1806fa84b80f0d5bf3ca3f598e9a54cf092e714a",
+    "assets/lrt-comparisons.js": "a68e17f7ea99e6a995da3d19fe3d0e6ad56aea1540b0952d78ed211b5d7bf5e2",
+    "tools/build_lrt_comparisons.py": "1f41c650be8fcd1aead4c8f5e0cf3f7a0885122a528c753774f8c23a3d868578",
+    "crlm/index.html": "f534f956b3f7b403d5eb7689d0af2affd1f8b4087aad9ae5761e7ebea8b87b36",
+    "icca/index.html": "9be09e4ba688cbada8c8024dd997b748d1adbd780fbccf9cb3234d8c88a04989",
+    "nelm/index.html": "78b335c6ab45f98afa291009c44084d461fcfee8cb0e877e99b6b959cb6b73aa",
+    "tools/lrt_pairwise_layout.py": "5bcfb622fce3c52fe9f7739c5b52616d1eefa4ebb0c34937126abf869be0586a",
+    "tools/lrt_screen_summary.py": "6cce4b81706711b8d774ec6ac4bfcbba24c02c6b2f1571b74b256fd2368bc167"
   },
   "verification_limits": "Review covers design, population, key outcomes, relevant tables/figures and clinical limitations in 34 downloaded papers. It is not an every-statement or every-supplement audit. Nine modified Word sections rendered separately and in the full documents. All 40 comparative PPT cards rendered; all 12 clinically changed cards inspected visually. Twenty modified decks passed package/layout/import checks. All pre-comparative slide, chart, table, media and workbook parts remain byte-identical to the V18 base. Prior comparative cards were replaced in place, not duplicated. Unchanged documents and slides were not re-reviewed in full.",
   "counts": {
@@ -841,13 +842,13 @@
     "clinical_summary_refinements": 12
   },
   "website_presentation_update": {
-    "date": "2026-11-04",
-    "version": "20261104-grid1",
-    "description": "Treatment-by-treatment grids with explicit study-arm mapping, concise per-cell outcomes and article/full-text links; direct, add-on and technique views. Full source records preserved.",
+    "date": "2026-11-05",
+    "version": "20261105-compact1",
+    "description": "Single-screen treatment-pair previews with endpoint-specific finding colors; all studies, population qualifiers, limitations and sources available on click.",
     "study_report_rows": 97,
     "explicit_pair_placements": 101,
     "clinical_data_unchanged_from": "90d7afba90a04a56ee36639428d5da6871cac9ce",
     "word_and_ppt_unchanged": true,
-    "verification_folder": "LRT_Treatment_Grid_2026-11-04"
+    "verification_folder": "LRT_Compact_Screen_2026-11-05"
   }
 }

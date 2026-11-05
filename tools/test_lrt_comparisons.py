@@ -46,3 +46,21 @@ assert at('32615109')[0]['a']=='lt' and at('32615109')[0]['b']=='nonlt'
 assert not any('htx' in [p['a'],p['b']] for p in pairs),'No comparative histotripsy trial in this source set'
 assert [(p['a'],p['b']) for p in at('abstract-RETNET-RCT')]==[('tae','ctace')]
 print(f'PASS: 97 source records and {len(pairs)} explicit treatment pairs; combination arms and effect order retained; full clinical sources unchanged.')
+
+# Screen colors are per endpoint, and null trials never become non-inferiority.
+for p in pairs:
+ s=p['screen'];assert s['verdict'] in data['verdicts'] and len(s['result'])<=64
+ assert s['label'] and s['rationale']
+ if s['verdict']=='superior':
+  r=next(r for r in rows if r['id']==p['study']);design=r['design'].lower()
+  assert ('randomized' in design or 'rct' in design) and 'nonrandom' not in design,p['id']
+  assert s['favored'] and s['endpoint']
+assert at('39848272')[0]['screen']['verdict']=='ni_uncertain'
+for pid in ['40554738','35949295','42829779','33687130','39699905','39644535','29107679','29498924']:
+ assert all(p['screen']['verdict']=='uncertain' for p in at(pid)),pid
+for pid in ['34358718','41580092','41056563','26695839','42433279','28677067']:
+ assert all(p['screen']['verdict']=='signal' for p in at(pid)),pid
+assert at('35258371')[0]['screen']['endpoint']=='TTP'
+assert at('27575820')[0]['screen']['endpoint']=='TTP'
+assert not any(p['screen']['verdict']=='noninferior' for p in pairs),'Current review has no unqualified confirmed-NI label'
+print('PASS: compact results and explicit endpoint-specific color labels; negative/observational trials are not promoted to superiority or NI.')
