@@ -4,27 +4,27 @@
   "word_documents": [
     {
       "path": "documents/hcc/HCC_1_Roadmap.docx",
-      "sha256": "70294fa05acb1e5f543c34d67fb51e7e526fc5258c912f935db239af228d1e53",
+      "sha256": "8accae3bc6fbede1f1d0abf88b54dc94bc27c493357c1daea55338e318cfcd72",
       "local_master": "Documents/01_HCC/HCC_1_Roadmap_v20.docx",
-      "local_sha256": "d5c208db437e3f530604d2d9bc1f5e3275e18d6c0c8d6ac6a7d98b8bc64b9fe6"
+      "local_sha256": "f18a226335a719194d7c366682dfd87010b17aa49c1c24f4961141a4e3c58e7e"
     },
     {
       "path": "documents/hcc/HCC_2_Roadmap_Questions.docx",
-      "sha256": "5f39265424822bcd878e3cd076555248679f4ffffd2939f57bffcc60705b29ed",
+      "sha256": "d87b1c1d195cd804ab475aa0f1d5f890c5c16421ee760ce1e852a0025bf5e59e",
       "local_master": "Documents/01_HCC/HCC_2_Roadmap_Questions_v20.docx",
-      "local_sha256": "5f39265424822bcd878e3cd076555248679f4ffffd2939f57bffcc60705b29ed"
+      "local_sha256": "d87b1c1d195cd804ab475aa0f1d5f890c5c16421ee760ce1e852a0025bf5e59e"
     },
     {
       "path": "documents/hcc/HCC_3_Standard_Pathway.docx",
-      "sha256": "e6e6e158dfcd7ce151754c7bcbec7e6bd66f4c356eeabd7a20fb359acb99d340",
+      "sha256": "34dbb72db23bcbf169aa495e6bf4cb38c3dab120185af98047c91be2191b97ce",
       "local_master": "Documents/01_HCC/HCC_3_Standard_Pathway_v20.docx",
-      "local_sha256": "0ef160cf001b69a3178c132c5423d500fc0e686954cd20aab84026ed374f5836"
+      "local_sha256": "08ad8e35692397396387650e844a7d9ce44997e0b674707a350a8746e08f2b2c"
     },
     {
       "path": "documents/hcc/HCC_4_Standard_Pathway_Questions.docx",
-      "sha256": "0b46d594953d86b263c0f4088a9983c1c281a90e25af5205eef045bd0d8b64c7",
+      "sha256": "e87a3c713e081a9def0d705d749bc479f2e130fd3794df0630289c27bb45cd41",
       "local_master": "Documents/01_HCC/HCC_4_Standard_Pathway_Questions_v20.docx",
-      "local_sha256": "0b46d594953d86b263c0f4088a9983c1c281a90e25af5205eef045bd0d8b64c7"
+      "local_sha256": "e87a3c713e081a9def0d705d749bc479f2e130fd3794df0630289c27bb45cd41"
     },
     {
       "path": "documents/hcc/HCC_5_High_Risk_Pathway.docx",
@@ -40,9 +40,9 @@
     },
     {
       "path": "documents/hcc/HCC_7_Decision_Discussion.docx",
-      "sha256": "80eb4840b92b773a8b0f7288be901e2f13f5c74c25f417a0d7c41afa0ea9d180",
+      "sha256": "4efd03a1dbf61ff0b2aead655a2d741c545e2a3ff11fb5150d072c97ed1b4250",
       "local_master": "Documents/01_HCC/HCC_7_Decision_Discussion_v20.docx",
-      "local_sha256": "80eb4840b92b773a8b0f7288be901e2f13f5c74c25f417a0d7c41afa0ea9d180"
+      "local_sha256": "4efd03a1dbf61ff0b2aead655a2d741c545e2a3ff11fb5150d072c97ed1b4250"
     },
     {
       "path": "documents/pcca/pCCA_1_Roadmap.docx",
@@ -397,13 +397,15 @@
     {
       "key": "liver_directed_matrix",
       "title": "Liver-directed treatment matrix",
-      "slides": 330,
-      "native_charts": 1,
+      "slides": 331,
+      "native_charts": 2,
       "native_tables": 2,
       "path": "Evidence_Libraries/01_Treatment_Matrices/liver_directed_matrix/Evidence_Summaries_v20.pptx",
-      "sha256": "fec2086e4c8d1f390392c866167b57098b287f649cd21b2852b115f9c13be8af",
+      "sha256": "516eef776552f03589b8a3c02bedf686c5f912781d7280aebdceb5c7528d7d78",
       "updated_comparative_cards": 40,
-      "pre_comparative_slide_parts_preserved": true
+      "pre_comparative_slide_parts_preserved": true,
+      "pathology_card_added": "32749512",
+      "prior_slide_parts_preserved": true
     },
     {
       "key": "systemic_matrix",
@@ -463,13 +465,15 @@
     {
       "key": "roadmap_hcc",
       "title": "HCC cancer roadmap",
-      "slides": 272,
-      "native_charts": 8,
+      "slides": 273,
+      "native_charts": 9,
       "native_tables": 0,
       "path": "Evidence_Libraries/02_Cancer_Roadmaps/roadmap_hcc/Evidence_Summaries_v20.pptx",
-      "sha256": "87bd6ce27aa5dc079d47ac132bcb3a9ef29f89624c1f54ac61b907655af59458",
+      "sha256": "36dad9b06072abaf9d2fd5484896eecf1db245a5086fcc45be016a1a5564fb21",
       "updated_comparative_cards": 20,
-      "pre_comparative_slide_parts_preserved": true
+      "pre_comparative_slide_parts_preserved": true,
+      "pathology_card_added": "32749512",
+      "prior_slide_parts_preserved": true
     },
     {
       "key": "roadmap_icca",
@@ -573,13 +577,15 @@
     {
       "key": "standard_hcc",
       "title": "HCC · standard protocol",
-      "slides": 214,
-      "native_charts": 7,
+      "slides": 215,
+      "native_charts": 8,
       "native_tables": 5,
       "path": "Evidence_Libraries/03_Standard_Transplant/standard_hcc/Evidence_Summaries_v20.pptx",
-      "sha256": "0fa99dd0abad44cb23fe819876ea77715a6db11306d367e54288bb88088c8c36",
+      "sha256": "7c115ca591e7d12cebb50f958d4ef7220d624f9785c3ec3470fdd9a6cbcf93dd",
       "updated_comparative_cards": 20,
-      "pre_comparative_slide_parts_preserved": true
+      "pre_comparative_slide_parts_preserved": true,
+      "pathology_card_added": "32749512",
+      "prior_slide_parts_preserved": true
     },
     {
       "key": "standard_hehe",
@@ -738,13 +744,15 @@
     {
       "key": "meeting_hcc",
       "title": "HCC meeting record",
-      "slides": 171,
-      "native_charts": 5,
+      "slides": 172,
+      "native_charts": 6,
       "native_tables": 3,
       "path": "Evidence_Libraries/05_Meeting_Records/meeting_hcc/Evidence_Summaries_v20.pptx",
-      "sha256": "a84907d4a32b0adb1e43835d64823b59a00178cb74306ae22d09684d2c102d94",
+      "sha256": "c7319dcdb6c762560ed69eb1ec2bb70a8b8eeaaf9150ac436ac82a8a0e16f43a",
       "updated_comparative_cards": 20,
-      "pre_comparative_slide_parts_preserved": true
+      "pre_comparative_slide_parts_preserved": true,
+      "pathology_card_added": "32749512",
+      "prior_slide_parts_preserved": true
     },
     {
       "key": "meeting_hehe",
@@ -782,11 +790,11 @@
     "crlm/data/lrt_matrix.json": "c9278424c37fdf48489e2cfe3664a74d9090ff9f3dc3321cdce33c372c83c032",
     "crlm/data/lrt_refs.json": "8e4a81d57e56c48328b03416cf974f3a50e5b899454616b465214ef0e3274e4b",
     "crlm/data/pathway.json": "383612cb74a3f3e3480a4648931b4b78ea102cd6710d7aa04b2d259efc715671",
-    "evidence-libraries/catalog.json": "03cfc3c7bc613ee44e947676e8d08a9970959c56dd01c5f5357bf7a68b618dcc",
-    "hcc/data/critique.json": "50589a89046ef49379ff76f34f9404b02106756df5658ef43fd0c65a9539cf7d",
+    "evidence-libraries/catalog.json": "b7b554bf80d9879bb994eaf1dcfaba84f13378259f3ec5b3fb2a777997a7a32b",
+    "hcc/data/critique.json": "bcc2d499b8e5ca5b2cf0c3807b4015b89f33eaa3ab50b450a408fd1e24903a0d",
     "hcc/data/lrt_matrix.json": "c9278424c37fdf48489e2cfe3664a74d9090ff9f3dc3321cdce33c372c83c032",
-    "hcc/data/lrt_refs.json": "0ec07c77b2ffda487d92b32b22318a019df86c136e3da048a8f0d774e7011722",
-    "hcc/index.html": "46af7f25b2149c368775a92dd411ffeebbe041437959d92a30af24a006e8129b",
+    "hcc/data/lrt_refs.json": "4ae11ac15a641a399c4d3cf30c35c7907f89cb384750914a9922678fb2a6a6a5",
+    "hcc/index.html": "0c8ebb3f193318eb1a920149a8143eb92ed582540e74e87f78aae926d4cb2ab7",
     "hilar/data/critique.json": "cf8977de23a4f0d560fd63c0ec24198f31dc3a195967b1c36523eb170d8866ed",
     "hilar/data/pathway.json": "2c4319ebf075e0f150ff4857f8082ca764b4132392402a9fc8dedfb7c86acd43",
     "icca/data/critique.json": "eb4eaeb16aa74b490e0fb80d59ba602078c239c07795cdb58cb91b99988e78e3",
@@ -795,8 +803,8 @@
     "icca/data/pathway.json": "c191a6baddfacbf74a8161e89fc2e9e6283e5291df3e713167130c7fcf3a611d",
     "incidental/data/critique.json": "bc0e12a34bd5761080e06ba2545619f767bc49635b7b1fdf5950be0fafa9c385",
     "incidental/data/pathway.json": "435d10eab4c3eb0406fa1c79cd8e0df562c15d5df6ed1ce729bc5125588d4441",
-    "lrt/index.html": "acd1314dff05d17cc78c3f07efabca90ea05bb85d93e4b632752dbef0cedd52c",
-    "lrt/matrix.json": "3e12517e5b9055763a450bec5e95603c1bb70a26222571faf28d1f7ee95552ab",
+    "lrt/index.html": "9719f47f85a98c9706bc87223bace6489872ac837233adee7cbed61ab8f9d0c0",
+    "lrt/matrix.json": "078596474cbe2f32fb08e0acf4ca87bd4e69ada0348bc3042e38a5093faa5b60",
     "nelm/data/critique.json": "7dc108a430301a2b35b6108e54429c967148900e7972039c347ed4d6e6a1f065",
     "nelm/data/lrt_matrix.json": "c9278424c37fdf48489e2cfe3664a74d9090ff9f3dc3321cdce33c372c83c032",
     "nelm/data/lrt_refs.json": "10ce02c292b6bf405c8cc1508b0911e3a64556008401775b7f20fc726a94426c",
@@ -809,19 +817,19 @@
     "pnet/data/pathway.json": "e9c26f81e378c44de6140c9ad981c9c48350369661fe53941d06372fe0707cf3",
     "systemic/matrix.json": "14f4ad4c14ac467e639ed5a34159356f0844e952445165c58c06d0a15ed6f44b",
     "systemic/references.json": "6bc9be778877b17a6975eb6d5c8665cb1f1040852bc8b60c0651db2e06ac5ef9",
-    "tools/compact_evidence_source.json": "63771eef6a0edf8f07369073ce67d8343c6df2c832da09976c05eef60b78fce4",
+    "tools/compact_evidence_source.json": "dc35523c933a69460bc9bbca2d6f180656e67b924b5f61108071958d7d54b4bf",
     "tools/lrt_comparative_evidence.json": "a778c2d135f40b5fbc86cc80f59c4addb847a0cdcd07a766febd8029e2456fe2",
     "transplant/assets/assistant.js": "f27a41d62acdbddae4eaa83b88d6fb89678d560dfc6f9f70f35de5beac0ac756",
-    "transplant/assets/content.json": "4d6396d4e1adede6b5a11cbdd0493f9f683c342fff5ca55c3d47c445b80023f5",
-    "transplant/assets/pathway-sections.json": "57cb3b71cdf690af5fa1e33ebf332908d5ffcd9620cef58ddeaa350e453c0fea",
+    "transplant/assets/content.json": "d06b6c22f3a45fd303f69d3061bc0ba3b869eff57bec788030fa096bdf472270",
+    "transplant/assets/pathway-sections.json": "a3862ad416d5d73ef55cc14ea6edd48168e0e005033c238d43b7ed1ff487e18f",
     "transplant/assets/risk-routing.js": "5135a79900b39e6906d42949f0ec691fbbc006048607581b85789983ac8848a9",
     "assets/lrt-comparisons.css": "abd197aefc9c90a60d08e961a101c40049621e886140273550525f1b129ff1b4",
     "lrt/comparisons.json": "47c8db10465f0ab4e838925a1806fa84b80f0d5bf3ca3f598e9a54cf092e714a",
     "assets/lrt-comparisons.js": "a68e17f7ea99e6a995da3d19fe3d0e6ad56aea1540b0952d78ed211b5d7bf5e2",
     "tools/build_lrt_comparisons.py": "1f41c650be8fcd1aead4c8f5e0cf3f7a0885122a528c753774f8c23a3d868578",
-    "crlm/index.html": "f534f956b3f7b403d5eb7689d0af2affd1f8b4087aad9ae5761e7ebea8b87b36",
-    "icca/index.html": "9be09e4ba688cbada8c8024dd997b748d1adbd780fbccf9cb3234d8c88a04989",
-    "nelm/index.html": "78b335c6ab45f98afa291009c44084d461fcfee8cb0e877e99b6b959cb6b73aa",
+    "crlm/index.html": "ff4d66739d50de1fd9e57b93b5d65f09068974bc60edb1baf43d97daad283f47",
+    "icca/index.html": "921f3b1d2c5c117a957869b1ad2e6d33de6dddf1a006a99ef4a4cce448f15f26",
+    "nelm/index.html": "a082788c2d4864faee2e7ba276ee5e8170d59e2f2eda4abb4964033a851dd289",
     "tools/lrt_pairwise_layout.py": "5bcfb622fce3c52fe9f7739c5b52616d1eefa4ebb0c34937126abf869be0586a",
     "tools/lrt_screen_summary.py": "6cce4b81706711b8d774ec6ac4bfcbba24c02c6b2f1571b74b256fd2368bc167"
   },
@@ -829,8 +837,8 @@
   "counts": {
     "word_documents": 65,
     "presentations": 34,
-    "slides": 4390,
-    "native_charts": 109,
+    "slides": 4394,
+    "native_charts": 113,
     "native_tables": 64,
     "updated_word_documents": 9,
     "updated_presentations": 20,
@@ -850,5 +858,20 @@
     "clinical_data_unchanged_from": "90d7afba90a04a56ee36639428d5da6871cac9ce",
     "word_and_ppt_unchanged": true,
     "verification_folder": "LRT_Compact_Screen_2026-11-05"
-  }
+  },
+  "evidence_updates": [
+    {
+      "date": "2026-11-09",
+      "pmid": "32749512",
+      "study": "Gabr 2021",
+      "scope": "HCC segmentectomy pathology and transplant bridging evidence; no change to grade, clinical selection, allocation, routing or comparative grid.",
+      "word_documents": 5,
+      "presentations": 4,
+      "added_slides": 4,
+      "added_native_charts": 4,
+      "prior_artifacts": "Y90_Pathology_Integration_2026-11-09/before/",
+      "review_record": "Y90_Pathology_Integration_2026-11-09/README.md",
+      "verification": "Full paper, Table 1 and Figure 3 checked. Updated Word documents rendered, changed pages inspected and full-document layout scanned. Four decks passed package/layout/import checks; every original slide/chart/table/workbook part preserved byte for byte."
+    }
+  ]
 }

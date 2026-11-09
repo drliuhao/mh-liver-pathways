@@ -23,12 +23,27 @@ for r in rows:
 assert 'abl' not in next(r for r in rows if r.get('pmid')=='42018958')['treatments']
 for pid in ['29091283','40554738','27575820','35258371','39848272','39311927','16134179']:
  assert any(r.get('pmid')==pid for r in rows),pid
-for pid in ['33739462','35617978','39225612','31670746']:
+for pid in ['33739462','35617978','39225612','31670746','32749512']:
  assert not any(r.get('pmid')==pid for r in rows),('Single-arm study used as comparison',pid)
-# A layout-only change leaves the source clinical data identical to V20.
+# Retain the V20 source baseline, replaying only recorded subsequent clinical edits.
+later=[json.loads(p.read_text()) for p in sorted((R/'tools/clinical_revisions').glob('*.json')) if p.name>'2026-11-05']
 for f in ['lrt/matrix.json','tools/compact_evidence_source.json','tools/lrt_comparative_evidence.json','transplant/assets/content.json']:
- baseline=subprocess.check_output(['git','show','90d7afb:'+f],cwd=R)
- assert baseline==(R/f).read_bytes(),f
+ baseline=subprocess.check_output(['git','show','90d7afb:'+f],cwd=R).decode()
+ for rev in later:
+  for e in rev.get('files',[]):
+   if e['file']==f:
+    assert baseline.count(e['old'])==1,(rev['id'],f)
+    baseline=baseline.replace(e['old'],e['new'])
+ if f=='transplant/assets/content.json':
+  baseline=json.loads(baseline)
+  for rev in later:
+   for e in rev.get('edits',[]):
+    assert e['op']=='replace_value',e['op']
+    holder=baseline
+    for k in e['path'][:-1]:holder=holder[k]
+    k=e['path'][-1];assert holder[k]==e['old'],e['path'];holder[k]=e['new']
+  assert baseline==read(f),f
+ else:assert baseline==(R/f).read_text(),f
 pairs=data['pairs']
 assert {p['study'] for p in pairs}=={r['id'] for r in rows}
 assert len({p['id'] for p in pairs})==len(pairs)
@@ -45,7 +60,7 @@ assert all('Recipient' in p['note'] or 'recipient' in p['note'] for pid in ['287
 assert at('32615109')[0]['a']=='lt' and at('32615109')[0]['b']=='nonlt'
 assert not any('htx' in [p['a'],p['b']] for p in pairs),'No comparative histotripsy trial in this source set'
 assert [(p['a'],p['b']) for p in at('abstract-RETNET-RCT')]==[('tae','ctace')]
-print(f'PASS: 97 source records and {len(pairs)} explicit treatment pairs; combination arms and effect order retained; full clinical sources unchanged.')
+print(f'PASS: 97 source records and {len(pairs)} explicit treatment pairs; combination arms and effect order retained; clinical changes match recorded revisions.')
 
 # Screen colors are per endpoint, and null trials never become non-inferiority.
 for p in pairs:

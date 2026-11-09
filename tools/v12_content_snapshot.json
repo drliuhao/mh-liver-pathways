@@ -363,9 +363,10 @@
               "label": "Treatment planning",
               "items": [
                 {
-                  "text": "Specify the treatment goal: bridging controls tumor while awaiting transplant; downstaging reduces tumor burden to transplant selection limits. Document anatomy, liver reserve, anticipated wait and the reason for the chosen treatment.",
+                  "text": "Specify the treatment goal: bridging controls tumor while awaiting transplant; downstaging reduces tumor burden to transplant selection limits. Document anatomy, liver reserve, anticipated wait and the reason for the chosen treatment. For radiation segmentectomy, document the treated volume and absorbed segment dose.",
                   "refs": [
-                    "H-aasld"
+                    "H-aasld",
+                    "LRT-32749512"
                   ]
                 },
                 {
@@ -756,6 +757,12 @@
               "text": "Imaging should be performed at least 4 weeks after last down-staging treatment.",
               "quote": true,
               "locator": "HCC guidance"
+            },
+            {
+              "ref": "LRT-32749512",
+              "text": "Complete pathologic necrosis 30/45 (67%); >400 Gy: 11/11 (100%). Selected surgical specimens after segmentectomy; no comparison of modalities or waitlist dropout.",
+              "quote": false,
+              "locator": "Table 1 p.581 and Figure 3 p.582"
             }
           ],
           "proposal": "Record the treatment goal, anatomical and liver-function considerations, and response-imaging date. Ask transplant radiology to resolve uncertain residual tumor before changing treatment.",
@@ -5736,6 +5743,20 @@
       "author": "Yuan G",
       "journal": "JTO Clin Res Rep",
       "year": "2026"
+    },
+    "LRT-32749512": {
+      "short": "Gabr 2021 · pathology",
+      "title": "Correlation of Y90-absorbed radiation dose to pathological necrosis in hepatocellular carcinoma: confirmatory multicenter analysis in 45 explants.",
+      "kind": "Retrospective cohort",
+      "locator": "Eur J Nucl Med Mol Imaging. 2021;48:580–583. Table 1 p.581; Figure 3 p.582.",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32749512/",
+      "pdf": "https://link.springer.com/content/pdf/10.1007/s00259-020-04976-8.pdf",
+      "doi": "10.1007/s00259-020-04976-8",
+      "pmid": "32749512",
+      "note": "Retrospective multicenter surgical cohort: treatment-naive solitary HCC ≤8 cm, Child-Pugh A; glass-microsphere radiation segmentectomy followed by transplant (34) or resection (11). Complete pathologic necrosis 30/45 (67%); >400 Gy: 11/11 (100%). Only patients who reached surgery were assessed; the >400 Gy subgroup had 11 patients. Dose refers to the perfused tumor-bearing segment by MIRD, not tumor-only dose. No comparator, waitlist-dropout estimate or demonstrated survival advantage.",
+      "author": "Gabr A",
+      "journal": "Eur J Nucl Med Mol Imaging",
+      "year": "2021"
     }
   },
   "assistants": {
@@ -17184,7 +17205,8 @@
           "Options include ablation, arterial treatment such as TACE or Y90, and radiation such as SBRT. Select by viable tumor location, prior treatment, normal-liver exposure and liver function.",
           "If no suitable viable target remains, clarify the AFP rise and staging before repeating liver-directed treatment. If local treatment is unsuitable or ineffective, review systemic therapy, a trial or best supportive care.",
           "Recheck imaging and AFP after treatment, then reassess transplant and MELD-exception criteria.",
-          "Ablation and selected Y90 radiation segmentectomy can both have curative intent. Choose by tumor size, location, liver reserve, achievable ablation margin or segmental dosimetry. Ablation has more randomized comparative evidence. Y90 versus ablation studies are mainly observational. Y90 is associated with less waitlist dropout than TACE in registry analyses, but no dedicated randomized comparison establishes a transplant or survival advantage."
+          "Ablation and selected Y90 radiation segmentectomy can both have curative intent. Choose by tumor size, location, liver reserve, achievable ablation margin or segmental dosimetry. Ablation has more randomized comparative evidence. Y90 versus ablation studies are mainly observational. Y90 is associated with less waitlist dropout than TACE in registry analyses, but no dedicated randomized comparison establishes a transplant or survival advantage.",
+          "For selected radiation segmentectomy, Gabr found complete necrosis in 30/45 surgical specimens (67%), including 11/11 after >400 Gy to the perfused segment. These recipient-only results support local tumor destruction; continue to assess transplant readiness using imaging, AFP, liver function and allocation criteria."
         ],
         "refs": [
           "NCCN-hcc",
@@ -17194,7 +17216,8 @@
           "LRT-42434250",
           "LRT-41580092",
           "LRT-41056563",
-          "LRT-39808828"
+          "LRT-39808828",
+          "LRT-32749512"
         ],
         "actions": [
           {

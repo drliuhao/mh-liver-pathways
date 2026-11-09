@@ -220,7 +220,7 @@
     {
      "source": "RASER",
      "ref": "35617978",
-     "position": "29 patients with a solitary tumour of 3 cm or less: sustained complete response 90%; roadmap: single-arm imaging endpoint, one unblinded in-house reader, and 3 of 8 explanted livers held additional untreated HCC.",
+     "position": "29 patients with solitary HCC ≤3 cm: sustained complete response 90%; all 8 explanted targets had complete necrosis. No comparator; 3 of 8 explanted livers held additional untreated HCC.",
      "locator": "What we are not sure about #18; Appendix · RASER (bottom line)"
     },
     {
@@ -228,6 +228,12 @@
      "ref": "33739462",
      "position": "Retrospective, 162 patients: 88.3% response by localised mRECIST falls to 46.3% by RECIST 1.1, and 28% went on to transplant or resection, so 3-year survival cannot be attributed to the radiation.",
      "locator": "What we are not sure about #18; Appendix · LEGACY (bottom line)"
+    },
+    {
+     "source": "Gabr 2021 · pathology",
+     "ref": "32749512",
+     "position": "Complete pathologic necrosis 30/45 (67%); >400 Gy: 11/11 (100%). Treatment-naive solitary HCC ≤8 cm, Child-Pugh A; surgical recipients only. Dose is MIRD perfused-segment dose.",
+     "locator": "Table 1 p.581; Figure 3 p.582 (PDF pp.2–3)"
     },
     {
      "source": "NCCN v2.2026",
@@ -242,10 +248,10 @@
      "locator": "Appendix · BCLC 2022 (bottom line); Stage A · Radiation segmentectomy (caveat)"
     }
    ],
-   "divergence": "Guidelines bring radioembolisation into early disease up to 8 cm, but the roadmap reads RASER and LEGACY as single-arm imaging evidence strongest at 3 cm or less; within the roadmap, stage 0 grades SBRT or Y-90 segmentectomy B while stage A and the selector grade segmentectomy C.",
+   "divergence": "Prospective segmentectomy evidence is strongest in solitary HCC ≤3 cm. Selected retrospective cohorts include tumors ≤8 cm, and Gabr adds pathology in surgical recipients; 8 cm remains an inclusion limit rather than a universal curative cutoff. Stage 0 combines SBRT and Y-90 under grade B, while stage A and the selector grade segmentectomy C.",
    "proposal": "Reasonable, grade C (Preferred in the selector for its phenotype): a selected definitive curative-intent option for solitary localized HCC when ablation is unsuitable, with full arterial coverage and ablative dosimetry. Strongest evidence is 3 cm or less; 8 cm is not a universal cut-off; unavailable personalised dosimetry is a caution; curative claims do not transfer to lobar Y-90.",
    "proposal_locator": "Stage A Reasonable · Radiation segmentectomy; Locoregional selector row; Ratification list · Interventional radiology",
-   "rationale": "The evidence is single-arm with imaging endpoints: RASER treated 29 patients and LEGACY is retrospective with 28% going on to transplant or resection, so its survival cannot be attributed to the radiation. The page grades it C rather than B, and what that implies for consent has to be settled before the word curative is used.",
+   "rationale": "Single-arm imaging and pathology studies support local tumor destruction. Gabr found complete necrosis in 30/45 surgical specimens (67%), including 11/11 after >400 Gy to the perfused segment. These selected cohorts do not establish superiority or survival benefit. LEGACY included later transplant or resection in 28%, so survival cannot be attributed to radiation alone. Retain the current grade C and explain these limits during consent.",
    "audit": ""
   },
   {

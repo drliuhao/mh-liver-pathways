@@ -9427,6 +9427,20 @@
         "Yuan 2026",
         "Retrospective single-center cohort. 30 lung-carcinoid patients, 53 primary embolization procedures; Y90 versus bland TAE. Local progression-free survival 30.57 versus 13.9 months (p=0.01); OS 43.5 versus 40.6 months (p=0.49). Primary-specific, small retrospective study with repeated procedures and systemic-treatment confounding; not generalizable to all NELM."
       ]
+    },
+    "32749512": {
+      "label": "Gabr 2021 · pathology",
+      "design": "Retrospective cohort",
+      "arms": "Radiation segmentectomy · 45 surgical specimens",
+      "result": "Complete pathologic necrosis 30/45 (67%); >400 Gy: 11/11 (100%).",
+      "caution": "Surgical recipients only; >400 Gy n=11. Perfused-segment dose. No comparator or survival benefit tested.",
+      "quotes": [
+        "Thirty (67%) patients had complete pathologic necrosis (CPN) at explant",
+        "All patients receiving > 400 Gy exhibited CPN.",
+        "Thirty-four (76%) patients underwent LT, and 11 (24%) patients underwent hepatic resection.",
+        "Retrospective multicenter surgical cohort: treatment-naive solitary HCC ≤8 cm, Child-Pugh A; glass-microsphere radiation segmentectomy followed by transplant (34) or resection (11).",
+        "Complete pathologic necrosis 30/45 (67%); >400 Gy: 11/11 (100%)."
+      ]
     }
   },
   "options": {
@@ -14463,6 +14477,15 @@
           "arms": "Y-90 segmentectomy · retrospective single-arm",
           "result": "Localised-mRECIST ORR 88.3% (46.3% by RECIST 1.1); 3-y OS 86.6%",
           "caution": "28% later had resection or transplant — survival is not attributable to Y-90 alone"
+        },
+        {
+          "trial": "Gabr 2021 · pathology",
+          "pmids": [
+            "32749512"
+          ],
+          "arms": "Segmentectomy · 45 surgical specimens",
+          "result": "Complete pathologic necrosis 30/45 (67%); >400 Gy: 11/11 (100%).",
+          "caution": "Only patients who reached surgery were assessed; the >400 Gy subgroup had 11 patients. Dose refers to the perfused tumor-bearing segment by MIRD, not tumor-only dose. No comparator, waitlist-dropout estimate or demonstrated survival advantage."
         }
       ]
     },

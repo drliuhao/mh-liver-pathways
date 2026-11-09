@@ -1,7 +1,7 @@
 {
-  "updated": "4 November 2026 · V20 full-text comparative update",
-  "unique_publications": 660,
-  "matched_publication_pdfs": 636,
+  "updated": "2026-11-09",
+  "unique_publications": 661,
+  "matched_publication_pdfs": 637,
   "missing_publication_pdfs": 24,
   "appraisals_pending": 53,
   "libraries": [
@@ -10,9 +10,9 @@
       "title": "Liver-directed treatment matrix",
       "family": "01_Treatment_Matrices",
       "slug": null,
-      "publication_count": 132,
-      "matched_pdfs": 130,
-      "slides": 330,
+      "publication_count": 133,
+      "matched_pdfs": 131,
+      "slides": 331,
       "ppt_filename": "Evidence_Summaries_v20.pptx",
       "local_folder": "V20_consistent_release_2026-11-04/Evidence_Libraries/01_Treatment_Matrices/liver_directed_matrix",
       "document": "lrt/",
@@ -1399,6 +1399,15 @@
           ],
           "inclusion": [
             "Comparative liver-directed treatment evidence in the relevant disease and treatment setting; focused source card with limitations."
+          ]
+        },
+        {
+          "id": "doi:10.1007/s00259-020-04976-8",
+          "slides": [
+            331
+          ],
+          "inclusion": [
+            "HCC radiation segmentectomy: dose and surgical pathology evidence"
           ]
         }
       ],
@@ -5479,9 +5488,9 @@
       "title": "HCC cancer roadmap",
       "family": "02_Cancer_Roadmaps",
       "slug": "hcc",
-      "publication_count": 103,
-      "matched_pdfs": 103,
-      "slides": 272,
+      "publication_count": 104,
+      "matched_pdfs": 104,
+      "slides": 273,
       "ppt_filename": "Evidence_Summaries_v20.pptx",
       "local_folder": "V20_consistent_release_2026-11-04/Evidence_Libraries/02_Cancer_Roadmaps/roadmap_hcc",
       "document": "documents/hcc/HCC_1_Roadmap.docx",
@@ -6572,6 +6581,15 @@
           ],
           "inclusion": [
             "Comparative liver-directed treatment evidence in the relevant disease and treatment setting; focused source card with limitations."
+          ]
+        },
+        {
+          "id": "doi:10.1007/s00259-020-04976-8",
+          "slides": [
+            273
+          ],
+          "inclusion": [
+            "HCC radiation segmentectomy: dose and surgical pathology evidence"
           ]
         }
       ],
@@ -10532,9 +10550,9 @@
       "title": "HCC · standard protocol",
       "family": "03_Standard_Transplant",
       "slug": "hcc",
-      "publication_count": 67,
-      "matched_pdfs": 67,
-      "slides": 214,
+      "publication_count": 68,
+      "matched_pdfs": 68,
+      "slides": 215,
       "ppt_filename": "Evidence_Summaries_v20.pptx",
       "local_folder": "V20_consistent_release_2026-11-04/Evidence_Libraries/03_Standard_Transplant/standard_hcc",
       "document": "documents/hcc/HCC_3_Standard_Pathway.docx",
@@ -11275,6 +11293,15 @@
           ],
           "inclusion": [
             "Comparative liver-directed treatment evidence in the relevant disease and treatment setting; focused source card with limitations."
+          ]
+        },
+        {
+          "id": "doi:10.1007/s00259-020-04976-8",
+          "slides": [
+            215
+          ],
+          "inclusion": [
+            "HCC radiation segmentectomy: dose and surgical pathology evidence"
           ]
         }
       ],
@@ -15923,9 +15950,9 @@
       "title": "HCC meeting record",
       "family": "05_Meeting_Records",
       "slug": "hcc",
-      "publication_count": 58,
-      "matched_pdfs": 58,
-      "slides": 171,
+      "publication_count": 59,
+      "matched_pdfs": 59,
+      "slides": 172,
       "ppt_filename": "Evidence_Summaries_v20.pptx",
       "local_folder": "V20_consistent_release_2026-11-04/Evidence_Libraries/05_Meeting_Records/meeting_hcc",
       "document": "documents/hcc/HCC_7_Decision_Discussion.docx",
@@ -16551,6 +16578,15 @@
           ],
           "inclusion": [
             "Comparative liver-directed treatment evidence in the relevant disease and treatment setting; focused source card with limitations."
+          ]
+        },
+        {
+          "id": "doi:10.1007/s00259-020-04976-8",
+          "slides": [
+            172
+          ],
+          "inclusion": [
+            "HCC radiation segmentectomy: dose and surgical pathology evidence"
           ]
         }
       ],
@@ -24339,6 +24375,19 @@
       "pdf_available": true,
       "coverage": "Focused main-text comparative review",
       "coverage_notes": "Primary-specific, small retrospective study with repeated procedures and systemic-treatment confounding; not generalizable to all NELM."
+    },
+    "doi:10.1007/s00259-020-04976-8": {
+      "title": "Correlation of Y90-absorbed radiation dose to pathological necrosis in hepatocellular carcinoma: confirmatory multicenter analysis in 45 explants.",
+      "author": "Gabr A",
+      "journal": "Eur J Nucl Med Mol Imaging",
+      "doi": "10.1007/s00259-020-04976-8",
+      "pmid": "32749512",
+      "year": "2021",
+      "publication_type": "Journal publication",
+      "url": "https://link.springer.com/article/10.1007/s00259-020-04976-8",
+      "tmc": "https://libkey.io/libraries/480/pmid/32749512",
+      "pdf_available": true,
+      "coverage": "Focused full-text appraisal"
     }
   },
   "artifact_release": "V20_consistent_release_2026-11-04"

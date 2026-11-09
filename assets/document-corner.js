@@ -9,7 +9,7 @@
 (() => {
   'use strict';
   const root = new URL('../', document.currentScript.src);
-  const KEY = '20261104-pdf1';
+  const KEY = '20261109-pathology1';
   const path = location.pathname.slice(root.pathname.length).split('/').filter(Boolean);
   const ROADMAP = {hcc: 'hcc', hilar: 'pcca', icca: 'icca', crlm: 'crlm', nelm: 'nelm', adenoma: 'hca', chcca: 'chcca', pdac: 'pdac',
     pnet: 'pnet', ampullary: 'ampullary', pcyst: 'pcyst', incidental: 'incidental'};

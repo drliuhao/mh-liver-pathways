@@ -7,7 +7,7 @@
 <meta name="description" content="Hepatocellular carcinoma — Memorial Hermann system roadmap v0.9, draft under development.">
 <title>Memorial Hermann HCC Roadmap</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap">
-<link rel="stylesheet" href="../assets/portal-navigation.css?v=20261104-pdf1"><script src="../assets/portal-navigation.js?v=20261104-pdf1" defer></script><link rel="stylesheet" href="/mh-liver-pathways/assets/roadmap-evidence.css?v=20261104-pdf1"><script src="/mh-liver-pathways/assets/document-references.js?v=20261104-pdf1"></script><script src="/mh-liver-pathways/assets/roadmap-evidence.js?v=20261104-pdf1"></script></head>
+<link rel="stylesheet" href="../assets/portal-navigation.css?v=20261109-pathology1"><script src="../assets/portal-navigation.js?v=20261109-pathology1" defer></script><link rel="stylesheet" href="/mh-liver-pathways/assets/roadmap-evidence.css?v=20261109-pathology1"><script src="/mh-liver-pathways/assets/document-references.js?v=20261109-pathology1"></script><script src="/mh-liver-pathways/assets/roadmap-evidence.js?v=20261109-pathology1"></script></head>
 <body>
 <style>
 /* Layout: a decision strip on top, a stage answer below it, then topic sections, then the evidence library everything links back into. */
@@ -347,8 +347,8 @@ footer p + p{margin-top:8px}
 </style>
 <link rel="stylesheet" href="../assets/lrt-comparisons.css?v=20261105-compact1">
 <script defer src="../assets/lrt-comparisons.js?v=20261105-compact1"></script>
-<link rel="stylesheet" href="../assets/roadmap-flow.css?v=20261104-pdf1">
-<script src="../assets/roadmap-flow.js?v=20261104-pdf1"></script>
+<link rel="stylesheet" href="../assets/roadmap-flow.css?v=20261109-pathology1">
+<script src="../assets/roadmap-flow.js?v=20261109-pathology1"></script>
 
 <header class="top">
   <div class="devbar">Clinical review draft · Not approved institutional policy · Not an automated eligibility tool.</div>
@@ -786,6 +786,7 @@ footer p + p{margin-top:8px}
 <script>
 /* ---------- evidence base ---------- */
 const REF = {
+ "32749512":["Gabr 2021 · pathology", "Radioembolisation", "Gabr A, et al. Correlation of Y90-absorbed radiation dose to pathological necrosis in hepatocellular carcinoma: confirmatory multicenter analysis in 45 explants. Eur J Nucl Med Mol Imaging. 2021;48:580–583. PMID 32749512. DOI 10.1007/s00259-020-04976-8."],
  "41151697":["BCLC 2026","Guidelines & policy","Reig M, Sanduzzi-Zamparelli M, Forner A, et al. BCLC strategy for prognosis prediction and treatment recommendations: the 2026 update. J Hepatol. 2026;84(3):631-654."],
  "34801630":["BCLC 2022","Guidelines & policy","Reig M, Forner A, Rimola J, et al. BCLC strategy for prognosis prediction and treatment recommendation: the 2022 update. J Hepatol. 2022;76(3):681-693."],
  "37199193":["AASLD 2023","Guidelines & policy","Singal AG, Llovet JM, Yarchoan M, et al. AASLD Practice Guidance on prevention, diagnosis, and treatment of hepatocellular carcinoma. Hepatology. 2023;78(6):1922-1965."],
@@ -877,7 +878,7 @@ const STAGES = [
        when:"May be discussed when surgery and thermal ablation are unsuitable. This does not require prior TACE.",
        pref:"SBRT: difficult access or vessel-adjacent target with adequate uninvolved liver. Segmentectomy: solitary localized tumour with full arterial coverage and ablative dosimetry.",
        avoid:"SBRT — insufficient uninvolved liver, refractory ascites, unsafe dose to adjacent bowel or stomach, overlapping prior dose, decompensation. Segmentectomy — hepatic reserve inadequate for the treated volume, unsafe lung-shunt fraction or non-target flow, personalised dosimetry unavailable.",
-       refs:["35617978","33739462","39693584","34688956"]}]}],
+       refs:["35617978","33739462","32749512","39693584","34688956"]}]}],
   avoid:[{t:"Indiscriminate embolisation or radiation when a better-suited established curative option is available. Selected definitive segmentectomy or SBRT remains permissible.", l:"Avoid", g:"", refs:[]}]},
  {id:"A", tone:"cure", name:"A · Early", req:"all", crit:["Solitary of any size, or ≤3 nodules each ≤3 cm","ECOG 0","Preserved liver function","No macrovascular invasion or extrahepatic spread"],
   standard:[{l:"Standard", g:"A", rank:false, opts:[
@@ -902,7 +903,7 @@ const STAGES = [
        when:"Y-90 to one or two segments, as a selected definitive curative-intent option.",
        pref:"Solitary localized HCC with ablation unsuitable, full arterial coverage and ablative dosimetry. Strongest prospective evidence is solitary ≤3 cm.",
        avoid:"Hepatic reserve inadequate for the treated volume, unsafe lung-shunt fraction or non-target flow, overlapping prior radiation dose, personalised dosimetry unavailable. ≤8 cm is not a universal curative cutoff, and segmentectomy's curative claim does not transfer to lobar Y-90.",
-       refs:["33739462","35617978"]},
+       refs:["33739462","35617978","32749512"]},
       {name:"SBRT", g:"B", flags:["EXPERTISE"],
        when:"Selected definitive alternative. No prior treatment failure is required — catheter therapy need not fail first.",
        pref:"Target unsuitable for both ablation and surgery, including difficult access and vessel-adjacent lesions, with preserved liver function and adequate uninvolved liver.",
@@ -1116,8 +1117,8 @@ const LOCO = [
  ["Radiation segmentectomy","Y-90 to ≤2 segments","Preferred","C",
   "Solitary localized HCC; ablation unsuitable; full arterial coverage and ablative dosimetry. Upfront definitive alternative when surgery and thermal ablation are unsuitable, or bridge or downstage.",
   "Hepatic reserve inadequate for the treated volume, unsafe lung-shunt fraction or non-target flow, overlapping prior radiation dose, personalised dosimetry unavailable.",
-  "Selected segmentectomy to one or two segments can be definitive curative-intent therapy. The strongest prospective evidence is solitary HCC ≤3 cm; selected retrospective cohorts extend to larger tumours, but ≤8 cm is not a universal curative cutoff. RASER (29 patients) reported 90% sustained complete response; LEGACY (162) supports response durability but includes later surgery and transplant. NCCN specifies >400 Gy to ≤25% of liver in Child-Pugh A — document dose compartment and microsphere model. Segment absorbed dose is not interchangeable with tumour absorbed dose. Lobar Y-90 for broader burden is generally control or conversion: do not transfer segmentectomy curative claims to all Y-90.",
-  ["33739462","35617978"],["DOSIMETRY","EXPERTISE","PAYER"]],
+  "Selected segmentectomy to one or two segments can be definitive curative-intent therapy. The strongest prospective evidence is solitary HCC ≤3 cm; selected retrospective cohorts extend to larger tumours, but ≤8 cm is not a universal curative cutoff. RASER (29 patients) reported 90% sustained complete response; LEGACY (162) supports response durability but includes later surgery and transplant. Gabr found complete necrosis in 30/45 surgical specimens (67%), including 11/11 after >400 Gy to the perfused segment; this selected subgroup does not establish a general cure rate. NCCN specifies >400 Gy to ≤25% of liver in Child-Pugh A — document dose compartment and microsphere model. Segment absorbed dose is not interchangeable with tumour absorbed dose. Lobar Y-90 for broader burden is generally control or conversion: do not transfer segmentectomy curative claims to all Y-90.",
+  ["33739462","35617978","32749512"],["DOSIMETRY","EXPERTISE","PAYER"]],
  ["TACE","conventional or drug-eluting bead","Standard","A",
   "Established disease-control option for selected intermediate HCC; also bridge or downstage. Not universally second line — it can be the first locoregional treatment for appropriate intermediate-stage disease.",
   "Decompensation, ALBI grade 3, diffuse or infiltrative pattern, impaired portal flow, renal or infection risk, inadequate benefit despite technically adequate treatment. Reassess after each session.",
@@ -1242,7 +1243,7 @@ const HONEST = [
   "Unilobar versus bilobar distribution, shunt fraction, remnant volume, whether hypertrophy is a goal.",
   "Time to progression, decompensation at 90 days, downstaging rate."],
  ["Radiation segmentectomy is a curative-intent option for ablation-unsuitable solitary tumours.",
-  "Single-arm data only, and the endpoints are imaging. RASER treated 29 patients with a solitary tumour of 3 cm or less: target-lesion complete response in 24 of 29 (83%), a sustained complete response after one treatment in 26 of 29 (90%), target-lesion progression in 3 of 29 (10%) and overall progression in 9 of 29 (31%) at a median follow-up of 691 days, read by one unblinded in-house radiologist with no comparator and 5 of 29 (17%) lost to follow-up. All 8 explants showed 100% necrosis of the target lesion, but 3 of those 8 livers held additional untreated HCC, one with vascular invasion. LEGACY is retrospective, 162 patients, median tumour 2.7 cm with 62% under 3 cm: best response of 88.3% (95% CI 82.4 to 92.4) by localised mRECIST falls to a confirmed 46.3% (38.8 to 54.0) by RECIST 1.1, and 45 patients (28%) went on to transplant or resection, so its 86.6% 3-year survival cannot be attributed to the radiation. Both studies were funded by the microsphere manufacturer.",
+  "Evidence includes single-arm imaging outcomes and selected surgical pathology. Gabr 2021 (PMID 32749512) found complete necrosis in 30/45 specimens (67%), including 11/11 after >400 Gy to the perfused segment; the cohort includes only patients who reached transplant or resection. RASER treated 29 patients with a solitary tumour of 3 cm or less: target-lesion complete response in 24 of 29 (83%), a sustained complete response after one treatment in 26 of 29 (90%), target-lesion progression in 3 of 29 (10%) and overall progression in 9 of 29 (31%) at a median follow-up of 691 days, read by one unblinded in-house radiologist with no comparator and 5 of 29 (17%) lost to follow-up. All 8 explants showed 100% necrosis of the target lesion, but 3 of those 8 livers held additional untreated HCC, one with vascular invasion. LEGACY is retrospective, 162 patients, median tumour 2.7 cm with 62% under 3 cm: best response of 88.3% (95% CI 82.4 to 92.4) by localised mRECIST falls to a confirmed 46.3% (38.8 to 54.0) by RECIST 1.1, and 45 patients (28%) went on to transplant or resection, so its 86.6% 3-year survival cannot be attributed to the radiation. Both studies were funded by the microsphere manufacturer.",
   "Segmental anatomy, tumour size, remnant volume, dosimetry feasibility, transplant timing.",
   "Complete response, local progression, and transplant explant pathology."],
  ["Lobar radioembolisation grows the contralateral lobe enough to make an unresectable patient resectable.",
@@ -1695,8 +1696,8 @@ fetch("data/critique.json?v=20261023-language").then(r=>r.ok?r.json():{}).catch(
   .then(c=>{ CRIT = c || {}; renderEv(); });
 
 Promise.all([
-  fetch("../lrt/matrix.json?v=20261104-pdf1").then(r=>r.json()),
-  fetch("data/lrt_refs.json?v=20261104-pdf1").then(r=>r.json())
+  fetch("../lrt/matrix.json?v=20261109-pathology1").then(r=>r.json()),
+  fetch("data/lrt_refs.json?v=20261109-pathology1").then(r=>r.json())
 ]).then(([mx, refs])=>{
   MX = mx;
   renderTierLegend(); renderCards(); renderCell();
