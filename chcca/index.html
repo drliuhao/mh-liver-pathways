@@ -788,7 +788,7 @@ function build(){
 /* ---------- load ---------- */
 Promise.all([
   fetch("data/pathway.json?v=20261026-library1").then(r=>r.json()),
-  fetch("data/critique.json?v=20261023-language").then(r=>r.ok ? r.json() : {}).catch(()=>({}))
+  fetch("data/critique.json?v=20261111-waitlist1").then(r=>r.ok ? r.json() : {}).catch(()=>({}))
 ]).then(([p, crit])=>{
   P = p;
   CRIT = crit || {};

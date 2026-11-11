@@ -1,5 +1,5 @@
 {
-  "version": "20261105-compact1",
+  "version": "20261111-waitlist1",
   "settings": {
     "local": "Definitive local treatment",
     "transplant": "Bridge / downstaging / transplant",
@@ -922,6 +922,106 @@
       "doi": "10.1016/j.adro.2015.12.003",
       "pubmed": "https://pubmed.ncbi.nlm.nih.gov/28799575/",
       "tmc": "https://libkey.io/libraries/480/pmid/28799575"
+    },
+    {
+      "id": "hcc-42421575",
+      "tumor": "hcc",
+      "setting": "transplant",
+      "comparison": "TACE + TKI vs TACE",
+      "treatments": [
+        "tace",
+        "systemic"
+      ],
+      "label": "Xu",
+      "design": "Retrospective cohort",
+      "population": "TACE + a tyrosine kinase inhibitor vs TACE alone. Matched transplant recipients, 60 per arm.",
+      "result": "Objective imaging response was 33.3% vs 16.7% (P=.035).",
+      "summary": "Objective imaging response was 33.3% vs 16.7% (P=.035).",
+      "caution": "Recipient-only comparison. Imaging response cannot establish transplant access or survival from listing.",
+      "shortCaution": "Recipient-only comparison. Imaging response cannot establish transplant access or survival from listing.",
+      "origin": "waitlist-comparison",
+      "pmid": "42421575",
+      "year": "2026",
+      "journal": "World J Surg",
+      "author": "Xu",
+      "doi": "10.1002/wjs.70454",
+      "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42421575/",
+      "tmc": "https://libkey.io/libraries/480/pmid/42421575"
+    },
+    {
+      "id": "hcc-35158918",
+      "tumor": "hcc",
+      "setting": "transplant",
+      "comparison": "TACE + sorafenib vs TACE",
+      "treatments": [
+        "tace",
+        "systemic"
+      ],
+      "label": "Abdelrahim",
+      "design": "Retrospective cohort",
+      "population": "Houston Methodist. TACE + sorafenib vs TACE alone in a beyond-Milan subgroup of 12 vs 24 recipients.",
+      "result": "Mean explant necrosis was 69.6% vs 43.8% (P=.03). Five-year disease-free survival was 100% vs 67.2% (P=.07).",
+      "summary": "Mean explant necrosis was 69.6% vs 43.8% (P=.03). Five-year disease-free survival was 100% vs 67.2% (P=.07).",
+      "caution": "Milan grouping incorporated explant findings. Recipient selection prevents estimation of waitlist dropout.",
+      "shortCaution": "Milan grouping incorporated explant findings. Recipient selection prevents estimation of waitlist dropout.",
+      "origin": "waitlist-comparison",
+      "pmid": "35158918",
+      "year": "2022",
+      "journal": "Cancers (Basel)",
+      "author": "Abdelrahim",
+      "doi": "10.3390/cancers14030650",
+      "pubmed": "https://pubmed.ncbi.nlm.nih.gov/35158918/",
+      "tmc": "https://libkey.io/libraries/480/pmid/35158918"
+    },
+    {
+      "id": "hcc-25957784",
+      "tumor": "hcc",
+      "setting": "transplant",
+      "comparison": "TACE + sorafenib vs TACE + placebo",
+      "treatments": [
+        "tace",
+        "systemic"
+      ],
+      "label": "HeiLivCa",
+      "design": "Randomized trial",
+      "population": "50 waitlisted patients. TACE + sorafenib vs TACE + placebo.",
+      "result": "Progression occurred in 7 patients per arm. Time to progression HR 1.11 (95% CI 0.39–3.16). Severe treatment-related events occurred in 50% vs 16%.",
+      "summary": "Progression occurred in 7 patients per arm. Time to progression HR 1.11 (95% CI 0.39–3.16). Severe treatment-related events occurred in 50% vs 16%.",
+      "caution": "Small blinded trial. No demonstrated gain in time to transplant or tumor control.",
+      "shortCaution": "Small blinded trial. No demonstrated gain in time to transplant or tumor control.",
+      "origin": "waitlist-comparison",
+      "pmid": "25957784",
+      "year": "2015",
+      "journal": "BMC Cancer",
+      "author": "Hoffmann",
+      "doi": "10.1186/s12885-015-1373-z",
+      "pubmed": "https://pubmed.ncbi.nlm.nih.gov/25957784/",
+      "tmc": "https://libkey.io/libraries/480/pmid/25957784"
+    },
+    {
+      "id": "hcc-24681342",
+      "tumor": "hcc",
+      "setting": "transplant",
+      "comparison": "Y90 + sorafenib vs Y90 alone",
+      "treatments": [
+        "y90",
+        "systemic"
+      ],
+      "label": "Kulik",
+      "design": "Randomized trial",
+      "population": "20 patients analyzed. Y90 + sorafenib vs Y90 alone before transplant.",
+      "result": "17/20 received a graft. Time to transplant was similar. Biliary complications occurred in 4/8 vs 0/9 recipients.",
+      "summary": "17/20 received a graft. Time to transplant was similar. Biliary complications occurred in 4/8 vs 0/9 recipients.",
+      "caution": "Small randomized safety pilot. Postoperative event counts include only recipients.",
+      "shortCaution": "Small randomized safety pilot. Postoperative event counts include only recipients.",
+      "origin": "waitlist-comparison",
+      "pmid": "24681342",
+      "year": "2014",
+      "journal": "J Hepatol",
+      "author": "Kulik",
+      "doi": "10.1016/j.jhep.2014.03.023",
+      "pubmed": "https://pubmed.ncbi.nlm.nih.gov/24681342/",
+      "tmc": "https://libkey.io/libraries/480/pmid/24681342"
     },
     {
       "id": "hcc-34358718",
@@ -3188,6 +3288,78 @@
       }
     },
     {
+      "study": "hcc-42421575",
+      "id": "hcc-42421575-0",
+      "mode": "combined",
+      "a": "tace_sys",
+      "b": "tace",
+      "arms": "TACE + TKI vs TACE",
+      "brief": "Imaging response 33.3% vs 16.7%.",
+      "note": "Matched recipients, 60 per arm. Waitlist dropout unmeasured.",
+      "screen": {
+        "label": "Xu",
+        "result": "Imaging response: 33.3% vs 16.7%",
+        "verdict": "signal",
+        "favored": "TACE + TKI",
+        "endpoint": "objective imaging response",
+        "rationale": "Matched recipients, 60 per arm. Waitlist dropout unmeasured."
+      }
+    },
+    {
+      "study": "hcc-35158918",
+      "id": "hcc-35158918-0",
+      "mode": "combined",
+      "a": "tace_sys",
+      "b": "tace",
+      "arms": "TACE + sorafenib vs TACE",
+      "brief": "Mean explant necrosis 69.6% vs 43.8%.",
+      "note": "Recipient subgroup, 12 vs 24. Milan classification included explant findings.",
+      "screen": {
+        "label": "Abdelrahim",
+        "result": "Mean explant necrosis: 69.6% vs 43.8%",
+        "verdict": "signal",
+        "favored": "TACE + sorafenib",
+        "endpoint": "explant necrosis",
+        "rationale": "Recipient subgroup, 12 vs 24. Milan classification included explant findings."
+      }
+    },
+    {
+      "study": "hcc-25957784",
+      "id": "hcc-25957784-0",
+      "mode": "combined",
+      "a": "tace_sys",
+      "b": "tace",
+      "arms": "TACE + sorafenib vs TACE + placebo",
+      "brief": "Progression: 7 per arm. TTP HR 1.11 (0.39–3.16).",
+      "note": "Small waitlist RCT. Severe treatment-related events 50% vs 16%.",
+      "screen": {
+        "label": "HeiLivCa",
+        "result": "Progression: 7 patients per arm",
+        "verdict": "uncertain",
+        "favored": "",
+        "endpoint": "summarized outcome",
+        "rationale": "Small waitlist RCT. Severe treatment-related events 50% vs 16%."
+      }
+    },
+    {
+      "study": "hcc-24681342",
+      "id": "hcc-24681342-0",
+      "mode": "combined",
+      "a": "y90_sys",
+      "b": "y90",
+      "arms": "Y90 + sorafenib vs Y90 alone",
+      "brief": "Time to transplant similar. Biliary complications 4/8 vs 0/9 recipients.",
+      "note": "Randomized safety pilot. Twenty patients analyzed.",
+      "screen": {
+        "label": "Kulik",
+        "result": "Biliary complications: 4/8 vs 0/9 recipients",
+        "verdict": "uncertain",
+        "favored": "",
+        "endpoint": "summarized outcome",
+        "rationale": "Randomized safety pilot. Twenty patients analyzed."
+      }
+    },
+    {
       "study": "hcc-34358718",
       "id": "hcc-34358718-0",
       "mode": "direct",
@@ -3734,7 +3906,7 @@
       "a": "tace_sys",
       "b": "tace",
       "arms": "TACE + durvalumab / bevacizumab vs TACE",
-      "brief": "PFS 15.0 vs 8.2 mo; HR 0.77; interim OS NS.",
+      "brief": "PFS 15.0 vs 8.2 mo; HR 0.77; final OS HR 1.10.",
       "note": "EMERALD-1: durvalumab + bevacizumab add-on.",
       "screen": {
         "label": "EMERALD-1",
@@ -3752,7 +3924,7 @@
       "a": "tace_sys",
       "b": "tace",
       "arms": "TACE + lenvatinib / pembrolizumab vs TACE",
-      "brief": "PFS 14.6 vs 10.0 mo; HR 0.66; interim OS NS.",
+      "brief": "PFS 14.6 vs 10.0 mo; HR 0.66; long-term OS HR 0.98.",
       "note": "LEAP-012: lenvatinib + pembrolizumab add-on.",
       "screen": {
         "label": "LEAP-012",

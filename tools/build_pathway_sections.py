@@ -84,7 +84,9 @@ def match_record(ref, keys):
     """The site record a document reference names: its key, PMID, DOI or title; a key already listed wins."""
     if ref.get('key') and (ref['key'] in SOURCES or ref['key'] in HRS):
         return ref['key']
-    pool = list(keys) + [k for k in list(SOURCES) + list(HRS) if k not in keys]
+    # Preserve an established cross-pathway citation when another disease adds its own decision-specific copy.
+    unlisted = [k for k in (*SOURCES, *HRS) if k not in keys]
+    pool = list(keys) + [k for k in unlisted if not k.startswith('WT-')] + [k for k in unlisted if k.startswith('WT-')]
     cite = DR.norm(ref['cite'])
     for test in (lambda k: ref['pmid'] and pmid_of(k) == ref['pmid'],
                  lambda k: ref['doi'] and doi_of(k) == ref['doi'],

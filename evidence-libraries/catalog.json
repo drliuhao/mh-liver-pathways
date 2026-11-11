@@ -1,8 +1,8 @@
 {
-  "updated": "2026-11-09",
-  "unique_publications": 661,
-  "matched_publication_pdfs": 637,
-  "missing_publication_pdfs": 24,
+  "updated": "2026-11-11",
+  "unique_publications": 670,
+  "matched_publication_pdfs": 643,
+  "missing_publication_pdfs": 27,
   "appraisals_pending": 53,
   "libraries": [
     {
@@ -10,9 +10,9 @@
       "title": "Liver-directed treatment matrix",
       "family": "01_Treatment_Matrices",
       "slug": null,
-      "publication_count": 133,
-      "matched_pdfs": 131,
-      "slides": 331,
+      "publication_count": 141,
+      "matched_pdfs": 136,
+      "slides": 336,
       "ppt_filename": "Evidence_Summaries_v20.pptx",
       "local_folder": "V20_consistent_release_2026-11-04/Evidence_Libraries/01_Treatment_Matrices/liver_directed_matrix",
       "document": "lrt/",
@@ -1013,7 +1013,8 @@
           "slides": [
             282,
             283,
-            284
+            284,
+            336
           ],
           "inclusion": [
             "Shared liver-directed treatment matrix and its established evidence set"
@@ -1024,7 +1025,8 @@
           "slides": [
             285,
             286,
-            287
+            287,
+            336
           ],
           "inclusion": [
             "Shared liver-directed treatment matrix and its established evidence set"
@@ -1409,6 +1411,78 @@
           "inclusion": [
             "HCC radiation segmentectomy: dose and surgical pathology evidence"
           ]
+        },
+        {
+          "id": "doi:10.1186/s12885-015-1373-z",
+          "slides": [
+            332
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Does adding sorafenib improve bridging?"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jhep.2014.03.023",
+          "slides": [
+            332
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Does adding sorafenib improve bridging?"
+          ]
+        },
+        {
+          "id": "doi:10.1097/js9.0000000000001813",
+          "slides": [
+            333
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Systemic therapy for selected downstaging"
+          ]
+        },
+        {
+          "id": "doi:10.3389/ti.2022.10569",
+          "slides": [
+            333
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Systemic therapy for selected downstaging"
+          ]
+        },
+        {
+          "id": "doi:10.3390/cancers14030650",
+          "slides": [
+            334
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Response in cohorts that reached transplant"
+          ]
+        },
+        {
+          "id": "doi:10.1002/wjs.70454",
+          "slides": [
+            334
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Response in cohorts that reached transplant"
+          ]
+        },
+        {
+          "id": "doi:10.1097/lvt.0000000000000357",
+          "slides": [
+            335
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Bridging during a prolonged wait"
+          ]
+        },
+        {
+          "id": "doi:10.1002/jgh3.13111",
+          "slides": [
+            335
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Bridging during a prolonged wait"
+          ]
         }
       ],
       "policy_records": []
@@ -1418,9 +1492,9 @@
       "title": "Cross-tumor systemic treatment",
       "family": "01_Treatment_Matrices",
       "slug": null,
-      "publication_count": 148,
-      "matched_pdfs": 145,
-      "slides": 413,
+      "publication_count": 160,
+      "matched_pdfs": 155,
+      "slides": 420,
       "ppt_filename": "Evidence_Summaries_v20.pptx",
       "local_folder": "V20_consistent_release_2026-11-04/Evidence_Libraries/01_Treatment_Matrices/systemic_matrix",
       "document": "systemic/",
@@ -2576,7 +2650,8 @@
           "slides": [
             301,
             302,
-            303
+            303,
+            420
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -2587,7 +2662,8 @@
           "slides": [
             304,
             305,
-            306
+            306,
+            420
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -3001,6 +3077,114 @@
           ],
           "inclusion": [
             "Comparative liver-directed treatment evidence in the relevant disease and treatment setting; focused source card with limitations."
+          ]
+        },
+        {
+          "id": "doi:10.1186/s12885-015-1373-z",
+          "slides": [
+            414
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Does adding sorafenib improve bridging?"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jhep.2014.03.023",
+          "slides": [
+            414
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Does adding sorafenib improve bridging?"
+          ]
+        },
+        {
+          "id": "doi:10.1097/js9.0000000000001813",
+          "slides": [
+            415
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Systemic therapy for selected downstaging"
+          ]
+        },
+        {
+          "id": "doi:10.3389/ti.2022.10569",
+          "slides": [
+            415
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Systemic therapy for selected downstaging"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jhep.2024.09.003",
+          "slides": [
+            416
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Which patients actually reached transplant?"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jhep.2026.02.019",
+          "slides": [
+            416
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Which patients actually reached transplant?"
+          ]
+        },
+        {
+          "id": "doi:10.3390/cancers14030650",
+          "slides": [
+            417
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Response in cohorts that reached transplant"
+          ]
+        },
+        {
+          "id": "doi:10.1002/wjs.70454",
+          "slides": [
+            417
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Response in cohorts that reached transplant"
+          ]
+        },
+        {
+          "id": "doi:10.1001/jamaoncol.2026.3901",
+          "slides": [
+            418
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Rejection after pretransplant checkpoint therapy"
+          ]
+        },
+        {
+          "id": "doi:10.1111/apt.70528",
+          "slides": [
+            418
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Rejection after pretransplant checkpoint therapy"
+          ]
+        },
+        {
+          "id": "doi:10.1097/hep.0000000000001644",
+          "slides": [
+            419
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Planning treatment before the first dose"
+          ]
+        },
+        {
+          "id": "doi:10.1159/000550600",
+          "slides": [
+            419
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Planning treatment before the first dose"
           ]
         }
       ],
@@ -5488,9 +5672,9 @@
       "title": "HCC cancer roadmap",
       "family": "02_Cancer_Roadmaps",
       "slug": "hcc",
-      "publication_count": 104,
-      "matched_pdfs": 104,
-      "slides": 273,
+      "publication_count": 112,
+      "matched_pdfs": 110,
+      "slides": 278,
       "ppt_filename": "Evidence_Summaries_v20.pptx",
       "local_folder": "V20_consistent_release_2026-11-04/Evidence_Libraries/02_Cancer_Roadmaps/roadmap_hcc",
       "document": "documents/hcc/HCC_1_Roadmap.docx",
@@ -6320,7 +6504,8 @@
           "slides": [
             223,
             224,
-            225
+            225,
+            278
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -6331,7 +6516,8 @@
           "slides": [
             226,
             227,
-            228
+            228,
+            278
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -6590,6 +6776,78 @@
           ],
           "inclusion": [
             "HCC radiation segmentectomy: dose and surgical pathology evidence"
+          ]
+        },
+        {
+          "id": "doi:10.1186/s12885-015-1373-z",
+          "slides": [
+            274
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Does adding sorafenib improve bridging?"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jhep.2014.03.023",
+          "slides": [
+            274
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Does adding sorafenib improve bridging?"
+          ]
+        },
+        {
+          "id": "doi:10.1097/js9.0000000000001813",
+          "slides": [
+            275
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Systemic therapy for selected downstaging"
+          ]
+        },
+        {
+          "id": "doi:10.3389/ti.2022.10569",
+          "slides": [
+            275
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Systemic therapy for selected downstaging"
+          ]
+        },
+        {
+          "id": "doi:10.1097/hep.0000000000001644",
+          "slides": [
+            276
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Planning treatment before the first dose"
+          ]
+        },
+        {
+          "id": "doi:10.1159/000550600",
+          "slides": [
+            276
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Planning treatment before the first dose"
+          ]
+        },
+        {
+          "id": "doi:10.1097/lvt.0000000000000357",
+          "slides": [
+            277
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Bridging during a prolonged wait"
+          ]
+        },
+        {
+          "id": "doi:10.1002/jgh3.13111",
+          "slides": [
+            277
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Bridging during a prolonged wait"
           ]
         }
       ],
@@ -10550,9 +10808,9 @@
       "title": "HCC · standard protocol",
       "family": "03_Standard_Transplant",
       "slug": "hcc",
-      "publication_count": 68,
-      "matched_pdfs": 68,
-      "slides": 215,
+      "publication_count": 77,
+      "matched_pdfs": 75,
+      "slides": 221,
       "ppt_filename": "Evidence_Summaries_v20.pptx",
       "local_folder": "V20_consistent_release_2026-11-04/Evidence_Libraries/03_Standard_Transplant/standard_hcc",
       "document": "documents/hcc/HCC_3_Standard_Pathway.docx",
@@ -10919,7 +11177,8 @@
           "slides": [
             111,
             112,
-            113
+            113,
+            218
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -10955,7 +11214,8 @@
             122,
             123,
             124,
-            125
+            125,
+            219
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -10992,7 +11252,8 @@
             135,
             136,
             137,
-            138
+            138,
+            218
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -11302,6 +11563,87 @@
           ],
           "inclusion": [
             "HCC radiation segmentectomy: dose and surgical pathology evidence"
+          ]
+        },
+        {
+          "id": "doi:10.1186/s12885-015-1373-z",
+          "slides": [
+            216
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Does adding sorafenib improve bridging?"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jhep.2014.03.023",
+          "slides": [
+            216
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Does adding sorafenib improve bridging?"
+          ]
+        },
+        {
+          "id": "doi:10.1097/js9.0000000000001813",
+          "slides": [
+            217
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Systemic therapy for selected downstaging"
+          ]
+        },
+        {
+          "id": "doi:10.3389/ti.2022.10569",
+          "slides": [
+            217
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Systemic therapy for selected downstaging"
+          ]
+        },
+        {
+          "id": "doi:10.1159/000550600",
+          "slides": [
+            219
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Planning treatment before the first dose"
+          ]
+        },
+        {
+          "id": "doi:10.1097/lvt.0000000000000357",
+          "slides": [
+            220
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Bridging during a prolonged wait"
+          ]
+        },
+        {
+          "id": "doi:10.1002/jgh3.13111",
+          "slides": [
+            220
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Bridging during a prolonged wait"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s12029-026-01399-w",
+          "slides": [
+            221
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Which outcomes support a waitlist decision?"
+          ]
+        },
+        {
+          "id": "doi:10.1038/s41571-026-01160-z",
+          "slides": [
+            221
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Which outcomes support a waitlist decision?"
           ]
         }
       ],
@@ -13154,9 +13496,9 @@
       "title": "HCC · high-risk / boundary protocol",
       "family": "04_High_Risk_Transplant",
       "slug": "hcc",
-      "publication_count": 72,
-      "matched_pdfs": 72,
-      "slides": 219,
+      "publication_count": 76,
+      "matched_pdfs": 76,
+      "slides": 224,
       "ppt_filename": "Evidence_Summaries_v20.pptx",
       "local_folder": "V20_consistent_release_2026-11-04/Evidence_Libraries/04_High_Risk_Transplant/high_risk_hcc",
       "document": "documents/hcc/HCC_5_High_Risk_Pathway.docx",
@@ -13510,7 +13852,8 @@
             106,
             107,
             108,
-            109
+            109,
+            222
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -13534,7 +13877,8 @@
           "slides": [
             114,
             115,
-            116
+            116,
+            222
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -13603,7 +13947,8 @@
             134,
             135,
             136,
-            137
+            137,
+            223
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -13651,7 +13996,8 @@
           "slides": [
             151,
             152,
-            153
+            153,
+            221
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -13723,7 +14069,8 @@
           "id": "doi:10.1111/apt.70528",
           "slides": [
             176,
-            177
+            177,
+            221
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -13745,7 +14092,8 @@
           "slides": [
             181,
             182,
-            183
+            183,
+            224
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -13942,6 +14290,42 @@
           ],
           "inclusion": [
             "Comparative liver-directed treatment evidence in the relevant disease and treatment setting; focused source card with limitations."
+          ]
+        },
+        {
+          "id": "doi:10.1097/js9.0000000000001813",
+          "slides": [
+            220
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Systemic therapy for selected downstaging"
+          ]
+        },
+        {
+          "id": "doi:10.3389/ti.2022.10569",
+          "slides": [
+            220
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Systemic therapy for selected downstaging"
+          ]
+        },
+        {
+          "id": "doi:10.1159/000550600",
+          "slides": [
+            223
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Planning treatment before the first dose"
+          ]
+        },
+        {
+          "id": "doi:10.1007/s12029-026-01399-w",
+          "slides": [
+            224
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Which outcomes support a waitlist decision?"
           ]
         }
       ],
@@ -15950,9 +16334,9 @@
       "title": "HCC meeting record",
       "family": "05_Meeting_Records",
       "slug": "hcc",
-      "publication_count": 59,
-      "matched_pdfs": 59,
-      "slides": 172,
+      "publication_count": 67,
+      "matched_pdfs": 65,
+      "slides": 177,
       "ppt_filename": "Evidence_Summaries_v20.pptx",
       "local_folder": "V20_consistent_release_2026-11-04/Evidence_Libraries/05_Meeting_Records/meeting_hcc",
       "document": "documents/hcc/HCC_7_Decision_Discussion.docx",
@@ -16321,7 +16705,8 @@
           "slides": [
             113,
             114,
-            115
+            115,
+            176
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -16381,7 +16766,8 @@
           "id": "doi:10.1111/apt.70528",
           "slides": [
             134,
-            135
+            135,
+            176
           ],
           "inclusion": [
             "Cited in this active source document"
@@ -16587,6 +16973,78 @@
           ],
           "inclusion": [
             "HCC radiation segmentectomy: dose and surgical pathology evidence"
+          ]
+        },
+        {
+          "id": "doi:10.1186/s12885-015-1373-z",
+          "slides": [
+            173
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Does adding sorafenib improve bridging?"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jhep.2014.03.023",
+          "slides": [
+            173
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Does adding sorafenib improve bridging?"
+          ]
+        },
+        {
+          "id": "doi:10.1097/js9.0000000000001813",
+          "slides": [
+            174
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Systemic therapy for selected downstaging"
+          ]
+        },
+        {
+          "id": "doi:10.3389/ti.2022.10569",
+          "slides": [
+            174
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Systemic therapy for selected downstaging"
+          ]
+        },
+        {
+          "id": "doi:10.3390/cancers14030650",
+          "slides": [
+            175
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Response in cohorts that reached transplant"
+          ]
+        },
+        {
+          "id": "doi:10.1002/wjs.70454",
+          "slides": [
+            175
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Response in cohorts that reached transplant"
+          ]
+        },
+        {
+          "id": "doi:10.1097/hep.0000000000001644",
+          "slides": [
+            177
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Planning treatment before the first dose"
+          ]
+        },
+        {
+          "id": "doi:10.1159/000550600",
+          "slides": [
+            177
+          ],
+          "inclusion": [
+            "HCC treatment before transplant. Planning treatment before the first dose"
           ]
         }
       ],
@@ -24386,6 +24844,123 @@
       "publication_type": "Journal publication",
       "url": "https://link.springer.com/article/10.1007/s00259-020-04976-8",
       "tmc": "https://libkey.io/libraries/480/pmid/32749512",
+      "pdf_available": true,
+      "coverage": "Focused full-text appraisal"
+    },
+    "doi:10.1186/s12885-015-1373-z": {
+      "title": "Impact of neo-adjuvant Sorafenib treatment on liver transplantation in HCC patients - a prospective, randomized, double-blind, phase III trial.",
+      "author": "Hoffmann",
+      "journal": "BMC Cancer",
+      "doi": "10.1186/s12885-015-1373-z",
+      "pmid": "25957784",
+      "year": "2015",
+      "publication_type": "Journal publication",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25957784/",
+      "tmc": "https://libkey.io/libraries/480/pmid/25957784",
+      "pdf_available": true,
+      "coverage": "Focused full-text appraisal"
+    },
+    "doi:10.1016/j.jhep.2014.03.023": {
+      "title": "Prospective randomized pilot study of Y90+/-sorafenib as bridge to transplantation in hepatocellular carcinoma.",
+      "author": "Kulik",
+      "journal": "J Hepatol",
+      "doi": "10.1016/j.jhep.2014.03.023",
+      "pmid": "24681342",
+      "year": "2014",
+      "publication_type": "Journal publication",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24681342/",
+      "tmc": "https://libkey.io/libraries/480/pmid/24681342",
+      "pdf_available": false,
+      "coverage": "Abstract-verified comparative summary"
+    },
+    "doi:10.1097/js9.0000000000001813": {
+      "title": "Pembrolizumab in combination with LEnvatinib in participants with hepatocellular carcinoma before liver transplant as Neoadjuvant TherapY-PLENTY pilot study.",
+      "author": "Lv",
+      "journal": "Int J Surg",
+      "doi": "10.1097/js9.0000000000001813",
+      "pmid": "38995162",
+      "year": "2024",
+      "publication_type": "Journal publication",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38995162/",
+      "tmc": "https://libkey.io/libraries/480/pmid/38995162",
+      "pdf_available": true,
+      "coverage": "Focused full-text appraisal"
+    },
+    "doi:10.3389/ti.2022.10569": {
+      "title": "Neo-Adjuvant Use of Sorafenib for Hepatocellular Carcinoma Awaiting Liver Transplantation.",
+      "author": "Minoux",
+      "journal": "Transpl Int",
+      "doi": "10.3389/ti.2022.10569",
+      "pmid": "36438781",
+      "year": "2022",
+      "publication_type": "Journal publication",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36438781/",
+      "tmc": "https://libkey.io/libraries/480/pmid/36438781",
+      "pdf_available": true,
+      "coverage": "Focused full-text appraisal"
+    },
+    "doi:10.3390/cancers14030650": {
+      "title": "Transarterial Chemoembolization (TACE) Plus Sorafenib Compared to TACE Alone in Transplant Recipients with Hepatocellular Carcinoma: An Institution Experience.",
+      "author": "Abdelrahim",
+      "journal": "Cancers (Basel)",
+      "doi": "10.3390/cancers14030650",
+      "pmid": "35158918",
+      "year": "2022",
+      "publication_type": "Journal publication",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35158918/",
+      "tmc": "https://libkey.io/libraries/480/pmid/35158918",
+      "pdf_available": true,
+      "coverage": "Focused full-text appraisal"
+    },
+    "doi:10.1002/wjs.70454": {
+      "title": "Association of Pre-Transplant Tyrosine Kinase Inhibitor Therapy With Tumor Response and Survival in Hepatocellular Carcinoma: A 10-Year Retrospective Cohort Study of 427 Patients.",
+      "author": "Xu",
+      "journal": "World J Surg",
+      "doi": "10.1002/wjs.70454",
+      "pmid": "42421575",
+      "year": "2026",
+      "publication_type": "Journal publication",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42421575/",
+      "tmc": "https://libkey.io/libraries/480/pmid/42421575",
+      "pdf_available": false,
+      "coverage": "Abstract-verified comparative summary"
+    },
+    "doi:10.1097/lvt.0000000000000357": {
+      "title": "Association between bridging therapy and posttransplant outcomes in patients with HCC within Milan criteria: A systematic review and meta-analysis.",
+      "author": "Arvind",
+      "journal": "Liver Transpl",
+      "doi": "10.1097/lvt.0000000000000357",
+      "pmid": "38466889",
+      "year": "2024",
+      "publication_type": "Journal publication",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38466889/",
+      "tmc": "https://libkey.io/libraries/480/pmid/38466889",
+      "pdf_available": false,
+      "coverage": "Abstract-verified comparative summary"
+    },
+    "doi:10.1002/jgh3.13111": {
+      "title": "Long-term posttransplant survival outcome following bridging locoregional therapy in hepatocellular carcinoma patients: A systematic review and meta-analysis.",
+      "author": "Chuncharunee",
+      "journal": "JGH Open",
+      "doi": "10.1002/jgh3.13111",
+      "pmid": "38978769",
+      "year": "2024",
+      "publication_type": "Journal publication",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38978769/",
+      "tmc": "https://libkey.io/libraries/480/pmid/38978769",
+      "pdf_available": true,
+      "coverage": "Focused full-text appraisal"
+    },
+    "doi:10.1007/s12029-026-01399-w": {
+      "title": "Pretransplant Systemic Therapies for Hepatocellular Carcinoma: A Systematic Review of Posttransplant Outcomes.",
+      "author": "Rodrigues Ribeiro",
+      "journal": "J Gastrointest Cancer",
+      "doi": "10.1007/s12029-026-01399-w",
+      "pmid": "41689676",
+      "year": "2026",
+      "publication_type": "Journal publication",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41689676/",
+      "tmc": "https://libkey.io/libraries/480/pmid/41689676",
       "pdf_available": true,
       "coverage": "Focused full-text appraisal"
     }

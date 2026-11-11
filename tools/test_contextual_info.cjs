@@ -65,5 +65,5 @@ for(const file of ['transplant/assets/app.js','assets/transplant-workspace.js','
  assert.equal(read(file),Revisions.applyText(file,base,auditRevisions),file+' differs from exact clinical revision replay');
 }
 const docs=Object.keys(JSON.parse(read('assets/roadmap-links.json'))).map(x=>x+'/index.html').concat(data.index.map(p=>'transplant/'+p.slug+'/index.html'));
-for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261104-pdf1'),doc+' missing display update');
+for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261109-pathology1'),doc+' missing display update');
 console.log(`PASS: Pinned V12 data and clinical renderers match exact recorded revisions; ${docs.length} pages; 46 headings, ${reviewed} help summaries and 46 recommendation guards verified; all Avoid wording retained.`);

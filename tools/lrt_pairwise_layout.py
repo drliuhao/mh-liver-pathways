@@ -35,6 +35,11 @@ ARMS = {
 # concise endpoint, essential qualification. Numeric order follows the study's
 # displayed arm line, NEVER an inferred ordering of matrix axes.
 SPECS = [
+('25957784', 'combined', 'tace_sys', 'tace', 'Progression: 7 per arm. TTP HR 1.11 (0.39–3.16).', 'Small waitlist RCT. Severe treatment-related events 50% vs 16%.'),
+('24681342', 'combined', 'y90_sys', 'y90', 'Time to transplant similar. Biliary complications 4/8 vs 0/9 recipients.', 'Randomized safety pilot. Twenty patients analyzed.'),
+('35158918', 'combined', 'tace_sys', 'tace', 'Mean explant necrosis 69.6% vs 43.8%.', 'Recipient subgroup, 12 vs 24. Milan classification included explant findings.'),
+('42421575', 'combined', 'tace_sys', 'tace', 'Imaging response 33.3% vs 16.7%.', 'Matched recipients, 60 per arm. Waitlist dropout unmeasured.'),
+
 ('16495695','direct','abl','resection','4-y OS 65.9% vs 64.0%; no significant difference.','RCT; crossover; not equivalence.'),
 ('29503247','technique','mwa','rfa','2-y local progression 6% vs 12% (P=.27).','Per-lesion analysis; superiority not shown.'),
 ('31774468','direct','resection','abl','5-y OS 43.6% vs 38.5% (P=.17).','Recurrent HCC; primary endpoint negative.'),
@@ -77,8 +82,8 @@ SPECS = [
 ('39699905','combined','sbrt_sys','systemic','OS 15.8 vs 12.3 mo; primary P=.06; PFS 9.2 vs 5.5 mo.','RTOG 1112: unadjusted primary OS endpoint not met.'),
 ('29543938','combined','tace_rt','systemic','12-wk PFS 86.7% vs 34.3%; OS 55 vs 43 wk.','RCT; high control-arm crossover.'),
 ('23269991','combined','tace_abl','abl','4-y OS 61.8% vs 45.0%; OS HR 0.525.','Single-center RCT; changed sample size.'),
-('39798579','combined','tace_sys','tace','PFS 15.0 vs 8.2 mo; HR 0.77; interim OS NS.','EMERALD-1: durvalumab + bevacizumab add-on.'),
-('39798578','combined','tace_sys','tace','PFS 14.6 vs 10.0 mo; HR 0.66; interim OS NS.','LEAP-012: lenvatinib + pembrolizumab add-on.'),
+('39798579','combined','tace_sys','tace','PFS 15.0 vs 8.2 mo; HR 0.77; final OS HR 1.10.','EMERALD-1: durvalumab + bevacizumab add-on.'),
+('39798578','combined','tace_sys','tace','PFS 14.6 vs 10.0 mo; HR 0.66; long-term OS HR 0.98.','LEAP-012: lenvatinib + pembrolizumab add-on.'),
 ('31421157','combined','y90_sys','systemic','No OS benefit from adding Y-90 to sorafenib.','SORAMIC; major treatment noncompletion.'),
 ('36525610','combined','surgery_hai','surgery_observe','DFS 20.3 vs 10.0 mo; OS difference NS.','Adjuvant HAIC-FOLFOX; detection asymmetry.'),
 ('29420221','combined','surgery_tace','surgery_observe','3-y OS 85.2% vs 77.4%; RFS favored adjuvant TACE.','HBV RCT; does not establish routine adjuvant use.'),

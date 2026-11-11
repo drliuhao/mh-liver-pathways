@@ -26,6 +26,7 @@ SUPERIOR = {
  '10615075':('HAI + systemic','2-year OS landmark only'),
 }
 SIGNAL = {
+ '35158918':('TACE + sorafenib','explant necrosis'), '42421575':('TACE + TKI','objective imaging response'),
  '26628466':('SBRT','local control in tumors ≥2 cm'), '33230652':('Y90','mean target PFS'),
  '19552767':('Y90','downstaging'), '34358718':('Study treatment','waitlist dropout'),
  '39808828':('Y90','downstaging'), '41056563':('Y90','waitlist dropout'), '41580092':('Y90','waitlist dropout'),
@@ -47,6 +48,11 @@ SIGNAL = {
 # Brief display strings keep the clinically important endpoint and arm direction.
 # Ratios/HRs retain their source analysis. Full results and CIs remain in details.
 MINI = {
+'25957784':'Progression: 7 patients per arm',
+'24681342':'Biliary complications: 4/8 vs 0/9 recipients',
+'35158918':'Mean explant necrosis: 69.6% vs 43.8%',
+'42421575':'Imaging response: 33.3% vs 16.7%',
+
  '16495695':'4-y OS: ablation 65.9%, surgery 64.0%; NS',
  '29503247':'2-y local progression: MWA 6%, RFA 12%; NS',
  '31774468':'5-y OS: surgery 43.6%, RFA 38.5%; NS',

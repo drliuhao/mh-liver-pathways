@@ -315,7 +315,7 @@ footer p + p{margin-top:8px}
 @media (prefers-reduced-motion:reduce){ *{transition:none !important} }
 </style>
 <link rel="stylesheet" href="../assets/lrt-comparisons.css?v=20261105-compact1">
-<script defer src="../assets/lrt-comparisons.js?v=20261105-compact1"></script>
+<script defer src="../assets/lrt-comparisons.js?v=20261111-waitlist1"></script>
 <link rel="stylesheet" href="../assets/roadmap-flow.css?v=20261109-pathology1">
 <script src="../assets/roadmap-flow.js?v=20261109-pathology1"></script>
 
@@ -848,7 +848,7 @@ function build(){
 /* ---------- load ---------- */
 Promise.all([
   fetch("data/pathway.json?v=20261026-library1").then(r=>r.json()),
-  fetch("data/critique.json?v=20261023-language").then(r=>r.ok ? r.json() : {}).catch(()=>({}))
+  fetch("data/critique.json?v=20261111-waitlist1").then(r=>r.ok ? r.json() : {}).catch(()=>({}))
 ]).then(([p, crit])=>{
   P = p;
   CRIT = crit || {};
@@ -858,8 +858,8 @@ Promise.all([
   document.getElementById("lrt").hidden = false;
   document.getElementById("navLrt").hidden = false;
   return Promise.all([
-    fetch("../lrt/matrix.json?v=20261109-pathology1").then(r=>r.json()),
-    fetch("data/lrt_refs.json?v=20261109-pathology1").then(r=>r.json())
+    fetch("../lrt/matrix.json?v=20261111-waitlist1").then(r=>r.json()),
+    fetch("data/lrt_refs.json?v=20261111-waitlist1").then(r=>r.json())
   ]).then(([mx, refs])=>{
     MX = mx;
     const first = MX.modalities.map(m=>P.matrix+"|"+m[0]).find(k=>MX.cells[k]);

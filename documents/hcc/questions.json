@@ -682,7 +682,7 @@
      "divergence": "All three phase 3 trials met progression-free survival without an overall-survival benefit; the roadmap rests its stance on absent benefit rather than demonstrated harm, and notes NCCN does not prohibit the combination.",
      "proposal": "Avoid outside a clinical trial or an approved institutional protocol, to be reviewed again should a positive overall-survival analysis appear or a labelled indication be granted. The v16 systemic matrix frames TACE-plus-systemic regimens as selected use under a defined oncology, IR or institutional pathway, not routine transplant bridging.",
      "proposal_locator": "Stage B Avoid; Systemic therapy tab · 'TACE combined with systemic therapy is not a standard of care'; Systemic treatment matrix, TACE combination rows (v16 text)",
-     "rationale": "All three phase 3 trials met a progression-free survival endpoint and none has shown an overall-survival benefit, while grade 3 or worse treatment-related events ran at 71% against 32% and 63% against 19%, with immune-mediated events in 48% and treatment-related deaths in both trials. The position is defensible on absent benefit, not on demonstrated harm, so the trigger to re-review has to be named too.",
+     "rationale": "All three phase 3 trials met a progression-free survival endpoint and none has shown an overall-survival benefit, while grade 3 or worse treatment-related events ran at 71% against 32% and 63% against 19%, with immune-mediated events in 48% and treatment-related deaths in both trials. The position is defensible on absent benefit, not on demonstrated harm, so the trigger to re-review has to be named too. In embolization-eligible unresectable HCC, reported follow-up showed median overall survival of 40.4 vs 40.8 months in LEAP-012 (HR 0.98) and 29.9 vs 33.3 months in EMERALD-1 (HR 1.10). Neither trial measured waitlist dropout or transplant receipt.",
      "audit": "",
      "web": "hcc/#question-HCC-D13"
     },
@@ -772,7 +772,7 @@
      "divergence": "No pre-transplant washout interval is prospectively validated; the earlier pooled review addresses post-transplant use, and the pre-transplant cohorts are observational.",
      "proposal": "Pre-transplant checkpoint inhibitors only through transplant-specific review (Reasonable C, TX-TIMING), with washout, immunosuppression plan and alternative agreed before the first dose; the record covers the last dose, the proposed interval, urgency, alternatives and transplant-governance sign-off. The OPEN decision in the transplant protocol controls, and the stricter of OPTN and local policy governs.",
      "proposal_locator": "Stage C Reasonable · pre-transplant checkpoint inhibitor (v16 text); Decisions table #15 (why); Transplant tab · Four kinds of statement",
-     "rationale": "The earlier 52-patient review concerns ICI AFTER LT and cannot define a pre-LT washout. Pre-LT cohorts provide observational timing evidence, not a universally safe cutoff. Agree the plan before the first dose and record last exposure, proposed interval, urgency, alternatives and transplant-governance approval. The transplant protocol’s OPEN decision remains controlling.",
+     "rationale": "The earlier 52-patient review concerns ICI AFTER LT and cannot define a pre-LT washout. Pre-LT cohorts provide observational timing evidence, not a universally safe cutoff. Agree the plan before the first dose and record last exposure, proposed interval, urgency, alternatives and transplant-governance approval. The transplant protocol’s OPEN decision remains controlling. Record the last doses of the ICI and bevacizumab separately and plan for an early graft offer. Prior ICI alone does not preclude an HCC exception.",
      "audit": "",
      "web": "hcc/#question-HCC-D15"
     },
@@ -805,12 +805,30 @@
        "key": "pm34331914",
        "says": "In downstaging, no detectable difference between chemoembolisation and Y-90, but the roadmap calls that comparison unadjusted and confounded.",
        "locator": "Appendix · MERITS-LT (bottom line)"
+      },
+      {
+       "source": "HeiLivCa",
+       "key": "pm25957784",
+       "says": "Progression occurred in 7 patients per arm. Time to progression HR 1.11 (95% CI 0.39–3.16). Severe treatment-related events occurred in 50% vs 16%. Small blinded trial. No demonstrated gain in time to transplant or tumor control.",
+       "locator": "Hoffmann et al. BMC Cancer. 2015. PMID 25957784. DOI 10.1186/s12885-015-1373-z."
+      },
+      {
+       "source": "Kulik",
+       "key": "pm24681342",
+       "says": "17/20 received a graft. Time to transplant was similar. Biliary complications occurred in 4/8 vs 0/9 recipients. Small randomized safety pilot. Postoperative event counts include only recipients.",
+       "locator": "Kulik et al. J Hepatol. 2014. PMID 24681342. DOI 10.1016/j.jhep.2014.03.023."
+      },
+      {
+       "source": "PLENTY",
+       "key": "pm38995162",
+       "says": "10/11 per arm received a transplant. One-year conventional post-transplant recurrence-free survival was 70% vs 30%. Single-center pilot with frequent portal-vein tumor thrombus. The experimental regimen omitted concurrent LRT. An overall or waitlist survival benefit remains unproven.",
+       "locator": "Lv et al. Int J Surg. 2024. PMID 38995162. DOI 10.1097/js9.0000000000001813."
       }
      ],
      "divergence": "Comparative bridging cohorts differ in selection and design. Toronto reserved SBRT for patients unsuitable for other options; the later Hong Kong prospective SBRT cohort with historical controls reported more complete pathological responses and less dropout. These comparisons do not establish one universally superior bridge.",
      "proposal": "The roadmap lists thermal ablation, TACE, radiation segmentectomy and SBRT among bridge uses, states that no technique is a universal best bridge, requires bridge use of SBRT to be named separately, and holds that technical feasibility does not confer transplant eligibility. No adjudicator of bridging modality is named.",
      "proposal_locator": "Locoregional selector (thermal ablation, segmentectomy, TACE and SBRT rows); Liver-directed treatment matrix, arterial embolization and external beam rows (v16 text)",
-     "rationale": "Toronto reported explant complete necrosis of 13.3% after SBRT, 24.3% after TACE and 49.2% after RFA, with unequal patient selection. Wong 2021 (PMID 34091914; abstract-level verification) reported 48.1%, 25% and 17.9% after prospective SBRT versus historical TACE/HIFU. Different selection and comparators prevent a causal ranking; modality choice requires transplant and radiation review.",
+     "rationale": "Toronto reported explant complete necrosis of 13.3% after SBRT, 24.3% after TACE and 49.2% after RFA, with unequal patient selection. Wong 2021 (PMID 34091914; abstract-level verification) reported 48.1%, 25% and 17.9% after prospective SBRT versus historical TACE/HIFU. Different selection and comparators prevent a causal ranking; modality choice requires transplant and radiation review. Use locoregional therapy when a patient within transplant criteria needs bridging during a prolonged wait and liver reserve and anatomy permit treatment. Adding systemic therapy has no demonstrated benefit for dropout, receipt of a transplant, or survival from listing.",
      "audit": "",
      "web": "hcc/#question-HCC-D16"
     },
@@ -1623,10 +1641,94 @@
        "kind": "Retrospective cohort",
        "says": "Complete pathologic necrosis 30/45 (67%); >400 Gy: 11/11 (100%). Selected surgical specimens after segmentectomy; no comparison of modalities or waitlist dropout.",
        "locator": "Table 1 p.581 and Figure 3 p.582"
+      },
+      {
+       "source": "HeiLivCa",
+       "key": "std-WT-25957784",
+       "kind": "RCT",
+       "says": "50 waitlisted patients. TACE + sorafenib vs TACE + placebo. Progression occurred in 7 patients per arm. Time to progression HR 1.11 (95% CI 0.39–3.16). Severe treatment-related events occurred in 50% vs 16%. Small blinded trial. No demonstrated gain in time to transplant or tumor control.",
+       "locator": "Hoffmann et al. BMC Cancer. 2015. PMID 25957784. DOI 10.1186/s12885-015-1373-z."
+      },
+      {
+       "source": "Kulik",
+       "key": "std-WT-24681342",
+       "kind": "RCT",
+       "says": "20 patients analyzed. Y90 + sorafenib vs Y90 alone before transplant. 17/20 received a graft. Time to transplant was similar. Biliary complications occurred in 4/8 vs 0/9 recipients. Small randomized safety pilot. Postoperative event counts include only recipients.",
+       "locator": "Kulik et al. J Hepatol. 2014. PMID 24681342. DOI 10.1016/j.jhep.2014.03.023."
+      },
+      {
+       "source": "PLENTY",
+       "key": "std-WT-38995162",
+       "kind": "RCT",
+       "says": "22 beyond Milan. Pembrolizumab + lenvatinib vs locoregional treatment such as TACE. 10/11 per arm received a transplant. One-year conventional post-transplant recurrence-free survival was 70% vs 30%. Single-center pilot with frequent portal-vein tumor thrombus. The experimental regimen omitted concurrent LRT. An overall or waitlist survival benefit remains unproven.",
+       "locator": "Lv et al. Int J Surg. 2024. PMID 38995162. DOI 10.1097/js9.0000000000001813."
+      },
+      {
+       "source": "Minoux",
+       "key": "std-WT-36438781",
+       "kind": "Retrospective cohort",
+       "says": "62 listed patients given sorafenib. No feasible LRT vs progression after LRT. Transplant receipt was 18/31 vs 8/31. Across both groups 36/62 dropped out. The two indications carry different prognoses. All received sorafenib and there was no LRT-only control.",
+       "locator": "Minoux et al. Transpl Int. 2022. PMID 36438781. DOI 10.3389/ti.2022.10569."
+      },
+      {
+       "source": "VITALITY",
+       "key": "std-WT-39255928",
+       "kind": "Cohort",
+       "says": "117 ICI-treated patients assessed for transplant. 94% also received LRT. 65/86 who exceeded Milan downstaged. Overall 43/117 received a graft. Three-year dropout was 28% within vs 48% beyond Milan. The dropout comparison is by tumor burden. There was no LRT-only arm.",
+       "locator": "Tabrizian et al. J Hepatol. 2025. PMID 39255928. DOI 10.1016/j.jhep.2024.09.003."
+      },
+      {
+       "source": "ImmunoXXL",
+       "key": "std-WT-41763363",
+       "kind": "Prospective cohort",
+       "says": "61 potentially eligible patients started atezolizumab–bevacizumab. 16/61 received a graft. Of these, 15 had prior LRT and 4 experienced rejection. Two-year recipient overall survival was 94% and recurrence-free survival 90%. Single prospective cohort without a concurrent comparator. The survival estimates start at transplant.",
+       "locator": "Bhoori et al. J Hepatol. 2026. PMID 41763363. DOI 10.1016/j.jhep.2026.02.019."
+      },
+      {
+       "source": "Abdelrahim",
+       "key": "std-WT-35158918",
+       "kind": "Retrospective cohort",
+       "says": "Houston Methodist. TACE + sorafenib vs TACE alone in a beyond-Milan subgroup of 12 vs 24 recipients. Mean explant necrosis was 69.6% vs 43.8% (P=.03). Five-year disease-free survival was 100% vs 67.2% (P=.07). Milan grouping incorporated explant findings. Recipient selection prevents estimation of waitlist dropout.",
+       "locator": "Abdelrahim et al. Cancers (Basel). 2022. PMID 35158918. DOI 10.3390/cancers14030650."
+      },
+      {
+       "source": "Xu",
+       "key": "std-WT-42421575",
+       "kind": "Retrospective cohort",
+       "says": "TACE + a tyrosine kinase inhibitor vs TACE alone. Matched transplant recipients, 60 per arm. Objective imaging response was 33.3% vs 16.7% (P=.035). Recipient-only comparison. Imaging response cannot establish transplant access or survival from listing.",
+       "locator": "Xu et al. World J Surg. 2026. PMID 42421575. DOI 10.1002/wjs.70454."
+      },
+      {
+       "source": "Arvind",
+       "key": "std-WT-38466889",
+       "kind": "Meta-analysis",
+       "says": "39,819 recipients within Milan. Bridging LRT vs no bridging LRT. Post-transplant recurrence-free survival HR 0.91 (95% CI 0.77–1.08) and overall survival HR 1.09 (0.95–1.24). Recipient outcomes exclude people who dropped out. This cannot establish that bridging is unnecessary during a long wait.",
+       "locator": "Arvind et al. Liver Transpl. 2024. PMID 38466889. DOI 10.1097/lvt.0000000000000357."
+      },
+      {
+       "source": "Chuncharunee",
+       "key": "std-WT-38978769",
+       "kind": "Meta-analysis",
+       "says": "Seven observational studies of LRT bridging. For waits of at least six months, bridging was associated with lower post-transplant mortality (HR 0.76, 95% CI 0.60–0.96). Observational subgroup evaluating local bridging. Systemic therapy was not the comparator.",
+       "locator": "Chuncharunee et al. JGH Open. 2024. PMID 38978769. DOI 10.1002/jgh3.13111."
+      },
+      {
+       "source": "EASL–AASLD–ILCA",
+       "key": "std-WT-42270817",
+       "kind": "Consensus",
+       "says": "Consensus on HCC clinical trial design. Assess transplant receipt, progression or death before transplant, and survival from entry for all enrolled candidates. Recipient recurrence and pathologic response address separate outcomes.",
+       "locator": "Llovet et al. Nat Rev Clin Oncol. 2026. PMID 42270817. DOI 10.1038/s41571-026-01160-z."
+      },
+      {
+       "source": "Nanneboyina · ASCO 2025",
+       "key": "std-WT-Dallas",
+       "kind": "Conference abstract",
+       "says": "Conference abstract. Among transplant recipients, systemic treatment + LRT (15) vs LRT alone (89) showed no significant difference in time to recurrence (P=.41). Dropout was unmeasured.",
+       "locator": "J Clin Oncol 2025, ASCO abstract 4135."
       }
      ],
      "proposal": "Record the treatment goal, anatomical and liver-function considerations, and response-imaging date. Ask transplant radiology to resolve uncertain residual tumor before changing treatment.",
-     "rationale": "Choice and sequencing require a clinical decision; the timing guidance is not a modality algorithm.",
+     "rationale": "Choice and sequencing require a clinical decision; the timing guidance is not a modality algorithm. Use locoregional therapy when a patient within transplant criteria needs bridging during a prolonged wait and liver reserve and anatomy permit treatment. Adding systemic therapy has no demonstrated benefit for dropout, receipt of a transplant, or survival from listing.",
      "owners": "IR · radiation oncology · radiology",
      "web": "transplant/hcc/#meeting-bridging"
     },
@@ -1661,10 +1763,66 @@
        "kind": "Clinical guidance",
        "says": "“discontinuation of these agents at least 3 months prior to LT”",
        "locator": "ICI discussion, PDF p.20"
+      },
+      {
+       "source": "AASLD–AST",
+       "key": "std-WT-41405234",
+       "kind": "Guideline",
+       "says": "Adult liver transplant candidate evaluation. Evidence is insufficient for routine ICI-based bridging or downstaging. Individual use requires coordination with transplant oncology and an agreed plan before dosing.",
+       "locator": "Dove et al. Hepatology. 2026. PMID 41405234. DOI 10.1097/hep.0000000000001644."
+      },
+      {
+       "source": "ILTS–ILCA",
+       "key": "std-WT-42312290",
+       "kind": "Consensus",
+       "says": "Consensus on transplant oncology. Suggests 2–3 drug-specific half-lives between ICI and transplant. Discusses at least 60 days after bevacizumab for wound healing. Limited evidence. AASLD HCC guidance advises at least three months for ICI. Record both last-dose dates and agree an early-offer plan.",
+       "locator": "Kodali et al. Liver Cancer. 2026. PMID 42312290. DOI 10.1159/000550600."
+      },
+      {
+       "source": "Ong",
+       "key": "std-WT-42821267",
+       "kind": "Retrospective cohort",
+       "says": "208 matched recipients per arm. ICI-based multimodal therapy vs heterogeneous non-ICI therapy beyond Milan. Post-transplant overall survival HR 0.63 (95% CI 0.43–0.92) and recurrence-free survival HR 0.59. Ninety-day rejection was 16.3% vs 8.2%. Observational comparison restricted to recipients. Regimens differed within both groups.",
+       "locator": "Ong et al. JAMA Oncol. 2026. PMID 42821267. DOI 10.1001/jamaoncol.2026.3901."
+      },
+      {
+       "source": "Aceituno",
+       "key": "std-WT-41640254",
+       "kind": "Retrospective cohort",
+       "says": "48 ICI-exposed vs 144 matched non-ICI recipients. 142/144 controls had LRT. Rejection occurred in 18.8% vs 19.4% (P=.916). Eight exposed recipients received ATG induction vs none of the controls. Similar observed proportions do not establish equivalent risk or a preferred induction strategy.",
+       "locator": "Aceituno et al. Aliment Pharmacol Ther. 2026. PMID 41640254. DOI 10.1111/apt.70528."
+      },
+      {
+       "source": "Rodrigues Ribeiro",
+       "key": "std-WT-41689676",
+       "kind": "Meta-analysis",
+       "says": "14 reports with 412 reported recipients after systemic therapy. Up to 26 recipients potentially overlapped. Pooled three-year post-transplant overall survival was 76% and acute rejection 21%. Mixed regimens and possible overlap. These data cannot establish a comparative effect on dropout.",
+       "locator": "Rodrigues Ribeiro et al. J Gastrointest Cancer. 2026. PMID 41689676. DOI 10.1007/s12029-026-01399-w."
+      },
+      {
+       "source": "TA-LEN-TRA",
+       "key": "std-WT-reg1",
+       "kind": "Trial registry",
+       "says": "Single-arm lenvatinib after TACE failure. No posted results at review.",
+       "locator": "ClinicalTrials.gov registry, 11 November 2026"
+      },
+      {
+       "source": "NCT05185505",
+       "key": "std-WT-reg2",
+       "kind": "Trial registry",
+       "says": "Single-arm atezolizumab–bevacizumab before transplant. No posted results at review.",
+       "locator": "ClinicalTrials.gov registry, 11 November 2026"
+      },
+      {
+       "source": "MACROTRANS",
+       "key": "std-WT-reg3",
+       "kind": "Trial registry",
+       "says": "Single-arm investigational treatment for selected macrovascular invasion. No posted results at review.",
+       "locator": "ClinicalTrials.gov registry, 11 November 2026"
       }
      ],
      "proposal": "Explicitly discuss the AASLD 3-month recommendation, agent/last dose, rejection risk and urgency. Any departure needs a documented multidisciplinary rationale; no washout guarantees safety.",
-     "rationale": "Eligibility for HCC MELD-exception points and the risk of rejection after checkpoint-inhibitor exposure require separate assessments.",
+     "rationale": "Eligibility for HCC MELD-exception points and the risk of rejection after checkpoint-inhibitor exposure require separate assessments. Before the first checkpoint dose, agree the last-dose interval, management of an early deceased-donor offer and the plan for active immune toxicity. For atezolizumab–bevacizumab, record both last doses. A living-donor operation can be scheduled. AASLD advises at least three months after ICI. The proposed local elective interval is 90 days. Rejection can occur after longer intervals.",
      "owners": "Transplant oncology · pharmacy · transplant surgery",
      "web": "transplant/hcc/#meeting-checkpoint"
     },
@@ -2427,7 +2585,7 @@
       "A shorter interval has no automatic urgency waiver. An exceptional-care decision must document near-term mortality without LT, alternatives, donor/graft risk, consent and rescue capability. Biology, ICI and allocation clocks may overlap; do not add them mechanically.",
       "Consent must address rejection, graft loss, uncertain comparative oncologic benefit and progression during washout. Neither elapsed time nor complete radiological response guarantees immune safety. Obtain the missing primary full texts before ratifying these provisional thresholds."
      ],
-     "tests": "Drug and last-dose dates; complete irAE history and grade; treatment and recovery; graft-risk review by hepatology, oncology and pharmacy; current staging.",
+     "tests": "Drug and last-dose dates; complete irAE history and grade; treatment and recovery; graft-risk review by hepatology, oncology and pharmacy; current staging. Record the last dose of bevacizumab separately, surgical healing risk, donor type and the plan if a deceased-donor offer arrives before the agreed interval.",
      "allocation": "Prior ICI alone is not an automatic HCC exception exclusion. The proposed clinical timing requirement is separate from tumor eligibility and allocation waiting time.",
      "rationale": "ICI can help some selected patients reach transplantation, but efficacy and safety denominators must be kept separate: response among treated patients, probability of reaching LT, and rejection among recipients answer different questions. Very short washout is consistently concerning; evidence does not establish an interval at which risk becomes zero. Prior irAE adds information beyond elapsed time. Neither the apparent safety of some matched cohorts nor promising recipient survival cancels the graft-loss signal.",
      "counter": "ImmunoXXL demonstrates feasibility with intervals shorter than 90 days, and Aceituno found similar rejection proportions in matched groups; these challenge a claim that <90 days is an absolute biological contraindication. They do not prove equivalence or validate elective shortening. Ong suggests oncologic benefit but also higher rejection, while Fang highlights risk missed by washout alone. The literature supports individualized exceptional review, not automatic urgency-based exemption.",
@@ -3363,6 +3521,30 @@
     "pubmed": "https://pubmed.ncbi.nlm.nih.gov/36102312/"
    }
   },
+  "pm25957784": {
+   "short": "HeiLivCa",
+   "title": "",
+   "kind": "",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/25957784/"
+   }
+  },
+  "pm24681342": {
+   "short": "Kulik",
+   "title": "",
+   "kind": "",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/24681342/"
+   }
+  },
+  "pm38995162": {
+   "short": "PLENTY",
+   "title": "",
+   "kind": "",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/38995162/"
+   }
+  },
   "std-H-policy": {
    "short": "OPTN 9.5.I",
    "title": "OPTN Policies — HCC standardized exception",
@@ -3393,6 +3575,166 @@
    "kind": "Retrospective cohort",
    "links": {
     "url": "https://pubmed.ncbi.nlm.nih.gov/32749512/"
+   }
+  },
+  "std-WT-25957784": {
+   "short": "HeiLivCa",
+   "title": "Impact of neo-adjuvant Sorafenib treatment on liver transplantation in HCC patients - a prospective, randomized, double-blind, phase III trial.",
+   "kind": "RCT",
+   "links": {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25957784/"
+   }
+  },
+  "std-WT-24681342": {
+   "short": "Kulik",
+   "title": "Prospective randomized pilot study of Y90+/-sorafenib as bridge to transplantation in hepatocellular carcinoma.",
+   "kind": "RCT",
+   "links": {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/24681342/"
+   }
+  },
+  "std-WT-38995162": {
+   "short": "PLENTY",
+   "title": "Pembrolizumab in combination with LEnvatinib in participants with hepatocellular carcinoma before liver transplant as Neoadjuvant TherapY-PLENTY pilot study.",
+   "kind": "RCT",
+   "links": {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38995162/"
+   }
+  },
+  "std-WT-36438781": {
+   "short": "Minoux",
+   "title": "Neo-Adjuvant Use of Sorafenib for Hepatocellular Carcinoma Awaiting Liver Transplantation.",
+   "kind": "Retrospective cohort",
+   "links": {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36438781/"
+   }
+  },
+  "std-WT-39255928": {
+   "short": "VITALITY",
+   "title": "Intention-to-treat outcomes of patients with hepatocellular carcinoma receiving immunotherapy before liver transplant: The multicenter VITALITY study.",
+   "kind": "Cohort",
+   "links": {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39255928/"
+   }
+  },
+  "std-WT-41763363": {
+   "short": "ImmunoXXL",
+   "title": "Efficacy of liver transplantation after response to atezolizumab-bevacizumab downstaging of intermediate and advanced hepatocellular carcinoma (ImmunoXXL).",
+   "kind": "Prospective cohort",
+   "links": {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41763363/"
+   }
+  },
+  "std-WT-35158918": {
+   "short": "Abdelrahim",
+   "title": "Transarterial Chemoembolization (TACE) Plus Sorafenib Compared to TACE Alone in Transplant Recipients with Hepatocellular Carcinoma: An Institution Experience.",
+   "kind": "Retrospective cohort",
+   "links": {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35158918/"
+   }
+  },
+  "std-WT-42421575": {
+   "short": "Xu",
+   "title": "Association of Pre-Transplant Tyrosine Kinase Inhibitor Therapy With Tumor Response and Survival in Hepatocellular Carcinoma: A 10-Year Retrospective Cohort Study of 427 Patients.",
+   "kind": "Retrospective cohort",
+   "links": {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42421575/"
+   }
+  },
+  "std-WT-38466889": {
+   "short": "Arvind",
+   "title": "Association between bridging therapy and posttransplant outcomes in patients with HCC within Milan criteria: A systematic review and meta-analysis.",
+   "kind": "Meta-analysis",
+   "links": {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38466889/"
+   }
+  },
+  "std-WT-38978769": {
+   "short": "Chuncharunee",
+   "title": "Long-term posttransplant survival outcome following bridging locoregional therapy in hepatocellular carcinoma patients: A systematic review and meta-analysis.",
+   "kind": "Meta-analysis",
+   "links": {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38978769/"
+   }
+  },
+  "std-WT-42270817": {
+   "short": "EASL–AASLD–ILCA",
+   "title": "Trial design and end points in hepatocellular carcinoma: an EASL-AASLD-ILCA consensus statement.",
+   "kind": "Consensus",
+   "links": {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42270817/"
+   }
+  },
+  "std-WT-Dallas": {
+   "short": "Nanneboyina · ASCO 2025",
+   "title": "Nanneboyina · ASCO 2025",
+   "kind": "Conference abstract",
+   "links": {
+    "url": "https://doi.org/10.1200/JCO.2025.43.16_suppl.4135"
+   }
+  },
+  "std-WT-41405234": {
+   "short": "AASLD–AST",
+   "title": "AASLD AST Practice Guideline on adult liver transplantation: Candidate evaluation.",
+   "kind": "Guideline",
+   "links": {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41405234/"
+   }
+  },
+  "std-WT-42312290": {
+   "short": "ILTS–ILCA",
+   "title": "The 2024 International Liver Transplant Society and International Liver Cancer Association Consensus Recommendations for Liver Transplantation for Liver Cancer.",
+   "kind": "Consensus",
+   "links": {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42312290/"
+   }
+  },
+  "std-WT-42821267": {
+   "short": "Ong",
+   "title": "Immune Checkpoint Inhibitor-Based Downstaging Therapy for Hepatocellular Carcinoma.",
+   "kind": "Retrospective cohort",
+   "links": {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42821267/"
+   }
+  },
+  "std-WT-41640254": {
+   "short": "Aceituno",
+   "title": "Safety of Immune Checkpoint Inhibitors Prior to Liver Transplantation in Hepatocellular Carcinoma.",
+   "kind": "Retrospective cohort",
+   "links": {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41640254/"
+   }
+  },
+  "std-WT-41689676": {
+   "short": "Rodrigues Ribeiro",
+   "title": "Pretransplant Systemic Therapies for Hepatocellular Carcinoma: A Systematic Review of Posttransplant Outcomes.",
+   "kind": "Meta-analysis",
+   "links": {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/41689676/"
+   }
+  },
+  "std-WT-reg1": {
+   "short": "TA-LEN-TRA",
+   "title": "TA-LEN-TRA",
+   "kind": "Trial registry",
+   "links": {
+    "url": "https://clinicaltrials.gov/study/NCT05901194"
+   }
+  },
+  "std-WT-reg2": {
+   "short": "NCT05185505",
+   "title": "NCT05185505",
+   "kind": "Trial registry",
+   "links": {
+    "url": "https://clinicaltrials.gov/study/NCT05185505"
+   }
+  },
+  "std-WT-reg3": {
+   "short": "MACROTRANS",
+   "title": "MACROTRANS",
+   "kind": "Trial registry",
+   "links": {
+    "url": "https://clinicaltrials.gov/study/NCT06725121"
    }
   },
   "std-V12-AFP_500": {

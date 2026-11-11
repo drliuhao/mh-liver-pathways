@@ -50,8 +50,8 @@ for f in ROOT.rglob('*'):
 catalog=json.loads((ROOT/'evidence-libraries/catalog.json').read_text())
 assert len(catalog['libraries'])==34
 for lib in catalog['libraries']:
-    assert lib['local_folder'].startswith('V19_consistent_release_2026-11-03/Evidence_Libraries/'),lib['key']
-    assert lib['ppt_filename']=='Evidence_Summaries_v19.pptx',lib['key']
+    assert lib['local_folder'].startswith('V20_consistent_release_2026-11-04/Evidence_Libraries/'),lib['key']
+    assert lib['ppt_filename']=='Evidence_Summaries_v20.pptx',lib['key']
     assert (ROOT/lib['document'].split('#')[0]).exists(),lib['key']
 print('PASS: 45 Word + 9 authored PDF originals archived; all retired serving files/links absent; '
-      '65 canonical Word downloads and 34 V19 package records resolve; original pCCA chart routes to hilar/.')
+      '65 canonical Word downloads and 34 V20 package records resolve; original pCCA chart routes to hilar/.')

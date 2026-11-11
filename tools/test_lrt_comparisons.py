@@ -4,7 +4,7 @@ from pathlib import Path
 R=Path(__file__).resolve().parents[1]
 read=lambda f:json.loads((R/f).read_text())
 data=read('lrt/comparisons.json');source=read('tools/lrt_comparative_evidence.json')['studies'];matrix=read('lrt/matrix.json');compact=read('tools/compact_evidence_source.json')['studies']
-rows=data['rows'];assert len(rows)==97 and len({r['id'] for r in rows})==97
+rows=data['rows'];assert len(rows)==101 and len({r['id'] for r in rows})==101
 for study in source:
  r=next(r for r in rows if r['tumor']==study['tumor'] and r.get('pmid')==study['pmid'])
  for key in ['design','population','result','caution']:assert r[key]==study[key],(r['id'],key)
@@ -60,7 +60,7 @@ assert all('Recipient' in p['note'] or 'recipient' in p['note'] for pid in ['287
 assert at('32615109')[0]['a']=='lt' and at('32615109')[0]['b']=='nonlt'
 assert not any('htx' in [p['a'],p['b']] for p in pairs),'No comparative histotripsy trial in this source set'
 assert [(p['a'],p['b']) for p in at('abstract-RETNET-RCT')]==[('tae','ctace')]
-print(f'PASS: 97 source records and {len(pairs)} explicit treatment pairs; combination arms and effect order retained; clinical changes match recorded revisions.')
+print(f'PASS: 101 source records and {len(pairs)} explicit treatment pairs; combination arms and effect order retained; clinical changes match recorded revisions.')
 
 # Screen colors are per endpoint, and null trials never become non-inferiority.
 for p in pairs:

@@ -9441,6 +9441,72 @@
         "Retrospective multicenter surgical cohort: treatment-naive solitary HCC ≤8 cm, Child-Pugh A; glass-microsphere radiation segmentectomy followed by transplant (34) or resection (11).",
         "Complete pathologic necrosis 30/45 (67%); >400 Gy: 11/11 (100%)."
       ]
+    },
+    "25957784": {
+      "label": "HeiLivCa",
+      "design": "RCT",
+      "arms": "TACE + sorafenib vs TACE + placebo in 50 listed patients",
+      "result": "Progression occurred in 7 patients per arm. Time to progression HR 1.11 (95% CI 0.39–3.16). Severe treatment-related events occurred in 50% vs 16%.",
+      "caution": "Small blinded trial. No demonstrated time-to-transplant advantage.",
+      "quotes": [
+        "50 waitlisted patients. TACE + sorafenib vs TACE + placebo.",
+        "Progression occurred in 7 patients per arm. Time to progression HR 1.11 (95% CI 0.39–3.16). Severe treatment-related events occurred in 50% vs 16%."
+      ]
+    },
+    "24681342": {
+      "label": "Kulik",
+      "design": "RCT",
+      "arms": "Y90 + sorafenib vs Y90 alone in 20 patients",
+      "result": "17/20 received a graft. Time to transplant was similar. Biliary complications occurred in 4/8 vs 0/9 recipients.",
+      "caution": "Small randomized safety pilot. Postoperative events include only recipients.",
+      "quotes": [
+        "20 patients analyzed. Y90 + sorafenib vs Y90 alone before transplant.",
+        "17/20 received a graft. Time to transplant was similar. Biliary complications occurred in 4/8 vs 0/9 recipients."
+      ]
+    },
+    "38995162": {
+      "label": "PLENTY",
+      "design": "RCT",
+      "arms": "Pembrolizumab + lenvatinib vs local treatment. Beyond Milan.",
+      "result": "10/11 per arm received a transplant. One-year conventional post-transplant recurrence-free survival was 70% vs 30%.",
+      "caution": "Single-center pilot. Recipient recurrence cannot establish a waitlist survival benefit.",
+      "quotes": [
+        "22 beyond Milan. Pembrolizumab + lenvatinib vs locoregional treatment such as TACE.",
+        "10/11 per arm received a transplant. One-year conventional post-transplant recurrence-free survival was 70% vs 30%."
+      ]
+    },
+    "36438781": {
+      "label": "Minoux",
+      "design": "Retrospective cohort",
+      "arms": "Sorafenib for infeasible LRT vs progression after LRT",
+      "result": "Transplant receipt was 18/31 vs 8/31. Across both groups 36/62 dropped out.",
+      "caution": "Single cohort. Different reasons for starting sorafenib, with no LRT-only comparator.",
+      "quotes": [
+        "62 listed patients given sorafenib. No feasible LRT vs progression after LRT.",
+        "Transplant receipt was 18/31 vs 8/31. Across both groups 36/62 dropped out."
+      ]
+    },
+    "35158918": {
+      "label": "Abdelrahim",
+      "design": "Retrospective cohort",
+      "arms": "TACE + sorafenib vs TACE. Selected transplant recipients.",
+      "result": "Mean explant necrosis was 69.6% vs 43.8% (P=.03). Five-year disease-free survival was 100% vs 67.2% (P=.07).",
+      "caution": "Classification incorporated explant findings. Waitlist dropout was unmeasured.",
+      "quotes": [
+        "Houston Methodist. TACE + sorafenib vs TACE alone in a beyond-Milan subgroup of 12 vs 24 recipients.",
+        "Mean explant necrosis was 69.6% vs 43.8% (P=.03). Five-year disease-free survival was 100% vs 67.2% (P=.07)."
+      ]
+    },
+    "42421575": {
+      "label": "Xu",
+      "design": "Retrospective cohort",
+      "arms": "TACE + TKI vs TACE in matched transplant recipients",
+      "result": "Objective imaging response was 33.3% vs 16.7% (P=.035).",
+      "caution": "Recipient-only imaging comparison. No waitlist denominator.",
+      "quotes": [
+        "TACE + a tyrosine kinase inhibitor vs TACE alone. Matched transplant recipients, 60 per arm.",
+        "Objective imaging response was 33.3% vs 16.7% (P=.035)."
+      ]
     }
   },
   "options": {

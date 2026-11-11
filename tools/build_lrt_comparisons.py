@@ -83,10 +83,11 @@ for tumor,name,setting,label,treatments,doi in [
   'pubmed':f'https://pubmed.ncbi.nlm.nih.gov/{pid}/' if pid else '',
   'tmc':f'https://libkey.io/libraries/480/pmid/{pid}' if pid else 'https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,'+doi})
 
+rows.extend(load('tools/hcc_waitlist_comparisons.json'))
 assert len({r['id'] for r in rows})==len(rows)
 order={k:i for i,k in enumerate(settings)}
 rows.sort(key=lambda r:(r['tumor'],order[r['setting']],r['comparison'],r['year'],r['id']))
-out={'version':'20261105-compact1','settings':settings,'treatments':dict((m[0],m[1]) for m in matrix['modalities'])|{'surgery':'Resection / transplant','systemic':'Systemic therapy','supportive':'Supportive care'},'rows':rows,'arms':ARMS,'modes':MODES,'pairs':build_pairs(rows)}
+out={'version':'20261111-waitlist1','settings':settings,'treatments':dict((m[0],m[1]) for m in matrix['modalities'])|{'surgery':'Resection / transplant','systemic':'Systemic therapy','supportive':'Supportive care'},'rows':rows,'arms':ARMS,'modes':MODES,'pairs':build_pairs(rows)}
 out['verdicts']=add_screen_metadata(rows,out['pairs'])
 (R/'lrt/comparisons.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
 print('Built comparison tables:',{t:sum(r['tumor']==t for r in rows) for t,_,_ in matrix['tumours']})
