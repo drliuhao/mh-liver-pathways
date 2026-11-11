@@ -49,7 +49,7 @@ SIGNAL = {
 # Ratios/HRs retain their source analysis. Full results and CIs remain in details.
 MINI = {
 '25957784':'Progression: 7 patients per arm',
-'24681342':'Biliary complications: 4/8 vs 0/9 recipients',
+'24681342':'Biliary complications within 30 days: 4/8 vs 0/9',
 '35158918':'Mean explant necrosis: 69.6% vs 43.8%',
 '42421575':'Imaging response: 33.3% vs 16.7%',
 

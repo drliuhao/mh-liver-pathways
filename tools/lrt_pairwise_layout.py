@@ -36,7 +36,7 @@ ARMS = {
 # displayed arm line, NEVER an inferred ordering of matrix axes.
 SPECS = [
 ('25957784', 'combined', 'tace_sys', 'tace', 'Progression: 7 per arm. TTP HR 1.11 (0.39–3.16).', 'Small waitlist RCT. Severe treatment-related events 50% vs 16%.'),
-('24681342', 'combined', 'y90_sys', 'y90', 'Time to transplant similar. Biliary complications 4/8 vs 0/9 recipients.', 'Randomized safety pilot. Twenty patients analyzed.'),
+('24681342', 'combined', 'y90_sys', 'y90', 'Transplanted 8/10 vs 9/10. Biliary complications within 30 days occurred in 4/8 vs 0/9 recipients.', 'Safety pilot, 23 randomized and 20 treated. All 10 sorafenib patients required dose reduction.'),
 ('35158918', 'combined', 'tace_sys', 'tace', 'Mean explant necrosis 69.6% vs 43.8%.', 'Recipient subgroup, 12 vs 24. Milan classification included explant findings.'),
 ('42421575', 'combined', 'tace_sys', 'tace', 'Imaging response 33.3% vs 16.7%.', 'Matched recipients, 60 per arm. Waitlist dropout unmeasured.'),
 

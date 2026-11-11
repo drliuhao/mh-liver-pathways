@@ -1,5 +1,5 @@
 {
-  "version": "20261111-waitlist1",
+  "version": "20261111-bridging2",
   "settings": {
     "local": "Definitive local treatment",
     "transplant": "Bridge / downstaging / transplant",
@@ -1009,11 +1009,11 @@
       ],
       "label": "Kulik",
       "design": "Randomized trial",
-      "population": "20 patients analyzed. Y90 + sorafenib vs Y90 alone before transplant.",
-      "result": "17/20 received a graft. Time to transplant was similar. Biliary complications occurred in 4/8 vs 0/9 recipients.",
-      "summary": "17/20 received a graft. Time to transplant was similar. Biliary complications occurred in 4/8 vs 0/9 recipients.",
-      "caution": "Small randomized safety pilot. Postoperative event counts include only recipients.",
-      "shortCaution": "Small randomized safety pilot. Postoperative event counts include only recipients.",
+      "population": "Y90 plus sorafenib vs Y90 alone. Of 23 randomized, 20 received treatment (10 per arm).",
+      "result": "8/10 vs 9/10 received a graft. Time to transplant did not differ significantly (P=0.35). Biliary complications within 30 days occurred in 4/8 vs 0/9 recipients (P=0.029).",
+      "summary": "8/10 vs 9/10 received a graft. Time to transplant did not differ significantly (P=0.35). Biliary complications within 30 days occurred in 4/8 vs 0/9 recipients (P=0.029).",
+      "caution": "All 10 sorafenib patients required a permanent dose reduction. The pilot was too small to establish an effect on transplant receipt or survival.",
+      "shortCaution": "All 10 sorafenib patients required a permanent dose reduction. The pilot was too small to establish an effect on transplant receipt or survival.",
       "origin": "waitlist-comparison",
       "pmid": "24681342",
       "year": "2014",
@@ -3348,15 +3348,15 @@
       "a": "y90_sys",
       "b": "y90",
       "arms": "Y90 + sorafenib vs Y90 alone",
-      "brief": "Time to transplant similar. Biliary complications 4/8 vs 0/9 recipients.",
-      "note": "Randomized safety pilot. Twenty patients analyzed.",
+      "brief": "Transplanted 8/10 vs 9/10. Biliary complications within 30 days occurred in 4/8 vs 0/9 recipients.",
+      "note": "Safety pilot, 23 randomized and 20 treated. All 10 sorafenib patients required dose reduction.",
       "screen": {
         "label": "Kulik",
-        "result": "Biliary complications: 4/8 vs 0/9 recipients",
+        "result": "Biliary complications within 30 days: 4/8 vs 0/9",
         "verdict": "uncertain",
         "favored": "",
         "endpoint": "summarized outcome",
-        "rationale": "Randomized safety pilot. Twenty patients analyzed."
+        "rationale": "Safety pilot, 23 randomized and 20 treated. All 10 sorafenib patients required dose reduction."
       }
     },
     {

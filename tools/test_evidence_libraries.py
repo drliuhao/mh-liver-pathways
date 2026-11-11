@@ -12,8 +12,11 @@ assert len(data['publications'])==data['unique_publications']==670
 # V18 adds four sources (ABC-06 was already indexed): two verified PDFs and
 # two primary reports read as XML, whose unavailable PDFs stay explicit.
 # V20 verifies and deposits all 34 papers from the comparative-study checklist.
-assert sum(bool(p['pdf_available']) for p in data['publications'].values())==643
-assert data['missing_publication_pdfs']==27 and data['appraisals_pending']==53
+assert sum(bool(p['pdf_available']) for p in data['publications'].values())==646
+assert data['missing_publication_pdfs']==24 and data['appraisals_pending']==53
+for pmid in ('24681342', '38466889', '42421575'):
+    pub = next(p for p in data['publications'].values() if p.get('pmid') == pmid)
+    assert pub['pdf_available'] and pub['coverage'] == 'Focused full-text appraisal', pmid
 used=set()
 for library in data['libraries']:
     ids=[p['id'] for p in library['papers']]

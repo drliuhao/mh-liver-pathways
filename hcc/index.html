@@ -346,7 +346,7 @@ footer p + p{margin-top:8px}
 @media (prefers-reduced-motion:reduce){ *{transition:none !important} }
 </style>
 <link rel="stylesheet" href="../assets/lrt-comparisons.css?v=20261105-compact1">
-<script defer src="../assets/lrt-comparisons.js?v=20261111-waitlist1"></script>
+<script defer src="../assets/lrt-comparisons.js?v=20261111-bridging2"></script>
 <link rel="stylesheet" href="../assets/roadmap-flow.css?v=20261109-pathology1">
 <script src="../assets/roadmap-flow.js?v=20261109-pathology1"></script>
 
@@ -1320,8 +1320,8 @@ const HONEST = [
   "A pragmatic consensus threshold, not a validated rule; published TACE-refractoriness definitions differ. EASL states that after one or two consecutive TACEs without response other therapies should be considered, at level of evidence 3, and no study has compared switching at a fixed session count with reassessing after each session. v0.8 withdrew the fixed rule in favour of reassessment after each session.",
   "Selectivity achieved, response pattern, liver-function trajectory, remaining downstaging goal.",
   "Outcomes of patients switched at two sessions versus continued."],
- ["Bridging therapy on the waiting list reduces dropout, and the modality does not matter.",
-  "The Toronto comparative series is a single-centre retrospective intention-to-treat analysis in which the arms were not comparable and SBRT was by design reserved for patients who could not have TACE or RFA. Dropout was 6 of 36 (16.7%) after SBRT, 20 of 99 (20.2%) after TACE and 41 of 244 (16.8%) after RFA (P = 0.7), but only 13 of 36 SBRT patients (36.1%) and 22 of 99 TACE patients (22.7%) were within Milan against 214 of 244 RFA patients (87.7%), and the SBRT arm had higher MELD and worse Child-Pugh. Explant complete necrosis was 4 of 30 (13.3%) after SBRT versus 17 of 70 (24.3%) after TACE and 87 of 177 (49.2%) after RFA (P below 0.001), and liver function deteriorated after SBRT in 38.9% versus 19.4% and 13.0%. With 6 dropouts in the SBRT arm the study is underpowered for its own endpoint and the authors read it as feasibility, not equivalence. Recipient studies of bridging versus observation exclude waitlist dropout. Arvind found no clear post-transplant survival difference within Milan. A separate observational synthesis found a survival association among patients waiting at least six months. Adding sorafenib to TACE or Y90 has shown no transplant advantage.",
+ ["Does bridging reduce waitlist dropout, and does the choice of local treatment matter?",
+  "The Toronto comparative series is a single-centre retrospective intention-to-treat analysis in which the arms were not comparable and SBRT was by design reserved for patients who could not have TACE or RFA. Dropout was 6 of 36 (16.7%) after SBRT, 20 of 99 (20.2%) after TACE and 41 of 244 (16.8%) after RFA (P = 0.7), but only 13 of 36 SBRT patients (36.1%) and 22 of 99 TACE patients (22.7%) were within Milan against 214 of 244 RFA patients (87.7%), and the SBRT arm had higher MELD and worse Child-Pugh. Explant complete necrosis was 4 of 30 (13.3%) after SBRT versus 17 of 70 (24.3%) after TACE and 87 of 177 (49.2%) after RFA (P below 0.001), and liver function deteriorated after SBRT in 38.9% versus 19.4% and 13.0%. With 6 dropouts in the SBRT arm the study is underpowered for its own endpoint and the authors read it as feasibility, not equivalence. Arvind found no clear post-transplant survival difference with bridging LRT in HCC within Milan. Five retrospective cohorts reported dropout (287 bridged, 166 unbridged) and found no significant difference. A separate observational synthesis found a survival association among patients waiting at least six months. Adding sorafenib to TACE or Y90 has shown no transplant advantage.",
   "Expected waiting time, liver function, whether the tumour is the threat to listing or the cirrhosis is, and what the explant is likely to show.",
   "Waitlist dropout and explant necrosis by bridging modality; number of locoregional procedures before transplant."],
  ["An approximate 10 to 12 case agenda cap improves decision quality.",
@@ -1711,12 +1711,12 @@ document.getElementById("mcards").addEventListener("click", e=>{
 
 /* the critique store loads on its own and re-renders the library when it lands,
    so a missing or slow file never holds up the rest of the page */
-fetch("data/critique.json?v=20261111-waitlist1").then(r=>r.ok?r.json():{}).catch(()=>({}))
+fetch("data/critique.json?v=20261111-bridging2").then(r=>r.ok?r.json():{}).catch(()=>({}))
   .then(c=>{ CRIT = c || {}; renderEv(); });
 
 Promise.all([
-  fetch("../lrt/matrix.json?v=20261111-waitlist1").then(r=>r.json()),
-  fetch("data/lrt_refs.json?v=20261111-waitlist1").then(r=>r.json())
+  fetch("../lrt/matrix.json?v=20261111-bridging2").then(r=>r.json()),
+  fetch("data/lrt_refs.json?v=20261111-bridging2").then(r=>r.json())
 ]).then(([mx, refs])=>{
   MX = mx;
   renderTierLegend(); renderCards(); renderCell();

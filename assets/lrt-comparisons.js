@@ -1,7 +1,7 @@
 /* One-screen overview. Study-level colors never rank whole modalities. */
 (() => {
   'use strict';
-  const url=new URL('../lrt/comparisons.json?v=20261111-waitlist1',document.currentScript.src);
+  const url=new URL('../lrt/comparisons.json?v=20261111-bridging2',document.currentScript.src);
   const names={hcc:'HCC',icca:'iCCA',pcca:'pCCA / hCCA',crlm:'CRLM',nelm:'NELM'};
   const core=['abl','sbrt','y90','tace','hai','htx'];
   const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
