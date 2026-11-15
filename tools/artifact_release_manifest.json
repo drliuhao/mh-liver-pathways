@@ -4,21 +4,21 @@
   "word_documents": [
     {
       "path": "documents/hcc/HCC_1_Roadmap.docx",
-      "sha256": "b6334ca5eec043c0215ab24fc6ce05ef7702608d538221f7be9c7ba4624d40ab",
+      "sha256": "9aa6ad110cd53937309a1fabaaf5e1b519cd2fe2a5433783cb006381835fc2e4",
       "local_master": "Documents/01_HCC/HCC_1_Roadmap_v20.docx",
-      "local_sha256": "446df689fef308dee4e3fb1532c5cf9563377c180e37182e40bfb6ea6597259d"
+      "local_sha256": "12a32b4673d4c1a0c1bff6685818873090a6545c5096ff2a3e1ae25242c347f7"
     },
     {
       "path": "documents/hcc/HCC_2_Roadmap_Questions.docx",
-      "sha256": "e02b1adf0a2557b6bd168edad6d6ab4255d52940583c251cf6b188df66d1deaf",
+      "sha256": "9ed7d6310b0f534d69643bd435b00a40aa43d69db03fbc65272d76f2388f10c7",
       "local_master": "Documents/01_HCC/HCC_2_Roadmap_Questions_v20.docx",
-      "local_sha256": "e02b1adf0a2557b6bd168edad6d6ab4255d52940583c251cf6b188df66d1deaf"
+      "local_sha256": "9ed7d6310b0f534d69643bd435b00a40aa43d69db03fbc65272d76f2388f10c7"
     },
     {
       "path": "documents/hcc/HCC_3_Standard_Pathway.docx",
-      "sha256": "d610dc74b1145da95b823fb0a4a16ee72ff06494ecf9fd2cf6f9a89c91a5fb86",
+      "sha256": "d7f6e4b75a737e5199c7d3dfc066e43f5c263edbb4a8de66344c269421b04ae9",
       "local_master": "Documents/01_HCC/HCC_3_Standard_Pathway_v20.docx",
-      "local_sha256": "fe3189a704bf2de2ebdae8fa20949da0ad6ed35ecd08804b98c1b15048bd88b5"
+      "local_sha256": "1e277ae56e13cb29720fdaca59ed7f22f62b4671b9bc6f9dc3f48d3448fa26f3"
     },
     {
       "path": "documents/hcc/HCC_4_Standard_Pathway_Questions.docx",
@@ -28,9 +28,9 @@
     },
     {
       "path": "documents/hcc/HCC_5_High_Risk_Pathway.docx",
-      "sha256": "304d839f02f15621bec08cbe8adbd5fb287da74f215b3a08e7873f3c7e5b81a1",
+      "sha256": "f1ac72deb080cb2a377c18a7b703eb4f832646f0eaed9b8afc1c25e7cf57bfa0",
       "local_master": "Documents/01_HCC/HCC_5_High_Risk_Pathway_v20.docx",
-      "local_sha256": "5858dec68671e2b38cf4863831aa3f3a6314a786ff353f9453ade3ecb0e9b78e"
+      "local_sha256": "e9729339f9114d1b7df0b2682a19bf6bfd0c70c853bbda0d3249a51b72b6abaf"
     },
     {
       "path": "documents/hcc/HCC_6_High_Risk_Pathway_Questions.docx",
@@ -40,9 +40,9 @@
     },
     {
       "path": "documents/hcc/HCC_7_Decision_Discussion.docx",
-      "sha256": "abfa4b5dca6386369394827cb3a494d4de07fc870e83c80c8fc70da7416e7aac",
+      "sha256": "4ae0867c3f024f9b27ca10599966ef19e991f211041230decdb54f2954da8502",
       "local_master": "Documents/01_HCC/HCC_7_Decision_Discussion_v20.docx",
-      "local_sha256": "abfa4b5dca6386369394827cb3a494d4de07fc870e83c80c8fc70da7416e7aac"
+      "local_sha256": "4ae0867c3f024f9b27ca10599966ef19e991f211041230decdb54f2954da8502"
     },
     {
       "path": "documents/pcca/pCCA_1_Roadmap.docx",
@@ -466,11 +466,11 @@
     {
       "key": "roadmap_hcc",
       "title": "HCC cancer roadmap",
-      "slides": 278,
+      "slides": 282,
       "native_charts": 9,
       "native_tables": 0,
       "path": "Evidence_Libraries/02_Cancer_Roadmaps/roadmap_hcc/Evidence_Summaries_v20.pptx",
-      "sha256": "0a160d18fb1e89b6dcc3a96a072131cbdb5cf8a17fe4783e79947f551a5c64f5",
+      "sha256": "b220c2fd164b1ce8265a77b68b66302753bb752ee8522594b9ce8c7be13604f7",
       "updated_comparative_cards": 20,
       "pre_comparative_slide_parts_preserved": true,
       "pathology_card_added": "32749512",
@@ -746,11 +746,11 @@
     {
       "key": "meeting_hcc",
       "title": "HCC meeting record",
-      "slides": 177,
+      "slides": 181,
       "native_charts": 6,
       "native_tables": 3,
       "path": "Evidence_Libraries/05_Meeting_Records/meeting_hcc/Evidence_Summaries_v20.pptx",
-      "sha256": "7d0d9925c25270067aaa3293071b19352b6cbcdcf6a66296c94610713b89a498",
+      "sha256": "9c5c639c4cb9757e745b1b4f6e849c24f243eef494a0d34624231a4f6b5fd73b",
       "updated_comparative_cards": 20,
       "pre_comparative_slide_parts_preserved": true,
       "pathology_card_added": "32749512",
@@ -792,7 +792,7 @@
     "crlm/data/lrt_matrix.json": "c9278424c37fdf48489e2cfe3664a74d9090ff9f3dc3321cdce33c372c83c032",
     "crlm/data/lrt_refs.json": "8e4a81d57e56c48328b03416cf974f3a50e5b899454616b465214ef0e3274e4b",
     "crlm/data/pathway.json": "383612cb74a3f3e3480a4648931b4b78ea102cd6710d7aa04b2d259efc715671",
-    "evidence-libraries/catalog.json": "609b3ce664c0361af629b2b2535a381deb976565756bf0230ad8582ae111f692",
+    "evidence-libraries/catalog.json": "a7e2690ead9002e0c0f2e43094c15efec01ca2469eaf7634b9750e37d03442a0",
     "hcc/data/critique.json": "0feda5ff8ed41190f6669b75207a5b9ca5dc30d8b1e77222c0a061c21d2dedbd",
     "hcc/data/lrt_matrix.json": "c9278424c37fdf48489e2cfe3664a74d9090ff9f3dc3321cdce33c372c83c032",
     "hcc/data/lrt_refs.json": "ef2b4ac5fb729074748728a56f6a2ae4b5654a34f9eb8182e80086a8c9d03773",
@@ -819,7 +819,7 @@
     "pnet/data/pathway.json": "e9c26f81e378c44de6140c9ad981c9c48350369661fe53941d06372fe0707cf3",
     "systemic/matrix.json": "1686afa2411611a31a1abba65619fbf5f4185165ab108391a9ea25bdd1449014",
     "systemic/references.json": "6bc9be778877b17a6975eb6d5c8665cb1f1040852bc8b60c0651db2e06ac5ef9",
-    "tools/compact_evidence_source.json": "cb3dcb454517267aa6324d8a5d55c9f5529ab8ad8dd41f82e9c325270da295ae",
+    "tools/compact_evidence_source.json": "7fba8ef7985fa5607969b26dd77571b77f905b5d76a7e420a86e76527994ef57",
     "tools/lrt_comparative_evidence.json": "a778c2d135f40b5fbc86cc80f59c4addb847a0cdcd07a766febd8029e2456fe2",
     "transplant/assets/assistant.js": "f27a41d62acdbddae4eaa83b88d6fb89678d560dfc6f9f70f35de5beac0ac756",
     "transplant/assets/content.json": "3bdfb99b8db89edd177737a4a29c785519653a644a1b58330e9dd13a058594b2",
@@ -836,14 +836,16 @@
     "tools/lrt_screen_summary.py": "518483abffabdc5a404e685bf8b1cfb62943e9cfc8162b4d719bc6d3292402f3",
     "tools/hcc_waitlist_comparisons.json": "b904eb05b04adcacacc0b5fd105b970e971753213862252f833ba17864e9e5ac",
     "tools/build_pathway_sections.py": "7f89a4e267e691bfa63e610baf28c2b93b057bec4eed9e1cc80a0983bbba3a36",
-    "evidence-libraries/document-index.json": "35273196af8161204a1abccc5718c96f849c733b776b05a5e634dbe4b00e086a",
-    "tools/hcc_document_pdf_status.json": "7332cf423a52e2acbafd57ec2326b2807936359325c653494404df17c466e0dd"
+    "evidence-libraries/document-index.json": "598a88c5572efe126bf1539b348a664dfc34db0f71e4d579198d3477e552864f",
+    "tools/hcc_document_pdf_status.json": "9e41b178740d47fab8a941afffc08250bf4c677cdbed57009d2a829ade357580",
+    "tools/ehd_positions.json": "773879d197b2d0883b75913679f6043993316494b9f414e63bead3be0a862617",
+    "documents/hcc/questions.json": "237b30581af2c9353cd357b93b8172ea6fc68aabebc7094fbad5b045d43abbd9"
   },
   "verification_limits": "Review covers design, population, key outcomes, relevant tables/figures and clinical limitations in 34 downloaded papers. It is not an every-statement or every-supplement audit. Nine modified Word sections rendered separately and in the full documents. All 40 comparative PPT cards rendered; all 12 clinically changed cards inspected visually. Twenty modified decks passed package/layout/import checks. All pre-comparative slide, chart, table, media and workbook parts remain byte-identical to the V18 base. Prior comparative cards were replaced in place, not duplicated. Unchanged documents and slides were not re-reviewed in full.",
   "counts": {
     "word_documents": 65,
     "presentations": 34,
-    "slides": 4427,
+    "slides": 4435,
     "native_charts": 113,
     "native_tables": 64,
     "updated_word_documents": 9,
@@ -961,6 +963,26 @@
         "39299553",
         "40105312"
       ]
+    },
+    {
+      "date": "2026-11-15",
+      "scope": "HCC-R1 after extrahepatic spread. Four publisher texts verified. HCC-B5 source-availability count corrected. No transplant eligibility or allocation change.",
+      "pmids": [
+        "32573905",
+        "38467379",
+        "39299553",
+        "40105312"
+      ],
+      "word_documents": 5,
+      "presentations": 2,
+      "new_study_cards": 4,
+      "slide_placements": 8,
+      "filed_pdf_copies": 8,
+      "missing_hcc_pdfs": [
+        "22521348"
+      ],
+      "review_record": "HCC_Discussion_Depots_2026-11-13/Full_Text_Update_2026-11-15/Release.md",
+      "pdf_receipt": "HCC_Discussion_Depots_2026-11-13/Full_Text_Update_2026-11-15/Filed_PDFs.json"
     }
   ]
 }

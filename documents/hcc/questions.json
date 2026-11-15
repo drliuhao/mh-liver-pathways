@@ -26,14 +26,14 @@
      "kind": "clinical",
      "status": "Proposed; MDT selection · OPEN proposal",
      "where": [],
-     "proposal": "Offer curative-intent liver resection or ablation, with treatment of every residual extrahepatic site, only to selected patients after MDT review, and present it as life-prolonging multimodal therapy, not cure. Use the JLCA definition of localized extrahepatic spread; all other extrahepatic disease stays systemic-therapy-led. This roadmap position does not open transplantation (HCC-B5).",
+     "proposal": "Systemic therapy remains the standard for HCC with extrahepatic spread. After all sites respond or remain stable, the multidisciplinary team may consider liver resection or ablation for selected patients with localized spread if every residual site can be treated. The survival benefit of adding liver treatment is uncertain. See HCC-B5 for transplant eligibility.",
      "rules": [
       "Localized extrahepatic spread (JLCA 2023, BR1): a solitary node at station 3, 8 or 12; localized peritoneal disease (P1); a unilateral adrenal metastasis; or a few lung metastases. All other extrahepatic disease is BR2: benefit of surgery uncertain.",
       "Before surgery: response or stable disease of every extrahepatic site on serial imaging, no new lesions, current whole-body staging, every intrahepatic and extrahepatic site treatable (resection, ablation or stereotactic radiotherapy), adequate liver reserve, ECOG 0–1. No guideline sets the interval; the MDT records the interval it uses.",
       "AASLD 2023 does not support systemic therapy before resection outside trials. Record the decision as an MDT exception or enroll in a study or registry; plan continued systemic therapy and surveillance.",
-      "Counsel that recurrence is the rule: after stereotactic radiotherapy to oligometastases, 2-year progression-free survival was 0%; after borderline-resectable surgery, 3-year recurrence-free survival was 19.7%."
+      "Discuss recurrence even when all visible lesions are treated. In the 40-patient SABR trial, 2-year freedom from local progression was 91.1% and 2-year progression-free survival was 0%."
      ],
-     "rationale": "National and multicentre cohorts associate surgery after response with longer survival, but every comparison is biased toward the operated patients. JLCA gives the only explicit definition of the limited extrahepatic disease for which surgery may help.",
+     "rationale": "The strongest direct evidence for liver surgery after response comes from selected observational cohorts. Studies treating metastases show that local control can be durable despite progression elsewhere. The Japanese consensus defines the limited patterns of spread for multidisciplinary review.",
      "studies": [
       {
        "source": "JLCA/JSHBPS 2023 resectability consensus (Akahoshi 2024)",
@@ -74,38 +74,38 @@
       {
        "source": "Midorikawa 2020 · resection of extrahepatic recurrence",
        "key": "ehd-hcc_midorikawa2020",
-       "population": "Comparison of 64 patients with extrahepatic recurrence and controlled liver disease. Nodes, adrenal, peritoneum, lung or brain; resectable.",
-       "results": "5-year survival 60.5% with resection vs 9.1% without.",
-       "limits": "Small, strongly selected, pre-immunotherapy.",
-       "locator": "Hepatol Res 2020 (abstract; full text pending).",
-       "read": "Abstract only; full text pending"
+       "population": "Single-center retrospective cohort of 64 patients with resectable extrahepatic recurrence after liver resection. Intrahepatic disease was absent or controlled. Of 64 eligible patients, 38 had metastasectomy and 26 received other treatment.",
+       "results": "Median overall survival after treatment for extrahepatic recurrence was 5.3 years with metastasectomy and 1.1 years with other treatment.",
+       "limits": "Patients selected for surgery were younger and had a longer disease-free interval. Median follow-up was 1.2 years. Five-year survival after surgery differs between the abstract (60.5%) and Results (55.9%); both give 9.1% for other treatment.",
+       "locator": "Hepatol Res. 2020;50:978–984. Selection pp. 979–980, survival pp. 978 and 981, Fig. 2B p. 982.",
+       "read": "Full text read"
       },
       {
        "source": "Choi 2024 · SABR for oligometastatic HCC, phase II",
        "key": "ehd-hcc_choi2024",
-       "population": "Phase II trial, 40 patients with controlled HCC and 1–5 metastases. Stereotactic ablative radiotherapy to all metastases.",
-       "results": "2-year survival 80%; 2-year progression-free survival 0%.",
-       "limits": "Single arm, short follow-up.",
-       "locator": "J Hepatol 2024 (abstract; full text pending).",
-       "read": "Abstract only; full text pending"
+       "population": "Prospective, single-arm phase II trial. Forty patients received stereotactic ablative radiotherapy (SABR) to 62 metastases. The primary was treated at least 3 months earlier with no progression there. Eligibility required ECOG 0–1 and all metastases treatable (up to 5 overall, up to 3 per organ).",
+       "results": "At 2 years, freedom from local progression was 91.1%, overall survival 80% and progression-free survival 0%. Median progression-free survival was 5.3 months from SABR.",
+       "limits": "Median follow-up was 15.5 months. Systemic therapy was permitted. The single-arm design cannot establish a survival benefit from SABR.",
+       "locator": "J Hepatol. 2024;81:84–92. Eligibility p. 85, outcomes pp. 86–87, Fig. 1 p. 87.",
+       "read": "Full text read"
       },
       {
-       "source": "Shin 2024 · lung metastasectomy vs SBRT",
+       "source": "Shin 2025 · lung metastasectomy vs SBRT",
        "key": "ehd-hcc_shin2024",
-       "population": "Weighted comparison, 209 patients with lung oligometastases. Metastasectomy vs stereotactic radiotherapy.",
-       "results": "2-year local control 98.2% vs 97.0% (unweighted); weighted 2-year progression-free survival 23.0% vs 24.7%.",
-       "limits": "No systemic-only comparator.",
-       "locator": "Int J Radiat Oncol Biol Phys 2024 (abstract; full text pending).",
-       "read": "Abstract only; full text pending"
+       "population": "Single-center retrospective study of 209 patients with 322 pulmonary metastases. Up to 5 lung metastases and no other extrahepatic disease. Initial lung treatment was metastasectomy (150 patients) or stereotactic body radiotherapy (SBRT, 59 patients). Prior transplant was excluded.",
+       "results": "Unadjusted 2-year freedom from local progression per lesion was 98.2% with surgery vs 97.0% with SBRT. Weighted 2-year overall survival was 72.6% vs 83.0% (P = .428) and progression-free survival 23.0% vs 24.7% (P = .478).",
+       "limits": "Viable intrahepatic disease remained imbalanced after weighting. There was no systemic-only arm or prespecified equivalence margin.",
+       "locator": "Int J Radiat Oncol Biol Phys. 2025;121:432–441. Eligibility p. 433, outcomes p. 435, Figs. 3–4 pp. 437–438.",
+       "read": "Full text read"
       },
       {
        "source": "Shindoh 2025 · borderline-resectable HCC",
        "key": "ehd-hcc_shindoh2025",
-       "population": "Nationwide Japanese study, 1,509 borderline-resectable HCC. BR1 as defined by the 2023 consensus, which includes localized extrahepatic spread; the number with extrahepatic spread is not given in the abstract.",
-       "results": "5-year disease-specific survival 40.8%; 3-year recurrence-free survival 19.7%.",
-       "limits": "No extrahepatic subgroup in the abstract.",
-       "locator": "J Hepatobiliary Pancreat Sci 2025 (abstract; full text pending).",
-       "read": "Abstract only; full text pending"
+       "population": "Japanese multicenter surgical cohort of 1,509 patients with borderline-resectable HCC. Only 107 received preoperative systemic therapy. By extent of extrahepatic spread, 1,278 had none, 153 were classified BR1 (limited spread) and 78 BR2 (more extensive spread). These categories differ from overall resectability.",
+       "results": "For HCC-specific death after surgery, adjusted hazard ratios vs no extrahepatic spread were 1.15 (95% CI 0.89–1.49) for BR1 spread and 2.19 (1.61–2.97) for BR2. Five-year disease-specific survival was 40.8% in all 1,509. Three-year recurrence-free survival was 19.7% in 1,276 evaluable R0/R1 patients.",
+       "limits": "All patients underwent surgery. The pooled survival rates include patients without extrahepatic spread. The study cannot establish benefit from conversion surgery over systemic treatment alone.",
+       "locator": "J Hepatobiliary Pancreat Sci. 2025;32:374–384. Results p. 376, Table 1 p. 377, Fig. 1 p. 378, Table 3 p. 380.",
+       "read": "Full text read"
       },
       {
        "source": "AASLD 2023 HCC practice guidance",
@@ -3275,7 +3275,7 @@
    }
   },
   "ehd-hcc_shin2024": {
-   "short": "Shin 2024 · lung metastasectomy vs SBRT",
+   "short": "Shin 2025 · lung metastasectomy vs SBRT",
    "title": "",
    "kind": "Study, guidance or policy",
    "links": {

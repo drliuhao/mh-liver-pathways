@@ -3977,15 +3977,14 @@
     "32573905": {
       "label": "Midorikawa extrahepatic relapse",
       "design": "Cohort",
-      "arms": "Cohort · 64 resectable extrahepatic HCC recurrences, surgery vs other",
-      "result": "Resection vs other therapies: median OS 5.3 vs 1.1 years; 5-year survival 60.5% vs 9.1%; intrahepatic disease absent or controlled.",
-      "caution": "Small, strongly selected, pre-immunotherapy; abstract-only reading.",
+      "arms": "64 resectable extrahepatic recurrences after hepatectomy",
+      "result": "Median OS after treatment for extrahepatic recurrence was 5.3 years with metastasectomy vs 1.1 years with other treatment.",
+      "caution": "Selection bias. Five-year OS after surgery differs between abstract (60.5%) and Results (55.9%).",
       "quotes": [
-        "Comparison of 64 patients with extrahepatic recurrence and controlled liver disease. Nodes, adrenal, peritoneum, lung or brain; resectable.",
-        "Results: 5-year survival 60.5% with resection vs 9.1% without.",
-        "Limits: Small, strongly selected, pre-immunotherapy.",
-        "The median overall survival was 5.3 (95% CI, 2.5-8.8) and 1.1",
-        "intrahepatic recurrent HCC was absent or controlled by locoregional therapies"
+        "survival was 5.3 (95% CI, 2.5–8.8) and 1.1",
+        "years, 23 (60.5%) of the 38 patients of",
+        "survival were 55.9% and 9.1% in the Surgical",
+        "Comparison of 64 patients with extrahepatic recurrence and controlled liver disease. Nodes, adrenal, peritoneum, lung or brain; resectable."
       ]
     },
     "32615109": {
@@ -6328,16 +6327,15 @@
     "38467379": {
       "label": "Choi SABR oligometastatic HCC",
       "design": "Single-arm phase 2",
-      "arms": "Single-arm phase 2 · 40 controlled HCC with 1–5 metastases, SABR",
-      "result": "SABR to all metastases: 2-year OS 80% but 2-year PFS 0% (median PFS 5.3 months); no grade 3+ toxicity.",
-      "caution": "Single arm, short follow-up (median 15.5 months); abstract-only reading.",
+      "arms": "Single-arm phase 2 · SABR to 62 metastases in 40 patients",
+      "result": "At 2 years: freedom from local progression 91.1%, OS 80%, PFS 0%. Median PFS 5.3 months from SABR.",
+      "caution": "Controlled primary, all metastases treatable. Median follow-up 15.5 months. No comparison arm.",
       "quotes": [
-        "Phase II trial, 40 patients with controlled HCC and 1–5 metastases. Stereotactic ablative radiotherapy to all metastases.",
-        "Results: 2-year survival 80%; 2-year progression-free survival 0%.",
-        "Limits: Single arm, short follow-up.",
         "Median PFS was 5.3 months",
-        "with no grade 3+ toxicity",
-        "After a median follow-up of 15.5 months"
+        "After a median follow-up of 15.5 months",
+        "2-yr 80% 40 PFS: 1-yr 21.2%, 2-yr 0%,",
+        "62 lesions in 40 patients were Meier survival",
+        "rates at 91.1%. Fig. 1 illustrates KaplanMeier survival"
       ]
     },
     "38488934": {
@@ -6702,16 +6700,13 @@
     "39299553": {
       "label": "Shin lung metastasectomy vs SBRT",
       "design": "Retrospective cohort",
-      "arms": "Retrospective cohort · 209 HCC lung oligometastases, resection vs SBRT",
-      "result": "2-year local control 98.2% (resection) vs 97.0% (SBRT); after weighting, 2-year PFS 23.0% vs 24.7% and OS 72.6% vs 83.0%, not significantly different.",
-      "caution": "Retrospective, propensity-weighted; no systemic-only comparator; abstract-only reading.",
+      "arms": "209 with lung oligometastases · metastasectomy vs SBRT",
+      "result": "At 2 years, surgery vs SBRT: lesion control 98.2% vs 97.0% (unadjusted), overall survival 72.6% vs 83.0% (weighted, P = .428).",
+      "caution": "Residual imbalance in viable liver disease. No systemic-only arm. Equivalence was not tested.",
       "quotes": [
-        "Weighted comparison, 209 patients with lung oligometastases. Metastasectomy vs stereotactic radiotherapy.",
-        "Results: 2-year local control 98.2% vs 97.0% (unweighted); weighted 2-year progression-free survival 23.0% vs 24.7%.",
-        "Limits: No systemic-only comparator.",
         "We retrospectively analyzed 209 patients with HCC with 322 metastatic lung lesions",
-        "and OS (72.6% vs 83.0%, P = .428) were not significantly different",
-        "Propensity score-based inverse probability of treatment weighting"
+        "groups (2-year FFLP, 98.2% for metastasectomy vs 97.0%",
+        "and OS (72.6% vs 83.0%, P = .428)"
       ]
     },
     "39306468": {
@@ -7395,16 +7390,14 @@
     "40105312": {
       "label": "Shindoh BR-HCC JSHBPS study",
       "design": "Cohort",
-      "arms": "Cohort · 1,509 resected borderline-resectable HCC (BR1 718, BR2 791)",
-      "result": "5-year DSS 40.8%, 3-year RFS 19.7%; preceding systemic therapy linked to longer DSS in BR1 (HR 0.41), unclear in BR2.",
-      "caution": "Observational; no extrahepatic subgroup in the abstract; abstract-only reading.",
+      "arms": "1,509 operated for borderline-resectable HCC",
+      "result": "Adjusted HR for HCC death vs no extrahepatic spread: BR1 (limited) 1.15 (95% CI 0.89–1.49), BR2 (more extensive) 2.19 (1.61–2.97).",
+      "caution": "All underwent surgery. Only 107 received preoperative systemic therapy. No nonsurgical comparator.",
       "quotes": [
-        "Nationwide Japanese study, 1,509 borderline-resectable HCC. BR1 as defined by the 2023 consensus, which includes localized extrahepatic spread; the number with extrahepatic spread is not given in the abstract.",
-        "Results: 5-year disease-specific survival 40.8%; 3-year recurrence-free survival 19.7%.",
-        "Limits: No extrahepatic subgroup in the abstract.",
-        "(BR1, n = 718 and BR2, n = 791)",
-        "Preceding systemic therapy was significantly correlated with a longer DSS (HR, 0.41",
-        "while its clinical significance was unclear in the patients with BR2 disease"
+        "0.89–1.49 BR2 <.001 0.784 0.156 25.15 2.19 1.61–2.97",
+        "HR 95% CI Disease-­specific survival (n = 1509)",
+        "focused on 107 patients who had received preoperative",
+        "0.130 1.18 1.15 0.89–1.49 BR2 <.001 0.784 0.156"
       ]
     },
     "40126570": {

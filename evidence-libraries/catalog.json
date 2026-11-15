@@ -1,7 +1,7 @@
 {
-  "updated": "2026-11-14",
-  "unique_publications": 670,
-  "matched_publication_pdfs": 646,
+  "updated": "2026-11-15",
+  "unique_publications": 674,
+  "matched_publication_pdfs": 650,
   "missing_publication_pdfs": 24,
   "appraisals_pending": 53,
   "libraries": [
@@ -5672,9 +5672,9 @@
       "title": "HCC cancer roadmap",
       "family": "02_Cancer_Roadmaps",
       "slug": "hcc",
-      "publication_count": 112,
-      "matched_pdfs": 112,
-      "slides": 278,
+      "publication_count": 116,
+      "matched_pdfs": 116,
+      "slides": 282,
       "ppt_filename": "Evidence_Summaries_v20.pptx",
       "local_folder": "V20_consistent_release_2026-11-04/Evidence_Libraries/02_Cancer_Roadmaps/roadmap_hcc",
       "document": "documents/hcc/HCC_1_Roadmap.docx",
@@ -6848,6 +6848,42 @@
           ],
           "inclusion": [
             "HCC treatment before transplant. Bridging during a prolonged wait"
+          ]
+        },
+        {
+          "id": "doi:10.1111/hepr.13526",
+          "slides": [
+            279
+          ],
+          "inclusion": [
+            "Roadmap document, reference V16-43. HCC-R1, local treatment after extrahepatic spread."
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jhep.2024.03.003",
+          "slides": [
+            280
+          ],
+          "inclusion": [
+            "Roadmap document, reference V16-44. HCC-R1, local treatment after extrahepatic spread."
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.ijrobp.2024.09.022",
+          "slides": [
+            281
+          ],
+          "inclusion": [
+            "Roadmap document, reference V16-45. HCC-R1, local treatment after extrahepatic spread."
+          ]
+        },
+        {
+          "id": "doi:10.1002/jhbp.12138",
+          "slides": [
+            282
+          ],
+          "inclusion": [
+            "Roadmap document, reference V16-46. HCC-R1, local treatment after extrahepatic spread."
           ]
         }
       ],
@@ -16334,9 +16370,9 @@
       "title": "HCC meeting record",
       "family": "05_Meeting_Records",
       "slug": "hcc",
-      "publication_count": 67,
-      "matched_pdfs": 67,
-      "slides": 177,
+      "publication_count": 71,
+      "matched_pdfs": 71,
+      "slides": 181,
       "ppt_filename": "Evidence_Summaries_v20.pptx",
       "local_folder": "V20_consistent_release_2026-11-04/Evidence_Libraries/05_Meeting_Records/meeting_hcc",
       "document": "documents/hcc/HCC_7_Decision_Discussion.docx",
@@ -17045,6 +17081,42 @@
           ],
           "inclusion": [
             "HCC treatment before transplant. Planning treatment before the first dose"
+          ]
+        },
+        {
+          "id": "doi:10.1111/hepr.13526",
+          "slides": [
+            178
+          ],
+          "inclusion": [
+            "Combined HCC decision discussion. HCC-R1, local treatment after extrahepatic spread."
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jhep.2024.03.003",
+          "slides": [
+            179
+          ],
+          "inclusion": [
+            "Combined HCC decision discussion. HCC-R1, local treatment after extrahepatic spread."
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.ijrobp.2024.09.022",
+          "slides": [
+            180
+          ],
+          "inclusion": [
+            "Combined HCC decision discussion. HCC-R1, local treatment after extrahepatic spread."
+          ]
+        },
+        {
+          "id": "doi:10.1002/jhbp.12138",
+          "slides": [
+            181
+          ],
+          "inclusion": [
+            "Combined HCC decision discussion. HCC-R1, local treatment after extrahepatic spread."
           ]
         }
       ],
@@ -24977,6 +25049,62 @@
       "tmc": "https://libkey.io/libraries/480/pmid/41689676",
       "pdf_available": true,
       "coverage": "Focused full-text appraisal"
+    },
+    "doi:10.1111/hepr.13526": {
+      "title": "Metastasectomy after extrahepatic recurrence",
+      "author": "Midorikawa Y",
+      "journal": "Hepatol Res",
+      "doi": "10.1111/hepr.13526",
+      "pmid": "32573905",
+      "year": "2020",
+      "publication_type": "Journal publication",
+      "url": "https://doi.org/10.1111/hepr.13526",
+      "tmc": "https://libkey.io/libraries/480/pmid/32573905",
+      "pdf_available": true,
+      "coverage": "Focused full-text appraisal",
+      "publisher_citation": "Hepatol Res. 2020;50:978–984. Selection pp. 979–980, survival pp. 978 and 981, Fig. 2B p. 982."
+    },
+    "doi:10.1016/j.jhep.2024.03.003": {
+      "title": "Local control and progression after SABR",
+      "author": "Choi SH",
+      "journal": "J Hepatol",
+      "doi": "10.1016/j.jhep.2024.03.003",
+      "pmid": "38467379",
+      "year": "2024",
+      "publication_type": "Journal publication",
+      "url": "https://doi.org/10.1016/j.jhep.2024.03.003",
+      "tmc": "https://libkey.io/libraries/480/pmid/38467379",
+      "pdf_available": true,
+      "coverage": "Focused full-text appraisal",
+      "publisher_citation": "J Hepatol. 2024;81:84–92. Eligibility p. 85, outcomes pp. 86–87, Fig. 1 p. 87."
+    },
+    "doi:10.1016/j.ijrobp.2024.09.022": {
+      "title": "Lung metastases treated with surgery or SBRT",
+      "author": "Shin YS",
+      "journal": "Int J Radiat Oncol Biol Phys",
+      "doi": "10.1016/j.ijrobp.2024.09.022",
+      "pmid": "39299553",
+      "year": "2025",
+      "publication_type": "Journal publication",
+      "url": "https://doi.org/10.1016/j.ijrobp.2024.09.022",
+      "tmc": "https://libkey.io/libraries/480/pmid/39299553",
+      "pdf_available": true,
+      "coverage": "Focused full-text appraisal",
+      "publisher_citation": "Int J Radiat Oncol Biol Phys. 2025;121:432–441. Eligibility p. 433, outcomes p. 435, Figs. 3–4 pp. 437–438."
+    },
+    "doi:10.1002/jhbp.12138": {
+      "title": "Extent of extrahepatic spread and survival after surgery",
+      "author": "Shindoh J",
+      "journal": "J Hepatobiliary Pancreat Sci",
+      "doi": "10.1002/jhbp.12138",
+      "pmid": "40105312",
+      "year": "2025",
+      "publication_type": "Journal publication",
+      "url": "https://doi.org/10.1002/jhbp.12138",
+      "tmc": "https://libkey.io/libraries/480/pmid/40105312",
+      "pdf_available": true,
+      "coverage": "Focused full-text appraisal",
+      "publisher_citation": "J Hepatobiliary Pancreat Sci. 2025;32:374–384. Results p. 376, Table 1 p. 377, Fig. 1 p. 378, Table 3 p. 380."
     }
   },
   "artifact_release": "V20_consistent_release_2026-11-04"

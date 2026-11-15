@@ -1,0 +1,63 @@
+{
+  "id": "2026-11-15-hcc-extrahepatic-fulltext",
+  "date": "2026-11-15",
+  "reason": "Four full texts clarify local versus systemic progression, nonrandomized treatment comparisons and the denominators of surgical outcomes in HCC-R1.",
+  "edits": [],
+  "files": [
+    {
+      "file": "tools/compact_evidence_source.json",
+      "old": "y reading.\",\n      \"quotes\": [\n        \"Nationwide Japanese study, 1,509 borderline-resectable HCC. BR1 as defined by the 2023 consensus, which includes localized extrahepatic spread; the number with extrahepatic spread is not given in the abstract.\",\n        \"Results: 5-year disease-specific survival 40.8%; 3-year recurrence-free survival 19.7%.\",\n        \"Limits: No extrahepatic subgroup in the abstract.\",\n        \"(BR1, n = 718 and BR2, n = 791)\",\n        \"Preceding systemic therapy was significantly correlated with a longer DSS (HR, 0.41\",\n        \"while its clinical significance was unclear in the patients with BR2 disease\"\n      ]\n    },\n    \"40126570\": {\n     ",
+      "new": "y reading.\",\n      \"quotes\": [\n        \"0.89–1.49 BR2 <.001 0.784 0.156 25.15 2.19 1.61–2.97\",\n        \"HR 95% CI Disease-­specific survival (n = 1509)\",\n        \"focused on 107 patients who had received preoperative\",\n        \"0.130 1.18 1.15 0.89–1.49 BR2 <.001 0.784 0.156\"\n      ]\n    },\n    \"40126570\": {\n     "
+    },
+    {
+      "file": "tools/compact_evidence_source.json",
+      "old": "     \"design\": \"Cohort\",\n      \"arms\": \"Cohort · 1,509 resected borderline-resectable HCC (BR1 718, BR2 791)\",\n      \"result\": \"5-year DSS 40.8%, 3-year RFS 19.7%; preceding systemic therapy linked to longer DSS in BR1 (HR 0.41), unclear in BR2.\",\n      \"caution\": \"Observational; no extrahepatic subgroup in the abstract; abstract-only reading.\",\n      \"quotes\": [\n        \"0.89–1.49",
+      "new": "     \"design\": \"Cohort\",\n      \"arms\": \"1,509 operated for borderline-resectable HCC\",\n      \"result\": \"Adjusted HR for HCC death vs no extrahepatic spread: BR1 (limited) 1.15 (95% CI 0.89–1.49), BR2 (more extensive) 2.19 (1.61–2.97).\",\n      \"caution\": \"All underwent surgery. Only 107 received preoperative systemic therapy. No nonsurgical comparator.\",\n      \"quotes\": [\n        \"0.89–1.49"
+    },
+    {
+      "file": "tools/compact_evidence_source.json",
+      "old": " 322 metastatic lung lesions\",\n        \"and OS (72.6% vs 83.0%, P = .428) were not significantly different\",\n        \"Propensity score-based inverse probability of treatment weighting\"\n      ]\n    },\n    \"39306468\": {\n     ",
+      "new": " 322 metastatic lung lesions\",\n        \"groups (2-year FFLP, 98.2% for metastasectomy vs 97.0%\",\n        \"and OS (72.6% vs 83.0%, P = .428)\"\n      ]\n    },\n    \"39306468\": {\n     "
+    },
+    {
+      "file": "tools/compact_evidence_source.json",
+      "old": "tract-only reading.\",\n      \"quotes\": [\n        \"Weighted comparison, 209 patients with lung oligometastases. Metastasectomy vs stereotactic radiotherapy.\",\n        \"Results: 2-year local control 98.2% vs 97.0% (unweighted); weighted 2-year progression-free survival 23.0% vs 24.7%.\",\n        \"Limits: No systemic-only comparator.\",\n        \"We retrospectively analyzed 209",
+      "new": "tract-only reading.\",\n      \"quotes\": [\n        \"We retrospectively analyzed 209"
+    },
+    {
+      "file": "tools/compact_evidence_source.json",
+      "old": " \"Retrospective cohort\",\n      \"arms\": \"Retrospective cohort · 209 HCC lung oligometastases, resection vs SBRT\",\n      \"result\": \"2-year local control 98.2% (resection) vs 97.0% (SBRT); after weighting, 2-year PFS 23.0% vs 24.7% and OS 72.6% vs 83.0%, not significantly different.\",\n      \"caution\": \"Retrospective, propensity-weighted; no systemic-only comparator; abstract-only reading.\",\n      \"quotes\": [\n        \"We retros",
+      "new": " \"Retrospective cohort\",\n      \"arms\": \"209 with lung oligometastases · metastasectomy vs SBRT\",\n      \"result\": \"At 2 years, surgery vs SBRT: lesion control 98.2% vs 97.0% (unadjusted), overall survival 72.6% vs 83.0% (weighted, P = .428).\",\n      \"caution\": \"Residual imbalance in viable liver disease. No systemic-only arm. Equivalence was not tested.\",\n      \"quotes\": [\n        \"We retros"
+    },
+    {
+      "file": "tools/compact_evidence_source.json",
+      "old": "  \"Median PFS was 5.3 months\",\n        \"with no grade 3+ toxicity\",\n        \"After a median follow-up of 15.5 months\"\n      ]\n    },\n    \"38488934\": {\n     ",
+      "new": "  \"Median PFS was 5.3 months\",\n        \"After a median follow-up of 15.5 months\",\n        \"2-yr 80% 40 PFS: 1-yr 21.2%, 2-yr 0%,\",\n        \"62 lesions in 40 patients were Meier survival\",\n        \"rates at 91.1%. Fig. 1 illustrates KaplanMeier survival\"\n      ]\n    },\n    \"38488934\": {\n     "
+    },
+    {
+      "file": "tools/compact_evidence_source.json",
+      "old": "tract-only reading.\",\n      \"quotes\": [\n        \"Phase II trial, 40 patients with controlled HCC and 1–5 metastases. Stereotactic ablative radiotherapy to all metastases.\",\n        \"Results: 2-year survival 80%; 2-year progression-free survival 0%.\",\n        \"Limits: Single arm, short follow-up.\",\n        \"Median PFS was 5.3 months\",\n   ",
+      "new": "tract-only reading.\",\n      \"quotes\": [\n        \"Median PFS was 5.3 months\",\n   "
+    },
+    {
+      "file": "tools/compact_evidence_source.json",
+      "old": "2\",\n      \"arms\": \"Single-arm phase 2 · 40 controlled HCC with 1–5 metastases, SABR\",\n      \"result\": \"SABR to all metastases: 2-year OS 80% but 2-year PFS 0% (median PFS 5.3 months); no grade 3+ toxicity.\",\n      \"caution\": \"Single arm, short follow-up (median 15.5 months); abstract-only reading.\",\n      \"quotes\": [\n        \"Median PF",
+      "new": "2\",\n      \"arms\": \"Single-arm phase 2 · SABR to 62 metastases in 40 patients\",\n      \"result\": \"At 2 years: freedom from local progression 91.1%, OS 80%, PFS 0%. Median PFS 5.3 months from SABR.\",\n      \"caution\": \"Controlled primary, all metastases treatable. Median follow-up 15.5 months. No comparison arm.\",\n      \"quotes\": [\n        \"Median PF"
+    },
+    {
+      "file": "tools/compact_evidence_source.json",
+      "old": "y reading.\",\n      \"quotes\": [\n        \"Comparison of 64 patients with extrahepatic recurrence and controlled liver disease. Nodes, adrenal, peritoneum, lung or brain; resectable.\",\n        \"Results: 5-year survival 60.5% with resection vs 9.1% without.\",\n        \"Limits: Small, strongly selected, pre-immunotherapy.\",\n        \"The median overall survival was 5.3 (95% CI, 2.5-8.8) and 1.1\",\n        \"intrahepatic recurrent HCC was absent or controlled by locoregional therapies\"\n      ]\n    },\n    \"32615109\": {\n     ",
+      "new": "y reading.\",\n      \"quotes\": [\n        \"survival was 5.3 (95% CI, 2.5–8.8) and 1.1\",\n        \"years, 23 (60.5%) of the 38 patients of\",\n        \"survival were 55.9% and 9.1% in the Surgical\",\n        \"Comparison of 64 patients with extrahepatic recurrence and controlled liver disease. Nodes, adrenal, peritoneum, lung or brain; resectable.\"\n      ]\n    },\n    \"32615109\": {\n     "
+    },
+    {
+      "file": "tools/compact_evidence_source.json",
+      "old": "     \"design\": \"Cohort\",\n      \"arms\": \"Cohort · 64 resectable extrahepatic HCC recurrences, surgery vs other\",\n      \"result\": \"Resection vs other therapies: median OS 5.3 vs 1.1 years; 5-year survival 60.5% vs 9.1%; intrahepatic disease absent or controlled.\",\n      \"caution\": \"Small, strongly selected, pre-immunotherapy; abstract-only reading.\",\n      \"quotes\": [\n        \"survival ",
+      "new": "     \"design\": \"Cohort\",\n      \"arms\": \"64 resectable extrahepatic recurrences after hepatectomy\",\n      \"result\": \"Median OS after treatment for extrahepatic recurrence was 5.3 years with metastasectomy vs 1.1 years with other treatment.\",\n      \"caution\": \"Selection bias. Five-year OS after surgery differs between abstract (60.5%) and Results (55.9%).\",\n      \"quotes\": [\n        \"survival "
+    },
+    {
+      "file": "tools/document_references.json",
+      "old": "adiation oncology, biology, physics. 2024; 121(2):432-441.\",\n     \"pmid\": \"\",\n   ",
+      "new": "adiation oncology, biology, physics. 2025; 121(2):432-441.\",\n     \"pmid\": \"\",\n   "
+    }
+  ]
+}
