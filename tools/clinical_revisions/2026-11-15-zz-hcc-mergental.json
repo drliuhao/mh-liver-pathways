@@ -1,0 +1,126 @@
+{
+  "id": "2026-11-15-zz-hcc-mergental",
+  "date": "2026-11-15",
+  "reason": "Publisher full-text verification of HCC nodal status at transplant. Distinguish nodal pathology at transplant from cleared historical nodal disease under local review HCC-B5.",
+  "edits": [
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        5,
+        "evidence",
+        "studies",
+        3
+      ],
+      "old": {
+        "key": "hcc_mergental2012",
+        "design_population": "European Liver Transplant Registry: 105 recipients with unresectable HCC in noncirrhotic livers.",
+        "selection": "Transplantation as primary treatment (62) or for intrahepatic recurrence after resection (43).",
+        "results": "Lymph-node involvement (HR 2.60) and macrovascular invasion (HR 2.55) were independently associated with death; five-year survival 59% without either.",
+        "limits": "Noncirrhotic population; nodal status as recorded by centres, not previously treated nodal disease.",
+        "locator": "J Hepatol 2012; abstract."
+      },
+      "new": {
+        "key": "hcc_mergental2012",
+        "design_population": "European Liver Transplant Registry cohort of 105 recipients with unresectable HCC in noncirrhotic livers across 38 centers.",
+        "selection": "62 received a primary transplant and 43 underwent transplant for intrahepatic recurrence after resection. Transplant pathology identified hilar nodal involvement in 12 of 105 recipients.",
+        "results": "Five-year overall survival after transplant was 17% with positive hilar nodes (95% CI 0–38%) and 54% with negative nodes (43–64%). The adjusted hazard ratio for death with positive nodes was 2.60 (95% CI 1.28–5.28).",
+        "limits": "Prior resection pathology was unavailable for the 43 rescue transplants. Survival after documented clearance of previously proven nodal metastases was not reported.",
+        "locator": "J Hepatol. 2012;57:297–305. Pathology p. 298, Table 1 p. 300, Fig. 2C p. 302, Table 3 p. 303, Table 4 and prior resection pathology p. 304."
+      }
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        5,
+        "evidence",
+        "synthesis"
+      ],
+      "old": "Every HCC transplant framework reviewed requires absence of extrahepatic disease, and AASLD lists lymph-node involvement or extrahepatic spread as downstaging failure and an exclusion from transplantation. ILTS–ILCA recommends downstaging, and immunotherapy for downstaging, only in patients without extrahepatic disease, and the XXL trial excluded extrahepatic spread, including hepatic-hilum nodes with a short axis >2 cm. Lymph-node involvement was strongly adverse after transplantation (HR 2.60 for death in noncirrhotic livers; pooled odds ratio 10.44 for recurrence with positive hilar nodes). A complete response is not cure: among 160 complete responders to immunotherapy-based treatment, prior extrahepatic metastasis doubled the risk of recurrence (adjusted HR 2.00), and 5-year recurrence-free survival in the whole cohort was 18%. The only published transplant after metastatic HCC is one case: the best response of nodal, lung and bone disease to nivolumab was partial, the bone lesions did not clearly regress, liver disease recurred off treatment and was ablated, extrahepatic clearance was never confirmed by biopsy or PET, and the recipient was free of cancer one year after transplantation.",
+      "new": "Every HCC transplant framework reviewed requires absence of extrahepatic disease, and AASLD lists lymph-node involvement or extrahepatic spread as downstaging failure and an exclusion from transplantation. ILTS–ILCA recommends downstaging, and immunotherapy for downstaging, only in patients without extrahepatic disease, and the XXL trial excluded extrahepatic spread, including hepatic-hilum nodes with a short axis >2 cm. In noncirrhotic HCC, five-year survival was 17% with positive hilar nodes at transplant and 54% with negative nodes. A separate meta-analysis found higher odds of recurrence with positive hilar nodes (pooled OR 10.44). Neither study establishes outcomes after prior proven nodal disease cleared. A complete response is not cure: among 160 complete responders to immunotherapy-based treatment, prior extrahepatic metastasis doubled the risk of recurrence (adjusted HR 2.00), and 5-year recurrence-free survival in the whole cohort was 18%. The only published transplant after metastatic HCC is one case: the best response of nodal, lung and bone disease to nivolumab was partial, the bone lesions did not clearly regress, liver disease recurred off treatment and was ablated, extrahepatic clearance was never confirmed by biopsy or PET, and the recipient was free of cancer one year after transplantation."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        5,
+        "stance"
+      ],
+      "old": "Keep closed. Previous extrahepatic metastasis is outside the standard pathway and every HCC high-risk cohort, even after local treatment or a complete response to immunotherapy. Record durable complete responders in a registry; this edition offers no transplant route.",
+      "new": "The local draft keeps standard and high-risk transplant routes closed after proven extrahepatic or nodal HCC, including after a complete response. Enroll durable complete responders in a prospective follow-up registry."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "hcc_mergental2012",
+        "review_depth"
+      ],
+      "old": "PubMed abstract reviewed; full text not reviewed.",
+      "new": "Publisher full text reviewed. Transplant pathology, Fig. 2C and Tables 1, 3 and 4 checked against printed pages 298–304."
+    }
+  ],
+  "files": [
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "022&lang=en\",\n      \"review_depth\": \"PubMed abstract reviewed; full text not reviewed.\"\n    },\n    \"icca_maspero2024\": {\n    ",
+      "new": "022&lang=en\",\n      \"review_depth\": \"Publisher full text reviewed. Transplant pathology, Fig. 2C and Tables 1, 3 and 4 checked against printed pages 298–304.\"\n    },\n    \"icca_maspero2024\": {\n    "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "on\": \"European Liver Transplant Registry: 105 recipients with unresectable HCC in noncirrhotic livers.\",\n                \"selection\": \"Transplantation as primary treatment (62) or for intrahepatic recurrence after resection (43).\",\n                \"results\": \"Lymph-node involvement (HR 2.60) and macrovascular invasion (HR 2.55) were independently associated with death; five-year survival 59% without either.\",\n                \"limits\": \"Noncirrhotic population; nodal status as recorded by centres, not previously treated nodal disease.\",\n                \"locator\": \"J Hepatol 2012; abstract.\"\n              },\n              {\n    ",
+      "new": "on\": \"European Liver Transplant Registry cohort of 105 recipients with unresectable HCC in noncirrhotic livers across 38 centers.\",\n                \"selection\": \"62 received a primary transplant and 43 underwent transplant for intrahepatic recurrence after resection. Transplant pathology identified hilar nodal involvement in 12 of 105 recipients.\",\n                \"results\": \"Five-year overall survival after transplant was 17% with positive hilar nodes (95% CI 0–38%) and 54% with negative nodes (43–64%). The adjusted hazard ratio for death with positive nodes was 2.60 (95% CI 1.28–5.28).\",\n                \"limits\": \"Prior resection pathology was unavailable for the 43 rescue transplants. Survival after documented clearance of previously proven nodal metastases was not reported.\",\n                \"locator\": \"J Hepatol. 2012;57:297–305. Pathology p. 298, Table 1 p. 300, Fig. 2C p. 302, Table 3 p. 303, Table 4 and prior resection pathology p. 304.\"\n              },\n              {\n    "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "ic-hilum nodes with a short axis >2 cm. Lymph-node involvement was strongly adverse after transplantation (HR 2.60 for death in noncirrhotic livers; pooled odds ratio 10.44 for recurrence with positive hilar nodes). A complete response is not cure: among",
+      "new": "ic-hilum nodes with a short axis >2 cm. In noncirrhotic HCC, five-year survival was 17% with positive hilar nodes at transplant and 54% with negative nodes. A separate meta-analysis found higher odds of recurrence with positive hilar nodes (pooled OR 10.44). Neither study establishes outcomes after prior proven nodal disease cleared. A complete response is not cure: among"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "ystemic therapy.\",\n          \"stance\": \"Keep closed. Previous extrahepatic metastasis is outside the standard pathway and every HCC high-risk cohort, even after local treatment or a complete response to immunotherapy. Record durable complete responders in a registry; this edition offers no transplant route.\",\n          \"rules\": [\n            \"“N",
+      "new": "ystemic therapy.\",\n          \"stance\": \"The local draft keeps standard and high-risk transplant routes closed after proven extrahepatic or nodal HCC, including after a complete response. Enroll durable complete responders in a prospective follow-up registry.\",\n          \"rules\": [\n            \"“N"
+    },
+    {
+      "file": "hcc/data/critique.json",
+      "old": "ntion-to-treat endpoints, pp. 634–635.\"\n  }\n}\n",
+      "new": "ntion-to-treat endpoints, pp. 634–635.\"\n  },\n  \"22521348\": {\n    \"kind\": \"cohort\",\n    \"n\": \"62 received a primary transplant and 43 underwent transplant for intrahepatic recurrence after resection. Transplant pathology identified hilar nodal involvement in 12 of 105 recipients.\",\n    \"bottom_line\": \"Five-year overall survival after transplant was 17% with positive hilar nodes (95% CI 0–38%) and 54% with negative nodes (43–64%). The adjusted hazard ratio for death with positive nodes was 2.60 (95% CI 1.28–5.28).\",\n    \"limitations\": [\n      \"Prior resection pathology was unavailable for the 43 rescue transplants. Survival after documented clearance of previously proven nodal metastases was not reported.\"\n    ],\n    \"critique\": [\n      \"European Liver Transplant Registry cohort of 105 recipients with unresectable HCC in noncirrhotic livers across 38 centers.\",\n      \"Prior resection pathology was unavailable for the 43 rescue transplants. Survival after documented clearance of previously proven nodal metastases was not reported.\"\n    ],\n    \"locator\": \"J Hepatol. 2012;57:297–305. Pathology p. 298, Table 1 p. 300, Fig. 2C p. 302, Table 3 p. 303, Table 4 and prior resection pathology p. 304.\"\n  }\n}\n"
+    },
+    {
+      "file": "tools/compact_evidence_source.json",
+      "old": "     \"European Liver Transplant Registry: 105 recipients with unresectable HCC in noncirrhotic livers.\",\n        \"Lymph-node involvement (HR 2.60) and macrovascular invasion (HR 2.55) were independently associated with death; five-year survival 59% without either.\"\n      ]\n    },\n    \"22619025\": {\n    ",
+      "new": "     \"European Liver Transplant Registry cohort of 105 recipients with unresectable HCC in noncirrhotic livers across 38 centers.\",\n        \"62 received a primary transplant and 43 underwent transplant for intrahepatic recurrence after resection. Transplant pathology identified hilar nodal involvement in 12 of 105 recipients.\",\n        \"Five-year overall survival after transplant was 17% with positive hilar nodes (95% CI 0–38%) and 54% with negative nodes (43–64%). The adjusted hazard ratio for death with positive nodes was 2.60 (95% CI 1.28–5.28).\"\n      ]\n    },\n    \"22619025\": {\n    "
+    },
+    {
+      "file": "tools/compact_evidence_source.json",
+      "old": "ign\": \"Registry cohort\",\n      \"arms\": \"ELTR registry · 105 recipients, unresectable HCC, noncirrhotic livers\",\n      \"result\": \"Lymph-node involvement (HR 2.60) and macrovascular invasion (HR 2.55) independently associated with death; five-year survival 59% without either\",\n      \"caution\": \"Noncirrhotic livers only; nodal status as recorded by centres\",\n      \"quotes\": [\n        \"European L",
+      "new": "ign\": \"Registry cohort\",\n      \"arms\": \"105 recipients with noncirrhotic HCC; 12 had positive hilar nodes\",\n      \"result\": \"5-year overall survival after transplant: 17% with positive hilar nodes vs 54% with negative nodes. Adjusted HR for death 2.60 (95% CI 1.28–5.28).\",\n      \"caution\": \"Nodes assessed at transplant. Outcomes after prior proven nodal disease cleared were not reported.\",\n      \"quotes\": [\n        \"European L"
+    },
+    {
+      "file": "hcc/index.html",
+      "old": "/a> for the separate nonstandard review.</td><td class=\"small\">OPTN policy</td></tr>\n   <tr><td><b>Beyond the down",
+      "new": "/a> for the separate nonstandard review. For prior proven nodal or distant HCC, see <a href=\"../transplant/hcc/#high-risk-hcc-b5\">nodal disease and transplant eligibility</a>. In 105 recipients with noncirrhotic HCC, five-year survival was 17% with positive hilar nodes at transplant and 54% with negative nodes. Outcomes after previously proven nodal disease cleared were not reported. {{22521348}}</td><td class=\"small\">OPTN policy and registry evidence</td></tr>\n   <tr><td><b>Beyond the down"
+    },
+    {
+      "file": "hcc/index.html",
+      "old": "t and reduce liver reserve. Refer early.\",\n       refs:[\"8594428\",\"34331914\"]}],\n    order:\"<b>Compare these three ",
+      "new": "t and reduce liver reserve. Refer early. Previously proven nodal or distant disease is addressed in the transplant pathway (HCC-B5).\",\n       refs:[\"8594428\",\"34331914\",\"22521348\"]}],\n    order:\"<b>Compare these three "
+    },
+    {
+      "file": "hcc/index.html",
+      "old": "idence base ---------- */\nconst REF = {\n \"25957784\":[\"HeiLivCa\", \"Transplant & d",
+      "new": "idence base ---------- */\nconst REF = {\n \"22521348\":[\"Mergental 2012\",\"Transplant & downstaging\",\"Mergental H et al. Liver transplantation for unresectable hepatocellular carcinoma in normal livers. J Hepatol. 2012;57:297–305. PMID 22521348. DOI 10.1016/j.jhep.2012.03.022.\"],\n \"25957784\":[\"HeiLivCa\", \"Transplant & d"
+    }
+  ]
+}

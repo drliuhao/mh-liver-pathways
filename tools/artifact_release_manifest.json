@@ -4,9 +4,9 @@
   "word_documents": [
     {
       "path": "documents/hcc/HCC_1_Roadmap.docx",
-      "sha256": "9aa6ad110cd53937309a1fabaaf5e1b519cd2fe2a5433783cb006381835fc2e4",
+      "sha256": "37ac8fac08e539aa9d4a81c1c1347131d9fde555eac803132b54bcf68b9fbfa0",
       "local_master": "Documents/01_HCC/HCC_1_Roadmap_v20.docx",
-      "local_sha256": "12a32b4673d4c1a0c1bff6685818873090a6545c5096ff2a3e1ae25242c347f7"
+      "local_sha256": "633c0016a612254ebfa7362cb83419ba2d42e62fd15b60c85fdbaf4646ecf8b4"
     },
     {
       "path": "documents/hcc/HCC_2_Roadmap_Questions.docx",
@@ -16,9 +16,9 @@
     },
     {
       "path": "documents/hcc/HCC_3_Standard_Pathway.docx",
-      "sha256": "62ba043b1bcbbc6273411127013648b56bbb847716821945c64cbec7ed064794",
+      "sha256": "ca789f21c55a366a0fba9f34f158822d6a0ea4946b9306f512b1b7f0c1d07be5",
       "local_master": "Documents/01_HCC/HCC_3_Standard_Pathway_v20.docx",
-      "local_sha256": "6793f0712fd0474dfe16b0f33a1dc9bd27c2c38c76dd84718902838755e721a4"
+      "local_sha256": "7adb616b7c114d1cbc3cfea1aa78e157523f3cb25c3ebf4514dfba1cd8303922"
     },
     {
       "path": "documents/hcc/HCC_4_Standard_Pathway_Questions.docx",
@@ -28,21 +28,21 @@
     },
     {
       "path": "documents/hcc/HCC_5_High_Risk_Pathway.docx",
-      "sha256": "1713074610451c70237a3df7bd9bac2f557606dd32e01ee4fe28f3862bc9b53f",
+      "sha256": "7f0c489a4a8d5d3b00cb3b0cfc6bd534eeb56933cca19312b606697271622f35",
       "local_master": "Documents/01_HCC/HCC_5_High_Risk_Pathway_v20.docx",
-      "local_sha256": "98adad9f6c3cb3f120cd457063973b9a96ca45c346c3cd6d6769199b13b680a0"
+      "local_sha256": "ca1b55768cc485ad882a3844d8b36497b2f088e34735fb5124cd0cc19c00f951"
     },
     {
       "path": "documents/hcc/HCC_6_High_Risk_Pathway_Questions.docx",
-      "sha256": "57fdc0d59e03779e85bbede4b92ac2b2bd494d3486f98a8081d3582df75583da",
+      "sha256": "d27ac16feac4e36531f2e8dcc0744bb30e2cbcabae0691f167dec071dbe3dd1e",
       "local_master": "Documents/01_HCC/HCC_6_High_Risk_Pathway_Questions_v20.docx",
-      "local_sha256": "314da36f58f003bf7ae7c7f9e66dd9f574b84d317e985a6741d212cc1fbd2276"
+      "local_sha256": "b83a58486bfbfd1f033387f725d58b72c314a9bbd60bdb9dd046fa78fce64fda"
     },
     {
       "path": "documents/hcc/HCC_7_Decision_Discussion.docx",
-      "sha256": "4ae0867c3f024f9b27ca10599966ef19e991f211041230decdb54f2954da8502",
+      "sha256": "0c35cd5101f3b7369ca5aa9f2279c2a8a42714ac58b6c7f21e44a05ca94b036d",
       "local_master": "Documents/01_HCC/HCC_7_Decision_Discussion_v20.docx",
-      "local_sha256": "4ae0867c3f024f9b27ca10599966ef19e991f211041230decdb54f2954da8502"
+      "local_sha256": "20dba447b232fc0a2969bd1cbcf951c6a922f1035b4b66b75e4a49743fe2a443"
     },
     {
       "path": "documents/pcca/pCCA_1_Roadmap.docx",
@@ -466,11 +466,11 @@
     {
       "key": "roadmap_hcc",
       "title": "HCC cancer roadmap",
-      "slides": 282,
+      "slides": 283,
       "native_charts": 9,
       "native_tables": 0,
       "path": "Evidence_Libraries/02_Cancer_Roadmaps/roadmap_hcc/Evidence_Summaries_v20.pptx",
-      "sha256": "b220c2fd164b1ce8265a77b68b66302753bb752ee8522594b9ce8c7be13604f7",
+      "sha256": "ccb84125841216997c7f67268dc574bd11ac1ef212eaeac9321318a9b05b68f6",
       "updated_comparative_cards": 20,
       "pre_comparative_slide_parts_preserved": true,
       "pathology_card_added": "32749512",
@@ -578,11 +578,11 @@
     {
       "key": "standard_hcc",
       "title": "HCC · standard protocol",
-      "slides": 221,
+      "slides": 222,
       "native_charts": 8,
       "native_tables": 5,
       "path": "Evidence_Libraries/03_Standard_Transplant/standard_hcc/Evidence_Summaries_v20.pptx",
-      "sha256": "019397571cbde00bb3bb98ed8c03567570e28469b14a07fef35ded860f8afa74",
+      "sha256": "3e7d2972292a059d7bfdd8c34c293665a9388684725b8d674060a56cba8ee837",
       "updated_comparative_cards": 20,
       "pre_comparative_slide_parts_preserved": true,
       "pathology_card_added": "32749512",
@@ -657,11 +657,11 @@
     {
       "key": "high_risk_hcc",
       "title": "HCC · high-risk / boundary protocol",
-      "slides": 224,
+      "slides": 225,
       "native_charts": 6,
       "native_tables": 3,
       "path": "Evidence_Libraries/04_High_Risk_Transplant/high_risk_hcc/Evidence_Summaries_v20.pptx",
-      "sha256": "f265daaabc9e457959e79aae90c9acf47462fce7f97c48287c90ce016578ebdf",
+      "sha256": "ddf90326decbdbcc38830afbc83f4d9b0d2d45fe821c89ebdbae9fb8355a871b",
       "updated_comparative_cards": 20,
       "pre_comparative_slide_parts_preserved": true,
       "prior_slide_parts_preserved": true
@@ -746,11 +746,11 @@
     {
       "key": "meeting_hcc",
       "title": "HCC meeting record",
-      "slides": 181,
+      "slides": 182,
       "native_charts": 6,
       "native_tables": 3,
       "path": "Evidence_Libraries/05_Meeting_Records/meeting_hcc/Evidence_Summaries_v20.pptx",
-      "sha256": "9c5c639c4cb9757e745b1b4f6e849c24f243eef494a0d34624231a4f6b5fd73b",
+      "sha256": "3e4830d3d9a6c250ee6140b2b28f6bf80abb88b9db87d8dca163302747a1577c",
       "updated_comparative_cards": 20,
       "pre_comparative_slide_parts_preserved": true,
       "pathology_card_added": "32749512",
@@ -792,11 +792,11 @@
     "crlm/data/lrt_matrix.json": "c9278424c37fdf48489e2cfe3664a74d9090ff9f3dc3321cdce33c372c83c032",
     "crlm/data/lrt_refs.json": "8e4a81d57e56c48328b03416cf974f3a50e5b899454616b465214ef0e3274e4b",
     "crlm/data/pathway.json": "383612cb74a3f3e3480a4648931b4b78ea102cd6710d7aa04b2d259efc715671",
-    "evidence-libraries/catalog.json": "a7e2690ead9002e0c0f2e43094c15efec01ca2469eaf7634b9750e37d03442a0",
-    "hcc/data/critique.json": "0feda5ff8ed41190f6669b75207a5b9ca5dc30d8b1e77222c0a061c21d2dedbd",
+    "evidence-libraries/catalog.json": "caa9283597c22d704fdd7d466aa6358758b09bee8798413ed082f7cb72fc5c21",
+    "hcc/data/critique.json": "5793e0903e8b75f0e6154fb83c2a52d632bf68ac242640c2e7727d5d5b4cc5d3",
     "hcc/data/lrt_matrix.json": "c9278424c37fdf48489e2cfe3664a74d9090ff9f3dc3321cdce33c372c83c032",
     "hcc/data/lrt_refs.json": "ef2b4ac5fb729074748728a56f6a2ae4b5654a34f9eb8182e80086a8c9d03773",
-    "hcc/index.html": "f40e6f9c122d5d8c1dd18d4f6e8279079783e4f4ee00b73ce07e0fd100696249",
+    "hcc/index.html": "5f3452422db408fa96c6e2b6f8e702b18f3030b194ac495a5093f36306e0d344",
     "hilar/data/critique.json": "cf8977de23a4f0d560fd63c0ec24198f31dc3a195967b1c36523eb170d8866ed",
     "hilar/data/pathway.json": "2c4319ebf075e0f150ff4857f8082ca764b4132392402a9fc8dedfb7c86acd43",
     "icca/data/critique.json": "eb4eaeb16aa74b490e0fb80d59ba602078c239c07795cdb58cb91b99988e78e3",
@@ -819,11 +819,11 @@
     "pnet/data/pathway.json": "e9c26f81e378c44de6140c9ad981c9c48350369661fe53941d06372fe0707cf3",
     "systemic/matrix.json": "1686afa2411611a31a1abba65619fbf5f4185165ab108391a9ea25bdd1449014",
     "systemic/references.json": "6bc9be778877b17a6975eb6d5c8665cb1f1040852bc8b60c0651db2e06ac5ef9",
-    "tools/compact_evidence_source.json": "7fba8ef7985fa5607969b26dd77571b77f905b5d76a7e420a86e76527994ef57",
+    "tools/compact_evidence_source.json": "1c4a2eef1e103f1b6ed30e27269b103dbd6dbb27053ffe80545f6622dc9363c1",
     "tools/lrt_comparative_evidence.json": "a778c2d135f40b5fbc86cc80f59c4addb847a0cdcd07a766febd8029e2456fe2",
     "transplant/assets/assistant.js": "f27a41d62acdbddae4eaa83b88d6fb89678d560dfc6f9f70f35de5beac0ac756",
-    "transplant/assets/content.json": "3bdfb99b8db89edd177737a4a29c785519653a644a1b58330e9dd13a058594b2",
-    "transplant/assets/pathway-sections.json": "ba6eccb3d34748b9f7c7658fdff03e51bd673f22957eaa7777b4244d357c4814",
+    "transplant/assets/content.json": "63919732eb6ae36d5e75c27b7bd525b0273fd4cb8a61f98540cf35aa25c8a857",
+    "transplant/assets/pathway-sections.json": "52161f09b5c475b968181aeb24221ddfa64713012c9cfab293acdc35a1de2e0e",
     "transplant/assets/risk-routing.js": "5135a79900b39e6906d42949f0ec691fbbc006048607581b85789983ac8848a9",
     "assets/lrt-comparisons.css": "abd197aefc9c90a60d08e961a101c40049621e886140273550525f1b129ff1b4",
     "lrt/comparisons.json": "f2b7976a35ecb70bddf7bd9b20ed2e9e7e8abdd49b4119ec1cd55b04c4c51c34",
@@ -836,16 +836,18 @@
     "tools/lrt_screen_summary.py": "518483abffabdc5a404e685bf8b1cfb62943e9cfc8162b4d719bc6d3292402f3",
     "tools/hcc_waitlist_comparisons.json": "b904eb05b04adcacacc0b5fd105b970e971753213862252f833ba17864e9e5ac",
     "tools/build_pathway_sections.py": "7f89a4e267e691bfa63e610baf28c2b93b057bec4eed9e1cc80a0983bbba3a36",
-    "evidence-libraries/document-index.json": "598a88c5572efe126bf1539b348a664dfc34db0f71e4d579198d3477e552864f",
-    "tools/hcc_document_pdf_status.json": "9e41b178740d47fab8a941afffc08250bf4c677cdbed57009d2a829ade357580",
-    "tools/ehd_positions.json": "773879d197b2d0883b75913679f6043993316494b9f414e63bead3be0a862617",
-    "documents/hcc/questions.json": "237b30581af2c9353cd357b93b8172ea6fc68aabebc7094fbad5b045d43abbd9"
+    "evidence-libraries/document-index.json": "3be5c78b5428299e52bd7e2a7897005dd578069032c0aed43d4071ecfec705f6",
+    "tools/hcc_document_pdf_status.json": "1ac22255210ceb09807f912f4e42ef18a82f7671bebf6655ce5e421a2da681b7",
+    "tools/ehd_positions.json": "7c7ddced5ae994bb19b0feceec9f93428a8d8e297e921d0932606ae0ece76438",
+    "documents/hcc/questions.json": "f6ce74798daf2ad6611efe3d1dc552a11c66c061e8f2d67fb9254cba7ca75ff1",
+    "assets/compact-evidence-data.js": "056a739d243143677dc6ee1dc27313a7741a1eb5802ff78f326ad831ad487378",
+    "tools/decision_assistant_source/high_risk_data.json": "ded63f5ec20fab263130327437f23d4a20eb37b4c38b185dbf38f95312ed5258"
   },
   "verification_limits": "Review covers design, population, key outcomes, relevant tables/figures and clinical limitations in 34 downloaded papers. It is not an every-statement or every-supplement audit. Nine modified Word sections rendered separately and in the full documents. All 40 comparative PPT cards rendered; all 12 clinically changed cards inspected visually. Twenty modified decks passed package/layout/import checks. All pre-comparative slide, chart, table, media and workbook parts remain byte-identical to the V18 base. Prior comparative cards were replaced in place, not duplicated. Unchanged documents and slides were not re-reviewed in full.",
   "counts": {
     "word_documents": 65,
     "presentations": 34,
-    "slides": 4435,
+    "slides": 4439,
     "native_charts": 113,
     "native_tables": 64,
     "updated_word_documents": 9,
@@ -983,6 +985,21 @@
       ],
       "review_record": "HCC_Discussion_Depots_2026-11-13/Full_Text_Update_2026-11-15/Release.md",
       "pdf_receipt": "HCC_Discussion_Depots_2026-11-13/Full_Text_Update_2026-11-15/Filed_PDFs.json"
+    },
+    {
+      "date": "2026-11-15",
+      "scope": "HCC transplant selection and HCC-B5, hilar nodal status at transplant compared with historical disease. All eight B5 sources checked in full.",
+      "pmids": [
+        "22521348"
+      ],
+      "word_documents": 5,
+      "presentations": 4,
+      "new_study_cards": 1,
+      "slide_placements": 4,
+      "filed_pdf_copies": 4,
+      "missing_hcc_pending_question_pdfs": [],
+      "review_record": "HCC_Discussion_Depots_2026-11-13/Mergental_Full_Text_2026-11-15/Release.md",
+      "pdf_receipt": "HCC_Discussion_Depots_2026-11-13/Mergental_Full_Text_2026-11-15/Filed_PDFs.json"
     }
   ]
 }

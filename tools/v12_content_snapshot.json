@@ -12559,7 +12559,7 @@
               "allocation"
             ],
             "context": "Use when HCC has involved any site outside the liver (regional or distant lymph nodes, lung, adrenal, bone or peritoneum), including disease later resected, ablated, irradiated or in complete response to systemic therapy.",
-            "stance": "Keep closed. Previous extrahepatic metastasis is outside the standard pathway and every HCC high-risk cohort, even after local treatment or a complete response to immunotherapy. Record durable complete responders in a registry; this edition offers no transplant route.",
+            "stance": "The local draft keeps standard and high-risk transplant routes closed after proven extrahepatic or nodal HCC, including after a complete response. Enroll durable complete responders in a prospective follow-up registry.",
             "rules": [
               "“No extrahepatic disease” in HCC-B1 and HCC-B2 means no current or previous extrahepatic metastasis. Resection, ablation, radiotherapy or a complete radiological response does not clear this history.",
               "Count proven lymph-node metastasis, including hilar or hepatoduodenal nodes, as extrahepatic disease. Enlarged hilar nodes without proof (XXL treated a short axis >2 cm as extrahepatic spread) are HOLD for characterization. A lesion later proven benign is not prior extrahepatic disease; record how it was resolved.",
@@ -12581,7 +12581,7 @@
               "hcc_sotiropoulos2007"
             ],
             "evidence": {
-              "synthesis": "Every HCC transplant framework reviewed requires absence of extrahepatic disease, and AASLD lists lymph-node involvement or extrahepatic spread as downstaging failure and an exclusion from transplantation. ILTS–ILCA recommends downstaging, and immunotherapy for downstaging, only in patients without extrahepatic disease, and the XXL trial excluded extrahepatic spread, including hepatic-hilum nodes with a short axis >2 cm. Lymph-node involvement was strongly adverse after transplantation (HR 2.60 for death in noncirrhotic livers; pooled odds ratio 10.44 for recurrence with positive hilar nodes). A complete response is not cure: among 160 complete responders to immunotherapy-based treatment, prior extrahepatic metastasis doubled the risk of recurrence (adjusted HR 2.00), and 5-year recurrence-free survival in the whole cohort was 18%. The only published transplant after metastatic HCC is one case: the best response of nodal, lung and bone disease to nivolumab was partial, the bone lesions did not clearly regress, liver disease recurred off treatment and was ablated, extrahepatic clearance was never confirmed by biopsy or PET, and the recipient was free of cancer one year after transplantation.",
+              "synthesis": "Every HCC transplant framework reviewed requires absence of extrahepatic disease, and AASLD lists lymph-node involvement or extrahepatic spread as downstaging failure and an exclusion from transplantation. ILTS–ILCA recommends downstaging, and immunotherapy for downstaging, only in patients without extrahepatic disease, and the XXL trial excluded extrahepatic spread, including hepatic-hilum nodes with a short axis >2 cm. In noncirrhotic HCC, five-year survival was 17% with positive hilar nodes at transplant and 54% with negative nodes. A separate meta-analysis found higher odds of recurrence with positive hilar nodes (pooled OR 10.44). Neither study establishes outcomes after prior proven nodal disease cleared. A complete response is not cure: among 160 complete responders to immunotherapy-based treatment, prior extrahepatic metastasis doubled the risk of recurrence (adjusted HR 2.00), and 5-year recurrence-free survival in the whole cohort was 18%. The only published transplant after metastatic HCC is one case: the best response of nodal, lung and bone disease to nivolumab was partial, the bone lesions did not clearly regress, liver disease recurred off treatment and was ablated, extrahepatic clearance was never confirmed by biopsy or PET, and the recipient was free of cancer one year after transplantation.",
               "counterevidence": "Durable complete responses to checkpoint inhibitors are now seen in advanced HCC, and the case shows transplantation is feasible after such a response. The guidelines describe current extrahepatic disease only; excluding previously treated disease is this program’s inference, not a guideline statement. ILTS–ILCA notes there is not yet enough evidence to say whether patients with a complete radiological response to immunotherapy still need transplantation or how long to observe them, so a permanent bar is a policy choice rather than a proven boundary. Immunosuppression could accelerate residual microscopic extrahepatic disease, which favours a registry with long observation over case-by-case transplantation.",
               "certainty": "Very low for transplantation after previously treated or completely responded extrahepatic HCC (one case report). Moderate that current nodal or extrahepatic disease predicts poor post-transplant outcome.",
               "threshold_basis": "The 12-month starting point mirrors the minimum 12 months of stability NLRB describes for selected candidates after ruptured HCC or primary portal-vein branch invasion, and the ILTS–ILCA 12-month observation after downstaging of Vp1–2 invasion; it is not derived from extrahepatic-disease data. The ≥90-day washout follows the AASLD advice to stop checkpoint inhibitors at least 3 months before transplantation and the rejection signal with washouts of 90 days or less in a multicentre cohort.",
@@ -12612,11 +12612,11 @@
                 },
                 {
                   "key": "hcc_mergental2012",
-                  "design_population": "European Liver Transplant Registry: 105 recipients with unresectable HCC in noncirrhotic livers.",
-                  "selection": "Transplantation as primary treatment (62) or for intrahepatic recurrence after resection (43).",
-                  "results": "Lymph-node involvement (HR 2.60) and macrovascular invasion (HR 2.55) were independently associated with death; five-year survival 59% without either.",
-                  "limits": "Noncirrhotic population; nodal status as recorded by centres, not previously treated nodal disease.",
-                  "locator": "J Hepatol 2012; abstract."
+                  "design_population": "European Liver Transplant Registry cohort of 105 recipients with unresectable HCC in noncirrhotic livers across 38 centers.",
+                  "selection": "62 received a primary transplant and 43 underwent transplant for intrahepatic recurrence after resection. Transplant pathology identified hilar nodal involvement in 12 of 105 recipients.",
+                  "results": "Five-year overall survival after transplant was 17% with positive hilar nodes (95% CI 0–38%) and 54% with negative nodes (43–64%). The adjusted hazard ratio for death with positive nodes was 2.60 (95% CI 1.28–5.28).",
+                  "limits": "Prior resection pathology was unavailable for the 43 rescue transplants. Survival after documented clearance of previously proven nodal metastases was not reported.",
+                  "locator": "J Hepatol. 2012;57:297–305. Pathology p. 298, Table 1 p. 300, Fig. 2C p. 302, Table 3 p. 303, Table 4 and prior resection pathology p. 304."
                 },
                 {
                   "key": "hcc_pirozzi2025",
@@ -17306,7 +17306,7 @@
         "url": "https://doi.org/10.1016/j.jhep.2012.03.022",
         "pdf_links": [],
         "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1016%2Fj.jhep.2012.03.022&lang=en",
-        "review_depth": "PubMed abstract reviewed; full text not reviewed."
+        "review_depth": "Publisher full text reviewed. Transplant pathology, Fig. 2C and Tables 1, 3 and 4 checked against printed pages 298–304."
       },
       "icca_maspero2024": {
         "key": "icca_maspero2024",

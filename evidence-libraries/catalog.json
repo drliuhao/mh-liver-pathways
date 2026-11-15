@@ -1,7 +1,7 @@
 {
   "updated": "2026-11-15",
-  "unique_publications": 674,
-  "matched_publication_pdfs": 650,
+  "unique_publications": 675,
+  "matched_publication_pdfs": 651,
   "missing_publication_pdfs": 24,
   "appraisals_pending": 53,
   "libraries": [
@@ -5672,9 +5672,9 @@
       "title": "HCC cancer roadmap",
       "family": "02_Cancer_Roadmaps",
       "slug": "hcc",
-      "publication_count": 116,
-      "matched_pdfs": 116,
-      "slides": 282,
+      "publication_count": 117,
+      "matched_pdfs": 117,
+      "slides": 283,
       "ppt_filename": "Evidence_Summaries_v20.pptx",
       "local_folder": "V20_consistent_release_2026-11-04/Evidence_Libraries/02_Cancer_Roadmaps/roadmap_hcc",
       "document": "documents/hcc/HCC_1_Roadmap.docx",
@@ -6884,6 +6884,15 @@
           ],
           "inclusion": [
             "Roadmap document, reference V16-46. HCC-R1, local treatment after extrahepatic spread."
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jhep.2012.03.022",
+          "slides": [
+            283
+          ],
+          "inclusion": [
+            "HCC roadmap, early-stage transplant selection and prior nodal disease."
           ]
         }
       ],
@@ -10844,9 +10853,9 @@
       "title": "HCC · standard protocol",
       "family": "03_Standard_Transplant",
       "slug": "hcc",
-      "publication_count": 77,
-      "matched_pdfs": 77,
-      "slides": 221,
+      "publication_count": 78,
+      "matched_pdfs": 78,
+      "slides": 222,
       "ppt_filename": "Evidence_Summaries_v20.pptx",
       "local_folder": "V20_consistent_release_2026-11-04/Evidence_Libraries/03_Standard_Transplant/standard_hcc",
       "document": "documents/hcc/HCC_3_Standard_Pathway.docx",
@@ -11680,6 +11689,15 @@
           ],
           "inclusion": [
             "HCC treatment before transplant. Which outcomes support a waitlist decision?"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jhep.2012.03.022",
+          "slides": [
+            222
+          ],
+          "inclusion": [
+            "Standard pathway document, reference V16-58."
           ]
         }
       ],
@@ -13532,9 +13550,9 @@
       "title": "HCC · high-risk / boundary protocol",
       "family": "04_High_Risk_Transplant",
       "slug": "hcc",
-      "publication_count": 76,
-      "matched_pdfs": 76,
-      "slides": 224,
+      "publication_count": 77,
+      "matched_pdfs": 77,
+      "slides": 225,
       "ppt_filename": "Evidence_Summaries_v20.pptx",
       "local_folder": "V20_consistent_release_2026-11-04/Evidence_Libraries/04_High_Risk_Transplant/high_risk_hcc",
       "document": "documents/hcc/HCC_5_High_Risk_Pathway.docx",
@@ -14362,6 +14380,15 @@
           ],
           "inclusion": [
             "HCC treatment before transplant. Which outcomes support a waitlist decision?"
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jhep.2012.03.022",
+          "slides": [
+            225
+          ],
+          "inclusion": [
+            "High-risk pathway document, reference V16-64. HCC-B5."
           ]
         }
       ],
@@ -16370,9 +16397,9 @@
       "title": "HCC meeting record",
       "family": "05_Meeting_Records",
       "slug": "hcc",
-      "publication_count": 71,
-      "matched_pdfs": 71,
-      "slides": 181,
+      "publication_count": 72,
+      "matched_pdfs": 72,
+      "slides": 182,
       "ppt_filename": "Evidence_Summaries_v20.pptx",
       "local_folder": "V20_consistent_release_2026-11-04/Evidence_Libraries/05_Meeting_Records/meeting_hcc",
       "document": "documents/hcc/HCC_7_Decision_Discussion.docx",
@@ -17117,6 +17144,15 @@
           ],
           "inclusion": [
             "Combined HCC decision discussion. HCC-R1, local treatment after extrahepatic spread."
+          ]
+        },
+        {
+          "id": "doi:10.1016/j.jhep.2012.03.022",
+          "slides": [
+            182
+          ],
+          "inclusion": [
+            "Combined HCC discussion, HCC-B5."
           ]
         }
       ],
@@ -25105,6 +25141,20 @@
       "pdf_available": true,
       "coverage": "Focused full-text appraisal",
       "publisher_citation": "J Hepatobiliary Pancreat Sci. 2025;32:374–384. Results p. 376, Table 1 p. 377, Fig. 1 p. 378, Table 3 p. 380."
+    },
+    "doi:10.1016/j.jhep.2012.03.022": {
+      "title": "Liver transplantation for unresectable hepatocellular carcinoma in normal livers",
+      "author": "Mergental H",
+      "journal": "J Hepatol",
+      "doi": "10.1016/j.jhep.2012.03.022",
+      "pmid": "22521348",
+      "year": "2012",
+      "publication_type": "Journal publication",
+      "url": "https://doi.org/10.1016/j.jhep.2012.03.022",
+      "tmc": "https://libkey.io/libraries/480/pmid/22521348",
+      "pdf_available": true,
+      "coverage": "Focused full-text appraisal",
+      "publisher_citation": "J Hepatol. 2012;57:297–305. Pathology p. 298, Table 1 p. 300, Fig. 2C p. 302, Table 3 p. 303, Table 4 and prior resection pathology p. 304."
     }
   },
   "artifact_release": "V20_consistent_release_2026-11-04"

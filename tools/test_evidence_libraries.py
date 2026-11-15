@@ -7,12 +7,12 @@ root=Path(__file__).resolve().parents[1]
 directory=root/'evidence-libraries'
 data=json.loads((directory/'catalog.json').read_text())
 assert len(data['libraries'])==34
-assert len(data['publications'])==data['unique_publications']==674
+assert len(data['publications'])==data['unique_publications']==675
 # 573 PDFs at V15 (25 October 2026); 23 more filed from the 29 October 2026 full-text batch.
 # V18 adds four sources (ABC-06 was already indexed): two verified PDFs and
 # two primary reports read as XML, whose unavailable PDFs stay explicit.
 # V20 verifies and deposits all 34 papers from the comparative-study checklist.
-assert sum(bool(p['pdf_available']) for p in data['publications'].values())==650
+assert sum(bool(p['pdf_available']) for p in data['publications'].values())==651
 assert data['missing_publication_pdfs']==24 and data['appraisals_pending']==53
 for pmid in ('24681342', '38466889', '42421575'):
     pub = next(p for p in data['publications'].values() if p.get('pmid') == pmid)

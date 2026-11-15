@@ -46,7 +46,7 @@
    "key": "hcc_mergental2012",
    "pmid": "22521348",
    "short": "Mergental 2012 · ELTR non-cirrhotic HCC",
-   "read": "abstract",
+   "read": "full",
    "links": {
     "pubmed": "https://pubmed.ncbi.nlm.nih.gov/22521348/",
     "doi": "https://doi.org/10.1016/j.jhep.2012.03.022",
@@ -1297,14 +1297,14 @@
    "title": "Previously treated extrahepatic disease",
    "question": "May a patient whose extrahepatic HCC (including proven lymph-node metastasis) was treated and has responded completely ever enter a transplant route, or does this history close transplantation?",
    "status": "Closed; registry only",
-   "position": "Keep closed. A history of extrahepatic metastasis or proven nodal metastasis excludes the standard OPTN route and every HCC high-risk cohort, even after resection, ablation, radiotherapy or a complete response to immunotherapy. Record durable complete responders in a prospective registry; this edition offers no transplant route.",
+   "position": "The local draft keeps standard and high-risk transplant routes closed after proven extrahepatic or nodal HCC, including after a complete response. Enroll durable complete responders in a prospective follow-up registry.",
    "rules": [
     "“No extrahepatic disease” in HCC-B1 and HCC-B2 means no current or previous extrahepatic metastasis. Resection, ablation, radiotherapy or a complete radiological response does not clear this history.",
     "Count proven lymph-node metastasis, including hilar or hepatoduodenal nodes, as extrahepatic disease. Enlarged hilar nodes without proof are HOLD for characterization. A lesion later proven benign is not prior extrahepatic disease; record how it was resolved.",
     "Registry, not listing: enter durable complete responders with dated imaging, AFP and treatment history. Starting points for any future study (not active): ≥12 months without evidence of disease off systemic therapy; PET or tissue confirmation that every extrahepatic site is cleared; current whole-body staging including bone; an immunotherapy washout of ≥90 days and the HCC-B3 safety review.",
     "Do not combine with the expanded-burden (HCC-B1) or portal-vein invasion (HCC-B2) cohorts."
    ],
-   "why": "The guidelines describe current extrahepatic disease only. Excluding previously treated disease is this program’s inference, stated as such: no series reports outcomes of transplantation after treated extrahepatic HCC (cohorts that contain such recipients exclude them or do not report them separately), nodal disease at transplantation strongly predicts recurrence, and a complete response to immunotherapy is not cure.",
+   "why": "Guidelines and allocation criteria address current extrahepatic disease. At transplantation, positive hilar nodes predict worse survival in noncirrhotic HCC. Outcomes after documented clearance of proven nodal or distant metastases remain uncertain. The program proposes registry follow-up for these patients.",
    "evidence": [
     {
      "key": "ilts",
@@ -1362,12 +1362,12 @@
     },
     {
      "key": "hcc_mergental2012",
-     "design_population": "European registry, 105 transplants for HCC in non-cirrhotic liver.",
-     "selection": "Nodal status recorded.",
-     "results": "Lymph-node involvement associated with death (HR 2.60, 95% CI 1.28–5.28).",
-     "limits": "Non-cirrhotic HCC only; timing of nodal disease not stated.",
-     "locator": "J Hepatol 2012 (abstract; full text pending).",
-     "read": "abstract"
+     "design_population": "European Liver Transplant Registry cohort of 105 recipients with unresectable HCC in noncirrhotic livers across 38 centers.",
+     "selection": "62 received a primary transplant and 43 underwent transplant for intrahepatic recurrence after resection. Transplant pathology identified hilar nodal involvement in 12 of 105 recipients.",
+     "results": "Five-year overall survival after transplant was 17% with positive hilar nodes (95% CI 0–38%) and 54% with negative nodes (43–64%). The adjusted hazard ratio for death with positive nodes was 2.60 (95% CI 1.28–5.28).",
+     "limits": "Prior resection pathology was unavailable for the 43 rescue transplants. Survival after documented clearance of previously proven nodal metastases was not reported.",
+     "locator": "J Hepatol. 2012;57:297–305. Pathology p. 298, Table 1 p. 300, Fig. 2C p. 302, Table 3 p. 303, Table 4 and prior resection pathology p. 304.",
+     "read": "full"
     },
     {
      "key": "hcc_choi2025",
@@ -1392,8 +1392,8 @@
     "hcc_sotiropoulos2007",
     "ilts"
    ],
-   "read_full": 7,
-   "read_abstract": 1
+   "read_full": 8,
+   "read_abstract": 0
   },
   {
    "id": "HCC-R1",
