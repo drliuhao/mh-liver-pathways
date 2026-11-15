@@ -37,9 +37,12 @@ for key,cell in matrix['cells'].items():
   for ev in role['ev']:
    occurrences.setdefault((tumor,ev[1]),[]).append((role,ev))
 
+edition_sources = json.loads((R/'evidence-libraries/catalog.json').read_text())['publications']
+edition_citations = {p['pmid']:p['publisher_citation'] for p in edition_sources.values() if p.get('publisher_citation')}
+
 def citation(pid):
  r=refs.get(pid,{})
- return {'pmid':pid,'year':str(r.get('y','')),'journal':r.get('j',''),'author':r.get('au',''),'doi':r.get('doi',''),'pubmed':f'https://pubmed.ncbi.nlm.nih.gov/{pid}/','tmc':f'https://libkey.io/libraries/480/pmid/{pid}'}
+ return {**({'publisher_citation':edition_citations[pid]} if pid in edition_citations else {}),'pmid':pid,'year':str(r.get('y','')),'journal':r.get('j',''),'author':r.get('au',''),'doi':r.get('doi',''),'pubmed':f'https://pubmed.ncbi.nlm.nih.gov/{pid}/','tmc':f'https://libkey.io/libraries/480/pmid/{pid}'}
 rows=[]
 for r in full:
  pid=r['pmid'];c=compact[pid]

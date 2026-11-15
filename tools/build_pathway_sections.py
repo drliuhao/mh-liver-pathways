@@ -28,6 +28,8 @@ HR = C['high_risk']
 SOURCES, HRS = C['sources'], HR['sources']
 ORDER = ['hcc', 'pcca', 'icca', 'crlm', 'nelm', 'hehe', 'hca']
 CATALOG = json.loads((ROOT / 'evidence-libraries/catalog.json').read_text())['publications']
+DOC_PUBLICATIONS = json.loads((ROOT / 'evidence-libraries/document-index.json').read_text())['publications']
+PUBLISHER_EDITIONS = {str(p['pmid']): p for p in [*CATALOG.values(), *DOC_PUBLICATIONS.values()] if p.get('publisher_citation')}
 DOI_PMID = {p['doi'].lower(): str(p['pmid']) for p in CATALOG.values() if p.get('doi') and p.get('pmid')}
 STUDIES = json.loads((ROOT / 'tools/compact_evidence_source.json').read_text())['studies']
 SUMMARIES = json.loads((ROOT / 'tools/source_summaries.json').read_text())['summaries']
@@ -186,6 +188,13 @@ def library(keys, standard, reviews, uses=None):
                 access.append({'label': 'Full PDF', 'url': r['pdf']})
             for l in r.get('pdf_links', []):
                 access.append({'label': l['label'], 'url': l['url']})
+        published = PUBLISHER_EDITIONS.get(row['pmid'])
+        if published:
+            title = published['title'].strip().rstrip('.')
+            if s.get('author') and lead not in DOCREC:
+                title = s['author'] + '. ' + s['title'].strip().rstrip('.')
+            item['cit'] = title + '. ' + published['publisher_citation']
+            access = [{'label': 'Publisher full text', 'url': 'https://doi.org/' + published['doi']}]
         if access:
             item['access'] = list({a['url']: a for a in access}.values())
         st = STUDIES.get(row['pmid'])

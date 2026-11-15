@@ -22,7 +22,7 @@
       <div class="lcm-study-body"><p class="lcm-arms"><b>Comparison:</b> ${esc(p.arms)}</p>
         <p><b>What the label means:</b> ${esc(p.screen.favored?p.screen.favored+' · '+p.screen.endpoint+'. ':'')}${esc(data.verdicts[p.screen.verdict].description)} ${esc(p.screen.rationale)}</p>
         <dl class="lcm-study-info"><div><dt>Design / setting</dt><dd>${esc(r.design)} · ${esc(data.settings[r.setting])}</dd></div><div><dt>Population / applicability</dt><dd>${esc(r.population)}</dd></div><div><dt>Results</dt><dd>${esc(r.result)}</dd></div><div><dt>Limitations / generalizability</dt><dd>${esc(r.caution)}</dd></div></dl>
-        <details class="lcm-sources"><summary>Sources & full text</summary><p>${esc([r.author,r.journal,r.year].filter(Boolean).join(' · '))}</p><div class="lcm-links">${links(r)}</div></details>
+        <details class="lcm-sources"><summary>Sources & full text</summary><p>${esc(r.publisher_citation ? [r.author,r.publisher_citation].filter(Boolean).join(' · ') : [r.author,r.journal,r.year].filter(Boolean).join(' · '))}</p><div class="lcm-links">${links(r)}</div></details>
       </div></details>`;
   }
   function openCell(host,entries,a,b,data,refs){

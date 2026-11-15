@@ -54,12 +54,12 @@
        "read": "Full text read"
       },
       {
-       "source": "Choi 2025 · NCDB curative treatment after ICI",
+       "source": "Choi 2026 · NCDB curative treatment after ICI",
        "key": "ehd-hcc_choi2025",
        "population": "US national cancer database, 4,329 patients on first-line immunotherapy. 138 (3.2%) had curative treatment afterwards, including 15 with distant and 10 with nodal metastasis.",
        "results": "Propensity-matched HR 0.22 (0.14–0.33) for death with curative treatment.",
        "limits": "Immortal-time bias; curative intent uncertain; modality not separated for the 15 distant and 10 nodal patients.",
-       "locator": "Liver Cancer 2025; Tables 1–3.",
+       "locator": "Liver Cancer. 2026;15(2):193–204. Tables 1–3, pp. 196–200.",
        "read": "Full text read"
       },
       {
@@ -68,8 +68,8 @@
        "population": "Japanese national survey, 14,872 resections. 112 with pathologically proven nodal metastasis.",
        "results": "3-year survival 38.9% (nodal) vs 27.2% (distant stage IVB).",
        "limits": "Pre-immunotherapy era; surgeon-selected patients.",
-       "locator": "Ann Surg 2014 (abstract; full text pending).",
-       "read": "Abstract only; full text pending"
+       "locator": "Ann Surg. 2014;259:166–170. Survival by nodal status, pp. 166–168 and Figure 1.",
+       "read": "Full text read"
       },
       {
        "source": "Midorikawa 2020 · resection of extrahepatic recurrence",
@@ -324,7 +324,7 @@
        "source": "Baveno VIII",
        "key": "pm42624290",
        "says": "Rule-in: liver stiffness ≥25 kPa (not obese MASLD), spleen stiffness >55 kPa, ANTICIPATE ≥75%; rule-out: ≤15 kPa with platelets ≥150. Its HCC statements are new, LoE 3 and weak, and non-invasive tests may not be applicable at all with macrovascular invasion.",
-       "locator": "Curative tab · Baveno criteria table; What we are not sure about #5"
+       "locator": "Baveno VIII, pp. 995–996, Figure 1 and statements 1.15–1.23."
       },
       {
        "source": "BCLC 2026",
@@ -336,7 +336,7 @@
        "source": "Baveno VII",
        "key": "pm35120736",
        "says": "Defines CSPH as HVPG of 10 mmHg or more, with non-invasive thresholds validated only in viral, alcohol-related and non-obese NASH disease; the roadmap reads it as describing risk, not deciding operability.",
-       "locator": "Appendix · Baveno VII (bottom line)"
+       "locator": "Baveno VII, pp. 960–963, Figure 1 on p. 963."
       }
      ],
      "divergence": "BCLC keeps HVPG as gold standard while allowing non-invasive rule-in or rule-out, and the Baveno VIII HCC statements are weak, device-specific and unvalidated in obese MASLD.",
@@ -368,13 +368,13 @@
        "source": "Baveno VIII",
        "key": "pm42624290",
        "says": "Varices or portosystemic collaterals are generally signs of CSPH, but may persist after the aetiology is cured or controlled, so in that setting a shunt alone does not establish current CSPH.",
-       "locator": "Curative tab · 'Three situations where a portosystemic shunt does not settle the question'"
+       "locator": "Curative tab · 'Three situations where a portosystemic shunt does not settle the question' See J Hepatol. 2026;85(5):993–1018. Figure 1 and statements 1.15–1.23, pp. 995–996."
       },
       {
        "source": "Baveno VII",
        "key": "pm35120736",
        "says": "When signs of portal hypertension coexist with an HVPG below 10 mmHg, portosinusoidal vascular disorder must be ruled out.",
-       "locator": "Curative tab · 'Three situations where a portosystemic shunt does not settle the question'"
+       "locator": "Curative tab · 'Three situations where a portosystemic shunt does not settle the question' See J Hepatol. 2022;76(4):959–974. HVPG and noninvasive criteria, pp. 960–963. Figure 1, p. 963."
       },
       {
        "source": "BCLC 2026",
@@ -590,7 +590,7 @@
        "source": "MERITS-LT",
        "key": "pm34331914",
        "says": "The only independent predictor of downstaging dropout was a pre-treatment AFP-L3 of 10% or more (sub-HR 3.7), measured in only 83 of 209 patients.",
-       "locator": "What we are not sure about #12"
+       "locator": "What we are not sure about #12 See Gastroenterology. 2021;161(5):1502–1512. Table 3, p. 1506. Figures 1–3, pp. 1507–1508."
       }
      ],
      "divergence": "OPTN standardized exception policy, AASLD guidance and EASL clinical selection wording differ. Exception priority, waitlist registration and any stricter OPEN local proposal are separate decisions.",
@@ -676,7 +676,7 @@
        "source": "LEAP-012 / EMERALD-1 commentary",
        "key": "pm41503570",
        "says": "Progression-free gains do not yet justify routine adoption without survival or quality-of-life data; over 40% of each trial lay outside intermediate stage and neither had a systemic-only arm.",
-       "locator": "Appendix · LEAP-012 / EMERALD-1 commentary (bottom line)"
+       "locator": "JHEP Reports, article 101664, pp. 1–9 of the publisher PDF."
       }
      ],
      "divergence": "All three phase 3 trials met progression-free survival without an overall-survival benefit; the roadmap rests its stance on absent benefit rather than demonstrated harm, and notes NCCN does not prohibit the combination.",
@@ -804,7 +804,7 @@
        "source": "MERITS-LT",
        "key": "pm34331914",
        "says": "In downstaging, no detectable difference between chemoembolisation and Y-90, but the roadmap calls that comparison unadjusted and confounded.",
-       "locator": "Appendix · MERITS-LT (bottom line)"
+       "locator": "MERITS-LT, Table 3 and Figures 1–3, pp. 1506–1508."
       },
       {
        "source": "HeiLivCa",
@@ -990,7 +990,7 @@
        "source": "Baveno VIII",
        "key": null,
        "says": "Provides non-invasive rule-in and rule-out criteria; its HCC statements are new, LoE 3 and weak.",
-       "locator": "Curative tab · Baveno criteria table; What we are not sure about #5"
+       "locator": "Baveno VIII, pp. 995–996, Figure 1 and statements 1.15–1.23."
       }
      ]
     },
@@ -1401,7 +1401,7 @@
        "source": "LEAP-012 / EMERALD-1 commentary",
        "key": null,
        "says": "Progression-free gains do not yet justify routine adoption without survival or quality-of-life data.",
-       "locator": "Appendix · LEAP-012 / EMERALD-1 commentary (bottom line)"
+       "locator": "JHEP Reports, article 101664, pp. 1–9 of the publisher PDF."
       }
      ]
     },
@@ -1717,7 +1717,7 @@
        "key": "std-WT-42270817",
        "kind": "Consensus",
        "says": "Consensus on HCC clinical trial design. Assess transplant receipt, progression or death before transplant, and survival from entry for all enrolled candidates. Recipient recurrence and pathologic response address separate outcomes.",
-       "locator": "Llovet et al. Nat Rev Clin Oncol. 2026. PMID 42270817. DOI 10.1038/s41571-026-01160-z."
+       "locator": "Nat Rev Clin Oncol. 2026;23(8):619–647. Transplant trial design and intention-to-treat endpoints, pp. 634–635."
       },
       {
        "source": "Nanneboyina · ASCO 2025",
@@ -1769,21 +1769,21 @@
        "key": "std-WT-41405234",
        "kind": "Guideline",
        "says": "Adult liver transplant candidate evaluation. Evidence is insufficient for routine ICI-based bridging or downstaging. Individual use requires coordination with transplant oncology and an agreed plan before dosing.",
-       "locator": "Dove et al. Hepatology. 2026. PMID 41405234. DOI 10.1097/hep.0000000000001644."
+       "locator": "Hepatology. 2026;83(6):1609–1645. HCC and CCA recommendations, pp. 1613–1614. Statement 11, p. 1614."
       },
       {
        "source": "ILTS–ILCA",
        "key": "std-WT-42312290",
        "kind": "Consensus",
        "says": "Consensus on transplant oncology. Suggests 2–3 drug-specific half-lives between ICI and transplant. Discusses at least 60 days after bevacizumab for wound healing. Limited evidence. AASLD HCC guidance advises at least three months for ICI. Record both last-dose dates and agree an early-offer plan.",
-       "locator": "Kodali et al. Liver Cancer. 2026. PMID 42312290. DOI 10.1159/000550600."
+       "locator": "Liver Cancer. Published online April 25, 2026. Table 1, publisher PDF p. 8 (ICI washout)."
       },
       {
        "source": "Ong",
        "key": "std-WT-42821267",
        "kind": "Retrospective cohort",
        "says": "208 matched recipients per arm. ICI-based multimodal therapy vs heterogeneous non-ICI therapy beyond Milan. Post-transplant overall survival HR 0.63 (95% CI 0.43–0.92) and recurrence-free survival HR 0.59. Ninety-day rejection was 16.3% vs 8.2%. Observational comparison restricted to recipients. Regimens differed within both groups.",
-       "locator": "Ong et al. JAMA Oncol. 2026. PMID 42821267. DOI 10.1001/jamaoncol.2026.3901."
+       "locator": "JAMA Oncol. Published online October 1, 2026. Publisher PDF pp. E3–E7, patient flow, rejection and survival."
       },
       {
        "source": "Aceituno",
@@ -2246,19 +2246,19 @@
        "source": "Xu 2025 · all-comers",
        "key": "hr-xu",
        "says": "“sum of tumor number and largest tumor diameter ≤12” Observationally proposed upper burden boundary, not an externally validated treatment-benefit rule.",
-       "locator": "Author-manuscript PDF p11, conclusion"
+       "locator": "Hepatology, p. 623, conclusion."
       },
       {
        "source": "Xu 2025 · all-comers",
        "key": "hr-xu",
        "says": "“exclusion criteria of AFP ≥100 and Child Pugh B/C” Supports a narrower initial cohort; does not establish that all excluded patients cannot benefit.",
-       "locator": "Author-manuscript PDF p11, conclusion"
+       "locator": "Hepatology, p. 623, conclusion."
       },
       {
        "source": "AASLD HCC 2023",
        "key": "hr-aasld",
        "says": "“3-to-6-month period of observation” Six months selects the conservative end of this guidance range; it is not a guarantee of favorable biology.",
-       "locator": "Author-manuscript PDF p56, guidance statement 36"
+       "locator": "AASLD HCC Practice Guidance (2023), guidance statement 36."
       }
      ],
      "proposal": "Open a bounded prospective beyond-UNOS downstaging cohort, not an unrestricted all-comers pathway.",
@@ -2288,7 +2288,7 @@
        "population": "Prospective MERITS-LT cohort: 209 UNOS-DS patients at seven centers in four US regions, 2016–2019. UNOS-DS entry limits; predominantly Child-Pugh A/B; bilirubin ≤4 mg/dL; Child-Pugh B/C with AFP >1,000 excluded. Initial TACE versus Y90 was not randomized.",
        "results": "174/209 (83.3%) achieved downstaging; two-year estimated success 87.7%. Observed dropout was 75/209, including 51 tumor progressions and nine liver-related deaths; two-year competing-risk dropout 37.3%. LT occurred in 63/209 by cutoff; three-year LT probability 46.6%. Median post-LT follow-up 1.7 years; two-year recipient survival 95%, three-year 83.1%; recurrence 5/63. Three-year treatment-entry survival 73%. Explants exceeded Milan in 42.8%, with microvascular invasion in 17.5%.",
        "limits": "Early post-LT follow-up and substantial radiology/explant discordance; success of an imaging endpoint does not establish absence of viable cancer. Overlaps later MERITS expansions.",
-       "locator": "Complete local author manuscript, PDF pp6–9, Table 3."
+       "locator": "Table 3, p. 1506. Figures 1–3, pp. 1507–1508."
       },
       {
        "source": "Sinha 2019",
@@ -2304,7 +2304,7 @@
        "population": "Prospective MERITS-LT expansion: 82 all-comers versus 229 UNOS-DS patients, seven centers, 2015–2020. All-comers exceeded UNOS-DS. Liver reserve and AFP identified poor-prognosis subgroups rather than a randomized selection rule.",
        "results": "Twelve-month downstaging: 67% versus 83%. Three-year entry survival: 58% versus 69%; approximately 30% in all-comers with Child-Pugh B/C or AFP ≥500. LT occurred in 20/82 versus 85/229; five-year LT probability 42.2% versus 73.6%. Recipient three-year survival: 90.9% versus 80.6%; recurrence 1/20 versus 7/85. Median post-LT follow-up was only about 18.5 months. All-comer dropouts numbered 39: 25 before and 14 after downstaging.",
        "limits": "Immature recipient estimates and substantial attrition. Cohort overlaps earlier MERITS and Xu 2025; do not sum patients or treat as independent validation.",
-       "locator": "Primary PMC full text, Results §3.5 and outcome tables, PMC10998692; PDF pending."
+       "locator": "Am J Transplant. 2023;23:1771–1780. Results, section 3.5 and Figure 2."
       },
       {
        "source": "Xu 2025 · all-comers",
@@ -2312,7 +2312,7 @@
        "population": "National prospective cohort, nine centers, 2015–2023: 190 all-comers and 326 UNOS-DS patients; intention-to-treat clock starts at first locoregional treatment. No extrahepatic disease or macrovascular invasion; all-comers exceeded UNOS-DS. Proposed burden and biologic refinements were derived from this cohort, not prospectively locked eligibility criteria.",
        "results": "Two-year downstaging: 66% versus 82%. Among all-comers, number plus largest diameter <10, 10–12 and >12 had success of 72%, 51% and 39%. Five-year treatment-entry survival: 45.0% versus 58.8%. LT occurred in 76/190 versus 155/326; median downstaging-to-LT 10.6 months. Five-year recipient survival: 71.5% versus 73.6%; recurrence: 29.8% versus 13.7%, with median post-LT follow-up 27.4 months. AFP ≥100 and Child-Pugh B predicted worse entry survival.",
        "limits": "Selected-recipient success cannot replace entry survival; five-year tails are immature. Y90/TACE comparisons were observational. The proposed number-plus-diameter ≤12, AFP <100 and Child-Pugh A combination remains unvalidated.",
-       "locator": "Complete local PDF, Results pp6–9, Tables 3–4; proposed refinements in Discussion pp9–11."
+       "locator": "Tables 3–4 and Figure 4, pp. 620–621. Proposed selection limits, p. 623."
       },
       {
        "source": "XXL 2020",
@@ -2320,7 +2320,7 @@
        "population": "Multicenter randomized phase 2b/3 trial: 74 entered downstaging; 29 dropped out before randomization; 45 responders were randomized, 23 to LT and 22 to nontransplant treatment. Child-Pugh A–B7, ECOG 0–1, predicted five-year post-LT survival ≥50%, and ≥3 months sustained response. AFP rules depended on baseline value and response, not an unconditional AFP <400 entry rule.",
        "results": "From randomization, five-year overall survival was 77.5% with LT versus 31.2% without LT; tumor-event-free survival 76.8% versus 18.3%; median follow-up 71 months.",
        "limits": "Strongest causal evidence for LT among selected responders, not for all 74 entrants or unlimited initial burden. Small, prematurely stopped trial. Appendix allowed uncertain bland-versus-neoplastic segmental/type-I portal thrombosis under additional response conditions; the actual PVTT denominator/outcomes are not reported. It must not be relabeled a proven-PVTT trial.",
-       "locator": "Complete accepted manuscript and protocol appendix; final published abstract for survival estimates. Avoid mixing accepted-manuscript and final-publication hazard ratios."
+       "locator": "Eligibility, pp. 947–950. Randomized outcomes, Figure 2, p. 953."
       },
       {
        "source": "Huang 2023",
@@ -2328,7 +2328,7 @@
        "population": "UNOS national cohort, 2010–2019: 23,398 HCC exception applicants—20,579 initially Milan, 2,151 UNOS-DS, 668 all-comers. Time zero was first HCC exception application, not first downstaging treatment. Patients had already reached the allocation/application stage.",
        "results": "Two-year dropout: 19.3%, 25.3% and 29.7%, respectively; the direct all-comer versus UNOS-DS difference was not significant (P=.07). In all-comers with initial AFP >100, two-year dropout was 52%, versus 26% in the comparison beyond-Milan patients. Higher MELD and total tumor diameter predicted dropout.",
        "limits": "Useful real-world waitlist counterevidence, but excludes patients lost before exception application and cannot supply first-LRT intention-to-treat survival. National registry overlaps other US registry studies.",
-       "locator": "Primary abstract plus publisher Methods/Results, DOI 10.1016/j.cgh.2022.08.023; complete PDF pending."
+       "locator": "Clin Gastroenterol Hepatol. Published PDF, Methods and Results. DOI 10.1016/j.cgh.2022.08.023."
       },
       {
        "source": "Tabrizian 2022",
@@ -2336,7 +2336,7 @@
        "population": "Five-center US recipient cohort, 2001–2015: 2,645 transplanted patients, including 2,122 always within Milan, 341 downstaged and 182 still beyond Milan. Only 168 of the 341 downstaged patients originally met UNOS-DS limits. All analyses start with patients who actually received a graft.",
        "results": "Ten-year post-LT overall survival was 61.5%, 52.1% and 43.3%; ten-year recurrence was 13.3%, 20.6% and 41.1%, respectively. Median follow-up was 55.3 months.",
        "limits": "Longer-term cancer risk persists after successful downstaging. Recipient-only retrospective data do not estimate entry survival or probability of ever reaching LT; long-term tails have fewer patients.",
-       "locator": "Primary PMC Methods/Results and survival tables, PMC9301590; complete PDF pending."
+       "locator": "JAMA Surg. Published PDF, Methods, Results and survival tables. PMID 35857294."
       }
      ],
      "web": "transplant/hcc/#high-risk-hcc-b1"
@@ -2465,7 +2465,7 @@
        "source": "Ye 2024",
        "key": "hr-pvtt_ye",
        "says": "“lobar PVTT: tumor thrombi involving left and right branches or main portal vein” This poor-outcome group combines first-order and main-portal involvement. Its recurrence cannot be attributed to Vp3 alone; perioperative deaths were excluded.",
-       "locator": "Complete early-online PDF p3, Diagnosis of PVTT"
+       "locator": "Methods, p. 1688 (publisher PDF p. 3), definition of portal-vein tumor thrombus."
       },
       {
        "source": "NLRB oncology guidance",
@@ -2517,7 +2517,7 @@
        "population": "Retrospective DDLT cohort of 141 vascular-invasion recipients: 13 segmental PVTT, 68 lobar PVTT, 60 microvascular invasion. All had HBV. Lobar PVTT included first-order branches or main portal vein; perioperative deaths and early follow-up losses were excluded.",
        "results": "Segmental three-year OS 75.0%, RFS 58.3%, crude recurrence 4/13. Lobar three-year OS 45.9%, RFS 9.1%, crude recurrence 60/68.",
        "limits": "Exclusion of early deaths biases recipient survival upward. Lobar is not an isolated Vp3 group. Crude recurrence and RFS are distinct measures; the cohort is not directly transportable to Western mixed-etiology candidates.",
-       "locator": "Complete 12-page PDF: Methods p3, Tables 1–2 p6, Figure 4 p7."
+       "locator": "Methods, p. 1688 (PDF p. 3). Tables 1–2 and Figure 4, pp. 1690–1692 (PDF pp. 5–7)."
       },
       {
        "source": "Soin 2020",
@@ -2525,7 +2525,7 @@
        "population": "Cohort following a PVTT downstaging protocol: 43 treated, 27 responders, 25 LDLT recipients. Among recipients, Vp1/Vp2/Vp3/Vp4 counts were 1/12/11/1. Transplant was conditional on successful downstaging.",
        "results": "Reported five-year OS 57% and RFS 51% exclude two postoperative deaths, leaving a 23-recipient survival subset. Recurrence occurred in 6/25 (24%) of the whole transplanted group.",
        "limits": "Neither reported survival curve represents all 25 recipients or all 43 treatment entrants. Small selected cohort without randomized control; grade-specific outcomes unavailable.",
-       "locator": "Primary publisher HTML Methods/Results and abstract, DOI 10.1097/TP.0000000000003162; complete PDF pending."
+       "locator": "Transplantation, pp. 2334–2345. See the downstaging protocol in Figure 2 and survival curves in Figure 3."
       },
       {
        "source": "Assalino 2020 · vascular invasion",
@@ -2540,8 +2540,8 @@
        "key": "hr-hcc_sposito2026",
        "population": "Five-center Italian Y90 cohort, 2010–2023: 240 consecutive HCC/PVTT patients; 61 downstaged, 37 transplanted. Sustained vascular CR or PR for ≥6 months plus center-specific morphology/AFP requirements. Median Y90-to-LT interval 17 months.",
        "results": "Downstaging: 61/240 (25.4%); LT: 37/240 (15.4%). Among downstaged patients, 60-month cancer death was 15.8% with LT versus 45.2% without LT (subdistribution HR .221, 95% CI .071–.683). Recipients had three/five-year OS 67.2%/61.6% and RFS 79.3%/79.3%; complete explant necrosis 56.7%.",
-       "limits": "Abstract-only verification. Grade denominators, landmark/selection adjustment and RFS death handling require full text; RFS exceeding OS must not be converted to recurrence as 1−RFS. No verified all-240 survival estimate.",
-       "locator": "Published primary abstract, PMID 42228945, DOI 10.1097/HEP.0000000000001801."
+       "limits": "All 240 treated patients had median overall survival of 14.1 months and five-year survival of 18.9% from Y90. Post-transplant survival starts at transplant in 37 selected recipients. The recurrence analysis censors death without recurrence. Selection and the interval to transplant limit comparisons (publisher PDF pp. 5–6, Figure 3 on p. 9).",
+       "locator": "Publisher PDF pp. 5–9, endpoint definitions, flowchart, Tables 1–2 and Figure 3."
       }
      ],
      "web": "transplant/hcc/#high-risk-hcc-b2"
@@ -2569,13 +2569,13 @@
        "source": "Rezaee-Zavareh · IPD",
        "key": "hr-ipd",
        "says": "“a 3-month washout may reduce it” A risk-reduction suggestion from largely retrospective data, not a safe minimum.",
-       "locator": "Accepted PDF p10 / manuscript p7, abstract conclusion"
+       "locator": "Journal abstract, p. 107. Washout model and Figure 4, pp. 114–115."
       },
       {
        "source": "Fang · irAEs",
        "key": "hr-fang",
        "says": "“irAEs (any grade vs non)” Prior irAEs were associated with rejection; the study did not validate the specific grade-based activation rule proposed here.",
-       "locator": "Published PDF p6, Table 4"
+       "locator": "Table 4, p. 1206 (publisher PDF p. 6)."
       }
      ],
      "proposal": "Use ≥90 days after the last ICI dose as the elective LT planning threshold, with a separate assessment of immune toxicity.",
@@ -2598,7 +2598,7 @@
        "population": "Multicenter observational US cohort: 117 consecutive ICI-treated HCC patients assessed for LT, 2016–2023. 86 were initially beyond Milan; 94% also received locoregional treatment. Patients were selected for transplant evaluation rather than representing all advanced HCC treated with ICI.",
        "results": "65/86 (75.6%) beyond-Milan patients downstaged, median 5.6 months; 43/117 (36.7%) received LT. Three-year intention-to-treat survival was 71.1%; three-year recipient survival 85%. Rejection occurred in 7/43; six had last ICI <3 months before LT; one rejection-associated graft loss.",
        "limits": "The abstract's categories—18 initially within Milan plus 23 downstaged recipients—sum to 41, not 43; the two-patient discrepancy awaits full flow-diagram review. Multimodal treatment prevents attribution to ICI alone; full paper unavailable.",
-       "locator": "Primary published abstract and accessible publisher material, PMID 39255928; full PDF pending."
+       "locator": "VITALITY. J Hepatol. 2025;82:512–522. Methods and Results."
       },
       {
        "source": "ImmunoXXL 2026",
@@ -2622,7 +2622,7 @@
        "population": "Secondary systematic review and individual-patient-data analysis: 91 recipients from 30 predominantly case reports/series and cohorts. Published ICI-exposed transplanted cases; not a randomized or consecutive all-treated population.",
        "results": "24/91 rejections (26.4%), nine recurrences and nine deaths; median follow-up 690 days. Adjusted rejection hazard ratio per additional washout week .92 (95% CI .86–.99). Ninety-four days was the median washout among modeled patients with predicted rejection probability ≤20%, not an observed universal safety cutoff.",
        "limits": "Publication/selection bias, heterogeneous regimens, small events and overlap with later cohorts. A modeled ≤20% probability does not justify telling an individual that three months eliminates rejection risk.",
-       "locator": "Complete local author manuscript: Results/washout model; PDF p10 (manuscript p7) conclusion. Existing V6 quotation ledger retained."
+       "locator": "Abstract, p. 107. Washout model, Table 4 and Figure 4, pp. 114–115."
       },
       {
        "source": "Fang · irAEs",
@@ -2630,7 +2630,7 @@
        "population": "Multicenter Chinese retrospective cohort, 2018–2024: 209 ICI-exposed LT recipients. Prior irAEs of any grade were recorded; six patients had grade 3–4 events.",
        "results": "Rejection occurred in 36/209 (17.2%); 61.1% biopsy proven, median ten days after LT. Correct risks from Table 3: 21/44 (47.7%) with prior irAE versus 15/165 (9.1%) without. Any irAE adjusted OR 9.17 (95% CI 4.00–21.02); washout <30 days OR 3.071 (1.211–7.787). The six grade 3–4 cases split three with and three without rejection.",
        "limits": "The discussion's 58.3%/13.3% are irAE prevalence within rejection/nonrejection groups, not rejection probabilities. Too few severe irAEs to validate a grade-specific exclusion or a recovery interval.",
-       "locator": "Complete local PDF pp5–6, Tables 3–4; avoid reversed conditional denominators."
+       "locator": "Tables 3–4, pp. 1204–1206 (PDF pp. 4–6). Figure 2, p. 1206 (PDF p. 6)."
       },
       {
        "source": "Aceituno 2026",
@@ -2653,8 +2653,8 @@
        "key": "hr-hccjama",
        "population": "Eight-center Chinese recipient cohort, 2019–2024; initially beyond Milan; 208 ICI recipients propensity matched to 208 non-ICI recipients. Downstaging followed by actual transplantation; not treatment-entry randomization. Treatment was multimodal.",
        "results": "Median post-LT OS 4.57 versus 2.53 years, HR .63 (95% CI .43–.92); RFS 1.47 versus .89 years, HR .59 (.44–.80); recurrence subdistribution HR .54 (.40–.72). Ninety-day rejection was 34/208 (16.3%) versus 17/208 (8.2%).",
-       "limits": "Favorable oncologic association coexists with greater rejection. Residual confounding and selection remain; there is no all-downstaging-entry ITT comparison. Possible center/year overlap with Fang and other Chinese cohorts must be checked before pooling. Abstract-only verification.",
-       "locator": "Primary October 2026 JAMA Oncology abstract, PMID 42821267; full PDF pending."
+       "limits": "Among transplant recipients, the oncologic association and higher rejection rate are observational. The study excludes patients who did not reach transplant. Check center and enrollment-year overlap with Fang before pooling (publisher PDF pp. E3–E7).",
+       "locator": "Publisher PDF pp. E3–E7, patient flow, rejection and survival."
       }
      ],
      "web": "transplant/hcc/#high-risk-hcc-b3"
@@ -2738,7 +2738,7 @@
        "population": "UK national liver-offering policy evaluation: separate simulation dataset of 1,287 registrations/629 donors plus early real-world NLOS implementation, 2018–2020. Transplant-benefit scoring governed national deceased-donor offers; not a high-risk-HCC validation sample.",
        "results": "Simulation compared observed 2013 deaths/removals 93 (7%) and 4,581 patient-years with modeled TBS outcomes 48 (4%) and 5,262 patient-years. During the first two implementation years, 68% of DBD livers were allocated by TBS; observed waitlist mortality decreased (P<.0001), postlisting survival improved (P=.005), with no adverse post-LT survival signal.",
        "limits": "Simulated gains are not observed outcomes. Before/after implementation is nonrandomized and can reflect secular changes. Nonetheless it is meaningful evidence that a governed benefit-based system can be deployed, unlike a claim that all such models are unusable.",
-       "locator": "Primary abstract and full publisher Methods/Results, Table 3, DOI 10.1016/j.jhep.2024.03.020; PDF pending."
+       "locator": "J Hepatol. 2024;81:471–478. Table 3, p. 475."
       },
       {
        "source": "Prosepe 2026",
@@ -2806,7 +2806,7 @@
        "population": "Randomized trial of transplantation after successful downstaging of HCC beyond Milan criteria. Main tumour-related exclusions: extrahepatic spread on CT or MRI, hepatic-hilum lymph nodes with short axis >2 cm, and portal-vein tumour thrombosis or invasion.",
        "results": "Five-year overall survival 77.5% with transplantation versus 31.2% without, from randomization.",
        "limits": "Excluded the population of interest; its benefit cannot be extrapolated to previous extrahepatic disease.",
-       "locator": "Lancet Oncol 2020; Methods (exclusion criteria) and protocol appendix."
+       "locator": "Lancet Oncology, pp. 947–950, eligibility and exclusion criteria."
       },
       {
        "source": "Mergental 2012 · ELTR noncirrhotic HCC",
@@ -2846,7 +2846,7 @@
        "population": "Eight-centre matched cohort, 416 recipients initially beyond Milan. Extrahepatic metastasis was an exclusion (9 recipients left out).",
        "results": "Immunotherapy-based downstaging associated with better survival (HR 0.63); acute rejection 16.3% vs 8.2%, clustered with washout of 90 days or less.",
        "limits": "Not evidence for treated extrahepatic disease; transplanted-only cohort.",
-       "locator": "JAMA Oncol 2026; Figure 1 and Results (full text)."
+       "locator": "Publisher PDF pp. E3–E7, patient flow, rejection and survival."
       },
       {
        "source": "Sotiropoulos 2007 · hilar nodes at LT, meta-analysis",
@@ -2854,7 +2854,7 @@
        "population": "Meta-analysis of transplant series: five on recurrence and five more on survival. Hilar nodes examined at transplantation.",
        "results": "Tumor-positive hilar nodes associated with recurrence (common odds ratio 10.44, 95% CI 3.43–38.59).",
        "limits": "Small, older series; nodes mostly found at transplantation.",
-       "locator": "Transpl Int 2007 (abstract; full text pending)."
+       "locator": "Transpl Int. 2007;20:141–146. Results and study table."
       }
      ],
      "web": "transplant/hcc/#high-risk-hcc-b5"
@@ -2999,7 +2999,7 @@
        "population": "EASL–AASLD–ILCA 2026 trial-design consensus, LT section. Separates standard/UNOS-DS, expanded intermediate HCC and advanced segmental vascular-invasion research populations.",
        "results": "Calls for entry-level dropout/feasibility, ITT EFS/OS and graft/immune harms; discusses ≥60% five-year ITT OS benchmark in HCC.",
        "limits": "Expert benchmark, not a validated cross-tumor allocation cutoff or a ten-patient stopping rule; mature five-year endpoints cannot be established after one year.",
-       "locator": "Accepted manuscript pp19–22, LT trial design."
+       "locator": "Transplant trial design and intention-to-treat endpoints, pp. 634–635."
       },
       {
        "source": "Kelly 2026",
@@ -3015,7 +3015,7 @@
        "population": "Multicenter randomized phase 2b/3 trial: 74 entered downstaging; 29 dropped out before randomization; 45 responders were randomized, 23 to LT and 22 to nontransplant treatment. Child-Pugh A–B7, ECOG 0–1, predicted five-year post-LT survival ≥50%, and ≥3 months sustained response. AFP rules depended on baseline value and response, not an unconditional AFP <400 entry rule.",
        "results": "From randomization, five-year overall survival was 77.5% with LT versus 31.2% without LT; tumor-event-free survival 76.8% versus 18.3%; median follow-up 71 months.",
        "limits": "Strongest causal evidence for LT among selected responders, not for all 74 entrants or unlimited initial burden. Small, prematurely stopped trial. Appendix allowed uncertain bland-versus-neoplastic segmental/type-I portal thrombosis under additional response conditions; the actual PVTT denominator/outcomes are not reported. It must not be relabeled a proven-PVTT trial.",
-       "locator": "Complete accepted manuscript and protocol appendix; final published abstract for survival estimates. Avoid mixing accepted-manuscript and final-publication hazard ratios."
+       "locator": "Eligibility, pp. 947–950. Randomized outcomes, Figure 2, p. 953."
       },
       {
        "source": "TransMet 2024",
@@ -3031,7 +3031,7 @@
        "population": "UK national liver-offering policy evaluation: separate simulation dataset of 1,287 registrations/629 donors plus early real-world NLOS implementation, 2018–2020. Transplant-benefit scoring governed national deceased-donor offers; not a high-risk-HCC validation sample.",
        "results": "Simulation compared observed 2013 deaths/removals 93 (7%) and 4,581 patient-years with modeled TBS outcomes 48 (4%) and 5,262 patient-years. During the first two implementation years, 68% of DBD livers were allocated by TBS; observed waitlist mortality decreased (P<.0001), postlisting survival improved (P=.005), with no adverse post-LT survival signal.",
        "limits": "Simulated gains are not observed outcomes. Before/after implementation is nonrandomized and can reflect secular changes. Nonetheless it is meaningful evidence that a governed benefit-based system can be deployed, unlike a claim that all such models are unusable.",
-       "locator": "Primary abstract and full publisher Methods/Results, Table 3, DOI 10.1016/j.jhep.2024.03.020; PDF pending."
+       "locator": "J Hepatol. 2024;81:471–478. Table 3, p. 475."
       }
      ],
      "web": "transplant/hcc/#high-risk-alloc-b2"
@@ -3133,7 +3133,7 @@
        "source": "EASL–AASLD–ILCA 2026",
        "key": "hr-hcc_design",
        "says": "“5-year OS of at least 60%” The HCC trial-design source discusses a ≥60% five-year intention-to-treat benchmark. It is not a validated universal cross-cancer allocation rule and does not establish the proposed 5/10-patient monitoring counts.",
-       "locator": "EASL–AASLD–ILCA 2026 manuscript p20; ITT discussion pp21–22"
+       "locator": "Transplant trial design and intention-to-treat endpoints, pp. 634–635."
       }
      ],
      "proposal": "Use a small staged pilot with all-screened accounting and explicit safety pauses; no automatic expansion on favorable recipient survival.",
@@ -3161,7 +3161,7 @@
        "population": "EASL–AASLD–ILCA 2026 trial-design consensus, LT section. Separates standard/UNOS-DS, expanded intermediate HCC and advanced segmental vascular-invasion research populations.",
        "results": "Calls for entry-level dropout/feasibility, ITT EFS/OS and graft/immune harms; discusses ≥60% five-year ITT OS benchmark in HCC.",
        "limits": "Expert benchmark, not a validated cross-tumor allocation cutoff or a ten-patient stopping rule; mature five-year endpoints cannot be established after one year.",
-       "locator": "Accepted manuscript pp19–22, LT trial design."
+       "locator": "Transplant trial design and intention-to-treat endpoints, pp. 634–635."
       },
       {
        "source": "Eldridge 2016",
@@ -3234,7 +3234,7 @@
    }
   },
   "ehd-hcc_choi2025": {
-   "short": "Choi 2025 · NCDB curative treatment after ICI",
+   "short": "Choi 2026 · NCDB curative treatment after ICI",
    "title": "",
    "kind": "Study, guidance or policy",
    "links": {
@@ -3760,7 +3760,6 @@
    "links": {
     "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39808828/",
     "doi": "https://doi.org/10.1097/HEP.0000000000001231",
-    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12256641/pdf/nihms-2047233.pdf",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12256641/",
     "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1097%2FHEP.0000000000001231&lang=en"
    }
@@ -3796,7 +3795,6 @@
    "links": {
     "pubmed": "https://pubmed.ncbi.nlm.nih.gov/34331914/",
     "doi": "https://doi.org/10.1053/j.gastro.2021.07.033",
-    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8545832/pdf/nihms-1730099.pdf",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8545832/",
     "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1053%2Fj.gastro.2021.07.033&lang=en"
    }
@@ -3921,7 +3919,6 @@
    "links": {
     "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39279926/",
     "doi": "https://doi.org/10.21037/jgo-24-328",
-    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11399840/pdf/jgo-15-04-1686.pdf",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11399840/",
     "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.21037%2Fjgo-24-328&lang=en"
    }
@@ -4002,7 +3999,6 @@
    "links": {
     "pubmed": "https://pubmed.ncbi.nlm.nih.gov/41193174/",
     "doi": "https://doi.org/10.1136/gutjnl-2025-336719",
-    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13217134/pdf/gutjnl-75-6.pdf",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13217134/",
     "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1136%2Fgutjnl-2025-336719&lang=en"
    }
@@ -4246,7 +4242,6 @@
    "links": {
     "pubmed": "https://pubmed.ncbi.nlm.nih.gov/42270817/",
     "doi": "https://doi.org/10.1038/s41571-026-01160-z",
-    "pmc": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13665261/pdf/nihms-2192929.pdf",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13665261/",
     "tmc": "https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1038%2Fs41571-026-01160-z&lang=en"
    }

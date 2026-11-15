@@ -15,10 +15,11 @@ for(const lib of data.libraries){
   assert.equal(r.document_only,true);assert.ok(r.inclusion.length);assert.ok(data.publications[r.id]);
  }
 }
-for(const p of Object.values(supplement.publications)){assert.equal(p.pdf_available,null);assert.match(p.url,/^https:\/\//);}
+const verified = read('tools/hcc_document_pdf_status.json');
+for(const p of Object.values(supplement.publications)){assert.equal(p.pdf_available,verified[p.pmid]?.pdf_available ?? null);assert.match(p.url,/^https:\/\//);}
 const crlm=data.libraries.find(l=>l.key==='standard_crlm');
 assert.ok(crlm.papers.length>base.libraries.find(l=>l.key==='standard_crlm').papers.length,'CRLM document references included');
-assert.equal(data.matched_publication_pdfs,646,'The 646 verified private PDFs retain their catalog status after document-only sources are merged');
+assert.equal(data.matched_publication_pdfs,653,'646 matched slide-library publications plus seven file-verified document references');
 for(const pmid of ['29167951','35619164','33868997','25373796'])assert.equal(Object.values(base.publications).find(p=>p.pmid===pmid)?.pdf_available,true);
 for(const pmid of ['33230652','41580092','40709764','42829779'])assert.equal(Object.values(base.publications).find(p=>p.pmid===pmid)?.pdf_available,true,'The earlier comparative papers were obtained in the V20 download batch');
 for(const pmid of ['37230894','36871765'])assert.equal(Object.values(base.publications).find(p=>p.pmid===pmid)?.pdf_available,true);

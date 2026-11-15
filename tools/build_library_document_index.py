@@ -88,6 +88,10 @@ def build():
                 if cited not in row['inclusion']:
                     row['inclusion'].append(cited)
         output['libraries'][key] = {'papers': list(additions.values()), 'policy_records': list(policies.values())}
+    verified = json.loads((ROOT / 'tools/hcc_document_pdf_status.json').read_text())
+    for paper in output['publications'].values():
+        if paper['pmid'] in verified:
+            paper.update(verified[paper['pmid']])
     return output
 
 

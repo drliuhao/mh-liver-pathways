@@ -1,0 +1,1418 @@
+{
+  "id": "2026-11-14-hcc-publisher-editions",
+  "date": "2026-11-14",
+  "reason": "Verify publisher editions, printed source pages, the Baveno VIII wording and disclosures, and survival time origins in the Sposito cohort. Preserve candidacy and routing.",
+  "edits": [
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        0,
+        "issues",
+        3,
+        "comparisons",
+        13,
+        "locator"
+      ],
+      "old": "Llovet et al. Nat Rev Clin Oncol. 2026. PMID 42270817. DOI 10.1038/s41571-026-01160-z.",
+      "new": "Nat Rev Clin Oncol. 2026;23(8):619–647. Transplant trial design and intention-to-treat endpoints, pp. 634–635."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        0,
+        "issues",
+        4,
+        "comparisons",
+        2,
+        "locator"
+      ],
+      "old": "Dove et al. Hepatology. 2026. PMID 41405234. DOI 10.1097/hep.0000000000001644.",
+      "new": "Hepatology. 2026;83(6):1609–1645. HCC and CCA recommendations, pp. 1613–1614. Statement 11, p. 1614."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        0,
+        "issues",
+        4,
+        "comparisons",
+        3,
+        "locator"
+      ],
+      "old": "Kodali et al. Liver Cancer. 2026. PMID 42312290. DOI 10.1159/000550600.",
+      "new": "Liver Cancer. Published online April 25, 2026. Table 1, publisher PDF p. 8 (ICI washout)."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "index",
+        0,
+        "issues",
+        4,
+        "comparisons",
+        4,
+        "locator"
+      ],
+      "old": "Ong et al. JAMA Oncol. 2026. PMID 42821267. DOI 10.1001/jamaoncol.2026.3901.",
+      "new": "JAMA Oncol. Published online October 1, 2026. Publisher PDF pp. E3–E7, patient flow, rejection and survival."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "sources",
+        "H-merits",
+        "locator"
+      ],
+      "old": "Mehta et al. · Gastroenterology · 2021 · PMID 34331914 · DOI 10.1053/j.gastro.2021.07.033",
+      "new": "Gastroenterology. 2021;161(5):1502–1512. Table 3, p. 1506. Figures 1–3, pp. 1507–1508."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "sources",
+        "LRT-39808828",
+        "locator"
+      ],
+      "old": "Hepatology. 2025. Available main text checked for the stated results.",
+      "new": "Hepatology. 2025;82(3):612–625. Tables 3–4 and Figure 4, pp. 620–621. Proposed selection limits, p. 623."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "sources",
+        "WT-42821267",
+        "locator"
+      ],
+      "old": "Ong et al. JAMA Oncol. 2026. PMID 42821267. DOI 10.1001/jamaoncol.2026.3901.",
+      "new": "JAMA Oncol. Published online October 1, 2026. Publisher PDF pp. E3–E7, patient flow, rejection and survival."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "sources",
+        "WT-38996924",
+        "locator"
+      ],
+      "old": "Rezaee-Zavareh et al. J Hepatol. 2025. PMID 38996924. DOI 10.1016/j.jhep.2024.06.042.",
+      "new": "J Hepatol. 2025;82(1):107–119. Abstract, p. 107. Washout model, Table 4 and Figure 4, pp. 114–115."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "sources",
+        "WT-41405234",
+        "locator"
+      ],
+      "old": "Dove et al. Hepatology. 2026. PMID 41405234. DOI 10.1097/hep.0000000000001644.",
+      "new": "Hepatology. 2026;83(6):1609–1645. HCC and CCA recommendations, pp. 1613–1614. Statement 11, p. 1614."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "sources",
+        "WT-42312290",
+        "locator"
+      ],
+      "old": "Kodali et al. Liver Cancer. 2026. PMID 42312290. DOI 10.1159/000550600.",
+      "new": "Liver Cancer. Published online April 25, 2026. Table 1, publisher PDF p. 8 (ICI washout)."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "sources",
+        "WT-42270817",
+        "locator"
+      ],
+      "old": "Llovet et al. Nat Rev Clin Oncol. 2026. PMID 42270817. DOI 10.1038/s41571-026-01160-z.",
+      "new": "Nat Rev Clin Oncol. 2026;23(8):619–647. Transplant trial design and intention-to-treat endpoints, pp. 634–635."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        0,
+        "evidence",
+        "studies",
+        1,
+        "locator"
+      ],
+      "old": "Complete local author manuscript, PDF pp6–9, Table 3.",
+      "new": "Table 3, p. 1506. Figures 1–3, pp. 1507–1508."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        0,
+        "evidence",
+        "studies",
+        3,
+        "locator"
+      ],
+      "old": "Primary PMC full text, Results §3.5 and outcome tables, PMC10998692; PDF pending.",
+      "new": "Am J Transplant. 2023;23:1771–1780. Results, section 3.5 and Figure 2."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        0,
+        "evidence",
+        "studies",
+        4,
+        "locator"
+      ],
+      "old": "Complete local PDF, Results pp6–9, Tables 3–4; proposed refinements in Discussion pp9–11.",
+      "new": "Tables 3–4 and Figure 4, pp. 620–621. Proposed selection limits, p. 623."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        0,
+        "evidence",
+        "studies",
+        5,
+        "locator"
+      ],
+      "old": "Complete accepted manuscript and protocol appendix; final published abstract for survival estimates. Avoid mixing accepted-manuscript and final-publication hazard ratios.",
+      "new": "Eligibility, pp. 947–950. Randomized outcomes, Figure 2, p. 953."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        0,
+        "evidence",
+        "studies",
+        6,
+        "locator"
+      ],
+      "old": "Primary abstract plus publisher Methods/Results, DOI 10.1016/j.cgh.2022.08.023; complete PDF pending.",
+      "new": "Clin Gastroenterol Hepatol. Published PDF, Methods and Results. DOI 10.1016/j.cgh.2022.08.023."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        0,
+        "evidence",
+        "studies",
+        7,
+        "locator"
+      ],
+      "old": "Primary PMC Methods/Results and survival tables, PMC9301590; complete PDF pending.",
+      "new": "JAMA Surg. Published PDF, Methods, Results and survival tables. PMID 35857294."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        2,
+        "evidence",
+        "studies",
+        3,
+        "locator"
+      ],
+      "old": "Complete 12-page PDF: Methods p3, Tables 1–2 p6, Figure 4 p7.",
+      "new": "Methods, p. 1688 (PDF p. 3). Tables 1–2 and Figure 4, pp. 1690–1692 (PDF pp. 5–7)."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        2,
+        "evidence",
+        "studies",
+        4,
+        "locator"
+      ],
+      "old": "Primary publisher HTML Methods/Results and abstract, DOI 10.1097/TP.0000000000003162; complete PDF pending.",
+      "new": "Transplantation, pp. 2334–2345. See the downstaging protocol in Figure 2 and survival curves in Figure 3."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        2,
+        "evidence",
+        "studies",
+        6,
+        "limits"
+      ],
+      "old": "Abstract-only verification. Grade denominators, landmark/selection adjustment and RFS death handling require full text; RFS exceeding OS must not be converted to recurrence as 1−RFS. No verified all-240 survival estimate.",
+      "new": "All 240 treated patients had median overall survival of 14.1 months and five-year survival of 18.9% from Y90. Post-transplant survival starts at transplant in 37 selected recipients. The recurrence analysis censors death without recurrence. Selection and the interval to transplant limit comparisons (publisher PDF pp. 5–6, Figure 3 on p. 9)."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        2,
+        "evidence",
+        "studies",
+        6,
+        "locator"
+      ],
+      "old": "Published primary abstract, PMID 42228945, DOI 10.1097/HEP.0000000000001801.",
+      "new": "Publisher PDF pp. 5–9, endpoint definitions, flowchart, Tables 1–2 and Figure 3."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        3,
+        "evidence",
+        "studies",
+        0,
+        "locator"
+      ],
+      "old": "Primary published abstract and accessible publisher material, PMID 39255928; full PDF pending.",
+      "new": "VITALITY. J Hepatol. 2025;82:512–522. Methods and Results."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        3,
+        "evidence",
+        "studies",
+        3,
+        "locator"
+      ],
+      "old": "Complete local author manuscript: Results/washout model; PDF p10 (manuscript p7) conclusion. Existing V6 quotation ledger retained.",
+      "new": "Abstract, p. 107. Washout model, Table 4 and Figure 4, pp. 114–115."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        3,
+        "evidence",
+        "studies",
+        4,
+        "locator"
+      ],
+      "old": "Complete local PDF pp5–6, Tables 3–4; avoid reversed conditional denominators.",
+      "new": "Tables 3–4, pp. 1204–1206 (PDF pp. 4–6). Figure 2, p. 1206 (PDF p. 6)."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        3,
+        "evidence",
+        "studies",
+        7,
+        "limits"
+      ],
+      "old": "Favorable oncologic association coexists with greater rejection. Residual confounding and selection remain; there is no all-downstaging-entry ITT comparison. Possible center/year overlap with Fang and other Chinese cohorts must be checked before pooling. Abstract-only verification.",
+      "new": "Among transplant recipients, the oncologic association and higher rejection rate are observational. The study excludes patients who did not reach transplant. Check center and enrollment-year overlap with Fang before pooling (publisher PDF pp. E3–E7)."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        3,
+        "evidence",
+        "studies",
+        7,
+        "locator"
+      ],
+      "old": "Primary October 2026 JAMA Oncology abstract, PMID 42821267; full PDF pending.",
+      "new": "Publisher PDF pp. E3–E7, patient flow, rejection and survival."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        4,
+        "evidence",
+        "studies",
+        4,
+        "locator"
+      ],
+      "old": "Primary abstract and full publisher Methods/Results, Table 3, DOI 10.1016/j.jhep.2024.03.020; PDF pending.",
+      "new": "J Hepatol. 2024;81:471–478. Table 3, p. 475."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        5,
+        "evidence",
+        "studies",
+        2,
+        "locator"
+      ],
+      "old": "Lancet Oncol 2020; Methods (exclusion criteria) and protocol appendix.",
+      "new": "Lancet Oncology, pp. 947–950, eligibility and exclusion criteria."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        5,
+        "evidence",
+        "studies",
+        7,
+        "locator"
+      ],
+      "old": "JAMA Oncol 2026; Figure 1 and Results (full text).",
+      "new": "Publisher PDF pp. E3–E7, patient flow, rejection and survival."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "pathways",
+        "hcc",
+        "reviews",
+        5,
+        "evidence",
+        "studies",
+        8,
+        "locator"
+      ],
+      "old": "Transpl Int 2007 (abstract; full text pending).",
+      "new": "Transpl Int. 2007;20:141–146. Results and study table."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "readiness",
+        1,
+        "evidence",
+        "studies",
+        2,
+        "locator"
+      ],
+      "old": "Accepted manuscript pp19–22, LT trial design.",
+      "new": "Transplant trial design and intention-to-treat endpoints, pp. 634–635."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "readiness",
+        1,
+        "evidence",
+        "studies",
+        4,
+        "locator"
+      ],
+      "old": "Complete accepted manuscript and protocol appendix; final published abstract for survival estimates. Avoid mixing accepted-manuscript and final-publication hazard ratios.",
+      "new": "Eligibility, pp. 947–950. Randomized outcomes, Figure 2, p. 953."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "readiness",
+        1,
+        "evidence",
+        "studies",
+        6,
+        "locator"
+      ],
+      "old": "Primary abstract and full publisher Methods/Results, Table 3, DOI 10.1016/j.jhep.2024.03.020; PDF pending.",
+      "new": "J Hepatol. 2024;81:471–478. Table 3, p. 475."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "readiness",
+        3,
+        "evidence",
+        "studies",
+        0,
+        "locator"
+      ],
+      "old": "Accepted manuscript pp19–22, LT trial design.",
+      "new": "Transplant trial design and intention-to-treat endpoints, pp. 634–635."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "candidate2026",
+        "pdf_links"
+      ],
+      "old": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13070310/pdf/nihms-2158808.pdf",
+          "label": "Full PDF · PMC",
+          "method": "PDF link in PMC article HTML"
+        },
+        {
+          "url": "https://europepmc.org/articles/PMC13070310?pdf=render",
+          "label": "Full PDF · Europe PMC",
+          "method": "Europe PMC DOI-matched fullTextUrlList"
+        }
+      ],
+      "new": [
+        {
+          "url": "https://doi.org/10.1097/HEP.0000000000001644",
+          "label": "Publisher full text",
+          "method": "Publisher DOI"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "candidate2026",
+        "review_depth"
+      ],
+      "old": "Complete 60-page PMC manuscript saved; relevant oncology evaluation and donor sections reviewed",
+      "new": "Publisher edition. Hepatology. 2026;83(6):1609–1645. HCC and CCA recommendations, pp. 1613–1614. Statement 11, p. 1614."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "fang",
+        "pdf_links"
+      ],
+      "old": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13217134/pdf/gutjnl-75-6.pdf",
+          "label": "Full PDF · PMC",
+          "method": "PDF link in PMC article HTML"
+        },
+        {
+          "url": "https://europepmc.org/articles/PMC13217134?pdf=render",
+          "label": "Full PDF · Europe PMC",
+          "method": "Europe PMC DOI-matched fullTextUrlList"
+        }
+      ],
+      "new": [
+        {
+          "url": "https://doi.org/10.1136/gutjnl-2025-336719",
+          "label": "Publisher full text",
+          "method": "Publisher DOI"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "fang",
+        "review_depth"
+      ],
+      "old": "Complete local PDF; question-relevant methods/results or guidance sections reviewed.",
+      "new": "Publisher edition. Gut. 2026;75(6):1201–1210. Tables 3–4, pp. 1204–1206 (PDF pp. 4–6). Figure 2, p. 1206 (PDF p. 6)."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "hcc_design",
+        "pdf_links"
+      ],
+      "old": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13665261/pdf/nihms-2192929.pdf",
+          "label": "Full PDF · PMC",
+          "method": "PDF link in PMC article HTML"
+        },
+        {
+          "url": "https://europepmc.org/articles/PMC13665261?pdf=render",
+          "label": "Full PDF · Europe PMC",
+          "method": "Europe PMC DOI-matched fullTextUrlList"
+        }
+      ],
+      "new": [
+        {
+          "url": "https://doi.org/10.1038/s41571-026-01160-z",
+          "label": "Publisher full text",
+          "method": "Publisher DOI"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "hcc_design",
+        "review_depth"
+      ],
+      "old": "Complete local 66-page consensus PDF; high-risk HCC trial-design sections pp19–22. Consensus benchmark, not primary validation.",
+      "new": "Publisher edition. Nat Rev Clin Oncol. 2026;23(8):619–647. Transplant trial design and intention-to-treat endpoints, pp. 634–635."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "hcc_merits2021",
+        "pdf_links"
+      ],
+      "old": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8545832/pdf/nihms-1730099.pdf",
+          "label": "Full PDF · PMC",
+          "method": "PDF link in PMC article HTML"
+        },
+        {
+          "url": "https://europepmc.org/articles/PMC8545832?pdf=render",
+          "label": "Full PDF · Europe PMC",
+          "method": "Europe PMC DOI-matched fullTextUrlList"
+        }
+      ],
+      "new": [
+        {
+          "url": "https://doi.org/10.1053/j.gastro.2021.07.033",
+          "label": "Publisher full text",
+          "method": "Publisher DOI"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "hcc_merits2021",
+        "review_depth"
+      ],
+      "old": "Complete local author manuscript reviewed, including outcome tables.",
+      "new": "Publisher edition. Gastroenterology. 2021;161(5):1502–1512. Table 3, p. 1506. Figures 1–3, pp. 1507–1508."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "hcc_sposito2026",
+        "pdf_links"
+      ],
+      "old": [],
+      "new": [
+        {
+          "url": "https://doi.org/10.1097/HEP.0000000000001801",
+          "label": "Publisher full text",
+          "method": "Publisher DOI"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "hcc_sposito2026",
+        "review_depth"
+      ],
+      "old": "Published primary abstract only; complete full text needed.",
+      "new": "Publisher edition. Hepatology. Published online June 2, 2026. Publisher PDF pp. 5–9, endpoint definitions, flowchart, Tables 1–2 and Figure 3."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "hccjama",
+        "pdf_links"
+      ],
+      "old": [],
+      "new": [
+        {
+          "url": "https://doi.org/10.1001/jamaoncol.2026.3901",
+          "label": "Publisher full text",
+          "method": "Publisher DOI"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "hccjama",
+        "review_depth"
+      ],
+      "old": "Primary published abstract; complete full text needed.",
+      "new": "Publisher edition. JAMA Oncol. Published online October 1, 2026. Publisher PDF pp. E3–E7, patient flow, rejection and survival."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "ipd",
+        "pdf_links",
+        0,
+        "url"
+      ],
+      "old": "https://europepmc.org/articles/PMC11655254?pdf=render",
+      "new": "https://doi.org/10.1016/j.jhep.2024.06.042"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "ipd",
+        "pdf_links",
+        0,
+        "label"
+      ],
+      "old": "Full PDF · Europe PMC",
+      "new": "Publisher full text"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "ipd",
+        "pdf_links",
+        0,
+        "method"
+      ],
+      "old": "Europe PMC DOI-matched fullTextUrlList",
+      "new": "Publisher DOI"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "ipd",
+        "review_depth"
+      ],
+      "old": "Complete local PDF; question-relevant methods/results or guidance sections reviewed.",
+      "new": "Publisher edition. J Hepatol. 2025;82(1):107–119. Abstract, p. 107. Washout model, Table 4 and Figure 4, pp. 114–115."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "pvtt_ye",
+        "pdf_links"
+      ],
+      "old": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11399840/pdf/jgo-15-04-1686.pdf",
+          "label": "Full PDF · PMC",
+          "method": "PDF link in PMC article HTML"
+        },
+        {
+          "url": "https://europepmc.org/articles/PMC11399840?pdf=render",
+          "label": "Full PDF · Europe PMC",
+          "method": "Europe PMC DOI-matched fullTextUrlList"
+        }
+      ],
+      "new": [
+        {
+          "url": "https://doi.org/10.21037/jgo-24-328",
+          "label": "Publisher full text",
+          "method": "Publisher DOI"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "pvtt_ye",
+        "review_depth"
+      ],
+      "old": "Complete local PDF; question-relevant methods/results or guidance sections reviewed.",
+      "new": "Publisher edition. J Gastrointest Oncol. 2024;15(4):1686–1697. Methods, p. 1688 (PDF p. 3). Tables 1–2 and Figure 4, pp. 1690–1692 (PDF pp. 5–7)."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "xu",
+        "pdf_links"
+      ],
+      "old": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12256641/pdf/nihms-2047233.pdf",
+          "label": "Full PDF · PMC",
+          "method": "PDF link in PMC article HTML"
+        },
+        {
+          "url": "https://europepmc.org/articles/PMC12256641?pdf=render",
+          "label": "Full PDF · Europe PMC",
+          "method": "Europe PMC DOI-matched fullTextUrlList"
+        }
+      ],
+      "new": [
+        {
+          "url": "https://doi.org/10.1097/HEP.0000000000001231",
+          "label": "Publisher full text",
+          "method": "Publisher DOI"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "xu",
+        "review_depth"
+      ],
+      "old": "Complete local PDF; question-relevant methods/results or guidance sections reviewed.",
+      "new": "Publisher edition. Hepatology. 2025;82(3):612–625. Tables 3–4 and Figure 4, pp. 620–621. Proposed selection limits, p. 623."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "xxl",
+        "pdf_links",
+        0,
+        "url"
+      ],
+      "old": "https://iris.unito.it/bitstream/2318/1768784/1/THELANCETONCOLOGY-D-19-01452.pdf",
+      "new": "https://doi.org/10.1016/S1470-2045(20)30224-2"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "xxl",
+        "pdf_links",
+        0,
+        "label"
+      ],
+      "old": "Full PDF · author manuscript",
+      "new": "Publisher full text"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "xxl",
+        "pdf_links",
+        0,
+        "method"
+      ],
+      "old": "Europe PMC DOI-matched fullTextUrlList",
+      "new": "Publisher DOI"
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "xxl",
+        "review_depth"
+      ],
+      "old": "Complete accepted manuscript including protocol appendix plus final published abstract; version-dependent hazard ratios not merged.",
+      "new": "Publisher edition. Lancet Oncol. 2020;21(7):947–956. Eligibility, pp. 947–950. Randomized outcomes, Figure 2, p. 953."
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "hcc_ong2026",
+        "pdf_links"
+      ],
+      "old": [],
+      "new": [
+        {
+          "url": "https://doi.org/10.1001/jamaoncol.2026.3901",
+          "label": "Publisher full text",
+          "method": "Publisher DOI"
+        }
+      ]
+    },
+    {
+      "op": "replace_value",
+      "path": [
+        "high_risk",
+        "sources",
+        "hcc_ong2026",
+        "review_depth"
+      ],
+      "old": "Full text read for the V16 extrahepatic-disease review (complete main text).",
+      "new": "Publisher edition. JAMA Oncol. Published online October 1, 2026. Publisher PDF pp. E3–E7, patient flow, rejection and survival."
+    }
+  ],
+  "files": [
+    {
+      "file": "tools/compact_evidence_source.json",
+      "old": "rsus 31.2%, HR 0.32 (95% CI 0.11–0.92). The local submitted draft differs; early closure, selection before randomization and older comparators limit generalization. The published abstract verifies this estimate; the final full report remains an access gap.\",\n        \"The conditional power of 98",
+      "new": "rsus 31.2%, HR 0.32 (95% CI 0.11–0.92). Figure 2 on p. 953 shows both randomized outcomes. Early closure, selection before randomization and older comparators limit generalization.\",\n        \"The conditional power of 98"
+    },
+    {
+      "file": "hcc/data/critique.json",
+      "old": "arate outcomes.\"\n    ],\n    \"locator\": \"Llovet et al. Nat Rev Clin Oncol. 2026. PMID 42270817. DOI 10.1038/s41571-026-01160-z.\"\n  }\n}\n",
+      "new": "arate outcomes.\"\n    ],\n    \"locator\": \"Nat Rev Clin Oncol. 2026;23(8):619–647. Transplant trial design and intention-to-treat endpoints, pp. 634–635.\"\n  }\n}\n"
+    },
+    {
+      "file": "hcc/data/critique.json",
+      "old": "rly-offer plan.\"\n    ],\n    \"locator\": \"Kodali et al. Liver Cancer. 2026. PMID 42312290. DOI 10.1159/000550600.\"\n  },\n  \"42270817\": {\n    \"kind\": \"oth",
+      "new": "rly-offer plan.\"\n    ],\n    \"locator\": \"Liver Cancer. Published online April 25, 2026. Table 1, publisher PDF p. 8 (ICI washout).\"\n  },\n  \"42270817\": {\n    \"kind\": \"oth"
+    },
+    {
+      "file": "hcc/data/critique.json",
+      "old": " before dosing.\"\n    ],\n    \"locator\": \"Dove et al. Hepatology. 2026. PMID 41405234. DOI 10.1097/hep.0000000000001644.\"\n  },\n  \"42312290\": {\n    \"kind\": \"ot",
+      "new": " before dosing.\"\n    ],\n    \"locator\": \"Hepatology. 2026;83(6):1609–1645. HCC and CCA recommendations, pp. 1613–1614. Statement 11, p. 1614.\"\n  },\n  \"42312290\": {\n    \"kind\": \"ot"
+    },
+    {
+      "file": "hcc/data/critique.json",
+      "old": "been validated.\"\n    ],\n    \"locator\": \"Rezaee-Zavareh et al. J Hepatol. 2025. PMID 38996924. DOI 10.1016/j.jhep.2024.06.042.\"\n  },\n  \"41689676\": {\n    \"kind\": \"oth",
+      "new": "been validated.\"\n    ],\n    \"locator\": \"J Hepatol. 2025;82(1):107–119. Abstract, p. 107. Washout model, Table 4 and Figure 4, pp. 114–115.\"\n  },\n  \"41689676\": {\n    \"kind\": \"oth"
+    },
+    {
+      "file": "hcc/data/critique.json",
+      "old": "in both groups.\"\n    ],\n    \"locator\": \"Ong et al. JAMA Oncol. 2026. PMID 42821267. DOI 10.1001/jamaoncol.2026.3901.\"\n  },\n  \"41640254\": {\n    \"kind\": \"oth",
+      "new": "in both groups.\"\n    ],\n    \"locator\": \"JAMA Oncol. Published online October 1, 2026. Publisher PDF pp. E3–E7, patient flow, rejection and survival.\"\n  },\n  \"41640254\": {\n    \"kind\": \"oth"
+    },
+    {
+      "file": "hcc/data/critique.json",
+      "old": "as a tested rule.\",\n    \"funding\": \"The acknowledgements record financial support from fifteen named industry partners, among them Echosens, Mindray, Boehringer Ingelheim, Roche/89bio, Madrigal, Grifols, GSK, Cook, CSL and W.L. Gore, alongside scientific partner organisations including EASL, ESGE, AEEH, AISF, BASL, CIBEREHD, JSH and VALDIG; no conflict-of-interest or disclosure statement for any of the 84 faculty members appears anywhere in the document\"\n  },\n  \"42636832\": {\n    \"kind\": \"rct\"",
+      "new": "as a tested rule.\",\n    \"funding\": \"The faculty report conference funding from industry partners and individual competing interests, including relationships with elastography manufacturers (pp. 1014–1015).\"\n  },\n  \"42636832\": {\n    \"kind\": \"rct\""
+    },
+    {
+      "file": "hcc/data/critique.json",
+      "old": "against it in this population.\",\n      \"Thresholds are specific to device, frequency and measurement conditions, spleen stiffness above 55 kPa at 100 Hz and liver stiffness by vibration-controlled transient elastography, but no guidance is given for centres using other elastography platforms or point shear-wave techniques. The aetiology caveat that matters most appears as a parenthesis in the figure, 'except in obese MASLD', rather than being carried into the statements themselves.\",\n      \"This is an accepted journal pre-proof dated 31 July 2026: the statements may change at copy-editing, pagination is absent, and no independent editorial or commentary on Baveno VIII was indexed in PubMed when this record was made, so the document has had no published external scrutiny.\",\n      \"The paediatric statements are new and were voted by the same faculty, with paediatric hepatologists added to only some panels and the composition of the vote for each statement not reported. The paediatric symposium held alongside the conference was sponsored by a single children's hospital, and the research agenda concedes that paediatric cut-offs for varices still need validation.\"\n    ],\n    \"bottom_line\": \"Establishe",
+      "new": "against it in this population.\",\n      \"Statement 1.16 specifies a 100-Hz spleen measurement and restricts the liver-stiffness rule-in to viral or alcohol-related disease and non-obese MASLD (p. 995).\",\n      \"Baveno VIII was published in J Hepatol 85, pp. 993–1018. See pp. 995–996 for the portal-hypertension criteria and pp. 1014–1015 for disclosures.\",\n      \"The paediatric statements are new and were voted by the same faculty, with paediatric hepatologists added to only some panels and the composition of the vote for each statement not reported. The paediatric symposium held alongside the conference was sponsored by a single children's hospital, and the research agenda concedes that paediatric cut-offs for varices still need validation.\",\n      \"On p. 995, statement 1.16c uses >55 kPa for spleen stiffness at 100 Hz. Figure 1 shows ≥55 kPa. The roadmap uses the written statement.\"\n    ],\n    \"bottom_line\": \"Establishe"
+    },
+    {
+      "file": "hcc/data/critique.json",
+      "old": "the evidence that produced it.\",\n      \"No disclosures are printed for any of the 84 faculty while the acknowledgements thank fifteen industry partners for financial support. Echosens manufactures the vibration-controlled transient elastography platform to which the footnote on statement 1.15 ties every liver stiffness threshold in the document, and Mindray makes ultrasound systems; a conference part-funded by the makers of the measuring devices has issued the cut-offs at which those devices decide management, and names no competing interest.\",\n      \"Baveno VII's participants declared they had nothing to disclose regarding funding or conflict of interest while acknowledging unrestricted grants. Baveno VIII drops the declaration altogether rather than extending it to the industry support it now names, so disclosure in this series has moved from implausible to absent.\",\n      \"Only statements reaching the ",
+      "new": "the evidence that produced it.\",\n      \"The journal reports conference funding and individual faculty relationships on pp. 1014–1015. These disclosures matter when interpreting device-specific elastography cutoffs.\",\n      \"Individual disclosures and links to the ICMJE forms appear on pp. 1014–1015.\",\n      \"Only statements reaching the "
+    },
+    {
+      "file": "hcc/data/critique.json",
+      "old": "ly what survived the room.\",\n      \"The extracted file is the accepted journal pre-proof: pagination and final figure placement are absent and inequality signs are unreliable in the extracted text, so the kilopascal and platelet thresholds that decide management must be checked against the published typesetting before use.\"\n    ],\n    \"bottom_line\": \"Establishe",
+      "new": "ly what survived the room.\",\n      \"The published text gives the noninvasive thresholds on pp. 961–963. Figure 1 on p. 963 summarizes the diagnostic approach.\"\n    ],\n    \"bottom_line\": \"Establishe"
+    },
+    {
+      "file": "hcc/data/critique.json",
+      "old": "rsus 31.2%, HR 0.32 (95% CI 0.11–0.92). The local submitted draft differs; early closure, selection before randomization and older comparators limit generalization. The published abstract verifies this estimate; the final full report remains an access gap.\",\n    \"funding\": \"Investigator-initiat",
+      "new": "rsus 31.2%, HR 0.32 (95% CI 0.11–0.92). Figure 2 on p. 953 shows both randomized outcomes. Early closure, selection before randomization and older comparators limit generalization.\",\n    \"funding\": \"Investigator-initiat"
+    },
+    {
+      "file": "hcc/index.html",
+      "old": "e-in</b></td><td>Liver stiffness ≥25 kPa, except in obese (BMI ≥30 kg/m²) MASLD; spleen stiffness (100 Hz) &gt;55 kPa; ANTICIPATE or ANTICIPATE-NASH ≥75%; NICER ≥75%.</td><td>Baveno VIII statement 1.16 criteria for CSPH in compensated advanced chronic liver disease. In BCLC 0–A HCC without a &gt;5 cm ri",
+      "new": "e-in</b></td><td>Liver stiffness ≥25 kPa in viral or alcohol-related disease, or MASLD with BMI &lt;30 kg/m²; spleen stiffness (100 Hz) &gt;55 kPa; ANTICIPATE or ANTICIPATE-NASH ≥75%; NICER ≥75%.</td><td>Baveno VIII, p. 995. Statement 1.16c specifies spleen stiffness >55 kPa. Figure 1 shows ≥55 kPa. The written statement is used here. In BCLC 0–A HCC without a &gt;5 cm ri"
+    },
+    {
+      "file": "hcc/index.html",
+      "old": "ry\",\"Locoregional + systemic\",\"Singal AG, Garcia-Reyes K, Kelley RK, Kim E. Impact of LEAP-012 and EMERALD-1 in the management of HCC. JHEP Rep. 2026;8:101664.\"],\n \"42624290\":[\"Baveno VIII\",\"Portal hypertension\",\"Berzigotti A, Mandorfer M, Pons M, et al; Baveno VIII Faculty. Baveno VIII — advancing consensus in portal hypertension. J Hepatol. 2026. Epub ahead of print.\"],\n \"35120736\":[\"Baveno VII\",\"Portal hypertension\",\"de Franchis R, Bosch J, Garcia-Tsao G, et al. Baveno VII — renewing consensus in portal hypertension. J Hepatol. 2022;76:959-974.\"],\n \"8831597\":[\"Bruix 1996\",\"Portal hy",
+      "new": "ry\",\"Locoregional + systemic\",\"Singal AG. Impact of LEAP-012 and EMERALD-1 in the management of HCC. JHEP Rep. 2026;8(1):101664. Article 101664, Figure 3, publisher PDF p. 6.\"],\n \"42624290\":[\"Baveno VIII\",\"Portal hypertension\",\"Baveno VIII Faculty. Baveno VIII - Advancing consensus in portal hypertension. J Hepatol. 2026;85(5):993–1018. Figure 1 and statements 1.15–1.23, pp. 995–996.\"],\n \"35120736\":[\"Baveno VII\",\"Portal hypertension\",\"de Franchis R. Baveno VII - Renewing consensus in portal hypertension. J Hepatol. 2022;76(4):959–974. HVPG and noninvasive criteria, pp. 960–963. Figure 1, p. 963.\"],\n \"8831597\":[\"Bruix 1996\",\"Portal hy"
+    },
+    {
+      "file": "hcc/index.html",
+      "old": "-LT\",\"Transplant & downstaging\",\"Mehta N, Frenette C, Tabrizian P, et al. Downstaging outcomes for hepatocellular carcinoma: results from the MERITS-LT consortium. Gastroenterology. 2021;161(5):1502-1512.\"],\n \"32615109\":[\"XXL trial\",\"Transplant & downstaging\",\"Mazzaferro V, Citterio D, Bhoori S, et al. Liver transplantation in hepatocellular carcinoma after tumour downstaging (XXL): a randomised, controlled, phase 2b/3 trial. Lancet Oncol. 2020;21(7):947-956.\"],\n \"36102312\":[\"ICI after transplant\"",
+      "new": "-LT\",\"Transplant & downstaging\",\"Mehta N. Downstaging Outcomes for Hepatocellular Carcinoma: Results From the Multicenter Evaluation of Reduction in Tumor Size before Liver Transplantation (MERITS-LT) Consortium. Gastroenterology. 2021;161(5):1502–1512. Table 3, p. 1506. Figures 1–3, pp. 1507–1508.\"],\n \"32615109\":[\"XXL trial\",\"Transplant & downstaging\",\"Mazzaferro V. Liver transplantation in hepatocellular carcinoma after tumour downstaging (XXL): a randomised, controlled, phase 2b/3 trial. Lancet Oncol. 2020;21(7):947–956. Eligibility, pp. 947–950. Randomized outcomes, Figure 2, p. 953.\"],\n \"36102312\":[\"ICI after transplant\""
+    },
+    {
+      "file": "hcc/index.html",
+      "old": "AST\", \"Transplant & downstaging\", \"Dove et al. AASLD AST Practice Guideline on adult liver transplantation: Candidate evaluation. Hepatology. 2026. PMID 41405234. DOI 10.1097/hep.0000000000001644.\"],\n \"42312290\":[\"ILTS–ILCA\", \"Transplant & downstaging\", \"Kodali et al. The 2024 International Liver Transplant Society and International Liver Cancer Association Consensus Recommendations for Liver Transplantation for Liver Cancer. Liver Cancer. 2026. PMID 42312290. DOI 10.1159/000550600.\"],\n \"42270817\":[\"EASL–AASLD–ILCA\", \"Transplant & downstaging\", \"Llovet et al. Trial design and end points in hepatocellular carcinoma: an EASL-AASLD-ILCA consensus statement. Nat Rev Clin Oncol. 2026. PMID 42270817. DOI 10.1038/s41571-026-01160-z.\"],\n \"32749512\":[\"Gabr 2021 · pathology",
+      "new": "AST\", \"Transplant & downstaging\", \"Dove L. AASLD AST Practice Guideline on adult liver transplantation: Candidate evaluation. Hepatology. 2026;83(6):1609–1645. HCC and CCA recommendations, pp. 1613–1614. Statement 11, p. 1614.\"],\n \"42312290\":[\"ILTS–ILCA\", \"Transplant & downstaging\", \"Kodali S. The 2024 International Liver Transplant Society and International Liver Cancer Association Consensus Recommendations for Liver Transplantation for Liver Cancer. Liver Cancer. Published online April 25, 2026. Table 1, publisher PDF p. 8 (ICI washout).\"],\n \"42270817\":[\"EASL–AASLD–ILCA\", \"Transplant & downstaging\", \"Llovet JM. Trial design and end points in hepatocellular carcinoma: an EASL-AASLD-ILCA consensus statement. Nat Rev Clin Oncol. 2026;23(8):619–647. Transplant trial design and intention-to-treat endpoints, pp. 634–635.\"],\n \"32749512\":[\"Gabr 2021 · pathology"
+    },
+    {
+      "file": "hcc/index.html",
+      "old": "nsplant & downstaging\", \"Rezaee-Zavareh et al. Impact of pre-transplant immune checkpoint inhibitor use on post-transplant outcomes in HCC: A systematic review and individual patient data meta-analysis. J Hepatol. 2025. PMID 38996924. DOI 10.1016/j.jhep.2024.06.042.\"],\n \"41689676\":[\"Rodrigues Ribeiro\", \"",
+      "new": "nsplant & downstaging\", \"Rezaee-Zavareh MS. Impact of pre-transplant immune checkpoint inhibitor use on post-transplant outcomes in HCC: A systematic review and individual patient data meta-analysis. J Hepatol. 2025;82(1):107–119. Abstract, p. 107. Washout model, Table 4 and Figure 4, pp. 114–115.\"],\n \"41689676\":[\"Rodrigues Ribeiro\", \""
+    },
+    {
+      "file": "hcc/index.html",
+      "old": "\"Ong\", \"Transplant & downstaging\", \"Ong et al. Immune Checkpoint Inhibitor-Based Downstaging Therapy for Hepatocellular Carcinoma. JAMA Oncol. 2026. PMID 42821267. DOI 10.1001/jamaoncol.2026.3901.\"],\n \"41640254\":[\"Aceituno\", \"Transplan",
+      "new": "\"Ong\", \"Transplant & downstaging\", \"Ong M. Immune Checkpoint Inhibitor-Based Downstaging Therapy for Hepatocellular Carcinoma. JAMA Oncol. Published online October 1, 2026. Publisher PDF pp. E3–E7, patient flow, rejection and survival.\"],\n \"41640254\":[\"Aceituno\", \"Transplan"
+    },
+    {
+      "file": "lrt/comparisons.json",
+      "old": ",\n      \"origin\": \"comparative-record\",\n      \"pmid\": \"39808828\",\n      \"year\": ",
+      "new": ",\n      \"origin\": \"comparative-record\",\n      \"publisher_citation\": \"Hepatology. 2025;82(3):612–625. Tables 3–4 and Figure 4, pp. 620–621. Proposed selection limits, p. 623.\",\n      \"pmid\": \"39808828\",\n      \"year\": "
+    },
+    {
+      "file": "lrt/comparisons.json",
+      "old": " unadjusted\",\n      \"origin\": \"matrix\",\n      \"pmid\": \"34331914\",\n      \"year\": ",
+      "new": " unadjusted\",\n      \"origin\": \"matrix\",\n      \"publisher_citation\": \"Gastroenterology. 2021;161(5):1502–1512. Table 3, p. 1506. Figures 1–3, pp. 1507–1508.\",\n      \"pmid\": \"34331914\",\n      \"year\": "
+    },
+    {
+      "file": "lrt/comparisons.json",
+      "old": "e\",\n      \"origin\": \"compact-evidence\",\n      \"pmid\": \"32615109\",\n      \"year\": ",
+      "new": "e\",\n      \"origin\": \"compact-evidence\",\n      \"publisher_citation\": \"Lancet Oncol. 2020;21(7):947–956. Eligibility, pp. 947–950. Randomized outcomes, Figure 2, p. 953.\",\n      \"pmid\": \"32615109\",\n      \"year\": "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "6.3901&lang=en\",\n      \"review_depth\": \"Full text read for the V16 extrahepatic-disease review (complete main text).\"\n    },\n    \"hcc_sotiropoulos2007\": {\n",
+      "new": "6.3901&lang=en\",\n      \"review_depth\": \"Publisher edition. JAMA Oncol. Published online October 1, 2026. Publisher PDF pp. E3–E7, patient flow, rejection and survival.\"\n    },\n    \"hcc_sotiropoulos2007\": {\n"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "itle\": \"Immune Checkpoint Inhibitor–Based Downstaging Therapy for Hepatocellular Carcinoma\",\n      \"author\": \"Ong\",\n      \"journal\": \"JAMA Oncology\",\n      \"year\": 2026,\n      \"pmid\": \"42821267\",\n      \"doi\": \"10.1001/jamaoncol.2026.3901\",\n      \"url\": \"https://doi.org/10.1001/jamaoncol.2026.3901\",\n      \"pdf_links\": [],\n      \"tmc\": \"https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1001%2Fjamaoncol.2026.3901&lang=en\",\n      \"review_depth\": \"Publisher edition. JAMA Oncol. Published online October 1, 2026. Publisher PDF pp. E3–E7, patient flow, rejection and sur",
+      "new": "itle\": \"Immune Checkpoint Inhibitor–Based Downstaging Therapy for Hepatocellular Carcinoma\",\n      \"author\": \"Ong\",\n      \"journal\": \"JAMA Oncology\",\n      \"year\": 2026,\n      \"pmid\": \"42821267\",\n      \"doi\": \"10.1001/jamaoncol.2026.3901\",\n      \"url\": \"https://doi.org/10.1001/jamaoncol.2026.3901\",\n      \"pdf_links\": [\n        {\n          \"url\": \"https://doi.org/10.1001/jamaoncol.2026.3901\",\n          \"label\": \"Publisher full text\",\n          \"method\": \"Publisher DOI\"\n        }\n      ],\n      \"tmc\": \"https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,10.1001%2Fjamaoncol.2026.3901&lang=en\",\n      \"review_depth\": \"Publisher edition. JAMA Oncol. Published online October 1, 2026. Publisher PDF pp. E3–E7, patient flow, rejection and sur"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "0224-2&lang=en\",\n      \"review_depth\": \"Complete accepted manuscript including protocol appendix plus final published abstract; version-dependent hazard ratios not merged.\"\n    },\n    \"AFP_RESPONSE\": {\n      \"k",
+      "new": "0224-2&lang=en\",\n      \"review_depth\": \"Publisher edition. Lancet Oncol. 2020;21(7):947–956. Eligibility, pp. 947–950. Randomized outcomes, Figure 2, p. 953.\"\n    },\n    \"AFP_RESPONSE\": {\n      \"k"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": ": [\n        {\n          \"url\": \"https://iris.unito.it/bitstream/2318/1768784/1/THELANCETONCOLOGY-D-19-01452.pdf\",\n          \"label\": \"Full PDF · author manuscript\",\n          \"method\": \"Europe PMC DOI-matched fullTextUrlList\"\n        }\n      ],\n      \"tmc\": \"https",
+      "new": ": [\n        {\n          \"url\": \"https://doi.org/10.1016/S1470-2045(20)30224-2\",\n          \"label\": \"Publisher full text\",\n          \"method\": \"Publisher DOI\"\n        }\n      ],\n      \"tmc\": \"https"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "001231&lang=en\",\n      \"review_depth\": \"Complete local PDF; question-relevant methods/results or guidance sections reviewed.\"\n    },\n    \"xxl\": {\n      \"key\": \"xxl",
+      "new": "001231&lang=en\",\n      \"review_depth\": \"Publisher edition. Hepatology. 2025;82(3):612–625. Tables 3–4 and Figure 4, pp. 620–621. Proposed selection limits, p. 623.\"\n    },\n    \"xxl\": {\n      \"key\": \"xxl"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": ": [\n        {\n          \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC12256641/pdf/nihms-2047233.pdf\",\n          \"label\": \"Full PDF · PMC\",\n          \"method\": \"PDF link in PMC article HTML\"\n        },\n        {\n          \"url\": \"https://europepmc.org/articles/PMC12256641?pdf=render\",\n          \"label\": \"Full PDF · Europe PMC\",\n          \"method\": \"Europe PMC DOI-matched fullTextUrlList\"\n        }\n      ],\n      \"tmc\": \"https",
+      "new": ": [\n        {\n          \"url\": \"https://doi.org/10.1097/HEP.0000000000001231\",\n          \"label\": \"Publisher full text\",\n          \"method\": \"Publisher DOI\"\n        }\n      ],\n      \"tmc\": \"https"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "24-328&lang=en\",\n      \"review_depth\": \"Complete local PDF; question-relevant methods/results or guidance sections reviewed.\"\n    },\n    \"round2_kelly\": {\n      \"k",
+      "new": "24-328&lang=en\",\n      \"review_depth\": \"Publisher edition. J Gastrointest Oncol. 2024;15(4):1686–1697. Methods, p. 1688 (PDF p. 3). Tables 1–2 and Figure 4, pp. 1690–1692 (PDF pp. 5–7).\"\n    },\n    \"round2_kelly\": {\n      \"k"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": ": [\n        {\n          \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC11399840/pdf/jgo-15-04-1686.pdf\",\n          \"label\": \"Full PDF · PMC\",\n          \"method\": \"PDF link in PMC article HTML\"\n        },\n        {\n          \"url\": \"https://europepmc.org/articles/PMC11399840?pdf=render\",\n          \"label\": \"Full PDF · Europe PMC\",\n          \"method\": \"Europe PMC DOI-matched fullTextUrlList\"\n        }\n      ],\n      \"tmc\": \"https",
+      "new": ": [\n        {\n          \"url\": \"https://doi.org/10.21037/jgo-24-328\",\n          \"label\": \"Publisher full text\",\n          \"method\": \"Publisher DOI\"\n        }\n      ],\n      \"tmc\": \"https"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "06.042&lang=en\",\n      \"review_depth\": \"Complete local PDF; question-relevant methods/results or guidance sections reviewed.\"\n    },\n    \"ito\": {\n      \"key\": \"ito",
+      "new": "06.042&lang=en\",\n      \"review_depth\": \"Publisher edition. J Hepatol. 2025;82(1):107–119. Abstract, p. 107. Washout model, Table 4 and Figure 4, pp. 114–115.\"\n    },\n    \"ito\": {\n      \"key\": \"ito"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": ": [\n        {\n          \"url\": \"https://europepmc.org/articles/PMC11655254?pdf=render\",\n          \"label\": \"Full PDF · Europe PMC\",\n          \"method\": \"Europe PMC DOI-matched fullTextUrlList\"\n        }\n      ],\n      \"tmc\": \"https",
+      "new": ": [\n        {\n          \"url\": \"https://doi.org/10.1016/j.jhep.2024.06.042\",\n          \"label\": \"Publisher full text\",\n          \"method\": \"Publisher DOI\"\n        }\n      ],\n      \"tmc\": \"https"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": ".3901&lang=en\",\n      \"review_depth\": \"Primary published abstract; complete full text needed.\"\n    },\n    \"heimbach\": {\n      \"key\":",
+      "new": ".3901&lang=en\",\n      \"review_depth\": \"Publisher edition. JAMA Oncol. Published online October 1, 2026. Publisher PDF pp. E3–E7, patient flow, rejection and survival.\"\n    },\n    \"heimbach\": {\n      \"key\":"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "maoncol.2026.3901\",\n      \"pdf_links\": [],\n      \"tmc\": \"https://thslc-houston.p",
+      "new": "maoncol.2026.3901\",\n      \"pdf_links\": [\n        {\n          \"url\": \"https://doi.org/10.1001/jamaoncol.2026.3901\",\n          \"label\": \"Publisher full text\",\n          \"method\": \"Publisher DOI\"\n        }\n      ],\n      \"tmc\": \"https://thslc-houston.p"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "ang=en\",\n      \"review_depth\": \"Published primary abstract only; complete full text needed.\"\n    },\n    \"hcc_tabrizian2022\": {\n   ",
+      "new": "ang=en\",\n      \"review_depth\": \"Publisher edition. Hepatology. Published online June 2, 2026. Publisher PDF pp. 5–9, endpoint definitions, flowchart, Tables 1–2 and Figure 3.\"\n    },\n    \"hcc_tabrizian2022\": {\n   "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": ".0000000000001801\",\n      \"pdf_links\": [],\n      \"tmc\": \"https://thslc-houston.p",
+      "new": ".0000000000001801\",\n      \"pdf_links\": [\n        {\n          \"url\": \"https://doi.org/10.1097/HEP.0000000000001801\",\n          \"label\": \"Publisher full text\",\n          \"method\": \"Publisher DOI\"\n        }\n      ],\n      \"tmc\": \"https://thslc-houston.p"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "07.033&lang=en\",\n      \"review_depth\": \"Complete local author manuscript reviewed, including outcome tables.\"\n    },\n    \"hcc_merits_ac2023\": {\n   ",
+      "new": "07.033&lang=en\",\n      \"review_depth\": \"Publisher edition. Gastroenterology. 2021;161(5):1502–1512. Table 3, p. 1506. Figures 1–3, pp. 1507–1508.\"\n    },\n    \"hcc_merits_ac2023\": {\n   "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": ": [\n        {\n          \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC8545832/pdf/nihms-1730099.pdf\",\n          \"label\": \"Full PDF · PMC\",\n          \"method\": \"PDF link in PMC article HTML\"\n        },\n        {\n          \"url\": \"https://europepmc.org/articles/PMC8545832?pdf=render\",\n          \"label\": \"Full PDF · Europe PMC\",\n          \"method\": \"Europe PMC DOI-matched fullTextUrlList\"\n        }\n      ],\n      \"tmc\": \"https",
+      "new": ": [\n        {\n          \"url\": \"https://doi.org/10.1053/j.gastro.2021.07.033\",\n          \"label\": \"Publisher full text\",\n          \"method\": \"Publisher DOI\"\n        }\n      ],\n      \"tmc\": \"https"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "1160-z&lang=en\",\n      \"review_depth\": \"Complete local 66-page consensus PDF; high-risk HCC trial-design sections pp19–22. Consensus benchmark, not primary validation.\"\n    },\n    \"hcc_goudsmit2023\": {\n    ",
+      "new": "1160-z&lang=en\",\n      \"review_depth\": \"Publisher edition. Nat Rev Clin Oncol. 2026;23(8):619–647. Transplant trial design and intention-to-treat endpoints, pp. 634–635.\"\n    },\n    \"hcc_goudsmit2023\": {\n    "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": ": [\n        {\n          \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC13665261/pdf/nihms-2192929.pdf\",\n          \"label\": \"Full PDF · PMC\",\n          \"method\": \"PDF link in PMC article HTML\"\n        },\n        {\n          \"url\": \"https://europepmc.org/articles/PMC13665261?pdf=render\",\n          \"label\": \"Full PDF · Europe PMC\",\n          \"method\": \"Europe PMC DOI-matched fullTextUrlList\"\n        }\n      ],\n      \"tmc\": \"https",
+      "new": ": [\n        {\n          \"url\": \"https://doi.org/10.1038/s41571-026-01160-z\",\n          \"label\": \"Publisher full text\",\n          \"method\": \"Publisher DOI\"\n        }\n      ],\n      \"tmc\": \"https"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "336719&lang=en\",\n      \"review_depth\": \"Complete local PDF; question-relevant methods/results or guidance sections reviewed.\"\n    },\n    \"grut\": {\n      \"key\": \"gr",
+      "new": "336719&lang=en\",\n      \"review_depth\": \"Publisher edition. Gut. 2026;75(6):1201–1210. Tables 3–4, pp. 1204–1206 (PDF pp. 4–6). Figure 2, p. 1206 (PDF p. 6).\"\n    },\n    \"grut\": {\n      \"key\": \"gr"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": ": [\n        {\n          \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC13217134/pdf/gutjnl-75-6.pdf\",\n          \"label\": \"Full PDF · PMC\",\n          \"method\": \"PDF link in PMC article HTML\"\n        },\n        {\n          \"url\": \"https://europepmc.org/articles/PMC13217134?pdf=render\",\n          \"label\": \"Full PDF · Europe PMC\",\n          \"method\": \"Europe PMC DOI-matched fullTextUrlList\"\n        }\n      ],\n      \"tmc\": \"https",
+      "new": ": [\n        {\n          \"url\": \"https://doi.org/10.1136/gutjnl-2025-336719\",\n          \"label\": \"Publisher full text\",\n          \"method\": \"Publisher DOI\"\n        }\n      ],\n      \"tmc\": \"https"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "001644&lang=en\",\n      \"review_depth\": \"Complete 60-page PMC manuscript saved; relevant oncology evaluation and donor sections reviewed\"\n    },\n    \"cirse\": {\n      \"key\": \"ci",
+      "new": "001644&lang=en\",\n      \"review_depth\": \"Publisher edition. Hepatology. 2026;83(6):1609–1645. HCC and CCA recommendations, pp. 1613–1614. Statement 11, p. 1614.\"\n    },\n    \"cirse\": {\n      \"key\": \"ci"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": ": [\n        {\n          \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC13070310/pdf/nihms-2158808.pdf\",\n          \"label\": \"Full PDF · PMC\",\n          \"method\": \"PDF link in PMC article HTML\"\n        },\n        {\n          \"url\": \"https://europepmc.org/articles/PMC13070310?pdf=render\",\n          \"label\": \"Full PDF · Europe PMC\",\n          \"method\": \"Europe PMC DOI-matched fullTextUrlList\"\n        }\n      ],\n      \"tmc\": \"https",
+      "new": ": [\n        {\n          \"url\": \"https://doi.org/10.1097/HEP.0000000000001644\",\n          \"label\": \"Publisher full text\",\n          \"method\": \"Publisher DOI\"\n        }\n      ],\n      \"tmc\": \"https"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "-year endpoints cannot be established after one year.\",\n            \"locator\": \"Accepted manuscript pp19–22, LT trial design.\"\n          },\n          {\n            \"key\": \"consort_pilot\",\n            \"des",
+      "new": "-year endpoints cannot be established after one year.\",\n            \"locator\": \"Transplant trial design and intention-to-treat endpoints, pp. 634–635.\"\n          },\n          {\n            \"key\": \"consort_pilot\",\n            \"des"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "are unusable.\",\n            \"locator\": \"Primary abstract and full publisher Methods/Results, Table 3, DOI 10.1016/j.jhep.2024.03.020; PDF pending.\"\n          }\n        ]\n      }\n    },\n",
+      "new": "are unusable.\",\n            \"locator\": \"J Hepatol. 2024;81:471–478. Table 3, p. 475.\"\n          }\n        ]\n      }\n    },\n"
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "n-PVTT trial.\",\n            \"locator\": \"Complete accepted manuscript and protocol appendix; final published abstract for survival estimates. Avoid mixing accepted-manuscript and final-publication hazard ratios.\"\n          },\n          {\n            ",
+      "new": "n-PVTT trial.\",\n            \"locator\": \"Eligibility, pp. 947–950. Randomized outcomes, Figure 2, p. 953.\"\n          },\n          {\n            "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "ter one year.\",\n            \"locator\": \"Accepted manuscript pp19–22, LT trial design.\"\n          },\n          {\n            ",
+      "new": "ter one year.\",\n            \"locator\": \"Transplant trial design and intention-to-treat endpoints, pp. 634–635.\"\n          },\n          {\n            "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "\n                \"locator\": \"Transpl Int 2007 (abstract; full text pending).\"\n              }\n            ]\n       ",
+      "new": "\n                \"locator\": \"Transpl Int. 2007;20:141–146. Results and study table.\"\n              }\n            ]\n       "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "y cohort.\",\n                \"locator\": \"JAMA Oncol 2026; Figure 1 and Results (full text).\"\n              },\n              {\n    ",
+      "new": "y cohort.\",\n                \"locator\": \"Publisher PDF pp. E3–E7, patient flow, rejection and survival.\"\n              },\n              {\n    "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "                \"locator\": \"Lancet Oncol 2020; Methods (exclusion criteria) and protocol appendix.\"\n              },\n              {\n    ",
+      "new": "                \"locator\": \"Lancet Oncology, pp. 947–950, eligibility and exclusion criteria.\"\n              },\n              {\n    "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "unusable.\",\n                \"locator\": \"Primary abstract and full publisher Methods/Results, Table 3, DOI 10.1016/j.jhep.2024.03.020; PDF pending.\"\n              },\n              {\n    ",
+      "new": "unusable.\",\n                \"locator\": \"J Hepatol. 2024;81:471–478. Table 3, p. 475.\"\n              },\n              {\n    "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "08 (8.2%).\",\n                \"limits\": \"Favorable oncologic association coexists with greater rejection. Residual confounding and selection remain; there is no all-downstaging-entry ITT comparison. Possible center/year overlap with Fang and other Chinese cohorts must be checked before pooling. Abstract-only verification.\",\n                \"locator\": \"Primary October 2026 JAMA Oncology abstract, PMID 42821267; full PDF pending.\"\n              }\n            ]\n       ",
+      "new": "08 (8.2%).\",\n                \"limits\": \"Among transplant recipients, the oncologic association and higher rejection rate are observational. The study excludes patients who did not reach transplant. Check center and enrollment-year overlap with Fang before pooling (publisher PDF pp. E3–E7).\",\n                \"locator\": \"Publisher PDF pp. E3–E7, patient flow, rejection and survival.\"\n              }\n            ]\n       "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "interval.\",\n                \"locator\": \"Complete local PDF pp5–6, Tables 3–4; avoid reversed conditional denominators.\"\n              },\n              {\n    ",
+      "new": "interval.\",\n                \"locator\": \"Tables 3–4, pp. 1204–1206 (PDF pp. 4–6). Figure 2, p. 1206 (PDF p. 6).\"\n              },\n              {\n    "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "ion risk.\",\n                \"locator\": \"Complete local author manuscript: Results/washout model; PDF p10 (manuscript p7) conclusion. Existing V6 quotation ledger retained.\"\n              },\n              {\n    ",
+      "new": "ion risk.\",\n                \"locator\": \"Abstract, p. 107. Washout model, Table 4 and Figure 4, pp. 114–115.\"\n              },\n              {\n    "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "vailable.\",\n                \"locator\": \"Primary published abstract and accessible publisher material, PMID 39255928; full PDF pending.\"\n              },\n              {\n    ",
+      "new": "vailable.\",\n                \"locator\": \"VITALITY. J Hepatol. 2025;82:512–522. Methods and Results.\"\n              },\n              {\n    "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "is 56.7%.\",\n                \"limits\": \"Abstract-only verification. Grade denominators, landmark/selection adjustment and RFS death handling require full text; RFS exceeding OS must not be converted to recurrence as 1−RFS. No verified all-240 survival estimate.\",\n                \"locator\": \"Published primary abstract, PMID 42228945, DOI 10.1097/HEP.0000000000001801.\"\n              }\n            ]\n       ",
+      "new": "is 56.7%.\",\n                \"limits\": \"All 240 treated patients had median overall survival of 14.1 months and five-year survival of 18.9% from Y90. Post-transplant survival starts at transplant in 37 selected recipients. The recurrence analysis censors death without recurrence. Selection and the interval to transplant limit comparisons (publisher PDF pp. 5–6, Figure 3 on p. 9).\",\n                \"locator\": \"Publisher PDF pp. 5–9, endpoint definitions, flowchart, Tables 1–2 and Figure 3.\"\n              }\n            ]\n       "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "vailable.\",\n                \"locator\": \"Primary publisher HTML Methods/Results and abstract, DOI 10.1097/TP.0000000000003162; complete PDF pending.\"\n              },\n              {\n    ",
+      "new": "vailable.\",\n                \"locator\": \"Transplantation, pp. 2334–2345. See the downstaging protocol in Figure 2 and survival curves in Figure 3.\"\n              },\n              {\n    "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "ndidates.\",\n                \"locator\": \"Complete 12-page PDF: Methods p3, Tables 1–2 p6, Figure 4 p7.\"\n              },\n              {\n    ",
+      "new": "ndidates.\",\n                \"locator\": \"Methods, p. 1688 (PDF p. 3). Tables 1–2 and Figure 4, pp. 1690–1692 (PDF pp. 5–7).\"\n              },\n              {\n    "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "patients.\",\n                \"locator\": \"Primary PMC Methods/Results and survival tables, PMC9301590; complete PDF pending.\"\n              }\n            ]\n       ",
+      "new": "patients.\",\n                \"locator\": \"JAMA Surg. Published PDF, Methods, Results and survival tables. PMID 35857294.\"\n              }\n            ]\n       "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": " studies.\",\n                \"locator\": \"Primary abstract plus publisher Methods/Results, DOI 10.1016/j.cgh.2022.08.023; complete PDF pending.\"\n              },\n              {\n    ",
+      "new": " studies.\",\n                \"locator\": \"Clin Gastroenterol Hepatol. Published PDF, Methods and Results. DOI 10.1016/j.cgh.2022.08.023.\"\n              },\n              {\n    "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "TT trial.\",\n                \"locator\": \"Complete accepted manuscript and protocol appendix; final published abstract for survival estimates. Avoid mixing accepted-manuscript and final-publication hazard ratios.\"\n              },\n              {\n    ",
+      "new": "TT trial.\",\n                \"locator\": \"Eligibility, pp. 947–950. Randomized outcomes, Figure 2, p. 953.\"\n              },\n              {\n    "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "alidated.\",\n                \"locator\": \"Complete local PDF, Results pp6–9, Tables 3–4; proposed refinements in Discussion pp9–11.\"\n              },\n              {\n    ",
+      "new": "alidated.\",\n                \"locator\": \"Tables 3–4 and Figure 4, pp. 620–621. Proposed selection limits, p. 623.\"\n              },\n              {\n    "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "lidation.\",\n                \"locator\": \"Primary PMC full text, Results §3.5 and outcome tables, PMC10998692; PDF pending.\"\n              },\n              {\n    ",
+      "new": "lidation.\",\n                \"locator\": \"Am J Transplant. 2023;23:1771–1780. Results, section 3.5 and Figure 2.\"\n              },\n              {\n    "
+    },
+    {
+      "file": "tools/decision_assistant_source/high_risk_data.json",
+      "old": "pansions.\",\n                \"locator\": \"Complete local author manuscript, PDF pp6–9, Table 3.\"\n              },\n              {\n    ",
+      "new": "pansions.\",\n                \"locator\": \"Table 3, p. 1506. Figures 1–3, pp. 1507–1508.\"\n              },\n              {\n    "
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "0224-2&lang=en\",\n      \"review_depth\": \"Complete accepted manuscript including protocol appendix plus final published abstract; version-dependent hazard ratios not merged.\"\n    }\n  },\n  \"status\": \"Proposed high",
+      "new": "0224-2&lang=en\",\n      \"review_depth\": \"Publisher edition. Lancet Oncol. 2020;21(7):947–956. Eligibility, pp. 947–950. Randomized outcomes, Figure 2, p. 953.\"\n    }\n  },\n  \"status\": \"Proposed high"
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": ": [\n        {\n          \"url\": \"https://iris.unito.it/bitstream/2318/1768784/1/THELANCETONCOLOGY-D-19-01452.pdf\",\n          \"label\": \"Full PDF · author manuscript\",\n          \"method\": \"Europe PMC DOI-matched fullTextUrlList\"\n        }\n      ],\n      \"tmc\": \"https",
+      "new": ": [\n        {\n          \"url\": \"https://doi.org/10.1016/S1470-2045(20)30224-2\",\n          \"label\": \"Publisher full text\",\n          \"method\": \"Publisher DOI\"\n        }\n      ],\n      \"tmc\": \"https"
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "001231&lang=en\",\n      \"review_depth\": \"Complete local PDF; question-relevant methods/results or guidance sections reviewed.\"\n    },\n    \"xxl\": {\n      \"key\": \"xxl",
+      "new": "001231&lang=en\",\n      \"review_depth\": \"Publisher edition. Hepatology. 2025;82(3):612–625. Tables 3–4 and Figure 4, pp. 620–621. Proposed selection limits, p. 623.\"\n    },\n    \"xxl\": {\n      \"key\": \"xxl"
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": ": [\n        {\n          \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC12256641/pdf/nihms-2047233.pdf\",\n          \"label\": \"Full PDF · PMC\",\n          \"method\": \"PDF link in PMC article HTML\"\n        },\n        {\n          \"url\": \"https://europepmc.org/articles/PMC12256641?pdf=render\",\n          \"label\": \"Full PDF · Europe PMC\",\n          \"method\": \"Europe PMC DOI-matched fullTextUrlList\"\n        }\n      ],\n      \"tmc\": \"https",
+      "new": ": [\n        {\n          \"url\": \"https://doi.org/10.1097/HEP.0000000000001231\",\n          \"label\": \"Publisher full text\",\n          \"method\": \"Publisher DOI\"\n        }\n      ],\n      \"tmc\": \"https"
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "24-328&lang=en\",\n      \"review_depth\": \"Complete local PDF; question-relevant methods/results or guidance sections reviewed.\"\n    },\n    \"round2_kelly\": {\n      \"k",
+      "new": "24-328&lang=en\",\n      \"review_depth\": \"Publisher edition. J Gastrointest Oncol. 2024;15(4):1686–1697. Methods, p. 1688 (PDF p. 3). Tables 1–2 and Figure 4, pp. 1690–1692 (PDF pp. 5–7).\"\n    },\n    \"round2_kelly\": {\n      \"k"
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": ": [\n        {\n          \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC11399840/pdf/jgo-15-04-1686.pdf\",\n          \"label\": \"Full PDF · PMC\",\n          \"method\": \"PDF link in PMC article HTML\"\n        },\n        {\n          \"url\": \"https://europepmc.org/articles/PMC11399840?pdf=render\",\n          \"label\": \"Full PDF · Europe PMC\",\n          \"method\": \"Europe PMC DOI-matched fullTextUrlList\"\n        }\n      ],\n      \"tmc\": \"https",
+      "new": ": [\n        {\n          \"url\": \"https://doi.org/10.21037/jgo-24-328\",\n          \"label\": \"Publisher full text\",\n          \"method\": \"Publisher DOI\"\n        }\n      ],\n      \"tmc\": \"https"
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "06.042&lang=en\",\n      \"review_depth\": \"Complete local PDF; question-relevant methods/results or guidance sections reviewed.\"\n    },\n    \"ito\": {\n      \"key\": \"ito",
+      "new": "06.042&lang=en\",\n      \"review_depth\": \"Publisher edition. J Hepatol. 2025;82(1):107–119. Abstract, p. 107. Washout model, Table 4 and Figure 4, pp. 114–115.\"\n    },\n    \"ito\": {\n      \"key\": \"ito"
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": ": [\n        {\n          \"url\": \"https://europepmc.org/articles/PMC11655254?pdf=render\",\n          \"label\": \"Full PDF · Europe PMC\",\n          \"method\": \"Europe PMC DOI-matched fullTextUrlList\"\n        }\n      ],\n      \"tmc\": \"https",
+      "new": ": [\n        {\n          \"url\": \"https://doi.org/10.1016/j.jhep.2024.06.042\",\n          \"label\": \"Publisher full text\",\n          \"method\": \"Publisher DOI\"\n        }\n      ],\n      \"tmc\": \"https"
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": ".3901&lang=en\",\n      \"review_depth\": \"Primary published abstract; complete full text needed.\"\n    },\n    \"heimbach\": {\n      \"key\":",
+      "new": ".3901&lang=en\",\n      \"review_depth\": \"Publisher edition. JAMA Oncol. Published online October 1, 2026. Publisher PDF pp. E3–E7, patient flow, rejection and survival.\"\n    },\n    \"heimbach\": {\n      \"key\":"
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "maoncol.2026.3901\",\n      \"pdf_links\": [],\n      \"tmc\": \"https://thslc-houston.p",
+      "new": "maoncol.2026.3901\",\n      \"pdf_links\": [\n        {\n          \"url\": \"https://doi.org/10.1001/jamaoncol.2026.3901\",\n          \"label\": \"Publisher full text\",\n          \"method\": \"Publisher DOI\"\n        }\n      ],\n      \"tmc\": \"https://thslc-houston.p"
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "ang=en\",\n      \"review_depth\": \"Published primary abstract only; complete full text needed.\"\n    },\n    \"hcc_tabrizian2022\": {\n   ",
+      "new": "ang=en\",\n      \"review_depth\": \"Publisher edition. Hepatology. Published online June 2, 2026. Publisher PDF pp. 5–9, endpoint definitions, flowchart, Tables 1–2 and Figure 3.\"\n    },\n    \"hcc_tabrizian2022\": {\n   "
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": ".0000000000001801\",\n      \"pdf_links\": [],\n      \"tmc\": \"https://thslc-houston.p",
+      "new": ".0000000000001801\",\n      \"pdf_links\": [\n        {\n          \"url\": \"https://doi.org/10.1097/HEP.0000000000001801\",\n          \"label\": \"Publisher full text\",\n          \"method\": \"Publisher DOI\"\n        }\n      ],\n      \"tmc\": \"https://thslc-houston.p"
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "07.033&lang=en\",\n      \"review_depth\": \"Complete local author manuscript reviewed, including outcome tables.\"\n    },\n    \"hcc_merits_ac2023\": {\n   ",
+      "new": "07.033&lang=en\",\n      \"review_depth\": \"Publisher edition. Gastroenterology. 2021;161(5):1502–1512. Table 3, p. 1506. Figures 1–3, pp. 1507–1508.\"\n    },\n    \"hcc_merits_ac2023\": {\n   "
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": ": [\n        {\n          \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC8545832/pdf/nihms-1730099.pdf\",\n          \"label\": \"Full PDF · PMC\",\n          \"method\": \"PDF link in PMC article HTML\"\n        },\n        {\n          \"url\": \"https://europepmc.org/articles/PMC8545832?pdf=render\",\n          \"label\": \"Full PDF · Europe PMC\",\n          \"method\": \"Europe PMC DOI-matched fullTextUrlList\"\n        }\n      ],\n      \"tmc\": \"https",
+      "new": ": [\n        {\n          \"url\": \"https://doi.org/10.1053/j.gastro.2021.07.033\",\n          \"label\": \"Publisher full text\",\n          \"method\": \"Publisher DOI\"\n        }\n      ],\n      \"tmc\": \"https"
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "1160-z&lang=en\",\n      \"review_depth\": \"Complete local 66-page consensus PDF; high-risk HCC trial-design sections pp19–22. Consensus benchmark, not primary validation.\"\n    },\n    \"hcc_goudsmit2023\": {\n    ",
+      "new": "1160-z&lang=en\",\n      \"review_depth\": \"Publisher edition. Nat Rev Clin Oncol. 2026;23(8):619–647. Transplant trial design and intention-to-treat endpoints, pp. 634–635.\"\n    },\n    \"hcc_goudsmit2023\": {\n    "
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": ": [\n        {\n          \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC13665261/pdf/nihms-2192929.pdf\",\n          \"label\": \"Full PDF · PMC\",\n          \"method\": \"PDF link in PMC article HTML\"\n        },\n        {\n          \"url\": \"https://europepmc.org/articles/PMC13665261?pdf=render\",\n          \"label\": \"Full PDF · Europe PMC\",\n          \"method\": \"Europe PMC DOI-matched fullTextUrlList\"\n        }\n      ],\n      \"tmc\": \"https",
+      "new": ": [\n        {\n          \"url\": \"https://doi.org/10.1038/s41571-026-01160-z\",\n          \"label\": \"Publisher full text\",\n          \"method\": \"Publisher DOI\"\n        }\n      ],\n      \"tmc\": \"https"
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "336719&lang=en\",\n      \"review_depth\": \"Complete local PDF; question-relevant methods/results or guidance sections reviewed.\"\n    },\n    \"grut\": {\n      \"key\": \"gr",
+      "new": "336719&lang=en\",\n      \"review_depth\": \"Publisher edition. Gut. 2026;75(6):1201–1210. Tables 3–4, pp. 1204–1206 (PDF pp. 4–6). Figure 2, p. 1206 (PDF p. 6).\"\n    },\n    \"grut\": {\n      \"key\": \"gr"
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": ": [\n        {\n          \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC13217134/pdf/gutjnl-75-6.pdf\",\n          \"label\": \"Full PDF · PMC\",\n          \"method\": \"PDF link in PMC article HTML\"\n        },\n        {\n          \"url\": \"https://europepmc.org/articles/PMC13217134?pdf=render\",\n          \"label\": \"Full PDF · Europe PMC\",\n          \"method\": \"Europe PMC DOI-matched fullTextUrlList\"\n        }\n      ],\n      \"tmc\": \"https",
+      "new": ": [\n        {\n          \"url\": \"https://doi.org/10.1136/gutjnl-2025-336719\",\n          \"label\": \"Publisher full text\",\n          \"method\": \"Publisher DOI\"\n        }\n      ],\n      \"tmc\": \"https"
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "001644&lang=en\",\n      \"review_depth\": \"Complete 60-page PMC manuscript saved; relevant oncology evaluation and donor sections reviewed\"\n    },\n    \"cirse\": {\n      \"key\": \"ci",
+      "new": "001644&lang=en\",\n      \"review_depth\": \"Publisher edition. Hepatology. 2026;83(6):1609–1645. HCC and CCA recommendations, pp. 1613–1614. Statement 11, p. 1614.\"\n    },\n    \"cirse\": {\n      \"key\": \"ci"
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": ": [\n        {\n          \"url\": \"https://pmc.ncbi.nlm.nih.gov/articles/PMC13070310/pdf/nihms-2158808.pdf\",\n          \"label\": \"Full PDF · PMC\",\n          \"method\": \"PDF link in PMC article HTML\"\n        },\n        {\n          \"url\": \"https://europepmc.org/articles/PMC13070310?pdf=render\",\n          \"label\": \"Full PDF · Europe PMC\",\n          \"method\": \"Europe PMC DOI-matched fullTextUrlList\"\n        }\n      ],\n      \"tmc\": \"https",
+      "new": ": [\n        {\n          \"url\": \"https://doi.org/10.1097/HEP.0000000000001644\",\n          \"label\": \"Publisher full text\",\n          \"method\": \"Publisher DOI\"\n        }\n      ],\n      \"tmc\": \"https"
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "-year endpoints cannot be established after one year.\",\n            \"locator\": \"Accepted manuscript pp19–22, LT trial design.\"\n          },\n          {\n            \"key\": \"consort_pilot\",\n            \"des",
+      "new": "-year endpoints cannot be established after one year.\",\n            \"locator\": \"Transplant trial design and intention-to-treat endpoints, pp. 634–635.\"\n          },\n          {\n            \"key\": \"consort_pilot\",\n            \"des"
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "are unusable.\",\n            \"locator\": \"Primary abstract and full publisher Methods/Results, Table 3, DOI 10.1016/j.jhep.2024.03.020; PDF pending.\"\n          }\n        ]\n      }\n    },\n",
+      "new": "are unusable.\",\n            \"locator\": \"J Hepatol. 2024;81:471–478. Table 3, p. 475.\"\n          }\n        ]\n      }\n    },\n"
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "n-PVTT trial.\",\n            \"locator\": \"Complete accepted manuscript and protocol appendix; final published abstract for survival estimates. Avoid mixing accepted-manuscript and final-publication hazard ratios.\"\n          },\n          {\n            ",
+      "new": "n-PVTT trial.\",\n            \"locator\": \"Eligibility, pp. 947–950. Randomized outcomes, Figure 2, p. 953.\"\n          },\n          {\n            "
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "ter one year.\",\n            \"locator\": \"Accepted manuscript pp19–22, LT trial design.\"\n          },\n          {\n            ",
+      "new": "ter one year.\",\n            \"locator\": \"Transplant trial design and intention-to-treat endpoints, pp. 634–635.\"\n          },\n          {\n            "
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "unusable.\",\n                \"locator\": \"Primary abstract and full publisher Methods/Results, Table 3, DOI 10.1016/j.jhep.2024.03.020; PDF pending.\"\n              },\n              {\n    ",
+      "new": "unusable.\",\n                \"locator\": \"J Hepatol. 2024;81:471–478. Table 3, p. 475.\"\n              },\n              {\n    "
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "08 (8.2%).\",\n                \"limits\": \"Favorable oncologic association coexists with greater rejection. Residual confounding and selection remain; there is no all-downstaging-entry ITT comparison. Possible center/year overlap with Fang and other Chinese cohorts must be checked before pooling. Abstract-only verification.\",\n                \"locator\": \"Primary October 2026 JAMA Oncology abstract, PMID 42821267; full PDF pending.\"\n              }\n            ]\n       ",
+      "new": "08 (8.2%).\",\n                \"limits\": \"Among transplant recipients, the oncologic association and higher rejection rate are observational. The study excludes patients who did not reach transplant. Check center and enrollment-year overlap with Fang before pooling (publisher PDF pp. E3–E7).\",\n                \"locator\": \"Publisher PDF pp. E3–E7, patient flow, rejection and survival.\"\n              }\n            ]\n       "
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "interval.\",\n                \"locator\": \"Complete local PDF pp5–6, Tables 3–4; avoid reversed conditional denominators.\"\n              },\n              {\n    ",
+      "new": "interval.\",\n                \"locator\": \"Tables 3–4, pp. 1204–1206 (PDF pp. 4–6). Figure 2, p. 1206 (PDF p. 6).\"\n              },\n              {\n    "
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "ion risk.\",\n                \"locator\": \"Complete local author manuscript: Results/washout model; PDF p10 (manuscript p7) conclusion. Existing V6 quotation ledger retained.\"\n              },\n              {\n    ",
+      "new": "ion risk.\",\n                \"locator\": \"Abstract, p. 107. Washout model, Table 4 and Figure 4, pp. 114–115.\"\n              },\n              {\n    "
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "vailable.\",\n                \"locator\": \"Primary published abstract and accessible publisher material, PMID 39255928; full PDF pending.\"\n              },\n              {\n    ",
+      "new": "vailable.\",\n                \"locator\": \"VITALITY. J Hepatol. 2025;82:512–522. Methods and Results.\"\n              },\n              {\n    "
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "is 56.7%.\",\n                \"limits\": \"Abstract-only verification. Grade denominators, landmark/selection adjustment and RFS death handling require full text; RFS exceeding OS must not be converted to recurrence as 1−RFS. No verified all-240 survival estimate.\",\n                \"locator\": \"Published primary abstract, PMID 42228945, DOI 10.1097/HEP.0000000000001801.\"\n              }\n            ]\n       ",
+      "new": "is 56.7%.\",\n                \"limits\": \"All 240 treated patients had median overall survival of 14.1 months and five-year survival of 18.9% from Y90. Post-transplant survival starts at transplant in 37 selected recipients. The recurrence analysis censors death without recurrence. Selection and the interval to transplant limit comparisons (publisher PDF pp. 5–6, Figure 3 on p. 9).\",\n                \"locator\": \"Publisher PDF pp. 5–9, endpoint definitions, flowchart, Tables 1–2 and Figure 3.\"\n              }\n            ]\n       "
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "vailable.\",\n                \"locator\": \"Primary publisher HTML Methods/Results and abstract, DOI 10.1097/TP.0000000000003162; complete PDF pending.\"\n              },\n              {\n    ",
+      "new": "vailable.\",\n                \"locator\": \"Transplantation, pp. 2334–2345. See the downstaging protocol in Figure 2 and survival curves in Figure 3.\"\n              },\n              {\n    "
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "ndidates.\",\n                \"locator\": \"Complete 12-page PDF: Methods p3, Tables 1–2 p6, Figure 4 p7.\"\n              },\n              {\n    ",
+      "new": "ndidates.\",\n                \"locator\": \"Methods, p. 1688 (PDF p. 3). Tables 1–2 and Figure 4, pp. 1690–1692 (PDF pp. 5–7).\"\n              },\n              {\n    "
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "patients.\",\n                \"locator\": \"Primary PMC Methods/Results and survival tables, PMC9301590; complete PDF pending.\"\n              }\n            ]\n       ",
+      "new": "patients.\",\n                \"locator\": \"JAMA Surg. Published PDF, Methods, Results and survival tables. PMID 35857294.\"\n              }\n            ]\n       "
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": " studies.\",\n                \"locator\": \"Primary abstract plus publisher Methods/Results, DOI 10.1016/j.cgh.2022.08.023; complete PDF pending.\"\n              },\n              {\n    ",
+      "new": " studies.\",\n                \"locator\": \"Clin Gastroenterol Hepatol. Published PDF, Methods and Results. DOI 10.1016/j.cgh.2022.08.023.\"\n              },\n              {\n    "
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "TT trial.\",\n                \"locator\": \"Complete accepted manuscript and protocol appendix; final published abstract for survival estimates. Avoid mixing accepted-manuscript and final-publication hazard ratios.\"\n              },\n              {\n    ",
+      "new": "TT trial.\",\n                \"locator\": \"Eligibility, pp. 947–950. Randomized outcomes, Figure 2, p. 953.\"\n              },\n              {\n    "
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "alidated.\",\n                \"locator\": \"Complete local PDF, Results pp6–9, Tables 3–4; proposed refinements in Discussion pp9–11.\"\n              },\n              {\n    ",
+      "new": "alidated.\",\n                \"locator\": \"Tables 3–4 and Figure 4, pp. 620–621. Proposed selection limits, p. 623.\"\n              },\n              {\n    "
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "lidation.\",\n                \"locator\": \"Primary PMC full text, Results §3.5 and outcome tables, PMC10998692; PDF pending.\"\n              },\n              {\n    ",
+      "new": "lidation.\",\n                \"locator\": \"Am J Transplant. 2023;23:1771–1780. Results, section 3.5 and Figure 2.\"\n              },\n              {\n    "
+    },
+    {
+      "file": "transplant/high-risk/integrated-protocols.json",
+      "old": "pansions.\",\n                \"locator\": \"Complete local author manuscript, PDF pp6–9, Table 3.\"\n              },\n              {\n    ",
+      "new": "pansions.\",\n                \"locator\": \"Table 3, p. 1506. Figures 1–3, pp. 1507–1508.\"\n              },\n              {\n    "
+    }
+  ]
+}
