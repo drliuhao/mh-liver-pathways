@@ -79,3 +79,18 @@ assert at('35258371')[0]['screen']['endpoint']=='TTP'
 assert at('27575820')[0]['screen']['endpoint']=='TTP'
 assert not any(p['screen']['verdict']=='noninferior' for p in pairs),'Current review has no unqualified confirmed-NI label'
 print('PASS: compact results and explicit endpoint-specific color labels; negative/observational trials are not promoted to superiority or NI.')
+
+# These high-impact comparison cells formerly omitted one cohort or paired a PFS article with stale OS.
+lookup = {r['pmid']: r for r in rows if r.get('pmid')}
+xu = at('39808828')[0]
+assert xu['screen']['verdict'] == 'uncertain'
+assert all(value in lookup['39808828']['result'] for value in ('73.8%', '64.6%', '78.1%', '86.5%', 'P=.07'))
+wei = at('31283409')[0]['screen']
+assert wei['verdict'] == 'superior' and wei['endpoint'] == '2-year tumor-related survival'
+assert '3D-CRT' in wei['favored'] and '9.4%' in wei['result']
+for pmid, os_hr, long_term_source in [('39798579', '1.10', 'annalsofoncology.org'),
+                                     ('39798578', '0.98', 'clinicaltrials.gov')]:
+    screen = at(pmid)[0]['screen']
+    assert screen['endpoint'] == 'PFS' and 'OS' in screen['result'] and os_hr in screen['result']
+    assert any(long_term_source in url for _, url in lookup[pmid]['additionalSources'])
+print('PASS: both Xu strata, randomized primary endpoint in Wei, and separately sourced long-term OS for both TACE add-on trials.')

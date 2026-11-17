@@ -5,14 +5,14 @@
  const slides=r=>r.slides.length?'PPT slides '+r.slides.join(', '):'No slide yet';
  const pdf=p=>p.pdf_available===true?'PDF matched in the audited depots':p.pdf_available===false?'PDF not yet matched in the audited depots':'PDF status not yet checked for this index entry';
  const links=p=>'<div class="access">'+(p.url?'<a href="'+e(p.url)+'" target="_blank" rel="noopener">Publication / full text ↗</a>':'')+(p.tmc?'<a href="'+e(p.tmc)+'" target="_blank" rel="noopener">TMC full-text access ↗</a>':'')+'</div>';
- const title=l=>l.title.replace(/\bprotocol\b/gi,'pathway').replace(/ cancer roadmap$/i,' roadmap');
+ const title=l=>l.title;
  const pending=l=>l.no_slide_count?' · '+l.no_slide_count+(l.no_slide_count===1?' reference has':' references have')+' no slide yet':'';
  try{
-  const responses=await Promise.all([fetch('catalog.json?v=20261111-bridging2'),fetch('document-index.json?v=20261109-pathology1')]);
+  const responses=await Promise.all([fetch('catalog.json?v=20261116-language1'),fetch('document-index.json?v=20261116-language1')]);
   if(responses.some(r=>!r.ok))throw Error('Catalog unavailable');
   const [base,supplement]=await Promise.all(responses.map(r=>r.json()));
   const data=LibraryDocumentIndex.merge(base,supplement);
-  document.getElementById('census').textContent=data.libraries.length+' libraries · '+data.unique_publications+' unique publications · '+data.matched_publication_pdfs+' matched PDFs · '+data.missing_publication_pdfs+' PDFs unmatched · '+data.unchecked_publication_pdfs+' PDF statuses not yet checked. '+data.no_slide_entries+' library entries have no slide yet.';
+  document.getElementById('census').textContent=data.libraries.length+' libraries · '+data.unique_publications+' distinct publications across slides and documents ('+data.from_slide_libraries+' in the slide libraries, '+data.additional_document_publications+' additional document citations). '+data.matched_publication_pdfs+' PDFs matched, '+data.missing_publication_pdfs+' unmatched and '+data.unchecked_publication_pdfs+' unchecked. Clinical webpages cite additional sources.';
   for(const lib of data.libraries){const option=document.createElement('option');option.value=lib.key;option.textContent=title(lib);select.append(option);}
   const paperSearch=(r,p)=>[p.title,p.author,p.journal,p.doi,p.pmid,p.coverage,slides(r),...r.inclusion].join(' ').toLowerCase();
   const policySearch=r=>[r.title,slides(r),...(r.inclusion||[])].join(' ').toLowerCase();

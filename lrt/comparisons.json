@@ -1,5 +1,5 @@
 {
-  "version": "20261111-bridging2",
+  "version": "20261116-review1",
   "settings": {
     "local": "Definitive local treatment",
     "transplant": "Bridge / downstaging / transplant",
@@ -59,8 +59,8 @@
       "population": "SABR + standard of care vs standard of care alone",
       "result": "Primary OS endpoint met only at alpha 0.20: median 41 vs 28 mo, HR 0.57 (0.30 to 1.10), p = 0.090; PFS 12 vs 6.0 mo, HR 0.47",
       "summary": "Primary OS endpoint met only at alpha 0.20: median 41 vs 28 mo, HR 0.57 (0.30 to 1.10), p = 0.090; PFS 12 vs 6.0 mo, HR 0.47",
-      "caution": "99 mixed-histology patients; only 19 of 191 lesions hepatic; three treatment-related deaths",
-      "shortCaution": "99 mixed-histology patients; only 19 of 191 lesions hepatic; three treatment-related deaths",
+      "caution": "Mixed primaries. Liver: 19/191 lesions (3/64 control, 16/127 SABR, Table 1). Three treatment-related deaths.",
+      "shortCaution": "Mixed primaries. Liver: 19/191 lesions (3/64 control, 16/127 SABR, Table 1). Three treatment-related deaths.",
       "origin": "compact-evidence",
       "pmid": "30982687",
       "year": "2019",
@@ -106,10 +106,10 @@
       "label": "COLLISION RCT",
       "design": "RCT",
       "population": "Thermal ablation vs resection (CRLM, one to ten lesions ≤3 cm)",
-      "result": "OS HR 1.05 (95% CI 0.69-1.58, p=0.83); upper bound crosses the 1.30 margin, so non-inferiority not shown; AEs 19% vs 46%; stay 1 vs 4 days",
-      "summary": "OS HR 1.05 (95% CI 0.69-1.58, p=0.83); upper bound crosses the 1.30 margin, so non-inferiority not shown; AEs 19% vs 46%; stay 1 vs 4 days",
-      "caution": "Stopped at 48% of planned 618; about a third of each arm also got the other modality; unmasked",
-      "shortCaution": "Stopped at 48% of planned 618; about a third of each arm also got the other modality; unmasked",
+      "result": "OS HR 1.05 (95% CI 0.69–1.58). Interim stopping rule met, but observed CI crosses the 1.30 NI margin. AEs 19% vs 46%, hospital stay 1 vs 4 days.",
+      "summary": "OS HR 1.05 (95% CI 0.69–1.58). Interim stopping rule met, but observed CI crosses the 1.30 NI margin. AEs 19% vs 46%, hospital stay 1 vs 4 days.",
+      "caution": "Both modalities used in 27 (18%) of the ablation arm and 52 (35%) of the resection arm (Table 1).",
+      "shortCaution": "Both modalities used in 27 (18%) of the ablation arm and 52 (35%) of the resection arm (Table 1).",
       "origin": "compact-evidence",
       "pmid": "39848272",
       "year": "2025",
@@ -158,8 +158,8 @@
       "population": "DEBIRI (irinotecan-bead chemoembolization) vs FOLFIRI",
       "result": "Primary endpoint met: median OS 22 vs 15 mo (P = .031); median PFS 7 vs 4 mo (P = .006); hepatic response 68.6% vs 20%",
       "summary": "Primary endpoint met: median OS 22 vs 15 mo (P = .031); median PFS 7 vs 4 mo (P = .006); hepatic response 68.6% vs 20%",
-      "caution": "74 patients at two centres, open label; obsolete FOLFIRI comparator capped at four months; not reproduced",
-      "shortCaution": "74 patients at two centres, open label; obsolete FOLFIRI comparator capped at four months; not reproduced",
+      "caution": "74 patients at two centers. The concurrent FOLFIRI comparator was capped at four months. Dated regimen.",
+      "shortCaution": "74 patients at two centers. The concurrent FOLFIRI comparator was capped at four months. Dated regimen.",
       "origin": "compact-evidence",
       "pmid": "22493375",
       "year": "2012",
@@ -333,9 +333,9 @@
       "design": "Randomized phase III",
       "population": "74 patients with bilobar unresectable CRLM: Y90 plus regional FUDR versus regional FUDR alone.",
       "result": "Tumor-volume response 50% versus 24% (p=0.03); liver progression was delayed.",
-      "caution": "Tests adding Y90 to HAI, not Y90 versus HAI alone. Older chemotherapy era; no established overall-survival benefit. Not evidence against ablation of small lesions.",
+      "caution": "Accrual closed at 74 of 95 planned, and the trial shifted from the original survival objective to response and progression. Older regional FUDR regimen. No established OS benefit. The comparison tested Y90 added to regional FUDR.",
       "summary": "Tumor-volume response 50% vs 24%; delayed liver progression.",
-      "shortCaution": "Add-on study using older treatment; no proven OS benefit or standalone HAI–Y90 ranking.",
+      "shortCaution": "Closed at 74 of 95 planned. Endpoints shifted from survival to response and progression. No proven OS gain.",
       "origin": "comparative-record",
       "pmid": "11843249",
       "year": "2001",
@@ -457,8 +457,8 @@
       "label": "Kemeny NEJM RCT",
       "design": "RCT",
       "population": "HAI floxuridine + systemic FU vs systemic FU alone",
-      "result": "Primary two-year OS 86% vs 72% (P=0.03, landmark) but whole KM curves NS (p=0.21); two-year hepatic PFS 90% vs 60% (P<0.001)",
-      "summary": "Primary two-year OS 86% vs 72% (P=0.03, landmark) but whole KM curves NS (p=0.21); two-year hepatic PFS 90% vs 60% (P<0.001)",
+      "result": "Two-year co-primary OS 86% vs 72% (P=.03) and all-site PFS 57% vs 42% (P=.07). Full OS curves P=.21. Secondary hepatic PFS 90% vs 60% (P<.001).",
+      "summary": "Two-year co-primary OS 86% vs 72% (P=.03) and all-site PFS 57% vs 42% (P=.07). Full OS curves P=.21. Secondary hepatic PFS 90% vs 60% (P<.001).",
       "caution": "Only 26% got more than half the planned floxuridine; 6 of 74 never received HAI; single centre",
       "shortCaution": "Only 26% got more than half the planned floxuridine; 6 of 74 never received HAI; single centre",
       "origin": "compact-evidence",
@@ -481,11 +481,11 @@
       ],
       "label": "Wang 2025",
       "design": "Prematurely stopped randomized trial (HARVEST)",
-      "population": "92 randomized after CRLM surgery; modified ITT 77, HAI-FUDR plus systemic 38 versus systemic 39.",
+      "population": "92 patients randomized. Randomization moved from before to after CRLM resection following the first 11 patients. The modified intention-to-treat population included 38 receiving HAI-FUDR plus systemic therapy and 39 receiving systemic therapy alone.",
       "result": "3-year RFS 31.4% versus 34.4%, p=0.28.",
       "caution": "Stopped for FUDR supply shortage; primary endpoint negative. Exploratory early-RFS/subgroup signals do not establish routine postoperative HAI.",
       "summary": "Three-year RFS 31.4% vs 34.4% (p=0.28).",
-      "shortCaution": "Primary endpoint negative; trial stopped for FUDR shortage; modified intention-to-treat analysis.",
+      "shortCaution": "Allocation moved after resection following the first 11 patients. FUDR shortage closed enrollment.",
       "origin": "comparative-record",
       "pmid": "39644535",
       "year": "2025",
@@ -509,8 +509,8 @@
       "population": "Perioperative HAI vs no HAI after CRLM resection (retrospective)",
       "result": "Median OS 67 vs 44 mo (P < .001); propensity-adjusted HR 0.67 (95% CI 0.59-0.76); 10-year OS 38.0% vs 23.8%",
       "summary": "Median OS 67 vs 44 mo (P < .001); propensity-adjusted HR 0.67 (95% CI 0.59-0.76); 10-year OS 38.0% vs 23.8%",
-      "caution": "Single-centre, non-randomised over 21 years; propensity model not shown; benefit largest in low-risk patients",
-      "shortCaution": "Single-centre, non-randomised over 21 years; propensity model not shown; benefit largest in low-risk patients",
+      "caution": "Single center over 21 years. Propensity covariates were listed, coefficients were not reported.",
+      "shortCaution": "Single center over 21 years. Propensity covariates were listed, coefficients were not reported.",
       "origin": "compact-evidence",
       "pmid": "28426374",
       "year": "2017",
@@ -581,8 +581,8 @@
       "label": "Xia RCT",
       "design": "RCT",
       "population": "Repeat hepatectomy vs percutaneous RFA (recurrent HCC)",
-      "result": "Primary endpoint not met: 5-yr OS 43.6% vs 38.5% (HR 1.26, 95% CI 0.91-1.76, p=0.17); local repeat recurrence 21.7% vs 37.8%",
-      "summary": "Primary endpoint not met: 5-yr OS 43.6% vs 38.5% (HR 1.26, 95% CI 0.91-1.76, p=0.17); local repeat recurrence 21.7% vs 37.8%",
+      "result": "5-y OS 43.6% after resection vs 38.5% after RFA (HR for death with RFA 1.26, 95% CI 0.91–1.76, P=.17). Local repeat recurrence 21.7% vs 37.8%.",
+      "summary": "5-y OS 43.6% after resection vs 38.5% after RFA (HR for death with RFA 1.26, 95% CI 0.91–1.76, P=.17). Local repeat recurrence 21.7% vs 37.8%.",
       "caution": "Single-centre open-label, almost all HBV, age capped at 60; null result, not proof of equivalence",
       "shortCaution": "Single-centre open-label, almost all HBV, age capped at 60; null result, not proof of equivalence",
       "origin": "compact-evidence",
@@ -633,8 +633,8 @@
       "population": "Surgery vs RFA",
       "result": "HCC ≤3 cm, ≤3 nodules: median RFS 3.46 vs 3.04 y (HR 0.92, 95% CI 0.67-1.25; P=0.58); local recurrence 15.0% vs 28.0% of recurrences (P=0.07)",
       "summary": "HCC ≤3 cm, ≤3 nodules: median RFS 3.46 vs 3.04 y (HR 0.92, 95% CI 0.67-1.25; P=0.58); local recurrence 15.0% vs 28.0% of recurrences (P=0.07)",
-      "caution": "Stopped at 301 analysable of 600 planned (conditional power <8%); mostly solitary tumours <2 cm",
-      "shortCaution": "Stopped at 301 analysable of 600 planned (conditional power <8%); mostly solitary tumours <2 cm",
+      "caution": "Slow accrual closed enrollment. Conditional power <8% was calculated afterward. Mostly solitary tumors <2 cm.",
+      "shortCaution": "Slow accrual closed enrollment. Conditional power <8% was calculated afterward. Mostly solitary tumors <2 cm.",
       "origin": "compact-evidence",
       "pmid": "35949295",
       "year": "2021",
@@ -708,8 +708,8 @@
       "population": "SBRT vs RFA",
       "result": "Recurrent HCC ≤5 cm: primary local PFS HR 0.45 (0.24–0.87); 2-y 92.7% vs 75.8%; 2–5 cm subgroup not significant; no significant PFS or OS difference",
       "summary": "Recurrent HCC ≤5 cm: primary local PFS HR 0.45 (0.24–0.87); 2-y 92.7% vs 75.8%; 2–5 cm subgroup not significant; no significant PFS or OS difference",
-      "caution": "Composite primary endpoint counts death from any cause; single centre, open-label, no central review",
-      "shortCaution": "Composite primary endpoint counts death from any cause; single centre, open-label, no central review",
+      "caution": "Local PFS includes death. The 2–5 cm subgroup was imprecise, with no interaction by size. Single center.",
+      "shortCaution": "Local PFS includes death. The 2–5 cm subgroup was imprecise, with no interaction by size. Single center.",
       "origin": "compact-evidence",
       "pmid": "39693584",
       "year": "2024",
@@ -807,9 +807,9 @@
       "label": "De la Garza-Ramos 2022",
       "design": "Retrospective multisite cohort",
       "population": "Solitary HCC ≤8 cm; RS 57 versus resection 66.",
-      "result": "Target progression 5% versus 8%; adjusted overall-progression HR 1.16 (95% CI 0.51–2.63). Median OS not reached in either group.",
+      "result": "Y90 segmentectomy vs resection: unadjusted median time to any progression 21.9 vs 29.4 months (P=.03). Adjusted progression HR 1.16 (0.51–2.63). Median OS was unreached in both arms. Target progression occurred in 5% vs 8%.",
       "caution": "Propensity distributions were too dissimilar to match. Different surgical candidacy and liver function prevent a claim of equivalence to resection.",
-      "summary": "Adjusted progression HR 1.16 (0.51–2.63); median OS unreached in both groups.",
+      "summary": "Unadjusted time to any progression 21.9 vs 29.4 mo (P=.03). Adjusted progression HR 1.16 (0.51–2.63). Median OS unreached in both groups.",
       "shortCaution": "Retrospective; inadequate overlap prevented propensity matching. Not evidence of equivalence.",
       "origin": "comparative-record",
       "pmid": "35346857",
@@ -857,10 +857,10 @@
       "label": "XXL RCT",
       "design": "RCT",
       "population": "LT vs non-transplant therapy after downstaging",
-      "result": "5-y OS 77.5% vs 31.2% (published HR 0.32, 95% CI 0.11–0.92); tumor-event-free survival 76.8% vs 18.3%; 45 randomized responders",
-      "summary": "5-y OS 77.5% vs 31.2% (published HR 0.32, 95% CI 0.11–0.92); tumor-event-free survival 76.8% vs 18.3%; 45 randomized responders",
-      "caution": "Selected responders; closed early; published abstract corrects a discrepant draft; final full text unavailable",
-      "shortCaution": "Selected responders; closed early; published abstract corrects a discrepant draft; final full text unavailable",
+      "result": "5-y OS 77.5% vs 31.2% (HR 0.32, 95% CI 0.11–0.92, P=.035). Tumor event-free survival 76.8% vs 18.3%.",
+      "summary": "5-y OS 77.5% vs 31.2% (HR 0.32, 95% CI 0.11–0.92, P=.035). Tumor event-free survival 76.8% vs 18.3%.",
+      "caution": "45 randomized responders after sustained downstaging. Early closure limits precision and generalizability.",
+      "shortCaution": "45 randomized responders after sustained downstaging. Early closure limits precision and generalizability.",
       "origin": "compact-evidence",
       "publisher_citation": "Lancet Oncol. 2020;21(7):947–956. Eligibility, pp. 947–950. Randomized outcomes, Figure 2, p. 953.",
       "pmid": "32615109",
@@ -1037,10 +1037,10 @@
       "label": "Kwong 2022",
       "design": "National observational cohort",
       "population": "31,609 US HCC transplant candidates, 2003–2018; 24,145 received LRT.",
-      "result": "IPTW-adjusted dropout sHR versus TACE: radioembolization 0.85 (95% CI 0.81–0.89); thermal ablation 0.95 (0.91–0.99).",
-      "caution": "Observational first-treatment comparison, with later treatments allowed. Center, era and patient selection remain confounders. Registry cohorts overlap with later studies.",
-      "summary": "IPTW dropout sHR vs TACE: Y90 0.85 (0.81–0.89); ablation 0.95 (0.91–0.99).",
-      "shortCaution": "Observational first-treatment comparison; overlapping registry cohorts and residual confounding.",
+      "result": "Waitlist dropout vs TACE: IPTW sHR 0.85 (0.81–0.89) for Y90 and 0.95 (0.91–0.99) for ablation. Conventional multivariable sHRs were 1.03 (0.91–1.17) and 0.97 (0.90–1.05), respectively.",
+      "caution": "First-treatment registry comparison, with later treatments allowed. Treatment selection and center/era effects remain possible. This registry overlaps later analyses.",
+      "summary": "Dropout sHR for Y90 and ablation vs TACE: IPTW 0.85 and 0.95, conventional adjustment 1.03 (0.91–1.17) and 0.97 (0.90–1.05), respectively.",
+      "shortCaution": "Observational. Modality associations varied with the adjustment method. Center and era may confound.",
       "origin": "comparative-record",
       "pmid": "34358718",
       "year": "2022",
@@ -1189,10 +1189,10 @@
       "label": "Xu 2025",
       "design": "Prospective multicenter cohort",
       "population": "MERITS-LT: 326 within UNOS-DS and 190 all-comers beyond UNOS-DS; 2015–2023.",
-      "result": "In the all-comers subgroup, 2-year successful downstaging was 74% with initial Y90 versus 65% with TACE (p<0.001).",
-      "caution": "Treatment was not randomized; subgroup finding does not expand allocation criteria. Overlaps earlier MERITS-LT enrollment. Earlier within-UNOS-DS study found no significant modality difference.",
-      "summary": "Two-year downstaging in all-comers: 74% vs 65%.",
-      "shortCaution": "Nonrandom treatment; overlaps MERITS-LT. Does not expand allocation eligibility.",
+      "result": "Two-year downstaging with Y90 vs TACE was 73.8% vs 64.6% beyond UNOS-DS and 78.1% vs 86.5% within UNOS-DS. First treatment was not predictive after stratification by center (P=.07).",
+      "caution": "Prospective observational cohort overlapping MERITS-LT. Treatment selection and center practice differed. Allocation criteria apply independently.",
+      "summary": "2-y downstaging, Y90 vs TACE: 73.8% vs 64.6% beyond UNOS-DS, 78.1% vs 86.5% within. First therapy was not predictive after center stratification (P=.07).",
+      "shortCaution": "Treatment was nonrandomized, and this cohort overlaps MERITS-LT. Allocation criteria still apply.",
       "origin": "comparative-record",
       "publisher_citation": "Hepatology. 2025;82(3):612–625. Tables 3–4 and Figure 4, pp. 620–621. Proposed selection limits, p. 623.",
       "pmid": "39808828",
@@ -1317,8 +1317,8 @@
       "population": "HAIC-FOLFOX vs sorafenib",
       "result": "Primary endpoint met: median OS 13.9 vs 8.2 mo (HR 0.408, 95% CI 0.301–0.552; P<.001); ORR 31.5% vs 1.5% (RECIST)",
       "summary": "Primary endpoint met: median OS 13.9 vs 8.2 mo (HR 0.408, 95% CI 0.301–0.552; P<.001); ORR 31.5% vs 1.5% (RECIST)",
-      "caution": "Single-centre, open-label; 92% hepatitis B, median tumour 11.2 cm; sorafenib comparator now obsolete",
-      "shortCaution": "Single-centre, open-label; 92% hepatitis B, median tumour 11.2 cm; sorafenib comparator now obsolete",
+      "caution": "Single center. HBV in 89% overall and 92% of the HAIC arm. Median tumor size 11.2 cm. Sorafenib control.",
+      "shortCaution": "Single center. HBV in 89% overall and 92% of the HAIC arm. Median tumor size 11.2 cm. Sorafenib control.",
       "origin": "compact-evidence",
       "pmid": "34905388",
       "year": "2021",
@@ -1467,8 +1467,8 @@
       "population": "Y-90 radioembolisation vs DEB-TACE",
       "result": "Primary endpoint met: median TTP 17.1 vs 9.5 mo (HR 0.36, 95% CI 0.18-0.70, P=.002); median OS 30.2 vs 15.6 mo (HR 0.48, P=.006)",
       "summary": "Primary endpoint met: median TTP 17.1 vs 9.5 mo (HR 0.36, 95% CI 0.18-0.70, P=.002); median OS 30.2 vs 15.6 mo (HR 0.48, P=.006)",
-      "caution": "Stopped at interim with 72 of 136 planned; single centre; unblinded local imaging assessment",
-      "shortCaution": "Stopped at interim with 72 of 136 planned; single centre; unblinded local imaging assessment",
+      "caution": "Single-center, open-label. Stopped at 72 of 136 planned. Masked central review was not established.",
+      "shortCaution": "Single-center, open-label. Stopped at 72 of 136 planned. Masked central review was not established.",
       "origin": "compact-evidence",
       "pmid": "35258371",
       "year": "2022",
@@ -1567,8 +1567,8 @@
       "population": "Y-90 resin radioembolisation (SIRT) vs sorafenib",
       "result": "Primary endpoint not met: median OS 8.0 vs 9.9 mo, HR 1.15 (95% CI 0.94-1.41), p = 0.18; per-protocol medians identical at 9.9 mo (HR 0.99)",
       "summary": "Primary endpoint not met: median OS 8.0 vs 9.9 mo, HR 1.15 (95% CI 0.94-1.41), p = 0.18; per-protocol medians identical at 9.9 mo (HR 0.99)",
-      "caution": "22% of SIRT arm never treated; activity by body surface area, no tumour dosimetry; manufacturer-funded",
-      "shortCaution": "22% of SIRT arm never treated; activity by body surface area, no tumour dosimetry; manufacturer-funded",
+      "caution": "22% assigned Y90 did not receive it. Body-surface-area dosing. Manufacturer funding.",
+      "shortCaution": "22% assigned Y90 did not receive it. Body-surface-area dosing. Manufacturer funding.",
       "origin": "compact-evidence",
       "pmid": "29107679",
       "year": "2017",
@@ -1590,10 +1590,10 @@
       "label": "SIRveNIB",
       "design": "RCT",
       "population": "Y-90 radioembolisation vs sorafenib",
-      "result": "No OS difference: ITT median OS 8.8 vs 10.0 mo (HR 1.12, 95% CI 0.9 to 1.4; P=.36); response 16.5% vs 1.7%",
-      "summary": "No OS difference: ITT median OS 8.8 vs 10.0 mo (HR 1.12, 95% CI 0.9 to 1.4; P=.36); response 16.5% vs 1.7%",
-      "caution": "28.6% assigned Y-90 never received it vs 9.0% sorafenib; positive signals only in treated population",
-      "shortCaution": "28.6% assigned Y-90 never received it vs 9.0% sorafenib; positive signals only in treated population",
+      "result": "Intention-to-treat OS 8.8 vs 10.0 mo (HR 1.12, 95% CI 0.9–1.4, P=.36). Intention-to-treat response 16.5% vs 1.7% (P<.001).",
+      "summary": "Intention-to-treat OS 8.8 vs 10.0 mo (HR 1.12, 95% CI 0.9–1.4, P=.36). Intention-to-treat response 16.5% vs 1.7% (P<.001).",
+      "caution": "28.6% assigned to Y90 and 9.0% assigned to sorafenib did not receive assigned treatment.",
+      "shortCaution": "28.6% assigned to Y90 and 9.0% assigned to sorafenib did not receive assigned treatment.",
       "origin": "compact-evidence",
       "pmid": "29498924",
       "year": "2018",
@@ -1616,9 +1616,9 @@
       "design": "Randomized study",
       "population": "70 early HCC patients: cisplatin HAIC before RFA versus RFA alone, 35 per arm.",
       "result": "3-year RFS 54.3% versus 34.3%; HR 0.597 (95% CI 0.320–1.091), p=0.094.",
-      "caution": "Primary RFS endpoint was not significant. A secondary distant-intrahepatic recurrence signal does not establish routine HAIC addition or HAIC as a replacement for ablation.",
+      "caution": "The primary RFS comparison was inconclusive. The distant intrahepatic recurrence analysis was post hoc. No routine HAIC indication follows from this trial.",
       "summary": "Three-year RFS 54.3% vs 34.3%; HR 0.597 (0.320–1.091), p=0.094.",
-      "shortCaution": "Primary recurrence endpoint negative; secondary distant-recurrence result is exploratory.",
+      "shortCaution": "Primary RFS comparison was inconclusive. The distant intrahepatic recurrence analysis was post hoc.",
       "origin": "comparative-record",
       "pmid": "33687130",
       "year": "2021",
@@ -1692,8 +1692,8 @@
       "population": "SBRT + sorafenib vs sorafenib alone",
       "result": "Primary endpoint not met: median OS 15.8 vs 12.3 mo (HR 0.77, 90% CI 0.59-1.01; 1-sided P=.06); adjusted HR 0.72; PFS 9.2 vs 5.5 mo (HR 0.55)",
       "summary": "Primary endpoint not met: median OS 15.8 vs 12.3 mo (HR 0.77, 90% CI 0.59-1.01; 1-sided P=.06); adjusted HR 0.72; PFS 9.2 vs 5.5 mo (HR 0.55)",
-      "caution": "177 analysed vs 368 planned (65% power); sorafenib comparator superseded during the trial",
-      "shortCaution": "177 analysed vs 368 planned (65% power); sorafenib comparator superseded during the trial",
+      "caution": "Targets: 368 (85% power), then 292 (80%). After early closure, 177 were analyzed at 65% power.",
+      "shortCaution": "Targets: 368 (85% power), then 292 (80%). After early closure, 177 were analyzed at 65% power.",
       "origin": "compact-evidence",
       "pmid": "39699905",
       "year": "2025",
@@ -1766,10 +1766,10 @@
       "label": "EMERALD-1",
       "design": "Phase 3 RCT",
       "population": "Durvalumab + bevacizumab + TACE vs placebo + TACE",
-      "result": "Primary endpoint met: median PFS 15.0 vs 8.2 mo, HR 0.77 (95% CI 0.61-0.98), P = 0.032; durvalumab + TACE alone HR 0.94; interim OS not significant",
-      "summary": "Primary endpoint met: median PFS 15.0 vs 8.2 mo, HR 0.77 (95% CI 0.61-0.98), P = 0.032; durvalumab + TACE alone HR 0.94; interim OS not significant",
-      "caution": "Primary comparison switched by mid-trial amendment; OS withheld; haemorrhage 28% vs 14%",
-      "shortCaution": "Primary comparison switched by mid-trial amendment; OS withheld; haemorrhage 28% vs 14%",
+      "result": "PFS 15.0 vs 8.2 mo, HR 0.77 (0.61–0.98). Final OS 29.9 vs 33.3 mo, HR 1.10 (0.87–1.39), P=.47 (ESMO GI 2026, 183O).",
+      "summary": "PFS 15.0 vs 8.2 mo, HR 0.77 (0.61–0.98). Final OS 29.9 vs 33.3 mo, HR 1.10 (0.87–1.39), P=.47 (ESMO GI 2026, 183O).",
+      "caution": "Amended primary comparison. Bleeding 28% vs 14%. Durvalumab without bevacizumab did not improve PFS.",
+      "shortCaution": "Amended primary comparison. Bleeding 28% vs 14%. Durvalumab without bevacizumab did not improve PFS.",
       "origin": "compact-evidence",
       "pmid": "39798579",
       "year": "2025",
@@ -1777,7 +1777,13 @@
       "author": "Sangro",
       "doi": "10.1016/S0140-6736(24)02551-0",
       "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39798579/",
-      "tmc": "https://libkey.io/libraries/480/pmid/39798579"
+      "tmc": "https://libkey.io/libraries/480/pmid/39798579",
+      "additionalSources": [
+        [
+          "ESMO GI 2026 abstract 183O · final overall survival",
+          "https://www.annalsofoncology.org/article/S0923-7534(26)00410-2/fulltext"
+        ]
+      ]
     },
     {
       "id": "hcc-39798578",
@@ -1791,10 +1797,10 @@
       "label": "LEAP-012",
       "design": "RCT",
       "population": "Lenvatinib + pembrolizumab + TACE vs dual placebo + TACE",
-      "result": "PFS primary met: median 14.6 vs 10.0 mo, HR 0.66 (95% CI 0.51-0.84); OS not met at interim, HR 0.80 (0.57-1.11), one-sided p=0.087",
-      "summary": "PFS primary met: median 14.6 vs 10.0 mo, HR 0.66 (95% CI 0.51-0.84); OS not met at interim, HR 0.80 (0.57-1.11), one-sided p=0.087",
-      "caution": "Grade ≥3 treatment-related events 71% vs 32%; trial-specific progression definition; nearly a third BCLC A",
-      "shortCaution": "Grade ≥3 treatment-related events 71% vs 32%; trial-specific progression definition; nearly a third BCLC A",
+      "result": "PFS 14.6 vs 10.0 mo, HR 0.66 (0.51–0.84). Long-term OS 40.4 vs 40.8 mo, HR 0.98 (0.76–1.26) (ESMO 2026, 1678RO).",
+      "summary": "PFS 14.6 vs 10.0 mo, HR 0.66 (0.51–0.84). Long-term OS 40.4 vs 40.8 mo, HR 0.98 (0.76–1.26) (ESMO 2026, 1678RO).",
+      "caution": "Grade ≥3 treatment-related events 71% vs 32% at the PFS analysis. OS from third interim analysis.",
+      "shortCaution": "Grade ≥3 treatment-related events 71% vs 32% at the PFS analysis. OS from third interim analysis.",
       "origin": "compact-evidence",
       "pmid": "39798578",
       "year": "2025",
@@ -1802,7 +1808,17 @@
       "author": "Kudo",
       "doi": "10.1016/S0140-6736(24)02575-3",
       "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39798578/",
-      "tmc": "https://libkey.io/libraries/480/pmid/39798578"
+      "tmc": "https://libkey.io/libraries/480/pmid/39798578",
+      "additionalSources": [
+        [
+          "LEAP-012 · long-term overall survival · posted trial results",
+          "https://clinicaltrials.gov/study/NCT04246177?tab=results"
+        ],
+        [
+          "ESMO 2026 abstract 1678RO · presenting investigator’s report",
+          "https://www.clinicbarcelona.org/en/news/clinic-barcelona-comprehensive-cancer-centre-presents-more-than-30-scientific-contributions-at-esmo-2026"
+        ]
+      ]
     },
     {
       "id": "hcc-31421157",
@@ -1940,11 +1956,11 @@
       ],
       "label": "Wei RCT",
       "design": "RCT",
-      "population": "RCT · 164 resectable HCC with PVTT: RT then surgery vs surgery",
-      "result": "Neoadjuvant 3D-CRT, not SBRT: HCC-death HR 0.47 (univariable ITT); 9/82 did not reach surgery",
-      "summary": "Neoadjuvant 3D-CRT, not SBRT: HCC-death HR 0.47 (univariable ITT); 9/82 did not reach surgery",
-      "caution": "96% of patients from one hospital; open-label",
-      "shortCaution": "96% of patients from one hospital; open-label",
+      "population": "3D-CRT then resection vs resection in HCC with Cheng II/III PVTT",
+      "result": "Neoadjuvant 3D conformal radiotherapy followed by resection vs immediate resection in 164 patients with resectable HCC and Cheng II/III portal vein tumor thrombus. Two-year tumor-related survival was 27.4% vs 9.4% (P<.001). Adjusted HR for HCC-related death 0.35 (95% CI 0.23–0.54). Open-label trial. One hospital enrolled 96%. Nine of 82 assigned to 3D-CRT did not reach surgery. The trial did not evaluate SBRT.",
+      "summary": "Neoadjuvant 3D conformal radiotherapy followed by resection vs immediate resection in 164 patients with resectable HCC and Cheng II/III portal vein tumor thrombus. Two-year tumor-related survival was 27.4% vs 9.4% (P<.001). Adjusted HR for HCC-related death 0.35 (95% CI 0.23–0.54). Open-label trial. One hospital enrolled 96%. Nine of 82 assigned to 3D-CRT did not reach surgery. The trial did not evaluate SBRT.",
+      "caution": "Open label. One hospital enrolled 96%. Nine of 82 assigned to 3D-CRT did not reach surgery.",
+      "shortCaution": "Open label. One hospital enrolled 96%. Nine of 82 assigned to 3D-CRT did not reach surgery.",
       "origin": "matrix",
       "pmid": "31283409",
       "year": "2019",
@@ -1967,8 +1983,8 @@
       "population": "Personalised (≥205 Gy) vs standard (120 Gy) SIRT dosimetry",
       "result": "Phase 2: index-lesion response at 3 mo 71% vs 36% (p=0.0074; primary met, stopped early); median OS 26.6 vs 10.7 mo (HR 0.421); PFS not significant",
       "summary": "Phase 2: index-lesion response at 3 mo 71% vs 36% (p=0.0074; primary met, stopped early); median OS 26.6 vs 10.7 mo (HR 0.421); PFS not significant",
-      "caution": "60 patients; unmasked single-lesion endpoint; resection 36% vs 4% partly drives OS",
-      "shortCaution": "60 patients; unmasked single-lesion endpoint; resection 36% vs 4% partly drives OS",
+      "caution": "Index-lesion response was unmasked. Masked central review also favored personalized dosing (79% vs 43%).",
+      "shortCaution": "Index-lesion response was unmasked. Masked central review also favored personalized dosing (79% vs 43%).",
       "origin": "compact-evidence",
       "pmid": "33166497",
       "year": "2021",
@@ -2015,10 +2031,10 @@
       "label": "MALRIC recurrent",
       "design": "Cohort",
       "population": "Microwave ablation (375) vs repeat resection (119) · observational",
-      "result": "Recurrent iCCA: median OS 29.8 vs 34.0 mo (HR 0.89, 95% CI 0.68-1.17); DFS 10.7 vs 14.8 mo (HR 0.78, 0.61-1.00); major complications 5.5% vs 31.3%",
-      "summary": "Recurrent iCCA: median OS 29.8 vs 34.0 mo (HR 0.89, 95% CI 0.68-1.17); DFS 10.7 vs 14.8 mo (HR 0.78, 0.61-1.00); major complications 5.5% vs 31.3%",
-      "caution": "Observational, no non-inferiority margin; DFS directionally worse after ablation; called exploratory",
-      "shortCaution": "Observational, no non-inferiority margin; DFS directionally worse after ablation; called exploratory",
+      "result": "MWA vs repeat resection: median OS 29.8 vs 34.0 mo, DFS 10.7 vs 14.8 mo. HRs for resection vs MWA: OS 0.89 (0.68–1.17), DFS 0.78 (0.61–1.00), P=.07 for DFS.",
+      "summary": "MWA vs repeat resection: median OS 29.8 vs 34.0 mo, DFS 10.7 vs 14.8 mo. HRs for resection vs MWA: OS 0.89 (0.68–1.17), DFS 0.78 (0.61–1.00), P=.07 for DFS.",
+      "caution": "Observational. Major complications: 5.5% with MWA vs 31.3% with resection. No noninferiority margin.",
+      "shortCaution": "Observational. Major complications: 5.5% with MWA vs 31.3% with resection. No noninferiority margin.",
       "origin": "compact-evidence",
       "pmid": "41528222",
       "year": "2026",
@@ -2039,11 +2055,11 @@
       ],
       "label": "MALRIC (PSM)",
       "design": "Cohort",
-      "population": "Microwave ablation vs resection · retrospective PSM (203 vs 588)",
+      "population": "MWA vs resection: one iCCA ≤5 cm or up to three, each ≤3 cm",
       "result": "iCCA within Milan: matched 5-y OS 44.8% vs 40.4% (HR 0.96, 95% CI 0.71-1.29, P=.761); median DFS 1.7 vs 3.6 y (HR 0.63), favouring resection",
       "summary": "iCCA within Milan: matched 5-y OS 44.8% vs 40.4% (HR 0.96, 95% CI 0.71-1.29, P=.761); median DFS 1.7 vs 3.6 y (HR 0.63), favouring resection",
-      "caution": "Retrospective; no non-inferiority margin; equivalence rests on post hoc 2017 split; entry single tumour ≤5 cm",
-      "shortCaution": "Retrospective; no non-inferiority margin; equivalence rests on post hoc 2017 split; entry single tumour ≤5 cm",
+      "caution": "Retrospective matched cohort. No noninferiority margin. The time-period analysis was post hoc.",
+      "shortCaution": "Retrospective matched cohort. No noninferiority margin. The time-period analysis was post hoc.",
       "origin": "compact-evidence",
       "pmid": "38261915",
       "year": "2024",
@@ -2141,9 +2157,9 @@
       "design": "Retrospective comparison",
       "population": "319 multifocal iCCA patients: unresectable HAIP-FUDR 141 versus resection 178 across different centers/eras.",
       "result": "Median OS 20.3 versus 18.9 months; adjusted HR 0.75 (95% CI 0.55–1.03), p=0.07.",
-      "caution": "HAIP patients had substantially more bilobar/multifocal disease. Not an equivalence trial or reason to deny resection to an otherwise suitable patient; does not distinguish all satellites from metastases.",
+      "caution": "Both cohorts had multifocal iCCA. HAIP vs resection cohorts more often had bilobar disease (88.0% vs 34.3%) and ≥4 tumors (66.7% vs 24.2%). Centers, eras and resectability differed. These data cannot establish equivalent survival or distinguish satellites from intrahepatic metastases.",
       "summary": "OS 20.3 vs 18.9 mo; adjusted HR 0.75 (0.55–1.03).",
-      "shortCaution": "Different centers/eras and burden; not resection equivalence or transplant-selection evidence.",
+      "shortCaution": "All were multifocal. HAIP vs resection: bilobar 88.0% vs 34.3%, ≥4 lesions 66.7% vs 24.2%.",
       "origin": "comparative-record",
       "pmid": "35544131",
       "year": "2022",
@@ -2190,10 +2206,10 @@
       "label": "Sebastian 2019",
       "design": "Retrospective NCDB comparison",
       "population": "Main-text analysis: SBRT 27, chemoradiation 54, TARE 60; nonmetastatic node-negative unresected iCCA.",
-      "result": "Adjusted OS HR 0.42 (95% CI 0.21–0.84) for SBRT versus TARE.",
+      "result": "SBRT vs TARE: multivariable OS HR 0.42 (0.21–0.84). With inverse probability weighting, HR 0.58 (0.37–0.91), P=.019, above the Bonferroni threshold of .017.",
       "caution": "TARE tumors were larger/more often multifocal or vascular-invasive. Strong selection bias and abstract/main-text cohort-count discrepancy; not causal superiority or equivalent treatment eligibility.",
-      "summary": "Adjusted OS HR 0.42 (0.21–0.84) for SBRT vs TARE.",
-      "shortCaution": "Selection differences; main-text and abstract cohort counts conflict. Not causal superiority.",
+      "summary": "SBRT vs TARE, OS: multivariable HR 0.42 (0.21–0.84). IPTW HR 0.58 (0.37–0.91), P=.019, above the prespecified Bonferroni threshold of .017.",
+      "shortCaution": "Registry cohort. Tumor burden and vascular invasion differed.",
       "origin": "comparative-record",
       "pmid": "31517072",
       "year": "2019",
@@ -2287,8 +2303,8 @@
       "label": "Gupta (n=123)",
       "design": "Cohort",
       "population": "Retrospective · HAE (bland) vs HACE (chemoembolisation)",
-      "result": "Carcinoid: response 81.0% vs 44.4% (OR 6.41, P=0.002), no PFS or OS difference; islet cell: response 25% vs 50% (P=0.06, not significant)",
-      "summary": "Carcinoid: response 81.0% vs 44.4% (OR 6.41, P=0.002), no PFS or OS difference; islet cell: response 25% vs 50% (P=0.06, not significant)",
+      "result": "Carcinoid response 81.0% vs 44.4%, adjusted OR 6.41 (P=.002). No OS or PFS difference. Islet-cell response 25% vs 50% (P=.06).",
+      "summary": "Carcinoid response 81.0% vs 44.4%, adjusted OR 6.41 (P=.002). No OS or PFS difference. Islet-cell response 25% vs 50% (P=.06).",
       "caution": "Retrospective; modality chosen by referring physician, so not a treatment effect; no grade or Ki-67",
       "shortCaution": "Retrospective; modality chosen by referring physician, so not a treatment effect; no grade or Ki-67",
       "origin": "compact-evidence",
@@ -2312,10 +2328,10 @@
       "label": "Egger 2020",
       "design": "Retrospective two-center cohort",
       "population": "248 NELM patients: TARE 51 versus TACE 197.",
-      "result": "Initial DCR 83% versus 96% (p<0.01); no significant OS or PFS difference. TARE was usually outpatient.",
+      "result": "TARE vs TACE: initial disease control 83% vs 96% (P<.01), with no significant OS or PFS difference. TARE was usually outpatient.",
       "caution": "Nonrandomized baseline and treatment-selection differences. Does not prove equivalence; treatment burden and delayed toxicity also matter.",
-      "summary": "Disease control 83% vs 96%; no significant OS/PFS difference.",
-      "shortCaution": "Retrospective; patient selection differs. Nonsignificance does not show equivalence.",
+      "summary": "TARE vs TACE: initial disease control 83% vs 96% (P<.01), with no significant OS or PFS difference.",
+      "shortCaution": "Retrospective, nonrandomized groups. The disease-control association does not demonstrate a survival benefit.",
       "origin": "comparative-record",
       "pmid": "32032719",
       "year": "2020",
@@ -2462,10 +2478,10 @@
       "label": "Hoogwater, BJS Open 2023",
       "design": "Retrospective cohort",
       "population": "Multicentre retrospective · 49 LT: 27 neoadjuvant CRT vs 22 none",
-      "result": "Chemoradiation: less recurrence (adjusted HR 0.30, 95% CI 0.09–0.97) but no OS gain (5-y 41% vs 53%, NS); major vascular complications 11/27 vs 3/22",
-      "summary": "Chemoradiation: less recurrence (adjusted HR 0.30, 95% CI 0.09–0.97) but no OS gain (5-y 41% vs 53%, NS); major vascular complications 11/27 vs 3/22",
-      "caution": "Nonrandom, centre-specific treatment; recurrence benefit vs vascular harm; not proof RT can be omitted",
-      "shortCaution": "Nonrandom, centre-specific treatment; recurrence benefit vs vascular harm; not proof RT can be omitted",
+      "result": "Recurrence HR 0.30 (0.09–0.97), 5-y OS 41% vs 53% (NS). Any major vascular complication 11/27 vs 3/22, hepatic artery complications 9/27 vs 2/22 (Table 3).",
+      "summary": "Recurrence HR 0.30 (0.09–0.97), 5-y OS 41% vs 53% (NS). Any major vascular complication 11/27 vs 3/22, hepatic artery complications 9/27 vs 2/22 (Table 3).",
+      "caution": "Center-specific, retrospective comparison. No randomized evidence for omitting radiation.",
+      "shortCaution": "Center-specific, retrospective comparison. No randomized evidence for omitting radiation.",
       "origin": "compact-evidence",
       "pmid": "37032423",
       "year": "2023",
@@ -2536,18 +2552,25 @@
       "label": "Chen randomized trial",
       "design": "Randomized trial",
       "population": "Chinese trial tested radiation-emitting vs conventional stents, BOTH with arterial gemcitabine/cisplatin. It did not test HAIC versus systemic therapy or pump FUDR.",
-      "result": "126 patients; OS 10.2 vs 6.7 months. Effect is the stent comparison within HAIC, not proof of HAI benefit.",
-      "summary": "126 patients; OS 10.2 vs 6.7 months. Effect is the stent comparison within HAIC, not proof of HAI benefit.",
+      "result": "Radiation-emitting vs conventional metallic stent, with HAIC in both groups: median OS 10.2 vs 6.7 months, HR 0.53 (95% CI 0.36–0.79), P=.002. The trial randomized 126 patients with unresectable Bismuth III/IV perihilar cholangiocarcinoma. Both groups received catheter-based gemcitabine/cisplatin. The randomized contrast isolates stent type.",
+      "summary": "Radiation-emitting vs conventional metallic stent, with HAIC in both groups: median OS 10.2 vs 6.7 months, HR 0.53 (95% CI 0.36–0.79), P=.002. The trial randomized 126 patients with unresectable Bismuth III/IV perihilar cholangiocarcinoma. Both groups received catheter-based gemcitabine/cisplatin. The randomized contrast isolates stent type.",
       "caution": "Chinese trial tested radiation-emitting vs conventional stents, BOTH with arterial gemcitabine/cisplatin. It did not test HAIC versus systemic therapy or pump FUDR.",
       "shortCaution": "Chinese trial tested radiation-emitting vs conventional stents, BOTH with arterial gemcitabine/cisplatin. It did not test HAIC versus systemic therapy or pump FUDR.",
       "origin": "matrix",
+      "publisher_citation": "Int J Surg. 2025;111:706–717.",
       "pmid": "39311927",
       "year": "2025",
       "journal": "Int J Surg",
       "author": "Chen",
       "doi": "10.1097/JS9.0000000000002089",
       "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39311927/",
-      "tmc": "https://libkey.io/libraries/480/pmid/39311927"
+      "tmc": "https://libkey.io/libraries/480/pmid/39311927",
+      "additionalSources": [
+        [
+          "Published full-text PDF · Int J Surg 2025",
+          "https://pmc-oa-opendata.s3.amazonaws.com/PMC11745636.1/PMC11745636.1.pdf"
+        ]
+      ]
     }
   ],
   "arms": {
@@ -2667,8 +2690,8 @@
       "a": "abl",
       "b": "resection",
       "arms": "Thermal ablation vs resection",
-      "brief": "OS HR 1.05 (0.69–1.58); AEs 19% vs 46%.",
-      "note": "COLLISION; CI crosses noninferiority margin.",
+      "brief": "OS HR 1.05 (0.69–1.58). Adverse events 19% vs 46%.",
+      "note": "Early-stop NI trial. Both treatments used in 18% assigned ablation and 35% assigned resection (Table 1).",
       "screen": {
         "label": "COLLISION",
         "result": "Ablation OS HR 1.05 (0.69–1.58); NI unresolved",
@@ -2703,15 +2726,15 @@
       "a": "tace",
       "b": "systemic",
       "arms": "DEBIRI vs FOLFIRI",
-      "brief": "OS 22 vs 15 mo; PFS 7 vs 4 mo.",
-      "note": "Small RCT; historical FOLFIRI control.",
+      "brief": "OS 22 vs 15 months and PFS 7 vs 4 months.",
+      "note": "Small randomized trial with concurrent FOLFIRI limited to four months.",
       "screen": {
         "label": "Fiorentini (n=74)",
         "result": "OS: DEBIRI 22, FOLFIRI 15 mo",
         "verdict": "superior",
         "favored": "DEBIRI",
         "endpoint": "OS",
-        "rationale": "Small RCT; historical FOLFIRI control."
+        "rationale": "Small randomized trial with concurrent FOLFIRI limited to four months."
       }
     },
     {
@@ -2829,15 +2852,15 @@
       "a": "y90_hai",
       "b": "hai",
       "arms": "Y90 + arterial FUDR vs arterial FUDR",
-      "brief": "Tumor-volume response 50% vs 24%; liver progression delayed.",
-      "note": "Older RCT; add-on study, no established OS benefit.",
+      "brief": "Tumor-volume response 50% vs 24%. Liver progression was delayed.",
+      "note": "The study closed early and shifted from survival to response and progression. OS benefit was not established.",
       "screen": {
         "label": "Gray 2001",
         "result": "Response: Y90+HAI 50%, HAI 24%",
         "verdict": "signal",
         "favored": "Y90 added to HAI",
         "endpoint": "tumor response",
-        "rationale": "Older RCT; add-on study, no established OS benefit."
+        "rationale": "The study closed early and shifted from survival to response and progression. OS benefit was not established."
       }
     },
     {
@@ -2919,15 +2942,15 @@
       "a": "hai_sys",
       "b": "systemic",
       "arms": "HAI + systemic vs systemic",
-      "brief": "2-y OS 86% vs 72% (P=.03); full OS curves NS.",
-      "note": "Adjuvant RCT; landmark vs whole-curve distinction.",
+      "brief": "Two-year co-primary OS 86% vs 72% (P=.03) and all-site PFS 57% vs 42% (P=.07).",
+      "note": "Full OS curves P=.21. Secondary hepatic PFS 90% vs 60% (P<.001).",
       "screen": {
         "label": "Kemeny NEJM",
-        "result": "2-y OS: add-on 86%, control 72%; full curve NS",
+        "result": "2-y OS 86% vs 72% (P=.03). PFS 57% vs 42% (P=.07)",
         "verdict": "superior",
         "favored": "HAI + systemic",
         "endpoint": "2-year OS landmark only",
-        "rationale": "Adjuvant RCT; landmark vs whole-curve distinction."
+        "rationale": "Full OS curves P=.21. Secondary hepatic PFS 90% vs 60% (P<.001)."
       }
     },
     {
@@ -2937,15 +2960,15 @@
       "a": "hai_sys",
       "b": "systemic",
       "arms": "HAI + systemic vs systemic",
-      "brief": "3-y RFS 31.4% vs 34.4% (P=.28).",
-      "note": "HARVEST: primary negative; stopped for FUDR shortage.",
+      "brief": "Three-year RFS 31.4% vs 34.4% (P=.28).",
+      "note": "HARVEST. Allocation moved to after resection following the first 11 patients. FUDR shortage closed enrollment.",
       "screen": {
         "label": "HARVEST",
         "result": "3-y RFS: add-on 31.4%, control 34.4%; NS",
         "verdict": "uncertain",
         "favored": "",
         "endpoint": "summarized outcome",
-        "rationale": "HARVEST: primary negative; stopped for FUDR shortage."
+        "rationale": "HARVEST. Allocation moved to after resection following the first 11 patients. FUDR shortage closed enrollment."
       }
     },
     {
@@ -2955,15 +2978,15 @@
       "a": "surgery_hai",
       "b": "surgery_nohai",
       "arms": "Perioperative HAI vs no HAI",
-      "brief": "OS 67 vs 44 mo; adjusted HR 0.67 (0.59–0.76).",
-      "note": "Retrospective, single center; residual confounding.",
+      "brief": "Median OS 67 vs 44 months, propensity-adjusted HR 0.67 (0.59–0.76).",
+      "note": "Single center. Propensity covariates listed, coefficients unreported. Residual confounding possible.",
       "screen": {
         "label": "Groot Koerkamp",
         "result": "OS: perioperative HAI 67, no HAI 44 mo",
         "verdict": "signal",
         "favored": "Perioperative HAI",
         "endpoint": "OS",
-        "rationale": "Retrospective, single center; residual confounding."
+        "rationale": "Single center. Propensity covariates listed, coefficients unreported. Residual confounding possible."
       }
     },
     {
@@ -3045,15 +3068,15 @@
       "a": "resection",
       "b": "abl",
       "arms": "Resection vs RFA",
-      "brief": "RFS 3.46 vs 3.04 y (P=.58).",
-      "note": "SURF interim report; stopped early.",
+      "brief": "Median RFS 3.46 vs 3.04 years (P=.58).",
+      "note": "Final RFS report. Enrollment was slow. Conditional power <8% was calculated after enrollment stopped.",
       "screen": {
         "label": "SURF",
         "result": "Surgery RFS HR 0.92 (0.67–1.25); NS",
         "verdict": "uncertain",
         "favored": "",
         "endpoint": "summarized outcome",
-        "rationale": "SURF interim report; stopped early."
+        "rationale": "Final RFS report. Enrollment was slow. Conditional power <8% was calculated after enrollment stopped."
       }
     },
     {
@@ -3171,15 +3194,15 @@
       "a": "y90",
       "b": "resection",
       "arms": "Y90 segmentectomy vs resection",
-      "brief": "Progression HR 1.16 (0.51–2.63); OS unreached in both.",
-      "note": "Retrospective; not equivalence.",
+      "brief": "Time to any progression 21.9 months after Y90 vs 29.4 after resection (P=.03). Adjusted HR 1.16 (0.51–2.63).",
+      "note": "Retrospective cohort. Liver reserve and surgical candidacy differed.",
       "screen": {
         "label": "De la Garza-Ramos 2022",
-        "result": "Y90 progression HR 1.16 (0.51–2.63)",
+        "result": "TTP 21.9 vs 29.4 mo (P=.03). Adjusted HR 1.16 (NS)",
         "verdict": "uncertain",
         "favored": "",
         "endpoint": "summarized outcome",
-        "rationale": "Retrospective; not equivalence."
+        "rationale": "Retrospective cohort. Liver reserve and surgical candidacy differed."
       }
     },
     {
@@ -3207,15 +3230,15 @@
       "a": "lt",
       "b": "nonlt",
       "arms": "LT vs non-transplant care after downstaging",
-      "brief": "5-y OS 77.5% vs 31.2%; HR 0.32 (0.11–0.92).",
-      "note": "45 selected downstaging responders; early closure.",
+      "brief": "Five-year OS 77.5% vs 31.2%, HR 0.32 (0.11–0.92).",
+      "note": "Corrected full report. 45 randomized downstaging responders. Trial closed early.",
       "screen": {
         "label": "XXL",
         "result": "5-y OS: LT 77.5%, non-LT 31.2%",
         "verdict": "superior",
         "favored": "Transplant",
         "endpoint": "survival after downstaging",
-        "rationale": "45 selected downstaging responders; early closure."
+        "rationale": "Corrected full report. 45 randomized downstaging responders. Trial closed early."
       }
     },
     {
@@ -3369,15 +3392,15 @@
       "a": "y90",
       "b": "tace",
       "arms": "Y-90 vs TACE",
-      "brief": "Dropout sHR 0.85 (0.81–0.89).",
-      "note": "IPTW registry cohort; not randomized.",
+      "brief": "Dropout sHR 0.85 (0.81–0.89) with IPTW, 1.03 (0.91–1.17) in the conventional multivariable model.",
+      "note": "Observational first-treatment registry comparison. The result depended on adjustment method.",
       "screen": {
         "label": "Kwong 2022",
-        "result": "Y90 dropout sHR 0.85 (0.81–0.89)",
+        "result": "Y90 dropout sHR: 0.85 IPTW, 1.03 conventional",
         "verdict": "signal",
         "favored": "Y90",
-        "endpoint": "waitlist dropout",
-        "rationale": "IPTW registry cohort; not randomized."
+        "endpoint": "IPTW waitlist dropout only",
+        "rationale": "Observational first-treatment registry comparison. The result depended on adjustment method."
       }
     },
     {
@@ -3387,15 +3410,15 @@
       "a": "abl",
       "b": "tace",
       "arms": "Ablation vs TACE",
-      "brief": "Dropout sHR 0.95 (0.91–0.99).",
-      "note": "Same cohort; not an ablation–Y-90 comparison.",
+      "brief": "Dropout sHR 0.95 (0.91–0.99) with IPTW, 0.97 (0.90–1.05) in the conventional multivariable model.",
+      "note": "Ablation vs TACE in the same registry. The result depended on adjustment method.",
       "screen": {
         "label": "Kwong 2022",
-        "result": "Ablation dropout sHR 0.95 (0.91–0.99)",
+        "result": "Ablation dropout sHR: 0.95 IPTW, 0.97 conventional",
         "verdict": "signal",
         "favored": "Ablation",
-        "endpoint": "waitlist dropout",
-        "rationale": "Same cohort; not an ablation–Y-90 comparison."
+        "endpoint": "IPTW waitlist dropout only",
+        "rationale": "Ablation vs TACE in the same registry. The result depended on adjustment method."
       }
     },
     {
@@ -3495,15 +3518,15 @@
       "a": "y90",
       "b": "tace",
       "arms": "Y90 vs TACE",
-      "brief": "2-y downstaging: 74% vs 65% in all-comers.",
-      "note": "Nonrandomized; overlaps MERITS-LT.",
+      "brief": "Two-year downstaging (Y90 vs TACE): 73.8% vs 64.6% beyond UNOS-DS, 78.1% vs 86.5% within UNOS-DS.",
+      "note": "Prospective cohort. First LRT type did not predict success after stratification by center (P=.07).",
       "screen": {
         "label": "Xu 2025",
-        "result": "2-y downstaging: Y90 74%, TACE 65%",
-        "verdict": "signal",
-        "favored": "Y90",
-        "endpoint": "downstaging",
-        "rationale": "Nonrandomized; overlaps MERITS-LT."
+        "result": "2-y DS, Y90:TACE: beyond 74:65%, within UNOS-DS 78:87%",
+        "verdict": "uncertain",
+        "favored": "",
+        "endpoint": "2-year downstaging by UNOS-DS entry status",
+        "rationale": "Prospective cohort. First LRT type did not predict success after stratification by center (P=.07)."
       }
     },
     {
@@ -3585,15 +3608,15 @@
       "a": "hai",
       "b": "systemic",
       "arms": "HAIC-FOLFOX vs sorafenib",
-      "brief": "OS 13.9 vs 8.2 mo; HR 0.408 (0.301–0.552).",
-      "note": "RCT; large tumors; historical sorafenib control.",
+      "brief": "OS 13.9 vs 8.2 months, HR 0.408 (0.301–0.552).",
+      "note": "HBV infection in 89% overall and 92% of the HAIC arm. Single-center trial with sorafenib.",
       "screen": {
         "label": "FOHAIC-1",
         "result": "OS: HAIC 13.9, sorafenib 8.2 mo",
         "verdict": "superior",
         "favored": "HAIC-FOLFOX",
         "endpoint": "OS",
-        "rationale": "RCT; large tumors; historical sorafenib control."
+        "rationale": "HBV infection in 89% overall and 92% of the HAIC arm. Single-center trial with sorafenib."
       }
     },
     {
@@ -3783,15 +3806,15 @@
       "a": "y90",
       "b": "systemic",
       "arms": "Y90 vs sorafenib",
-      "brief": "OS 8.8 vs 10.0 mo; HR 1.12 (0.9–1.4).",
-      "note": "SIRveNIB RCT; no OS benefit.",
+      "brief": "ITT OS 8.8 vs 10.0 months, HR 1.12 (0.9–1.4). ITT response 16.5% vs 1.7% (P<.001).",
+      "note": "SIRveNIB. Higher response did not translate into longer survival.",
       "screen": {
         "label": "SIRveNIB",
         "result": "OS: Y90 8.8, sorafenib 10.0 mo; NS",
         "verdict": "uncertain",
         "favored": "",
         "endpoint": "summarized outcome",
-        "rationale": "SIRveNIB RCT; no OS benefit."
+        "rationale": "SIRveNIB. Higher response did not translate into longer survival."
       }
     },
     {
@@ -3801,15 +3824,15 @@
       "a": "hai_abl",
       "b": "abl",
       "arms": "HAIC + RFA vs RFA",
-      "brief": "3-y RFS 54.3% vs 34.3% (P=.094).",
-      "note": "Randomized; primary recurrence endpoint negative.",
+      "brief": "Three-year RFS 54.3% vs 34.3% (P=.094).",
+      "note": "Primary RFS result was inconclusive. Distant intrahepatic recurrence was examined post hoc.",
       "screen": {
         "label": "Oyama 2021",
         "result": "HAIC add-on: 3-y RFS 54.3% vs 34.3%; P=.094",
         "verdict": "uncertain",
         "favored": "",
         "endpoint": "summarized outcome",
-        "rationale": "Randomized; primary recurrence endpoint negative."
+        "rationale": "Primary RFS result was inconclusive. Distant intrahepatic recurrence was examined post hoc."
       }
     },
     {
@@ -3855,15 +3878,15 @@
       "a": "sbrt_sys",
       "b": "systemic",
       "arms": "SBRT + sorafenib vs sorafenib",
-      "brief": "OS 15.8 vs 12.3 mo; primary P=.06; PFS 9.2 vs 5.5 mo.",
-      "note": "RTOG 1112: unadjusted primary OS endpoint not met.",
+      "brief": "OS 15.8 vs 12.3 months, primary P=.06. PFS 9.2 vs 5.5 months.",
+      "note": "Original 368 at 85% power. Amended 292 at 80%. Early closure: 177 analyzed at 65% power.",
       "screen": {
         "label": "RTOG 1112",
         "result": "SBRT add-on: OS 15.8 vs 12.3 mo; primary P=.06",
         "verdict": "uncertain",
         "favored": "",
         "endpoint": "summarized outcome",
-        "rationale": "RTOG 1112: unadjusted primary OS endpoint not met."
+        "rationale": "Original 368 at 85% power. Amended 292 at 80%. Early closure: 177 analyzed at 65% power."
       }
     },
     {
@@ -3909,15 +3932,15 @@
       "a": "tace_sys",
       "b": "tace",
       "arms": "TACE + durvalumab / bevacizumab vs TACE",
-      "brief": "PFS 15.0 vs 8.2 mo; HR 0.77; final OS HR 1.10.",
-      "note": "EMERALD-1: durvalumab + bevacizumab add-on.",
+      "brief": "Add-on PFS 15.0 vs 8.2 months (HR 0.77). Final OS 29.9 vs 33.3 months (HR 1.10, 95% CI 0.87–1.39).",
+      "note": "EMERALD-1. PFS from the randomized trial publication. OS from ESMO GI 2026 abstract 183O.",
       "screen": {
         "label": "EMERALD-1",
-        "result": "Add-on PFS 15.0 vs 8.2 mo; OS unresolved",
+        "result": "PFS 15.0 vs 8.2 mo. OS 29.9 vs 33.3 mo (HR 1.10, NS)",
         "verdict": "superior",
         "favored": "TACE + durvalumab/bevacizumab",
         "endpoint": "PFS",
-        "rationale": "EMERALD-1: durvalumab + bevacizumab add-on."
+        "rationale": "EMERALD-1. PFS from the randomized trial publication. OS from ESMO GI 2026 abstract 183O."
       }
     },
     {
@@ -3927,15 +3950,15 @@
       "a": "tace_sys",
       "b": "tace",
       "arms": "TACE + lenvatinib / pembrolizumab vs TACE",
-      "brief": "PFS 14.6 vs 10.0 mo; HR 0.66; long-term OS HR 0.98.",
-      "note": "LEAP-012: lenvatinib + pembrolizumab add-on.",
+      "brief": "Add-on PFS 14.6 vs 10.0 months (HR 0.66). Long-term OS 40.4 vs 40.8 months (HR 0.98, 95% CI 0.76–1.26).",
+      "note": "LEAP-012. Published primary PFS. Long-term OS from ESMO 2026 abstract 1678RO and the trial registry.",
       "screen": {
         "label": "LEAP-012",
-        "result": "Add-on PFS 14.6 vs 10.0 mo; OS unresolved",
+        "result": "PFS 14.6 vs 10.0 mo. OS 40.4 vs 40.8 mo (HR 0.98, NS)",
         "verdict": "superior",
         "favored": "TACE + lenvatinib/pembrolizumab",
         "endpoint": "PFS",
-        "rationale": "LEAP-012: lenvatinib + pembrolizumab add-on."
+        "rationale": "LEAP-012. Published primary PFS. Long-term OS from ESMO 2026 abstract 1678RO and the trial registry."
       }
     },
     {
@@ -4035,15 +4058,15 @@
       "a": "rt_surgery",
       "b": "resection",
       "arms": "RT → resection vs resection",
-      "brief": "HCC-death HR 0.47; 9/82 did not reach surgery.",
-      "note": "Neoadjuvant 3D-CRT, not SBRT; univariable ITT.",
+      "brief": "Two-year tumor-related survival 27.4% vs 9.4% (P<.001). Adjusted HCC-death HR 0.35 (0.23–0.54).",
+      "note": "Preoperative 3D-CRT in resectable Cheng II/III PVTT. One hospital enrolled 96%. No SBRT arm.",
       "screen": {
         "label": "Wei",
-        "result": "Preop RT: HCC-death HR 0.47",
-        "verdict": "signal",
-        "favored": "Preoperative 3D-CRT",
-        "endpoint": "univariable HCC-death analysis",
-        "rationale": "Neoadjuvant 3D-CRT, not SBRT; univariable ITT."
+        "result": "2-y tumor-related survival: 3D-CRT + surgery 27.4%, surgery 9.4%",
+        "verdict": "superior",
+        "favored": "3D-CRT then resection",
+        "endpoint": "2-year tumor-related survival",
+        "rationale": "Preoperative 3D-CRT in resectable Cheng II/III PVTT. One hospital enrolled 96%. No SBRT arm."
       }
     },
     {
@@ -4053,15 +4076,15 @@
       "a": "personal_y90",
       "b": "standard_y90",
       "arms": "Personalized vs standard Y90 dosimetry",
-      "brief": "3-mo response 71% vs 36%; OS 26.6 vs 10.7 mo.",
-      "note": "Phase II; stopped early; OS affected by resection.",
+      "brief": "Index-lesion response at 3 months: 71% vs 36% by investigator. Masked central assessment: 79% vs 43% (P=.0062).",
+      "note": "Phase 2, 60 patients, index-lesion response. Early stop and subsequent resections complicate OS.",
       "screen": {
         "label": "DOSISPHERE-01",
         "result": "3-mo response: personalized 71%, standard 36%",
         "verdict": "superior",
         "favored": "Personalized Y90 dose",
         "endpoint": "3-month index-lesion response",
-        "rationale": "Phase II; stopped early; OS affected by resection."
+        "rationale": "Phase 2, 60 patients, index-lesion response. Early stop and subsequent resections complicate OS."
       }
     },
     {
@@ -4089,15 +4112,15 @@
       "a": "abl",
       "b": "resection",
       "arms": "MWA vs repeat resection",
-      "brief": "OS 29.8 vs 34.0 mo; major complications 5.5% vs 31.3%.",
-      "note": "Recurrent iCCA; observational, not equivalence.",
+      "brief": "MWA vs repeat resection: OS 29.8 vs 34.0 and DFS 10.7 vs 14.8 months.",
+      "note": "HRs compare repeat resection to MWA: OS 0.89, DFS 0.78. Observational study.",
       "screen": {
         "label": "MALRIC recurrent",
         "result": "OS: MWA 29.8, repeat resection 34.0 mo; NS",
         "verdict": "uncertain",
         "favored": "",
         "endpoint": "summarized outcome",
-        "rationale": "Recurrent iCCA; observational, not equivalence."
+        "rationale": "HRs compare repeat resection to MWA: OS 0.89, DFS 0.78. Observational study."
       }
     },
     {
@@ -4107,15 +4130,15 @@
       "a": "abl",
       "b": "resection",
       "arms": "MWA vs resection",
-      "brief": "5-y OS 44.8% vs 40.4%; DFS 1.7 vs 3.6 y.",
-      "note": "Matched cohort; DFS favored resection.",
+      "brief": "Five-year OS 44.8% vs 40.4%. Median DFS 1.7 vs 3.6 years.",
+      "note": "Matched cohort within Milan: one tumor ≤5 cm or up to three, each ≤3 cm. DFS favored resection.",
       "screen": {
         "label": "MALRIC (PSM)",
         "result": "5-y OS: MWA 44.8%, resection 40.4%; NS",
         "verdict": "uncertain",
         "favored": "",
         "endpoint": "summarized outcome",
-        "rationale": "Matched cohort; DFS favored resection."
+        "rationale": "Matched cohort within Milan: one tumor ≤5 cm or up to three, each ≤3 cm. DFS favored resection."
       }
     },
     {
@@ -4179,15 +4202,15 @@
       "a": "hai",
       "b": "resection",
       "arms": "Pump HAI vs resection",
-      "brief": "OS 20.3 vs 18.9 mo; adjusted HR 0.75 (0.55–1.03).",
-      "note": "Multifocal iCCA; different centers/eras.",
+      "brief": "Median OS 20.3 vs 18.9 months, adjusted HR 0.75 (0.55–1.03).",
+      "note": "All patients had multifocal iCCA. Bilobar disease and ≥4 lesions were more frequent with HAIP.",
       "screen": {
         "label": "Franssen 2022",
         "result": "HAI OS HR 0.75 (0.55–1.03); uncertain",
         "verdict": "uncertain",
         "favored": "",
         "endpoint": "summarized outcome",
-        "rationale": "Multifocal iCCA; different centers/eras."
+        "rationale": "All patients had multifocal iCCA. Bilobar disease and ≥4 lesions were more frequent with HAIP."
       }
     },
     {
@@ -4215,15 +4238,15 @@
       "a": "sbrt",
       "b": "y90",
       "arms": "SBRT vs TARE",
-      "brief": "Adjusted OS HR 0.42 (0.21–0.84).",
-      "note": "Registry; burden/selection differed; not causal superiority.",
+      "brief": "SBRT vs TARE OS HR 0.42 (0.21–0.84) in the multivariable model and 0.58 (0.37–0.91) after IPTW (P=.019).",
+      "note": "Weighted P=.019 missed the Bonferroni threshold of .017. Tumor burden and treatment selection differed.",
       "screen": {
         "label": "Sebastian 2019",
-        "result": "SBRT vs Y90 OS HR 0.42 (0.21–0.84)",
-        "verdict": "signal",
-        "favored": "SBRT",
-        "endpoint": "OS",
-        "rationale": "Registry; burden/selection differed; not causal superiority."
+        "result": "SBRT vs Y90 OS HR: 0.42 multivariable, 0.58 IPTW (P=.019)",
+        "verdict": "uncertain",
+        "favored": "",
+        "endpoint": "overall survival across adjusted models",
+        "rationale": "Weighted P=.019 missed the Bonferroni threshold of .017. Tumor burden and treatment selection differed."
       }
     },
     {
@@ -4287,15 +4310,15 @@
       "a": "tae",
       "b": "ctace",
       "arms": "Bland vs chemoembolization",
-      "brief": "Carcinoid response 81.0% vs 44.4%; islet-cell 25% vs 50%.",
-      "note": "Retrospective; islet-cell difference NS; not a survival gain.",
+      "brief": "Carcinoid response 81.0% with bland embolization vs 44.4% with chemoembolization (adjusted OR 6.41).",
+      "note": "Retrospective. Islet-cell response 25% vs 50% (P=.06). No survival advantage was established.",
       "screen": {
         "label": "Gupta (n=123)",
         "result": "Carcinoid response: TAE 81%, TACE 44.4%",
         "verdict": "signal",
         "favored": "Bland embolization",
         "endpoint": "carcinoid response; not all NETs",
-        "rationale": "Retrospective; islet-cell difference NS; not a survival gain."
+        "rationale": "Retrospective. Islet-cell response 25% vs 50% (P=.06). No survival advantage was established."
       }
     },
     {
@@ -4305,15 +4328,15 @@
       "a": "y90",
       "b": "tace",
       "arms": "Y90 vs TACE",
-      "brief": "Disease control 83% vs 96%; OS/PFS differences NS.",
-      "note": "Retrospective; not equivalence.",
+      "brief": "Initial disease control 83% after Y90 vs 96% after TACE (P<.01). OS and PFS differences were nonsignificant.",
+      "note": "Retrospective cohort. The association was confined to disease control.",
       "screen": {
         "label": "Egger 2020",
         "result": "Disease control: Y90 83%, TACE 96%; OS NS",
-        "verdict": "uncertain",
-        "favored": "",
-        "endpoint": "summarized outcome",
-        "rationale": "Retrospective; not equivalence."
+        "verdict": "signal",
+        "favored": "TACE",
+        "endpoint": "initial disease control",
+        "rationale": "Retrospective cohort. The association was confined to disease control."
       }
     },
     {
@@ -4431,15 +4454,15 @@
       "a": "lt_crt",
       "b": "lt_nocrt",
       "arms": "Neoadjuvant chemoradiation vs none before LT",
-      "brief": "Recurrence HR 0.30; 5-y OS 41% vs 53% (NS).",
-      "note": "Nonrandomized; more vascular complications with CRT.",
+      "brief": "Recurrence HR 0.30. Five-year OS 41% vs 53% (NS).",
+      "note": "Table 3: all major vascular complications 11/27 vs 3/22, including hepatic artery complications 9/27 vs 2/22.",
       "screen": {
         "label": "Hoogwater, BJS Open 2023",
         "result": "CRT recurrence HR 0.30; OS benefit absent",
         "verdict": "signal",
         "favored": "Neoadjuvant chemoradiation",
         "endpoint": "recurrence; no OS gain",
-        "rationale": "Nonrandomized; more vascular complications with CRT."
+        "rationale": "Table 3: all major vascular complications 11/27 vs 3/22, including hepatic artery complications 9/27 vs 2/22."
       }
     },
     {
@@ -4485,15 +4508,15 @@
       "a": "stent_radio",
       "b": "stent_plain",
       "arms": "Radioactive vs conventional stents; both with HAIC",
-      "brief": "OS 10.2 vs 6.7 mo.",
-      "note": "Both arms received HAIC; effect is stent comparison.",
+      "brief": "Median OS 10.2 vs 6.7 months, HR 0.53 (0.36–0.79), P=.002.",
+      "note": "Both arms received HAIC. The stent comparison enrolled unresectable Bismuth III/IV pCCA.",
       "screen": {
         "label": "Chen randomized trial",
         "result": "OS: radioactive stent 10.2, usual 6.7 mo",
         "verdict": "superior",
         "favored": "Radioactive stent + HAIC",
         "endpoint": "OS; both arms received HAIC",
-        "rationale": "Both arms received HAIC; effect is stent comparison."
+        "rationale": "Both arms received HAIC. The stent comparison enrolled unresectable Bismuth III/IV pCCA."
       }
     }
   ],

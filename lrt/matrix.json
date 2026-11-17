@@ -92,7 +92,7 @@
             [
               "SURF RCT",
               "35949295",
-              "No significant RFS difference vs surgery"
+              "No significant RFS difference with surgery vs RFA. Enrollment stopped because of slow accrual. Among 301 analyzed, final RFS did not differ significantly. Conditional power <8% was calculated afterward. Most tumors were solitary and <2 cm."
             ],
             [
               "SURF final",
@@ -194,7 +194,7 @@
             [
               "Kwong 2022",
               "34358718",
-              "National observational cohort. 31,609 US HCC transplant candidates, 2003–2018; 24,145 received LRT. IPTW-adjusted dropout sHR versus TACE: radioembolization 0.85 (95% CI 0.81–0.89); thermal ablation 0.95 (0.91–0.99). Observational first-treatment comparison, with later treatments allowed. Center, era and patient selection remain confounders. Registry cohorts overlap with later studies."
+              "National observational cohort. 31,609 US HCC transplant candidates, 2003–2018; 24,145 received LRT. Waitlist dropout vs TACE: IPTW sHR 0.85 (0.81–0.89) for Y90 and 0.95 (0.91–0.99) for ablation. Conventional multivariable sHRs were 1.03 (0.91–1.17) and 0.97 (0.90–1.05), respectively. First-treatment registry comparison, with later treatments allowed. Treatment selection and center/era effects remain possible. This registry overlaps later analyses."
             ],
             [
               "Mohamed 2016",
@@ -211,7 +211,7 @@
             [
               "Oyama 2021",
               "33687130",
-              "Randomized study. 70 early HCC patients: cisplatin HAIC before RFA versus RFA alone, 35 per arm. 3-year RFS 54.3% versus 34.3%; HR 0.597 (95% CI 0.320–1.091), p=0.094. Primary RFS endpoint was not significant. A secondary distant-intrahepatic recurrence signal does not establish routine HAIC addition or HAIC as a replacement for ablation."
+              "Randomized study. 70 early HCC patients: cisplatin HAIC before RFA versus RFA alone, 35 per arm. 3-year RFS 54.3% versus 34.3%; HR 0.597 (95% CI 0.320–1.091), p=0.094. The primary RFS comparison was inconclusive. The distant intrahepatic recurrence analysis was post hoc. No routine HAIC indication follows from this trial."
             ]
           ]
         },
@@ -267,7 +267,7 @@
             [
               "Wei RCT",
               "31283409",
-              "Neoadjuvant 3D-CRT, not SBRT: HCC-death HR 0.47 (univariable ITT); 9/82 did not reach surgery"
+              "Neoadjuvant 3D conformal radiotherapy followed by resection vs immediate resection in 164 patients with resectable HCC and Cheng II/III portal vein tumor thrombus. Two-year tumor-related survival was 27.4% vs 9.4% (P<.001). Adjusted HR for HCC-related death 0.35 (95% CI 0.23–0.54). Open-label trial. One hospital enrolled 96%. Nine of 82 assigned to 3D-CRT did not reach surgery. The trial did not evaluate SBRT."
             ],
             [
               "Bai RCT",
@@ -293,7 +293,7 @@
             [
               "RTOG 1112",
               "39699905",
-              "SBRT→sorafenib vs sorafenib: OS 15.8 vs 12.3 mo; HR 0.77 (90% CI 0.59–1.01), primary P=.06"
+              "SBRT then sorafenib vs sorafenib: OS 15.8 vs 12.3 months, HR 0.77 (90% CI 0.59–1.01), primary P=.06. Originally 368 patients were planned at 85% power. The amended target was 292 at 80% power. After early closure, the time-driven analysis of 177 patients had 65% power."
             ],
             [
               "Yoon RCT",
@@ -402,12 +402,12 @@
             [
               "SARAH",
               "29107679",
-              "OS NS"
+              "SARAH randomized 467 patients and analyzed 459 (237 assigned Y90, 222 sorafenib). Median OS was 8.0 vs 9.9 months, HR 1.15 (95% CI 0.94–1.41). 22% assigned to Y90 never received it. The trial did not establish that dosing explained the OS result."
             ],
             [
               "SIRveNIB",
               "29498924",
-              "OS NS"
+              "Y90 vs sorafenib: intention-to-treat median OS 8.8 vs 10.0 months (HR 1.12, 95% CI 0.9–1.4, P=.36). Intention-to-treat tumor response was 16.5% vs 1.7% (P<.001). 28.6% assigned to Y90 and 9.0% assigned to sorafenib did not receive assigned treatment."
             ],
             [
               "SORAMIC",
@@ -417,7 +417,7 @@
             [
               "DOSISPHERE-01",
               "33166497",
-              "Personalized vs standard Y90 dosimetry: ORR 71 vs 36%; not a Y90–sorafenib comparison"
+              "Personalized vs standard Y90 dosimetry: investigator-read index-lesion response 71% vs 36% at 3 months. Masked central review also favored personalized dosing, 79% vs 43% (P=.0062). Sixty patients were randomized. This was a dose comparison."
             ]
           ]
         },
@@ -449,7 +449,7 @@
             [
               "De la Garza-Ramos 2022",
               "35346857",
-              "Retrospective multisite cohort. Solitary HCC ≤8 cm; RS 57 versus resection 66. Target progression 5% versus 8%; adjusted overall-progression HR 1.16 (95% CI 0.51–2.63). Median OS not reached in either group. Propensity distributions were too dissimilar to match. Different surgical candidacy and liver function prevent a claim of equivalence to resection."
+              "Retrospective multisite cohort. Solitary HCC ≤8 cm; RS 57 versus resection 66. Y90 segmentectomy vs resection: unadjusted median time to any progression 21.9 vs 29.4 months (P=.03). Adjusted progression HR 1.16 (0.51–2.63). Median OS was unreached in both arms. Target progression occurred in 5% vs 8%. Propensity distributions were too dissimilar to match. Different surgical candidacy and liver function prevent a claim of equivalence to resection."
             ]
           ]
         },
@@ -466,7 +466,7 @@
             [
               "Kwong 2022",
               "34358718",
-              "National observational cohort. 31,609 US HCC transplant candidates, 2003–2018; 24,145 received LRT. IPTW-adjusted dropout sHR versus TACE: radioembolization 0.85 (95% CI 0.81–0.89); thermal ablation 0.95 (0.91–0.99). Observational first-treatment comparison, with later treatments allowed. Center, era and patient selection remain confounders. Registry cohorts overlap with later studies."
+              "National observational cohort. 31,609 US HCC transplant candidates, 2003–2018; 24,145 received LRT. Waitlist dropout vs TACE: IPTW sHR 0.85 (0.81–0.89) for Y90 and 0.95 (0.91–0.99) for ablation. Conventional multivariable sHRs were 1.03 (0.91–1.17) and 0.97 (0.90–1.05), respectively. First-treatment registry comparison, with later treatments allowed. Treatment selection and center/era effects remain possible. This registry overlaps later analyses."
             ],
             [
               "Fakhoury 2026",
@@ -508,7 +508,7 @@
             [
               "Xu 2025",
               "39808828",
-              "Prospective multicenter cohort. MERITS-LT: 326 within UNOS-DS and 190 all-comers beyond UNOS-DS; 2015–2023. In the all-comers subgroup, 2-year successful downstaging was 74% with initial Y90 versus 65% with TACE (p<0.001). Treatment was not randomized; subgroup finding does not expand allocation criteria. Overlaps earlier MERITS-LT enrollment. Earlier within-UNOS-DS study found no significant modality difference."
+              "Prospective multicenter cohort. MERITS-LT: 326 within UNOS-DS and 190 all-comers beyond UNOS-DS; 2015–2023. Two-year downstaging with Y90 vs TACE was 73.8% vs 64.6% beyond UNOS-DS and 78.1% vs 86.5% within UNOS-DS. First treatment was not predictive after stratification by center (P=.07). Prospective observational cohort overlapping MERITS-LT. Treatment selection and center practice differed. Allocation criteria apply independently. The unadjusted Table 2 Y90:TACE subhazard ratio was 1.06 (0.82–1.39)."
             ]
           ]
         },
@@ -577,7 +577,7 @@
             [
               "XXL RCT",
               "32615109",
-              "LT after downstaging ↑ OS"
+              "XXL randomized 45 responders after sustained downstaging. At five years, OS was 77.5% after LT vs 31.2% with non-transplant care (HR 0.32, 95% CI 0.11–0.92, P=.035). Tumor event-free survival was 76.8% vs 18.3%. Enrollment closed early."
             ],
             [
               "MERITS-LT",
@@ -618,12 +618,12 @@
             [
               "EMERALD-1",
               "39798579",
-              "Durvalumab+bevacizumab+TACE: PFS 15.0 vs 8.2 mo; PFS benefit does not establish OS benefit; Child-Pugh A–B7"
+              "Durvalumab + bevacizumab + TACE vs TACE: PFS 15.0 vs 8.2 months, HR 0.77 (95% CI 0.61–0.98). Final OS 29.9 vs 33.3 months, HR 1.10 (0.87–1.39), P=.47 (ESMO GI 2026, 183O). Child-Pugh A–B7. Bleeding events occurred in 28% with both drugs vs 14% with placebo."
             ],
             [
               "LEAP-012",
               "39798578",
-              "Lenvatinib+pembrolizumab+TACE: PFS 14.6 vs 10.0 mo; OS not significant; grade ≥3 toxicity 71 vs 32%; Child-Pugh A"
+              "Lenvatinib + pembrolizumab + TACE vs TACE: PFS 14.6 vs 10.0 months, HR 0.66 (95% CI 0.51–0.84). Long-term OS 40.4 vs 40.8 months, HR 0.98 (0.76–1.26) (ESMO 2026, 1678RO). Grade ≥3 treatment-related events 71% vs 32% at the primary PFS analysis. Child-Pugh A. A sensitivity analysis without the LI-RADS 5 requirement for new intrahepatic lesions gave PFS 14.6 vs 8.4 months (HR 0.63, 95% CI 0.49–0.80)."
             ]
           ]
         },
@@ -657,7 +657,7 @@
             [
               "Kwong 2022",
               "34358718",
-              "National observational cohort. 31,609 US HCC transplant candidates, 2003–2018; 24,145 received LRT. IPTW-adjusted dropout sHR versus TACE: radioembolization 0.85 (95% CI 0.81–0.89); thermal ablation 0.95 (0.91–0.99). Observational first-treatment comparison, with later treatments allowed. Center, era and patient selection remain confounders. Registry cohorts overlap with later studies."
+              "National observational cohort. 31,609 US HCC transplant candidates, 2003–2018; 24,145 received LRT. Waitlist dropout vs TACE: IPTW sHR 0.85 (0.81–0.89) for Y90 and 0.95 (0.91–0.99) for ablation. Conventional multivariable sHRs were 1.03 (0.91–1.17) and 0.97 (0.90–1.05), respectively. First-treatment registry comparison, with later treatments allowed. Treatment selection and center/era effects remain possible. This registry overlaps later analyses."
             ],
             [
               "Fakhoury 2026",
@@ -699,7 +699,7 @@
             [
               "Xu 2025",
               "39808828",
-              "Prospective multicenter cohort. MERITS-LT: 326 within UNOS-DS and 190 all-comers beyond UNOS-DS; 2015–2023. In the all-comers subgroup, 2-year successful downstaging was 74% with initial Y90 versus 65% with TACE (p<0.001). Treatment was not randomized; subgroup finding does not expand allocation criteria. Overlaps earlier MERITS-LT enrollment. Earlier within-UNOS-DS study found no significant modality difference."
+              "Prospective multicenter cohort. MERITS-LT: 326 within UNOS-DS and 190 all-comers beyond UNOS-DS; 2015–2023. Two-year downstaging with Y90 vs TACE was 73.8% vs 64.6% beyond UNOS-DS and 78.1% vs 86.5% within UNOS-DS. First treatment was not predictive after stratification by center (P=.07). Prospective observational cohort overlapping MERITS-LT. Treatment selection and center practice differed. Allocation criteria apply independently. The unadjusted Table 2 Y90:TACE subhazard ratio was 1.06 (0.82–1.39)."
             ]
           ]
         },
@@ -733,7 +733,7 @@
             [
               "FOHAIC-1",
               "34905388",
-              "OS 13.9 vs 8.2 mo vs sorafenib"
+              "HAIC-FOLFOX vs sorafenib: OS 13.9 vs 8.2 months. Single-center, open-label trial. HBV infection in 234/262 overall (89%), including 120/130 (92%) in the HAIC arm. Median tumor size 11.2 cm. Sorafenib was the comparator."
             ],
             [
               "He RCT",
@@ -754,7 +754,7 @@
             [
               "FOHAIC-1",
               "34905388",
-              "12% downstaged to surgery/ablation"
+              "HAIC-FOLFOX vs sorafenib: OS 13.9 vs 8.2 months. Single-center, open-label trial. HBV infection in 234/262 overall (89%), including 120/130 (92%) in the HAIC arm. Median tumor size 11.2 cm. Sorafenib was the comparator."
             ]
           ]
         },
@@ -777,7 +777,7 @@
             [
               "Oyama 2021",
               "33687130",
-              "Randomized study. 70 early HCC patients: cisplatin HAIC before RFA versus RFA alone, 35 per arm. 3-year RFS 54.3% versus 34.3%; HR 0.597 (95% CI 0.320–1.091), p=0.094. Primary RFS endpoint was not significant. A secondary distant-intrahepatic recurrence signal does not establish routine HAIC addition or HAIC as a replacement for ablation."
+              "Randomized study. 70 early HCC patients: cisplatin HAIC before RFA versus RFA alone, 35 per arm. 3-year RFS 54.3% versus 34.3%; HR 0.597 (95% CI 0.320–1.091), p=0.094. The primary RFS comparison was inconclusive. The distant intrahepatic recurrence analysis was post hoc. No routine HAIC indication follows from this trial."
             ]
           ]
         },
@@ -840,12 +840,12 @@
             [
               "MALRIC (PSM)",
               "38261915",
-              "MWA vs resection 5-y OS 44.8 vs 40.4%"
+              "MWA vs resection for primary iCCA: one tumor ≤5 cm or up to three tumors each ≤3 cm, without major vascular/hilar invasion or nodal or distant spread. Five-year OS was 44.8% with MWA vs 40.4% with resection. Median DFS 1.7 vs 3.6 years."
             ],
             [
               "MALRIC recurrent",
               "41528222",
-              "Retrospective matched cohort: no significant OS difference from repeat resection; not equivalence evidence"
+              "MWA vs repeat resection: median OS 29.8 vs 34.0 months, DFS 10.7 vs 14.8 months, and major complications 5.5% vs 31.3%. HRs compare repeat resection to MWA: OS 0.89 (0.68–1.17), DFS 0.78 (0.61–1.00), P=.07 for DFS."
             ],
             [
               "Meta-analysis",
@@ -884,7 +884,7 @@
             [
               "Sebastian 2019",
               "31517072",
-              "Retrospective NCDB comparison. Main-text analysis: SBRT 27, chemoradiation 54, TARE 60; nonmetastatic node-negative unresected iCCA. Adjusted OS HR 0.42 (95% CI 0.21–0.84) for SBRT versus TARE. TARE tumors were larger/more often multifocal or vascular-invasive. Strong selection bias and abstract/main-text cohort-count discrepancy; not causal superiority or equivalent treatment eligibility."
+              "Retrospective NCDB comparison. Main-text analysis: SBRT 27, chemoradiation 54, TARE 60; nonmetastatic node-negative unresected iCCA. SBRT vs TARE: multivariable OS HR 0.42 (0.21–0.84). With inverse probability weighting, HR 0.58 (0.37–0.91), P=.019, above the Bonferroni threshold of .017. TARE tumors were larger/more often multifocal or vascular-invasive. Strong selection bias and abstract/main-text cohort-count discrepancy; not causal superiority or equivalent treatment eligibility."
             ]
           ]
         }
@@ -947,7 +947,7 @@
             [
               "Sebastian 2019",
               "31517072",
-              "Retrospective NCDB comparison. Main-text analysis: SBRT 27, chemoradiation 54, TARE 60; nonmetastatic node-negative unresected iCCA. Adjusted OS HR 0.42 (95% CI 0.21–0.84) for SBRT versus TARE. TARE tumors were larger/more often multifocal or vascular-invasive. Strong selection bias and abstract/main-text cohort-count discrepancy; not causal superiority or equivalent treatment eligibility."
+              "Retrospective NCDB comparison. Main-text analysis: SBRT 27, chemoradiation 54, TARE 60; nonmetastatic node-negative unresected iCCA. SBRT vs TARE: multivariable OS HR 0.42 (0.21–0.84). With inverse probability weighting, HR 0.58 (0.37–0.91), P=.019, above the Bonferroni threshold of .017. TARE tumors were larger/more often multifocal or vascular-invasive. Strong selection bias and abstract/main-text cohort-count discrepancy; not causal superiority or equivalent treatment eligibility."
             ]
           ]
         }
@@ -1068,7 +1068,7 @@
             [
               "Franssen 2022",
               "35544131",
-              "Retrospective comparison. 319 multifocal iCCA patients: unresectable HAIP-FUDR 141 versus resection 178 across different centers/eras. Median OS 20.3 versus 18.9 months; adjusted HR 0.75 (95% CI 0.55–1.03), p=0.07. HAIP patients had substantially more bilobar/multifocal disease. Not an equivalence trial or reason to deny resection to an otherwise suitable patient; does not distinguish all satellites from metastases."
+              "Retrospective comparison. 319 multifocal iCCA patients: unresectable HAIP-FUDR 141 versus resection 178 across different centers/eras. Median OS 20.3 versus 18.9 months; adjusted HR 0.75 (95% CI 0.55–1.03), p=0.07. Both cohorts had multifocal iCCA. HAIP vs resection cohorts more often had bilobar disease (88.0% vs 34.3%) and ≥4 tumors (66.7% vs 24.2%). Centers, eras and resectability differed. These data cannot establish equivalent survival or distinguish satellites from intrahepatic metastases."
             ]
           ]
         }
@@ -1102,7 +1102,7 @@
             [
               "COLLISION RCT",
               "39848272",
-              "Early-stop trial: OS HR 1.05 (95% CI 0.69–1.58); CI crosses the 1.30 noninferiority margin; AEs 19 vs 46%"
+              "Thermal ablation vs resection: OS HR 1.05 (95% CI 0.69–1.58). Interim stopping rule met, but the 95% CI crosses the 1.30 noninferiority margin. Adverse events 19% vs 46%. Unmasked trial stopped early. Both procedures were used in 27 (18%) assigned to ablation and 52 (35%) assigned to resection (Table 1)."
             ],
             [
               "Shady",
@@ -1164,7 +1164,7 @@
             [
               "SABR-COMET",
               "30982687",
-              "mixed oligomets incl. CRC"
+              "SABR-COMET. 99 patients with mixed primary tumors and metastatic sites. Liver accounted for 19 of 191 lesions (3/64 control, 16/127 SABR, Table 1). Three treatment-related deaths. Survival was reported for the mixed cohort."
             ],
             [
               "SABR-COMET LT",
@@ -1259,7 +1259,7 @@
             [
               "Gray 2001",
               "11843249",
-              "Randomized phase III. 74 patients with bilobar unresectable CRLM: Y90 plus regional FUDR versus regional FUDR alone. Tumor-volume response 50% versus 24% (p=0.03); liver progression was delayed. Tests adding Y90 to HAI, not Y90 versus HAI alone. Older chemotherapy era; no established overall-survival benefit. Not evidence against ablation of small lesions."
+              "Randomized phase III. 74 patients with bilobar unresectable CRLM: Y90 plus regional FUDR versus regional FUDR alone. Tumor-volume response 50% versus 24% (p=0.03); liver progression was delayed. Accrual closed at 74 of 95 planned, and the trial shifted from the original survival objective to response and progression. Older regional FUDR regimen. No established OS benefit. The comparison tested Y90 added to regional FUDR."
             ]
           ]
         }
@@ -1276,7 +1276,7 @@
             [
               "Fiorentini RCT (n=74)",
               "22493375",
-              "DEBIRI vs FOLFIRI OS 22 vs 15 mo"
+              "DEBIRI vs concurrent FOLFIRI: median OS 22 vs 15 months. 74 patients randomized at two centers. The concurrent FOLFIRI control was capped at four months. Regimen and duration limit applicability to current systemic therapy."
             ]
           ]
         },
@@ -1305,12 +1305,12 @@
             [
               "Kemeny NEJM RCT",
               "10615075",
-              "2-y hepatic RFS 90 vs 60%"
+              "Two-year co-primary endpoints with HAI + systemic vs systemic alone: OS 86% vs 72% (P=.03) and all-site PFS 57% vs 42% (P=.07). Full OS curves P=.21. Secondary hepatic PFS 90% vs 60% (P<.001)."
             ],
             [
               "Groot Koerkamp",
               "28426374",
-              "Propensity-score quartile-adjusted OS HR 0.67; retrospective association, not matching or randomized benefit"
+              "Perioperative HAI vs no HAI: median OS 67 vs 44 months, propensity-score quartile adjusted HR 0.67 (0.59–0.76). Single-center observational study across 21 years. The paper lists propensity covariates but does not report model coefficients. The largest association was in lower-risk subgroups."
             ],
             [
               "Dutch PUMP, ASCO 2026 LBA3506",
@@ -1393,7 +1393,7 @@
             [
               "Gray 2001",
               "11843249",
-              "Randomized phase III. 74 patients with bilobar unresectable CRLM: Y90 plus regional FUDR versus regional FUDR alone. Tumor-volume response 50% versus 24% (p=0.03); liver progression was delayed. Tests adding Y90 to HAI, not Y90 versus HAI alone. Older chemotherapy era; no established overall-survival benefit. Not evidence against ablation of small lesions."
+              "Randomized phase III. 74 patients with bilobar unresectable CRLM: Y90 plus regional FUDR versus regional FUDR alone. Tumor-volume response 50% versus 24% (p=0.03); liver progression was delayed. Accrual closed at 74 of 95 planned, and the trial shifted from the original survival objective to response and progression. Older regional FUDR regimen. No established OS benefit. The comparison tested Y90 added to regional FUDR."
             ]
           ]
         },
@@ -1417,7 +1417,7 @@
             [
               "Wang 2025",
               "39644535",
-              "Prematurely stopped randomized trial (HARVEST). 92 randomized after CRLM surgery; modified ITT 77, HAI-FUDR plus systemic 38 versus systemic 39. 3-year RFS 31.4% versus 34.4%, p=0.28. Stopped for FUDR supply shortage; primary endpoint negative. Exploratory early-RFS/subgroup signals do not establish routine postoperative HAI."
+              "Prematurely stopped randomized trial (HARVEST). 92 patients randomized. Randomization moved from before to after CRLM resection following the first 11 patients. The modified intention-to-treat population included 38 receiving HAI-FUDR plus systemic therapy and 39 receiving systemic therapy alone. 3-year RFS 31.4% versus 34.4%, p=0.28. Stopped for FUDR supply shortage; primary endpoint negative. Exploratory early-RFS/subgroup signals do not establish routine postoperative HAI."
             ],
             [
               "Gelli 2026",
@@ -1494,7 +1494,7 @@
             [
               "SABR-COMET (mixed)",
               "30982687",
-              "no NET-specific data"
+              "SABR-COMET. 99 patients with mixed primary tumors and metastatic sites. Liver accounted for 19 of 191 lesions (3/64 control, 16/127 SABR, Table 1). Three treatment-related deaths. Survival was reported for the mixed cohort."
             ]
           ]
         }
@@ -1539,7 +1539,7 @@
             [
               "Egger 2020",
               "32032719",
-              "Retrospective two-center cohort. 248 NELM patients: TARE 51 versus TACE 197. Initial DCR 83% versus 96% (p<0.01); no significant OS or PFS difference. TARE was usually outpatient. Nonrandomized baseline and treatment-selection differences. Does not prove equivalence; treatment burden and delayed toxicity also matter."
+              "Retrospective two-center cohort. 248 NELM patients: TARE 51 versus TACE 197. TARE vs TACE: initial disease control 83% vs 96% (P<.01), with no significant OS or PFS difference. TARE was usually outpatient. Nonrandomized baseline and treatment-selection differences. Does not prove equivalence; treatment burden and delayed toxicity also matter."
             ],
             [
               "Do Minh 2017",
@@ -1578,7 +1578,7 @@
             [
               "Gupta (n=123)",
               "16134179",
-              "carcinoid > islet-cell response"
+              "Carcinoid: response with bland embolization vs chemoembolization 81.0% vs 44.4%, adjusted OR 6.41 (P=.002). No OS or PFS difference. Islet-cell response 25% vs 50% (P=.06)."
             ],
             [
               "RETNET RCT",
@@ -1605,7 +1605,7 @@
             [
               "Egger 2020",
               "32032719",
-              "Retrospective two-center cohort. 248 NELM patients: TARE 51 versus TACE 197. Initial DCR 83% versus 96% (p<0.01); no significant OS or PFS difference. TARE was usually outpatient. Nonrandomized baseline and treatment-selection differences. Does not prove equivalence; treatment burden and delayed toxicity also matter."
+              "Retrospective two-center cohort. 248 NELM patients: TARE 51 versus TACE 197. TARE vs TACE: initial disease control 83% vs 96% (P<.01), with no significant OS or PFS difference. TARE was usually outpatient. Nonrandomized baseline and treatment-selection differences. Does not prove equivalence; treatment burden and delayed toxicity also matter."
             ],
             [
               "Do Minh 2017",
@@ -1704,7 +1704,7 @@
             [
               "Hoogwater, BJS Open 2023",
               "37032423",
-              "49 LT recipients, 27 neoadjuvant chemoradiation vs 22 no neoadjuvant therapy. Lower adjusted recurrence hazard, more vascular complications; no proven OS benefit or equivalence."
+              "Chemoradiation vs none before LT: adjusted recurrence HR 0.30 (0.09–0.97). Five-year OS 41% vs 53% (NS). Table 3 reports any major vascular complication in 11/27 vs 3/22 and hepatic artery complications in 9/27 vs 2/22."
             ]
           ]
         },
@@ -1802,7 +1802,7 @@
             [
               "Chen randomized trial",
               "39311927",
-              "126 patients; OS 10.2 vs 6.7 months. Effect is the stent comparison within HAIC, not proof of HAI benefit."
+              "Radiation-emitting vs conventional metallic stent, with HAIC in both groups: median OS 10.2 vs 6.7 months, HR 0.53 (95% CI 0.36–0.79), P=.002. The trial randomized 126 patients with unresectable Bismuth III/IV perihilar cholangiocarcinoma. Both groups received catheter-based gemcitabine/cisplatin. The randomized contrast isolates stent type."
             ]
           ]
         },
@@ -2677,7 +2677,8 @@
       "au": "Chen",
       "j": "Int J Surg",
       "y": "2025",
-      "t": "Radiation-emitting metallic stent for unresectable Bismuth type III or IV perihilar cholangiocarcinoma: a multicenter randomized trial."
+      "t": "Radiation-emitting metallic stent for unresectable Bismuth type III or IV perihilar cholangiocarcinoma: a multicenter randomized trial.",
+      "pagination": "111(1):706–717"
     },
     {
       "pmid": "34439146",

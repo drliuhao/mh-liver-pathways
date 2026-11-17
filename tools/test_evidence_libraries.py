@@ -7,13 +7,20 @@ root=Path(__file__).resolve().parents[1]
 directory=root/'evidence-libraries'
 data=json.loads((directory/'catalog.json').read_text())
 assert len(data['libraries'])==34
-assert len(data['publications'])==data['unique_publications']==675
-# 573 PDFs at V15 (25 October 2026); 23 more filed from the 29 October 2026 full-text batch.
-# V18 adds four sources (ABC-06 was already indexed): two verified PDFs and
-# two primary reports read as XML, whose unavailable PDFs stay explicit.
-# V20 verifies and deposits all 34 papers from the comparative-study checklist.
-assert sum(bool(p['pdf_available']) for p in data['publications'].values())==651
-assert data['missing_publication_pdfs']==24 and data['appraisals_pending']==53
+assert len(data['publications'])==data['unique_publications']
+assert sum(p.get('pdf_available') is True for p in data['publications'].values())==data['matched_publication_pdfs']
+assert sum(p.get('pdf_available') is False for p in data['publications'].values())==data['missing_publication_pdfs']
+# A publication cited on the website, a document-only reference and an appraised slide are different scopes.
+from evidence_census import census
+summary=census()
+assert summary['unique_slide_publications']==data['unique_publications']
+assert summary['unique_slide_and_document_publications']==summary['unique_slide_publications']+summary['additional_document_publications']
+assert summary['matched_pdfs']+summary['unmatched_pdfs']+summary['unchecked_pdfs']==summary['unique_slide_and_document_publications']
+assert summary['structured_web_bibliography_pmids_outside_document_and_slide_libraries']
+chen_id = next(key for key,p in data['publications'].items() if str(p.get('pmid'))=='39311927')
+for key in ('liver_directed_matrix','roadmap_pcca'):
+    library=next(l for l in data['libraries'] if l['key']==key)
+    assert any(r['id']==chen_id and r['slides'] for r in library['papers'])
 for pmid in ('24681342', '38466889', '42421575'):
     pub = next(p for p in data['publications'].values() if p.get('pmid') == pmid)
     assert pub['pdf_available'] and pub['coverage'] == 'Focused full-text appraisal', pmid

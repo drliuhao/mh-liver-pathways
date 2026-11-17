@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '/mh-liver-pathways/'
-KEY = '20261109-pathology1'
+KEY = '20261116-review1'
 data = json.loads((ROOT / 'tools/ehd_positions.json').read_text())
 manifest = json.loads((ROOT / 'assets/documents.json').read_text())['tumors']
 e = html.escape
@@ -42,7 +42,7 @@ css = ('.ehd-list{list-style:none;padding:0;margin:0}.ehd-list li{padding:9px 0;
        '.ehd-tumor{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:14px 18px;margin:12px 0}.ehd-tumor h2{font:600 20px/1.3 "Source Serif 4",Georgia,serif;margin:0 0 6px}')
 out = ['<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
        '<meta name="robots" content="noindex"><title>Previously treated extrahepatic disease | Memorial Hermann HPB Oncology</title>'
-       f'<link rel="stylesheet" href="{BASE}assets/evidence-tools.css?v=20261109-pathology1">'
+       f'<link rel="stylesheet" href="{BASE}assets/evidence-tools.css?v=20261116-review1">'
        f'<link rel="stylesheet" href="{BASE}assets/portal-navigation.css?v={KEY}"><script src="{BASE}assets/portal-navigation.js?v={KEY}" defer></script>'
        f'<style>{css}</style></head><body><main class="evidence-wrap" id="ehd-positions">',
        '<header class="tool-hero"><p class="eyebrow">Index · proposed positions</p><h1>Previously treated extrahepatic disease</h1>'
@@ -53,7 +53,7 @@ out = ['<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="v
 for key in order:
     if key in rows:
         out.append(f'<section class="ehd-tumor" id="{e(key)}"><h2>{e(manifest[key]["name"])}</h2><ul class="ehd-list">{"".join(rows[key])}</ul></section>')
-out.append(f'<footer class="evidence-footer">Prepared {e(data["prepared"])} (Claude.ai) for Hao Liu. Index only; positions, sources and decision fields are in each tumor\'s pages<span data-doc-note> and Word files</span>.</footer></main></body></html>')
+out.append(f'<footer class="evidence-footer">Clinical positions and source citations are in each disease pathway<span data-doc-note> and Word files</span>.</footer></main></body></html>')
 dest = ROOT / 'extrahepatic-disease/index.html'
 dest.write_text(''.join(out) + '\n')
 print(f'written {dest.relative_to(ROOT)}: {sum(len(v) for v in rows.values())} entries for {len(rows)} tumors')

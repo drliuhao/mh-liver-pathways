@@ -87,10 +87,30 @@ for tumor,name,setting,label,treatments,doi in [
   'tmc':f'https://libkey.io/libraries/480/pmid/{pid}' if pid else 'https://thslc-houston.primo.exlibrisgroup.com/discovery/search?vid=01TEXASHEALTH_HOUSTON%3ATMC_INST&query=any,contains,'+doi})
 
 rows.extend(load('tools/hcc_waitlist_comparisons.json'))
+# Long-term trial outcomes and a verified public paper have separate source links.
+additional_sources = {
+    "39798579": [
+        ["ESMO GI 2026 abstract 183O · final overall survival",
+         "https://www.annalsofoncology.org/article/S0923-7534(26)00410-2/fulltext"],
+    ],
+    "39798578": [
+        ["LEAP-012 · long-term overall survival · posted trial results",
+         "https://clinicaltrials.gov/study/NCT04246177?tab=results"],
+        ["ESMO 2026 abstract 1678RO · presenting investigator’s report",
+         "https://www.clinicbarcelona.org/en/news/clinic-barcelona-comprehensive-cancer-centre-presents-more-than-30-scientific-contributions-at-esmo-2026"],
+    ],
+    "39311927": [
+        ["Published full-text PDF · Int J Surg 2025",
+         "https://pmc-oa-opendata.s3.amazonaws.com/PMC11745636.1/PMC11745636.1.pdf"],
+    ],
+}
+for row in rows:
+ if row.get('pmid') in additional_sources:
+  row['additionalSources'] = additional_sources[row['pmid']]
 assert len({r['id'] for r in rows})==len(rows)
 order={k:i for i,k in enumerate(settings)}
 rows.sort(key=lambda r:(r['tumor'],order[r['setting']],r['comparison'],r['year'],r['id']))
-out={'version':'20261111-bridging2','settings':settings,'treatments':dict((m[0],m[1]) for m in matrix['modalities'])|{'surgery':'Resection / transplant','systemic':'Systemic therapy','supportive':'Supportive care'},'rows':rows,'arms':ARMS,'modes':MODES,'pairs':build_pairs(rows)}
+out={'version':'20261116-review1','settings':settings,'treatments':dict((m[0],m[1]) for m in matrix['modalities'])|{'surgery':'Resection / transplant','systemic':'Systemic therapy','supportive':'Supportive care'},'rows':rows,'arms':ARMS,'modes':MODES,'pairs':build_pairs(rows)}
 out['verdicts']=add_screen_metadata(rows,out['pairs'])
 (R/'lrt/comparisons.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
 print('Built comparison tables:',{t:sum(r['tumor']==t for r in rows) for t,_,_ in matrix['tumours']})

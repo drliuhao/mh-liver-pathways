@@ -94,7 +94,7 @@ add('hcc','treatment',[
  question('response','What does post-treatment imaging show?',[
   option('controlled','Viable burden within required limits / no viable tumor'),option('residual','Residual burden above limits or equivocal response'),
   option('spread','New macrovascular invasion or extrahepatic disease')],H,
-  'Assess viable tumor separately from the treated cavity and retain pretreatment stage. For downstaging, guidance advises imaging ≥4 weeks after the last treatment.'),
+  'Assess viable tumor separately from the treated cavity and retain pretreatment stage. For a nonstandard request after starting beyond UNOS-DS, NLRB guidance advises imaging at least four weeks after the last treatment.'),
  yesno('afp','Required AFP response maintained?', ['H-policy'],AFP_HELP),
  yesno('reserve','Liver reserve and treatment safety acceptable?', ['H-aasld'],
   'Treatment-related decompensation needs reassessment. Prior checkpoint immunotherapy requires transplant/pharmacy review before transplantation.'),

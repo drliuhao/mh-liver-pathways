@@ -1,7 +1,7 @@
 {
-  "updated": "2026-11-15",
-  "unique_publications": 675,
-  "matched_publication_pdfs": 651,
+  "updated": "2026-11-16",
+  "unique_publications": 676,
+  "matched_publication_pdfs": 652,
   "missing_publication_pdfs": 24,
   "appraisals_pending": 53,
   "libraries": [
@@ -10,9 +10,9 @@
       "title": "Liver-directed treatment matrix",
       "family": "01_Treatment_Matrices",
       "slug": null,
-      "publication_count": 141,
-      "matched_pdfs": 139,
-      "slides": 336,
+      "publication_count": 142,
+      "matched_pdfs": 140,
+      "slides": 337,
       "ppt_filename": "Evidence_Summaries_v20.pptx",
       "local_folder": "V20_consistent_release_2026-11-04/Evidence_Libraries/01_Treatment_Matrices/liver_directed_matrix",
       "document": "lrt/",
@@ -1482,6 +1482,15 @@
           ],
           "inclusion": [
             "HCC treatment before transplant. Bridging during a prolonged wait"
+          ]
+        },
+        {
+          "id": "doi:10.1097/js9.0000000000002089",
+          "slides": [
+            337
+          ],
+          "inclusion": [
+            "Randomised comparison of radiation-emitting versus conventional biliary stenting, each combined with hepatic arterial infusion chemotherapy, in unresectable Bismuth III–IV perihilar cholangiocarcinoma."
           ]
         }
       ],
@@ -8473,9 +8482,9 @@
       "title": "Perihilar CCA cancer roadmap",
       "family": "02_Cancer_Roadmaps",
       "slug": "pcca",
-      "publication_count": 51,
-      "matched_pdfs": 50,
-      "slides": 154,
+      "publication_count": 52,
+      "matched_pdfs": 51,
+      "slides": 155,
       "ppt_filename": "Evidence_Summaries_v20.pptx",
       "local_folder": "V20_consistent_release_2026-11-04/Evidence_Libraries/02_Cancer_Roadmaps/roadmap_pcca",
       "document": "documents/pcca/pCCA_1_Roadmap.docx",
@@ -9034,6 +9043,15 @@
           ],
           "inclusion": [
             "Comparative liver-directed treatment evidence in the relevant disease and treatment setting; focused source card with limitations."
+          ]
+        },
+        {
+          "id": "doi:10.1097/js9.0000000000002089",
+          "slides": [
+            155
+          ],
+          "inclusion": [
+            "Randomised comparison of radiation-emitting versus conventional biliary stenting, each combined with hepatic arterial infusion chemotherapy, in unresectable Bismuth III–IV perihilar cholangiocarcinoma."
           ]
         }
       ],
@@ -25155,7 +25173,22 @@
       "pdf_available": true,
       "coverage": "Focused full-text appraisal",
       "publisher_citation": "J Hepatol. 2012;57:297–305. Pathology p. 298, Table 1 p. 300, Fig. 2C p. 302, Table 3 p. 303, Table 4 and prior resection pathology p. 304."
+    },
+    "doi:10.1097/js9.0000000000002089": {
+      "title": "Radiation-emitting metallic stent for unresectable Bismuth type III or IV perihilar cholangiocarcinoma: a multicenter randomized trial.",
+      "author": "Chen Q",
+      "journal": "Int J Surg",
+      "year": "2025",
+      "doi": "10.1097/js9.0000000000002089",
+      "pmid": "39311927",
+      "publication_type": "Journal publication",
+      "url": "https://doi.org/10.1097/js9.0000000000002089",
+      "tmc": "https://libkey.io/libraries/480/pmid/39311927",
+      "pdf_available": true,
+      "coverage": "Focused full-text appraisal",
+      "publisher_citation": "Int J Surg. 2025;111:706–717."
     }
   },
-  "artifact_release": "V20_consistent_release_2026-11-04"
+  "artifact_release": "V20_consistent_release_2026-11-04",
+  "scope": "Publications represented in the presentation libraries. The evidence index also counts additional references supplied by the clinical documents. Policy records are listed separately."
 }

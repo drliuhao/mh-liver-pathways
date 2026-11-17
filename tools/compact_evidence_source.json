@@ -107,13 +107,14 @@
       "label": "Kemeny adjuvant HAI",
       "design": "RCT",
       "arms": "HAI floxuridine + systemic FU vs systemic FU alone",
-      "result": "Primary two-year OS 86% vs 72% (P=0.03, landmark) but whole KM curves NS (p=0.21); two-year hepatic PFS 90% vs 60% (P<0.001)",
+      "result": "Two-year co-primary OS 86% vs 72% (P=.03) and all-site PFS 57% vs 42% (P=.07). Full OS curves P=.21. Secondary hepatic PFS 90% vs 60% (P<.001).",
       "caution": "Only 26% got more than half the planned floxuridine; 6 of 74 never received HAI; single centre",
       "quotes": [
         "Two-year actuarial overall survival was 86% with combined therapy versus 72% with systemic therapy alone (P=0.03)",
-        "the Kaplan-Meier comparison gives p=0.21",
         "Two-year survival free of hepatic progression was 90% versus 60% (P<0.001)",
-        "Only 26% of combined-therapy patients received more than half the planned floxuridine, 6 of 74 never received any hepatic arterial infusion at all"
+        "Only 26% of combined-therapy patients received more than half the planned floxuridine, 6 of 74 never received any hepatic arterial infusion at all",
+        "Two-year co-primary endpoints with HAI + systemic vs systemic alone: OS 86% vs 72% (P=.03) and all-site PFS 57% vs 42% (P=.07). Full OS curves P=.21. Secondary hepatic PFS 90% vs 60% (P<.001).",
+        "The headline result is a landmark reading of curves that do not differ. The statistical plan states that the log-rank and Wilcoxon p values are the comparisons of the entire Kaplan-Meier curves, and those are 0.21 and 0.11; the 86% against 72% two-year survival difference (p=0.03) is taken off the same curves by normal approximation at a single timepoint. Both appear in the paper and only the second appears in the conclusions."
       ]
     },
     "11932907": {
@@ -222,12 +223,13 @@
       "label": "Gupta embolisation",
       "design": "Cohort",
       "arms": "Retrospective · HAE (bland) vs HACE (chemoembolisation)",
-      "result": "Carcinoid: response 81.0% vs 44.4% (OR 6.41, P=0.002), no PFS or OS difference; islet cell: response 25% vs 50% (P=0.06, not significant)",
+      "result": "Carcinoid response 81.0% vs 44.4%, adjusted OR 6.41 (P=.002). No OS or PFS difference. Islet-cell response 25% vs 50% (P=.06).",
       "caution": "Retrospective; modality chosen by referring physician, so not a treatment effect; no grade or Ki-67",
       "quotes": [
         "In carcinoid tumours HAE outperformed HACE for response (81.0% vs 44.4%; multivariate OR 6.41, 95% CI 1.97-20.84, P = 0.002), with no difference in PFS or OS.",
         "In islet cell carcinoma HACE trended better than HAE for response (50% vs 25%, P = 0.06)",
-        "Neither grade nor Ki-67 is reported anywhere."
+        "Neither grade nor Ki-67 is reported anywhere.",
+        "Carcinoid: response with bland embolization vs chemoembolization 81.0% vs 44.4%, adjusted OR 6.41 (P=.002). No OS or PFS difference. Islet-cell response 25% vs 50% (P=.06)."
       ]
     },
     "16135931": {
@@ -925,12 +927,13 @@
       "design": "RCT",
       "arms": "DEBIRI (irinotecan-bead chemoembolization) vs FOLFIRI",
       "result": "Primary endpoint met: median OS 22 vs 15 mo (P = .031); median PFS 7 vs 4 mo (P = .006); hepatic response 68.6% vs 20%",
-      "caution": "74 patients at two centres, open label; obsolete FOLFIRI comparator capped at four months; not reproduced",
+      "caution": "74 patients at two centers. The concurrent FOLFIRI comparator was capped at four months. Dated regimen.",
       "quotes": [
         "Primary endpoint: median overall survival 22 months (95% CI 21 to 23) with DEBIRI versus 15 months (95% CI 12 to 18) with FOLFIRI, P = .031.",
         "Median progression-free survival 7 months (95% CI 3 to 11) versus 4 months (95% CI 3 to 5), P = .006",
         "Hepatic response (complete plus partial) in 24 of 35 treated DEBIRI patients (68.6%) versus 7 of 35 (20%)",
-        "The result should not be relied on: 74 patients at two centres, powered for a 40% survival difference, open label"
+        "The result should not be relied on: 74 patients at two centres, powered for a 40% survival difference, open label",
+        "DEBIRI vs concurrent FOLFIRI: median OS 22 vs 15 months. 74 patients randomized at two centers. The concurrent FOLFIRI control was capped at four months. Regimen and duration limit applicability to current systemic therapy."
       ]
     },
     "22504095": {
@@ -1477,7 +1480,7 @@
         "11 studies with 1,737 patients with cirrhosis and HCC treated surgically",
         "pooled odds ratio 2.09 (95% CI 1.52 to 2.88; P<0.00001) for 3-year mortality and 2.07 (95% CI 1.51 to 2.84; P<0.00001) for 5-year mortality",
         "pooled odds ratio 3.04 (95% CI 2.02 to 4.59; P<0.00001)",
-        "Every estimate is crude and unadjusted, portal hypertension is a marker of more advanced cirrhosis"
+        "Across 11 observational studies of HCC resection, clinically significant portal hypertension was associated with higher odds of three- and five-year mortality (crude OR 2.09 and 2.07) and postoperative decompensation (OR 3.04). In HVPG-defined subgroups, the decompensation estimate (OR 14.59) came from three studies with 115 patients and the mortality estimate (OR 8.00) from one 77-patient series. Confounding by cirrhosis severity limits causal interpretation."
       ]
     },
     "25293823": {
@@ -2208,11 +2211,11 @@
       "design": "RCT",
       "arms": "Regorafenib vs placebo (after sorafenib progression)",
       "result": "Primary endpoint met: median OS 10.6 vs 7.8 mo (HR 0.63, 95% CI 0.50-0.79); median PFS 3.1 vs 1.5 mo (HR 0.46)",
-      "caution": "Only sorafenib-tolerant progressors; placebo comparator; quality-of-life scores worse with regorafenib",
+      "caution": "Sorafenib-tolerant progressors. QoL score differences were below clinical importance thresholds.",
       "quotes": [
         "Primary endpoint: median overall survival 10.6 months (95% CI 9.1 to 12.1) with regorafenib versus 7.8 months (6.3 to 8.8) with placebo; hazard ratio 0.63 (95% CI 0.50 to 0.79)",
         "Median progression-free survival by mRECIST 3.1 months (95% CI 2.8 to 4.2) versus 1.5 months (1.4 to 1.6), hazard ratio 0.46",
-        "a prespecified effect size that it met"
+        "RESORCE showed a survival benefit for regorafenib after sorafenib in patients who had tolerated sorafenib: median overall survival 10.6 vs 7.8 months (HR 0.63, 95% CI 0.50–0.79). Progression-free survival, time to progression and response also favoured regorafenib. Every treated regorafenib recipient had an adverse event. FACT-Hep Total and Trial Outcome Index scores were statistically lower, but the differences fell below established thresholds of clinical importance."
       ]
     },
     "27939373": {
@@ -2346,11 +2349,12 @@
       "design": "Cohort",
       "arms": "Perioperative HAI vs no HAI after CRLM resection (retrospective)",
       "result": "Median OS 67 vs 44 mo (P < .001); propensity-adjusted HR 0.67 (95% CI 0.59-0.76); 10-year OS 38.0% vs 23.8%",
-      "caution": "Single-centre, non-randomised over 21 years; propensity model not shown; benefit largest in low-risk patients",
+      "caution": "Single center over 21 years. Propensity covariates were listed, coefficients were not reported.",
       "quotes": [
         "Median overall survival 67 months with HAI versus 44 months without (P < .001); 5-year survival 52.9% versus 37.9% and 10-year survival 38.0% versus 23.8% (both P < .001).",
         "Propensity-score-adjusted hazard ratio for HAI 0.67 (95% CI 0.59 to 0.76; P < .001)",
-        "the comparison is non-randomised over 21 years"
+        "the comparison is non-randomised over 21 years",
+        "Perioperative HAI vs no HAI: median OS 67 vs 44 months, propensity-score quartile adjusted HR 0.67 (0.59–0.76). Single-center observational study across 21 years. The paper lists propensity covariates but does not report model coefficients. The largest association was in lower-risk subgroups."
       ]
     },
     "28435454": {
@@ -2688,12 +2692,12 @@
       "design": "RCT",
       "arms": "Y-90 resin radioembolisation (SIRT) vs sorafenib",
       "result": "Primary endpoint not met: median OS 8.0 vs 9.9 mo, HR 1.15 (95% CI 0.94-1.41), p = 0.18; per-protocol medians identical at 9.9 mo (HR 0.99)",
-      "caution": "22% of SIRT arm never treated; activity by body surface area, no tumour dosimetry; manufacturer-funded",
+      "caution": "22% assigned Y90 did not receive it. Body-surface-area dosing. Manufacturer funding.",
       "quotes": [
-        "to Y-90 resin radioembolisation (237) or sorafenib (222)",
         "median overall survival in the intention-to-treat population was 8.0 months (95% CI 6.7 to 9.9) with SIRT versus 9.9 months (8.7 to 11.4) with sorafenib, hazard ratio 1.15 (95% CI 0.94 to 1.41), p = 0.18",
         "the medians were identical at 9.9 months (95% CI 8.0 to 12.7 versus 9.0 to 11.6), hazard ratio 0.99",
-        "22 percent of the radioembolisation arm never received the treatment"
+        "237 assigned Y-90 resin radioembolisation, 222 sorafenib",
+        "SARAH randomized 467 patients and analyzed 459 (237 assigned Y90, 222 sorafenib). Median OS was 8.0 vs 9.9 months, HR 1.15 (95% CI 0.94–1.41). 22% assigned to Y90 never received it. The trial did not establish that dosing explained the OS result."
       ]
     },
     "29121977": {
@@ -2820,13 +2824,14 @@
       "label": "SIRveNIB",
       "design": "RCT",
       "arms": "Y-90 radioembolisation vs sorafenib",
-      "result": "No OS difference: ITT median OS 8.8 vs 10.0 mo (HR 1.12, 95% CI 0.9 to 1.4; P=.36); response 16.5% vs 1.7%",
-      "caution": "28.6% assigned Y-90 never received it vs 9.0% sorafenib; positive signals only in treated population",
+      "result": "Intention-to-treat OS 8.8 vs 10.0 mo (HR 1.12, 95% CI 0.9–1.4, P=.36). Intention-to-treat response 16.5% vs 1.7% (P<.001).",
+      "caution": "28.6% assigned to Y90 and 9.0% assigned to sorafenib did not receive assigned treatment.",
       "quotes": [
         "Median overall survival in the intention-to-treat population was 8.8 months with radioembolisation versus 10.0 months with sorafenib (hazard ratio 1.12; 95% CI 0.9 to 1.4; P=.36)",
         "Tumour response rate strongly favoured radioembolisation: 16.5% versus 1.7% in the intention-to-treat population",
-        "28.6 percent of patients assigned radioembolisation never received it against 9.0 percent assigned sorafenib",
-        "to a single Y-90 resin radioembolisation (182) or sorafenib (178)"
+        "In SIRveNIB, median overall survival by ITT was 8.8 months with Y-90 radioembolisation and 10.0 with sorafenib, without a significant difference. Tumour response favoured radioembolisation (16.5% vs 1.7%, p<0.001), as did toxicity-time measures. Assigned treatment was never received by 28.6% vs 9.0%. Favourable survival or progression comparisons in the treated population are susceptible to post-randomisation selection.",
+        "to a single Y-90 resin radioembolisation (182) or sorafenib (178)",
+        "Y90 vs sorafenib: intention-to-treat median OS 8.8 vs 10.0 months (HR 1.12, 95% CI 0.9–1.4, P=.36). Intention-to-treat tumor response was 16.5% vs 1.7% (P<.001). 28.6% assigned to Y90 and 9.0% assigned to sorafenib did not receive assigned treatment."
       ]
     },
     "29503247": {
@@ -3384,12 +3389,13 @@
       "design": "RCT",
       "arms": "SABR + standard of care vs standard of care alone",
       "result": "Primary OS endpoint met only at alpha 0.20: median 41 vs 28 mo, HR 0.57 (0.30 to 1.10), p = 0.090; PFS 12 vs 6.0 mo, HR 0.47",
-      "caution": "99 mixed-histology patients; only 19 of 191 lesions hepatic; three treatment-related deaths",
+      "caution": "Mixed primaries. Liver: 19/191 lesions (3/64 control, 16/127 SABR, Table 1). Three treatment-related deaths.",
       "quotes": [
         "Primary endpoint met on the trial's own terms: median overall survival 41 months (95 per cent CI 26 to not reached) with SABR versus 28 months (19 to 33) with standard of care, hazard ratio 0.57 (0.30 to 1.10), stratified log-rank p = 0.090 — positive at the prespecified alpha of 0.20 but not at 0.05.",
         "Progression-free survival doubled: median 12 months (95 per cent CI 6.9 to 30.4) versus 6.0 months (3.4 to 7.1), hazard ratio 0.47 (0.30 to 0.76)",
         "99 patients with a controlled primary tumour",
-        "only 19 of 191 lesions were hepatic"
+        "only 19 of 191 lesions were hepatic",
+        "SABR-COMET. 99 patients with mixed primary tumors and metastatic sites. Liver accounted for 19 of 191 lesions (3/64 control, 16/127 SABR, Table 1). Three treatment-related deaths. Survival was reported for the mixed cohort."
       ]
     },
     "31059945": {
@@ -3459,15 +3465,16 @@
     "31283409": {
       "label": "Wei · neoadjuvant RT for PVTT",
       "design": "RCT",
-      "arms": "RCT · 164 resectable HCC with PVTT: RT then surgery vs surgery",
-      "result": "Neoadjuvant 18 Gy: 2-year survival 27.4% vs 9.4% (tumour-related deaths only); cancer-specific death HR 0.35; 11% lost their operation during the wait",
-      "caution": "96% of patients from one hospital; open-label",
+      "arms": "3D-CRT then resection vs resection in HCC with Cheng II/III PVTT",
+      "result": "Two-year tumor-related survival was 27.4% vs 9.4% (P<.001). Adjusted HR for HCC-related death 0.35 (95% CI 0.23–0.54).",
+      "caution": "Open label. One hospital enrolled 96%. Nine of 82 assigned to 3D-CRT did not reach surgery.",
       "quotes": [
         "Wei: cancer-specific death HR 0.35; 11% lost their operation during the wait; 96% from one hospital",
         "neoadjuvant 18 Gy before hepatectomy",
         "2-year survival 27.4 against 9.4 percent",
         "164 patients with resectable HBV-related HCC and Cheng type II or III portal vein tumour thrombus",
-        "The primary endpoint is tumour-related rather than all-cause death"
+        "The primary endpoint is tumour-related rather than all-cause death",
+        "Neoadjuvant 3D conformal radiotherapy followed by resection vs immediate resection in 164 patients with resectable HCC and Cheng II/III portal vein tumor thrombus. Two-year tumor-related survival was 27.4% vs 9.4% (P<.001). Adjusted HR for HCC-related death 0.35 (95% CI 0.23–0.54). Open-label trial. One hospital enrolled 96%. Nine of 82 assigned to 3D-CRT did not reach surgery. The trial did not evaluate SBRT."
       ]
     },
     "31313827": {
@@ -3692,11 +3699,11 @@
       "label": "Xia RCT",
       "design": "RCT",
       "arms": "Repeat hepatectomy vs percutaneous RFA (recurrent HCC)",
-      "result": "Primary endpoint not met: 5-yr OS 43.6% vs 38.5% (HR 1.26, 95% CI 0.91-1.76, p=0.17); local repeat recurrence 21.7% vs 37.8%",
+      "result": "5-y OS 43.6% after resection vs 38.5% after RFA (HR for death with RFA 1.26, 95% CI 0.91–1.76, P=.17). Local repeat recurrence 21.7% vs 37.8%.",
       "caution": "Single-centre open-label, almost all HBV, age capped at 60; null result, not proof of equivalence",
       "quotes": [
         "1, 3 and 5-year survival was 92.5%, 65.8% and 43.6% after repeat hepatectomy versus 87.5%, 52.5% and 38.5% after ablation, log-rank p = 0.17, hazard ratio 1.26 (95% CI 0.91 to 1.76)",
-        "local repeat recurrence was 21.7 versus 37.8 percent",
+        "In Xia et al., 5-year overall survival after repeat resection vs percutaneous RFA for recurrent HCC was 43.6% vs 38.5% (HR for death with RFA 1.26, 95% CI 0.91–1.76, p=0.17). Local repeat recurrence was 21.7% vs 37.8%, and complications were 22.4% vs 7.3%. The size >3 cm and AFP >200 ng/mL subgroups had 81 and 96 patients, respectively. Subgroup comparisons were exploratory, and eligibility excluded anatomically difficult ablation sites.",
         "age capped at 60"
       ]
     },
@@ -3947,7 +3954,7 @@
         "Co-primary overall survival: stratified hazard ratio for death 0.58 (95% CI 0.42 to 0.79), P<0.001",
         "Overall survival at 6 and 12 months 84.8% (80.9 to 88.7) and 67.2% (61.3 to 73.1) with the combination versus 72.2% (65.1 to 79.4) and 54.6% (45.2 to 64.0) with sorafenib",
         "Co-primary progression-free survival: median 6.8 months (95% CI 5.7 to 8.3) versus 4.3 months (4.0 to 5.6), hazard ratio 0.59 (0.47 to 0.76), P<0.001",
-        "first of two planned interim looks at 161 of 312 planned deaths with a median follow-up of 8.6 months"
+        "IMbrave150 improved survival with atezolizumab–bevacizumab versus sorafenib (death HR 0.58, 95% CI 0.42–0.79). Survival at 12 months was 67.2% versus 54.6%, and median progression-free survival was 6.8 versus 4.3 months. At the first planned interim analysis, median follow-up was 8.6 months, 161 of 312 planned deaths had occurred, and median survival on combination therapy was not reached. Endoscopy and treatment of varices as needed were required. Dose reduction was permitted for sorafenib."
       ]
     },
     "32416072": {
@@ -3992,35 +3999,10 @@
       "label": "XXL trial",
       "design": "RCT",
       "arms": "LT vs non-transplant therapy after downstaging",
-      "result": "5-y OS 77.5% vs 31.2% (published HR 0.32, 95% CI 0.11–0.92); tumor-event-free survival 76.8% vs 18.3%; 45 randomized responders",
-      "caution": "Selected responders; closed early; published abstract corrects a discrepant draft; final full text unavailable",
+      "result": "5-y OS 77.5% vs 31.2% (HR 0.32, 95% CI 0.11–0.92, P=.035). Tumor event-free survival 76.8% vs 18.3%.",
+      "caution": "45 randomized responders after sustained downstaging. Early closure limits precision and generalizability.",
       "quotes": [
-        "74 patients with HCC beyond Milan criteria and at least 50 percent predicted 5-year post-transplant survival on the Metroticket calculator enrolled at 9 Italian centres between March 2011 and March 2015; 54 (73 percent) were successfully downstaged and 45 randomised, 23 to transplantation (21 actually transplanted) and 22 to non-transplant therapy",
-        "XXL randomized 45 selected responders after downstaging, comparing transplantation with nontransplant treatment. Published five-year OS was 77.5% versus 31.2%, HR 0.32 (95% CI 0.11–0.92). Figure 2 on p. 953 shows both randomized outcomes. Early closure, selection before randomization and older comparators limit generalization.",
-        "The conditional power of 98.6 percent is a projection, not evidence: it is the probability that significance would persist if the observed HR of 0.22 attenuated only to the planned 0.50 across a hypothetical further 215 patients, so it assumes the answer and cannot substitute for the 65 deaths that were never observed",
-        "The 2 patients randomised to transplantation who refused it are described as censored in the intervention group according to the intention-to-treat principle, but censoring is not intention to treat: both progressed and died at 17 and 20 months, and removing those deaths from the transplant arm inflates the only outcome the trial reports",
-        "Survival is counted from randomisation, so the 29 of 74 enrolled patients (39 percent) who never reached randomisation, including 22 progressions and 2 deaths during downstaging, appear in no survival analysis; the trial reports no outcome for the downstaging strategy as a whole, which is the question a clinician faces at presentation",
-        "The control arm was treated only at the time of progression, while standard care for intermediate-stage HCC is continued locoregional therapy; the comparison is therefore transplantation versus deferred salvage rather than transplantation versus best available therapy, and best available therapy in 2011 to 2015 meant sorafenib",
-        "Randomisation did not balance the key prognostic variable: residual tumour burden was significantly higher in the transplant arm (p = 0.03) and 9 percent of the transplant arm versus none of the controls were beyond Milan criteria at randomisation, in 45 patients with no adjustment for either",
-        "Explant pathology in the 23 transplant-arm patients showed tumour burden returning from a median of 0 at randomisation to a median of 4.8 (range 0 to 9.6), close to the enrolment median of 7.3, so most grafts went to tumours that were no longer within the criteria the randomisation was based on; the paper reports this as a non-significant trend (p = 0.158)",
-        "Two of the 5 deaths in the transplant arm occurred within 30 days (myocardial infarction on day 10, multiorgan failure on day 20), a 30-day mortality of 2 of 21 transplanted patients, which is never stated as an operative mortality figure in a trial whose purpose is to justify consuming grafts",
-        "The eligibility ceiling was a Metroticket prediction of at least 50 percent 5-year survival, a calculator derived by the senior author from a retrospective series and never validated for prospective patient selection, so the entry criterion is the investigators' own model",
-        "Randomisation was stratified by compliance with sorafenib during downstaging, but sorafenib was non-mandatory and 24 of 54 patients (44 percent) stopped it for intolerance or worsening liver function, so the stratification variable was unstable and the trial has no way to separate the contribution of sorafenib from that of the locoregional treatments",
-        "The co-primary tumour endpoint composites two different events measured differently in the two arms, recurrence after transplantation against progression of residual disease in controls, in an open-label trial with no blinded central imaging review",
-        "The policy proposal in the Discussion, that partially responding tumours be prioritised on the waiting list, rests on a subgroup contrast of 26.5 versus 9.9 months in mean survival benefit whose confidence interval for complete responders crosses zero (-5.5 to 25.3) and whose interaction p value is 0.105",
-        "Two different p values are printed for the same primary comparison, p = 0.004 for the Cox hazard ratio in the abstract and log-rank p = 0.002 in the Discussion, and the Discussion restates the effect inverted as HR 4.50 without saying so",
-        "There was no provision for a formal interim analysis, yet the trial was closed early on the monitoring committee's recommendation and then analysed after four further years of follow-up with the data already in hand, and no alpha adjustment is made for either the data-dependent stopping or the data-dependent analysis time",
-        "The grafts used were not of high quality (median donor age 69 years, range 18 to 84; median D-MELD 594; macrosteatosis of 10 percent or more in 8 of 22 livers) and the trial's own framing is the optimal use of a scarce resource, yet no analysis of what the 21 grafts cost non-cancer candidates is presented",
-        "The authors declare no competing interests, but the senior author wrote the Italian allocation consensus the trial cites, both Metroticket models used for eligibility and prognostication, and the adaptive-allocation proposal the conclusions advance; no intellectual conflict is disclosed",
-        "XXL RCT",
-        "LT after downstaging ↑ OS",
-        "Bridge / downstage to LT (UNOS-DS)",
-        "Multicenter randomized phase 2b/3 trial: 74 entered downstaging; 29 dropped out before randomization; 45 responders were randomized, 23 to LT and 22 to nontransplant treatment.",
-        "From randomization, five-year overall survival was 77.5% with LT versus 31.2% without LT; tumor-event-free survival 76.8% versus 18.3%; median follow-up 71 months.",
-        "Strongest causal evidence for LT among selected responders, not for all 74 entrants or unlimited initial burden. Small, prematurely stopped trial. Appendix allowed uncertain bland-versus-neoplastic segmental/type-I portal thrombosis under additional response conditions; the actual PVTT denominator/outcomes are not reported. It must not be relabeled a proven-PVTT trial.",
-        "Randomized trial of transplantation after successful downstaging of HCC beyond Milan criteria.",
-        "Five-year overall survival 77.5% with transplantation versus 31.2% without, from randomization.",
-        "Excluded the population of interest; its benefit cannot be extrapolated to previous extrahepatic disease."
+        "XXL randomized 45 responders after sustained downstaging. At five years, OS was 77.5% after LT vs 31.2% with non-transplant care (HR 0.32, 95% CI 0.11–0.92, P=.035). Tumor event-free survival was 76.8% vs 18.3%. Enrollment closed early."
       ]
     },
     "32666496": {
@@ -4224,14 +4206,14 @@
       "design": "Phase 2 RCT",
       "arms": "Personalised (≥205 Gy) vs standard (120 Gy) SIRT dosimetry",
       "result": "Phase 2: index-lesion response at 3 mo 71% vs 36% (p=0.0074; primary met, stopped early); median OS 26.6 vs 10.7 mo (HR 0.421); PFS not significant",
-      "caution": "60 patients; unmasked single-lesion endpoint; resection 36% vs 4% partly drives OS",
+      "caution": "Index-lesion response was unmasked. Masked central review also favored personalized dosing (79% vs 43%).",
       "quotes": [
         "a randomised, multicentre, open-label phase 2 trial",
         "personalised dosimetry (at least 205 Gy to the index lesion, n=31) or standard dosimetry (120 plus or minus 20 Gy to the perfused lobe, n=29)",
         "Primary endpoint: objective response of the index lesion at 3 months in 20 of 28 (71%, 95% CI 51 to 87) with personalised dosimetry versus 10 of 28 (36%, 19 to 56) with standard dosimetry, p=0.0074",
         "Median overall survival by intention to treat 26.6 months (95% CI 11.7 to not reached) versus 10.7 months (6.0 to 16.8), hazard ratio 0.421",
         "Resection with curative intent after treatment in 10 of 28 (36%) versus 1 of 28 (4%)",
-        "60 patients with unresectable locally advanced HCC"
+        "Personalized vs standard Y90 dosimetry: investigator-read index-lesion response 71% vs 36% at 3 months. Masked central review also favored personalized dosing, 79% vs 43% (P=.0062). Sixty patients were randomized. This was a dose comparison."
       ]
     },
     "33264544": {
@@ -4350,11 +4332,11 @@
       "label": "LEGACY",
       "design": "Retrospective cohort",
       "arms": "Retrospective single-arm · 162 patients",
-      "result": "Co-primary endpoint met: ORR 88.3% by localised mRECIST, 62.2% lasting ≥6 mo; 46.3% confirmed by RECIST 1.1; 3-y OS 86.6%",
+      "result": "Confirmed local mRECIST response 72.2% (best 88.3%). Of 117 confirmed responders, 76.1% maintained response ≥6 mo. Three-year OS 86.6%.",
       "caution": "No comparator; 28% went on to transplant or resection, confounding survival",
       "quotes": [
         "162 consecutive patients with a solitary HCC",
-        "reporting an 88.3 percent objective response by localised mRECIST with 62.2 percent lasting at least 6 months and 3-year survival of 86.6 percent",
+        "LEGACY supported FDA approval of TheraSphere for solitary unresectable HCC. In 162 patients, confirmed objective response by localised mRECIST was 72.2% (best response 88.3%). With RECIST 1.1, the corresponding figures were 46.3% and 63.0%. Eighty-nine of 117 confirmed localised mRECIST responders (76.1%) maintained response ≥6 months. Three-year overall survival was 86.6%. This retrospective single-arm cohort included 45 patients who subsequently received transplantation or resection.",
         "by RECIST 1.1 best response fell to 63.0% (55.3 to 70.0) and confirmed response to 46.3% (38.8 to 54.0)",
         "45 patients (28 percent) subsequently transplanted or resected"
       ]
@@ -4406,8 +4388,8 @@
       "caution": "Composite-score groups, not AFP ranges; deaths within 90 days excluded; no transplant-benefit comparison",
       "quotes": [
         "Halazun 2021. External retrospective validation in 2,236 recipients.",
-        "Five-year competing-risk cumulative recurrence: 9.5%, 20.5%, 40.5% for low/intermediate/high NYCA categories. Discrimination C statistic 0.66.",
-        "Deaths within 90 postoperative days excluded."
+        "Deaths within 90 postoperative days excluded.",
+        "Five-year competing-risk cumulative recurrence: 9.5%, 20.5%, 40.5% for low/acceptable/high NYCA categories. Discrimination C statistic 0.66. These are composite-score categories, not isolated AFP ranges."
       ]
     },
     "33964311": {
@@ -4803,11 +4785,12 @@
       "design": "RCT",
       "arms": "HAIC-FOLFOX vs sorafenib",
       "result": "Primary endpoint met: median OS 13.9 vs 8.2 mo (HR 0.408, 95% CI 0.301–0.552; P<.001); ORR 31.5% vs 1.5% (RECIST)",
-      "caution": "Single-centre, open-label; 92% hepatitis B, median tumour 11.2 cm; sorafenib comparator now obsolete",
+      "caution": "Single center. HBV in 89% overall and 92% of the HAIC arm. Median tumor size 11.2 cm. Sorafenib control.",
       "quotes": [
         "Median overall survival was 13.9 months (95% CI 10.6 to 17.2) with HAIC-FO versus 8.2 months (7.5 to 9.0) with sorafenib (HR 0.408, 95% CI 0.301 to 0.552; P<.001)",
         "Objective response was 31.5 percent versus 1.5 percent by RECIST",
-        "It is a single-centre trial in a 92 percent hepatitis B population with a median tumour of 11.2 cm"
+        "First-line hepatic arterial FOLFOX improved median overall survival versus sorafenib (13.9 versus 8.2 months, HR 0.408, 95% CI 0.301–0.552) and response (31.5% versus 1.5%). This was a single-centre trial in a population with large intrahepatic tumours (median 11.2 cm) and predominantly HBV-related disease (89%). It did not compare current immunotherapy combinations. The exploratory 15-gene model requires external validation.",
+        "HAIC-FOLFOX vs sorafenib: OS 13.9 vs 8.2 months. Single-center, open-label trial. HBV infection in 234/262 overall (89%), including 120/130 (92%) in the HAIC arm. Median tumor size 11.2 cm. Sorafenib was the comparator."
       ]
     },
     "34925507": {
@@ -4876,11 +4859,11 @@
       "label": "Baveno VII",
       "design": "Consensus",
       "arms": "Consensus statement · Baveno VII 2022",
-      "result": "CSPH = HVPG ≥10 mmHg; ruled out by stiffness ≤15 kPa + platelets ≥150 x 10^9/L, in at ≥25 kPa; CSPH flags decompensation/death risk after HCC resection",
+      "result": "CSPH: HVPG ≥10 mmHg in viral/alcohol cirrhosis. In cACLD, stiffness ≤15 kPa + platelets ≥150 × 10⁹/L rules out CSPH. ≥25 kPa rules in for eligible etiologies.",
       "caution": "Rule-in cut-off applies to viral/alcohol-related or non-obese NASH cACLD; no stand-alone resection exclusion",
       "quotes": [
         "de Franchis et al. J Hepatol. 2022.",
-        "clinically significant portal hypertension as an HVPG of 10 mmHg or more, ruled out by liver stiffness of 15 kPa or less with platelets of 150 x 10^9/L or more, ruled in at 25 kPa or more",
+        "Baveno VII defines clinically significant portal hypertension (CSPH) by an HVPG of at least 10 mmHg in viral- and alcohol-related cirrhosis. In compensated advanced chronic liver disease, liver stiffness at most 15 kPa with platelets at least 150 × 10⁹/L rules out CSPH. Stiffness at least 25 kPa rules it in for viral- or alcohol-related disease and non-obese NASH. ANTICIPATE estimates intermediate risk in those groups. CSPH increases risk after HCC resection, but the consensus gives no universal threshold for declining surgery.",
         "CSPH, by an HVPG of 10 mmHg or more or by clinical manifestations of portal hypertension, is associated with higher risk of decompensation and mortality after liver resection for HCC"
       ]
     },
@@ -4918,11 +4901,11 @@
       "design": "RCT",
       "arms": "Y-90 radioembolisation vs DEB-TACE",
       "result": "Primary endpoint met: median TTP 17.1 vs 9.5 mo (HR 0.36, 95% CI 0.18-0.70, P=.002); median OS 30.2 vs 15.6 mo (HR 0.48, P=.006)",
-      "caution": "Stopped at interim with 72 of 136 planned; single centre; unblinded local imaging assessment",
+      "caution": "Single-center, open-label. Stopped at 72 of 136 planned. Masked central review was not established.",
       "quotes": [
         "Median time to overall progression, the primary endpoint, was 17.1 months after radioembolisation versus 9.5 months after drug-eluting bead TACE (intention to treat HR 0.36; 95% CI 0.18, 0.70; P=.002",
         "Median overall survival was 30.2 months versus 15.6 months (HR 0.48; 95% CI 0.28, 0.82; P=.006)",
-        "stopped at a planned interim analysis with 72 of 136 planned patients at a single centre with local unblinded imaging assessment",
+        "In the single-centre phase 2 TRACE trial, median time to progression was 17.1 vs 9.5 months and median OS 30.2 vs 15.6 months with Y-90 vs drug-eluting bead TACE. The trial stopped at a planned interim analysis after 72 of 136 planned patients. The TACE protocol permitted five sessions of up to 150 mg doxorubicin. Three infection-related deaths in that arm included two with septic shock. Liver volumes treated also differed between arms.",
         "to Y-90 glass microsphere radioembolisation (38) or doxorubicin drug-eluting bead chemoembolisation (34)"
       ]
     },
@@ -4983,12 +4966,13 @@
       "design": "Single-arm trial",
       "arms": "Single-arm prospective (radiation segmentectomy) · 29 patients",
       "result": "Primary endpoint: target CR by mRECIST 83% (24/29), sustained CR 90%; local progression 12% at 2 years; all 8 explanted targets 100% necrosis",
-      "caution": "Single-centre, no comparator; 44% of patients censored by transplant or loss",
+      "caution": "No comparator or masked independent reading. Transplant or loss during follow-up in 13/29 (45%).",
       "quotes": [
         "target lesion complete response by mRECIST in 24 of 29 (83%) and partial response in 5 (17%), an objective response of 100%; 26 of 29 (90%) had a sustained complete response after a single treatment",
         "cumulative incidence 4% (95% CI 0 to 16) at 1 year and 12% (3 to 28) at 2 years",
         "all 8 target lesions showed 100% necrosis on explant",
-        "44 percent of patients censored by transplant or loss"
+        "In 29 patients, initial complete response of the target lesion was 83%, sustained complete response was 90%, and all eight explanted target lesions had complete necrosis. There was no comparator or masked independent image review. Thirteen of 29 (45%) underwent transplant or were lost during follow-up. Comparative recurrence and survival versus ablation remain uncertain.",
+        "(13/29, 45%, combined)"
       ]
     },
     "35633905": {
@@ -5113,12 +5097,13 @@
       "design": "RCT",
       "arms": "Surgery vs RFA",
       "result": "HCC ≤3 cm, ≤3 nodules: median RFS 3.46 vs 3.04 y (HR 0.92, 95% CI 0.67-1.25; P=0.58); local recurrence 15.0% vs 28.0% of recurrences (P=0.07)",
-      "caution": "Stopped at 301 analysable of 600 planned (conditional power <8%); mostly solitary tumours <2 cm",
+      "caution": "Slow accrual closed enrollment. Conditional power <8% was calculated afterward. Mostly solitary tumors <2 cm.",
       "quotes": [
         "Largest HCC diameter 3 cm or less and 3 or fewer HCC nodules",
         "Primary endpoint: median recurrence-free survival 3.46 years with surgery versus 3.04 years with RFA, hazard ratio 0.92 (95% CI 0.67 to 1.25), P = 0.58",
         "Local recurrence was less frequent after surgery but not significantly so: 12 of 82 (15.0%) versus 24 of 86 (28.0%), P = 0.07.",
-        "Accrual stopped at 301 analysable patients of a planned 600, leaving a conditional power under 8 percent, the tumours were overwhelmingly solitary and under 2 cm"
+        "SURF compared resection with radiofrequency ablation for HCC ≤3 cm. Median recurrence-free survival was 3.46 vs 3.04 years (HR 0.92, 95% CI 0.67–1.25, p=0.58). There were 301 analysable patients vs 600 planned. About 90% had a solitary lesion and about two-thirds had lesions ≤2 cm. Difficult ablation locations were excluded and the protocol allowed technical success without an adequate margin. The superiority trial did not establish equivalence.",
+        "No significant RFS difference with surgery vs RFA. Enrollment stopped because of slow accrual. Among 301 analyzed, final RFS did not differ significantly. Conditional power <8% was calculated afterward. Most tumors were solitary and <2 cm."
       ]
     },
     "35975918": {
@@ -5617,12 +5602,13 @@
       "label": "Hoogwater 2023",
       "design": "Retrospective cohort",
       "arms": "Multicentre retrospective · 49 LT: 27 neoadjuvant CRT vs 22 none",
-      "result": "Chemoradiation: less recurrence (adjusted HR 0.30, 95% CI 0.09–0.97) but no OS gain (5-y 41% vs 53%, NS); major vascular complications 11/27 vs 3/22",
-      "caution": "Nonrandom, centre-specific treatment; recurrence benefit vs vascular harm; not proof RT can be omitted",
+      "result": "Recurrence HR 0.30 (0.09–0.97), 5-y OS 41% vs 53% (NS). Any major vascular complication 11/27 vs 3/22, hepatic artery complications 9/27 vs 2/22 (Table 3).",
+      "caution": "Center-specific, retrospective comparison. No randomized evidence for omitting radiation.",
       "quotes": [
         "Hoogwater, BJS Open 2023",
         "Multicenter 2011–2020; 49 LT, 27 with NAT, 22 without.",
-        "Post-LT 5-year OS 41% NAT versus 53% no NAT(not significant); NAT associated with less recurrence (adjusted HR 0.30, 95% CI 0.09–0.97). Major vascular complications 11/27 vs 3/22; hepatic-artery complications 9/27 vs 2/22."
+        "Post-LT 5-year OS 41% NAT versus 53% no NAT(not significant); NAT associated with less recurrence (adjusted HR 0.30, 95% CI 0.09–0.97). Major vascular complications 11/27 vs 3/22; hepatic-artery complications 9/27 vs 2/22.",
+        "Chemoradiation vs none before LT: adjusted recurrence HR 0.30 (0.09–0.97). Five-year OS 41% vs 53% (NS). Table 3 reports any major vascular complication in 11/27 vs 3/22 and hepatic artery complications in 9/27 vs 2/22."
       ]
     },
     "37037359": {
@@ -6240,14 +6226,15 @@
     "38261915": {
       "label": "MALRIC primary",
       "design": "Cohort",
-      "arms": "Microwave ablation vs resection · retrospective PSM (203 vs 588)",
+      "arms": "MWA vs resection: one iCCA ≤5 cm or up to three, each ≤3 cm",
       "result": "iCCA within Milan: matched 5-y OS 44.8% vs 40.4% (HR 0.96, 95% CI 0.71-1.29, P=.761); median DFS 1.7 vs 3.6 y (HR 0.63), favouring resection",
-      "caution": "Retrospective; no non-inferiority margin; equivalence rests on post hoc 2017 split; entry single tumour ≤5 cm",
+      "caution": "Retrospective matched cohort. No noninferiority margin. The time-period analysis was post hoc.",
       "quotes": [
         "221 percutaneous microwave ablation and 723 liver resection, reduced to 203 versus 588 after one-to-many propensity score matching",
         "after matching, 5-year overall survival was 44.8% with MWA versus 40.4% with resection (HR 0.96, 95% CI 0.71-1.29, P=.761)",
         "after matching, median DFS 1.7 versus 3.6 years (HR 0.63, 95% CI 0.48-0.83, P=.0010)",
-        "the equivalence claim depends on a post hoc split at 2017 whose later comparison is underpowered at P = .129. The entry criterion was a single tumour up to 5 cm"
+        "the equivalence claim depends on a post hoc split at 2017 whose later comparison is underpowered at P = .129. The entry criterion was a single tumour up to 5 cm",
+        "MWA vs resection for primary iCCA: one tumor ≤5 cm or up to three tumors each ≤3 cm, without major vascular/hilar invasion or nodal or distant spread. Five-year OS was 44.8% with MWA vs 40.4% with resection. Median DFS 1.7 vs 3.6 years."
       ]
     },
     "38319892": {
@@ -6255,12 +6242,12 @@
       "design": "RCT",
       "arms": "STRIDE (tremelimumab + durvalumab) vs sorafenib",
       "result": "Primary endpoint met: median OS 16.43 vs 13.77 mo, HR 0.78 (96.02% CI 0.65 to 0.93), P = 0.0035; 36-mo OS 30.7% vs 20.2%; durvalumab alone non-inferior",
-      "caution": "No PFS benefit; curves separate only after 9 months; open label, investigator-assessed progression",
+      "caution": "No PFS gain. Time-split OS estimates were exploratory. No significant treatment-by-time interaction.",
       "quotes": [
         "Primary endpoint: median overall survival 16.43 months (95% CI 14.16 to 19.58) with STRIDE versus 13.77 months (95% CI 12.25 to 16.13) with sorafenib; hazard ratio 0.78 (96.02% CI 0.65 to 0.93), P = 0.0035.",
         "Overall survival at 36 months was 30.7% with STRIDE, 24.7% with durvalumab and 20.2% with sorafenib",
         "Durvalumab monotherapy was non-inferior to sorafenib",
-        "There was no progression-free survival benefit, the curves separate only after 9 months"
+        "STRIDE improved median overall survival versus sorafenib (16.43 versus 13.77 months, HR 0.78, 96.02% CI 0.65–0.93) and three-year survival (30.7% versus 20.2%). Durvalumab monotherapy met its noninferiority criterion versus sorafenib. Progression-free survival did not improve. Exploratory STRIDE survival HRs were 0.87 before nine months and 0.70 thereafter, with no significant treatment-by-time interaction. HIMALAYA was not powered to compare STRIDE with durvalumab alone."
       ]
     },
     "38319896": {
@@ -6954,13 +6941,13 @@
       "label": "EASL HCC 2025",
       "design": "Guideline",
       "arms": "Guideline · EASL clinical practice guidelines on HCC",
-      "result": "AFP above 1,000 ng/ml bars listing (must be ≤1,000 for 3 months); resection must not be used to downstage beyond-Milan HCC; RFA and MWA equivalent",
-      "caution": "Most surgical and transplant items LoE 3 to 4 expert consensus; no disclosures printed",
+      "result": "EASL: AFP >1,000 precludes LT. After downstaging, AFP ≤1,000 ng/mL for ≥3 mo before listing. Avoid resection solely to downstage. No RFA/MWA preference.",
+      "caution": "European guidance. US standardized allocation follows OPTN policy. Evidence levels vary by recommendation.",
       "quotes": [
         "AFP above 1,000 ng/ml is an absolute contraindication, and must be 1,000 or less for 3 months (LoE 3, strong, 95%)",
         "Resection must not be used to downstage beyond-Milan disease for transplant eligibility (LoE 4, strong, 83%)",
-        "equivalence of radiofrequency and microwave ablation",
-        "most surgical and transplant items are LoE 3 to 4 expert consensus, and no disclosures are printed"
+        "EASL 2025 grades recommendations for HCC surveillance, diagnosis, resection, ablation, transplantation and locoregional therapy. Examples include an AFP listing threshold, no general preference between radiofrequency and microwave ablation, and a recommendation against using resection to downstage beyond-Milan disease for transplant eligibility. The update covers selected clinical questions and refers to the 2018 guideline elsewhere. Many surgical and transplant recommendations rely on nonrandomised cohorts, case-control studies or case series (levels 3–4).",
+        "EASL regards AFP above 1,000 ng/mL as a contraindication to transplantation and requires AFP at or below 1,000 for at least three months before listing patients downstaged to Milan criteria. In the United States, OPTN Policy 9.5.I.iv governs standard HCC exception priority. If AFP ever exceeded 1,000, a candidate who otherwise qualifies must have AFP below 500 after locoregional therapy and maintain it below 500. Cases outside the standard rule require individual review for exception priority. Transplant candidacy is a separate centre decision."
       ]
     },
     "39693584": {
@@ -6968,13 +6955,13 @@
       "design": "RCT",
       "arms": "SBRT vs RFA",
       "result": "Recurrent HCC ≤5 cm: primary local PFS HR 0.45 (0.24–0.87); 2-y 92.7% vs 75.8%; 2–5 cm subgroup not significant; no significant PFS or OS difference",
-      "caution": "Composite primary endpoint counts death from any cause; single centre, open-label, no central review",
+      "caution": "Local PFS includes death. The 2–5 cm subgroup was imprecise, with no interaction by size. Single center.",
       "quotes": [
         "166 patients with a solitary recurrent HCC of 5 cm or less",
         "Primary endpoint: local progression-free survival favoured SBRT, hazard ratio 0.45 (95% CI 0.24 to 0.87), p = 0.014",
         "2-y local PFS 92.7 vs 75.8%",
         "2–5 cm NS (HR 0.58, p=0.31); PFS and OS identical",
-        "The primary endpoint is a composite that counts death from any cause",
+        "In 166 patients with a solitary recurrent HCC ≤5 cm, SBRT improved local progression-free survival vs RFA: 92.7% vs 75.8% at 2 years and 84.3% vs 67.3% at 3 years (HR 0.45, 95% CI 0.24–0.87, p=0.014). This endpoint includes death. Overall PFS and OS did not differ significantly. For the 48 patients with 2–5 cm tumours, the estimate was imprecise (HR 0.58, 95% CI 0.20–1.68). There was no evidence of interaction by size (p=0.842).",
         "Single-centre design with possible selection bias",
         "Open-label with no central imaging review"
       ]
@@ -6984,12 +6971,13 @@
       "design": "Phase 3 RCT",
       "arms": "SBRT + sorafenib vs sorafenib alone",
       "result": "Primary endpoint not met: median OS 15.8 vs 12.3 mo (HR 0.77, 90% CI 0.59-1.01; 1-sided P=.06); adjusted HR 0.72; PFS 9.2 vs 5.5 mo (HR 0.55)",
-      "caution": "177 analysed vs 368 planned (65% power); sorafenib comparator superseded during the trial",
+      "caution": "Targets: 368 (85% power), then 292 (80%). After early closure, 177 were analyzed at 65% power.",
       "quotes": [
         "Median overall survival was 15.8 months (90% CI 11.4-19.2) with SBRT then sorafenib versus 12.3 months (10.6-14.3) with sorafenib alone, HR 0.77 (90% CI 0.59-1.01), 1-sided P=.06, so the primary endpoint was not met. Adjusted for performance status, macrovascular invasion, M stage and liver function, HR 0.72 (P=.04).",
         "Progression-free survival nearly doubled: 9.2 months (95% CI 7.5-11.9) versus 5.5 months (3.4-6.3), HR 0.55 (0.40-0.75; P<.001)",
         "the design required 368 patients",
-        "converted to a time-driven analysis with 65 percent power on 177 eligible patients"
+        "converted to a time-driven analysis with 65 percent power on 177 eligible patients",
+        "SBRT then sorafenib vs sorafenib: OS 15.8 vs 12.3 months, HR 0.77 (90% CI 0.59–1.01), primary P=.06. Originally 368 patients were planned at 85% power. The amended target was 292 at 80% power. After early closure, the time-driven analysis of 177 patients had 65% power."
       ]
     },
     "39716538": {
@@ -7034,36 +7022,38 @@
       "label": "LEAP-012",
       "design": "RCT",
       "arms": "Lenvatinib + pembrolizumab + TACE vs dual placebo + TACE",
-      "result": "PFS primary met: median 14.6 vs 10.0 mo, HR 0.66 (95% CI 0.51-0.84); OS not met at interim, HR 0.80 (0.57-1.11), one-sided p=0.087",
-      "caution": "Grade ≥3 treatment-related events 71% vs 32%; trial-specific progression definition; nearly a third BCLC A",
+      "result": "PFS 14.6 vs 10.0 mo, HR 0.66 (0.51–0.84). Long-term OS 40.4 vs 40.8 mo, HR 0.98 (0.76–1.26) (ESMO 2026, 1678RO).",
+      "caution": "Grade ≥3 treatment-related events 71% vs 32% at the PFS analysis. OS from third interim analysis.",
       "quotes": [
         "The progression-free survival endpoint was met: median 14.6 months (95% CI 12.6-16.7; 132 events) with lenvatinib plus pembrolizumab versus 10.0 months (8.1-12.2; 154 events) with placebo (hazard ratio 0.66, 95% CI 0.51-0.84",
         "Overall survival did not meet its threshold at this interim analysis",
         "(hazard ratio 0.80, 95% CI 0.57-1.11; one-sided p=0.087 against a 0.0012 threshold)",
-        "Grade 3 or worse treatment-related adverse events occurred in 169 of 237 (71%) versus 76 of 241 (32%)"
+        "Grade 3 or worse treatment-related adverse events occurred in 169 of 237 (71%) versus 76 of 241 (32%)",
+        "Lenvatinib + pembrolizumab + TACE vs TACE: PFS 14.6 vs 10.0 months, HR 0.66 (95% CI 0.51–0.84). Long-term OS 40.4 vs 40.8 months, HR 0.98 (0.76–1.26) (ESMO 2026, 1678RO). Grade ≥3 treatment-related events 71% vs 32% at the primary PFS analysis. Child-Pugh A. A sensitivity analysis without the LI-RADS 5 requirement for new intrahepatic lesions gave PFS 14.6 vs 8.4 months (HR 0.63, 95% CI 0.49–0.80)."
       ]
     },
     "39798579": {
       "label": "EMERALD-1",
       "design": "Phase 3 RCT",
       "arms": "Durvalumab + bevacizumab + TACE vs placebo + TACE",
-      "result": "Primary endpoint met: median PFS 15.0 vs 8.2 mo, HR 0.77 (95% CI 0.61-0.98), P = 0.032; durvalumab + TACE alone HR 0.94; interim OS not significant",
-      "caution": "Primary comparison switched by mid-trial amendment; OS withheld; haemorrhage 28% vs 14%",
+      "result": "PFS 15.0 vs 8.2 mo, HR 0.77 (0.61–0.98). Final OS 29.9 vs 33.3 mo, HR 1.10 (0.87–1.39), P=.47 (ESMO GI 2026, 183O).",
+      "caution": "Amended primary comparison. Bleeding 28% vs 14%. Durvalumab without bevacizumab did not improve PFS.",
       "quotes": [
         "median progression-free survival 15.0 months (95% CI 11.1 to 18.9) with durvalumab plus bevacizumab plus TACE versus 8.2 months (6.9 to 11.1) with placebo plus TACE; hazard ratio 0.77 (95% CI 0.61 to 0.98), two-sided stratified log-rank P = 0.032",
         "hazard ratio 0.94 (0.75 to 1.19)",
-        "Haemorrhagic events occurred in 28% (43 of 154) given durvalumab and bevacizumab versus 14% (27 of 200) on placebo"
+        "Haemorrhagic events occurred in 28% (43 of 154) given durvalumab and bevacizumab versus 14% (27 of 200) on placebo",
+        "Durvalumab + bevacizumab + TACE vs TACE: PFS 15.0 vs 8.2 months, HR 0.77 (95% CI 0.61–0.98). Final OS 29.9 vs 33.3 months, HR 1.10 (0.87–1.39), P=.47 (ESMO GI 2026, 183O). Child-Pugh A–B7. Bleeding events occurred in 28% with both drugs vs 14% with placebo."
       ]
     },
     "39808828": {
       "label": "Xu 2025",
       "design": "Prospective cohort",
-      "arms": "Y90 vs TACE; prospective all-comers downstaging cohort",
-      "result": "Two-year downstaging in all-comers: 74% vs 65%.",
-      "caution": "Nonrandom treatment; overlaps MERITS-LT. Does not expand allocation eligibility.",
+      "arms": "Initial Y90 vs TACE within or beyond UNOS downstaging entry criteria",
+      "result": "2-y downstaging, Y90 vs TACE: 73.8% vs 64.6% beyond UNOS-DS, 78.1% vs 86.5% within. First therapy was not predictive after center stratification (P=.07).",
+      "caution": "Treatment was nonrandomized, and this cohort overlaps MERITS-LT. Allocation criteria still apply.",
       "quotes": [
         "Xu 2025",
-        "Prospective multicenter cohort. MERITS-LT: 326 within UNOS-DS and 190 all-comers beyond UNOS-DS; 2015–2023. In the all-comers subgroup, 2-year successful downstaging was 74% with initial Y90 versus 65% with TACE (p<0.001). Treatment was not randomized; subgroup finding does not expand allocation criteria. Overlaps earlier MERITS-LT enrollment. Earlier within-UNOS-DS study found no significant modality difference."
+        "Prospective multicenter cohort. MERITS-LT: 326 within UNOS-DS and 190 all-comers beyond UNOS-DS; 2015–2023. Two-year downstaging with Y90 vs TACE was 73.8% vs 64.6% beyond UNOS-DS and 78.1% vs 86.5% within UNOS-DS. First treatment was not predictive after stratification by center (P=.07). Prospective observational cohort overlapping MERITS-LT. Treatment selection and center practice differed. Allocation criteria apply independently. The unadjusted Table 2 Y90:TACE subhazard ratio was 1.06 (0.82–1.39)."
       ]
     },
     "39831703": {
@@ -7113,12 +7103,13 @@
       "label": "COLLISION",
       "design": "RCT",
       "arms": "Thermal ablation vs resection (CRLM, one to ten lesions ≤3 cm)",
-      "result": "OS HR 1.05 (95% CI 0.69-1.58, p=0.83); upper bound crosses the 1.30 margin, so non-inferiority not shown; AEs 19% vs 46%; stay 1 vs 4 days",
-      "caution": "Stopped at 48% of planned 618; about a third of each arm also got the other modality; unmasked",
+      "result": "OS HR 1.05 (95% CI 0.69–1.58). Interim stopping rule met, but observed CI crosses the 1.30 NI margin. AEs 19% vs 46%, hospital stay 1 vs 4 days.",
+      "caution": "Both modalities used in 27 (18%) of the ablation arm and 52 (35%) of the resection arm (Table 1).",
       "quotes": [
         "Shows that in centrally vetted patients with one to ten colorectal liver metastases of 3 cm or less, thermal ablation carries far less morbidity than resection (adverse events 19% vs 46%, no treatment-related deaths vs three, median stay 1 vs 4 days)",
         "HR 1.05 (95% CI 0.69-1.58), p=0.83",
-        "accrual stopped at 48% of the planned 618 patients on a projected conditional power of 90.5%, and the observed HR of 1.05 has a 95% CI (0.69-1.58) whose upper bound crosses the 1.30 margin"
+        "accrual stopped at 48% of the planned 618 patients on a projected conditional power of 90.5%, and the observed HR of 1.05 has a 95% CI (0.69-1.58) whose upper bound crosses the 1.30 margin",
+        "Thermal ablation vs resection: OS HR 1.05 (95% CI 0.69–1.58). Interim stopping rule met, but the 95% CI crosses the 1.30 noninferiority margin. Adverse events 19% vs 46%. Unmasked trial stopped early. Both procedures were used in 27 (18%) assigned to ablation and 52 (35%) assigned to resection (Table 1)."
       ]
     },
     "39864891": {
@@ -7835,12 +7826,12 @@
       "label": "BCLC 2026",
       "design": "Guideline",
       "arms": "Guideline · BCLC 2026 update",
-      "result": "EBRT and TARE join ablation in BCLC 0/A; microwave preferred up to 3-4 cm; TACE stays standard in B; four first-line IO doublets in C; BCLC D survival <12 mo",
+      "result": "BCLC 0/A: selected EBRT or TARE, MWA discussed up to 3–4 cm. B: TACE. C: systemic therapy. D: median OS <12 mo overall, <3 mo for strictly defined stage D.",
       "caution": "No HVPG, AFP-decline or TACE-unsuitable cut-offs; early-stage changes rest on observational data",
       "quotes": [
         "BCLC strategy for prognosis prediction and treatment recommendations: The 2026 update",
         "EBRT now sits alongside TARE as a valid alternative ablative modality in BCLC 0 and A",
-        "preferring microwave to radiofrequency up to 3 to 4 cm",
+        "BCLC 2026 includes EBRT and radioembolisation among selected early-stage options and discusses microwave ablation for tumours up to 3–4 cm. It defines multifocal disease numerically and includes ECOG 2 and four systemic doublets in BCLC C. Figure 5 gives median survival under 12 months for the broader BCLC D group and under three months for strictly defined BCLC D. The update leaves several choices to multidisciplinary judgement, including resection with portal hypertension, TACE suitability and response sufficient for downstaging.",
         "revised to under 12 months for D (3 months in 2022)"
       ]
     },
@@ -8022,13 +8013,14 @@
       "label": "MALRIC recurrent",
       "design": "Cohort",
       "arms": "Microwave ablation (375) vs repeat resection (119) · observational",
-      "result": "Recurrent iCCA: median OS 29.8 vs 34.0 mo (HR 0.89, 95% CI 0.68-1.17); DFS 10.7 vs 14.8 mo (HR 0.78, 0.61-1.00); major complications 5.5% vs 31.3%",
-      "caution": "Observational, no non-inferiority margin; DFS directionally worse after ablation; called exploratory",
+      "result": "MWA vs repeat resection: median OS 29.8 vs 34.0 mo, DFS 10.7 vs 14.8 mo. HRs for resection vs MWA: OS 0.89 (0.68–1.17), DFS 0.78 (0.61–1.00), P=.07 for DFS.",
+      "caution": "Observational. Major complications: 5.5% with MWA vs 31.3% with resection. No noninferiority margin.",
       "quotes": [
         "375 microwave ablation and 119 repeat liver resection",
         "median overall survival 29.8 months with microwave ablation versus 34.0 months with repeat resection (HR 0.89, 95% CI 0.68 to 1.17; P = .31)",
         "Median disease-free survival 10.7 months with ablation versus 14.8 months with repeat resection (HR 0.78, 95% CI 0.61 to 1.00; P = .07)",
-        "Complications above Clavien-Dindo grade II in 5.5% after ablation versus 31.3% after repeat resection"
+        "Complications above Clavien-Dindo grade II in 5.5% after ablation versus 31.3% after repeat resection",
+        "MWA vs repeat resection: median OS 29.8 vs 34.0 months, DFS 10.7 vs 14.8 months, and major complications 5.5% vs 31.3%. HRs compare repeat resection to MWA: OS 0.89 (0.68–1.17), DFS 0.78 (0.61–1.00), P=.07 for DFS."
       ]
     },
     "41564818": {
@@ -8091,7 +8083,7 @@
       "quotes": [
         "Aceituno 2026 — Safety of Immune Checkpoint Inhibitors Prior to Liver Transplantation in Hepatocellular Carcinoma.",
         "Ten-center ICI series, 48 recipients, propensity matched with 144 Toronto non-ICI controls; 20/48 exposed cases previously published.",
-        "Biopsy-proven rejection 9/48 (18.8%) versus 28/144 (19.4%), P=.916."
+        "Rejection occurred in 9/48 ICI recipients (18.8%, all biopsy-proven) and 28/144 controls (19.4%, biopsy or clinical response to steroids), P=.916."
       ]
     },
     "41680345": {
@@ -8150,12 +8142,12 @@
       "design": "Retrospective cohort",
       "arms": "Retrospective Asan LDLT cohort · 137 PVTT recipients, 1997–2022",
       "result": "Five-year OS 66.6% in responders vs 35.1% in nonresponders (DFS 64.7% vs 19.7%); Vp1 OS 69.5%, Vp4 50.0%",
-      "caution": "Recipient-only, mixed eras, small grade subgroups; viable PVTT in 65/83 responder explants",
+      "caution": "Recipient-only cohort. Viable PVTT in 65/83 responders at LDLT; the assessment method was unspecified.",
       "quotes": [
         "Yoon 2026 — Living-donor liver transplantation in hepatocellular carcinoma with portal-vein tumor thrombosis.",
         "Retrospective Asan LDLT cohort, 1997–2022, 137 selected PVTT recipients; median follow-up 38.3 months.",
         "Vp1 five-year OS 69.5%, DFS 56.2%; Vp4 OS 50.0%, DFS 34.3%.",
-        "Responders: 83 patients, five-year OS 66.6%, DFS 64.7%, recurrence 28/83; nonresponders: 54, OS 35.1%, DFS 19.7%, recurrence 42/54. Viable PVTT remained in 65/83 responder explants."
+        "Vp1 five-year OS 69.5%, DFS 56.2%; Vp4 OS 50.0%, DFS 34.3%. Exact Vp2/Vp3 five-year values were not tabulated. Vp4 recurrence was 9/14 (64.3%) by Table 2 count, not a five-year risk. Responders: 83 patients, five-year OS 66.6%, DFS 64.7%, recurrence 28/83; nonresponders: 54, OS 35.1%, DFS 19.7%, recurrence 42/54. Viable PVTT remained in 65/83 responders at the time of LDLT (Table 1 does not specify the assessment method)."
       ]
     },
     "41720193": {
@@ -8437,12 +8429,13 @@
       "design": "Meta-analysis",
       "arms": "IPD meta-analysis · 4,913 patients, no comparator arm",
       "result": "Median OS by adjudicated stage: BCLC-0 6.8 y, A 4.6, B 3.6, C 1.7, D 0.8; ablative dose (BED10 ≥80 Gy) adjusted HR 0.62 (0.56–0.68)",
-      "caution": "Retrospective, no comparator; only 30 of 96 centres (31%) contributed; 60% had prior locoregional therapy",
+      "caution": "No comparator. Of 96 centers meeting technical criteria, 30 contributed. Prior locoregional therapy in 58%.",
       "quotes": [
-        "4,913 patients treated with ablative liver external beam radiotherapy at 30 of 96 invited centres in 11 countries, pooled as individual patient data after a systematic review to 15 December 2022; 60 percent had received prior locoregional therapy and there was no comparator arm",
         "Median overall survival by adjudicated BCLC stage was 6.8 years (95% CI 5.7 to 8.7) for BCLC-0, 4.6 (4.1 to 5.1) for BCLC-A, 3.6 (3.0 to 4.9) for BCLC-B, 1.7 (1.6 to 1.8) for BCLC-C and 0.8 (0.7 to 1.4) for BCLC-D",
         "An ablative radiation dose (BED10 of 80 Gy or more) was associated with lower mortality in adjusted models: HR 0.62 (95% CI 0.56 to 0.68)",
-        "only 31 percent of eligible centres contributed"
+        "This pooled individual-patient study reports survival after ablative EBRT by adjudicated BCLC stage. Thirty of 96 eligible centres participated. Eligibility required a published ablative radiotherapy series reporting survival. Sixty percent had received previous therapy, including 58% who had locoregional therapy. All four Cox models violated proportional hazards. Without a concurrent comparison, these data cannot establish equivalence to surgery or ablation.",
+        "The individual-patient meta-analysis included 4,913 HCC patients treated with ablative EBRT at 30 of 96 eligible centres in 11 countries identified through a systematic review to 15 December 2022. Sixty percent had any previous therapy and 58% had previous locoregional therapy. There was no non-EBRT comparator.",
+        "Thirty of 96 eligible centres supplied data. Eligibility required published ablative-technique series reporting survival. Selective publication and participation could influence survival estimates, but neither the direction nor the size of that effect is known."
       ]
     },
     "42153585": {
@@ -9063,11 +9056,11 @@
       "label": "De la Garza-Ramos 2022",
       "design": "Retrospective cohort",
       "arms": "RS vs resection; solitary HCC ≤8 cm",
-      "result": "Adjusted progression HR 1.16 (0.51–2.63); median OS unreached in both groups.",
+      "result": "Unadjusted time to any progression 21.9 vs 29.4 mo (P=.03). Adjusted progression HR 1.16 (0.51–2.63). Median OS unreached in both groups.",
       "caution": "Retrospective; inadequate overlap prevented propensity matching. Not evidence of equivalence.",
       "quotes": [
         "De la Garza-Ramos 2022",
-        "Retrospective multisite cohort. Solitary HCC ≤8 cm; RS 57 versus resection 66. Target progression 5% versus 8%; adjusted overall-progression HR 1.16 (95% CI 0.51–2.63). Median OS not reached in either group. Propensity distributions were too dissimilar to match. Different surgical candidacy and liver function prevent a claim of equivalence to resection."
+        "Retrospective multisite cohort. Solitary HCC ≤8 cm; RS 57 versus resection 66. Y90 segmentectomy vs resection: unadjusted median time to any progression 21.9 vs 29.4 months (P=.03). Adjusted progression HR 1.16 (0.51–2.63). Median OS was unreached in both arms. Target progression occurred in 5% vs 8%. Propensity distributions were too dissimilar to match. Different surgical candidacy and liver function prevent a claim of equivalence to resection."
       ]
     },
     "19552767": {
@@ -9085,11 +9078,11 @@
       "label": "Kwong 2022",
       "design": "Retrospective cohort",
       "arms": "Initial LRT in 31,609 OPTN HCC candidates",
-      "result": "IPTW dropout sHR vs TACE: Y90 0.85 (0.81–0.89); ablation 0.95 (0.91–0.99).",
-      "caution": "Observational first-treatment comparison; overlapping registry cohorts and residual confounding.",
+      "result": "Dropout sHR for Y90 and ablation vs TACE: IPTW 0.85 and 0.95, conventional adjustment 1.03 (0.91–1.17) and 0.97 (0.90–1.05), respectively.",
+      "caution": "Observational. Modality associations varied with the adjustment method. Center and era may confound.",
       "quotes": [
         "Kwong 2022",
-        "National observational cohort. 31,609 US HCC transplant candidates, 2003–2018; 24,145 received LRT. IPTW-adjusted dropout sHR versus TACE: radioembolization 0.85 (95% CI 0.81–0.89); thermal ablation 0.95 (0.91–0.99). Observational first-treatment comparison, with later treatments allowed. Center, era and patient selection remain confounders. Registry cohorts overlap with later studies."
+        "National observational cohort. 31,609 US HCC transplant candidates, 2003–2018; 24,145 received LRT. Waitlist dropout vs TACE: IPTW sHR 0.85 (0.81–0.89) for Y90 and 0.95 (0.91–0.99) for ablation. Conventional multivariable sHRs were 1.03 (0.91–1.17) and 0.97 (0.90–1.05), respectively. First-treatment registry comparison, with later treatments allowed. Treatment selection and center/era effects remain possible. This registry overlaps later analyses."
       ]
     },
     "41580092": {
@@ -9174,10 +9167,10 @@
       "design": "RCT",
       "arms": "Cisplatin HAIC before RFA vs RFA; 70 patients",
       "result": "Three-year RFS 54.3% vs 34.3%; HR 0.597 (0.320–1.091), p=0.094.",
-      "caution": "Primary recurrence endpoint negative; secondary distant-recurrence result is exploratory.",
+      "caution": "Primary RFS comparison was inconclusive. The distant intrahepatic recurrence analysis was post hoc.",
       "quotes": [
         "Oyama 2021",
-        "Randomized study. 70 early HCC patients: cisplatin HAIC before RFA versus RFA alone, 35 per arm. 3-year RFS 54.3% versus 34.3%; HR 0.597 (95% CI 0.320–1.091), p=0.094. Primary RFS endpoint was not significant. A secondary distant-intrahepatic recurrence signal does not establish routine HAIC addition or HAIC as a replacement for ablation."
+        "Randomized study. 70 early HCC patients: cisplatin HAIC before RFA versus RFA alone, 35 per arm. 3-year RFS 54.3% versus 34.3%; HR 0.597 (95% CI 0.320–1.091), p=0.094. The primary RFS comparison was inconclusive. The distant intrahepatic recurrence analysis was post hoc. No routine HAIC indication follows from this trial."
       ]
     },
     "35993224": {
@@ -9229,10 +9222,10 @@
       "design": "RCT",
       "arms": "Y90+regional FUDR vs FUDR; randomized CRLM trial",
       "result": "Tumor-volume response 50% vs 24%; delayed liver progression.",
-      "caution": "Add-on study using older treatment; no proven OS benefit or standalone HAI–Y90 ranking.",
+      "caution": "Closed at 74 of 95 planned. Endpoints shifted from survival to response and progression. No proven OS gain.",
       "quotes": [
         "Gray 2001",
-        "Randomized phase III. 74 patients with bilobar unresectable CRLM: Y90 plus regional FUDR versus regional FUDR alone. Tumor-volume response 50% versus 24% (p=0.03); liver progression was delayed. Tests adding Y90 to HAI, not Y90 versus HAI alone. Older chemotherapy era; no established overall-survival benefit. Not evidence against ablation of small lesions."
+        "Randomized phase III. 74 patients with bilobar unresectable CRLM: Y90 plus regional FUDR versus regional FUDR alone. Tumor-volume response 50% versus 24% (p=0.03); liver progression was delayed. Accrual closed at 74 of 95 planned, and the trial shifted from the original survival objective to response and progression. Older regional FUDR regimen. No established OS benefit. The comparison tested Y90 added to regional FUDR."
       ]
     },
     "31177151": {
@@ -9262,10 +9255,10 @@
       "design": "RCT",
       "arms": "HARVEST: postop FUDR HAI+systemic vs systemic",
       "result": "Three-year RFS 31.4% vs 34.4% (p=0.28).",
-      "caution": "Primary endpoint negative; trial stopped for FUDR shortage; modified intention-to-treat analysis.",
+      "caution": "Allocation moved after resection following the first 11 patients. FUDR shortage closed enrollment.",
       "quotes": [
         "Wang 2025",
-        "Prematurely stopped randomized trial (HARVEST). 92 randomized after CRLM surgery; modified ITT 77, HAI-FUDR plus systemic 38 versus systemic 39. 3-year RFS 31.4% versus 34.4%, p=0.28. Stopped for FUDR supply shortage; primary endpoint negative. Exploratory early-RFS/subgroup signals do not establish routine postoperative HAI."
+        "Prematurely stopped randomized trial (HARVEST). 92 patients randomized. Randomization moved from before to after CRLM resection following the first 11 patients. The modified intention-to-treat population included 38 receiving HAI-FUDR plus systemic therapy and 39 receiving systemic therapy alone. 3-year RFS 31.4% versus 34.4%, p=0.28. Stopped for FUDR supply shortage; primary endpoint negative. Exploratory early-RFS/subgroup signals do not establish routine postoperative HAI."
       ]
     },
     "42018958": {
@@ -9317,10 +9310,10 @@
       "design": "Retrospective cohort",
       "arms": "Pump HAI vs resection; multifocal iCCA",
       "result": "OS 20.3 vs 18.9 mo; adjusted HR 0.75 (0.55–1.03).",
-      "caution": "Different centers/eras and burden; not resection equivalence or transplant-selection evidence.",
+      "caution": "All were multifocal. HAIP vs resection: bilobar 88.0% vs 34.3%, ≥4 lesions 66.7% vs 24.2%.",
       "quotes": [
         "Franssen 2022",
-        "Retrospective comparison. 319 multifocal iCCA patients: unresectable HAIP-FUDR 141 versus resection 178 across different centers/eras. Median OS 20.3 versus 18.9 months; adjusted HR 0.75 (95% CI 0.55–1.03), p=0.07. HAIP patients had substantially more bilobar/multifocal disease. Not an equivalence trial or reason to deny resection to an otherwise suitable patient; does not distinguish all satellites from metastases."
+        "Retrospective comparison. 319 multifocal iCCA patients: unresectable HAIP-FUDR 141 versus resection 178 across different centers/eras. Median OS 20.3 versus 18.9 months; adjusted HR 0.75 (95% CI 0.55–1.03), p=0.07. Both cohorts had multifocal iCCA. HAIP vs resection cohorts more often had bilobar disease (88.0% vs 34.3%) and ≥4 tumors (66.7% vs 24.2%). Centers, eras and resectability differed. These data cannot establish equivalent survival or distinguish satellites from intrahepatic metastases."
       ]
     },
     "37814188": {
@@ -9349,11 +9342,11 @@
       "label": "Sebastian 2019",
       "design": "Retrospective cohort",
       "arms": "SBRT vs TARE in unresected iCCA; NCDB cohort",
-      "result": "Adjusted OS HR 0.42 (0.21–0.84) for SBRT vs TARE.",
-      "caution": "Selection differences; main-text and abstract cohort counts conflict. Not causal superiority.",
+      "result": "SBRT vs TARE, OS: multivariable HR 0.42 (0.21–0.84). IPTW HR 0.58 (0.37–0.91), P=.019, above the prespecified Bonferroni threshold of .017.",
+      "caution": "Registry cohort. Tumor burden and vascular invasion differed.",
       "quotes": [
         "Sebastian 2019",
-        "Retrospective NCDB comparison. Main-text analysis: SBRT 27, chemoradiation 54, TARE 60; nonmetastatic node-negative unresected iCCA. Adjusted OS HR 0.42 (95% CI 0.21–0.84) for SBRT versus TARE. TARE tumors were larger/more often multifocal or vascular-invasive. Strong selection bias and abstract/main-text cohort-count discrepancy; not causal superiority or equivalent treatment eligibility."
+        "Retrospective NCDB comparison. Main-text analysis: SBRT 27, chemoradiation 54, TARE 60; nonmetastatic node-negative unresected iCCA. SBRT vs TARE: multivariable OS HR 0.42 (0.21–0.84). With inverse probability weighting, HR 0.58 (0.37–0.91), P=.019, above the Bonferroni threshold of .017. TARE tumors were larger/more often multifocal or vascular-invasive. Strong selection bias and abstract/main-text cohort-count discrepancy; not causal superiority or equivalent treatment eligibility."
       ]
     },
     "42433279": {
@@ -9382,11 +9375,11 @@
       "label": "Egger 2020",
       "design": "Retrospective cohort",
       "arms": "TARE vs TACE; 248 patients with NELM",
-      "result": "Disease control 83% vs 96%; no significant OS/PFS difference.",
-      "caution": "Retrospective; patient selection differs. Nonsignificance does not show equivalence.",
+      "result": "TARE vs TACE: initial disease control 83% vs 96% (P<.01), with no significant OS or PFS difference.",
+      "caution": "Retrospective, nonrandomized groups. The disease-control association does not demonstrate a survival benefit.",
       "quotes": [
         "Egger 2020",
-        "Retrospective two-center cohort. 248 NELM patients: TARE 51 versus TACE 197. Initial DCR 83% versus 96% (p<0.01); no significant OS or PFS difference. TARE was usually outpatient. Nonrandomized baseline and treatment-selection differences. Does not prove equivalence; treatment burden and delayed toxicity also matter."
+        "Retrospective two-center cohort. 248 NELM patients: TARE 51 versus TACE 197. TARE vs TACE: initial disease control 83% vs 96% (P<.01), with no significant OS or PFS difference. TARE was usually outpatient. Nonrandomized baseline and treatment-selection differences. Does not prove equivalence; treatment burden and delayed toxicity also matter."
       ]
     },
     "28677067": {
@@ -11059,7 +11052,7 @@
       "rows": [
         {
           "pmid": "10615075",
-          "result": "RCT, adjuvant HAI vs bolus fluorouracil comparator: 2-y hepatic PFS 90% vs 60% (p<0.001); 2-y OS 86% vs 72% (p=0.03); whole OS curves not different (p=0.21)",
+          "result": "HAI plus systemic therapy vs systemic therapy: 2-y OS 86% vs 72% (P=0.03) and any-site PFS 57% vs 42% (P=0.07); hepatic PFS 90% vs 60% (P<0.001).",
           "caution": "Positive result is the 2-y landmark; only 26% got more than half the planned floxuridine"
         },
         {

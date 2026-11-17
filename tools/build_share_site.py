@@ -119,7 +119,7 @@ def share_library_script():
  try{
  const [a,b]=await Promise.all(['catalog.json','document-index.json'].map(u=>fetch(u).then(r=>{if(!r.ok)throw Error(u);return r.json()})));
  const data=LibraryDocumentIndex.merge(a,b);
- document.getElementById('census').textContent=data.libraries.length+' libraries · '+data.unique_publications+' publications';
+ document.getElementById('census').textContent=data.libraries.length+' libraries · '+data.unique_publications+' distinct publications across these libraries. Clinical webpages cite additional sources.';
  for(const lib of data.libraries){const o=document.createElement('option');o.value=lib.key;o.textContent=lib.title;select.append(o)}
  function render(){const key=decodeURIComponent(location.hash.slice(1));select.value=key;const q=search.value.toLowerCase(),lib=data.libraries.find(x=>x.key===key);
  if(!lib){out.innerHTML='<div class="library-grid">'+data.libraries.filter(l=>l.title.toLowerCase().includes(q)).map(l=>'<article class="library-card"><h2><a href="#'+e(l.key)+'">'+e(l.title)+'</a></h2><p>'+l.publication_count+' publications</p></article>').join('')+'</div>';return}
@@ -129,28 +129,6 @@ def share_library_script():
  select.addEventListener('change',()=>{location.hash=select.value});search.addEventListener('input',render);window.addEventListener('hashchange',render);render();
  }catch(err){out.textContent='The evidence index could not load. Please reload.';console.error(err)}
 })();'''
-
-
-def share_library_index_script():
-    """Merge public citations without depending on removed private metadata."""
-    return ''''use strict';
-(function(root){
- function merge(catalog,supplement){
-  const data=JSON.parse(JSON.stringify(catalog));
-  Object.assign(data.publications,supplement.publications);
-  for(const lib of data.libraries){
-   const extra=supplement.libraries[lib.key]||{papers:[],policy_records:[]};
-   const ids=new Set(lib.papers.map(r=>r.id));
-   for(const row of extra.papers){if(!ids.has(row.id)){lib.papers.push(row);ids.add(row.id)}}
-   const titles=new Set(lib.policy_records.map(r=>r.title));
-   for(const row of extra.policy_records){if(!titles.has(row.title)){lib.policy_records.push(row);titles.add(row.title)}}
-   lib.publication_count=lib.papers.length;
-  }
-  data.unique_publications=Object.keys(data.publications).length;
-  return data;
- }
- if(typeof module==='object'&&module.exports)module.exports={merge};else root.LibraryDocumentIndex={merge};
-})(typeof window==='undefined'?globalThis:window);'''
 
 
 def build(out, base):
@@ -189,6 +167,9 @@ def build(out, base):
             s = re.sub(r'<a href="https://github\.com/drliuhao/[^"]*">([^<]*)</a>', r'\1', s)
             s = re.sub(r'<html\b(?![^>]*data-edition)', '<html data-edition="share"', s, count=1)
             s = strip_links(s, f, base)
+            if f == 'transplant/waiting/index.html':
+                s = re.sub(r'<p data-waiting-method-files>.*?</p>', '', s, flags=re.S)
+
             # Embedded data is another possible source of generated document links.
             s=re.sub(r'(<script\b[^>]*type=["\']application/json["\'][^>]*>)(.*?)(</script>)',
                      lambda m:m[1]+json.dumps(clean_data(json.loads(m[2]),base=base),ensure_ascii=False)+m[3],s,flags=re.S)
@@ -199,7 +180,6 @@ def build(out, base):
             s=s.replace('Publication metadata and institutional full-text links are public. Deposited journal PDFs and the figure-containing PPTs remain in the private Synology package; they are not uploaded here. Availability does not establish evidence quality or institutional approval.',
                         'Publication metadata and literature access links support review of the clinical content. Document and slide downloads are not included in this edition.')
         if f == 'evidence-libraries/library.js': s=share_library_script()
-        if f == 'evidence-libraries/document-index.js': s=share_library_index_script()
         if f == 'assets/portal-navigation.js':
             s = s.replace('(() => {', "(() => {\n  document.documentElement.dataset.edition='share';", 1)
             assert "dataset.edition='share';" in s, 'portal-navigation.js entry point changed'

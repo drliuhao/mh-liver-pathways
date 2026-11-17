@@ -7,7 +7,7 @@
 <meta name="description" content="Intrahepatic cholangiocarcinoma — Memorial Hermann system roadmap v0.8, draft under development.">
 <title>Memorial Hermann iCCA Roadmap</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap">
-<link rel="stylesheet" href="../assets/portal-navigation.css?v=20261109-pathology1"><script src="../assets/portal-navigation.js?v=20261109-pathology1" defer></script><link rel="stylesheet" href="/mh-liver-pathways/assets/roadmap-evidence.css?v=20261109-pathology1"><script src="/mh-liver-pathways/assets/document-references.js?v=20261109-pathology1"></script><script src="/mh-liver-pathways/assets/roadmap-evidence.js?v=20261109-pathology1"></script></head>
+<link rel="stylesheet" href="../assets/portal-navigation.css?v=20261116-review1"><script src="../assets/portal-navigation.js?v=20261116-review1" defer></script><link rel="stylesheet" href="/mh-liver-pathways/assets/roadmap-evidence.css?v=20261109-pathology1"><script src="/mh-liver-pathways/assets/document-references.js?v=20261109-pathology1"></script><script src="/mh-liver-pathways/assets/roadmap-evidence.js?v=20261116-review1"></script></head>
 <body>
 <style>
 /* One renderer, four tumours: the gates come from data/pathway.json?v=20261026-library1, the
@@ -315,7 +315,7 @@ footer p + p{margin-top:8px}
 @media (prefers-reduced-motion:reduce){ *{transition:none !important} }
 </style>
 <link rel="stylesheet" href="../assets/lrt-comparisons.css?v=20261105-compact1">
-<script defer src="../assets/lrt-comparisons.js?v=20261111-waitlist1"></script>
+<script defer src="../assets/lrt-comparisons.js?v=20261116-review1"></script>
 <link rel="stylesheet" href="../assets/roadmap-flow.css?v=20261109-pathology1">
 <script src="../assets/roadmap-flow.js?v=20261109-pathology1"></script>
 
@@ -848,7 +848,7 @@ function build(){
 /* ---------- load ---------- */
 Promise.all([
   fetch("data/pathway.json?v=20261026-library1").then(r=>r.json()),
-  fetch("data/critique.json?v=20261111-waitlist1").then(r=>r.ok ? r.json() : {}).catch(()=>({}))
+  fetch("data/critique.json?v=20261116-review1").then(r=>r.ok ? r.json() : {}).catch(()=>({}))
 ]).then(([p, crit])=>{
   P = p;
   CRIT = crit || {};
@@ -858,7 +858,7 @@ Promise.all([
   document.getElementById("lrt").hidden = false;
   document.getElementById("navLrt").hidden = false;
   return Promise.all([
-    fetch("../lrt/matrix.json?v=20261111-waitlist1").then(r=>r.json()),
+    fetch("../lrt/matrix.json?v=20261116-review1").then(r=>r.json()),
     fetch("data/lrt_refs.json?v=20261111-waitlist1").then(r=>r.json())
   ]).then(([mx, refs])=>{
     MX = mx;

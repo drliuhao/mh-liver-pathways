@@ -109,7 +109,7 @@
       if (c.funding) paragraphs.push(`<p><b>Funding.</b> ${esc(c.funding)}</p>`);
     }
     const list = values => (values || []).map(v=>`<li>${esc(v)}</li>`).join('') || '<li>None recorded in this appraisal.</li>';
-    const oldCritique = c ? `<div class="evcritin"><div class="lim"><h5>Limitations the authors state</h5><ul>${list(c.limitations)}</ul></div><div class="crit"><h5>What they do not say</h5><ul>${list(c.critique)}</ul></div></div>` : '';
+    const oldCritique = c ? `<div class="evcritin"><div class="lim"><h5>Limitations reported by the investigators</h5><ul>${list(c.limitations)}</ul></div><div class="crit"><h5>Independent appraisal</h5><ul>${list(c.critique)}</ul></div></div>` : '';
     const disclosure = (a || c) ? `<details class="evcrit"><summary>How far this one goes</summary><div class="evmeta">${paragraphs.join('')}</div>${oldCritique}</details>` : '';
     const aliases = (row.aliases || []).flatMap(id=>[id,`ev-${id}`]).filter(id=>id!==`ev-${row.id}`).map(id=>`<span id="${esc(id)}" class="evidence-anchor" aria-hidden="true"></span>`).join('');
     const flag = row.flag ? `<span class="chip evflag">${esc(row.flag)}</span>` : '';

@@ -19,7 +19,16 @@ const verified = read('tools/hcc_document_pdf_status.json');
 for(const p of Object.values(supplement.publications)){assert.equal(p.pdf_available,verified[p.pmid]?.pdf_available ?? null);assert.match(p.url,/^https:\/\//);}
 const crlm=data.libraries.find(l=>l.key==='standard_crlm');
 assert.ok(crlm.papers.length>base.libraries.find(l=>l.key==='standard_crlm').papers.length,'CRLM document references included');
-assert.equal(data.matched_publication_pdfs,658,'651 matched slide-library publications plus seven file-verified document references');
+assert.equal(data.matched_publication_pdfs, base.matched_publication_pdfs + Object.values(supplement.publications).filter(p=>p.pdf_available===true).length, 'audited document and slide PDFs counted once');
+assert.equal(data.from_slide_libraries,base.unique_publications);
+assert.equal(data.unique_publications,data.from_slide_libraries+data.additional_document_publications);
+assert.ok(data.libraries.every(l=>!/cancer cancer roadmap|standard protocol|boundary protocol/i.test(l.title)));
+const reference=Object.entries(base.publications).find(([,p])=>p.pdf_available && p.pmid);
+const paper=reference[1], alias='document-test', lib0=base.libraries.find(l=>l.papers.some(r=>r.id===reference[0]));
+const overlap=merge(base,{publications:{[alias]:{pmid:paper.pmid,doi:paper.doi,pdf_available:null}},libraries:{[lib0.key]:{papers:[{id:alias,slides:[],inclusion:['document citation'],document_only:true}],policy_records:[]}}});
+assert.equal(overlap.unique_publications,base.unique_publications);
+assert.equal(overlap.publications[reference[0]].pdf_available,true);
+assert.equal(overlap.libraries.find(l=>l.key===lib0.key).papers.length,lib0.papers.length);
 for(const pmid of ['29167951','35619164','33868997','25373796'])assert.equal(Object.values(base.publications).find(p=>p.pmid===pmid)?.pdf_available,true);
 for(const pmid of ['33230652','41580092','40709764','42829779'])assert.equal(Object.values(base.publications).find(p=>p.pmid===pmid)?.pdf_available,true,'The earlier comparative papers were obtained in the V20 download batch');
 for(const pmid of ['37230894','36871765'])assert.equal(Object.values(base.publications).find(p=>p.pmid===pmid)?.pdf_available,true);

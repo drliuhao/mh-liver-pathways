@@ -69,7 +69,9 @@ for (const slug of slugs) {
     assert(prior,slug + ' original appraisal');
     const originalParagraphs = [...prior[1].matchAll(/<p>([\s\S]*?)<\/p>/g)].map(m=>htmlText(m[1]));
     for (const value of originalParagraphs.filter(v=>!v.includes('TMC full-text access'))) {
-      assert(htmlText(rendered).includes(value),slug + ' original appraisal text retained: '+value.slice(0,55));
+      const replacement = releaseRevisions.revisions().flatMap(r => r.appraisalParagraphs || []).find(r => r.slug === slug && r.paper === paper.id && r.old === value);
+      const expected = replacement ? replacement.new : value;
+      assert(htmlText(rendered).includes(expected), slug + ' source-checked appraisal text retained: ' + expected.slice(0,55));
     }
     assert(originalAppraisalPage.includes('id="'+paper.id+'"'),slug + ' stable original anchor');
     appraisals++;

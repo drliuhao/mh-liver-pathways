@@ -16,7 +16,7 @@
 .tc-row[open]>summary::before,.tc-fold[open]>summary::before{transform:rotate(90deg)}
 .tc-row>summary:focus-visible,.tc-fold>summary:focus-visible,.tc-link:focus-visible{outline:3px solid #3a759c;outline-offset:2px}
 .tc-name,.tc-fold-name{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
-.tc-kind{flex:0 0 auto;font:600 10px/1.3 var(--sans,system-ui);letter-spacing:.03em;color:#5b7179;background:#e6eef1;border-radius:9px;padding:2px 7px;white-space:nowrap}
+.tc-kind{flex:0 0 auto;font:600 10px/1.3 var(--sans,system-ui);letter-spacing:.03em;color:#4c626c;background:#e6eef1;border-radius:9px;padding:2px 7px;white-space:nowrap}
 .tc-row .tc-body,.tc-row>.moreinner{padding:4px 2px 12px 15px;font:400 12px/1.55 var(--sans,system-ui);color:#29454e;max-width:100%;overflow-x:auto;position:static;box-shadow:none;border:0;width:auto}
 .tc-row .tc-body p,.tc-row .tc-body li{font-size:12px;line-height:1.55}
 .tc-row .tc-body table{font-size:11.5px}
@@ -46,7 +46,7 @@
 .tc-result{display:grid;gap:3px;margin-top:10px;padding:8px 10px;border-left:3px solid #9fb5bd;background:#f3f7f9;font:400 12px/1.5 var(--sans,system-ui);color:#35525b}
 .tc-result.has-result{border-left-color:#2f6f7a;background:#eef6f6}
 .tc-result strong{font:700 13.5px/1.4 var(--sans,system-ui);color:#1f4f59}
-.tc-calc-note{margin:7px 0 0!important;font-size:11px!important;color:#5b7179}
+.tc-calc-note{margin:7px 0 0!important;font-size:11px!important;color:#4c626c}
 
 /* Folded matrices and evidence: transplant decisions and roadmaps */
 .tw-more{margin:18px 0 0;border-top:1px solid #c9dade}
@@ -67,7 +67,7 @@
 .tc-tier.tc-t1{background:#dcefe4;color:#1f5c3c}.tc-tier.tc-t2{background:#e6f1d9;color:#3d5b1c}.tc-tier.tc-t3{background:#dde9f6;color:#24507e}.tc-tier.tc-t4{background:#fbecd6;color:#7a4b0b}.tc-tier.tc-t5{background:#ececec;color:#4a4a4a}
 .tc-fold-body .tc-link{display:inline-block;margin-top:10px;font-weight:650;color:#245866}
 .tc-fold-body .tc-link::after{content:' →'}
-.tc-note{color:#5b7179;font-size:12px}
+.tc-note{color:#4c626c;font-size:12px}
 .tc-roadmap-host>.tc-mx-title,.tc-roadmap-matrices>.tc-mx-title{margin:0 0 8px;font:700 13px/1.4 var(--sans,system-ui);letter-spacing:.06em;text-transform:uppercase;color:#4d6670}
 .tc-roadmap-host .tc-fold:first-of-type{border-top:1px solid #c9dade}
 .tc-roadmap-matrices{margin:0}

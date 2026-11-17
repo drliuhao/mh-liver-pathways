@@ -1,14 +1,14 @@
 /* One-screen overview. Study-level colors never rank whole modalities. */
 (() => {
   'use strict';
-  const url=new URL('../lrt/comparisons.json?v=20261111-bridging2',document.currentScript.src);
+  const url=new URL('../lrt/comparisons.json?v=20261116-review1',document.currentScript.src);
   const names={hcc:'HCC',icca:'iCCA',pcca:'pCCA / hCCA',crlm:'CRLM',nelm:'NELM'};
   const core=['abl','sbrt','y90','tace','hai','htx'];
   const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   let pending;
   const load=()=>pending||(pending=fetch(url).then(r=>{if(!r.ok)throw Error('Unavailable');return r.json();}).catch(e=>{pending=null;throw e;}));
   const link=(href,label)=>href?`<a href="${esc(href)}" target="_blank" rel="noopener">${esc(label)} ↗</a>`:'';
-  const links=r=>[link(r.tmc,r.label==='RETNET RCT'?'TMC protocol':'TMC full text'),link(r.pubmed,'PMID '+r.pmid+(r.label==='RETNET RCT'?' · protocol':'')),link(r.doi?'https://doi.org/'+r.doi:'','DOI / original article')].filter(Boolean).join('');
+  const links=r=>[link(r.tmc,r.label==='RETNET RCT'?'TMC protocol':'TMC full text'),link(r.pubmed,'PMID '+r.pmid+(r.label==='RETNET RCT'?' · protocol':'')),link(r.doi?'https://doi.org/'+r.doi:'','DOI / original article'),...(r.additionalSources||[]).map(([label,url])=>link(url,label))].filter(Boolean).join('');
   const key=(a,b)=>[a,b].sort().join('|');
   const ordered=(items,data)=>Object.keys(data.arms).filter(k=>items.includes(k));
   const rank=r=>!/non[- ]?random/i.test(r.design)&&/randomized|randomised|\bRCT\b/i.test(r.design)?0:/prospective/i.test(r.design)?1:2;

@@ -1,7 +1,6 @@
 """Reviewed compact display metadata, never a whole-modality treatment ranking.
 
-Clinical records and the 101 explicit comparisons remain unchanged. Colors
-refer to a named endpoint within one study. No null superiority test is NI.
+The compact classifications refer to a named endpoint within one study. No null superiority test is NI.
 """
 VERDICTS = {
  'superior': {'symbol':'▲','label':'Superiority','description':'A randomized comparison supports an advantage on the stated endpoint in its trial population. This does not imply superiority on every outcome or in other patients.'},
@@ -12,6 +11,7 @@ VERDICTS = {
 }
 # Classification is explicit, not inferred from p-values or keywords.
 SUPERIOR = {
+ '31283409':('3D-CRT then resection','2-year tumor-related survival'),
  '39693584':('SBRT','local PFS'), '32615109':('Transplant','survival after downstaging'),
  '34648352':('HAIC-FOLFOX','OS'), '34905388':('HAIC-FOLFOX','OS'),
  '36421345':('SBRT','local control'), '11981766':('TACE','OS'), '12049862':('TACE','OS'),
@@ -26,15 +26,15 @@ SUPERIOR = {
  '10615075':('HAI + systemic','2-year OS landmark only'),
 }
 SIGNAL = {
+ '32032719':('TACE','initial disease control'),
  '35158918':('TACE + sorafenib','explant necrosis'), '42421575':('TACE + TKI','objective imaging response'),
  '26628466':('SBRT','local control in tumors ≥2 cm'), '33230652':('Y90','mean target PFS'),
- '19552767':('Y90','downstaging'), '34358718':('Study treatment','waitlist dropout'),
- '39808828':('Y90','downstaging'), '41056563':('Y90','waitlist dropout'), '41580092':('Y90','waitlist dropout'),
+ '19552767':('Y90','downstaging'), '34358718':('Study treatment','IPTW waitlist dropout only'),
+ '41056563':('Y90','waitlist dropout'), '41580092':('Y90','waitlist dropout'),
  '35993224':('Added ablation after HAIC','2-year OS in selected responders'),
  '37328589':('Staged embolization/resection','perioperative mortality / OS'),
- '31283409':('Preoperative 3D-CRT','univariable HCC-death analysis'),
  '26695839':('HAI + systemic','OS'), '33868997':('HAIC','OS'), '40216615':('HAIC','OS vs cTACE only'),
- '37814188':('HAI ± systemic','OS'), '31517072':('SBRT','OS'), '26503201':('Higher radiation dose','OS / local control'),
+ '37814188':('HAI ± systemic','OS'), '26503201':('Higher radiation dose','OS / local control'),
  '37032423':('Neoadjuvant chemoradiation','recurrence; no OS gain'), '42433279':('Catheter HAIC','OS'),
  '30982687':('SABR + standard care','phase II OS signal; mixed cancers'),
  '32484754':('SABR + standard care','follow-up OS; mixed cancers'),
@@ -64,7 +64,7 @@ MINI = {
  '33230652':'Mean target PFS: Y90 57.8, MWA 38.6 mo',
  '42434250':'Y90 PFS HR 0.56 (0.20–1.51); uncertain',
  '27930089':'CR / progression / OS: no clear difference',
- '35346857':'Y90 progression HR 1.16 (0.51–2.63)',
+ '35346857':'TTP 21.9 vs 29.4 mo (P=.03). Adjusted HR 1.16 (NS)',
  '36100064':'DCR: Y90 94.7%, TACE+abl 100%; OS/PFS NS',
  '32615109':'5-y OS: LT 77.5%, non-LT 31.2%',
  '42379392':'Mean necrosis: Y90 83.6%, TACE+MWA 79%; NS',
@@ -72,7 +72,7 @@ MINI = {
  '28668402':'Recurrence: Y90 9%, TACE 8%; OS/RFS NS',
  '34331914':'Downstaging: no clear Y90–TACE difference',
  '35619164':'Recurrence: Y90 23%, TACE 11%; P=.12',
- '39808828':'2-y downstaging: Y90 74%, TACE 65%',
+ '39808828':'2-y DS, Y90:TACE: beyond 74:65%, within UNOS-DS 78:87%',
  '41056563':'Y90 dropout sHR 0.83 (0.74–0.93)',
  '41580092':'2-y dropout: Y90 14.2%, TACE 19.0%',
  '29631810':'OS: add-on 11.8, control 11.5 mo; NS',
@@ -95,14 +95,14 @@ MINI = {
  '39699905':'SBRT add-on: OS 15.8 vs 12.3 mo; primary P=.06',
  '29543938':'12-wk PFS: TACE+RT 86.7%, sorafenib 34.3%',
  '23269991':'4-y OS: TACE+RFA 61.8%, RFA 45.0%',
- '39798579':'Add-on PFS 15.0 vs 8.2 mo; OS unresolved',
- '39798578':'Add-on PFS 14.6 vs 10.0 mo; OS unresolved',
+ '39798579':'PFS 15.0 vs 8.2 mo. OS 29.9 vs 33.3 mo (HR 1.10, NS)',
+ '39798578':'PFS 14.6 vs 10.0 mo. OS 40.4 vs 40.8 mo (HR 0.98, NS)',
  '31421157':'Y90 added to sorafenib: no OS benefit',
  '36525610':'Adjuvant HAIC: DFS 20.3 vs 10.0 mo',
  '29420221':'Adjuvant TACE: longer RFS',
  '37328589':'Staged surgery: lower hospital mortality',
  '38488934':'Postoperative PFS / OS: no difference',
- '31283409':'Preop RT: HCC-death HR 0.47',
+ '31283409':'2-y tumor-related survival: 3D-CRT + surgery 27.4%, surgery 9.4%',
  '33166497':'3-mo response: personalized 71%, standard 36%',
  '39245060':'Pain response: RT 67%, supportive care 22%',
  '41528222':'OS: MWA 29.8, repeat resection 34.0 mo; NS',
@@ -136,7 +136,7 @@ MINI = {
  '34541864':'PFS: add-on 8.0, chemo 7.2 mo; OS NS',
  'abstract-Dutch-PUMP':'Adjuvant HAI PFS HR 0.88 (0.62–1.25); NS',
  '42018958':'Hepatic RFS: arterial 25, IV 12 mo',
- '10615075':'2-y OS: add-on 86%, control 72%; full curve NS',
+ '10615075':'2-y OS 86% vs 72% (P=.03). PFS 57% vs 42% (P=.07)',
  '39644535':'3-y RFS: add-on 31.4%, control 34.4%; NS',
  '28426374':'OS: perioperative HAI 67, no HAI 44 mo',
  'abstract-RETNET-RCT':'Hepatic PFS: no clear TAE–cTACE difference',
@@ -148,7 +148,7 @@ MINI = {
  '28257902':'Waitlist dropout: no clear difference',
  '28799575':'Recipient-only necrosis: Y90 75%, RFA 60%',
  '34358718':'Adjusted dropout sHR vs TACE: 0.85 / 0.95',
- '31517072':'SBRT vs Y90 OS HR 0.42 (0.21–0.84)',
+ '31517072':'SBRT vs Y90 OS HR: 0.42 multivariable, 0.58 IPTW (P=.019)',
  '28677067':'Weighted OS: cTACE 34.0, Y90 22.9 mo',
 }
 LABELS = {'40554738':'SURF final','35949295':'SURF','39848272':'COLLISION','42829779':'LAVA-CRLM','39699905':'RTOG 1112','35258371':'TRACE','27575820':'PREMIERE','34905388':'FOHAIC-1','34648352':'Li 2022','36525610':'Li 2023','29631810':'SILIUS','41118066':'SULTAN','39644535':'HARVEST','39798579':'EMERALD-1','39798578':'LEAP-012','16505413':'CALGB 9481','30982687':'SABR-COMET','32484754':'SABR-COMET LT','33166497':'DOSISPHERE-01','39245060':'CCTG HE1','37037359':'TRENDY','36421345':'Comito','29503247':'Vietti Violi','abstract-ABC-07-randomized-phase-II':'ABC-07','abstract-Dutch-PUMP':'Dutch PUMP','abstract-RETNET-RCT':'RETNET'}
@@ -161,10 +161,12 @@ def add_screen_metadata(rows,pairs):
   verdict='superior' if pid in SUPERIOR else ('signal' if pid in SIGNAL else 'uncertain')
   favored,endpoint=(SUPERIOR.get(pid) or SIGNAL.get(pid) or ('','summarized outcome'))
   micro=MINI[pid]
+  if pid=='39808828':endpoint='2-year downstaging by UNOS-DS entry status'
+  if pid=='31517072':endpoint='overall survival across adjusted models'
   if pid=='39848272':verdict='ni_uncertain';endpoint='OS non-inferiority';favored=''
   if pid=='34358718':
    favored='Y90' if p['a']=='y90' else 'Ablation'
-   micro=favored+' dropout sHR '+('0.85 (0.81–0.89)' if p['a']=='y90' else '0.95 (0.91–0.99)')
+   micro=favored+' dropout sHR: '+('0.85 IPTW, 1.03 conventional' if p['a']=='y90' else '0.95 IPTW, 0.97 conventional')
   if pid=='28677067' and p['b']=='debtace':micro='Weighted OS: cTACE 33.8, DEB-TACE 23.4 mo'
   label=LABELS.get(pid,r['label'].replace(' RCT','').replace(' ph III','').replace(' ph II',''))
   p['screen']={'label':label,'result':micro,'verdict':verdict,'favored':favored,'endpoint':endpoint,'rationale':p['note']}

@@ -213,8 +213,8 @@ window.ContextualCopy = {
       "label": "Does AFP meet the HCC MELD-exception requirement?"
     },
     "hcc/treatment/response": {
-      "source": "Assess viable tumor separately from the treated cavity and retain pretreatment stage. For downstaging, guidance advises imaging ≥4 weeks after the last treatment.",
-      "concise": "Assess viable tumor separately from the treated cavity; retain pretreatment stage. Downstaging imaging ≥4 weeks after last treatment.",
+      "source": "Assess viable tumor separately from the treated cavity and retain pretreatment stage. For a nonstandard request after starting beyond UNOS-DS, NLRB guidance advises imaging at least four weeks after the last treatment.",
+      "concise": "Assess viable tumour on CT or MRI after LRT. If initial burden exceeded UNOS-DS, NLRB advises imaging at least four weeks after the last treatment.",
       "title": "What does post-treatment imaging show?",
       "label": "What does post-treatment imaging show?"
     },
@@ -771,7 +771,7 @@ window.ContextualCopy = {
       "concise": "Name the histologic primary by epicenter: ampulla, duodenum, distal bile duct or pancreatic head. Shared surgery does not imply shared prognosis."
     },
     "hcc/C/alt/0": {
-      "source": "Add external beam radiotherapy or radioembolisation alongside systemic therapy. Both supporting trials used a sorafenib comparator: RTOG 1112 missed its primary survival endpoint (HR 0.77, 90% CI 0.59–1.01, one-sided p=0.06) and 15% of its patients then never started sorafenib, while the Asan trial gave TACE plus radiotherapy instead of sorafenib, with 91% crossover. Neither tested adding radiation to an immunotherapy backbone.",
+      "source": "Add external beam radiotherapy or radioembolisation alongside systemic therapy. Both supporting trials used a sorafenib comparator: RTOG 1112 missed its primary survival endpoint (HR 0.77, 90% CI 0.59–1.01, one-sided p=0.06) and 13/85 (15%) assigned to SBRT plus sorafenib and 3/92 (3%) assigned to sorafenib alone never received sorafenib, while the Asan trial gave TACE plus radiotherapy instead of sorafenib, with an estimated 90.7% of the sorafenib arm crossing over by 24 weeks. Neither tested adding radiation to an immunotherapy backbone.",
       "concise": "Consider radiation or radioembolization with systemic therapy. Evidence used sorafenib comparators; RTOG 1112 missed its primary survival endpoint, and Asan used TACE–radiation. Neither tested an immunotherapy backbone."
     },
     "hcc/B/standard/0": {

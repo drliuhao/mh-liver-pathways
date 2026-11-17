@@ -146,15 +146,28 @@
       "title": "Systemic therapy combined with TACE",
       "position": "Selected multidisciplinary or trial consideration",
       "who": "TACE-eligible unresectable HCC: eligibility differs by regimen. LEAP-012 and EMERALD-3 mainly required Child-Pugh A; EMERALD-1 allowed B7. Evaluate current guideline position and competing curative options.",
-      "evidence": "EMERALD-1, LEAP-012 and EMERALD-3 reported progression-free survival benefit for their respective combinations. In EMERALD-3, STRIDE + lenvatinib + TACE yielded PFS 13.0 versus 9.8 months; overall-survival superiority was not established at the reported analysis.",
-      "limits": "PFS benefit is not proof of OS benefit or a transplant bridge. LEAP-012 grade ≥3 treatment-related toxicity was 71% vs 32%; EMERALD-3 grade 3–4 treatment-related toxicity was 63% vs 19%. EMERALD-1 durvalumab without bevacizumab did not improve PFS.",
-      "transplant": "For a listed patient with treatable liver-limited disease, use LRT for routine bridging. Adding systemic treatment has no demonstrated benefit for dropout or transplant receipt. In embolization-eligible unresectable HCC, reported follow-up showed median overall survival of 40.4 vs 40.8 months in LEAP-012 (HR 0.98) and 29.9 vs 33.3 months in EMERALD-1 (HR 1.10). Neither trial measured waitlist dropout or transplant receipt.",
+      "evidence": "EMERALD-1: durvalumab + bevacizumab + TACE vs TACE improved PFS (15.0 vs 8.2 months, HR 0.77). Final OS was 29.9 vs 33.3 months (HR 1.10, 95% CI 0.87–1.39, ESMO GI 2026, 183O). LEAP-012: lenvatinib + pembrolizumab + TACE vs TACE improved PFS (14.6 vs 10.0 months, HR 0.66). Long-term OS was 40.4 vs 40.8 months (HR 0.98, 95% CI 0.76–1.26, ESMO 2026, 1678RO). EMERALD-3: STRIDE + lenvatinib + TACE vs TACE improved PFS (13.0 vs 9.8 months). Interim OS HR 0.84 did not meet the prespecified significance boundary.",
+      "limits": "Grade ≥3 treatment-related events were 71% vs 32% in the primary LEAP-012 analysis. Grade 3–4 treatment-related events were 63% vs 19% in EMERALD-3. Durvalumab without bevacizumab did not improve PFS in EMERALD-1.",
+      "transplant": "For a listed patient with treatable liver-limited HCC, use liver-directed therapy for routine bridging. These phase 3 trials did not test waitlist dropout or transplant receipt.",
       "refs": [
         "39798579",
         "39798578",
         "42636832"
       ],
-      "links": []
+      "links": [
+        [
+          "ESMO GI 2026 abstract 183O · final overall survival",
+          "https://www.annalsofoncology.org/article/S0923-7534(26)00410-2/fulltext"
+        ],
+        [
+          "LEAP-012 · long-term overall survival · posted trial results",
+          "https://clinicaltrials.gov/study/NCT04246177?tab=results"
+        ],
+        [
+          "ESMO 2026 abstract 1678RO · presenting investigator’s report",
+          "https://www.clinicbarcelona.org/en/news/clinic-barcelona-comprehensive-cancer-centre-presents-more-than-30-scientific-contributions-at-esmo-2026"
+        ]
+      ]
     },
     {
       "id": "btc-first",

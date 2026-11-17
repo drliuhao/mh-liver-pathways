@@ -19,7 +19,7 @@
               "label": "Imaging and lesion map",
               "items": [
                 {
-                  "text": "Multiphase liver CT or MRI; transplant-radiology review of adequacy and at-risk liver context.",
+                  "text": "Measure lesions on pretreatment multiphase liver CT or MRI. An eligible lesion can meet OPTN Class 5 by LI-RADS 5 CT, MRI or contrast-enhanced ultrasound, or by biopsy. Stage vascular invasion and extrahepatic spread with CT or MRI.",
                   "refs": [
                     "H-policy",
                     "H-aasld"
@@ -383,7 +383,7 @@
               "label": "Response evidence",
               "items": [
                 {
-                  "text": "Schedule multiphase CT/MRI and AFP; NLRB guidance advises imaging ≥4 weeks after the last downstaging treatment.",
+                  "text": "Obtain multiphase liver CT or MRI and AFP after LRT to assess viable T2 burden. For a nonstandard request after starting beyond UNOS-DS, NLRB guidance advises imaging at least four weeks after the last treatment.",
                   "refs": [
                     "N-hcc"
                   ]
@@ -759,7 +759,7 @@
               "ref": "N-hcc",
               "text": "Imaging should be performed at least 4 weeks after last down-staging treatment.",
               "quote": true,
-              "locator": "HCC guidance"
+              "locator": "HCC guidance · individual requests after initial burden beyond standard downstaging criteria"
             },
             {
               "ref": "LRT-32749512",
@@ -840,7 +840,7 @@
               "locator": "J Clin Oncol 2025, ASCO abstract 4135."
             }
           ],
-          "proposal": "Record the treatment goal, anatomical and liver-function considerations, and response-imaging date. Ask transplant radiology to resolve uncertain residual tumor before changing treatment.",
+          "proposal": "Record the treatment goal, anatomical and liver-function considerations, and response-imaging date. Ask transplant radiology to resolve uncertain residual tumor before changing treatment. The four-week guidance applies to an individual NLRB request for a patient initially beyond standard downstaging entry criteria.",
           "rationale": "Choice and sequencing require a clinical decision; the timing guidance is not a modality algorithm. Use locoregional therapy when a patient within transplant criteria needs bridging during a prolonged wait and liver reserve and anatomy permit treatment. Adding systemic therapy has no demonstrated benefit for dropout, receipt of a transplant, or survival from listing.",
           "owners": "IR · radiation oncology · radiology",
           "record": "HCC G4 / G6",
@@ -5245,7 +5245,7 @@
       "url": "https://doi.org/10.1001/jamasurg.2021.0954",
       "doi": "10.1001/jamasurg.2021.0954",
       "pmid": "33950167",
-      "note": "Five-year competing-risk cumulative recurrence: 9.5%, 20.5%, 40.5% for low/intermediate/high NYCA categories. Discrimination C statistic 0.66. These are composite-score categories, not isolated AFP ranges. Recipient selection, exclusion of early deaths, no waitlist dropout or transplant-benefit comparison. Maximum-to-final AFP can miss a rebound below the original peak. Extreme-AFP response subgroup was tiny. Full PDF saved privately; TMC: https://libkey.io/libraries/480/10.1001/jamasurg.2021.0954"
+      "note": "Five-year competing-risk cumulative recurrence: 9.5%, 20.5%, 40.5% for low/acceptable/high NYCA categories. Discrimination C statistic 0.66. These are composite-score categories, not isolated AFP ranges. Recipient selection, exclusion of early deaths, no waitlist dropout or transplant-benefit comparison. Maximum-to-final AFP can miss a rebound below the original peak. Extreme-AFP response subgroup was tiny. Full PDF saved privately; TMC: https://libkey.io/libraries/480/10.1001/jamasurg.2021.0954"
     },
     "V12-AFP_OCCULT": {
       "short": "Moriyama 2026: markers before imaging recurrence",
@@ -5420,7 +5420,7 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/35346857/",
       "doi": "10.1016/j.jvir.2022.03.021",
       "pmid": "35346857",
-      "note": "Retrospective multisite cohort. Solitary HCC ≤8 cm; RS 57 versus resection 66. Target progression 5% versus 8%; adjusted overall-progression HR 1.16 (95% CI 0.51–2.63). Median OS not reached in either group. Propensity distributions were too dissimilar to match. Different surgical candidacy and liver function prevent a claim of equivalence to resection. Full-text design and key outcomes checked, 4 November 2026.",
+      "note": "RS vs resection; solitary HCC ≤8 cm. Unadjusted time to any progression 21.9 vs 29.4 mo (P=.03). Adjusted progression HR 1.16 (0.51–2.63). Median OS unreached in both groups. Retrospective; inadequate overlap prevented propensity matching. Not evidence of equivalence.",
       "author": "De la Garza-Ramos C",
       "journal": "J Vasc Interv Radiol",
       "year": "2022"
@@ -5446,7 +5446,7 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/34358718/",
       "doi": "10.1016/j.cgh.2021.07.048",
       "pmid": "34358718",
-      "note": "National observational cohort. 31,609 US HCC transplant candidates, 2003–2018; 24,145 received LRT. IPTW-adjusted dropout sHR versus TACE: radioembolization 0.85 (95% CI 0.81–0.89); thermal ablation 0.95 (0.91–0.99). Observational first-treatment comparison, with later treatments allowed. Center, era and patient selection remain confounders. Registry cohorts overlap with later studies. Full-text design and key outcomes checked, 4 November 2026.",
+      "note": "Initial LRT in 31,609 OPTN HCC candidates. Dropout sHR for Y90 and ablation vs TACE: IPTW 0.85 and 0.95, conventional adjustment 1.03 (0.91–1.17) and 0.97 (0.90–1.05), respectively. Observational. Modality associations varied with the adjustment method. Center and era may confound.",
       "author": "Kwong AJ",
       "journal": "Clin Gastroenterol Hepatol",
       "year": "2022"
@@ -5485,7 +5485,7 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/39808828/",
       "doi": "10.1097/hep.0000000000001231",
       "pmid": "39808828",
-      "note": "Prospective multicenter cohort. MERITS-LT: 326 within UNOS-DS and 190 all-comers beyond UNOS-DS; 2015–2023. In the all-comers subgroup, 2-year successful downstaging was 74% with initial Y90 versus 65% with TACE (p<0.001). Treatment was not randomized; subgroup finding does not expand allocation criteria. Overlaps earlier MERITS-LT enrollment. Earlier within-UNOS-DS study found no significant modality difference. Available main text checked for the stated results.",
+      "note": "Initial Y90 vs TACE within or beyond UNOS downstaging entry criteria. 2-y downstaging, Y90 vs TACE: 73.8% vs 64.6% beyond UNOS-DS, 78.1% vs 86.5% within. First therapy was not predictive after center stratification (P=.07). Treatment was nonrandomized, and this cohort overlaps MERITS-LT. Allocation criteria still apply.",
       "author": "Xu E",
       "journal": "Hepatology",
       "year": "2025"
@@ -5576,7 +5576,7 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/33687130/",
       "doi": "10.1111/hepr.13633",
       "pmid": "33687130",
-      "note": "Randomized study. 70 early HCC patients: cisplatin HAIC before RFA versus RFA alone, 35 per arm. 3-year RFS 54.3% versus 34.3%; HR 0.597 (95% CI 0.320–1.091), p=0.094. Primary RFS endpoint was not significant. A secondary distant-intrahepatic recurrence signal does not establish routine HAIC addition or HAIC as a replacement for ablation. Full-text design and key outcomes checked, 4 November 2026.",
+      "note": "Cisplatin HAIC before RFA vs RFA; 70 patients. Three-year RFS 54.3% vs 34.3%; HR 0.597 (0.320–1.091), p=0.094. Primary RFS comparison was inconclusive. The distant intrahepatic recurrence analysis was post hoc.",
       "author": "Oyama A",
       "journal": "Hepatol Res",
       "year": "2021"
@@ -5641,7 +5641,7 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/11843249/",
       "doi": "10.1023/a:1013569329846",
       "pmid": "11843249",
-      "note": "Randomized phase III. 74 patients with bilobar unresectable CRLM: Y90 plus regional FUDR versus regional FUDR alone. Tumor-volume response 50% versus 24% (p=0.03); liver progression was delayed. Tests adding Y90 to HAI, not Y90 versus HAI alone. Older chemotherapy era; no established overall-survival benefit. Not evidence against ablation of small lesions. Full-text design and key outcomes checked, 4 November 2026.",
+      "note": "Y90+regional FUDR vs FUDR; randomized CRLM trial. Tumor-volume response 50% vs 24%; delayed liver progression. Closed at 74 of 95 planned. Endpoints shifted from survival to response and progression. No proven OS gain.",
       "author": "Gray B",
       "journal": "Ann Oncol",
       "year": "2001"
@@ -5680,7 +5680,7 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/39644535/",
       "doi": "10.1016/j.ejca.2024.115154",
       "pmid": "39644535",
-      "note": "Prematurely stopped randomized trial (HARVEST). 92 randomized after CRLM surgery; modified ITT 77, HAI-FUDR plus systemic 38 versus systemic 39. 3-year RFS 31.4% versus 34.4%, p=0.28. Stopped for FUDR supply shortage; primary endpoint negative. Exploratory early-RFS/subgroup signals do not establish routine postoperative HAI. Full-text design and key outcomes checked, 4 November 2026.",
+      "note": "HARVEST: postop FUDR HAI+systemic vs systemic. Three-year RFS 31.4% vs 34.4% (p=0.28). Allocation moved after resection following the first 11 patients. FUDR shortage closed enrollment.",
       "author": "Wang DS",
       "journal": "Eur J Cancer",
       "year": "2025"
@@ -5745,7 +5745,7 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/35544131/",
       "doi": "10.1001/jamasurg.2022.1298",
       "pmid": "35544131",
-      "note": "Retrospective comparison. 319 multifocal iCCA patients: unresectable HAIP-FUDR 141 versus resection 178 across different centers/eras. Median OS 20.3 versus 18.9 months; adjusted HR 0.75 (95% CI 0.55–1.03), p=0.07. HAIP patients had substantially more bilobar/multifocal disease. Not an equivalence trial or reason to deny resection to an otherwise suitable patient; does not distinguish all satellites from metastases. Full-text design and key outcomes checked, 4 November 2026.",
+      "note": "Pump HAI vs resection; multifocal iCCA. OS 20.3 vs 18.9 mo; adjusted HR 0.75 (0.55–1.03). All were multifocal. HAIP vs resection: bilobar 88.0% vs 34.3%, ≥4 lesions 66.7% vs 24.2%.",
       "author": "Franssen S",
       "journal": "JAMA Surg",
       "year": "2022"
@@ -5784,7 +5784,7 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/31517072/",
       "doi": "10.1016/j.ctro.2019.07.007",
       "pmid": "31517072",
-      "note": "Retrospective NCDB comparison. Main-text analysis: SBRT 27, chemoradiation 54, TARE 60; nonmetastatic node-negative unresected iCCA. Adjusted OS HR 0.42 (95% CI 0.21–0.84) for SBRT versus TARE. TARE tumors were larger/more often multifocal or vascular-invasive. Strong selection bias and abstract/main-text cohort-count discrepancy; not causal superiority or equivalent treatment eligibility. Full-text design and key outcomes checked, 4 November 2026.",
+      "note": "SBRT vs TARE in unresected iCCA; NCDB cohort. SBRT vs TARE, OS: multivariable HR 0.42 (0.21–0.84). IPTW HR 0.58 (0.37–0.91), P=.019, above the prespecified Bonferroni threshold of .017. Registry cohort. Tumor burden and vascular invasion differed.",
       "author": "Sebastian NT",
       "journal": "Clin Transl Radiat Oncol",
       "year": "2019"
@@ -5823,7 +5823,7 @@
       "url": "https://pubmed.ncbi.nlm.nih.gov/32032719/",
       "doi": "10.1016/j.jamcollsurg.2019.12.026",
       "pmid": "32032719",
-      "note": "Retrospective two-center cohort. 248 NELM patients: TARE 51 versus TACE 197. Initial DCR 83% versus 96% (p<0.01); no significant OS or PFS difference. TARE was usually outpatient. Nonrandomized baseline and treatment-selection differences. Does not prove equivalence; treatment burden and delayed toxicity also matter. Full-text design and key outcomes checked, 4 November 2026.",
+      "note": "TARE vs TACE; 248 patients with NELM. TARE vs TACE: initial disease control 83% vs 96% (P<.01), with no significant OS or PFS difference. Retrospective, nonrandomized groups. The disease-control association does not demonstrate a survival benefit.",
       "author": "Egger ME",
       "journal": "J Am Coll Surg",
       "year": "2020"
@@ -6663,7 +6663,7 @@
             "H-policy",
             "H-aasld"
           ],
-          "help": "Assess viable tumor separately from the treated cavity and retain pretreatment stage. For downstaging, guidance advises imaging ≥4 weeks after the last treatment.",
+          "help": "Assess viable tumor separately from the treated cavity and retain pretreatment stage. For a nonstandard request after starting beyond UNOS-DS, NLRB guidance advises imaging at least four weeks after the last treatment.",
           "criteria": [
             {
               "title": "Bridging while within transplant criteria",
@@ -12253,7 +12253,7 @@
                   "key": "AFP_NYCA",
                   "title": "Halazun 2021: dynamic AFP/NYCA",
                   "design": "External retrospective validation in 2236 LT recipients at eight centers, 2001–2013; 545 beyond Milan. Composite score combines tumor size, count and AFP response. Deaths within 90 postoperative days excluded.",
-                  "results": "Five-year competing-risk cumulative recurrence: 9.5%, 20.5%, 40.5% for low/intermediate/high NYCA categories. Discrimination C statistic 0.66. These are composite-score categories, not isolated AFP ranges.",
+                  "results": "Five-year competing-risk cumulative recurrence: 9.5%, 20.5%, 40.5% for low/acceptable/high NYCA categories. Discrimination C statistic 0.66. These are composite-score categories, not isolated AFP ranges.",
                   "limitations": "Recipient selection, exclusion of early deaths, no waitlist dropout or transplant-benefit comparison. Maximum-to-final AFP can miss a rebound below the original peak. Extreme-AFP response subgroup was tiny.",
                   "implication": "Use dynamic AFP as complementary risk information. The NYCA definition of response does not supersede the stricter OPTN requirement to fall below 500 after AFP >1000.",
                   "locator": "Main PDF pp 1–8; Table 1, Figures 1–3. Trailing commentary is not a separate reviewed study."
@@ -12308,7 +12308,7 @@
                   "key": "round2_yoon",
                   "design_population": "Retrospective Asan LDLT cohort, 1997–2022, 137 selected PVTT recipients; median follow-up 38.3 months.",
                   "selection": "Original Vp1/Vp2/Vp3/Vp4 counts were 51/36/36/14. Overall mRECIST CR/PR defined responders, not necessarily complete vascular response.",
-                  "results": "Vp1 five-year OS 69.5%, DFS 56.2%; Vp4 OS 50.0%, DFS 34.3%. Exact Vp2/Vp3 five-year values were not tabulated. Vp4 recurrence was 9/14 (64.3%) by Table 2 count, not a five-year risk. Responders: 83 patients, five-year OS 66.6%, DFS 64.7%, recurrence 28/83; nonresponders: 54, OS 35.1%, DFS 19.7%, recurrence 42/54. Viable PVTT remained in 65/83 responder explants.",
+                  "results": "Vp1 five-year OS 69.5%, DFS 56.2%; Vp4 OS 50.0%, DFS 34.3%. Exact Vp2/Vp3 five-year values were not tabulated. Vp4 recurrence was 9/14 (64.3%) by Table 2 count, not a five-year risk. Responders: 83 patients, five-year OS 66.6%, DFS 64.7%, recurrence 28/83; nonresponders: 54, OS 35.1%, DFS 19.7%, recurrence 42/54. Viable PVTT remained in 65/83 responders at the time of LDLT (Table 1 does not specify the assessment method).",
                   "limits": "Recipient-only, heterogeneous treatment eras and small grade subgroups. Nonsignificant grade comparisons do not prove equivalence. Discussion/conclusion transpose responder OS and DFS; retain Results/Figure 1 values.",
                   "locator": "Complete PDF: Table 1; Results p7261; Table 2 p7264; Figure 1 p7265; Discussion p7268. Preserve source/pvtt_outcomes.py values."
                 },
@@ -12443,9 +12443,9 @@
                   "key": "aceituno",
                   "design_population": "Ten-center ICI series, 48 recipients, propensity matched with 144 Toronto non-ICI controls; 20/48 exposed cases previously published.",
                   "selection": "Matching used age, sex, liver disease and LT year, not tumor burden or immunosuppression. Prior ICI adverse events were not captured.",
-                  "results": "Biopsy-proven rejection 9/48 (18.8%) versus 28/144 (19.4%), P=.916. Two exposed cases were steroid resistant; one rejection-related graft failure required retransplant. Overall graft failure 2/48 versus 3/144, retransplant 2 versus zero, recurrence 5/48 versus 15/144, death 7/48 versus 21/144. Median follow-up 2.6 versus 3.2 years. Table 1 washout median 60 days, IQR 22–196.",
+                  "results": "Rejection occurred in 9/48 ICI recipients (18.8%, all biopsy-proven) and 28/144 controls (19.4%, biopsy or clinical response to steroids), P=.916. Two exposed cases were steroid resistant; one rejection-related graft failure required retransplant. Overall graft failure 2/48 versus 3/144, retransplant 2 versus zero, recurrence 5/48 versus 15/144, death 7/48 versus 21/144. Median follow-up 2.6 versus 3.2 years. Table 1 washout median 60 days, IQR 22–196.",
                   "limits": "No detected difference is not equivalence. Substantial tumor-risk imbalance and published-case overlap. Abstract washout IQR 13–96 conflicts with Table 1 and appears to match rejection-onset timing; use table and flag discrepancy. It cannot reassure about prior irAE risk.",
-                  "locator": "Complete local PDF pp2–5, Methods and Tables 1–2."
+                  "locator": "Complete local PDF pp. 2–6, Methods and Tables 1–2. Table 2 is on journal p. 1374."
                 },
                 {
                   "key": "litchi",
@@ -17632,7 +17632,7 @@
           "Options include ablation, arterial treatment such as TACE or Y90, and radiation such as SBRT. Select by viable tumor location, prior treatment, normal-liver exposure and liver function.",
           "If no suitable viable target remains, clarify the AFP rise and staging before repeating liver-directed treatment. If local treatment is unsuitable or ineffective, review systemic therapy, a trial or best supportive care.",
           "Recheck imaging and AFP after treatment, then reassess transplant and MELD-exception criteria.",
-          "Ablation and selected Y90 radiation segmentectomy can both have curative intent. Choose by tumor size, location, liver reserve, achievable ablation margin or segmental dosimetry. Ablation has more randomized comparative evidence. Y90 versus ablation studies are mainly observational. Y90 is associated with less waitlist dropout than TACE in registry analyses, but no dedicated randomized comparison establishes a transplant or survival advantage.",
+          "Ablation and selected Y90 radiation segmentectomy can both have curative intent. Choose by tumor size, location, liver reserve, achievable ablation margin or segmental dosimetry. Ablation has more randomized comparative evidence. Y90 versus ablation studies are mainly observational. Some registry analyses associate Y90 with less dropout than TACE. Estimates vary by adjustment method, and downstaging results differ by baseline tumor burden. No randomized trial establishes a transplant or survival advantage.",
           "For selected radiation segmentectomy, Gabr found complete necrosis in 30/45 surgical specimens (67%), including 11/11 after >400 Gy to the perfused segment. These recipient-only results support local tumor destruction; continue to assess transplant readiness using imaging, AFP, liver function and allocation criteria.",
           "Use locoregional therapy when a patient within transplant criteria needs bridging during a prolonged wait and liver reserve and anatomy permit treatment. Adding systemic therapy has no demonstrated benefit for dropout, receipt of a transplant, or survival from listing."
         ],
