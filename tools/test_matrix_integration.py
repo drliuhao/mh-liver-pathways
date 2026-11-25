@@ -33,10 +33,12 @@ for url in review_links:
 assert not (ROOT/'transplant/high-risk/pdac').exists()
 for page in (ROOT/'transplant/high-risk').rglob('*.html'):
  t=page.read_text();assert '/Users/' not in t and 'file://' not in t,page
- assert 'not been activated' in t or 'proposals remain open' in t,page
+ assert 'not been activated' in t or 'proposals remain open' in t or 'A proposal is not an activated protocol' in t,page
  assert not re.search(r'href="[^"]*pdac',t,re.I),page
-assert 'Expansion remains closed' in (ROOT/'transplant/high-risk/pcca/index.html').read_text()
-assert 'separate multifocal tumors in different segments' in (ROOT/'transplant/high-risk/icca/index.html').read_text()
+assert 'location.replace' in (ROOT/'transplant/high-risk/pcca/index.html').read_text()
+assert data['high_risk']['pathways']['pcca']['reviews'][0]['status']=='Expansion remains closed'
+assert 'location.replace' in (ROOT/'transplant/high-risk/icca/index.html').read_text()
+assert data['high_risk']['pathways']['icca']['reviews'][0]['anchor']=='icca-b1'
 assert 'Systemic treatment options' not in (ROOT/'transplant/high-risk/hca/index.html').read_text()
 
 matrix=json.loads((ROOT/'systemic/matrix.json').read_text());refs=json.loads((ROOT/'systemic/references.json').read_text())

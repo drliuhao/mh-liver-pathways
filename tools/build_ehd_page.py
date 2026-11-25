@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '/mh-liver-pathways/'
-KEY = '20261124-clarity1'
+KEY = '20261125-threshold1'
 data = json.loads((ROOT / 'tools/ehd_positions.json').read_text())
 manifest = json.loads((ROOT / 'assets/documents.json').read_text())['tumors']
 e = html.escape

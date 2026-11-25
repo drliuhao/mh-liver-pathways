@@ -49,7 +49,7 @@ DS=criterion('UNOS downstaging: pretreatment inclusion criteria',[
     '2–3 Class 5 lesions: at least one >3 cm, each ≤5 cm, and summed diameters ≤8 cm; OR',
     '4–5 Class 5 lesions: each <3 cm, with summed diameters ≤8 cm.',
     'No macrovascular invasion or extrahepatic disease. After treatment, viable tumor burden must meet T2 size requirements; AFP and observation requirements also apply.',
-    'The current OPTN policy uses strictly <3 cm for the 4–5 lesion group, even though some study summaries use ≤3 cm.'
+    'For 4–5 lesions, OPTN downstaging entry criteria require each lesion <3 cm and a total diameter ≤8 cm.'
 ],['H-policy','H-yao','H-merits'],['ds'])
 AFP_HELP='If AFP has never exceeded 1,000 ng/mL: current AFP ≤1,000. If it ever exceeded 1,000: treatment must reduce AFP to <500 and it must remain <500.'
 
@@ -151,7 +151,7 @@ add('pcca','diagnosis',[
 add('pcca','phenotype',[
  question('size','What is the radial mass size?',[
   option('small','Single mass <3 cm'),option('none','No discrete mass'),option('large','Mass ≥3 cm or multiple masses')],P,
-  'Measure perpendicular to the bile duct. Exactly 3 cm does not meet <3 cm; longitudinal duct involvement is not this measurement.'),
+  'Measure radial diameter perpendicular to the bile duct; longitudinal duct involvement is recorded separately.'),
  yesno('unresectable','Unresectable because of anatomy or underlying liver disease?',P),
  question('spread','Regional nodes, intrahepatic metastases or extrahepatic spread?',[
   option('clear','No metastatic disease identified'),option('present','Metastatic disease present')],P,
@@ -268,13 +268,12 @@ add('crlm','map-disease',[
 add('crlm','biology',[
  question('molecular','BRAF and MSI/MMR profile?',[
   option('fits','BRAF wild type and microsatellite stable'),option('outside','BRAF-mutant or MSI-H / dMMR')],['N-crlm','C-consensus']),
- question('cea','Current CEA?',[
-  option('low','<80 µg/L'),option('boundary','Exactly 80 µg/L'),option('high','>80 µg/L')],['N-crlm'],
-  'µg/L and ng/mL have the same numeric value. Initial guidance excludes >80; extensions require <80. Resolve exactly 80 explicitly.'),
+ question('cea','CEA meets the applicable request criterion?',[
+  option('low','Meets the request-specific CEA criterion'),option('high','Does not meet the request-specific CEA criterion')],['N-crlm'],
+  'Initial NLRB request: CEA ≤80 µg/L. Extension: CEA <80 µg/L. µg/L and ng/mL have the same numeric value.'),
  yesno('size','Every pretreatment liver lesion ≤10 cm?', ['N-crlm']),
-], [rule({'molecular':'outside'},1),stop({'cea':'high'},'CEA >80 µg/L excludes an initial CRLM MELD exception under the described guidance, even if the value is falling.',['N-crlm']),
+], [rule({'molecular':'outside'},1),stop({'cea':'high'},'The CEA requirement is not met for this request: initial CEA ≤80 µg/L; extension CEA <80 µg/L. Continue or adjust cancer treatment and reassess before an exception request.',['N-crlm']),
  stop({'size':'no'},'A pretreatment liver lesion >10 cm does not meet the CRLM MELD-exception criteria described in NLRB guidance.',['N-crlm']),
- pause({'cea':'boundary'},'Clarify the CEA boundary','Obtain allocation review rather than assuming that exactly 80 satisfies both initial and extension wording.',['N-crlm']),
  rule({'molecular':'fits','cea':'low','size':'yes'},0)])
 
 add('crlm','unresectability',[
@@ -329,7 +328,7 @@ follow_up('crlm','transplant',C,'Recheck disease control, fitness and consent, a
 add('nelm','biology',[
  question('grade','Differentiation / grade?',[
   option('fits','Well-differentiated G1/G2; Ki-67 and mitoses below guidance limits'),
-  option('outside','G3, poorly differentiated NEC or discordant aggressive biology')],N,
+  option('outside','Grade, differentiation or proliferation indices outside guidance limits')],N,
   'Guidance specifies Ki-67 (proliferative index) <20% and mitoses <20 per 10 HPF. Reconcile discordant primary and liver samples.'),
  yesno('primary','Gastroenteropancreatic primary with portal-system drainage?', ['N-net'],
   'Lower rectal, esophageal, lung, adrenal and thyroid primaries do not meet the NET MELD-exception criteria.'),

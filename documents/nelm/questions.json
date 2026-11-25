@@ -111,6 +111,7 @@
      "question": "Which embolisation technique is the programme's default?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "7 · Select liver-directed therapy",
@@ -167,6 +168,7 @@
      "question": "Is first-line PRRT offered for receptor-positive grade 2–3 disease, and to whom?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "4 · G3 NET versus neuroendocrine carcinoma",
@@ -217,6 +219,7 @@
      "question": "Hepatic burden threshold above which cytoreduction is not attempted.",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "5 · Assess surgical cytoreduction",
@@ -269,6 +272,7 @@
      "question": "Does the programme offer radioembolisation in this disease at all, and at what point?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "7 · Select liver-directed therapy",
@@ -325,6 +329,7 @@
      "question": "Does the programme open a NELM transplant protocol?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "9 · Assess transplant eligibility",
@@ -377,6 +382,7 @@
      "question": "Who owns carcinoid-crisis prophylaxis, and how is it verified before each procedure?",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "8 · Hormone-related symptoms and crisis prevention",
@@ -423,6 +429,7 @@
      "question": "Re-biopsy policy for suspected grade progression or transformation.",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "1 · Confirm differentiation and grade",
@@ -455,6 +462,7 @@
      "question": "Who owns subsequent NCCN and OPTN update checks, and on what cycle?",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [],
      "positions": [],
      "divergence": "No source positions; programme decision.",
@@ -471,6 +479,7 @@
      "question": "Is hepatic debulking offered in well-differentiated G3 disease, and under what conditions?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "4 · G3 NET versus neuroendocrine carcinoma",
@@ -527,6 +536,7 @@
      "question": "Is first-line PRRT offered to a patient who has already had liver-directed therapy?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "6 · Select systemic therapy",
@@ -577,6 +587,7 @@
      "question": "Does the programme reproduce or restate the NCCN position against drug-eluting embolics, and on what basis?",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "7 · Select liver-directed therapy",
@@ -623,6 +634,7 @@
      "question": "Who corrects the shared liver-directed-therapy matrix entry that attributes outcome figures to RETNET?",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "7 · Select liver-directed therapy",
@@ -657,6 +669,7 @@
      "question": "Which surveillance interval does the programme adopt for observed low-burden disease, and is observation documented as an equal alternative to an immediate analogue?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "2 · Low-volume G1–G2 disease",
@@ -709,6 +722,7 @@
      "question": "Who confirms the OPTN imaging-timing wording with the review board before the first NELM filing?",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "9 · Assess transplant eligibility",
@@ -751,6 +765,7 @@
      "question": "How should discordant grade, Ki-67 or an unusual primary be handled?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Confirm differentiation and grade",
@@ -785,6 +800,7 @@
      "question": "Can prior nodal disease be distinguished from active or solid-organ metastasis?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Stage disease and confirm primary treatment",
@@ -830,6 +846,7 @@
      "question": "Will our local program use Milan-NET age and liver-volume restrictions?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Compare treatment options",
@@ -875,6 +892,7 @@
      "question": "How should PRRT and hepatic radiation/embolization be sequenced?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Review treatment exposure",
@@ -909,6 +927,7 @@
      "question": "How do we interpret the “at least 3 months prior” imaging wording?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Verify disease control",
@@ -943,6 +962,7 @@
      "question": "Who is responsible for functional restaging and long-term recurrence surveillance?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Request and renew the MELD exception",
@@ -1127,7 +1147,7 @@
      ],
      "proposal": "Activate only well-differentiated G1/G2 disease from a known portal-drained GEP primary; retain a six-month biology test.",
      "rules": [
-      "Require expert pathology with Ki-67 <20% and the applicable mitotic criterion; use the highest reliable representative grade. Exactly 20%, rounding uncertainty or discordance is HOLD for adjudication, not rounding down. Do not impose an unsupported Ki-67 <10 rule or blanket G2 ban.",
+      "Require expert pathology with Ki-67 <20% and the applicable mitotic criterion; use the highest reliable representative grade. Resolve uncertain or discordant Ki-67 measurements through expert pathology review; use Ki-67 <20% for NLRB exception assessment. Do not impose an unsupported Ki-67 <10 rule or blanket G2 ban.",
       "G3, NEC and unknown/nonportal primary have no active cohort in this edition. Extrahepatic disease, active or previously treated, follows NET-B4: resected nodes may qualify after clearance; previous solid-organ metastases do not.",
       "Require ≥6 months of stable/responding hepatic disease and ≥6 months without recurrence after primary/extrahepatic clearance. Proposed documentation: at least three comparable assessments spanning baseline, about three months and six months. A suspicious new site is HOLD; confirmed progression restarts observation."
      ],
@@ -1136,7 +1156,7 @@
      "rationale": "Evidence supports carefully selected well-differentiated G1/G2 portal-drained GEP primaries with cleared primary/extrahepatic disease and observed control. G2 has worse prognosis than G1 in the multicentre series but still meaningful selected survival, so a universal Ki-67 <10% rule would discard potentially suitable G2 without validation. Well-differentiated G3 and poorly differentiated NEC must be separated diagnostically, yet neither has an established LT-benefit pathway. Prior primary regional nodal positivity is not equivalent to active unresected extrahepatic disease.",
      "counter": "Milan LT cohorts included many patients whose primary nodes had been positive, so 'ever node-positive means never LT' is too broad. However, retrospective final-pathology positive nodes do not negate the current cleared-disease requirement. Spanish OUT cases and the tiny G3 subgroup are too heterogeneous to validate expansion. NETTER-2 proves PRRT activity in selected G3, not LT efficacy after response; seven post-LT PRRT cases cannot guarantee safe salvage. ENETS controllable bone disease conflicts with NLRB's solid-organ exclusion.",
      "certainty": "Low-to-moderate certainty for G1/G2 prognostic distinction and cautious standard selection; very low certainty for G3, nonportal/unknown primary, active nodes or prior solid-organ metastasis expansions. Official allocation exclusions should be reported separately from biological evidence.",
-     "threshold_basis": "Ki-67 <20% and six months after primary/extrahepatic clearance reflect current NLRB wording; modern WHO grading and the exact-20 boundary need explicit reconciliation. Six months stability derives from selection traditions, not a randomized timing trial. Three serial scans at roughly 0/3/6 months are a proposed local demonstration schedule, not a national mandated scan count.",
+     "threshold_basis": "NLRB guidance requires Ki-67 <20% and six months after primary/extrahepatic clearance. Record WHO grade separately from exception eligibility. Six months stability derives from selection traditions, not a randomized timing trial. Three serial scans at roughly 0/3/6 months are a proposed local demonstration schedule, not a national mandated scan count.",
      "studies": [
       {
        "source": "Mazzaferro 2016 · Milan-NET",
@@ -1191,7 +1211,7 @@
        "key": "hr-nlrb",
        "population": "Official Adult MELD Exceptions for Transplant Oncology guidance, December 2025 posting checked 24 October 2026. Allocation-review guidance, not national clinical policy or proof of efficacy. CRLM: BRAF wild type, microsatellite stable, R0 primary, at least 12 months from CRLM diagnosis and six months chemotherapy control; pretreatment largest lesion not >10 cm; no post-primary-resection extrahepatic disease, including nodes outside the primary field. Initial CEA exclusion is >80 ng/mL; extensions require <80. NET: known portal-drained GEP primary, well-differentiated G1/G2, Ki-67 <20%, primary and extrahepatic disease resected with at least six months NED; no active extrahepatic disease. Lung/bone/other solid-organ metastasis history is a permanent exception-guidance exclusion.",
        "results": "No efficacy denominator. NET guidance has no explicit numerical age or hepatic-volume cutoff. CRLM wording excludes >10% diameter growth or new lesions and labels this RECIST 1.1, although conventional RECIST 1.1 progression generally uses at least 20% summed-diameter increase plus an absolute change; record both, do not silently equate them.",
-       "limits": "Clinical judgment, exception endorsement and graft availability are distinct. A reasonable research hypothesis or living donor does not override allocation guidance or demonstrate acceptable benefit. At exactly CEA 80 the initial/extension wording differs; the draft's strict <80 harmonization is a conservative local rule.",
+       "limits": "Clinical judgment, exception endorsement and graft availability are distinct. A reasonable research hypothesis or living donor does not override allocation guidance or demonstrate acceptable benefit. Use the applicable tumor-specific NLRB criteria for exception review.",
        "locator": "Official PDF NET pp.8–9; CRLM pp.9–10; introduction on purpose/status."
       },
       {
@@ -1236,7 +1256,7 @@
      "proposal": "Use age as a review trigger, not an absolute exclusion; retain a conservative opening burden and a separately declared expansion band.",
      "rules": [
       "Age ≥60 triggers explicit physiological-reserve, competing-mortality and benefit review; no absolute chronological-age ceiling or invented NET-specific frailty score is adopted.",
-      "Reproducibly estimate liver involvement. <50% is the conservative Milan-derived reference; exactly 50% through 70% is a separate prospective expansion stratum, not automatically active. >70% is outside the initial local program for conservative risk control, not because published evidence proves futility. The 50–70/>70 choices are local proposals, not national limits.",
+      "Reproducibly estimate liver involvement. <50% is the conservative Milan-derived reference; 50–70% is a separate prospective expansion stratum, not automatically active. >70% is outside the initial local program for conservative risk control, not because published evidence proves futility. The 50–70/>70 choices are local proposals, not national limits.",
       "Low burden, particularly <25%, defaults to non-LT care unless a documented NET-B1 benefit trigger overrides that default. Do not give harmful downstaging solely to cross a percentage boundary."
      ],
      "tests": "Method/date of volumetric burden; functional reserve/frailty; competing illness; symptom/benefit trigger; current treatment alternatives.",

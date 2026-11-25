@@ -30,7 +30,7 @@ SOURCES = {
  'I-focality':source('CAP · tumor focality','Intrahepatic bile ducts resection protocol v4.3.0.0','Pathology reporting standard','June 2025 · AJCC8 pT categories PDF p8; focality PDF p11','https://www.cap.org/wp-content/uploads/documents/New-Cancer-Protocols-June-2025/BileDuctIH_4.3.0.0.REL_CAPCP.pdf'),
  'I-satellites':source('RCPA · tumor focality','Structured pathology reporting: liver cancer, tumor focality','Pathology reporting standard','iCCA focality: no clear universal satellite definition','https://www.rcpa.edu.au/Library/Practising-Pathology/Structured-Pathology-Reporting-of-Cancer/Cancer-Protocols-Pre/Gastrointestinal/Elements-liver-cancer'),
  'H-policy':source('OPTN 9.5.I','OPTN Policies — HCC standardized exception','Allocation policy','Effective October 1, 2026 · §§9.5.I.i–vii · pp.196–200',POLICY+'#page=196',note='Policy determines exception eligibility, not whether transplantation is the best clinical treatment. Class 5 now explicitly includes eligible LI-RADS 5 CT/MRI/CEUS or biopsy pathways.'),
- 'P-policy':source('OPTN 9.5.A','OPTN Policies — hilar CCA standardized exception','Allocation policy','Effective October 1, 2026 · §9.5.A · pp.190–191',POLICY+'#page=190',note='Requires an approved written center protocol, neoadjuvant therapy and operative staging. The mass threshold is strictly <3 cm in radial diameter.'),
+ 'P-policy':source('OPTN 9.5.A','OPTN Policies — hilar CCA standardized exception','Allocation policy','Effective October 1, 2026 · §9.5.A · pp.190–191',POLICY+'#page=190',note='Requires an approved written center protocol, neoadjuvant therapy and operative staging. If a mass is present, it must be single and <3 cm in radial diameter.'),
  'N-hcc':source('NLRB · HCC','Adult MELD exception review guidance — HCC','NLRB guidance','December 2025 · HCC section · pp.2–4',GUIDANCE+'#page=2','OPTN_Adult*pdf',2),
  'N-icca':source('NLRB · iCCA','Adult MELD exception review guidance — iCCA / mixed HCC-iCCA','NLRB guidance','December 2025 · pp.7–8',GUIDANCE+'#page=7','OPTN_Adult*pdf',7),
  'N-crlm':source('NLRB · CRLM','Adult MELD exception review guidance — CRLM','NLRB guidance','December 2025 · pp.9–10, including timing/progression footnotes',GUIDANCE+'#page=9','OPTN_Adult*pdf',9,note='Nonstandard consideration, not an automatic exception. The >10% progression footnote must not be presented as the usual RECIST 1.1 progression definition.'),
@@ -168,7 +168,7 @@ PATHWAYS.append(pathway('pcca','pCCA','Perihilar cholangiocarcinoma','Standardiz
  'Transplant radiology · HPB surgery · coordinator','Before enrollment / initial exception',[
   group('Eligibility record',item('Document unresectability due to technical anatomy or underlying liver disease. If there is a mass, it must be single and <3 cm radially, perpendicular to the duct.','P-policy'),item('Chest/abdomen cross-sectional staging must exclude intrahepatic and extrahepatic metastases within 90 days before the initial request.','P-policy'))], [
   branch('Tumor criteria for the pCCA transplant protocol met',[item('Hilar diagnostic criteria + unresectability + permitted tumor size and distribution + no metastatic disease; general transplant fitness remains a separate review.','P-policy')],'If accepted by the transplant program, begin neoadjuvant treatment under its approved pCCA transplant protocol.','neoadjuvant'),
-  branch('Size or resectability requires review',[item('OPTN uses <3 cm, not ≤3 cm. Duct length does not replace radial measurement.','P-policy')],'Review radial size, number of masses and resectability with the transplant and HPB teams before claiming eligibility for a standardized pCCA MELD exception.',kind='hold')],
+  branch('Size or resectability requires review',[item('OPTN requires a single mass <3 cm in radial diameter, measured perpendicular to the bile duct.','P-policy')],'Review radial size, number of masses and resectability with the transplant and HPB teams before claiming eligibility for a standardized pCCA MELD exception.',kind='hold')],
   [item('Confirmed regional hepatic nodal, intrahepatic metastatic or extrahepatic disease excludes transplantation under this pCCA protocol.','P-policy')],['threshold']),
  step('neoadjuvant','Deliver approved neoadjuvant therapy','Is the center-approved regimen being delivered with safe drainage and infection control?',
  'Medical/radiation oncology · advanced GI · transplant team','Before and throughout neoadjuvant therapy',[
@@ -200,10 +200,10 @@ PATHWAYS.append(pathway('pcca','pCCA','Perihilar cholangiocarcinoma','Standardiz
   comparison('P-policy','Transperitoneal aspiration or biopsy of the primary tumor',True,'§9.5.A(6): must be avoided'),comparison('P-policy','Endoscopic ultrasound-guided aspiration of regional hepatic lymph nodes may be advisable',True,'§9.5.A(5)'),comparison('C-aasld','Transperitoneal biopsies must be avoided in patients with pCCA who are potential LT candidates',True,'PDF p.26')],
   'Use intraductal diagnostic approaches; require explicit target/needle-path review for EUS. Nodal sampling is not interchangeable with sampling the primary.',
   'The risk depends on the target and trajectory, not the name of the endoscopic procedure.','Advanced GI · transplant surgery','pCCA G2'),
- issue('threshold','How do we handle exactly 3 cm or conflicting radial measurements?',[
+ issue('threshold','How should conflicting radial measurements be resolved?',[
   comparison('P-policy','less than three cm in radial (perpendicular to the duct) diameter',True,'§9.5.A(3)'),comparison('C-aasld','≤3 cm in radial diameter',True,'Treatment discussion, PDF p.27; summary guidance uses <3 cm')],
-  'For the standardized exception, use the strict OPTN <3 cm rule. Request a documented transplant-radiology measurement when borderline.',
-  'Clinical text and allocation policy are not identical at the boundary.','Radiology · coordinator','pCCA G3'),
+  'Use the OPTN criterion: a single mass <3 cm in radial diameter. Ask transplant radiology to resolve conflicting measurements before the exception request.',
+  'Eligibility assessment requires a reproducible radial measurement, perpendicular to the duct.','Radiology · coordinator','pCCA G3'),
  issue('regimen','Which neoadjuvant regimen and modifications will our center approve?',[
   comparison('P-policy','Administration of neoadjuvant therapy before transplantation',True,'Required written protocol'),comparison('C-aasld','Describes external-beam radiation with 5-FU, brachytherapy and maintenance capecitabine; delivery varies by center.'),comparison('P-cohort','Multicenter outcomes support integrated neoadjuvant-plus-transplant programs, not a single isolated component.')],
   'Use the formally approved center regimen and document treatment milestones; require named multidisciplinary approval for deviations.',
@@ -293,7 +293,7 @@ PATHWAYS.append(pathway('crlm','CRLM','Colorectal liver metastases','Individual 
  'Oncology · molecular pathology','Before transplant-directed selection',[
   group('Molecular tests',item('Obtain BRAF and MSI/MMR results; document RAS for treatment planning and prognosis.','N-crlm','C-consensus')),
   group('Biomarker and baseline burden',item('CEA with dates/trend; record whether any liver lesion was >10 cm before treatment.','N-crlm'))], [
-  branch('Molecular, tumor-size and CEA criteria met',[item('BRAF wild type and microsatellite stable; no pretreatment lesion >10 cm.','N-crlm'),item('CEA does not breach the guidance exclusion; an exact value of 80 needs explicit interpretation because initial and extension language differ.','N-crlm')],'Review whether all liver disease can now be treated safely with resection or ablation.','unresectability'),
+  branch('Molecular, tumor-size and CEA criteria met',[item('BRAF wild type and microsatellite stable; no pretreatment lesion >10 cm.','N-crlm'),item('CEA meets the request-specific NLRB criterion: ≤80 µg/L initially; <80 µg/L for extensions.','N-crlm')],'Review whether all liver disease can now be treated safely with resection or ablation.','unresectability'),
   branch('MSI-H/dMMR or BRAF-mutant',[item('Not the molecular population described in the NLRB CRLM guidance.','N-crlm')],'Use the colorectal cancer roadmap to select treatment for the molecular subtype. Any transplant proposal outside these guidance criteria requires separate review.',kind='redirect')],
   [item('CEA >80 µg/L excludes an initial CRLM MELD exception under the NLRB guidance, even if CEA is falling.','N-crlm')],['molecular-gates','cea-progression']),
  step('unresectability','Confirm unresectability','Can an expert liver team treat all clinically relevant disease with resection or ablation?',
@@ -328,7 +328,7 @@ PATHWAYS.append(pathway('crlm','CRLM','Colorectal liver metastases','Individual 
   group('Review packet',item('Include histology/molecular results, primary R0 report, unresectability assessment, baseline tumor burden, all required time intervals and current imaging/CEA. Guidance supports MMaT−20, with floor 15.','N-crlm')),
   group('Extension evidence',item('Every 3 months: CT/MRI chest/abdomen/pelvis and CEA; no hepatic progression or extrahepatic disease, and CEA <80 µg/L.','N-crlm'))], [
   branch('Clinical and allocation reviews satisfactory',[item('The transplant team has accepted the patient, and the NLRB decision and current supporting tests are recorded separately.','N-crlm')],'Continue surveillance through final pretransplant review.','transplant'),
-  branch('Pending review or borderline renewal',[item('A score recommendation is not an entitlement to transplant. Resolve exact CEA 80 or ambiguous progression explicitly.','N-crlm')],'Resolve uncertain CEA or progression findings before requesting MELD-exception renewal. Reassess clinical suitability separately before activating the patient for organ offers.',kind='hold')],
+  branch('Pending review or borderline renewal',[item('Confirm CEA <80 µg/L and no hepatic progression or extrahepatic disease for an extension request. Resolve uncertain measurements before filing.','N-crlm')],'Resolve uncertain CEA or progression findings before requesting MELD-exception renewal. Reassess clinical suitability separately before activating the patient for organ offers.',kind='hold')],
   [item('New extrahepatic disease, hepatic progression or CEA outside the required limit does not meet the CRLM MELD-exception extension criteria; review other treatment options.','N-crlm')],['cea-progression','ownership']),
  step('transplant','Transplant and follow-up','Do the expected benefits still justify transplantation, and who will monitor for recurrence?',
  'Transplant team · colorectal oncology','Before transplant and longitudinally afterward',[
@@ -354,9 +354,9 @@ PATHWAYS.append(pathway('crlm','CRLM','Colorectal liver metastases','Individual 
   comparison('N-crlm','Guidance contains additional synchronous-primary timing requirements, including primary resection >6 months after diagnosis and further chemotherapy/stability windows.'),comparison('C-consensus','Primary-tumor management must remain clinically appropriate; transplant selection must not drive unsafe delay of needed surgery.')],
   'Create a dated chronology and request a documented interpretation if the sequence differs. Do not retrospectively relabel dates or defer necessary care to satisfy wording.',
   'This is a true allocation interpretation issue, not a website checkbox.','Colorectal surgery · transplant physician · coordinator','CRLM G4'),
- issue('cea-progression','How should CEA exactly 80 and the progression footnote be interpreted?',[
+ issue('cea-progression','CEA and progression criteria for MELD-exception requests',[
   comparison('N-crlm','Carcinoembryonic antigen (CEA) greater than 80 µg/L',True,'Initial exclusion wording'),comparison('N-crlm','CEA less than 80 µg/L',True,'Extension wording'),comparison('N-crlm','The progression footnote uses >10% diameter increase or any new lesion, while calling it RECIST; usual RECIST 1.1 progression is not this threshold.'),comparison('C-consensus','Statement 25 distinguishes rising versus falling CEA >80; this is not the same as the NLRB exclusion.')],
-  'Do not automatically qualify exact 80 or override an exclusion with a falling trend. Record clinical RECIST assessment separately from the NLRB guidance threshold and seek review for boundary cases.',
+  'Apply the request-specific CEA criterion: initial exclusion >80 µg/L; extensions <80 µg/L. Record the NLRB progression criterion (>10% diameter increase or new lesions) separately from the clinical RECIST 1.1 assessment.',
   'Where guidance and consensus differ, record which criterion applies to the MELD-exception request and which informs treatment.','Oncology · radiology · allocation leadership','CRLM G4 / G6'),
  issue('restaging','Can ctDNA or altered PET timing substitute for required imaging?',[
   comparison('N-crlm','CT/MRI and PET are specified within the initial-request window; PET is specified after a chemotherapy-free interval.'),comparison('C-consensus','Cross-sectional imaging is central to resectability and response assessment.')],
@@ -374,7 +374,7 @@ PATHWAYS.append(pathway('nelm','NELM','Neuroendocrine liver metastases','Individ
  'NET oncology · expert pathology','At referral; review the most relevant current tissue',[
   group('Pathology and origin',item('Review differentiation, grade, Ki-67 index and mitoses; reconcile primary and liver pathology if discordant.','N-net'),item('Identify primary site and portal-system drainage; document functional syndrome and treatment history.','N-net','NET-milan'))], [
   branch('G1/G2 GEP NET with portal drainage',[item('Guidance specifies mitotic rate <20 per 10 HPF and proliferative index <20%; record the actual pathology values and counting convention.','N-net')],'Map primary control and all extrahepatic sites.','distribution'),
-  branch('G3, poorly differentiated NEC or conflicting grade results',[item('These findings fall outside the NET MELD-exception criteria described in NLRB guidance. An older low-grade sample does not explain new aggressive tumor behavior.','N-net')],'Return to NET oncology/pathology and the cancer roadmap.',kind='redirect')],
+  branch('Grade, differentiation or proliferation criteria not met',[item('These findings fall outside the NET MELD-exception criteria described in NLRB guidance. An older low-grade sample does not explain new aggressive tumor behavior.','N-net')],'Return to NET oncology/pathology and the cancer roadmap.',kind='redirect')],
   [item('Lower rectal, esophageal, lung, adrenal or thyroid primary does not qualify for this NET exception pathway.','N-net')],['biology']),
  step('distribution','Stage disease and confirm primary treatment','Is disease currently confined to the liver, and has the primary been removed?',
  'NET surgery · radiology · nuclear medicine','Before transplant selection and with any new finding',[
@@ -547,3 +547,14 @@ PATHWAYS.append(pathway('hca','HCA','Hepatic adenoma','Individual MELD-exception
   comparison('N-hca','Guidance describes exceptional indications and score consideration, not a universal post-LT follow-up schedule.'),comparison('A-easl','Management depends on bleeding, growth, subtype and clinical context.')],
   'Assign surveillance and urgent-bleeding contacts, explant review and underlying-disease follow-up owners.',
   'A rare indication still requires an explicit operational handoff.','Transplant team · hepatology · metabolic service','HCA G6')]))
+
+# Guideline criteria are a resolved reference, not a local threshold vote.
+for p in PATHWAYS:
+ for i in p["issues"]:
+  if p["slug"] == "crlm" and i["id"] == "cea-progression":
+   i["resolved"] = True
+   i["status"] = "Guidance criteria — no local threshold decision"
+
+for p in PATHWAYS:
+ if p["slug"] == "pcca":
+  next(i for i in p["issues"] if i["id"] == "threshold")["comparisons"] = [{'ref': 'P-policy', 'text': 'If a mass is present, a single mass <3 cm in radial diameter is required. Measure perpendicular to the bile duct; longitudinal duct extension is excluded.', 'quote': False, 'locator': 'OPTN Policy 9.5.A · mass measurement'}]

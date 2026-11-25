@@ -120,6 +120,7 @@
      "question": "Name the accountable CRLM pathway owner and the neutral tumour-board chair.",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [],
      "positions": [],
      "divergence": "No source positions; programme decision.",
@@ -136,6 +137,7 @@
      "question": "Approve the Epic submission form with an explicit phase field and a clearance-assessment field.",
      "kind": "operational",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [],
      "positions": [],
      "divergence": "No source positions; programme decision.",
@@ -152,6 +154,7 @@
      "question": "Decide whether Memorial Hermann will run a hepatic arterial infusion programme, and if so the credentialing standard, case volume floor and toxicity review cadence.",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "3 · Treat and reassess for resection or ablation",
@@ -208,6 +211,7 @@
      "question": "Ratify the written liver transplant protocol for CRLM: eligibility, review-board route, graft strategy including living donation, registry dataset and recurrence plan.",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "4 · Assess transplant eligibility",
@@ -254,6 +258,7 @@
      "question": "Set the institutional position on transplanting outside TransMet criteria — permitted under protocol with registry entry, or not at all.",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "4 · Assess transplant eligibility",
@@ -300,6 +305,7 @@
      "question": "Define the pre-transplant checkpoint-inhibitor policy for MSI-high candidates, including washout and the approval route, before any such patient is listed.",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "1 · Complete staging and molecular testing",
@@ -350,6 +356,7 @@
      "question": "Approve remnant-volume thresholds and the augmentation strategy hierarchy (PVE, LVD, two-stage, ALPPS), including who decides between them.",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "3 · Treat and reassess for resection or ablation",
@@ -396,6 +403,7 @@
      "question": "Set the minimum ablative margin that counts toward clearance, and require it to be documented.",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "2 · Resection or ablation feasible now",
@@ -442,6 +450,7 @@
      "question": "Name the referral route and the specialist team for peritoneal metastases, which are assessed outside this liver pathway.",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "2 · Resection or ablation feasible now",
@@ -486,6 +495,7 @@
      "question": "Decide which transplant criteria set governs locally, and record the resolution of each named disagreement between the OPTN guidance route, IHPBA 2021 and ESMO 2026 — MSI-high and dMMR status, BRAF V600E versus any BRAF mutation, the metabolic tumour volume and total lesion glycolysis bars, the months of stability required and the line of therapy by which transplantation may be considered.",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "4 · Assess transplant eligibility",
@@ -534,10 +544,11 @@
     {
      "id": "CRLM-D11",
      "set": "roadmap",
-     "title": "Resolve the two numeric boundaries in the OPTN transplant-oncology guidance before the first filing: a CEA of exactly 80 µg/L, and the definition of progression as more than a 10% increase in diameter while being labelled RECIST 1.1.",
-     "question": "Resolve the two numeric boundaries in the OPTN transplant-oncology guidance before the first filing: a CEA of exactly 80 µg/L, and the definition of progression as more than a 10% increase in diameter while being labelled RECIST 1.1.",
-     "kind": "governance",
-     "status": "OPEN — not yet decided",
+     "title": "CEA and progression criteria for MELD-exception requests",
+     "question": "CEA and progression criteria for MELD-exception requests",
+     "kind": "Guidance criteria",
+     "status": "Guidance criteria — no local threshold decision",
+     "resolved": true,
      "where": [
       {
        "label": "4 · Assess transplant eligibility",
@@ -548,7 +559,7 @@
       {
        "source": "OPTN transplant-oncology guidance",
        "key": "np-crlm-optn-guidance",
-       "says": "Its initial exclusion is CEA above 80 µg/L while the renewal wording requires below 80, and footnotes 20–21 define progression as a 10% diameter increase or new lesions while labelling this RECIST 1.1.",
+       "says": "Its initial exclusion is CEA above 80 µg/L while the renewal wording requires below 80, and footnotes 20–21 define progression as a >10% diameter increase or new lesions while labelling this RECIST 1.1.",
        "locator": "Gate 4 · Standard 'Keep the candidate inside protocol while waiting…' (note)"
       },
       {
@@ -558,11 +569,11 @@
        "locator": "Gate 4 · Deceased-donor option (flagnote); Quick reference · transplant decision points"
       }
      ],
-     "divergence": "The OPTN guidance is internally inconsistent at a CEA of exactly 80 and its 10% progression figure differs from the usual target-lesion threshold, so eligibility can turn on which wording is read.",
-     "proposal": "Treat an exact CEA of 80 as needing explicit review rather than an assumed pass; keep the guidance's 10% progression wording and flag it rather than silently substituting 20%; resolve both in writing before any exception request is filed.",
+     "divergence": "The NLRB initial request excludes CEA >80 µg/L; extensions require CEA <80 µg/L. Its progression criterion is >10% diameter increase or new lesions; record clinical RECIST 1.1 assessment separately.",
+     "proposal": "Apply the NLRB request-specific criteria: initial exclusion CEA >80 µg/L; extensions CEA <80 µg/L; progression >10% diameter increase or new lesions. Record clinical RECIST 1.1 assessment separately.",
      "proposal_locator": "Gate 4 · Standard 'Keep the candidate inside protocol while waiting…' (note); Quick reference · transplant decision points (foot)",
-     "rationale": "The initial exclusion is stated as CEA above 80 and the renewal wording as below 80, so an exact value of 80 has no stated answer; and the 10% figure differs from the usual target-lesion threshold, so a candidate can be progressing under one reading and stable under the other.",
-     "audit": "Both boundaries addressed in writing, with the source wording preserved rather than silently substituted, before any exception request is submitted.",
+     "rationale": "Initial and extension requests have their own CEA requirements. NLRB progression criteria govern exception review; RECIST 1.1 describes the clinical treatment response.",
+     "audit": "CEA, request type and radiographic progression documented against the applicable NLRB criteria before filing.",
      "web": "crlm/#question-CRLM-D11"
     },
     {
@@ -572,6 +583,7 @@
      "question": "Decide whether anti-EGFR therapy is used with conversion intent in left-sided RAS and BRAF wild-type disease, or only as the first-line survival choice.",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "1 · Complete staging and molecular testing",
@@ -628,6 +640,7 @@
      "question": "Set the institutional position on transarterial therapy in refractory disease: whether second-line Y90 and DEBIRI are offered at all, and the requirement that every transarterial treatment be recorded as regional control with a named reassessment date.",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "5 · Disease control when complete removal is not feasible",
@@ -680,6 +693,7 @@
      "question": "Decide whether perioperative chemotherapy is offered outside the population in which it was tested — one to four metastases, no extrahepatic disease — and require the indication to be recorded each time it is given.",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "2 · Resection or ablation feasible now",
@@ -720,6 +734,7 @@
      "question": "Decide how an ablation margin that cannot be measured is recorded and managed, and who reads the confirmatory study.",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "2 · Resection or ablation feasible now",
@@ -754,6 +769,7 @@
      "question": "Commit the surveillance and salvage capacity the published survival figures depend on — thoracic surveillance, pulmonary metastasectomy, repeat hepatic clearance — and name the owner of each.",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "2 · Resection or ablation feasible now",
@@ -804,6 +820,7 @@
      "question": "Agree the registry dataset for every conversion-intent course: who judged resectability at each reassessment, what they judged, and whether the operation happened.",
      "kind": "operational",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "3 · Treat and reassess for resection or ablation",
@@ -825,6 +842,7 @@
      "question": "Pilot for 90 days, audit 20 consecutive cases, then revise before approval as a clinical practice guideline.",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [],
      "positions": [],
      "divergence": "No source positions; programme decision.",
@@ -841,6 +859,7 @@
      "question": "Ratify early HAI review, disease-specific selection and programme safeguards.",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "3 · Treat and reassess for resection or ablation",
@@ -909,6 +928,7 @@
      "question": "What evidence establishes persistent unresectability?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Stage the disease",
@@ -954,6 +974,7 @@
      "question": "Does a nonviable-appearing or disappearing liver lesion count as persistent disease?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Confirm unresectability",
@@ -988,6 +1009,7 @@
      "question": "Which biomarkers affect CRLM MELD-exception eligibility, and which help estimate prognosis?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Review molecular markers and CEA",
@@ -1022,6 +1044,7 @@
      "question": "Which observation window governs: trial, consensus or NLRB?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Treat and observe",
@@ -1056,6 +1079,7 @@
      "question": "What if the timing of primary-tumor treatment does not meet the guidance?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Confirm primary treatment and timing",
@@ -1086,10 +1110,11 @@
     {
      "id": "CRLM G4 / G6",
      "set": "standard",
-     "title": "How should CEA exactly 80 and the progression footnote be interpreted?",
-     "question": "How should CEA exactly 80 and the progression footnote be interpreted?",
+     "title": "CEA and progression criteria for MELD-exception requests",
+     "question": "CEA and progression criteria for MELD-exception requests",
      "kind": "standard pathway",
-     "status": "Discussion required — not yet approved",
+     "status": "Guidance criteria — no local threshold decision",
+     "resolved": true,
      "where": [
       {
        "label": "Review molecular markers and CEA",
@@ -1134,7 +1159,7 @@
        "locator": "2021 · resectability / selection pp.3–5; response assessment pp.7–8 (PDF pages)"
       }
      ],
-     "proposal": "Do not automatically qualify exact 80 or override an exclusion with a falling trend. Record clinical RECIST assessment separately from the NLRB guidance threshold and seek review for boundary cases.",
+     "proposal": "Apply the request-specific CEA criterion: initial exclusion >80 µg/L; extensions <80 µg/L. Record the NLRB progression criterion (>10% diameter increase or new lesions) separately from the clinical RECIST 1.1 assessment.",
      "rationale": "Where guidance and consensus differ, record which criterion applies to the MELD-exception request and which informs treatment.",
      "owners": "Oncology · radiology · allocation leadership",
      "web": "transplant/crlm/#meeting-cea-progression"
@@ -1146,6 +1171,7 @@
      "question": "Can ctDNA or altered PET timing substitute for required imaging?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Restage for transplant",
@@ -1180,6 +1206,7 @@
      "question": "Who renews the MELD exception, confirms readiness for transplantation and plans recurrence surveillance?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Request and renew the MELD exception",
@@ -1428,14 +1455,14 @@
      "proposal": "Do not open molecular expansions initially; permit KRAS-mutant disease when all other selected criteria are met. Previous extrahepatic disease follows CRLM-B5.",
      "rules": [
       "Initial proposed exclusions: BRAF-mutant disease, MSI-H/dMMR disease, R1 primary margins, pretreatment liver lesion >10 cm, or progression despite treatment. Previous extrahepatic disease is addressed separately in CRLM-B5. Preserve these as separate research questions; do not combine several relaxations.",
-      "Proposed CEA requirement: strictly <80 ng/mL, including initial activation. Repeat a borderline/unexpected result and review the trajectory; a falling value still ≥80 does not clear this local rule.",
+      "CEA criteria: the initial NLRB request excludes CEA >80 µg/L; extensions require CEA <80 µg/L. Record the value, assay date and request type, and repeat unexpected values.",
       "Require ≥6 months of documented control and the applicable ≥12-month CRLM-diagnosis interval. Report ordinary RECIST separately from the NLRB >10% wording; new lesions or concerning growth are HOLD pending central measurement review.",
       "Confirmed progression resets the proposed six-month control clock after subsequent effective treatment; one improved scan is insufficient. Use the actual application imaging/CEA windows. Do not delay indicated primary surgery to manufacture eligibility."
      ],
      "tests": "Primary R0 pathology; BRAF, RAS and MMR/MSI; original maximum lesion diameter; complete EHD history; dated CEA; dated response and primary/CRLM diagnosis; current staging.",
      "allocation": "National guidance, study criteria and local choices remain separate. Confirm current NLRB wording at application and do not substitute RECIST for an expressly different guidance threshold.",
      "rationale": "BRAF-wild-type, controlled liver-only disease with a cleared primary has the strongest treatment evidence. RAS-mutant disease (including KRAS) was allowed in TransMet (17/47 assigned LT), so a blanket RAS ban would exceed evidence; that does not prove every molecular subgroup derives equal benefit. Arm D is a warning against stacking expansions. PET/Oslo/CEA markers forecast prognosis in recipients but have not demonstrated that crossing a threshold changes the incremental benefit of LT over modern non-LT care.",
-     "counter": "IHPBA specifically excludes BRAF V600E, whereas NLRB requests BRAF wild type; non-V600E cases are therefore a true guideline/research gap, not automatically eligible. TransMet accepted CEA <80 OR a ≥50% decline, unlike the draft strict <80 rule. SECA-II's excellent long-term outcomes mostly occurred with CEA ≤33, small lesions and low MTV; they cannot establish safety at every nominal upper limit. Negative ctDNA has not been validated to rescue other exclusion criteria.",
+     "counter": "IHPBA specifically excludes BRAF V600E, whereas NLRB requests BRAF wild type; non-V600E cases are therefore a true guideline/research gap, not automatically eligible. TransMet accepted CEA <80 OR a ≥50% decline; apply the separate NLRB initial and extension requirements for exception review. SECA-II's excellent long-term outcomes mostly occurred with CEA ≤33, small lesions and low MTV; they cannot establish safety at every nominal upper limit. Negative ctDNA has not been validated to rescue other exclusion criteria.",
      "certainty": "Moderate-to-high for narrow TransMet eligibility; low/very low for non-V600E BRAF, prior pulmonary disease, R1 primary, ECOG 2, or ctDNA-directed selection. Prognostic association does not equal predictive treatment-benefit validation. Allocation criteria have authoritative administrative status but are not randomized cutoff evidence.",
      "threshold_basis": "Current NLRB contains six-month/12-month/10-cm/CEA requirements and >10% growth wording. TransMet used at least three months control and a CEA-decline alternative. Oslo >5.5 cm, CEA >80, <2 years and progression are prognostic score components; MTV ~70 is data-derived; TLG 260 is consensus, not the same as Grut's 238.8. Resetting a six-month clock after confirmed progression and requiring repeat CEA are proposed local safeguards, not validated rescue rules.",
      "studies": [
@@ -1500,7 +1527,7 @@
        "key": "hr-nlrb",
        "population": "Official Adult MELD Exceptions for Transplant Oncology guidance, December 2025 posting checked 24 October 2026. Allocation-review guidance, not national clinical policy or proof of efficacy. CRLM: BRAF wild type, microsatellite stable, R0 primary, at least 12 months from CRLM diagnosis and six months chemotherapy control; pretreatment largest lesion not >10 cm; no post-primary-resection extrahepatic disease, including nodes outside the primary field. Initial CEA exclusion is >80 ng/mL; extensions require <80. NET: known portal-drained GEP primary, well-differentiated G1/G2, Ki-67 <20%, primary and extrahepatic disease resected with at least six months NED; no active extrahepatic disease. Lung/bone/other solid-organ metastasis history is a permanent exception-guidance exclusion.",
        "results": "No efficacy denominator. NET guidance has no explicit numerical age or hepatic-volume cutoff. CRLM wording excludes >10% diameter growth or new lesions and labels this RECIST 1.1, although conventional RECIST 1.1 progression generally uses at least 20% summed-diameter increase plus an absolute change; record both, do not silently equate them.",
-       "limits": "Clinical judgment, exception endorsement and graft availability are distinct. A reasonable research hypothesis or living donor does not override allocation guidance or demonstrate acceptable benefit. At exactly CEA 80 the initial/extension wording differs; the draft's strict <80 harmonization is a conservative local rule.",
+       "limits": "Clinical judgment, exception endorsement and graft availability are distinct. A reasonable research hypothesis or living donor does not override allocation guidance or demonstrate acceptable benefit. Use the applicable tumor-specific NLRB criteria for exception review.",
        "locator": "Official PDF NET pp.8–9; CRLM pp.9–10; introduction on purpose/status."
       }
      ],
@@ -1586,7 +1613,7 @@
        "key": "hr-nlrb",
        "population": "Official Adult MELD Exceptions for Transplant Oncology guidance, December 2025 posting checked 24 October 2026. Allocation-review guidance, not national clinical policy or proof of efficacy. CRLM: BRAF wild type, microsatellite stable, R0 primary, at least 12 months from CRLM diagnosis and six months chemotherapy control; pretreatment largest lesion not >10 cm; no post-primary-resection extrahepatic disease, including nodes outside the primary field. Initial CEA exclusion is >80 ng/mL; extensions require <80. NET: known portal-drained GEP primary, well-differentiated G1/G2, Ki-67 <20%, primary and extrahepatic disease resected with at least six months NED; no active extrahepatic disease. Lung/bone/other solid-organ metastasis history is a permanent exception-guidance exclusion.",
        "results": "No efficacy denominator. NET guidance has no explicit numerical age or hepatic-volume cutoff. CRLM wording excludes >10% diameter growth or new lesions and labels this RECIST 1.1, although conventional RECIST 1.1 progression generally uses at least 20% summed-diameter increase plus an absolute change; record both, do not silently equate them.",
-       "limits": "Clinical judgment, exception endorsement and graft availability are distinct. A reasonable research hypothesis or living donor does not override allocation guidance or demonstrate acceptable benefit. At exactly CEA 80 the initial/extension wording differs; the draft's strict <80 harmonization is a conservative local rule.",
+       "limits": "Clinical judgment, exception endorsement and graft availability are distinct. A reasonable research hypothesis or living donor does not override allocation guidance or demonstrate acceptable benefit. Use the applicable tumor-specific NLRB criteria for exception review.",
        "locator": "Official PDF NET pp.8–9; CRLM pp.9–10; introduction on purpose/status."
       }
      ],

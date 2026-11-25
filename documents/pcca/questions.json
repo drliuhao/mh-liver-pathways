@@ -83,6 +83,7 @@
      "question": "Does the programme open a perihilar transplant protocol, and under whose governance?",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "4 · Assess transplant eligibility",
@@ -111,7 +112,7 @@
       {
        "source": "Milan consensus",
        "key": "pm40478744",
-       "says": "Recommendation 59 supports consideration for selected unresectable or PSC-associated pCCA ≤3.0 cm radial diameter without nodal or distant metastases (strong, level 3), with staging and neoadjuvant therapy specified separately. Recommendation 64 only weakly supports consideration in resectable or questionably resectable disease with appropriate donor access (level 3). Neither establishes universal superiority over resection; the consensus boundary does not replace OPTN’s strict <3 cm mass criterion.",
+       "says": "Recommendation 59 supports consideration for selected unresectable or PSC-associated pCCA ≤3.0 cm radial diameter without nodal or distant metastases (strong, level 3), with staging and neoadjuvant therapy specified separately. Recommendation 64 only weakly supports consideration in resectable or questionably resectable disease with appropriate donor access (level 3). Neither establishes universal superiority over resection; the standardized OPTN exception requires a single mass <3 cm in radial diameter.",
        "locator": "Gate 4 · Avoid 'Do not use Rea 2005…' (note)"
       },
       {
@@ -135,6 +136,7 @@
      "question": "Endoscopic or percutaneous drainage as the default first route?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "0 · Assess drainage after staging imaging, unless urgent",
@@ -187,6 +189,7 @@
      "question": "Bilirubin threshold before major hepatectomy, embolic therapy, radiation, and systemic therapy.",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "0 · Assess drainage after staging imaging, unless urgent",
@@ -216,6 +219,7 @@
      "question": "Minimum annual volume for extended hepatectomy with biliary reconstruction at this centre.",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "3 · Assess resection",
@@ -244,6 +248,7 @@
      "question": "Adjuvant capecitabine — offered routinely, or case-by-case?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "3 · Assess resection",
@@ -296,6 +301,7 @@
      "question": "How is tissue obtained in a potentially protocol-eligible patient?",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "2 · Plan tissue sampling",
@@ -352,6 +358,7 @@
      "question": "Who owns drain management across services?",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "0 · Assess drainage after staging imaging, unless urgent",
@@ -373,6 +380,7 @@
      "question": "Does a molecular (next-generation sequencing) result on an ERCP-obtained specimen satisfy the transplant protocol's confirmed-malignancy condition?",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "2 · Plan tissue sampling",
@@ -423,6 +431,7 @@
      "question": "Who owns subsequent NCCN and OPTN update checks, and on what cycle?",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [],
      "positions": [],
      "divergence": "No source positions; programme decision.",
@@ -439,6 +448,7 @@
      "question": "Adjuvant chemoradiation after R0 resection with nodal metastases?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "3 · Assess resection",
@@ -485,6 +495,7 @@
      "question": "Which palliative drainage volume target does the programme adopt — NCCN's more than 50%, or ESGE 2026's ideally 70% or more?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "0 · Assess drainage after staging imaging, unless urgent",
@@ -529,6 +540,7 @@
      "question": "Is first-line chemo-immunotherapy offered on the biliary-tract-wide result, given that the extrahepatic subgroup showed no effect?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "5 · Unresectable disease outside a transplant protocol",
@@ -581,6 +593,7 @@
      "question": "Bilateral or unilateral stenting as the default in palliative hilar obstruction?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "0 · Assess drainage after staging imaging, unless urgent",
@@ -619,6 +632,7 @@
      "question": "Does FISH polysomy alone satisfy the programme's diagnostic threshold for entering a patient on the transplant protocol?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "2 · Plan tissue sampling",
@@ -657,6 +671,7 @@
      "question": "A written minimum for brush passes and intraductal biopsies at the index ERCP.",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "2 · Plan tissue sampling",
@@ -697,6 +712,7 @@
      "question": "Left-sided versus right-sided hepatectomy where both would achieve R0.",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "3 · Assess resection",
@@ -733,6 +749,7 @@
      "question": "Which proximal strictures require transplant-team review before diagnostic sampling?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Localize the lesion",
@@ -767,6 +784,7 @@
      "question": "Primary-tumor sampling versus nodal sampling: what is acceptable?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Plan diagnostic sampling",
@@ -804,10 +822,11 @@
     {
      "id": "pCCA G3",
      "set": "standard",
-     "title": "How do we handle exactly 3 cm or conflicting radial measurements?",
-     "question": "How do we handle exactly 3 cm or conflicting radial measurements?",
+     "title": "How should conflicting radial measurements be resolved?",
+     "question": "How should conflicting radial measurements be resolved?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Check protocol criteria",
@@ -819,19 +838,12 @@
        "source": "OPTN 9.5.A",
        "key": "std-P-policy",
        "kind": "Allocation policy",
-       "says": "“less than three cm in radial (perpendicular to the duct) diameter”",
-       "locator": "§9.5.A(3)"
-      },
-      {
-       "source": "AASLD · CCA",
-       "key": "std-C-aasld",
-       "kind": "Clinical guidance",
-       "says": "“≤3 cm in radial diameter”",
-       "locator": "Treatment discussion, PDF p.27; summary guidance uses <3 cm"
+       "says": "If a mass is present, a single mass <3 cm in radial diameter is required. Measure perpendicular to the bile duct; longitudinal duct extension is excluded.",
+       "locator": "OPTN Policy 9.5.A · mass measurement"
       }
      ],
-     "proposal": "For the standardized exception, use the strict OPTN <3 cm rule. Request a documented transplant-radiology measurement when borderline.",
-     "rationale": "Clinical text and allocation policy are not identical at the boundary.",
+     "proposal": "Use the OPTN criterion: a single mass <3 cm in radial diameter. Ask transplant radiology to resolve conflicting measurements before the exception request.",
+     "rationale": "Eligibility assessment requires a reproducible radial measurement, perpendicular to the duct.",
      "owners": "Radiology · coordinator",
      "web": "transplant/pcca/#meeting-threshold"
     },
@@ -842,6 +854,7 @@
      "question": "Which neoadjuvant regimen and modifications will our center approve?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Deliver approved neoadjuvant therapy",
@@ -883,6 +896,7 @@
      "question": "When is operative staging performed, and when does imaging expire?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Perform operative staging",
@@ -921,6 +935,7 @@
      "question": "Who approves the program and its surveillance plan?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "List and maintain readiness",
@@ -997,7 +1012,7 @@
      ],
      "proposal": "Keep size expansion, primary transperitoneal-biopsy exposure and cleared malignant nodes as three separate closed transplant strata. Distant or peritoneal metastasis, even after response, ends the transplant route.",
      "rules": [
-      "For the conventional standardized-exception mass criterion, retain a single mass <3.0 cm in radial diameter. Exactly 3.0 cm is not rounded down; obtain central measurement review. Do not activate a 3–5 cm expansion.",
+      "For the conventional standardized-exception mass criterion, retain a single mass <3.0 cm in radial diameter. Resolve conflicting radial measurements with transplant radiology. Do not activate a 3–5 cm expansion.",
       "Exclude any prior transperitoneal primary-tumor biopsy exposure from the initial transplanting study. Record trajectory and whether pathology was positive, negative or nondiagnostic; this is a conservative selection rule, not proof of dissemination in every exposed patient.",
       "Exclude previously proven malignant nodes from the initial transplant cohort even after radiographic/pathologic clearance. Nodal EUS sampling that does not traverse the primary is distinct from primary-tumor biopsy. Do not combine these excluded categories in one expansion cohort.",
       "Distant or peritoneal metastasis, or nodal disease beyond the regional field, found at any time (including at operative staging) ends the transplant route for this protocol, even after response to chemoradiation or chemotherapy. There is no proposed stratum."
@@ -1005,7 +1020,7 @@
      "tests": "Original MRI/MRCP or CT with perpendicular radial measurement; full biopsy reports/needle trajectory; node station and original pathology; operative staging plan; resection assessment. Record whether EUS sampled a regional node or traversed the primary mass, the route, pathology result and date. These are not equivalent exposures. Record any distant or peritoneal finding at staging with its pathology.",
      "allocation": "Clinical review, standardized exception eligibility and research expansion are separate. A favorable response or living donor does not erase the original size/biopsy/node history.",
      "rationale": "Size, biopsy exposure and nodal biology must remain separate. Larger-mass LT has directly unfavorable recurrence data. Biopsy evidence is conflicting across settings, so the mechanism is plausible and current policy is restrictive, but an inevitable-seeding claim is unjustified. No reviewed study validates a cleared-node rescue stratum. Imaging-negative nodes do not equal pathological clearance. Operative staging is where most of this disease is found: in the Mayo series, 36 of 199 patients left the protocol with metastases found at staging (regional nodes 14, intrahepatic 6, extrahepatic 16).",
-     "counter": "Aveson challenges a universal causal inference from Heimbach. Absence of PM in nine negative TP-FNA cases does not establish safety. Soliman's occult-node recipients do not validate deliberate nodal expansion. One prospective pilot admitted regional lymphadenopathy in locally advanced hilar and intrahepatic cholangiocarcinoma; five of 18 reached transplantation and one had an isolated portacaval nodal recurrence at 12 months. Whether the nodes were proven malignant is not reported in the abstract, and it cannot validate a cleared-node stratum. The exact 3.0-cm boundary is a current policy boundary, not a biological discontinuity proven by these studies.",
+     "counter": "Aveson challenges a universal causal inference from Heimbach. Absence of PM in nine negative TP-FNA cases does not establish safety. Soliman's occult-node recipients do not validate deliberate nodal expansion. One prospective pilot admitted regional lymphadenopathy in locally advanced hilar and intrahepatic cholangiocarcinoma; five of 18 reached transplantation and one had an isolated portacaval nodal recurrence at 12 months. Whether the nodes were proven malignant is not reported in the abstract, and it cannot validate a cleared-node stratum. For the standardized exception, apply the OPTN single-mass <3 cm radial criterion.",
      "certainty": "Moderate confidence that conventional selection yields better observed outcomes; low certainty for causal effects of size and biopsy; very low/no direct evidence for a previously positive-node clearance pathway.",
      "threshold_basis": "POLICY: OPTN 9.5. A specifies radial mass < 3 cm, unresectability, NAT and staging; primary TP-biopsy must be avoided. STUDY: >3 cm associated with lower RFS; positive TP-FNA associated with PM in a very small LT cohort. LOCAL: closing all prior-biopsy and cleared-node strata is a conservative first-study choice, not proof of universal futility.",
      "studies": [

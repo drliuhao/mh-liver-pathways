@@ -1,5 +1,5 @@
 window.ClarityPresentation={
-  "version": "20261124-clarity1",
+  "version": "20261125-threshold1",
   "riskLinks": {
     "hcc/curative-route/r0": [
       "hcc-b5"
@@ -84,9 +84,6 @@ window.ClarityPresentation={
       "crlm-b3"
     ],
     "crlm/biology/r2": [
-      "crlm-b3"
-    ],
-    "crlm/biology/r3": [
       "crlm-b3"
     ],
     "crlm/clocks/b1": [

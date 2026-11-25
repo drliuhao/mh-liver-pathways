@@ -212,66 +212,79 @@
      {
       "id": "lesion-counting",
       "question": "Which observations count, and when should LR-4 be biopsied?",
+      "resolved": false,
       "href": "#meeting-lesion-counting"
      },
      {
       "id": "curative-route",
       "question": "When should uncertain portal hypertension change resection versus transplant?",
+      "resolved": false,
       "href": "#meeting-curative-route"
      },
      {
       "id": "beyond-downstaging",
       "question": "What requires nonstandard review: burden, prior rupture or portal-branch invasion?",
+      "resolved": false,
       "href": "#meeting-beyond-downstaging"
      },
      {
       "id": "bridging",
       "question": "How should modality and an equivocal response guide the next treatment?",
+      "resolved": false,
       "href": "#meeting-bridging"
      },
      {
       "id": "checkpoint",
       "question": "What transplant-safety approach applies after checkpoint inhibitors?",
+      "resolved": false,
       "href": "#meeting-checkpoint"
      },
      {
       "id": "ownership",
       "question": "Who confirms fitness for transplantation, verifies the MELD-exception request and arranges surveillance?",
+      "resolved": false,
       "href": "#meeting-ownership"
      },
      {
       "id": "response-uncertainty",
       "question": "How should equivocal post-treatment enhancement or borderline AFP be handled?",
+      "resolved": false,
       "href": "#meeting-response-uncertainty"
      },
      {
       "id": "afp-b1-1a",
       "question": "Should AFP-only failure have a distinct high-risk review entry even when tumor burden is within Milan?",
+      "resolved": false,
       "href": "#meeting-afp-b1-1a"
      },
      {
       "id": "afp-b1-1b",
       "question": "Should confirmed AFP at least 500 trigger a clinical hold even without a prior AFP above 1000?",
+      "resolved": false,
       "href": "#meeting-afp-b1-1b"
      },
      {
       "id": "afp-b1-1c",
       "question": "How should rising AFP below 500 with controlled imaging be handled?",
+      "resolved": false,
       "href": "#meeting-afp-b1-1c"
      },
      {
       "id": "afp-b1-1d",
       "question": "What permits release from a biochemical hold?",
+      "resolved": false,
       "href": "#meeting-afp-b1-1d"
      },
      {
       "id": "afp-b1-1e",
       "question": "Can persistent AFP failure ever proceed to LT or LDLT?",
+      "resolved": false,
       "href": "#meeting-afp-b1-1e"
      },
      {
       "id": "afp-b1-1f",
       "question": "What must be audited?",
+      "resolved": false,
       "href": "#meeting-afp-b1-1f"
      }
     ],
@@ -2966,31 +2979,37 @@
      {
       "id": "anatomy",
       "question": "Which proximal strictures require transplant-team review before diagnostic sampling?",
+      "resolved": false,
       "href": "#meeting-anatomy"
      },
      {
       "id": "sampling",
       "question": "Primary-tumor sampling versus nodal sampling: what is acceptable?",
+      "resolved": false,
       "href": "#meeting-sampling"
      },
      {
       "id": "threshold",
-      "question": "How do we handle exactly 3 cm or conflicting radial measurements?",
+      "question": "How should conflicting radial measurements be resolved?",
+      "resolved": false,
       "href": "#meeting-threshold"
      },
      {
       "id": "regimen",
       "question": "Which neoadjuvant regimen and modifications will our center approve?",
+      "resolved": false,
       "href": "#meeting-regimen"
      },
      {
       "id": "staging-timing",
       "question": "When is operative staging performed, and when does imaging expire?",
+      "resolved": false,
       "href": "#meeting-staging-timing"
      },
      {
       "id": "ownership",
       "question": "Who approves the program and its surveillance plan?",
+      "resolved": false,
       "href": "#meeting-ownership"
      }
     ],
@@ -3036,7 +3055,7 @@
       "text": "Allocation policy (OPTN 9.5.A): the hilar CCA exception (approved center protocol, neoadjuvant therapy, operative staging, mass <3 cm) applied at each step."
      },
      "appraisal": {
-      "note": "Requires an approved written center protocol, neoadjuvant therapy and operative staging. The mass threshold is strictly <3 cm in radial diameter."
+      "note": "Requires an approved written center protocol, neoadjuvant therapy and operative staging. If a mass is present, it must be single and <3 cm in radial diameter."
      }
     },
     {
@@ -4603,31 +4622,37 @@
      {
       "id": "histology",
       "question": "Will the local protocol include mixed HCC-iCCA?",
+      "resolved": false,
       "href": "#meeting-histology"
      },
      {
       "id": "phenotype",
       "question": "Is NLRB alignment sufficient, or do we require a prospective program?",
+      "resolved": false,
       "href": "#meeting-phenotype"
      },
      {
       "id": "therapy",
       "question": "Which control strategy and ICI safety rules will be used?",
+      "resolved": false,
       "href": "#meeting-therapy"
      },
      {
       "id": "stability-clock",
       "question": "Which event starts or restarts the six-month stability interval?",
+      "resolved": false,
       "href": "#meeting-stability-clock"
      },
      {
       "id": "review-ownership",
       "question": "Who verifies nonstandard submission and three-month imaging?",
+      "resolved": false,
       "href": "#meeting-review-ownership"
      },
      {
       "id": "surveillance",
       "question": "What post-transplant recurrence surveillance will the program adopt?",
+      "resolved": false,
       "href": "#meeting-surveillance"
      }
     ],
@@ -6271,41 +6296,49 @@
      {
       "id": "unresectability",
       "question": "What evidence establishes persistent unresectability?",
+      "resolved": false,
       "href": "#meeting-unresectability"
      },
      {
       "id": "treated-lesions",
       "question": "Does a nonviable-appearing or disappearing liver lesion count as persistent disease?",
+      "resolved": false,
       "href": "#meeting-treated-lesions"
      },
      {
       "id": "molecular-gates",
       "question": "Which biomarkers affect CRLM MELD-exception eligibility, and which help estimate prognosis?",
+      "resolved": false,
       "href": "#meeting-molecular-gates"
      },
      {
       "id": "control-clock",
       "question": "Which observation window governs: trial, consensus or NLRB?",
+      "resolved": false,
       "href": "#meeting-control-clock"
      },
      {
       "id": "primary-clocks",
       "question": "What if the timing of primary-tumor treatment does not meet the guidance?",
+      "resolved": false,
       "href": "#meeting-primary-clocks"
      },
      {
       "id": "cea-progression",
-      "question": "How should CEA exactly 80 and the progression footnote be interpreted?",
+      "question": "CEA and progression criteria for MELD-exception requests",
+      "resolved": true,
       "href": "#meeting-cea-progression"
      },
      {
       "id": "restaging",
       "question": "Can ctDNA or altered PET timing substitute for required imaging?",
+      "resolved": false,
       "href": "#meeting-restaging"
      },
      {
       "id": "ownership",
       "question": "Who renews the MELD exception, confirms readiness for transplantation and plans recurrence surveillance?",
+      "resolved": false,
       "href": "#meeting-ownership"
      }
     ],
@@ -6389,7 +6422,7 @@
       "cited": "Standard pathway document, reference V16-2; High-risk pathway document, reference V16-2",
       "scope": "Official Adult MELD Exceptions for Transplant Oncology guidance, December 2025 posting checked 24 October 2026. Allocation-review guidance, not national clinical policy or proof of efficacy.",
       "results": "No efficacy denominator. NET guidance has no explicit numerical age or hepatic-volume cutoff. CRLM wording excludes >10% diameter growth or new lesions and labels this RECIST 1.1, although conventional RECIST 1.1 progression generally uses at least 20% summed-diameter increase plus an absolute change; record both, do not silently equate them.",
-      "limitations": "Clinical judgment, exception endorsement and graft availability are distinct. A reasonable research hypothesis or living donor does not override allocation guidance or demonstrate acceptable benefit. At exactly CEA 80 the initial/extension wording differs; the draft's strict <80 harmonization is a conservative local rule.",
+      "limitations": "Clinical judgment, exception endorsement and graft availability are distinct. A reasonable research hypothesis or living donor does not override allocation guidance or demonstrate acceptable benefit. Use the applicable tumor-specific NLRB criteria for exception review.",
       "locator": "Official PDF NET pp.8–9; CRLM pp.9–10; introduction on purpose/status."
      }
     },
@@ -7987,31 +8020,37 @@
      {
       "id": "biology",
       "question": "How should discordant grade, Ki-67 or an unusual primary be handled?",
+      "resolved": false,
       "href": "#meeting-biology"
      },
      {
       "id": "extrahepatic",
       "question": "Can prior nodal disease be distinguished from active or solid-organ metastasis?",
+      "resolved": false,
       "href": "#meeting-extrahepatic"
      },
      {
       "id": "selection",
       "question": "Will our local program use Milan-NET age and liver-volume restrictions?",
+      "resolved": false,
       "href": "#meeting-selection"
      },
      {
       "id": "sequencing",
       "question": "How should PRRT and hepatic radiation/embolization be sequenced?",
+      "resolved": false,
       "href": "#meeting-sequencing"
      },
      {
       "id": "observation",
       "question": "How do we interpret the “at least 3 months prior” imaging wording?",
+      "resolved": false,
       "href": "#meeting-observation"
      },
      {
       "id": "ownership",
       "question": "Who is responsible for functional restaging and long-term recurrence surveillance?",
+      "resolved": false,
       "href": "#meeting-ownership"
      }
     ],
@@ -8086,7 +8125,7 @@
       "cited": "Standard pathway document, reference V16-2; High-risk pathway document, reference V16-2",
       "scope": "Official Adult MELD Exceptions for Transplant Oncology guidance, December 2025 posting checked 24 October 2026. Allocation-review guidance, not national clinical policy or proof of efficacy.",
       "results": "No efficacy denominator. NET guidance has no explicit numerical age or hepatic-volume cutoff. CRLM wording excludes >10% diameter growth or new lesions and labels this RECIST 1.1, although conventional RECIST 1.1 progression generally uses at least 20% summed-diameter increase plus an absolute change; record both, do not silently equate them.",
-      "limitations": "Clinical judgment, exception endorsement and graft availability are distinct. A reasonable research hypothesis or living donor does not override allocation guidance or demonstrate acceptable benefit. At exactly CEA 80 the initial/extension wording differs; the draft's strict <80 harmonization is a conservative local rule.",
+      "limitations": "Clinical judgment, exception endorsement and graft availability are distinct. A reasonable research hypothesis or living donor does not override allocation guidance or demonstrate acceptable benefit. Use the applicable tumor-specific NLRB criteria for exception review.",
       "locator": "Official PDF NET pp.8–9; CRLM pp.9–10; introduction on purpose/status."
      }
     },
@@ -9266,31 +9305,37 @@
      {
       "id": "diagnosis",
       "question": "What level of expert pathology confirmation is required?",
+      "resolved": false,
       "href": "#meeting-diagnosis"
      },
      {
       "id": "extrahepatic",
       "question": "Which extrahepatic disease patterns are acceptable locally?",
+      "resolved": false,
       "href": "#meeting-extrahepatic"
      },
      {
       "id": "risk-score",
       "question": "Can HEHE-LT risk estimates be used before transplant?",
+      "resolved": false,
       "href": "#meeting-risk-score"
      },
      {
       "id": "governance",
       "question": "When does transplant offer enough benefit over observation or other therapy?",
+      "resolved": false,
       "href": "#meeting-governance"
      },
      {
       "id": "submission",
       "question": "Who verifies each component of the nonstandard request?",
+      "resolved": false,
       "href": "#meeting-submission"
      },
      {
       "id": "surveillance",
       "question": "What risk-adapted post-transplant follow-up will be adopted?",
+      "resolved": false,
       "href": "#meeting-surveillance"
      }
     ],
@@ -9922,31 +9967,37 @@
      {
       "id": "subtype",
       "question": "What evidence is sufficient to call an adenoma β-catenin activated?",
+      "resolved": false,
       "href": "#meeting-subtype"
      },
      {
       "id": "alternatives",
       "question": "When have conventional management options been adequately assessed?",
+      "resolved": false,
       "href": "#meeting-alternatives"
      },
      {
       "id": "criteria",
       "question": "Are these alternative indications, or does every patient need complications?",
+      "resolved": false,
       "href": "#meeting-criteria"
      },
      {
       "id": "transformation",
       "question": "When should suspected transformation move to a malignant-tumor pathway?",
+      "resolved": false,
       "href": "#meeting-transformation"
      },
      {
       "id": "benefit",
       "question": "Will the local program impose an exon-specific molecular restriction?",
+      "resolved": false,
       "href": "#meeting-benefit"
      },
      {
       "id": "ownership",
       "question": "Who is responsible for waiting-list complication management and long-term follow-up?",
+      "resolved": false,
       "href": "#meeting-ownership"
      }
     ],

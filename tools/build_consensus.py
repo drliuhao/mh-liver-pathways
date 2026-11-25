@@ -123,7 +123,7 @@ def roadmap_set(t, S):
                 key = S.add('pm' + ref, p['source'], '', '', **links_for(pmid=ref))
             positions.append(dict(source=p['source'], key=key, says=p['position'], locator=p.get('locator', '')))
         out.append(dict(id=q['id'], set='roadmap', title=q['question'], question=q['question'], kind=q['kind'],
-                        status='OPEN — not yet decided', where=[dict(label=GATES[slug].get(str(d), f'Decision {d}'), url=f'{slug}/#decision-{d}') for d in q.get('decisions', [])],
+                        status=q.get('status', 'OPEN — not yet decided'), resolved=q.get('resolved', False), where=[dict(label=GATES[slug].get(str(d), f'Decision {d}'), url=f'{slug}/#decision-{d}') for d in q.get('decisions', [])],
                         positions=positions, divergence=q.get('divergence', ''), proposal=q.get('proposal', ''),
                         proposal_locator=q.get('proposal_locator', ''), rationale=q.get('rationale', ''), audit=q.get('audit', ''),
                         web=f'{slug}/#question-{q["id"]}'))
@@ -200,7 +200,7 @@ def standard_set(t, S):
                             locator=c.get('locator') or s.get('locator', '')))
         rid = i['record'].replace(' — detailed web subquestion', ' (detail)')
         steps = [s for s in p['steps'] if i['id'] in s.get('issues', [])]
-        out.append(dict(id=rid, set='standard', title=i['question'], question=i['question'], kind='standard pathway', status=i['status'],
+        out.append(dict(id=rid, set='standard', title=i['question'], question=i['question'], kind='standard pathway', status=i['status'], resolved=i.get('resolved', False),
                         where=[dict(label=s['title'], url=f'transplant/{p["slug"]}/#{s["id"]}') for s in steps],
                         positions=pos, proposal=i['proposal'], rationale=i['rationale'], owners=i.get('owners', ''),
                         web=f'transplant/{p["slug"]}/#meeting-{i["id"]}'))

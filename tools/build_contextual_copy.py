@@ -82,7 +82,7 @@ help_copy = {
     'pcca/localize/review': 'Review liver disease, resectability and benign stricture causes before biopsy.',
     'pcca/diagnosis/diagnosis': 'At least one: malignant biopsy/cytology; CA 19-9 >100 U/mL without cholangitis; aneuploidy; or hilar mass <3 cm radially.',
     'pcca/diagnosis/biopsy': 'Avoid transperitoneal primary biopsy (EUS, percutaneous or operative). Regional-node sampling without traversing the primary is a different procedure.',
-    'pcca/phenotype/size': 'Measure perpendicular to the duct. Exactly 3 cm fails <3 cm; duct length is separate.',
+    'pcca/phenotype/size': 'Measure radial diameter perpendicular to the duct; record duct length separately.',
     'pcca/phenotype/spread': 'Chest/abdominal imaging ≤90 days before the initial exception request must show no metastases.',
     'pcca/phenotype/diagnosis': 'Confirm diagnostic criteria and no transperitoneal primary-tumor biopsy.',
     'pcca/neoadjuvant/protocol': 'Written protocol: selection, neoadjuvant therapy and operative staging. Review regimen changes with the program.',

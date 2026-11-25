@@ -75,9 +75,9 @@
       ${n ? `<details class="cq-fold"><summary>Positions of guidelines, trials and papers <span>${n}</span></summary>${pos}${studies}</details>` :
         '<p class="cq-none">No guideline, trial or paper takes a position on this question; it is a programme decision.</p>'}
       ${q.divergence ? `<p class="cq-diverge"><b>Where sources differ.</b> ${esc(q.divergence)}</p>` : ''}
-      <div class="cq-proposal"><b>Proposed selection · OPEN</b><p>${esc(q.proposal || 'No proposal yet; the group decides.')}</p>${(q.rules || []).length ? `<ul>${q.rules.map(r => `<li>${esc(r)}</li>`).join('')}</ul>` : ''}${q.proposal_locator ? `<small>Basis in the roadmap: ${esc(q.proposal_locator)}</small>` : ''}</div>
+      <div class="cq-proposal"><b>${q.resolved?'Applicable guidance':'Proposed selection · OPEN'}</b><p>${esc(q.proposal || 'No proposal yet; the group decides.')}</p>${(q.rules || []).length ? `<ul>${q.rules.map(r => `<li>${esc(r)}</li>`).join('')}</ul>` : ''}${q.proposal_locator ? `<small>Basis in the roadmap: ${esc(q.proposal_locator)}</small>` : ''}</div>
       ${more ? `<details class="cq-fold"><summary>Rationale${q.audit ? ' and audit' : ''}</summary>${more}</details>` : ''}
-      <p class="cq-decision">Group decision: <b>not yet recorded</b>.</p></article>`;
+      ${q.resolved?'':'<p class="cq-decision">Group decision: <b>not yet recorded</b>.</p>'}</article>`;
   }
   function questions(t) {
     const slug = path[0];
@@ -92,8 +92,8 @@
         [['Item', x => `<b>${esc(x.id)}</b><small>${esc(x.specialty)}</small>`], ['To ratify', x => esc(x.question)], ["Roadmap's stated position", x => `${esc(x.proposal)}<small>${esc(x.proposal_locator)}</small>`]])}</details>` : '';
       const na = (data.not_applicable || []).map(n => `<p class="cq-na"><b>Previously treated extrahepatic disease.</b> ${esc(n.text)}</p>`).join('');
       sec.innerHTML = `<div class="sechead"><h3 class="ch-background-title">Questions for consensus</h3><p>Every decision this roadmap still needs the programme to make: what guidelines, trials and papers say, the proposed selection, and the group decision.<span data-doc-note> Versioned Word source files are under <b>Documents</b> (top right); the web questions include later review corrections.</span></p><button class="xpand" type="button" aria-expanded="false">Show</button></div>
-        <div class="cq-body" hidden><nav class="cq-index" aria-label="Questions for consensus">${set.questions.map(q => `<a href="#question-${esc(q.id)}">${esc(q.id)}</a>`).join('')}</nav>
-        ${set.questions.map(q => card(data, q, slug)).join('')}${ratify}${na}</div>`;
+        <div class="cq-body" hidden><nav class="cq-index" aria-label="Questions for consensus">${set.questions.filter(q=>!q.resolved).map(q => `<a href="#question-${esc(q.id)}">${esc(q.id)}</a>`).join('')}</nav>
+        ${set.questions.filter(q=>!q.resolved).map(q => card(data, q, slug)).join('')}${set.questions.some(q=>q.resolved)?'<details class="cq-fold cq-resolved"><summary>Guidance criteria</summary>'+set.questions.filter(q=>q.resolved).map(q=>card(data,q,slug)).join('')+'</details>':''}${ratify}${na}</div>`;
       anchor.before(sec);
       const body = sec.querySelector('.cq-body'), btn = sec.querySelector('.xpand');
       const show = open => { body.hidden = !open; btn.textContent = open ? 'Hide' : 'Show'; btn.setAttribute('aria-expanded', String(open)); };
@@ -103,7 +103,7 @@
         if (id !== 'questions' && !id.startsWith('question-')) return;
         show(true);
         const target = document.getElementById(id);
-        if (target) { target.querySelectorAll('details.cq-fold').forEach(d => { d.open = true; }); requestAnimationFrame(() => target.scrollIntoView({block: 'start'})); }
+        if (target) { const parent=target.closest('details');if(parent)parent.open=true; target.querySelectorAll('details.cq-fold').forEach(d => { d.open = true; }); requestAnimationFrame(() => target.scrollIntoView({block: 'start'})); }
       };
       window.addEventListener('hashchange', reveal); reveal();
       const nav = document.querySelector('header.top nav.sec');

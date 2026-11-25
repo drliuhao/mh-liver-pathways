@@ -54,7 +54,7 @@ function questions(slug,step,a,prior={}){
   if(step==='biology'&&a.molecular==='outside')add('molecular','Which molecular result is outside the stated selection criteria?',[['braf','BRAF mutation'],['msi','MSI-H / dMMR'],['both','Both']], 'The local opening cohort keeps these separate research questions; use the relevant systemic-treatment pathway.');
  }
  if(slug==='nelm'){
-  if(step==='biology'&&a.grade==='outside')add('grade_detail','Which pathology finding is established?',[['g3','Confirmed well-differentiated G3'],['nec','Confirmed poorly differentiated NEC'],['discordant','Borderline or discordant grading requires expert review']], 'Discordant tests require pathology review; they are not automatically a confirmed G3 or NEC diagnosis.');
+  if(step==='biology'&&a.grade==='outside')add('grade_detail','Which pathology finding is established?',[['g3','Confirmed well-differentiated G3'],['nec','Confirmed poorly differentiated NEC'],['indices','G1/G2; proliferation criterion not met'],['discordant','Borderline or discordant grading requires expert review']], 'Discordant tests require pathology review; they are not automatically a confirmed G3 or NEC diagnosis.');
   if(step==='options'&&a.strategy==='transplant')add('benefit','What requires additional transplant-benefit review?',[['symptoms','Refractory functioning syndrome'],['function','Liver-related functional compromise'],['threat','Credible threat to durable hepatic control despite reasonable alternatives'],['stable','Stable low-burden disease with reasonable durable alternatives'],['complete','Benefit comparison has been completed']], 'Favorable predicted survival alone does not establish additional benefit over available care.');
   if(['options','review'].includes(step)){
    add('age','Age at this review',[['younger','Under 60 years'],['older','60 years or older']], 'Age ≥60 calls for individual physiological-reserve and benefit review; it is not an absolute age exclusion.');
@@ -126,7 +126,7 @@ function local(slug,step,a,x,history={}){
   if(step==='control'&&a.unresectable==='no')add('crlm-b1','Complete nontransplant clearance may now be possible. Reassess resection and ablation before further transplant planning.','checklist');
   if(step==='biology'){
    if(a.molecular==='outside'&&!ask('molecular','Clarify BRAF mutation versus MSI-H/dMMR before the molecular selection review.'))add('crlm-b3',x.molecular==='braf'?'BRAF mutation is outside the local opening cohort.':x.molecular==='msi'?'MSI-H/dMMR is outside the local opening cohort; review the appropriate systemic treatment.':'Both selected molecular findings are outside the local opening cohort.','closed',true,true);
-   if(is(a.cea,'high','boundary'))add('crlm-b3','CEA is at or above the local proposed <80 boundary; repeat and review the trend. Local selection and NLRB guidance must be assessed separately.','notice',true);
+   if(is(a.cea,'high'))add('crlm-b3','The applicable NLRB CEA requirement is not met: initial CEA ≤80 µg/L; extension CEA <80 µg/L. Review cancer treatment and reassess.','notice',true);
    if(a.size==='no')add('crlm-b3','The pretreatment lesion-size criterion is not met; the initial proposal does not activate that expansion.','closed',true,true);
   }
   if(step==='map-disease'&&a.spread==='present')add('crlm-b5','Extrahepatic disease after primary resection or local relapse was selected. This does not open an expanded transplant route.','closed',true,true);
@@ -145,6 +145,7 @@ function local(slug,step,a,x,history={}){
   if(step==='biology'){
    if(a.grade==='outside'&&!ask('grade_detail','Resolve the grade and differentiation with expert pathology review.')){
     if(x.grade_detail==='discordant')clarify.push({label:'Resolve discordant pathology before assigning a grade-based transplant exclusion.'});
+    else if(x.grade_detail==='indices')add('net-b2','The proliferation criterion is not met: NLRB requires Ki-67 <20% and mitoses <20 per 10 HPF. WHO grade remains recorded separately. Review other NET treatment options.','closed',true,true);
     else add('net-b2','Confirmed G3 or poorly differentiated NEC is outside the current opening pathway.','closed',true,true);
    }
    if(a.primary==='no')add('net-b2','The stated primary-site criterion is not met. Clarify the exact site before further transplant consideration.','notice',true);
@@ -199,7 +200,7 @@ function hardStop(slug,step,a,x){
  if(slug==='crlm'&&((step==='map-disease'&&a.spread==='present')||(step==='restaging'&&a.stage==='spread')))return yes('Selected extrahepatic disease or local relapse does not meet this CRLM pathway.');
  if(slug==='crlm'&&step==='biology'&&(a.molecular==='outside'||a.size==='no'))return yes('The selected molecular or pretreatment size finding does not meet the defined CRLM selection route. A later favorable response does not waive it.');
  if(slug==='crlm'&&x.visible==='ned')return yes('No convincing visible disease was selected. This proposal does not offer transplantation solely for presumed microscopic disease.');
- if(slug==='nelm'&&step==='biology'&&((a.grade==='outside'&&is(x.grade_detail,'g3','nec'))||a.primary==='no'))return yes('The selected grade or primary-site finding requires resolution before proceeding under this NET pathway.');
+ if(slug==='nelm'&&step==='biology'&&((a.grade==='outside'&&is(x.grade_detail,'g3','nec','indices'))||a.primary==='no'))return yes('The selected grade or primary-site finding requires resolution before proceeding under this NET pathway.');
  if(slug==='nelm'&&((step==='distribution'&&is(a.spread,'active','solid'))||(step==='observation'&&a.clearance==='recurrence')))return yes('The selected extrahepatic finding does not meet the current NET opening pathway.');
  if(slug==='hca'&&((step==='characterize'&&a.diagnosis==='bleeding')||(step==='standard-care'&&a.bleeding==='yes')))return yes('Treat unstable hemorrhage before elective transplant assessment.');
  if(slug==='hehe'&&step==='diagnosis'&&a.pathology==='angiosarcoma')return yes('Angiosarcoma is not the HEHE transplant pathway; return to diagnosis-specific treatment.');
@@ -277,7 +278,7 @@ function evaluate(pathway,index,session,context={},configs={}){
  const iciComplete=ici&&history.iciStatus==='complete';
  if(iciComplete){ici.mode='safety-note';ici.reason+=' The transplant team review is marked complete for this scenario; follow the agreed plan. This does not guarantee safety or approve transplantation.';}
  const finalReview=ici&&!iciComplete&&['listing','waitlist'].includes(step)?{origin:step,why:'The known immunotherapy exposure or plan still needs a transplant-team safety and sequencing review.'}:null;
- const nonstandard=out.find(o=>is(o.anchor,'hcc-b1','hcc-b2','pcca-b1','pcca-b3','icca-b1','icca-b2','icca-b3','hca-b1'))||out.find(o=>o.anchor==='crlm-b3'&&o.reason.startsWith('CEA'))||out.find(o=>o.anchor==='hehe-b2'&&session.answers['hehe/stage']?.vascular==='no');
+ const nonstandard=out.find(o=>is(o.anchor,'hcc-b1','hcc-b2','pcca-b1','pcca-b3','icca-b1','icca-b2','icca-b3','hca-b1'))||out.find(o=>o.anchor==='crlm-b3'&&o.mode==='notice'&&session.answers['crlm/biology']?.cea==='high')||out.find(o=>o.anchor==='hehe-b2'&&session.answers['hehe/stage']?.vascular==='no');
  const routeText={
   hcc:'Continue case-specific transplant and allocation review. The original burden or invasion history is not erased by a current T2 response; standardized exception eligibility must not be assumed.',
   pcca:'Continue case-specific protocol review with the earlier finding visible. Neither an alternative regimen nor apparent clearance of previously malignant nodes activates a closed local expansion or establishes standardized exception eligibility.',

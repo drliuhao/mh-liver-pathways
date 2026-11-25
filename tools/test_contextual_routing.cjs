@@ -168,3 +168,5 @@ assert(!js.includes('HighRisk.inline(')&&!js.includes('HighRisk.prompt('),'Uncon
 assert(js.includes('risk-next-options')&&js.includes('renderActions(onward.clarify)'));
 assert(!/localStorage|sessionStorage|indexedDB|\bfetch\s*\(/.test(fs.readFileSync(path.join(root,'transplant/assets/risk-routing.js'),'utf8')));
 console.log(`PASS: ${cases} targeted assertions; ${states} categorical states across all 46 decisions; ${seen.size} clinical review triggers (including distinct AFP-only review) and HCC-B4 reference-only; unknown/excluded/composite findings, prior context and reset.`);
+
+const indices=fixture('nelm/biology',{grade:'outside',primary:'yes'},{grade_detail:'indices'});assert(indices.result.guard);assert(!JSON.stringify(indices.result).includes('Confirmed G3'));assert(JSON.stringify(indices.result).includes('proliferation'));

@@ -40,8 +40,8 @@ for(const [key,entry] of Object.entries(copy.help)){
 assert.equal(reviewed,68);assert.equal(Object.keys(copy.headings).length,46);
 for(const p of data.index)for(const s of p.steps)assert.equal(copy.headings[p.slug+'/'+s.id].source,s.question);
 for(const key of ['hcc/allocation/afp','hcc/treatment/afp'])assert.equal(copy.help[key].concise,copy.help[key].source,'AFP rule must remain complete');
-assert(copy.help['pcca/phenotype/size'].concise.includes('Exactly 3 cm fails <3 cm'));
-assert(copy.help['crlm/biology/cea'].concise.includes('Initial request excludes >80; extensions require <80. Exactly 80'));
+assert(copy.help['pcca/phenotype/size'].concise.includes('perpendicular to the duct'));assert(!copy.help['pcca/phenotype/size'].concise.includes('Exactly'));
+assert(copy.help['crlm/biology/cea'].concise.includes('CEA ≤80 µg/L. Extension: CEA <80 µg/L'));assert(!copy.help['crlm/biology/cea'].concise.includes('Exactly'));
 assert(copy.help['icca/phenotype/focality'].concise.includes('≥2 separate nodules'));
 assert(copy.help['icca/phenotype/focality'].concise.includes('no universal distance cutoff'));
 assert(copy.help['pcca/diagnosis/biopsy'].concise.includes('EUS, percutaneous or operative'));
@@ -65,5 +65,5 @@ for(const file of ['transplant/assets/app.js','assets/transplant-workspace.js','
  assert.equal(read(file),Revisions.applyText(file,base,auditRevisions),file+' differs from exact clinical revision replay');
 }
 const docs=Object.keys(JSON.parse(read('assets/roadmap-links.json'))).map(x=>x+'/index.html').concat(data.index.map(p=>'transplant/'+p.slug+'/index.html'));
-for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261124-clarity1'),doc+' missing display update');
+for(const doc of docs)assert(read(doc).includes('portal-navigation.js?v=20261125-threshold1'),doc+' missing display update');
 console.log(`PASS: Pinned V12 data and clinical renderers match exact recorded revisions; ${docs.length} pages; 46 headings, ${reviewed} help summaries and 46 recommendation guards verified; all Avoid wording retained.`);

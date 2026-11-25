@@ -15,7 +15,7 @@
   const slug = path[1];
   const VIEWS = new Set(['pathway', 'high-risk']);
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
-  const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = new URL('assets/pathway-sections.css?v=20261124-clarity1', root); document.head.append(css);
+  const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = new URL('assets/pathway-sections.css?v=20261125-threshold1', root); document.head.append(css);
 
   const chip = r => r.dialog ? `<button type="button" class="cite" data-ref="${esc(r.key)}">${esc(r.label)} ↗</button>`
     : r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.label)} ↗</a>` : `<span>${esc(r.label)}</span>`;
@@ -29,7 +29,7 @@
       <td>${esc(x.why)}${x.refs.length ? `<div class="pw-refs">${x.refs.map(chip).join('')}</div>` : ''}${x.related ? `<p class="pw-related">Open question: <a href="${esc(x.related.href)}">${esc(x.related.label)}</a></p>` : ''}<small>${esc(x.locator)}</small></td></tr>`).join('')}</tbody></table></div>`;
   }
   function questions(d) {
-    const std = d.questions.standard.map((q, n) => `<li><a href="${esc(q.href)}">${n + 1}. ${esc(q.question)}</a></li>`).join('');
+    const std = d.questions.standard.filter(q=>!q.resolved).map((q, n) => `<li><a href="${esc(q.href)}">${n + 1}. ${esc(q.question)}</a></li>`).join('');
     const hr = d.questions.highrisk.map(q => `<li><a href="${esc(q.href)}"><b>${esc(q.id)}</b>${esc(q.title)}</a><small>${esc(q.status)}</small></li>`).join('');
     return `<p class="pw-sub">Standard pathway · each opens in the meeting record</p>${std ? `<ol class="pw-list">${std}</ol>` : '<p class="pw-none">None.</p>'}
       <p class="pw-sub">High-risk pathway · each opens in the high-risk view</p>${hr ? `<ul class="pw-list">${hr}</ul>` : '<p class="pw-none">None.</p>'}`;
@@ -103,11 +103,11 @@
   }
   window.PathwaySections = {open};
   if (!window.RoadmapEvidence) {
-    const ev = document.createElement('script'); ev.async = false; ev.src = new URL('assets/roadmap-evidence.js?v=20261124-clarity1', root); document.head.append(ev);
-    const evCss = document.createElement('link'); evCss.rel = 'stylesheet'; evCss.href = new URL('assets/roadmap-evidence.css?v=20261124-clarity1', root); document.head.append(evCss);
+    const ev = document.createElement('script'); ev.async = false; ev.src = new URL('assets/roadmap-evidence.js?v=20261125-threshold1', root); document.head.append(ev);
+    const evCss = document.createElement('link'); evCss.rel = 'stylesheet'; evCss.href = new URL('assets/roadmap-evidence.css?v=20261125-threshold1', root); document.head.append(evCss);
     ev.addEventListener('load', () => { const box = document.getElementById('pathway-closing'); if (box) renderEv(box); });
   }
-  fetch(new URL('transplant/assets/pathway-sections.json?v=20261124-clarity1', root)).then(r => r.ok ? r.json() : null).then(j => {
+  fetch(new URL('transplant/assets/pathway-sections.json?v=20261125-threshold1', root)).then(r => r.ok ? r.json() : null).then(j => {
     data = j && j.pathways[slug];
     if (!data) return;
     const app = document.getElementById('app');

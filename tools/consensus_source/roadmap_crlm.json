@@ -360,8 +360,8 @@
   {
    "id": "CRLM-D11",
    "n": 11,
-   "question": "Resolve the two numeric boundaries in the OPTN transplant-oncology guidance before the first filing: a CEA of exactly 80 µg/L, and the definition of progression as more than a 10% increase in diameter while being labelled RECIST 1.1.",
-   "kind": "governance",
+   "question": "CEA and progression criteria for MELD-exception requests",
+   "kind": "Guidance criteria",
    "decisions": [
     "4"
    ],
@@ -369,7 +369,7 @@
     {
      "source": "OPTN transplant-oncology guidance",
      "ref": "optn-guidance",
-     "position": "Its initial exclusion is CEA above 80 µg/L while the renewal wording requires below 80, and footnotes 20–21 define progression as a 10% diameter increase or new lesions while labelling this RECIST 1.1.",
+     "position": "Its initial exclusion is CEA above 80 µg/L while the renewal wording requires below 80, and footnotes 20–21 define progression as a >10% diameter increase or new lesions while labelling this RECIST 1.1.",
      "locator": "Gate 4 · Standard 'Keep the candidate inside protocol while waiting…' (note)"
     },
     {
@@ -379,11 +379,13 @@
      "locator": "Gate 4 · Deceased-donor option (flagnote); Quick reference · transplant decision points"
     }
    ],
-   "divergence": "The OPTN guidance is internally inconsistent at a CEA of exactly 80 and its 10% progression figure differs from the usual target-lesion threshold, so eligibility can turn on which wording is read.",
-   "proposal": "Treat an exact CEA of 80 as needing explicit review rather than an assumed pass; keep the guidance's 10% progression wording and flag it rather than silently substituting 20%; resolve both in writing before any exception request is filed.",
+   "divergence": "The NLRB initial request excludes CEA >80 µg/L; extensions require CEA <80 µg/L. Its progression criterion is >10% diameter increase or new lesions; record clinical RECIST 1.1 assessment separately.",
+   "proposal": "Apply the NLRB request-specific criteria: initial exclusion CEA >80 µg/L; extensions CEA <80 µg/L; progression >10% diameter increase or new lesions. Record clinical RECIST 1.1 assessment separately.",
    "proposal_locator": "Gate 4 · Standard 'Keep the candidate inside protocol while waiting…' (note); Quick reference · transplant decision points (foot)",
-   "rationale": "The initial exclusion is stated as CEA above 80 and the renewal wording as below 80, so an exact value of 80 has no stated answer; and the 10% figure differs from the usual target-lesion threshold, so a candidate can be progressing under one reading and stable under the other.",
-   "audit": "Both boundaries addressed in writing, with the source wording preserved rather than silently substituted, before any exception request is submitted."
+   "rationale": "Initial and extension requests have their own CEA requirements. NLRB progression criteria govern exception review; RECIST 1.1 describes the clinical treatment response.",
+   "audit": "CEA, request type and radiographic progression documented against the applicable NLRB criteria before filing.",
+   "resolved": true,
+   "status": "Guidance criteria — no local threshold decision"
   },
   {
    "id": "CRLM-D12",

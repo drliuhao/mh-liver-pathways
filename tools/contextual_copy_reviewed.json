@@ -278,8 +278,8 @@
       "label": "Prior transperitoneal primary-tumor biopsy?"
     },
     "pcca/phenotype/size": {
-      "source": "Measure perpendicular to the bile duct. Exactly 3 cm does not meet <3 cm; longitudinal duct involvement is not this measurement.",
-      "concise": "Measure perpendicular to the duct. Exactly 3 cm fails <3 cm; duct length is separate.",
+      "source": "Measure radial diameter perpendicular to the bile duct; longitudinal duct involvement is recorded separately.",
+      "concise": "Measure radial diameter perpendicular to the duct; record duct length separately.",
       "title": "What is the radial mass size?",
       "label": "What is the radial mass size?"
     },
@@ -380,10 +380,10 @@
       "label": "Colorectal adenocarcinoma confirmed and liver burden mapped?"
     },
     "crlm/biology/cea": {
-      "source": "µg/L and ng/mL have the same numeric value. Initial guidance excludes >80; extensions require <80. Resolve exactly 80 explicitly.",
-      "concise": "µg/L = ng/mL numerically. Initial request excludes >80; extensions require <80. Exactly 80 needs explicit review.",
-      "title": "Current CEA?",
-      "label": "Current CEA?"
+      "source": "Initial NLRB request: CEA ≤80 µg/L. Extension: CEA <80 µg/L. µg/L and ng/mL have the same numeric value.",
+      "concise": "Initial NLRB request: CEA ≤80 µg/L. Extension: CEA <80 µg/L. µg/L and ng/mL have the same numeric value.",
+      "title": "CEA meets the applicable request criterion?",
+      "label": "CEA meets the applicable request criterion?"
     },
     "crlm/unresectability/clearance": {
       "source": "Review remnant, vascular/biliary anatomy, staged or parenchymal-sparing resection and combined ablation. Tumor count alone does not establish unresectability.",

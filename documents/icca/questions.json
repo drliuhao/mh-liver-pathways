@@ -111,6 +111,7 @@
      "question": "Does the programme run a hepatic arterial infusion service for intrahepatic cholangiocarcinoma?",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "4 · Treat and reassess for resection",
@@ -171,6 +172,7 @@
      "question": "Which liver-directed modality is first choice for unresectable liver-confined disease?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "5 · Unresectable disease confined to the liver",
@@ -227,6 +229,7 @@
      "question": "Adjuvant capecitabine — offered routinely, or case by case?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "8 · Adjuvant treatment after resection",
@@ -279,6 +282,7 @@
      "question": "Is molecular profiling funded and ordered at diagnosis in practice?",
      "kind": "operational",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "2 · Request molecular profiling",
@@ -300,6 +304,7 @@
      "question": "Does the programme open an intrahepatic cholangiocarcinoma transplant protocol?",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "10 · Assess transplant eligibility",
@@ -352,6 +357,7 @@
      "question": "What are the thresholds barring each liver-directed modality by liver function?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "3 · Assess resection",
@@ -400,6 +406,7 @@
      "question": "Ablation for intrahepatic cholangiocarcinoma — acceptable, and in whom?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "3 · Assess resection",
@@ -460,6 +467,7 @@
      "question": "Who owns subsequent NCCN and OPTN update checks, and on what cycle?",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [],
      "positions": [],
      "divergence": "No source positions; programme decision.",
@@ -476,6 +484,7 @@
      "question": "Is a core biopsy required before resection of a high-suspicion, clearly resectable mass, or is destination-specific confirmation enough?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "1 · Confirm diagnosis and stage disease",
@@ -528,6 +537,7 @@
      "question": "Is regional lymphadenectomy mandatory at every iCCA resection, and what minimum node yield is recorded?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "3 · Assess resection",
@@ -584,6 +594,7 @@
      "question": "Define how treatment response and the six-month NLRB stability interval are documented; permit early transplant referral while that assessment continues.",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "10 · Assess transplant eligibility",
@@ -630,6 +641,7 @@
      "question": "Does the page name trastuzumab deruxtecan, entrectinib, larotrectinib and selpercatinib, as ESMO 2024 does, or only require that the alterations be captured?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "2 · Request molecular profiling",
@@ -672,6 +684,7 @@
      "question": "Is there a default first-line checkpoint combination, or does the choice stay with the treating oncologist?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "6 · Distant metastatic disease",
@@ -722,6 +735,7 @@
      "question": "Post-resection surveillance — 3-monthly or 6-monthly imaging for the first two years?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "3 · Assess resection",
@@ -754,6 +768,7 @@
      "question": "Ratify early HAI review, disease-specific selection and programme safeguards.",
      "kind": "governance",
      "status": "OPEN — not yet decided",
+     "resolved": false,
      "where": [
       {
        "label": "4 · Treat and reassess for resection",
@@ -820,6 +835,7 @@
      "question": "Will the local protocol include mixed HCC-iCCA?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Establish histology",
@@ -854,6 +870,7 @@
      "question": "Is NLRB alignment sufficient, or do we require a prospective program?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Check clinical selection criteria",
@@ -888,6 +905,7 @@
      "question": "Which control strategy and ICI safety rules will be used?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Plan pretransplant treatment",
@@ -922,6 +940,7 @@
      "question": "Which event starts or restarts the six-month stability interval?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Demonstrate stability",
@@ -956,6 +975,7 @@
      "question": "Who verifies nonstandard submission and three-month imaging?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Request an individual iCCA MELD exception",
@@ -983,6 +1003,7 @@
      "question": "What post-transplant recurrence surveillance will the program adopt?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
+     "resolved": false,
      "where": [
       {
        "label": "Transplant and follow-up",
@@ -1051,13 +1072,13 @@
       {
        "source": "AASLD/AST candidate evaluation",
        "key": "hr-candidate2026",
-       "says": "“a maximum diameter < 3 cm” The clinical recommendation uses a strict inequality. Its rationale discusses solitary disease in cirrhosis; this is not the advanced-study population.",
+       "says": "“a maximum diameter < 3 cm” The clinical recommendation uses <3 cm. Its rationale discusses solitary disease in cirrhosis; this is not the advanced-study population.",
        "locator": "AASLD/AST candidate evaluation, p. 1614, statement 11."
       },
       {
        "source": "NLRB oncology guidance",
        "key": "hr-nlrb",
-       "says": "“less than or equal to 3 cm” Allocation guidance includes equality. Exactly 3.0 cm requires clinical adjudication; preserve the exact allocation wording instead of silently harmonizing it.",
+       "says": "“less than or equal to 3 cm” Use ≤3 cm for the NLRB reviewed-exception route, with the other guidance requirements met.",
        "locator": "December 2025 oncology guidance p8, iCCA initial/extension criteria"
       }
      ],
@@ -1066,7 +1087,7 @@
       "Proposed advanced entry phenotype: pure iCCA, G1–2, one mass-forming focus with or without adjacent peritumoral satellites; no separate multifocal deposits across distinct segments. No universal 8 cm/three-lesion rule is adopted.",
       "Exclude known G3/poor differentiation, mixed HCC-iCCA, macroscopic tumor thrombus, proven malignant nodes, peritoneal or other extrahepatic disease, current or previously treated (iCCA-B4), from the initial advanced pilot. Negative core sampling cannot guarantee the whole tumor grade; record this limitation.",
       "Intrahepatic vascular encasement without tumor thrombus may be considered if complete explant/reconstruction is technically feasible. Larger size needs individualized technical/biological review, not an automatic permission.",
-      "Do not apply the advanced-study mixed-histology exclusion to the separate NLRB small-cirrhotic route. Preserve ≤3 cm guidance wording and flag the exactly-3.0 cm clinical discrepancy with <3 cm candidate-evaluation prose."
+      "For the separate NLRB small-cirrhotic route, use a solitary iCCA or mixed tumor ≤3 cm with the remaining guidance requirements met. The advanced-study mixed-histology exclusion does not apply to this route."
      ],
      "tests": "Expert core-pathology review including pure versus mixed and grade; MRI/CT segment map; chest/systemic staging; nodal resolution; vascular thrombus versus encasement; resection review.",
      "allocation": "Advanced noncirrhotic or larger disease does not inherit the small-cirrhotic favorable NLRB pathway. Organ-route and research decisions remain explicit.",

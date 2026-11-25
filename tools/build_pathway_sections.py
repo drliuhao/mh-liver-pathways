@@ -291,7 +291,7 @@ for slug in ORDER:
         'quality': {'standard': [q['text'] for q in src['quality'] if q['setting'] == 'standard'],
                     'highrisk': [q['text'] for q in src['quality'] if q['setting'] == 'highrisk'],
                     'locator': doc_name(src.get('quality_locator'))},
-        'questions': {'standard': [{'id': i['id'], 'question': i['question'], 'href': f"#meeting-{i['id']}"} for i in p['issues']],
+        'questions': {'standard': [{'id': i['id'], 'question': i['question'], 'resolved': i.get('resolved', False), 'href': f"#meeting-{i['id']}"} for i in p['issues']],
                       'highrisk': [{'id': r['id'], 'title': r['title'], 'status': r['status'], 'href': f"#high-risk-{r['anchor']}"} for r in reviews]},
         'sources': library(keys, standard, reviews, uses),
     }

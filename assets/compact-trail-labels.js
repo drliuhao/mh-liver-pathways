@@ -199,7 +199,7 @@ window.CompactTrailLabels = {
       "label": "BRAF / MSI / MMR"
     },
     "crlm/biology/cea": {
-      "source": "Current CEA?",
+      "source": "CEA meets the applicable request criterion?",
       "label": "CEA"
     },
     "crlm/biology/size": {

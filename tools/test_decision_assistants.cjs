@@ -100,7 +100,9 @@ expect('icca/phenotype',{focality:'multiple',profile:'fits',spread:'yes',program
 expect('icca/phenotype',{focality:'uncertain',profile:'fits',spread:'yes',program:'yes'},null,'hold');
 expect('icca/stability',{duration:'short',disease:'stable'},1,'hold');
 expect('icca/stability',{duration:'met',disease:'progression'},null,'stop');
-expect('crlm/biology',{molecular:'fits',cea:'boundary',size:'yes'},null,'hold');
+expect('crlm/biology',{molecular:'fits',cea:'low',size:'yes'},0);
+expect('crlm/biology',{molecular:'fits',cea:'high',size:'yes'},null,'stop');
+assert(!D.assistants['crlm/biology'].questions.find(q=>q.id==='cea').options.some(o=>o.value==='boundary'));
 expect('crlm/biology',{molecular:'fits',cea:'high',size:'yes'},null,'stop');
 expect('crlm/biology',{molecular:'outside',cea:'low',size:'yes'},1,'redirect');
 expect('crlm/unresectability',{clearance:'yes'},0,'redirect');
@@ -117,7 +119,7 @@ expect('hca/standard-care',{bleeding:'yes',management:'no'},null,'stop');
 // Exact boundaries remain explicit in rendered source definitions.
 const hcc=JSON.stringify(D.assistants['hcc/allocation']);
 for(const term of ['4–5 Class 5 lesions: each <3 cm','1 to <2 cm','summed diameters ≤8 cm','2–5 cm','<500'])assert(hcc.includes(term),term);
-assert(JSON.stringify(D.assistants['pcca/phenotype']).includes('Exactly 3 cm does not meet <3 cm'));
+assert(D.assistants['pcca/phenotype'].questions[0].options.some(o=>o.label==='Single mass <3 cm'));assert(D.assistants['pcca/phenotype'].questions[0].options.some(o=>o.label==='Mass ≥3 cm or multiple masses'));assert(!JSON.stringify(D.assistants['pcca/phenotype']).includes('Exactly 3 cm'));
 assert(R.evidence(['H-milan'],D.sources).includes('query=any,contains,10.1056%2FNEJM199603143341104'));
 // No data submission, saved-record interface, or old kit remains in the live workflow.
 for(const name of ['assistant.js','app.js']){
