@@ -100,7 +100,7 @@
   {
    "id": "iCCA-D3",
    "n": 3,
-   "question": "Adjuvant capecitabine — offered routinely, or case by case?",
+   "question": "How will adjuvant capecitabine be offered, and what local departures require approval?",
    "kind": "clinical",
    "decisions": [
     "8"
@@ -122,13 +122,13 @@
      "source": "BSG 2023",
      "ref": "37770126",
      "position": "Recommends considering 24 weeks of capecitabine (strong recommendation, moderate-quality evidence); AASLD 2023 similarly says it should be considered for all patients.",
-     "locator": "Gate 8 · Reasonable 'Offer adjuvant capecitabine for 6 months…' (pref)"
+     "locator": "Gate 8 · Standard 'Offer adjuvant capecitabine for 6 months…' (pref)"
     },
     {
      "source": "LCSGJ 2022",
      "ref": "35978598",
      "position": "Makes only a weak recommendation and reports no significant benefit in the intrahepatic subgroup; EASL-ILCA reads the same unpowered subgroup as HR 0.65, the best of the subtypes.",
-     "locator": "Gate 8 · Standard 'Have the adjuvant conversation…' (avoid, note); Gate 8 · Reasonable 'Offer adjuvant capecitabine…' (note)"
+     "locator": "Gate 8 · Standard 'Have the adjuvant conversation…' (avoid, note); Gate 8 · Standard 'Offer adjuvant capecitabine…' (note)"
     },
     {
      "source": "ASCOT",
@@ -137,10 +137,10 @@
      "locator": "Gate 8 · Avoid 'Do not offer S-1 as the adjuvant option here…'"
     }
    ],
-   "divergence": "NCCN, AASLD, BSG and EASL-ILCA treat adjuvant capecitabine as standard or strongly recommended, while LCSGJ is weak and the trial they rest on missed its intention-to-treat endpoint with few intrahepatic patients.",
-   "proposal": "Case by case for now: offer 6 months of capecitabine as a Reasonable consideration, grade C, not an obligation, to the fit patient after R0 or R1 resection, especially node-positive or R1, after explaining that BILCAP's primary analysis was not significant. Whether it becomes Standard is open; adjuvant gemcitabine–oxaliplatin and S-1 are avoided.",
-   "proposal_locator": "Gate 8 · Reasonable 'Offer adjuvant capecitabine for 6 months as a reasonable consideration…'; Gate 8 · Standard 'Have the adjuvant conversation…'; Gate 8 · Avoid options",
-   "rationale": "BILCAP's primary analysis was not significant; ASCOT's positive result used an agent unavailable here.",
+   "divergence": "The guideline-supported default is to offer six months of adjuvant capecitabine to suitable resected patients. The prior Reasonable-only classification is not retained as the default. Uncertainty in site-specific trial effects belongs in shared decision-making and evidence appraisal.",
+   "proposal": "Offer six months of adjuvant capecitabine after resection when the patient is fit for treatment, with an individualized discussion of benefit, toxicity and preferences. Treatment is not mandatory. Any proposed case-by-case-only local policy requires explicit approval; record clinical reasons for non-treatment separately from a programme-wide departure.",
+   "proposal_locator": "Adjuvant treatment, Standard capecitabine offer",
+   "rationale": "The indication is supported by major guidelines despite uncertainty in the anatomic-subtype estimates. Internal study appraisal, guideline recommendation strength and an individual patient’s decision are separate judgments.",
    "audit": "Registry: uptake, completion, recurrence pattern."
   },
   {
@@ -207,7 +207,7 @@
   {
    "id": "iCCA-D6",
    "n": 6,
-   "question": "What are the thresholds barring each liver-directed modality by liver function?",
+   "question": "Which liver-reserve findings preclude resection or each liver-directed treatment?",
    "kind": "clinical",
    "decisions": [
     "3",
@@ -218,13 +218,13 @@
     {
      "source": "MISPHEC",
      "ref": "31670746",
-     "position": "The one data-based hard stop: with Y90 plus chemotherapy, hepatic failure occurred in 9 of 12 cirrhotic patients (5 irreversible, all after whole-liver treatment) versus 5 of 29 without cirrhosis, all reversible.",
+     "position": "In MISPHEC, Y90 plus chemotherapy caused hepatic failure in 9 of 12 patients with cirrhosis (5 irreversible, all after whole-liver treatment) versus 5 of 29 without cirrhosis, all reversible. This is regimen- and treatment-volume-specific evidence, not a universal threshold for every liver-directed modality.",
      "locator": "What we are not sure about · 'Thresholds barring each liver-directed modality by liver function…'; Gate 4 · Y90 option (avoid)"
     },
     {
      "source": "AASLD 2023",
      "ref": "36083140",
-     "position": "Names decompensated cirrhosis and portal hypertension as contraindications to resection, a point on which the roadmap is silent.",
+     "position": "Names decompensated cirrhosis and portal hypertension as contraindications to iCCA resection. These need explicit assessment in addition to remnant volume and laboratory scores.",
      "locator": "Gate 3 · Standard options (flagnote); What we are not sure about · 'Two resectability criteria this page states but does not define…'"
     },
     {
@@ -234,11 +234,11 @@
      "locator": "What we are not sure about · 'Two resectability criteria this page states but does not define…'"
     }
    ],
-   "divergence": "Apart from cirrhosis before radioembolisation with chemotherapy, no comparative data define liver-function cut-offs for any modality, and the guidelines frame reserve differently (AASLD by portal hypertension, LCSGJ by Child-Pugh class).",
-   "proposal": "The roadmap proposes no numeric thresholds: it treats the cut-offs as safety conventions, keeps cirrhosis as the hard stop for radioembolisation with chemotherapy, leaves numeric reserve rules to specialty-approved local implementation, and audits decompensation after liver-directed therapy.",
+   "divergence": "The roadmap requires adequate reserve but does not define its resection exclusions or modality-specific limits. AASLD states a resection boundary; MISPHEC addresses the risk of Y90 combined with chemotherapy, especially whole-liver treatment in cirrhosis. These scopes must remain separate.",
+   "proposal": "Agree an explicit resection checklist covering decompensation, clinically significant portal hypertension, functional future liver remnant and the planned extent of resection. Separately approve modality-specific liver-function limits and whether the MISPHEC regimen-specific cirrhosis restriction is retained. Do not derive universal numeric cutoffs or apply a whole-liver combination-treatment toxicity estimate to selective Y90 alone.",
    "proposal_locator": "What we are not sure about · 'Thresholds barring each liver-directed modality by liver function…'; Gate 5 · Reasonable options (flagnote); Gate 3 · Standard options (flagnote)",
-   "rationale": "No comparative data define the cut-offs; they are safety conventions.",
-   "audit": "Audit: decompensation after liver-directed therapy."
+   "rationale": "A laboratory score or remnant percentage alone cannot represent decompensation, portal hypertension and the functional demands of the proposed operation. Guideline-defined exclusions and local numeric safety limits should be recorded separately; the latter remain pending specialty approval.",
+   "audit": "Record decompensation, portal-hypertension assessment, functional remnant, treatment volume and regimen, plus post-treatment hepatic failure."
   },
   {
    "id": "iCCA-D7",
@@ -350,7 +350,7 @@
   {
    "id": "iCCA-D10",
    "n": 10,
-   "question": "Is regional lymphadenectomy mandatory at every iCCA resection, and what minimum node yield is recorded?",
+   "question": "Which nodes are regional, and what lymphadenectomy and node yield are required?",
    "kind": "clinical",
    "decisions": [
     "3",
@@ -378,21 +378,27 @@
     {
      "source": "AASLD 2023",
      "ref": "36083140",
-     "position": "Makes no statement on lymphadenectomy extent or yield.",
-     "locator": "Gate 3 · option 'Resection with regional lymphadenectomy' (note); What we are not sure about · 'Routine regional lymphadenectomy…'"
+     "position": "Defines nodal metastases beyond the hepatoduodenal and gastrohepatic ligaments as a contraindication to resection, but does not prescribe lymphadenectomy extent or node yield. Eligibility by nodal location and the staging operation are separate questions.",
+     "locator": "AASLD PSC/CCA guidance, PDF p24; iCCA resection section"
     },
     {
      "source": "BILCAP",
      "ref": "30922733",
      "position": "Did not mandate lymphadenectomy for intrahepatic patients, yet nodal status is one of the covariates that makes its sensitivity analysis positive.",
      "locator": "Gate 8 · Standard 'Have the adjuvant conversation…' (note)"
+    },
+    {
+     "source": "EASL-ILCA 2023",
+     "ref": "37084797",
+     "position": "Regional lymphadenectomy provides pathologic staging; the guideline discusses the AJCC eighth-edition target of at least six assessed nodes for adequate nodal staging, without establishing a survival benefit from the dissection itself.",
+     "locator": "EASL-ILCA iCCA guideline, PDF p12; lymphadenectomy section"
     }
    ],
-   "divergence": "ESMO 2023 recommends routine dissection on level IV evidence, LCSGJ 2022 makes no recommendation and warns of harm in cirrhosis, and BSG and AASLD are silent, so no guideline supports it on survival grounds.",
-   "proposal": "Keep regional lymphadenectomy of the porta hepatis in every resection as a staging decision, so the adjuvant conversation and the registry have a nodal denominator, not as a survival claim; audit node yield rather than outcome. The roadmap sets no minimum node yield.",
+   "divergence": "The current roadmap excludes disease beyond the regional basin without an agreed station map. Guidance also differs on routine lymphadenectomy; a staging node-yield target is not proof of therapeutic benefit.",
+   "proposal": "Approve a regional-node map by tumor location, specify which extra-regional stations exclude the proposed resection, and define the staging dissection and minimum documented yield. Record the AJCC six-node staging target separately from any claim of therapeutic benefit. Keep the current regional lymphadenectomy approach pending this agreement; do not expand transplant eligibility on the basis of resectable regional nodes.",
    "proposal_locator": "Gate 3 · Standard option 'Resection with regional lymphadenectomy' (when, note) and flagnote; What we are not sure about · 'Routine regional lymphadenectomy at every iCCA resection'",
-   "rationale": "LCSGJ 2022 makes no recommendation and warns that prophylactic dissection in cirrhosis increases complications; ESMO 2023 recommends routine hepatoduodenal-ligament dissection on level IV evidence; BSG 2023 and AASLD 2023 state neither extent nor yield. The clinical decision 8 adjuvant conversation and the registry both need a nodal denominator. Alignment worksheet, area 5.",
-   "audit": "Registry: lymphadenectomy performed, node count, node positivity, and complications attributable to the dissection."
+   "rationale": "The surgeon, radiologist and pathologist need the same nodal map. Eligibility based on nodal location, the staging value of dissection, its risks in cirrhosis and the completeness of nodal assessment are separate decisions.",
+   "audit": "Record sampled/dissected nodal stations, total and positive node counts, the agreed regional/extra-regional classification, and dissection-related complications."
   },
   {
    "id": "iCCA-D11",
@@ -570,6 +576,84 @@
    "proposal_locator": "HAI evidence and pathway revision (15 October 2026) · 'Treatment position', 'Regional nodes and transplant separation', 'Programme readiness', 'Feasibility and medication safeguards'",
    "rationale": "Before activation, name the HPB pump surgeon and backup, medical oncology lead, nursing/pharmacy team, nuclear-medicine perfusion service and IR rescue service; define refill/maintenance coverage, laboratory monitoring and dose holds, biliary-toxicity escalation, and an outcomes registry. Minimum programme requirements: PMID 39962001; surgical toolkit: PMID 36346892. Avoid concurrent bevacizumab with FUDR (PMID 24154839); retain the NCCN CRLM restriction on concurrent VEGF inhibitors. Selected resectable regional nodes in HAI evidence do not confer transplant eligibility. No established head-to-head modality hierarchy.",
    "audit": "Record intent, referral timing, systemic plan, perfusion verification, dose intensity, biliary complications, reassessment and complete resection/ablation outcomes."
+  },
+  {
+   "id": "iCCA-D16",
+   "n": 16,
+   "question": "How will PET-CT and management-changing EUS node sampling be completed before intended curative resection?",
+   "kind": "clinical",
+   "decisions": [
+    "1",
+    "3",
+    "6"
+   ],
+   "positions": [
+    {
+     "source": "EASL-ILCA 2023",
+     "ref": "37084797",
+     "position": "Recommends FDG-PET in apparently resectable iCCA. If a nodal result would change treatment, EUS-guided sampling is recommended, including after negative or inconclusive PET where relevant.",
+     "locator": "EASL-ILCA iCCA guideline, PDF p10; staging recommendations"
+    },
+    {
+     "source": "BSG 2023",
+     "ref": "37770126",
+     "position": "Recommends PET-CT for nodal and distant staging; this is broader than a suspected-occult-spread-only approach.",
+     "locator": "BSG CCA guideline; staging recommendations"
+    },
+    {
+     "source": "AASLD 2023",
+     "ref": "36083140",
+     "position": "PET is not recommended for diagnosis of the primary tumor; that limitation is different from PET used to search for nodal or distant spread.",
+     "locator": "AASLD PSC/CCA guidance; iCCA diagnosis and staging"
+    }
+   ],
+   "divergence": "The prior selective-PET wording was narrower than the cited staging recommendations. The default now includes PET-CT for apparently resectable iCCA and EUS-guided node sampling when the result would change management; local access or workflow departures require explicit review.",
+   "proposal": "Use PET-CT for nodal and distant staging of apparently resectable iCCA alongside CT/MRI. Obtain EUS-guided node sampling when the result changes treatment. Define safe sampling, reporting, access and alternative staging when a test is infeasible, without treating a negative PET as exclusion of nodal disease.",
+   "proposal_locator": "Clinical decision 1, staging; decision 3, resection; decision 6, transplant review",
+   "rationale": "The staging default follows the guideline-defined resection setting. Primary-tumor diagnosis, biliary mapping and transplant-protocol staging remain distinct; local implementation must specify which finding changes treatment.",
+   "audit": "Record PET use, nodal stations sampled, change in stage or treatment plan, failed/unsafe sampling and alternative staging agreed by the multidisciplinary team."
+  },
+  {
+   "id": "iCCA-D17",
+   "n": 17,
+   "question": "When is limited multifocal iCCA still resectable?",
+   "kind": "clinical",
+   "decisions": [
+    "1",
+    "3",
+    "7"
+   ],
+   "positions": [
+    {
+     "source": "EASL-ILCA 2023",
+     "ref": "37084797",
+     "position": "Resection may be considered for selected multifocal unilobar iCCA; this is a weak recommendation based on low-level evidence.",
+     "locator": "EASL-ILCA iCCA guideline, PDF p12; multifocal disease recommendation"
+    },
+    {
+     "source": "NCCN BTC v1.2026",
+     "ref": "nccn",
+     "position": "Multifocal liver disease generally argues against resection, with exceptions for highly selected limited disease; this does not equate liver-confined multifocal disease with distant metastasis.",
+     "locator": "Principles of Surgery, intrahepatic cholangiocarcinoma; current alignment worksheet"
+    },
+    {
+     "source": "CAP iCCA protocol",
+     "ref": "capicca",
+     "position": "Multiple intrahepatic tumors are captured in the intrahepatic bile-duct T category; their presence alone does not establish distant M1 disease.",
+     "locator": "CAP iCCA v4.3.0.0, PDF p8 (pT) and p11 (focality)"
+    },
+    {
+     "source": "RCPA tumor focality",
+     "ref": "rcpafocality",
+     "position": "There is no universal iCCA satellite definition that can replace recording tumor number, segmental distribution and relationship to the main tumor.",
+     "locator": "RCPA structured pathology reporting; tumor focality"
+    }
+   ],
+   "divergence": "The roadmap already permits selected limited unilobar resection. A blanket multifocal exclusion in the treatment selector contradicted that branch and has been corrected. The precise institutional selection rule remains undecided.",
+   "proposal": "Retain multidisciplinary consideration of limited unilobar or satellite disease when all malignant nodules can be cleared with an R0 resection and an adequate functional remnant. Define the local selection and documentation criteria before treating this narrow exception as routine; bilobar or incompletely clearable disease follows conversion or unresectable-disease options.",
+   "proposal_locator": "Clinical decision 3, selected multifocal resection; decision 7, resection cautions",
+   "rationale": "Distribution and complete safe clearance matter more than the word multifocal alone. Satellite appearance does not prove favorable biology or remove nodal and distant staging requirements.",
+   "audit": "Record number and sizes of nodules, involved segments/lobes, satellite description, R0 clearance, functional remnant, recurrence and survival."
   }
  ]
 }

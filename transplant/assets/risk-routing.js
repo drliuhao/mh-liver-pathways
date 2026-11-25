@@ -205,6 +205,7 @@ function hardStop(slug,step,a,x){
  if(slug==='hca'&&((step==='characterize'&&a.diagnosis==='bleeding')||(step==='standard-care'&&a.bleeding==='yes')))return yes('Treat unstable hemorrhage before elective transplant assessment.');
  if(slug==='hehe'&&step==='diagnosis'&&a.pathology==='angiosarcoma')return yes('Angiosarcoma is not the HEHE transplant pathway; return to diagnosis-specific treatment.');
  if(slug==='hehe'&&step==='stage'&&a.vascular==='no')return yes('Macrovascular invasion does not meet the stated HEHE exception-guidance criterion. Review clinical suitability and any individual allocation request separately before continuing.');
+ if(slug==='hehe'&&step==='stage'&&['prior','active','uncertain'].includes(a.rupture))return yes(a.rupture==='prior'?'Prior tumour rupture is a major clinical contraindication to HEHE transplantation. Review the nontransplant plan before continuing.':'Resolve active bleeding or the possible rupture history before proceeding with HEHE transplant selection.');
  return null;
 }
 function afpReview(pathway,index,session,context={}){

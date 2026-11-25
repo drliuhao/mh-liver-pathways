@@ -235,8 +235,8 @@
       ],
       "setting": "perioperative",
       "title": "Capecitabine after resection",
-      "position": "Usual adjuvant discussion",
-      "who": "Resected biliary cancer after recovery; discuss approximately six months of adjuvant treatment and margin-specific radiation considerations.",
+      "position": "Guideline-supported adjuvant option",
+      "who": "Offer six months of adjuvant capecitabine after resection and recovery to patients fit for treatment; discuss benefit uncertainty, toxicity, preferences and margin-specific radiation considerations.",
       "evidence": "BILCAP: primary intention-to-treat overall-survival comparison was not significant (HR 0.81; p=0.097); prespecified sensitivity and per-protocol analyses favored capecitabine. ASCOT supported S-1 in a Japanese population.",
       "limits": "Do not describe BILCAP as an unequivocally positive primary-endpoint trial. PRODIGE-12 and BCAT did not establish adjuvant GEMOX or gemcitabine benefit. S-1 applicability and access differ by region.",
       "transplant": "Adjuvant treatment after resection and neoadjuvant treatment before transplant are separate settings.",
@@ -246,7 +246,12 @@
         "30707660",
         "29405274"
       ],
-      "links": []
+      "links": [
+        [
+          "ASCO adjuvant guideline · PMID 30856044",
+          "https://ascopubs.org/doi/10.1200/JCO.18.02178"
+        ]
+      ]
     },
     {
       "id": "cca-fgfr",

@@ -1,5 +1,5 @@
 window.ClarityPresentation={
-  "version": "20261125-threshold1",
+  "version": "20261125-alignment1",
   "riskLinks": {
     "hcc/curative-route/r0": [
       "hcc-b5"

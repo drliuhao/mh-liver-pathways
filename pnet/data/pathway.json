@@ -1231,8 +1231,8 @@
   "approvals": [
    {
     "n": 1,
-    "q": "For an incidental nonfunctional tumour of 1 to 2 cm, does the programme default to observation or to individualised decision?",
-    "why": "NCCN's surgical principles say a G1 tumour under 2 cm can be safely observed and that this is the recommended course; NANETS says individualise everything between 1 and 2 cm; the Delphi consensus NANETS cites reached no agreement in that band at all; ENETS 2023, read in full, observes 1 cm or less and personalises above 1 cm to the resection required and the patient's comorbidities, with no rule offered; and the ASPEN investigators, whose data NCCN cites in support of observation, conclude that management should be personalised above 1 cm. Every source hands the 1-2 cm band back to the clinician, which means the decision is made by whoever is in the room unless a default is chosen. The full-text read adds one thing: the only systematic comparison of the two strategies at this size found no difference in metastasis or mortality, at low to very low certainty, so a default either way is a judgement and not a finding.",
+    "q": "How will the team document individualized surveillance-versus-resection decisions for a nonfunctional pNET over 1 cm to 2 cm?",
+    "why": "Guidelines permit individualized management in the 1–2 cm group. Available surveillance cohorts are selected and comparisons with surgery are not definitive; MEN1-specific evidence cannot establish a rule for sporadic tumours. A consistent assessment and shared-decision record is needed, without presenting surveillance or resection as obligatory for the whole group.",
     "audit": "Registry: size, grade, duct calibre, calcification, management chosen, growth, crossover to surgery with reason, resection pathology."
    },
    {
@@ -1243,8 +1243,8 @@
    },
    {
     "n": 3,
-    "q": "Does the size threshold for resection differ by race?",
-    "why": "Nodal metastasis below 2 cm was 23% and 21% in Black patients against 5% and 12% in white patients in two independent datasets (p<0.01 in both). NCCN reproduces the finding without altering the algorithm. The programme needs a stated position, and a stated reason for it, rather than silence.",
+    "q": "How will the programme audit equitable access and outcomes for small pNETs without using an unvalidated race-specific resection threshold?",
+    "why": "The reported nodal signal arose in overlapping, resected-only datasets without sufficient measures of grade, access or treatment selection. It does not validate a race-specific threshold, and NCCN does not change its algorithm on this basis. Equity and outcome monitoring are appropriate; changing an individual’s surgical threshold on race alone is not supported.",
     "audit": "Audit: nodal positivity by size band and by race in the programme's own resected patients, reported annually."
    },
    {

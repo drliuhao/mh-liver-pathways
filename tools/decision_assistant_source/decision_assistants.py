@@ -70,7 +70,7 @@ add('hcc','curative-route',[
   option('review','Neither approach is established / fitness unresolved')],H,
   'Resection is favored by limited burden, compensated liver, no clinically significant portal hypertension and adequate remnant. Early HCC with decompensation or significant portal hypertension may favor transplant.'),
 ], [stop({'spread':'excluded'},'Active extrahepatic spread, macrovascular invasion or tumor rupture prevents a standardized HCC MELD exception. Reassess the transplant plan and review other HCC treatments.',['N-hcc']),
- pause({'spread':'prior'},'Review prior rupture or vascular invasion','Previously treated rupture or portal-branch invasion requires individual review by the transplant program and the NLRB if HCC MELD-exception points are requested.',['N-hcc']),
+ pause({'spread':'prior'},'Review treated rupture, vascular invasion or prior metastasis separately','Previously treated rupture or portal-branch invasion requires individual clinical selection and NLRB review if HCC MELD-exception points are requested. The observation interval alone does not establish transplant eligibility; local treated-rupture selection remains under HCC G3 discussion. Previously proven extrahepatic or nodal HCC follows the separate HCC-B5 position.',['N-hcc']),
  pause({'operation':'review'},'Clarify the curative treatment plan','Review liver reserve, resection feasibility and transplant fitness.',H),
  rule({'spread':'clear','operation':'resection'},0),rule({'spread':'clear','operation':'transplant'},1)])
 
@@ -397,13 +397,13 @@ add('hehe','stage',[
  rule({'vascular':'yes','strategy':'transplant','extrahepatic':'none'},0)])
 
 add('hehe','risk',[
- yesno('criteria','Unresectable disease without macrovascular invasion remains confirmed?', ['N-hehe']),
+ yesno('criteria','Unresectable disease, no macrovascular invasion and no prior tumour rupture confirmed?', ['N-hehe']),
  question('benefit','What is the MDT assessment of expected transplant benefit?',[
   option('supported','Benefit supported after review of tempo, sites and alternatives'),option('uncertain','Tempo / benefit remains uncertain')],['E-score','E-consensus'],
   'HEHE-LT registry findings inform counseling; they are not a MELD score or an automatic selection rule. Some prognostic features are known only on explant.'),
-], [stop({'criteria':'no'},'Reassess resectability and vascular involvement before requesting a HEHE MELD exception.',['N-hehe']),
+], [stop({'criteria':'no'},'Reassess resectability, vascular involvement and rupture history before continuing transplant selection. Clinical suitability and a HEHE MELD-exception request are separate decisions.',['N-hehe']),
  rule({'benefit':'uncertain'},1),rule({'criteria':'yes','benefit':'supported'},0)])
-review_step('hehe','review',E,'Confirm biopsy-proven HEHE, unresectability and absence of macrovascular invasion. Document how any extrahepatic disease affects expected transplant benefit and MELD-exception consideration.')
+review_step('hehe','review',E,'Confirm biopsy-proven HEHE, unresectability and absence of macrovascular invasion for the exception request. Separately confirm clinical suitability, including no prior tumour rupture, and assess how any extrahepatic disease affects expected transplant benefit.')
 follow_up('hehe','follow-up',['E-score','E-consensus'],'Reconcile explant and pretransplant findings; agree risk-informed imaging and long-term recurrence assessment. No universal OPTN surveillance interval is specified.')
 
 add('hca','characterize',[

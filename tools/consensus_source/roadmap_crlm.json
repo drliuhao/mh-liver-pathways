@@ -69,7 +69,7 @@
      "locator": "Appendix: what is wrong with each paper · ESMO 2026"
     }
    ],
-   "divergence": "NCCN and the expert-programme paper treat HAI as a credentialed-centre therapy with defined eligibility while ESMO files it as low-grade salvage, and all conversion data are single-arm and centre-concentrated, so results at a new programme are uncertain.",
+   "divergence": "ESMO 2026 permits HAI as intensification or salvage in liver-dominant disease [III, C]. NCCN and the expert-programme paper add selection and service requirements. The local decisions are whether to establish the service, how to credential it and when to refer; early planning does not waive NCCN treatment eligibility. Conversion evidence remains largely single-arm and centre-concentrated.",
    "proposal": "The roadmap supports HAI plus systemic therapy (Standard, grade C, expertise-dependent) for selected unresectable liver-only CRLM at a credentialed pump centre, planned during first-line treatment rather than kept as terminal salvage, with the full service team, monitoring, toxicity escalation and an outcomes registry named before activation, and conversion recorded separately from pump response.",
    "proposal_locator": "Gate 3 · Standard option 'Hepatic arterial infusion plus systemic therapy…'; HAI evidence and pathway revision · 'Earlier HAI review with a clearance endpoint', 'Programme readiness'",
    "rationale": "HAI conversion evidence is single-arm and concentrated in experienced centres, and biliary toxicity and pump complications are not occasional-case risks; the modality is only defensible with a credentialed programme behind it.",
@@ -314,7 +314,7 @@
   {
    "id": "CRLM-D10",
    "n": 10,
-   "question": "Decide which transplant criteria set governs locally, and record the resolution of each named disagreement between the OPTN guidance route, IHPBA 2021 and ESMO 2026 — MSI-high and dMMR status, BRAF V600E versus any BRAF mutation, the metabolic tumour volume and total lesion glycolysis bars, the months of stability required and the line of therapy by which transplantation may be considered.",
+   "question": "Which additional clinical selection criteria will the programme use for CRLM transplantation, alongside the fixed requirements for the applicable NLRB MELD-exception request?",
    "kind": "clinical",
    "decisions": [
     "4"
@@ -351,10 +351,10 @@
      "locator": "Gate 4 · Reasonable 'Use the Oslo score…' (note); What we are not sure about · 'The Oslo score, the 70 cm³ metabolic tumour volume cut-off…'"
     }
    ],
-   "divergence": "A dMMR patient with four months of stability and a 90 cm³ metabolic tumour volume qualifies under ESMO but not under IHPBA or the OPTN route, while a non-V600E BRAF mutant passes IHPBA but fails the OPTN wording.",
-   "proposal": "Where the randomised evidence (TransMet), the consensus (IHPBA 2021) and the institutional protocol conflict, the stricter governs. The roadmap calls this a defensible choice rather than a finding and leaves open whether MSI-high/dMMR is excluded outright and whether the BRAF exclusion covers V600E only or any BRAF mutation.",
+   "divergence": "OPTN/NLRB, IHPBA and ESMO describe different purposes and candidate groups. BRAF wild type, microsatellite stability and the stated chronology are requirements of the described NLRB CRLM request route; a local vote cannot waive them. Additional PET, age, histology and treatment-response restrictions, or a separately approved investigational route, require explicit local decisions.",
+   "proposal": "Apply the current NLRB requirements to each CRLM MELD-exception request. State separately which additional clinical criteria the programme adopts from TransMet, IHPBA or ESMO, with each source named. A candidate outside the NLRB route may be discussed only through the relevant clinical, allocation and institutional review; this is not automatic transplant eligibility or an exception-points entitlement.",
    "proposal_locator": "Gate 4 · Standard option 'Deceased-donor transplantation…' (flagnote); Quick reference · transplant decision points (foot); What we are not sure about · 'There is one set of criteria…'",
-   "rationale": "The documents a review board will be handed disagree on decision points that decide individual patients, and the rule that the stricter governs does not by itself say which document supplies the stricter value for each criterion.",
+   "rationale": "Allocation eligibility and clinical selection answer different questions. A single table should identify the required criteria for the request being filed, additional local restrictions and any proposed research criteria. This removes the ambiguous instruction that the strictest criterion always governs without allowing a local consensus vote to change allocation requirements.",
    "audit": "A single written criteria table in the protocol, with the source of every assessment named and every conflict shown as resolved; conformance checked for each listed patient."
   },
   {

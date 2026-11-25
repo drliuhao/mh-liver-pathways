@@ -217,13 +217,13 @@
      },
      {
       "id": "curative-route",
-      "question": "When should uncertain portal hypertension change resection versus transplant?",
+      "question": "Which patients with portal hypertension remain suitable for resection, and when is transplantation preferable?",
       "resolved": false,
       "href": "#meeting-curative-route"
      },
      {
       "id": "beyond-downstaging",
-      "question": "What requires nonstandard review: burden, prior rupture or portal-branch invasion?",
+      "question": "How should clinical selection and exception review differ for excess tumor burden, previously treated rupture and portal-branch invasion?",
       "resolved": false,
       "href": "#meeting-beyond-downstaging"
      },
@@ -334,13 +334,13 @@
       "H-policy"
      ],
      "tag": "OPTN 9.5.I",
-     "cit": "OPTN Policies — HCC standardized exception. Effective October 1, 2026 · §§9.5.I.i–vii · pp.196–200",
+     "cit": "OPTN Policies — HCC standardized exception. Effective November 18, 2026 · §9.5.I · pp.199–202",
      "group": "Policy & review guidance",
-     "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf#page=196",
+     "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf#page=199",
      "access": [
       {
        "label": "Full PDF",
-       "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf#page=196"
+       "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf#page=199"
       }
      ],
      "summary": {
@@ -348,7 +348,7 @@
       "text": "Allocation policy (OPTN 9.5.I): the standardized HCC exception's Class 5 burden, AFP and imaging rules applied here; it sets eligibility, not best treatment."
      },
      "appraisal": {
-      "note": "Policy determines exception eligibility, not whether transplantation is the best clinical treatment. Class 5 now explicitly includes eligible LI-RADS 5 CT/MRI/CEUS or biopsy pathways."
+      "note": "Policy determines exception eligibility, not whether transplantation is the best clinical treatment. Class 5 now explicitly includes eligible LI-RADS 5 CT/MRI/CEUS or biopsy pathways. T2, downstaging and AFP provisions checked November 25, 2026; this is not a new verification of every allocation-policy section."
      }
     },
     {
@@ -2984,7 +2984,7 @@
      },
      {
       "id": "sampling",
-      "question": "Primary-tumor sampling versus nodal sampling: what is acceptable?",
+      "question": "How will routine regional-node EUS-FNA be completed safely before neoadjuvant therapy?",
       "resolved": false,
       "href": "#meeting-sampling"
      },
@@ -8052,6 +8052,12 @@
       "question": "Who is responsible for functional restaging and long-term recurrence surveillance?",
       "resolved": false,
       "href": "#meeting-ownership"
+     },
+     {
+      "id": "functional-observation",
+      "question": "Could severe refractory functioning symptoms justify a shorter clinical observation period?",
+      "resolved": false,
+      "href": "#meeting-functional-observation"
      }
     ],
     "highrisk": [
@@ -8153,6 +8159,44 @@
      }
     },
     {
+     "key": "NET-enets2026",
+     "keys": [
+      "NET-enets2026",
+      "enets"
+     ],
+     "tag": "ENETS · LT 2026",
+     "cit": "Stålberg et al. Controversies in NEN: An ENETS position statement on the role of liver transplantation (LT) in patients with advanced small-intestinal and pancreatic NETs. Journal of neuroendocrinology. 2026.",
+     "group": "Guidelines & consensus",
+     "pmid": "42816382",
+     "doi": "10.1111/jne.70250",
+     "access": [
+      {
+       "label": "Full PDF",
+       "url": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/jne.70250"
+      },
+      {
+       "label": "Full PDF · PMC",
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13626967/pdf/JNE-38-e70250.pdf"
+      },
+      {
+       "label": "Full PDF · Europe PMC",
+       "url": "https://europepmc.org/articles/PMC13626967?pdf=render"
+      }
+     ],
+     "summary": {
+      "lead": "Expert position statement · no original outcome denominator",
+      "text": "Frames LT around incremental benefit: liver burden ~25–70%, age <60 (relative), six-month stability; illustrative non-LT <30% vs post-LT ≥70%"
+     },
+     "appraisal": {
+      "cited": "Standard pathway document, reference V16-8; High-risk pathway document, reference V16-4",
+      "note": "Primary full text inspected. A proposed expert framework, not outcome-validated selection criteria.",
+      "scope": "ENETS 2026 position statement explicitly addressing controversies; expert, hypothesis-generating framework rather than original comparative outcome study.",
+      "results": "No original outcome denominator. Proposed liver-burden bands around 25–70%, age <60 as relative and six-month stability are pragmatic concepts. Illustrative non-LT five-year survival <30% versus post-LT ≥70% are not a calibrated individual benefit model.",
+      "limitations": "Do not turn an expert future-oriented proposal into validated numerical gates. Suggested controllable extrahepatic disease, including bone, conflicts with current NLRB solid-organ-metastasis exclusion. It identifies research needs rather than approving an expansion.",
+      "locator": "J Neuroendocrinol 2026;38:e70250; complete position-statement PDF burden, benefit, age, stability and extrahepatic discussion."
+     }
+    },
+    {
      "key": "NCCN-net",
      "keys": [
       "NCCN-net"
@@ -8216,38 +8260,6 @@
      },
      "appraisal": {
       "note": "The transplant/diagnostic sections are cited here. Systemic treatment updates belong in the linked cancer roadmap, not this transplant checklist."
-     }
-    },
-    {
-     "key": "enets",
-     "keys": [
-      "enets"
-     ],
-     "tag": "ENETS 2026",
-     "cit": "Stålberg et al. Controversies in NEN: An ENETS position statement on the role of liver transplantation (LT) in patients with advanced small-intestinal and pancreatic NETs. Journal of neuroendocrinology. 2026.",
-     "group": "Guidelines & consensus",
-     "pmid": "42816382",
-     "doi": "10.1111/jne.70250",
-     "access": [
-      {
-       "label": "Full PDF · PMC",
-       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13626967/pdf/JNE-38-e70250.pdf"
-      },
-      {
-       "label": "Full PDF · Europe PMC",
-       "url": "https://europepmc.org/articles/PMC13626967?pdf=render"
-      }
-     ],
-     "summary": {
-      "lead": "Expert position statement · no original outcome denominator",
-      "text": "Frames LT around incremental benefit: liver burden ~25–70%, age <60 (relative), six-month stability; illustrative non-LT <30% vs post-LT ≥70%"
-     },
-     "appraisal": {
-      "cited": "Standard pathway document, reference V16-8; High-risk pathway document, reference V16-4",
-      "scope": "ENETS 2026 position statement explicitly addressing controversies; expert, hypothesis-generating framework rather than original comparative outcome study.",
-      "results": "No original outcome denominator. Proposed liver-burden bands around 25–70%, age <60 as relative and six-month stability are pragmatic concepts. Illustrative non-LT five-year survival <30% versus post-LT ≥70% are not a calibrated individual benefit model.",
-      "limitations": "Do not turn an expert future-oriented proposal into validated numerical gates. Suggested controllable extrahepatic disease, including bone, conflicts with current NLRB solid-organ-metastasis exclusion. It identifies research needs rather than approving an expansion.",
-      "locator": "J Neuroendocrinol 2026;38:e70250; complete position-statement PDF burden, benefit, age, stability and extrahepatic discussion."
      }
     },
     {
@@ -9337,6 +9349,12 @@
       "question": "What risk-adapted post-transplant follow-up will be adopted?",
       "resolved": false,
       "href": "#meeting-surveillance"
+     },
+     {
+      "id": "rupture",
+      "question": "How will prior tumour rupture be identified and documented before HEHE transplant selection?",
+      "resolved": false,
+      "href": "#meeting-rupture"
      }
     ],
     "highrisk": [
@@ -10043,13 +10061,13 @@
       "H-policy"
      ],
      "tag": "OPTN 9.5.I",
-     "cit": "OPTN Policies — HCC standardized exception. Effective October 1, 2026 · §§9.5.I.i–vii · pp.196–200",
+     "cit": "OPTN Policies — HCC standardized exception. Effective November 18, 2026 · §9.5.I · pp.199–202",
      "group": "Policy & review guidance",
-     "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf#page=196",
+     "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf#page=199",
      "access": [
       {
        "label": "Full PDF",
-       "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf#page=196"
+       "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf#page=199"
       }
      ],
      "summary": {
@@ -10057,7 +10075,7 @@
       "text": "Allocation policy (OPTN 9.5.I): the standardized HCC exception's Class 5 burden, AFP and imaging rules applied here; it sets eligibility, not best treatment."
      },
      "appraisal": {
-      "note": "Policy determines exception eligibility, not whether transplantation is the best clinical treatment. Class 5 now explicitly includes eligible LI-RADS 5 CT/MRI/CEUS or biopsy pathways."
+      "note": "Policy determines exception eligibility, not whether transplantation is the best clinical treatment. Class 5 now explicitly includes eligible LI-RADS 5 CT/MRI/CEUS or biopsy pathways. T2, downstaging and AFP provisions checked November 25, 2026; this is not a new verification of every allocation-policy section."
      }
     },
     {

@@ -254,6 +254,18 @@
           "pref": "Potential transplant-protocol candidates need an accepted diagnostic basis, not necessarily a positive primary-tumor biopsy. OPTN accepts a malignant-appearing stricture plus at least one of these diagnostic findings: biopsy or cytology showing malignancy, CA 19-9 >100 U/mL without cholangitis, aneuploidy, or a hilar mass <3 cm in radial diameter; transperitoneal biopsy of the primary must be avoided. In a 6-year prospective study of 2,908 ERCP-obtained specimens from 2,116 patients at 28 US institutions, with accuracy computed on the 1,979 patients who had follow-up (1,108 neoplastic, 871 benign), a DNA/RNA panel gave 82% sensitivity and 98% specificity for a neoplastic stricture, against 44% and 99% for pathological assessment of separate specimens; combining the two gave 88% at 97%. In intrahepatic or hilar strictures specifically it was 80% versus 36%, and 86% combined. Actionable alterations were found in 23% of positive malignancies and in 137 of 458 cholangiocarcinomas (30%), so the same specimen can serve diagnosis and target identification. Assay failure was about 1%. [PAYER] [DEVICE]",
           "avoid": "Four cautions. Specificity is high but not perfect, and a false positive commits a patient to neoadjuvant chemoradiation and transplantation — the consequence of error is not symmetrical with the consequence in an ordinary diagnostic setting; sixteen false positives occurred, at variant allele frequencies of 1.5–30%. The endpoint was a neoplastic stricture, which is broader than malignancy, and a stricture could be called neoplastic on imaging plus clinical or radiographic progression over 12 months rather than on tissue, which tends to flatter the test that often prompted that work-up. Only 2% of neoplastic strictures were purely dysplastic, so outside PSC this is earlier diagnosis of established cancer, not early detection, and no survival or resectability benefit has been shown. And a negative result still does not exclude malignancy.",
           "note": "Downgraded from B to C. Identical specimens were never compared — sequencing and pathology were run on different specimens — specimens were submitted at the endoscopist's discretion rather than consecutively, FISH was never compared head to head, and all testing was done in the laboratory that developed the assay. The earlier single-centre prospective study (252 patients, 346 specimens) raised pathology sensitivity from 35% to 71% on 132 paired brushings and from 52% to 75% on 114 paired biopsies, and reported 83% versus 8% in primary sclerosing cholangitis on 12 malignant cases (95% CI 0.51–0.98). Two real-world cohorts reproduce the overall direction (65% versus 52% alone and 78% combined on 47 biopsies in one; 75% versus 42.9% in 77 patients in the other) but neither supports the PSC result — one found 20% sensitivity in PSC against 40% for brush cytology — and in the one cohort that reported it separately, the gain in cholangiocarcinoma itself was not significant (70% versus 60%, P=.72). The test is a laboratory-developed test from a single CLIA-certified laboratory, not FDA cleared, and coverage must be verified in writing before it is written into routine practice."
+        },
+        {
+          "t": "Complete regional-node EUS assessment and FNA of safely accessible nodes before neoadjuvant therapy in pCCA transplant evaluation.",
+          "l": "Standard",
+          "g": "D",
+          "pref": "A potential transplant candidate, even when nodes do not appear suspicious. Record sampled stations and safe needle paths; nodal disease changes candidacy.",
+          "avoid": "Avoid traversing the primary tumor. If safe sampling is infeasible, document the multidisciplinary alternative staging plan. A negative EUS assessment does not replace operative staging after neoadjuvant treatment and before transplantation.",
+          "note": "AASLD guidance statement 49 supports routine pre-neoadjuvant regional-node EUS-FNA. OPTN policy uses permissive wording; the clinical default follows the guideline while allocation and mandatory operative staging remain separate. Local workflow departures are pending pCCA-D6.",
+          "refs": [
+            "36083140",
+            "37770126"
+          ]
         }
       ],
       "alt": [
@@ -281,17 +293,6 @@
                 "39689874",
                 "37307900",
                 "27824027"
-              ]
-            },
-            {
-              "name": "EUS evaluation and aspiration of regional nodes",
-              "g": "D",
-              "when": "AASLD requires EUS-FNA of regional nodes before neoadjuvant therapy in patients being evaluated for transplantation; BSG samples an involved locoregional node for staging while leaving the mass alone.",
-              "pref": "Before a transplant workup is spent. Node-positive disease is itself a protocol exclusion, so a positive nodal result does not cost candidacy that existed — it identifies a patient who was never a candidate.",
-              "avoid": "Do not let a nodal pass become a pass at the primary; they are different sampling targets. AASLD also notes that no morphological criteria reliably identify malignant nodes, which weakens a 'suspicious node' trigger, and the AASLD document is explicitly expert consensus rather than a GRADE-rated guideline.",
-              "refs": [
-                "36083140",
-                "37770126"
               ]
             }
           ],
@@ -376,6 +377,18 @@
           ],
           "pref": "Every patient needing an extended hepatectomy. These steps take weeks, and the order is not interchangeable — hypertrophy is poor while the remnant remains obstructed, so drainage comes first.",
           "avoid": "Resection attempted without remnant drainage."
+        },
+        {
+          "t": "Offer six months of adjuvant capecitabine after resection to patients fit for treatment, using shared decision-making about benefit, toxicity and preferences.",
+          "l": "Standard",
+          "g": "C",
+          "refs": [
+            "30922733",
+            "36681415"
+          ],
+          "pref": "After R0 or R1 resection, assess recovery, organ function, performance status, treatment tolerance and patient preferences. Guideline support is not limited to node-positive or R1 disease; adverse features inform the benefit–risk discussion rather than defining the only patients offered treatment. BILCAP (n=447) gave median overall survival 51.1 versus 36.4 months with an adjusted hazard ratio of 0.81 (95% CI 0.63–1.04), p=0.097 — the intention-to-treat primary analysis did not meet significance. Significance appeared per protocol (210 versus 220 patients, HR 0.75, 0.58–0.97) and in the protocol-specified intention-to-treat sensitivity analysis adjusted for nodal status, grade and sex (HR 0.71, 0.55–0.92), and the trial was unmasked.",
+          "avoid": "Explain guideline-supported use and uncertainty in the pCCA-specific effect; do not equate an imprecise subgroup with absence of benefit. 128 of 447 patients (29%) had hilar tumours, the trial was not powered for site-specific effects, and the BILCAP perihilar subgroup estimate was imprecise (HR 1.08, 95% CI 0.68–1.71); Milan nevertheless recommends six months of capecitabine or S-1 (strong, level 2). The recurrence-free survival advantage was confined to the first 24 months (HR 0.75, 0.58–0.98) with none from 24 to 60 months (HR 1.48, 0.80–2.77), which the authors read as recurrence deferred rather than prevented. Grade 3 events occurred in 44% of treated patients, 55% completed all eight cycles, 46% needed a dose reduction and 32% stopped for toxicity.",
+          "note": "Guidelines support offering adjuvant capecitabine. The internal evidence grade C describes uncertainty in the pCCA-specific estimate and is separate from guideline recommendation strength. BILCAP did not meet its primary intention-to-treat endpoint and was not powered by anatomic subtype; this does not establish absence of benefit. A case-by-case-only institutional policy would be a local departure requiring explicit approval, not the current default. ASCOT (n=440) was positive for S-1 — 3-year survival 77.1% versus 67.6%, HR 0.69 (0.51–0.94) — but relapse-free survival did not reach significance (HR 0.80, 0.61–1.04, p=0.088), the analysis was taken at 179 deaths against 285 planned events, the R1 subgroup estimate was imprecise (HR 1.04, 0.57–1.92), the trial was conducted only in Japan and S-1 is unavailable in the United States."
         }
       ],
       "alt": [
@@ -425,18 +438,6 @@
           ],
           "order": "PVE is Milan’s recommended initial technique; upfront or additional LVD may be considered for substantial augmentation. Both Recommendations 23 and 24 are strong, level of evidence 3. This is not a comparative survival ranking. Milan does not suggest ALPPS as the initial procedure; its recommendation is weak, level of evidence 5, and the registry mortality concern remains.",
           "flagnote": "Local approval item (§11 item 4, and alignment area 11): the roadmap states no numeric remnant threshold and does not list ALPPS in its Avoid row. The alignment worksheet recommends adding both — a written threshold makes the embolisation decision auditable, and BSG's 48% registry mortality is strong enough to justify an explicit Avoid line. Audit: volume, 90-day mortality, R0 rate."
-        },
-        {
-          "t": "Capecitabine for 6 months is a reasonable option after resection, not an obligation — offer it with the actual numbers.",
-          "l": "Reasonable",
-          "g": "C",
-          "refs": [
-            "30922733",
-            "36681415"
-          ],
-          "pref": "A resected patient fit for 8 cycles who wants adjuvant treatment, particularly with adverse features. BILCAP (n=447) gave median overall survival 51.1 versus 36.4 months with an adjusted hazard ratio of 0.81 (95% CI 0.63–1.04), p=0.097 — the intention-to-treat primary analysis did not meet significance. Significance appeared per protocol (210 versus 220 patients, HR 0.75, 0.58–0.97) and in the protocol-specified intention-to-treat sensitivity analysis adjusted for nodal status, grade and sex (HR 0.71, 0.55–0.92), and the trial was unmasked.",
-          "avoid": "Do not present it as established benefit in this tumour. 128 of 447 patients (29%) had hilar tumours, the trial was not powered for site-specific effects, and the BILCAP perihilar subgroup estimate was imprecise (HR 1.08, 95% CI 0.68–1.71); Milan nevertheless recommends six months of capecitabine or S-1 (strong, level 2). The recurrence-free survival advantage was confined to the first 24 months (HR 0.75, 0.58–0.98) with none from 24 to 60 months (HR 1.48, 0.80–2.77), which the authors read as recurrence deferred rather than prevented. Grade 3 events occurred in 44% of treated patients, 55% completed all eight cycles, 46% needed a dose reduction and 32% stopped for toxicity.",
-          "note": "Downgraded from B to C, because the trial is negative on its prespecified primary endpoint and the positive signal rests on a per-protocol analysis and an adjusted model; the linked commentary asks whether that is enough to define a standard of care. NCCN designates capecitabine preferred, category 1, while also acknowledging BILCAP's nonsignificant intention-to-treat analysis; the local label and grade remain more cautious and require explicit multidisciplinary local approval. ASCOT (n=440) was positive for S-1 — 3-year survival 77.1% versus 67.6%, HR 0.69 (0.51–0.94) — but relapse-free survival did not reach significance (HR 0.80, 0.61–1.04, p=0.088), the analysis was taken at 179 deaths against 285 planned events, the R1 subgroup showed nothing (HR 1.04, 0.57–1.92), the trial was conducted only in Japan and S-1 is unavailable in the United States."
         },
         {
           "t": "After an R1 resection, discuss adjuvant chemoradiation in addition to systemic therapy as a shared decision, weighing toxicity against local-recurrence benefit.",
@@ -942,8 +943,8 @@
       "refs": []
     },
     {
-      "t": "Nodal assessment is a different act. EUS evaluation of regional nodes, including aspiration of a suspicious node, addresses a different question from biopsying the primary. Node-positive disease is itself a protocol exclusion, so a positive nodal result does not cost candidacy that existed — it identifies a patient who was never a candidate, before a transplant workup is spent.",
-      "why": "Grade D. The logic is sound but untested, and AASLD notes there are no clearly identified morphological criteria for a malignant node, which weakens any 'suspicious node' trigger. AASLD requires EUS-FNA of regional nodes in every transplant candidate before neoadjuvant therapy; the roadmap is looser and limits it to suspicious nodes (§11, alignment area 8).",
+      "t": "Primary-tumor biopsy and regional-node sampling answer different questions. A positive regional node excludes the standard pCCA transplant protocol; sampling must avoid the primary tumor.",
+      "why": "AASLD recommends regional-node EUS-FNA before neoadjuvant therapy in patients evaluated for pCCA transplantation, while OPTN policy says it may be advisable. The default follows AASLD. The internal grade D describes the evidence base, not the strength of that recommendation. Any local workflow departure must be recorded under pCCA-D6; operative staging remains required.",
       "refs": [
         "36083140",
         "37770126"
@@ -1222,15 +1223,15 @@
       },
       {
         "n": 5,
-        "q": "Adjuvant capecitabine — offered routinely, or case-by-case?",
-        "why": "BILCAP's primary analysis was not significant and BCAT was null for gemcitabine in bile duct cancer specifically.",
+        "q": "How will adjuvant capecitabine be offered, and what local departures require approval?",
+        "why": "The indication is supported by major guidelines despite uncertainty in the anatomic-subtype estimates. Internal study appraisal, guideline recommendation strength and an individual patient’s decision are separate judgments.",
         "audit": "Registry: uptake, completion, recurrence."
       },
       {
         "n": 6,
-        "q": "How is tissue obtained in a potentially protocol-eligible patient?",
-        "why": "A protocol condition, not an evidence question, but it requires a standing agreement so no one disqualifies a candidate inadvertently.",
-        "audit": "Audit: biopsy route in protocol candidates."
+        "q": "How will routine regional-node EUS-FNA be completed safely before neoadjuvant therapy?",
+        "why": "Routine pre-treatment nodal assessment and post-treatment operative staging are complementary. Local implementation must handle unsafe or inaccessible sampling without substituting a negative needle result for operative staging.",
+        "audit": "Record primary sampling route, regional-node EUS assessment and sampled stations, timing relative to neoadjuvant therapy, reasons for omitted sampling, and operative staging completion."
       },
       {
         "n": 7,

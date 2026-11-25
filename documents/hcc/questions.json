@@ -212,8 +212,8 @@
     {
      "id": "HCC-D4",
      "set": "roadmap",
-     "title": "Ratify the locoregional selector and the stop/switch rules jointly with hepatobiliary and transplant surgery, hepatology, interventional radiology, radiation oncology, diagnostic radiology and medical oncology.",
-     "question": "Ratify the locoregional selector and the stop/switch rules jointly with hepatobiliary and transplant surgery, hepatology, interventional radiology, radiation oncology, diagnostic radiology and medical oncology.",
+     "title": "Agree when to stop or change TACE, when to use Y90 after TACE, and when systemic therapy should replace further local treatment.",
+     "question": "Agree when to stop or change TACE, when to use Y90 after TACE, and when systemic therapy should replace further local treatment.",
      "kind": "governance",
      "status": "OPEN — not yet decided",
      "resolved": false,
@@ -247,20 +247,32 @@
        "key": null,
        "says": "Separate nonradiation and radiation treatment-response algorithms; after SBRT or Y-90 the nonprogressing category means persistent enhancement alone is not failure. The roadmap notes these algorithms have no outcome validation.",
        "locator": "Locoregional tab · Stop and switch rules; Quick reference · LI-RADS table (v16 text); What we are not sure about #2"
+      },
+      {
+       "source": "AASLD 2023",
+       "key": "pm37199193",
+       "says": "Y90 is an alternative to TACE in BCLC B; systemic therapy is advised when disease is unsuitable for or refractory to locoregional therapy.",
+       "locator": "Guidance statements 42 and 45"
+      },
+      {
+       "source": "EASL 2025",
+       "key": "pm39690085",
+       "says": "For multiple tumors no longer suitable for TACE or surgery, systemic therapy is favored; selected lobar SIRT may be considered when systemic therapy is contraindicated.",
+       "locator": "Transarterial-treatment recommendations"
       }
      ],
-     "divergence": "Use per-session multidisciplinary reassessment; the guidance’s one-or-two nonresponse signal prompts consideration of alternatives rather than an automatic treatment-count rule.",
-     "proposal": "Ratify a non-ranked selector chosen by goal, anatomy and reserve, with no universal ablation-to-histotripsy sequence; device availability and specialty preference are not indications. Stop/switch: reassess after every treatment; move away from repeated TACE for decompensation, worsening ALBI or Child-Pugh, lost selective access, or out-of-territory, vascular or extrahepatic progression, or inadequate response after technically adequate treatment, assessed after each session; continued treatment needs a recorded goal and rationale; allow delayed response after radiation.",
+     "divergence": "AASLD permits Y90 as an alternative to TACE in BCLC B. EASL favors systemic therapy for multiple tumors unsuitable for TACE or surgery, with selected lobar SIRT when systemic therapy is contraindicated. Both require reassessment after ineffective treatment; a fixed treatment count is not a substitute for response, reserve and access review.",
+     "proposal": "Use a non-ranked selector based on treatment goal, anatomy, reserve and response. After each TACE, reassess decompensation, worsening reserve, selective access, disease distribution and treatment adequacy. The group must specify when another selective TACE or Y90 remains appropriate and when systemic treatment becomes the preferred next step. Portal-vein tumor invasion is assessed as advanced HCC. Device availability alone is not an indication; allow delayed response after radiation.",
      "proposal_locator": "Locoregional tab · Decision sequence, selector table and Stop and switch rules; Decisions table #4 (why)",
      "rationale": "The selector is the page's operative content and it crosses six specialties; a concept everyone agrees with and a table nobody has signed is not a ratified pathway. Hepatobiliary and transplant surgery, hepatology, interventional radiology, radiation oncology, diagnostic radiology and medical oncology each own part of it.",
-     "audit": "",
+     "audit": "Record prior response, liver reserve, intended treatment goal, selected next modality and the reason for choosing further local treatment instead of systemic therapy.",
      "web": "hcc/#question-HCC-D4"
     },
     {
      "id": "HCC-D5",
      "set": "roadmap",
-     "title": "Adopt one reading of resection in clinically significant portal hypertension and state it on the page, rather than leaving the BCLC position and the Yuan randomised result side by side for each board to choose between.",
-     "question": "Adopt one reading of resection in clinically significant portal hypertension and state it on the page, rather than leaving the BCLC position and the Yuan randomised result side by side for each board to choose between.",
+     "title": "Which patients with mild clinically significant portal hypertension may undergo resection, and what liver-reserve, remnant and operative-risk assessment is required?",
+     "question": "Which patients with mild clinically significant portal hypertension may undergo resection, and what liver-reserve, remnant and operative-risk assessment is required?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
      "resolved": false,
@@ -278,7 +290,7 @@
       {
        "source": "BCLC 2026",
        "key": "pm41151697",
-       "says": "With CSPH, resection carries significant risk and transplantation offers better survival; HVPG remains the gold standard. Roadmap critique: the update gives no HVPG cut-off for resection with portal hypertension.",
+       "says": "With CSPH, transplantation is favored when appropriate because resection carries increased risk. BCLC allows selected minimally invasive resection for a single peripheral tumor with mild CSPH and adequate future remnant when transplantation is not an option and ablation is suboptimal; local operative-risk assessment is required.",
        "locator": "Curative tab · 'Does CSPH bar resection?'; Appendix · BCLC 2026 (bottom line)"
       },
       {
@@ -300,8 +312,8 @@
        "locator": "What we are not sure about #3; Appendix · Bruix 1996 (bottom line)"
       }
      ],
-     "divergence": "BCLC, on observational data, favours transplant over resection in CSPH, while the only randomised trial found no significant survival difference but was small, hepatitis B only and never measured HVPG.",
-     "proposal": "The roadmap currently adopts neither reading by default: CSPH raises operative risk and should prompt transplant assessment within Milan, but is not an automatic bar where the remnant is adequate, the resection minor or laparoscopic, and the hepatologist concurs; the board records which reading it applied. This approval item asks the programme to fix one reading.",
+     "divergence": "Guidelines favor transplantation for suitable patients with CSPH but allow carefully selected minimally invasive resection in limited disease. Yuan adds randomized evidence in a selected HBV population; it does not make CSPH risk irrelevant or establish equivalence to transplantation.",
+     "proposal": "Assess transplantation in an eligible patient with CSPH. Selected minor or minimally invasive resection may be considered after HPB and hepatology review of portal-hypertension severity, liver function, tumor location and future remnant. Agree the local assessment and selection criteria; do not treat BCLC and Yuan as mutually exclusive rules.",
      "proposal_locator": "Curative tab · 'Does CSPH bar resection?' (teal callout); Stage 0 · Resection (caveat)",
      "rationale": "BCLC favours transplantation for suitable patients with clinically significant portal hypertension. It allows minimally invasive resection for a single peripheral HCC with mild portal hypertension and an adequate future liver remnant. Yuan randomized 160 selected patients with HBV-related HCC within Milan criteria. Survival did not differ significantly, and complications were more frequent with resection. Agree which measures of portal pressure and operative risk the team will use.",
      "audit": "",
@@ -400,8 +412,8 @@
     {
      "id": "HCC-D8",
      "set": "roadmap",
-     "title": "Decide whether radiation segmentectomy may be offered as a definitive curative-intent option on single-arm evidence, above what tumour size it may not, and whether personalised dosimetry is required before it is described that way.",
-     "question": "Decide whether radiation segmentectomy may be offered as a definitive curative-intent option on single-arm evidence, above what tumour size it may not, and whether personalised dosimetry is required before it is described that way.",
+     "title": "For guideline-supported radiation segmentectomy, agree the tumor phenotype, arterial coverage, reserve, dosimetry and consent requirements.",
+     "question": "For guideline-supported radiation segmentectomy, agree the tumor phenotype, arterial coverage, reserve, dosimetry and consent requirements.",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
      "resolved": false,
@@ -445,9 +457,15 @@
        "key": "pm34801630",
        "says": "Brought radioembolisation in for single nodules up to 8 cm; the roadmap states that 8 cm is not a universal curative cut-off.",
        "locator": "Appendix · BCLC 2022 (bottom line); Stage A · Radiation segmentectomy (caveat)"
+      },
+      {
+       "source": "AASLD 2023",
+       "key": "pm37199193",
+       "says": "Targeted radioembolization or EBRT may be used as alternatives to thermal ablation for selected BCLC A tumors in patients who are not surgical candidates.",
+       "locator": "Guidance statement 40"
       }
      ],
-     "divergence": "Prospective segmentectomy evidence is strongest in solitary HCC ≤3 cm. Selected retrospective cohorts include tumors ≤8 cm, and Gabr adds pathology in surgical recipients; 8 cm remains an inclusion limit rather than a universal curative cutoff. Stage 0 combines SBRT and Y-90 under grade B, while stage A and the selector grade segmentectomy C.",
+     "divergence": "AASLD permits targeted radioembolization or EBRT as alternatives to thermal ablation in nonsurgical BCLC A disease; BCLC also recognizes selected use. The draft retains thermal-ablation unsuitability as a local selection condition for discussion. Agree phenotype, dose planning and interpretation of single-arm imaging and pathology outcomes; no universal curative size cutoff or superiority over ablation is established.",
      "proposal": "Reasonable, grade C (Preferred in the selector for its phenotype): a selected definitive curative-intent option for solitary localized HCC when ablation is unsuitable, with full arterial coverage and ablative dosimetry. Strongest evidence is 3 cm or less; 8 cm is not a universal cut-off; unavailable personalised dosimetry is a caution; curative claims do not transfer to lobar Y-90.",
      "proposal_locator": "Stage A Reasonable · Radiation segmentectomy; Locoregional selector row; Ratification list · Interventional radiology",
      "rationale": "Single-arm imaging and pathology studies support local tumor destruction. Gabr found complete necrosis in 30/45 surgical specimens (67%), including 11/11 after >400 Gy to the perfused segment. These selected cohorts do not establish superiority or survival benefit. LEGACY included later transplant or resection in 28%, so survival cannot be attributed to radiation alone. Retain the current grade C and explain these limits during consent.",
@@ -502,8 +520,8 @@
     {
      "id": "HCC-D10",
      "set": "roadmap",
-     "title": "Decide whether this roadmap adopts the BCLC 2026 placement of external beam radiotherapy as an ablative alternative in BCLC 0 and A, given the supporting survival figures come from a retrospective multinational cohort of selected centres with no comparator arm.",
-     "question": "Decide whether this roadmap adopts the BCLC 2026 placement of external beam radiotherapy as an ablative alternative in BCLC 0 and A, given the supporting survival figures come from a retrospective multinational cohort of selected centres with no comparator arm.",
+     "title": "For guideline-supported early-stage EBRT, agree patient selection, liver and adjacent-organ dose constraints, and consent language.",
+     "question": "For guideline-supported early-stage EBRT, agree patient selection, liver and adjacent-organ dose constraints, and consent language.",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
      "resolved": false,
@@ -541,10 +559,16 @@
        "key": "pm39693584",
        "says": "In 166 patients with recurrent HCC of 5 cm or less, SBRT improved local progression-free survival (HR 0.45) without a progression-free or overall survival difference, significant only at 2 cm or less; not proof of superiority for new HCC.",
        "locator": "Locoregional selector row 'SBRT or external beam radiotherapy'; What we are not sure about #22"
+      },
+      {
+       "source": "AASLD 2023",
+       "key": "pm37199193",
+       "says": "Targeted radioembolization or EBRT may be used as alternatives to thermal ablation for selected BCLC A tumors in patients who are not surgical candidates.",
+       "locator": "Guidance statement 40"
       }
      ],
-     "divergence": "BCLC 2026 and ASTRO place EBRT among early-stage options, while the roadmap finds the survival data uncontrolled and the only randomised trial, in recurrent HCC, shows a local-control benefit without a survival difference.",
-     "proposal": "SBRT is Reasonable, grade B: a selected definitive alternative when the target is unsuitable for ablation and surgery (difficult access, vessel-adjacent) with adequate uninvolved liver; prior catheter-therapy failure is not required. The ratification list frames it as a reasonable consideration, not a standard alternative to ablation, and radiation oncology must agree the grade the evidence supports.",
+     "divergence": "BCLC, AASLD and ASTRO recognize selected early-stage EBRT alternatives. This does not establish universal equivalence or superiority to resection or ablation; local selection, constraints and evidence presentation require agreement.",
+     "proposal": "Retain SBRT as a selected definitive alternative when surgery or thermal ablation is unsuitable and uninvolved liver and adjacent-organ constraints can be met; prior catheter-therapy failure is not required. Radiation oncology and the MDT agree selection and constraints. Report the external guideline recommendation separately from the local evidence grade.",
      "proposal_locator": "Stage 0 and Stage A Reasonable · SBRT; Locoregional selector SBRT row; Ratification list · Radiation oncology; Decisions table #10 (why)",
      "rationale": "The supporting survival figures come from a retrospective multinational individual-patient cohort from 30 of 96 invited centres (31%) with prior publications meeting prespecified technical standards, with no resection, ablation or TACE arm and a formally violated proportional hazards assumption. Radiation oncology must agree what grade that supports.",
      "audit": "",
@@ -649,8 +673,8 @@
     {
      "id": "HCC-D13",
      "set": "roadmap",
-     "title": "Adopt an explicit institutional position that TACE combined with checkpoint inhibitors is protocol-only until an overall-survival benefit is demonstrated, and record the toxicity rates the trials reported as part of the consent conversation.",
-     "question": "Adopt an explicit institutional position that TACE combined with checkpoint inhibitors is protocol-only until an overall-survival benefit is demonstrated, and record the toxicity rates the trials reported as part of the consent conversation.",
+     "title": "Which TACE–systemic combinations, if any, may be offered under a named institutional protocol, and what approval, toxicity and reassessment requirements apply?",
+     "question": "Which TACE–systemic combinations, if any, may be offered under a named institutional protocol, and what approval, toxicity and reassessment requirements apply?",
      "kind": "governance",
      "status": "OPEN — not yet decided",
      "resolved": false,
@@ -693,9 +717,9 @@
       }
      ],
      "divergence": "All three phase 3 trials met progression-free survival without an overall-survival benefit; the roadmap rests its stance on absent benefit rather than demonstrated harm, and notes NCCN does not prohibit the combination.",
-     "proposal": "Avoid outside a clinical trial or an approved institutional protocol, to be reviewed again should a positive overall-survival analysis appear or a labelled indication be granted. The v16 systemic matrix frames TACE-plus-systemic regimens as selected use under a defined oncology, IR or institutional pathway, not routine transplant bridging.",
+     "proposal": "The current local position remains trial or specifically approved institutional protocol only. A routine MDT discussion alone does not activate a combination pathway. Agree eligible populations, named regimens, consent, toxicity monitoring and review triggers using the current guidelines, drug label and mature trial outcomes. These studies do not establish routine transplant bridging benefit.",
      "proposal_locator": "Stage B Avoid; Systemic therapy tab · 'TACE combined with systemic therapy is not a standard of care'; Systemic treatment matrix, TACE combination rows (v16 text)",
-     "rationale": "All three phase 3 trials met a progression-free survival endpoint and none has shown an overall-survival benefit, while grade 3 or worse treatment-related events ran at 71% against 32% and 63% against 19%, with immune-mediated events in 48% and treatment-related deaths in both trials. The position is defensible on absent benefit, not on demonstrated harm, so the trigger to re-review has to be named too. In embolization-eligible unresectable HCC, reported follow-up showed median overall survival of 40.4 vs 40.8 months in LEAP-012 (HR 0.98) and 29.9 vs 33.3 months in EMERALD-1 (HR 1.10). Neither trial measured waitlist dropout or transplant receipt.",
+     "rationale": "Progression-free benefits and toxicity must be read alongside the mature or immature survival results for each regimen. The local protocol-only restriction is not an NCCN prohibition. Distinguish this nontransplant treatment decision from transplant-specific ICI safety and waitlist benefit; none of these trials measured waitlist dropout or transplant receipt.",
      "audit": "",
      "web": "hcc/#question-HCC-D13"
     },
@@ -952,6 +976,47 @@
      "rationale": "The page is a draft for multidisciplinary and institutional governance review, not active clinical policy, and the operating requirements are evidence grade D by construction. A pilot with a fixed audit is what converts a stakeholder-derived document into something that can be approved.",
      "audit": "",
      "web": "hcc/#question-HCC-D20"
+    },
+    {
+     "id": "HCC-D21",
+     "set": "roadmap",
+     "title": "When may EBRT or Y90 be used with systemic treatment in advanced liver-dominant HCC, and what evidence and protocol requirements apply to each modality?",
+     "question": "When may EBRT or Y90 be used with systemic treatment in advanced liver-dominant HCC, and what evidence and protocol requirements apply to each modality?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "resolved": false,
+     "where": [
+      {
+       "label": "C · Advanced",
+       "url": "hcc/#decision-C"
+      }
+     ],
+     "positions": [
+      {
+       "source": "RTOG 1112",
+       "key": "pm39699905",
+       "says": "Tested SBRT followed by sorafenib, not Y90 or a modern immunotherapy backbone; primary survival endpoint was not met.",
+       "locator": "Primary trial report"
+      },
+      {
+       "source": "Asan randomized trial",
+       "key": "pm29543938",
+       "says": "Compared TACE plus radiotherapy with sorafenib; it did not test Y90 or adding radiation to checkpoint therapy.",
+       "locator": "Primary trial report"
+      },
+      {
+       "source": "EASL 2025",
+       "key": "pm39690085",
+       "says": "Systemic checkpoint-based combinations remain the advanced-HCC backbone; evidence does not establish EBRT as a replacement or routine Y90–systemic benefit.",
+       "locator": "Advanced HCC and transarterial/EBRT recommendations"
+      }
+     ],
+     "divergence": "The modalities, treatment partners and study populations differ. Evidence for SBRT plus sorafenib or TACE plus radiotherapy cannot be transferred to Y90 with contemporary immunotherapy.",
+     "proposal": "Use systemic therapy as the advanced-HCC backbone and do not routinely add Y90. Consider a clinical trial for the combined strategy. Any proposed local off-trial expansion remains pending institutional protocol approval. Consider EBRT separately for a defined local-control or symptom goal through multidisciplinary planning with liver and adjacent-organ constraints; the supporting trials do not establish benefit with a modern immunotherapy backbone. Agree modality-specific selection, sequence and toxicity monitoring; no new combination protocol is activated by this discussion.",
+     "proposal_locator": "Stage C alternatives; local-treatment discussion D4; TACE combination discussion D13",
+     "rationale": "A shared radiation label does not make the evidence interchangeable. Report the actual trial arms and separate local-control evidence from an unproven survival benefit with current immunotherapy.",
+     "audit": "Regimen and local modality; treatment sequence; goal; protocol approval; liver decompensation and other grade 3 or worse toxicity; response and time to systemic treatment.",
+     "web": "hcc/#question-HCC-D21"
     }
    ],
    "ratify": [
@@ -989,9 +1054,9 @@
     {
      "id": "HCC-RT-3",
      "specialty": "Hepatology",
-     "question": "Whether the §5.1.1 criteria are adopted as the institutional definition of clinically significant portal hypertension, whether HVPG is required before resection or non-invasive rule-in suffices, and which reading of the Yuan randomised trial governs when CSPH is present.",
+     "question": "Portal-hypertension assessment before resection: when HVPG changes the plan, when noninvasive criteria suffice, and which selected patients with mild CSPH may undergo minor or minimally invasive surgery.",
      "kind": "clinical",
-     "proposal": "CSPH is an HVPG of 10 mmHg or more, alongside Baveno VIII specific signs and non-invasive rule-in criteria; measure HVPG when resection turns on it and record criterion, value and date. Neither CSPH reading is adopted by default.",
+     "proposal": "Assess CSPH using HVPG and appropriate Baveno clinical and noninvasive criteria; measure HVPG when it could change the operation. Consider transplantation when suitable and assess selected minor or minimally invasive resection through HPB/hepatology review. The local selection and risk-assessment criteria remain to be agreed.",
      "proposal_locator": "Curative tab · Establishing CSPH and 'Does CSPH bar resection?'",
      "positions": [
       {
@@ -1037,7 +1102,7 @@
      "specialty": "Transplant and hepatobiliary surgery",
      "question": "Milan/T2 and downstaging-pool wording, including the ‘at least one lesion >3 cm’ correction.",
      "kind": "clinical",
-     "proposal": "Milan/OPTN T2 covers a single 2-5 cm lesion or two to three lesions of 1-3 cm, without vascular invasion or spread. The UNOS-DS 2-3 lesion group needs one lesion above 3 cm, correcting v0.2, which misrouted T2 disease.",
+     "proposal": "Keep Milan tumor-burden criteria separate from OPTN T2. Milan permits one tumor ≤5 cm or up to three tumors each ≤3 cm, without macrovascular invasion or extrahepatic spread. OPTN T2 requires one Class 5 lesion 2–5 cm or two to three Class 5 lesions each 1–3 cm. The UNOS downstaging pattern with two to three lesions requires at least one >3 cm, each ≤5 cm and total diameter ≤8 cm.",
      "proposal_locator": "Transplant tab · Eligibility pathways; Quick reference · Transplant table (v16 text)",
      "positions": [
       {
@@ -1059,14 +1124,14 @@
      "specialty": "Transplant and hepatobiliary surgery",
      "question": "AFP-rule operational handling and who monitors it.",
      "kind": "governance",
-     "proposal": "Record every AFP with its date and intervening treatment; 1,000 ng/mL or more blocks the standard exception until below 500 after locoregional therapy, and a later rise to 500 or more goes to review-board referral. No monitor is named.",
+     "proposal": "Record serial AFP and treatment history. If AFP has never exceeded 1,000 ng/mL, the standardized HCC exception requires current AFP ≤1,000 ng/mL. A history of AFP >1,000 ng/mL requires a post-treatment fall below 500 ng/mL that is maintained. A subsequent AFP ≥500 ng/mL in that history group requires NLRB review. Assign responsibility for monitoring and exception submissions.",
      "proposal_locator": "Transplant tab · Eligibility pathways (AFP rule); AFP-only discordance (v16 text); Decisions table #11 (why)",
      "positions": [
       {
-       "source": "OPTN Policy 9 and AASLD 2023",
+       "source": "OPTN Policy 9",
        "key": null,
-       "says": "Allow listing once an AFP of 1,000 or more falls below 500 ng/mL; a later rise to 500 or more needs review-board referral.",
-       "locator": "Transplant tab · AFP rule; What we are not sure about #12"
+       "says": "For standardized HCC exception eligibility, a history of AFP >1,000 ng/mL triggers the requirement for a post-treatment AFP <500 ng/mL that remains below 500. If AFP has never exceeded 1,000 ng/mL, the ordinary AFP ceiling is ≤1,000 ng/mL; a later rise above it needs individual review.",
+       "locator": "Policy 9.5.I.ii, iv and vii; current official PDF pp.200–202, effective 18 November 2026; AFP wording checked 25 November 2026."
       },
       {
        "source": "EASL 2025",
@@ -1283,7 +1348,7 @@
     {
      "id": "HCC-RT-22",
      "specialty": "Radiation oncology",
-     "question": "SBRT graded B as a reasonable consideration, not a standard alternative to ablation.",
+     "question": "Selection and dose constraints for guideline-supported early-stage SBRT; distinguish the guideline recommendation from the local evidence grade.",
      "kind": "clinical",
      "proposal": "Reasonable, grade B: a selected definitive alternative when ablation and surgery are unsuitable, with adequate uninvolved liver; prior catheter failure is not required; superiority over ablation for newly diagnosed HCC is not established.",
      "proposal_locator": "Stage A Reasonable · SBRT; Locoregional selector row 'SBRT or external beam radiotherapy'",
@@ -1541,7 +1606,7 @@
        "key": "std-H-policy",
        "kind": "Allocation policy",
        "says": "“LI-RADS 5 classification on CT, MRI, or CEUS”",
-       "locator": "Table 9-9, p.198"
+       "locator": "OPTN 9.5.I.vi, Table 9-9; printed p.201 (18 November 2026 PDF)"
       },
       {
        "source": "AASLD · HCC",
@@ -1559,8 +1624,8 @@
     {
      "id": "HCC G2",
      "set": "standard",
-     "title": "When should uncertain portal hypertension change resection versus transplant?",
-     "question": "When should uncertain portal hypertension change resection versus transplant?",
+     "title": "Which patients with portal hypertension remain suitable for resection, and when is transplantation preferable?",
+     "question": "Which patients with portal hypertension remain suitable for resection, and when is transplantation preferable?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
      "resolved": false,
@@ -1583,19 +1648,19 @@
        "key": "std-H-policy",
        "kind": "Allocation policy",
        "says": "“An indication that the candidate is not eligible for resection”",
-       "locator": "§9.5.I.i, p.196"
+       "locator": "OPTN 9.5.I.i; printed p.199 (18 November 2026 PDF)"
       }
      ],
-     "proposal": "Use liver reserve, portal-hypertension evidence and technical remnant assessment first. Obtain invasive hemodynamics only when the result could change the operation.",
-     "rationale": "Allocation documentation does not substitute for a surgical risk-benefit decision.",
+     "proposal": "Use liver reserve, portal-hypertension severity, tumor location, operative extent and future remnant to compare resection with transplantation. Selected minor or minimally invasive resection may be appropriate after HPB and hepatology assessment; agree the local selection and risk-assessment criteria. Obtain invasive hemodynamics only when the result could change the operation.",
+     "rationale": "Guideline-supported selection is not a choice between ignoring portal hypertension and forbidding every resection. Allocation documentation does not substitute for a surgical risk-benefit decision.",
      "owners": "HPB surgery · hepatology",
      "web": "transplant/hcc/#meeting-curative-route"
     },
     {
      "id": "HCC G3",
      "set": "standard",
-     "title": "What requires nonstandard review: burden, prior rupture or portal-branch invasion?",
-     "question": "What requires nonstandard review: burden, prior rupture or portal-branch invasion?",
+     "title": "How should clinical selection and exception review differ for excess tumor burden, previously treated rupture and portal-branch invasion?",
+     "question": "How should clinical selection and exception review differ for excess tumor burden, previously treated rupture and portal-branch invasion?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
      "resolved": false,
@@ -1615,7 +1680,7 @@
        "key": "std-H-policy",
        "kind": "Allocation policy",
        "says": "“not automatically eligible for a standardized MELD or PELD exception”",
-       "locator": "§9.5.I.iii, p.197"
+       "locator": "OPTN 9.5.I.iii; printed p.200 (18 November 2026 PDF)"
       },
       {
        "source": "NLRB · HCC",
@@ -1625,9 +1690,9 @@
        "locator": "December 2025 · HCC section · pp.2–4"
       }
      ],
-     "proposal": "Request individual NLRB review when standardized HCC MELD-exception criteria are not met. Document pretreatment tumor burden, rupture or vascular invasion, treatment response, AFP and the observation period.",
-     "rationale": "Pretreatment tumor burden and prior rupture or vascular invasion still determine whether an HCC MELD-exception request needs individual review.",
-     "owners": "Transplant hepatology · coordinator",
+     "proposal": "Continue individual transplant-program review when standard criteria are not met; seek separate NLRB review if HCC MELD-exception points are requested. Record pretreatment burden, AFP, prior rupture or invasion, response and observation. For previously treated rupture, agree explicit clinical selection criteria: confirmation of rupture, peritoneal and distant staging, durable response, liver reserve, tumor biology, combined-risk exclusions and review ownership. No treated-rupture cohort is activated by this discussion.",
+     "rationale": "NLRB guidance allows selected exception consideration after prolonged stability, including at least 12 months for previously treated rupture or primary portal-vein branch invasion. That interval is not a complete clinical transplant protocol or automatic eligibility. The initial portal-invasion pilot continues to exclude prior rupture; previously proven extrahepatic or nodal disease remains a separate HCC-B5 decision.",
+     "owners": "Transplant surgery and hepatology · HPB surgery · diagnostic radiology · medical oncology · coordinator",
      "web": "transplant/hcc/#meeting-beyond-downstaging"
     },
     {
@@ -1875,7 +1940,7 @@
        "key": "std-H-policy",
        "kind": "Allocation policy",
        "says": "Policy specifies the exception evidence and explant reporting. It does not assign our local team members.",
-       "locator": "Effective October 1, 2026 · §§9.5.I.i–vii · pp.196–200"
+       "locator": "OPTN 9.5.I.i; printed p.199 (18 November 2026 PDF)"
       },
       {
        "source": "AASLD · HCC",
@@ -1910,7 +1975,7 @@
        "key": "std-H-policy",
        "kind": "Allocation policy",
        "says": "Extension rules use tumor stage, treatment and AFP; the prior >1,000 AFP history changes the applicable threshold.",
-       "locator": "Effective October 1, 2026 · §§9.5.I.i–vii · pp.196–200"
+       "locator": "OPTN 9.5.I.vii; printed p.202 (18 November 2026 PDF)"
       },
       {
        "source": "AASLD · HCC",
@@ -1957,7 +2022,7 @@
        "key": "std-H-policy",
        "kind": "Allocation policy",
        "says": "“as long as the candidate’s AFP level remains below 500 ng/mL”",
-       "locator": "OPTN 9.5.I.iv; after prior AFP >1000"
+       "locator": "OPTN 9.5.I.iv; printed pp.200–201 (18 November 2026 PDF); after prior AFP >1,000"
       },
       {
        "source": "Goldman 2022: final AFP ≥500",
@@ -2011,7 +2076,7 @@
        "key": "std-H-policy",
        "kind": "Allocation policy",
        "says": "“as long as the candidate’s AFP level remains below 500 ng/mL”",
-       "locator": "OPTN 9.5.I.iv; after prior AFP >1000"
+       "locator": "OPTN 9.5.I.iv; printed pp.200–201 (18 November 2026 PDF); after prior AFP >1,000"
       },
       {
        "source": "Goldman 2022: final AFP ≥500",
@@ -2065,7 +2130,7 @@
        "key": "std-H-policy",
        "kind": "Allocation policy",
        "says": "“as long as the candidate’s AFP level remains below 500 ng/mL”",
-       "locator": "OPTN 9.5.I.iv; after prior AFP >1000"
+       "locator": "OPTN 9.5.I.iv; printed pp.200–201 (18 November 2026 PDF); after prior AFP >1,000"
       },
       {
        "source": "Goldman 2022: final AFP ≥500",
@@ -2119,7 +2184,7 @@
        "key": "std-H-policy",
        "kind": "Allocation policy",
        "says": "“as long as the candidate’s AFP level remains below 500 ng/mL”",
-       "locator": "OPTN 9.5.I.iv; after prior AFP >1000"
+       "locator": "OPTN 9.5.I.iv; printed pp.200–201 (18 November 2026 PDF); after prior AFP >1,000"
       },
       {
        "source": "Goldman 2022: final AFP ≥500",
@@ -2173,7 +2238,7 @@
        "key": "std-H-policy",
        "kind": "Allocation policy",
        "says": "“as long as the candidate’s AFP level remains below 500 ng/mL”",
-       "locator": "OPTN 9.5.I.iv; after prior AFP >1000"
+       "locator": "OPTN 9.5.I.iv; printed pp.200–201 (18 November 2026 PDF); after prior AFP >1,000"
       },
       {
        "source": "Goldman 2022: final AFP ≥500",
@@ -2227,7 +2292,7 @@
        "key": "std-H-policy",
        "kind": "Allocation policy",
        "says": "“as long as the candidate’s AFP level remains below 500 ng/mL”",
-       "locator": "OPTN 9.5.I.iv; after prior AFP >1000"
+       "locator": "OPTN 9.5.I.iv; printed pp.200–201 (18 November 2026 PDF); after prior AFP >1,000"
       },
       {
        "source": "Goldman 2022: final AFP ≥500",
@@ -3362,6 +3427,14 @@
     "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39690085/"
    }
   },
+  "pm37199193": {
+   "short": "AASLD 2023",
+   "title": "",
+   "kind": "",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/37199193/"
+   }
+  },
   "pm41151697": {
    "short": "BCLC 2026",
    "title": "",
@@ -3474,14 +3547,6 @@
     "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39693584/"
    }
   },
-  "pm37199193": {
-   "short": "AASLD 2023",
-   "title": "",
-   "kind": "",
-   "links": {
-    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/37199193/"
-   }
-  },
   "pm34331914": {
    "short": "MERITS-LT",
    "title": "",
@@ -3578,12 +3643,28 @@
     "pubmed": "https://pubmed.ncbi.nlm.nih.gov/38995162/"
    }
   },
+  "pm39699905": {
+   "short": "RTOG 1112",
+   "title": "",
+   "kind": "",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/39699905/"
+   }
+  },
+  "pm29543938": {
+   "short": "Asan randomized trial",
+   "title": "",
+   "kind": "",
+   "links": {
+    "pubmed": "https://pubmed.ncbi.nlm.nih.gov/29543938/"
+   }
+  },
   "std-H-policy": {
    "short": "OPTN 9.5.I",
    "title": "OPTN Policies — HCC standardized exception",
    "kind": "Allocation policy",
    "links": {
-    "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf#page=196"
+    "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf#page=199"
    }
   },
   "std-H-aasld": {

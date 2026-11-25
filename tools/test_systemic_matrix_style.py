@@ -69,9 +69,9 @@ assert len(table.xpath('.//div[@class="matrix-option"]')) == len(old.xpath('//ta
 assert sorted(norm(x.text_content()) for x in table.xpath('.//span[@class="empty-cell"]')) == sorted(norm(x.text_content()) for x in old.xpath('//table[@class="therapy-matrix"]//span[@class="empty-cell"]'))
 before = Counter(u for u in old.xpath('//a/@href') if not u.startswith('#'))
 after = Counter(u for u in page.xpath('//a/@href') if not u.startswith('#'))
-for cid in ['crlm-conversion', 'hcc-tki', 'hcc-tace-combination']:
+for cid in ['crlm-conversion', 'hcc-tki', 'hcc-tace-combination', 'btc-adjuvant']:
     before.update(u for _, u in cards[cid]['links'])
-assert before == after, 'External source links changed beyond the recorded CAIRO5, HCC bridging and TACE-combination outcome sources'
+assert before == after, 'External source links changed beyond the recorded CAIRO5, HCC bridging, TACE-combination and biliary adjuvant guideline sources'
 for u in page.xpath('//a/@href'):
     if u.startswith('#'):
         assert u[1:] in ids, u

@@ -630,11 +630,11 @@
     {
      "id": "NELM-D12",
      "set": "roadmap",
-     "title": "Who corrects the shared liver-directed-therapy matrix entry that attributes outcome figures to RETNET?",
-     "question": "Who corrects the shared liver-directed-therapy matrix entry that attributes outcome figures to RETNET?",
-     "kind": "governance",
-     "status": "OPEN — not yet decided",
-     "resolved": false,
+     "title": "RETNET outcome attribution corrected",
+     "question": "RETNET outcome attribution corrected",
+     "kind": "Completed source correction",
+     "status": "Completed attribution correction — source retrieval tracked separately",
+     "resolved": true,
      "where": [
       {
        "label": "7 · Select liver-directed therapy",
@@ -655,10 +655,10 @@
        "locator": "What we are not sure about #15; Gate 7 · Avoid 'Avoid drug-eluting embolics in NET.' · note"
       }
      ],
-     "divergence": "No source disagreement: the shared matrix cites outcome figures the RETNET paper does not contain, and who corrects it is a programme decision.",
-     "proposal": "Attribute RETNET efficacy results to the 2025 NANETS conference abstract/poster, not the 2018 protocol. Retain conference status and endpoint definitions, remove unsupported medians and do not infer equivalence from nonsignificance. Name an owner for source-version updates across the shared matrix.",
+     "divergence": "The attribution error has been corrected: the 2018 RETNET protocol is not an outcomes report, and efficacy results are identified as 2025 NANETS conference evidence. Retrieval of a final results publication and subsequent source-version checks remain separate evidence-maintenance tasks.",
+     "proposal": "Retain the completed attribution correction, conference status, endpoint definitions and limits on interpretation. Do not infer equivalence from a nonsignificant comparison. Track retrieval of a final full-text results report and source updates under the programme’s existing source-review ownership process.",
      "proposal_locator": "Gate 7 · flag note; What we are not sure about #15; Decisions table #12 · why and audit",
-     "rationale": "The 2018 protocol contains no outcomes, whereas the 2025 conference abstract/poster reports randomized TAE-versus-cTACE results. These are distinct sources. All shared entries must preserve that provenance and the limitations of conference reporting.",
+     "rationale": "The protocol and later conference results are distinct sources. Correcting their attribution is completed editorial work, not an unresolved treatment choice. The availability of a final full-text efficacy publication remains to be checked and recorded separately.",
      "audit": "Source-recency check: matrix entries reconciled against the depot abstracts by a named owner each cycle.",
      "web": "nelm/#question-NELM-D12"
     },
@@ -749,6 +749,41 @@
      "rationale": "The guidance requires extrahepatic workup 'at least 3 months prior to initial or extension request (submit date)', which read literally sets a minimum age for the imaging rather than the recency requirement a clinician assumes. The page reproduces the wording unchanged rather than correcting it; somebody has to resolve the intent before a listing depends on it.",
      "audit": "Allocation record: imaging dates against submit dates for every request and extension, with the named coordinator's sign-off.",
      "web": "nelm/#question-NELM-D14"
+    },
+    {
+     "id": "NELM-D15",
+     "set": "roadmap",
+     "title": "Could refractory functioning symptoms justify a shorter clinical observation period before transplantation?",
+     "question": "Could refractory functioning symptoms justify a shorter clinical observation period before transplantation?",
+     "kind": "clinical",
+     "status": "OPEN — not yet decided",
+     "resolved": false,
+     "where": [
+      {
+       "label": "9 · Assess transplant eligibility",
+       "url": "nelm/#decision-9"
+      }
+     ],
+     "positions": [
+      {
+       "source": "ENETS 2026 LT position statement",
+       "key": "np-nelm-enets-lt2026",
+       "says": "Shorter demonstrated stability may be considered for uncontrolled functioning syndromes; this is expert judgment, not validated selection.",
+       "locator": "§7, principle7; Table1"
+      },
+      {
+       "source": "OPTN/NLRB NET guidance",
+       "key": "np-nelm-optn-nlrb",
+       "says": "Applicable exception requirements remain separate from the choice of a local clinical observation period.",
+       "locator": "NET initial and extension request requirements"
+      }
+     ],
+     "divergence": "The current local protocol retains its observation period. ENETS permits individualized consideration for refractory functioning symptoms; no shorter local route is activated.",
+     "proposal": "Discuss this symptom-driven exception through the transplant/NET team and institutional protocol review. Retain current clinical and allocation requirements until an explicit protocol change is approved.",
+     "proposal_locator": "NELM transplant pathway · Verify disease control; NELM G7",
+     "rationale": "Potential symptom relief must be balanced against uncertain tumour biology, alternative therapy and transplant risk. A shorter clinical observation period cannot itself waive MELD-exception requirements.",
+     "audit": "If a protocol change is approved: syndrome severity, treatments attempted, response duration, selection rationale, allocation route and patient outcomes.",
+     "web": "nelm/#question-NELM-D15"
     }
    ],
    "ratify": []
@@ -993,6 +1028,45 @@
      "rationale": "Avoid gaps between transplant and NET oncology care.",
      "owners": "Transplant team · NET oncology · coordinator",
      "web": "transplant/nelm/#meeting-ownership"
+    },
+    {
+     "id": "NELM G7",
+     "set": "standard",
+     "title": "Could severe refractory functioning symptoms justify a shorter clinical observation period?",
+     "question": "Could severe refractory functioning symptoms justify a shorter clinical observation period?",
+     "kind": "standard pathway",
+     "status": "Discussion required — no shorter observation route activated",
+     "resolved": false,
+     "where": [
+      {
+       "label": "Compare treatment options",
+       "url": "transplant/nelm/#options"
+      },
+      {
+       "label": "Verify disease control",
+       "url": "transplant/nelm/#observation"
+      }
+     ],
+     "positions": [
+      {
+       "source": "ENETS · LT 2026",
+       "key": "std-NET-enets2026",
+       "kind": "Expert consensus",
+       "says": "ENETS 2026 allows consideration of shorter demonstrated stability for uncontrolled functioning syndromes; this is expert judgment rather than validated selection.",
+       "locator": "§7, principle7"
+      },
+      {
+       "source": "NLRB · NET",
+       "key": "std-N-net",
+       "kind": "NLRB guidance",
+       "says": "The applicable MELD-exception requirements remain a separate assessment and cannot be waived by changing a local clinical observation period.",
+       "locator": "NET guidance"
+      }
+     ],
+     "proposal": "Keep the current observation requirement. Discuss any symptom-driven exception only through an explicitly approved clinical protocol and applicable allocation review; no shorter interval is activated here.",
+     "rationale": "The potential benefit is symptom relief in a patient with refractory functioning disease, balanced against uncertain tumour biology and transplant risk.",
+     "owners": "NET oncology · endocrinology · transplant selection",
+     "web": "transplant/nelm/#meeting-functional-observation"
     }
    ]
   },
@@ -2041,6 +2115,14 @@
     "pubmed": "https://pubmed.ncbi.nlm.nih.gov/32272208/"
    }
   },
+  "np-nelm-enets-lt2026": {
+   "short": "ENETS 2026 LT position statement",
+   "title": "Stålberg P, et al. Controversies in NEN: An ENETS position statement on the role of liver transplantation in patients with advanced small-intestinal and pancreatic NETs. J Neuroendocrinol. 2026;38:e70250. doi:10.1111/jne.70250. Primary full text reviewed, §7 principle7 and Table1; expert framework, not outcome-validated recipient selection.",
+   "kind": "Guidelines & policy",
+   "links": {
+    "url": "https://doi.org/10.1111/jne.70250"
+   }
+  },
   "std-N-net": {
    "short": "NLRB · NET",
    "title": "Adult MELD exception review guidance — NET",
@@ -2055,6 +2137,14 @@
    "kind": "Cohort evidence",
    "links": {
     "url": "https://doi.org/10.1111/ajt.13831"
+   }
+  },
+  "std-NET-enets2026": {
+   "short": "ENETS · LT 2026",
+   "title": "Stålberg et al. Controversies in NEN: An ENETS position statement on liver transplantation in advanced small-intestinal and pancreatic NETs",
+   "kind": "Expert consensus",
+   "links": {
+    "url": "https://doi.org/10.1111/jne.70250"
    }
   },
   "hr-enets": {

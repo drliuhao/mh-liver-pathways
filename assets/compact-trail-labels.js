@@ -339,8 +339,8 @@ window.CompactTrailLabels = {
       "label": "Extrahepatic disease"
     },
     "hehe/risk/criteria": {
-      "source": "Unresectable disease without macrovascular invasion remains confirmed?",
-      "label": "Resectability / invasion"
+      "source": "Unresectable disease, no macrovascular invasion and no prior tumour rupture confirmed?",
+      "label": "Resectability / invasion / rupture"
     },
     "hehe/risk/benefit": {
       "source": "What is the MDT assessment of expected transplant benefit?",
@@ -405,6 +405,10 @@ window.CompactTrailLabels = {
     "hca/follow-up/concern": {
       "source": "Any new concerning finding?",
       "label": "New concern"
+    },
+    "hehe/stage/rupture": {
+      "source": "Tumour rupture or related intraperitoneal bleeding?",
+      "label": "Tumour rupture"
     }
   },
   "risk": {

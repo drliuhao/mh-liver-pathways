@@ -4,7 +4,7 @@ Historical HTML is preserved in Website_Clarity_Release_2026-11-24/archive/.
 import html,json,re,subprocess
 from pathlib import Path
 R=Path(__file__).resolve().parents[1];D=json.loads((R/'transplant/assets/content.json').read_text());e=html.escape
-BASE='/mh-liver-pathways/';KEY='20261125-threshold1'
+BASE='/mh-liver-pathways/';KEY='20261125-alignment1'
 def shell(title,content,script=''):
  return f'<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)}</title><link rel="stylesheet" href="{BASE}assets/portal-navigation.css?v={KEY}"><link rel="stylesheet" href="{BASE}assets/evidence-tools.css?v={KEY}"><script src="{BASE}assets/portal-navigation.js?v={KEY}" defer></script>{f"<script>{script}</script>" if script else ""}</head><body><main class="evidence-wrap">{content}</main></body></html>'
 for p in D['index']:

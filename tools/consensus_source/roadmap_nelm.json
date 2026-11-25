@@ -436,8 +436,8 @@
   {
    "id": "NELM-D12",
    "n": 12,
-   "question": "Who corrects the shared liver-directed-therapy matrix entry that attributes outcome figures to RETNET?",
-   "kind": "governance",
+   "question": "RETNET outcome attribution corrected",
+   "kind": "Completed source correction",
    "decisions": [
     "7"
    ],
@@ -455,11 +455,13 @@
      "locator": "What we are not sure about #15; Gate 7 · Avoid 'Avoid drug-eluting embolics in NET.' · note"
     }
    ],
-   "divergence": "No source disagreement: the shared matrix cites outcome figures the RETNET paper does not contain, and who corrects it is a programme decision.",
-   "proposal": "Attribute RETNET efficacy results to the 2025 NANETS conference abstract/poster, not the 2018 protocol. Retain conference status and endpoint definitions, remove unsupported medians and do not infer equivalence from nonsignificance. Name an owner for source-version updates across the shared matrix.",
+   "divergence": "The attribution error has been corrected: the 2018 RETNET protocol is not an outcomes report, and efficacy results are identified as 2025 NANETS conference evidence. Retrieval of a final results publication and subsequent source-version checks remain separate evidence-maintenance tasks.",
+   "proposal": "Retain the completed attribution correction, conference status, endpoint definitions and limits on interpretation. Do not infer equivalence from a nonsignificant comparison. Track retrieval of a final full-text results report and source updates under the programme’s existing source-review ownership process.",
    "proposal_locator": "Gate 7 · flag note; What we are not sure about #15; Decisions table #12 · why and audit",
-   "rationale": "The 2018 protocol contains no outcomes, whereas the 2025 conference abstract/poster reports randomized TAE-versus-cTACE results. These are distinct sources. All shared entries must preserve that provenance and the limitations of conference reporting.",
-   "audit": "Source-recency check: matrix entries reconciled against the depot abstracts by a named owner each cycle."
+   "rationale": "The protocol and later conference results are distinct sources. Correcting their attribution is completed editorial work, not an unresolved treatment choice. The availability of a final full-text efficacy publication remains to be checked and recorded separately.",
+   "audit": "Source-recency check: matrix entries reconciled against the depot abstracts by a named owner each cycle.",
+   "resolved": true,
+   "status": "Completed attribution correction — source retrieval tracked separately"
   },
   {
    "id": "NELM-D13",
@@ -534,6 +536,34 @@
    "proposal_locator": "Gate 9 · Standard 'Maintain the allocation record and assign responsibility for renewals from the start…' · pref and caveat; What we are not sure about #25; Decisions table #14 · audit",
    "rationale": "The guidance requires extrahepatic workup 'at least 3 months prior to initial or extension request (submit date)', which read literally sets a minimum age for the imaging rather than the recency requirement a clinician assumes. The page reproduces the wording unchanged rather than correcting it; somebody has to resolve the intent before a listing depends on it.",
    "audit": "Allocation record: imaging dates against submit dates for every request and extension, with the named coordinator's sign-off."
+  },
+  {
+   "id": "NELM-D15",
+   "n": 15,
+   "question": "Could refractory functioning symptoms justify a shorter clinical observation period before transplantation?",
+   "kind": "clinical",
+   "decisions": [
+    "9"
+   ],
+   "positions": [
+    {
+     "source": "ENETS 2026 LT position statement",
+     "ref": "enets-lt2026",
+     "position": "Shorter demonstrated stability may be considered for uncontrolled functioning syndromes; this is expert judgment, not validated selection.",
+     "locator": "§7, principle7; Table1"
+    },
+    {
+     "source": "OPTN/NLRB NET guidance",
+     "ref": "optn-nlrb",
+     "position": "Applicable exception requirements remain separate from the choice of a local clinical observation period.",
+     "locator": "NET initial and extension request requirements"
+    }
+   ],
+   "divergence": "The current local protocol retains its observation period. ENETS permits individualized consideration for refractory functioning symptoms; no shorter local route is activated.",
+   "proposal": "Discuss this symptom-driven exception through the transplant/NET team and institutional protocol review. Retain current clinical and allocation requirements until an explicit protocol change is approved.",
+   "proposal_locator": "NELM transplant pathway · Verify disease control; NELM G7",
+   "rationale": "Potential symptom relief must be balanced against uncertain tumour biology, alternative therapy and transplant risk. A shorter clinical observation period cannot itself waive MELD-exception requirements.",
+   "audit": "If a protocol change is approved: syndrome severity, treatments attempted, response duration, selection rationale, allocation route and patient outcomes."
   }
  ]
 }

@@ -45,7 +45,7 @@ const proceed={
  'nelm/review':{criteria:'met',reviews:'yes'},
  'nelm/follow-up':{phase:'before',plan:'yes',concern:'none'},
  'hehe/diagnosis':{pathology:'hehe'},
- 'hehe/stage':{vascular:'yes',strategy:'transplant',extrahepatic:'none'},
+ 'hehe/stage':{vascular:'yes',strategy:'transplant',extrahepatic:'none',rupture:'none'},
  'hehe/risk':{criteria:'yes',benefit:'supported'},
  'hehe/review':{criteria:'met',reviews:'yes'},
  'hehe/follow-up':{phase:'before',plan:'yes',concern:'none'},
@@ -111,8 +111,10 @@ expect('crlm/clocks',{primary:'yes',interval:'yes',synchronous:'different'},1,'h
 expect('crlm/clocks',{primary:'yes',interval:'yes',synchronous:'met'},0,'advance');
 expect('nelm/distribution',{primary:'yes',spread:'cleared'},1,'hold');
 expect('nelm/distribution',{primary:'yes',spread:'solid'},null,'stop');
-expect('hehe/stage',{vascular:'yes',strategy:'transplant',extrahepatic:'limited'},2,'hold');
+expect('hehe/stage',{vascular:'yes',strategy:'transplant',extrahepatic:'limited',rupture:'none'},2,'hold');
 expect('hehe/stage',{vascular:'no',strategy:'transplant',extrahepatic:'none'},null,'stop');
+// Rupture history must override otherwise favorable HEHE selection.
+for(const [rupture,branch,kind] of [['prior',3,'stop'],['uncertain',4,'hold'],['active',5,'stop']])expect('hehe/stage',{vascular:'yes',strategy:'transplant',extrahepatic:'none',rupture},branch,kind);
 for(const route of ['syndrome','beta','adenomatosis','complicated'])expect('hca/exception-route',{route},0,'advance');
 expect('hca/exception-route',{route:'none'},1,'hold');
 expect('hca/standard-care',{bleeding:'yes',management:'no'},null,'stop');

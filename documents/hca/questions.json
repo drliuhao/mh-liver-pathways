@@ -133,8 +133,8 @@
     {
      "id": "HCA-D3",
      "set": "roadmap",
-     "title": "How long may risk-factor modification run before a persistent lesion over 5 cm is treated — EASL's 6 months, or 12, or longer in a lesion that is still falling?",
-     "question": "How long may risk-factor modification run before a persistent lesion over 5 cm is treated — EASL's 6 months, or 12, or longer in a lesion that is still falling?",
+     "title": "How will the team individualize the 6–12-month reassessment period for a woman with a persistent large adenoma, and when is observation beyond 12 months appropriate?",
+     "question": "How will the team individualize the 6–12-month reassessment period for a woman with a persistent large adenoma, and when is observation beyond 12 months appropriate?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
      "resolved": false,
@@ -181,9 +181,9 @@
       }
      ],
      "divergence": "EASL anchors the decision at 6 months, while ACG uses a looser 6- to 12-month interval. The regression cohort, its authors and most surveyed experts favour waiting longer. The authors' 12-month proposal ignores baseline diameter even though time to regression was strongly size-dependent.",
-     "proposal": "Reimage with contrast MRI at 6 months and read it as a trajectory; do not call risk-factor modification a failure before 12 months (grade C, a deliberate deviation from EASL). Observation beyond 12 months is Reasonable in a woman with a typical, non-beta-catenin adenoma that is shrinking. No diameter-specific interval is proposed.",
+     "proposal": "Reimage with contrast MRI at 6 months and assess size, growth, subtype, symptoms and response to risk-factor modification. Individualize intervention within the 6–12-month period; do not require every patient to wait 12 months. Observation beyond 12 months remains a case-specific option for a shrinking, typical non-beta-catenin adenoma in a woman without concerning features.",
      "proposal_locator": "What we are not sure about #4; Gate 2 · Standard 'Reimage with contrast-enhanced MRI at 6 months…'; Gate 2 · Reasonable 'Extend observation past 12 months…'",
-     "rationale": "EASL and ACG indicate resection at 6 months. At that point only 8.5-15.3% of adenomas over 5 cm have fallen below 5 cm, against 23.7-27.1% at 52 weeks and 58.5% eventually at a median 104 weeks, with no complication during the whole of that follow-up and time to regression strongly size-dependent (median 63 weeks under 7 cm, 208 weeks over 10 cm). The six-month trigger therefore captures roughly one in six to one in ten of the lesions that will eventually regress below 5 cm. The cohort's authors proposed 12 months for typical non-beta-catenin adenomas in women; 79% of responding European experts already decline the rule; and the only GRADE-appraised guideline grades the 6-month decision point very low quality, conditional. Decide the number, and decide whether it differs by baseline diameter.",
+     "rationale": "EASL uses a 6-month reassessment before recommending resection of persistent lesions at least 5 cm; ACG permits a 6–12-month period. In the regression cohort, 8.5–15.3% of adenomas over 5 cm had fallen below 5 cm at 26 weeks, 23.7–27.1% at 52 weeks and 58.5% eventually at a median 104 weeks, with no complication reported during follow-up. These selected observational data support considering trajectory but do not establish that delaying intervention is safe for every large or high-risk lesion. The remaining local choice concerns individualization and observation beyond 12 months, not a blanket 12-month minimum.",
      "audit": "Audit: time to fall below 5 cm or to intervention, for every adenoma over 5 cm under surveillance.",
      "web": "adenoma/#question-HCA-D3"
     },
@@ -972,10 +972,10 @@
        "key": "std-H-policy",
        "kind": "Allocation policy",
        "says": "HCC exception qualification has its own diagnostic and staging requirements.",
-       "locator": "Effective October 1, 2026 · §§9.5.I.i–vii · pp.196–200"
+       "locator": "Effective November 18, 2026 · §9.5.I · pp.199–202"
       }
      ],
-     "proposal": "Confirm or exclude malignancy with pathology and the tumor board. If cancer is present, use its treatment pathway and assess the relevant MELD-exception criteria.",
+     "proposal": "Confirm or exclude malignancy with pathology and the tumor board. If cancer is present, use its treatment pathway and assess the relevant MELD-exception criteria. After HCC is confirmed, use the HCC roadmap to choose resection or, when unsuitable, liver-directed therapy, transplantation or systemic treatment according to stage and clinical eligibility. Diagnostic confirmation does not require resection in every patient.",
      "rationale": "Suspected malignant transformation requires diagnostic confirmation before applying cancer-specific treatment and MELD-exception criteria.",
      "owners": "Pathology · hepatology · transplant surgery",
      "web": "transplant/hca/#meeting-transformation"
@@ -1849,7 +1849,7 @@
    "title": "OPTN Policies — HCC standardized exception",
    "kind": "Allocation policy",
    "links": {
-    "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf#page=196"
+    "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf#page=199"
    }
   },
   "hr-nlrb": {

@@ -9495,6 +9495,14 @@
         "TACE + a tyrosine kinase inhibitor vs TACE alone. Matched transplant recipients, 60 per arm.",
         "Objective imaging response was 33.3% vs 16.7% (P=.035)."
       ]
+    },
+    "38502889": {
+      "label": "ASCO guideline",
+      "design": "Guideline",
+      "arms": "Advanced HCC systemic-treatment recommendations",
+      "result": "Selected durvalumab monotherapy when combination therapy is unsuitable and checkpoint therapy remains appropriate.",
+      "caution": "This guideline option is distinct from the US labeled HCC combination regimen.",
+      "quotes": []
     }
   },
   "options": {
@@ -11299,16 +11307,6 @@
     "hcc:1hkadz7": {
       "lead": "Lobar radioembolisation with Y-90.",
       "rows": []
-    },
-    "hcc:1nocq72": {
-      "lead": "Consider radiation or radioembolization with systemic therapy. Evidence used sor",
-      "rows": [
-        {
-          "pmid": "39699905",
-          "result": "Primary survival endpoint missed: HR 0.77 (90% CI 0.59–1.01), one-sided p=0.06, radiotherapy + sorafenib vs sorafenib",
-          "caution": "15% never started sorafenib; no immunotherapy backbone tested"
-        }
-      ]
     },
     "hcc:1o6kxv0": {
       "lead": "Transplant Consider when transplantation can address both the cancer and the und",
@@ -14435,6 +14433,16 @@
           "caution": "Single-arm basket trial; pancreatic OS not reported; no comparative survival estimate"
         }
       ]
+    },
+    "hcc:173cdu1": {
+      "lead": "Consider EBRT for selected liver-dominant or portal-vein tumor invasion control; coordinate systemic treatment.",
+      "rows": [
+        {
+          "pmid": "39699905",
+          "result": "Primary survival endpoint missed: HR 0.77 (90% CI 0.59–1.01), one-sided p=0.06, radiotherapy + sorafenib vs sorafenib",
+          "caution": "13/85 never started sorafenib; no immunotherapy backbone tested"
+        }
+      ]
     }
   },
   "reference_links": {
@@ -14454,10 +14462,6 @@
     "hcc:1hkadz7": [
       "hcc-y90-lobar"
     ],
-    "hcc:1nocq72": [
-      "hcc-rt-advanced",
-      "hcc-y90-advanced"
-    ],
     "hcc:3jdrkt": [
       "hcc-atezo-bev",
       "hcc-stride",
@@ -14473,6 +14477,9 @@
     ],
     "hcc:7sfecx": [
       "hcc-ablation"
+    ],
+    "hcc:173cdu1": [
+      "hcc-rt-advanced"
     ]
   },
   "reference_groups": {

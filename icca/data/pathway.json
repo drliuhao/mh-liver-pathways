@@ -50,6 +50,19 @@
           "note": "Where the tumour obstructs the biliary tree, the need for drainage, its route and its side are decided with the hepatobiliary surgeon before any non-emergency procedure; resection without preoperative drainage can be considered when the future remnant is large. That drainage rule is grade D on its own — no comparative outcome data in intrahepatic disease were identified for it — while the grade B on this string covers the imaging sequence, which BSG 2023 and EASL-ILCA both recommend."
         },
         {
+          "t": "For apparently resectable iCCA, obtain FDG-PET-CT for nodal and distant staging alongside appropriate CT and MRI.",
+          "l": "Standard",
+          "g": "B",
+          "refs": [
+            "nccn",
+            "37770126",
+            "37084797"
+          ],
+          "pref": "Apparently resectable disease being assessed for intended curative resection. Use EUS-guided sampling of accessible nodes when confirming nodal metastasis would change management, including relevant uncertainty after negative or inconclusive PET.",
+          "avoid": "Do not substitute PET for MRI with MRCP in local planning; MRCP is preferred for biliary anatomy and ERCP or PTC are used more for therapeutic intervention.",
+          "note": "EASL-ILCA recommends PET staging in apparently resectable iCCA and management-changing EUS-guided nodal sampling; BSG recommends PET-CT for nodal and distant staging. AASLD’s caution about PET for diagnosing the primary addresses a different question. This default does not replace liver/biliary imaging or the separate transplant-protocol staging requirements. Local workflow or access departures remain explicit under iCCA-D16."
+        },
+        {
           "t": "Exclude another primary before committing to this pathway, because metastatic adenocarcinoma can be histologically indistinguishable from intrahepatic cholangiocarcinoma.",
           "l": "Standard",
           "g": "D",
@@ -86,19 +99,6 @@
           "pref": "The patient entering the pathway as an indeterminate stricture, where pathology alone is weakest: in a 6-year prospective study of 2,116 patients across 28 institutions, pathologic assessment of ERCP brushings and biopsies had 44% sensitivity overall and 36% for intrahepatic or hilar strictures, while a DNA/RNA sequencing panel on separately collected specimens in a dedicated nucleic-acid buffer reached 82% sensitivity at 98% specificity and the combination 88% at 97%. Specificity was 99% for pathology, so sequencing bought sensitivity and gave up almost nothing.",
           "avoid": "Do not read a negative molecular result as excluding malignancy — in the original single-centre cohort there were 37 false negatives (25%) and the negative predictive value was only 63%, with sampling failure the usual explanation; in 12 of those cases the same panel found an alteration in the resected tumour. Only 2% of neoplastic strictures in the 2026 study were purely dysplastic, so outside primary sclerosing cholangitis this is earlier diagnosis of established cancer, not early detection, and no resectability or survival benefit has been shown. Payer authorisation and the dedicated collection buffer have to be arranged before the procedure, not after.",
           "note": "Correct the yield figure: therapeutically relevant alterations were reported in 20 of 150 cancers (13%) in the original single-centre cohort, and in the 2026 multi-institutional study in 137 of 458 cholangiocarcinomas (30%) — but only on the 161-gene version of the panel. The 28-gene version used in the original cohort did not detect FGFR2 fusions at all, which with chromatin-remodelling genes accounts for up to 20% of intrahepatic tumours, so a biliary specimen substitutes for the clinical decision 2 profile only if the panel actually run reports fusions. Downgraded from B: specimens were submitted at the endoscopist's discretion rather than consecutively, a stricture could be classified neoplastic on 12 months of clinical or radiographic progression rather than on tissue, and all testing was done in the laboratory that developed the assay."
-        },
-        {
-          "t": "Add FDG-PET selectively, for suspected occult spread and for transplant staging.",
-          "l": "Reasonable",
-          "g": "B",
-          "refs": [
-            "nccn",
-            "37770126",
-            "37084797"
-          ],
-          "pref": "Where occult nodal or distant disease would change the operation, and in any patient being staged for a transplant protocol.",
-          "avoid": "Do not substitute PET for MRI with MRCP in local planning; MRCP is preferred for biliary anatomy and ERCP or PTC are used more for therapeutic intervention.",
-          "note": "BSG 2023 recommends FDG-PET-CT for nodal and distant disease as part of staging and EASL-ILCA recommends it routinely in apparently resectable patients, both more broadly than our selective wording — alignment worksheet, area 2. Read the strength of the broader recommendation honestly: the EASL-ILCA routine-PET statement passed its Delphi panel with only 78% agreement, the weakest consensus in that guideline's staging section, and AASLD 2023 states PET should not be used to assess the primary tumour."
         }
       ],
       "avoid": [
@@ -747,7 +747,7 @@
               "g": "B",
               "when": "Goal: curative. Standard in the selector. Fits R0 achievable, liver-confined, adequate remnant and biliary drainage, fit patient.",
               "pref": "The established curative standard whenever the anatomy and the reserve allow it — clinical decision 3.",
-              "avoid": "Multifocal disease; nodal disease beyond the regional basin; inadequate remnant; any extrahepatic disease.",
+              "avoid": "Multifocal disease across both lobes, malignant nodules that cannot all be safely resected, nodal disease beyond the regional basin, inadequate functional remnant, or extrahepatic disease. Selected limited unilobar or satellite disease may still be considered for complete resection under clinical decision 3.",
               "refs": [
                 "nccn",
                 "36083140"
@@ -897,13 +897,11 @@
           ],
           "pref": "Every patient being offered capecitabine. Significance appeared in the prespecified intention-to-treat sensitivity analysis adjusted for nodal status, tumour grade and sex (hazard ratio 0.71, 95% CI 0.55–0.92, p=0.010) and in the per-protocol analysis (hazard ratio 0.75, 95% CI 0.58–0.97, p=0.028); the trial was unmasked. Say both halves.",
           "avoid": "Do not present it as settled. Only 84 of 447 patients (19%) had intrahepatic disease and the trial was not powered for site-specific effects, so the iCCA-specific benefit is unproven; LCSGJ 2022 reports no significant benefit in the intrahepatic subgroup, while EASL-ILCA cites an iCCA hazard ratio of 0.65 — the best of the subtypes — and still grades the recommendation on a trial that was negative on intention to treat.",
-          "note": "Lymphadenectomy was not mandated for intrahepatic patients in BILCAP, yet nodal status is one of the covariates that turns the sensitivity analysis positive. Recurrence-free survival favoured capecitabine over the first 24 months (median 24.4 versus 17.5 months, adjusted hazard ratio 0.75, 95% CI 0.58–0.98, p=0.033) with no difference from 24 to 60 months (hazard ratio 1.48, 0.80–2.77, p=0.21), which the authors read as deferred rather than prevented recurrence. Recruitment ran nearly nine years with no fully defined analysis plan at the outset and the monitoring committee had to reset the event target when survival on observation proved far better than assumed. Two guideline readings of the same subgroup conflict and should not be presented as two datasets: LCSGJ 2022 reports no significant benefit in the intrahepatic subgroup while EASL-ILCA cites an iCCA hazard ratio of 0.65 as the best of the subtypes — both are unpowered subgroup estimates from the trial that was negative on intention to treat. NCCN Biliary Tract Cancers v1.2026 designates capecitabine preferred, category 1, while acknowledging the nonsignificant intention-to-treat analysis; our Reasonable consideration is deliberately more cautious and requires explicit multidisciplinary local approval (alignment worksheet, area 11)."
-        }
-      ],
-      "alt": [
+          "note": "Lymphadenectomy was not mandated for intrahepatic patients in BILCAP, yet nodal status is one of the covariates that turns the sensitivity analysis positive. Recurrence-free survival favoured capecitabine over the first 24 months (median 24.4 versus 17.5 months, adjusted hazard ratio 0.75, 95% CI 0.58–0.98, p=0.033) with no difference from 24 to 60 months (hazard ratio 1.48, 0.80–2.77, p=0.21), which the authors read as deferred rather than prevented recurrence. Recruitment ran nearly nine years with no fully defined analysis plan at the outset and the monitoring committee had to reset the event target when survival on observation proved far better than assumed. Two guideline readings of the same subgroup conflict and should not be presented as two datasets: LCSGJ 2022 reports no significant benefit in the intrahepatic subgroup while EASL-ILCA cites an iCCA hazard ratio of 0.65 as the best of the subtypes — both are unpowered subgroup estimates from the trial that was negative on intention to treat. NCCN Biliary Tract Cancers v1.2026 designates capecitabine preferred, category 1, while acknowledging the nonsignificant intention-to-treat analysis; the current default follows the guideline-supported offer, with toxicity and uncertainty explained. Any case-by-case-only institutional policy remains an unapproved local departure under iCCA-D3."
+        },
         {
-          "t": "Offer adjuvant capecitabine for 6 months as a reasonable consideration, not an obligation.",
-          "l": "Reasonable",
+          "t": "Offer six months of adjuvant capecitabine after resection to patients fit for treatment, using shared decision-making about benefit, toxicity and preferences.",
+          "l": "Standard",
           "g": "C",
           "refs": [
             "30922733",
@@ -911,10 +909,12 @@
             "37770126",
             "35978598"
           ],
-          "pref": "The fit patient after R0 or R1 resection, particularly node-positive or R1 disease, who has heard the trial endpoints and wants treatment. AASLD 2023 says capecitabine should be considered for all patients with cholangiocarcinoma and BSG 2023 recommends considering 24 weeks (strong recommendation, moderate-quality evidence).",
+          "pref": "After R0 or R1 resection, assess recovery, organ function, performance status, treatment tolerance and patient preferences. Guideline support is not limited to node-positive or R1 disease; adverse features inform the benefit–risk discussion rather than defining the only patients offered treatment.",
           "avoid": "A patient for whom the toxicity outweighs an unproven site-specific gain: grade 3 or worse events affected 44% of the 213 treated patients, most often hand-foot syndrome (20%), 32% stopped for toxicity and only 55% completed all eight cycles. Serious adverse events were 21% versus 10% on observation.",
-          "note": "Downgraded from B. The trial that supports it did not meet its primary intention-to-treat endpoint (adjusted hazard ratio 0.81, 95% CI 0.63–1.04, p=0.097), only 84 of 447 patients (19%) had intrahepatic disease and it was not powered for site-specific effects, so for this pathway the benefit is an unpowered subgroup of a negative trial. ACTICCA-1 has not reported. Our label sits closest to LCSGJ 2022's weak recommendation and is more cautious than AASLD 2023, BSG 2023 and EASL-ILCA, each of which grades the recommendation strong. Whether it moves to Standard is unresolved approval item 3."
-        },
+          "note": "Guidelines support offering adjuvant capecitabine. The internal evidence grade C describes uncertainty in the iCCA-specific estimate and is separate from guideline recommendation strength. BILCAP did not meet its primary intention-to-treat endpoint and was not powered by anatomic subtype; this does not establish absence of benefit. A case-by-case-only institutional policy would be a local departure requiring explicit approval, not the current default. BILCAP: primary intention-to-treat adjusted HR 0.81 (95% CI 0.63–1.04), p=0.097; 84 of 447 participants (19%) had iCCA, and no powered iCCA-specific effect was established."
+        }
+      ],
+      "alt": [
         {
           "t": "Discuss adjuvant chemoradiotherapy case by case at tumour board after an R1 or node-positive resection; it is not routine.",
           "l": "Reasonable",
@@ -1363,7 +1363,7 @@
           "ASCOT: 3-year survival 77.1% versus 67.6%, hazard ratio 0.69 — Japan only, S-1 unavailable in the United States, 13% intrahepatic. PRODIGE-12: negative for gemcitabine–oxaliplatin, grade 3–4 toxicity 73%. BCAT: no benefit for gemcitabine (hazard ratio 1.01) in extrahepatic bile duct cancer only, iCCA not eligible."
         ]
       ],
-      "foot": "Local label: Reasonable consideration, grade B. NCCN Biliary Tract Cancers v1.2026 designates capecitabine preferred, category 1, while acknowledging the nonsignificant intention-to-treat analysis; AASLD 2023 and BSG 2023 treat it as standard, and LCSGJ 2022 makes a weak recommendation and reports no significant benefit in the intrahepatic subgroup. Lymphadenectomy was not mandated for intrahepatic patients, yet nodal status is one of the covariates that turns the sensitivity analysis positive. Offer capecitabine, discuss it with these numbers, and do not present it as settled — whether the label moves to Standard is unresolved approval item 3.",
+      "foot": "Standard offer: discuss six months of adjuvant capecitabine with suitable resected patients. NCCN identifies it as preferred, category 1; AASLD, BSG and EASL-ILCA support its use. BILCAP’s primary intention-to-treat result and iCCA-specific estimate remain uncertain, and toxicity and preferences determine the individual decision. The internal evidence grade C does not replace guideline recommendation strength. Any programme-wide departure from offering treatment remains pending iCCA-D3.",
       "src": "BILCAP PMID 30922733; ASCOT PMID 36681415; PRODIGE-12 PMID 30707660; BCAT PMID 29405274; roadmap §7.1 and alignment worksheet area 11"
     },
     {
@@ -1493,7 +1493,7 @@
     },
     {
       "t": "Adjuvant capecitabine after resection of intrahepatic cholangiocarcinoma.",
-      "why": "BILCAP did not meet its primary endpoint. Intention-to-treat median overall survival was 51.1 versus 36.4 months with an adjusted hazard ratio of 0.81 (95% CI 0.63–1.04), p=0.097; significance appeared only in a prespecified sensitivity analysis adjusted for nodal status, grade and sex (0.71, 0.55–0.92) and in the per-protocol analysis (0.75, 0.58–0.97), in an unmasked trial whose analysis plan was not fully defined at the outset. Intrahepatic patients were 84 of 447 (19%) and the trial was not powered for site-specific effects, so no iCCA-specific benefit has been shown. The two guideline readings of that subgroup contradict each other — LCSGJ 2022 reports no significant benefit, EASL-ILCA cites a hazard ratio of 0.65 as the best of the subtypes — and they are not two datasets but two readings of one unpowered subgroup of a negative trial. What is actually known is that recurrence was deferred rather than prevented (no difference in recurrence-free survival from 24 to 60 months) and that 44% of treated patients had a grade 3 event, 32% stopped for toxicity and 55% finished all eight cycles. ACTICCA-1 has not reported. Our label is Reasonable consideration, grade C, and the conversation is the deliverable.",
+      "why": "BILCAP did not meet its primary endpoint. Intention-to-treat median overall survival was 51.1 versus 36.4 months with an adjusted hazard ratio of 0.81 (95% CI 0.63–1.04), p=0.097; significance appeared only in a prespecified sensitivity analysis adjusted for nodal status, grade and sex (0.71, 0.55–0.92) and in the per-protocol analysis (0.75, 0.58–0.97), in an unmasked trial whose analysis plan was not fully defined at the outset. Intrahepatic patients were 84 of 447 (19%) and the trial was not powered for site-specific effects, so no iCCA-specific benefit has been shown. The two guideline readings of that subgroup contradict each other — LCSGJ 2022 reports no significant benefit, EASL-ILCA cites a hazard ratio of 0.65 as the best of the subtypes — and they are not two datasets but two readings of one unpowered subgroup of a negative trial. What is actually known is that recurrence was deferred rather than prevented (no difference in recurrence-free survival from 24 to 60 months) and that 44% of treated patients had a grade 3 event, 32% stopped for toxicity and 55% finished all eight cycles. ACTICCA-1 has not reported. The current label is Standard offer with internal evidence grade C: offer treatment to suitable patients, explain uncertainty and toxicity, and respect informed preferences. A programme-wide case-by-case-only restriction remains a pending local departure.",
       "refs": [
         "30922733",
         "35978598",
@@ -1737,8 +1737,8 @@
       },
       {
         "n": 3,
-        "q": "Adjuvant capecitabine — offered routinely, or case by case?",
-        "why": "BILCAP's primary analysis was not significant; ASCOT's positive result used an agent unavailable here.",
+        "q": "How will adjuvant capecitabine be offered, and what local departures require approval?",
+        "why": "The indication is supported by major guidelines despite uncertainty in the anatomic-subtype estimates. Internal study appraisal, guideline recommendation strength and an individual patient’s decision are separate judgments.",
         "audit": "Registry: uptake, completion, recurrence pattern."
       },
       {
@@ -1755,9 +1755,9 @@
       },
       {
         "n": 6,
-        "q": "What are the thresholds barring each liver-directed modality by liver function?",
-        "why": "No comparative data define the cut-offs; they are safety conventions.",
-        "audit": "Audit: decompensation after liver-directed therapy."
+        "q": "Which liver-reserve findings preclude resection or each liver-directed treatment?",
+        "why": "A laboratory score or remnant percentage alone cannot represent decompensation, portal hypertension and the functional demands of the proposed operation. Guideline-defined exclusions and local numeric safety limits should be recorded separately; the latter remain pending specialty approval.",
+        "audit": "Record decompensation, portal-hypertension assessment, functional remnant, treatment volume and regimen, plus post-treatment hepatic failure."
       },
       {
         "n": 7,
@@ -1779,9 +1779,9 @@
       },
       {
         "n": 10,
-        "q": "Is regional lymphadenectomy mandatory at every iCCA resection, and what minimum node yield is recorded?",
-        "why": "LCSGJ 2022 makes no recommendation and warns that prophylactic dissection in cirrhosis increases complications; ESMO 2023 recommends routine hepatoduodenal-ligament dissection on level IV evidence; BSG 2023 and AASLD 2023 state neither extent nor yield. The clinical decision 8 adjuvant conversation and the registry both need a nodal denominator. Alignment worksheet, area 5.",
-        "audit": "Registry: lymphadenectomy performed, node count, node positivity, and complications attributable to the dissection."
+        "q": "Which nodes are regional, and what lymphadenectomy and node yield are required?",
+        "why": "The surgeon, radiologist and pathologist need the same nodal map. Eligibility based on nodal location, the staging value of dissection, its risks in cirrhosis and the completeness of nodal assessment are separate decisions.",
+        "audit": "Record sampled/dissected nodal stations, total and positive node counts, the agreed regional/extra-regional classification, and dissection-related complications."
       },
       {
         "n": 11,
@@ -1812,6 +1812,18 @@
         "q": "Ratify early HAI review, disease-specific selection and programme safeguards.",
         "why": "Before activation, name the HPB pump surgeon and backup, medical oncology lead, nursing/pharmacy team, nuclear-medicine perfusion service and IR rescue service; define refill/maintenance coverage, laboratory monitoring and dose holds, biliary-toxicity escalation, and an outcomes registry. Minimum programme requirements: PMID 39962001; surgical toolkit: PMID 36346892. Avoid concurrent bevacizumab with FUDR (PMID 24154839); retain the NCCN CRLM restriction on concurrent VEGF inhibitors. Selected resectable regional nodes in HAI evidence do not confer transplant eligibility. No established head-to-head modality hierarchy.",
         "audit": "Record intent, referral timing, systemic plan, perfusion verification, dose intensity, biliary complications, reassessment and complete resection/ablation outcomes."
+      },
+      {
+        "n": 16,
+        "q": "How will PET-CT and management-changing EUS node sampling be completed before intended curative resection?",
+        "why": "The staging default follows the guideline-defined resection setting. Primary-tumor diagnosis, biliary mapping and transplant-protocol staging remain distinct; local implementation must specify which finding changes treatment.",
+        "audit": "Record PET use, nodal stations sampled, change in stage or treatment plan, failed/unsafe sampling and alternative staging agreed by the multidisciplinary team."
+      },
+      {
+        "n": 17,
+        "q": "When is limited multifocal iCCA still resectable?",
+        "why": "Distribution and complete safe clearance matter more than the word multifocal alone. Satellite appearance does not prove favorable biology or remove nodal and distant staging requirements.",
+        "audit": "Record number and sizes of nodules, involved segments/lobes, satellite description, R0 clearance, functional remnant, recurrence and survival."
       }
     ]
   },

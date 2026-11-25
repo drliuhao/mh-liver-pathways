@@ -8,7 +8,7 @@
  const inclusion=r=>(r.inclusion||[]).map(e).join('; ');
  const slideNote=r=>!share&&r.slides?.length?'<p class="meta">Evidence PPT · slides '+r.slides.join(', ')+'</p>':'';
  try{
-  const responses=await Promise.all([fetch('catalog.json?v=20261125-threshold1'),fetch('document-index.json?v=20261125-threshold1')]);
+  const responses=await Promise.all([fetch('catalog.json?v=20261125-alignment1'),fetch('document-index.json?v=20261125-alignment1')]);
   if(responses.some(r=>!r.ok))throw Error('Catalog unavailable');
   const [base,supplement]=await Promise.all(responses.map(r=>r.json()));const data=LibraryDocumentIndex.merge(base,supplement);
   document.getElementById('census').textContent=data.libraries.length+' libraries · '+data.unique_publications+' distinct publications. Search includes policy and guidance records.';

@@ -1,36 +1,36 @@
 {
-  "release": "Threshold_Clarity_Release_2026-11-25/Artifacts",
-  "scope": "Project-wide threshold language cleanup; use named guideline criteria, preserve distinct request stages and study populations. Historical releases preserved.",
+  "release": "Guideline_Alignment_Release_2026-11-25/Artifacts",
+  "scope": "Guideline-gap alignment: factual corrections, user-selected guideline defaults, synchronized clinical-selection wording and explicit pending local departures. Historical releases preserved.",
   "word_documents": [
     {
       "path": "documents/hcc/HCC_1_Roadmap.docx",
-      "sha256": "aaedcdcfb3927845290c7019843956ae8eceeb03e92df2acd952ad81f83c6f54",
+      "sha256": "48b1495b01af85fd4d8098bc0c335ed01eeb8f6a6c15003d896ceabbaa9fbae2",
       "local_master": "Documents/01_HCC/HCC_1_Roadmap_v20.docx",
-      "local_sha256": "aaedcdcfb3927845290c7019843956ae8eceeb03e92df2acd952ad81f83c6f54"
+      "local_sha256": "48b1495b01af85fd4d8098bc0c335ed01eeb8f6a6c15003d896ceabbaa9fbae2"
     },
     {
       "path": "documents/hcc/HCC_2_Roadmap_Questions.docx",
-      "sha256": "5b7a1faec61ee38f77cc56c2dd2e0136bed8aa26c4133b23d062eb3ba5931c92",
+      "sha256": "57191fd537e5d07f6e80c3c95df83a7361ae8fbc15409263b2f68813f1dc0d3a",
       "local_master": "Documents/01_HCC/HCC_2_Roadmap_Questions_v20.docx",
-      "local_sha256": "5b7a1faec61ee38f77cc56c2dd2e0136bed8aa26c4133b23d062eb3ba5931c92"
+      "local_sha256": "57191fd537e5d07f6e80c3c95df83a7361ae8fbc15409263b2f68813f1dc0d3a"
     },
     {
       "path": "documents/hcc/HCC_3_Standard_Pathway.docx",
-      "sha256": "9b2fcbf5819a0136d08ad35467fe7b08e4d21044a76653aed3cdb42ad67d69e5",
+      "sha256": "26fa6c17a3770ea6262ffa3ee870b26f81f52486d0a6e1073e2418de294be6c3",
       "local_master": "Documents/01_HCC/HCC_3_Standard_Pathway_v20.docx",
-      "local_sha256": "9b2fcbf5819a0136d08ad35467fe7b08e4d21044a76653aed3cdb42ad67d69e5"
+      "local_sha256": "26fa6c17a3770ea6262ffa3ee870b26f81f52486d0a6e1073e2418de294be6c3"
     },
     {
       "path": "documents/hcc/HCC_4_Standard_Pathway_Questions.docx",
-      "sha256": "63a38d34293bd3c47ae9fef16f54470501c8698d629835d4fa2e7c9328d0a946",
+      "sha256": "6e0aa84c5e4f63057e230f400448d0e9cd1ebe08d1d547cf140bed7ce3ab52e1",
       "local_master": "Documents/01_HCC/HCC_4_Standard_Pathway_Questions_v20.docx",
-      "local_sha256": "63a38d34293bd3c47ae9fef16f54470501c8698d629835d4fa2e7c9328d0a946"
+      "local_sha256": "6e0aa84c5e4f63057e230f400448d0e9cd1ebe08d1d547cf140bed7ce3ab52e1"
     },
     {
       "path": "documents/hcc/HCC_5_High_Risk_Pathway.docx",
-      "sha256": "be3fae20aaf682f0d45c4027bbf415c797012f4252ecd2758730789f50412645",
+      "sha256": "0c2e48a7e82cb715596aa152308a050616740462c2f1224ba7758021a72a6e23",
       "local_master": "Documents/01_HCC/HCC_5_High_Risk_Pathway_v20.docx",
-      "local_sha256": "be3fae20aaf682f0d45c4027bbf415c797012f4252ecd2758730789f50412645"
+      "local_sha256": "0c2e48a7e82cb715596aa152308a050616740462c2f1224ba7758021a72a6e23"
     },
     {
       "path": "documents/hcc/HCC_6_High_Risk_Pathway_Questions.docx",
@@ -40,33 +40,33 @@
     },
     {
       "path": "documents/hcc/HCC_7_Decision_Discussion.docx",
-      "sha256": "686168c537dea5f5cb1b272173e7891ab5b459e782074dc613a19f33566f2f73",
+      "sha256": "f4d7c0fe0a51f82325403c4e2990bbb965c5c74af8d59c96014b63e9dcd2a41e",
       "local_master": "Documents/01_HCC/HCC_7_Decision_Discussion_v20.docx",
-      "local_sha256": "686168c537dea5f5cb1b272173e7891ab5b459e782074dc613a19f33566f2f73"
+      "local_sha256": "f4d7c0fe0a51f82325403c4e2990bbb965c5c74af8d59c96014b63e9dcd2a41e"
     },
     {
       "path": "documents/pcca/pCCA_1_Roadmap.docx",
-      "sha256": "73020165491874e7f880ddd7cb999cddfdb61965b643e46373cbb8010537871d",
+      "sha256": "e31a6707b302c5c0cef3a115c145814ab51370c3b36088ecb3160073345f5f8d",
       "local_master": "Documents/02_pCCA/pCCA_1_Roadmap_v20.docx",
-      "local_sha256": "73020165491874e7f880ddd7cb999cddfdb61965b643e46373cbb8010537871d"
+      "local_sha256": "e31a6707b302c5c0cef3a115c145814ab51370c3b36088ecb3160073345f5f8d"
     },
     {
       "path": "documents/pcca/pCCA_2_Roadmap_Questions.docx",
-      "sha256": "a50729cf4e4a14e27f6ad28b99512b34df1413c6fd2757c83ee4daff45adb2d8",
+      "sha256": "9ceacf17a9dd309a7b2c69f4dd2b81021c36207c2522a32bca985c7159add1d4",
       "local_master": "Documents/02_pCCA/pCCA_2_Roadmap_Questions_v20.docx",
-      "local_sha256": "a50729cf4e4a14e27f6ad28b99512b34df1413c6fd2757c83ee4daff45adb2d8"
+      "local_sha256": "9ceacf17a9dd309a7b2c69f4dd2b81021c36207c2522a32bca985c7159add1d4"
     },
     {
       "path": "documents/pcca/pCCA_3_Standard_Pathway.docx",
-      "sha256": "bcde047b614bde4c75043b6bc894b8f21228c08348ee1a8be6fc377af872fc12",
+      "sha256": "2e1e0f45817fab9ae5ade2612e33a31665d6b0009fa76ee17293379a813b72fc",
       "local_master": "Documents/02_pCCA/pCCA_3_Standard_Pathway_v20.docx",
-      "local_sha256": "bcde047b614bde4c75043b6bc894b8f21228c08348ee1a8be6fc377af872fc12"
+      "local_sha256": "2e1e0f45817fab9ae5ade2612e33a31665d6b0009fa76ee17293379a813b72fc"
     },
     {
       "path": "documents/pcca/pCCA_4_Standard_Pathway_Questions.docx",
-      "sha256": "6847c9118e3d967653b5024843c38150bc7a4bedfcfd631ba1ec8b87068e5f53",
+      "sha256": "3b7f9e706e6454ad7efc96819356a0c49ef0f5fca6ccf5fd4c4092beb7fb3e46",
       "local_master": "Documents/02_pCCA/pCCA_4_Standard_Pathway_Questions_v20.docx",
-      "local_sha256": "6847c9118e3d967653b5024843c38150bc7a4bedfcfd631ba1ec8b87068e5f53"
+      "local_sha256": "3b7f9e706e6454ad7efc96819356a0c49ef0f5fca6ccf5fd4c4092beb7fb3e46"
     },
     {
       "path": "documents/pcca/pCCA_5_High_Risk_Pathway.docx",
@@ -82,21 +82,21 @@
     },
     {
       "path": "documents/pcca/pCCA_7_Decision_Discussion.docx",
-      "sha256": "30070391bd6dffad4ff1d73ae459815b5114f8b4464040a7202ce76fc640dcf4",
+      "sha256": "8efb191b4681242af5982791dec73776b80e974fc55044b30c6418340cebedde",
       "local_master": "Documents/02_pCCA/pCCA_7_Decision_Discussion_v20.docx",
-      "local_sha256": "30070391bd6dffad4ff1d73ae459815b5114f8b4464040a7202ce76fc640dcf4"
+      "local_sha256": "8efb191b4681242af5982791dec73776b80e974fc55044b30c6418340cebedde"
     },
     {
       "path": "documents/icca/iCCA_1_Roadmap.docx",
-      "sha256": "c93e134c31d6d0a27b87c3aafcdd0d6d89c898d5b7fa81905f46df4809fa2546",
+      "sha256": "2266de1832adf282963456ef5ef95f777b7902192393de5c715e95255b6e3d46",
       "local_master": "Documents/03_iCCA/iCCA_1_Roadmap_v20.docx",
-      "local_sha256": "c93e134c31d6d0a27b87c3aafcdd0d6d89c898d5b7fa81905f46df4809fa2546"
+      "local_sha256": "2266de1832adf282963456ef5ef95f777b7902192393de5c715e95255b6e3d46"
     },
     {
       "path": "documents/icca/iCCA_2_Roadmap_Questions.docx",
-      "sha256": "e21d769fad9b13f7f733c466eb497b0da26fd13fdb69e345b9f677afdf4fb07b",
+      "sha256": "0c27d7107540d0247ce8ca8d44cdce3bf9e6d9eef7fe1ae765350d7857e04808",
       "local_master": "Documents/03_iCCA/iCCA_2_Roadmap_Questions_v20.docx",
-      "local_sha256": "e21d769fad9b13f7f733c466eb497b0da26fd13fdb69e345b9f677afdf4fb07b"
+      "local_sha256": "0c27d7107540d0247ce8ca8d44cdce3bf9e6d9eef7fe1ae765350d7857e04808"
     },
     {
       "path": "documents/icca/iCCA_3_Standard_Pathway.docx",
@@ -124,21 +124,21 @@
     },
     {
       "path": "documents/icca/iCCA_7_Decision_Discussion.docx",
-      "sha256": "04e2ab4e24c24d0580e94c85ba3f980e093a38dae4a4a5895c86767813b9d946",
+      "sha256": "c1897995fe20a0657743cd12b146733d6e589ac5ab8995ee938c31f164696211",
       "local_master": "Documents/03_iCCA/iCCA_7_Decision_Discussion_v20.docx",
-      "local_sha256": "04e2ab4e24c24d0580e94c85ba3f980e093a38dae4a4a5895c86767813b9d946"
+      "local_sha256": "c1897995fe20a0657743cd12b146733d6e589ac5ab8995ee938c31f164696211"
     },
     {
       "path": "documents/crlm/CRLM_1_Roadmap.docx",
-      "sha256": "5bb0a8068ff6ff5f7bd79a4954c874813c3342aa856b40a8b1cad644c121a28c",
+      "sha256": "3646420f169871b797d288ba615c39ead8ce37db0d1fc0ee244b3b7550b9f72a",
       "local_master": "Documents/04_CRLM/CRLM_1_Roadmap_v20.docx",
-      "local_sha256": "5bb0a8068ff6ff5f7bd79a4954c874813c3342aa856b40a8b1cad644c121a28c"
+      "local_sha256": "3646420f169871b797d288ba615c39ead8ce37db0d1fc0ee244b3b7550b9f72a"
     },
     {
       "path": "documents/crlm/CRLM_2_Roadmap_Questions.docx",
-      "sha256": "75630887e61592b887c5f642d9b1be9f4ae603bf9998bce5aee1f483daea50d6",
+      "sha256": "ab7f523a9c42e7acbbadcef5fd5c5eb3120118df233a2ef1778e3c750c404b44",
       "local_master": "Documents/04_CRLM/CRLM_2_Roadmap_Questions_v20.docx",
-      "local_sha256": "75630887e61592b887c5f642d9b1be9f4ae603bf9998bce5aee1f483daea50d6"
+      "local_sha256": "ab7f523a9c42e7acbbadcef5fd5c5eb3120118df233a2ef1778e3c750c404b44"
     },
     {
       "path": "documents/crlm/CRLM_3_Standard_Pathway.docx",
@@ -166,21 +166,21 @@
     },
     {
       "path": "documents/crlm/CRLM_7_Decision_Discussion.docx",
-      "sha256": "42c16199c3e654e244c43136f2f37296e35455cee0645525809a084233dec098",
+      "sha256": "561f7b639adb86edf52962d87e653a057070d43a98334dad398c7d9081ae7f8d",
       "local_master": "Documents/04_CRLM/CRLM_7_Decision_Discussion_v20.docx",
-      "local_sha256": "42c16199c3e654e244c43136f2f37296e35455cee0645525809a084233dec098"
+      "local_sha256": "561f7b639adb86edf52962d87e653a057070d43a98334dad398c7d9081ae7f8d"
     },
     {
       "path": "documents/nelm/NELM_1_Roadmap.docx",
-      "sha256": "8ebc41c8d5beb9160fa066b0cdf6647dd3bcf6b3ce865ef2c581970ef6914150",
+      "sha256": "8872c9fe4c20667cc59f09d9d4a236bc74bab6c60130e73ddfb1d67313b2e3ec",
       "local_master": "Documents/05_NELM/NELM_1_Roadmap_v20.docx",
-      "local_sha256": "8ebc41c8d5beb9160fa066b0cdf6647dd3bcf6b3ce865ef2c581970ef6914150"
+      "local_sha256": "8872c9fe4c20667cc59f09d9d4a236bc74bab6c60130e73ddfb1d67313b2e3ec"
     },
     {
       "path": "documents/nelm/NELM_2_Roadmap_Questions.docx",
-      "sha256": "aaacb3cb096c89f90ec5667e18537189ab3a45c675b59d7ffd16fe1afa865681",
+      "sha256": "52592499265b526ecfa1334526c52e98db10f30a739713c7d6e799bf3234b337",
       "local_master": "Documents/05_NELM/NELM_2_Roadmap_Questions_v20.docx",
-      "local_sha256": "aaacb3cb096c89f90ec5667e18537189ab3a45c675b59d7ffd16fe1afa865681"
+      "local_sha256": "52592499265b526ecfa1334526c52e98db10f30a739713c7d6e799bf3234b337"
     },
     {
       "path": "documents/nelm/NELM_3_Standard_Pathway.docx",
@@ -190,9 +190,9 @@
     },
     {
       "path": "documents/nelm/NELM_4_Standard_Pathway_Questions.docx",
-      "sha256": "0b6848107bc2e0a6d90f0218ce5a054a916d274ca0aab96c0a16e6e8f98170d4",
+      "sha256": "f5d6752d9bb84507071836825d0ee6857703ddd136f2991eca5e40de0a601316",
       "local_master": "Documents/05_NELM/NELM_4_Standard_Pathway_Questions_v20.docx",
-      "local_sha256": "0b6848107bc2e0a6d90f0218ce5a054a916d274ca0aab96c0a16e6e8f98170d4"
+      "local_sha256": "f5d6752d9bb84507071836825d0ee6857703ddd136f2991eca5e40de0a601316"
     },
     {
       "path": "documents/nelm/NELM_5_High_Risk_Pathway.docx",
@@ -208,21 +208,21 @@
     },
     {
       "path": "documents/nelm/NELM_7_Decision_Discussion.docx",
-      "sha256": "dc3c9f4035d8394b11bcae5ee63d96509f680533f9a816e3861d2401202f247d",
+      "sha256": "796a05541d1aae47a61d5545d804f41bbc50d4272522dcc13e14bd0969e2229f",
       "local_master": "Documents/05_NELM/NELM_7_Decision_Discussion_v20.docx",
-      "local_sha256": "dc3c9f4035d8394b11bcae5ee63d96509f680533f9a816e3861d2401202f247d"
+      "local_sha256": "796a05541d1aae47a61d5545d804f41bbc50d4272522dcc13e14bd0969e2229f"
     },
     {
       "path": "documents/hehe/HEHE_3_Standard_Pathway.docx",
-      "sha256": "07a4914d6465be56b81e07c8775582db79daf3e18b3034d484bfbff3e6c45626",
+      "sha256": "a089dca81d2fd8491b44344dc0163954922480293b8cf697405855dfeab90edb",
       "local_master": "Documents/06_HEHE/HEHE_3_Standard_Pathway_v20.docx",
-      "local_sha256": "07a4914d6465be56b81e07c8775582db79daf3e18b3034d484bfbff3e6c45626"
+      "local_sha256": "a089dca81d2fd8491b44344dc0163954922480293b8cf697405855dfeab90edb"
     },
     {
       "path": "documents/hehe/HEHE_4_Standard_Pathway_Questions.docx",
-      "sha256": "89270c7d0329ec3252da17441dcd96b2d84f5ea842279b814d216c2815f1a778",
+      "sha256": "2743c370efb33eb053acd1a0ed670ba48d2b0244a6ecf8a8ed67a9d14f03d941",
       "local_master": "Documents/06_HEHE/HEHE_4_Standard_Pathway_Questions_v20.docx",
-      "local_sha256": "89270c7d0329ec3252da17441dcd96b2d84f5ea842279b814d216c2815f1a778"
+      "local_sha256": "2743c370efb33eb053acd1a0ed670ba48d2b0244a6ecf8a8ed67a9d14f03d941"
     },
     {
       "path": "documents/hehe/HEHE_5_High_Risk_Pathway.docx",
@@ -238,33 +238,33 @@
     },
     {
       "path": "documents/hehe/HEHE_7_Decision_Discussion.docx",
-      "sha256": "1a285fb01b525f90b1725e726cab0f1f3ccbf36ed5f8027d15f3e558896b3f3d",
+      "sha256": "1a618d69cb58eac8973a70aacfea879be24de405455f2485ffc19a3b391475eb",
       "local_master": "Documents/06_HEHE/HEHE_7_Decision_Discussion_v20.docx",
-      "local_sha256": "1a285fb01b525f90b1725e726cab0f1f3ccbf36ed5f8027d15f3e558896b3f3d"
+      "local_sha256": "1a618d69cb58eac8973a70aacfea879be24de405455f2485ffc19a3b391475eb"
     },
     {
       "path": "documents/hca/HCA_1_Roadmap.docx",
-      "sha256": "9e6ffb5b81ac8acbad545b105b94ab5a7dcc9793ac71f4a15e827e819c819985",
+      "sha256": "eb6e2eed72168fe93cdccb6fbec68b1aee854fb37a6213d2b0a75d6068d1f644",
       "local_master": "Documents/07_HCA/HCA_1_Roadmap_v20.docx",
-      "local_sha256": "9e6ffb5b81ac8acbad545b105b94ab5a7dcc9793ac71f4a15e827e819c819985"
+      "local_sha256": "eb6e2eed72168fe93cdccb6fbec68b1aee854fb37a6213d2b0a75d6068d1f644"
     },
     {
       "path": "documents/hca/HCA_2_Roadmap_Questions.docx",
-      "sha256": "408d2608a79aa3ee4792b4f8f73f441c4f11f5ba57f098310e490333b889ec0e",
+      "sha256": "a4ccdac00b722ec27d19f6a44a6870d633976e2731c745cf069f3c9edd2abf61",
       "local_master": "Documents/07_HCA/HCA_2_Roadmap_Questions_v20.docx",
-      "local_sha256": "408d2608a79aa3ee4792b4f8f73f441c4f11f5ba57f098310e490333b889ec0e"
+      "local_sha256": "a4ccdac00b722ec27d19f6a44a6870d633976e2731c745cf069f3c9edd2abf61"
     },
     {
       "path": "documents/hca/HCA_3_Standard_Pathway.docx",
-      "sha256": "3a68d4a208ec2ef3274a1fa93b78e44b953654e9be3b34d2899aca94a85443f7",
+      "sha256": "6800f0a0ce38ea8f3df9b1bea78e97393b82fc8568239027e33e322d38e24147",
       "local_master": "Documents/07_HCA/HCA_3_Standard_Pathway_v20.docx",
-      "local_sha256": "3a68d4a208ec2ef3274a1fa93b78e44b953654e9be3b34d2899aca94a85443f7"
+      "local_sha256": "6800f0a0ce38ea8f3df9b1bea78e97393b82fc8568239027e33e322d38e24147"
     },
     {
       "path": "documents/hca/HCA_4_Standard_Pathway_Questions.docx",
-      "sha256": "b7ac201a2b304872ba4fbfbe5d026e98e2e39fc712bc04c82c5ddd302dbb25c6",
+      "sha256": "54ce81f1f453cfef1c550e77be08b1477e3e4e0bbf887a6a46fe1901d4be69c7",
       "local_master": "Documents/07_HCA/HCA_4_Standard_Pathway_Questions_v20.docx",
-      "local_sha256": "b7ac201a2b304872ba4fbfbe5d026e98e2e39fc712bc04c82c5ddd302dbb25c6"
+      "local_sha256": "54ce81f1f453cfef1c550e77be08b1477e3e4e0bbf887a6a46fe1901d4be69c7"
     },
     {
       "path": "documents/hca/HCA_5_High_Risk_Pathway.docx",
@@ -280,63 +280,63 @@
     },
     {
       "path": "documents/hca/HCA_7_Decision_Discussion.docx",
-      "sha256": "a1828fbe811c48d7f0afd856d5cf979e19498988df806a88c4e43f8d8f003057",
+      "sha256": "e1c11662ba636d5d145073d42b6cd99af57937f36493fd7722fbad89c632fb82",
       "local_master": "Documents/07_HCA/HCA_7_Decision_Discussion_v20.docx",
-      "local_sha256": "a1828fbe811c48d7f0afd856d5cf979e19498988df806a88c4e43f8d8f003057"
+      "local_sha256": "e1c11662ba636d5d145073d42b6cd99af57937f36493fd7722fbad89c632fb82"
     },
     {
       "path": "documents/chcca/cHCCCCA_1_Roadmap.docx",
-      "sha256": "6dea79338145d78e850fea8c8d8d81c9fd9afe5169727d0b1c419f4818ca0c2e",
+      "sha256": "0b19acd0aef3029d45833be34d92776ea00a674f5f19c4e2bd3359fb536edf21",
       "local_master": "Documents/08_cHCCCCA/cHCCCCA_1_Roadmap_v20.docx",
-      "local_sha256": "6dea79338145d78e850fea8c8d8d81c9fd9afe5169727d0b1c419f4818ca0c2e"
+      "local_sha256": "0b19acd0aef3029d45833be34d92776ea00a674f5f19c4e2bd3359fb536edf21"
     },
     {
       "path": "documents/chcca/cHCCCCA_2_Roadmap_Questions.docx",
-      "sha256": "f7dbd64ccfe93367eb508fd6feb7341045e42f1267262713ac61674bc7ac8e89",
+      "sha256": "c394237f33a2ccbddc2a0086e306aceed8d67c9e9d3697800a221f5024603670",
       "local_master": "Documents/08_cHCCCCA/cHCCCCA_2_Roadmap_Questions_v20.docx",
-      "local_sha256": "f7dbd64ccfe93367eb508fd6feb7341045e42f1267262713ac61674bc7ac8e89"
+      "local_sha256": "c394237f33a2ccbddc2a0086e306aceed8d67c9e9d3697800a221f5024603670"
     },
     {
       "path": "documents/chcca/cHCCCCA_7_Decision_Discussion.docx",
-      "sha256": "cdd65f1c1b24e0b6d9d1f6b576a251870344a3f00f0768173cbb4160adb42114",
+      "sha256": "39a40729146c26634fc6c912fd1da899cedafb551c07ea95aeb406b0025c17f4",
       "local_master": "Documents/08_cHCCCCA/cHCCCCA_7_Decision_Discussion_v20.docx",
-      "local_sha256": "cdd65f1c1b24e0b6d9d1f6b576a251870344a3f00f0768173cbb4160adb42114"
+      "local_sha256": "39a40729146c26634fc6c912fd1da899cedafb551c07ea95aeb406b0025c17f4"
     },
     {
       "path": "documents/pdac/PDAC_1_Roadmap.docx",
-      "sha256": "224d75031a53c6d705e4b9f3197ebc3e406daa12e9604c0da9499f9edee97248",
+      "sha256": "8ab6f5f67e03267716641e189d4b5ce62e1e64a5f7e617afad2e167b04c58944",
       "local_master": "Documents/09_PDAC/PDAC_1_Roadmap_v20.docx",
-      "local_sha256": "224d75031a53c6d705e4b9f3197ebc3e406daa12e9604c0da9499f9edee97248"
+      "local_sha256": "8ab6f5f67e03267716641e189d4b5ce62e1e64a5f7e617afad2e167b04c58944"
     },
     {
       "path": "documents/pdac/PDAC_2_Roadmap_Questions.docx",
-      "sha256": "8ed32a9f4e24f3aca8397d138d0f9172deebfc47cfc607e0ce617a6ceaaad862",
+      "sha256": "16502ff67ce166fdd404a578edd339845d4d23a3f874fc09ef977ffbce415fc5",
       "local_master": "Documents/09_PDAC/PDAC_2_Roadmap_Questions_v20.docx",
-      "local_sha256": "8ed32a9f4e24f3aca8397d138d0f9172deebfc47cfc607e0ce617a6ceaaad862"
+      "local_sha256": "16502ff67ce166fdd404a578edd339845d4d23a3f874fc09ef977ffbce415fc5"
     },
     {
       "path": "documents/pdac/PDAC_7_Decision_Discussion.docx",
-      "sha256": "c2aecf9b7659e325900a3110eaa04a97db7d470f71a35fa1944931c7c2a2f917",
+      "sha256": "71b460f310b8ced9f74c4a9f84afec3118fb9d35db8e72f56e1a39904fe2c713",
       "local_master": "Documents/09_PDAC/PDAC_7_Decision_Discussion_v20.docx",
-      "local_sha256": "c2aecf9b7659e325900a3110eaa04a97db7d470f71a35fa1944931c7c2a2f917"
+      "local_sha256": "71b460f310b8ced9f74c4a9f84afec3118fb9d35db8e72f56e1a39904fe2c713"
     },
     {
       "path": "documents/pnet/pNET_1_Roadmap.docx",
-      "sha256": "eed15cb7adefe81ba7061817cbc09de786a38085ad082fb059575187bbc7d29c",
+      "sha256": "b82f62fb7f7ebe1cf6473f4413d93360cc6ad4a3df87bd64d90235e2148ec59f",
       "local_master": "Documents/10_pNET/pNET_1_Roadmap_v20.docx",
-      "local_sha256": "eed15cb7adefe81ba7061817cbc09de786a38085ad082fb059575187bbc7d29c"
+      "local_sha256": "b82f62fb7f7ebe1cf6473f4413d93360cc6ad4a3df87bd64d90235e2148ec59f"
     },
     {
       "path": "documents/pnet/pNET_2_Roadmap_Questions.docx",
-      "sha256": "21d4f42a8991351eba4708dcaa081e0b40ff9436bebdb635ac6ebacc9dbb07b0",
+      "sha256": "72b6f351a01d624790c4ea3e1cbd3dde1a366deac99f83873efe5ab6169c73eb",
       "local_master": "Documents/10_pNET/pNET_2_Roadmap_Questions_v20.docx",
-      "local_sha256": "21d4f42a8991351eba4708dcaa081e0b40ff9436bebdb635ac6ebacc9dbb07b0"
+      "local_sha256": "72b6f351a01d624790c4ea3e1cbd3dde1a366deac99f83873efe5ab6169c73eb"
     },
     {
       "path": "documents/pnet/pNET_7_Decision_Discussion.docx",
-      "sha256": "76ae0a470ef7af822a41cdfbc06bec16a3a92db5140c7d7091844bf8cece29fa",
+      "sha256": "eee2d14b81ffc7b00e4afd7e3f2b5d04e1f0e9d987bf84ff3ce2d9e4e873ce5b",
       "local_master": "Documents/10_pNET/pNET_7_Decision_Discussion_v20.docx",
-      "local_sha256": "76ae0a470ef7af822a41cdfbc06bec16a3a92db5140c7d7091844bf8cece29fa"
+      "local_sha256": "eee2d14b81ffc7b00e4afd7e3f2b5d04e1f0e9d987bf84ff3ce2d9e4e873ce5b"
     },
     {
       "path": "documents/ampullary/AMP_1_Roadmap.docx",
@@ -358,21 +358,21 @@
     },
     {
       "path": "documents/pcyst/PCYST_1_Roadmap.docx",
-      "sha256": "b1a5c0b6fd3cf9f2d2ccd18e78fb71351687194ce0e8d669ee7a6be958b13c5c",
+      "sha256": "b2f102b33cdb97ba2471d25ad8c83d9b511ab34b5ba6ffdd31a93485890f80d2",
       "local_master": "Documents/12_PCYST/PCYST_1_Roadmap_v20.docx",
-      "local_sha256": "b1a5c0b6fd3cf9f2d2ccd18e78fb71351687194ce0e8d669ee7a6be958b13c5c"
+      "local_sha256": "b2f102b33cdb97ba2471d25ad8c83d9b511ab34b5ba6ffdd31a93485890f80d2"
     },
     {
       "path": "documents/pcyst/PCYST_2_Roadmap_Questions.docx",
-      "sha256": "f6e10532dde58420f3178b1e0c4926638e6e89e494ea5c234c1bac60442135f8",
+      "sha256": "5f39c3c45dd72a89c997c7dc14d3651cfa3da87d327a056055654d04d2ad2d9c",
       "local_master": "Documents/12_PCYST/PCYST_2_Roadmap_Questions_v20.docx",
-      "local_sha256": "f6e10532dde58420f3178b1e0c4926638e6e89e494ea5c234c1bac60442135f8"
+      "local_sha256": "5f39c3c45dd72a89c997c7dc14d3651cfa3da87d327a056055654d04d2ad2d9c"
     },
     {
       "path": "documents/pcyst/PCYST_7_Decision_Discussion.docx",
-      "sha256": "ed38ca178b8f40f7d0723137e74227a8231b14c4d2480601ad915755a8b2f980",
+      "sha256": "4efca16f8a24dc3d8e59306dadb8938bcbe60707aa4e9b9e55adb06bb7ea24bb",
       "local_master": "Documents/12_PCYST/PCYST_7_Decision_Discussion_v20.docx",
-      "local_sha256": "ed38ca178b8f40f7d0723137e74227a8231b14c4d2480601ad915755a8b2f980"
+      "local_sha256": "4efca16f8a24dc3d8e59306dadb8938bcbe60707aa4e9b9e55adb06bb7ea24bb"
     },
     {
       "path": "documents/incidental/INC_1_Roadmap.docx",
@@ -401,7 +401,7 @@
       "native_charts": 2,
       "native_tables": 2,
       "path": "Evidence_Libraries/01_Treatment_Matrices/liver_directed_matrix/Evidence_Summaries_v20.pptx",
-      "sha256": "842e9b7f7fd89632fcf5e16ed9ffc73e5925c10533657d88a8af9b1ae19c3b57",
+      "sha256": "f2c10f54c761eec68b516533b10c671b9081a383925da3a049305c409fad61c0",
       "updated_comparative_cards": 40,
       "pre_comparative_slide_parts_preserved": true,
       "pathology_card_added": "32749512",
@@ -415,7 +415,7 @@
       "native_charts": 22,
       "native_tables": 2,
       "path": "Evidence_Libraries/01_Treatment_Matrices/systemic_matrix/Evidence_Summaries_v20.pptx",
-      "sha256": "4ed2de497ee6dee195586b3b1187a60a03005adf997e186e46962b366f916df0",
+      "sha256": "005d887735513f51e3e39f49a43d8bcc1517e21dbf9a2945f72f927fdef0298d",
       "updated_comparative_cards": 14,
       "pre_comparative_slide_parts_preserved": true,
       "prior_slide_parts_preserved": true,
@@ -440,7 +440,7 @@
       "native_charts": 0,
       "native_tables": 2,
       "path": "Evidence_Libraries/02_Cancer_Roadmaps/roadmap_chcca/Evidence_Summaries_v20.pptx",
-      "sha256": "dceae8b8c544ec78dfa00234e008f64dd185a84fef6344b4afa85077b72f63a6",
+      "sha256": "ab603bb6f3b9ee524bee6446883038537d1df71ee1ed2fa1dd78013cd02db130",
       "updated_comparative_cards": 0,
       "pre_comparative_slide_parts_preserved": true,
       "last_clinical_source_review": "2026-11-16"
@@ -452,7 +452,7 @@
       "native_charts": 10,
       "native_tables": 3,
       "path": "Evidence_Libraries/02_Cancer_Roadmaps/roadmap_crlm/Evidence_Summaries_v20.pptx",
-      "sha256": "bc2f6b0c53ef97714f6f963168debe1a6e44e222c69ba4006fa2da9247cdbe49",
+      "sha256": "168d3d6e8644b231e5ded3c82a1ef5872234287b1254a426b8b1015f5e08b391",
       "updated_comparative_cards": 8,
       "pre_comparative_slide_parts_preserved": true,
       "last_clinical_source_review": "2026-11-16"
@@ -464,7 +464,7 @@
       "native_charts": 0,
       "native_tables": 3,
       "path": "Evidence_Libraries/02_Cancer_Roadmaps/roadmap_hca/Evidence_Summaries_v20.pptx",
-      "sha256": "4a03855861ad6e26e865c15505ae41b997b557a2ce4cb3fc75774b0bb9507d44",
+      "sha256": "6d8475ad6622b8b07fb406fd99e693518d246935cdf722c3c9af93a5d953de20",
       "updated_comparative_cards": 0,
       "pre_comparative_slide_parts_preserved": true,
       "last_clinical_source_review": "2026-11-16"
@@ -476,7 +476,7 @@
       "native_charts": 9,
       "native_tables": 0,
       "path": "Evidence_Libraries/02_Cancer_Roadmaps/roadmap_hcc/Evidence_Summaries_v20.pptx",
-      "sha256": "05dc862fbf54f70a696f89bbdf4f9ac1b5ee8d9ec2505ed1f6ce3c6ccccb0987",
+      "sha256": "ae7c7e2c2ab87ab5e705bc9ade80b485698e0e993bc3bfde9c4b739a07b7a09b",
       "updated_comparative_cards": 20,
       "pre_comparative_slide_parts_preserved": true,
       "pathology_card_added": "32749512",
@@ -490,7 +490,7 @@
       "native_charts": 1,
       "native_tables": 4,
       "path": "Evidence_Libraries/02_Cancer_Roadmaps/roadmap_icca/Evidence_Summaries_v20.pptx",
-      "sha256": "7f400b2298e29b12a2543830177a6b673f42e5674d838e6281c291df37dd93b8",
+      "sha256": "5f5ad965b4d597f09c893195566dbe5a88b9b69e5dd7a2988d7dfd1386155265",
       "updated_comparative_cards": 6,
       "pre_comparative_slide_parts_preserved": true,
       "last_clinical_source_review": "2026-11-16"
@@ -526,7 +526,7 @@
       "native_charts": 3,
       "native_tables": 6,
       "path": "Evidence_Libraries/02_Cancer_Roadmaps/roadmap_pcca/Evidence_Summaries_v20.pptx",
-      "sha256": "802b507a029b45b65315b9db279492681c1cfe5ecbc1ab5827d8555eda2d526e",
+      "sha256": "5ff26f26f9d9e55f395350fb69237ffbd7f03ef47a3c076be018ee7912f304c0",
       "updated_comparative_cards": 1,
       "pre_comparative_slide_parts_preserved": true,
       "last_clinical_source_review": "2026-11-16"
@@ -550,7 +550,7 @@
       "native_charts": 2,
       "native_tables": 0,
       "path": "Evidence_Libraries/02_Cancer_Roadmaps/roadmap_pdac/Evidence_Summaries_v20.pptx",
-      "sha256": "0c5ccad2c399bdab6b2d182f50f62e59faecfbfa812e8add35268a777d375367",
+      "sha256": "7b2cb76bc97243ad85c955a12d23fb53c06880cd41378cbedd05e5612eef98f6",
       "updated_comparative_cards": 0,
       "pre_comparative_slide_parts_preserved": true,
       "last_clinical_source_review": "2026-11-16"
@@ -586,7 +586,7 @@
       "native_charts": 1,
       "native_tables": 1,
       "path": "Evidence_Libraries/03_Standard_Transplant/standard_hca/Evidence_Summaries_v20.pptx",
-      "sha256": "bd827494e04bedc8b136cbe3d60d0cdf3d78aa87e81a26a9a7627ec1c0d01ffa",
+      "sha256": "7441a2c8061b5583a5ae2e382c88222cf910a3f18e4ebab236ec413d5dd005a0",
       "updated_comparative_cards": 0,
       "pre_comparative_slide_parts_preserved": true,
       "last_clinical_source_review": "2026-11-16"
@@ -612,7 +612,7 @@
       "native_charts": 1,
       "native_tables": 1,
       "path": "Evidence_Libraries/03_Standard_Transplant/standard_hehe/Evidence_Summaries_v20.pptx",
-      "sha256": "1766d5a255eaad5ccedb0aba33caa26a6b90b56c8e24b2fac5ce1ac7cf9b486f",
+      "sha256": "3a4ed91ac928ac0a144f98caf0ef104ea2251a74e9a8ff3b052f76edde5e2891",
       "updated_comparative_cards": 0,
       "pre_comparative_slide_parts_preserved": true,
       "last_clinical_source_review": "2026-11-16"
@@ -624,7 +624,7 @@
       "native_charts": 3,
       "native_tables": 2,
       "path": "Evidence_Libraries/03_Standard_Transplant/standard_icca/Evidence_Summaries_v20.pptx",
-      "sha256": "1df2f108cfcf224588ea386c34a58e3aa57d500c3e15f9f7e0ad1b6946a68591",
+      "sha256": "8ba321ad6ee314529a2a8d72b7a1c790d88392a018e45dec87a7126871f893ea",
       "updated_comparative_cards": 6,
       "pre_comparative_slide_parts_preserved": true,
       "last_clinical_source_review": "2026-11-16"
@@ -636,7 +636,7 @@
       "native_charts": 3,
       "native_tables": 2,
       "path": "Evidence_Libraries/03_Standard_Transplant/standard_nelm/Evidence_Summaries_v20.pptx",
-      "sha256": "a686e6d55f2481dc65b9bbd077fd3812e959603622b58ded66cb116e8a52cee3",
+      "sha256": "6228f7824d4f0d3433150e2c04d5ba5212dd83f900ec662f321a81180b0a2575",
       "updated_comparative_cards": 5,
       "pre_comparative_slide_parts_preserved": true,
       "last_clinical_source_review": "2026-11-16"
@@ -648,7 +648,7 @@
       "native_charts": 3,
       "native_tables": 3,
       "path": "Evidence_Libraries/03_Standard_Transplant/standard_pcca/Evidence_Summaries_v20.pptx",
-      "sha256": "117f8ebe03b561acca89e5fa8f7c65043a3b5f519da5f017924aaafefbfd0fe1",
+      "sha256": "19500aeb938673349ebbf5d302b5b52d2c3b75a075e07d4e958dd365036bfda8",
       "updated_comparative_cards": 1,
       "pre_comparative_slide_parts_preserved": true,
       "last_clinical_source_review": "2026-11-16"
@@ -672,7 +672,7 @@
       "native_charts": 1,
       "native_tables": 1,
       "path": "Evidence_Libraries/04_High_Risk_Transplant/high_risk_hca/Evidence_Summaries_v20.pptx",
-      "sha256": "72c3cb69cdf92771ffe21724f6971ca35bf9e3837c290fe7adaf2dc7aa7943bc",
+      "sha256": "186a77e97237a4beb7b3eba6951ca21c9180f46a032da1013289a5631756aa47",
       "updated_comparative_cards": 0,
       "pre_comparative_slide_parts_preserved": true,
       "last_clinical_source_review": "2026-11-16"
@@ -697,7 +697,7 @@
       "native_charts": 0,
       "native_tables": 1,
       "path": "Evidence_Libraries/04_High_Risk_Transplant/high_risk_hehe/Evidence_Summaries_v20.pptx",
-      "sha256": "abb58dd2708c9cae22d84f2c7a97dde838d1cd2229dc64eadcf5cd7ecdb4dfb2",
+      "sha256": "bd3e32b68c69e6cbe69b8cfba343f1839845f636bf4ed99276ccc0b9529014d9",
       "updated_comparative_cards": 0,
       "pre_comparative_slide_parts_preserved": true,
       "last_clinical_source_review": "2026-11-16"
@@ -721,7 +721,7 @@
       "native_charts": 3,
       "native_tables": 1,
       "path": "Evidence_Libraries/04_High_Risk_Transplant/high_risk_nelm/Evidence_Summaries_v20.pptx",
-      "sha256": "735289d612bb515596fc3ec6801ead9abed7245b8cecd72b0ab9cee0528c63b9",
+      "sha256": "27b58ad3dd4f835829e809d76e988a0542c0c1e40a098e7cb9c1f7407b3cb757",
       "updated_comparative_cards": 5,
       "pre_comparative_slide_parts_preserved": true,
       "last_clinical_source_review": "2026-11-16"
@@ -733,7 +733,7 @@
       "native_charts": 5,
       "native_tables": 2,
       "path": "Evidence_Libraries/04_High_Risk_Transplant/high_risk_pcca/Evidence_Summaries_v20.pptx",
-      "sha256": "c42e08b5d9e4cc4254dfe37878d0e6cccb9558974fb577024f846c7a6cbc3250",
+      "sha256": "3eb4e05cace396c7e91ad7a5d506fc5a977b76450f84205546d45713a457ed54",
       "updated_comparative_cards": 1,
       "pre_comparative_slide_parts_preserved": true,
       "last_clinical_source_review": "2026-11-16"
@@ -769,7 +769,7 @@
       "native_charts": 1,
       "native_tables": 1,
       "path": "Evidence_Libraries/05_Meeting_Records/meeting_hca/Evidence_Summaries_v20.pptx",
-      "sha256": "b14cb6404d1ade6012ce1356940ae6a556359139adf4feb3c57c78fe5a4a199f",
+      "sha256": "c772a16dd73289d269bed55582854c581c19a0f928f2507aaec00e04131cdc4a",
       "updated_comparative_cards": 0,
       "pre_comparative_slide_parts_preserved": true,
       "last_clinical_source_review": "2026-11-16"
@@ -795,7 +795,7 @@
       "native_charts": 0,
       "native_tables": 1,
       "path": "Evidence_Libraries/05_Meeting_Records/meeting_hehe/Evidence_Summaries_v20.pptx",
-      "sha256": "480f823efe6fb3517f062fffe0ed0f2fbe1b5626bb197c3157a53f47ede531f8",
+      "sha256": "97c81585f0842d83e21272ee29c9350032dca14007af125bfc5db9522121f148",
       "updated_comparative_cards": 0,
       "pre_comparative_slide_parts_preserved": true,
       "last_clinical_source_review": "2026-11-16"
@@ -807,7 +807,7 @@
       "native_charts": 2,
       "native_tables": 1,
       "path": "Evidence_Libraries/05_Meeting_Records/meeting_nelm/Evidence_Summaries_v20.pptx",
-      "sha256": "955181e832fbe56d0477b1da5d94c255d674a3ee5483f8efe6edf11f976e08a7",
+      "sha256": "62b12f04307159fd1b6af009878ef15b2c1d2456dda52cf076d12270a86c2f50",
       "updated_comparative_cards": 5,
       "pre_comparative_slide_parts_preserved": true,
       "last_clinical_source_review": "2026-11-16"
@@ -815,57 +815,57 @@
   ],
   "clinical_source_sha256": {
     "adenoma/data/critique.json": "7dd08834315115f2594f7f3b7c0c802fd452d0d26effefabdfe5b10076c97644",
-    "adenoma/data/pathway.json": "75c222476c4adf3c42f0fd600907ad46c2a54df05d3b080f77777159ed2ea822",
+    "adenoma/data/pathway.json": "7166e8d30f2f4a796cec4cf5ba5b5bb9d860769fcb9712b8bbee9061f8eb5152",
     "ampullary/data/critique.json": "67b2e793523b8ffeca4c2acc8fd0a807cdc7d243fc2b647ba9ecb7a1198a1e1d",
     "ampullary/data/pathway.json": "4a060ed026092611afb98a5d3c9168a3a60eded09357d0b655036405be5f25f7",
     "assets/clinical-reference.js": "d7c852b90001a2c2fe1ae1c8e3c13a8e14eb97d5dec245051e5f5aa4d98f35d6",
     "assets/clinical-scores.js": "a09db3921e7fc24952cdac2d5719f7378e8fbac9e7b969d06b4a60fe6079f264",
     "chcca/data/critique.json": "93e8dfa82e6845b664db69e32af1303ff00f88ec3d4cb9d4ea86f385a12d2b9b",
-    "chcca/data/pathway.json": "ce3791d7b7d19d2ef1d4b861969ebd6f22f3b36c806673d79f39c0e99017f8d4",
+    "chcca/data/pathway.json": "351892865a9da11675f6c34f759d1c2dc903d3f0c17510e8eff31c33ccd629d3",
     "crlm/data/critique.json": "1c20fcacee29be66be0214a70316a708b69c530f245525e666f8d1a1e1fec183",
     "crlm/data/lrt_matrix.json": "c9278424c37fdf48489e2cfe3664a74d9090ff9f3dc3321cdce33c372c83c032",
     "crlm/data/lrt_refs.json": "8e4a81d57e56c48328b03416cf974f3a50e5b899454616b465214ef0e3274e4b",
-    "crlm/data/pathway.json": "7e1697ff5d9004ad61c3d870f5d088db0ea7fc3ee36e963dd4d72c2b9838cdd0",
-    "evidence-libraries/catalog.json": "8d974a18e7306af00cc28e789ee6d5fa797175d4b299d334a0fe320cbca7ac51",
+    "crlm/data/pathway.json": "e8e939ae1ea5a784a87b7c744be72154bb1864cdf7be8f0e70ad98c9ce99d4cd",
+    "evidence-libraries/catalog.json": "b596b5ed1ca88bd08784973e3617bb4b8e7dc6b4ab2b7c1e80327ea6771971b9",
     "hcc/data/critique.json": "f2172bd11de5f8daf52ce948117d319c83c53b21b980708ebf6a6e848dd383d2",
     "hcc/data/lrt_matrix.json": "c9278424c37fdf48489e2cfe3664a74d9090ff9f3dc3321cdce33c372c83c032",
     "hcc/data/lrt_refs.json": "ef2b4ac5fb729074748728a56f6a2ae4b5654a34f9eb8182e80086a8c9d03773",
-    "hcc/index.html": "865a7b05c6c55a499d20e2c6f0e651fa3115e4c2399e8dd4edb56c22e059aa94",
+    "hcc/index.html": "e42a6843871f85b3ee7fd2cbc451062cadfa30cd3192a1246299b604a71b4b28",
     "hilar/data/critique.json": "ddb38514eebfad4c65f48b899486ecc880eff9f6c5c97232b66288da6a0406cd",
-    "hilar/data/pathway.json": "5701eea40bca3e579832ac32d3705e1c27b007bd2d3ebf1a2192b74d8482c1a0",
+    "hilar/data/pathway.json": "1c8355b52aabd25e449f1a9a96e0105f3337230028c635cd68ef9c364fa79b30",
     "icca/data/critique.json": "eb4eaeb16aa74b490e0fb80d59ba602078c239c07795cdb58cb91b99988e78e3",
     "icca/data/lrt_matrix.json": "c9278424c37fdf48489e2cfe3664a74d9090ff9f3dc3321cdce33c372c83c032",
     "icca/data/lrt_refs.json": "8add5b60118025f7aac00a145ba631f224a41c798b06a2da5b8bf20a9e394f97",
-    "icca/data/pathway.json": "c191a6baddfacbf74a8161e89fc2e9e6283e5291df3e713167130c7fcf3a611d",
+    "icca/data/pathway.json": "e461329f6caf3f5ceb0f54bfe15b7ec5d6a99f3a3c24fca09f0b5cd40e29a171",
     "incidental/data/critique.json": "bc0e12a34bd5761080e06ba2545619f767bc49635b7b1fdf5950be0fafa9c385",
     "incidental/data/pathway.json": "5e5b550ee99d00996eab36c8d154539e1f5ff34328cc856b44cfa03cb4082f8e",
-    "lrt/index.html": "57fedb8e4a38f4fa0ae350188d864e7839b8fc248055b0019ab5bfd8ea64620b",
+    "lrt/index.html": "3e80e7f1a42a3f1b0377bebd32031d73943843aadc3f118db7b01b27cebfb77d",
     "lrt/matrix.json": "afa468d361bfba9a1fc944d1e085b9ed94efdb5093eabfb54dae75a285b4a3a6",
     "nelm/data/critique.json": "7dc108a430301a2b35b6108e54429c967148900e7972039c347ed4d6e6a1f065",
     "nelm/data/lrt_matrix.json": "c9278424c37fdf48489e2cfe3664a74d9090ff9f3dc3321cdce33c372c83c032",
     "nelm/data/lrt_refs.json": "10ce02c292b6bf405c8cc1508b0911e3a64556008401775b7f20fc726a94426c",
-    "nelm/data/pathway.json": "cc718484bf5d342dd6942a99241ec64e616eb9585e04373beaf09185175174d3",
+    "nelm/data/pathway.json": "6d1ef5de1f304266a7f290d54bb59e1643886be054ce5dbe651837f783b3e767",
     "pcyst/data/critique.json": "2416bce4188b3fff8c2038802dda4d49b43f7ee34c3948fe56bd186e0800e262",
-    "pcyst/data/pathway.json": "c67466ab55ea870be4ab6661661beb70a95fbf856bec6ce3b7d805c2f50008cb",
+    "pcyst/data/pathway.json": "0126ea1035455af4ec8e820c0321955268cb51a938def4a7cc35cdb0eaf91d89",
     "pdac/data/critique.json": "3fddf184264652dc4cd81f0346fb36ff5f89f6aa19674c893e7609425a5f1554",
-    "pdac/data/pathway.json": "0a6629b6b58fbd576a0b598a86f5fd9382dff96875a34e479fcc5eaa76ec2f17",
+    "pdac/data/pathway.json": "b32c1230459d9beaac85ae13411a52c7515aebb7b1496dabb3354e733041076e",
     "pnet/data/critique.json": "43d1ca891b27ded3aca8e38a19b7039bc4e433a21980618f37e93667a2367132",
-    "pnet/data/pathway.json": "e9c26f81e378c44de6140c9ad981c9c48350369661fe53941d06372fe0707cf3",
-    "systemic/matrix.json": "cda8ae1a5a46ad99c7acc34dd15c8a75bc0a3b2c922e80cfcb27eb6a6e75470b",
+    "pnet/data/pathway.json": "2fa94ab6a318a4a0a0c487b1e73301fafc032b6bf233a1b2e840aa3b109dd025",
+    "systemic/matrix.json": "9a7c5a5179063ac1f7d806dba3022220af4e0e0960820ddf2a629a2c775016a2",
     "systemic/references.json": "6bc9be778877b17a6975eb6d5c8665cb1f1040852bc8b60c0651db2e06ac5ef9",
-    "tools/compact_evidence_source.json": "016d630dc733e86c8515bc02a12a8f02b87c6364922a5b96e91e441cfaa15964",
+    "tools/compact_evidence_source.json": "c7ffebe41aa26e23224bdefae233ebd826dae762d49159df7a751262946c064e",
     "tools/lrt_comparative_evidence.json": "dbc0921f66071305414acecd5fc3cf4e25cb37e20e8effab37b1da5635846eda",
     "transplant/assets/assistant.js": "f27a41d62acdbddae4eaa83b88d6fb89678d560dfc6f9f70f35de5beac0ac756",
-    "transplant/assets/content.json": "3b62b5f01b0eb6fed1f5feebd6b90f2a30d5354f54862839951deaf39713c957",
-    "transplant/assets/pathway-sections.json": "16539620e6a94ccf6e8fe707166bcf79b58beb35b5019469f339e2be3046b604",
-    "transplant/assets/risk-routing.js": "d0595b24024fff1b8ae488eaeadf5233b1165f472df497757a605a1b6d2fc06f",
+    "transplant/assets/content.json": "a460bd3ac9d2e8b65bb77020f8921786d913f2f118d6e8ff4f9a95f53cb3668b",
+    "transplant/assets/pathway-sections.json": "355a61e04114edff1015d10c2596f86b7e9a008d6c6530f069fd8220c793a786",
+    "transplant/assets/risk-routing.js": "ee79de0b85e5d80ad6a700a11b8991814ffa5edfb0b0264a55e65b006e68ed49",
     "assets/lrt-comparisons.css": "6db44d98fbae79f2ca6dfba2696f433fc748635e0b3319bd3cba283fe16c9bcc",
     "lrt/comparisons.json": "228faa89e20fb14b2f743b405321f2964a123e975a9a984de78752788baea3f7",
-    "assets/lrt-comparisons.js": "2168de11c8bdeb2bb7a7bb3d143aecd16aedf16943b95df83ae9cd94613eca99",
+    "assets/lrt-comparisons.js": "0f31375b60e641a03ce896cbe9e5fe82eb9a4e891021b5467795702e6f84c038",
     "tools/build_lrt_comparisons.py": "5a8ad25405d3daf77c9e932daf3d5dec526360a16aaef85ac40921ac39cf0f97",
-    "crlm/index.html": "7ceb91bd7ee28d5123c552201e736b06e2cbcd5b0ca1666864d2be0465f7c3b8",
-    "icca/index.html": "890ef71b6dc955343e4915c074eaa6c6ee231e9e4cf79bf566c685586a9326de",
-    "nelm/index.html": "6206f5e8d3d386465419437fcccab35e803998dbfaea427aae0112b547eaa496",
+    "crlm/index.html": "510881aa73e31862699c3ba80a034307b0ea771bc4232434d8f2a37833bfba97",
+    "icca/index.html": "2467044ffc3db1e1184ba30c940c1128ac0ba7dc16a1cde10bc0dacf424ca99a",
+    "nelm/index.html": "39793ac6406002f7bcc3c746df1ad6d061960c8b215f2ab3d666b1fa8fe74488",
     "tools/lrt_pairwise_layout.py": "ae5a3ea9a77f24aa740efefc62a7c823de1f01c6fdcbfa024bcc1aadfa8e9f2a",
     "tools/lrt_screen_summary.py": "25abc3308b7d4b5209fa60af980d2329c4fcc7151a68fe786e5397e28983c697",
     "tools/hcc_waitlist_comparisons.json": "b904eb05b04adcacacc0b5fd105b970e971753213862252f833ba17864e9e5ac",
@@ -873,10 +873,10 @@
     "evidence-libraries/document-index.json": "3be5c78b5428299e52bd7e2a7897005dd578069032c0aed43d4071ecfec705f6",
     "tools/hcc_document_pdf_status.json": "1ac22255210ceb09807f912f4e42ef18a82f7671bebf6655ce5e421a2da681b7",
     "tools/ehd_positions.json": "075ddc0edb1a3f263a6892cbfd51cf1bfa842f9848aa0ed067d763d7d42c6a38",
-    "documents/hcc/questions.json": "557a0cf1c5f5bcc08d594c4b9c893455ccf8dcd9a997c1eb43ea9fd8578f7b51",
-    "assets/compact-evidence-data.js": "17f24a4bf566e40b4c08c58496bb0c06e8ecb6e477d491f10e0443bc21ade668",
+    "documents/hcc/questions.json": "c2ceccd5e1c1f59f9602ef8afe8f8097c51aeb863f6f3f4481caddbafd657916",
+    "assets/compact-evidence-data.js": "44f7357617a54b881cb8a181f1941320d034e4e5a1058c7b14442b2aa5a4dae1",
     "tools/decision_assistant_source/high_risk_data.json": "baca7e66c27f4185780e5774a376ae9b635945678a3e7c9e4a5b2db808a0d773",
-    "assets/contextual-copy.js": "0a1e0a25d6f9a67d1f16e2213bbbb0ecf865b29cd5b19042ace21e141fc50adf",
+    "assets/contextual-copy.js": "dfa19f987c1e6cb91754ceb75b0b50db679232fb1cf60b01083d5ccad0f3fa3d",
     "tools/systemic_evidence_rows.json": "4893c6958d59521071c80f8b3c8a990942774feae063c90b79752fd94fd6f855",
     "assets/document-references.js": "55e70fb916ccb69292debf6267766e4e5c3d394a085443faec9140dcfbd959ab",
     "tools/transplant_sections/hcc.json": "b4f0cf0361416157ceee67375bec7a1a9ee28318e81fed438b0b8009f75eeadf"
@@ -1055,7 +1055,7 @@
     }
   ],
   "presentation_release": {
-    "version": "20261125-threshold1",
+    "version": "20261125-alignment1",
     "date": "2026-11-24",
     "clinical_content": "Unchanged from b024917; source rules and navigation reorganized.",
     "artifact_action": "65 Word downloads and 34 evidence PPT libraries carried forward unchanged; 4441 slides, 113 editable charts, 64 native tables.",

@@ -7,10 +7,10 @@
 <meta name="description" content="Neuroendocrine liver metastases — Memorial Hermann system roadmap v0.7, draft under development.">
 <title>Memorial Hermann NELM Roadmap</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
-<link rel="stylesheet" href="../assets/portal-navigation.css?v=20261125-threshold1"><script src="../assets/portal-navigation.js?v=20261125-threshold1" defer></script><link rel="stylesheet" href="/mh-liver-pathways/assets/roadmap-evidence.css?v=20261125-threshold1"><script src="/mh-liver-pathways/assets/document-references.js?v=20261125-threshold1"></script><script src="/mh-liver-pathways/assets/roadmap-evidence.js?v=20261125-threshold1"></script><link rel="stylesheet" href="../assets/clarity-presentation.css?v=20261125-threshold1"><script src="../assets/clarity-presentation.js?v=20261125-threshold1"></script></head>
+<link rel="stylesheet" href="../assets/portal-navigation.css?v=20261125-alignment1"><script src="../assets/portal-navigation.js?v=20261125-alignment1" defer></script><link rel="stylesheet" href="/mh-liver-pathways/assets/roadmap-evidence.css?v=20261125-alignment1"><script src="/mh-liver-pathways/assets/document-references.js?v=20261125-alignment1"></script><script src="/mh-liver-pathways/assets/roadmap-evidence.js?v=20261125-alignment1"></script><link rel="stylesheet" href="../assets/clarity-presentation.css?v=20261125-alignment1"><script src="../assets/clarity-presentation.js?v=20261125-alignment1"></script></head>
 <body>
 <style>
-/* One renderer, four tumours: the gates come from data/pathway.json?v=20261125-threshold1, the
+/* One renderer, four tumours: the gates come from data/pathway.json?v=20261125-alignment1, the
    liver-directed matrix from the shared LRT_Evidence_Matrix export. Layout
    follows the HCC console: a gate strip, the answer below it, then the
    evidence library everything links back into. */
@@ -314,10 +314,10 @@ footer p + p{margin-top:8px}
 @media (max-width:640px){ .ev .evtag{width:auto} }
 @media (prefers-reduced-motion:reduce){ *{transition:none !important} }
 </style>
-<link rel="stylesheet" href="../assets/lrt-comparisons.css?v=20261125-threshold1">
-<script defer src="../assets/lrt-comparisons.js?v=20261125-threshold1"></script>
-<link rel="stylesheet" href="../assets/roadmap-flow.css?v=20261125-threshold1">
-<script src="../assets/roadmap-flow.js?v=20261125-threshold1"></script>
+<link rel="stylesheet" href="../assets/lrt-comparisons.css?v=20261125-alignment1">
+<script defer src="../assets/lrt-comparisons.js?v=20261125-alignment1"></script>
+<link rel="stylesheet" href="../assets/roadmap-flow.css?v=20261125-alignment1">
+<script src="../assets/roadmap-flow.js?v=20261125-alignment1"></script>
 
 <header class="top">
   <div class="devbar">Clinical review draft · Not approved institutional policy · Not an automated eligibility tool.</div>
@@ -764,8 +764,8 @@ function build(){
 
 /* ---------- load ---------- */
 Promise.all([
-  fetch("data/pathway.json?v=20261125-threshold1").then(r=>r.json()),
-  fetch("data/critique.json?v=20261125-threshold1").then(r=>r.ok ? r.json() : {}).catch(()=>({}))
+  fetch("data/pathway.json?v=20261125-alignment1").then(r=>r.json()),
+  fetch("data/critique.json?v=20261125-alignment1").then(r=>r.ok ? r.json() : {}).catch(()=>({}))
 ]).then(([p, crit])=>{
   P = p;
   CRIT = crit || {};
@@ -775,8 +775,8 @@ Promise.all([
   document.getElementById("lrt").hidden = false;
   document.getElementById("navLrt").hidden = false;
   return Promise.all([
-    fetch("../lrt/matrix.json?v=20261125-threshold1").then(r=>r.json()),
-    fetch("data/lrt_refs.json?v=20261125-threshold1").then(r=>r.json())
+    fetch("../lrt/matrix.json?v=20261125-alignment1").then(r=>r.json()),
+    fetch("data/lrt_refs.json?v=20261125-alignment1").then(r=>r.json())
   ]).then(([mx, refs])=>{
     MX = mx;
     const first = MX.modalities.map(m=>P.matrix+"|"+m[0]).find(k=>MX.cells[k]);

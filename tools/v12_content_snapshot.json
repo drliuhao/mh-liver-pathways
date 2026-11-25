@@ -684,7 +684,7 @@
               "ref": "H-policy",
               "text": "LI-RADS 5 classification on CT, MRI, or CEUS",
               "quote": true,
-              "locator": "Table 9-9, p.198"
+              "locator": "OPTN 9.5.I.vi, Table 9-9; printed p.201 (18 November 2026 PDF)"
             },
             {
               "ref": "H-aasld",
@@ -701,7 +701,7 @@
         },
         {
           "id": "curative-route",
-          "question": "When should uncertain portal hypertension change resection versus transplant?",
+          "question": "Which patients with portal hypertension remain suitable for resection, and when is transplantation preferable?",
           "comparisons": [
             {
               "ref": "H-aasld",
@@ -713,24 +713,24 @@
               "ref": "H-policy",
               "text": "An indication that the candidate is not eligible for resection",
               "quote": true,
-              "locator": "§9.5.I.i, p.196"
+              "locator": "OPTN 9.5.I.i; printed p.199 (18 November 2026 PDF)"
             }
           ],
-          "proposal": "Use liver reserve, portal-hypertension evidence and technical remnant assessment first. Obtain invasive hemodynamics only when the result could change the operation.",
-          "rationale": "Allocation documentation does not substitute for a surgical risk-benefit decision.",
+          "proposal": "Use liver reserve, portal-hypertension severity, tumor location, operative extent and future remnant to compare resection with transplantation. Selected minor or minimally invasive resection may be appropriate after HPB and hepatology assessment; agree the local selection and risk-assessment criteria. Obtain invasive hemodynamics only when the result could change the operation.",
+          "rationale": "Guideline-supported selection is not a choice between ignoring portal hypertension and forbidding every resection. Allocation documentation does not substitute for a surgical risk-benefit decision.",
           "owners": "HPB surgery · hepatology",
           "record": "HCC G2",
           "status": "Discussion required — not yet approved"
         },
         {
           "id": "beyond-downstaging",
-          "question": "What requires nonstandard review: burden, prior rupture or portal-branch invasion?",
+          "question": "How should clinical selection and exception review differ for excess tumor burden, previously treated rupture and portal-branch invasion?",
           "comparisons": [
             {
               "ref": "H-policy",
               "text": "not automatically eligible for a standardized MELD or PELD exception",
               "quote": true,
-              "locator": "§9.5.I.iii, p.197"
+              "locator": "OPTN 9.5.I.iii; printed p.200 (18 November 2026 PDF)"
             },
             {
               "ref": "N-hcc",
@@ -739,9 +739,9 @@
               "locator": ""
             }
           ],
-          "proposal": "Request individual NLRB review when standardized HCC MELD-exception criteria are not met. Document pretreatment tumor burden, rupture or vascular invasion, treatment response, AFP and the observation period.",
-          "rationale": "Pretreatment tumor burden and prior rupture or vascular invasion still determine whether an HCC MELD-exception request needs individual review.",
-          "owners": "Transplant hepatology · coordinator",
+          "proposal": "Continue individual transplant-program review when standard criteria are not met; seek separate NLRB review if HCC MELD-exception points are requested. Record pretreatment burden, AFP, prior rupture or invasion, response and observation. For previously treated rupture, agree explicit clinical selection criteria: confirmation of rupture, peritoneal and distant staging, durable response, liver reserve, tumor biology, combined-risk exclusions and review ownership. No treated-rupture cohort is activated by this discussion.",
+          "rationale": "NLRB guidance allows selected exception consideration after prolonged stability, including at least 12 months for previously treated rupture or primary portal-vein branch invasion. That interval is not a complete clinical transplant protocol or automatic eligibility. The initial portal-invasion pilot continues to exclude prior rupture; previously proven extrahepatic or nodal disease remains a separate HCC-B5 decision.",
+          "owners": "Transplant surgery and hepatology · HPB surgery · diagnostic radiology · medical oncology · coordinator",
           "record": "HCC G3",
           "status": "Discussion required — not yet approved"
         },
@@ -925,7 +925,7 @@
               "ref": "H-policy",
               "text": "Policy specifies the exception evidence and explant reporting. It does not assign our local team members.",
               "quote": false,
-              "locator": ""
+              "locator": "OPTN 9.5.I.i; printed p.199 (18 November 2026 PDF)"
             },
             {
               "ref": "H-aasld",
@@ -948,7 +948,7 @@
               "ref": "H-policy",
               "text": "Extension rules use tumor stage, treatment and AFP; the prior >1,000 AFP history changes the applicable threshold.",
               "quote": false,
-              "locator": ""
+              "locator": "OPTN 9.5.I.vii; printed p.202 (18 November 2026 PDF)"
             },
             {
               "ref": "H-aasld",
@@ -971,7 +971,7 @@
               "ref": "H-policy",
               "text": "as long as the candidate’s AFP level remains below 500 ng/mL",
               "quote": true,
-              "locator": "OPTN 9.5.I.iv; after prior AFP >1000"
+              "locator": "OPTN 9.5.I.iv; printed pp.200–201 (18 November 2026 PDF); after prior AFP >1,000"
             },
             {
               "ref": "V12-AFP_500",
@@ -1000,7 +1000,7 @@
               "ref": "H-policy",
               "text": "as long as the candidate’s AFP level remains below 500 ng/mL",
               "quote": true,
-              "locator": "OPTN 9.5.I.iv; after prior AFP >1000"
+              "locator": "OPTN 9.5.I.iv; printed pp.200–201 (18 November 2026 PDF); after prior AFP >1,000"
             },
             {
               "ref": "V12-AFP_500",
@@ -1029,7 +1029,7 @@
               "ref": "H-policy",
               "text": "as long as the candidate’s AFP level remains below 500 ng/mL",
               "quote": true,
-              "locator": "OPTN 9.5.I.iv; after prior AFP >1000"
+              "locator": "OPTN 9.5.I.iv; printed pp.200–201 (18 November 2026 PDF); after prior AFP >1,000"
             },
             {
               "ref": "V12-AFP_500",
@@ -1058,7 +1058,7 @@
               "ref": "H-policy",
               "text": "as long as the candidate’s AFP level remains below 500 ng/mL",
               "quote": true,
-              "locator": "OPTN 9.5.I.iv; after prior AFP >1000"
+              "locator": "OPTN 9.5.I.iv; printed pp.200–201 (18 November 2026 PDF); after prior AFP >1,000"
             },
             {
               "ref": "V12-AFP_500",
@@ -1087,7 +1087,7 @@
               "ref": "H-policy",
               "text": "as long as the candidate’s AFP level remains below 500 ng/mL",
               "quote": true,
-              "locator": "OPTN 9.5.I.iv; after prior AFP >1000"
+              "locator": "OPTN 9.5.I.iv; printed pp.200–201 (18 November 2026 PDF); after prior AFP >1,000"
             },
             {
               "ref": "V12-AFP_500",
@@ -1116,7 +1116,7 @@
               "ref": "H-policy",
               "text": "as long as the candidate’s AFP level remains below 500 ng/mL",
               "quote": true,
-              "locator": "OPTN 9.5.I.iv; after prior AFP >1000"
+              "locator": "OPTN 9.5.I.iv; printed pp.200–201 (18 November 2026 PDF); after prior AFP >1,000"
             },
             {
               "ref": "V12-AFP_500",
@@ -1252,8 +1252,9 @@
               "label": "Nodal staging",
               "items": [
                 {
-                  "text": "Consider EUS sampling of suspicious regional lymph nodes without passing through the primary tumor. Record exactly what was sampled and the needle path.",
+                  "text": "Complete EUS assessment and FNA of safely accessible regional lymph nodes before neoadjuvant therapy, avoiding traversal of the primary tumor. Record nodal stations and needle paths; if safe sampling is infeasible, document the multidisciplinary alternative staging plan. A negative EUS assessment does not replace operative staging before transplantation.",
                   "refs": [
+                    "C-aasld",
                     "P-policy"
                   ]
                 }
@@ -1691,7 +1692,7 @@
         },
         {
           "id": "sampling",
-          "question": "Primary-tumor sampling versus nodal sampling: what is acceptable?",
+          "question": "How will routine regional-node EUS-FNA be completed safely before neoadjuvant therapy?",
           "comparisons": [
             {
               "ref": "P-policy",
@@ -1710,10 +1711,16 @@
               "text": "Transperitoneal biopsies must be avoided in patients with pCCA who are potential LT candidates",
               "quote": true,
               "locator": "PDF p.26"
+            },
+            {
+              "ref": "C-aasld",
+              "text": "AASLD recommends EUS-FNA of regional nodes before neoadjuvant therapy in patients evaluated for pCCA transplantation; suspicious morphology is not a prerequisite. A negative EUS assessment does not replace operative staging.",
+              "quote": false,
+              "locator": "PDF p28, guidance statement 49"
             }
           ],
-          "proposal": "Use intraductal diagnostic approaches; require explicit target/needle-path review for EUS. Nodal sampling is not interchangeable with sampling the primary.",
-          "rationale": "The risk depends on the target and trajectory, not the name of the endoscopic procedure.",
+          "proposal": "Use intraductal primary-tumor sampling and complete regional-node EUS assessment with FNA of safely accessible nodes before neoadjuvant therapy. Specify targets and safe needle paths. If safe sampling is infeasible, record a multidisciplinary alternative; a routine selective-node-only policy would be a local departure requiring approval. Preserve operative staging regardless of EUS results.",
+          "rationale": "The default follows AASLD pre-neoadjuvant nodal staging guidance. OPTN policy is permissive about EUS-FNA and mandatory about operative staging; these are complementary assessments. Local implementation must define a safe alternative when sampling is infeasible.",
           "owners": "Advanced GI · transplant surgery",
           "record": "pCCA G2",
           "status": "Discussion required — not yet approved"
@@ -3443,7 +3450,8 @@
           ],
           "stops": [],
           "issues": [
-            "selection"
+            "selection",
+            "functional-observation"
           ]
         },
         {
@@ -3582,7 +3590,8 @@
           ],
           "issues": [
             "extrahepatic",
-            "observation"
+            "observation",
+            "functional-observation"
           ]
         },
         {
@@ -3848,6 +3857,29 @@
           "owners": "Transplant team · NET oncology · coordinator",
           "record": "NELM G6",
           "status": "Discussion required — not yet approved"
+        },
+        {
+          "id": "functional-observation",
+          "question": "Could severe refractory functioning symptoms justify a shorter clinical observation period?",
+          "comparisons": [
+            {
+              "ref": "NET-enets2026",
+              "text": "ENETS 2026 allows consideration of shorter demonstrated stability for uncontrolled functioning syndromes; this is expert judgment rather than validated selection.",
+              "quote": false,
+              "locator": "§7, principle7"
+            },
+            {
+              "ref": "N-net",
+              "text": "The applicable MELD-exception requirements remain a separate assessment and cannot be waived by changing a local clinical observation period.",
+              "quote": false,
+              "locator": "NET guidance"
+            }
+          ],
+          "proposal": "Keep the current observation requirement. Discuss any symptom-driven exception only through an explicitly approved clinical protocol and applicable allocation review; no shorter interval is activated here.",
+          "rationale": "The potential benefit is symptom relief in a patient with refractory functioning disease, balanced against uncertain tumour biology and transplant risk.",
+          "owners": "NET oncology · endocrinology · transplant selection",
+          "record": "NELM G7",
+          "status": "Discussion required — no shorter observation route activated"
         }
       ],
       "protocol": "/mh-liver-pathways/documents/nelm/NELM_3_Standard_Pathway.docx",
@@ -3867,7 +3899,7 @@
       "code": "HEHE",
       "name": "Hepatic epithelioid hemangioendothelioma",
       "route": "Individual MELD-exception review · NLRB guidance",
-      "entry": "Biopsy-proven unresectable HEHE without macrovascular invasion; rare-tumor biology requires expert review.",
+      "entry": "Biopsy-proven unresectable HEHE without macrovascular invasion; assess prior tumour rupture and expected benefit with the expert team.",
       "roadmap": "",
       "steps": [
         {
@@ -3962,6 +3994,12 @@
                   "refs": [
                     "E-consensus"
                   ]
+                },
+                {
+                  "text": "Ask about prior tumour rupture or tumour-related intraperitoneal bleeding; review imaging, operative and pathology records. Active bleeding requires urgent assessment and stabilization.",
+                  "refs": [
+                    "E-consensus"
+                  ]
                 }
               ]
             }
@@ -3971,9 +4009,10 @@
               "title": "Unresectable liver disease without macrovascular invasion",
               "criteria": [
                 {
-                  "text": "Disease distribution and behavior support case-level transplant discussion.",
+                  "text": "Disease distribution and behavior support case-level transplant discussion; no history of tumour rupture has been identified.",
                   "refs": [
-                    "N-hehe"
+                    "N-hehe",
+                    "E-consensus"
                   ]
                 }
               ],
@@ -4011,6 +4050,57 @@
               "to": "risk",
               "kind": "hold",
               "refs": []
+            },
+            {
+              "title": "Prior tumour rupture confirmed",
+              "criteria": [
+                {
+                  "text": "The EHE consensus considers prior tumour rupture a major contraindication to transplantation because of recurrence risk. This is a clinical-selection concern, separate from the stated NLRB criteria.",
+                  "refs": [
+                    "E-consensus"
+                  ]
+                }
+              ],
+              "action": "Do not continue to routine transplant listing. Review nontransplant treatment with sarcoma oncology and the transplant team.",
+              "to": null,
+              "kind": "stop",
+              "refs": [
+                "E-consensus"
+              ]
+            },
+            {
+              "title": "Possible rupture; history unclear",
+              "criteria": [
+                {
+                  "text": "Imaging, bleeding history or previous procedures raise concern for tumour rupture, but the diagnosis is unresolved.",
+                  "refs": [
+                    "E-consensus"
+                  ]
+                }
+              ],
+              "action": "Review the original records and disease extent with radiology and the sarcoma/transplant team before deciding transplant suitability.",
+              "to": null,
+              "kind": "hold",
+              "refs": [
+                "E-consensus"
+              ]
+            },
+            {
+              "title": "Active tumour-related bleeding",
+              "criteria": [
+                {
+                  "text": "Suspected or confirmed active bleeding needs urgent assessment.",
+                  "refs": [
+                    "E-consensus"
+                  ]
+                }
+              ],
+              "action": "Stabilize and control bleeding through the acute-care team, then reassess rupture, disease extent and the oncologic treatment plan.",
+              "to": null,
+              "kind": "stop",
+              "refs": [
+                "E-consensus"
+              ]
             }
           ],
           "stops": [
@@ -4019,10 +4109,17 @@
               "refs": [
                 "N-hehe"
               ]
+            },
+            {
+              "text": "Prior tumour rupture is a major clinical contraindication to LT in the EHE consensus; it is not a new NLRB numerical criterion.",
+              "refs": [
+                "E-consensus"
+              ]
             }
           ],
           "issues": [
-            "extrahepatic"
+            "extrahepatic",
+            "rupture"
           ]
         },
         {
@@ -4036,7 +4133,7 @@
               "label": "Risk and alternatives",
               "items": [
                 {
-                  "text": "Record disease tempo, symptoms, nodal findings, vascular involvement and alternatives; distinguish known pretransplant findings from eventual explant pathology.",
+                  "text": "Record disease tempo, symptoms, prior rupture, nodal findings, vascular involvement and alternatives; distinguish known pretransplant findings from eventual explant pathology.",
                   "refs": [
                     "E-score",
                     "E-consensus"
@@ -4056,7 +4153,7 @@
               "title": "Acceptable expected benefit after MDT review",
               "criteria": [
                 {
-                  "text": "Unresectable disease, no macrovascular invasion and a documented patient-specific benefit-risk judgment.",
+                  "text": "Unresectable disease, no macrovascular invasion, no prior tumour rupture and a documented patient-specific benefit-risk judgment.",
                   "refs": [
                     "N-hehe",
                     "E-consensus"
@@ -4112,6 +4209,12 @@
                   "refs": [
                     "E-consensus"
                   ]
+                },
+                {
+                  "text": "Document the rupture assessment separately from MELD-exception requirements. Confirmed prior rupture prevents routine progression through this clinical pathway.",
+                  "refs": [
+                    "E-consensus"
+                  ]
                 }
               ]
             }
@@ -4153,6 +4256,12 @@
               "text": "Confirmed macrovascular invasion or a revised diagnosis of angiosarcoma does not meet the HEHE MELD-exception criteria; reassess the treatment plan.",
               "refs": [
                 "N-hehe"
+              ]
+            },
+            {
+              "text": "Newly identified prior tumour rupture requires reassessment of clinical suitability; do not proceed through routine listing on the basis of an earlier review.",
+              "refs": [
+                "E-consensus"
               ]
             }
           ],
@@ -4341,6 +4450,29 @@
           "owners": "Oncology · transplant team",
           "record": "HEHE G6",
           "status": "Discussion required — not yet approved"
+        },
+        {
+          "id": "rupture",
+          "question": "How will prior tumour rupture be identified and documented before HEHE transplant selection?",
+          "comparisons": [
+            {
+              "ref": "E-consensus",
+              "text": "The EHE consensus identifies prior tumour rupture as a major contraindication to LT because of recurrence risk.",
+              "quote": false,
+              "locator": "Liver EHE / liver transplantation section; PMID34090171"
+            },
+            {
+              "ref": "N-hehe",
+              "text": "The stated NLRB diagnostic, unresectability and macrovascular-invasion criteria answer the separate MELD-exception question.",
+              "quote": false,
+              "locator": ""
+            }
+          ],
+          "proposal": "Require review of rupture and bleeding history before selection. Confirmed prior rupture stops routine transplant progression; uncertain events require expert imaging and record review.",
+          "rationale": "The current protocol already recognizes rupture risk. The website assessment must capture it without conflating clinical suitability with allocation requirements.",
+          "owners": "HPB/transplant surgery · sarcoma oncology · radiology",
+          "record": "HEHE G7",
+          "status": "Implementation discussion — clinical contraindication retained"
         }
       ],
       "protocol": "/mh-liver-pathways/documents/hehe/HEHE_3_Standard_Pathway.docx",
@@ -4865,7 +4997,7 @@
               "locator": ""
             }
           ],
-          "proposal": "Confirm or exclude malignancy with pathology and the tumor board. If cancer is present, use its treatment pathway and assess the relevant MELD-exception criteria.",
+          "proposal": "Confirm or exclude malignancy with pathology and the tumor board. If cancer is present, use its treatment pathway and assess the relevant MELD-exception criteria. After HCC is confirmed, use the HCC roadmap to choose resection or, when unsuitable, liver-directed therapy, transplantation or systemic treatment according to stage and clinical eligibility. Diagnostic confirmation does not require resection in every patient.",
           "rationale": "Suspected malignant transformation requires diagnostic confirmation before applying cancer-specific treatment and MELD-exception criteria.",
           "owners": "Pathology · hepatology · transplant surgery",
           "record": "HCA G4",
@@ -5035,10 +5167,10 @@
       "short": "OPTN 9.5.I",
       "title": "OPTN Policies — HCC standardized exception",
       "kind": "Allocation policy",
-      "locator": "Effective October 1, 2026 · §§9.5.I.i–vii · pp.196–200",
-      "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf#page=196",
-      "pdf": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf#page=196",
-      "note": "Policy determines exception eligibility, not whether transplantation is the best clinical treatment. Class 5 now explicitly includes eligible LI-RADS 5 CT/MRI/CEUS or biopsy pathways."
+      "locator": "Effective November 18, 2026 · §9.5.I · pp.199–202",
+      "url": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf#page=199",
+      "pdf": "https://www.hrsa.gov/sites/default/files/hrsa/optn/optn_policies.pdf#page=199",
+      "note": "Policy determines exception eligibility, not whether transplantation is the best clinical treatment. Class 5 now explicitly includes eligible LI-RADS 5 CT/MRI/CEUS or biopsy pathways. T2, downstaging and AFP provisions checked November 25, 2026; this is not a new verification of every allocation-policy section."
     },
     "P-policy": {
       "short": "OPTN 9.5.A",
@@ -6163,6 +6295,15 @@
       "url": "https://clinicaltrials.gov/study/NCT06725121",
       "pdf": "",
       "note": "Single-arm investigational treatment for selected macrovascular invasion. No posted results at review."
+    },
+    "NET-enets2026": {
+      "short": "ENETS · LT 2026",
+      "title": "Stålberg et al. Controversies in NEN: An ENETS position statement on liver transplantation in advanced small-intestinal and pancreatic NETs",
+      "kind": "Expert consensus",
+      "locator": "J Neuroendocrinol. 2026;38:e70250 · §7, principle7 and Table1",
+      "url": "https://doi.org/10.1111/jne.70250",
+      "pdf": "https://onlinelibrary.wiley.com/doi/pdf/10.1111/jne.70250",
+      "note": "Primary full text inspected. A proposed expert framework, not outcome-validated selection criteria."
     }
   },
   "assistants": {
@@ -6339,8 +6480,8 @@
           },
           "branch": null,
           "kind": "hold",
-          "title": "Review prior rupture or vascular invasion",
-          "text": "Previously treated rupture or portal-branch invasion requires individual review by the transplant program and the NLRB if HCC MELD-exception points are requested.",
+          "title": "Review treated rupture, vascular invasion or prior metastasis separately",
+          "text": "Previously treated rupture or portal-branch invasion requires individual clinical selection and NLRB review if HCC MELD-exception points are requested. The observation interval alone does not establish transplant eligibility; local treated-rupture selection remains under HCC G3 discussion. Previously proven extrahepatic or nodal HCC follows the separate HCC-B5 position.",
           "refs": [
             "N-hcc"
           ]
@@ -10762,9 +10903,75 @@
           ],
           "help": "Extrahepatic disease alone does not exclude HEHE MELD-exception consideration under NLRB guidance. Review its sites, behavior and effect on expected transplant benefit.",
           "criteria": []
+        },
+        {
+          "id": "rupture",
+          "label": "Tumour rupture or related intraperitoneal bleeding?",
+          "options": [
+            {
+              "value": "none",
+              "label": "No history identified",
+              "details": []
+            },
+            {
+              "value": "prior",
+              "label": "Prior tumour rupture confirmed",
+              "details": []
+            },
+            {
+              "value": "uncertain",
+              "label": "Possible rupture; history unresolved",
+              "details": []
+            },
+            {
+              "value": "active",
+              "label": "Active tumour-related bleeding",
+              "details": []
+            },
+            {
+              "value": "unknown",
+              "label": "Uncertain / not yet assessed",
+              "details": []
+            }
+          ],
+          "refs": [
+            "E-consensus"
+          ],
+          "help": "Review prior imaging, bleeding events and operative records. EHE consensus identifies prior tumour rupture as a major contraindication to LT.",
+          "criteria": []
         }
       ],
       "rules": [
+        {
+          "when": {
+            "rupture": "active"
+          },
+          "branch": 5,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "rupture": "prior"
+          },
+          "branch": 3,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
+        {
+          "when": {
+            "rupture": "uncertain"
+          },
+          "branch": 4,
+          "kind": null,
+          "title": null,
+          "text": null,
+          "refs": []
+        },
         {
           "when": {
             "vascular": "no"
@@ -10805,7 +11012,8 @@
           "when": {
             "vascular": "yes",
             "strategy": "transplant",
-            "extrahepatic": "limited"
+            "extrahepatic": "limited",
+            "rupture": "none"
           },
           "branch": 2,
           "kind": null,
@@ -10817,7 +11025,8 @@
           "when": {
             "vascular": "yes",
             "strategy": "transplant",
-            "extrahepatic": "none"
+            "extrahepatic": "none",
+            "rupture": "none"
           },
           "branch": 0,
           "kind": null,
@@ -10829,14 +11038,15 @@
       "example": {
         "vascular": "yes",
         "strategy": "transplant",
-        "extrahepatic": "none"
+        "extrahepatic": "none",
+        "rupture": "none"
       }
     },
     "hehe/risk": {
       "questions": [
         {
           "id": "criteria",
-          "label": "Unresectable disease without macrovascular invasion remains confirmed?",
+          "label": "Unresectable disease, no macrovascular invasion and no prior tumour rupture confirmed?",
           "options": [
             {
               "value": "yes",
@@ -10855,7 +11065,8 @@
             }
           ],
           "refs": [
-            "N-hehe"
+            "N-hehe",
+            "E-consensus"
           ],
           "help": "",
           "criteria": []
@@ -10896,9 +11107,10 @@
           "branch": null,
           "kind": "stop",
           "title": "Review the treatment and transplant plan",
-          "text": "Reassess resectability and vascular involvement before requesting a HEHE MELD exception.",
+          "text": "Reassess resectability, vascular involvement and rupture history before continuing transplant selection. Clinical suitability and a HEHE MELD-exception request are separate decisions.",
           "refs": [
-            "N-hehe"
+            "N-hehe",
+            "E-consensus"
           ]
         },
         {
@@ -10959,7 +11171,7 @@
             "N-hehe",
             "E-consensus"
           ],
-          "help": "Confirm biopsy-proven HEHE, unresectability and absence of macrovascular invasion. Document how any extrahepatic disease affects expected transplant benefit and MELD-exception consideration.",
+          "help": "Confirm biopsy-proven HEHE, unresectability and absence of macrovascular invasion for the exception request. Separately confirm clinical suitability, including no prior tumour rupture, and assess how any extrahepatic disease affects expected transplant benefit.",
           "criteria": []
         },
         {
@@ -20880,10 +21092,51 @@
             "care": null,
             "url": "/mh-liver-pathways/transplant/hehe/#high-risk-hehe-b2"
           }
+        ],
+        "3": [
+          {
+            "label": "Review treatment and continuing care",
+            "detail": "Choose the appropriate sarcoma treatment and supportive-care plan.",
+            "step": null,
+            "care": "treatment",
+            "url": null
+          }
+        ],
+        "4": [
+          {
+            "label": "Reassess after the rupture review",
+            "detail": "Update disease extent and the clinical selection decision.",
+            "step": "stage",
+            "care": null,
+            "url": null
+          },
+          {
+            "label": "Review treatment and continuing care",
+            "detail": "Choose the appropriate sarcoma treatment and supportive-care plan.",
+            "step": null,
+            "care": "treatment",
+            "url": null
+          }
+        ],
+        "5": [
+          {
+            "label": "Reassess after the rupture review",
+            "detail": "Update disease extent and the clinical selection decision.",
+            "step": "stage",
+            "care": null,
+            "url": null
+          },
+          {
+            "label": "Review treatment and continuing care",
+            "detail": "Choose the appropriate sarcoma treatment and supportive-care plan.",
+            "step": null,
+            "care": "treatment",
+            "url": null
+          }
         ]
       },
       "rules": {
-        "0": [
+        "3": [
           {
             "label": "Review treatment and continuing care",
             "detail": "If transplantation is unsuitable, choose a disease-specific treatment or ongoing-care plan.",
@@ -20892,7 +21145,7 @@
             "url": null
           }
         ],
-        "1": [
+        "4": [
           {
             "label": "Reassess after resolving the finding",
             "detail": "Complete the assessment described above, then update the choices for this decision.",

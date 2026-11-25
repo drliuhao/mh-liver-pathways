@@ -600,9 +600,9 @@
     {
      "id": "PCYST-D13",
      "set": "roadmap",
-     "title": "The mural nodule threshold: 5 mm, as Kyoto retains it, or 10 mm, which its own commissioned review found discriminates far better?",
-     "question": "The mural nodule threshold: 5 mm, as Kyoto retains it, or 10 mm, which its own commissioned review found discriminates far better?",
-     "kind": "clinical",
+     "title": "How will enhancing mural nodules be measured and confirmed before applying Kyoto’s 5 mm high-risk criterion?",
+     "question": "How will enhancing mural nodules be measured and confirmed before applying Kyoto’s 5 mm high-risk criterion?",
+     "kind": "implementation",
      "status": "OPEN — not yet decided",
      "resolved": false,
      "where": [
@@ -641,19 +641,19 @@
        "locator": "Gate 2 · Standard 'Resect, in a patient fit for pancreatectomy…'"
       }
      ],
-     "divergence": "Kyoto and the European guideline both hold 5 mm, but Kyoto's own commissioned evidence shows 10 mm discriminates far better and 5 mm was an expert-agreement pick among similarly performing heights.",
-     "proposal": "The draft applies Kyoto's 5 mm enhancing-nodule threshold, measured on EUS or contrast-enhanced imaging so that a non-enhancing mucin globule is not counted, while calling it the page's most consequential unexamined number. A programme keeping 5 mm should do so knowingly, and EUS reports should state nodule height in millimetres.",
+     "divergence": "Kyoto and the European guideline retain an enhancing mural nodule of at least 5 mm as a high-risk criterion. Studies of other cutoffs explain uncertainty in risk prediction but do not establish a replacement threshold. The practical issue is reliable enhancement and height assessment, followed by surgical fitness and patient-preference review.",
+     "proposal": "Apply the chosen guideline’s enhancing-nodule criterion: at least 5 mm under Kyoto. State nodule height and enhancement in the report, distinguish a mucin globule from a true nodule, and use expert EUS or contrast imaging review when uncertain. Assess surgical fitness and patient preferences before recommending resection.",
      "proposal_locator": "Gate 2 · Standard 'Resect, in a patient fit for pancreatectomy…' and note; Practice choices with limited evidence · item 3; Decisions table · item 13 · why and audit",
-     "rationale": "Kyoto 2024 reports that a mural nodule alone carries an odds ratio of 1.19 to 3.16 in recent multivariable models, and that one EUS analysis gave a 10 mm nodule an odds ratio of 7.90 with a 67% probability of high-grade dysplasia or invasive carcinoma against 2.93 and under 19% for a nodule of 5 to 10 mm. It discussed moving to 10 mm and kept 5 mm for lack of evidence strongly supporting the change. The 5 mm line was itself chosen by expert agreement in 2017 after three candidate heights performed similarly. This threshold separates an operation from an interval scan and it is the single most consequential unexamined number on the page. A programme that keeps 5 mm should do so knowingly.",
+     "rationale": "The current 5 mm criterion is already guideline-based. Evidence examining 10 mm or other cutoffs should remain in the appraisal, without turning it into a separate local threshold vote. Standardizing measurement and resolving equivocal nodules are the actionable programme decisions.",
      "audit": "Resections by nodule height and enhancement, with final histology; proportion of EUS reports stating nodule height in millimetres.",
      "web": "pcyst/#question-PCYST-D13"
     },
     {
      "id": "PCYST-D14",
      "set": "roadmap",
-     "title": "Is the Kyoto 30 mm size band retained for the 6-monthly interval, given that its only large validation found no stratification at 30 mm?",
-     "question": "Is the Kyoto 30 mm size band retained for the 6-monthly interval, given that its only large validation found no stratification at 30 mm?",
-     "kind": "clinical",
+     "title": "How will the programme apply and audit the selected cyst-surveillance schedule, including Kyoto’s 30 mm size band?",
+     "question": "How will the programme apply and audit the selected cyst-surveillance schedule, including Kyoto’s 30 mm size band?",
+     "kind": "implementation",
      "status": "OPEN — not yet decided",
      "resolved": false,
      "where": [
@@ -695,9 +695,9 @@
       }
      ],
      "divergence": "Kyoto and ACG intensify above 30 mm while the European guideline does not, and the evidence is split: the validation cohort found no separation at 30 mm, whereas the stopping cohort found excess risk in stable cysts above 30 mm.",
-     "proposal": "No decision. The roadmap's view is that keeping the band is defensible on prudence but unsupported by the validation, and that a programme adopting Kyoto's three-tier size schedule should know its top tier is the one that did not separate risk.",
+     "proposal": "If Kyoto is the adopted surveillance framework, retain its size-based intervals, including 6-monthly follow-up for cysts at least 30 mm. Record the guideline used, measurement trajectory, competing risk and suitability for intervention. Choosing the programme’s overall surveillance framework remains a separate discussion; the validation critique alone does not replace its schedule.",
      "proposal_locator": "Decisions table · item 14 · why; Practice choices with limited evidence · item 9; Gate 8 · Standard option 'Kyoto 2024 schedule' caveat",
-     "rationale": "In the 3,336-patient cohort that validated the rest of the revised criteria, the subdistribution hazard ratio for later pancreatic cancer was 2.07 (1.38 to 3.10) at 20 to 29 mm and 1.75 (1.00 to 3.08) at 30 mm or more. The band that triggers the most imaging is the band that did not separate, and 9.2% of that cohort had cysts of 30 mm or more, all of them already carrying a worrisome feature or high-risk stigma. Keeping the band is defensible on prudence; it is not supported by the validation.",
+     "rationale": "Guidelines differ in surveillance schedules, and retrospective validation does not establish an optimal interval. The roadmap should apply its chosen schedule consistently while retaining the limitations of the size-band evidence in the appraisal. Audit adherence, progression and harms; do not imply that failure to separate risk in one cohort invalidates the guideline interval.",
      "audit": "Surveillance studies per patient-year by size band, and progression events by size band.",
      "web": "pcyst/#question-PCYST-D14"
     },

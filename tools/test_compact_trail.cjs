@@ -6,7 +6,7 @@ const data=JSON.parse(read('transplant/assets/content.json'));let count=0;
 for(const [key,c] of Object.entries(data.assistants))for(const q of c.questions){
  const entry=labels.core[key+'/'+q.id];assert(entry,key+'/'+q.id);assert.equal(entry.source,q.label);assert(entry.label.length<=44);count++;
 }
-assert.equal(count,101);assert.equal(Object.keys(labels.core).length,count);
+assert.equal(count,102);assert.equal(Object.keys(labels.core).length,count);
 assert.equal(labels.core['hcc/allocation/burden'].label,'Tumor burden');
 assert.equal(labels.core['hcc/allocation/afp'].label,'AFP');
 assert.equal(labels.core['hcc/treatment/response'].label,'Tumor response');

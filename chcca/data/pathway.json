@@ -294,7 +294,7 @@
      ],
      "pref": "Every case. In a single-centre Japanese series of 19 resected cHCC-CCA, the tumour behaved like a biliary cancer in this respect: the liver was the commonest recurrence site but the lymph node was second, where in HCC it is not, and biliary invasion was present in 36.8% against 5.0% of the institution's HCC resections. The narrative surgical literature puts nodal metastasis in cHCC-CCA at 25–35%. Where nodal recurrence happens, it concentrates proximally: in a mapping study of 53 patients whose first recurrence after resection of a primary liver cancer was in regional nodes, the hepatic hilum was involved in 62.3% and the portal vein–vena cava region in 39.6%.",
      "avoid": "Do not accept a staging package built for HCC. A liver-only protocol with no chest imaging and no deliberate nodal assessment will miss the two findings that most often change the plan. And read the mapping study for what it is: only 11 of its 53 patients had cHCC-CCA, the denominator is patients who recurred in nodes rather than patients at risk, so the percentages describe where disease goes and not how likely it is to go there, and the median node count at the original operation was 6.",
-     "note": "The local CPG asks for CT of the chest, contrasted liver-protocol MR of the abdomen and pelvis, and an MR bone survey, with FDG-PET added where CA 19-9 is raised and other imaging shows no metastasis. The chest and liver imaging are standard practice; the routine MR bone survey appears in no guideline and is not supported by comparative data — see the limited-evidence section."
+     "note": "Use clinically indicated bone imaging for symptoms, examination findings or suspicious staging results. The historical 2022 local CPG included an MR bone survey and serial restaging, but a fixed three-monthly bone-MRI schedule is not the current default; it remains a proposed local departure under cHCC-CCA-D15. Continue required liver/chest and extrahepatic staging."
     },
     {
      "t": "Record which component predominates, with a proportion where the specimen allows it, because the proportion tracks outcome.",
@@ -1400,8 +1400,8 @@
    "why": "Renzulli includes dedicated mixed-histology cohorts and an enhancement-pattern analysis. Auer mainly reviews interventional iCCA therapy and presents an outlook for cHCC-CCA. Tumour enhancement and histological predominance should not be conflated or treated as validated universal predictors. Small cohorts, heterogeneous treatments, response criteria and survival time origins prevent a pooled efficacy claim; numerical outcomes require checking the primary reports because the review has inconsistent labels. Separate adjuvant post-operative TACE data in 95 resected patients reported HR 0.2 for overall survival (p=0.005, no confidence interval reported), from a retrospective hepatitis-B-endemic cohort with substantial selection concerns. That association does not establish efficacy in unresectable disease or on a transplant pathway."
   },
   {
-   "t": "Two intervals on this page are operating rules rather than evidence thresholds: the local protocol's three-monthly MR bone survey, and the three-monthly surveillance schedule this page recommends after treatment.",
-   "why": "The MR bone survey appears in no guideline and has no supporting data in this disease. It is a plausible safeguard in a tumour that metastasises to bone and it is the local written rule, so it stands until the group changes it — but it is grade D, it runs three times per listing cycle, and nobody has measured what it finds. The post-treatment surveillance interval is derived from recurrence timing: median recurrence-free survival of 7.27 months in a 95-patient resection cohort, 5-year recurrence-free survival of 12.2% in another, and recurrence above 60% in the narrative literature, so most events fall inside the window. No study has tested a surveillance interval in this histology, and NCCN states plainly for biliary tract cancer that there are no data supporting a specific schedule or set of tests. That the interval also matches the NLRB guidance route (nonstandard review)'s own imaging requirement is convenient, not evidential."
+   "t": "Bone imaging is clinically indicated; a fixed three-monthly MR bone survey remains a pending local departure under cHCC-CCA-D15. Post-treatment surveillance is a separate decision.",
+   "why": "No comparative evidence supports routine serial bone MRI in cHCC-CCA. The current default is symptom- or finding-directed bone imaging; the historical CPG’s fixed schedule is preserved as a source position for explicit local review, not as an OPTN/NCCN or current pathway requirement. cHCC-CCA-D9 separately addresses post-treatment surveillance without implying that all cross-sectional imaging includes a bone MRI."
   },
   {
    "t": "Several of the registry papers this page relies on contain internal numerical contradictions, and their affected figures should not be quoted at a board.",
@@ -1534,6 +1534,12 @@
     "q": "May a needle-biopsy differentiation grade exclude a transplant candidate, when no study has tested biopsy grade against explant grade in this disease?",
     "why": "Grade and the other pathological variables carry the most reproducible outcome signal — poor differentiation HR 4.16 (95% CI 1.37–12.66) for recurrence in the French cirrhosis cohort, microvascular invasion HR 4.56 (95% CI 1.36–15.22) in the Korean registry — and all of them are explant findings. In that registry cohort no pre-operative variable predicted anything. The local CPG softened these from criteria that 'must' exclude to features that 'may' exclude. The group has to decide whether a needle-core grade is allowed to make an exclusion, or whether the criterion is recorded as unmeasurable before transplant and the decision made on size, number, nodal status and observed stability instead.",
     "audit": "Pre-transplant biopsy grade against explant grade for every recipient, reported as a concordance rate."
+   },
+   {
+    "n": 15,
+    "q": "Should a fixed bone-MRI schedule be added to clinically indicated bone imaging?",
+    "why": "Staging for extrahepatic spread does not establish a required bone-imaging modality or interval. The fixed schedule is left for explicit local approval while clinically indicated imaging proceeds.",
+    "audit": "Record bone-imaging indication, positive and indeterminate findings, management changes, additional tests, delays and cost."
    }
   ]
  },

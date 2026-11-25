@@ -1104,15 +1104,16 @@
    ],
    "avoid": [
     {
-     "t": "Do not ablate or embolise a lesion in which transformation is the question.",
+     "t": "Do not use ablation or embolisation to bypass an unresolved diagnosis of malignant transformation.",
      "l": "Avoid",
      "g": "D",
      "refs": [
       "27085809",
-      "28518415"
+      "28518415",
+      "38958301"
      ],
-     "pref": "Resect it, or biopsy it and then resect it. Both modalities leave viable tissue and neither produces a specimen; EASL already makes residual viable lesion after embolisation an indication for resection.",
-     "avoid": "The systematic review of embolisation reported malignant transformation as one of its outcomes of interest precisely because the question cannot be closed by an intervention that leaves the lesion in situ. Treating a possibly malignant lesion with an ablative modality converts a diagnostic problem into an unanswerable one."
+     "pref": "Obtain expert imaging and pathology review; use biopsy when needed to establish the diagnosis and direct treatment. Resect when feasible. If HCC is confirmed and resection is unsuitable, use the HCC roadmap to assess liver-directed therapy, transplantation or systemic treatment according to tumour extent, liver function and clinical eligibility.",
+     "avoid": "Local treatment of an unclassified lesion may leave the diagnostic question unresolved. Once HCC is established, a non-resection treatment can be appropriate; suspected transformation is not a permanent contraindication to HCC-directed local therapy."
     },
     {
      "t": "Do not use imaging follow-up alone as the surveillance strategy for a beta-catenin-activated adenoma.",
@@ -1686,8 +1687,8 @@
    },
    {
     "n": 3,
-    "q": "How long may risk-factor modification run before a persistent lesion over 5 cm is treated — EASL's 6 months, or 12, or longer in a lesion that is still falling?",
-    "why": "EASL and ACG indicate resection at 6 months. At that point only 8.5-15.3% of adenomas over 5 cm have fallen below 5 cm, against 23.7-27.1% at 52 weeks and 58.5% eventually at a median 104 weeks, with no complication during the whole of that follow-up and time to regression strongly size-dependent (median 63 weeks under 7 cm, 208 weeks over 10 cm). The six-month trigger therefore captures roughly one in six to one in ten of the lesions that will eventually regress below 5 cm. The cohort's authors proposed 12 months for typical non-beta-catenin adenomas in women; 79% of responding European experts already decline the rule; and the only GRADE-appraised guideline grades the 6-month decision point very low quality, conditional. Decide the number, and decide whether it differs by baseline diameter.",
+    "q": "How will the team individualize the 6–12-month reassessment period for a woman with a persistent large adenoma, and when is observation beyond 12 months appropriate?",
+    "why": "EASL uses a 6-month reassessment before recommending resection of persistent lesions at least 5 cm; ACG permits a 6–12-month period. In the regression cohort, 8.5–15.3% of adenomas over 5 cm had fallen below 5 cm at 26 weeks, 23.7–27.1% at 52 weeks and 58.5% eventually at a median 104 weeks, with no complication reported during follow-up. These selected observational data support considering trajectory but do not establish that delaying intervention is safe for every large or high-risk lesion. The remaining local choice concerns individualization and observation beyond 12 months, not a blanket 12-month minimum.",
     "audit": "Audit: time to fall below 5 cm or to intervention, for every adenoma over 5 cm under surveillance."
    },
    {

@@ -3,13 +3,14 @@
  'use strict';
  const root=new URL('../',document.currentScript.src),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  let state=null,links=null,configLoaded=false;
- const configPromise=fetch(new URL('assets/roadmap-links.json?v=20261125-threshold1',root)).then(r=>{if(!r.ok)throw Error('Navigation unavailable');return r.json();}).catch(()=>null);
+ const configPromise=fetch(new URL('assets/roadmap-links.json?v=20261125-alignment1',root)).then(r=>{if(!r.ok)throw Error('Navigation unavailable');return r.json();}).catch(()=>null);
  const title=s=>s.name.replace(/^\d+\s*·\s*/, '');
  function initial(stages,fallback){let id;try{id=decodeURIComponent(location.hash.replace(/^#decision-/,''));}catch{return fallback;}return location.hash.startsWith('#decision-')&&stages.some(s=>s.id===id)?id:(stages.some(s=>s.id==='A')?'A':stages[0].id);}
  function setup({slug,stages,select,topic}){
   state={slug,stages,select,topic,current:null,initialSelection:null,trail:[]};document.body.classList.add('roadmap-streamlined');
   const legend=document.querySelector('.legend');
   if(legend&&!legend.closest('details')){const d=document.createElement('details');d.className='rf-legend';d.innerHTML='<summary>Recommendation labels, evidence grades and delivery requirements</summary>';legend.before(d);d.append(legend);}
+  if(legend&&!legend.querySelector('.rf-evidence-conventions')){const p=document.createElement('p');p.className='rf-evidence-conventions';p.textContent='Recommendation groups describe this draft’s proposed approach. A–D grades describe our assessment of supporting evidence, not the source guideline’s recommendation strength. A lower evidence grade alone does not override a guideline recommendation; any local departure requires an explicit rationale and decision.';legend.append(p);}
   const entry=document.getElementById('entry');if(entry)entry.textContent='Select the clinical question to review. Some assessments can proceed together; urgent care and procedure-specific precautions take priority.';
   const buttons=document.getElementById('stageBtns');
   buttons.innerHTML=stages.map(s=>`<button class="rf-topic" type="button" data-roadmap-decision="${esc(s.id)}">${esc(s.name)}</button>`).join('');

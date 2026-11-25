@@ -87,7 +87,7 @@
     }
    ],
    "divergence": "The 2022 CPG is broader than the OPTN guidance on size, cirrhosis and histological proof, and older than WHO 2019 and the current NCCN systemic recommendations.",
-   "proposal": "The roadmap does not choose among reaffirm, revise or replace, but identifies concrete revisions: a histological diagnostic criterion, dropping 'regardless of size' for the OPTN limits, a current induction list, sequencing on the diagnostic specimen, and closing the 3–6 cm adjuvant gap. Rules it does not contest, such as the radiation exclusion, stand until changed.",
+   "proposal": "The roadmap does not choose among reaffirm, revise or replace, but identifies concrete revisions: a histological diagnostic criterion, dropping 'regardless of size' for the OPTN limits, a current induction list, sequencing on the diagnostic specimen, and closing the 3–6 cm adjuvant gap. Rules it does not contest, such as the radiation exclusion, stand until changed. Use clinically indicated bone imaging; any fixed serial MR bone survey schedule is an unapproved local departure under cHCC-CCA-D15, not a guideline-mandated test.",
    "proposal_locator": "Gate 0 · Avoid 'Do not accept \"imaging characteristics consistent…\"'; Gate 5 · Avoid 'Do not list a patient on the strength of the words \"regardless of size\"'; Gate 5 · Reasonable 'Where the local protocol is used…' (avoid, note); Gate 8 · Avoid 'Do not use external-beam radiation as pre-transplant therapy…'; What we are not sure about · items 13–14",
    "rationale": "Its diagnostic criterion cannot be met as written — there is no cHCC-CCA imaging phenotype, and it asks only for biopsy or cytology showing malignancy where the NLRB guidance route (nonstandard review) requires biopsy-proven mixed histology. It permits listing 'regardless of size' where every other document and every dataset sets a limit. It does not require cirrhosis. It states that the MELD exception will be sought 'once the exception is available from UNOS', and it is now available and narrower than the protocol. Its induction regimen list predates every immunotherapy combination now recommended, it specifies next-generation sequencing on the explant rather than the diagnostic specimen when 34.7% of these tumours carry a potentially actionable alteration, its adjuvant tiers leave a 3-to-6 cm gap, and its newest reference is from 2018.",
    "audit": "Named owner, a revision date, and a standing reconciliation against the current OPTN guidance text and NCCN editions."
@@ -569,6 +569,43 @@
    "proposal_locator": "Gate 5 · Reasonable 'Differentiation grade and the explant pathological variables…' (avoid); What we are not sure about · item 9",
    "rationale": "Grade and the other pathological variables carry the most reproducible outcome signal — poor differentiation HR 4.16 (95% CI 1.37–12.66) for recurrence in the French cirrhosis cohort, microvascular invasion HR 4.56 (95% CI 1.36–15.22) in the Korean registry — and all of them are explant findings. In that registry cohort no pre-operative variable predicted anything. The local CPG softened these from criteria that 'must' exclude to features that 'may' exclude. The group has to decide whether a needle-core grade is allowed to make an exclusion, or whether the criterion is recorded as unmeasurable before transplant and the decision made on size, number, nodal status and observed stability instead.",
    "audit": "Pre-transplant biopsy grade against explant grade for every recipient, reported as a concordance rate."
+  },
+  {
+   "id": "cHCC-CCA-D15",
+   "n": 15,
+   "question": "Should a fixed bone-MRI schedule be added to clinically indicated bone imaging?",
+   "kind": "clinical",
+   "decisions": [
+    "2",
+    "5",
+    "6",
+    "9"
+   ],
+   "positions": [
+    {
+     "source": "Local cHCC-CCA transplant CPG, 11 April 2022",
+     "ref": "localcpg",
+     "position": "Includes an MR bone survey in staging and serial restaging. This is a local written requirement.",
+     "locator": "Local CPG; staging/restaging sections"
+    },
+    {
+     "source": "OPTN NLRB transplant-oncology guidance",
+     "ref": "optnnlrb",
+     "position": "Requires imaging to confirm stability and absence of extrahepatic disease; it does not specify a routine three-monthly MR bone survey.",
+     "locator": "Intrahepatic cholangiocarcinoma section, including mixed HCC-iCCA; extension requirements"
+    },
+    {
+     "source": "NCCN Biliary Tract Cancers v1.2026",
+     "ref": "nccnbtc",
+     "position": "No evidence establishes a specific surveillance test set for biliary tract cancer; this does not provide support for routine serial bone MRI in mixed HCC-CCA.",
+     "locator": "Surveillance discussion"
+    }
+   ],
+   "divergence": "The current default is clinically indicated bone imaging. The historical 2022 CPG’s routine serial MR bone survey is a potential local departure, not an active requirement of this pathway or national guidance.",
+   "proposal": "Use bone imaging for symptoms, examination findings or suspicious staging results. Any fixed serial MR bone schedule requires explicit protocol-owner approval, a defined purpose and review of diagnostic yield. Keep baseline/pretransplant staging separate from post-treatment surveillance.",
+   "proposal_locator": "Clinical decision 2, staging; local CPG staging/restaging; decision 9, surveillance",
+   "rationale": "Staging for extrahepatic spread does not establish a required bone-imaging modality or interval. The fixed schedule is left for explicit local approval while clinically indicated imaging proceeds.",
+   "audit": "Record bone-imaging indication, positive and indeterminate findings, management changes, additional tests, delays and cost."
   }
  ]
 }

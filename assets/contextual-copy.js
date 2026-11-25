@@ -525,8 +525,8 @@ window.ContextualCopy = {
       "label": "Team assessment of expected transplant benefit?"
     },
     "hehe/review/criteria": {
-      "source": "Confirm biopsy-proven HEHE, unresectability and absence of macrovascular invasion. Document how any extrahepatic disease affects expected transplant benefit and MELD-exception consideration.",
-      "concise": "Confirm biopsy-proven, unresectable HEHE without macrovascular invasion; assess extrahepatic disease effects on benefit and exception review.",
+      "source": "Confirm biopsy-proven HEHE, unresectability and absence of macrovascular invasion for the exception request. Separately confirm clinical suitability, including no prior tumour rupture, and assess how any extrahepatic disease affects expected transplant benefit.",
+      "concise": "Confirm biopsy-proven unresectable HEHE without macrovascular invasion for exception review. Separately confirm clinical suitability, no prior rupture and the impact of extrahepatic disease.",
       "title": "Are the disease-specific MELD-exception criteria still met?",
       "label": "Disease-specific MELD-exception criteria still met?"
     },
@@ -595,6 +595,12 @@ window.ContextualCopy = {
       "concise": "While waiting: reassess bleeding/transformation. After transplant: explant review and continuing metabolic/vascular care.",
       "title": "Clinical plan and follow-up responsibilities agreed for this stage of care?",
       "label": "Stage-specific plan and follow-up agreed?"
+    },
+    "hehe/stage/rupture": {
+      "source": "Review prior imaging, bleeding events and operative records. EHE consensus identifies prior tumour rupture as a major contraindication to LT.",
+      "concise": "Review imaging, bleeding history and operative records. Prior tumour rupture is a major clinical contraindication to LT in EHE consensus.",
+      "title": "Tumour rupture or related intraperitoneal bleeding?",
+      "label": "Prior rupture or active bleeding?"
     }
   },
   "recommendations": {
@@ -771,8 +777,8 @@ window.ContextualCopy = {
       "concise": "Name the histologic primary by epicenter: ampulla, duodenum, distal bile duct or pancreatic head. Shared surgery does not imply shared prognosis."
     },
     "hcc/C/alt/0": {
-      "source": "Add external beam radiotherapy or radioembolisation alongside systemic therapy. Both supporting trials used a sorafenib comparator: RTOG 1112 missed its primary survival endpoint (HR 0.77, 90% CI 0.59–1.01, one-sided p=0.06) and 13/85 (15%) assigned to SBRT plus sorafenib and 3/92 (3%) assigned to sorafenib alone never received sorafenib, while the Asan trial gave TACE plus radiotherapy instead of sorafenib, with an estimated 90.7% of the sorafenib arm crossing over by 24 weeks. Neither tested adding radiation to an immunotherapy backbone.",
-      "concise": "Consider radiation or radioembolization with systemic therapy. Evidence used sorafenib comparators; RTOG 1112 missed its primary survival endpoint, and Asan used TACE–radiation. Neither tested an immunotherapy backbone."
+      "source": "Consider external beam radiotherapy for selected liver-dominant or portal-vein tumor invasion control, coordinated with systemic treatment.",
+      "concise": "Consider EBRT for selected liver-dominant or portal-vein tumor invasion control; coordinate systemic treatment."
     },
     "hcc/B/standard/0": {
       "source": "Superselective conventional or drug-eluting-bead TACE. Plan selective delivery, define the intended response, and specify when to stop or change treatment.",

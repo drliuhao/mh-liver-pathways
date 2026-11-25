@@ -218,6 +218,41 @@
      "rationale": "Do not present a local surveillance interval as national policy.",
      "owners": "Oncology · transplant team",
      "web": "transplant/hehe/#meeting-surveillance"
+    },
+    {
+     "id": "HEHE G7",
+     "set": "standard",
+     "title": "How will prior tumour rupture be identified and documented before HEHE transplant selection?",
+     "question": "How will prior tumour rupture be identified and documented before HEHE transplant selection?",
+     "kind": "standard pathway",
+     "status": "Implementation discussion — clinical contraindication retained",
+     "resolved": false,
+     "where": [
+      {
+       "label": "Stage and compare options",
+       "url": "transplant/hehe/#stage"
+      }
+     ],
+     "positions": [
+      {
+       "source": "EHE · consensus",
+       "key": "std-E-consensus",
+       "kind": "Expert consensus",
+       "says": "The EHE consensus identifies prior tumour rupture as a major contraindication to LT because of recurrence risk.",
+       "locator": "Liver EHE / liver transplantation section; PMID34090171"
+      },
+      {
+       "source": "NLRB · HEHE",
+       "key": "std-N-hehe",
+       "kind": "NLRB guidance",
+       "says": "The stated NLRB diagnostic, unresectability and macrovascular-invasion criteria answer the separate MELD-exception question.",
+       "locator": "December 2025 · pp.10–11"
+      }
+     ],
+     "proposal": "Require review of rupture and bleeding history before selection. Confirmed prior rupture stops routine transplant progression; uncertain events require expert imaging and record review.",
+     "rationale": "The current protocol already recognizes rupture risk. The website assessment must capture it without conflating clinical suitability with allocation requirements.",
+     "owners": "HPB/transplant surgery · sarcoma oncology · radiology",
+     "web": "transplant/hehe/#meeting-rupture"
     }
    ]
   },

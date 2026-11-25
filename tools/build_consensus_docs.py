@@ -26,6 +26,7 @@ ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE, V16, OUT = Path(sys.argv[1]), Path(sys.argv[2]), Path(sys.argv[3])
 WEB = '--web' in sys.argv
 QUESTIONS_ONLY = '--questions-only' in sys.argv
+ONLY = set(next((x.split('=', 1)[1] for x in sys.argv if x.startswith('--only=')), '').split(',')) - {''}
 EDITION = next((x.split('=', 1)[1] for x in sys.argv if x.startswith('--edition=')), '17')
 SITE = 'https://drliuhao.github.io/mh-liver-pathways/'
 DATE = next((x.split('=', 1)[1] for x in sys.argv if x.startswith('--date=')), '29 October 2026')
@@ -195,7 +196,7 @@ def question(d, b, q, level=2):
         table(d, ['Source', 'Population and selection', 'Results, limits and location'],
               [[source_cell(b, s), s.get('population', ''), [s.get('results', ''), ('Limits: ' + s['limits'], 'i') if s.get('limits') else '', (s.get('locator', ''), 's')]]
                for s in q['studies']], [2000, 3900, 4180])
-    heading(d, 'Our proposed selection (OPEN)', level + 1)
+    heading(d, 'Current guidance or resolved correction' if q.get('resolved') else 'Our proposed selection (OPEN)', level + 1)
     para(d, q.get('proposal') or 'No proposal yet; the group decides.')
     if q.get('proposal_locator'):
         para(d, q['proposal_locator'], label='Basis in the document:', size=9, color=GREY)
@@ -214,6 +215,9 @@ def question(d, b, q, level=2):
             bullet(d, t)
     if q.get('supporting'):
         para(d, ', '.join(q['supporting']), label='Further sources:')
+    if q.get('resolved'):
+        para(d, 'Reference retained for traceability. No local approval is needed to apply the stated source criterion or factual correction.', italic=True)
+        return
     heading(d, f"{q['id']} — group decision", level + 1)
     for label in ('Accepted position (or alternative chosen):', 'Rationale, dissent and exceptions:', 'Owner · approval date · implementation date:'):
         para(d, '', label=label, after=0); rule_line(d)
@@ -263,8 +267,8 @@ def questions_doc(data, setname, path):
     info = {'roadmap': f.get('roadmap_info'), 'standard': f.get('standard_info'), 'highrisk': f.get('highrisk_info')}[setname]
     label = s['label']
     front(d, data, f"{data['name']} — {label}: questions for consensus",
-          [f"Every question in the {label.lower()} that still needs a consensus answer. Each one shows what guidelines, trials and papers say, "
-           "our proposed selection, and space for the group decision. All proposals are OPEN; nothing in this document is activated or approved.",
+          [f"Current questions and retained guidance references for the {label.lower()}. Each one shows what guidelines, trials and papers say, "
+           "our proposed selection, and space for the group decision. Unresolved proposals require group approval. Resolved guidance references are identified separately; listing a proposal does not activate it.",
            f"Web page: {SITE + s['web']}"],
           [('Full content', info), ('Decision discussion for all settings', f['decision'])])
     if setname == 'highrisk':
@@ -300,10 +304,10 @@ def decision_doc(data, path):
           ["One file for the multidisciplinary decision on this tumor, covering every setting: " +
            ', '.join(SET_NAME[k].lower() for k in sets) + '. ' +
            'For each question: the positions of guidelines, trials and papers where they differ, our proposed selection, and space for the decision. '
-           'All proposals are OPEN; nothing in this document is activated or approved.'],
+           'Unresolved proposals require group approval. Resolved guidance references are identified separately; listing a proposal does not activate it.'],
           comp)
     allq = [q for k in sets for q in sets[k]['questions']]
-    heading(d, 'Summary of open questions', 1)
+    heading(d, 'Questions and guidance references', 1)
     summary(d, allq, setting=True)
     for n, k in enumerate(sets, 1):
         s = sets[k]
@@ -416,6 +420,8 @@ def v17(name):
 
 report = []
 for n, key in enumerate(ORDER, 1):
+    if ONLY and key not in ONLY:
+        continue
     data = json.loads((ROOT / 'documents' / key / 'questions.json').read_text())
     f = data['files']
     folder = OUT / f'{n:02d}_{data["code"].replace("-", "")}'

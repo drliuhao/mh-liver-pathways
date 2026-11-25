@@ -189,9 +189,15 @@
        "key": "pm40945523",
        "says": "Neoadjuvant FOLFIRINOX without adjuvant therapy and the PREOPANC chemoradiotherapy regimen gave similar survival (21.9 vs 21.3 months, HR 0.88), with no upfront-surgery arm; the roadmap calls it a failed superiority trial that justifies FOLFIRINOX if neoadjuvant.",
        "locator": "Gate 3 · Standard group · option 'Neoadjuvant FOLFIRINOX, then surgery' (when, pref)"
+      },
+      {
+       "source": "ASTRO 2026 — official society summary",
+       "key": "np-pdac-astro2026-summary",
+       "says": "The official ASTRO 2026 summary conditionally recommends preoperative chemoradiation for resectable pancreatic cancer. This is an additional guideline position to compare with the current NCCN/ESMO-based sequence; it does not establish universal superiority of neoadjuvant treatment.",
+       "locator": "ASTRO official 2026 summary; primary guideline full text not retrieved"
       }
      ],
-     "divergence": "NCCN permits and ESMO advises against neoadjuvant therapy in resectable disease; NORPACT-1 pointed to upfront surgery and PREOPANC to neoadjuvant treatment in a mixed population, the pooled resectable subgroup shows no benefit (HR 0.90), and no trial has tested the comparator with adjuvant mFOLFIRINOX.",
+     "divergence": "NCCN permits and ESMO advises against neoadjuvant therapy in resectable disease; NORPACT-1 pointed to upfront surgery and PREOPANC to neoadjuvant treatment in a mixed population, the pooled resectable subgroup shows no benefit (HR 0.90), and no trial has tested the comparator with adjuvant mFOLFIRINOX. ASTRO 2026 provides a newer, setting-specific radiation recommendation; a conditional preoperative option does not make chemoradiation obligatory for all resectable patients. Upfront surgery remains the appropriate default for the existing selected group; technical guideline detail remains pending primary full-text review.",
      "proposal": "The roadmap lists upfront resection then adjuvant mFOLFIRINOX first for fit patients without high-risk features, as what randomised evidence supports, while saying it does not resolve the question. If a neoadjuvant route is chosen - for named high-risk features, or where the board judges selecting out occult metastatic disease worth the resection-rate cost - tissue comes first and the regimen is FOLFIRINOX, or PREOPANC chemoradiotherapy if FOLFIRINOX is not tolerable; offer a randomised trial where one is recruiting (A021806 is active but not recruiting).",
      "proposal_locator": "Gate 3 · Standard group (order note, flagnote and options); Reasonable 'Neoadjuvant chemotherapy for a resectable tumour that has high-risk features…'; Avoid 'Do not start neoadjuvant therapy without a tissue diagnosis.'",
      "rationale": "The trials disagree and the page does not resolve them, and the full-text read made the disagreement worse rather than better. No neoadjuvant trial gave its control arm modern adjuvant therapy except NORPACT-1, and there only 19 of 44 resected control patients (43%) received adjuvant mFOLFIRINOX; PREOPANC's control arm received adjuvant gemcitabine and only 51% of it received any chemotherapy; PREOPANC-2 has no upfront-surgery arm; S1505 and A021501 had no randomised control at all. Pooled across nine randomised trials the resectable subgroup shows no benefit (HR 0.90, 0.63–1.28) and the borderline resectable subgroup does (HR 0.60, 0.38–0.96), but the between-subgroup test is not significant (p=0.081) and the pooled estimate depends on post hoc removal of NORPACT-1. NORPACT-1's primary endpoint favoured upfront surgery at a two-sided alpha of 0.15, was non-significant per protocol, and had 21% of its neoadjuvant arm go straight to resection without the drug. ESMO recommends against neoadjuvant therapy in resectable disease at [II, E]. The pooled data also show no gain in adjuvant initiation (57.7% versus 55.6%, p=0.353), which removes the main mechanistic argument. A021806 has not reported. This has to be a local decision because there is no guideline answer to copy and no trial of the comparison that matters.",
@@ -385,8 +391,8 @@
     {
      "id": "PDAC-D6",
      "set": "roadmap",
-     "title": "Is consolidative chemoradiotherapy after induction therapy in locally advanced disease offered routinely, only where conversion to resection is the stated objective, or not at all?",
-     "question": "Is consolidative chemoradiotherapy after induction therapy in locally advanced disease offered routinely, only where conversion to resection is the stated objective, or not at all?",
+     "title": "How will the programme deliver the guideline-supported radiation assessment and local-control offer after multiagent chemotherapy for locally advanced PDAC?",
+     "question": "How will the programme deliver the guideline-supported radiation assessment and local-control offer after multiagent chemotherapy for locally advanced PDAC?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
      "resolved": false,
@@ -414,12 +420,18 @@
        "key": "pm27160474",
        "says": "In single-arm cohorts a pooled 63.5% received radiotherapy, yet survival did not correlate with radiotherapy use (p=0.12); the authors say it remains unestablished who benefits from radiotherapy afterwards.",
        "locator": "Gate 7 · Standard 'Multiagent induction chemotherapy…' (avoid, note)"
+      },
+      {
+       "source": "ASTRO 2026 — official society summary",
+       "key": "np-pdac-astro2026-summary",
+       "says": "The official ASTRO 2026 summary recommends radiation or chemoradiation after multiagent chemotherapy for locally advanced disease to improve definitive local control and reduce morbidity. A lack of demonstrated overall-survival benefit does not make local control an unproven objective. Primary guideline detail and exact technical conditions remain to be reviewed.",
+       "locator": "ASTRO official 2026 summary; primary guideline full text not retrieved"
       }
      ],
-     "divergence": "Both randomised trials are null for survival and both show better local control; neither tested radiotherapy after FOLFIRINOX with modern surgery and adjuvant therapy, so the choice turns on the objective rather than on evidence.",
-     "proposal": "Continue chemotherapy alone after induction as the default where the objective is survival; offer chemoradiotherapy only where the board's stated objective is local control or a clear margin in a responder heading to surgery, recording which; never present radiotherapy as survival-prolonging. Upfront radiotherapy without induction is reserved for a narrow group.",
+     "divergence": "LAP07 and CONKO-007 did not demonstrate an overall-survival advantage, but both support improved local control. ASTRO 2026’s official summary recommends post-chemotherapy RT/CRT for locally advanced local control and morbidity reduction. The roadmap adopts that general offer; exact technical conditions remain pending primary full-text review.",
+     "proposal": "Offer radiation-oncology assessment after multiagent chemotherapy and RT or chemoradiotherapy when clinically appropriate for definitive local control or reduction of local morbidity. Discuss the expected local benefit, toxicity and alternatives without claiming an established overall-survival gain. Continued chemotherapy alone is an alternative when RT is unsuitable or not preferred. Regimen-specific technical requirements await the primary ASTRO 2026 guideline; a blanket chemotherapy-alone default would be a separately approved local departure.",
      "proposal_locator": "Gate 7 · Reasonable group (order note and options); Gate 7 · Avoid 'Do not offer radiotherapy as a survival-prolonging treatment in locally advanced disease.'",
-     "rationale": "LAP07 (HR 1.03, P=.83, stopped at interim for futility with that analysis declared final, 18% major radiotherapy protocol deviations, survival measured from the first of two randomisations) and CONKO-007 (HR 0.937, P=.57, primary endpoint not met at 25% versus 18% R0) are both null for overall survival. CONKO-007's primary endpoint was changed mid-trial from overall survival to R0 rate with the new effect size calculated from its own unblinded interim data on 180 already-enrolled patients, its radiotherapy was never centrally reviewed for stated financial reasons, and its significant R0 advantage (69.4% versus 50.0%) is confined to patients who reached theatre, which was not randomised. What both trials do show is better local control (CONKO-007 locoregional recurrence HR 0.33, 0.206–0.530, P<.001; LAP07 32% versus 46%, P=.03). Neither tested radiotherapy after a FOLFIRINOX backbone followed by modern surgery and modern adjuvant therapy, so the local position has to be a judgement about objectives rather than a reading of evidence.",
+     "rationale": "LAP07 (HR 1.03, P=.83, stopped at interim for futility with that analysis declared final, 18% major radiotherapy protocol deviations, survival measured from the first of two randomisations) and CONKO-007 (HR 0.937, P=.57, primary endpoint not met at 25% versus 18% R0) are both null for overall survival. CONKO-007's primary endpoint was changed mid-trial from overall survival to R0 rate with the new effect size calculated from its own unblinded interim data on 180 already-enrolled patients, its radiotherapy was never centrally reviewed for stated financial reasons, and its significant R0 advantage (69.4% versus 50.0%) is confined to patients who reached theatre, which was not randomised. What both trials do show is better local control (CONKO-007 locoregional recurrence HR 0.33, 0.206–0.530, P<.001; LAP07 32% versus 46%, P=.03). Neither tested radiotherapy after a FOLFIRINOX backbone followed by modern surgery and modern adjuvant therapy, so the local position has to be a judgement about objectives rather than a reading of evidence. The absence of a demonstrated survival gain does not negate the guideline-supported local-control objective. The adopted offer is based on the accessible official ASTRO summary; detailed regimen and dose requirements are not inferred.",
      "audit": "Registry: induction regimen, radiation given or not, proportion reaching exploration, R0 rate, local progression, overall survival from the start of induction.",
      "web": "pdac/#question-PDAC-D6"
     },
@@ -486,7 +498,7 @@
       {
        "source": "RASolute 302",
        "key": "pm42223072",
-       "says": "In previously treated RAS G12 disease daraxonrasib doubled median survival (13.2 vs 6.6 months, HR 0.40); non-G12 HR 1.38 (0.60–3.17); 15.1% of the chemotherapy arm never received it, which the roadmap says inflates the effect.",
+       "says": "In previously treated RAS G12 disease, median OS was 13.2 versus 6.6 months (HR 0.40). Benefit was also shown in the overall population. The small exploratory non-G12 subgroup (n=41) had PFS HR 1.38 (0.60–3.17) and OS HR 0.37 (0.15–0.93); these are different endpoints and do not support a mutation-based exclusion. Nonreceipt of assigned chemotherapy was more frequent in the control arm, which limits interpretation of the treatment comparison.",
        "locator": "Gate 8 · Reasonable group · option 'Daraxonrasib for eligible metastatic PDAC; the US indication is not restricted to a RAS mutation' (when, pref, avoid, note)"
       },
       {
@@ -509,9 +521,9 @@
       }
      ],
      "divergence": "RASolute 302 demonstrated benefit in both RAS G12 and the overall previously treated population; the US indication also includes patients unable to receive multiagent therapy, and the roadmap leaves daraxonrasib's place against other second-line options to availability, regulatory status and cost.",
-     "proposal": "Order profiling at the first visit, bank extra passes at biopsy, and have medical oncology name the person who chases the result. Daraxonrasib is listed first among later-line options for a previously treated patient with a documented RAS G12 mutation, after checking availability, regulatory status and coverage; its place relative to other second-line regimens is not set.",
+     "proposal": "Order profiling at the first visit, bank appropriate biopsy material and name the medical-oncology owner of the report. Daraxonrasib’s US indication includes adults with metastatic PDAC after at least one prior systemic treatment or when multiagent therapy is unsuitable; it is not restricted to RAS G12. Its sequence relative to other options remains a local clinical decision based on prior treatment, fitness, evidence and access, without narrowing the approved indication by mutation.",
      "proposal_locator": "Operations · board meeting 'Molecular' step; Gate 8 · Avoid 'Do not let the molecular report arrive after it can be used.'; Gate 8 · Reasonable group · option 'Daraxonrasib…' (pref, avoid) and flagnote",
-     "rationale": "The commonest failure in metastatic PDAC is a genomic report that arrives after the patient is too unwell to act on it, which is an operational problem with a named-owner solution. The sequencing question is separate: RASolute 302 is a phase 3 result with dual primary endpoints met in the RAS G12 population (median overall survival 13.2 versus 6.6 months, HR 0.40; progression-free survival 7.3 versus 3.5 months, HR 0.45), and benefit was also demonstrated in the overall population; the non-G12 subgroup was small and exploratory (n=41; PFS HR 1.38, 0.60–3.17; OS HR 0.37, 0.15–0.93), 38 of 252 patients (15.1%) allocated to the comparator never received it against 7 of 248 (2.8%) on daraxonrasib, and the comparator was unconstrained investigator's choice with a 6.6-month median at the low end of published second-line outcomes. The local position depends on availability, regulatory status and cost, and should state which RAS alterations it covers. [PAYER]",
+     "rationale": "The commonest failure in metastatic PDAC is a genomic report that arrives after the patient is too unwell to act on it, which is an operational problem with a named-owner solution. The sequencing question is separate: RASolute 302 is a phase 3 result with dual primary endpoints met in the RAS G12 population (median overall survival 13.2 versus 6.6 months, HR 0.40; progression-free survival 7.3 versus 3.5 months, HR 0.45), and benefit was also demonstrated in the overall population; the non-G12 subgroup was small and exploratory (n=41; PFS HR 1.38, 0.60–3.17; OS HR 0.37, 0.15–0.93), 38 of 252 patients (15.1%) allocated to the comparator never received it against 7 of 248 (2.8%) on daraxonrasib, and the comparator was unconstrained investigator's choice with a 6.6-month median at the low end of published second-line outcomes. The approved indication is not mutation-restricted. The remaining local question is treatment sequencing and access; efficacy in treatment-naive patients unfit for multiagent therapy is less directly informed by this previously treated trial population. [PAYER]",
      "audit": "Registry: proportion with completed germline and genomic results before second line, time from biopsy to report, proportion of actionable results acted on, second-line agent.",
      "web": "pdac/#question-PDAC-D8"
     },
@@ -694,15 +706,22 @@
     {
      "id": "PDAC-D16",
      "set": "roadmap",
-     "title": "Who owns retrieving the remaining full texts and verifying guideline-only figures?",
-     "question": "Who owns retrieving the remaining full texts and verifying guideline-only figures?",
+     "title": "Who will complete the missing primary-source review, including ASTRO 2026, and reconcile any affected treatment recommendations?",
+     "question": "Who will complete the missing primary-source review, including ASTRO 2026, and reconcile any affected treatment recommendations?",
      "kind": "governance",
      "status": "OPEN — not yet decided",
      "resolved": false,
      "where": [],
-     "positions": [],
+     "positions": [
+      {
+       "source": "ASTRO 2026 — official society summary",
+       "key": "np-pdac-astro2026-summary",
+       "says": "The official summary is available, but the publisher full text and society slide set could not be accessed. The source gap is explicit; this review has not verified every recommendation, grade or technical condition.",
+       "locator": "Guideline PMID42580553; DOI10.1016/j.prro.2026.07.002"
+      }
+     ],
      "divergence": "No source positions; programme decision.",
-     "proposal": "Name an owner for residual source verification and keep actual read extent visible. The continuation has resolved some earlier gaps, including the final RTOG 0848 report; use the preserved source dossiers to maintain the remaining list.",
+     "proposal": "Name an owner for residual source verification and keep actual read extent visible. The continuation has resolved some earlier gaps, including the final RTOG 0848 report; use the preserved source dossiers to maintain the remaining list. Retrieve the ASTRO 2026 primary guideline and reconcile resectable, borderline, locally advanced, postoperative, recurrent and oligometastatic settings with the current roadmap. The official summary includes a conditional postoperative recommendation for node-negative disease after multiagent chemotherapy when preoperative RT was not given, plus selected recurrent and oligometastatic uses. The general post-induction radiation assessment/local-control offer is adopted from the official summary. Confirm recommendation strength, selection and technical conditions in the primary guideline before choosing new detailed regimens; do not infer dose or technique requirements from the summary alone.",
      "proposal_locator": "What we are not sure about · 'One reference remains cited from abstract only…'; Gate 3 · Reasonable 'PAXG…' (note); Operations · dashboard 'Source currency…'",
      "rationale": "Assign ownership of the residual source-review list, record the actual source version and read extent, and propagate verified corrections. RTOG 0848 is resolved to PMID42456089; do not continue to label it an unavailable primary report.",
      "audit": "Named owner per reference, with retrieval date and a note of any figure that changed on reading; the page's grades revisited where a D was assigned for provenance rather than for design.",
@@ -954,6 +973,14 @@
    "kind": "Neoadjuvant & adjuvant trials",
    "links": {
     "pubmed": "https://pubmed.ncbi.nlm.nih.gov/40945523/"
+   }
+  },
+  "np-pdac-astro2026-summary": {
+   "short": "ASTRO 2026 pancreatic RT guidance — official summary",
+   "title": "ASTRO. ASTRO updates guideline on radiation therapy for pancreatic cancer (2026). Official society summary of Radiation Therapy for Pancreatic Cancer: An ASTRO Clinical Practice Guideline, PMID42580553, DOI10.1016/j.prro.2026.07.002. The official summary was accessible; publisher full text and the society slide set were inaccessible during this review. Recommendations below retain that source limitation; exact grades, dose prescriptions and technical conditions await the primary guideline.",
+   "kind": "Guidelines & policy",
+   "links": {
+    "url": "https://www.astro.org/news-and-publications/news-and-media-center/news-releases/2026/astro-updates-guideline-on-radiation-therapy-for-pancreatic-cancer"
    }
   },
   "pm36048453": {

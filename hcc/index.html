@@ -7,7 +7,7 @@
 <meta name="description" content="Hepatocellular carcinoma — Memorial Hermann system roadmap v0.9, draft under development.">
 <title>Memorial Hermann HCC Roadmap</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap">
-<link rel="stylesheet" href="../assets/portal-navigation.css?v=20261125-threshold1"><script src="../assets/portal-navigation.js?v=20261125-threshold1" defer></script><link rel="stylesheet" href="/mh-liver-pathways/assets/roadmap-evidence.css?v=20261125-threshold1"><script src="/mh-liver-pathways/assets/document-references.js?v=20261125-threshold1"></script><script src="/mh-liver-pathways/assets/roadmap-evidence.js?v=20261125-threshold1"></script><link rel="stylesheet" href="../assets/clarity-presentation.css?v=20261125-threshold1"><script src="../assets/clarity-presentation.js?v=20261125-threshold1"></script></head>
+<link rel="stylesheet" href="../assets/portal-navigation.css?v=20261125-alignment1"><script src="../assets/portal-navigation.js?v=20261125-alignment1" defer></script><link rel="stylesheet" href="/mh-liver-pathways/assets/roadmap-evidence.css?v=20261125-alignment1"><script src="/mh-liver-pathways/assets/document-references.js?v=20261125-alignment1"></script><script src="/mh-liver-pathways/assets/roadmap-evidence.js?v=20261125-alignment1"></script><link rel="stylesheet" href="../assets/clarity-presentation.css?v=20261125-alignment1"><script src="../assets/clarity-presentation.js?v=20261125-alignment1"></script></head>
 <body>
 <style>
 /* Layout: a decision strip on top, a stage answer below it, then topic sections, then the evidence library everything links back into. */
@@ -345,10 +345,10 @@ footer p + p{margin-top:8px}
 }
 @media (prefers-reduced-motion:reduce){ *{transition:none !important} }
 </style>
-<link rel="stylesheet" href="../assets/lrt-comparisons.css?v=20261125-threshold1">
-<script defer src="../assets/lrt-comparisons.js?v=20261125-threshold1"></script>
-<link rel="stylesheet" href="../assets/roadmap-flow.css?v=20261125-threshold1">
-<script src="../assets/roadmap-flow.js?v=20261125-threshold1"></script>
+<link rel="stylesheet" href="../assets/lrt-comparisons.css?v=20261125-alignment1">
+<script defer src="../assets/lrt-comparisons.js?v=20261125-alignment1"></script>
+<link rel="stylesheet" href="../assets/roadmap-flow.css?v=20261125-alignment1">
+<script src="../assets/roadmap-flow.js?v=20261125-alignment1"></script>
 
 <header class="top">
   <div class="devbar">Clinical review draft · Not approved institutional policy · Not an automated eligibility tool.</div>
@@ -810,6 +810,7 @@ const REF = {
  "34801630":["BCLC 2022","Guidelines & policy","Reig M, Forner A, Rimola J, et al. BCLC strategy for prognosis prediction and treatment recommendation: the 2022 update. J Hepatol. 2022;76(3):681-693."],
  "37199193":["AASLD 2023","Guidelines & policy","Singal AG, Llovet JM, Yarchoan M, et al. AASLD Practice Guidance on prevention, diagnosis, and treatment of hepatocellular carcinoma. Hepatology. 2023;78(6):1922-1965."],
  "39992051":["AASLD critical update","Guidelines & policy","Taddei TH, Brown DB, Yarchoan M, et al. Critical Update: AASLD Practice Guidance on prevention, diagnosis, and treatment of hepatocellular carcinoma. Hepatology. 2025;82(1):272-274."],
+ "38502889":["ASCO systemic HCC 2024","Guidelines & policy","Gordan JD, Kennedy EB, Abou-Alfa GK, et al. Systemic Therapy for Advanced Hepatocellular Carcinoma: ASCO Guideline Update. J Clin Oncol. 2024;42:1830–1850. PMID 38502889. DOI 10.1200/JCO.23.02745."],
  "39690085":["EASL 2025","Guidelines & policy","EASL Clinical Practice Guidelines on the management of hepatocellular carcinoma. J Hepatol. 2025;82(2):315-374."],
  "34688956":["ASTRO EBRT","Guidelines & policy","Apisarnthanarax S, Barry A, Cao M, et al. External beam radiation therapy for primary liver cancers: an ASTRO clinical practice guideline. Pract Radiat Oncol. 2022;12(1):28-51."],
  "8594428":["Milan criteria","Transplant & downstaging","Mazzaferro V, Regalia E, Doci R, et al. Liver transplantation for the treatment of small hepatocellular carcinomas in patients with cirrhosis. N Engl J Med. 1996;334(11):693-699."],
@@ -867,6 +868,7 @@ const REF = {
   "28799575": ["Mohamed 2016", "Radiotherapy", "Mohamed et al. Bridge to transplantation with different liver-directed treatments. Adv Radiat Oncol 2016."]
 };
 const NONPM = {
+  "doc-imfinzi-label": ["FDA durvalumab label", "Guidelines & policy", "IMFINZI US prescribing information, 2026; section 1.4. HCC indication in combination with tremelimumab; de novo monotherapy is not the labeled regimen.", "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/761069s059lbl.pdf"],
   "LIRADS": [
     "LI-RADS",
     "Guidelines & policy",
@@ -969,7 +971,7 @@ const STAGES = [
        pref:"Multinodular arterialised liver-confined disease, preserved reserve, patent portal flow, superselective access achievable. Also bridge or downstage.",
        avoid:"Decompensation, ALBI grade 3, diffuse or infiltrative pattern, impaired portal flow, renal or infection risk, and inadequate benefit despite technically adequate treatment. Reassess after each session rather than against a fixed session count."}],
   alt:[{t:"Lobar radioembolisation with Y-90.", l:"Reasonable", g:"B", refs:["27575820","35258371","33166497"], flags:["DOSIMETRY","PAYER"],
-       pref:"Unilobar or segment-dominant burden; TACE intolerance or failure; planned radiation lobectomy with contralateral hypertrophy; selected portal-vein tumour thrombus.",
+       pref:"Unilobar or segment-dominant liver-confined burden without macrovascular invasion; selective delivery and adequate reserve. After TACE intolerance, inadequate response or progression, reassess systemic therapy and the feasibility of a different local treatment. Planned radiation lobectomy requires a separate remnant and resection assessment. Portal-vein tumour invasion is assessed under advanced HCC.",
        avoid:"High-volume bilobar replacement, hyperbilirubinaemia, unsafe shunt fraction, inadequate future remnant, decompensation."},
        {t:"Systemic therapy when locoregional treatment is unsuitable.", l:"Standard", g:"A", refs:["32402160","38319892","40349714"],
        pref:"Diffuse, high-burden or TACE-unsuitable disease. In a transplant candidate, distinguish an infeasible local treatment from progression after adequate treatment. Review systemic downstaging with the transplant team before starting.",
@@ -984,11 +986,13 @@ const STAGES = [
   standard:[{t:"Systemic therapy is the main treatment. Start an immunotherapy combination when eligible and do not delay it for a liver-directed procedure.", l:"Standard", g:"A", refs:["32402160","34902530","39687036","38319892","40349714"],
        pref:"Child-Pugh A, ECOG 0–1 — where almost all the pivotal evidence sits. Three first-line combinations, none ranked above the others on evidence. The exploratory non-viral IMbrave150 subgroup had an imprecise OS estimate (HR 1.05, 95% CI 0.68–1.63); this does not establish absence of benefit or a validated aetiology-based exclusion.",
        avoid:"Atezolizumab–bevacizumab requires documented variceal assessment and treatment of high-risk varices first, and bleeding is not a varices-only risk: all five fatal upper-gastrointestinal bleeds on atezolizumab–bevacizumab in IMbrave150 were in patients with Vp3–Vp4 invasion (four Vp4, one Vp3). Nivolumab–ipilimumab carries excess mortality in the first six months (HR 1.65, nine fatal hepatic events), which matters for a patient with a short expected survival; tremelimumab–durvalumab shows no early excess but its curves separate only after nine months, so neither pattern should be read as a class effect. Child-Pugh B9 and above is rarely appropriate outside a trial. Pre-transplant checkpoint exposure only through transplant-specific review. The small PLENTY trial beyond Milan reported 10/11 transplanted per arm. Its post-transplant recurrence signal cannot establish a benefit for routine bridging."}],
-  alt:[{t:"Add external beam radiotherapy or radioembolisation alongside systemic therapy. Both supporting trials used a sorafenib comparator: RTOG 1112 missed its primary survival endpoint (HR 0.77, 90% CI 0.59–1.01, one-sided p=0.06) and 13/85 (15%) assigned to SBRT plus sorafenib and 3/92 (3%) assigned to sorafenib alone never received sorafenib, while the Asan trial gave TACE plus radiotherapy instead of sorafenib, with an estimated 90.7% of the sorafenib arm crossing over by 24 weeks. Neither tested adding radiation to an immunotherapy backbone.", l:"Reasonable", g:"B", refs:["39699905","29543938","34688956"],
+  alt:[{t:"Consider external beam radiotherapy for selected liver-dominant or portal-vein tumor invasion control, coordinated with systemic treatment.", l:"Reasonable", g:"B", refs:["39699905","29543938","34688956"],
        pref:"Liver-dominant control, portal-vein tumour thrombus, or symptom control, where the anatomy is liver-confined, reserve is preserved and dosimetry is feasible.",
-       avoid:"Do not let it delay or displace the systemic start — the most common harm in this group is a delayed systemic start, not the radiation itself. Document why local therapy is being added and when systemic therapy starts or resumes.",
-       note:"No randomised trial has tested this against a modern immunotherapy backbone. Both supporting trials used a sorafenib comparator."}],
-  avoid:[{t:"Radioembolisation as a substitute for systemic therapy.", l:"Avoid", g:"", refs:["29107679","29498924"]},
+       avoid:"Do not delay or displace an indicated systemic treatment for an unproven combination. Record the local-control or symptom goal, liver and adjacent-organ dose constraints, and the coordinated systemic treatment schedule.",
+       note:"RTOG 1112 tested SBRT plus sorafenib: the primary survival endpoint was not met (HR 0.77, 90% CI 0.59–1.01, one-sided p=0.06); 13/85 assigned to the combination and 3/92 assigned to sorafenib never received sorafenib. The Asan trial tested TACE plus radiotherapy instead of sorafenib, with estimated 90.7% comparator crossover by 24 weeks. Neither establishes benefit from adding EBRT to a modern immunotherapy backbone, and neither tested Y90."}],
+  avoid:[{t:"Do not routinely add Y90 to systemic therapy.", l:"Avoid", g:"D", refs:["37199193","39690085"],
+         note:"Systemic therapy remains the advanced-HCC backbone. The benefit of adding Y90 to modern systemic therapy is unestablished; SBRT-plus-sorafenib and TACE-plus-radiotherapy results do not establish that benefit. Consider a clinical trial. Any proposed local off-trial combination remains pending institutional protocol approval under HCC-D21. This does not make selected EBRT trial-only or prohibit every individualized Y90 local-control treatment."},
+         {t:"Radioembolisation as a substitute for systemic therapy.", l:"Avoid", g:"", refs:["29107679","29498924"]},
          {t:"Deferring systemic therapy to complete a locoregional series.", l:"Avoid", g:"", refs:[]}]},
  {id:"D", tone:"pall", name:"D · Terminal", req:"any", crit:["ECOG 3–4","Child-Pugh C not correctable by transplant"],
   standard:[{t:"Symptom-directed care with early specialist palliative involvement; treat reversible liver complications.", l:"Standard", g:"A", refs:["41151697"],
@@ -1204,10 +1208,14 @@ const SYSTEMIC = [
   "Atezolizumab + bevacizumab; tremelimumab + durvalumab (STRIDE); nivolumab + ipilimumab. All <span class='pill p-std'>Standard</span> <span class='grade A'>A</span>.",
   "No head-to-head trial ranks these three, so none can be labelled preferred over the others on evidence. v0.2 listed them in an order that implies a hierarchy; that implication is removed. Atezolizumab–bevacizumab requires documented variceal assessment and treatment of high-risk varices before the first dose. Dual checkpoint regimens avoid the VEGF bleeding risk but carry immune toxicity; nivolumab–ipilimumab showed excess mortality in the first six months (HR 1.65) despite superior overall survival at 23.7 versus 20.6 months — which matters for a patient with a short expected survival.",
   ["32402160","34902530","38319892","40349714"]],
- ["First line, immunotherapy unsuitable",
-  "Lenvatinib or sorafenib <span class='grade A'>A</span>; durvalumab monotherapy in selected patients <span class='grade B'>B</span>.",
-  "Match the tyrosine-kinase inhibitor to cardiovascular, renal, weight, hand-foot, diarrhoea and drug-interaction risk. Evidence is strongest in Child-Pugh A.",
-  ["38319892"]],
+ ["First line, checkpoint immunotherapy unsuitable",
+  "Lenvatinib or sorafenib <span class='grade A'>A</span>.",
+  "Match the tyrosine-kinase inhibitor to cardiovascular, renal, weight, hand-foot, diarrhoea and drug-interaction risk. Evidence is strongest in Child-Pugh A. A contraindication to checkpoint immunotherapy also applies to durvalumab monotherapy.",
+  ["38502889"]],
+ ["First line, combination unsuitable but checkpoint immunotherapy eligible",
+  "Durvalumab monotherapy in selected patients <span class='grade B'>B</span>.",
+  "ASCO permits this alternative when the named first-line combinations are unsuitable, in Child-Pugh A and ECOG 0–1. It remains immunotherapy. The US HCC indication is durvalumab with tremelimumab; starting durvalumab alone is off-label and requires indication, toxicity and coverage review. Do not confuse this with durvalumab maintenance after STRIDE induction.",
+  ["38502889","38319892","doc-imfinzi-label"]],
  ["After a first-line immunotherapy combination",
   "Clinical trial preferred. Otherwise a mechanistically appropriate tyrosine-kinase inhibitor — cabozantinib, lenvatinib or sorafenib if not previously used, regorafenib only after documented sorafenib tolerance — or ramucirumab if AFP ≥400 ng/mL. All <span class='pill p-reas'>Reasonable</span> <span class='grade C'>C</span>.",
   "There is no randomised evidence for any sequence after a modern immunotherapy combination. <b>Every second-line agent was tested after sorafenib, in a population that no longer exists.</b> This must not be presented as an evidence-based sequence. Record prior toxicity, best response, liver function and the rationale.",
@@ -1634,30 +1642,31 @@ const APPROVALS = [
  "Name the accountable system HCC pathway owner and the neutral tumour-board chair.",
  "Approve the Epic submission form, the MDT note template, the registry minimum dataset and the urgent-case rule.",
  "Approve modality-specific liver-function and dosimetry thresholds rather than relying on a single universal bilirubin cut-off.",
- "Ratify the locoregional selector and the stop/switch rules jointly with hepatobiliary and transplant surgery, hepatology, interventional radiology, radiation oncology, diagnostic radiology and medical oncology.",
- "Adopt one reading of resection in clinically significant portal hypertension and state it on the page, rather than leaving the BCLC position and the Yuan randomised result side by side for each board to choose between.",
+ "Agree when to stop or change TACE, when to use Y90 after TACE, and when systemic therapy should replace further local treatment.",
+ "Which patients with mild clinically significant portal hypertension may undergo resection, and what liver-reserve, remnant and operative-risk assessment is required?",
  "Decide whether a non-invasive Baveno VIII rule-in or rule-out may stand in for HVPG when the resection decision turns on portal pressure, and make recording the criterion used, its value and its date a condition of proposing resection.",
  "Rule on whether a large spontaneous portosystemic shunt can lower measured HVPG enough to make a sub-10 mmHg value unreliable; this roadmap has not verified that concern against a primary source.",
- "Decide whether radiation segmentectomy may be offered as a definitive curative-intent option on single-arm evidence, above what tumour size it may not, and whether personalised dosimetry is required before it is described that way.",
+ "For guideline-supported radiation segmentectomy, agree the tumor phenotype, arterial coverage, reserve, dosimetry and consent requirements.",
  "Decide whether to adopt the BCLC 2026 microwave preference, distinguishing a device-specific local-control advantage from an unproven survival advantage.",
- "Decide whether this roadmap adopts the BCLC 2026 placement of external beam radiotherapy as an ablative alternative in BCLC 0 and A, given the supporting survival figures come from a retrospective multinational cohort of selected centres with no comparator arm.",
+ "For guideline-supported early-stage EBRT, agree patient selection, liver and adjacent-organ dose constraints, and consent language.",
  "Agree the local AFP approach while distinguishing OPTN exception scoring (>1,000 then <500 after treatment), AASLD guidance (≥1,000) and the EASL downstaging condition (<1,000 for at least three months).",
  "Decide whether histotripsy begins as trial-only or registry-only, with credentialing, target criteria, consent language and an outcome review cadence, and require the prespecified rather than the post hoc local-control read in the registry.",
- "Adopt an explicit institutional position that TACE combined with checkpoint inhibitors is protocol-only until an overall-survival benefit is demonstrated, and record the toxicity rates the trials reported as part of the consent conversation.",
+ "Which TACE–systemic combinations, if any, may be offered under a named institutional protocol, and what approval, toxicity and reassessment requirements apply?",
  "Decide whether any adjuvant locoregional therapy is offered after high-risk resection, recognizing that AASLD advises against neoadjuvant/adjuvant systemic therapy and EASL 2025 advises against any adjuvant treatment.",
  "Define the pre-transplant checkpoint-inhibitor washout requirement and the approval route, and confirm that local transplant policy is at least as strict as OPTN policy.",
  "Decide how SBRT bridging is selected, considering the differing nonrandomized comparative cohorts, and name who adjudicates bridging modality choice.",
  "Name who owns the response-assessment call, including which LI-RADS treatment-response algorithm applies after radiation-based therapy, and how a discordant read is resolved.",
  "Agree that the 90% and 95% quality thresholds, the one-business-day urgent triage standard and the three-procedure investigation trigger are operational judgements set for the pilot and revisable, not evidence-derived targets.",
  "Assign an owner and a calendar date for re-verifying OPTN Policy 9 criteria, drug labelling and device authorisations against this document.",
- "Pilot for 90 days, audit 20 consecutive cases, then revise before formal approval as a clinical practice guideline."
+ "Pilot for 90 days, audit 20 consecutive cases, then revise before formal approval as a clinical practice guideline.",
+ "When may EBRT or Y90 be used with systemic treatment in advanced liver-dominant HCC, and what evidence and protocol requirements apply to each modality?"
 ];
 const RATIFY = [
- ["Hepatology",["Surveillance grade B (not A) and the stop-surveillance rule.","Child-Pugh, ALBI and MELD thresholds used to bar each locoregional modality.","Whether the §5.1.1 criteria are adopted as the institutional definition of clinically significant portal hypertension, whether HVPG is required before resection or non-invasive rule-in suffices, and which reading of the Yuan randomised trial governs when CSPH is present.","Hepatitis B antiviral requirement before embolic, radiation and systemic therapy.","Child-Pugh B systemic-therapy position."]],
+ ["Hepatology",["Surveillance grade B (not A) and the stop-surveillance rule.","Child-Pugh, ALBI and MELD thresholds used to bar each locoregional modality.","Portal-hypertension assessment before resection: when HVPG changes the plan, when noninvasive criteria suffice, and which selected patients with mild CSPH may undergo minor or minimally invasive surgery.","Hepatitis B antiviral requirement before embolic, radiation and systemic therapy.","Child-Pugh B systemic-therapy position."]],
  ["Transplant and hepatobiliary surgery",["Milan/T2 and downstaging-pool wording, including the ‘at least one lesion >3 cm’ correction.","AFP-rule operational handling and who monitors it.","Beyond-downstaging position: governance route, registry requirement, no automatic exception.","Pre-transplant checkpoint-inhibitor washout requirement and approval route.","Resection criteria including portal-hypertension risk and future-remnant thresholds.","The rule that transplant referral is not delayed by accumulating locoregional procedures."]],
  ["Diagnostic radiology",["LR-TIV handling — narrowing v0.2's universal biopsy requirement.","Visualisation score C as an escalation trigger distinct from the US category.","Mandatory use of the correct LI-RADS treatment-response algorithm, radiation versus nonradiation.","Reporting minimum dataset and turnaround for MDT imaging review.","Alternative surveillance with abbreviated MRI: indications and capacity."]],
  ["Interventional radiology",["The locoregional selector table: phenotypes, cautions and evidence grades as written.","Radiation segmentectomy graded C rather than B, and what that implies for consent.","Personalised dosimetry as a precondition for radioembolisation, and who performs it.","Per-session TACE response and reserve review, including what counts as technically adequate treatment.","Histotripsy as trial or registry only, with credentialing and target criteria."]],
- ["Radiation oncology",["SBRT graded B as a reasonable consideration, not a standard alternative to ablation.","The accurate statement of RTOG 1112 (primary endpoint not met) in consent and MDT discussion.","Dose-constraint and prior-dose-overlap rules; who maintains the cumulative dose record.","Delayed-response interpretation rules after radiation-based therapy.","Position on radiotherapy for portal-vein tumour thrombus alongside systemic therapy."]],
+ ["Radiation oncology",["Selection and dose constraints for guideline-supported early-stage SBRT; distinguish the guideline recommendation from the local evidence grade.","The accurate statement of RTOG 1112 (primary endpoint not met) in consent and MDT discussion.","Dose-constraint and prior-dose-overlap rules; who maintains the cumulative dose record.","Delayed-response interpretation rules after radiation-based therapy.","Position on radiotherapy for portal-vein tumour thrombus alongside systemic therapy."]],
  ["Medical oncology",["Removal of any implied ranking among the three first-line immunotherapy regimens.","Mandatory variceal assessment before atezolizumab–bevacizumab.","Explicit statement that post-immunotherapy sequencing is not evidence based.","TACE plus checkpoint inhibitor as protocol-only, and the trigger to re-review.","Early-mortality counselling for dual checkpoint therapy in patients with a short expected survival."]],
  ["Pathology",["Pre-alert trigger list and the turnaround commitment for MDT cases.","Tissue-handling protocol for LR-M and tumour-in-vein biopsies, including molecular adequacy.","Explant reporting dataset needed to close the downstaging and bridging registry loop."]],
  ["Programme operations",["All section 9 operating requirements as written — 24-hour agenda, 10–12 case cap, urgent referrals, required attendance, one recommendation, one owner, Epic documentation within one business day, registry closure, referring-clinician protection.","The new curative-first discipline measure and the transplant-pathway measures in section 10.","The registry minimum dataset and who is accountable for entry.","The named owner and calendar date for re-verifying OPTN policy, labelling and device authorisations."]]
@@ -1746,12 +1755,12 @@ document.getElementById("mcards").addEventListener("click", e=>{
 
 /* the critique store loads on its own and re-renders the library when it lands,
    so a missing or slow file never holds up the rest of the page */
-fetch("data/critique.json?v=20261125-threshold1").then(r=>r.ok?r.json():{}).catch(()=>({}))
+fetch("data/critique.json?v=20261125-alignment1").then(r=>r.ok?r.json():{}).catch(()=>({}))
   .then(c=>{ CRIT = c || {}; renderEv(); });
 
 Promise.all([
-  fetch("../lrt/matrix.json?v=20261125-threshold1").then(r=>r.json()),
-  fetch("data/lrt_refs.json?v=20261125-threshold1").then(r=>r.json())
+  fetch("../lrt/matrix.json?v=20261125-alignment1").then(r=>r.json()),
+  fetch("data/lrt_refs.json?v=20261125-alignment1").then(r=>r.json())
 ]).then(([mx, refs])=>{
   MX = mx;
   renderTierLegend(); renderCards(); renderCell();

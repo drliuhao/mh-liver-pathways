@@ -244,8 +244,8 @@
     {
      "id": "pCCA-D5",
      "set": "roadmap",
-     "title": "Adjuvant capecitabine — offered routinely, or case-by-case?",
-     "question": "Adjuvant capecitabine — offered routinely, or case-by-case?",
+     "title": "How will adjuvant capecitabine be offered, and what local departures require approval?",
+     "question": "How will adjuvant capecitabine be offered, and what local departures require approval?",
      "kind": "clinical",
      "status": "OPEN — not yet decided",
      "resolved": false,
@@ -260,19 +260,19 @@
        "source": "NCCN Biliary Tract Cancers v1.2026",
        "key": "np-hilar-nccn",
        "says": "Designates capecitabine preferred, category 1, while acknowledging BILCAP's non-significant intention-to-treat analysis.",
-       "locator": "Gate 3 · Reasonable 'Capecitabine for 6 months is a reasonable option after resection…' (note)"
+       "locator": "Gate 3 · Standard 'Capecitabine for 6 months is a reasonable option after resection…' (note)"
       },
       {
        "source": "BILCAP",
        "key": "pm30922733",
        "says": "Median survival 51.1 versus 36.4 months but intention-to-treat HR 0.81 (p=0.097) missed significance; benefit appeared only per protocol and in an adjusted model; 29% hilar, not powered by site; recurrence benefit confined to the first 24 months.",
-       "locator": "Gate 3 · Reasonable 'Capecitabine for 6 months…' (pref, avoid)"
+       "locator": "Gate 3 · Standard 'Capecitabine for 6 months…' (pref, avoid)"
       },
       {
        "source": "Milan consensus",
        "key": "pm40478744",
        "says": "Recommends six months of adjuvant capecitabine or S-1 after pCCA resection (strong recommendation, level 2); the trials were not powered for the perihilar subgroup.",
-       "locator": "Gate 3 · Reasonable 'Capecitabine for 6 months…' (avoid)"
+       "locator": "Gate 3 · Standard 'Capecitabine for 6 months…' (avoid)"
       },
       {
        "source": "BCAT",
@@ -284,21 +284,21 @@
        "source": "ASCOT",
        "key": "pm36681415",
        "says": "Positive for adjuvant S-1 on overall survival (HR 0.69) but not relapse-free survival; analysed early, null in R1, Japan only, and S-1 is unavailable in the United States.",
-       "locator": "Gate 3 · Reasonable 'Capecitabine for 6 months…' (note)"
+       "locator": "Gate 3 · Standard 'Capecitabine for 6 months…' (note)"
       }
      ],
-     "divergence": "Milan, ESMO, AASLD and NCCN support adjuvant capecitabine after resection. The roadmap’s more cautious Reasonable/grade C label is an OPEN local divergence; a nonsignificant pCCA subgroup does not establish absence of benefit.",
-     "proposal": "Reasonable, grade C, not an obligation: offer six months of capecitabine to a fit resected patient who wants adjuvant treatment, particularly with adverse features, quoting the actual BILCAP numbers and toxicity; it is not to be presented as established benefit in this tumour. The local label is more cautious than NCCN and needs explicit multidisciplinary approval.",
-     "proposal_locator": "Gate 3 · Reasonable 'Capecitabine for 6 months is a reasonable option after resection, not an obligation…'",
-     "rationale": "BILCAP's primary analysis was not significant and BCAT was null for gemcitabine in bile duct cancer specifically.",
+     "divergence": "The guideline-supported default is to offer six months of adjuvant capecitabine to suitable resected patients. The prior Reasonable-only classification is not retained as the default. Uncertainty in site-specific trial effects belongs in shared decision-making and evidence appraisal.",
+     "proposal": "Offer six months of adjuvant capecitabine after resection when the patient is fit for treatment, with an individualized discussion of benefit, toxicity and preferences. Treatment is not mandatory. Any proposed case-by-case-only local policy requires explicit approval; record clinical reasons for non-treatment separately from a programme-wide departure.",
+     "proposal_locator": "Adjuvant treatment, Standard capecitabine offer",
+     "rationale": "The indication is supported by major guidelines despite uncertainty in the anatomic-subtype estimates. Internal study appraisal, guideline recommendation strength and an individual patient’s decision are separate judgments.",
      "audit": "Registry: uptake, completion, recurrence.",
      "web": "hilar/#question-pCCA-D5"
     },
     {
      "id": "pCCA-D6",
      "set": "roadmap",
-     "title": "How is tissue obtained in a potentially protocol-eligible patient?",
-     "question": "How is tissue obtained in a potentially protocol-eligible patient?",
+     "title": "How will routine regional-node EUS-FNA be completed safely before neoadjuvant therapy?",
+     "question": "How will routine regional-node EUS-FNA be completed safely before neoadjuvant therapy?",
      "kind": "governance",
      "status": "OPEN — not yet decided",
      "resolved": false,
@@ -332,10 +332,10 @@
        "locator": "Gate 2 · Reasonable option 'EUS-guided aspiration of the primary'"
       },
       {
-       "source": "AASLD 2023",
+       "source": "AASLD 2023, guidance statement 49",
        "key": "pm36083140",
-       "says": "Requires EUS-FNA of regional nodes before neoadjuvant therapy in transplant candidates; the roadmap is looser, limiting nodal sampling to suspicious nodes, and notes no morphological criteria reliably identify malignant nodes.",
-       "locator": "Gate 2 · Reasonable option 'EUS evaluation and aspiration of regional nodes'; What we are not sure about · item 4"
+       "says": "Recommends EUS-FNA of regional nodes before neoadjuvant therapy in patients being evaluated for pCCA transplantation. Suspicious morphology is not a prerequisite; negative endoscopic staging does not replace operative staging.",
+       "locator": "AASLD PSC/CCA guidance, PDF p28, statement 49"
       },
       {
        "source": "AHPBA 2015 consensus",
@@ -344,11 +344,11 @@
        "locator": "Gate 2 · Reasonable option 'Proceed to resection without tissue' (when)"
       }
      ],
-     "divergence": "Sources agree the primary must not be needled transperitoneally in a protocol candidate, but differ on routine nodal EUS-FNA (AASLD) and on whether the restriction reaches resection-only candidates (BSG stricter; the roadmap's resection row silent).",
-     "proposal": "Discuss route with the transplant team before any tissue; never biopsy the primary transperitoneally, including by EUS, while transplantation remains possible; take brushings and intraductal biopsies at the index ERCP with a separate specimen for sequencing; treat nodal sampling as a separate decision; keep a mandatory pre-biopsy transplant assessment. Extension to resection-only candidates is unresolved.",
+     "divergence": "The default now follows AASLD pre-neoadjuvant nodal EUS-FNA guidance. OPTN policy is permissive about endoscopic nodal sampling but still requires operative staging. Sampling the primary tumor transperitoneally remains a separate precaution.",
+     "proposal": "Use intraductal primary-tumor sampling and complete regional-node EUS assessment with FNA of safely accessible nodes before neoadjuvant therapy. Specify targets and safe needle paths. If safe sampling is infeasible, record a multidisciplinary alternative; routine selective-node-only practice would be a local departure requiring approval. Preserve operative staging regardless of EUS results.",
      "proposal_locator": "Gate 2 · criteria; Standard 'A transperitoneal biopsy…'; Avoid 'Do not biopsy the primary perihilar tumor through a transperitoneal route…'; What we are not sure about · item 8",
-     "rationale": "A protocol condition, not an evidence question, but it requires a standing agreement so no one disqualifies a candidate inadvertently.",
-     "audit": "Audit: biopsy route in protocol candidates.",
+     "rationale": "Routine pre-treatment nodal assessment and post-treatment operative staging are complementary. Local implementation must handle unsafe or inaccessible sampling without substituting a negative needle result for operative staging.",
+     "audit": "Record primary sampling route, regional-node EUS assessment and sampled stations, timing relative to neoadjuvant therapy, reasons for omitted sampling, and operative staging completion.",
      "web": "hilar/#question-pCCA-D6"
     },
     {
@@ -780,8 +780,8 @@
     {
      "id": "pCCA G2",
      "set": "standard",
-     "title": "Primary-tumor sampling versus nodal sampling: what is acceptable?",
-     "question": "Primary-tumor sampling versus nodal sampling: what is acceptable?",
+     "title": "How will routine regional-node EUS-FNA be completed safely before neoadjuvant therapy?",
+     "question": "How will routine regional-node EUS-FNA be completed safely before neoadjuvant therapy?",
      "kind": "standard pathway",
      "status": "Discussion required — not yet approved",
      "resolved": false,
@@ -812,10 +812,17 @@
        "kind": "Clinical guidance",
        "says": "“Transperitoneal biopsies must be avoided in patients with pCCA who are potential LT candidates”",
        "locator": "PDF p.26"
+      },
+      {
+       "source": "AASLD · CCA",
+       "key": "std-C-aasld",
+       "kind": "Clinical guidance",
+       "says": "AASLD recommends EUS-FNA of regional nodes before neoadjuvant therapy in patients evaluated for pCCA transplantation; suspicious morphology is not a prerequisite. A negative EUS assessment does not replace operative staging.",
+       "locator": "PDF p28, guidance statement 49"
       }
      ],
-     "proposal": "Use intraductal diagnostic approaches; require explicit target/needle-path review for EUS. Nodal sampling is not interchangeable with sampling the primary.",
-     "rationale": "The risk depends on the target and trajectory, not the name of the endoscopic procedure.",
+     "proposal": "Use intraductal primary-tumor sampling and complete regional-node EUS assessment with FNA of safely accessible nodes before neoadjuvant therapy. Specify targets and safe needle paths. If safe sampling is infeasible, record a multidisciplinary alternative; a routine selective-node-only policy would be a local departure requiring approval. Preserve operative staging regardless of EUS results.",
+     "rationale": "The default follows AASLD pre-neoadjuvant nodal staging guidance. OPTN policy is permissive about EUS-FNA and mandatory about operative staging; these are complementary assessments. Local implementation must define a safe alternative when sampling is infeasible.",
      "owners": "Advanced GI · transplant surgery",
      "web": "transplant/pcca/#meeting-sampling"
     },
