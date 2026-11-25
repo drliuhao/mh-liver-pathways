@@ -5,13 +5,13 @@ const source=fs.readFileSync(path.join(root,'transplant/assets/app.js'),'utf8');
 const begin=source.indexOf('function renderActions(actions){'),end=source.indexOf('\nfunction afpReviewHTML',begin);
 assert(begin>=0&&end>begin);
 const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const ctx=vm.createContext({e,highRiskAction:a=>`<a class="route-button" href="${e(a.url)}">${e(a.label)}</a>`});
+const ctx=vm.createContext({e,decisionLabel:id=>'Decision '+id,highRiskAction:a=>`<a class="route-button" href="${e(a.url)}">${e(a.label)}</a>`});
 vm.runInContext(source.slice(begin,end)+';this.renderActions=renderActions;',ctx);
 const data=JSON.parse(fs.readFileSync(path.join(root,'transplant/assets/content.json'),'utf8'));
 let groups=0,actions=0;
 for(const next of Object.values(data.continuations))for(const group of [...Object.values(next.branches),...Object.values(next.rules),next.clarify]){
  const html=ctx.renderActions(group);groups++;
- for(const a of group){assert(html.includes(e(a.label.replace(/^Continue: /,''))),a.label);if(a.detail)assert(html.includes(e(a.detail)),a.detail);actions++;}
+ for(const a of group){assert(html.includes(e(a.step?'Decision '+a.step:a.label.replace(/^Continue: /,''))),a.label);if(a.detail)assert(html.includes(e(a.detail)),a.detail);actions++;}
 }
 const afp=data.continuations['hcc/allocation'].rules['4'];
 const html=ctx.renderActions(afp);

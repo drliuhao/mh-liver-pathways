@@ -43,7 +43,8 @@
   for(const {entry,node} of refs){
    node.open=false;
    let target;
-   if(entry.kind==='evidence')target=group(middle,'ch-study-references','Supporting studies');
+   if(entry.kind==='criteria'){target=group(middle,'ch-visible-criteria','Classification & selection');node.open=true;const prior=middle.querySelector('.rf-recommendations');if(prior)prior.before(target);}
+   else if(entry.kind==='evidence')target=group(middle,'ch-study-references','Supporting studies');
    else if(entry.kind==='tool')target=group(tools,'dw-tool-calculators','Calculators & scores');
    else if(entry.kind==='guide')target=group(tools,'dw-tool-treatments','Treatment resources');
    else target=group(tools,'ch-decision-references','Decision references');

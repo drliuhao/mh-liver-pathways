@@ -82,7 +82,7 @@ PRIVATE_FIELDS = {'ppt_filename', 'local_folder', 'pdf_file', 'pdf_path', 'pdf_f
                   'slides', 'slide_numbers', 'slide_count', 'pdf_available', 'matched_pdfs',
                   'missing_pdfs', 'matched_publication_pdfs', 'missing_publication_pdfs',
                   'unchecked_publication_pdfs', 'no_slide_entries', 'no_slide_count', 'appraisals_pending'}
-LIBRARY_PRIVATE_FIELDS = {'coverage', 'family', 'document', 'document_only', 'inclusion'}
+LIBRARY_PRIVATE_FIELDS = {'coverage', 'family', 'document'}
 _REMOVE = object()  # Authored JSON null is clinical data, not a removal signal.
 
 def clean_data(value, key='', base='mh-liver-pathways-share', library=False):
@@ -174,12 +174,12 @@ def build(out, base):
             s=re.sub(r'(<script\b[^>]*type=["\']application/json["\'][^>]*>)(.*?)(</script>)',
                      lambda m:m[1]+json.dumps(clean_data(json.loads(m[2]),base=base),ensure_ascii=False)+m[3],s,flags=re.S)
             s=re.sub(r'<[^>]+\bdownload(?:=[^>]*)?>.*?</a>', '',s,flags=re.S)
-            s=s.replace('Evidence, PDFs and summary slides','Evidence libraries')
+            s=s.replace('Evidence, PDFs and summary slides','Evidence libraries').replace('Reference &amp; presentation index','Reference index')
             s=s.replace('Shared papers belong in every library that needs them. Find a publication, see its full-text access links, and identify its summary slides in the corresponding local PPT.',
                         'Find the publications supporting each clinical topic, with publisher and TMC Library access links.')
             s=s.replace('Publication metadata and institutional full-text links are public. Deposited journal PDFs and the figure-containing PPTs remain in the private Synology package; they are not uploaded here. Availability does not establish evidence quality or institutional approval.',
                         'Publication metadata and literature access links support review of the clinical content. Document and slide downloads are not included in this edition.')
-        if f == 'evidence-libraries/library.js': s=share_library_script()
+        # Shared clinical renderer is edition-aware; no reduced share-only catalogue.
         if f == 'assets/portal-navigation.js':
             s = s.replace('(() => {', "(() => {\n  document.documentElement.dataset.edition='share';", 1)
             assert "dataset.edition='share';" in s, 'portal-navigation.js entry point changed'

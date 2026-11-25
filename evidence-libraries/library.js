@@ -1,35 +1,32 @@
+/* One clinical index in both editions; institutional artifacts remain full-edition only. */
 'use strict';
 (async()=>{
  const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const out=document.getElementById('results'),select=document.getElementById('library'),search=document.getElementById('search');
- const slides=r=>r.slides.length?'PPT slides '+r.slides.join(', '):'No slide yet';
- const pdf=p=>p.pdf_available===true?'PDF matched in the audited depots':p.pdf_available===false?'PDF not yet matched in the audited depots':'PDF status not yet checked for this index entry';
- const links=p=>'<div class="access">'+(p.url?'<a href="'+e(p.url)+'" target="_blank" rel="noopener">Publication / full text ↗</a>':'')+(p.tmc?'<a href="'+e(p.tmc)+'" target="_blank" rel="noopener">TMC full-text access ↗</a>':'')+'</div>';
- const title=l=>l.title;
- const pending=l=>l.no_slide_count?' · '+l.no_slide_count+(l.no_slide_count===1?' reference has':' references have')+' no slide yet':'';
+ const share=document.body.dataset.edition==='share'||document.documentElement.dataset.edition==='share'||location.pathname.includes('mh-liver-pathways-share');
+ const links=p=>'<div class="access">'+(p.url?'<a href="'+e(p.url)+'" target="_blank" rel="noopener">Publication / full text ↗</a>':'')+(p.tmc?'<a href="'+e(p.tmc)+'" target="_blank" rel="noopener">TMC full text ↗</a>':'')+'</div>';
+ const inclusion=r=>(r.inclusion||[]).map(e).join('; ');
+ const slideNote=r=>!share&&r.slides?.length?'<p class="meta">Evidence PPT · slides '+r.slides.join(', ')+'</p>':'';
  try{
-  const responses=await Promise.all([fetch('catalog.json?v=20261116-language1'),fetch('document-index.json?v=20261116-language1')]);
+  const responses=await Promise.all([fetch('catalog.json?v=20261124-clarity1'),fetch('document-index.json?v=20261124-clarity1')]);
   if(responses.some(r=>!r.ok))throw Error('Catalog unavailable');
-  const [base,supplement]=await Promise.all(responses.map(r=>r.json()));
-  const data=LibraryDocumentIndex.merge(base,supplement);
-  document.getElementById('census').textContent=data.libraries.length+' libraries · '+data.unique_publications+' distinct publications across slides and documents ('+data.from_slide_libraries+' in the slide libraries, '+data.additional_document_publications+' additional document citations). '+data.matched_publication_pdfs+' PDFs matched, '+data.missing_publication_pdfs+' unmatched and '+data.unchecked_publication_pdfs+' unchecked. Clinical webpages cite additional sources.';
-  for(const lib of data.libraries){const option=document.createElement('option');option.value=lib.key;option.textContent=title(lib);select.append(option);}
-  const paperSearch=(r,p)=>[p.title,p.author,p.journal,p.doi,p.pmid,p.coverage,slides(r),...r.inclusion].join(' ').toLowerCase();
-  const policySearch=r=>[r.title,slides(r),...(r.inclusion||[])].join(' ').toLowerCase();
+  const [base,supplement]=await Promise.all(responses.map(r=>r.json()));const data=LibraryDocumentIndex.merge(base,supplement);
+  document.getElementById('census').textContent=data.libraries.length+' libraries · '+data.unique_publications+' distinct publications. Search includes policy and guidance records.';
+  for(const lib of data.libraries){const o=document.createElement('option');o.value=lib.key;o.textContent=lib.title;select.append(o);}
+  const paperSearch=(r,p)=>[p.title,p.author,p.journal,p.year,p.doi,p.pmid,...(r.inclusion||[])].join(' ').toLowerCase();
+  const policySearch=r=>[r.title,...(r.inclusion||[])].join(' ').toLowerCase();
+  const paper=r=>{const p=data.publications[r.id];return '<li class="record"><h3>'+e(p.title)+'</h3><p class="meta">'+[p.author,p.journal,p.year,p.pmid?'PMID '+p.pmid:'',p.doi?'DOI '+p.doi:''].filter(Boolean).map(e).join(' · ')+'</p>'+(p.publisher_citation?'<p class="meta">'+e(p.publisher_citation)+'</p>':'')+links(p)+(r.inclusion?.length?'<p class="library-clinical-summary"><b>Cited in:</b> '+inclusion(r)+'</p>':'')+slideNote(r)+(!share?'<p class="meta">'+(p.pdf_available===true?'PDF matched in the local reference depot':p.pdf_available===false?'PDF not yet matched':'Local PDF status not checked')+'</p>':'')+'</li>';};
+  const policy=r=>'<li class="record"><h3>'+e(r.title)+'</h3>'+links(r)+(r.inclusion?.length?'<p class="library-clinical-summary"><b>Cited in:</b> '+inclusion(r)+'</p>':'')+slideNote(r)+'</li>';
   function render(){
    const key=decodeURIComponent(location.hash.slice(1));select.value=data.libraries.some(l=>l.key===key)?key:'';
    const lib=data.libraries.find(l=>l.key===select.value),q=search.value.trim().toLowerCase();
-   if(!lib){
-    const matches=data.libraries.filter(l=>title(l).toLowerCase().includes(q)||l.papers.some(r=>paperSearch(r,data.publications[r.id]).includes(q))||l.policy_records.some(r=>policySearch(r).includes(q)));
-    out.innerHTML='<p class="count">'+matches.length+' libraries shown</p><div class="library-grid">'+matches.map(l=>'<article class="library-card"><h2><a href="#'+e(l.key)+'">'+e(title(l))+'</a></h2><p>'+l.publication_count+' papers · '+l.matched_pdfs+' matched PDFs</p><p>'+l.slides+' slides in its PPT'+pending(l)+'</p><p class="meta">'+e(l.family.replace(/^\d+_/,'').replaceAll('_',' '))+'</p></article>').join('')+'</div>';return;
-   }
-   const matches=lib.papers.filter(r=>paperSearch(r,data.publications[r.id]).includes(q));
-   const policies=lib.policy_records.filter(r=>policySearch(r).includes(q));
-   out.innerHTML='<p><a href="#">← All evidence libraries</a></p><div class="library-heading"><h2>'+e(title(lib))+'</h2><p>'+lib.publication_count+' publications · '+lib.matched_pdfs+' matched PDFs · '+lib.slides+' PPT slides'+pending(lib)+'</p><p><b>Matching PPT:</b> '+e(lib.ppt_filename)+'</p><details><summary>Where to find the local files</summary><p>Synology → MHH work → Memorial Herman Transplant Oncology Protocols → <code>'+e(lib.local_folder)+'/</code></p><p>The current V20 presentation and local full texts are in the corresponding evidence library. References marked “No slide yet” are cited in the newer documents and have not been added to this PPT.</p></details><p class="meta">Slide numbers describe the existing PPT. A document citation alone does not establish a completed full-text appraisal or a deposited PDF.</p></div><p class="count">'+matches.length+' of '+lib.publication_count+' publications shown</p><ul class="records">'+matches.map(r=>{
-    const p=data.publications[r.id];
-    return '<li class="record"><h3>'+e(p.title)+'</h3><p class="meta">'+(p.author?e(p.author)+' · ':'')+(p.year?e(p.year)+' · ':'')+'PMID '+e(p.pmid||'not indexed')+' · DOI '+e(p.doi||'not recorded')+'</p>'+(p.publisher_citation?'<p class="meta">'+e(p.publisher_citation)+'</p>':'')+'<p><b>'+e(slides(r))+'</b>'+(r.document_only?' · Document reference':' · '+e(p.coverage))+'</p><p class="'+(p.pdf_available===false?'gap':'meta')+'">'+pdf(p)+'</p>'+links(p)+'<details><summary>Why this paper is included</summary><p>'+e(r.inclusion.join('; '))+'</p></details></li>';
-   }).join('')+'</ul>'+(policies.length?'<h3>Policy, guidance and document records</h3><p class="meta">Separate from publication counts.</p><ul class="records">'+policies.map(p=>'<li class="record"><h3>'+e(p.title)+'</h3><p><b>'+e(slides(p))+'</b></p><p class="meta">'+pdf(p)+'</p>'+links(p)+(p.inclusion?.length?'<p class="meta">'+e(p.inclusion.join('; '))+'</p>':'')+'</li>').join('')+'</ul>':'');
+   if(!lib&&!q){out.innerHTML='<div class="library-grid">'+data.libraries.map(l=>'<article class="library-card"><h2><a href="#'+e(l.key)+'">'+e(l.title)+'</a></h2><p>'+l.publication_count+' publications · '+l.policy_records.length+' policy / guidance records</p></article>').join('')+'</div>';return;}
+   const chosen=lib?[lib]:data.libraries;
+   let count=0;const groups=chosen.map(l=>{const papers=l.papers.filter(r=>paperSearch(r,data.publications[r.id]).includes(q)),policies=l.policy_records.filter(r=>policySearch(r).includes(q));count+=papers.length+policies.length;
+    if(!papers.length&&!policies.length)return '';
+    return '<section class="library-global-hit"><h2><a href="#'+e(l.key)+'">'+e(l.title)+'</a></h2>'+(lib&&!share?'<details><summary>Local presentation and files</summary><p>'+e(l.ppt_filename||'')+'</p><p>'+e(l.local_folder||'')+'</p><p class="meta">Slide numbers describe the current presentation. A document citation alone does not establish completed full-text appraisal.</p></details>':'')+(papers.length?'<ul class="records">'+papers.map(paper).join('')+'</ul>':'')+(policies.length?'<h3>Policy & guidance</h3><ul class="records">'+policies.map(policy).join('')+'</ul>':'')+'</section>';}).join('');
+   out.innerHTML=(lib?'<p><a href="#">← All libraries</a></p>':'')+'<p class="count">'+count+' matching records'+(!lib?' across libraries':'')+'</p>'+groups+(count?'':'<p>No included source matches this search. Clear the search or select another library.</p>');
   }
-  select.addEventListener('change',()=>{history.pushState(null,'','#'+select.value);search.value='';render();});search.addEventListener('input',render);window.addEventListener('hashchange',render);window.addEventListener('popstate',render);render();
+  select.addEventListener('change',()=>{history.pushState(null,'','#'+select.value);render();});search.addEventListener('input',render);window.addEventListener('hashchange',render);window.addEventListener('popstate',render);render();
  }catch(error){out.textContent='The evidence index could not load. Please reload this page.';console.error(error);}
 })();

@@ -3,7 +3,7 @@
  'use strict';
  const root=new URL('../',document.currentScript.src),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  let state=null,links=null,configLoaded=false;
- const configPromise=fetch(new URL('assets/roadmap-links.json?v=20261109-pathology1',root)).then(r=>{if(!r.ok)throw Error('Navigation unavailable');return r.json();}).catch(()=>null);
+ const configPromise=fetch(new URL('assets/roadmap-links.json?v=20261124-clarity1',root)).then(r=>{if(!r.ok)throw Error('Navigation unavailable');return r.json();}).catch(()=>null);
  const title=s=>s.name.replace(/^\d+\s*·\s*/, '');
  function initial(stages,fallback){let id;try{id=decodeURIComponent(location.hash.replace(/^#decision-/,''));}catch{return fallback;}return location.hash.startsWith('#decision-')&&stages.some(s=>s.id===id)?id:(stages.some(s=>s.id==='A')?'A':stages[0].id);}
  function setup({slug,stages,select,topic}){
@@ -70,11 +70,13 @@
   state.current=s.id;
   renderTrail();
   document.querySelectorAll('[data-roadmap-decision]').forEach(b=>{if(b.classList.contains('rf-topic'))b.setAttribute('aria-current',b.dataset.roadmapDecision===s.id?'true':'false');});
-  const recommendations=[...(s.standard||[]),...(s.alt||[])];
+  const roles=window.ClarityPresentation?.recommendationRoles[state.slug+'/'+s.id]||{};
+  const entries=['standard','alt'].flatMap(k=>(s[k]||[]).map((r,i)=>({r,role:roles[k+'/'+i]||'treatment'})));
+  const recommendations=entries.filter(x=>x.role==='treatment').map(x=>x.r);
   const standard=recommendations.filter(x=>! /^(Reasonable|Trial|Investigational)/i.test(x.l||''));
   const alternative=recommendations.filter(x=> /^(Reasonable|Trial|Investigational)/i.test(x.l||''));
   const group=(label,items,cls)=>items?.length?`<section class="rf-option-group ${cls}"><h4>${label}</h4>${items.map(recHTML).join('')}</section>`:'';
-  return `<div class="ahead"><p class="rf-context">Showing this clinical topic</p><h3 tabindex="-1">${esc(s.name)}</h3>${s.ask?`<p class="ask">${esc(s.ask)}</p>`:''}<p class="rf-eligibility-note">Topic selection does not establish treatment or transplant eligibility.</p><details class="rf-criteria" open><summary>Selection criteria · ${s.req==='any'?'any one':'all required'}</summary><p>Conditions and checks described for this topic:</p><b>${s.req==='any'?'Any one of the following':'All of the following'}</b><ul>${s.crit.map(c=>`<li>${esc(c)}</li>`).join('')}</ul></details></div><div class="rf-recommendations"><h4 class="flow-section-heading"><span>2</span> Compare treatment options</h4><div class="rf-options">${group('Standard approach',standard,'rf-standard')}${group('Reasonable alternatives / protocol options',alternative,'rf-alternatives')}</div>${group('Avoid / cautions in this situation',s.avoid,'rf-cautions')}</div><section class="rf-related" aria-label="Related clinical decisions" data-related-for="${esc(s.id)}"></section><div class="rf-evidence-controls"><button class="xpand" type="button" id="xpandAll" data-open="0" aria-expanded="false">Expand criteria and evidence</button><span>These links open related assessments. Recheck the destination criteria; topic selections do not carry patient findings or establish eligibility.</span></div>`;
+  return `<div class="ahead"><p class="rf-context">Showing this clinical topic</p><h3 tabindex="-1">${esc(s.name)}</h3>${s.ask?`<p class="ask">${esc(s.ask)}</p>`:''}<p class="rf-eligibility-note">Topic selection does not establish treatment or transplant eligibility.</p><details class="rf-criteria" open><summary>Findings to assess</summary><p>Assess each finding below. Treatment-specific indications and exclusions are listed with each option.</p><ul>${s.crit.map(c=>`<li>${esc(c)}</li>`).join('')}</ul></details></div><div class="rf-recommendations"><h4 class="flow-section-heading"><span>2</span> Options and actions</h4><div class="rf-options">${group('Standard approach',standard,'rf-standard')}${group('Reasonable alternatives / protocol options',alternative,'rf-alternatives')}</div>${group('Required assessments & continuing care',entries.filter(x=>x.role==='task').map(x=>x.r),'rf-supporting')}${group('Counseling',entries.filter(x=>x.role==='counsel').map(x=>x.r),'rf-counsel')}${group('Evidence interpretation',entries.filter(x=>x.role==='evidence').map(x=>x.r),'rf-interpretation')}${group('Avoid / cautions in this situation',s.avoid,'rf-cautions')}</div><section class="rf-related" aria-label="Related clinical decisions" data-related-for="${esc(s.id)}"></section><div class="rf-evidence-controls"><button class="xpand" type="button" id="xpandAll" data-open="0" aria-expanded="false">Expand criteria and evidence</button><span>These links open related assessments. Recheck the destination criteria; topic selections do not carry patient findings or establish eligibility.</span></div>`;
  }
  function update(s){
   renderRelated(s.id);renderTrail();

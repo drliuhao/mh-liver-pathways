@@ -247,7 +247,7 @@ function highRiskAction(a){
 function renderActions(actions){
  // Distinct clinical choices stay distinct even when they open the same care page.
  const seen=new Set();
- return `<div class="next-actions">${(actions||[]).filter(a=>{const key=JSON.stringify([a.step,a.care,a.url,a.label,a.detail]);if(seen.has(key))return false;seen.add(key);return true;}).map(a=>`<div class="next-action">${a.detail?`<p>${e(a.detail)}</p>`:''}${a.step?`<button class="route-button" data-step="${e(a.step)}">${e(a.label.replace(/^Continue: /,''))} →</button>`:a.care?`<a class="route-button" href="#care-${e(a.care)}" data-care="${e(a.care)}" data-action-label="${e(a.label)}" data-action-condition="${e(a.detail||'')}">${e(a.label)} →</a>`:highRiskAction(a)}</div>`).join('')}</div>`;
+ return `<div class="next-actions">${(actions||[]).filter(a=>{const key=JSON.stringify([a.step,a.care,a.url,a.label,a.detail]);if(seen.has(key))return false;seen.add(key);return true;}).map(a=>`<div class="next-action">${a.detail?`<p>${e(a.detail)}</p>`:''}${a.step?`<button class="route-button" data-step="${e(a.step)}">${e(decisionLabel(a.step))} →</button>`:a.care?`<a class="route-button" href="#care-${e(a.care)}" data-care="${e(a.care)}" data-action-label="${e(a.label)}" data-action-condition="${e(a.detail||'')}">${e(a.label)} →</a>`:highRiskAction(a)}</div>`).join('')}</div>`;
 }
 
 function afpReviewHTML(finding){
@@ -388,13 +388,13 @@ function currentCareOrigin(){
  return origin&&origin.care===careId?origin:null;
 }
 function captureCareOrigin(trigger){
- if(view!=='pathway'||!trigger.closest('#current-result'))return null;
- const action=trigger.closest('.next-action'),result=trigger.closest('.branch,.assistant-other-result');
+ if(view!=='pathway'||!trigger.closest('#current-result,.tw-options'))return null;
+ const action=trigger.closest('.next-action'),result=trigger.closest('.branch,.assistant-other-result,.tw-option');
  const step=active.steps[stepIndex],key=assistantKey(),answers=assistantSession.answers[key]||{};
  return {step:step.id,care:trigger.dataset.care,title:step.title,number:stepIndex+1,
   option:trigger.dataset.actionLabel||trigger.textContent.trim().replace(/\s*→$/,''),condition:trigger.dataset.actionCondition??action?.querySelector(':scope > p')?.textContent??'',
   kind:result?.classList.contains('hold')?'hold':result?.classList.contains('stop')?'stop':'review',
-  result:result?.querySelector('.branch-title h4,h4')?.textContent||'',
+  result:result?.querySelector('.branch-title h4,h4,.tw-option-title')?.textContent||'',
   status:result?.querySelector('.route-label')?.textContent||(result?.classList.contains('hold')?'Hold at the originating decision':result?.classList.contains('stop')?'Stop and review at the originating decision':result?.querySelector('.branch-match')?.textContent||''),
   example:assistantSession.origins[key]==='example',fingerprint:careFingerprint(step.id),
   reviews:[...document.querySelectorAll('#current-result [data-risk-anchor],#current-result [data-afp-review]')].map(n=>({anchor:n.dataset.riskAnchor||'hcc-b1-1',title:n.querySelector('summary>b')?.textContent||'AFP criterion not met: review transplant options',status:n.querySelector('.risk-next-status')?.textContent||''})),
@@ -438,6 +438,8 @@ function renderStep(){
 }
 
 function renderMeeting(){
+ const chosen=location.hash.startsWith('#meeting-')?active.issues.find(i=>i.id===decodeURIComponent(location.hash.slice(9))):null;
+ if(chosen)return `<section class="meetingintro"><a href="#meeting" data-view="meeting">← All discussion questions</a><p class="eyebrow">Local decision record · pending approval</p></section>${renderIssue(chosen,active.issues.indexOf(chosen))}`;
  return `<section class="meetingintro"><div><p class="eyebrow">Source comparison + local decision record</p><h2>Questions to resolve together</h2><p>Each question is linked from its pathway decision. Source wording and proposed local interpretation are separate. <b>No local proposal is marked approved.</b></p></div></section>
  <aside class="high-risk-doc-note">${HighRisk.badge()}<p>Individual reviews appear with the relevant findings and next-step choices.</p><a href="#high-risk" data-view="high-risk">High-risk protocols and evidence →</a></aside><nav class="issue-index" aria-label="Meeting questions">${active.issues.map((i,n)=>`<a href="#meeting-${i.id}" data-issue="${i.id}">${n+1}. ${e(i.question)}</a>`).join('')}</nav>
  <div class="issue-records">${active.issues.map((i,n)=>renderIssue(i,n)).join('')}</div>`;
@@ -472,8 +474,9 @@ function setStep(id,push=true,fromAction=false,browse=false){
  document.querySelector('.decision').scrollIntoView({block:'start',behavior:'instant'});
 }
 function showHighRisk(id,push=true){
+ const origin=view==='pathway'?active.steps[stepIndex].id:history.state?.riskOrigin;
  riskReference=id;view='risk-reference';
- if(push)history.pushState(null,'','#high-risk-'+id);
+ if(push)history.pushState({riskOrigin:origin},'','#high-risk-'+id);
  renderView();
  const target=document.querySelector('.risk-reference');
  target?.scrollIntoView({block:'start',behavior:'instant'});
@@ -548,7 +551,7 @@ document.addEventListener('click',ev=>{
  if(ev.target.closest('.close-dialog')){document.getElementById('source-dialog').close();return;}
  const step=ev.target.closest('[data-step]');if(step&&!step.disabled){ev.preventDefault();setStep(step.dataset.step,true,!!step.closest('.next-action'),step.hasAttribute('data-dw-browse'));return;}
  const tab=ev.target.closest('[data-view]');if(tab){ev.preventDefault();view=tab.dataset.view;if(view==='care')careOriginToken=null;history.pushState(null,'',view==='pathway'?'#'+active.steps[stepIndex].id:view==='care'?'#care-'+careId:'#'+view);renderView();return;}
- const issue=ev.target.closest('[data-issue]');if(issue){ev.preventDefault();history.pushState(null,'','#meeting-'+issue.dataset.issue);document.getElementById(issue.dataset.issue).scrollIntoView({block:'start'});}
+ const issue=ev.target.closest('[data-issue]');if(issue){ev.preventDefault();history.pushState(null,'','#meeting-'+issue.dataset.issue);view='meeting';renderView();document.getElementById(issue.dataset.issue).scrollIntoView({block:'start'});}
 });
 document.getElementById('source-dialog').addEventListener('click',ev=>{if(ev.target===ev.currentTarget){const r=ev.currentTarget.getBoundingClientRect();if(ev.clientX<r.left||ev.clientX>r.right||ev.clientY<r.top||ev.clientY>r.bottom)ev.currentTarget.close();}});
 document.getElementById('source-dialog').addEventListener('close',()=>lastTrigger?.focus());

@@ -42,22 +42,7 @@
   $('#no-papers').hidden=count!==0;
  }
  // Ladder: the selected tumor's regimens grouped by setting, as the LRT ladder groups modalities by tier.
- function updateLadder(){
-  const ladder=$('#ladder');ladder.textContent='';
-  for(const key of validSettings.filter(v=>v!=='all')){
-   const visible=cards.filter(c=>!c.hidden&&c.dataset.setting===key);
-   if(setting.value!=='all'&&setting.value!==key)continue;
-   const rung=document.createElement('div');rung.className='st-rung st-'+key;
-   const h=document.createElement('h3');h.textContent=settingLabels[key];rung.append(h);
-   const pills=document.createElement('div');pills.className='st-pills';
-   if(!visible.length){const none=document.createElement('span');none.className='st-none';none.textContent='No option in this setting';pills.append(none);}
-   for(const c of visible){
-    const a=document.createElement('a');a.className='st-pill';a.href='#'+c.id;a.textContent=c.querySelector('.st-title').textContent;
-    pills.append(a);
-   }
-   rung.append(pills);ladder.append(rung);
-  }
- }
+ function updateLadder(){const ladder=$('#ladder');if(ladder)ladder.hidden=true;}
  function update(){
   buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===tumor)));
   chips.forEach(c=>c.setAttribute('aria-pressed',String(c.dataset.settingChip===setting.value)));
@@ -81,7 +66,7 @@
    t.tabIndex=selected?0:-1;$('#view-'+t.dataset.view).hidden=!selected;
   });
   $('#treatment-controls').hidden=!['options','comparison'].includes(view);
-  $('#setting-legend').hidden=!['options','comparison'].includes(view);
+  $('#setting-legend').hidden=true;
   $('.st-legend-note').hidden=!['options','comparison'].includes(view);
   $('.tumor-tabs').hidden=view==='precautions';
   // Drug-class precautions read as cards, like the LRT contraindications view.
@@ -154,5 +139,6 @@
  let printState=[];
  window.addEventListener('beforeprint',()=>{printState=$$('details').map(d=>[d,d.open]);printState.forEach(([d])=>d.open=true);});
  window.addEventListener('afterprint',()=>{printState.forEach(([d,open])=>d.open=open);printState=[];});
+ const noResults=$('#no-results');noResults.textContent='No included regimen matches these filters. ';const reset=document.createElement('button');reset.type='button';reset.textContent='Reset filters';reset.addEventListener('click',()=>{search.value='';setting.value='all';clearAnchor();update();});noResults.append(reset);
  if(!openAnchor(location.hash))update();
 })();

@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '/mh-liver-pathways/'
-KEY = '20261116-review1'
+KEY = '20261124-clarity1'
 data = json.loads((ROOT / 'tools/ehd_positions.json').read_text())
 manifest = json.loads((ROOT / 'assets/documents.json').read_text())['tumors']
 e = html.escape
@@ -44,7 +44,7 @@ out = ['<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="v
        '<meta name="robots" content="noindex"><title>Previously treated extrahepatic disease | Memorial Hermann HPB Oncology</title>'
        f'<link rel="stylesheet" href="{BASE}assets/evidence-tools.css?v=20261116-review1">'
        f'<link rel="stylesheet" href="{BASE}assets/portal-navigation.css?v={KEY}"><script src="{BASE}assets/portal-navigation.js?v={KEY}" defer></script>'
-       f'<style>{css}</style></head><body><main class="evidence-wrap" id="ehd-positions">',
+       f'<style>{css}</style><link rel="stylesheet" href="../assets/clarity-presentation.css?v={KEY}"><script src="../assets/clarity-presentation.js?v={KEY}"></script></head><body><main class="evidence-wrap" id="ehd-positions">',
        '<header class="tool-hero"><p class="eyebrow">Index · proposed positions</p><h1>Previously treated extrahepatic disease</h1>'
        '<p>Each tumor\'s question is discussed once, in its own setting: the roadmap\'s Questions for consensus, or the pathway\'s '
        'high-risk view.<span data-doc-note> The tumor\'s Word files (Documents, top right on those pages) carry the same questions with every source.</span></p></header>',

@@ -112,6 +112,7 @@
   const meta=data.topics[slug+'/'+related?.dataset.relatedFor];if(!ahead||!criteria||!related||!meta)return;
   const actual=[...criteria.querySelectorAll(':scope>ul>li')].map(n=>plain(n.textContent));
   if(plain(ahead.querySelector('h3')?.textContent)!==plain(meta.title)||JSON.stringify(actual)!==JSON.stringify(meta.criteria.map(plain)))return;
+  const shortHeading=window.CompactTrailLabels?.roadmaps[slug+'/'+related.dataset.relatedFor]?.label;if(shortHeading)ahead.querySelector('h3').textContent=shortHeading;
   answer.classList.add('dw-ready','dw-roadmap');answer.dataset.workspaceKey=slug+'/'+related.dataset.relatedFor;
   ahead.prepend(make('p','dw-decision-kicker','Current decision'));
   const grid=make('div','dw-grid'),left=column('dw-inputs','dw-inputs','Tests needed');
@@ -168,14 +169,16 @@
     if(protocol.pathway.slug==='hcc'&&step.id==='waitlist')return;
     const short=data.protocolNavigation?.[protocol.pathway.slug+'/'+step.id],label=short?.source===step.title?short.label:step.title;
     const waitStep={hcc:'listing',pcca:'listing',icca:'review',crlm:'review',nelm:'review',hehe:'review',hca:'review'}[protocol.pathway.slug];
-    const b=make('button','dw-protocol-topic',step.id===waitStep?'Transplant waitlisted':label);b.type='button';b.dataset.dwBrowse='';b.dataset.step=step.id;b.title=step.id===waitStep?'Listing and waiting':step.title;
-    b.dataset.baseLabel=step.id===waitStep?'Transplant waitlisted: before activation and reassessment while waiting':step.title;b.setAttribute('aria-label','View '+b.dataset.baseLabel);choices.append(b);
+    const b=make('button','dw-protocol-topic',step.id===waitStep?'Transplant waitlisted':label);b.type='button';b.dataset.dwBrowse='';b.dataset.step=step.id;b.title=step.id===waitStep?'Listing and waiting':label;
+    b.dataset.baseLabel=step.id===waitStep?'Transplant waitlisted: before activation and reassessment while waiting':label;b.setAttribute('aria-label','View '+b.dataset.baseLabel);choices.append(b);
    });
    nav.append(heading,choices);strip.prepend(nav);strip.classList.add('dw-protocol-strip');
    const menu=strip.querySelector('.ct-menu>summary');if(menu){menu.textContent='Findings';menu.setAttribute('aria-label','Recorded findings menu');}
    if(window.ResizeObserver)new ResizeObserver(()=>revealMajorDecision(choices)).observe(choices);
   }
   const id=document.querySelector('.decision .permalink')?.getAttribute('href')?.slice(1)||'';
+  const canonical=window.DecisionWorkspaceData?.protocolNavigation[protocol.pathway.slug+'/'+id]?.label;
+  const heading=document.getElementById('question');if(heading&&canonical&&heading.textContent!==canonical)heading.textContent=canonical;
   const actual=document.body.dataset.currentAssessment||id,signature=id+'/'+actual;
   if(nav.dataset.current!==signature){
    nav.dataset.current=signature;

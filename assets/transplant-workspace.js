@@ -202,7 +202,8 @@
   }
   function actionsFor(step, index, ruleIndex) {
     const route = data.continuations?.[slug + '/' + step.id];
-    const list = (ruleIndex === undefined ? route?.branches?.[index] || [] : route?.rules?.[ruleIndex] || []).filter(a => a.step !== step.id);
+    let list = (ruleIndex === undefined ? route?.branches?.[index] || [] : route?.rules?.[ruleIndex] || []).filter(a => a.step !== step.id);
+    if(slug==='pcca' && step.id==='phenotype' && ruleIndex===3) list=[{step:'diagnosis',label:'Diagnosis',detail:'Resolve the diagnostic basis and primary-biopsy route with the transplant team.'}];
     if (!list.length) return null;
     if (typeof renderActions === 'function') {          // the page's own renderer, so links behave as before
       const box = make('div', 'tw-next');
@@ -228,73 +229,81 @@
       crit.append(make('summary', '', 'Applies when'));
       const inner = make('div', 'moreinner');
       inner.append(criteriaList(branch.criteria));
+      inner.querySelectorAll(".citations").forEach(n => n.remove());
       crit.append(inner);
       panels.append(crit);
       row.append(peer('Applies when', crit, 'ct-peer-ind'));
     }
-    const ev = evidencePanel([...refsOf(branch.criteria), ...(branch.refs || [])]);
+    const config=data.assistants[slug+'/'+step.id];
+    const checklistRefs=new Set((config?.questions||[]).flatMap(q=>[...(q.refs||[]),...(q.criteria||[]).flatMap(c=>c.refs||[])]));
+    const ev = evidencePanel([...refsOf(branch.criteria), ...(branch.refs || [])].filter(id=>!checklistRefs.has(id)||!/policy|guidance|guideline|consensus/i.test(data.sources[id]?.kind||'')));
     if (ev) { panels.append(ev.panel); row.append(peer('Evidence & sources', ev.panel, 'ct-peer-ev', ev.count)); }
     if (row.childElementCount) card.append(row, panels);
-    return card;
-  }
-  function highRiskGroup(step) {
-    const reviews = (data.high_risk?.pathways?.[slug]?.reviews || []).filter(r => (r.steps || []).includes(step.id));
-    if (!reviews.length) return null;
-    const group = make('section', 'tw-group tw-k-risk');
-    group.append(make('h4', '', 'High-risk protocol reviews'));
-    for (const r of reviews) {
-      const card = make('article', 'tw-option tw-k-risk');
-      card.append(make('h5', 'tw-option-title', r.title));
-      if (r.status) card.append(make('p', 'tw-option-status', r.status));
-      if (r.context) card.append(make('p', 'tw-option-action', r.context));
-      const a = make('a', 'route-button high-risk-route', 'Open the high-risk review →');
-      a.href = '#high-risk-' + r.anchor; a.dataset.highRisk = r.anchor;
-      const box = make('div', 'tw-next');
-      box.append(a);
-      card.append(box);
-      group.append(card);
+    const refsForResult = window.ClarityPresentation?.riskLinks[slug+'/'+step.id+'/'+(ruleIndex===undefined?'b'+index:'r'+ruleIndex)] || [];
+    for(const anchor of refsForResult) {
+      const r = data.high_risk?.pathways?.[slug]?.reviews.find(x=>x.anchor===anchor); if(!r||card.querySelector('[data-high-risk="'+anchor+'"]'))continue;
+      const link = make('a','tw-risk-link');link.href='#high-risk-'+r.anchor;link.dataset.highRisk=r.anchor;
+      link.append(make('small','',HighRisk.statusLabel(r.anchor)),make('b','',r.title+' →'));
+      const context = make('div','tw-risk-context');if(r.context)context.append(make('p','',r.context));context.append(link);card.append(context);
     }
-    return group;
+    return card;
   }
   function criteriaCard(step) {
     const config = data.assistants?.[slug + '/' + step.id];
     const box = make('section', 'tw-static-criteria');
-    box.append(make('p', 'tw-kicker', 'What this decision assesses'));
-    const list = make('ul', 'tw-assess');
-    const definitions = new Map();
+    box.append(make('h4', 'tw-kicker', 'Decision criteria'));
+    box.append(make('p', 'tw-logic', 'Assess each finding. The result options below show how the findings are combined.'));
+    const list = make('div', 'tw-criteria-table');
+    const refs = new Set();
     for (const q of config?.questions || []) {
-      const li = make('li');
-      li.append(make('b', '', q.label));
-      if (q.help) li.append(make('span', 'tw-assess-help', q.help));
-      // Its sources are listed once, with results, under Evidence & sources below.
-      list.append(li);
-      for (const c of q.criteria || []) if (!definitions.has(c.title)) definitions.set(c.title, c);
+      const row = make('section', 'tw-criterion'); row.dataset.criterion = q.id;
+      const short = window.CompactTrailLabels?.core[slug + '/' + step.id + '/' + q.id];
+      row.append(make('h5', '', short?.label || q.label));
+      const body = make('div', 'tw-criterion-body');
+      if(!q.help && !(q.options||[]).some(o=>o.value!=='unknown'&&!['Yes','No'].includes(o.label)))body.append(make('p','tw-criterion-question',q.label));
+      if (q.help) body.append(make('p', 'tw-assess-help', q.help));
+      const choices = (q.options || []).filter(o => o.value !== 'unknown');
+      if (choices.some(o => !['Yes','No'].includes(o.label))) {
+        const ul = make('ul', 'tw-categories');
+        choices.forEach(o => {const li = make('li', '', o.label); for(const d of o.details || []) li.append(make('p','',typeof d==='string'?d:d.text||''));ul.append(li);}); body.append(ul);
+      }
+      for(const c of q.criteria || []) {
+        const definition = make('section','tw-definition'); definition.append(make('h6','',c.title));
+        const ul = make('ul'); (c.items || []).forEach(i => ul.append(make('li','',i))); definition.append(ul); body.append(definition);
+        (c.refs || []).forEach(id => refs.add(id));
+      }
+      // Deep links to suitability must retain the actual diagnostic definition.
+      if(slug==='pcca' && step.id==='phenotype' && q.id==='diagnosis') {
+        const original = data.assistants['pcca/diagnosis'].questions;
+        body.append(make('p','tw-key-rule','Malignant-appearing hilar stricture AND at least one diagnostic criterion:'));
+        const dx=make('ul');for(const text of ['Malignant biopsy or cytology','CA 19-9 >100 U/mL without cholangitis','Aneuploidy','Hilar mass <3 cm in radial diameter'])dx.append(make('li','',text));body.append(dx,make('p','tw-caution',original[1].help));
+      }
+      (q.refs || []).forEach(id => refs.add(id));
+      row.append(body); list.append(row);
     }
-    if (list.childElementCount) box.append(list);
-    for (const c of definitions.values()) {
-      const d = make('details', 'tw-definition');
-      d.append(make('summary', '', c.title));
-      const ul = make('ul');
-      for (const item of c.items || []) ul.append(make('li', '', item));
-      d.append(ul);
-      if (c.refs?.length) { const p = make('p', 'tw-def-sources'); p.append(cites(c.refs)); d.append(p); }
-      box.append(d);
+    box.append(list);
+    if(slug==='pcca' && step.id==='phenotype') {
+      box.querySelector('.tw-logic').textContent='All of the following are needed for protocol entry review; program acceptance and allocation approval remain separate.';
+      const required={
+        size:'No discrete mass, or one mass <3 cm in radial diameter.',
+        unresectable:'Unresectable because of anatomy or underlying liver disease.',
+        spread:'No confirmed regional nodal disease and no intrahepatic or extrahepatic metastases.',
+        diagnosis:'Accepted diagnostic basis and no transperitoneal aspiration or biopsy of the primary tumor.'
+      };
+      for(const row of list.querySelectorAll('.tw-criterion')) {
+        const body=row.querySelector('.tw-criterion-body');body.querySelectorAll(':scope>.tw-criterion-question,:scope>.tw-categories').forEach(n=>n.remove());
+        body.prepend(make('p','tw-key-rule',required[row.dataset.criterion]));
+      }
     }
-    // The papers and guidance behind these questions and definitions, as matrix-style lines.
-    const refs = [...(config?.questions || []).flatMap(q => q.refs || []), ...[...definitions.values()].flatMap(c => c.refs || [])];
-    // They sit folded at the bottom of the decision (Hao, 28 October), with the treatment matrices.
-    const ev = evidencePanel(refs);
-    let fold = null;
-    if (ev) {
-      fold = ev.panel;
-      fold.className = 'tc-fold tw-evidence-fold ct-evidence';
-      const s = fold.querySelector(':scope>summary');
-      s.replaceChildren(make('span', 'tc-fold-name', 'Evidence & sources for this decision'), make('span', 'tc-kind', ev.count + (ev.count === 1 ? ' source' : ' sources')));
-      const body = make('div', 'tc-fold-body');
-      body.append(...[...fold.childNodes].filter(n => n !== s));
-      fold.append(body);
+    if(slug==='pcca' && ['diagnosis','phenotype'].includes(step.id)) {
+      const note = make('aside','tw-timing-note');
+      note.append(make('b','','Timing and program acceptance'), make('p','','The 90-day imaging window applies to the initial exception request. Operative staging follows neoadjuvant therapy and precedes transplantation. Entry assessment does not establish definitive negative nodal status. The transplant team must accept the diagnostic basis, general fitness and treatment plan under its approved protocol.'));
+      box.append(note);
     }
-    return [list.childElementCount || definitions.size ? box : null, fold];
+    // One source group per coherent checklist; branch-specific studies remain with their result.
+    const ev = evidencePanel([...refs]);
+    if(ev) {ev.panel.classList.add('tw-checklist-sources');ev.panel.querySelector('summary').textContent='Sources for these criteria';box.append(ev.panel);}
+    return [box, null];
   }
   function staticOptions(decision) {
     const id = decision.querySelector('.permalink')?.getAttribute('href')?.slice(1);
@@ -307,7 +316,7 @@
     const [crit, evidence] = criteriaCard(step);
     const box = make('section', 'tw-options');
     box.setAttribute('aria-label', 'Possible results within this decision');
-    box.append(make('h4', 'tw-options-title', 'Possible results within this decision'));
+    box.append(make('h4', 'tw-options-title', 'Results & next steps'));
     const config = data.assistants[slug + '/' + step.id];
     const results = step.branches.map((b, i) => [b, i]);
     config.rules.forEach((r, ri) => {
@@ -319,16 +328,19 @@
       });
       results.push([{kind:r.kind,title:r.title,action:r.text,criteria,refs:r.refs},null,ri]);
     });
+    const phases = config.questions.some(q=>q.id==='phase') ? ['before','after'] : [null];
+    for(const phase of phases) {
+    const phaseHost = phase ? make('section','tw-phase tw-phase-'+phase) : box;
+    if(phase) {phaseHost.append(make('h4','tw-phase-title',phase==='before'?'Before transplantation':'After transplantation'));box.append(phaseHost);}
     for (const [kind, title] of GROUPS) {
-      const branches = results.filter(([b]) => b.kind === kind);
+      const branches = results.filter(([b,i,ri]) => b.kind === kind && (!phase || (ri===undefined ? phase==='before' : config.rules[ri].when.phase===phase)));
       if (!branches.length) continue;
       const group = make('section', 'tw-group tw-k-' + kind);
       group.append(make('h4', '', title));
       for (const [b, i, ri] of branches) group.append(optionCard(step, b, i, ri));
-      box.append(group);
+      phaseHost.append(group);
     }
-    const risk = highRiskGroup(step);
-    if (risk) box.append(risk);
+    }
     if (step.stops?.length) {
       const group = make('section', 'tw-group tw-k-reassess');
       group.append(make('h4', '', 'Reasons to reassess'));
@@ -370,7 +382,10 @@
       if (matchMedia('(max-width:760px)').matches) document.getElementById('dw-tab-criteria')?.click();
     });
     box.append(b, make('p', 'tw-mode-note', 'Optional. Choosing findings highlights the matching result. Findings stay in this tab and are not saved.'));
+    if(decision.dataset.workspaceKey==='hcc/listing' && !tools.querySelector('[data-high-risk="hcc-b4"]')){const model=make('a','tc-resource','Survival-benefit model · research only →');model.href='#high-risk-hcc-b4';model.dataset.highRisk='hcc-b4';box.append(model);}
     tools.append(box);
+    const banner=make('div','tw-mode-banner'); banner.append(make('span','','Optional finding mode is active.'));
+    const reset=make('button','','Show all results');reset.type='button';reset.addEventListener('click',()=>{if(interactive)b.click();});banner.append(reset);decision.querySelector('.dw-criteria').prepend(banner);
   }
 
   // On a phone the section tabs scroll sideways; keep the open section's tab in view (e.g. a link to

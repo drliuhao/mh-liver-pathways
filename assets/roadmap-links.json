@@ -54,7 +54,7 @@
       },
       {
         "when": "For disease-specific transplant and allocation assessment",
-        "url": "transplant/crlm/",
+        "url": "transplant/crlm/#map-disease",
         "label": "Open CRLM transplant assessment"
       },
       {
@@ -223,7 +223,7 @@
     "10": [
       {
         "when": "For the exact disease-specific transplant and allocation criteria",
-        "url": "transplant/icca/",
+        "url": "transplant/icca/#phenotype",
         "label": "Open iCCA transplant assessment"
       },
       {
@@ -302,7 +302,7 @@
     "4": [
       {
         "when": "For protocol-specific diagnosis, staging and allocation assessment",
-        "url": "transplant/pcca/",
+        "url": "transplant/pcca/#diagnosis",
         "label": "Open pCCA transplant assessment"
       },
       {
@@ -347,11 +347,11 @@
         "decision": "4"
       },
       {
-        "when": "If well-differentiated G1–G2 disease is low volume",
+        "when": "If well-differentiated G1\u2013G2 disease is low volume",
         "decision": "2"
       },
       {
-        "when": "If well-differentiated G1–G2 disease is high volume or progressing",
+        "when": "If well-differentiated G1\u2013G2 disease is high volume or progressing",
         "decision": "3"
       }
     ],
@@ -458,7 +458,7 @@
     "9": [
       {
         "when": "For exact differentiation, distribution and observation requirements",
-        "url": "transplant/nelm/",
+        "url": "transplant/nelm/#biology",
         "label": "Open NELM transplant assessment"
       },
       {
@@ -543,7 +543,7 @@
     "5": [
       {
         "when": "For the separate mixed HCC-iCCA criteria within iCCA guidance",
-        "url": "transplant/icca/",
+        "url": "transplant/icca/#diagnosis",
         "label": "Open iCCA / mixed HCC-iCCA transplant assessment"
       },
       {
@@ -728,7 +728,7 @@
     "10": [
       {
         "when": "For the specific clinical indication and allocation review",
-        "url": "transplant/hca/",
+        "url": "transplant/hca/#exception-route",
         "label": "Open hepatic adenoma transplant assessment"
       },
       {
@@ -1430,7 +1430,7 @@
       },
       {
         "when": "If transplant assessment is relevant",
-        "url": "transplant/hcc/",
+        "url": "transplant/hcc/#curative-route",
         "label": "Open HCC transplant assessment"
       },
       {
@@ -1447,7 +1447,7 @@
       },
       {
         "when": "For tumor burden, AFP and allocation assessment",
-        "url": "transplant/hcc/",
+        "url": "transplant/hcc/#allocation",
         "label": "Open HCC transplant assessment"
       },
       {
@@ -1498,7 +1498,7 @@
     "D": [
       {
         "when": "If liver dysfunction may be addressed by transplant; assess full suitability",
-        "url": "transplant/hcc/",
+        "url": "transplant/hcc/#curative-route",
         "label": "Open HCC transplant assessment"
       },
       {

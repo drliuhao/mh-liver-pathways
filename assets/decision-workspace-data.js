@@ -1965,11 +1965,11 @@ window.DecisionWorkspaceData={
     },
     "pcca/diagnosis": {
       "source": "Plan diagnostic sampling",
-      "label": "Diagnostic sampling"
+      "label": "Diagnosis"
     },
     "pcca/phenotype": {
       "source": "Check protocol criteria",
-      "label": "Protocol criteria"
+      "label": "Transplant suitability"
     },
     "pcca/neoadjuvant": {
       "source": "Deliver approved neoadjuvant therapy",
